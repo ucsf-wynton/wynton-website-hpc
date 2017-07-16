@@ -54,8 +54,11 @@
 ## Linux Containers
 
 * singularity
+<<<<<<< HEAD
 
 
 
 _Comment:_ The core software are updated on a regular basis.
 
+=======
+>>>>>>> 4fe3ad1462b89982b29894841c8f4c3f70574785
