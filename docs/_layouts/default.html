@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link href="{{ '/assets/css/ucsf-banners.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/bootstrap.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/tweaks.css' | relative_url }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-fixed-top" id="topnavbar">
+  <div class="top-banner logo">
+    <div class="inner">
+      <div>
+        <div class="logo"></div>
+        <a class="logotype" href="https://www.ucsf.edu/">
+          <span>University of California San Francisco</span>
+        </a>
+      </div>
+      <div class="nav">
+        <ul class="top-banner-menu">
+          <li><a href="https://www.ucsf.edu/about">About UCSF</a></li>
+          <li><a href="https://www.ucsf.edu/search">Search UCSF</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="Wynton - UCSF Research Computing at Scale">Wynton</a>
+    </div>
+    
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">	
+
+        <li><a href="{{ '/status/index.html' | relative_url }}">Status</a></li>
+	
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/software/core-software.html' | relative_url }}">Core software</a></li>
+            <li><a href="{{ '/software/software-repositories.html' | relative_url }}">Software repositories</a></li>
+            <li><a href="{{ '/software/missing-software.html' | relative_url }}">Missing software?</a></li>
+          </ul>
+        </li>
+	
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Scheduler <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">Submit jobs</a></li>
+            <li><a href="{{ '/scheduler/list-jobs.html' | relative_url }}">List jobs</a></li>
+            <li><a href="{{ '/scheduler/kill-jobs.html' | relative_url }}">Kill jobs</a></li>
+            <li><a href="{{ '/scheduler/sge-envvars.html' | relative_url }}">Useful SGE env. variables</a></li>
+            <li><a href="{{ '/scheduler/available-queues.html' | relative_url }}">Available queues</a></li>
+            <li><a href="{{ '/scheduler/advanced-usage.html' | relative_url }}">Advanced usage</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">File Transfers <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/transfers/files-and-directories.html' | relative_url }}">Transfer files and directories</a></li>
+<!--            <li><a href="{{ '/transfers/ucsf-box.html' | relative_url }}">UCSF Box</a></li> -->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Good Practices <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/good-practices/using-local-scratch.html' | relative_url }}">Use local scratch</a></li>
+            <li><a href="{{ '/good-practices/disk-space-cleanup.html' | relative_url }}">Cleanup your temporary files</a></li>
+            <li><a href="{{ '/good-practices/torque-pbs-multiprocessing.html' | relative_url }}">Automatically acknowledge job allocations</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How To <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/howto/login-without-pwd.html' | relative_url }}">Login without password</a></li>
+            <li><a href="{{ '/howto/find-files.html' | relative_url }}">Find files</a></li>
+<!--            <li><a href="{{ '/howto/compress-files-(as-a-job).html' | relative_url }}">Compress Files (via Job Queue)</a></li> -->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Troubleshooting <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/troubleshoot/ssh-n6-gives-permission-denied-(publickey).html' | relative_url }}">SSH Permission Denied?</a></li>
+          </ul>
+        </li>
+	
+        <li><a href="{{ '/support/index.html' | relative_url }}">Support</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/get-started/access-cluster.html' | relative_url }}">1. Login</a></li>
+            <li><a href="{{ '/get-started/interactive-usage.html' | relative_url }}">2. Interactive usage</a></li>
+            <li><a href="{{ '/get-started/submit-job.html' | relative_url }}">3. Submit job to cluster</a></li>
+            <li><a href="{{ '/get-started/submit-job.html' | relative_url }}">4. Logout</a></li>
+          </ul>
+        </li>
+	
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/about/specs.html' | relative_url }}">Specifications</a></li>
+            <li><a href="{{ '/about/roadmap.html' | relative_url }}">Roadmap</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ '/about/join.html' | relative_url }}">Join <span class="glyphicon glyphicon-heart-empty"></span></a></li>
+            <li><a href="{{ '/about/conduct.html' | relative_url }}">Code of conduct</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ '/about/contact.html' | relative_url }}">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="wrap">
+
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+     {% assign page_url = page.url | remove: '.html' %}
+     {% if page_url == '/' %}
+     {% assign page_url = '/index' %}
+     {% endif %}     
+     <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/tree/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank"><span class="glyphicon glyphicon-edit" style="float: right;" title="Contribute to this page!"></span></a>
+
+<p class="muted credit" style="font-size: inherits;">
+<a href="{{ '/' | relative_url }}">HPC Wynton</a>
+::
+<a href="https://www.ucsf.edu/">University&nbsp;of&nbsp;California, San&nbsp;Francisco</a>
+</p>
+      </footer>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+      $(document.body).css('padding-top', $('#topnavbar').height() + 10);
+      $(window).resize(function(){
+          $(document.body).css('padding-top', $('#topnavbar').height() + 10);
+      });
+  });
+</script>
+
+  <script>
+    $("a[href^='http']:not([href*='ucsf.edu']):not([href*='github.io']):not([id*='edit'])").each(function() {
+      $(this).css({
+        "background": "url(https://www.google.com/s2/favicons?domain=" +
+                       this.href + ") right center no-repeat",
+        "background-size": "16px",
+        "padding-right": "20px"
+      });
+    });
+  </script>
+
+  {% if site.google_analytics %}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+  {% endif %}
+  </body>
+</html>
