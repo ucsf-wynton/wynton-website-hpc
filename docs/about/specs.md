@@ -43,6 +43,6 @@ table {
 tr:last-child { border-top: 2px solid #000; }
 </style>
 
-[CentOS]: https://www.centos.org/
+[CentOS 7.3]: https://www.centos.org/
 [Son of Grid Engine]: https://arc.liv.ac.uk/trac/SGE
-[Pacific Research Platform]: http://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
+[Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
