@@ -1,4 +1,4 @@
-## Kill jobs
+## Kill Jobs
 
 To kill a specific job, use:
 

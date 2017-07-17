@@ -1,4 +1,4 @@
-# List jobs
+# List Jobs
 
 You can list all your submitted jobs, queued and running, using:
 ```sh

@@ -1,4 +1,4 @@
-# Join the cluster
+# Join the Cluster
 
 The UCSF Wynton computing cluster is funded and administered cooperatively by UCSF campus IT and key research groups. It is available to all UCSF researchers.
 

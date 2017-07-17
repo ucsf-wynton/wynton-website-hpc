@@ -1,4 +1,4 @@
-# Cluster specifications
+# Cluster Specifications
 
 ## Software environment
 

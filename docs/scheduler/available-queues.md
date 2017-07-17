@@ -1,4 +1,4 @@
-# Available queues
+# Available Queues
 
 The cluster provides different queues each optimized for different purposes.
 

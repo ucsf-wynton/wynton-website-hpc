@@ -1,4 +1,4 @@
-# Submit jobs
+# Submit Jobs
 
 ## Submit a script
 

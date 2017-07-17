@@ -1,4 +1,4 @@
-# Using local /scratch/ space
+# Using Local /scratch/ on Compute Nodes
 
 All nodes have their own locally storage mounted as `/scratch/`.  The `/scratch/` storage is fast - faster than system-wide storage such as `/home/` and `/work/` - which make it ideal for holding intermediate data files.  This will also lower the load on the system-wide storage and the local network.
 
