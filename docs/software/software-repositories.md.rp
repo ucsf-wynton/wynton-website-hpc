@@ -1,0 +1,186 @@
+<%@meta postprocess="FALSE"%>
+<%
+library("R.utils")
+trim <- function(x) {
+  if (!is.character(x)) return(x)
+  x <- sub("^[\t\n\f\r ]*", "", x)
+  sub("[\t\n\f\r ]*$", "", x)
+}
+as_html <- function(x) {
+  if (!is.character(x)) return(x)
+  x <- commonmark::markdown_html(x, extensions = TRUE)
+  x <- gsub("(^<p>|</p>\n$)", "", x)
+  x
+}
+
+style <- cmdArg(style = FALSE)
+
+modulepath <- function(module_repos) {
+  modulepath_root <- "/home/shared/cbc/apps/modulefiles"
+  modulepath <- file.path(modulepath_root, module_repos)
+  if (module_repos == "Legacy-Scyld") modulepath <- "/opt/scyld/modulefiles"
+  stopifnot(utils::file_test("-d", modulepath))
+  modulepath
+}
+
+module_avail <- function(module_repos) {
+  spider <- file.path(Sys.getenv("LMOD_DIR"), "spider")
+  stopifnot(utils::file_test("-x", spider))
+  json <- system2(spider, args = c("-o jsonSoftwarePage", modulepath(module_repos)), stdout = TRUE)
+  x <- jsonlite::fromJSON(json)
+  o <- order(x$package)
+  x <- x[o,]
+  keep <- !grepl("^[.]", x$package)
+  x <- x[keep,]
+  x
+}
+
+module_repositories <- list(
+  CBC = list(
+    name       = "CBC",
+    maintainer = "Computational Biology Core",
+    url        = "http://cbc.ucsf.edu"
+  )
+)
+%>
+<% if (style) { %>
+<style type="text/css">
+table {
+  width: 100%;
+  border: solid 1px black;
+}
+  
+tr {
+  vertical-align: top;
+  text-align: left;
+  padding: 0px;
+}
+  
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+th, td {
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+<% } # if (style) %>
+<% table_of_modules <- function(x, style = c("module", "repos")) { %>
+<% style <- match.arg(style) %>
+<table>
+<tr>
+<% if (style == "module") { %>
+  <th>module &amp; versions</th>
+<% } else if (style == "repos") { %>
+  <th>repository</th>
+<% } %>
+  <th>description</th>
+ </tr>
+<% for (ii in seq_len(nrow(x))) { %>
+<%
+m <- x[ii,]
+m <- lapply(m, FUN = trim)
+versions <- m$versions[[1]]
+for (cc in seq_len(ncol(versions))) {
+  versions[[cc]] <- trim(versions[[cc]])
+}
+m$versions[[1]] <- versions
+helps <- unique(versions$help)
+help <- helps[[1]]
+vers <- NULL
+if (!is.null(versions$versionName)) {
+  vers <- unique(versions$versionName)
+  if (length(vers) > 1L || vers != "default") {
+    idx <- match(m$defaultVersionName, table = vers)
+    if (length(idx) == 1) {
+      ## FIXME: spider seems to set 'defaultVersionName' randomly /HB 2017-06-30
+      vers[idx] <- sprintf("<em>%s</em>", vers[idx])
+    }
+  } else {
+    vers <- NULL
+  }
+}
+%>
+ <tr>
+  <td>
+  <strong><%= m$package %></strong><br>
+  <%= paste(vers, collapse = ", ") %>
+  </td>
+  <td>
+  <strong><%= as_html(help) %></strong><br>
+  <%= as_html(m$description) %><br>
+  <% if (!is.null(m$url) && !is.na(m$url)) { %>
+  URL: <%= as_html(m$url) %><br>
+  <% } %>
+  </td>
+ </tr>
+<% } # for (ii in ...) %>
+</table>
+<% } ## table_of_modules() %>
+
+<%-- Add a front-matter warning to the Markdown file --%>
+<!--
+WARNING: do _not_ update this file; it is automatically generated from modules.md.rsp and will be overwritten.
+-->
+
+<div class="alert alert-warning" role="alert">
+Environment modules are currently in beta - to enable them, see Configuration / <a href="{{ '/configuration/lmod.html' | relative_url }}">Enable Software Modules</a>.
+</div>
+
+# Software
+
+To use one or more of the below software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+```sh
+module load bowtie2
+module load bowtie2/2.2.6
+module load python r bwa
+```
+
+These software modules are available from different _module repositories_, each providing several modules (more details below).  The available repositories are:
+
+<%
+x <- module_avail("repos")
+keep <- which(sapply(x$versions, FUN = function(v) unique(basename(dirname(v$path)))) == "repos")
+x <- x[keep,]
+keep <- grep("^Legacy-", x$package, invert = TRUE)
+x <- x[keep,]
+table_of_modules(x, style = "repos")
+%>
+<br>
+
+To get access to one or more of these module repositories and see what modules they provide (see below), load them as regular modules, e.g.
+```sh
+module load CBC
+module avail
+```
+
+_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBC` appends `<%= gsub("/home/shared/cbc/apps/modulefiles", "$MODULEPATH_ROOT", modulepath("CBC")) %>` to your `$MODULEPATH`.
+
+
+<% for (module_repos in names(module_repositories)) { %>
+<%
+info <- module_repositories[[module_repos]]
+x <- module_avail(module_repos)
+%>
+
+## Module Repository '<%= module_repos %>'
+
+Maintained by: [<%= info$maintainer %>](<%= info$url %>)
+
+<% table_of_modules(x) %>
+<% } ## for (module_repos ...) %>
+
+
+<br>
+<br>
+<br>
+_The above information was automatically generated on <%= Sys.time() %>._
