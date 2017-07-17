@@ -55,7 +55,7 @@ python<br>
  </tr>
 
  <tr>
-  <td>System tools</td>
+  <td>System Utilities</td>
   <td>
 top, htop(*)
   </td>

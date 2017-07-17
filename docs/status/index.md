@@ -8,10 +8,8 @@ WARNING: do _not_ update this file; it is automatically generated from index.md.
 
 <img src="https://img.shields.io/badge/master%3A%20ping-up-green.svg" alt="Master responds to ping">
 
+
 ## Cluster usage
-
-For full details, see [Ganglia](http://cclc01.som.ucsf.edu/ganglia/?&hc=6) ([via UCSF Remote](http://cbc.ucsf.edu/vpn/http://cclc01.som.ucsf.edu/ganglia/?&hc=6)).
-
 
 ### Total CPU Load
 

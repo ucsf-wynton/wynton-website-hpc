@@ -3,9 +3,6 @@
 WARNING: do _not_ update this file; it is automatically generated from modules.md.rsp and will be overwritten.
 -->
 
-<div class="alert alert-warning" role="alert">
-Environment modules are currently in beta - to enable them, see Configuration / <a href="{{ '/configuration/lmod.html' | relative_url }}">Enable Software Modules</a>.
-</div>
 
 # Software
 
