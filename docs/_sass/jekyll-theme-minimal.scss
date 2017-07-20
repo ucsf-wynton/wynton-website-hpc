@@ -157,7 +157,9 @@ header ul a:active {
 }
 
 strong {
-  color:#222;
+  /* Removed such that <strong> does not force a color, e.g.
+     in an alert div. /Henrik 2017-07-20 */
+  /* color:#222; */
   font-weight:700;
 }
 
