@@ -94,7 +94,7 @@ alice1@{{ login_ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 You should now be able to log into the cluster from your local computer without having to enter the cluster password.  Try the following:
 ```sh
 {local}$ ssh -o PreferredAuthentications=publickey -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ login_node }}
-[alice@{{ login_name }} .ssh]$ 
+[alice@{{ login_name }} ~]$ 
 ```
 You will be asked to enter your _passphrase_, if you chose one above.
 
