@@ -107,7 +107,7 @@ then make sure you use the correct user name and that the file permissions on `~
 The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, you can now use:
 ```sh
 {local}$ ssh -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ login_node }}
-[alice@{{ login_name }} .ssh]$ 
+[alice@{{ login_name }} ~]$ 
 ```
 
 
@@ -123,7 +123,7 @@ Host {{ login_node }}
 With all of the above, you should now be able to log in to the cluster using:
 ```sh
 {local}$ ssh {{ login_node }}
-[alice@{{ login_name }} .ssh]$ 
+[alice@{{ login_name }} ~]$ 
 ```
 
 [USCF VPN]: https://it.ucsf.edu/services/vpn
