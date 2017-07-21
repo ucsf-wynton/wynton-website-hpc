@@ -56,7 +56,7 @@ The key\'s randomart image is:
 +----[SHA256]-----+
 ```
 <div class="alert alert-info" role="alert">
-If you specify a passphrase, your local operating system will ask for the passphrase <em>the first time</em> you try to log in to the cluster.  All other login attempts will be passphrase (and password) free (until you reboot the machine).  This should work out of the box on macOS and most Linux distributions - on Windows you need to set up your SSH agent manually (or use an empty passphrase).  If you choose to use an empty passphrase, make sure that your machine is safe and use a highly secure local login password.
+If you specify a passphrase, your local operating system will ask for the passphrase <em>the first time</em> you try to log in to the cluster.  All other login attempts will be passphrase (and password) free (until you reboot the machine).  This should work out of the box on macOS and most Linux distributions - on Windows you need to set up your SSH agent manually (or use an empty passphrase).  If you choose to use an empty passphrase, make sure that your machine is safe and uses a highly secure local login password.
 </div>
 
 <div class="alert alert-danger" role="alert">
@@ -74,7 +74,7 @@ First, assuming your cluster user name is `alice`, copy the public key file to `
 laptop_to_tipcc_20170720.pub           100%  390     0.4KB/s   00:00
 ```
 
-Second, log into the cluster (still using a password):
+Second, log into the cluster (still using a password) and _append_ the public key to `~/.ssh/authorized_keys`:
 ```sh
 {local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}
 alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
@@ -98,7 +98,7 @@ If you get
 ```sh
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
 ```
-then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct both on your local machine (see Step 1).  If it still does not work, check the `~/.ssh` permissions on the cluster (analogously to Step 1).
+then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your local machine (see Step 1).  If it still does not work, check the `~/.ssh` permissions on the cluster (analogously to Step 1).
 
 The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, you can now use:
 ```sh
