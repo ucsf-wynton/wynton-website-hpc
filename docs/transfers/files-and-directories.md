@@ -6,21 +6,21 @@
 
 To copy a single file to `~/` on the cluster, use
 ```sh
-{remote}$ scp one_file.tsv wynton.ucsf.edu:
+{remote}$ scp one_file.tsv {{ site.login.hostname }}:
 ```
 
 ### Copy one or more files to folder on the cluster
 
 To copy multiple files to the cluster so they appear directly under `~/data/files/`, use
 ```sh
-{remote}$ scp *.txt *.R ../some/path/another_file.tsv wynton.ucsf.edu:data/files/
+{remote}$ scp *.txt *.R ../some/path/another_file.tsv {{ site.login.hostname }}:data/files/
 ```
 
 ### Recursively copy a directory to folder on the cluster
 
 To copy all content of directory `dataset/` to the cluster so that it appears as `~/data/dataset/`, use
 ```sh
-{remote}$ scp -r dataset/ wynton.ucsf.edu:data/
+{remote}$ scp -r dataset/ {{ site.login.hostname }}:data/
 ```
 
 

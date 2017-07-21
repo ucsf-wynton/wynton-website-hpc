@@ -1,7 +1,3 @@
-{% assign login_name = "wynton" %}
-{% assign login_node = "wynton.ucsf.edu" %}
-{% assign login_ip = "169.230.nnn.nnn" %}
-
 # Log in without Password
 
 These instructions explains how to set up your local computer such that you can log into the compute cluster, or copy files to and from the cluster, without having to enter your password each time.
@@ -74,17 +70,17 @@ Next, we will set up the cluster to recognize your public SSH key.  For this we 
 
 First, assuming your cluster user name is `alice`, copy the public key file to `~/.ssh` on the cluster:
 ```sh
-{local}$ scp ~/.ssh/laptop_to_tipcc_20170720.pub alice@{{ login_node }}:.ssh/
+{local}$ scp ~/.ssh/laptop_to_tipcc_20170720.pub alice@{{ site.login.hostname }}:.ssh/
 laptop_to_tipcc_20170720.pub           100%  390     0.4KB/s   00:00
 ```
 
 Second, log into the cluster (still using a password):
 ```sh
-{local}$ ssh -o PreferredAuthentications=password alice@{{ login_node }}
-alice1@{{ login_ip }}\'s password: XXXXXXXXXXXXXXXXXXX
-[alice@{{ login_name }} ~]$ cd .ssh
-[alice@{{ login_name }} .ssh]$ cat laptop_to_tipcc_20170720.pub >> authorized_keys
-[alice@{{ login_name }} .ssh]$ exit
+{local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}
+alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
+[alice@{{ site.login.name }} ~]$ cd .ssh
+[alice@{{ site.login.name }} .ssh]$ cat laptop_to_tipcc_20170720.pub >> authorized_keys
+[alice@{{ site.login.name }} .ssh]$ exit
 {local}$ 
 ```
 
@@ -93,8 +89,8 @@ alice1@{{ login_ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 
 You should now be able to log into the cluster from your local computer without having to enter the cluster password.  Try the following:
 ```sh
-{local}$ ssh -o PreferredAuthentications=publickey -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ login_node }}
-[alice@{{ login_name }} .ssh]$ 
+{local}$ ssh -o PreferredAuthentications=publickey -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ site.login.hostname }}
+[alice@{{ site.login.name }} .ssh]$ 
 ```
 You will be asked to enter your _passphrase_, if you chose one above.
 
@@ -106,24 +102,24 @@ then make sure you use the correct user name and that the file permissions on `~
 
 The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, you can now use:
 ```sh
-{local}$ ssh -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ login_node }}
-[alice@{{ login_name }} .ssh]$ 
+{local}$ ssh -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ site.login.hostname }}
+[alice@{{ site.login.name }} .ssh]$ 
 ```
 
 
 ## Step 4: Avoid having to specify SSH option `-i` (on local machine)
 
-It is rather tedious having to specify what private key file to use (`-i ~/.ssh/laptop_to_tipcc_20170720`) each time you use SSH.  As a last step, we will set the default options for `alice@{{ login_node }}`.  On your local machine, add the following entry to `~/.ssh/config` (if you don't have the file, create it):
+It is rather tedious having to specify what private key file to use (`-i ~/.ssh/laptop_to_tipcc_20170720`) each time you use SSH.  As a last step, we will set the default options for `alice@{{ site.login.hostname }}`.  On your local machine, add the following entry to `~/.ssh/config` (if you don't have the file, create it):
 ```
-Host {{ login_node }}
+Host {{ site.login.hostname }}
   User alice
   IdentityFile ~/.ssh/laptop_to_tipcc_20170720
 ```
 
 With all of the above, you should now be able to log in to the cluster using:
 ```sh
-{local}$ ssh {{ login_node }}
-[alice@{{ login_name }} .ssh]$ 
+{local}$ ssh {{ site.login.hostname }}
+[alice@{{ site.login.name }} .ssh]$ 
 ```
 
 [USCF VPN]: https://it.ucsf.edu/services/vpn
