@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert">
-To set up password-free file transfer, see <a href="/howto/log-in-without-pwd.html">Log in without Password</a>.
+To set up password-free file transfer, see <a href="{{ '/howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.
 </div>
 
 

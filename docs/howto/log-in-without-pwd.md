@@ -123,4 +123,3 @@ With all of the above, you should now be able to log in to the cluster using:
 ```
 
 [USCF VPN]: https://it.ucsf.edu/services/vpn
-

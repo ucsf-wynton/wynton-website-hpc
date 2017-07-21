@@ -24,4 +24,4 @@ Is the software you need not installed on the cluster?  If so, you have a few op
 
 4. Core software
 
-   - If it is a core software, it may be that the [the system administrators](/about/contact.mtml) are willing to add it to the core installation.
+   - If it is a core software, it may be that the [the system administrators]({{ '/about/contact.html' | relative_url }}) are willing to add it to the core installation.
