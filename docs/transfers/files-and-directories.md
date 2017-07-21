@@ -1,3 +1,8 @@
+<div class="alert alert-info" role="alert">
+To set up password-free file transfer, see <a href="/howto/log-in-without-pwd.html">Log in without Password</a>.
+</div>
+
+
 # Transfer Files and Directories
 
 ## From a remote machine to cluster
@@ -22,6 +27,3 @@ To copy all content of directory `dataset/` to the cluster so that it appears as
 ```sh
 {remote}$ scp -r dataset/ {{ site.login.hostname }}:data/
 ```
-
-
-
