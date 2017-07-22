@@ -16,7 +16,7 @@ You can pass arguments to a job script similarly to how one passes argument to a
 ```sh
 qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"' --debug
 ```
-Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as the two arguments `--third=some` and `value`.
+Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
 
 
 
