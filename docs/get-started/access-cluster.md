@@ -5,14 +5,14 @@ These instructions are primarily written for Linux and macOS users.  If you are 
 
 # Login
 
-The Wynton cluster can only be accessed from within the UCSF network via standard SSH.  If you are outside, make sure you are connected via the [UCSF VPN].
+The Wynton cluster can be accessed via standard SSH protocols.  Since access is restricted to computers on the UCSF network, make sure you are first connected via the [UCSF VPN], if you are outside.
 
 
 ## Instructions
 
 To log into the cluster, assuming your user name is `alice` (case sensitive), do the following:
 
-1. open a terminal (called 'Terminal' on macOS and common Linux distributions), and
+1. open a terminal (called 'Terminal' on macOS and most Linux distributions), and
 2. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press ENTER.
 3. when prompted, enter your Wynton password.
 
