@@ -1,10 +1,11 @@
 title: 'UCSF HPC: Wynton'
 theme: jekyll-theme-minimal
 foo: 'hello world!'
-login_name: "wynton"
-login_node: "wynton.ucsf.edu"
-login_ip: "169.230.nnn.nnn"
 login:
-  name: "wynton"
-  hostname: "wynton.ucsf.edu"
+  name: "login"
+  hostname: "login.wynton.ucsf.edu"
+  ip: "169.230.nnn.nnn"
+transfer:
+  name: "transfer"
+  hostname: "transfer.wynton.ucsf.edu"
   ip: "169.230.nnn.nnn"

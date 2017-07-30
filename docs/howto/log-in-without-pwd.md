@@ -66,7 +66,7 @@ The public key you can safely share with the world, but <strong>treat your <em>p
 
 ## Step 2: Add the public SSH key (on cluster)
 
-Next, we will set up the cluster to recognize your public SSH key.  For this we will have to log in to the cluster, which requires that your machine is connected to the UCSF network, e.g. via the [USCF VPN].
+Next, we will set up the cluster to recognize your public SSH key.  For this we will have to log in to the cluster, which requires that your machine is connected to the UCSF network, e.g. via the [UCSF VPN].
 
 First, assuming your cluster user name is `alice`, copy the public key file to `~/.ssh` on the cluster:
 ```sh
@@ -122,4 +122,4 @@ With all of the above, you should now be able to log in to the cluster using:
 [alice@{{ site.login.name }} .ssh]$ 
 ```
 
-[USCF VPN]: https://it.ucsf.edu/services/vpn
+[UCSF VPN]: https://it.ucsf.edu/services/vpn
