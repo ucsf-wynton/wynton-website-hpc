@@ -39,9 +39,11 @@ _Comment_: SMP stands for [Symmetric multiprocessing](https://en.wikipedia.org/w
 
 ## Interactive jobs
 
-It is not possible to request _interactive_ jobs.  Instead, there [are dedicated interactive nodes](https://github.com/UCSF-HPC/wynton/wiki/Todo) that can be used for building software and prototyping scripts before submitting them to the scheduler.
+It is not possible to request _interactive jobs_.  Instead, there are dedicated [interactive nodes] that can be used for short-term interactive needs such building software and prototyping scripts before submitting them to the scheduler.
 
 
 ## See also
 
 For further options and advanced usage, see [Advanced Usage](advanced-usage.html) of the scheduler.
+
+[interactive nodes]: {{ '/get-started/interactive-usage.html' | relative_url }}

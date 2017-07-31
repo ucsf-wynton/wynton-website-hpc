@@ -22,12 +22,8 @@ When logging in from a login node, you should see something like:
 [alice@{{ site.interactive.name }} ~]$ 
 ```
 
-
-[logged in to the cluster]: {{ '/get-started/access-cluster.html' | relative_url }}
-
-
-
-
 <div class="alert alert-warning" role="alert">
 <strong>Please do not run your real-world analysis on the interactive nodes.</strong>  Instead run it as a job via the scheduler - this will assert that your analysis runs as fast as possible and with all the resources it needs.  For further instruction, see the getting-started page <a href="{{ 'get-started/submit-job.html' | relative_url }}">Submit Job to Cluster</a>.
 </div>
+
+[logged in to the cluster]: {{ '/get-started/access-cluster.html' | relative_url }}
