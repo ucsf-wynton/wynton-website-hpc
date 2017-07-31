@@ -11,3 +11,8 @@ If the node is non-responsive, you can force the scheduler to remove the job by 
 ```sh
 $ qdel -f <jobid>
 ```
+
+To kill all of your jobs, use:
+```sh
+$ qdel -u $USER
+```
