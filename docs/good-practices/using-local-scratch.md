@@ -13,7 +13,7 @@ Here is how you should use `/scratch`:
 
 * **Don't leave files on `/scratch` longer than necessary**.  For instance, have your jobs cleanup after themselves.
 
-* **Specify how much local storage your job will need**.  Local storage is limited to [???-???](https://github.com/UCSF-HPC/wynton/wiki/Todo) GiB per compute node.  If your job will use up to 200 GiB of disk space, you can specify this resource as `-l scratch=200G` (in units of GiB) when submitting the job.  A node with 800 GiB of scratch space will at most have four `-l scratch=200G` jobs running at the same time.
+* **Specify how much local storage your job will need**.  Local storage is limited to [~1.5 TiB per compute node]({{ '/about/specs.html' | relative_url }}).  If your job will use up to 200 GiB of disk space, you can specify this resource as `-l scratch=200G` (in units of GiB) when submitting the job.  A node with 800 GiB of scratch space will at most have four `-l scratch=200G` jobs running at the same time.
 
 * **All files on `/scratch` are local to that node**.  Any files copied / written to a node's `/scratch` space will only be accessible from that node and not from anywhere else.
 

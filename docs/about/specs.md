@@ -8,20 +8,20 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ## Hardware
 
-Node      | Nbr of cores |       CPU |       RAM |
-----------|-------------:|----------:|----------:|
-cc-hmid1  |           48 |  2.50 GHz |   512 GiB |
-cc-id1    |           48 |  2.50 GHz |   256 GiB |
-cc-id2    |           48 |  2.50 GHz |   256 GiB |
-cc-id3    |           48 |  2.50 GHz |   256 GiB |
-cin-hmid1 |           48 |  2.50 GHz |   512 GiB |
-cin-id1   |           48 |  2.50 GHz |   256 GiB |
-cin-id2   |           48 |  2.50 GHz |   256 GiB |
-cin-id3   |           48 |  2.50 GHz |   256 GiB |
-qb3-hmid1 |           48 |  2.50 GHz |   512 GiB |
-qb3-id1   |           48 |  2.50 GHz |   256 GiB |
-qb3-id2   |           48 |  2.50 GHz |   256 GiB |
-**Total** |      **528** |           |           |
+Node      | Number of Cores |       CPU |      RAM | Local Scratch |
+----------|----------------:|----------:|---------:|--------------:|
+cc-hmid1  |              48 |  2.50 GHz |  512 GiB |       1.5 TiB |
+cc-id1    |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+cc-id2    |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+cc-id3    |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+cin-hmid1 |              48 |  2.50 GHz |  512 GiB |       1.5 TiB |
+cin-id1   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+cin-id2   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+cin-id3   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+qb3-hmid1 |              48 |  2.50 GHz |  512 GiB |       1.5 TiB |
+qb3-id1   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+qb3-id2   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+**Total** |         **528** |           |          |               |
 
 All compute nodes have Intel Xeon CPU E5-2680 v3 @ 2.50GHz processors and local solid state drives (SSDs).
 
