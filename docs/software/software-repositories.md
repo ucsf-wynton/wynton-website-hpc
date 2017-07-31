@@ -3,6 +3,10 @@
 WARNING: do _not_ update this file; it is automatically generated from modules.md.rsp and will be overwritten.
 -->
 
+<div class="alert alert-danger" role="alert">
+<strong>This is a mockup page!</strong>
+</div>
+
 
 # Software
 

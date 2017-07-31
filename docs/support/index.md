@@ -1,3 +1,7 @@
+<div class="alert alert-danger" role="alert">
+<strong>This is a mockup page!</strong>
+</div>
+
 # User Support
 
 For questions and feature requests, please use one of the following channels:

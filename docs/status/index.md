@@ -2,6 +2,10 @@
 WARNING: do _not_ update this file; it is automatically generated from index.md.sh and will be overwritten.
 -->
 
+<div class="alert alert-danger" role="alert">
+<strong>This is a mockup page!</strong>
+</div>
+
 # Cluster Status
 
 ## Cluster heartbeats
