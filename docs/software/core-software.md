@@ -1,5 +1,7 @@
 # Core System Software
 
+A large number of common CentOS software tools are available on the cluster as part of the core setup.  The below table shows a small excerpt of what is available.
+
 <table>
  <tr>
   <th>Category</th>
@@ -31,33 +33,35 @@ emacs(*), nano, vim
  <tr>
   <td>Version Control</td>
   <td>
-git, svn
+git, hg(*), svn
   </td>
  </tr>
 
  <tr>
-  <td>Document and Reports</td>
+  <td>Text, Documents, and Reports</td>
   <td>
+aspell(*), ispell(*), hunspell<br>
 doxygen, pandoc<br>
-LaTeX, PDF and Postscript tools
+LaTeX, PDF and Postscript tools<br>
   </td>
  </tr>
 
  <tr>
-  <td>Programming Languages and Compilers</td>
+  <td>Programming Languages, Compilers, and Tools</td>
   <td>
-gcc / g++ (C, C++, and Fortran)<br>
-java, javac<br>
-lua<br>
-perl<br>
-python<br>
+  make, cmake(*)<br>
+  gcc / g++ (C, C++, and Fortran)<br>
+  java, javac<br>
+  lua<br>
+  perl<br>
+  python<br>
   </td>
  </tr>
 
  <tr>
   <td>System Utilities</td>
   <td>
-top, htop(*)
+htop(*), top
   </td>
  </tr>
 
