@@ -5,7 +5,7 @@ Although you should always run analyses via the job scheduler, there are times w
 
 ## Instructions
 
-To access an _interactive node_,
+To access an _interactive node_, assuming your username is `alice`,
 
 1. make sure you are [logged in to the cluster], and
 
