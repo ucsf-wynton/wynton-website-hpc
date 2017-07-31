@@ -1,4 +1,4 @@
-¢# Singularity - Linux Containers
+# Singularity - Linux Containers
 
 The Wynton cluster supports Linux Containers ([LXC]) via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
 
