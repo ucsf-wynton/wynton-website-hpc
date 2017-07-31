@@ -23,7 +23,7 @@ Some of the environment variables set by the scheduler and available to a job at
 
 ## Example
 
-To see all environment variable available to a job, submit the following test job:
+To see all environment variable available to a job, submit a job that calls `env`:
 
 ```sh
 $ cd ~/test/

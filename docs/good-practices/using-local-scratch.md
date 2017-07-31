@@ -3,6 +3,8 @@
 All nodes have their own locally storage mounted as `/scratch`.  The `/scratch` storage is fast - faster than system-wide storage such as `/home` - which make it ideal for holding intermediate data files.  This will also lower the load on the system-wide storage and the local network.
 
 
+## Instructions
+
 Here is how you should use `/scratch`:
 
 * **Write to `/scratch/$USER/`**.  This will minimize the risk for clashing with other users, which may happen if you use the same filename and write to `/scratch/`.
@@ -16,7 +18,7 @@ Here is how you should use `/scratch`:
 * **All files on `/scratch` are local to that node**.  Any files copied / written to a node's `/scratch` space will only be accessible from that node and not from anywhere else.
 
 
-## Example
+### Example
 
 Here is a script called `ex-scratch.sh` that illustrates how to copy input files over from the NFS-mounted `/home` drive to the local scratch of whatever node the job ends up running on.  After processing of the input files is complete, the output files are moved from the local scratch to `/home`.  At the very end, the local scratch is cleaned up.
 

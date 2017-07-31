@@ -18,7 +18,7 @@ To log into the cluster, assuming your user name is `alice` (case sensitive), do
 3. when prompted, enter your Wynton password.
 
 
-## Example
+### Example
 
 When logging in from your local computer, you should see something like:
 
