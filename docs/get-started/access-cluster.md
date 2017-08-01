@@ -32,7 +32,7 @@ alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 If you get `Permission denied, please try again.` when you enter your password, make sure you use the correct Wynton username (case sensitive) and the correct password.
 
 <div class="alert alert-info" role="alert">
-It is possible to set up password-less authenatication via an public-private SSH key pair.  For details, see the how-to page <a href="{{ 'howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.
+It is possible to set up password-less authenatication via a public-private SSH key pair.  For details, see the how-to page <a href="{{ 'howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.
 </div>
 
 
