@@ -1,12 +1,6 @@
-<div class="alert alert-danger" role="alert">
-<strong>This is a mockup page!</strong>
-</div>
+# Contact Information
 
-# About
+Systems Administrators:
 
-The Wynton cluster ...
-
-## Contact information
-
-Systems Administrator: [Joshua Baker-Lepain](https://directory.ucsf.edu/people/search/id/979)
+* [Joshua Baker-Lepain](https://directory.ucsf.edu/people/search/id/979)
 
