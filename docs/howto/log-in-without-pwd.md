@@ -28,7 +28,7 @@ _On your local machine_, open a terminal.  If missing, create a private `~/.ssh/
 {local}$ stat --format=%A ~/.ssh
 drwx------
 ```
-_Explanation:_ The above `chmod` settings specify that you as a user (`u`) have read (`r`) and write (`w`) permissions for this directory.  In addition, you have executable (`x`) permission, which also means you can set it as your working directory.  Continuing, the settings also specify that other users in your group (`g`) as well as all other (`o`) users on the system have no access at all (empty permission).  The `stat` output consists of four parts: `d` tells us it is a directory, `rw-` specifies the permission for the user (`u`), and the following `---` and `---` specifies the permissions for the group (`g`), and all others (`o`), respectively.
+_Explanation:_ The above `chmod` settings specify that you as a user (`u`) have read (`r`) and write (`w`) permissions for this directory.  In addition, you have executable (`x`) permission, which also means you can set it as your working directory.  Continuing, the settings also specify that other users in your group (`g`) as well as all other (`o`) users on the system have no access at all (empty permission).  The `stat` output, which confirms this, consists of four parts: `d` tells us it is a directory, `rw-` specifies the permission for the user (`u`), and the following `---` and `---` specifies the permissions for the group (`g`), and all others (`o`), respectively.
 
 
 Next, we will generate a private-public SSH key pair (stored in two files) that is unique for accessing the cluster:
