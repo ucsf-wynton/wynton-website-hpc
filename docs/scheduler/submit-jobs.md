@@ -19,6 +19,19 @@ qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"
 Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
 
 
+## Specifying (maximum) run time
+
+By specifying the how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
+```sh
+qsub -cwd -l mem_free=1G -l h_rt=00:03:00 script.sh
+```
+
+<div class="alert alert-warning" role="alert">
+A job that runs longer than the requested run time, will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
+</div>
+
+
+
 
 ## Parallel processing (on a single machine)
 
