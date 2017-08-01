@@ -100,7 +100,7 @@ Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
 ```
 then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your local machine (see Step 1).  If it still does not work, check the `~/.ssh` permissions on the cluster (analogously to Step 1).
 
-The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, this option can be dropped and you can now use:
+The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, these options can be dropped and you can now use:
 ```sh
 {local}$ ssh -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ site.login.hostname }}
 [alice@{{ site.login.name }} ~]$ 
