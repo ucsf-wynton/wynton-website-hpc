@@ -90,7 +90,7 @@ alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 You should now be able to log into the cluster from your local computer without having to enter the cluster password.  Try the following:
 ```sh
 {local}$ ssh -o PreferredAuthentications=publickey -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ site.login.hostname }}
-[alice@{{ site.login.name }} .ssh]$ 
+[alice@{{ site.login.name }} ~]$ 
 ```
 You will be asked to enter your _passphrase_, if you chose one above.
 
@@ -100,10 +100,10 @@ Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
 ```
 then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your local machine (see Step 1).  If it still does not work, check the `~/.ssh` permissions on the cluster (analogously to Step 1).
 
-The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, you can now use:
+The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, this option can be dropped and you can now use:
 ```sh
 {local}$ ssh -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ site.login.hostname }}
-[alice@{{ site.login.name }} .ssh]$ 
+[alice@{{ site.login.name }} ~]$ 
 ```
 
 
@@ -119,7 +119,7 @@ Host {{ site.login.hostname }}
 With all of the above, you should now be able to log in to the cluster using:
 ```sh
 {local}$ ssh {{ site.login.hostname }}
-[alice@{{ site.login.name }} .ssh]$ 
+[alice@{{ site.login.name }} ~]$ 
 ```
 
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
