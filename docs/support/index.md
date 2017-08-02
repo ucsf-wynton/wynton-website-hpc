@@ -1,5 +1,5 @@
 <div class="alert alert-danger" role="alert">
-<strong>This is a mockup page!</strong>
+<strong>The mailing list is yet not available!</strong>
 </div>
 
 # User Support
@@ -7,7 +7,9 @@
 For questions and feature requests, please use one of the following channels:
 
 1. the [Wynton mailing list]
+<!--
 2. the [Wynton issue tracker]
+-->
 
 These forums are monitored by the Wynton system administrators.
 
