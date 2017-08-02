@@ -4,7 +4,7 @@ Don't find the software you need for your analysis?  Did you make sure it is not
 
 1. Install it yourself to your own account
    - Download a pre-built binary
-   - Build software from source (traditional, e.g. `configure --prefix ~/software; make; make install`)
+   - Build software from source (traditional, e.g. `./configure --prefix ~/software`, `make`, and `make install`)
    - Build software from source (using Spack, e.g. `spack list` and `spack install pango`)
    <br><br>
 
