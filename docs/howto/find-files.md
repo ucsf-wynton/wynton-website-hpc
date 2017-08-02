@@ -22,12 +22,12 @@ find ~ -type f -name '*.fastq' -o -name '*.fq' -o -name '*.sam' -size +50000k -e
 
 ## Find files older than 14 days
 
-To find all files under `/scratch/alice/` that have not been modified during the last 14 days, do:
+To find all files under `~/transfer/` that have not been modified during the last 14 days, do:
 ```sh
-find /scratch/alice/ -type f -mtime +14
+find ~/transfer/ -type f -mtime +14
 ```
 
 To remove these files, do:
 ```sh
-find /scratch/alice/ -type f -mtime +14 -exec rm {} \;
+find ~/transfer/ -type f -mtime +14 -exec rm {} \;
 ```
