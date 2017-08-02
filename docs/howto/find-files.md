@@ -24,12 +24,10 @@ find ~ -type f -name '*.fastq' -o -name '*.fq' -o -name '*.sam' -size +50000k -e
 
 To find all files under `/scratch/alice/` that have not been modified during the last 14 days, do:
 ```sh
-cd /scratch/alice/
-find . -type f -mtime +14
+find /scratch/alice/ -type f -mtime +14
 ```
 
 To remove these files, do:
 ```sh
-cd /scratch/alice/
-find . -type f -mtime +14 -exec rm {} \;
+find /scratch/alice/ -type f -mtime +14 -exec rm {} \;
 ```
