@@ -27,7 +27,7 @@ To find all files under `~/transfer/` that have not been modified during the las
 find ~/transfer/ -type f -mtime +14
 ```
 
-To remove these files interactively, do:
+To remove these files interactively (`rm -i`), do:
 ```sh
 find ~/transfer/ -type f -mtime +14 -exec rm -i {} \;
 ```
