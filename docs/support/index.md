@@ -7,6 +7,7 @@
 For questions and feature requests, please use one of the following channels:
 
 1. the [Wynton mailing list]
+
 <!--
 2. the [Wynton issue tracker]
 -->
