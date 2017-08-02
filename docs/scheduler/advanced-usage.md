@@ -1,8 +1,8 @@
 # Advanced Scheduler Usage 
 
-## Programmatical get job id
+## Programmatically get job id
 
-When submitting a job, the job id is outputted to standard output as part of a long message, e.g.
+When submitting a job, the job id is outputted to standard output (stdout) as part of a long message, e.g.
 ```sh
 $ qsub -cwd hello_world
 Your job 151711 ("hello_world") has been submitted
