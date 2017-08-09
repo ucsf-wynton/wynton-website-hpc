@@ -142,7 +142,7 @@ Your job 150909 ("r-base") has been submitted
 <br>
 <br>
 <div class="alert alert-info" role="alert">
-Why not Docker? Docker is one of the most popular and well-known software solutions for using Linux Containers. However, contrary to Singularity, it turns out that it is hard to get Docker to play well with multi-tenant HPC environments such as the Wynton cluster.
+Why not Docker? Docker is one of the most popular and well-known software solutions for using Linux Containers. However, contrary to Singularity, it turns out that it is hard to get Docker to play well with multi-tenant HPC environments.
 </div>
 
 
