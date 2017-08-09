@@ -70,6 +70,13 @@ th {
 th, td {
     padding: 0.5ex;
 }
+dt {
+  margin-left: 0.5ex;
+}
+dt:after { content: ":" }
+dd {
+  margin-left: 2.5ex;
+}
 
 
 /*--------------------------------------------------------------*

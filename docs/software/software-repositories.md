@@ -556,14 +556,3 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
 _The above information was automatically generated on 2017-08-08 17:55:08 (source: `module spider`)._
 
 [Software Modules]: {{ '/software/software-modules.html' | relative_url }}
-
-
-<style>
-dt:after { content: ":" }
-dt {
-  margin-left: 0.5ex;
-}
-dd {
-  margin-left: 2.5ex;
-}
-</style>
