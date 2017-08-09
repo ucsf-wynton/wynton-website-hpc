@@ -1,6 +1,7 @@
 # Core System Software
 
-A large number of common Linux software tools are available on the cluster as part of the core setup.  Below follows a small excerpt of what tools are available.
+A large number of common Linux software tools are available on the cluster as part of the core setup.  Below follows a small excerpt of what tools are available.  Additional software can be found in the [Software Repositories].
+
 
 <dl>
 <dt>Editors</dt>
@@ -52,12 +53,14 @@ singularity
 </dd>
 </dl>
 
-
-<br>
 (*) These tools are yet to be installed.
+
 
 <br>
 _Note:_ The installed versions of the above core tools will change regularly as these tools are upgraded on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).
+
+
+[Software Repositories]: {{ '/software/software-repositories.html' | relative_url }}
 
 <style>
 dt {
