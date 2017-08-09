@@ -1,6 +1,6 @@
 # Missing Software?
 
-Don't find the software you need for your analysis?  Did you make sure it is not in one of the [software repositories]({{ '/software/modules.html' | relative_url }})?  If so, you have a few options:
+Don't find the software you need for your analysis?  Did you make sure it is not in one of the [software repositories]({{ '/software/software-repositories.html' | relative_url }})?  If so, you have a few options:
 
 1. Install it yourself to your own account
    - Download a pre-built binary

@@ -4,68 +4,43 @@ WARNING: do _not_ update this file; it is automatically generated from modules.m
 -->
 
 <div class="alert alert-danger" role="alert">
-<strong>This is a mockup page!</strong>
+<strong>This page is under construction: it contains only mockup information!</strong>
 </div>
 
 
-# Software
+# Software Available in Software Repositories
 
-To use one or more of the below software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
-```sh
-module load bowtie2
-module load bowtie2/2.2.6
-module load python r bwa
-```
-
-These software modules are available from different _module repositories_, each providing several modules (more details below).  The available repositories are:
-
-<table>
-<tr>
-  <th>repository</th>
-  <th>description</th>
- </tr>
- <tr>
-  <td>
-  <strong>CBC</strong><br>
-  
-  </td>
-  <td>
-  <strong>Module Repository by CBC (Computational Biology Core)</strong><br>
-  Repository of modules shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>). When loading this module, your <code>MODULEPATH</code> will be extended and you will get access to a large number of additional modules. When unloading the module, the changes to <code>MODULEPATH</code> will be undone. Note that any modules from the CBC repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.<br>
-  URL: <a href="http://cbc.ucsf.edu/">http://cbc.ucsf.edu/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>Personal</strong><br>
-  
-  </td>
-  <td>
-  <strong>Modules in ~/modulefiles/</strong><br>
-  Personal modules in <code>~/modulefiles/</code>.  For instance, module definition file <code>~/modulefiles/foo/1.0.lua</code> provides module foo/1.0, which can be loaded using <code>module load foo/1.0</code>.<br>
-  </td>
- </tr>
-</table>
-<br>
-
-To get access to one or more of these module repositories and see what modules they provide (see below), load them as regular modules, e.g.
-```sh
-module load CBC
-module avail
-```
-
-_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBC` appends `$MODULEPATH_ROOT/CBC` to your `$MODULEPATH`.
-
-
+Below is a list of all available Software Repositories, which each provide a set of software tools that can be accessed using `module load <repos>` and then `module load <software>`.  For further instructions on how to use software modules, see the page on [Software Modules].
 
 ## Module Repository 'CBC'
 
-Maintained by: [Computational Biology Core](http://cbc.ucsf.edu)
+<dl>
+<dt>Title</dt>
+<dd>
+Module Repository by CBC (Computational Biology Core)
+</dd>
+<dt>Description</dt>
+<dd>
+Repository of modules shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>). When loading this module, your <code>MODULEPATH</code> will be extended and you will get access to a large number of additional modules. When unloading the module, the changes to <code>MODULEPATH</code> will be undone. Note that any modules from the CBC repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.<br>
+</dd>
+<dt>Website</dt>
+<dd>
+ <a href="http://cbc.ucsf.edu/">http://cbc.ucsf.edu/</a>
+</dd>
+<dt>Maintainer</dt>
+<dd>
+  Henrik Bengtsson, <a href="http://cbc.ucsf.edu/">Computational Biology Core</a>
+</dd>
+<dt>Bug Reports</dt>
+<dd>
+  Please contact the maintainer of this repository
+</dd>
+</dl>
 
 <table>
-<tr>
-  <th>module &amp; versions</th>
-  <th>description</th>
+ <tr>
+  <th>Module &amp; versions</th>
+  <th>Description</th>
  </tr>
  <tr>
   <td>
@@ -578,4 +553,6 @@ Maintained by: [Computational Biology Core](http://cbc.ucsf.edu)
 <br>
 <br>
 <br>
-_The above information was automatically generated on 2017-07-13 17:55:08._
+_The above information was automatically generated on 2017-08-08 17:55:08 (source: `module spider`)._
+
+[Software Modules]: {{ '/software/software-modules.html' | relative_url }}
