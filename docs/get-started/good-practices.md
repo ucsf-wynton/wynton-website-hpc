@@ -9,5 +9,3 @@ In order to maximize the efficieny of the cluster and **decrease your** (and oth
 * Make your script agile to [SGE resources allocated to your job]({{ '/scheduler/sge-envvars.html' | relative_url }}) (&rArr; scalable and lower risk of using resources not requested)
 
 * [Work toward local scratch]({{ '/scheduler/using-local-scratch.html' | relative_url }}) on the compute nodes (&rArr; faster processing and less load on shared disk I/O)
-
-* Use [a queue that is most suitable for your needs]({{ '/scheduler/queues.html' | relative_url }}) (&rArr; lower latency and faster processing)
