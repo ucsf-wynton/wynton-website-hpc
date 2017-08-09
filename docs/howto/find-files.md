@@ -1,13 +1,13 @@
 # Find Files
 
-## Find files of a certain type
+## Find files with a certain filename extension
 
 To find all FASTQ or SAM files under `~/data/`, do
 ```sh
 find `~/data/` -type f -name '*.fastq' -o -name '*.fq' -o -name '*.sam'
 ```
 
-## Find large files of a certain type
+## Find large files with a certain filename extension
 
 To find all FASTQ and SAM files larger than 50,000 KiB (~= 48.8 MiB) in your home directory (recursively), do
 ```sh
