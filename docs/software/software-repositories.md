@@ -10,7 +10,7 @@ WARNING: do _not_ update this file; it is automatically generated from modules.m
 
 # Software Available in Software Repositories
 
-Below is a list of all available Software Repositories, which each provide a set of software tools that can be accessed using `module load <repos>` and then `module load <software>`.  For further instructions on how to use software modules, see the page on [Software Modules].
+Below is a list of all available Software Repositories, which each provides a set of software tools that can be accessed using `module load <repos>` and then `module load <software>`.  For further instructions on how to use software modules, see the page on [Software Modules].
 
 ## Module Repository 'CBC'
 
