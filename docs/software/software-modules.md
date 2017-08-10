@@ -4,8 +4,8 @@ In addition to the [core software] tools that are available by default, addition
 
 <table>
 <tr>
-  <th>repository</th>
-  <th>description</th>
+  <th>Repository</th>
+  <th>Description</th>
  </tr>
  <tr>
   <td>
@@ -13,29 +13,13 @@ In addition to the [core software] tools that are available by default, addition
   
   </td>
   <td>
-  <strong>Module Repository by CBC (Computational Biology Core)</strong><br>
-  Repository of modules shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>). When loading this module, your <code>MODULEPATH</code> will be extended and you will get access to a large number of additional modules. When unloading the module, the changes to <code>MODULEPATH</code> will be undone. Note that any modules from the CBC repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.<br>
-  URL: <a href="http://cbc.ucsf.edu/">http://cbc.ucsf.edu/</a><br>
-  <br>
-  Usage:<br>
-  <ul>
-   <li>Enable repository: <code>module load CBC</code></li>
-   <li>List content (must be enabled): <code>module avail</code> and <code>module spider</code></li>
-   <li>Disable repository: <code>module unload CBC</code></li>
-  </ul>
-
-  List of software: See the <a href="{{ '/software/software-repositories.html' | relative_url }}">Software Repositories</a> page
-  <br><br>
-
+  <strong>The Computational Biology Core (CBC) Software Repository</strong><br>
+  Repository of software shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.
+  See the <a href="{{ '/software/software-repositories.html' | relative_url }}">Software Repositories</a> page for further details.
   </td>
  </tr>
 </table>
 <br>
-
-<div class="alert alert-danger" role="alert">
-<strong>The above table is under construction: it contains only mockup information!</strong>
-</div>
-
 
 To get access to the software available in one or more of these repositories, load the repository using `module load <repos>` (on command line and in script).  After loading a software repository, all of its software tools are available as _environment modules_, that is, they can in turn be loaded using `module load <software>`.
 
@@ -67,6 +51,11 @@ To disable ("unload") R, that is, remove it from the search path, do:
 module unload r
 ```
 
+<br>
+<div class="alert alert-warning" role="alert">
+If you unload a <em>repository</em>, any of its software modules that are loaded will be <em>deactivated</em> - they remain listed but act as they never have been loaded.  If you then reload the repository, such software modules will be activated again.
+</div>
+
 To see what software modules you have currently loaded, use:
 ```sh
 module list
@@ -90,6 +79,7 @@ If the software repository provides more than one version of each software, spec
 module load r/3.1.3
 ```
 _Comment_: If another version of R is already loaded, that will automatically be unloaded before loading the new version.
+
 
 
 <br>

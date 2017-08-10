@@ -39,7 +39,7 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
 
 <table>
  <tr>
-  <th>Module &amp; versions</th>
+  <th>Module &amp; Versions</th>
   <th>Description</th>
  </tr>
  <tr>
