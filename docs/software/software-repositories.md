@@ -17,23 +17,27 @@ Below is a list of all available Software Repositories, which each provides a se
 <dl>
 <dt>Title</dt>
 <dd>
-Module Repository by CBC (Computational Biology Core)
+The Computational Biology Core (CBC) Software Repository
 </dd>
 <dt>Description</dt>
 <dd>
-Repository of modules shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>). When loading this module, your <code>MODULEPATH</code> will be extended and you will get access to a large number of additional modules. When unloading the module, the changes to <code>MODULEPATH</code> will be undone. Note that any modules from the CBC repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.<br>
+Repository of software shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.
 </dd>
 <dt>Website</dt>
 <dd>
  <a href="http://cbc.ucsf.edu/">http://cbc.ucsf.edu/</a>
 </dd>
+<dt>Bug Reports</dt>
+<dd>
+  Please contact the maintainer of this repository
+</dd>
 <dt>Maintainer</dt>
 <dd>
   Henrik Bengtsson, <a href="http://cbc.ucsf.edu/">Computational Biology Core</a>
 </dd>
-<dt>Bug Reports</dt>
+<dt>Usage</dt>
 <dd>
-  Please contact the maintainer of this repository
+  <code>module load CBC</code>
 </dd>
 </dl>
 
@@ -41,28 +45,6 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
  <tr>
   <th>Module &amp; Versions</th>
   <th>Description</th>
- </tr>
- <tr>
-  <td>
-  <strong>anaconda</strong><br>
-  
-  </td>
-  <td>
-  <strong>[DEPRECATED] Anaconda Package Manager w/ CBC-shared installations</strong><br>
-  Open Data Science Platform powered by Python<br>
-  URL: <a href="https://www.continuum.io/anaconda-overview">https://www.continuum.io/anaconda-overview</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>anaconda-python</strong><br>
-  <em>2.7.13</em>
-  </td>
-  <td>
-  <strong>[DEPRECATED] Anaconda: The Python Programming Language</strong><br>
-  The Python programming language (by Anaconda)<br>
-  URL: <a href="https://www.python.org/">https://www.python.org/</a><br>
-  </td>
  </tr>
  <tr>
   <td>
@@ -143,39 +125,6 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
  </tr>
  <tr>
   <td>
-  <strong>cbc-bin</strong><br>
-  <em>0.1.0</em>
-  </td>
-  <td>
-  <strong>CBC-shared Scripts and Binaries</strong><br>
-  Utility scripts and binaries of the UCSF CBC group.<br>
-  URL: <a href="https://cbc.ucsf.edu/">https://cbc.ucsf.edu/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>cbc-devel</strong><br>
-  <em>0.1.0</em>
-  </td>
-  <td>
-  <strong>CBC-shared Developer's Environment</strong><br>
-  Setup for building and installing software inline with the CBC-shared setup.<br>
-  URL: <a href="https://cbc.ucsf.edu/">https://cbc.ucsf.edu/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>cbc-shared</strong><br>
-  0.1.0, 0.1.2, <em>0.1.1</em>
-  </td>
-  <td>
-  <strong>CBC-shared Software: Default Set</strong><br>
-  When loaded, this module loads the default set of CBC-shared software.  This replaces and is backward compatible with the deprecated usage of <code>source /home/shared/cbc/bashrc</code>.<br>
-  URL: <a href="https://github.com/UCSF-TI/TIPCC/wiki/Software-shared-by-CBC">https://github.com/UCSF-TI/TIPCC/wiki/Software-shared-by-CBC</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
   <strong>control-freec</strong><br>
   2.5, <em>7.2-3</em>
   </td>
@@ -242,17 +191,6 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
  </tr>
  <tr>
   <td>
-  <strong>git</strong><br>
-  2.1.1, <em>2.1.3</em>
-  </td>
-  <td>
-  <strong>Git - Distributed Version Control System</strong><br>
-  Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.<br>
-  URL: <a href="https://git-scm.com/">https://git-scm.com/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
   <strong>gitflow</strong><br>
   <em>0.4.2</em>
   </td>
@@ -270,7 +208,7 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
   <td>
   <strong>The Go Programming Language</strong><br>
   Go is a cross-platform open-source programming language that makes it easy to build simple, reliable, and efficient software.<br>
-  URL: <a href="https://golang.org//">https://golang.org//</a><br>
+  URL: <a href="https://golang.org/">https://golang.org/</a><br>
   </td>
  </tr>
  <tr>
@@ -330,100 +268,13 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
  </tr>
  <tr>
   <td>
-  <strong>jdk</strong><br>
-  1.6.0, 1.7.0, <em>1.8.0</em>
-  </td>
-  <td>
-  <strong>Java Development Kit (JDK)</strong><br>
-  The Java programming language<br>
-  URL: <a href="https://www.java.com/">https://www.java.com/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>lua</strong><br>
-  5.1.4, <em>5.3.3</em>
-  </td>
-  <td>
-  <strong>The Lua Programming Language</strong><br>
-  The Lua programming language<br>
-  URL: <a href="https://www.lua.org/">https://www.lua.org/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>luarocks</strong><br>
-  <em>2.4.2</em>
-  </td>
-  <td>
-  <strong>LuaRocks - the Lua package manager</strong><br>
-  LuaRocks is the package manager for Lua modules.<br>
-  URL: <a href="https://luarocks.org/">https://luarocks.org/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>matlab</strong><br>
-  R2010b, <em>R2012a</em>
-  </td>
-  <td>
-  <strong>The Matlab Programming Language</strong><br>
-  The Matlab programming language<br>
-  URL: <a href="https://www.mathworks.com/products/matlab.html">https://www.mathworks.com/products/matlab.html</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>pandoc</strong><br>
-  <em>1.19.2-0</em>
-  </td>
-  <td>
-  <strong>Pandoc - a universal document converter</strong><br>
-  Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library.<br>
-  URL: <a href="http://pandoc.org/">http://pandoc.org/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>pip</strong><br>
-  <em>9.0.1</em>
-  </td>
-  <td>
-  <strong>pip - The PyPA recommended tool for installing Python packages</strong><br>
-  The PyPA recommended tool for installing Python packages.<br>
-  URL: <a href="https://pypi.python.org/pypi/pip">https://pypi.python.org/pypi/pip</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>python</strong><br>
-  2.7.3, 2.7.4, <em>2.7.9</em>
-  </td>
-  <td>
-  <strong>The Python Programming Language</strong><br>
-  The Python programming language<br>
-  URL: <a href="https://www.python.org/">https://www.python.org/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
   <strong>r</strong><br>
-  devel, oldrel, patched, release, 2.7.0, 2.8.0, 2.10.0, 2.11.0, 2.11.1, 2.12.2, 2.13.1, 2.13.2, 2.14.0, 2.15.0, 2.15.1, 2.15.2, 2.15.3, 3.0.0, 3.0.1, 3.0.2, 3.0.3, 3.1.0, 3.1.1, 3.1.2, 3.1.3, 3.2.0, 3.2.1, 3.2.2, 3.2.3, 3.2.4, 3.2.5, 3.3.0, 3.3.1, 3.3.2, 3.3.3, 3.4.0, 3.4.1patched, 3.5.0devel, <em>3.4.1</em>
+  3.4.0, <em>3.4.1</em>
   </td>
   <td>
   <strong>The R Programming Language</strong><br>
   The R programming language<br>
   URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>r-extras</strong><br>
-  <em>0.1.0</em>
-  </td>
-  <td>
-  <strong>R Extras: Additional software, libraries and include paths needed to build some R / Bioconductor packages</strong><br>
-  Additional software, libraries and include paths needed to build some R / Bioconductor packages<br>
   </td>
  </tr>
  <tr>
@@ -494,28 +345,6 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
  </tr>
  <tr>
   <td>
-  <strong>udocker</strong><br>
-  <em>1.0.0</em>
-  </td>
-  <td>
-  <strong>udocker</strong><br>
-  A basic user tool to execute simple containers in batch or interactive systems without root privileges.<br>
-  URL: <a href="https://github.com/indigo-dc/udocker">https://github.com/indigo-dc/udocker</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>valgrind</strong><br>
-  3.10.0, <em>3.8.1</em>
-  </td>
-  <td>
-  <strong>Valgrind - a programming tool for memory debugging, memory leak detection, and profiling</strong><br>
-  Valgrind is a programming tool for memory debugging, memory leak detection, and profiling.<br>
-  URL: <a href="http://www.valgrind.org/">http://www.valgrind.org/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
   <strong>varscan</strong><br>
   2.2.3, <em>2.3.9</em>
   </td>
@@ -534,17 +363,6 @@ Repository of modules shared by the Computational Biology Core (<a href="http://
   <strong>VCFtools</strong><br>
   VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. The aim of VCFtools is to provide easily accessible methods for working with complex genetic variation data in the form of VCF files.<br>
   URL: <a href="https://vcftools.github.io/">https://vcftools.github.io/</a><br>
-  </td>
- </tr>
- <tr>
-  <td>
-  <strong>wordspy</strong><br>
-  <em>1.5</em>
-  </td>
-  <td>
-  <strong>WordSpy</strong><br>
-  A steganalysis-based approach to comprehensive identification and characterization of functional regulatory elements.<br>
-  URL: <a href="http://cic.cs.wustl.edu/wordspy/dltemp.htm">http://cic.cs.wustl.edu/wordspy/dltemp.htm</a><br>
   </td>
  </tr>
 </table>
