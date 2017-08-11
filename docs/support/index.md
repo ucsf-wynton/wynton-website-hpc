@@ -6,15 +6,15 @@
 
 For questions and feature requests, please use one of the following channels:
 
-1. the [Wynton mailing list]
+1. Mailing list: wynton-help (not yet available)
+
+2. Slack Channel: [ucsf-wynton](https://ucsf-wynton.slack.com/) ([signup](https://join.slack.com/t/ucsf-wynton/signup))
 
 <!--
-2. the [Wynton issue tracker]
+3. the [Wynton issue tracker]
 -->
 
-These forums are monitored by the Wynton system administrators.
-
-There are several advantages of using these communal resources.  For instance, if multiple users experience the same issues, it helps avoiding duplicating similar questions and requests.  When new software installations are requested, it allows everyone to see what is in the pipeline and to share their interests in the same software ("we need it too").  It also allows anyone to reply, which increases your chances for quick resolutions.  The advantage of using the issue tracker rather than the mailing list is that we can easily refer back to previously resolved issues and answers.
+These are communal forums - feel free to ask questions, answer questions, and participate in discussions.
 
 If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate [dropping us an email]({{ '/about/contact.html' | relative_url }}).
 
