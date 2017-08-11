@@ -8,7 +8,7 @@ For questions and feature requests, please use one of the following channels:
 
 1. Mailing list: wynton-help (not yet available)
 
-2. Slack Channel: [ucsf-wynton](https://ucsf-wynton.slack.com/) ([signup](https://join.slack.com/t/ucsf-wynton/signup))
+2. Slack Team: [ucsf-wynton](https://ucsf-wynton.slack.com/) ([signup](https://join.slack.com/t/ucsf-wynton/signup))
 
 <!--
 3. the [Wynton issue tracker]
