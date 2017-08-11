@@ -1,3 +1,8 @@
+<div class="alert alert-danger" role="alert">
+<strong>This page is under construction: Shared Software Repositories are yet to be enabled on the cluster</strong>
+</div>
+
+
 # Software Modules
 
 In addition to the [core software] tools that are available by default, additional software is available via different [Software Repositories].  Note that some of these software tools are installed and maintained by other users or research groups of the cluster who have kindly agreed on sharing their efforts with other cluster users. Currently known and publicly shared repositories are:
