@@ -4,11 +4,19 @@ login:
   name: "wynlog1"
   hostname: "wynlog1.compbio.ucsf.edu"
   ip: "169.230.126.77"
-transfer:
+interactive_todo:
+  name: "interactive"
+  hostname: "interactive.wynton.ucsf.edu"
+  ip: "169.230.nnn.nnn"
+transfer_todo:
   name: "transfer"
   hostname: "transfer.wynton.ucsf.edu"
   ip: "169.230.nnn.nnn"
 interactive:
-  name: "interactive"
-  hostname: "interactive.wynton.ucsf.edu"
-  ip: "169.230.nnn.nnn"
+  name: "wynlog1"
+  hostname: "wynlog1.compbio.ucsf.edu"
+  ip: "169.230.126.77"
+transfer:
+  name: "wynlog1"
+  hostname: "wynlog1.compbio.ucsf.edu"
+  ip: "169.230.126.77"
