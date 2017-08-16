@@ -1,9 +1,9 @@
 title: 'UCSF HPC: Wynton'
 theme: jekyll-theme-minimal
 login:
-  name: "login"
-  hostname: "login.wynton.ucsf.edu"
-  ip: "169.230.nnn.nnn"
+  name: "wynlog1"
+  hostname: "wynlog1.compbio.ucsf.edu"
+  ip: "169.230.126.77"
 transfer:
   name: "transfer"
   hostname: "transfer.wynton.ucsf.edu"
