@@ -41,7 +41,7 @@ qsub -pe smp 4 -l mem_free=2G script.sh
 ```
 The scheduler will make sure your job is launched on a node with at least four cores available.
 
-Note, when writing your script, use SGE environment variable `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
+Note, when writing your script, use [SGE environment variable] `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
 ```sh
 bwa aln -t $NSLOTS ...
 ```
@@ -64,4 +64,5 @@ It is not possible to request _interactive jobs_.  Instead, there are dedicated 
 
 For further options and advanced usage, see [Advanced Usage](advanced-usage.html) of the scheduler.
 
+[SGE environment variable]: {{ '/scheduler/sge-envvars.html' | relative_url }}
 [interactive nodes]: {{ '/get-started/interactive-usage.html' | relative_url }}
