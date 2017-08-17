@@ -38,7 +38,7 @@ It is possible to set up password-less authenatication via a public-private SSH 
 
 # What is available on the login node?
 
-The login node is dedicated solely to very basic tasks such as copying and moving files on the shared file system, submitting jobs, and checking the status on existing jobs.  Note that most software tools are _not_ available on the login node, which means you can neither use it for prototyping scripts nor build software.  Instead, for such tasks, use an [interactive node], which are configured identically to the compute nodes.
+The login node is dedicated solely to very basic tasks such as copying and moving files on the shared file system, submitting jobs, and checking the status on existing jobs.  Note that most software tools are _not_ available on the login node, which means you can neither use it for prototyping scripts nor build software.  Instead, for such tasks, use an [interactive node], which is configured identically to the compute nodes.
 
 
 # Logout
