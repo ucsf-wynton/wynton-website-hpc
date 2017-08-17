@@ -36,6 +36,11 @@ It is possible to set up password-less authenatication via a public-private SSH 
 </div>
 
 
+# What is available on the login node?
+
+The login node is dedicated solely to very basic tasks such as copying and moving files on the shared file system, submitting jobs, and checking the status on existing jobs.  Note that most software tools are _not_ available on the login node, which means you can neither use it for prototyping scripts nor build software.  Instead, for such tasks, use an [interactive node], which are configured identically to the compute nodes.
+
+
 # Logout
 
 Like for all Unix-based system, to log out from Wynton, type `exit` or `logout` (standard Unix commands) and press ENTER.  For example,
@@ -46,5 +51,8 @@ Connection to {{ site.login.hostname }} closed.
 {local}$ 
 ```
 
+An alternative is to press Ctrl-D (signals "QUIT") at the command-line prompt.
+
 
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
+[interactive node]: {{ '/get-started/interactive-usage.html' | relative_url }}

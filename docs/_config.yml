@@ -13,8 +13,8 @@ transfer_todo:
   hostname: "transfer.wynton.ucsf.edu"
   ip: "169.230.nnn.nnn"
 interactive:
-  name: "wynlog1"
-  hostname: "wynlog1.compbio.ucsf.edu"
+  name: "interactive"
+  hostname: "interactive-mockup.compbio.ucsf.edu"
   ip: "169.230.126.77"
 transfer:
   name: "wynlog1"
