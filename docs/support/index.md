@@ -6,7 +6,7 @@ For questions and feature requests, please use one of the following channels:
   - Subscribe / unsubscribe: (a) go to [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help), (b) click 'Subscribe or Unsubscribe', (c) enter your full name and preferred email address, and (d) click link in confirmation email that arrives within minutes
   - Web archives: [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help) (only visible to subscribed list members)
 
-2. **Slack Team [ucsf-wynton](https://ucsf-wynton.slack.com/)**
+2. **Slack team [ucsf-wynton](https://ucsf-wynton.slack.com/)**
   - Join: (a) go to [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (b) enter your USCF email address
 
 <!--
