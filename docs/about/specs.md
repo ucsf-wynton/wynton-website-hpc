@@ -21,7 +21,8 @@ cin-id3   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
 qb3-hmid1 |              48 |  2.50 GHz |  512 GiB |       1.5 TiB |
 qb3-id1   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
 qb3-id2   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-**Total** |         **528** |           |          |               |
+qb3-id3   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
+**Total** |         **576** |           |          |               |
 
 All compute nodes have Intel Xeon CPU E5-2680 v3 @ 2.50GHz processors and local solid state drives (SSDs).
 
