@@ -38,6 +38,8 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 1. {{ site.login.name  }}: `{{ site.login.hostname }}`
 2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
 
+The login nodes can only be access from within the UCSF network.
+
 
 ### Interactive Nodes
 
@@ -46,6 +48,12 @@ The cluster has one interactive node:
 1. {{ site.interactive.name }}: `{{ site.interactive.hostname }}`
 
 Interactive nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
+
+
+## Storage
+
+Each user may use up to 200 GiB disk space in the home directory.  Research groups can add additional storage space by either mounting their existing storage or purchase new.
+
 
 
 
