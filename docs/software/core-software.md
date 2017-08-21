@@ -1,6 +1,6 @@
 # Core System Software
 
-A large number of common Linux software tools are available on the cluster as part of the core setup.  Below follows a small excerpt of what tools are available.
+A large number of common Linux software tools are available on the cluster (compute nodes and interactive nodes) as part of the core setup.  Below follows a small excerpt of what tools are available.
 <!--
 Additional software can be found in the [Software Repositories].
 -->
