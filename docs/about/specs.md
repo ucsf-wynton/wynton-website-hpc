@@ -6,7 +6,7 @@ All nodes on the cluster runs [CentOS 7.3] which is updated on a regular basis.
 The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{ '/scheduler/queues.html' | relative_url }}) for both communal and lab-priority tasks.
 
 
-## Hardware
+## Compute Nodes
 
 Node      | Number of Cores |       CPU |      RAM | Local Scratch |
 ----------|----------------:|----------:|---------:|--------------:|
@@ -24,6 +24,26 @@ qb3-id2   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
 **Total** |         **528** |           |          |               |
 
 All compute nodes have Intel Xeon CPU E5-2680 v3 @ 2.50GHz processors and local solid state drives (SSDs).
+
+The compute nodes can only be utilized by submitting jobs via the scheduler - it is _not_ possible to explicitly log in to compute nodes.
+
+
+### Login Nodes
+
+The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_url }}) via SSH to one of two login nodes:
+
+1. {{ site.login.name  }}: `{{ site.login.hostname }}`
+2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
+
+
+### Interactive Nodes
+
+The cluster has one interactive node:
+
+1. {{ site.interactive.name }}: `{{ site.interactive.hostname }}`
+
+Interactive nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
+
 
 
 ## Network
