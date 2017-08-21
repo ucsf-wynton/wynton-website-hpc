@@ -23,4 +23,4 @@ If so, you have a few options:
    <br><br>
 
 4. Core software
-   - If a [core software]({{ '/software/core-software.html' | relative_url }}) is missing, it may be that the [the system administrators]({{ '/about/contact.html' | relative_url }}) are willing to add it to the core installation.
+   - If a [core software]({{ '/software/core-software.html' | relative_url }}) is missing, it may be that the [the system administrators]({{ '/about/contact.html' | relative_url }}) are willing to add it to the core installation
