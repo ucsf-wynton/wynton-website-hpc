@@ -14,11 +14,11 @@ Although you should always run analyses via the job scheduler, there are times w
 
 ## Instructions
 
-To access an _interactive node_, assuming your username is `alice`,
+To access an _interactive node_,
 
 1. make sure you are [logged in to the cluster], and
 
-2. type `ssh alice@{{ site.interactive.hostname }}` and press ENTER.
+2. type `ssh {{ site.interactive.hostname }}` and press ENTER.
 
 
 ### Example
@@ -27,7 +27,7 @@ From one of the login nodes, do:
 
 ```sh
 [alice@{{ site.login.name }} ~]$ 
-{local}$ ssh alice@{{ site.interactive.hostname }}
+{local}$ ssh {{ site.interactive.hostname }}
 [alice@{{ site.interactive.name }} ~]$ 
 ```
 
