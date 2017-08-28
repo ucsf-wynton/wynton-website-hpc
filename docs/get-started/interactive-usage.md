@@ -1,8 +1,3 @@
-<div class="alert alert-danger" role="alert">
-<strong>This page is under construction: Interactive nodes are yet to be set up for the cluster.</strong>
-</div>
-
-
 # Interactive Usage
 
 Although you should always run analyses via the job scheduler, there are times when you may need to do it interactively at the command-line prompt.  For instance, you may need to install some software, a few R packages, or run some quick tests on your new pipeline.  Wynton provides _interactive nodes_ dedicated for such short-term usages and that are configured identically to the compute nodes.
@@ -26,8 +21,7 @@ To access an _interactive node_,
 From one of the login nodes, do:
 
 ```sh
-[alice@{{ site.login.name }} ~]$ 
-{local}$ ssh {{ site.interactive.hostname }}
+[alice@{{ site.login.name }} ~]$ ssh {{ site.interactive.hostname }}
 [alice@{{ site.interactive.name }} ~]$ 
 ```
 
