@@ -2,7 +2,7 @@
 
 The UCSF Wynton compute cluster is funded and administered cooperatively by UCSF campus IT and key research groups.  It is available without costs to all UCSF researchers; however, priority access is granted to those who contribute resources.  Non-contributing users may use CPU cores when these cores would otherwise be idle.  Contributing users are granted shares of the cluster, proportionate to the contribution, that translate into priority access to the computing power.
 
-To request access and get an account on the cluster, please [contact us] with the following information on the new user:
+To request access and get an account on the cluster, please [contact us] with the following information:
 
 1. First and Last name
 2. UCSF email address
