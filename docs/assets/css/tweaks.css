@@ -98,6 +98,11 @@ a:hover, a:focus {
   font-weight: normal;
 }
 
+code {
+  background: rgb(245, 245, 245); /* Fallback if rgba() is missing */
+  background: rgba(245, 245, 245, .5);
+}
+
 .printonly {
   display: none;
 }
