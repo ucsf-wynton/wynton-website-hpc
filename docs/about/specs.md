@@ -38,12 +38,12 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 1. {{ site.login.name  }}: `{{ site.login.hostname }}`
 2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
 
-The login nodes can only be access from within the UCSF network.
+The login nodes can only be accessed from within the UCSF network.
 
 
 ### Interactive Nodes
 
-The cluster has one interactive node:
+The cluster has one interactive node for the purpose of validating scripts, prototyping pipelines, compiling software etc.:
 
 1. {{ site.interactive.name }}: `{{ site.interactive.hostname }}`
 
