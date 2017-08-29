@@ -156,9 +156,12 @@
      {% assign page_url = page.url | remove: '.html' %}
      {% if page_url == '/' %}
      {% assign page_url = '/index' %}
-     {% endif %}     
-     <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/tree/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank"><span class="glyphicon glyphicon-edit" style="float: right;" title="Contribute to this page!"></span></a>
-
+     {% endif %}
+     <span style="float: right;">
+       <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/commits/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank"><span class="glyphicon glyphicon-time" title="Change log for this page"></span></a>
+       :
+     <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/tree/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank"><span class="glyphicon glyphicon-edit" title="Contribute to this page"></span></a>
+     </span>
 <p class="muted credit" style="font-size: inherits;">
 <a href="{{ '/' | relative_url }}">HPC Wynton</a>
 ::
