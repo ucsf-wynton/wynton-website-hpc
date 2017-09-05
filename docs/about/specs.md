@@ -43,7 +43,7 @@ The login nodes can only be accessed from within the UCSF network.
 
 ### Interactive Nodes
 
-The cluster has interactive nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more:
+The cluster has interactive nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Interactive nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
 
 Node                        | Number of Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
 ----------------------------|----------------:|----------:|---------:|-----------------:|-------------:|
@@ -51,15 +51,10 @@ Node                        | Number of Cores |       CPU |      RAM | Local `/s
 
 The interactive nodes have Intel Xeon CPU E5430 @ 2.66GHz processors and local solid state drives (SSDs).
 
-Interactive nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
-
-
 
 ## Storage
 
 Each user may use up to 200 GiB disk space in the home directory.  Research groups can add additional storage space by either mounting their existing storage or purchase new.
-
-
 
 
 ## Network
