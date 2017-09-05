@@ -10,21 +10,21 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ### Compute Nodes
 
-Node      | Number of Cores |       CPU |      RAM | Local Scratch |
-----------|----------------:|----------:|---------:|--------------:|
-cc-hmid1  |              48 |  2.50 GHz |  512 GiB |       1.5 TiB |
-cc-id1    |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-cc-id2    |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-cc-id3    |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-cin-hmid1 |              48 |  2.50 GHz |  512 GiB |       1.5 TiB |
-cin-id1   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-cin-id2   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-cin-id3   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-qb3-hmid1 |              48 |  2.50 GHz |  512 GiB |       1.5 TiB |
-qb3-id1   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-qb3-id2   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-qb3-id3   |              48 |  2.50 GHz |  256 GiB |       1.5 TiB |
-**Total** |         **576** |           |          |               |
+Node      | Number of Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
+----------|----------------:|----------:|---------:|-----------------:|-------------:|
+cc-hmid1  |              48 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
+cc-id1    |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cc-id2    |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cc-id3    |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cin-hmid1 |              48 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
+cin-id1   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cin-id2   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cin-id3   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+qb3-hmid1 |              48 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
+qb3-id1   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+qb3-id2   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+qb3-id3   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+**Total** |         **576** |           |          |                  |              |
 
 All compute nodes have Intel Xeon CPU E5-2680 v3 @ 2.50GHz processors and local solid state drives (SSDs).
 
@@ -43,11 +43,16 @@ The login nodes can only be accessed from within the UCSF network.
 
 ### Interactive Nodes
 
-The cluster has one interactive node for the purpose of validating scripts, prototyping pipelines, compiling software etc.:
+The cluster has interactive nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more:
 
-1. {{ site.interactive.name }}: `{{ site.interactive.hostname }}`
+Node                        | Number of Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
+----------------------------|----------------:|----------:|---------:|-----------------:|-------------:|
+{{ site.interactive.name }} |               8 |  2.66 GHz |   16 GiB |        0.125 TiB |      4.0 GiB |
+
+The interactive nodes have Intel Xeon CPU E5430 @ 2.66GHz processors and local solid state drives (SSDs).
 
 Interactive nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
+
 
 
 ## Storage
