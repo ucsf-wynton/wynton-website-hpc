@@ -1,5 +1,6 @@
-<div class="alert alert-danger" role="alert">
-STATUS UPDATE (August 26, 2017): The goal is for Wynton go live in the next few weeks.  Initially, Wynton will operate in a beta stage where early adopters will help us identify remaining issues, bugs, and common user needs that have been overseen by the Wynton Technical Working Group.  As such initial problems are resolved, we will roll out access to more users and groups.  If you are interested in early access to Wynton, you may already now <a href="{{ '/about/join.html' | relative_url }}">reach out to us</a>.
+<div class="alert alert-info" role="alert">
+<strong>NEWS</strong>:<br>
+2017-09-07: Wynton is live.
 </div>
 
 # Wynton - UCSF Research Computing at Scale
