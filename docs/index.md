@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert">
-<strong>NEWS</strong>:<by>
+<strong>NEWS</strong>:<br/>
 2017-09-07: Wynton is live.
 </div>
 
