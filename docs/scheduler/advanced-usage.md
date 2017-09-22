@@ -26,4 +26,4 @@ This allows you to pass it in downstream calls, e.g. `qstat -j $job_id` and `qde
 For more help on the SGE scheduler, please see:
 
 * [Grid Engine HOWTOs](http://arc.liv.ac.uk/SGE/howto/howto.html) - by the Son of Grid Engine Project
-* [USCF QB3 wiki](https://salilab.org/qb3cluster) - the UCSF QB3 cluster uses SGE as well
+* [USCF QB3 wiki](https://salilab.org/qb3cluster) - the UCSF QB3 cluster uses SGE as well, and a similar setup in general
