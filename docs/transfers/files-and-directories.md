@@ -5,6 +5,15 @@ To set up password-free file transfers, see <a href="{{ '/howto/log-in-without-p
 
 # Transfer Files and Directories
 
+For _storage_ mounted directly_ on the Wynton cluster, files can be transferred to and from the cluster using regular file copying, e.g. `cp` and `rsync`.
+For _non-mounted storage_, files may be transfered to and from the cluster via secure copying, e.g. `scp` and `sftp`, which can be utilized via `rsync`.
+For _file downloads_ from online resources, tools such as `curl`, `wget`, and `rsync` may be used.
+
+<div class="alert alert-warning" role="alert">
+<a href="{{ '/about/specs.html' | relative_url }}">Compute nodes</a> have no internet access, i.e. they cannot be used for file transfers other than between mount points.  All other file transfers should be done via dedicated file-transfer nodes.
+</div>
+
+
 ## From a remote machine to the cluster
 
 ### Copy a single file to your cluster home directory
