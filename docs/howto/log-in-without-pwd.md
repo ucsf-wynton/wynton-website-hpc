@@ -80,6 +80,15 @@ Second, log into the cluster (still using a password) and _append_ the public ke
 alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ cd .ssh
 [alice@{{ site.login.name }} .ssh]$ cat laptop_to_tipcc_20170720.pub >> authorized_keys
+```
+Third, make sure that `~/.ssh/authorized_keys` is only accessible to you (otherwise that file will be completely ignored);
+```sh
+[alice@{{ site.login.name }} .ssh]$ chmod u=rw,go= ~/.ssh/authorized_keys
+[alice@{{ site.login.name }} .ssh]$ stat --format=%A ~/.ssh/authorized_keys
+-rw-------
+```
+Lastly, log out from the cluster:
+```sh
 [alice@{{ site.login.name }} .ssh]$ exit
 {local}$ 
 ```
