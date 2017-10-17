@@ -73,10 +73,6 @@ table {
 }
 tr:last-child { border-top: 2px solid #000; }
 </style>
-Hey everyone,
-
-
-We need new photos now for the CCSG poster and for the website. It looks like everyone could potentially be here this Wednesday (10/18) at noon for a ten minute photo session.  Please let me (just me) know if you can make it.  Also let me know if you have a good camera, like taking photos, etc.
 
 [CentOS]: https://www.centos.org/
 [Son of Grid Engine]: https://arc.liv.ac.uk/trac/SGE
