@@ -26,7 +26,7 @@ qb3-id2   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0
 qb3-id3   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
 **Total** |         **576** |           |          |                  |              |
 
-All compute nodes have Intel Xeon CPU E5-2680 v3 @ 2.50GHz processors and local solid state drives (SSDs).
+All compute nodes have Intel Xeon CPU E5-2680 v3 @ 2.50 GHz processors and local solid state drives (SSDs).
 
 The compute nodes can only be utilized by submitting jobs via the scheduler - it is _not_ possible to explicitly log in to compute nodes.
 
@@ -73,6 +73,10 @@ table {
 }
 tr:last-child { border-top: 2px solid #000; }
 </style>
+Hey everyone,
+
+
+We need new photos now for the CCSG poster and for the website. It looks like everyone could potentially be here this Wednesday (10/18) at noon for a ten minute photo session.  Please let me (just me) know if you can make it.  Also let me know if you have a good camera, like taking photos, etc.
 
 [CentOS]: https://www.centos.org/
 [Son of Grid Engine]: https://arc.liv.ac.uk/trac/SGE
