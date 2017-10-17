@@ -49,7 +49,7 @@ Node                        | Number of Cores |       CPU |      RAM | Local `/s
 ----------------------------|----------------:|----------:|---------:|-----------------:|-------------:|
 {{ site.interactive.name }} |               8 |  2.66 GHz |   16 GiB |        0.125 TiB |      4.0 GiB |
 
-The interactive nodes have Intel Xeon CPU E5430 @ 2.66GHz processors and local solid state drives (SSDs).
+The interactive nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local solid state drives (SSDs).
 
 
 ## Storage
