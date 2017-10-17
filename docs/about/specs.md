@@ -2,7 +2,7 @@
 
 ## Software environment
 
-All nodes on the cluster runs [CentOS 7.4] which is updated on a regular basis.
+All nodes on the cluster runs [CentOS] 7.4 which is updated on a regular basis.
 The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{ '/scheduler/queues.html' | relative_url }}) for both communal and lab-priority tasks.
 
 
@@ -74,6 +74,6 @@ table {
 tr:last-child { border-top: 2px solid #000; }
 </style>
 
-[CentOS 7.3]: https://www.centos.org/
+[CentOS]: https://www.centos.org/
 [Son of Grid Engine]: https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
