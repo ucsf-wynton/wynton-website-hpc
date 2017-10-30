@@ -12,19 +12,19 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 Node      | Number of Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
 ----------|----------------:|----------:|---------:|-----------------:|-------------:|
-cc-hmid1  |              48 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
-cc-id1    |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-cc-id2    |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-cc-id3    |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-cin-hmid1 |              48 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
-cin-id1   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-cin-id2   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-cin-id3   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-qb3-hmid1 |              48 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
-qb3-id1   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-qb3-id2   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-qb3-id3   |              48 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
-**Total** |         **576** |           |          |                  |              |
+cc-hmid1  |              24 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
+cc-id1    |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cc-id2    |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cc-id3    |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cin-hmid1 |              24 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
+cin-id1   |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cin-id2   |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+cin-id3   |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+qb3-hmid1 |              24 |  2.50 GHz |  512 GiB |          1.5 TiB |      4.0 GiB |
+qb3-id1   |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+qb3-id2   |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+qb3-id3   |              24 |  2.50 GHz |  256 GiB |          1.5 TiB |      4.0 GiB |
+**Total** |         **288** |           |          |                  |              |
 
 All compute nodes have Intel Xeon CPU E5-2680 v3 @ 2.50 GHz processors and local solid state drives (SSDs).
 
