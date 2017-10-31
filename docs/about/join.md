@@ -25,7 +25,7 @@ To request access and get an account on the cluster, please [contact us] with th
 4. UCSF Principle Investigator (PI), if any
 5. CGL Kerberos username, if any
 6. UCSF Employee ID (nine digits), if any
-7. Preferred username
+7. Preferred username and one alternate
 8. Previous HPC cluster experience? (this will help us help you)
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
