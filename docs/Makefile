@@ -18,5 +18,4 @@ stop:
 
 
 build-wynton-hub:
-	git checkout wynton
 	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help
