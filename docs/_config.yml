@@ -1,3 +1,5 @@
+baseurl: /wynton-help
+
 title: 'UCSF Wynton HPC Cluster'
 theme: jekyll-theme-minimal
 login:
