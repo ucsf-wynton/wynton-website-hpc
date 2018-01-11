@@ -20,7 +20,7 @@ Because you can create and customize your own containers, and because Singularit
 
 ## Instructions
 
-All tasks for using Linux containers, such as downloading, building, and running containers, is done via the `singularity` client, where the most common command calls are:
+All tasks for using Linux containers, such as downloading, building, and running containers, is done via the `singularity` client and supported on Wynton.  The most common command calls are:
 
 * Using an existing container image:
   - `singularity run <image>` - run predefined script within container
@@ -29,6 +29,9 @@ All tasks for using Linux containers, such as downloading, building, and running
 
 * Downloading containers available online:
   - `singularity pull <url>` - import Singularity or Docker container
+
+* Building containers:
+  - `singularity build ...` - build Singularity containers locally
 
 For full details, see `singularity --help`, `man singularity`, and the [Singularity] website.
 
