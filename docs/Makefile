@@ -16,3 +16,6 @@ serve:
 stop:
 	pkill --echo --count "ruby2.3"
 
+
+wynton:
+	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help
