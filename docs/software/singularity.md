@@ -111,11 +111,7 @@ Exactly what is "run" is defined by the so called "runscript" of the Singularity
 [alice@{{ site.interactive.name }} lxc]$ 
 ```
 
-Note that, if you mark the image to be an executable, that is,
-```sh
-[alice@{{ site.interactive.name }} lxc]$ chmod ugo+x rocker_r-base.img
-```
-then you can run it as any other executable, e.g.
+Note that, the Singularity image is also an executable, which means that you can run with using the `singularity` tool, e.g.
 ```sh
 [alice@{{ site.interactive.name }} lxc]$ ./rocker_r-base.img --quiet
 > sum(1:10)
