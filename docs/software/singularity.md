@@ -32,9 +32,6 @@ All tasks for using Linux containers, such as downloading, building, and running
   - `singularity build <path>` - build a Singularity from local specifications
   - `singularity build <url>` - import Singularity or Docker container available online
 
-* Building containers:
-  - `singularity build ...` - build Singularity containers locally
-
 For full details, see `singularity --help`, `man singularity`, and the [Singularity] website.
 
 
