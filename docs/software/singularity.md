@@ -96,7 +96,7 @@ Type 'q()' to quit R.
 
 > sum(1:10)
 [1] 55
-> quit()
+> q()
 Save workspace image? [y/n/c]: n
 
 [alice@{{ site.interactive.name }} lxc]$ 
@@ -107,16 +107,16 @@ Exactly what is "run" is defined by the so called "runscript" of the Singularity
 [alice@{{ site.interactive.name }} lxc]$ singularity exec rocker_r-base.img R --quiet
 > sum(1:10)
 [1] 55
-> quit("no")
+> q("no")
 [alice@{{ site.interactive.name }} lxc]$ 
 ```
 
-Note that, the Singularity image is also an executable, which means that you can run with using the `singularity` tool, e.g.
+Note that, the Singularity image is also an executable, which means that you can run it without using the `singularity` tool, e.g.
 ```sh
 [alice@{{ site.interactive.name }} lxc]$ ./rocker_r-base.img --quiet
 > sum(1:10)
 [1] 55
-> quit("no")
+> q("no")
 [alice@{{ site.interactive.name }} lxc]$ 								
 ```
 
