@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-<strong>Where is Singularity 2.4.2?</strong>:  Although the current release version of is Singularity 2.4.2, Wynton only provides Singularity is 2.3.1.  The reason is that <a href="https://github.com/singularityware/singularity/pull/1218#issuecomment-362023939">2.4.2 has a show-stopping bug</a>.  As soon as Singularity has fixed this, we will upgrade.  /2018-02-08
+<strong>Where is Singularity 2.4.2?</strong>:  Although the current release version is Singularity 2.4.2, Wynton only provides Singularity 2.3.1.  The reason is that <a href="https://github.com/singularityware/singularity/pull/1218#issuecomment-362023939">2.4.2 has a show-stopping bug</a>.  As soon as Singularity has fixed this, we will upgrade.  /2018-02-08
 </div>
 
 # Singularity - Linux Containers
