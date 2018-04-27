@@ -29,7 +29,7 @@ where N is the number of GPUs your job will use and M is the number of MPI proce
 ## Running GPU applications
 Several CUDA runtimes are installed on the GPU nodes.  They can be loaded via modules just as above on the development nodes.  
 ### GPU selection
-When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable $SGE_GPU as a comma-delimited set of numbers.  Be sure to send this assignment to your application using the proper format for your application.
+When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable `$SGE_GPU` as a comma-delimited set of numbers.  Be sure to send this assignment to your application using the proper format for your application.
 
 ### CPU core usage
 Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores, there is no way to ensure that a GPU node's CPU cores don't get oversubscribed.  For this reason, please limit your CPU core usage to 4 CPU cores per GPU requested.  This will prevent CPU core overloading on all the GPU node types.
