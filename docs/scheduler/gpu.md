@@ -2,7 +2,7 @@
 
 ## Compiling GPU applications
 
-The CUDA development toolkit is installed on the [development nodes]({{ 'get-started/development-prototyping.html' | relative_url }}).  Several versions of CUDA are available via software modules.  To see the currently available versions, run the command:
+The CUDA development toolkit is installed on the [development nodes].  Several versions of CUDA are available via software modules.  To see the currently available versions, run the command:
 ```sh
 module avail
 ```
@@ -67,7 +67,8 @@ xprojects             NONE
 usage_scaling         NONE
 report_variables      NONE
 ```
-The above shows that host msg-iogpu3 has 2 GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722MiB (758054912 bytes) of free memory.
+The above shows that host `msg-iogpu3` has 2 GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
 
 [submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
 [list jobs]: {{ '/scheduler/list-jobs.html' | relative_url }}
+[development nodes]: {{ 'get-started/development-prototyping.html' | relative_url }}
