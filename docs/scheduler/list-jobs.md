@@ -30,7 +30,7 @@ For example,
 $ qstat -u '*'
 job-ID  prior   name       user state submit/start at     queue           slots ja-task-ID
 ------------------------------------------------------------------------------------------
- 80725 0.05508 job_qb3.sh alice     r 04/20/2018 15:24:13 long.q@mac-inst-hmid1      24
+380725 0.05508 job_qb3.sh alice     r 04/20/2018 15:24:13 long.q@mac-inst-hmid1      24
 380768 0.16819 proc0009.s carol     r 04/20/2018 15:00:28 long.q@msg-hmio3            4
 380815 0.05508 job_qb3.sh alice     r 04/20/2018 15:59:58 long.q@mac-inst-id1        24
 382375 0.05508 job_qb3.sh alice     r 04/21/2018 13:37:13 ondemand.q@mac-inst-id3    24
@@ -38,14 +38,14 @@ job-ID  prior   name       user state submit/start at     queue           slots 
 386435 0.16819 proc0010.s carol     r 04/25/2018 10:54:24 member.q@cdhi-idgpu1        4
 386532 0.05055 GATK_SUB_G charlie   r 04/25/2018 12:46:54 ondemand.q@mac-inst-id1    24
 386533 0.05055 GATK_SUB_G charlie   r 04/25/2018 12:46:54 ondemand.q@mac-inst-hmid1  24
- 86435 0.16819 proc0010.s carol     r 04/25/2018 10:54:24 member.q@cdhi-idgpu1        4
+386435 0.16819 proc0010.s carol     r 04/25/2018 10:54:24 member.q@cdhi-idgpu1        4
 386594 0.05055 GATK_SUB_G charlie   r 04/26/2018 00:22:30 long.q@cdhi-idgpu1         24
 387048 0.17577 C3Db2_REST bob       r 04/25/2018 23:02:30 gpu.q@msg-iogpu11           4
 387524 0.16566 class3d    alice     r 04/26/2018 10:34:00 gpu.q@msg-iogpu9            2
 387674 0.16566 class3d    alice     r 04/26/2018 13:40:30 gpu.q@msg-ihgpu3            2
 388578 0.05004 pedigree1  bob       r 04/27/2018 10:57:45 long.q@msg-ihgpu2           1 2
 388578 0.05004 pedigree2  bob       r 04/27/2018 10:57:45 long.q@msg-iogpu4           1 3
- 88806 0.05004 run_cluste bob       r 04/27/2018 15:06:33 long.q@qb3-id3              1 20
+388806 0.05004 run_cluste bob       r 04/27/2018 15:06:33 long.q@qb3-id3              1 20
 388693 0.50000 run_0423.s carol    qw 04/27/2018 12:53:02                             2
 388745 0.41908 test       carol   Eqw 04/27/2018 14:00:42                             3
 372081 0.16240 DIAGS      alice    qw 04/12/2018 10:44:20                             1
