@@ -55,9 +55,9 @@ _Comment_: SMP stands for [Symmetric multiprocessing](https://en.wikipedia.org/w
 
 
 
-## Developing, prototyping jobs
+## Interactive jobs
 
-It is currently not possible to request _interactive jobs_.  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
+It is currently _not_ possible to request _interactive_ jobs.  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
 
 
 ## See also
@@ -65,4 +65,4 @@ It is currently not possible to request _interactive jobs_.  Instead, there are 
 For further options and advanced usage, see [Advanced Usage](advanced-usage.html) of the scheduler.
 
 [SGE environment variable]: {{ '/scheduler/sge-envvars.html' | relative_url }}
-[interactive nodes]: {{ '/get-started/interactive-usage.html' | relative_url }}
+[development nodes]: {{ '/get-started/development-prototyping.html' | relative_url }}

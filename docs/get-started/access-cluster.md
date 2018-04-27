@@ -55,4 +55,4 @@ An alternative is to press Ctrl-D (signals "QUIT") at the command-line prompt.
 
 
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
-[development node]: {{ '/get-started/interactive-usage.html' | relative_url }}
+[development node]: {{ '/get-started/development-prototyping.html' | relative_url }}

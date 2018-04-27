@@ -2,7 +2,7 @@
 
 ## Compiling GPU applications
 
-The CUDA development toolkit is installed on the [development nodes]({{ 'get-started/interactive-usage.html' | relative_url }}).  Several versions of CUDA are available via software modules.  To see the currently available versions, run the command:
+The CUDA development toolkit is installed on the [development nodes]({{ 'get-started/development-prototyping.html' | relative_url }}).  Several versions of CUDA are available via software modules.  To see the currently available versions, run the command:
 ```sh
 module avail
 ```

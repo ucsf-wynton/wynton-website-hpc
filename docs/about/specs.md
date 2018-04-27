@@ -43,7 +43,7 @@ The login nodes can only be accessed from within the UCSF network.
 
 ### Development Nodes
 
-The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
+The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed using SSH]({{ '/get-started/development-prototyping.html' | relative_url }}) and only from the login nodes.
 
 Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
 ----------------------------|-----------------:|----------:|---------:|-----------------:|-------------:|
