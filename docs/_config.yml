@@ -8,7 +8,7 @@ login2:
   name: "wynlog2"
   hostname: "wynlog2.cc.ucsf.edu"
   ip: "169.230.134.15"
-interactive:
+devel:
   name: "qb3-int1"
   hostname: "qb3-int1"
   ip: "172.26.32.2"

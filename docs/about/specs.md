@@ -41,15 +41,15 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 The login nodes can only be accessed from within the UCSF network.
 
 
-### Interactive Nodes
+### Development Nodes
 
-The cluster has interactive nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Interactive nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
+The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed using SSH]({{ '/get-started/interactive-usage.html' | relative_url }}) and only from the login nodes.
 
 Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
 ----------------------------|-----------------:|----------:|---------:|-----------------:|-------------:|
-{{ site.interactive.name }} |                8 |  2.66 GHz |   16 GiB |        0.125 TiB |      4.0 GiB |
+{{ site.devel.name }} |                8 |  2.66 GHz |   16 GiB |        0.125 TiB |      4.0 GiB |
 
-The interactive nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local solid state drives (SSDs).
+The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local solid state drives (SSDs).
 
 
 ## Storage

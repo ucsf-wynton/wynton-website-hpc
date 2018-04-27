@@ -55,9 +55,9 @@ _Comment_: SMP stands for [Symmetric multiprocessing](https://en.wikipedia.org/w
 
 
 
-## Interactive jobs
+## Developing, prototyping jobs
 
-It is not possible to request _interactive jobs_.  Instead, there are dedicated [interactive nodes] that can be used for short-term interactive needs such building software and prototyping scripts before submitting them to the scheduler.
+It is currently not possible to request _interactive jobs_.  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
 
 
 ## See also

@@ -47,9 +47,9 @@ As an illustration on how to use Linux containers with Singularity, we will use 
 To use this rocker/r-base container, we first pull it down to a Singularity image file `~/lxc/r-base.img` as:
 
 ```sh
-[alice@{{ site.interactive.name }} ~]$ mkdir lxc
-[alice@{{ site.interactive.name }} ~]$ cd lxc/
-[alice@{{ site.interactive.name }} lxc]$ singularity pull docker://rocker/r-base
+[alice@{{ site.devel.name }} ~]$ mkdir lxc
+[alice@{{ site.devel.name }} ~]$ cd lxc/
+[alice@{{ site.devel.name }} lxc]$ singularity pull docker://rocker/r-base
 Initializing Singularity image subsystem
 Opening image file: r-base.img
 Creating 1290MiB image
@@ -68,13 +68,13 @@ Importing: /netapp/home/alice/.singularity/docker/sha256:f3532c5b4720cb6c9b3eb5f
 Importing: /netapp/home/alice/.singularity/docker/sha256:3f41d580fce287afb9c7c21072c974e8295edb8f22dc9963be9efb087aa1c1a5.tar.gz
 Done. Container is at: r-base.img
 
-[alice@{{ site.interactive.name }} lxc]$ ll r-base.img 
+[alice@{{ site.devel.name }} lxc]$ ll r-base.img 
 -rwxr-xr-x. 1 alice lsd 1352663072 Jul 31 08:05 r-base.img
 ```
 
 The above may take a few minutes to complete.  After this, we can run R within this container using:
 ```sh
-[alice@{{ site.interactive.name }} lxc]$ singularity run r-base.img
+[alice@{{ site.devel.name }} lxc]$ singularity run r-base.img
 
 R version 3.4.1 (2017-06-30) -- "Single Candle"
 Copyright (C) 2017 The R Foundation for Statistical Computing
@@ -98,21 +98,21 @@ Type 'q()' to quit R.
 [1] 55
 > quit()
 Save workspace image? [y/n/c]: n
-[alice@{{ site.interactive.name }} lxc]$ 
+[alice@{{ site.devel.name }} lxc]$ 
 ```
 
 What is "run" is defined by the so called "runscript" of the container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
 ```sh
-[alice@{{ site.interactive.name }} lxc]$ singularity exec r-base.img R --quiet
+[alice@{{ site.devel.name }} lxc]$ singularity exec r-base.img R --quiet
 > sum(1:10)
 [1] 55
 > quit("no")
-[alice@{{ site.interactive.name }} lxc]$ 
+[alice@{{ site.devel.name }} lxc]$ 
 ```
 
 To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the Wynton host system), do:
 ```sh
-[alice@{{ site.interactive.name }} lxc]$ singularity shell r-base.img
+[alice@{{ site.devel.name }} lxc]$ singularity shell r-base.img
 Singularity: Invoking an interactive shell within container...
 
 Singularity r-base.img:~> head -3 /etc/os-release
@@ -124,7 +124,7 @@ R scripting front-end version 3.4.1 (2017-06-30)
 Singularity r-base.img:~> exit
 exit
 
-[alice@{{ site.interactive.name }} lxc]$ head -3 /etc/os-release
+[alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
 NAME="CentOS Linux"
 VERSION="7 (Core)"
 ID="centos"
@@ -134,15 +134,15 @@ ID="centos"
 
 When it comes to the scheduler, there is nothing special about Singularity per se - the Singularity software can be used as any other software on the cluster.  As a proof of concept, here is how to calculate the sum of one to ten using R within the above Linux container at the command line:
 ```sh
-[alice@{{ site.interactive.name }} ~]$ singularity exec ~/lxc/r-base.img Rscript -e "sum(1:10)"
+[alice@{{ site.devel.name }} ~]$ singularity exec ~/lxc/r-base.img Rscript -e "sum(1:10)"
 [1] 55
-[alice@{{ site.interactive.name }} ~]$
+[alice@{{ site.devel.name }} ~]$
 ```
 and here is how to do the same via the job scheduler:
 ```sh
-[alice@{{ site.interactive.name }} ~]$ echo 'singularity exec ~/lxc/r-base.img Rscript -e "sum(1:10)"' | qsub -cwd -j yes -N r-base
+[alice@{{ site.devel.name }} ~]$ echo 'singularity exec ~/lxc/r-base.img Rscript -e "sum(1:10)"' | qsub -cwd -j yes -N r-base
 Your job 150909 ("r-base") has been submitted
-[alice@{{ site.interactive.name }} ~]$ cat r-base.o150909
+[alice@{{ site.devel.name }} ~]$ cat r-base.o150909
 ```
 
 
