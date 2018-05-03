@@ -5,7 +5,7 @@ These instructions are primarily written for Linux and macOS users.  If you are 
 
 # Login
 
-To access the Wynton cluster you need an account - any UCSF affiliate can get an [account]({{ '/about/join.html' | relative_url }}).  Anyone with a Wynton account, can access the cluster via _Secure Shell (SSH)_.  Since access is restricted to computers on the UCSF network, make sure you are first connected via the [UCSF VPN], if you are outside.
+To access the Wynton cluster you need an account - any UCSF affiliate can get an [account]({{ '/about/join.html' | relative_url }}).  Anyone with a Wynton account, can access the cluster via _Secure Shell (SSH)_.
 
 
 ## Instructions
@@ -54,5 +54,4 @@ Connection to {{ site.login.hostname }} closed.
 An alternative is to press Ctrl-D (signals "QUIT") at the command-line prompt.
 
 
-[UCSF VPN]: https://it.ucsf.edu/services/vpn
 [development node]: {{ '/get-started/development-prototyping.html' | relative_url }}

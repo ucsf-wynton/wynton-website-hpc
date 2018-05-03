@@ -38,12 +38,10 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 1. {{ site.login.name  }}: `{{ site.login.hostname }}`
 2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
 
-The login nodes can only be accessed from within the UCSF network.
-
 
 ### Development Nodes
 
-The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed using SSH]({{ '/get-started/development-prototyping.html' | relative_url }}) and only from the login nodes.
+The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ '/get-started/development-prototyping.html' | relative_url }}).
 
 Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
 ----------------------------|-----------------:|----------:|---------:|-----------------:|-------------:|
