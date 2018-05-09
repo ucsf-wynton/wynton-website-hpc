@@ -1,7 +1,3 @@
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-<strong>Where is Singularity 2.4.2?</strong>:  Although the current release version is Singularity 2.4.2, Wynton only provides Singularity 2.3.1.  The reason is that <a href="https://github.com/singularityware/singularity/pull/1218#issuecomment-362023939">2.4.2 has a show-stopping bug</a>.  As soon as Singularity has fixed this, we will upgrade.  /2018-02-08
-</div>
-
 # Singularity - Linux Containers
 
 The Wynton cluster supports Linux Containers ([LXC]) via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
@@ -26,58 +22,62 @@ Because you can create and customize your own containers, and because Singularit
 
 All tasks for using Linux containers, such as downloading, building, and running containers, is done via the `singularity` client and supported on Wynton.  The most common command calls are:
 
-* Using an existing container image:
+* Use an existing container:
   - `singularity run <image>` - run predefined script within container
   - `singularity exec <image>` - execute any command within container
   - `singularity shell <image>` - run bash shell within container
 
-* Downloading containers available online:
-  - `singularity pull <url>` - import Singularity or Docker container
-
-* Building containers:
-  - `singularity build ...` - build Singularity containers locally
+* Build a container:
+  - `singularity build <path>` - build a Singularity from local specifications
+  - `singularity build <url>`  - import Singularity or Docker container available online
 
 For full details, see `singularity --help`, `man singularity`, and the [Singularity] website.
 
 
 ## Example
 
+### Building a container
+
 As an illustration on how to use Linux containers with Singularity, we will use the Docker container [rocker/r-base] available on Docker Hub.  This particular container provides the latest release of the [R] software in an Ubuntu OS environment.  Containers available from Singularity Hub, Biocontainers, and elsewhere, can be downloaded and used analogously.
 
-To use this rocker/r-base container, we first pull it down to a Singularity image file `~/lxc/r-base.img` as:
+To use this rocker/r-base container, we first pull it down to a Singularity image file `~/lxc/rocker_r-base.img` as:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ mkdir lxc
 [alice@{{ site.devel.name }} ~]$ cd lxc/
-[alice@{{ site.devel.name }} lxc]$ singularity pull docker://rocker/r-base
-Initializing Singularity image subsystem
-Opening image file: r-base.img
-Creating 1290MiB image
-Binding image to loop
-Creating file system within image
-Image is done: r-base.img
+[alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.img docker://rocker/r-base
 Docker image path: index.docker.io/rocker/r-base:latest
-Cache folder set to /netapp/home/alice/.singularity/docker
+Cache folder set to /netapp/home/hb/.singularity/docker
 [6/6] |===================================| 100.0% 
 Importing: base Singularity environment
-Importing: /netapp/home/alice/.singularity/docker/sha256:dcc248e321fc0450bb176a499d598ea0e00a061a4866cda57b4c823cc593a7e0.tar.gz
-Importing: /netapp/home/alice/.singularity/docker/sha256:6c7404962a97270898c9924f8d174f5ba73b8d663d4442cfad5efa1866b63f58.tar.gz
-Importing: /netapp/home/alice/.singularity/docker/sha256:41ab95b19c7e39d396a1252b57a6d46392b243aff19c7ae2b3b1fd2442e17082.tar.gz
-Importing: /netapp/home/alice/.singularity/docker/sha256:c88bc6d3282408e0997f1ae8517a2f061a804741e14c5bfae45dbdcc46326e50.tar.gz
-Importing: /netapp/home/alice/.singularity/docker/sha256:f3532c5b4720cb6c9b3eb5f6da2eadbd45b56d6e23dcc5a55a166be2255e25aa.tar.gz
-Importing: /netapp/home/alice/.singularity/docker/sha256:3f41d580fce287afb9c7c21072c974e8295edb8f22dc9963be9efb087aa1c1a5.tar.gz
-Done. Container is at: r-base.img
+Importing: /netapp/home/hb/.singularity/docker/sha256:ae5da26d7cb2cb22d27c9edbae4639e74326f509b5bd8ec5d0cf1491e8e51667.tar.gz
+Importing: /netapp/home/hb/.singularity/docker/sha256:2d9c896cd744b32f5e71b1e60c57400652204a01264fb25031fe0b400660707b.tar.gz
+Importing: /netapp/home/hb/.singularity/docker/sha256:513d0440e1890266711676e1077cf75b101948e8732c68dd5fde3b64db983bd6.tar.gz
+Importing: /netapp/home/hb/.singularity/docker/sha256:e026193e10939eb90a38099f79ed42e833d9b22b5e40165ed33d7473ea8934dc.tar.gz
+Importing: /netapp/home/hb/.singularity/docker/sha256:c8a303e7745609ed06e4f6b8252f6ae489afbb91c7d9ba98808b97da88a0143c.tar.gz
+Importing: /netapp/home/hb/.singularity/docker/sha256:6df06abbd238be0a6950b02bb51f36eca574ed78332992a8fe8e0d6d42a1d8e4.tar.gz
+Importing: /netapp/home/hb/.singularity/metadata/sha256:18609ecad4dff92b7fabfd4edeb6f2879ac5f6f297168b41cae34bb133b2e3a6.tar.gz
+WARNING: Building container as an unprivileged user. If you run this container as root
+WARNING: it may be missing some functionality.
+Building Singularity image...
+Singularity container built: rocker_r-base.img
+Cleaning up...
 
-[alice@{{ site.devel.name }} lxc]$ ll r-base.img 
--rwxr-xr-x. 1 alice lsd 1352663072 Jul 31 08:05 r-base.img
+[alice@{{ site.devel.name }} lxc]$ ll rocker_r-base.img
+-rwxr-xr-x. 1 hb lsd 274538527 May  8 21:50 rocker_r-base.img
 ```
 
-The above may take a few minutes to complete.  After this, we can run R within this container using:
-```sh
-[alice@{{ site.devel.name }} lxc]$ singularity run r-base.img
+The above may take a minute or two to complete.
 
-R version 3.4.1 (2017-06-30) -- "Single Candle"
-Copyright (C) 2017 The R Foundation for Statistical Computing
+
+### Running a container
+
+After this, we can run R within this container using:
+```sh
+[alice@{{ site.devel.name }} lxc]$ singularity run rocker_r-base.img 
+
+R version 3.5.0 (2018-04-23) -- "Joy in Playing"
+Copyright (C) 2018 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -101,28 +101,36 @@ Save workspace image? [y/n/c]: n
 [alice@{{ site.devel.name }} lxc]$ 
 ```
 
-What is "run" is defined by the so called "runscript" of the container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
+Exactly what is "run" is defined by the so called "runscript" of the Singularity container, or the ["CMD"](https://hub.docker.com/r/rocker/r-base/~/dockerfile/) if imported from a Docker container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity exec r-base.img R --quiet
+[alice@{{ site.devel.name }} lxc]$ singularity exec rocker_r-base.img R --quiet
 > sum(1:10)
 [1] 55
 > quit("no")
 [alice@{{ site.devel.name }} lxc]$ 
 ```
 
+Note that, the Singularity image is marked as an _executable_, which means you can run it as any other executable, e.g.
+```sh
+[alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.img --quiet
+> sum(1:10)
+[1] 55
+> quit("no")
+[alice@{{ site.devel.name }} lxc]$ 								
+```
+
 To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the Wynton host system), do:
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity shell r-base.img
+[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.img
 Singularity: Invoking an interactive shell within container...
 
-Singularity r-base.img:~> head -3 /etc/os-release
+Singularity rocker_r-base.img:~/lxc> head -3 /etc/os-release
 PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
 Singularity r-base.img:~> Rscript --version
-R scripting front-end version 3.4.1 (2017-06-30)
+R scripting front-end version 3.5.0 (2018-04-23)
 Singularity r-base.img:~> exit
-exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
 NAME="CentOS Linux"
@@ -130,19 +138,20 @@ VERSION="7 (Core)"
 ID="centos"
 ```
 
-## Running Singularity software as job
+### Running a container as a job
 
 When it comes to the scheduler, there is nothing special about Singularity per se - the Singularity software can be used as any other software on the cluster.  As a proof of concept, here is how to calculate the sum of one to ten using R within the above Linux container at the command line:
 ```sh
-[alice@{{ site.devel.name }} ~]$ singularity exec ~/lxc/r-base.img Rscript -e "sum(1:10)"
+[alice@{{ site.devel.name }} ~]$ singularity exec ~/lxc/rocker_r-base.img Rscript -e "sum(1:10)"
 [1] 55
 [alice@{{ site.devel.name }} ~]$
 ```
 and here is how to do the same via the job scheduler:
 ```sh
-[alice@{{ site.devel.name }} ~]$ echo 'singularity exec ~/lxc/r-base.img Rscript -e "sum(1:10)"' | qsub -cwd -j yes -N r-base
-Your job 150909 ("r-base") has been submitted
-[alice@{{ site.devel.name }} ~]$ cat r-base.o150909
+[alice@{{ site.devel.name }} ~]$ echo 'singularity exec ~/lxc/rocker_r-base.img Rscript -e "sum(1:10)"' | qsub -cwd -j yes -N r-base
+Your job 454702 ("r-base") has been submitted
+[alice@{{ site.devel.name }} ~]$ cat r-base.o454702
+[1] 55
 ```
 
 
