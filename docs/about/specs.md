@@ -2,7 +2,7 @@
 
 ## Software environment
 
-All nodes on the cluster runs [CentOS] 7.4 which is updated on a regular basis.
+All nodes on the cluster runs [CentOS] 7 which is updated on a regular basis.
 The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{ '/scheduler/queues.html' | relative_url }}) for both communal and lab-priority tasks.
 
 
