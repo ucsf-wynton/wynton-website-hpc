@@ -51,7 +51,7 @@ Connection to {{ site.login.hostname }} closed.
 {local}$ 
 ```
 
-An alternative is to press Ctrl-D (signals "QUIT") at the command-line prompt.
+An alternative is to press Ctrl-D (sends "End-Of-File" [EOF]) at the command-line prompt.
 
 
 [development node]: {{ '/get-started/development-prototyping.html' | relative_url }}
