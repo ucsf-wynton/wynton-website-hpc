@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert">
-These instructions are primarily written for Linux and macOS users.  If you are on Windows using the <a href="http://www.putty.org/">PuTTY</a> SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
+These instructions are primarily written for Linux, macOS, and Windows 10 users.  If you are on a pre-Windows 10, using the <a href="http://www.putty.org/">PuTTY</a> SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
 </div>
 
 
@@ -12,7 +12,7 @@ To access the Wynton cluster you need an account - any UCSF affiliate can get an
 
 To log into the cluster, assuming your user name on Wynton is `alice` (case sensitive), do the following:
 
-1. Open a terminal (called 'Terminal' on macOS and most Linux distributions),
+1. Open a terminal (called 'Terminal' on macOS and most Linux distributions, and 'Command Prompt' on Windows 10),
 
 2. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press ENTER, and
 3. when prompted, enter your Wynton password.

@@ -15,7 +15,7 @@ In summary, the steps are:
 Expected time: < 10 minutes.
 
 <div class="alert alert-info" role="alert">
-These instructions are primarily written for Linux and macOS users.  If you are on Windows using the <a href="http://www.putty.org/">PuTTY</a> SSH client, the overall idea is similar but the setup is different.  Please consult the PuTTY user forums for further instructions.
+These instructions are primarily written for Linux, macOS, and Windows 10 users.  If you are on a pre-Windows 10, using the <a href="http://www.putty.org/">PuTTY</a> SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
 </div>
 
 
