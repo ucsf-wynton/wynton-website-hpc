@@ -2,11 +2,11 @@
 
 The cluster provides different queues ("running areas") that each is optimized for a different purpose.
 
-* **member.q**:
-  - Maximum runtime: 2 weeks
-  - Process priority: 0 (higest)
-  - Quota: Proportional to your labs share on the cluster (priority users only)
-  - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the Wynton cluster and gain priority access corresponding to the contribution
+* **short.q**:
+  - Maximum runtime: 30 minutes
+  - Process priority: 10 (medium)
+  - Quota: 200 (queued or active) jobs per user (all users)
+  - Purpose: Low-latency needs, e.g. pipeline prototyping and quick turn-around analysis
 
 * **long.q**:
   - Maximum runtime: 2 weeks
@@ -14,13 +14,11 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Quota: Unlimited (all users)
   - Purpose: General needs
 
-
-* **short.q**:
-  - Maximum runtime: 30 minutes
-  - Process priority: 10 (medium)
-  - Quota: 200 (queued or active) jobs per user (all users)
-  - Purpose: Low-latency needs, e.g. pipeline prototyping and quick turn-around analysis
-
+* **member.q**:
+  - Maximum runtime: 2 weeks
+  - Process priority: 0 (higest)
+  - Quota: Proportional to your labs share on the cluster (priority users only)
+  - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the Wynton cluster and gain priority access corresponding to the contribution
 
 * **ondemand.q**:
   - Maximum runtime: Per agreement
