@@ -58,7 +58,9 @@ The cluster connects to NSF’s [Pacific Research Platform] at a speed of 100 Gb
 
 ### All Compute Nodes
 
-<script src="https://d3js.org/d3.v3.min.js"></script> <!-- ~150 kB -->
+<script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"><!-- ~80 kB --></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"><!-- 2 kB --></script>
 
 <table id="hosttable">
 </table>
@@ -81,7 +83,10 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   data.forEach(function(row) {
     if (count == 0) {
       tr = table.append("thead").append("tr");
-      for (key in row) { tr.append("th").text(key); }
+      for (key in row) {
+      value = key.replace(/\`/g, "");
+	    tr.append("th").text(value);
+	  }
       tbody = table.append("tbody");
 	}
     tr = tbody.append("tr");
@@ -121,7 +126,7 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   tr.append("td").text(value);
   d3.select("#hosttable-summary-nodes").text(value);
 
-  value = coreMin + "-" + coreMax + " cores (total " + cores + ")";
+  value = cores + " cores (" + coreMin + "-" + coreMax + " per node)";
   tr.append("td").text(value);
   d3.select("#hosttable-summary-cores").text(value);
 
@@ -144,6 +149,12 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   }
   tr.append("td").text(value);
   d3.select("#hosttable-summary-tmp").text(value);
+
+  $(document).ready(function() {
+    $('#hosttable').DataTable({
+      "pageLength": 25
+	});
+  });
 });
 </script>
 
