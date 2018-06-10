@@ -64,7 +64,7 @@ The cluster connects to NSF’s [Pacific Research Platform] at a speed of 100 Gb
 </table>
 
 <script type="text/javascript" charset="utf-8">
-d3.tsv("/assets/data/host_table.tsv", function(error, data) {
+d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, data) {
   if (error) throw error;
 
   var container = d3.select("#hosttable");
