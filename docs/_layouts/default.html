@@ -14,6 +14,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><!-- ~90 kB --></script>
   </head>
   <body>
 <nav class="navbar navbar-default navbar-fixed-top" id="topnavbar">
@@ -169,9 +170,9 @@
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- ~90 kB -->
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!-- ~40 kB -->
-    <script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"><!-- ~40 kB --></script>
+
+<script>
   $(document).ready(function(){
       $(document.body).css('padding-top', $('#topnavbar').height() + 10);
       $(window).resize(function(){
