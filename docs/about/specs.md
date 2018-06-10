@@ -67,8 +67,8 @@ The cluster connects to NSF’s [Pacific Research Platform] at a speed of 100 Gb
 d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, data) {
   if (error) throw error;
 
-  var container = d3.select("#hosttable");
-  var tr;
+  var table = d3.select("#hosttable");
+  var thead, tbody, tfoot, tr;
   var value;
   var cores = 0, coreMin = 1e9, coreMax = -1e9;
   var cpuMin = 1e9, cpuMax = -1e9;
@@ -80,10 +80,11 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   var count = 0;
   data.forEach(function(row) {
     if (count == 0) {
-      tr = container.append("tr");
+      tr = table.append("thead").append("tr");
       for (key in row) { tr.append("th").text(key); }
+      tbody = table.append("tbody");
 	}
-    tr = container.append("tr");
+    tr = tbody.append("tr");
     for (key in row) { tr.append("td").text(row[key]); }
 	
 	/* Cores */
@@ -115,7 +116,7 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
     count += 1;	
   });
 
-  tr = container.append("tr");
+  tr = table.append("tfoot").append("tr");
   value = count + " nodes";
   tr.append("td").text(value);
   d3.select("#hosttable-summary-nodes").text(value);
@@ -154,7 +155,11 @@ table {
   margin-top: 2ex;
   margin-bottom: 2ex;
 }
-tr:last-child { border-top: 2px solid #000; font-weight: bold; }
+tfoot {
+  border-top: 2px solid #000;
+  font-weight: bold;
+}
+ttr:last-child { border-top: 2px solid #000; }
 </style>
 
 [CentOS]: https://www.centos.org/
