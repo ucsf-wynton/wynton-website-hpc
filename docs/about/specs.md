@@ -16,7 +16,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
   <dt>CPU</dt><dd id="hosttable-summary-cpu"></dd>
   <dt>RAM</dt><dd id="hosttable-summary-ram"></dd>
   <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-scratch"></dd>
-  <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp"></dd>
+  <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp">4 GiB</dd>
 </dl>
   
 All compute nodes have Intel processors and local solid state drives (SSDs).  For full details, see the <a href="#details">Details</a> section below.
@@ -36,9 +36,9 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ '/get-started/development-prototyping.html' | relative_url }}).
 
-Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` | Local `/tmp` |
-----------------------------|-----------------:|----------:|---------:|-----------------:|-------------:|
-{{ site.devel.name }} |                8 |  2.66 GHz |   16 GiB |        0.125 TiB |      4.0 GiB |
+Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` |
+----------------------------|-----------------:|----------:|---------:|-----------------:|
+{{ site.devel.name }} |                8 |  2.66 GHz |   16 GiB |        0.125 TiB |
 
 The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local solid state drives (SSDs).
 
@@ -76,15 +76,17 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   var cpuMin = 1e9, cpuMax = -1e9;
   var ramMin = 1e9, ramMax = -1e9;
   var scratchMin = 1e9, scratchMax = -1e9;
-  var tmpMin = 1e9, tmpMax = -1e9;
 
   /* For each row */
   var count = 0;
   data.forEach(function(row) {
+    /* Ignore column on /tmp size, iff it exists */
+    delete row["Local `/tmp`"];
+  
     if (count == 0) {
       tr = table.append("thead").append("tr");
       for (key in row) {
-      value = key.replace(/\`/g, "");
+        value = key.replace(/\`/g, "");
 	    tr.append("th").text(value);
 	  }
       tbody = table.append("tbody");
@@ -113,11 +115,6 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
 	if (value <= scratchMin) scratchMin = value;
 	if (value >= scratchMax) scratchMax = value;
 
-	/* Tmp */
-	value = parseFloat(row["Local `/tmp`"].match(/[\d.]+/));
-	if (value <= tmpMin) tmpMin = value;
-	if (value >= tmpMax) tmpMax = value;
-
     count += 1;	
   });
 
@@ -141,14 +138,6 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   value = scratchMin + "-" + scratchMax + " TiB";
   tr.append("td").text(value);
   d3.select("#hosttable-summary-scratch").text(value);
-
-  if (tmpMin == tmpMax) {
-    value = tmpMin + " GiB";
-  } else {
-    value = tmpMin + "-" + tmpMax + " GiB";
-  }
-  tr.append("td").text(value);
-  d3.select("#hosttable-summary-tmp").text(value);
 
   $(document).ready(function() {
     $('#hosttable').DataTable({
