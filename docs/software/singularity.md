@@ -47,16 +47,16 @@ To use this rocker/r-base container, we first pull it down to a Singularity imag
 [alice@{{ site.devel.name }} ~]$ cd lxc/
 [alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.img docker://rocker/r-base
 Docker image path: index.docker.io/rocker/r-base:latest
-Cache folder set to /netapp/home/hb/.singularity/docker
+Cache folder set to /netapp/home/alice/.singularity/docker
 [6/6] |===================================| 100.0% 
 Importing: base Singularity environment
-Importing: /netapp/home/hb/.singularity/docker/sha256:ae5da26d7cb2cb22d27c9edbae4639e74326f509b5bd8ec5d0cf1491e8e51667.tar.gz
-Importing: /netapp/home/hb/.singularity/docker/sha256:2d9c896cd744b32f5e71b1e60c57400652204a01264fb25031fe0b400660707b.tar.gz
-Importing: /netapp/home/hb/.singularity/docker/sha256:513d0440e1890266711676e1077cf75b101948e8732c68dd5fde3b64db983bd6.tar.gz
-Importing: /netapp/home/hb/.singularity/docker/sha256:e026193e10939eb90a38099f79ed42e833d9b22b5e40165ed33d7473ea8934dc.tar.gz
-Importing: /netapp/home/hb/.singularity/docker/sha256:c8a303e7745609ed06e4f6b8252f6ae489afbb91c7d9ba98808b97da88a0143c.tar.gz
-Importing: /netapp/home/hb/.singularity/docker/sha256:6df06abbd238be0a6950b02bb51f36eca574ed78332992a8fe8e0d6d42a1d8e4.tar.gz
-Importing: /netapp/home/hb/.singularity/metadata/sha256:18609ecad4dff92b7fabfd4edeb6f2879ac5f6f297168b41cae34bb133b2e3a6.tar.gz
+Importing: /netapp/home/alice/.singularity/docker/sha256:ae5da26d7cb2cb22d27c9edbae4639e74326f509b5bd8ec5d0cf1491e8e51667.tar.gz
+Importing: /netapp/home/alice/.singularity/docker/sha256:2d9c896cd744b32f5e71b1e60c57400652204a01264fb25031fe0b400660707b.tar.gz
+Importing: /netapp/home/alice/.singularity/docker/sha256:513d0440e1890266711676e1077cf75b101948e8732c68dd5fde3b64db983bd6.tar.gz
+Importing: /netapp/home/alice/.singularity/docker/sha256:e026193e10939eb90a38099f79ed42e833d9b22b5e40165ed33d7473ea8934dc.tar.gz
+Importing: /netapp/home/alice/.singularity/docker/sha256:c8a303e7745609ed06e4f6b8252f6ae489afbb91c7d9ba98808b97da88a0143c.tar.gz
+Importing: /netapp/home/alice/.singularity/docker/sha256:6df06abbd238be0a6950b02bb51f36eca574ed78332992a8fe8e0d6d42a1d8e4.tar.gz
+Importing: /netapp/home/alice/.singularity/metadata/sha256:18609ecad4dff92b7fabfd4edeb6f2879ac5f6f297168b41cae34bb133b2e3a6.tar.gz
 WARNING: Building container as an unprivileged user. If you run this container as root
 WARNING: it may be missing some functionality.
 Building Singularity image...
@@ -64,7 +64,7 @@ Singularity container built: rocker_r-base.img
 Cleaning up...
 
 [alice@{{ site.devel.name }} lxc]$ ll rocker_r-base.img
--rwxr-xr-x. 1 hb lsd 274538527 May  8 21:50 rocker_r-base.img
+-rwxr-xr-x. 1 alice lsd 274538527 May  8 21:50 rocker_r-base.img
 ```
 
 The above may take a minute or two to complete.
