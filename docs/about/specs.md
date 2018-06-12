@@ -28,7 +28,7 @@ The compute nodes can only be utilized by submitting jobs via the scheduler - it
 
 The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_url }}) via SSH to one of two login nodes:
 
-1. {{ site.login.name  }}: `{{ site.login.hostname }}`
+1. {{ site.login1.name }}: `{{ site.login1.hostname }}`
 2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
 
 
