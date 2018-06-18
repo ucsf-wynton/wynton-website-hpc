@@ -8,4 +8,4 @@
 
 <span style="font-size: 200%; font-weight: bold; color: orange;">Power outage</span>
 
-**Investigating**: The UCSF Mission Bay Campus experienced a power outage on Saturday June 16 causing parts of Wynton to go down.  One of the login nodes (wynlog1), the developer node (qb3-int1), and part of the compute nodes are currently non-functional.
+**Investigating**: The UCSF Mission Bay Campus experienced a power outage on Saturday June 16 causing parts of Wynton to go down.  One of the login nodes (wynlog1), the development node (qb3-int1), and parts of the compute nodes are currently non-functional.
