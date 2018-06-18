@@ -1,7 +1,7 @@
 # UCSF Wynton Status
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC is experiencing partial problems</strong>
+<strong>Some Wynton HPC compute nodes are down</strong>
 </div>
 
 ## June 16, 2018
