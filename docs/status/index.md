@@ -8,6 +8,9 @@
 
 <span style="font-size: 200%; font-weight: bold; color: orange;">Power outage</span>
 
+**Update**: Some of compute nodes with GPUs are still down due to issues with the NVidia drivers.
+<br><span class="timestamp">Jun 19, 13:50 PDT</span>
+
 **Update**: The login nodes and and the development nodes are functional. Some compute nodes that went down are back up, but not all.
 <br><span class="timestamp">Jun 18, 10:45 PDT</span>
 
