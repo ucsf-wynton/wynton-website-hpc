@@ -13,7 +13,9 @@ Password changed.
 [alice@{{ site.login.name }} ~]$ 
 ```
 
-Only passwords adhering to the Unified UCSF Enterprise Password Standard are accepted.  Attempts to update to an insufficient password will produce an informative error message.  For details, see the [RBVI Kerberos Web Interface], which you can access using your Wynton credentials.
+Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
+
+Alternatively, you can change your password using the [RBVI Kerberos Web Interface].
 
 
 ## Verify credentials
@@ -29,6 +31,7 @@ To test your Wynton credentials, try to [login to Wynton via SSH]({{ '/get-start
 
 ## Reset password
 
-To reset your _Wynton_ password, contact [kerberos-help@cgl.ucsf.edu]([kerberos-help@cgl.ucsf.edu) via e-mail.
+To reset your _Wynton_ password, contact the admins at [wynton_admin@ucsf.edu]([wynton_admin@ucsf.edu).
 
 [RBVI Kerberos web interface]: https://www.cgl.ucsf.edu/admin/chpass.py
+[UCSF Enterprise Password Standard]: https://wiki.library.ucsf.edu/pages/viewpage.action?spaceKey=ITSI&title=Unified+UCSF+Enterprise+Password+Standard
