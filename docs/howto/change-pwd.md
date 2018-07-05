@@ -18,7 +18,7 @@ Only passwords adhering to the Unified UCSF Enterprise Password Standard are acc
 
 ## Verify credentials
 
-To test your Wynton credentials, try to [login to Wynton via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alteratively, verify it from your browser:
+To test your Wynton credentials, try to [login to Wynton via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alteratively, verify them from your browser:
 
 1. Go to [https://www.cgl.ucsf.edu/admin/kerbtest.py](https://www.cgl.ucsf.edu/admin/kerbtest.py) in your browser.  A popup panel titled 'Sign in https://www.cgl.ucsf.edu' is opened by the browser.
 
