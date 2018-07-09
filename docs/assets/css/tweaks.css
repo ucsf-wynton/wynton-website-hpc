@@ -111,6 +111,7 @@ code {
   margin-left: 0.3ex;
   font-weight: bold;
   color: orange;
+  visibility: hidden;
 }
 
 .timestamp {
