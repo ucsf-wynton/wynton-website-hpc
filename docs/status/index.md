@@ -4,9 +4,14 @@
 <strong>Some Wynton HPC compute nodes are down</strong>
 </div>
 
-## June 16, 2018
+## Past Incidents
 
-<span style="font-size: 200%; font-weight: bold; color: orange;">Power outage</span>
+### June 16-26, 2018
+
+#### <span style="color: orange;">Power outage</span>
+
+**Resolved**: The NVidia-driver issue occurring on some of the GPU compute nodes has been fixed.
+<br><span class="timestamp">Jun 26, 11:59 PDT</span>
 
 **Update**: Some of the compute nodes with GPUs are still down due to issues with the NVidia drivers.
 <br><span class="timestamp">Jun 19, 13:50 PDT</span>
