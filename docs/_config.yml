@@ -13,8 +13,8 @@ login2:
   hostname: "wynlog2.cc.ucsf.edu"
   ip: "169.230.134.15"
 devel:
-  name: "qb3-int1"
-  hostname: "qb3-int1"
+  name: "qb3-dev1"
+  hostname: "qb3-dev1"
   ip: "172.26.32.2"
 transfer_todo:
   name: "transfer"
