@@ -43,7 +43,23 @@ Node                        | # Physical Cores |       CPU |      RAM | Local `/
 The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local solid state drives (SSDs).
 
 
-## Storage
+## Scratch Storage
+
+The Wynton cluster provides two types of scratch storage:
+
+* Local `/scratch/` - <span id="hosttable-summary-scratch2"></span> storage unique to each compute node (can only be access from the specific compute node).
+
+* [BETA] Global `/wynton/scratch/` - approx. 200 TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+
+There are no per-user quotas in these scratch spaces.  Files left untouched for two weeks will be automatically deleted.
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<strong>
+The global scratch storage is available for <em>beta testing</em> as of 2018-07-25.  During the test phase, there is a risk that it will be taken offline in order to optimize it further before going into full-production mode.</strong>
+</div>
+
+
+## User and Lab Storage
 
 Each user may use up to 200 GiB disk space in the home directory.  Research groups can add additional storage space by either mounting their existing storage or purchase new.
 
@@ -138,6 +154,7 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   value = scratchMin + "-" + scratchMax + " TiB";
   tr.append("td").text(value);
   d3.select("#hosttable-summary-scratch").text(value);
+  d3.select("#hosttable-summary-scratch2").text(value);
 
   $(document).ready(function() {
     $('#hosttable').DataTable({
