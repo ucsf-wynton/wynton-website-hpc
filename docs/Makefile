@@ -19,7 +19,7 @@ serve:
 	bundle exec jekyll serve --port 4001 &
 
 stop:
-	pkill --echo --count "ruby2.3"
+	pkill --echo --count --full jekyll
 
 
 wynton:
