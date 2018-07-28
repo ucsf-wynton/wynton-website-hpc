@@ -1,3 +1,8 @@
+## Requirements:
+## * See https://jekyllrb.com/docs/installation/;
+##   - Ruby Dev (e.g. sudo apt-get install ruby-dev)
+##   - RubyGems ('bundle', e.g. sudo apt install ruby-bundler)
+##   - Jekyll (e.g. gem install bundler jekyll github-pages)
 dynamic:
 	cd software; $(MAKE)
 
