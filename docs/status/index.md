@@ -10,6 +10,16 @@
 </div>
 -->
 
+## Planned Outages
+
+### July 30, 2018
+
+#### <span style="color: orange;">Partial shutdown</span>
+
+**Notice**: On Monday July 30 at 7:00am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within ~1 hour.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
+<br><span class="timestamp">Jul 29, 21:22 PDT</span>
+
+
 ## Past Incidents
 
 ### June 16-26, 2018
