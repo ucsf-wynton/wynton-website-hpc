@@ -10,8 +10,6 @@
 </div>
 -->
 
-## Planned Outages
-
 ### July 30, 2018
 
 #### <span style="color: orange;">Partial shutdown</span>
