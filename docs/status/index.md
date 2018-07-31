@@ -10,21 +10,26 @@
 </div>
 -->
 
-### Aug 1, 2018
+### August 1, 2018
 
 #### <span style="color: orange;">Partial shutdown</span>
 
 **Notice**: On Wednesday August 1 at 6:45am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
 <br><span class="timestamp">Jul 30, 20:45 PDT</span>
 
-**Update**: The July 30 partial shutdown has been postponed a few days. Exact date for the shutdown is not known at this point.
+
+## Past Incidents
+
+### July 30, 2018
+
+#### <span style="color: orange;">Partial shutdown</span>
+
+**Resolved**: The nodes brought down during the July 30 partial shutdown has been rebooted.  Unfortunately, the same partial shutdown has to be repeated within a few days because the work in server room was not completed. Exact date for the next shutdown is not known at this point.
 <br><span class="timestamp">Jul 30, 09:55 PDT</span>
 
 **Notice**: On Monday July 30 at 7:00am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
 <br><span class="timestamp">Jul 29, 21:20 PDT</span>
 
-
-## Past Incidents
 
 ### June 16-26, 2018
 
