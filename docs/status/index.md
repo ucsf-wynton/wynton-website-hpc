@@ -10,15 +10,18 @@
 </div>
 -->
 
-### July 30-Aug 4, 2018
+### Aug 1, 2018
 
 #### <span style="color: orange;">Partial shutdown</span>
+
+**Notice**: On Wednesday August 1 at 6:45am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
+<br><span class="timestamp">Jul 30, 20:45 PDT</span>
 
 **Update**: The July 30 partial shutdown has been postponed a few days. Exact date for the shutdown is not known at this point.
 <br><span class="timestamp">Jul 30, 09:55 PDT</span>
 
-**Notice**: On Monday July 30 at 7:00am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within ~1 hour.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
-<br><span class="timestamp">Jul 29, 21:22 PDT</span>
+**Notice**: On Monday July 30 at 7:00am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
+<br><span class="timestamp">Jul 29, 21:20 PDT</span>
 
 
 ## Past Incidents
@@ -28,7 +31,7 @@
 #### <span style="color: orange;">Power outage</span>
 
 **Resolved**: The NVidia-driver issue occurring on some of the GPU compute nodes has been fixed.
-<br><span class="timestamp">Jun 26, 11:59 PDT</span>
+<br><span class="timestamp">Jun 26, 11:55 PDT</span>
 
 **Update**: Some of the compute nodes with GPUs are still down due to issues with the NVidia drivers.
 <br><span class="timestamp">Jun 19, 13:50 PDT</span>
