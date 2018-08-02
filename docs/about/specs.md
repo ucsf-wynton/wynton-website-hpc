@@ -32,6 +32,17 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
 
 
+### Data Transfer Nodes
+
+For transfering large data files, it is recommended to use the dedicate data transfer node:
+
+1. {{ site.transfer.name }}: `{{ site.transfer.hostname }}`
+
+which has a 10 Gbs connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer node can be access via SSH.
+
+_Comment_: You can also transfer data via the login nodes, but you will see much higher transfer rates when using the dedicated transfer node.
+
+
 ### Development Nodes
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ '/get-started/development-prototyping.html' | relative_url }}).

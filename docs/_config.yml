@@ -16,11 +16,11 @@ devel:
   name: "qb3-dev1"
   hostname: "qb3-dev1"
   ip: "172.26.32.2"
-transfer_todo:
-  name: "transfer"
-  hostname: "transfer.wynton.ucsf.edu"
-  ip: "169.230.nnn.nnn"
 transfer:
+  name: "wyndt1"
+  hostname: "wyndt1.compbio.ucsf.edu"
+  ip: "169.230.126.58"
+transfer_old:
   name: "wynlog1"
   hostname: "wynlog1.compbio.ucsf.edu"
   ip: "169.230.126.77"
