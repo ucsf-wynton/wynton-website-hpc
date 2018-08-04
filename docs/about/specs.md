@@ -38,7 +38,7 @@ For transfering large data files, it is recommended to use the dedicate data tra
 
 1. {{ site.transfer.name }}: `{{ site.transfer.hostname }}`
 
-which has a 10 Gbs connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer node can be access via SSH.
+which has a 10 Gbs connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer node can be accessed via SSH.
 
 _Comment_: You can also transfer data via the login nodes, but since those only have 1 Gbs connections, you will see much lower transfer rates.
 
