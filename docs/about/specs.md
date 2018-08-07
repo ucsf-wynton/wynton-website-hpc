@@ -21,7 +21,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
   
 All compute nodes have Intel processors and local solid state drives (SSDs).  For full details, see the <a href="#details">Details</a> section below.
 
-The compute nodes can only be utilized by submitting jobs via the scheduler - it is _not_ possible to explicitly log in to compute nodes.
+The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
 
 
 ### Login Nodes
