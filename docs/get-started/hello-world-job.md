@@ -32,7 +32,7 @@ In this example we will run compute jobs that outputs the name of the compute no
 ```
 #!/bin/env bash
 
-echo "Hello world, I'm running on node $HOSTNAME"
+echo "Hello world, I am running on node $HOSTNAME"
 sleep 10
 date
 ```
@@ -45,7 +45,7 @@ Although not critical for the job scheduler, it is always convenient to set the 
 This, in combination with the so called "she-bang" (`#! ...`) on the first line, allows you call the script just any other software, e.g.
 ```sh
 [alice@{{ site.devel.name }} tests]$ ./hello_world
-Hello world, I'm running on node {{ site.devel.name }}.
+Hello world, I am running on node {{ site.devel.name }}.
 Mon Aug 28 16:31:29 PDT 2017
 ```
 Note how it takes ten seconds between the `Hello world` message and the time stamp.  We have now confirm that the shell script does what we expect it to do, and we are ready to submit it to the job queue of the scheduler.  To do this, do:
@@ -76,7 +76,7 @@ Eventually, when the job script finished, `qstat` will no longer list it (if you
 So where is the output of the job?  Since we used `-j yes` and `-cwd` we will find a job output file in the current directory named `hello_world.o201` that contains:
 ```sh
 [alice@{{ site.devel.name }} tests]$ cat hello_world.o201
-Hello world, I'm running on node cin-hmid1
+Hello world, I am running on node cin-hmid1
 Mon Aug 28 16:32:12 PDT 2017
 [alice@{{ site.devel.name }} tests]$ 
 ```
