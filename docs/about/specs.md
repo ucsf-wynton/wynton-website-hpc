@@ -145,25 +145,26 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
     count += 1;	
   });
 
-  tr = table.append("tfoot").append("tr");
+  var addFooter = false;
+  if (addFooter) tr = table.append("tfoot").append("tr");
   value = count + " nodes";
-  tr.append("td").text(value);
+  if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-nodes").text(value);
 
   value = cores + " cores (" + coreMin + "-" + coreMax + " per node)";
-  tr.append("td").text(value);
+  if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-cores").text(value);
 
   value = cpuMin + "-" + cpuMax + " GHz";
-  tr.append("td").text(value);
+  if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-cpu").text(value);
 
   value = ramMin + "-" + ramMax + " GiB";
-  tr.append("td").text(value);
+  if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-ram").text(value);
 
   value = scratchMin + "-" + scratchMax + " TiB";
-  tr.append("td").text(value);
+  if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-scratch").text(value);
   d3.select("#hosttable-summary-scratch2").text(value);
 
