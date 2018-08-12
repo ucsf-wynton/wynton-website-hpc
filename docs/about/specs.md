@@ -11,14 +11,14 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 ### Compute Nodes
 
 <dl id="hosttable-summary" class="dl-horizontal">
-  <dt>Compute nodes</dt><dd id="hosttable-summary-nodes"></dd>
-  <dt>Physical cores</dt><dd id="hosttable-summary-cores"></dd>
-  <dt>CPU</dt><dd id="hosttable-summary-cpu"></dd>
-  <dt>RAM</dt><dd id="hosttable-summary-ram"></dd>
-  <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-scratch"></dd>
-  <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp">4 GiB</dd>
+  <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
+  <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
+  <dt>CPU</dt><dd id="hosttable-summary-cpu">{{ site.specs.cpu_range }}</dd>
+  <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}</dd>
+  <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-scratch">{{ site.specs.local_scratch_size_range }}</dd>
+  <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp">{{ site.specs.local_tmp_size }}</dd>
 </dl>
-  
+
 All compute nodes have Intel processors and local solid state drives (SSDs).  For full details, see the <a href="#details">Details</a> section below.
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
