@@ -12,21 +12,21 @@
   
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>Active Nodes</span><span style="float: right;">80%</span>
+    <span>Available Nodes</span><span style="float: right;">85 nodes (98.8%)</span>
    </div>
    <div id="ActiveNodes"></div>
   </div>
   
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>Core Usage</span><span style="float: right;">80%</span>
+    <span>Core Usage</span><span style="float: right;">1385 physical cores (76.2%)</span>
    </div>
    <div id="CoreUsage"></div>
   </div>
   
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>Memory Usage</span><span style="float: right;">80%</span>
+    <span>Memory Usage</span><span style="float: right;">8.6 TiB (40.0%)</span>
    </div>
    <div id="MemoryUsage"></div>
   </div>
@@ -38,14 +38,14 @@
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>Active Jobs</span><span style="float: right;">15 jobs</span>
+    <span>Active Jobs</span><span style="float: right;">356 jobs</span>
    </div>
    <div id="ActiveJobs"></div>
   </div>
   
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>Queue Backlog</span><span style="float: right;">15 jobs</span>
+    <span>Backlog</span><span style="float: right;">45 jobs</span>
    </div>
    <div id="QueueBacklog"></div>
   </div>
