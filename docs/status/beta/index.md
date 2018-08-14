@@ -19,7 +19,7 @@
   
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>Core Usage</span><span style="float: right;">1385 physical cores (76.2%)</span>
+    <span>Core Usage</span><span style="float: right;">1385 cores (76.2%)</span>
    </div>
    <div id="CoreUsage"></div>
   </div>
