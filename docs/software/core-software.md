@@ -16,7 +16,7 @@ emacs(*), nano, vim
 <dd>
 scp, sftp, rsync<br>
 curl, wget<br>
-dos2unix(*)<br>
+dos2unix<br>
 </dd>
 
 <dt>Communication</dt>
