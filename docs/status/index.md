@@ -32,7 +32,6 @@
   <div id="queues-year" class="tab-pane fade">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-year.png" alt="queues usage during the last year"/>
   </div>
-  <p style="padding-top: 1em;"><em>WARNING: Currently, these graphs displays mockup data. /2018-08-16</em></p>
 </div>
   
 
