@@ -11,6 +11,32 @@
 -->
 
 
+## Queue Metrics
+
+<ul class="nav nav-pills">
+  <li class="active"><a data-toggle="pill" href="#queues-day">Day</a></li>
+  <li><a data-toggle="pill" href="#queues-week">Week</a></li>
+  <li><a data-toggle="pill" href="#queues-month">Month</a></li>
+  <li><a data-toggle="pill" href="#queues-year">Year</a></li>
+</ul>
+<div class="tab-content" style="margin-top: 1ex;">
+  <div id="queues-day" class="tab-pane fade in active">
+    <img src="{{ site.assets.status_root_path }}/status/figures/queues-day.png" alt="queues usage during the last day"/>
+  </div>
+  <div id="queues-week" class="tab-pane fade">
+    <img src="{{ site.assets.status_root_path }}/status/figures/queues-week.png" alt="queues usage during the last week"/>
+  </div>
+  <div id="queues-month" class="tab-pane fade">
+    <img src="{{ site.assets.status_root_path }}/status/figures/queues-month.png" alt="queues usage during the last month"/>
+  </div>
+  <div id="queues-year" class="tab-pane fade">
+    <img src="{{ site.assets.status_root_path }}/status/figures/queues-year.png" alt="queues usage during the last year"/>
+  </div>
+  <p style="padding-top: 1em;"><em>WARNING: Currently, these graphs displays mockup data. /2018-08-16</em></p>
+</div>
+  
+
+
 ## Past Incidents
 
 ### August 1, 2018
