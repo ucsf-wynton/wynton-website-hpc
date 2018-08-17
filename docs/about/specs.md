@@ -19,7 +19,8 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
   <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp">{{ site.specs.local_tmp_size }}</dd>
 </dl>
 
-All compute nodes have Intel processors and local solid state drives (SSDs).  For full details, see the <a href="#details">Details</a> section below.
+Most compute nodes have Intel processors, while others have AMD processes.  Each compute node has a local drive, which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.
+For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
 
@@ -58,7 +59,7 @@ The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local 
 
 The Wynton cluster provides two types of scratch storage:
 
-* Local `/scratch/` - <span id="hosttable-summary-scratch2"></span> storage unique to each compute node (can only be access from the specific compute node).
+* Local `/scratch/` - <span id="hosttable-summary-scratch2"></span> storage unique to each compute node (can only be accessed from the specific compute node).
 
 * [BETA] Global `/wynton/scratch/` - approx. 200 TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
