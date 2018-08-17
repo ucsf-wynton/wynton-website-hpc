@@ -75,3 +75,12 @@
 
 **Investigating**: The UCSF Mission Bay Campus experienced a power outage on Saturday June 16 causing parts of Wynton to go down.  One of the login nodes (wynlog1), the development node (qb3-dev1), and parts of the compute nodes are currently non-functional.
 <br><span class="timestamp">Jun 17, 15:00 PDT</span>
+
+
+
+<script type="text/javascript">
+  // FIXME: Ideally we set <meta http-equiv="refresh" content="600">
+  //        but how do we do that with Jekyll? /HB 2018-08-17
+  // Refresh page every 10 minutes
+  setInterval(page_refresh, 10*60000);
+</script>
