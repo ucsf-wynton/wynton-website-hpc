@@ -61,14 +61,9 @@ The Wynton cluster provides two types of scratch storage:
 
 * Local `/scratch/` - <span id="hosttable-summary-scratch2"></span> storage unique to each compute node (can only be accessed from the specific compute node).
 
-* [BETA] Global `/wynton/scratch/` - approx. 200 TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+* Global `/wynton/scratch/` - approx. 200 TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  Files left untouched for two weeks will be automatically deleted.
-
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-<strong>
-The global scratch storage is available for <em>beta testing</em> as of 2018-07-25.  During the test phase, there is a risk that it will be taken offline in order to optimize it further before going into full-production mode.</strong>
-</div>
 
 
 ## User and Lab Storage
