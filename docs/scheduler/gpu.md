@@ -72,7 +72,7 @@ xprojects             NONE
 usage_scaling         NONE
 report_variables      NONE
 ```
-The above shows that host `msg-iogpu3` has 2 GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
+The above shows that host `msg-iogpu3` has 2 GeForce GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
 
 <div class="alert alert-warning" role="alert">
 The <code>qconf -se hostname</code> command works only on the login nodes - not on the developer nodes.
