@@ -23,15 +23,22 @@ The cluster provides different queues ("running areas") that each is optimized f
 * **ondemand.q**:
   - Maximum runtime: Per agreement
   - Process priority: 0 (higest)
-  - Quota: Available upon application and approval by the [steering committee].
-  - Purpose: Intended for scheduled, high-priority computing needs and / or temporary paid priority access.
+  - Quota: Available upon application and approval by the [steering committee]
+  - Purpose: Intended for scheduled, high-priority computing needs and / or temporary paid priority access
+
+* **gpu.q**:
+  - Maximum runtime: 2 weeks
+  - Process priority: 0 (higest)
+  - Quota: Available to users/groups who have contributed with GPU hardware (The plan is to eventually make this a communal resource)
+  - Purpose: For software that utilize Graphics Processing Units (GPUs)
 
 
 ## Usage
 
-There is often _no need_ to explicitly specify what queue your job should be submitted to.  Instead, it is sufficient to [specify the resources] that your jobs need, e.g. the maximum processing time (e.g. `-l h_rt=00:10:00` for ten minutes), the maximum memory usage (e.g. `-l mem_free=1G` for 1 GiB of RAM), and the number of cores (e.g. `-pe smp 2` for two cores).  When the scheduler knows about your job's resource need, it will allocate your job to a compute node that better fits your needs and your job is likely to finish sooner.
+Except for [the gpu.q queue]({{ '/scheduler/gpu.html' | relative_url }}), there is often _no need_ to explicitly specify what queue your job should be submitted to.  Instead, it is sufficient to [specify the resources] that your jobs need, e.g. the maximum processing time (e.g. `-l h_rt=00:10:00` for ten minutes), the maximum memory usage (e.g. `-l mem_free=1G` for 1 GiB of RAM), and the number of cores (e.g. `-pe smp 2` for two cores).  When the scheduler knows about your job's resource need, it will allocate your job to a compute node that better fits your needs and your job is likely to finish sooner.
 
 Only in rare cases there should be a need to specify through what queue your job should run.  To do this, you can use the `-q <name>` option of `qsub`, e.g. `qsub -q long.q my_script`.
+
 
 
 [steering committee]: http://wynton.ucsf.edu/
