@@ -34,12 +34,12 @@ _Explanation:_ The above `chmod` settings specify that you as a user (`u`) have 
 Next, we will generate a private-public SSH key pair (stored in two files) that is unique for accessing the cluster:
 ```sh
 {local}$ cd ~/.ssh   ## <== IMPORTANT
-{local}$ ssh-keygen -f laptop_to_tipcc_20170720
+{local}$ ssh-keygen -f laptop_to_wynton
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in laptop_to_tipcc_20170720
-Your public key has been saved in laptop_to_tipcc_20170720.pub.
+Your identification has been saved in laptop_to_wynton
+Your public key has been saved in laptop_to_wynton.pub.
 he key fingerprint is:
 SHA256:2MpJL+I6rQbfhvLZAyC6fa6Y40yZhwG+FYOiHCQ94Fw alice@my_laptop
 The key\'s randomart image is:
@@ -66,12 +66,12 @@ The public key you can safely share with the world, but <strong>treat your <em>p
 
 ## Step 2: Add the public SSH key (on cluster)
 
-Next, we will set up the cluster to recognize your public SSH key.  For this we will have to log in to the cluster, which requires that your machine is connected to the UCSF network, e.g. via the [UCSF VPN].
+Next, we will set up the cluster to recognize your public SSH key.  For this we will have to log in to the cluster.
 
 First, assuming your cluster user name is `alice`, copy the public key file to `~/.ssh` on the cluster:
 ```sh
-{local}$ scp ~/.ssh/laptop_to_tipcc_20170720.pub alice@{{ site.login.hostname }}:.ssh/
-laptop_to_tipcc_20170720.pub           100%  390     0.4KB/s   00:00
+{local}$ scp ~/.ssh/laptop_to_wynton.pub alice@{{ site.login.hostname }}:.ssh/
+laptop_to_wynton.pub           100%  390     0.4KB/s   00:00
 ```
 
 Second, log into the cluster (still using a password) and _append_ the public key to `~/.ssh/authorized_keys`:
@@ -79,7 +79,7 @@ Second, log into the cluster (still using a password) and _append_ the public ke
 {local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}
 alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ cd .ssh
-[alice@{{ site.login.name }} .ssh]$ cat laptop_to_tipcc_20170720.pub >> authorized_keys
+[alice@{{ site.login.name }} .ssh]$ cat laptop_to_wynton.pub >> authorized_keys
 ```
 Third, make sure that `~/.ssh/authorized_keys` is only accessible to you (otherwise that file will be completely ignored);
 ```sh
@@ -98,7 +98,7 @@ Lastly, log out from the cluster:
 
 You should now be able to log into the cluster from your local computer without having to enter the cluster password.  Try the following:
 ```sh
-{local}$ ssh -o PreferredAuthentications=publickey -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ site.login.hostname }}
+{local}$ ssh -o PreferredAuthentications=publickey -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_wynton alice@{{ site.login.hostname }}
 [alice@{{ site.login.name }} ~]$ 
 ```
 You will be asked to enter your _passphrase_, if you chose one above.
@@ -111,18 +111,18 @@ then make sure you use the correct user name and that the file permissions on `~
 
 The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, these options can be dropped and you can now use:
 ```sh
-{local}$ ssh -i ~/.ssh/laptop_to_tipcc_20170720 alice@{{ site.login.hostname }}
+{local}$ ssh -i ~/.ssh/laptop_to_wynton alice@{{ site.login.hostname }}
 [alice@{{ site.login.name }} ~]$ 
 ```
 
 
 ## Step 4: Avoid having to specify SSH option `-i` (on local machine)
 
-It is rather tedious having to specify what private key file to use (`-i ~/.ssh/laptop_to_tipcc_20170720`) each time you use SSH.  As a last step, we will set the default options for `alice@{{ site.login.hostname }}`.  On your local machine, add the following entry to `~/.ssh/config` (if you don't have the file, create it):
+It is rather tedious having to specify what private key file to use (`-i ~/.ssh/laptop_to_wynton`) each time you use SSH.  As a last step, we will set the default options for `alice@{{ site.login.hostname }}`.  On your local machine, add the following entry to `~/.ssh/config` (if you don't have the file, create it):
 ```
 Host {{ site.login.hostname }}
   User alice
-  IdentityFile ~/.ssh/laptop_to_tipcc_20170720
+  IdentityFile ~/.ssh/laptop_to_wynton
 ```
 
 With all of the above, you should now be able to log in to the cluster using:
