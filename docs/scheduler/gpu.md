@@ -1,3 +1,8 @@
+<div class="alert alert-warning" role="alert">
+2018-08-20: Currently, GPUs are available only to users in groups who contributed GPU hardware to Wynton. However, it is the intention to make GPUs a communal resource.
+</div>
+
+
 # GPU Scheduling
 
 ## Compiling GPU applications
