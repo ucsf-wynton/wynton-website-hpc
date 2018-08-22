@@ -15,6 +15,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
   <dt>CPU</dt><dd id="hosttable-summary-cpu">{{ site.specs.cpu_range }}</dd>
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}</dd>
+  <dt>Swap</dt><dd id="hosttable-summary-ram">{{ site.specs.swap_range }}</dd>
   <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-scratch">{{ site.specs.local_scratch_size_range }}</dd>
   <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp">{{ site.specs.local_tmp_size }}</dd>
 </dl>
