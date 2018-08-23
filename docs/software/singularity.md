@@ -1,6 +1,6 @@
 # Singularity - Linux Containers
 
-The Wynton cluster supports Linux Containers ([LXC]) via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
+The Wynton cluster supports [Linux containers] via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
 
 Singularity, and Linux containers in general, provides solutions to common problems and hurdles that HPC users often face, e.g.
 
@@ -165,7 +165,7 @@ Q. _What's the difference between `*.img` and `*.simg`?_
 A. The filename extension of Singularity images are optional, but using one helps clarify that an executable is a Singularity image.  [The `*.img` indicates a _writeable_ (ext3) images whereas `*.simg` indicates a read-only (squashfs) image.](https://groups.google.com/a/lbl.gov/d/msg/singularity/Cq7kIbN_L68/2mOdkwx2BAAJ)
 
 
-[LXC]: https://en.wikipedia.org/wiki/LXC
+[Linux containers]: https://www.wikipedia.org/wiki/Linux_containers
 [Singularity]: http://singularity.lbl.gov/
 [Docker]: https://www.docker.com/
 [Docker Hub]: https://hub.docker.com/
