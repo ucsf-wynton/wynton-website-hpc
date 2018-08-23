@@ -41,10 +41,10 @@ or, shorter (order is important):
 module load CBI r
 ```
 
-After this, the `R` (and the `Rscript`) commands are available on the search path (`PATH`), e.g.
+After this, the `R` and the `Rscript` commands are available on the search path (`PATH`), e.g.
 ```sh
 $ Rscript --version
-R scripting front-end version 3.4.1 (2017-06-30)
+R scripting front-end version 3.5.1 (2018-07-02)
 ```
 
 <div class="alert alert-warning" role="alert">
@@ -89,7 +89,7 @@ _Comment_: If another version of R is already loaded, that will automatically be
 
 <br>
 <div class="alert alert-info" role="alert">
-The names of software repositories are always capitilized (e.g. <code>CBI</code>) whereas the names of the software themselves are always in lower case (e.g. <code>r</code> and <code>bwa</code>).  This makes it easier to distiguish between repositories and software.
+The names of software repositories are always capitilized (e.g. <code>CBI</code> and <code>Sali</code>) whereas the names of the software themselves are typically in all lower case (e.g. <code>r</code> and <code>bwa</code>).  This makes it easier to distiguish between repositories and software.
 </div>
 
 
