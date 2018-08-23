@@ -14,12 +14,12 @@ In addition to the [core software] tools that are available by default, addition
  </tr>
  <tr>
   <td>
-  <strong>CBC</strong><br>
+  <strong>CBI</strong><br>
   
   </td>
   <td>
-  <strong>The Computational Biology Core (CBC) Software Repository</strong><br>
-  Repository of software shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.
+  <strong>The Computational Biology and Informatics (CBI) Software Repository</strong><br>
+  Repository of software shared by the Computational Biology and Informatics (<a href="http://cbi.ucsf.edu">http://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.
   See the <a href="{{ '/software/software-repositories.html' | relative_url }}">Software Repositories</a> page for further details.
   </td>
  </tr>
@@ -31,14 +31,14 @@ To get access to the software available in one or more of these repositories, lo
 
 ## Example
 
-The [R] software is available in software repository CBC.  To use that R installation, first make sure to enable ("load") the repository and then the software as in:
+The [R] software is available in software repository CBI.  To use that R installation, first make sure to enable ("load") the repository and then the software as in:
 ```sh
-module load CBC   ## Enables the software repository
+module load CBI   ## Enables the software repository
 module load r     ## Enables R
 ```
 or, shorter (order is important):
 ```sh
-module load CBC r
+module load CBI r
 ```
 
 After this, the `R` (and the `Rscript`) commands are available on the search path (`PATH`), e.g.
@@ -79,7 +79,7 @@ or alternative,
 module spider
 ```
 
-If the software repository provides more than one version of each software, specific versions can be loaded using the `module load <software>/<version>` format.  For instance, the CBC repository provides a large number of historical R versions.  To load R 3.1.3, use:
+If the software repository provides more than one version of each software, specific versions can be loaded using the `module load <software>/<version>` format.  For instance, the CBI repository provides a large number of historical R versions.  To load R 3.1.3, use:
 ```sh
 module load r/3.1.3
 ```
@@ -89,7 +89,7 @@ _Comment_: If another version of R is already loaded, that will automatically be
 
 <br>
 <div class="alert alert-info" role="alert">
-The names of software repositories are always capitilized (e.g. <code>CBC</code>) whereas the names of the software themselves are always in lower case (e.g. <code>r</code> and <code>bwa</code>).  This makes it easier to distiguish between repositories and software.
+The names of software repositories are always capitilized (e.g. <code>CBI</code>) whereas the names of the software themselves are always in lower case (e.g. <code>r</code> and <code>bwa</code>).  This makes it easier to distiguish between repositories and software.
 </div>
 
 

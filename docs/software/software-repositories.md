@@ -8,20 +8,20 @@ WARNING: do _not_ update this file; it is automatically generated from software-
 Below is a list of all available Software Repositories, which each provides a set of software tools that can be accessed using `module load <repos>` and then `module load <software>`.  For further instructions on how to use software modules, see the page on [Software Modules].
 
 
-## Repository 'CBC'
+## Repository 'CBI'
 
 <dl>
 <dt>Title</dt>
 <dd>
-The Computational Biology Core (CBC) Software Repository
+The Computational Biology and Informatics (CBI) Software Repository
 </dd>
 <dt>Description</dt>
 <dd>
-Repository of software shared by the Computational Biology Core (<a href="http://cbc.ucsf.edu">http://cbc.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.
+Repository of software shared by the  Computational Biology and Informatics (<a href="http://cbi.ucsf.edu">http://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.
 </dd>
 <dt>Website</dt>
 <dd>
- <a href="http://cbc.ucsf.edu/">http://cbc.ucsf.edu/</a>
+ <a href="http://cbi.ucsf.edu/">http://cbi.ucsf.edu/</a>
 </dd>
 <dt>Bug Reports</dt>
 <dd>
@@ -29,11 +29,11 @@ Repository of software shared by the Computational Biology Core (<a href="http:/
 </dd>
 <dt>Maintainer</dt>
 <dd>
-  Henrik Bengtsson, <a href="http://cbc.ucsf.edu/">Computational Biology Core</a>
+  Henrik Bengtsson, <a href="http://cbi.ucsf.edu/">Computational Biology and Informatics</a>
 </dd>
 <dt>Usage</dt>
 <dd>
-  <code>module load CBC</code>
+  <code>module load CBI</code>
 </dd>
 </dl>
 

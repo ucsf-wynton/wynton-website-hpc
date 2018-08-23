@@ -36,10 +36,10 @@ module_avail <- function(module_repos) {
 }
 
 module_repositories <- list(
-  CBC = list(
-    name       = "CBC",
-    maintainer = "Computational Biology Core",
-    url        = "http://cbc.ucsf.edu"
+  CBI = list(
+    name       = "CBI",
+    maintainer = "Computational Biology and Informatics",
+    url        = "http://cbi.ucsf.edu"
   )
 )
 %>
@@ -163,11 +163,11 @@ table_of_modules(x, style = "repos")
 
 To get access to one or more of these module repositories and see what modules they provide (see below), load them as regular modules, e.g.
 ```sh
-module load CBC
+module load CBI
 module avail
 ```
 
-_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBC` appends `<%= gsub("/home/shared/cbc/apps/modulefiles", "$MODULEPATH_ROOT", modulepath("CBC")) %>` to your `$MODULEPATH`.
+_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `<%= gsub("/home/shared/cbc/apps/modulefiles", "$MODULEPATH_ROOT", modulepath("CBI")) %>` to your `$MODULEPATH`.
 
 
 <% for (module_repos in names(module_repositories)) { %>
