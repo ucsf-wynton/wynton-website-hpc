@@ -24,8 +24,9 @@ To request access and get an account on the cluster, please [contact us] with th
 3. UCSF affiliation (faculty, student, postdoc, etc.)
 4. UCSF Principle Investigator (PI), if any
 5. QB3/CGL Kerberos username, if any
-6. UCSF Employee/Student ID (nine digits), if any
+6. UCSF Employee/Student ID (nine digits; 02xxxxxxx), if any
 7. Preferred username and one alternate
 8. Previous HPC cluster experience? (this will help us help you)
+9. (QB3, Sali Lab, MSG users only) Current UID/GID (as reported by `id`), if any
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
