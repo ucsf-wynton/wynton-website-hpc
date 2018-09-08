@@ -10,7 +10,7 @@
 
 * Storage: Increase the default size of user's home directory - currently 200 GiB per user
 
-* Development: A GPU development node for building GPU software
+* Development: A Graphics Processing Unit (GPUs) development node for building GPU software
 
 * Software stacks: Support for sharing software installations between groups via environment modules (e.g. `module load CBI`)
 
@@ -25,7 +25,7 @@
 
 * Support: A User Issue Tracker
 
-* Compute: Communal access to compute on Graphics Processing Units (GPUs) - currently only available to investigators who contributed with their own GPU nodes
+* Compute: Add communal GPU nodes - currently only available to investigators who contributed with their own GPU nodes
 
 
 ## Planned deprecation
