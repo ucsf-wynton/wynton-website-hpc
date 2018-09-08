@@ -67,7 +67,7 @@ module list
 ```
 To disable all loaded software modules and repositories, use:
 ```sh
-`module purge
+module purge
 ```
 
 To see what software modules are currently available (in the software repositories you have loaded), use:
