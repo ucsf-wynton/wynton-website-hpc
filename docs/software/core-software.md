@@ -9,7 +9,7 @@ Additional software can be found in the [Software Repositories].
 <dl>
 <dt>Editors</dt>
 <dd>
-emacs(*), nano, vim
+emacs, nano, vim
 </dd>
 
 <dt>File transfers</dt>
@@ -38,7 +38,7 @@ LaTeX, PDF and Postscript tools<br>
 
 <dt>Programming Languages, Compilers, and Tools</dt>
 <dd>
-make, cmake(*)<br>
+make, cmake<br>
 gcc / g++ (C, C++, and Fortran)<br>
 java, javac<br>
 lua<br>
