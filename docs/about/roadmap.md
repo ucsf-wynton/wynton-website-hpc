@@ -1,12 +1,10 @@
-<div class="alert alert-danger" role="alert">
-<strong>This is a mockup page!</strong>
-</div>
-
 # Accomplishments
 
-* 2018-08-20: <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">Global scratch storage</a> on BeeGFS Parallel File System
+* Storage: Global scratch storage on BeeGFS parallel file system
 
-* 2018-08-02: Dedicated <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">10 Gpbs transfer node</a> for faster file transfers in to and out from Wynton
+* Development: Dedicated 10 Gpbs transfer node for faster file transfers in to and out from Wynton
+
+See also [NEWS]({{ '/about/news.html' | relative_url }}).
 
 
 # Roadmap
