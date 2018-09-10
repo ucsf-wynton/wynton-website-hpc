@@ -2,6 +2,13 @@
 <strong>This is a mockup page!</strong>
 </div>
 
+# Accomplishments
+
+* 2018-08-20: <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">Global scratch storage</a> on BeeGFS Parallel File System
+
+* 2018-08-02: Dedicated <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">10 Gpbs transfer node</a> for faster file transfers in to and out from Wynton
+
+
 # Roadmap
 
 ## Soon
@@ -19,7 +26,7 @@
 
 ## On the horizon
 
-* Pricing model: Detailed description on how buy into Wynton, e.g. pricing models for adding extra storage and compute resources
+* Pricing model: Detailed description on how buy into or contribute with existing hardware to Wynton, e.g. pricing models for adding extra storage and compute resources.
 
 * Scheduler: Support interactive jobs (`qlogin`)
 
