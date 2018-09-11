@@ -75,7 +75,7 @@ Each user may use up to 200 GiB disk space in the home directory.  Research grou
 ## Network
 
 The compute nodes are connected using 10 Gbps Ethernet.
-The cluster connects to NSF’s [Pacific Research Platform] at a speed of 100 Gbps.
+The cluster connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps.
 
 
 ## Details
