@@ -1,4 +1,4 @@
-# Wynton Crendentials
+# Wynton Credentials
 
 ## Change password
 
@@ -20,7 +20,7 @@ Alternatively, you can change your password using the [RBVI Kerberos Web Interfa
 
 ## Verify credentials
 
-To test your Wynton credentials, try to [login to Wynton via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alteratively, verify them from your browser:
+To test your Wynton credentials, try to [login to Wynton via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alternatively, verify them from your browser:
 
 1. Go to [https://www.cgl.ucsf.edu/admin/kerbtest.py](https://www.cgl.ucsf.edu/admin/kerbtest.py) in your browser.  A popup panel titled 'Sign in https://www.cgl.ucsf.edu' is opened by the browser.
 

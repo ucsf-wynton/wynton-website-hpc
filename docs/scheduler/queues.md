@@ -16,19 +16,19 @@ The cluster provides different queues ("running areas") that each is optimized f
 
 * **member.q**:
   - Maximum runtime: 2 weeks
-  - Process priority: 0 (higest)
+  - Process priority: 0 (highest)
   - Quota: Proportional to your labs share on the cluster (priority users only)
   - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the Wynton cluster and gain priority access corresponding to the contribution
 
 * **ondemand.q**:
   - Maximum runtime: Per agreement
-  - Process priority: 0 (higest)
+  - Process priority: 0 (highest)
   - Quota: Available upon application and approval by the [steering committee]
   - Purpose: Intended for scheduled, high-priority computing needs and / or temporary paid priority access
 
 * **gpu.q**:
   - Maximum runtime: 2 weeks
-  - Process priority: 0 (higest)
+  - Process priority: 0 (highest)
   - Quota: Available to users/groups who have contributed with GPU hardware (The plan is to eventually make this a communal resource)
   - Purpose: For software that utilize Graphics Processing Units (GPUs)
 

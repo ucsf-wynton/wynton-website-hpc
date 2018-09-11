@@ -1,8 +1,8 @@
 # Good Practices
 
-The Wynton cluster is high-performance compute resource used by a variety of UCSF researchers.  It is designed to handle a large number of analyses run in parallel by a large number of groups and users.  Despite this, there will times when the demand is higher than the supply, resulting in longer queing times and possibly also slower processing times when the jobs are started.
+The Wynton cluster is high-performance compute resource used by a variety of UCSF researchers.  It is designed to handle a large number of analyses run in parallel by a large number of groups and users.  Despite this, there will times when the demand is higher than the supply, resulting in longer queueing times and possibly also slower processing times when the jobs are started.
 
-In order to maximize the efficieny of the cluster and **decrease your** (and others) **queuing and processing times**, please try make yourself familary with the following guidelines:
+In order to maximize the efficiency of the cluster and **decrease your** (and others) **queuing and processing times**, please try make yourself familiar with the following guidelines:
 
 * Identify and [specify]({{ '/scheduler/submit-jobs.html' | relative_url }}) the amount of resources your jobs need (&rArr; better utilization and load balancing)
 

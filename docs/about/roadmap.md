@@ -41,7 +41,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Global scratch storage on BeeGFS parallel file system
 
-* Development: Dedicated 10 Gpbs transfer node for faster file transfers in to and out from Wynton
+* Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from Wynton
 
 See also [NEWS]({{ '/about/news.html' | relative_url }}).
 

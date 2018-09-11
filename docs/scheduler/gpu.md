@@ -18,7 +18,7 @@ GPU jobs run in a dedicated queue which must be requested in the job submission.
 ```sh
 qsub -q gpu.q ...
 ```
-Jobs requiring more than one GPU must be submited like this:
+Jobs requiring more than one GPU must be submitted like this:
 ```sh
 qsub -q gpu.q -pe smp N ...
 ```
@@ -46,7 +46,7 @@ To avoid overloading GPUs, it is important that each job use only the GPUs it wa
 Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores, there is no way to ensure that a GPU node's CPU cores don't get oversubscribed.  For this reason, please limit your CPU core usage to 4 CPU cores per GPU requested.  This will prevent CPU core overloading on all the GPU node types.
 
 ## GPU use monitoring
-While it is not possible to log directly into the GPU nodes to monitor their usage, several statistics are availble from the login hosts.  For example:
+While it is not possible to log directly into the GPU nodes to monitor their usage, several statistics are available from the login hosts.  For example:
 ```sh
 [alice@{{ site.login.name }} ~]$ qconf -se msg-iogpu3
 hostname              msg-iogpu3
