@@ -1,15 +1,6 @@
-# Accomplishments
+# Roadmap & Accomplishments
 
-* Storage: Global scratch storage on BeeGFS parallel file system
-
-* Development: Dedicated 10 Gpbs transfer node for faster file transfers in to and out from Wynton
-
-See also [NEWS]({{ '/about/news.html' | relative_url }}).
-
-
-# Roadmap
-
-_The below "timeline" is a rough outline on when we can expect different milestones to be accomplished - it is not meant to convey their relative priorities or the amount of effort being put into them_.
+_The below "timeline" is a rough outline on when we can expect different milestones to be accomplished - the order does not reflect their relative priorities or the amount of effort spent_.
 
 ## Soon
 
@@ -45,6 +36,15 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 ## Planned deprecation
 
 * Storage: When new parallel file system (`/wynton`) is fully deployed, discontinue the NetApp storage (e.g. deprecate usage of `/netapp`) as well as `/scrapp/`.
+
+## Accomplished milestones
+
+* Storage: Global scratch storage on BeeGFS parallel file system
+
+* Development: Dedicated 10 Gpbs transfer node for faster file transfers in to and out from Wynton
+
+See also [NEWS]({{ '/about/news.html' | relative_url }}).
+
 
 
 [QB3]: https://salilab.org/qb3cluster/
