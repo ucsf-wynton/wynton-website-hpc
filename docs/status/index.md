@@ -38,6 +38,14 @@
 
 ## Past Incidents
 
+### September 13, 2018
+
+#### <span style="color: orange;">Scheduler unreachable</span>
+
+**Resolved**: Around 11pm on Wednesday September 12, the SGE scheduler (“qmaster”) became unreachable such that the scheduler could not be queried and no new jobs could be submitted. Jobs that relied on run-time access to the scheduler may have failed. The problem, which was due to a misconfiguration being introduced, was resolved early morning on Thursday September 13.
+<br><span class="timestamp">Sept 13, 9:50 PDT</span>
+
+
 ### August 1, 2018
 
 #### <span style="color: orange;">Partial shutdown</span>
