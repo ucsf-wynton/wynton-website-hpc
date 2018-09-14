@@ -48,7 +48,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from Wynton
 
-* Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores and ) is incorporated into Wynton
+* Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into Wynton
 
 See also [NEWS]({{ '/about/news.html' | relative_url }}).
 
