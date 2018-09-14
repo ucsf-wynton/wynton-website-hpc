@@ -21,7 +21,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Pricing model: Description on how to purchase (amount in USD) additional storage space (beyond what is available for free)
 
-* Storage: Requirements for mounting storage that exists elsewhere on the UCSF campus to Wynton
+* Storage: Requirements for mounting lab-owned storage into Wynton
 
 * Scheduler: Support interactive jobs (`qlogin`)
 
@@ -34,7 +34,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
 
-* Compliance: Support for restricted data analysis, e.g. protected health information (PHI) and clinical data
+* Compliance: Support for restricted data analysis
 
 
 ## Planned deprecation
