@@ -98,16 +98,16 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   var value;
   var cores = 0, coreMin = 1e9, coreMax = -1e9;
   var cpuMin = 1e9, cpuMax = -1e9;
-  var ramMin = 1e9, ramMax = -1e9;
-  var scratchMin = 1e9, scratchMax = -1e9;
+  var ram = 0, ramMin = 1e9, ramMax = -1e9;
+  var scratch = 0, scratchMin = 1e9, scratchMax = -1e9;
 
   /* For each row */
-  var count = 0;
+  var nodes = 0;
   data.forEach(function(row) {
     /* Ignore column on /tmp size, iff it exists */
     delete row["Local `/tmp`"];
   
-    if (count == 0) {
+    if (nodes == 0) {
       tr = table.append("thead").append("tr");
       for (key in row) {
         value = key.replace(/\`/g, "");
@@ -131,24 +131,26 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
 
 	/* RAM */
 	value = parseFloat(row["RAM"].match(/[\d.]+/));
+	ram += value;
 	if (value <= ramMin) ramMin = value;
 	if (value >= ramMax) ramMax = value;
 
 	/* Scratch */
 	value = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
+	scratch += value;
 	if (value <= scratchMin) scratchMin = value;
 	if (value >= scratchMax) scratchMax = value;
 
-    count += 1;	
+    nodes += 1;	
   });
 
   var addFooter = false;
   if (addFooter) tr = table.append("tfoot").append("tr");
-  value = count + " nodes";
+  value = nodes + " nodes";
   if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-nodes").text(value);
 
-  value = cores + " cores (" + coreMin + "-" + coreMax + " per node)";
+  value = cores + " cores (" + coreMin + "-" + coreMax + " cores/node, avg. " + (cores/nodes).toFixed(1) + " cores/node)";
   if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-cores").text(value);
 
@@ -156,11 +158,11 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-cpu").text(value);
 
-  value = ramMin + "-" + ramMax + " GiB";
+  value = ramMin + "-" + ramMax + " GiB (avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
   if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-ram").text(value);
 
-  value = scratchMin + "-" + scratchMax + " TiB";
+  value = scratchMin + "-" + scratchMax + " TiB (avg. " + (scratch/nodes).toFixed(2) + " TiB/node or " + (scratch/cores).toFixed(3) + " TiB/core)";
   if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-scratch").text(value);
   d3.select("#hosttable-summary-scratch2").text(value);
