@@ -12,12 +12,16 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Software stacks: Support for sharing software installations between groups via environment modules (e.g. `module load CBI`)
 
-* Expansion: Migrate QB3 users and QB3 compute nodes over to Wynton HPC
+* Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 cores) over to Wynton HPC
+
+* Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
 
 ## On the horizon
 
-* Pricing model: Detailed description on how buy into or contribute with existing hardware to Wynton, e.g. pricing models for adding extra storage and compute resources.
+* Pricing model: Description on how to purchase (amount in USD) additional storage space (beyond what is available for free)
+
+* Storage: Requirements for mounting storage that exists elsewhere on the UCSF campus to Wynton
 
 * Scheduler: Support interactive jobs (`qlogin`)
 
@@ -35,7 +39,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Planned deprecation
 
-* Storage: When new parallel file system (`/wynton`) is fully deployed, discontinue the NetApp storage (e.g. deprecate usage of `/netapp`) as well as `/scrapp/`.
+* Storage: When new parallel file system (`/wynton`) is fully deployed, discontinue the NetApp storage (e.g. deprecate usage of `/netapp`) as well as `/scrapp/`
 
 ## Accomplished milestones
 
