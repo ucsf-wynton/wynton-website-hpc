@@ -162,10 +162,11 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
   if (addFooter) tr.append("td").text(value);
   d3.select("#hosttable-summary-ram").text(value);
 
-  value = scratchMin + "-" + scratchMax + " TiB (avg. " + (scratch/nodes).toFixed(2) + " TiB/node or " + (scratch/cores).toFixed(3) + " TiB/core)";
+  value = scratchMin + "-" + scratchMax + " TiB";
   if (addFooter) tr.append("td").text(value);
-  d3.select("#hosttable-summary-scratch").text(value);
   d3.select("#hosttable-summary-scratch2").text(value);
+  value += " (avg. " + (scratch/nodes).toFixed(2) + " TiB/node or " + (scratch/cores).toFixed(3) + " TiB/core)";
+  d3.select("#hosttable-summary-scratch").text(value);
 
   $(document).ready(function() {
     $('#hosttable').DataTable({
