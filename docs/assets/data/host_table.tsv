@@ -1,3 +1,5 @@
+# Created by: Henrik Bengtsson
+# Created on: 2018-08-07 23:08:30 PDT
 Node	# Physical Cores	CPU	RAM	Local `/scratch`	Local `/tmp`
 cc-hmid1	24	2.9 GHz	512 GiB	1.4 TiB	4.0 GiB
 cc-id1	24	2.9 GHz	256 GiB	1.4 TiB	4.0 GiB

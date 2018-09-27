@@ -90,8 +90,19 @@ The cluster connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps
 </table>
 
 <script type="text/javascript" charset="utf-8">
-d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, data) {
-  if (error) throw error;
+d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(tsv) {
+
+  // extract date from header comments
+  var timestamp = tsv.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
+  timestamp = timestamp.replace(/^[#] Created on: /g, '');
+  timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
+  timestamp = timestamp.trim();
+  d3.select("#hosttable-timestamp").text(timestamp);
+
+  // drop header comment
+  tsv = tsv.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+
+  var data = d3.tsv.parse(tsv);
 
   var table = d3.select("#hosttable");
   var thead, tbody, tfoot, tr;
@@ -176,7 +187,7 @@ d3.tsv("{{ '/assets/data/host_table.tsv' | relative_url }}", function(error, dat
 });
 </script>
 
-Source: [host_table.tsv] (produced from `qhost`, `cat /proc/cpuinfo`, and `cat /etc/centos-release`).
+Source: [host_table.tsv] (<span id="hosttable-timestamp"></span>) produced from `qhost`, `cat /proc/cpuinfo`, and `cat /etc/centos-release`.
 
 
 <style>
