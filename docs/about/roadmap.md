@@ -30,7 +30,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Compute: Add communal GPU nodes - currently only available to investigators who contributed with their own GPU nodes
 
 
-## Long-term objectives
+## In progress
 
 * Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
 
