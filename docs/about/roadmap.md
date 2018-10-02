@@ -50,10 +50,11 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into Wynton
 
-See also [NEWS]({{ '/about/news.html' | relative_url }}).
+See also [News].
 
 
 
 [QB3]: https://salilab.org/qb3cluster/
 [BeeGFS]: https://www.beegfs.io/
 [Globus]: https://www.globus.org/
+[News]: {{ '/about/news.html' | relative_url }}
