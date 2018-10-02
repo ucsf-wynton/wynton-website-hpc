@@ -35,8 +35,28 @@
 </div>
   
 
+## Current Incidents
+
+### September 28 - October 11, 2018
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Notice**: Starting September 28, All compute nodes have been taken offline. Each node will be rebooted as soon as all of its running jobs have completed.  Since the maximum allowed run time for a job is two week, it may take until October 11 before all nodes have been rebooted and accepting new jobs.  In the meanwhile, there will be fewer available slots on the queue than usual.  To follow the progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.
+<br><span class="timestamp">Sept 28, 4:30 PDT</span>
+
 
 ## Past Incidents
+
+### October 1, 2018
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Resolved**: The login, development, and data transfer hosts have been rebooted.
+<br><span class="timestamp">Oct 1, 1:30 PDT</span>
+
+**Notice**: On Monday October 1 at 1:00 pm, all of the login, development, and data transfer hosts will be rebooted.
+<br><span class="timestamp">Sept 28, 4:30 PDT</span>
+
 
 ### September 13, 2018
 
