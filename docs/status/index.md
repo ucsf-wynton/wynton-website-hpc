@@ -41,7 +41,7 @@
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
-**Notice**: Starting September 28, All compute nodes have been taken offline. Each node will be rebooted as soon as all of its running jobs have completed.  Since the maximum allowed run time for a job is two week, it may take until October 11 before all nodes have been rebooted and accepting new jobs.  In the meanwhile, there will be fewer available slots on the queue than usual.  To follow the progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.
+**Notice**: On September 28, a kernel update was applied to all compute nodes. To begin running the new kernel, each node must be rebooted.  To achieve this as quickly as possible and without any loss of running jobs, the queues on the nodes were all disabled (i.e., they stopped accepting new jobs).  Each node will reboot itself and re-enable its own queues as soon as all of its running jobs have completed.  Since the maximum allowed run time for a job is two weeks, it may take until October 11 before all nodes have been rebooted and accepting new jobs.  In the meanwhile, there will be fewer available slots on the queue than usual.  To follow the progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.
 <br><span class="timestamp">Sept 28, 4:30 PDT</span>
 
 
