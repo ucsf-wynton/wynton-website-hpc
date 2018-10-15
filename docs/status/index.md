@@ -43,7 +43,7 @@
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
-*Resolved**: The compute nodes has been rebooted and are accepting new jobs.  For the record, on Oct 3 (day 5) approx. 300 cores were back online, on Oct 5 (day 7) approx. 600 cores were back online, on Oct 6 (day 8) approx. 1500 cores were back online, and on Oct 7 (day 9) the majority of the 1832 cores were back online.
+**Resolved**: The compute nodes has been rebooted and are accepting new jobs.  For the record, on Oct 3 (day 5) approx. 300 cores were back online, on Oct 5 (day 7) approx. 600 cores were back online, on Oct 6 (day 8) approx. 1500 cores were back online, and on Oct 7 (day 9) the majority of the 1832 cores were back online.
 <br><span class="timestamp">Oct 11, 09:00 PDT</span>
 
 **Notice**: On September 28, a kernel update was applied to all compute nodes. To begin running the new kernel, each node must be rebooted.  To achieve this as quickly as possible and without any loss of running jobs, the queues on the nodes were all disabled (i.e., they stopped accepting new jobs).  Each node will reboot itself and re-enable its own queues as soon as all of its running jobs have completed.  Since the maximum allowed run time for a job is two weeks, it may take until October 11 before all nodes have been rebooted and accepting new jobs.  In the meanwhile, there will be fewer available slots on the queue than usual.  To follow the progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.

@@ -31,11 +31,11 @@ _Footnote_:
 
 Free members, and other members who have not contributed toward compute, will be limited by the number of concurrent cores and will have lower priority on the job queue.  Participating co-op **members that contribute compute** to the cluster will get priority on the job queue and will be able to utilize a large number of concurrent cores (proportionate to their contribution).  For further details on scheduling and compute priorities, see [Available queues]({{ '/scheduler/queues.html' | relative_url }}).
 
-Contributions toward compute can be done either in cash ("buy in") or by intergrating existing hardware ("bring your own").
+Contributions toward compute can be done either in cash ("buy in") or by integrating existing hardware ("bring your own").
 
 ### Buy new compute
 
-As of October 2018, **a compute unit with four nodes (112 cores), 384 GiB RAM, ~0.8 TiB local scatch, 10 Gbps network card, is ~37,000 USD**.  It is possible buy into a partial compute unit - please let us known and we will combine your contributions with others before purchasing the new hardware.
+As of October 2018, **a compute unit with four nodes (112 cores), 384 GiB RAM, ~0.8 TiB local scratch, 10 Gbps network card, is ~37,000 USD**.  It is possible buy into a partial compute unit - please let us known and we will combine your contributions with others before purchasing the new hardware.
 
 ### Bring your own compute
 
