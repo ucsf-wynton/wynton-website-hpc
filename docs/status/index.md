@@ -35,27 +35,30 @@
 </div>
   
 
-## Current Incidents
+
+## Past Incidents
+
 
 ### September 28 - October 11, 2018
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
+*Resolved**: The compute nodes has been rebooted and are accepting new jobs.  For the record, on Oct 3 (day 5) approx. 300 cores were back online, on Oct 5 (day 7) approx. 600 cores were back online, on Oct 6 (day 8) approx. 1500 cores were back online, and on Oct 7 (day 9) the majority of the 1832 cores were back online.
+<br><span class="timestamp">Oct 11, 09:00 PDT</span>
+
 **Notice**: On September 28, a kernel update was applied to all compute nodes. To begin running the new kernel, each node must be rebooted.  To achieve this as quickly as possible and without any loss of running jobs, the queues on the nodes were all disabled (i.e., they stopped accepting new jobs).  Each node will reboot itself and re-enable its own queues as soon as all of its running jobs have completed.  Since the maximum allowed run time for a job is two weeks, it may take until October 11 before all nodes have been rebooted and accepting new jobs.  In the meanwhile, there will be fewer available slots on the queue than usual.  To follow the progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.
-<br><span class="timestamp">Sept 28, 4:30 PDT</span>
+<br><span class="timestamp">Sept 28, 16:30 PDT</span>
 
-
-## Past Incidents
 
 ### October 1, 2018
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
 **Resolved**: The login, development, and data transfer hosts have been rebooted.
-<br><span class="timestamp">Oct 1, 1:30 PDT</span>
+<br><span class="timestamp">Oct 1, 13:30 PDT</span>
 
 **Notice**: On Monday October 1 at 1:00 pm, all of the login, development, and data transfer hosts will be rebooted.
-<br><span class="timestamp">Sept 28, 4:30 PDT</span>
+<br><span class="timestamp">Sept 28, 16:30 PDT</span>
 
 
 ### September 13, 2018
@@ -63,7 +66,7 @@
 #### <span style="color: orange;">Scheduler unreachable</span>
 
 **Resolved**: Around 11pm on Wednesday September 12, the SGE scheduler (“qmaster”) became unreachable such that the scheduler could not be queried and no new jobs could be submitted. Jobs that relied on run-time access to the scheduler may have failed. The problem, which was due to a misconfiguration being introduced, was resolved early morning on Thursday September 13.
-<br><span class="timestamp">Sept 13, 9:50 PDT</span>
+<br><span class="timestamp">Sept 13, 09:50 PDT</span>
 
 
 ### August 1, 2018
@@ -71,7 +74,7 @@
 #### <span style="color: orange;">Partial shutdown</span>
 
 **Resolved**: Nodes were rebooted on August 1 shortly after the power came back.
-<br><span class="timestamp">Aug 2, 8:15 PDT</span>
+<br><span class="timestamp">Aug 2, 08:15 PDT</span>
 
 **Notice**: On Wednesday August 1 at 6:45am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
 <br><span class="timestamp">Jul 30, 20:45 PDT</span>
