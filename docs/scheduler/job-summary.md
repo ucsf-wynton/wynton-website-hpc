@@ -31,10 +31,10 @@ usage         1:            cpu=00:00:30, mem=1.38664 GB s, io=0.00968 GB, vmem=
 ```
 The full details are available at the end.
 
-With this information, we can narrow down that the total processing time is roughly 30 seconds and that the maximum amount of memory used was approximately 1.4 GiB.  If we want to submit this script again, we could submit it, with some margin, using:
+With this information, we can narrow down that the total processing time is roughly 30 seconds (`cpu=00:00:30`) and that the maximum amount of virtual memory (`vmem=500.066M`) used was ~500 MiB.  If we want to submit this script again, we could submit it, with some margin, using:
 
 ```sh
-$ qsub -l h_rt=00:01:00 -l mem=2G job_summary.pbs
+$ qsub -l h_rt=00:01:00 -l mem=1G job_summary.pbs
 ```
 
 
