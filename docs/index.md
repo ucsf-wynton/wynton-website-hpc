@@ -13,9 +13,11 @@ Wynton is a large, shared high-performance compute (HPC) cluster underlying UCSF
 
 In the initial phase (Fall 2017), our focus is to accommodate existing users from the earliest contributing UCSF centers (Memory & Aging, Inst. for Computational Health Sciences, Dept. of Radiology & Biomedical Imaging, and QB3).  In addition, **we encourage research groups who want to join the cooperative environment through new purchases or equipment migration to [contact us] for planning and evaluation**.  We plan to bring on more UCSF centers every few months.  Finally, once we achieve sufficient size and robustness, **we will also offer additional guest accounts for UCSF researchers who are not contributing to the co-op model**, to help meet the computational needs of the broad range of UCSF faculty and staff.  For more details, please see the Wynton [Roadmap].
 
-
-[Roadmap]: {{ '/about/roadmap.html' | relative_url }}
-
 If you don't fit one of the above early-access categories, but are keen to participate in one way or the other, please don't hesitate to [contact us] - we'd love to hear from you.
 
+**Please note**: The current Wynton cluster is *not* certified for use with Protected Health Information (PHI).  Data containing PHI must not be transferred to, mounted on, or processed with any Wynton cluster resources.  If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office].
+
+
+[Roadmap]: {{ '/about/roadmap.html' | relative_url }}
 [contact us]: {{ '/about/contact.html' | relative_url }}
+[UCSF Privacy Office]: https://hipaa.ucsf.edu/
