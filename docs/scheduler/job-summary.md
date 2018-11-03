@@ -9,7 +9,7 @@ If you don't know how much resources your job consumes, you can add `qstat -j $J
 #$ -cwd    ## use current working directory
 #$ -j yes  ## merge stdout and stderr
 
-## Calculate the mean of 100 million random numbers (~1.0 GiB RAM) in R
+## Calculate the mean of 100 million random numbers (~0.80 GB = ~0.75 GiB of RAM) in R
 Rscript -e "x <- rnorm(n = 100e6); Sys.sleep(30); mean(x)"
 
 ## End-of-job summary
