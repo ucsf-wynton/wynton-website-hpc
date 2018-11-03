@@ -19,14 +19,14 @@ qstat -j $JOB_ID
 As a first guess, we can assume that this script takes at most 5 minutes to run, but let's assume we don't have a good sense on how much memory it will consume, so we submit it as:
 
 ```sh
-$ qsub -l h_rt=00:05:00 job_summary.pbs
-Your job 2264194 ("job_summary.pbs") has been submitted
+$ qsub -l h_rt=00:05:00 job_summary.sge
+Your job 2264194 ("job_summary.sge") has been submitted
 ```
 
 When the job completes, we can find the resources as part of the output file:
 
 ```sh
-$ grep "usage" job_summary.pbs.o2264194
+$ grep "usage" job_summary.sge.o2264194
 usage         1:            cpu=00:00:30, mem=1.38664 GB s, io=0.00968 GB, vmem=500.066M, maxvmem=500.066M
 ```
 The full details are available at the end.
@@ -34,7 +34,7 @@ The full details are available at the end.
 With this information, we can narrow down that the total processing time is roughly 30 seconds (`cpu=00:00:30`) and that the maximum amount of virtual memory used was ~500 MiB (`vmem=500.066M`).  If we want to submit this script again, we could submit it, with some margin, using:
 
 ```sh
-$ qsub -l h_rt=00:01:00 -l mem=1G job_summary.pbs
+$ qsub -l h_rt=00:01:00 -l mem=1G job_summary.sge
 ```
 
 
@@ -42,7 +42,7 @@ $ qsub -l h_rt=00:01:00 -l mem=1G job_summary.pbs
 ## Full job summary
 
 ```sh
-$  cat job_summary.pbs.o2264194
+$  cat job_summary.sge.o2264194
 [1] -0.0001014335
 ==============================================================
 job_number:                 2264194
@@ -64,11 +64,11 @@ merge:                      y
 hard resource_list:         h_rt=300
 mail_list:                  alice@qb3-dev1
 notify:                     FALSE
-job_name:                   job_summary.pbs
+job_name:                   job_summary.sge
 jobshare:                   0
 hard_queue_list:            !gpu.q
 env_list:                   TERM=NONE
-script_file:                job_summary.pbs
+script_file:                job_summary.sge
 project:                    alicelab
 binding:                    NONE
 job_type:                   NONE
