@@ -1,5 +1,8 @@
 title: 'UCSF Wynton HPC Cluster'
 theme: jekyll-theme-minimal
+
+google_analytics: UA-128646955-1
+
 login:
   name: "wynlog2"
   hostname: "wynlog2.cc.ucsf.edu"
@@ -34,5 +37,6 @@ specs:
   swap_range: "4 GiB"
   local_scratch_size_range: "0.1-1.8 TiB"
   local_tmp_size: "4 GiB"
+  
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
