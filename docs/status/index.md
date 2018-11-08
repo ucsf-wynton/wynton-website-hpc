@@ -36,8 +36,18 @@
   
 
 
-## Past Incidents
+## Upcoming and Current Incidents
 
+### November 8, 2018
+
+#### <span style="color: orange;">Partial shutdown due to planned power outage</span>
+
+**Notice**: Parts of the Wynton cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. To follow the reboot progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.
+<br><span class="timestamp">Nov 7, 15:45 PDT</span>
+
+
+
+## Past Incidents
 
 ### September 28 - October 11, 2018
 
