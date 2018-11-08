@@ -43,7 +43,7 @@
 
 #### <span style="color: orange;">Partial shutdown due to planned power outage</span>
 
-**Update**: Login node `wynlog1` was also affected by the power outage.  Use `wynlog2` instead.
+**Update**: Login node `wynlog1` is also affected by the power outage.  Use `wynlog2` instead.
 <br><span class="timestamp">Nov 8, 09:10 PDT</span>
 
 **Notice**: Parts of the Wynton cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  ~~Nodes will be rebooted as soon as the power comes back. To follow the reboot progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
