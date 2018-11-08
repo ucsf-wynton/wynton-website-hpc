@@ -75,7 +75,7 @@ Please specify <code>-l scratch=size</code> when using local <code>/scratch</cod
 
 ## Interactive jobs
 
-It is currently _not_ possible to request _interactive_ jobs.  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
+It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
 
 
 ## See also
