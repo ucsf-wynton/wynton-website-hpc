@@ -43,6 +43,9 @@
 
 #### <span style="color: orange;">Partial shutdown due to planned power outage</span>
 
+**Update**: The login nodes, the development nodes and the data transfer node are now functional.
+<br><span class="timestamp">Nov 8, 10:15 PDT</span>
+
 **Update**: Login node `wynlog1` was also affected by the power outage.  Use `wynlog2` instead.
 <br><span class="timestamp">Nov 8, 09:10 PDT</span>
 
