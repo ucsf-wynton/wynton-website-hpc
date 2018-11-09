@@ -15,12 +15,15 @@ init: .git/hooks/pre-commit
 	cd .git/hooks; \
 	ln -s ../../.githooks/pre-commit .
 
-serve:
+start:
 	bundle exec jekyll serve --port 4001 &
 
 stop:
-	pkill --echo --count --full jekyll
+	- pkill --echo --count --full jekyll
 
+restart: stop start
+
+serve: start
 
 wynton:
 	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help

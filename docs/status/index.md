@@ -1,14 +1,14 @@
 # UCSF Wynton Status
 
-<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC Environment Operational</strong>
 </div>
--->
 
+<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Partial shutdown of Wynton HPC compute nodes starting Nov 8 at 4:00 am</strong>
 </div>
+-->
 
 
 
@@ -39,9 +39,20 @@
 
 ## Upcoming and Current Incidents
 
+N/A
+
+
+## Past Incidents
+
 ### November 8, 2018
 
 #### <span style="color: orange;">Partial shutdown due to planned power outage</span>
+
+**Resolved**: The cluster is full functional.  It turns out that none of the compute nodes, and therefore none of the running jobs, were affected by the power outage.
+<br><span class="timestamp">Nov 8, 11:00 PDT</span>
+
+**Update**: The queue-metric graphs are being updated again.
+<br><span class="timestamp">Nov 8, 11:00 PDT</span>
 
 **Update**: The login nodes, the development nodes and the data transfer node are now functional.
 <br><span class="timestamp">Nov 8, 10:10 PDT</span>
@@ -51,10 +62,6 @@
 
 **Notice**: Parts of the Wynton cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. ~~To follow the reboot progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
 <br><span class="timestamp">Nov 7, 15:45 PDT</span>
-
-
-
-## Past Incidents
 
 ### September 28 - October 11, 2018
 
