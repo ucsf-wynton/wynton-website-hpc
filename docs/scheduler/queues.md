@@ -5,7 +5,7 @@ The cluster provides different queues ("running areas") that each is optimized f
 * **short.q**:
   - Maximum runtime: 30 minutes
   - Process priority: 10 (medium)
-  - Quota: 200 (queued or active) jobs per user (all users)
+  - Quota: 100 (queued or active) jobs per user (all users)
   - Purpose: Low-latency needs, e.g. pipeline prototyping and quick turn-around analysis
 
 * **long.q**:
