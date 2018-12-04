@@ -45,9 +45,9 @@
 
 **Notice**: On Wednesday December 19, 2018, the Wynton HPC environment will be taken down for the purpose of providing all users with new, larger, and faster (home) storage space.  The new storage will served using BeeGFS, which is a new much faster file system - a system we have prototyped and tested via `/wynton/scratch`.  The home space will be increased from 200 GiB to 500 GiB for all users.  In order to do this, the following upgrade schedule is planned:
 
-* Wednesday December 6: **To all users, please refrain from using `/wynton/scratch` - use local `/scratch` if possible (see below).  The sooner we can take it down, the higher the chance is that we can get everything in place before December 19.**
+* Wednesday December 5: **To all users, please refrain from using `/wynton/scratch` - use local `/scratch` if possible (see below).  The sooner we can take it down, the higher the chance is that we can get everything in place before December 19.**
 
-* Wednesday December 6-19 (14 days):  In order to be able to upgrade the cluster storage on December 19 with minimal downtime, the maximum allowed run-time for jobs on long.q and members.q will be decreased from the current 14 days down to 1 day on Tuesday December 18.
+* Wednesday December 5-19 (15 days):  In order to be able to upgrade the cluster storage on December 19 with minimal downtime, the maximum allowed run-time for jobs on long.q and members.q will be decreased from the current 14 days down to 1 day on Tuesday December 18.
 
 * Wednesday December 12-19 (8 days): **`/wynton/scratch` will be unavailable and completely wiped**.  For computational scratch space, please [use local `/scratch` available on each compute node](https://ucsf-hpc.github.io/wynton/scheduler/using-local-scratch.html).
 
