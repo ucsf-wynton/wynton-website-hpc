@@ -111,7 +111,8 @@ code {
   margin-left: 0.3ex;
   font-weight: bold;
   color: orange;
-  visibility: hidden;
+  /* Comment out 'visibility' to display "broadcast" icon */
+/*  visibility: hidden; */
 }
 
 .timestamp {
