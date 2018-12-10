@@ -70,6 +70,7 @@ There are no per-user quotas in these scratch spaces.  Files not added or modifi
 ## User and Lab Storage
 
 Each user may use up to 200 GiB disk space in the home directory.  Research groups can add additional storage space by either mounting their existing storage or purchase new.
+**Important**, please note that the Wynton HPC storage is _not_ backed up.  Users and labs are responsible to back up their own data outside of Wynton.
 
 
 ## Network
