@@ -2,6 +2,7 @@
 
 _The below "timeline" is a rough outline on when we can expect different milestones to be accomplished - the order does not reflect their relative priorities or the amount of effort spent_.
 
+
 ## Soon
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
@@ -16,12 +17,12 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 physical cores) over to Wynton HPC
 
+* Pricing model: Description on how to purchase (amount in USD) additional storage space (beyond what is available for free)
+
 * Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
 
 ## On the horizon
-
-* Pricing model: Description on how to purchase (amount in USD) additional storage space (beyond what is available for free)
 
 * Storage: Requirements for mounting lab-owned storage into Wynton
 
