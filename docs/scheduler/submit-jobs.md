@@ -68,7 +68,7 @@ qsub -cwd -l scratch=200G script.sh
 Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes](using-local-scratch.html).
 
 <div class="alert alert-warning" role="alert">
-Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, lowers the queing times, and minimizes the risk for running out of local scratch.
+Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
 </div>
 
 
