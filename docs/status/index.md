@@ -2,15 +2,17 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/tweaks.css -->
 
+<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC Environment Operational</strong>
 </div>
-
-<!--
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Partial shutdown of Wynton HPC compute nodes starting Nov 8 at 4:00 am</strong>
-</div>
 -->
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>Wynton HPC Environment Operational<br>
+However, partially interruptive upgrades will take place on December 12-19</strong>
+</div>
+
 
 
 
