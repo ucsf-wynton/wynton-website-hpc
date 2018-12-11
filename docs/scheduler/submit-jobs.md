@@ -22,7 +22,7 @@ Arguments are then passed as if you called the script as `script.sh --first=2 --
 ## Specifying (maximum) run time
 
 <div class="alert alert-info" role="alert">
-Specifying the run time will shorten the queueing time - significantly so for short running jobs.
+Specifying the run time will shorten the queuing time - significantly so for short running jobs.
 </div>
 
 By specifying the how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
@@ -68,7 +68,7 @@ qsub -cwd -l scratch=200G script.sh
 Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes](using-local-scratch.html).
 
 <div class="alert alert-warning" role="alert">
-Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, lowers the queing times, and minimizes the risk for running out of local scratch.
+Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
 </div>
 
 
