@@ -4,13 +4,13 @@
 
 <!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC Environment Operational</strong>
+<strong>Wynton HPC environment operational</strong>
 </div>
 -->
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC Environment Operational<br>
-However, partially interruptive upgrades will take place on December 12-19</strong>
+<strong>Wynton HPC partial outage due to power failure</strong><br>
+<span style="font-size: normal;">Also, partially interruptive upgrades will take place on December 12-19</span>
 </div>
 
 
@@ -42,6 +42,12 @@ However, partially interruptive upgrades will take place on December 12-19</stro
 
 
 ## Upcoming and Current Incidents
+
+### December 12, 2018
+#### <span style="color: orange;">Power failure</span>
+
+**Investigating**: The compute nodes named `mac-*` (in the Sandler building) went down due to power failure on Wednesday December 12 starting around 5:50am.  Nodes are being rebooted.
+<br><span class="timestamp">Dec 12, 09:05 PDT</span>
 
 ### November 28-December 19, 2018
 
