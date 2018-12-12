@@ -53,6 +53,9 @@
 
 #### <span style="color: orange;">Migration to New, Larger, and Faster Storage Space including Users' Home Space</span>
 
+**Update**: `/wynton/scratch` has been taken offline.
+<br><span class="timestamp">Dec 12, 10:20 PDT</span>
+
 **Reminder**: All of `/wynton/scratch` will be taken offline and completely wiped starting Wednesday December 12 at 8:00am.
 <br><span class="timestamp">Dec 11, 14:45 PDT</span>
 
