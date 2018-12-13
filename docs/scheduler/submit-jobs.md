@@ -1,22 +1,24 @@
 # Submit Jobs
 
-## Submit a script
+## Submit a script to run in the current working directory
 
-To submit a shell script to the scheduler that needs 1 GiB of RAM (`-l mem_free=1G`) and such that it will run in the current working directory (`-cwd`), use:
+To submit a shell script to the scheduler such that it will run in the current working directory (`-cwd`), use:
 ```sh
-qsub -cwd -l mem_free=1G script.sh
+qsub -cwd script.sh
 ```
 The scheduler will assign your job a unique (numeric) job ID.
 
 
+## Specifying (maximum) memory usage
 
-### Passing arguments to script
-
-You can pass arguments to a job script similarly to how one passes argument to a script executed on the command line, e.g.
+It is important to give specify the maximum amount of memory a job will need in order to complete.  For example, the following job needs at most 10 GiB of RAM and will run on the first available compute node with that amount of memory available:
 ```sh
-qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"' --debug
+qsub -cwd -l mem_free=10G script.sh
 ```
-Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
+
+<div class="alert alert-warning" role="alert">
+A job that consumes more memory than requested will be terminated by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
+</div>
 
 
 ## Specifying (maximum) run time
@@ -31,9 +33,8 @@ qsub -cwd -l mem_free=1G -l h_rt=00:03:00 script.sh
 ```
 
 <div class="alert alert-warning" role="alert">
-A job that runs longer than the requested run time, will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
+A job that runs longer than the requested run time will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
 </div>
-
 
 
 
@@ -71,6 +72,15 @@ Your job is only guaranteed the amount of available scratch space that you reque
 Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
 </div>
 
+
+
+## Passing arguments to script
+
+You can pass arguments to a job script similarly to how one passes argument to a script executed on the command line, e.g.
+```sh
+qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"' --debug
+```
+Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
 
 
 ## Interactive jobs
