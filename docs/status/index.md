@@ -43,11 +43,6 @@
 
 ## Upcoming and Current Incidents
 
-### December 12, 2018
-#### <span style="color: orange;">Power failure</span>
-
-**Investigating**: The compute nodes named `mac-*` (in the Sandler building) went down due to power failure on Wednesday December 12 starting around 5:50am.  Nodes are being rebooted.
-<br><span class="timestamp">Dec 12, 09:05 PDT</span>
 
 ### November 28-December 19, 2018
 
@@ -77,6 +72,16 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 
 ## Past Incidents
+
+### December 12-14, 2018
+#### <span style="color: orange;">Power failure</span>
+
+**Resolved**: All `mac-*` compute nodes are up and functional.
+<br><span class="timestamp">Dec 14, 12:00 PDT</span>
+
+**Investigating**: The compute nodes named `mac-*` (in the Sandler building) went down due to power failure on Wednesday December 12 starting around 5:50am.  Nodes are being rebooted.
+<br><span class="timestamp">Dec 12, 09:05 PDT</span>
+
 
 ### November 8, 2018
 
