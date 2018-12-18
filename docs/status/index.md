@@ -42,109 +42,9 @@
 
 ## Compute Nodes
 
-<script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"><!-- ~80 kB --></script>
-<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"><!-- 2 kB --></script>
-
 <div id="hosttablediv">
 <p id="hosttablemessage">All compute nodes are functional.</p>
 </div>
-
-<script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(host_table) {
-  // drop header comments
-  host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
-  host_table = d3.tsv.parse(host_table);
-
-  d3.text("https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/status/qstat_nodes_in_state_au.tsv", "text/csv", function(host_status) {
-    
-    // drop header comments
-    host_status = host_status.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
-    host_status = d3.tsv.parse(host_status);
-
-    var table;
-    var thead, tbody, tfoot, tr, td, td_status, p;
-    var value;
-    var cores = 0, cores_kk;
-    var ram = 0, ram_kk;
-    var scratch = 0, scratch_kk;
-    var nodes_with_issues = 0, cores_with_issues = 0, ram_with_issues = 0;
-  
-    /* For each row */
-    var nodes = 0;
-    host_table.forEach(function(row) {
-      nodes += 1;
-      
-      /* Cores */
-      cores_kk = parseInt(row["# Physical Cores"]);
-      cores += cores_kk;
-      /* RAM */
-      ram_kk = parseFloat(row["RAM"].match(/[\d.]+/));
-      ram += ram_kk;
-      /* Scratch */
-      scratch_kk = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
-      scratch += scratch_kk;
-
-      // No issues?
-      if (host_status.filter(function(d) { return d.queuename == row["Node"] }).length == 0) return;
-
-      /* Ignore column on /tmp size, iff it exists */
-      delete row["Local `/tmp`"];
-
-      if (nodes_with_issues == 0) {
-        table = d3.select("#hosttable");
-        div = d3.select("#hosttablediv");
-	table = div.append("table");
-        table.id = "hosttable";
-        tr = table.append("thead").append("tr");
-        tr.append("th").text("Status");
-        for (key in row) tr.append("th").text(key.replace(/\`/g, ""));
-        tbody = table.append("tbody");
-      }
-
-      nodes_with_issues += 1;      
-      cores_with_issues += cores_kk;
-      ram_with_issues += ram_kk;
-  
-      tr = tbody.append("tr");
-      td_status = tr.append("td").text("⚠");  // "⚠" or "✖"
-      for (key in row) td = tr.append("td").text(row[key]);
-    });
-
-    p = d3.select("#hosttablemessage");
-    if (nodes_with_issues > 0) {
-      p.text(nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) nodes out of " + nodes + ", corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) cores out of " + cores + ", are reported to have a queuing state 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes).");
-      p.append("br");
-//, with a total of " + cores + " cores and " + ram + " GiB of RAM), are functional.");
-//      p.append("p").text('(*) Below is a table of all compute nodes with queuing state "unheard/unreachable" or "error" (according to \'qstat -f -qs uE\' queried every five minutes).');
-    } else {
-      p.text("All " + nodes + " nodes, with a total of " + cores + " cores and " + ram + " GiB of RAM), are functional.");
-    }
-
-    $(document).ready(function() {
-      $('#hosttable').DataTable({
-        paging: false,
-        searching: false,
-        order: [[ 1, "asc" ]]
-      });
-    });
-  });
-});
-</script>
-
-
-
-<style>
-table {
-  margin-top: 2ex;
-  margin-bottom: 2ex;
-}
-tfoot {
-  border-top: 2px solid #000;
-  font-weight: bold;
-}
-ttr:last-child { border-top: 2px solid #000; }
-</style>
 
 
 ## Upcoming and Current Incidents
@@ -286,6 +186,104 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 <br><span class="timestamp">Jun 17, 15:00 PDT</span>
 
 
+
+<!-- DO NOT EDIT ANYTHING BELOW -->
+
+<script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"><!-- ~80 kB --></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"><!-- 2 kB --></script>
+
+<script type="text/javascript" charset="utf-8">
+d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(host_table) {
+  // drop header comments
+  host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+  host_table = d3.tsv.parse(host_table);
+
+  d3.text("https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/status/qstat_nodes_in_state_au.tsv", "text/csv", function(host_status) {
+    
+    // drop header comments
+    host_status = host_status.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+    host_status = d3.tsv.parse(host_status);
+
+    var table;
+    var thead, tbody, tfoot, tr, td, td_status, p;
+    var value;
+    var cores = 0, cores_kk;
+    var ram = 0, ram_kk;
+    var scratch = 0, scratch_kk;
+    var nodes_with_issues = 0, cores_with_issues = 0, ram_with_issues = 0;
+  
+    /* For each row */
+    var nodes = 0;
+    host_table.forEach(function(row) {
+      nodes += 1;
+      
+      /* Cores */
+      cores_kk = parseInt(row["# Physical Cores"]);
+      cores += cores_kk;
+      /* RAM */
+      ram_kk = parseFloat(row["RAM"].match(/[\d.]+/));
+      ram += ram_kk;
+      /* Scratch */
+      scratch_kk = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
+      scratch += scratch_kk;
+
+      // No issues?
+      if (host_status.filter(function(d) { return d.queuename == row["Node"] }).length == 0) return;
+
+      /* Ignore column on /tmp size, iff it exists */
+      delete row["Local `/tmp`"];
+
+      if (nodes_with_issues == 0) {
+        table = d3.select("#hosttable");
+        div = d3.select("#hosttablediv");
+	table = div.append("table");
+        table.id = "hosttable";
+        tr = table.append("thead").append("tr");
+        tr.append("th").text("Status");
+        for (key in row) tr.append("th").text(key.replace(/\`/g, ""));
+        tbody = table.append("tbody");
+      }
+
+      nodes_with_issues += 1;      
+      cores_with_issues += cores_kk;
+      ram_with_issues += ram_kk;
+  
+      tr = tbody.append("tr");
+      td_status = tr.append("td").text("⚠");  // "⚠" or "✖"
+      for (key in row) td = tr.append("td").text(row[key]);
+    });
+
+    p = d3.select("#hosttablemessage");
+    if (nodes_with_issues > 0) {
+      p.text(nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) nodes out of " + nodes + ", corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) cores out of " + cores + ", are reported to have a queuing state 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes).");
+    } else {
+      p.text("All " + nodes + " nodes, with a total of " + cores + " cores and " + ram + " GiB of RAM), are functional.");
+    }
+    
+    $(document).ready(function() {
+      $('#hosttable').DataTable({
+        paging: false,
+        searching: false,
+        order: [[ 1, "asc" ]]
+      });
+    });
+  });
+});
+</script>
+
+
+<style>
+table {
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+}
+tfoot {
+  border-top: 2px solid #000;
+  font-weight: bold;
+}
+ttr:last-child { border-top: 2px solid #000; }
+</style>
 
 <script type="text/javascript">
   // FIXME: Ideally we set <meta http-equiv="refresh" content="300">
