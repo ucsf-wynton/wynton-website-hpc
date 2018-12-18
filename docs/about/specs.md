@@ -13,8 +13,8 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 <dl id="hosttable-summary" class="dl-horizontal">
   <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
-  <dt>CPU</dt><dd id="hosttable-summary-cpu">{{ site.specs.cpu_range }}</dd>
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}</dd>
+  <dt>CPU</dt><dd id="hosttable-summary-cpu">{{ site.specs.cpu_range }}</dd>
   <dt>Swap</dt><dd id="hosttable-summary-ram">{{ site.specs.swap_range }}</dd>
   <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-scratch">{{ site.specs.local_scratch_size_range }}</dd>
   <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp">{{ site.specs.local_tmp_size }}</dd>
@@ -91,99 +91,117 @@ The cluster connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps
 </table>
 
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(tsv) {
-
+d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(host_table) {
   // extract date from header comments
-  var timestamp = tsv.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
+  var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
   timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
   timestamp = timestamp.trim();
   d3.select("#hosttable-timestamp").text(timestamp);
 
-  // drop header comment
-  tsv = tsv.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+  // drop header comments
+  host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+  host_table = d3.tsv.parse(host_table);
 
-  var data = d3.tsv.parse(tsv);
+  d3.text("https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/status/qstat_nodes_in_state_au.tsv", "text/csv", function(host_status) {
+    
+    // drop header comments
+    host_status = host_status.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+    host_status = d3.tsv.parse(host_status);
 
-  var table = d3.select("#hosttable");
-  var thead, tbody, tfoot, tr;
-  var value;
-  var cores = 0, coreMin = 1e9, coreMax = -1e9;
-  var cpuMin = 1e9, cpuMax = -1e9;
-  var ram = 0, ramMin = 1e9, ramMax = -1e9;
-  var scratch = 0, scratchMin = 1e9, scratchMax = -1e9;
-
-  /* For each row */
-  var nodes = 0;
-  data.forEach(function(row) {
-    /* Ignore column on /tmp size, iff it exists */
-    delete row["Local `/tmp`"];
+    var table = d3.select("#hosttable");
+    var thead, tbody, tfoot, tr, td, td_status;
+    var value, value2, has_issue;
+    var cores = 0, coreMin = 1e9, coreMax = -1e9;
+    var cpuMin = 1e9, cpuMax = -1e9;
+    var ram = 0, ramMin = 1e9, ramMax = -1e9;
+    var scratch = 0, scratchMin = 1e9, scratchMax = -1e9;
+    var nodes_with_issue = 0, cores_with_issue = 0, ram_with_issue = 0;
   
-    if (nodes == 0) {
-      tr = table.append("thead").append("tr");
-      for (key in row) {
-        value = key.replace(/\`/g, "");
-	    tr.append("th").text(value);
-	  }
-      tbody = table.append("tbody");
-	}
-    tr = tbody.append("tr");
-    for (key in row) { tr.append("td").text(row[key]); }
-	
-	/* Cores */
-	value = parseInt(row["# Physical Cores"]);
-	cores += value;
-	if (value <= coreMin) coreMin = value;
-	if (value >= coreMax) coreMax = value;
+    /* For each row */
+    var nodes = 0;
+    host_table.forEach(function(row) {
+      /* Ignore column on /tmp size, iff it exists */
+      delete row["Local `/tmp`"];
+    
+      if (nodes == 0) {
+        tr = table.append("thead").append("tr");
+        tr.append("th").text("Status");
+        for (key in row) {
+          value = key.replace(/\`/g, "");
+          tr.append("th").text(value);
+        }
+        tbody = table.append("tbody");
+      }
+      tr = tbody.append("tr");
 
-	/* CPU */
-	value = parseFloat(row["CPU"].match(/[\d.]+/));
-	if (value <= cpuMin) cpuMin = value;
-	if (value >= cpuMax) cpuMax = value;
-
-	/* RAM */
-	value = parseFloat(row["RAM"].match(/[\d.]+/));
-	ram += value;
-	if (value <= ramMin) ramMin = value;
-	if (value >= ramMax) ramMax = value;
-
-	/* Scratch */
-	value = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
-	scratch += value;
-	if (value <= scratchMin) scratchMin = value;
-	if (value >= scratchMax) scratchMax = value;
-
-    nodes += 1;	
-  });
-
-  var addFooter = false;
-  if (addFooter) tr = table.append("tfoot").append("tr");
-  value = nodes + " nodes";
-  if (addFooter) tr.append("td").text(value);
-  d3.select("#hosttable-summary-nodes").text(value);
-
-  value = cores + " cores (" + coreMin + "-" + coreMax + " cores/node, avg. " + (cores/nodes).toFixed(1) + " cores/node)";
-  if (addFooter) tr.append("td").text(value);
-  d3.select("#hosttable-summary-cores").text(value);
-
-  value = cpuMin + "-" + cpuMax + " GHz";
-  if (addFooter) tr.append("td").text(value);
-  d3.select("#hosttable-summary-cpu").text(value);
-
-  value = ramMin + "-" + ramMax + " GiB (avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
-  if (addFooter) tr.append("td").text(value);
-  d3.select("#hosttable-summary-ram").text(value);
-
-  value = scratchMin + "-" + scratchMax + " TiB";
-  if (addFooter) tr.append("td").text(value);
-  d3.select("#hosttable-summary-scratch2").text(value);
-  value += " (avg. " + (scratch/nodes).toFixed(2) + " TiB/node or " + (scratch/cores).toFixed(3) + " TiB/core)";
-  d3.select("#hosttable-summary-scratch").text(value);
-
-  $(document).ready(function() {
-    $('#hosttable').DataTable({
-      "pageLength": 25
-	});
+      td_status = tr.append("td");
+      has_issue = (host_status.filter(function(d) { return d.queuename == row["Node"] }).length > 0);
+      if (has_issue) {
+        td_status.text("⚠");  // "⚠" or "✖"
+        nodes_with_issue += 1;
+      }
+      
+      for (key in row) td = tr.append("td").text(row[key]);
+      
+      /* Cores */
+      value = parseInt(row["# Physical Cores"]);
+      cores += value;
+      if (value <= coreMin) coreMin = value;
+      if (value >= coreMax) coreMax = value;
+      if (has_issue) cores_with_issue += value;
+  
+      /* CPU */
+      value = parseFloat(row["CPU"].match(/[\d.]+/));
+      if (value <= cpuMin) cpuMin = value;
+      if (value >= cpuMax) cpuMax = value;
+  
+      /* RAM */
+      value = parseFloat(row["RAM"].match(/[\d.]+/));
+      ram += value;
+      if (value <= ramMin) ramMin = value;
+      if (value >= ramMax) ramMax = value;
+      if (has_issue) ram_with_issue += value;
+  
+      /* Scratch */
+      value = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
+      scratch += value;
+      if (value <= scratchMin) scratchMin = value;
+      if (value >= scratchMax) scratchMax = value;
+  
+      nodes += 1;
+    });
+  
+    var addFooter = false;
+    if (addFooter) tr = table.append("tfoot").append("tr");
+    value = nodes + " nodes";
+    if (addFooter) tr.append("td").text(value);
+    d3.select("#hosttable-summary-nodes").text(value);
+  
+    value = cores + " cores (" + coreMin + "-" + coreMax + " cores/node, avg. " + (cores/nodes).toFixed(1) + " cores/node)";
+    if (addFooter) tr.append("td").text(value);
+    d3.select("#hosttable-summary-cores").text(value);
+  
+    value = cpuMin + "-" + cpuMax + " GHz";
+    if (addFooter) tr.append("td").text(value);
+    d3.select("#hosttable-summary-cpu").text(value);
+  
+    value = ram + " GiB (" + ramMin + "-" + ramMax + " GiB, avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
+    if (addFooter) tr.append("td").text(value);
+    d3.select("#hosttable-summary-ram").text(value);
+  
+    value = scratchMin + "-" + scratchMax + " TiB";
+    if (addFooter) tr.append("td").text(value);
+    d3.select("#hosttable-summary-scratch2").text(value);
+    value += " (avg. " + (scratch/nodes).toFixed(2) + " TiB/node or " + (scratch/cores).toFixed(3) + " TiB/core)";
+    d3.select("#hosttable-summary-scratch").text(value);
+  
+    $(document).ready(function() {
+      $('#hosttable').DataTable({
+        "pageLength": 25,
+        "order": [[ 1, "asc" ]]
+      });
+    });
   });
 });
 </script>
