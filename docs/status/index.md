@@ -256,7 +256,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
 
     p = d3.select("#hosttablemessage");
     if (nodes_with_issues > 0) {
-      p.text(nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) nodes out of " + nodes + ", corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) cores out of " + cores + ", are reported to have a queuing state 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes).");
+      p.text("Currently, " + nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) nodes out of " + nodes + ", corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) cores out of " + cores + ", are reported to have a queuing state 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes).");
     } else {
       p.text("All " + nodes + " nodes, with a total of " + cores + " cores and " + ram + " GiB of RAM), are functional.");
     }
