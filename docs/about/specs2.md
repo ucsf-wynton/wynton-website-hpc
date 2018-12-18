@@ -91,23 +91,23 @@ The cluster connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps
 </table>
 
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/host_table.tsv' | relative_udatarl }}", "text/csv", function(host_table) {
+d3.text("{{ '/assets/data/host_table.tsv' | relative_udatarl }}", "text/csv", function(hosttable) {
   // extract date from header comments
-  var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
+  var timestamp = hosttable.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
   timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
   timestamp = timestamp.trim();
   d3.select("#hosttable-timestamp").text(timestamp);
 
   // drop header comments
-  host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
-  host_table = d3.tsv.parse(host_table);
+  hosttable = hosttable.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+  hosttable = d3.tsv.parse(hosttable);
 
-  d3.text("https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/status/qstat_nodes_in_state_au.tsv", "text/csv", function(host_status) {
+  d3.text("https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/status/qstat_nodes_in_state_au.tsv", "text/csv", function(hoststatus) {
     
     // drop header comments
-    host_status = host_status.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
-    host_status = d3.tsv.parse(host_status);
+    hoststatus = hoststatus.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+    hoststatus = d3.tsv.parse(hoststatus);
 
     var table = d3.select("#hosttable");
     var thead, tbody, tfoot, tr, td, td_status;
@@ -119,7 +119,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_udatarl }}", "text/csv", fu
   
     /* For each row */
     var nodes = 0;
-    host_table.forEach(function(row) {
+    hosttable.forEach(function(row) {
       /* Ignore column on /tmp size, iff it exists */
       delete row["Local `/tmp`"];
     
@@ -138,7 +138,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_udatarl }}", "text/csv", fu
         value = row[key];
         td = tr.append("td").text(value);
 	if (key == "Node") {
-	  value2 = host_status.filter(function(d) { return d.queuename == value });
+	  value2 = hoststatus.filter(function(d) { return d.queuename == value });
 	  if (value2.length > 0) {
             td_status.text("⚠");  // ⚠ ✖
 //	  } else {
