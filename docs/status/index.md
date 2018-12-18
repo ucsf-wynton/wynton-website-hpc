@@ -284,10 +284,3 @@ tfoot {
 }
 ttr:last-child { border-top: 2px solid #000; }
 </style>
-
-<script type="text/javascript">
-  // FIXME: Ideally we set <meta http-equiv="refresh" content="300">
-  //        but how do we do that with Jekyll? /HB 2018-08-17
-  // Refresh page every 5 minutes
-  setTimeout(function() { location.reload(); }, 5*60000);
-</script>
