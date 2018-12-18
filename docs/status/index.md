@@ -56,7 +56,7 @@
 <br><span class="timestamp">Dec 17, 17:00 PDT</span>
 
 
-### November 28-December 19, 2018
+### November 28-December 19, 2018 (ongoing)
 
 #### <span style="color: orange;">Migration to New, Larger, and Faster Storage Space including Users' Home Space</span>
 
