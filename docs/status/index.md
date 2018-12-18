@@ -52,7 +52,7 @@
 ### December 12, 2018 (ongoing)
 #### <span style="color: orange;">Nodes down</span>
 
-**Notice**: Starting Wednesday December 12 around 11am, several `msg-*` compute nodes went down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeFGS project is completed, which is projected to be done on Wednesday December 19.
+**Notice**: Starting Wednesday December 12 around 11am, several `msg-*` compute nodes went to down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeFGS project is completed, which is projected to be done on Wednesday December 19.
 <br><span class="timestamp">Dec 17, 17:00 PDT</span>
 
 
@@ -60,7 +60,7 @@
 
 #### <span style="color: orange;">Migration to New, Larger, and Faster Storage Space including Users' Home Space</span>
 
-**Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 19. We are working on fine tuning the configuration, running performance tests, and resilience tests.
+**Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 12. We are working on fine tuning the configuration, running performance tests, and resilience tests.
 <br><span class="timestamp">Dec 17, 10:15 PDT</span>
 
 **Update**: `/wynton/scratch` has been taken offline.
@@ -205,28 +205,17 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     host_status = host_status.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
     host_status = d3.tsv.parse(host_status);
 
-    var table;
-    var thead, tbody, tfoot, tr, td, td_status, p;
+    var tbody, tr, td, td_status;
     var value;
-    var cores = 0, cores_kk;
-    var ram = 0, ram_kk;
-    var scratch = 0, scratch_kk;
-    var nodes_with_issues = 0, cores_with_issues = 0, ram_with_issues = 0;
+    var cores = 0, cores_node;
+    var nodes_with_issues = 0, cores_with_issues = 0;
   
     /* For each row */
     var nodes = 0;
     host_table.forEach(function(row) {
       nodes += 1;
-      
-      /* Cores */
-      cores_kk = parseInt(row["# Physical Cores"]);
-      cores += cores_kk;
-      /* RAM */
-      ram_kk = parseFloat(row["RAM"].match(/[\d.]+/));
-      ram += ram_kk;
-      /* Scratch */
-      scratch_kk = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
-      scratch += scratch_kk;
+      cores_node = parseInt(row["# Physical Cores"]);
+      cores += cores_node;
 
       // No issues?
       if (host_status.filter(function(d) { return d.queuename == row["Node"] }).length == 0) return;
@@ -235,9 +224,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
       delete row["Local `/tmp`"];
 
       if (nodes_with_issues == 0) {
-        table = d3.select("#hosttable");
-        div = d3.select("#hosttablediv");
-	table = div.append("table");
+        var table = d3.select("#hosttablediv").append("details").append("table");
         table.id = "hosttable";
         tr = table.append("thead").append("tr");
         tr.append("th").text("Status");
@@ -246,19 +233,18 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
       }
 
       nodes_with_issues += 1;      
-      cores_with_issues += cores_kk;
-      ram_with_issues += ram_kk;
+      cores_with_issues += cores_node;
   
       tr = tbody.append("tr");
       td_status = tr.append("td").text("⚠");  // "⚠" or "✖"
       for (key in row) td = tr.append("td").text(row[key]);
     });
 
-    p = d3.select("#hosttablemessage");
+    var p = d3.select("#hosttablemessage");
     if (nodes_with_issues > 0) {
       p.text("Currently, " + nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) nodes out of " + nodes + ", corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) cores out of " + cores + ", are reported to have a queuing state 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes).");
     } else {
-      p.text("All " + nodes + " nodes, with a total of " + cores + " cores and " + ram + " GiB of RAM), are functional.");
+      p.text("All " + nodes + " nodes, with a total of " + cores + " cores, are functional.");
     }
     
     $(document).ready(function() {
