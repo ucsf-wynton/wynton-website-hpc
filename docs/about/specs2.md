@@ -91,25 +91,27 @@ The cluster connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps
 </table>
 
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(host_table) {
+d3.text("{{ '/assets/data/host_table.tsv' | relative_udatarl }}", "text/csv", function(host_table) {
+  // extract date from header comments
+  var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
+  timestamp = timestamp.replace(/^[#] Created on: /g, '');
+  timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
+  timestamp = timestamp.trim();
+  d3.select("#hosttable-timestamp").text(timestamp);
+
+  // drop header comments
+  host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+  host_table = d3.tsv.parse(host_table);
+
   d3.text("https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/status/qstat_nodes_in_state_au.tsv", "text/csv", function(host_status) {
-    alert(host_status);
     
-    // extract date from header comments
-    var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
-    timestamp = timestamp.replace(/^[#] Created on: /g, '');
-    timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
-    timestamp = timestamp.trim();
-    d3.select("#hosttable-timestamp").text(timestamp);
-  
-    // drop header comment
-    host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
-  
-    var data = d3.tsv.parse(host_table);
-  
+    // drop header comments
+    host_status = host_status.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+    host_status = d3.tsv.parse(host_status);
+
     var table = d3.select("#hosttable");
-    var thead, tbody, tfoot, tr;
-    var value;
+    var thead, tbody, tfoot, tr, td, td_status;
+    var value, value2;
     var cores = 0, coreMin = 1e9, coreMax = -1e9;
     var cpuMin = 1e9, cpuMax = -1e9;
     var ram = 0, ramMin = 1e9, ramMax = -1e9;
@@ -117,20 +119,33 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
   
     /* For each row */
     var nodes = 0;
-    data.forEach(function(row) {
+    host_table.forEach(function(row) {
       /* Ignore column on /tmp size, iff it exists */
       delete row["Local `/tmp`"];
     
       if (nodes == 0) {
         tr = table.append("thead").append("tr");
+	tr.append("th").text("Status");
         for (key in row) {
           value = key.replace(/\`/g, "");
-  	    tr.append("th").text(value);
-  	  }
+  	  tr.append("th").text(value);
+        }
         tbody = table.append("tbody");
-  	}
+      }
       tr = tbody.append("tr");
-      for (key in row) { tr.append("td").text(row[key]); }
+      td_status = tr.append("td");
+      for (key in row) {
+        value = row[key];
+        td = tr.append("td").text(value);
+	if (key == "Node") {
+	  value2 = host_status.filter(function(d) { return d.queuename == value });
+	  if (value2.length > 0) {
+            td_status.text("⚠");  // ⚠ ✖
+//	  } else {
+//            td_status.text("");
+          }
+        }
+      }
   	
   	/* Cores */
   	value = parseInt(row["# Physical Cores"]);
@@ -184,7 +199,8 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
   
     $(document).ready(function() {
       $('#hosttable').DataTable({
-        "pageLength": 25
+        "pageLength": 25,
+	"order": [[ 1, "asc" ]]
   	});
     });
   });
