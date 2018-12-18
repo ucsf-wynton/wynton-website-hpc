@@ -43,10 +43,19 @@
 
 ## Upcoming and Current Incidents
 
+### December 12, 2018 (ongoing)
+#### <span style="color: orange;">Nodes down</span>
+
+**Notice**: Starting Wednesday December 12 around 11am, several `msg-*` compute nodes went to down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeFGS project is completed, which is projected to be done on Wednesday December 19.
+<br><span class="timestamp">Dec 17, 17:00 PDT</span>
+
 
 ### November 28-December 19, 2018
 
 #### <span style="color: orange;">Migration to New, Larger, and Faster Storage Space including Users' Home Space</span>
+
+**Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 12. We are working on fine tuning the configuration, running performance tests, and resilience tests.
+<br><span class="timestamp">Dec 17, 10:15 PDT</span>
 
 **Update**: `/wynton/scratch` has been taken offline.
 <br><span class="timestamp">Dec 12, 10:20 PDT</span>
