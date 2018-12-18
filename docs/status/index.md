@@ -9,7 +9,7 @@
 -->
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC partial outage due to power failure</strong><br>
+<strong>Wynton HPC partial outage</strong><br>
 <span style="font-size: normal;">Also, partially interruptive upgrades will take place on December 12-19</span>
 </div>
 
