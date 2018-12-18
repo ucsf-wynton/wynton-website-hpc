@@ -93,6 +93,7 @@ The cluster connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps
 <script type="text/javascript" charset="utf-8">
 d3.text("{{ '/assets/data/host_table.tsv' | relative_udatarl }}", "text/csv", function(hosttable) {
   // extract date from header comments
+  alert(hosttable);
   var timestamp = hosttable.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
   timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
@@ -140,7 +141,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_udatarl }}", "text/csv", fu
 	if (key == "Node") {
 	  value2 = hoststatus.filter(function(d) { return d.queuename == value });
 	  if (value2.length > 0) {
-            td_status.text("⚠");  // ⚠ ✖
+            td_status.text("⚠");  // "⚠" or "✖"
 //	  } else {
 //            td_status.text("");
           }
