@@ -51,20 +51,23 @@
 
 ### December 18, 2018 (ongoing)
 #### <span style="color: orange;">Development node does not respond</span>
-**Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing in tomorrow morning (Wednesday Decemeber 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
+**Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing in tomorrow morning (Wednesday December 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
 <br><span class="timestamp">Dec 18, 16:30 PDT</span>
 
 
 ### December 12, 2018 (ongoing)
 #### <span style="color: orange;">Nodes down</span>
 
-**Notice**: Starting Wednesday December 12 around 11am, several `msg-*` compute nodes went down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeFGS project is completed, which is projected to be done on Wednesday December 19.
+**Notice**: Starting Wednesday December 12 around 11am, several `msg-*` compute nodes went down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeGFS project is completed, which is projected to be done on Wednesday December 19.
 <br><span class="timestamp">Dec 17, 17:00 PDT</span>
 
 
 ### November 28-December 19, 2018 (ongoing)
 
 #### <span style="color: orange;">Migration to New, Larger, and Faster Storage Space including Users' Home Space</span>
+
+**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/$USER` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/$USER` to the new location.  Sorry, users on QB3 will _not_ be able to migrate at this stage.
+<br><span class="timestamp">Dec 18, 16:45 PDT</span>
 
 **Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 19. We are working on fine tuning the configuration, running performance tests, and resilience tests.
 <br><span class="timestamp">Dec 17, 10:15 PDT</span>
@@ -75,20 +78,22 @@
 **Reminder**: All of `/wynton/scratch` will be taken offline and completely wiped starting Wednesday December 12 at 8:00am.
 <br><span class="timestamp">Dec 11, 14:45 PDT</span>
 
-**Notice**: On Wednesday December 12, 2018, the global scratch space `/wynton/scratch` will be taken offline and completely erased.  Over the week following this, we will be adding to and reconfiguring the storage system in order to provide all users with new, larger, and faster (home) storage space.  The new storage will served using BeeGFS, which is a new much faster file system - a system we have prototyped and tested via `/wynton/scratch`.  Once migrated to the new storage, a user's home directory quota will be increased from 200 GiB to 500 GiB.  In order to do this, the following upgrade schedule is planned:
+**Notice**: On Wednesday December 12, 2018, the global scratch space `/wynton/scratch` will be taken offline and completely erased.  Over the week following this, we will be adding to and reconfiguring the storage system in order to provide all users with new, larger, and faster (home) storage space.  The new storage will served using BeeGFS, which is a new much faster file system - a system we have been prototyping and tested via `/wynton/scratch`.  Once migrated to the new storage, a user's home directory quota will be increased from 200 GiB to 500 GiB.  In order to do this, the following upgrade schedule is planned:
 
 * Wednesday November 28-December 19 (21 days): **To all users, please refrain from using `/wynton/scratch` - use local, node-specific `/scratch` if possible (see below).  The sooner we can take it down, the higher the chance is that we can get everything in place before December 19.**
 
 * Wednesday December 12-19 (8 days): **`/wynton/scratch` will be unavailable and completely wiped**.  For computational scratch space, please [use local `/scratch` unique to each compute node](https://ucsf-hpc.github.io/wynton/scheduler/using-local-scratch.html).  For _global_ scratch needs, the old and much slower `/scrapp` and `/scrapp2` may also be used.
 
-* Wednesday December 19, 2018 (1/2 day): The Wynton HPC scheduler (SGE) will be taken offline.  No jobs will be able to be submitted until it is restarted.
+* ~~Wednesday December 19, 2018 (1/2 day): The Wynton HPC scheduler (SGE) will be taken offline.  No jobs will be able to be submitted until it is restarted.~~
 
-* Wednesday December 19, 2018: The upgraded Wynton HPC with the new storage will be available again.
+* Wednesday December 19, 2018: The upgraded Wynton HPC with the new storage will be available including `/wynton/scratch`.
+
+* Wednesday January 9, 2019 (1/2 day): The Wynton HPC scheduler (SGE) will be taken offline temporarily.  No jobs will be able to be submitted until it is restarted.
 
 It is our hope to be able to keep the user's home accounts, login nodes, the transfer nodes, and the development nodes available throughout this upgrade period.
 
 _NOTE: If our new setup proves more challenging than anticipated, then we will postpone the SGE downtime to after the holidays, on Wednesday January 9, 2019.  Wynton will remain operational over the holidays, though without `/wynton/scratch`._
-<br><span class="timestamp">Dec 6, 14:30 PDT</span>
+<br><span class="timestamp">Dec 6, 14:30 PDT [edited Dec 18, 17:15 PDT]</span>
 
 
 

@@ -26,6 +26,7 @@ GPUs
 GTX
 HOWTOs
 HPC
+HTSeq
 http
 https
 ImageMagick
@@ -53,10 +54,13 @@ qb
 queueing
 RBVI
 README
+reconfiguring
+reproducibility
 Roadmap
 rollout
 runscript
 Sali
+Sandler
 scalable
 se
 sexualized
@@ -67,6 +71,7 @@ SMP
 squashfs
 SSD
 SSDs
+SSL
 stdout
 subtask
 TiB
@@ -75,6 +80,7 @@ ucsf
 UCSF
 UCSF's
 UID
+virtualenv
 www
 wynlog
 wynton
