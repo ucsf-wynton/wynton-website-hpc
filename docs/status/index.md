@@ -49,12 +49,6 @@
 
 ## Upcoming and Current Incidents
 
-### December 18, 2018 (ongoing)
-#### <span style="color: orange;">Development node does not respond</span>
-**Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing tomorrow morning (Wednesday December 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
-<br><span class="timestamp">Dec 18, 16:30 PDT</span>
-
-
 ### December 12, 2018 (ongoing)
 #### <span style="color: orange;">Nodes down</span>
 
@@ -98,6 +92,15 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 
 ## Past Incidents
+
+### December 18, 2018 (ongoing)
+#### <span style="color: orange;">Development node does not respond</span>
+**Resolved**: Development node `qb3-dev1` is functional.
+<br><span class="timestamp">Dec 18, 20:50 PDT</span>
+
+**Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing tomorrow morning (Wednesday December 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
+<br><span class="timestamp">Dec 18, 16:30 PDT</span>
+
 
 ### December 12-14, 2018
 #### <span style="color: orange;">Power failure</span>
