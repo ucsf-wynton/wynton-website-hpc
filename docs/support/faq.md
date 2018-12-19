@@ -14,6 +14,11 @@
 
 ## Errors
 
-**Q**. I just started to get SSL-related errors when using `qsub` and `qstat` that I have never seen before, e.g. `error: commlib error: ssl connect error (SSL handshake error)`, `ssl error (the used certificate is expired)`, `unable to contact qmaster using port 6444 on host "q"`.  What am I doing wrong?
+**Q**. I just started to get SSL-related errors when using `qsub` and `qstat` that I have never seen before;
+```
+error: commlib error: ssl connect error (SSL handshake error)
+ssl error (the used certificate is expired)
+unable to contact qmaster using port 6444 on host "q"
+```
 
-**A**. _It may be that your Wynton account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.  It could also be an issue with the cluster - if so, please let us know._
+**A**. _Your Wynton account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.
