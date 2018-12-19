@@ -1,4 +1,4 @@
-# Frequential Asked Questions (FAQs)
+# Frequently Asked Questions (FAQs)
 
 ## Jobs
 
