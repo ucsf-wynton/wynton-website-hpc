@@ -62,7 +62,7 @@ The Wynton cluster provides two types of scratch storage:
 
 * Local `/scratch/` - <span id="hosttable-summary-scratch2"></span> storage unique to each compute node (can only be accessed from the specific compute node).
 
-* Global `/wynton/scratch/` - approx. 200 TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+* Global `/wynton/scratch/` - approx. 500 TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  Files not added or modified during the last two weeks will be automatically deleted on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 

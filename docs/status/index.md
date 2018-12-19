@@ -56,9 +56,21 @@
 <br><span class="timestamp">Dec 17, 17:00 PDT</span>
 
 
-### November 28-December 19, 2018 (ongoing)
+<!--
+### January 9, 2019 (planned)
 
-#### <span style="color: orange;">Migration to New, Larger, and Faster Storage Space including Users' Home Space</span>
+#### <span style="color: orange;">Migration of Users to New, Larger, and Faster Storage Space</span>
+**Notice**: The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/$USER` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/$USER` to the new location.  Sorry, users on QB3 will _not_ be able to migrate at this stage.
+<br><span class="timestamp">Dec 18, 16:45 PDT</span>
+-->
+
+
+### November 28-December 19, 2018
+
+#### <span style="color: orange;">Installation of New, Larger, and Faster Storage Space</span>
+
+**Resolved**: `/wynton/scratch` is now back online and ready to be used.
+<br><span class="timestamp">Dec 19, 14:20 PDT</span>
 
 **Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/$USER` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/$USER` to the new location.  Sorry, users on QB3 will _not_ be able to migrate at this stage.
 <br><span class="timestamp">Dec 18, 16:45 PDT</span>
