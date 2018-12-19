@@ -206,7 +206,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
 });
 </script>
 
-Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> using [wyntonquery].
+Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> using [wyntonquery] and [qstat_nodes_in_state_au.tsv](https://github.com/UCSF-HPC/wynton-slash2/blob/master/status/qstat_nodes_in_state_au.tsv).
 
 
 <style>
