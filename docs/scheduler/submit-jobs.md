@@ -21,7 +21,7 @@ A job that consumes more memory than requested will be terminated by the schedul
 </div>
 
 <div class="alert alert-warning" role="alert">
-Note that <code>-l mem=size</code> specified <em>memory per slot</em>, not per job.
+Note that <code>-l mem_free=size</code> specifies <em>memory per slot</em>, not per job.
 </div>
 
 
@@ -56,7 +56,7 @@ Please specify <code>-l scratch=size</code> when using local <code>/scratch</cod
 </div>
 
 <div class="alert alert-warning" role="alert">
-Note that <code>-l scratch=size</code> specified <em>space per job</em>, not per slot.
+Note that <code>-l scratch=size</code> specifies <em>space per job</em>, not per slot.
 </div>
 
 
