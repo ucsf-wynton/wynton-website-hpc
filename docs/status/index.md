@@ -55,14 +55,23 @@
 <br><span class="timestamp">Dec 17, 17:00 PDT</span>
 
 
-<!--
 ### January 9, 2019 (planned)
 
-#### <span style="color: orange;">Migration of Users to New, Larger, and Faster Storage Space</span>
-**Notice**: The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/$USER` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/$USER` to the new location.  Sorry, users on QB3 will _not_ be able to migrate at this stage.
-<br><span class="timestamp">Dec 18, 16:45 PDT</span>
--->
+#### <span style="color: orange;">SGE maintenance downtime</span>
+**Notice**: There will be a short job-scheduler downtime on Wednesday January 9 due to SGE maintenance.  During this downtime, already running jobs will keep running and queued jobs will remain in the queue, but no new jobs can be submitted.
+<br><span class="timestamp">Dec 20, 12:00 PDT</span>
 
+
+
+## Past Incidents
+
+### December 18, 2018
+#### <span style="color: orange;">Development node does not respond</span>
+**Resolved**: Development node `qb3-dev1` is functional.
+<br><span class="timestamp">Dec 18, 20:50 PDT</span>
+
+**Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing tomorrow morning (Wednesday December 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
+<br><span class="timestamp">Dec 18, 16:30 PDT</span>
 
 ### November 28-December 19, 2018
 
@@ -71,7 +80,7 @@
 **Resolved**: `/wynton/scratch` is now back online and ready to be used.
 <br><span class="timestamp">Dec 19, 14:20 PDT</span>
 
-**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/$USER` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/$USER` to the new location.  Sorry, users on QB3 will _not_ be able to migrate at this stage.
+**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and Wynton will _not_ be able to migrate until the QB3 cluster has been incorporated into Wynton HPC (see [Roadmap]({{ '/about/roadmap.html' | relative_url }})) or they giving up their QB3 account.
 <br><span class="timestamp">Dec 18, 16:45 PDT</span>
 
 **Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 19. We are working on fine tuning the configuration, running performance tests, and resilience tests.
@@ -99,18 +108,6 @@ It is our hope to be able to keep the user's home accounts, login nodes, the tra
 
 _NOTE: If our new setup proves more challenging than anticipated, then we will postpone the SGE downtime to after the holidays, on Wednesday January 9, 2019.  Wynton will remain operational over the holidays, though without `/wynton/scratch`._
 <br><span class="timestamp">Dec 6, 14:30 PDT [edited Dec 18, 17:15 PDT]</span>
-
-
-
-## Past Incidents
-
-### December 18, 2018 (ongoing)
-#### <span style="color: orange;">Development node does not respond</span>
-**Resolved**: Development node `qb3-dev1` is functional.
-<br><span class="timestamp">Dec 18, 20:50 PDT</span>
-
-**Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing tomorrow morning (Wednesday December 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
-<br><span class="timestamp">Dec 18, 16:30 PDT</span>
 
 
 ### December 12-14, 2018
