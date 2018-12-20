@@ -20,6 +20,10 @@ qsub -cwd -l mem_free=10G script.sh
 A job that consumes more memory than requested will be terminated by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
 </div>
 
+<div class="alert alert-warning" role="alert">
+Note that <code>-l mem=size</code> specified <em>memory per slot</em>, not per job.
+</div>
+
 
 ## Specifying (maximum) run time
 
@@ -51,15 +55,18 @@ Your job is only guaranteed the amount of available scratch space that you reque
 Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
 </div>
 
+<div class="alert alert-warning" role="alert">
+Note that <code>-l scratch=size</code> specified <em>space per job</em>, not per slot.
+</div>
 
 
 ## Parallel processing (on a single machine)
 
-The scheduler will allocate a single core for your job.  To allow the job to use multiple slots, request the number of slots needed when you submit the job.  For instance, to request four slots (`NSLOTS=4`) and in _total_ 2 GiB of RAM, use:
+The scheduler will allocate a single core for your job.  To allow the job to use multiple slots, request the number of slots needed when you submit the job.  For instance, to request four slots (`NSLOTS=4`) _each with 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
 ```sh
 qsub -pe smp 4 -l mem_free=2G script.sh
 ```
-The scheduler will make sure your job is launched on a node with at least four cores available.
+The scheduler will make sure your job is launched on a node with at least four slots available.
 
 Note, when writing your script, use [SGE environment variable] `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
 ```sh
