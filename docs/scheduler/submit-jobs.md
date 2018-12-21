@@ -11,10 +11,11 @@ The scheduler will assign your job a unique (numeric) job ID.
 
 ## Specifying (maximum) memory usage
 
-It is important to give specify the maximum amount of memory a job will need in order to complete.  For example, the following job needs at most 10 GiB of RAM and will run on the first available compute node with that amount of memory available:
+Unless specified, the maximum amount of memory used at any time is 1 GiB per slot (`-l mem_free=1G`).  A job that need to use more memory, need to request that when submitted.  For example, a job that needs (at most) 10 GiB of memory should be submitted as:
 ```sh
 qsub -cwd -l mem_free=10G script.sh
 ```
+The scheduler will launch this jobs on the first available compute node with that amount of memory available.
 
 <div class="alert alert-warning" role="alert">
 A job that consumes more memory than requested will be terminated by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
@@ -33,7 +34,7 @@ Specifying the run time will shorten the queuing time - significantly so for sho
 
 By specifying the how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
 ```sh
-qsub -cwd -l mem_free=1G -l h_rt=00:03:00 script.sh
+qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
 ```
 
 <div class="alert alert-warning" role="alert">
@@ -119,6 +120,15 @@ Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <co
 
 _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org/wiki/Message_Passing_Interface).
 
+
+
+<!--
+## Defaults
+
+* Memory usage (per slot): If not specified, the default is `-l mem_free=1G`.
+
+* Working directory: If not specified (e.g. `-cwd`), the default working directory is `$HOME`.
+-->
 
 
 ## See also
