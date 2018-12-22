@@ -58,6 +58,13 @@
 
 ## Past Incidents
 
+### December 21, 2018
+#### <span style="color: orange;">Partial file system failure</span>
+
+**Resolved**: Parts of the new BeeGFS file system was non-functional for approx. 1.5 hours during Friday December 21 when a brief maintainance task failed.
+<br><span class="timestamp">Dec 21, 20:50 PDT</span>
+
+
 ### December 12-20, 2018
 #### <span style="color: orange;">Nodes down</span>
 
