@@ -16,7 +16,7 @@ Some of the environment variables set by the scheduler and available to a job at
 
 * `TMP` (string) - same as `TMPDIR`
 
-* `TMPDIR` (string) - the absolute path to a job-specific temporary directory (local on the compute node) that is automatically removed when the job finishes
+* `TMPDIR` (string) - the absolute path to a job-specific temporary directory (local on the compute node and owned by `$USER`) that is automatically removed when the job finishes
 
 * `HOSTNAME` (string) - the name of the machine where the job is launched
 
