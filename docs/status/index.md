@@ -48,6 +48,13 @@
 
 ## Upcoming and Current Incidents
 
+### January 8, 2019 (investigating)
+ 
+#### <span style="color: orange;">File-system server crash</span>
+**Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 19:30 and was recovered on 21:20.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
+<br><span class="timestamp">Jan 8, 10:15 PDT</span>
+
+
 ### January 9, 2019 (planned)
 
 #### <span style="color: orange;">SGE maintenance downtime</span>
