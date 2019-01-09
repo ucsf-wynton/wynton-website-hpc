@@ -6,10 +6,11 @@
 <strong>Wynton HPC environment operational</strong>
 </div>
 
+<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <em>Notice: The job scheduler will be taken down on Wednesday January 9 from noon to 1:00pm</em>
 </div>
-
+-->
 
 
 
@@ -53,7 +54,14 @@
 <br><span class="timestamp">Jan 8, 10:15 PDT</span>
 
 
-### January 9, 2019 (planned)
+
+## Past Incidents
+
+### January 9, 2019
+#### <span style="color: orange;">Job scheduler maintenance downtime</span>
+
+**Resolved**: The SGE job scheduler is now back online and accepts new job submission again.
+<br><span class="timestamp">Jan 9, 12:45 PDT</span>
 
 #### <span style="color: orange;">Job scheduler maintenance downtime</span>
 **Update**: The downtime of the job scheduler will begin on Wednesday January 9 @ noon and is expected to be completed by 1:00pm.
@@ -62,9 +70,6 @@
 **Notice**: There will be a short job-scheduler downtime on Wednesday January 9 due to SGE maintenance.  During this downtime, already running jobs will keep running and queued jobs will remain in the queue, but no new jobs can be submitted.
 <br><span class="timestamp">Dec 20, 12:00 PDT</span>
 
-
-
-## Past Incidents
 
 ### December 21, 2018
 #### <span style="color: orange;">Partial file system failure</span>
