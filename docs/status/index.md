@@ -6,11 +6,9 @@
 <strong>Wynton HPC environment operational</strong>
 </div>
 
-<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC partial outage</strong><br>
+<em>Notice: The job scheduler will be taken down on Wednesday January 9 from noon to 1:00pm</em>
 </div>
--->
 
 
 
@@ -51,13 +49,16 @@
 ### January 8, 2019 (investigating)
  
 #### <span style="color: orange;">File-system server crash</span>
-**Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 19:30 and was recovered on 21:20.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
+**Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 7:30pm and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
 <br><span class="timestamp">Jan 8, 10:15 PDT</span>
 
 
 ### January 9, 2019 (planned)
 
-#### <span style="color: orange;">SGE maintenance downtime</span>
+#### <span style="color: orange;">Job scheduler maintenance downtime</span>
+**Update**: The downtime of the job scheduler will begin on Wednesday January 9 @ noon and is expected to be completed by 1:00pm.
+<br><span class="timestamp">Jan 8, 16:00 PDT</span>
+
 **Notice**: There will be a short job-scheduler downtime on Wednesday January 9 due to SGE maintenance.  During this downtime, already running jobs will keep running and queued jobs will remain in the queue, but no new jobs can be submitted.
 <br><span class="timestamp">Dec 20, 12:00 PDT</span>
 
@@ -92,7 +93,7 @@
 
 ### November 28-December 19, 2018
 
-#### <span style="color: orange;">Installation of New, Larger, and Faster Storage Space</span>
+#### <span style="color: orange;">Installation of new, larger, and faster storage space</span>
 
 **Resolved**: `/wynton/scratch` is now back online and ready to be used.
 <br><span class="timestamp">Dec 19, 14:20 PDT</span>
