@@ -76,7 +76,7 @@ There are no per-user quotas in these scratch spaces.  Files not added or modifi
 * `/wynton/home`: {{ site.specs.home_size }} storage space
 * `/netapp/home`: {{ site.specs.netapp_home_size }} storage space (to be decommissioned)
 
-Each user may use up to 200 GiB (soon 500 GiB) disk space in the home directory.  Research groups can add additional storage space by either mounting their existing storage or purchase new.
+Each user may use up to 500 GiB disk space in the home directory (for users still on `/netapp/home` the limit is 200 GiB).  Research groups can add additional storage space by either mounting their existing storage or purchase new.
 
 **Importantly**, please note that the Wynton HPC storage is _not_ backed up.  Users and labs are responsible to back up their own data outside of Wynton.
 

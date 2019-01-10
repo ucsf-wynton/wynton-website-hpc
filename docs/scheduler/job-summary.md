@@ -56,14 +56,14 @@ owner:                      alice
 uid:                        34002
 group:                      cbi
 gid:                        34001
-sge_o_home:                 /netapp/home/alice
+sge_o_home:                 /wynton/home/alice
 sge_o_log_name:             alice
-sge_o_path:                 /opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/netapp/home/alice/.local/bin:/netapp/home/alice/bin
+sge_o_path:                 /opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/wynton/home/alice/.local/bin:/wynton/home/alice/bin
 sge_o_shell:                /bin/bash
-sge_o_workdir:              /netapp/home/alice/ex
+sge_o_workdir:              /wynton/home/alice/ex
 sge_o_host:                 qb3-dev1
 account:                    sge
-cwd:                        /netapp/home/alice/ex
+cwd:                        /wynton/home/alice/ex
 merge:                      y
 hard resource_list:         h_rt=300
 mail_list:                  alice@qb3-dev1
