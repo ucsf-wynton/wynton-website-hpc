@@ -9,7 +9,7 @@
   2. The queue where your job is sitting may be full. If so, your job will eventually run.
   3. You might have asked for compute resources that cannot be met, e.g. more memory or more cores than available on any compute node, e.g. `-l mem=4048gb` or `-pe smp 256`.  If so, your job will never run.  Either lower the job's resource needs using `qdel`, or, alternatively,  remove the job (`qdel`) and submit (`qsub`) a new one with adjusted resources.
   4. You might have asked for compute resources that you do not have access to.  For instance, graphical processing units (GPUs) are currently only available to groups who have contributed with their own GPU hardware.  If so, please remove your job from the queue (`qdel`).
-  5. `qstat -j <job_id>` will provide details on why a particular job is not running.
+  5. `qstat -j <job_id>` will provide details on why a particular job is not running.  `qstat -u '*'` will show all jobs and their priority scores in the queue.
 
 
 ## Errors

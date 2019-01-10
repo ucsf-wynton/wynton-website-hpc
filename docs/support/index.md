@@ -1,4 +1,4 @@
-# User Support
+# Support Channels
 
 For questions and feature requests, please use one of the following channels:
 
