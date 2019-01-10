@@ -37,6 +37,7 @@ specs:
   swap_range: "4 GiB"
   local_scratch_size_range: "0.1-1.8 TiB"
   local_tmp_size: "4 GiB"
+  global_scratch_size: "492 TiB"
   
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"

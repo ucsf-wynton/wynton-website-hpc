@@ -16,8 +16,9 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}</dd>
   <dt>CPU</dt><dd id="hosttable-summary-cpu">{{ site.specs.cpu_range }}</dd>
   <dt>Swap</dt><dd id="hosttable-summary-ram">{{ site.specs.swap_range }}</dd>
-  <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-scratch">{{ site.specs.local_scratch_size_range }}</dd>
   <dt>Local <code>/tmp</code></dt><dd id="hosttable-summary-tmp">{{ site.specs.local_tmp_size }}</dd>
+  <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_range }}</dd>
+  <dt>Global <code>/scratch</code></dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size }}</dd>  
 </dl>
 
 Most compute nodes have Intel processors, while others have AMD processes.  Each compute node has a local drive, which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.
@@ -60,9 +61,9 @@ The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local 
 
 The Wynton cluster provides two types of scratch storage:
 
-* Local `/scratch/` - <span id="hosttable-summary-scratch2"></span> storage unique to each compute node (can only be accessed from the specific compute node).
+* Local `/scratch/` - <span id="hosttable-summary-local-scratch2"></span> storage unique to each compute node (can only be accessed from the specific compute node).
 
-* Global `/wynton/scratch/` - approx. 500 TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+* Global `/wynton/scratch/` - {{ site.specs.global_scratch_size }} storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  Files not added or modified during the last two weeks will be automatically deleted on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
@@ -192,10 +193,15 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
   
     value = scratchMin + "-" + scratchMax + " TiB";
     if (addFooter) tr.append("td").text(value);
-    d3.select("#hosttable-summary-scratch2").text(value);
+    d3.select("#hosttable-summary-local-scratch2").text(value);
     value += " (avg. " + (scratch/nodes).toFixed(2) + " TiB/node or " + (scratch/cores).toFixed(3) + " TiB/core)";
-    d3.select("#hosttable-summary-scratch").text(value);
-  
+    d3.select("#hosttable-summary-local-scratch").text(value);
+
+    value = "{{ site.specs.global_scratch_size }}";
+    var global_scratch = parseFloat(value.split(" ")[0]);
+    value += " (corresponding to " + (global_scratch/nodes).toFixed(2) + " TiB/node or " + (global_scratch/cores).toFixed(3) + " TiB/core)";
+    d3.select("#hosttable-summary-global-scratch").text(value);
+
     $(document).ready(function() {
       $('#hosttable').DataTable({
         "pageLength": 25,
