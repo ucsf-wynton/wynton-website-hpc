@@ -5,10 +5,10 @@
 <dl id="hosttable-summary" class="dl-horizontal">
   <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
-  <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}</dd>
-  <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_range }}</dd>
+  <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}/node</dd>
+  <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_range }}/node</dd>
   <dt>Global <code>/scratch</code></dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size }}</dd>
-  <dt>User home storage</dt><dd>{{ site.specs.home_size }} (maximum 200 GiB/user)</dd>
+  <dt>User home storage</dt><dd>{{ site.specs.home_size }} (maximum 200 GiB/user - soon 500 GiB/user)</dd>
 
 </dl>
 
@@ -76,7 +76,7 @@ There are no per-user quotas in these scratch spaces.  Files not added or modifi
 * `/wynton/home`: {{ site.specs.home_size }} storage space
 * `/netapp/home`: {{ site.specs.netapp_home_size }} storage space (to be decommissioned)
 
-Each user may use up to 200 GiB disk space in the home directory.  Research groups can add additional storage space by either mounting their existing storage or purchase new.
+Each user may use up to 200 GiB (soon 500 GiB) disk space in the home directory.  Research groups can add additional storage space by either mounting their existing storage or purchase new.
 
 **Importantly**, please note that the Wynton HPC storage is _not_ backed up.  Users and labs are responsible to back up their own data outside of Wynton.
 
@@ -194,20 +194,22 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     if (addFooter) tr.append("td").text(value);
     d3.select("#hosttable-summary-cpu").text(value);
   
-    value = ram + " GiB (" + ramMin + "-" + ramMax + " GiB, avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
+    value = ramMin + "-" + ramMax + " GiB/node (" + ram + " GiB in total, avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
     if (addFooter) tr.append("td").text(value);
     d3.select("#hosttable-summary-ram").text(value);
   
-    value = scratchMin + "-" + scratchMax + " TiB";
+    value = scratchMin + "-" + scratchMax + " TiB/node";
     if (addFooter) tr.append("td").text(value);
     d3.select("#hosttable-summary-local-scratch2").text(value);
     value += " (avg. " + (scratch/nodes).toFixed(2) + " TiB/node or " + (scratch/cores).toFixed(3) + " TiB/core)";
     d3.select("#hosttable-summary-local-scratch").text(value);
 
+/*
     value = "{{ site.specs.global_scratch_size }}";
     var global_scratch = parseFloat(value.split(" ")[0]);
     value += " (corresponding to " + (global_scratch/nodes).toFixed(2) + " TiB/node or " + (global_scratch/cores).toFixed(3) + " TiB/core)";
     d3.select("#hosttable-summary-global-scratch").text(value);
+*/
 
     $(document).ready(function() {
       $('#hosttable').DataTable({
