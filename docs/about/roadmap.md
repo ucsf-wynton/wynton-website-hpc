@@ -51,6 +51,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from Wynton
 
+* Migration: The UCSF Memory and Aging Center (MAC) have joined Wynton by contributing new nodes
+
 * Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into Wynton
 
 See also [News].
