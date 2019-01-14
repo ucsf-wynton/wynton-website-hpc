@@ -2,14 +2,16 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/tweaks.css -->
 
+<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC experiencing problems</strong>
 </div>
+-->
 
-<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC environment operational</strong>
 </div>
+<!--
 -->
 
 <!--
@@ -53,12 +55,6 @@
 
 ## Upcoming and Current Incidents
 
-### January 14, 2019 (investigating)
- 
-#### <span style="color: orange;">Blocking file-system issues</span>
-**Investigating**: The file system under `/wynton/` is down resulting is several critical failures including the scheduler failing.
-<br><span class="timestamp">Jan 14, 11:55 PDT</span>
-
 
 ### January 8, 2019 (investigating)
  
@@ -69,6 +65,17 @@
 
 
 ## Past Incidents
+
+### January 14, 2019
+ 
+#### <span style="color: orange;">Blocking file-system issues</span>
+
+**Resolved**: The file system under `/wynton/` is back up again.  We are looking into the cause and taking steps to prevent this from happening again.
+<br><span class="timestamp">Jan 9, 12:45 PDT</span>
+
+**Investigating**: The file system under `/wynton/` went down around 11:30 am resulting is several critical failures including the scheduler failing.
+<br><span class="timestamp">Jan 14, 11:55 PDT</span>
+
 
 ### January 9, 2019
 #### <span style="color: orange;">Job scheduler maintenance downtime</span>
