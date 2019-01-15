@@ -107,12 +107,12 @@ code {
   display: none;
 }
 
+/* NOTE: Control visibility in dynamics.css */
 .broadcast {
   margin-left: 0.3ex;
   font-weight: bold;
   color: orange;
-  /* Comment out 'visibility' to display "broadcast" icon */
-/*  visibility: hidden; */
+  visibility: hidden; */
 }
 
 .timestamp {
