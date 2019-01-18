@@ -5,17 +5,15 @@ _Last updated: January 15, 2019_
 
 ## Summary
 
-* All user accounts come with a quota of 500 GiB (= 537 GB) of storage, which is free of charge
+* All user accounts come with a quota of 500 GiB of storage, which is free of charge
 
-* Additional Wynton HPC storage can be purchased at $160/TB (= $176/TiB) (one-time fee)
+* Additional Wynton HPC storage can be purchased at $160/TB (one-time fee)
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
 * To purchase more storage, please contact [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu)
 
 <br>
-_Comment: 1 TB = 1000 GB, but note that [1.00 TiB = 1.10 TB and 1.00 GiB = 1.07 GB](https://en.wikipedia.org/wiki/File_size)_
-
 
 
 ## Plan
@@ -45,6 +43,6 @@ We have an immediate need to provide for Wynton/HPC storage expansion to meet th
 
 * Any new storage will be added to our existing BeeGFS installation and will not use separate instances of BeeGFS (which would significantly increase the potential costs, if not in hardware, certainly in terms of personnel effort).
 
-* We assume that our last purchase represents a reasonable scalable unit of storage.  This purchase provided 1,200 TB (raw) storage and two storage servers.  At ~$112,500, this results in a cost of $93/TB (raw) or $136/TB after accounting for RAID-Z2 and BeeGFS filesystem costs. We also need to add two additional metadata servers at a cost of $20,000. Taken together, this results in the $160/TB (= $176/TiB) price.
+* We assume that our last purchase represents a reasonable scalable unit of storage.  This purchase provided 1,200 TB (raw) storage and two storage servers.  At ~$112,500, this results in a cost of $93/TB (raw) or $136/TB after accounting for RAID-Z2 and BeeGFS filesystem costs. We also need to add two additional metadata servers at a cost of $20,000. Taken together, this results in the $160/TB price.
 
 * The current storage hardware increment is ~$160,000, which may result in some delay between the first contributions and an actual purchase, although there is already pent-up demand and hence we are trying to proceed with the purchase as quickly as possible.
