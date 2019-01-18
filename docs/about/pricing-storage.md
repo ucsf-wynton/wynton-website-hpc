@@ -1,7 +1,3 @@
-<div class="alert alert-danger" role="alert">
-2019-01-17: This is a near-final draft.
-</div>
-
 # Lab-Specific HPC Storage Pricing Model
 
 _Last updated: January 15, 2019_
