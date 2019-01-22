@@ -17,8 +17,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 physical cores) over to Wynton HPC
 
-* Pricing model: Description on how to purchase (amount in USD) additional storage space (beyond what is available for free)
-
 * Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
 
@@ -46,6 +44,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 
 ## Accomplished milestones
+
+* Pricing model: Description on how to purchase (amount in USD) additional storage space (beyond what is available for free)
 
 * Storage: Global scratch storage on BeeGFS parallel file system
 
