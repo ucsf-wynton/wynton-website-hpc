@@ -55,12 +55,19 @@
 
 ## Upcoming and Current Incidents
 
+### January 23, 2019 (planned)
 
-### January 8, 2019 (investigating)
- 
-#### <span style="color: orange;">File-system server crash</span>
-**Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 7:30pm and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
-<br><span class="timestamp">Jan 8, 10:15 PDT</span>
+#### <span style="color: orange;">Kernel maintenance</span>
+**Notice**: On Wednesday January 23 at 12:00pm (noon), all of login, development, and data transfer hosts will be rebooted.  Please be logged out before then.  The hosts should be offline for less than 5 minutes.
+<br><span class="timestamp">Jan 22, 16:45 PDT</span>
+
+
+### January 22-February 5, 2019 (ongoing)
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target 1,832 cores) in the graph above.
+<br><span class="timestamp">Jan 22, 16:45 PDT</span>
 
 
 
@@ -89,6 +96,13 @@
 
 **Notice**: There will be a short job-scheduler downtime on Wednesday January 9 due to SGE maintenance.  During this downtime, already running jobs will keep running and queued jobs will remain in the queue, but no new jobs can be submitted.
 <br><span class="timestamp">Dec 20, 12:00 PDT</span>
+
+
+### January 8, 2019
+ 
+#### <span style="color: orange;">File-system server crash</span>
+**Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 7:30pm and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
+<br><span class="timestamp">Jan 8, 10:15 PDT</span>
 
 
 ### December 21, 2018
@@ -179,17 +193,17 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Update**: Login node `wynlog1` is also affected by the power outage.  Use `wynlog2` instead.
 <br><span class="timestamp">Nov 8, 09:10 PDT</span>
 
-**Notice**: Parts of the Wynton cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. ~~To follow the reboot progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
+**Notice**: Parts of the Wynton cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. ~~To follow the reboot progress, see the 'Available CPU cores' curve (target 1,832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
 <br><span class="timestamp">Nov 7, 15:45 PDT</span>
 
 ### September 28 - October 11, 2018
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
-**Resolved**: The compute nodes has been rebooted and are accepting new jobs.  For the record, on day 5 approx. 300 cores were back online, on day 7 approx. 600 cores were back online, on day 8 approx. 1500 cores were back online, and on day 9 the majority of the 1832 cores were back online.
+**Resolved**: The compute nodes has been rebooted and are accepting new jobs.  For the record, on day 5 approx. 300 cores were back online, on day 7 approx. 600 cores were back online, on day 8 approx. 1,500 cores were back online, and on day 9 the majority of the 1,832 cores were back online.
 <br><span class="timestamp">Oct 11, 09:00 PDT</span>
 
-**Notice**: On September 28, a kernel update was applied to all compute nodes. To begin running the new kernel, each node must be rebooted.  To achieve this as quickly as possible and without any loss of running jobs, the queues on the nodes were all disabled (i.e., they stopped accepting new jobs).  Each node will reboot itself and re-enable its own queues as soon as all of its running jobs have completed.  Since the maximum allowed run time for a job is two weeks, it may take until October 11 before all nodes have been rebooted and accepting new jobs.  In the meanwhile, there will be fewer available slots on the queue than usual.  To follow the progress, see the 'Available CPU cores' curve (target 1832 cores) in the graph above.
+**Notice**: On September 28, a kernel update was applied to all compute nodes. To begin running the new kernel, each node must be rebooted.  To achieve this as quickly as possible and without any loss of running jobs, the queues on the nodes were all disabled (i.e., they stopped accepting new jobs).  Each node will reboot itself and re-enable its own queues as soon as all of its running jobs have completed.  Since the maximum allowed run time for a job is two weeks, it may take until October 11 before all nodes have been rebooted and accepting new jobs.  In the meanwhile, there will be fewer available slots on the queue than usual.  To follow the progress, see the 'Available CPU cores' curve (target 1,832 cores) in the graph above.
 <br><span class="timestamp">Sept 28, 16:30 PDT</span>
 
 
