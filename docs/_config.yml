@@ -19,6 +19,18 @@ devel:
   name: "qb3-dev1"
   hostname: "qb3-dev1"
   ip: "172.26.32.2"
+dev1:
+  name: "qb3-dev1"
+  hostname: "qb3-dev1"
+  ip: "172.26.32.2"
+dev2:
+  name: "qb3-dev2"
+  hostname: "qb3-dev2"
+  ip: "172.26.32.7"
+dev3:
+  name: "qb3-dev3"
+  hostname: "qb3-dev3"
+  ip: "172.26.32.8"
 transfer:
   name: "wyndt1"
   hostname: "wyndt1.compbio.ucsf.edu"

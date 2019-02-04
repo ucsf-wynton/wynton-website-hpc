@@ -55,9 +55,11 @@ The cluster has development nodes for the purpose of validating scripts, prototy
 
 Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` |
 ----------------------------|-----------------:|----------:|---------:|-----------------:|
-{{ site.devel.name }} |                8 |  2.66 GHz |   16 GiB |        0.125 TiB |
+{{ site.dev1.name }}        |                8 |  2.66 GHz |   16 GiB |         0.11 TiB |
+{{ site.dev2.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
+{{ site.dev3.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
 
-The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors and local solid state drives (SSDs).
+The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors. <!-- and local solid state drives (SSDs). -->
 
 
 ## Scratch Storage
