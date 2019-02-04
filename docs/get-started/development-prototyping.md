@@ -6,10 +6,14 @@ Although you should always run analyses via the job scheduler, there are times w
 <strong>Please do not run your real-world analysis on the development nodes.</strong>  Instead run it as a job via the scheduler - this will assert that your analysis runs as fast as possible and with all the resources it needs.  For further instruction, see the getting-started page <a href="{{ 'get-started/hello-world-job.html' | relative_url }}">Submit Job to Cluster</a>.
 </div>
 
+## List of Development Nodes
+ * {{ site.dev1.hostname }}
+ * {{ site.dev2.hostname }}
+ * {{ site.dev3.hostname }}
 
 ## Instructions
 
-To access a _development node_,
+To access one of the _development node_, say, {{ site.devel.hostname }},
 
 1. make sure you are [logged in to the cluster], and
 
