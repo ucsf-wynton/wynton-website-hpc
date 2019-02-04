@@ -44,7 +44,13 @@
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-year.png" alt="queues usage during the last year"/>
   </div>
 </div>
-  
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+The above 'Queue Metrics' plots have not been updated since January 23, 2019<br>
+<small>(It's on the to-do list to fix this)</small>
+</div>
+
+
 
 ## Compute Nodes
 
