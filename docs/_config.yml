@@ -7,6 +7,11 @@ login:
   name: "wynlog2"
   hostname: "wynlog2.cc.ucsf.edu"
   ip: "169.230.134.15"
+devel:
+  name: "qb3-dev3"
+  hostname: "qb3-dev3"
+  ip: "172.26.32.8"
+
 login1:
   name: "wynlog1"
   hostname: "wynlog1.compbio.ucsf.edu"
@@ -15,10 +20,6 @@ login2:
   name: "wynlog2"
   hostname: "wynlog2.cc.ucsf.edu"
   ip: "169.230.134.15"
-devel:
-  name: "qb3-dev1"
-  hostname: "qb3-dev1"
-  ip: "172.26.32.2"
 dev1:
   name: "qb3-dev1"
   hostname: "qb3-dev1"
@@ -39,6 +40,7 @@ transfer_old:
   name: "wynlog1"
   hostname: "wynlog1.compbio.ucsf.edu"
   ip: "169.230.126.77"
+
 specs:
   nodes: 93
   physical_cores: 1944

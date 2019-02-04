@@ -7,13 +7,13 @@ Although you should always run analyses via the job scheduler, there are times w
 </div>
 
 ## List of Development Nodes
- * qb3-dev1
- * qb3-dev2
- * qb3-dev3
+ * {{ site.dev1.hostname }}
+ * {{ site.dev2.hostname }}
+ * {{ site.dev3.hostname }}
 
 ## Instructions
 
-To access a _development node_,
+To access one of the _development node_, say, {{ site.devel.hostname }},
 
 1. make sure you are [logged in to the cluster], and
 
