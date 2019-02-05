@@ -59,7 +59,7 @@ Node                        | # Physical Cores |       CPU |      RAM | Local `/
 {{ site.dev2.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
 {{ site.dev3.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
 
-The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors. <!-- and local solid state drives (SSDs). -->
+<!-- The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors. and local solid state drives (SSDs). -->
 
 
 ## Scratch Storage
