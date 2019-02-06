@@ -1,6 +1,6 @@
 # News
 
-2019-01-31: Added two <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.<br/>
+2019-01-31: Added two more <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.<br/>
 
 2019-01-18: It is now possible to <a href="{{ '/about/pricing-storage.html' | relative_url }}">purchase additional storage</a>.<br/>
 

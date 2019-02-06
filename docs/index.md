@@ -1,6 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>:<br/>
-2019-01-31: Added two <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.<br/>
+2019-01-31: Added two more <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.<br/>
 2019-01-18: It is now possible to <a href="{{ '/about/pricing-storage.html' | relative_url }}">purchase additional storage</a>.<br/>
 2018-11-05: Nightly cleanup of <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">scratch spaces</a> now respects also when files were "added" - not just when they were last modified.  This fixes the problem where files with old timestamps were extracted from an archive just to be wiped by the next nightly cleanup.<br/>
 2018-10-02: Added a <a href="{{ '/about/roadmap.html' | relative_url }}">Roadmap</a>.<br/>
