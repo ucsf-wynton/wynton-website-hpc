@@ -9,8 +9,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Increase the default size of users' home directories - currently 200 GiB per user
 
-* Development: Additional development nodes for building software to take load off the current development node
-
 * Development: A dedicated Graphics Processing Unit (GPUs) development node for building GPU software
 
 * Software stacks: Support for sharing software installations between groups via environment modules (e.g. `module load CBI`)
@@ -50,6 +48,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Storage: Global scratch storage on BeeGFS parallel file system
 
 * Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from Wynton
+
+* Development: Additional development nodes for building software to take load off the current development node
 
 * Migration: The UCSF Memory and Aging Center (MAC) have joined Wynton by contributing new nodes
 
