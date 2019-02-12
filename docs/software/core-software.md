@@ -26,12 +26,12 @@ ssh, telnet
 
 <dt>Version Control</dt>
 <dd>
-git, hg(*), svn
+git, svn
 </dd>
 
 <dt>Text, Documents, and Reports</dt>
 <dd>
-aspell(*), ispell(*), hunspell<br>
+hunspell<br>
 doxygen, pandoc<br>
 LaTeX, PDF and Postscript tools<br>
 </dd>
@@ -48,7 +48,7 @@ python<br>
   
 <dt>System Utilities</dt>
 <dd>
-htop(*), top
+top
 </dd>
 
 <dt>Linux Containers</dt>
@@ -57,11 +57,8 @@ singularity
 </dd>
 </dl>
 
-(*) These tools are yet to be installed.
-
-
 <br>
-_Note:_ The installed versions of core tools will change regularly as these tools are upgraded on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)) with [Centos 7 EPEL] being the main source repository.
+_Note:_ These core tools will be updated without notice as the operating system is updated on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the tools originate from the (stable) [Centos 7 EPEL] repository.
 
 
 [Software Repositories]: {{ '/software/software-repositories.html' | relative_url }}
