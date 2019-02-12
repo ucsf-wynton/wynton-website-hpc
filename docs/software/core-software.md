@@ -58,11 +58,11 @@ singularity
 </dl>
 
 <br>
-_Note:_ These core tools will be updated without notice as the operating system is updated on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the tools originate from the (stable) [Centos 7 EPEL] repository.
+_Note:_ These core tools will be updated without notice as the operating system is updated on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the tools originate from the (stable) [CentOS 7 EPEL] repository.
 
 
 [Software Repositories]: {{ '/software/software-repositories.html' | relative_url }}
-[Centos 7 EPEL]: https://centos.pkgs.org/7/epel-x86_64/
+[CentOS 7 EPEL]: https://centos.pkgs.org/7/epel-x86_64/
 
 
 <style>
