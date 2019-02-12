@@ -47,3 +47,6 @@ Assume that the total amount of local scratch you need for your input files and 
 ```sh
 $ qsub -l scratch=100G -l mem_free=4G -pe smp 2 ex-scratch.sh
 ```
+
+
+To understand the purpose of `qstat -j` at the end, see the [Job Summary]({{ '/scheduler/job-summary.html' | relative_url }}) page.

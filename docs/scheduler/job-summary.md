@@ -34,12 +34,14 @@ usage         1:            cpu=00:00:14, mem=6.82412 GB s, io=0.00903 GB, vmem=
 ```
 The full details are available at the end.
 
-With this information, we can narrow down that the total processing time was 14 seconds (`cpu=00:00:14`) and that the maximum amount of virtual memory used was ~810 MB (`vmem=810.203M`).  If we want to submit this script again, we could submit it, with some margin, using:
+With this information, we can narrow down that the total processing time was 14 seconds (`cpu=00:00:14`) and that the maximum amount of virtual memory used was ~810 MB (`maxvmem=810.203M`).  With the help of `cpu` and `maxvmem` from previous runs, we can re-submit this job script with more relevant resource specifications;
 
 ```sh
 $ qsub -l h_rt=00:01:00 -l mem=1G job_summary.sge
 ```
 
+
+_Comment_: Note that the `mem` value has unit `GB s` (GB * seconds), which is because it is the "accumulated memory usage of the job in Gbytes seconds".
 
 
 ## Full job summary
