@@ -17,6 +17,8 @@ qsub -cwd -l mem_free=10G script.sh
 ```
 The scheduler will launch this jobs on the first available compute node with that amount of memory available.
 
+_TIPS_: Add `qstat -j $JOB_ID` to the end of your script to find out how much memory and CPU time your job needed.  See [Job Summary] page for more details.
+
 <div class="alert alert-warning" role="alert">
 A job that consumes more memory than requested will be terminated by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
 </div>
@@ -24,6 +26,7 @@ A job that consumes more memory than requested will be terminated by the schedul
 <div class="alert alert-warning" role="alert">
 Note that <code>-l mem_free=size</code> specifies <em>memory per slot</em>, not per job.
 </div>
+
 
 
 ## Specifying (maximum) run time
@@ -136,4 +139,5 @@ _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org
 For further options and advanced usage, see [Advanced Usage](advanced-usage.html) of the scheduler.
 
 [SGE environment variable]: {{ '/scheduler/sge-envvars.html' | relative_url }}
+[Job Summary]: {{ '/scheduler/job-summary.html' | relative_url }}
 [development nodes]: {{ '/get-started/development-prototyping.html' | relative_url }}
