@@ -85,6 +85,16 @@ _Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric mul
 </div>
 
 
+## Minimum network speed (1 Gbps, 10 Gpbs, 40 Gpbs)
+
+The majority of the compute nodes have 1 Gbs and 10 Gpbs network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gpbs network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
+```sh
+qsub -cwd -l eth_speed=10 script.sh
+```
+A job requesting `eth_speed=40` will end up on a 40 Gbps node, and a job requesting `eth_speed=1` (default) will end up on any node.
+
+
+
 ## Passing arguments to script
 
 You can pass arguments to a job script similarly to how one passes argument to a script executed on the command line, e.g.
