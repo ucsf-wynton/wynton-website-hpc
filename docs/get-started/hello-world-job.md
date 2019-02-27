@@ -39,6 +39,7 @@ date
 
 Although not critical for the job scheduler, it is always convenient to set the file permission on this script file to be executable, e.g.
 ```sh
+[alice@{{ site.devel.name }} ~]$ mkdir tests
 [alice@{{ site.devel.name }} ~]$ cd tests/
 [alice@{{ site.devel.name }} tests]$ chmod ugo+x hello_world
 ```
