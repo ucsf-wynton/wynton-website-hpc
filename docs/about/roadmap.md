@@ -3,22 +3,25 @@
 _The below "timeline" is a rough outline on when we can expect different milestones to be accomplished - the order does not reflect their relative priorities or the amount of effort spent_.
 
 
-## Soon
+## In progress
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
 
 * Storage: Increase the default size of users' home directories - currently 200 GiB per user
 
+* Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 physical cores) over to Wynton HPC
+
+
+## Soon
+
 * Development: A dedicated Graphics Processing Unit (GPUs) development node for building GPU software
 
 * Software stacks: Support for sharing software installations between groups via environment modules (e.g. `module load CBI`)
 
-* Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 physical cores) over to Wynton HPC
-
 * Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
 
-## On the horizon
+## Near future
 
 * Storage: Requirements for mounting lab-owned storage into Wynton
 
@@ -29,11 +32,11 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Compute: Add communal GPU nodes - currently only available to investigators who contributed with their own GPU nodes
 
 
-## In progress
-
-* Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
+## On the horizon
 
 * Compliance: Support for restricted data analysis
+
+* Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
 
 
 ## Planned deprecation
