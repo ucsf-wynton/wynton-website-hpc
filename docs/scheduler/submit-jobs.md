@@ -85,9 +85,9 @@ _Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric mul
 </div>
 
 
-## Minimum network speed (1 Gbps, 10 Gpbs, 40 Gpbs)
+## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps)
 
-The majority of the compute nodes have 1 Gbs and 10 Gpbs network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gpbs network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
+The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
 ```sh
 qsub -cwd -l eth_speed=10 script.sh
 ```
