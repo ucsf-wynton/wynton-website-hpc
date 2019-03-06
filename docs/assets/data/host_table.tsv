@@ -1,13 +1,13 @@
 # Created by: Henrik Bengtsson
-# Created on: 2019-03-06 12:31:09 PST
+# Created on: 2019-03-06 14:27:51 PST
 Node	# Physical Cores	CPU	RAM	Local `/scratch`	Local `/tmp`
 qb3-id10	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id11	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id4	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id44	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id4	24	2.8 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id44	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id45	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id46	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id47	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id47	28	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id48	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id49	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id5	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
@@ -16,6 +16,21 @@ qb3-id51	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id6	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id8	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id9	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id100	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id101	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id102	28	2.4 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id103	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id104	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id105	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id106	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id107	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id12	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id13	24	2.5 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id15	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id16	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id17	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id18	24	2.8 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id19	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id52	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id53	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id54	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
