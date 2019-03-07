@@ -196,7 +196,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     if (addFooter) tr.append("td").text(value);
     d3.select("#hosttable-summary-cpu").text(value);
   
-    value = ramMin + "-" + ramMax + " GiB/node (" + ram + " GiB in total, avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
+    value = ramMin + "-" + ramMax + " GiB/node (" + (ram/1024).toFixed(1) + " TiB in total, avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
     if (addFooter) tr.append("td").text(value);
     d3.select("#hosttable-summary-ram").text(value);
   
