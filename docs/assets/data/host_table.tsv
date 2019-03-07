@@ -1,6 +1,17 @@
 # Created by: Henrik Bengtsson
-# Created on: 2019-03-06 14:27:51 PST
+# Created on: 2019-03-07 15:16:50 PST
 Node	# Physical Cores	CPU	RAM	Local `/scratch`	Local `/tmp`
+qb3-id108	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id109	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id110	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id111	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id112	28	2.4 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id113	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id115	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id24	24	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id25	24	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id26	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id27	24	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id10	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id11	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id4	24	2.8 GHz	256 GiB	0.9 TiB	8.0 GiB
