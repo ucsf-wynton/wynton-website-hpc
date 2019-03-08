@@ -1,6 +1,18 @@
 # Created by: Henrik Bengtsson
-# Created on: 2019-03-07 15:16:50 PST
+# Created on: 2019-03-08 15:40:12 PST
+# Number of hosts: 195
+# Number of cores: 4668
 Node	# Physical Cores	CPU	RAM	Local `/scratch`	Local `/tmp`
+qb3-id117	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id119	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id120	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id121	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id122	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id123	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id20	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id21	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id22	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id23	24	3.0 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id108	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id109	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
 qb3-id110	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
