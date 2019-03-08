@@ -1,10 +1,12 @@
 # News
 
-2019-03-06: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to Wynton HPC development nodes.<br/>
+2019-03-07: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">11 nodes (292 cores)</a> from QB3 to Wynton HPC.<br/>
 
-2019-03-05: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to Wynton HPC development nodes.<br/>
+2019-03-06: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to Wynton HPC.<br/>
 
-2019-03-01: Migrated <a href="{{ '/about/specs.html' | relative_url }}">48 nodes (1344 cores)</a> from QB3 to Wynton HPC development nodes.<br/>
+2019-03-05: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to Wynton HPC.<br/>
+
+2019-03-01: Migrated <a href="{{ '/about/specs.html' | relative_url }}">48 nodes (1344 cores)</a> from QB3 to Wynton HPC.<br/>
 
 2019-02-14: Added <a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">SGE resource `eth_speed`</a> for requesting minimum network speeds.<br/>
 

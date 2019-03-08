@@ -5,11 +5,11 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## In progress
 
+* Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 physical cores) over to Wynton HPC
+
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
 
 * Storage: Increase the default size of users' home directories - currently 200 GiB per user
-
-* Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 physical cores) over to Wynton HPC
 
 
 ## Soon
