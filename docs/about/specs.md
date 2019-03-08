@@ -6,8 +6,8 @@
   <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}/node</dd>
-  <dt>Local <code>/scratch</code></dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_range }}/node</dd>
-  <dt>Global <code>/scratch</code></dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size }}</dd>
+  <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_range }}/node</dd>
+  <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size }}</dd>
   <dt>User home storage</dt><dd>{{ site.specs.home_size }} (maximum 200 GiB/user - soon 500 GiB/user)</dd>
 
 </dl>
