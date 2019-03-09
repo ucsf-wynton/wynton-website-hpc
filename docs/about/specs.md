@@ -215,8 +215,8 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
 
     $(document).ready(function() {
       $('#hosttable').DataTable({
-        "pageLength": 25,
-        "order": [[ 1, "asc" ]]
+        "pageLength": 25
+/*        "order": [[ 1, "asc" ]]  */
       });
     });
   });
