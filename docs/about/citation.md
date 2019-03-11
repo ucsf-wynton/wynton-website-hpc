@@ -36,4 +36,4 @@ Below are a few examples on how to give details on the Wynton HPC environment in
 > {{ site.specs.nodes }} nodes with {{ site.specs.physical_cores }} cores
 > operating at {{ site.specs.cpu_min }}-{{ site.specs.cpu_max }} GHz.
 > Each node has at least {{ site.specs.ram_min }} GiB of RAM and
-> total home storage is {{ site.specs.home_size }}.
+> total home storage is {{ site.specs.home_size_total }} TiB.

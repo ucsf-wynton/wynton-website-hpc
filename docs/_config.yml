@@ -58,21 +58,30 @@ specs:
   ram_range: "48-768 GiB"
   
   ## Disk /swap [GiB]:
+  swap_min: 4
+  swap_max: 4
   swap_range: "4 GiB"
 
   ## Local /tmp [GiB]:
+  local_tmp_size_min: 4
+  local_tmp_size_max: 4
   local_tmp_size: "4 GiB"
 
   ## Local /scratch [TiB]:
+  local_scratch_size_min: 0.1
+  local_scratch_size_max: 1.8
   local_scratch_size_range: "0.1-1.8 TiB"
   
   ## Global /wynton/scratch [TiB]:
+  global_scratch_size_total: 492
   global_scratch_size: "492 TiB"
   
   ## NetApp home [TiB]:
+  netapp_home_size_total: 20
   netapp_home_size: "20 TiB"
   
   ## User home [TiB]:
+  home_size_total: 383
   home_size: "383 TiB"
   
 assets:

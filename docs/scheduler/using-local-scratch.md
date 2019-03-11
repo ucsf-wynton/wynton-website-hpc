@@ -15,7 +15,7 @@ Here is how to use `/scratch`:
 
 * The job-specific TMPDIR folder will be deleted automatically when the job terminates.
 
-* **Specify how much local scratch (TMPDIR) storage your job will need**.  Local storage is limited to [{{ site.specs.local_scratch_size_range }} per compute node]({{ '/about/specs.html' | relative_url }}).  If your job will use up to 200 GiB of disk space, you can specify this resource as `-l scratch=200G` (in units of GiB) when submitting the job.  A node with 800 GiB of scratch space can support up to four `-l scratch=200G` jobs running at the same time.
+* **Specify how much local scratch (TMPDIR) storage your job will need**.  Local storage is limited to [{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node]({{ '/about/specs.html' | relative_url }}).  If your job will use up to 200 GiB of disk space, you can specify this resource as `-l scratch=200G` (in units of GiB) when submitting the job.  A node with 800 GiB of scratch space can support up to four `-l scratch=200G` jobs running at the same time.
 
 
 ### Example

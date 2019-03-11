@@ -5,10 +5,10 @@
 <dl id="hosttable-summary" class="dl-horizontal">
   <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
-  <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_range }}/node</dd>
-  <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_range }}/node</dd>
-  <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size }}</dd>
-  <dt>User home storage</dt><dd>{{ site.specs.home_size }} (maximum 200 GiB/user - soon 500 GiB/user)</dd>
+  <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_min }}-{{ site.specs.ram_max }} GiB/node</dd>
+  <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</dd>
+  <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>
+  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 200 GiB/user - soon 500 GiB/user)</dd>
 
 </dl>
 
@@ -21,8 +21,8 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ### Compute Nodes
 
-Most compute nodes have Intel processors, while others have AMD processes. The CPU speeds are in the range of {{ site.specs.cpu_range }}.
-Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.  In addition, each node has a {{ site.specs.local_tmp_size }} `/tmp` drive and {{ site.specs.swap_range }} of swap space.
+Most compute nodes have Intel processors, while others have AMD processes. The CPU speeds are in the range of {{ site.specs.cpu_min }}-{{ site.specs.cpu_max }} GHz.
+Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.  In addition, each node has a {{ site.specs.local_tmp_size_min }} TiB `/tmp` drive and {{ site.specs.swap_min }} TiB of swap space.
 For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
 
 
@@ -66,17 +66,17 @@ Node                        | # Physical Cores |       CPU |      RAM | Local `/
 
 The Wynton cluster provides two types of scratch storage:
 
-* Local `/scratch/` - <span id="hosttable-summary-local-scratch2"></span> storage unique to each compute node (can only be accessed from the specific compute node).
+* Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
 
-* Global `/wynton/scratch/` - {{ site.specs.global_scratch_size }} storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+* Global `/wynton/scratch/` - {{ site.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  Files not added or modified during the last two weeks will be automatically deleted on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
 ## User and Lab Storage
 
-* `/wynton/home`: {{ site.specs.home_size }} storage space
-* `/netapp/home`: {{ site.specs.netapp_home_size }} storage space (to be decommissioned)
+* `/wynton/home`: {{ site.specs.home_size_total }} TiB storage space
+* `/netapp/home`: {{ site.specs.netapp_home_size_total }} TiB storage space (to be decommissioned)
 
 Each user may use up to 500 GiB disk space in the home directory (for users still on `/netapp/home` the limit is 200 GiB).  Research groups can add additional storage space by either mounting their existing storage or purchase new.
 
