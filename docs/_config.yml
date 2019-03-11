@@ -46,13 +46,33 @@ specs:
   physical_cores: 4668
   gpus: 58
   gpu_nodes: 24
+  
+  ## CPU [GHz]:
+  cpu_min: 2.6
+  cpu_max: 3.4
   cpu_range: "2.6-3.4 GHz"
+
+  ## RAM [GiB]:
+  ram_min: 48
+  ram_max: 768
   ram_range: "48-768 GiB"
+  
+  ## Disk /swap [GiB]:
   swap_range: "4 GiB"
-  local_scratch_size_range: "0.1-1.8 TiB"
+
+  ## Local /tmp [GiB]:
   local_tmp_size: "4 GiB"
+
+  ## Local /scratch [TiB]:
+  local_scratch_size_range: "0.1-1.8 TiB"
+  
+  ## Global /wynton/scratch [TiB]:
   global_scratch_size: "492 TiB"
+  
+  ## NetApp home [TiB]:
   netapp_home_size: "20 TiB"
+  
+  ## User home [TiB]:
   home_size: "383 TiB"
   
 assets:

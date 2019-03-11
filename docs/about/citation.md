@@ -11,8 +11,8 @@ Below are a few examples on how to give details on the Wynton HPC environment in
 > connected by multiple 40 Gbps network connections.  Wynton currently
 > contains {{ site.specs.nodes }} nodes with over
 > {{ site.specs.physical_cores }} CPU cores.
-> RAM in the nodes ranges from 48 to 768 GiB with an average RAM-to-core
-> ratio of over 10 GiB.
+> RAM in the nodes ranges from {{ site.specs.ram_min }} to
+> {{ site.specs.ram_max }} GiB with an average RAM-to-core ratio of over 10 GiB.
 > There are also {{ site.specs.gpu_nodes}} nodes containing a total of
 > {{ site.specs.gpus }} GPUs.
 > Storage is provided by a parallel filesystem providing 400 TB of mirrored
@@ -29,11 +29,11 @@ Below are a few examples on how to give details on the Wynton HPC environment in
 
 ### Example 2
 
-> Wynton is a computational research cluster shared by investigators at 
+> Wynton HPC is a computational research cluster shared by investigators at 
 > UCSF.  The cluster is run as a co-op, with access for all and priority 
 > given to those who have contributed funds or hardware.  Support is 
 > also provided by UCSF Research IT.  The cluster currently consists of
 > {{ site.specs.nodes }} nodes with {{ site.specs.physical_cores }} cores
-> operating at {{ site.specs.cpu_range }}.
-> Each node has at least 48 GiB of RAM and
+> operating at {{ site.specs.cpu_min }}-{{ site.specs.cpu_max }} GHz.
+> Each node has at least {{ site.specs.ram_min }} GiB of RAM and
 > total home storage is {{ site.specs.home_size }}.
