@@ -14,7 +14,7 @@ Below are a few examples on how to give details on the Wynton HPC environment in
 > RAM in the nodes ranges from 48 to 768 GiB with an average RAM-to-core
 > ratio of over 10 GiB.
 > There are also {{ site.specs.gpu_nodes}} nodes containing a total of
-> {{ site.specs.gpus }} GPUs(*).
+> {{ site.specs.gpus }} GPUs.
 > Storage is provided by a parallel filesystem providing 400 TB of mirrored
 > home space and 500 TB of global scratch space.
 > 
@@ -25,9 +25,6 @@ Below are a few examples on how to give details on the Wynton HPC environment in
 > cluster. The balance of the computing power not used by the contributors
 > is available to other registered groups (including other contributors) on
 > a first-come, first-served basis.
->
-> (*) At the moment, GPUs are only available to the groups who contributed
->     them.  It is on the roadmap to add communal GPU nodes as well.
 
 
 ### Example 2
