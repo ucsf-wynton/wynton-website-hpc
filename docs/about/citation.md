@@ -1,12 +1,8 @@
-<div class="alert alert-warning" role="alert">
-2019-01-09: This is a proposal that is yet to be approved by the Wynton team.
-</div>
-
 # How to Cite
 
 ## Grant Applications
 
-Below are a few examples on how to give details on the Wynton HPC environment in a grant application:
+Below are a few examples on how to give details on the Wynton HPC environment in a grant application.  _Please note that the node and CPU cores counts are automatically updated on a daily basis._
 
 ### Example 1
 
