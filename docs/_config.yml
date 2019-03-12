@@ -42,8 +42,8 @@ transfer_old:
   ip: "169.230.126.77"
 
 specs:
-  nodes: 195
-  physical_cores: 4668
+  nodes: 214
+  physical_cores: 5200
   gpus: 58
   gpu_nodes: 24
   
@@ -61,7 +61,7 @@ specs:
 
   ## Local /tmp [GiB]:
   local_tmp_size_min: 4
-  local_tmp_size_max: 4
+  local_tmp_size_max: 8
 
   ## Local /scratch [TiB]:
   local_scratch_size_min: 0.1
