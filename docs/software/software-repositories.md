@@ -1,3 +1,8 @@
+<div class="alert alert-danger" role="alert">
+<strong>This page is under construction: For currently available software modules, use `module avail`.</strong>
+</div>
+
+
 <!--
 WARNING: do _not_ update this file; it is automatically generated from software-repositories.md.rsp and will be overwritten.
 -->

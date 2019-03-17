@@ -1,8 +1,3 @@
-<div class="alert alert-danger" role="alert">
-<strong>This page is under construction: Shared Software Repositories are yet to be enabled on the cluster</strong>
-</div>
-
-
 # Software Modules
 
 In addition to the [core software] tools that are available by default, additional software is available via different [Software Repositories].  Note that some of these software tools are installed and maintained by other users or research groups of the cluster who have kindly agreed on sharing their efforts with other cluster users. Currently known and publicly shared repositories are:
@@ -15,12 +10,24 @@ In addition to the [core software] tools that are available by default, addition
  <tr>
   <td>
   <strong>CBI</strong><br>
-  
   </td>
   <td>
   <strong>The Computational Biology and Informatics (CBI) Software Repository</strong><br>
-  Repository of software shared by the Computational Biology and Informatics (<a href="http://cbi.ucsf.edu">http://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.
-  See the <a href="{{ '/software/software-repositories.html' | relative_url }}">Software Repositories</a> page for further details.
+  Repository of software shared by the Computational Biology and Informatics (<a href="http://cbi.ucsf.edu">http://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.<br>
+  Usage: <code>module load CBI</code>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <strong>Sali</strong><br>
+  
+  </td>
+  <td>
+  <strong>Sali Lab Software Repository</strong><br>
+  Repository of software shared by the UCSF Sali Lab (<a href="https://salilab.org/">https://salilab.org/</a>).<br>
+  <em>Comment: Contrary to the UCSF QB3 cluster, where these modules were available by default, this repository has to be loaded explicitly in order to have access to its modules on Wynton HPC.</em><br>
+  
+  Usage: <code>module load Sali</code>
   </td>
  </tr>
 </table>
@@ -44,7 +51,7 @@ module load CBI r
 After this, the `R` and the `Rscript` commands are available on the search path (`PATH`), e.g.
 ```sh
 $ Rscript --version
-R scripting front-end version 3.5.1 (2018-07-02)
+R scripting front-end version 3.5.3 (2019-03-11)
 ```
 
 <div class="alert alert-warning" role="alert">
@@ -79,9 +86,9 @@ or alternative,
 module spider
 ```
 
-If the software repository provides more than one version of each software, specific versions can be loaded using the `module load <software>/<version>` format.  For instance, the CBI repository provides a large number of historical R versions.  To load R 3.1.3, use:
+If the software repository provides more than one version of each software, specific versions can be loaded using the `module load <software>/<version>` format.  For instance, the CBI repository provides a large number of historical R versions.  To load R 3.2.0, use:
 ```sh
-module load r/3.1.3
+module load r/3.2.0
 ```
 _Comment_: If another version of R is already loaded, that will automatically be unloaded before loading the new version.
 
