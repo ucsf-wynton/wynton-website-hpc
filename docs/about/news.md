@@ -1,5 +1,9 @@
 # News
 
+2019-03-15: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">8 nodes (224 cores)</a> from QB3 to Wynton HPC.<br/>
+
+2019-03-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">19 nodes (532 cores)</a> from QB3 to Wynton HPC.<br/>
+
 2019-03-08: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">10 nodes (264 cores)</a> from QB3 to Wynton HPC.<br/>
 
 2019-03-07: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">11 nodes (292 cores)</a> from QB3 to Wynton HPC.<br/>

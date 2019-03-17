@@ -1,6 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>:<br/>
-2019-03-01--...: Migrating nodes from QB3 to Wynton HPC - <a href="{{ '/about/specs.html' | relative_url }}">93 nodes (2684 cores)</a> has been moved this far.<br/>
+2019-03-01--...: Migrating nodes from QB3 to Wynton HPC - <a href="{{ '/about/specs.html' | relative_url }}">120 nodes (3440 cores)</a> has been moved this far.<br/>
 2019-02-14: Added <a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">SGE resource `eth_speed`</a> for requesting minimum network speeds.<br/>
 2019-01-31: Added two more <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.<br/>
 2019-01-18: It is now possible to <a href="{{ '/about/pricing-storage.html' | relative_url }}">purchase additional storage</a>.<br/>
