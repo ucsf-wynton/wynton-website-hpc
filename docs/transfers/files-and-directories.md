@@ -60,7 +60,7 @@ To copy multiple files from `~/study/files/` on the cluster to `~/study/` on you
 {local_machine}$ scp alice@{{ site.transfer.hostname }}:study/files/*.txt alice@{{ site.transfer.hostname }}:study/files/*.R ~/study/
 ```
 
-### Recursively copy a folder from cluster
+### Recursively copy a folder from the cluster
 
 To copy all content of directory `dataset/` on the cluster so that it appears as `dataset/` in your local working directory, use
 ```sh
