@@ -1,6 +1,12 @@
 # UCSF Wynton Status
 
-<!-- To display the 'broadcast' icon in the navbar, edit assets/css/tweaks.css -->
+<!-- To display the 'broadcast' icon in the navbar, edit assets/css/dynamics.css -->
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>Wynton HPC environment operational</strong><br>
+<em>Fewer slots than ususal will be be available March 21-April 5 as the kernel is updated on all compute nodes
+</em>
+</div>
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -8,10 +14,10 @@
 </div>
 -->
 
+<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC environment operational</strong>
 </div>
-<!--
 -->
 
 <!--
@@ -53,6 +59,27 @@
 
 
 ## Upcoming and Current Incidents
+
+### March 22, 2019
+
+#### <span style="color: orange;">Kernel maintenance</span>
+<!--
+**Resolved**: The login, development and transfer hosts have been rebooted.
+<br><span class="timestamp">March 22, 12:00 PDT</span>
+-->
+**Notice**: On Friday March 22 at 10:30am, all of the login, development, and data transfer hosts will be rebooted.  Please be logged out before then.  These hosts should be offline for less than 5 minutes.
+<br><span class="timestamp">Mar 21, 15:30 PDT</span>
+
+
+### March 21-April 5, 2019
+
+#### <span style="color: orange;">Kernel maintenance</span>
+<!--
+**Resolved**: All compute nodes have been rebooted.
+<br><span class="timestamp">April 5, 12:00 PDT</span>
+-->
+**Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target 5,424 cores) in the graph above.
+<br><span class="timestamp">Mar 21, 15:30 PDT</span>
 
 
 ## Past Incidents
