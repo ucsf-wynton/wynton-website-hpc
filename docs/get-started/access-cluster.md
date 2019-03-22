@@ -2,6 +2,10 @@
 These instructions are primarily written for Linux, macOS, and Windows 10 users.  If you are on a pre-Windows 10, using the <a href="http://www.putty.org/">PuTTY</a> SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
 </div>
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Any shell session that has been idle for more than eight hours will timeout and exit automatically.
+</div>
+
 
 # Login
 

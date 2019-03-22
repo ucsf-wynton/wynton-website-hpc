@@ -1,5 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>:<br/>
+2019-03-21: To decrease the number of stray shells, any shell session that has been idle for more than eight hours will timeout and exit automatically.<br/>
 2019-03-01-17: Migrated the majority (136 nodes; 3680 cores) of the QB3 nodes to Wynton HPC.<br/>
 2019-02-14: Added <a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">SGE resource `eth_speed`</a> for requesting minimum network speeds.<br/>
 2019-01-31: Added two more <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.<br/>
