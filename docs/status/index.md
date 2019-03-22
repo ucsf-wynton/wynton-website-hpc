@@ -60,17 +60,6 @@
 
 ## Upcoming and Current Incidents
 
-### March 22, 2019
-
-#### <span style="color: orange;">Kernel maintenance</span>
-<!--
-**Resolved**: The login, development and transfer hosts have been rebooted.
-<br><span class="timestamp">March 22, 12:00 PDT</span>
--->
-**Notice**: On Friday March 22 at 10:30am, all of the login, development, and data transfer hosts will be rebooted.  Please be logged out before then.  These hosts should be offline for less than 5 minutes.
-<br><span class="timestamp">Mar 21, 15:30 PDT</span>
-
-
 ### March 21-April 5, 2019
 
 #### <span style="color: orange;">Kernel maintenance</span>
@@ -83,6 +72,16 @@
 
 
 ## Past Incidents
+
+### March 22, 2019
+
+#### <span style="color: orange;">Kernel maintenance</span>
+**Resolved**: The login, development and transfer hosts have been rebooted.
+<br><span class="timestamp">March 22, 10:35 PDT</span>
+
+**Notice**: On Friday March 22 at 10:30am, all of the login, development, and data transfer hosts will be rebooted.  Please be logged out before then.  These hosts should be offline for less than 5 minutes.
+<br><span class="timestamp">Mar 21, 15:30 PDT</span>
+
 
 ### January 22-February 5, 2019
 
