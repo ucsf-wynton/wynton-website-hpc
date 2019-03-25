@@ -20,7 +20,7 @@ The scheduler will launch this jobs on the first available compute node with tha
 _TIPS_: Add `qstat -j $JOB_ID` to the end of your script to find out how much memory and CPU time your job needed.  See [Job Summary] page for more details.
 
 <div class="alert alert-warning" role="alert">
-A job that consumes more memory than requested will be terminated by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
+A job that consumes more memory than requested may be terminated by the administrators and in the future possibly automatically by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
 </div>
 
 <div class="alert alert-warning" role="alert">
