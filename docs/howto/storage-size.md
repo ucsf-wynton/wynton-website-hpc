@@ -31,9 +31,9 @@ _Comment_: It is the _compressed_ size that counts towards your disk quota.
 
 
 
-## Disk quota on /wynton/home
+## Disk quota on /wynton/home/
 
-To check how much storage space you have consumed on `/wynton/home`, and the total amount available to you, call:
+To check how much storage space you have consumed on `/wynton/home/`, and the total amount available to you, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=11 --uid $USER
