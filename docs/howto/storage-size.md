@@ -58,6 +58,8 @@ To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 beegfs-ctl --getquota --storagepoolid=10 --uid $USER
 ```
 
+_Comment_: [Files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
+
 
 ## Disk quota on /netapp/home (deprecated)
 
