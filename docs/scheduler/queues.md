@@ -19,7 +19,7 @@ The cluster provides different queues ("running areas") that each is optimized f
 * **member.q**:
   - Maximum runtime: 2 weeks
   - Process priority: 0 (highest)
-  - Availability: all compute nodes except GPU and institutional purchased nodes
+  - Availability: all compute nodes except GPU and institutionally purchased nodes
   - Quota: Proportional to your labs share on the cluster (priority users only).  When a lab has exhausted all its available member.q slots, additional jobs scheduled by lab members will spill over to the long.q queue
   - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the Wynton cluster and gain priority access corresponding to the contribution
 
