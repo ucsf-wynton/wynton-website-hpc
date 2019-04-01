@@ -125,4 +125,4 @@ tmp
 TMPDIR
 Toolset
 ZFS
-xz
+lz
