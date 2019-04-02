@@ -11,7 +11,7 @@
   4. You might have asked for compute resources that you do not have access to.  For instance, graphical processing units (GPUs) are currently only available to groups who have contributed with their own GPU hardware.  If so, please remove your job from the queue (`qdel`).
   5. `qstat -j <job_id>` will provide details on why a particular job is not running.  `qstat -u '*'` will show all jobs and their priority scores in the queue.
 
-**A**: **[For QB3 migrants]** If you are coming from the QB3 cluster, please make sure that your job script does _not_ specify any of the below [QB3-specific SGE resources](https://salilab.org/qb3cluster/Cluster_Topology).  A job submitted with one ore more of these will sit in the queue forever.
+**A**: **[For QB3 migrants]** If you are coming from the QB3 cluster, please make sure that your job script does _not_ specify any of the below [QB3-specific SGE resources](https://salilab.org/qb3cluster/Cluster_Topology).  A job submitted with one or more of these will sit in the queue forever.
 
   - `-l arch=linux-x64`: this architecture does not exist on Wynton HPC. (You could specify, `-l arch=lx-amd64` but that is not needed as all compute nodes now have the same architecture.)
 
