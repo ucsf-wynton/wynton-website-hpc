@@ -60,21 +60,22 @@
 
 ## Upcoming and Current Incidents
 
+
+
+## Past Incidents
+
 ### March 21-April 5, 2019
 
 #### <span style="color: orange;">Kernel maintenance</span>
-<!--
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">April 5, 12:00 PDT</span>
--->
+
 **Update**: Nearly all compute nodes have been rebooted (~5,200 cores are now available).
 <br><span class="timestamp">Mar 29, 12:00 PDT</span>
 
 **Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target 5,424 cores) in the graph above.
 <br><span class="timestamp">Mar 21, 15:30 PDT</span>
 
-
-## Past Incidents
 
 ### March 22, 2019
 
