@@ -16,10 +16,12 @@ as_html <- function(x) {
 style <- cmdArg(style = FALSE)
 
 modulepath <- function(module_repos) {
-  modulepath_root <- "/home/shared/cbc/apps/modulefiles"
+  modulepath_root <- "/netapp/home/hb/shared/apps/modulefiles"
   modulepath <- file.path(modulepath_root, module_repos)
   if (module_repos == "Legacy-Scyld") modulepath <- "/opt/scyld/modulefiles"
-  stopifnot(utils::file_test("-d", modulepath))
+  if (!utils::file_test("-d", modulepath)) {
+    stop("No such module directory: ", sQuote(modulepath))
+  }
   modulepath
 }
 
