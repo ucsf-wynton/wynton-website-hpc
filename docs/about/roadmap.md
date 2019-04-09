@@ -11,6 +11,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Increase the default size of users' home directories - currently 200 GiB per user
 
+* Compute: Add four communal GPU nodes (from the QB3 cluster)
+
 
 ## Soon
 
@@ -28,8 +30,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Scheduler: Support interactive jobs (`qlogin`)
 
 * Support: A User Issue Tracker
-
-* Compute: Add communal GPU nodes - currently only available to investigators who contributed with their own GPU nodes
 
 
 ## On the horizon

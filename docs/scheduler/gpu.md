@@ -1,5 +1,5 @@
-<div class="alert alert-warning" role="alert">
-2018-08-20: Currently, GPUs are available only to users in groups who contributed GPU hardware to Wynton. However, it is on the <a href="{{ '/about/roadmap.html' | relative_url }}">roadmap</a> to make GPUs a communal resource.
+<div class="alert alert-info" role="alert">
+2019-04-09: Two GPU nodes are available to all users.  It is on the <a href="{{ '/about/roadmap.html' | relative_url }}">roadmap</a> to make additional GPUs available as a communal resource.  Users in groups who contributed GPU hardware will have exclusive access to an additional set of GPUs.
 </div>
 
 

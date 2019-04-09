@@ -1,11 +1,11 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>:<br/>
+2019-04-09: Added the first two communal GPU nodes available to all users.<br/>
 2019-03-21: To decrease the number of stray shells, any shell session that has been idle for more than eight hours will timeout and exit automatically.<br/>
 2019-03-01-17: Migrated the majority (136 nodes; 3680 cores) of the QB3 nodes to Wynton HPC.<br/>
 2019-02-14: Added <a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">SGE resource `eth_speed`</a> for requesting minimum network speeds.<br/>
 2019-01-31: Added two more <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.<br/>
 2019-01-18: It is now possible to <a href="{{ '/about/pricing-storage.html' | relative_url }}">purchase additional storage</a>.<br/>
-2018-11-05: Nightly cleanup of <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">scratch spaces</a> now respects also when files were "added" - not just when they were last modified.  This fixes the problem where files with old timestamps were extracted from an archive just to be wiped by the next nightly cleanup.<br/>
 <a href="{{ '/about/news.html' | relative_url }}">More ...</a>
 </div>
 

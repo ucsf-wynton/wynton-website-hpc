@@ -34,7 +34,7 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Maximum runtime: 2 weeks
   - Process priority: 0 (highest)
   - Availability: GPU nodes only
-  - Quota: Available to users/groups who have contributed with GPU hardware (The plan is to eventually make this a communal resource)
+  - Quota: Unlimited (all users) - users/groups who have contributed with GPU hardware will have exclusive access to the GPUs on those nodes
   - Purpose: For software that utilize Graphics Processing Units (GPUs)
 
 

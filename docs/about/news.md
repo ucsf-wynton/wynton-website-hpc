@@ -1,5 +1,7 @@
 # News
 
+2019-04-09: Added the first two communal GPU nodes available to all users.<br/>
+
 2019-03-21: To decrease the number of stray shells, any shell session that has been idle for more than eight hours will timeout and exit automatically.<br/>
 
 2019-03-17: The majority (136 nodes; 3680 cores) of the QB3 nodes has now been migrated to Wynton HPC.<br/>
