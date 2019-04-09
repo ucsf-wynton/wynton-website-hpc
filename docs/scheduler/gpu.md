@@ -31,6 +31,20 @@ mpirun -np M --oversubscribe ...
 ```
 where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).
 
+## GPU relevant resource requests
+
+The GPU nodes in Wynton contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are 2 SGE resource complexes assigned to each GPU node.  They are `compute_cap` and `gpu_mem`.
+
+`compute_cap` describes the Compute Capability (or SM version) of the GPUs in the node (see [NVIDIA's CUDA GPU page][1] for more details).  `compute_cap` is an integer in keeping with the relevant flags to `nvcc`.  For example, a Compute Capability of 6.1 (GeForce GTX 1080) is represented by `compute_cap=61`.
+
+`gpu_mem` describes how much GPU memory the GPUs in the node have.  It's defined in MiB.
+
+Specifying either of these resources is not required.  If you do specify one, your job will be scheduled on a GPU node with resources >= those that you requested.  As an example, if you wanted to only run on at least GTX 1080 generation nodes with more than 10GB of GPU memory, you would specify:
+
+```
+-l compute_cap=61,gpu_mem=10000M
+```
+
 ## Running GPU applications
 Several CUDA runtimes are installed on the GPU nodes.  They can be loaded via modules just as above on the development nodes.
 
@@ -88,3 +102,4 @@ The <code>qconf -se hostname</code> command works only on the login nodes - not 
 [submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
 [list jobs]: {{ '/scheduler/list-jobs.html' | relative_url }}
 [development nodes]: {{ 'get-started/development-prototyping.html' | relative_url }}
+[1]: https://developer.nvidia.com/cuda-gpus
