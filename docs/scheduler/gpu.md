@@ -70,7 +70,7 @@ Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores
 
 While it is not possible to log directly into the GPU nodes to monitor their usage, several statistics are available from the login hosts.  For example:
 ```sh
-[alice@{{ site.login.name }} ~]$ qconf -se msg-iogpu3
+[alice@{{ site.devel.name }} ~]$ qconf -se msg-iogpu3
 hostname              msg-iogpu3
 load_scaling          NONE
 complex_values        mem_free=128000M
@@ -101,10 +101,6 @@ usage_scaling         NONE
 report_variables      NONE
 ```
 The above shows that host `msg-iogpu3` has 2 GeForce GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
-
-<div class="alert alert-warning" role="alert">
-The <code>qconf -se hostname</code> command works only on the login nodes - not on the developer nodes.
-</div>
 
 
 [submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
