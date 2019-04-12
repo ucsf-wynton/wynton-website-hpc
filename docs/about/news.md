@@ -2,6 +2,8 @@
 
 2019-04-12: Added another two communal GPU nodes available to all users.  There are now four communal GPU nodes with a total of 12 GPUs.<br/>
 
+2019-04-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">24 nodes (396 cores)</a> from QB3 to Wynton HPC.<br/>
+
 2019-04-09: Added the first two communal GPU nodes available to all users.<br/>
 
 2019-03-21: To decrease the number of stray shells, any shell session that has been idle for more than eight hours will timeout and exit automatically.<br/>
