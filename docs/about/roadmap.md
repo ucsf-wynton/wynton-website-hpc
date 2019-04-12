@@ -11,8 +11,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Increase the default size of users' home directories - currently 200 GiB per user
 
-* Compute: Add four communal GPU nodes (from the QB3 cluster)
-
 
 ## Soon
 
@@ -38,6 +36,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
 
+* GPU compute: Add additional communal GPU nodes
+
 
 ## Planned deprecation
 
@@ -57,6 +57,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Migration: The UCSF Memory and Aging Center (MAC) have joined Wynton by contributing new nodes
 
 * Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into Wynton
+
+* GPU compute: Four communal GPU nodes with a total of 12 GPUs (from the QB3 cluster)
 
 See also [News].
 

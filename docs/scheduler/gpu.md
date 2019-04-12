@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert">
-2019-04-09: Two GPU nodes are available to all users.  It is on the <a href="{{ '/about/roadmap.html' | relative_url }}">roadmap</a> to make additional GPUs available as a communal resource.  Users in groups who contributed GPU hardware will have exclusive access to an additional set of GPUs.
+2019-04-12: There are four GPU nodes with a total of 12 GPUs available to all users.  Users in groups who contributed GPU hardware will have exclusive access to an additional set of GPUs.
 </div>
 
 
