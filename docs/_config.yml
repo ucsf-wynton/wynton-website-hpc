@@ -42,10 +42,10 @@ transfer_old:
   ip: "169.230.126.77"
 
 specs:
-  nodes: 226
-  physical_cores: 5488
+  nodes: 250
+  physical_cores: 5884
+  gpu_nodes: 31
   gpus: 60
-  gpu_nodes: 28
   
   ## CPU [GHz]:
   cpu_min: 2.6
