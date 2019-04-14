@@ -88,3 +88,6 @@ specs:
   
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
+
+plugins:
+  - jekyll-target-blank
