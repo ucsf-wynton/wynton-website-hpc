@@ -9,6 +9,25 @@ body {
   padding-bottom: 40px;
 }
 
+.navbar-default {
+  background-color: #ffdd00;
+  border-color: #dec000;
+}
+
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555555;
+  background-color: #dec000;
+}
+
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #dec000;
+}
+
+.navbar-default .navbar-form {
+  border-color: #dec000;
+}
+
+
 /*--------------------------------------------------------------*
  * Sticky footer styles
  *--------------------------------------------------------------*/
