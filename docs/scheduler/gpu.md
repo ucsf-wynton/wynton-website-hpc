@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert">
-2019-04-12: There are four GPU nodes with a total of 12 GPUs available to all users.  Users in groups who contributed GPU hardware will have exclusive access to an additional set of GPUs.
+2019-04-12: There are four GPU nodes with a total of 12 GPUs and GPU development node available to all users.  Users in groups who contributed GPU hardware will have exclusive access to an additional set of GPUs.
 </div>
 
 
