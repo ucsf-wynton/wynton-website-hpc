@@ -8,11 +8,9 @@ Wynton is a large, shared high-performance compute (HPC) cluster underlying UCSF
 The end goal is that the all UCSF researchers should have access to the cluster without charge.  Free accounts will be limited by the number of concurrent cores and will have lower priority on the job queue.  Participating co-op members that contribute to the cluster will get priority on the job queue and will be able to utilize a large number of concurrent cores (proportionate to the contribution).
 
 
-## Who can join right now?
+## Who can join?
 
-In the initial phase (Fall 2017), our focus is to accommodate existing users from the earliest contributing UCSF centers (Memory & Aging, Inst. for Computational Health Sciences, Dept. of Radiology & Biomedical Imaging, and QB3).  In addition, **we encourage research groups who want to join the cooperative environment through new purchases or equipment migration to [contact us] for planning and evaluation**.  We plan to bring on more UCSF centers every few months.  Finally, once we achieve sufficient size and robustness, **we will also offer additional guest accounts for UCSF researchers who are not contributing to the co-op model**, to help meet the computational needs of the broad range of UCSF faculty and staff.  We plan to complete the wide rollout by December 2018.
-
-If you don't fit one of the above early-access categories, but are really keen to participate in one way or the other, please don't hesitate to [contact us] - we'd love to hear from you.
+The Wynton HPC environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
 
 
 ## Request access
@@ -22,7 +20,7 @@ To request access and get an account on the cluster, please [contact us] with th
 1. First and Last name
 2. UCSF email address
 3. UCSF affiliation (faculty, student, postdoc, etc.)
-4. UCSF Principle Investigator (PI), if any
+4. UCSF Principal Investigator (PI), if any
 5. QB3/CGL Kerberos username, if any
 6. UCSF Employee/Student ID (nine digits; 02xxxxxxx), if any
 7. Preferred username and one alternate
