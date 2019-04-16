@@ -38,8 +38,8 @@ unable to contact qmaster using port 6444 on host "q"
 
 ## Files and folders
 
-**Q**. _Is it possible to have a common folder where our group member can share files and software?_
+**Q**. _Is it possible to have a common folder where our group members can share files and software?_
 
-**A**. If you belong to a specific group, we can set up a `/wynton/home/GROUP/shared/` folder that group member (part of the same Unix group) have write access to.  The typical use case is then that one or more members maintain subdirectories therein.  If you need this, please drop us an email.
+**A**. If you belong to a specific group, we can set up a `/wynton/home/your_group/shared/` folder that group members (part of the same Unix group) have write access to.  The typical use case is then that one or more members maintain subdirectories therein.  If you need this, please drop us an email.
 
 
