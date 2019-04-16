@@ -22,6 +22,7 @@ GiB
 GID
 Globus
 gpu
+gpudev
 GPUs
 GTX
 HOWTOs
@@ -47,6 +48,7 @@ NSF's
 NVidia
 NVMe
 ondemand
+PIs
 pre
 Programmatically
 py
