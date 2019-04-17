@@ -71,7 +71,7 @@ To check your disk quota on the deprecated `/netapp/home` file system, use `quot
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ quota --no-wrap -f /netapp/home
-Disk quotas for user hb (uid 34002): 
+Disk quotas for user hb (uid 59999): 
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
 netapp:/vol/home/0  22436M    200G    300G            239k    315m    630m
 ```
