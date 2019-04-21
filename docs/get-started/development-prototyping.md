@@ -14,6 +14,7 @@ Any shell session that has been idle for more than eight hours will timeout and 
  * {{ site.dev1.hostname }}
  * {{ site.dev2.hostname }}
  * {{ site.dev3.hostname }}
+ * {{ site.gpudev1.hostname }}
 
 ## Instructions
 
