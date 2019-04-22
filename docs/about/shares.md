@@ -52,7 +52,7 @@ d3.text("{{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}", "te
 });
 </script>
 
-Source: [wynton_hpc_compute_shares.tsv].
+Source: [wynton_hpc_compute_shares.tsv] (compiled from `qconf -srqs member_queue_limits` and `qconf -sprj <project>`)
 
 
 <style>
