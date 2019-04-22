@@ -1,4 +1,4 @@
-# Contribution Shares
+# Contributing Member Shares
 
 ## Compute Shares
 
@@ -15,6 +15,8 @@ d3.text("{{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}", "te
   host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
   host_table = d3.tsv.parse(host_table);
 
+  var metadata = ['shares', 'queue_slots', 'project'];
+  
   var table = d3.select("#hosttable");
   var thead, tbody, tfoot, tr, td, td_status;
   var value, value2;
@@ -22,30 +24,16 @@ d3.text("{{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}", "te
   
   /* For each row */
   var nodes = 0;
-  host_table.forEach(function(row) {
+  host_table.forEach(function(row0) {
     /* Ignore column on /tmp size, iff it exists */
-    delete row["queue_total"];
-    
+    var row = [row0["shares"], row0["funits"], row0["queue_slots"], row0["project"]];
+
     if (nodes == 0) {
       tr = table.append("thead").append("tr");
-      for (key in row) {
-        value = key.replace(/\`/g, "");
-	switch(value) {
-	  case "funits":
-	    value = "Functional Units (FU)";
-	    break;
-	  case "shares":
-	    value = "Shares";
-	    break;
-	  case "queue_slots":
-	    value = "Slots (member.q)";
-	    break;
-	  case "project":
-	    value = "Group";
-	    break;
-	}
-        tr.append("th").text(value);
-      }
+      tr.append("th").text("Shares");
+      tr.append("th").text("Functional Units (FU)");
+      tr.append("th").text("Slots (member.q)");
+      tr.append("th").text("Group");
       tbody = table.append("tbody");
     }
     
@@ -58,7 +46,7 @@ d3.text("{{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}", "te
   $(document).ready(function() {
     $('#hosttable').DataTable({
       "pageLength": 50,
-      "order": [[ 2, "desc" ]]
+      "order": [[ 1, "desc" ]]
     });
   });
 });
