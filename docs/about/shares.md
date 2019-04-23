@@ -10,13 +10,18 @@
 </table>
 
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}", "text/csv", function(host_table) {
+d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", function(host_table) {
+  // extract date from header comments
+  var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
+  timestamp = timestamp.replace(/^[#] Created on: /g, '');
+  timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
+  timestamp = timestamp.trim();
+  d3.select("#compute-shares-timestamp").text(timestamp);
+  
   // drop header comments
   host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
   host_table = d3.tsv.parse(host_table);
 
-  var metadata = ['shares', 'queue_slots', 'project'];
-  
   var table = d3.select("#hosttable");
   var thead, tbody, tfoot, tr, td, td_status;
   var value, value2;
@@ -26,11 +31,10 @@ d3.text("{{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}", "te
   var nodes = 0;
   host_table.forEach(function(row0) {
     /* Ignore column on /tmp size, iff it exists */
-    var row = [row0["shares"], row0["funits"], row0["queue_slots"], row0["project"]];
+    var row = [row0["funits"], row0["queue_slots"], row0["project"]];
 
     if (nodes == 0) {
       tr = table.append("thead").append("tr");
-      tr.append("th").text("Shares");
       tr.append("th").text("Functional Units (FU)");
       tr.append("th").text("Slots (member.q)");
       tr.append("th").text("Group");
@@ -46,13 +50,13 @@ d3.text("{{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}", "te
   $(document).ready(function() {
     $('#hosttable').DataTable({
       "pageLength": 50,
-      "order": [[ 1, "desc" ]]
+      "order": [[ 0, "desc" ]]
     });
   });
 });
 </script>
 
-Source: [wynton_hpc_compute_shares.tsv] (compiled from `qconf -srqs member_queue_limits` and `qconf -sprj <project>`)
+Source: [compute_shares.tsv]({{ '/assets/data/compute_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span> (compiled from `qconf -srqs member_queue_limits` and `qconf -sprj <project>`)
 
 
 <style>
@@ -66,5 +70,3 @@ tfoot {
 }
 ttr:last-child { border-top: 2px solid #000; }
 </style>
-
-[wynton_hpc_compute_shares.tsv]: {{ '/assets/data/wynton_hpc_compute_shares.tsv' | relative_url }}
