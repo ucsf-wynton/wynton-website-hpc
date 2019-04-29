@@ -35,7 +35,7 @@ d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", fu
 
     if (nodes == 0) {
       tr = table.append("thead").append("tr");
-      tr.append("th").text("Functional Units (FU)");
+      tr.append("th").text("Functional Shares");
       tr.append("th").text("Slots (member.q)");
       tr.append("th").text("Group");
       tbody = table.append("tbody");
