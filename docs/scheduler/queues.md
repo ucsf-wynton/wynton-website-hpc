@@ -33,7 +33,7 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Purpose: For software that utilize Graphics Processing Units (GPUs)
 
 * **ondemand.q**:
-  - Maximum runtime: Per agreement
+  - Maximum runtime: 2 weeks
   - Process priority: 0 (highest)
   - Availability: Institutionally purchased nodes only
   - Quota: Available upon application and approval by the [steering committee]
