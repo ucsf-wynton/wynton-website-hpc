@@ -81,7 +81,7 @@ specs:
   home_size_total: 383
 
   ## Job queues
-  pu_total: 15255
+  pu_total: 15994
   member_q_total: 5006
 
   ## Deprecated fields - use above instead /HB 2019-03-11
