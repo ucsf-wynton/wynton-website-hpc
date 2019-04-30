@@ -116,7 +116,7 @@ d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", fu
 });
 </script>
 
-Source: [compute_shares.tsv]({{ '/assets/data/compute_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds to a _functional fshare_ ("fshare").
+Source: [compute_shares.tsv]({{ '/assets/data/compute_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds to a _functional share_ ("fshare").
 
 
 <style>
