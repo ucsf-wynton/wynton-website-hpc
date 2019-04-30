@@ -84,7 +84,7 @@ d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", fu
   /* For each row */
   var nodes = 0;
   host_table.forEach(function(row0) {
-    var row = [row0["funits"], row0["queue_slots"], row0["project"]];
+    var row = [row0["fshares"], row0["queue_slots"], row0["project"]];
 
     if (nodes == 0) {
       tr = table.append("thead").append("tr");
@@ -116,7 +116,7 @@ d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", fu
 });
 </script>
 
-Source: [compute_shares.tsv]({{ '/assets/data/compute_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span> (compiled from `qconf -srqs member_queue_limits` and `qconf -sprj <project>`)
+Source: [compute_shares.tsv]({{ '/assets/data/compute_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds toa _functional fshare_ ("fshare").
 
 
 <style>
@@ -130,5 +130,3 @@ tfoot {
 }
 ttr:last-child { border-top: 2px solid #000; }
 </style>
-
-
