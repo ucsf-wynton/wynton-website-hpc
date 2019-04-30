@@ -6,7 +6,7 @@ To kill a specific job, use:
 qdel <jobid>
 ```
 
-If the node is non-responsive, you can force the scheduler to remove the job by using:
+If the node, where the job is running, is non-responsive, you can force the scheduler to remove the job by using:
 
 ```sh
 qdel -f <jobid>
