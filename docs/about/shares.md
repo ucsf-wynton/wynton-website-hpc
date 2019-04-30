@@ -52,7 +52,7 @@ Below table shows the current amount of contributions in terms of Processing Uni
 
 <small>
 (*) To be documented.<br>
-(**) The reason for _member.q<sub>lab</sub>_ not remaining exactly the same when _PU<sub>lab</sub>_ does not change, is that the compute power per core is greater for newer hardware compared with older hardware. Because of this, a lab’s number of member.q slots is likely to, ever so slightly, decrease in the long run. But don’t worry, as the _average compute power per member.q slot increases over time_, your lab's total compute power on the member.q queue remains constant per definition (unless your lab adds further contributions).
+(**) The reason for _member.q<sub>lab</sub>_ not remaining exactly the same when _PU<sub>lab</sub>_ does not change, is that the compute power per core is greater for newer hardware compared with older hardware. Because of this, a lab’s number of member.q slots is likely to, ever so slightly, decrease in the long run as the cluster keeps growing. But don’t worry, as the _average compute power per member.q slot increases over time_, your lab's total compute power on the member.q queue remains constant per definition (unless your lab adds further contributions).
 </small>
 
 
