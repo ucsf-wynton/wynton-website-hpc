@@ -1,9 +1,9 @@
 # Created by: hb
-# Created on: 2019-04-30 10:52:50-07:00
-# Total funits: 15994
+# Created on: 2019-04-30 11:03:59-07:00
+# Total fshares: 15994
 # Total queue_slots: 5006
 # Number of projects: 35
-funits	queue_slots	project
+fshares	queue_slots	project
 27	8	schreinerlab
 280	88	fraserlab
 253	79	surbecklab
