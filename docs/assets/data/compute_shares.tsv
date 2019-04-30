@@ -1,6 +1,6 @@
 # Created by: hb
-# Created on: 2019-04-23 09:46:03-07:00
-# Total funits: 15255
+# Created on: 2019-04-30 10:41:08-07:00
+# Total funits: 15994
 # Total queue_slots: 5006
 # Number of projects: 35
 funits	queue_slots	project		
@@ -27,7 +27,7 @@ funits	queue_slots	project
 627	196	kortemmelab		
 594	186	jacobsonlab		
 54	17	chiulab		
-1	164	shoichetlab		
+524	164	shoichetlab		
 48	15	zaitlenlab		
 48	15	saviclab		
 497	156	limlab		
@@ -37,5 +37,5 @@ funits	queue_slots	project
 4054	1269	salilab		
 36	11	jameslab		
 381	119	babbittlab		
-135	110	grabelab		
+351	110	grabelab		
 32	10	weissmanlab		
