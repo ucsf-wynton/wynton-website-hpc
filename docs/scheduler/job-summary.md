@@ -55,7 +55,7 @@ job_number:                 2854740
 exec_file:                  job_scripts/2854740
 submission_time:            Fri Nov  2 22:32:57 2018
 owner:                      alice
-uid:                        34002
+uid:                        59999
 group:                      cbi
 gid:                        34001
 sge_o_home:                 /wynton/home/alice

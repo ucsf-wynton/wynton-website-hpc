@@ -80,6 +80,10 @@ specs:
   ## User home [TiB]:
   home_size_total: 383
 
+  ## Job queues
+  pu_total: 15994
+  member_q_total: 5006
+
   ## Deprecated fields - use above instead /HB 2019-03-11
   cpu_range: "2.6-3.4 GHz"
   ram_range: "48-768 GiB"

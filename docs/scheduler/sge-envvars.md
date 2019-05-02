@@ -27,7 +27,7 @@ To see all environment variable available to a job, submit a job that calls `env
 
 ```sh
 $ cd ~/test/
-$ echo "env" | qsub -cwd -j yes -pe smp 4 -N test_envvar
+$ echo "env" | qsub -cwd -j yes -pe smp 4 -l h_rt=00:01:00 -N test_envvar
 Your job 135988 ("test_envvar") has been submitted
 ```
 
