@@ -5,7 +5,7 @@ google_analytics: UA-128646955-1
 
 login:
   name: "wynlog2"
-  hostname: "wynlog2.cc.ucsf.edu"
+  hostname: "log2.wynton.ucsf.edu"
   ip: "169.230.134.15"
 devel:
   name: "qb3-dev3"
@@ -14,11 +14,13 @@ devel:
 
 login1:
   name: "wynlog1"
-  hostname: "wynlog1.compbio.ucsf.edu"
+  hostname_deprecated: "wynlog1.compbio.ucsf.edu"
+  hostname: "log1.wynton.ucsf.edu"
   ip: "169.230.126.77"
 login2:
   name: "wynlog2"
-  hostname: "wynlog2.cc.ucsf.edu"
+  hostname_deprecated: "wynlog2.cc.ucsf.edu"
+  hostname: "log2.wynton.ucsf.edu"
   ip: "169.230.134.15"
 dev1:
   name: "qb3-dev1"
@@ -38,7 +40,8 @@ gpudev1:
   ip: "172.26.32.3"
 transfer:
   name: "wyndt1"
-  hostname: "wyndt1.compbio.ucsf.edu"
+  hostname_deprecated: "wyndt1.compbio.ucsf.edu"
+  hostname: "dt1.wynton.ucsf.edu"
   ip: "169.230.126.58"
 transfer_old:
   name: "wynlog1"
