@@ -39,13 +39,13 @@ _If you are interested in contributing new hardware to Wynton HPC, please contac
 
 ### Wynton HPC Recommended Purchase
 
- * Compute node ("1U"):
+ * Compute node:
    - Number of CPUs: 2
-   - Each CPU: Xeon Gold 6132 (14 cores, 2.6 GHz)
+   - Each CPU: Intel Xeon Gold 6132 (14 cores, 2.60 GHz)
    - RAM: 384 GiB
    - Local storage: 1.0 TB HDD
    - Networking: 10 Gbps
    - Wynton HPC Processing Units: 109.25 PUs (~{{ 109.25 | plus: 0.0 | divided_by: 14 | divided_by: 2 | round: 1 }} PUs/core).  109.25 PUs [corresponds to]({{ '/about/shares.html' | relative_url }}) _member.q_ = {{ member_q_slots_per_pu | times: 109.25 | round: 1 }} slots (as of 2019-05-06)
    - Cost: TBA
    
-This compute node is part of a "4U brick" that contains in total of four (4) such compute nodes.  In order for Wynton to put in a purchase order, there needs to be a request for a complete 4U brick.  Purchasing multiples of 4 compute nodes (= one 4U brick) is likely to make it available sooner because it avoids having to have for other labs to complete a brick.
+This compute node is part of a "brick" that contains in total of four (4) such compute nodes.  In order for Wynton to put in a purchase order, there needs to be a request for a complete brick.  Purchasing multiples of 4 compute nodes (= one brick) is likely to make it available sooner because it avoids having to have for other labs to complete a brick.
