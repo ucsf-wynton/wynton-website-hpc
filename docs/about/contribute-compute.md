@@ -37,15 +37,24 @@ _If you are interested in contributing new hardware to Wynton HPC, please contac
 
 ## Purchasing new hardware
 
+**A lab can invest any amount of USD**.  The amount invested will be translated to a certain number of processing units (PUs), which the lab will keep for life.  Owning processing unit shares on the Wynton HPC, will give access to the member.q queue.  The more PUs a lab has the more member.q slots they can use at anytime.
+
+As of 2019-05-06, **[1 PU gives {{ member_q_slots_per_pu | round: 3 }} member.q slots]({{ '/about/shares.html' | relative_url }})**.
+
+
 ### Wynton HPC Recommended Purchase
 
- * Compute node:
+The Wynton HPC team recommends, full or partial, contributions toward the following hardware configuration:
+
+ * Four (4) compute nodes, each having:
    - Number of CPUs: 2
    - Each CPU: Intel Xeon Gold 6132 (14 cores, 2.60 GHz)
    - RAM: 384 GiB
    - Local storage: 1.0 TB HDD
    - Networking: 10 Gbps
-   - Wynton HPC Processing Units: 109.25 PUs (~{{ 109.25 | plus: 0.0 | divided_by: 14 | divided_by: 2 | round: 1 }} PUs/core).  109.25 PUs [corresponds to]({{ '/about/shares.html' | relative_url }}) _member.q_ = {{ member_q_slots_per_pu | times: 109.25 | round: 1 }} slots (as of 2019-05-06)
-   - Cost: TBA
-   
-This compute node is part of a "brick" that contains in total of four (4) such compute nodes.  In order for Wynton to put in a purchase order, there needs to be a request for a complete brick.  Purchasing multiples of 4 compute nodes (= one brick) is likely to make it available sooner because it avoids having to have for other labs to complete a brick.
+ * Total cost: TBA
+
+The total processing power of the above "brick" is **337 PUs** (based on Wynton HPC benchmarking), which currently corresponds to approximately {{ member_q_slots_per_pu | times: 337 | round: 0 }} member.q slots (as of 2019-05-06).
+
+
+_Comment_: In order for Wynton to put in a purchase order, there needs to be lab requests for a complete brick.  Contributing multiples of 4 compute nodes (= complete one brick) is likely to make it available sooner as there is no need to wait for other labs to contribute the remaining shares.
