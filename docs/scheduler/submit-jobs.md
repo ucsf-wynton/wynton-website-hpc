@@ -56,10 +56,10 @@ By specifying the how long each job will take, the better the scheduler can mana
 ```sh
 qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
 ```
-
 <div class="alert alert-warning" role="alert">
-A job that runs longer than the requested run time will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
+If not specified, the default run time is 10 minutes.  A job that runs longer than the requested run time will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
 </div>
+
 
 
 
