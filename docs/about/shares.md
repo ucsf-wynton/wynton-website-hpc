@@ -17,7 +17,7 @@ HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
 	       this is neater when done in Hugo(?).  Let's wait and see. If
                not, we might wanna consider RMarkdown to generate this info.
 {% endcomment %}
-{% assign pu_adddescription = "two 2.6 GHz Xeon Gold 6132 CPU" %}
+{% assign pu_add_description = "two 2.6 GHz Xeon Gold 6132 CPU" %}
 {% assign pu_add = 109.25 %}
 {% assign slots_add = 14 %}
 {% assign pu_ncpus = 2 %}
@@ -38,7 +38,7 @@ Currently, the Wynton HPC cluster has in total _member.q<sub>total</sub>_ = {{ s
 The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.specs.pu_total }} _contributed_ processing units on Wynton HPC.
 
 
-Assume that the last addition was from the Charlie Lab contributing {{ pu_times }} compute nodes.  Each of these machines has {{ slots_add }}-core {{ pu_adddescription }} and clocks in at {{ pu_add }} PUs based on the benchmarking, resulting in the processing power added for this lab, but also to the cluster as a whole, to be {{ pu_times }} \* {{ pu_add }} PUs = +{{ pu_delta }} PUs.  In addition to increasing the total amount of contributed PUs, the lab's contribution also increased the total number of member.q slots on the cluster by {{ pu_times }} machines \* {{ pu_ncpus }} CPUs \* {{ slots_add }} cores/CPU = +{{ slots_delta }} slots.
+Assume that the last addition was from the Charlie Lab contributing {{ pu_times }} compute nodes.  Each of these machines has {{ slots_add }}-core {{ pu_add_description }} and clocks in at {{ pu_add }} PUs based on the benchmarking, resulting in the processing power added for this lab, but also to the cluster as a whole, to be {{ pu_times }} \* {{ pu_add }} PUs = +{{ pu_delta }} PUs.  In addition to increasing the total amount of contributed PUs, the lab's contribution also increased the total number of member.q slots on the cluster by {{ pu_times }} machines \* {{ pu_ncpus }} CPUs \* {{ slots_add }} cores/CPU = +{{ slots_delta }} slots.
 
 If this was Charlie Lab's first contribution to Wynton, their share on the member.q queue will be _PU<sub>lab</sub>_ / _PU<sub>total</sub>_ = {{ pu_delta }} / {{ site.specs.pu_total }} = {{ pu_delta_share | times: 100 | round: 3 }}%.  This PU share translates to _member.q<sub>lab</sub>_ = (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) \*_member.q<sub>total</sub>_ = {{ slots_delta_share | round: 0 }} member.q slots ({{ slots_delta_share | round: 2 }} rounded off to the closest integer).
 Instead, if they already had contributed, say, in total {{ pu_0 }} PUs in the past, their computational share would had become _PU<sub>lab</sub>_ = ({{ pu_0 }} + {{ pu_delta }}) / {{ site.specs.pu_total }} = {{ pu_1_share | times: 100 | round: 3 }}%, which, would corresponds to {{ slots_1 | round: 0 }} member.q slots ({{ slots_1 | round: 2 }} rounded off).
