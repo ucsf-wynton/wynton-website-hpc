@@ -11,11 +11,6 @@ The site.specs.* variables are set in the _config.yml file.
 {% assign member_q_slots_per_pu = site.specs.member_q_total | plus: 0.0 | divided_by: site.specs.pu_total %}
 
 
-* {{ member_q_slots_per_pu }}
-* {{ site.specs.member_q_total }}
-* {{ site.specs.pu_total }}
-
-
 ## Summary
 
 * Wynton HPC contributors get access to a number of _member.q_ compute slots, which have higher priority on the queue and on the compute nodes.  For details, see [Contributing Member Shares]({{ '/about/shares.html' | relative_url }}).
@@ -39,7 +34,7 @@ _If you are interested in contributing new hardware to Wynton HPC, please contac
 
 **A lab can invest any amount of USD**.  The amount invested will be translated to a certain number of processing units (PUs), which the lab will keep for life.  Owning processing unit shares on the Wynton HPC, will give access to the member.q queue.  The more PUs a lab has the more member.q slots they can use at anytime.
 
-As of 2019-05-06, **[1 PU gives {{ member_q_slots_per_pu | round: 3 }} member.q slots]({{ '/about/shares.html' | relative_url }})**.
+As of May 2019, **[1 PU costs approximately {{ 30000 | plus: 0.0 | divided_by: 337 | round: 0 }} USD and gives {{ member_q_slots_per_pu | round: 3 }} member.q slots]({{ '/about/shares.html' | relative_url }})**.
 
 
 ### Wynton HPC Recommended Purchase
@@ -52,9 +47,9 @@ The Wynton HPC team recommends, full or partial, contributions toward the follow
    - RAM: 384 GiB
    - Local storage: 1.0 TB HDD
    - Networking: 10 Gbps
- * Total cost: TBA
+ * Total cost: approximately 30,000 USD
 
-The total processing power of the above "brick" is **337 PUs** (based on Wynton HPC benchmarking), which currently corresponds to approximately {{ member_q_slots_per_pu | times: 337 | round: 0 }} member.q slots (as of 2019-05-06).
+The total processing power of the above "brick" is **337 PUs** (based on Wynton HPC benchmarking), which currently corresponds to approximately {{ member_q_slots_per_pu | times: 337 | round: 0 }} member.q slots (as of May 2019).
 
 
 _Comment_: In order for Wynton to put in a purchase order, there needs to be lab requests for a complete brick.  Contributing multiples of 4 compute nodes (= complete one brick) is likely to make it available sooner as there is no need to wait for other labs to contribute the remaining shares.
