@@ -20,7 +20,7 @@ Here is how to use `/scratch`:
 
 ### Example
 
-Here is a script called `ex-scratch.sh` that illustrates how to copy input files over from the NFS-mounted `$HOME` drive to the local scratch (TMPDIR) of whatever node the job ends up running on.  After processing of the input files is complete, the output files are moved from the local scratch (TMPDIR) to HOME.
+Here is a script called `ex-scratch.sh` that illustrates how to copy input files over from the `$HOME` folder to the local scratch folder (TMPDIR) of whatever node the job ends up running on.  After processing of the input files is complete, the output files are moved from the local scratch (TMPDIR) to HOME.
 
 ```sh
 #!/bin/env bash
