@@ -62,21 +62,35 @@
 
 ## Upcoming and Current Incidents
 
+
+## Past Incidents
+
+
+### May 15-16, 2019
+
+#### <span style="color: orange;">Major outage due to file-system issues</span>
+
+**Resolved**: The BeeGFS file system, and thereby also the cluster itself, is functional again.
+<br><span class="timestamp">May 16, 10:30 PDT</span>
+
+**Investigating**: The BeeGFS file system (`/wynton`) is experiencing major issues.  This caused all on Wynton HPC to become non-functional.
+<br><span class="timestamp">May 15, 10:00 PDT</span>
+
+
+
 ### May 15, 2019
 
-#### <span style="color: orange;">Major file-system issues</span>
-**Investigating**: The BeeGFS file system (`/wynton`) is experiencing major issues.
-<br><span class="timestamp">May 15, 13:40 PDT</span>
+#### <span style="color: orange;">Network/login issues</span>
 
-#### <span style="color: orange;">Network/Login issues</span>
+**Resolved**: The UCSF-wide network issue that affected access to Wynton HPC has been resolved.
+<br><span class="timestamp">May 15, 15:30 PDT</span>
+
 **Update**: The login issue is related to UCSF-wide network issues.
 <br><span class="timestamp">May 15, 13:30 PDT</span>
 
-**Investigating**: There are issues logging in to the Wynton HPC.
+**Investigating**: There are issues logging in to Wynton HPC.
 <br><span class="timestamp">May 15, 10:15 PDT</span>
 
-
-## Past Incidents
 
 ### March 21-April 5, 2019
 
