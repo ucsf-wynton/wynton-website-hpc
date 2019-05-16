@@ -13,7 +13,7 @@
 <!--
 -->
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC login problems</strong>
+<strong>Wynton HPC login and file-system problems</strong>
 </div>
 
 <!--
@@ -64,8 +64,15 @@
 
 ### May 15, 2019
 
+#### <span style="color: orange;">Major file-system issues</span>
+**Investigating**: The BeeGFS file system (`/wynton`) is experiencing major issues.
+<br><span class="timestamp">May 15, 13:40 PDT</span>
+
 #### <span style="color: orange;">Network/Login issues</span>
-**Investigating**: There are issues logging into the Wynton HPC.
+**Update**: The login issue are related to UCSF-wide network issues.
+<br><span class="timestamp">May 15, 13:30 PDT</span>
+
+**Investigating**: There are issues logging in to the Wynton HPC.
 <br><span class="timestamp">May 15, 10:15 PDT</span>
 
 
