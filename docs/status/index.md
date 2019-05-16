@@ -69,7 +69,7 @@
 <br><span class="timestamp">May 15, 13:40 PDT</span>
 
 #### <span style="color: orange;">Network/Login issues</span>
-**Update**: The login issue are related to UCSF-wide network issues.
+**Update**: The login issue is related to UCSF-wide network issues.
 <br><span class="timestamp">May 15, 13:30 PDT</span>
 
 **Investigating**: There are issues logging in to the Wynton HPC.
