@@ -1,6 +1,6 @@
 # UCSF Wynton Status
 
-<!-- To display the 'broadcast' icon in the navbar, edit assets/css/dynamics.css -->
+<!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
