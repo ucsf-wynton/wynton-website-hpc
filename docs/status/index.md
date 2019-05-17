@@ -10,10 +10,10 @@
 </div>
 -->
 
+<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC is experiencing significant issues</strong>
 </div>
-<!--
 -->
 
 <!--
@@ -62,14 +62,18 @@
 
 ## Upcoming and Current Incidents
 
+
+## Past Incidents
+
 ### May 17, 2019
 
 #### <span style="color: orange;">Major outage due to file-system issues</span>
 
+**Resolved**: The BeeGFS file system and the cluster is functional again.
+<br><span class="timestamp">May 17, 16:00 PDT</span>
+
 **Investigating**: There is a major slowdown of the BeeGFS file system (`/wynton`), which in turn causes significant problems throughout the Wynton HPC environment.
 <br><span class="timestamp">May 17, 10:45 PDT</span>
-
-## Past Incidents
 
 
 ### May 15-16, 2019
