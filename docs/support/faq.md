@@ -34,3 +34,13 @@ unable to contact qmaster using port 6444 on host "q"
 ```
 
 **A**. Your Wynton account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.
+
+
+## Files and folders
+
+**Q**. _Is it possible to have a common folder where our group members can share files and software?_
+
+**A**. If you belong to a specific group, we can set up a `/wynton/home/your_group/shared/` folder that group members (part of the same Unix group) have write access to.  The typical use case is then that one or more members maintain subdirectories therein.  If you need this, please drop us an email.  Note, if the `groups` command reports `lsd` for you, then you do not belong to a specific group and can unfortunately not get a group-specific folder.
+
+
+

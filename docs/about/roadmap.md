@@ -18,6 +18,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
+* GPU compute: Add additional communal GPU nodes
+
 
 ## Near future
 
@@ -33,8 +35,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Compliance: Support for restricted data analysis
 
 * Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
-
-* GPU compute: Add additional communal GPU nodes
 
 
 ## Planned deprecation

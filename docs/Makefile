@@ -31,10 +31,15 @@ wynton:
 spell:
 	Rscript -e 'paths <- dir(pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); words <- spelling::spell_check_files(paths, ignore = readLines("WORDLIST")); words'
 
+broadcast-off:
+	cd assets/css/ && ln -fs broadcast-off.css broadcast.css
+
+broadcast-on:
+	cd assets/css/ && ln -fs broadcast-on.css broadcast.css
+
 assets/data/compute_shares.tsv: FORCE
 	wynton shares tsv > $@
 
 assets: assets/data/compute_shares.tsv
 
 FORCE:
-

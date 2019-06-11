@@ -1,6 +1,6 @@
 # UCSF Wynton Status
 
-<!-- To display the 'broadcast' icon in the navbar, edit assets/css/dynamics.css -->
+<!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -12,15 +12,15 @@
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC experiencing problems</strong>
+<strong>Wynton HPC is experiencing significant issues</strong>
 </div>
 -->
 
 <!--
--->
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC environment operational</strong>
 </div>
+-->
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -63,8 +63,44 @@
 ## Upcoming and Current Incidents
 
 
-
 ## Past Incidents
+
+### May 17, 2019
+
+#### <span style="color: orange;">Major outage due to file-system issues</span>
+
+**Resolved**: The BeeGFS file system and the cluster is functional again.
+<br><span class="timestamp">May 17, 16:00 PDT</span>
+
+**Investigating**: There is a major slowdown of the BeeGFS file system (`/wynton`), which in turn causes significant problems throughout the Wynton HPC environment.
+<br><span class="timestamp">May 17, 10:45 PDT</span>
+
+
+### May 15-16, 2019
+
+#### <span style="color: orange;">Major outage due to file-system issues</span>
+
+**Resolved**: The BeeGFS file system, and thereby also the cluster itself, is functional again.
+<br><span class="timestamp">May 16, 10:30 PDT</span>
+
+**Investigating**: The BeeGFS file system (`/wynton`) is experiencing major issues.  This caused all on Wynton HPC to become non-functional.
+<br><span class="timestamp">May 15, 10:00 PDT</span>
+
+
+
+### May 15, 2019
+
+#### <span style="color: orange;">Network/login issues</span>
+
+**Resolved**: The UCSF-wide network issue that affected access to Wynton HPC has been resolved.
+<br><span class="timestamp">May 15, 15:30 PDT</span>
+
+**Update**: The login issue is related to UCSF-wide network issues.
+<br><span class="timestamp">May 15, 13:30 PDT</span>
+
+**Investigating**: There are issues logging in to Wynton HPC.
+<br><span class="timestamp">May 15, 10:15 PDT</span>
+
 
 ### March 21-April 5, 2019
 

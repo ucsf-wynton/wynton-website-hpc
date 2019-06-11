@@ -1,5 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>:<br/>
+2019-04-30: <a href="{{ '/about/shares.html' | relative_url }}">Contributing Member Shares</a> are now explained and listed online.<br/>
 2019-04-15: Add a dedicated <a href="{{ '/about/specs.html' | relative_url }}">GPU development node</a> (after having been in beta testing for several months).<br/>
 2019-04-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">24 nodes (396 cores)</a> from QB3 to Wynton HPC.<br/>
 2019-04-12: Added another two communal GPU nodes available to all users.  There are now four communal GPU nodes with a total of 12 GPUs.<br/>
@@ -19,7 +20,7 @@ Wynton is a large, shared high-performance compute (HPC) cluster underlying UCSF
 
 **The Wynton HPC environment is available for _free_ to all UCSF researchers**.  To join, please follow the [instructions for requesting an account]({{ '/about/join.html' | relative_url }}).
 
-The Wynton HPC environment keeps growing as more users discover it and more groups buy into the co-op model.  Each contributing member brings more resources and compute power for everyone based on a fair-share model where contributors get higher access priority than non-contributing members.  Several UCSF centers have already joined contributing a large amount of compute power to the cluster, e.g. Memory and Aging Center and QB3.  Additional centers are lined up to merge their existing hardware into the Wynton HPC.  For more details on where we are heading, please see the [Wynton HPC Roadmap]({{ '/about/roadmap.html' | relative_url }}).
+The Wynton HPC environment keeps growing as more users discover it and more groups buy into the co-op model.  <a href="{{ '/about/shares.html' | relative_url }}">Each contributing member brings more resources and compute power for everyone based on a fair-share model where contributors get higher access priority than non-contributing members</a>.  **Contributions to the Wynton HPC environment are non-expiring and valid for life!** Several UCSF centers have already joined contributing a large amount of compute power to the cluster, e.g. Memory and Aging Center and QB3.  Additional centers are lined up to merge their existing hardware into the Wynton HPC.  For more details on where we are heading, please see the [Wynton HPC Roadmap]({{ '/about/roadmap.html' | relative_url }}).
 
 **Please note**: The current Wynton HPC environment is *not* certified for use with Protected Health Information (PHI).  Data containing PHI must not be transferred to, mounted on, or processed with any Wynton cluster resources.  If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office].
 
