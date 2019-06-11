@@ -21,8 +21,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ### Compute Nodes
 
-Most compute nodes have Intel processors, while others have AMD processes. The CPU speeds are in the range of {{ site.specs.cpu_min }}-{{ site.specs.cpu_max }} GHz.
-Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.  In addition, each node has a {{ site.specs.local_tmp_size_min }} TiB `/tmp` drive and {{ site.specs.swap_min }} TiB of swap space.
+The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.  In addition, each node has a {{ site.specs.local_tmp_size_min }} TiB `/tmp` drive and {{ site.specs.swap_min }} TiB of swap space.
 For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
 
 
@@ -53,12 +52,12 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ '/get-started/development-prototyping.html' | relative_url }}).
 
-Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` |
-----------------------------|-----------------:|----------:|---------:|-----------------:|
-{{ site.dev1.name }}        |                8 |  2.66 GHz |   16 GiB |         0.11 TiB |
-{{ site.dev2.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
-{{ site.dev3.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
-{{ site.gpudev1.name }}     |               12 |  2.66 GHz |   48 GiB |         0.37 TiB |
+Node                        | # Physical Cores |      RAM | Local `/scratch` |                                       CPU |
+----------------------------|-----------------:|---------:|-----------------:|------------------------------------------:|
+{{ site.dev1.name }}        |                8 |   16 GiB |         0.11 TiB | Intel(R) Xeon(R) CPU E5430 @ 2.66GHz      |
+{{ site.dev2.name }}        |               32 |  512 GiB |         1.1  TiB | Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHz |
+{{ site.dev3.name }}        |               32 |  512 GiB |         1.1  TiB | Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHz |
+{{ site.gpudev1.name }}     |               12 |   48 GiB |         0.37 TiB | Intel(R) Xeon(R) CPU X5650 @ 2.67GHz      |
 
 _Comment:_ Please use the GPU development node only if you need to build or prototype GPU software.
 <!-- The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors. and local solid state drives (SSDs). -->
@@ -135,7 +134,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     host_table.forEach(function(row) {
       /* Ignore column on /tmp size, iff it exists */
       delete row["Local `/tmp`"];
-    
+
       if (nodes == 0) {
         tr = table.append("thead").append("tr");
         tr.append("th").text("Status");
@@ -153,7 +152,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
         td_status.text("⚠");  // "⚠" or "✖"
         nodes_with_issue += 1;
       }
-      
+
       for (key in row) td = tr.append("td").text(row[key]);
       
       /* Cores */
@@ -162,20 +161,20 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
       if (value <= coreMin) coreMin = value;
       if (value >= coreMax) coreMax = value;
       if (has_issue) cores_with_issue += value;
-  
+
       /* RAM */
       value = parseFloat(row["RAM"].match(/[\d.]+/));
       ram += value;
       if (value <= ramMin) ramMin = value;
       if (value >= ramMax) ramMax = value;
       if (has_issue) ram_with_issue += value;
-  
+
       /* Scratch */
       value = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
       scratch += value;
       if (value <= scratchMin) scratchMin = value;
       if (value >= scratchMax) scratchMax = value;
-  
+      
       nodes += 1;
     });
   
