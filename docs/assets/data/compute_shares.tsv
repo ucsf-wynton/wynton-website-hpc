@@ -1,8 +1,8 @@
 # Created by: hb
-# Created on: 2019-04-30 11:03:59-07:00
+# Created on: 2019-06-10 20:16:57-07:00
 # Total fshares: 15994
 # Total queue_slots: 5006
-# Number of projects: 35
+# Number of projects: 38
 fshares	queue_slots	project
 27	8	schreinerlab
 280	88	fraserlab
@@ -17,6 +17,10 @@ fshares	queue_slots	project
 118	37	tanglab
 119	37	fischbachlab
 109	34	nagarajanmukherjeelab
+1099	344	agardlab
+1062	333	chenglab
+994	311	stroudlab
+994	311	frostlab
 90	28	lilab
 901	282	pollardlab
 874	274	mac-users
@@ -33,7 +37,6 @@ fshares	queue_slots	project
 497	156	limlab
 475	149	hernandezlab
 445	139	genetics
-4149	1299	agardlab,chenglab,frostlab,stroudlab
 4054	1269	salilab
 36	11	jameslab
 381	119	babbittlab
