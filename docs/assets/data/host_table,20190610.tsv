@@ -1,7 +1,8 @@
 # Created by: Henrik Bengtsson
-# Created on: 2019-06-10 22:35:12
-# Number of hosts: 304
-# Number of cores: 6348
+# Created on: 2019-06-10 22:41:34
+# Number of hosts: 303
+# Number of cores: 6320
+Node	# Physical Cores	RAM	Local `/scratch`	Local `/tmp`	CPU
 cc-hmid1	24	512 GiB	1.4 TiB	4.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
 cc-id1	24	256 GiB	1.4 TiB	4.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
 cc-id2	24	256 GiB	1.4 TiB	4.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
@@ -173,7 +174,6 @@ qb3-id111	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 qb3-id112	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 qb3-id113	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 qb3-id114	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
-qb3-id115	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 qb3-id116	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 qb3-id117	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 qb3-id118	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
