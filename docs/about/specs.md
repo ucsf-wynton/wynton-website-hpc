@@ -126,7 +126,6 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     var thead, tbody, tfoot, tr, td, td_status;
     var value, value2, has_issue;
     var cores = 0, coreMin = 1e9, coreMax = -1e9;
-    var cpuMin = 1e9, cpuMax = -1e9;
     var ram = 0, ramMin = 1e9, ramMax = -1e9;
     var scratch = 0, scratchMin = 1e9, scratchMax = -1e9;
     var nodes_with_issue = 0, cores_with_issue = 0, ram_with_issue = 0;
@@ -164,11 +163,6 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
       if (value >= coreMax) coreMax = value;
       if (has_issue) cores_with_issue += value;
   
-      /* CPU */
-      value = parseFloat(row["CPU"].match(/[\d.]+/));
-      if (value <= cpuMin) cpuMin = value;
-      if (value >= cpuMax) cpuMax = value;
-  
       /* RAM */
       value = parseFloat(row["RAM"].match(/[\d.]+/));
       ram += value;
@@ -194,10 +188,6 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     value = cores + " cores (" + coreMin + "-" + coreMax + " cores/node, avg. " + (cores/nodes).toFixed(1) + " cores/node)";
     if (addFooter) tr.append("td").text(value);
     d3.select("#hosttable-summary-cores").text(value);
-  
-    value = cpuMin + "-" + cpuMax + " GHz";
-    if (addFooter) tr.append("td").text(value);
-    d3.select("#hosttable-summary-cpu").text(value);
   
     value = ramMin + "-" + ramMax + " GiB/node (" + (ram/1024).toFixed(1) + " TiB in total, avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
     if (addFooter) tr.append("td").text(value);

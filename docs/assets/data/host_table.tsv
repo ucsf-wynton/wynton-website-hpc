@@ -1,255 +1,308 @@
 # Created by: Henrik Bengtsson
-# Created on: 2019-04-12 15:32:51 PDT
-# Number of hosts: 250
-# Number of cores: 5884
+# Created on: 2019-06-10 21:35:00 PDT
+# Number of hosts: 303
+# Number of cores: 6320
 Node	# Physical Cores	CPU	RAM	Local `/scratch`	Local `/tmp`
-cc-hmid1	28	3.4 GHz	384 GiB	1.8 TiB	8.0 GiB
-cc-id1	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cc-id2	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cc-id3	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cc-idgpu1	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cc-idgpu2	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cc-idgpu3	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cc-idgpu4	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cc-idgpu5	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-cdhi-idgpu1	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id1	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id2	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id3	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id4	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id5	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id6	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id7	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-id8	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-inst-hmid1	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-inst-id1	16	2.6 GHz	64 GiB	0.9 TiB	8.0 GiB
-mac-inst-id2	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-mac-inst-id3	16	2.6 GHz	64 GiB	0.4 TiB	8.0 GiB
-msg-hmio1	16	2.9 GHz	128 GiB	0.9 TiB	8.0 GiB
-msg-hmio2	16	2.9 GHz	128 GiB	0.9 TiB	8.0 GiB
-msg-hmio3	12	3.6 GHz	256 GiB	0.4 TiB	8.0 GiB
-msg-id1	12	3.6 GHz	256 GiB	0.4 TiB	8.0 GiB
-msg-id2	12	3.6 GHz	256 GiB	0.4 TiB	8.0 GiB
-msg-id3	28	2.4 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id4	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id5	28	3.0 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id6	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id7	28	3.0 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id8	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id9	28	3.0 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id10	28	3.0 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id11	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id12	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id13	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id14	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id15	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id16	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id17	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id18	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id19	28	2.4 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id20	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id21	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id22	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id23	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id24	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id25	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id26	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id27	28	3.2 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id28	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id29	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id30	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id31	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id32	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id33	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id34	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id35	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id36	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id37	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id38	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id39	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-id40	24	3.0 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu1	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu2	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu3	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu4	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu5	28	2.4 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu6	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu7	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-ihgpu8	24	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io1	24	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io2	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io3	24	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io4	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io5	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io6	24	2.8 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io7	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io8	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io9	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-io10	28	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu1	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu2	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu3	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu4	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu5	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu6	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu7	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu8	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu9	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu10	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu11	28	2.4 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu12	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-msg-iogpu13	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id1	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id2	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id3	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id4	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id5	24	2.5 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id6	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id8	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id9	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id10	24	2.8 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id11	24	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id12	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id13	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id15	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id16	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id17	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id18	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id19	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id20	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id21	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id22	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id23	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id24	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id25	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id26	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id27	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id36	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id37	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id38	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id39	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id40	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id41	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id42	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id43	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id44	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id45	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id46	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id47	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id48	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id49	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id50	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id51	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id52	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id53	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id54	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id55	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id56	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id57	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id58	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id59	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id60	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id61	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id62	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id63	28	3.1 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id64	28	3.3 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id65	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id66	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id67	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id68	28	2.9 GHz	256 GiB	0.9 TiB	8.0 GiB
-qb3-id69	24	2.9 GHz	512 GiB	1.4 TiB	4.0 GiB
-qb3-id70	24	3.0 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-id71	24	3.1 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-id72	24	2.9 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-id73	20	2.7 GHz	96 GiB	1.8 TiB	4.0 GiB
-qb3-id74	20	2.9 GHz	96 GiB	1.8 TiB	4.0 GiB
-qb3-id75	20	2.8 GHz	96 GiB	1.8 TiB	4.0 GiB
-qb3-id76	20	2.8 GHz	96 GiB	1.8 TiB	4.0 GiB
-qb3-id77	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-id78	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-id79	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-id80	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-id81	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-id82	24	2.9 GHz	512 GiB	1.4 TiB	4.0 GiB
-qb3-id83	24	2.7 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-id84	24	2.9 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-id85	24	3.3 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-id86	16	3.4 GHz	768 GiB	0.3 TiB	4.0 GiB
-qb3-id87	16	3.6 GHz	768 GiB	0.3 TiB	4.0 GiB
-qb3-id88	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id89	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id90	20	3.4 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id91	20	3.3 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id92	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id93	20	3.6 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id94	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id95	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id96	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id97	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id98	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id99	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id100	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id101	24	3.5 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id102	24	3.5 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id103	24	3.2 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id104	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id105	20	3.4 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id106	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id107	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id108	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id109	24	2.6 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id110	24	3.0 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id111	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id112	20	3.2 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id113	24	3.5 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id114	20	3.5 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id115	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id116	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id117	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id118	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-id119	12	2.7 GHz	48 GiB	0.5 TiB	4.0 GiB
-qb3-id120	12	2.7 GHz	48 GiB	0.5 TiB	4.0 GiB
-qb3-id121	12	2.7 GHz	48 GiB	0.5 TiB	4.0 GiB
-qb3-id122	12	2.7 GHz	48 GiB	0.5 TiB	8.0 GiB
-qb3-id123	12	2.7 GHz	48 GiB	0.5 TiB	8.0 GiB
-qb3-id124	16	3.3 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id125	16	3.0 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id126	16	3.0 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id127	16	3.3 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id128	16	3.2 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id129	16	3.0 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id130	16	3.2 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id131	16	3.0 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id132	16	2.6 GHz	256 GiB	1.1 TiB	4.0 GiB
-qb3-id133	16	2.4 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id134	16	2.4 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-id135	16	3.0 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id136	16	3.3 GHz	128 GiB	1.8 TiB	4.0 GiB
-qb3-id137	16	3.0 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id138	16	3.3 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-id139	16	3.1 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-idgpu1	16	3.1 GHz	128 GiB	0.8 TiB	4.0 GiB
-qb3-io1	16	3.2 GHz	128 GiB	0.8 TiB	4.0 GiB
-qb3-io2	16	3.0 GHz	128 GiB	0.8 TiB	4.0 GiB
-qb3-io3	24	2.9 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-io4	24	2.9 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-io5	16	1.9 GHz	96 GiB	0.9 TiB	4.0 GiB
-qb3-io6	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-io7	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-io8	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-io9	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-io10	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-io11	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-io12	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-io13	16	3.1 GHz	128 GiB	0.1 TiB	4.0 GiB
-qb3-io14	28	2.6 GHz	384 GiB	0.9 TiB	4.0 GiB
-qb3-io15	16	3.4 GHz	768 GiB	0.3 TiB	4.0 GiB
-qb3-io16	20	3.1 GHz	256 GiB	0.4 TiB	4.0 GiB
-qb3-io17	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-io18	24	3.1 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-io19	16	3.2 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-io20	16	3.0 GHz	128 GiB	0.4 TiB	4.0 GiB
-qb3-io21	16	3.0 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-iogpu1	24	3.1 GHz	256 GiB	1.4 TiB	4.0 GiB
-qb3-iogpu2	24	3.0 GHz	256 GiB	0.3 TiB	4.0 GiB
-qb3-iogpu3	28	2.6 GHz	768 GiB	1.7 TiB	4.0 GiB
+cc-hmid1	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	512 GiB	1.4 TiB	4.0 GiB
+cc-id1	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	1.4 TiB	4.0 GiB
+cc-id2	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	1.4 TiB	4.0 GiB
+cc-id3	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	1.4 TiB	4.0 GiB
+cc-idgpu3	20	Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz	96 GiB	1.8 TiB	4.0 GiB
+cc-idgpu4	20	Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz	96 GiB	1.8 TiB	4.0 GiB
+cc-idgpu5	28	Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz	384 GiB	1.8 TiB	8.0 GiB
+msg-hmio2	16	Intel(R) Xeon(R) CPU E5-2667 v3 @ 3.20GHz	768 GiB	0.3 TiB	4.0 GiB
+msg-hmio3	16	Intel(R) Xeon(R) CPU E5-2667 v3 @ 3.20GHz	768 GiB	0.3 TiB	4.0 GiB
+msg-id1	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id2	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id3	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id4	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id5	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id6	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id7	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id8	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id9	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id11	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id12	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id13	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id14	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id15	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id16	20	Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id17	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id18	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id19	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id20	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id21	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id22	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id23	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id24	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.4 TiB	4.0 GiB
+msg-id25	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id26	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id27	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id28	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id29	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id30	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id31	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id32	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id33	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id34	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id35	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id36	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id37	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id38	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-id39	24	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-ihgpu1	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.5 TiB	4.0 GiB
+msg-ihgpu2	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.5 TiB	4.0 GiB
+msg-ihgpu3	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.5 TiB	4.0 GiB
+msg-ihgpu4	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.5 TiB	8.0 GiB
+msg-ihgpu5	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.5 TiB	8.0 GiB
+msg-ihgpu6	12	Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz	256 GiB	0.4 TiB	8.0 GiB
+msg-ihgpu7	12	Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz	256 GiB	0.4 TiB	8.0 GiB
+msg-ihgpu8	12	Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz	256 GiB	0.4 TiB	8.0 GiB
+msg-iogpu1	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	4.0 GiB
+msg-iogpu2	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	4.0 GiB
+msg-iogpu3	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	1.8 TiB	4.0 GiB
+msg-iogpu4	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	4.0 GiB
+msg-iogpu5	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	4.0 GiB
+msg-iogpu6	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	4.0 GiB
+msg-iogpu7	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.8 TiB	4.0 GiB
+msg-iogpu8	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.8 TiB	4.0 GiB
+msg-iogpu9	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.8 TiB	4.0 GiB
+msg-iogpu10	16	Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz	256 GiB	1.1 TiB	4.0 GiB
+msg-iogpu11	16	Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-iogpu12	16	Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz	256 GiB	0.3 TiB	4.0 GiB
+msg-iogpu13	16	Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz	256 GiB	0.3 TiB	4.0 GiB
+qb3-ad1	24	AMD Opteron(tm) Processor 6174	96 GiB	0.1 TiB	8.0 GiB
+qb3-ad2	24	AMD Opteron(tm) Processor 6174	96 GiB	1.8 TiB	8.0 GiB
+qb3-ad3	24	AMD Opteron(tm) Processor 6174	96 GiB	0.1 TiB	8.0 GiB
+qb3-ad5	24	AMD Opteron(tm) Processor 6174	96 GiB	0.1 TiB	8.0 GiB
+qb3-ad6	24	AMD Opteron(tm) Processor 6174	96 GiB	0.1 TiB	8.0 GiB
+qb3-ad8	24	AMD Opteron(tm) Processor 6174	96 GiB	0.1 TiB	8.0 GiB
+qb3-ad9	24	AMD Opteron(tm) Processor 6174	96 GiB	0.1 TiB	8.0 GiB
+qb3-ad10	24	AMD Opteron(tm) Processor 6174	96 GiB	0.1 TiB	8.0 GiB
+qb3-id2	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	1.4 TiB	4.0 GiB
+qb3-id3	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	1.4 TiB	4.0 GiB
+qb3-id4	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id5	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id6	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id8	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id9	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id10	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id11	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id12	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id13	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id15	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id16	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id17	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id18	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id19	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id20	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id21	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id22	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id23	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id24	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id25	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id26	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id27	24	Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id36	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id37	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id38	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id39	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id40	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id41	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id42	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id43	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id44	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id45	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id46	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id47	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id48	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id49	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id51	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id52	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id53	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id54	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id55	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id56	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id57	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id58	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id59	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id60	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id61	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id62	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id63	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id64	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id65	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id66	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id68	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id69	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id70	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id72	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id73	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id74	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id75	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id76	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id77	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id78	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id79	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id81	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id82	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id83	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id84	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id85	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id86	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id87	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id88	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id89	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id90	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id91	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id92	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id93	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id95	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id96	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id97	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id99	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id100	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id103	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id104	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id105	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id106	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id107	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id108	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id109	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id110	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id111	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id112	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id113	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id114	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id116	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id117	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id118	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id119	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id120	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id121	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id122	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id123	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id124	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id125	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id126	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id127	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id128	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id129	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id130	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id131	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id132	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id133	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id134	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id135	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id136	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id137	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id138	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id139	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id140	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id141	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id143	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id145	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id146	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-id147	28	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-idgpu1	28	Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz	256 GiB	0.9 TiB	8.0 GiB
+qb3-idgpu2	28	Intel(R) Xeon(R) CPU E5-2660 v4 @ 2.00GHz	256 GiB	1.8 TiB	8.0 GiB
+qb3-ih5	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.4 TiB	8.0 GiB
+qb3-ih6	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih7	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih8	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih9	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih10	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih11	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih12	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih13	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih14	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih15	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih16	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih17	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih18	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih19	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih20	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih21	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih22	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih23	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih24	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih25	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih26	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih27	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih28	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih29	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih30	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.4 TiB	8.0 GiB
+qb3-ih31	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih32	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih33	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih34	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih35	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih36	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih37	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih38	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih39	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih40	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih41	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih42	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih43	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih44	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih45	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih46	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih48	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih49	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih50	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih51	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih52	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih53	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.4 TiB	8.0 GiB
+qb3-ih54	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih55	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih56	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih57	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih58	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih59	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih60	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	1.8 TiB	8.0 GiB
+qb3-ih61	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih62	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih63	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih64	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih65	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih66	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih67	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih68	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih69	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih70	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih71	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih72	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih73	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih74	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih75	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-ih76	12	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz	48 GiB	0.1 TiB	8.0 GiB
+qb3-io1	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io2	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io3	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io4	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io5	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io6	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io7	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.9 TiB	8.0 GiB
+qb3-io8	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io9	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io10	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io11	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io13	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io14	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io15	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io18	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io19	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io20	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io21	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	64 GiB	0.4 TiB	8.0 GiB
+qb3-io22	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.1 TiB	8.0 GiB
+qb3-io23	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	8.0 GiB
+qb3-io24	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	8.0 GiB
+qb3-io25	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	8.0 GiB
+qb3-io26	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	8.0 GiB
+qb3-io27	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	8.0 GiB
+qb3-io28	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	8.0 GiB
+qb3-io29	16	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz	128 GiB	0.4 TiB	8.0 GiB
+qb3-iogpu1	16	Intel(R) Xeon(R) Silver 4110 CPU @ 2.10GHz	96 GiB	0.9 TiB	4.0 GiB
+qb3-iogpu2	16	Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHz	128 GiB	0.9 TiB	8.0 GiB
+qb3-iogpu3	16	Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHz	128 GiB	0.9 TiB	8.0 GiB
