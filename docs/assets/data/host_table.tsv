@@ -1,5 +1,5 @@
 # Created by: Henrik Bengtsson
-# Created on: 2019-06-11 08:22:27
+# Created on: 2019-06-11 08:39:11
 # Number of hosts: 306
 # Number of cores: 6404
 Node	# Physical Cores	RAM	Local `/scratch`	Local `/tmp`	CPU
@@ -71,14 +71,14 @@ msg-iogpu10	16	256 GiB	1.1 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
 msg-iogpu11	16	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
 msg-iogpu12	16	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
 msg-iogpu13	16	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
-qb3-ad1	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron Processor 6174
-qb3-ad2	24	96 GiB	1.8 TiB	8.0 GiB	AMD Opteron Processor 6174
-qb3-ad3	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron Processor 6174
-qb3-ad5	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron Processor 6174
-qb3-ad6	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron Processor 6174
-qb3-ad8	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron Processor 6174
-qb3-ad9	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron Processor 6174
-qb3-ad10	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron Processor 6174
+qb3-ad1	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad2	24	96 GiB	1.8 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad3	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad5	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad6	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad8	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad9	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad10	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
 qb3-id2	24	256 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id3	24	256 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id4	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
