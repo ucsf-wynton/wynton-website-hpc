@@ -156,8 +156,9 @@ Required-by:
 [alice@{{ site.devel.name }} my_project]$ 
 ```
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 When submitting jobs to the scheduler, make sure the job scripts load all required modules and activate the virtual environment.
-
+</div>
 
 To _deactivate_ a Python virtual environment, either open a fresh terminal (e.g. log out and back in), or use:
 ```sh
