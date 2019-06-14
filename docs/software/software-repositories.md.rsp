@@ -94,15 +94,7 @@ th, td {
 <% } # if (style) %>
 <% table_of_modules <- function(x, style = c("module", "repos")) { %>
 <% style <- match.arg(style) %>
-<table>
-<tr>
-<% if (style == "module") { %>
-  <th>Module &amp; Versions</th>
-<% } else if (style == "repos") { %>
-  <th>Repository</th>
-<% } %>
-  <th>Description</th>
- </tr>
+<dl>
 <% for (ii in seq_len(nrow(x))) { %>
 <%
 m <- x[ii,]
@@ -128,21 +120,20 @@ if (!is.null(versions$versionName)) {
   }
 }
 %>
- <tr>
-  <td>
-  <strong><%= m$package %></strong><br>
-  <%= paste(vers, collapse = ", ") %>
-  </td>
-  <td>
-  <strong><%= as_html(help) %></strong><br>
+  <dt>
+  <code><%= m$package %></code>
+  (<strong><%= as_html(help) %></strong>)
+  </dt>
+  <dd>
   <%= as_html(m$description) %><br>
   <% if (!is.null(m$url) && !is.na(m$url)) { %>
   URL: <%= as_html(m$url) %><br>
   <% } %>
-  </td>
- </tr>
+  Versions: <%= paste(vers, collapse = ", ") %>
+  </dd>
+
 <% } # for (ii in ...) %>
-</table>
+</dl>
 <% } ## table_of_modules() %>
 
 <div class="alert alert-warning" role="alert">
