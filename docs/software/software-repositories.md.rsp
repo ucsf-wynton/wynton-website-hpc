@@ -94,7 +94,7 @@ th, td {
 <% } # if (style) %>
 <% table_of_modules <- function(x, style = c("module", "repos")) { %>
 <% style <- match.arg(style) %>
-<dl>
+<dl style="display: block; margin-left: 4ex; font-weight: bold;">
 <% for (ii in seq_len(nrow(x))) { %>
 <%
 m <- x[ii,]
@@ -120,7 +120,7 @@ if (!is.null(versions$versionName)) {
   }
 }
 %>
-  <dt><code><%= m$package %></code></dt>
+  <dt><%= m$package %></dt>
   <dd>
   <% if (!is.null(help)) { %>
     <strong><%= as_html(help) %></strong><br>
@@ -194,3 +194,18 @@ Enable repository: <code>module load <%= name %></code><br>
 <br>
 <br>
 _The above information was automatically generated on <%= Sys.time() %>._
+
+
+<style>
+dt {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: bold;
+  font-size: 120%;
+  margin-top: 1ex;
+  text-decoration: underline;
+}
+dt:after {
+  content: "";
+}
+</style>
+
