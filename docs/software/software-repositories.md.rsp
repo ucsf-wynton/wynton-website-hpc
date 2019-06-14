@@ -120,14 +120,16 @@ if (!is.null(versions$versionName)) {
   }
 }
 %>
-  <dt>
-  <code><%= m$package %></code>
-  (<strong><%= as_html(help) %></strong>)
-  </dt>
+  <dt><code><%= m$package %></code></dt>
   <dd>
-  <%= as_html(m$description) %><br>
+  <% if (!is.null(help)) { %>
+    <strong><%= as_html(help) %></strong><br>
+  <% } %>
+  <% if (!is.null(m$description)) { %>
+    <%= as_html(m$description) %><br>
+  <% } %>
   <% if (!is.null(m$url) && !is.na(m$url)) { %>
-  URL: <%= as_html(m$url) %><br>
+    URL: <%= as_html(m$url) %><br>
   <% } %>
   Versions: <%= paste(vers, collapse = ", ") %>
   </dd>
