@@ -184,19 +184,32 @@ module avail
 _Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `<%= module_repositories[["CBI"]]$module_path %>` to your `$MODULEPATH`.
 
 
-<% for (module_repos in names(module_repositories)) { %>
+## Software Module Repositories
+
+<ul class="nav nav-pills">
+<%for (kk in seq_along(module_repositories)) { %>
+<% name <- names(module_repositories)[kk] %>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
+<% } ## for (name ...) %>
+</ul>
+<div class="tab-content" style="margin-top: 1ex;">
+<%for (kk in seq_along(module_repositories)) { %>
 <%
-info <- module_repositories[[module_repos]]
-x <- module_avail(info)
+  name <- names(module_repositories)[kk]
+  info <- module_repositories[[name]]
+  x <- module_avail(info)
 %>
+<div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-## Module Repository '<%= module_repos %>'
+<h3>Module Repository '<%= name %>'</h3>
 
-Maintained by: [<%= info$maintainer %>](<%= info$url %>)
+Maintained by: <a href="<%= info$url %>"><%= info$maintainer %></a>
 
 <% table_of_modules(x) %>
-<% } ## for (module_repos ...) %>
+<% } ## for (name ...) %>
 
+  </div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
+</div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
 
 <br>
 <br>

@@ -35,10 +35,18 @@ module avail
 _Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `/wynton/home/cbi/shared/modulefiles/CBI` to your `$MODULEPATH`.
 
 
+## Software Module Repositories
 
-## Module Repository 'CBI'
+<ul class="nav nav-pills">
+  <li class="active"><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali">Sali</a></li>
+</ul>
+<div class="tab-content" style="margin-top: 1ex;">
+<div id="queues-CBI" class="tab-pane fadein active">
 
-Maintained by: [Computational Biology and Informatics](http://cbi.ucsf.edu)
+<h3>Module Repository 'CBI'</h3>
+
+Maintained by: <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a>
 
 <table>
 <tr>
@@ -288,10 +296,11 @@ Maintained by: [Computational Biology and Informatics](http://cbi.ucsf.edu)
   </td>
  </tr>
 </table>
+<div id="queues-Sali" class="tab-pane fade">
 
-## Module Repository 'Sali'
+<h3>Module Repository 'Sali'</h3>
 
-Maintained by: [Sali Lab Software Repository](https://salilab.org/)
+Maintained by: <a href="https://salilab.org/">Sali Lab Software Repository</a>
 
 <table>
 <tr>
@@ -1070,8 +1079,10 @@ Maintained by: [Sali Lab Software Repository](https://salilab.org/)
  </tr>
 </table>
 
+  </div> 
+</div> 
 
 <br>
 <br>
 <br>
-_The above information was automatically generated on 2019-06-13 18:02:33._
+_The above information was automatically generated on 2019-06-13 18:25:47._
