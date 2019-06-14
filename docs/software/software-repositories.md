@@ -618,7 +618,7 @@ Enable repository: <code>module load Sali</code><br>
 </div> 
 
 
-_The above information was automatically generated on 2019-06-13 20:19:24._
+_The above information was automatically generated on 2019-06-13 20:25:22 from querying `module avail` and `module spider`._
 
 
 <style>

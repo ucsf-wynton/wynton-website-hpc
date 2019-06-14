@@ -196,7 +196,7 @@ Enable repository: <code>module load <%= name %></code><br>
 </div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
 
 
-_The above information was automatically generated on <%= Sys.time() %>._
+_The above information was automatically generated on <%= Sys.time() %> from querying `module avail` and `module spider`._
 
 
 <style>

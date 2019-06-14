@@ -1,4 +1,4 @@
-PAGE=modules
+PAGE=software-repositories
 
 all: $(PAGE).md
 
