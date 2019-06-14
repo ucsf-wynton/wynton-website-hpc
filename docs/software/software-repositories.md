@@ -31,8 +31,9 @@ Below are 2 contributed software repositories, each providing a set of software 
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="queues-CBI" class="tab-pane fadein active">
 
-Module Repository: CBI<br>
-Maintained by: <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
+<h2>Module Software Repository: CBI<h2>
+
+Maintained by: info$maintainer, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
 <br>
 
@@ -218,8 +219,9 @@ Tree is a recursive directory listing command that produces a depth indented lis
 
 <div id="queues-Sali" class="tab-pane fade">
 
-Module Repository: Sali<br>
-Maintained by: <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
+<h2>Module Software Repository: Sali<h2>
+
+Maintained by: info$maintainer, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
 <br>
 
@@ -618,7 +620,7 @@ Enable repository: <code>module load Sali</code><br>
 <br>
 <br>
 <br>
-_The above information was automatically generated on 2019-06-13 19:55:30._
+_The above information was automatically generated on 2019-06-13 20:15:55._
 
 
 <style>

@@ -47,14 +47,16 @@ module_avail <- function(info) {
 module_repositories <- list(
   CBI = list(
     name        = "CBI",
-    maintainer  = "Computational Biology and Informatics",
+    maintainer  = "Henrik Bengtsson",
+    group       = "Computational Biology and Informatics",
     url         = "http://cbi.ucsf.edu",
     module_path = Sys.getenv("MODULE_ROOT_CBI")
   ),
 
   Sali = list(
     name        = "Sali",
-    maintainer  = "Sali Lab Software Repository",
+    maintainer  = "Joshua Baker-LePain",
+    group       = "Sali Lab Software Repository",
     url         = "https://salilab.org/",
     module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
   )
@@ -180,8 +182,9 @@ Below are <%= length(module_repositories) %> contributed software repositories, 
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-Module Repository: <%= name %><br>
-Maintained by: <a href="<%= info$url %>"><%= info$maintainer %></a><br>
+<h2>Module Software Repository: <%= name %><h2>
+
+Maintained by: info$maintainer, <a href="<%= info$url %>"><%= info$group %></a><br>
 Enable repository: <code>module load <%= name %></code><br>
 <br>
 
