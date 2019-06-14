@@ -39,7 +39,7 @@ Maintained by: <a href="http://cbi.ucsf.edu">Computational Biology and Informati
 Enable repository: <code>module load CBI</code><br>
 <br>
 
-<dl style="display: block; margin-left: 4ex; font-weight: bold;">
+<dl>
   <dt>bcl2fastq</dt>
   <dd>
     <strong>bcl2fastq: Illumina Conversion Software</strong><br>
@@ -226,7 +226,7 @@ Maintained by: <a href="https://salilab.org/">Sali Lab Software Repository</a><b
 Enable repository: <code>module load Sali</code><br>
 <br>
 
-<dl style="display: block; margin-left: 4ex; font-weight: bold;">
+<dl>
   <dt>allosmod</dt>
   <dd>
   Versions: 
@@ -621,10 +621,13 @@ Enable repository: <code>module load Sali</code><br>
 <br>
 <br>
 <br>
-_The above information was automatically generated on 2019-06-13 19:42:22._
+_The above information was automatically generated on 2019-06-13 19:51:08._
 
 
 <style>
+dl {
+  display: block;
+}
 dt {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-weight: bold;
