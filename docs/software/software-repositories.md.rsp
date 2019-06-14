@@ -150,11 +150,9 @@ if (!is.null(versions$versionName)) {
 </div>
 
 
-# Software Module Repositories
+# Contributed Software Repositories
 
-## Introduction
-
-It is common that research groups maintain their own software stacks. Some of these groups make their stacks available to other cluster user community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  Below are <%= length(module_repositories) %> such contributed software repositories, each providing a set of software tools.  To get access to these repositories and their software, make sure to load them first, e.g.
+It is common that research groups maintain their own software stacks. Some of these groups make their stacks available to other cluster user community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  To get access to these repositories and their software, make sure to load them first, e.g.
 ```sh
 module load CBI
 ```
@@ -170,8 +168,7 @@ It is possible to enable a software repository and load specific software in one
 module load CBI python r bwa
 ```
 
-
-## Contributed Repositories
+Below are <%= length(module_repositories) %> contributed software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <%for (kk in seq_along(module_repositories)) { %>
