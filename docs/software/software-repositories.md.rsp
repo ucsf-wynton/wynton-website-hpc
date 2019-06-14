@@ -1,6 +1,12 @@
 <%@meta postprocess="FALSE"%>
+<%-- Add a front-matter warning to the Markdown file --%>
+<!--
+WARNING: Do _not_ update this file; it is automatically generated from software-respository.md.rsp.
+-->
 <%
-library("R.utils")
+library(utils)
+library(R.utils)
+
 trim <- function(x) {
   if (!is.character(x)) return(x)
   x <- sub("^[\t\n\f\r ]*", "", x)
@@ -13,27 +19,35 @@ as_html <- function(x) {
   x
 }
 
-style <- cmdArg(style = FALSE)
+style <- R.utils::cmdArg(style = FALSE)
 
-modulepath <- function(module_repos) {
-  modulepath_root <- "/netapp/home/hb/shared/apps/modulefiles"
-  modulepath <- file.path(modulepath_root, module_repos)
-  if (module_repos == "Legacy-Scyld") modulepath <- "/opt/scyld/modulefiles"
-  if (!utils::file_test("-d", modulepath)) {
-    stop("No such module directory: ", sQuote(modulepath))
-  }
+#' @importFrom utils file_test
+modulepath <- function(module_repos = NULL, modulepath_root = dirname(Sys.getenv("MODULE_ROOT_CBI"))) {
+  if (identical(module_repos, "Legacy-Scyld")) modulepath <- "/opt/scyld/modulefiles"
+  stopifnot(utils::file_test("-d", modulepath_root))
+  modulepath <- modulepath_root
+  if (!is.null(module_repos)) modulepath <- file.path(modulepath, module_repos)
+  if (!utils::file_test("-d", modulepath)) stop("No such module directory: ", sQuote(modulepath))
   modulepath
 }
 
-module_avail <- function(module_repos) {
-  spider <- file.path(Sys.getenv("LMOD_DIR"), "spider")
+#' @importFrom utils file_test
+module_avail <- function(...) {
+  message("module_avail() ...")
+  lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
+  stopifnot(nzchar(lmod_dir))
+  spider <- file.path(lmod_dir, "spider")
+  message(" - spider binary: ", sQuote(spider))
   stopifnot(utils::file_test("-x", spider))
-  json <- system2(spider, args = c("-o jsonSoftwarePage", modulepath(module_repos)), stdout = TRUE)
+  args <- c("-o jsonSoftwarePage", modulepath(...))
+  message(" - spider arguments: ", paste(args, collapse = " "))
+  json <- system2(spider, args = args, stdout = TRUE)
   x <- jsonlite::fromJSON(json)
   o <- order(x$package)
   x <- x[o,]
   keep <- !grepl("^[.]", x$package)
   x <- x[keep,]
+  message("module_avail() ... done")
   x
 }
 
@@ -81,11 +95,11 @@ th, td {
 <table>
 <tr>
 <% if (style == "module") { %>
-  <th>module &amp; versions</th>
+  <th>Module &amp; Versions</th>
 <% } else if (style == "repos") { %>
-  <th>repository</th>
+  <th>Repository</th>
 <% } %>
-  <th>description</th>
+  <th>Description</th>
  </tr>
 <% for (ii in seq_len(nrow(x))) { %>
 <%
@@ -129,18 +143,10 @@ if (!is.null(versions$versionName)) {
 </table>
 <% } ## table_of_modules() %>
 
-<%-- Add a front-matter warning to the Markdown file --%>
-<!--
-WARNING: do _not_ update this file; it is automatically generated from modules.md.rsp and will be overwritten.
--->
-
-<div class="alert alert-danger" role="alert">
-<strong>This is a mockup page!</strong>
-</div>
-
 <div class="alert alert-warning" role="alert">
-Environment modules are currently in beta - to enable them, see Configuration / <a href="{{ '/configuration/lmod.html' | relative_url }}">Enable Software Modules</a>.
+<strong>This page is under construction: For currently available software modules, use `module avail`.</strong>
 </div>
+
 
 # Software
 
@@ -154,7 +160,7 @@ module load python r bwa
 These software modules are available from different _module repositories_, each providing several modules (more details below).  The available repositories are:
 
 <%
-x <- module_avail("repos")
+x <- module_avail(modulepath_root = Sys.getenv("MODULEPATH_REPOS", "/wynopt/modrepos"))
 keep <- which(sapply(x$versions, FUN = function(v) unique(basename(dirname(v$path)))) == "repos")
 x <- x[keep,]
 keep <- grep("^Legacy-", x$package, invert = TRUE)
