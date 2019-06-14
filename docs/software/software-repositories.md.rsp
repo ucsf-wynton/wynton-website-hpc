@@ -22,24 +22,17 @@ as_html <- function(x) {
 style <- R.utils::cmdArg(style = FALSE)
 
 #' @importFrom utils file_test
-modulepath <- function(module_repos = NULL, modulepath_root = dirname(Sys.getenv("MODULE_ROOT_CBI"))) {
-  if (identical(module_repos, "Legacy-Scyld")) modulepath <- "/opt/scyld/modulefiles"
-  stopifnot(utils::file_test("-d", modulepath_root))
-  modulepath <- modulepath_root
-  if (!is.null(module_repos)) modulepath <- file.path(modulepath, module_repos)
-  if (!utils::file_test("-d", modulepath)) stop("No such module directory: ", sQuote(modulepath))
-  modulepath
-}
-
-#' @importFrom utils file_test
-module_avail <- function(...) {
+module_avail <- function(info) {
   message("module_avail() ...")
+  stopifnot(is.list(info), "module_path" %in% names(info))
+  module_path <- info$module_path
+  stopifnot(utils::file_test("-x", module_path))
   lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
   stopifnot(nzchar(lmod_dir))
   spider <- file.path(lmod_dir, "spider")
   message(" - spider binary: ", sQuote(spider))
   stopifnot(utils::file_test("-x", spider))
-  args <- c("-o jsonSoftwarePage", modulepath(...))
+  args <- c("-o jsonSoftwarePage", module_path)
   message(" - spider arguments: ", paste(args, collapse = " "))
   json <- system2(spider, args = args, stdout = TRUE)
   x <- jsonlite::fromJSON(json)
@@ -53,11 +46,13 @@ module_avail <- function(...) {
 
 module_repositories <- list(
   CBI = list(
-    name       = "CBI",
-    maintainer = "Computational Biology and Informatics",
-    url        = "http://cbi.ucsf.edu"
+    name        = "CBI",
+    maintainer  = "Computational Biology and Informatics",
+    url         = "http://cbi.ucsf.edu",
+    module_path = Sys.getenv("MODULE_ROOT_CBI")
   )
 )
+
 %>
 <% if (style) { %>
 <style type="text/css">
@@ -160,7 +155,11 @@ module load python r bwa
 These software modules are available from different _module repositories_, each providing several modules (more details below).  The available repositories are:
 
 <%
-x <- module_avail(modulepath_root = Sys.getenv("MODULEPATH_REPOS", "/wynopt/modrepos"))
+info <- list(
+  name        = "Module Software Repositories",
+  module_path = Sys.getenv("MODULEPATH_REPOS", "/wynopt/modrepos")
+)
+x <- module_avail(info)
 keep <- which(sapply(x$versions, FUN = function(v) unique(basename(dirname(v$path)))) == "repos")
 x <- x[keep,]
 keep <- grep("^Legacy-", x$package, invert = TRUE)
@@ -175,13 +174,13 @@ module load CBI
 module avail
 ```
 
-_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `<%= gsub("/home/shared/cbc/apps/modulefiles", "$MODULEPATH_ROOT", modulepath("CBI")) %>` to your `$MODULEPATH`.
+_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `<%= module_repositories[["CBI"]]$module_path %>` to your `$MODULEPATH`.
 
 
 <% for (module_repos in names(module_repositories)) { %>
 <%
 info <- module_repositories[[module_repos]]
-x <- module_avail(module_repos)
+x <- module_avail(info)
 %>
 
 ## Module Repository '<%= module_repos %>'
