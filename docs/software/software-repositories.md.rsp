@@ -206,9 +206,10 @@ _Technical details_: Loading a module repository will append its folder to the `
 Maintained by: <a href="<%= info$url %>"><%= info$maintainer %></a>
 
 <% table_of_modules(x) %>
+</div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
+
 <% } ## for (name ...) %>
 
-  </div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
 </div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
 
 <br>

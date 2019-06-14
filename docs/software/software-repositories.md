@@ -296,6 +296,8 @@ Maintained by: <a href="http://cbi.ucsf.edu">Computational Biology and Informati
   </td>
  </tr>
 </table>
+</div> 
+
 <div id="queues-Sali" class="tab-pane fade">
 
 <h3>Module Repository 'Sali'</h3>
@@ -1078,11 +1080,12 @@ Maintained by: <a href="https://salilab.org/">Sali Lab Software Repository</a>
   </td>
  </tr>
 </table>
+</div> 
 
-  </div> 
+
 </div> 
 
 <br>
 <br>
 <br>
-_The above information was automatically generated on 2019-06-13 18:25:47._
+_The above information was automatically generated on 2019-06-13 18:31:08._
