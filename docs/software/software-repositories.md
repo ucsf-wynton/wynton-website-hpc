@@ -7,35 +7,28 @@ WARNING: Do _not_ update this file; it is automatically generated from software-
 </div>
 
 
-# Software
+# Software Module Repositories
 
-To use one or more of the below software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+## Introduction
+
+It is common that research groups maintain their own software stacks. Some of these groups make their stacks available to other cluster user community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  Below are 2 such contributed software repositories, each providing a set of software tools.  To get access to these repositories and their software, make sure to load them first, e.g.
+```sh
+module load CBI
+```
+Then use `module avail` to list what modules are availble (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
 module load python r bwa
 ```
 
-These software modules are available from different _module repositories_, each providing several modules (more details below).  The available repositories are:
-
-<table>
-<tr>
-  <th>Repository</th>
-  <th>Description</th>
- </tr>
-</table>
-<br>
-
-To get access to one or more of these module repositories and see what modules they provide (see below), load them as regular modules, e.g.
+It is possible to enable a software repository and load specific software in one call, e.g.
 ```sh
-module load CBI
-module avail
+module load CBI python r bwa
 ```
 
-_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `/wynton/home/cbi/shared/modulefiles/CBI` to your `$MODULEPATH`.
 
-
-## Software Module Repositories
+## Contributed Repositories
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
@@ -44,9 +37,10 @@ _Technical details_: Loading a module repository will append its folder to the `
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="queues-CBI" class="tab-pane fadein active">
 
-<h3>Module Repository 'CBI'</h3>
-
-Maintained by: <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a>
+Module Repository: CBI<br>
+Maintained by: <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
+Enable repository: <code>module load CBI</code><br>
+<br>
 
 <table>
 <tr>
@@ -300,9 +294,10 @@ Maintained by: <a href="http://cbi.ucsf.edu">Computational Biology and Informati
 
 <div id="queues-Sali" class="tab-pane fade">
 
-<h3>Module Repository 'Sali'</h3>
-
-Maintained by: <a href="https://salilab.org/">Sali Lab Software Repository</a>
+Module Repository: Sali<br>
+Maintained by: <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
+Enable repository: <code>module load Sali</code><br>
+<br>
 
 <table>
 <tr>
@@ -1088,4 +1083,4 @@ Maintained by: <a href="https://salilab.org/">Sali Lab Software Repository</a>
 <br>
 <br>
 <br>
-_The above information was automatically generated on 2019-06-13 18:31:08._
+_The above information was automatically generated on 2019-06-13 18:49:50._

@@ -150,41 +150,28 @@ if (!is.null(versions$versionName)) {
 </div>
 
 
-# Software
+# Software Module Repositories
 
-To use one or more of the below software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+## Introduction
+
+It is common that research groups maintain their own software stacks. Some of these groups make their stacks available to other cluster user community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  Below are <%= length(module_repositories) %> such contributed software repositories, each providing a set of software tools.  To get access to these repositories and their software, make sure to load them first, e.g.
+```sh
+module load CBI
+```
+Then use `module avail` to list what modules are availble (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
 module load python r bwa
 ```
 
-These software modules are available from different _module repositories_, each providing several modules (more details below).  The available repositories are:
-
-<%
-info <- list(
-  name        = "Module Software Repositories",
-  module_path = Sys.getenv("MODULEPATH_REPOS", "/wynopt/modrepos")
-)
-x <- module_avail(info)
-keep <- which(sapply(x$versions, FUN = function(v) unique(basename(dirname(v$path)))) == "repos")
-x <- x[keep,]
-keep <- grep("^Legacy-", x$package, invert = TRUE)
-x <- x[keep,]
-table_of_modules(x, style = "repos")
-%>
-<br>
-
-To get access to one or more of these module repositories and see what modules they provide (see below), load them as regular modules, e.g.
+It is possible to enable a software repository and load specific software in one call, e.g.
 ```sh
-module load CBI
-module avail
+module load CBI python r bwa
 ```
 
-_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `<%= module_repositories[["CBI"]]$module_path %>` to your `$MODULEPATH`.
 
-
-## Software Module Repositories
+## Contributed Repositories
 
 <ul class="nav nav-pills">
 <%for (kk in seq_along(module_repositories)) { %>
@@ -201,9 +188,10 @@ _Technical details_: Loading a module repository will append its folder to the `
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-<h3>Module Repository '<%= name %>'</h3>
-
-Maintained by: <a href="<%= info$url %>"><%= info$maintainer %></a>
+Module Repository: <%= name %><br>
+Maintained by: <a href="<%= info$url %>"><%= info$maintainer %></a><br>
+Enable repository: <code>module load <%= name %></code><br>
+<br>
 
 <% table_of_modules(x) %>
 </div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
