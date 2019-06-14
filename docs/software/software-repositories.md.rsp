@@ -182,9 +182,9 @@ Below are <%= length(module_repositories) %> contributed software repositories, 
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-<h2>Module Software Repository: <%= name %><h2>
+<h2>Module Software Repository: <%= name %></h2>
 
-Maintained by: info$maintainer, <a href="<%= info$url %>"><%= info$group %></a><br>
+Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
 Enable repository: <code>module load <%= name %></code><br>
 <br>
 
