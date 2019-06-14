@@ -2,9 +2,6 @@
 WARNING: Do _not_ update this file; it is automatically generated from software-respository.md.rsp.
 -->
 
-<div class="alert alert-warning" role="alert">
-<strong>This page is under construction: For currently available software modules, use `module avail`.</strong>
-</div>
 
 
 # Contributed Software Repositories
@@ -621,7 +618,7 @@ Enable repository: <code>module load Sali</code><br>
 <br>
 <br>
 <br>
-_The above information was automatically generated on 2019-06-13 19:51:08._
+_The above information was automatically generated on 2019-06-13 19:55:30._
 
 
 <style>
