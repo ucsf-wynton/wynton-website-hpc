@@ -10,10 +10,10 @@
 </div>
 -->
 
-<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC is experiencing significant issues</strong>
 </div>
+<!--
 -->
 
 <!--
@@ -61,6 +61,14 @@
 
 
 ## Upcoming and Current Incidents
+
+
+### May 17, 2019
+
+#### <span style="color: orange;">Significant file-system outage</span>
+
+**Investigating**: Parts of `/wynton/scratch` and `/wynton/group` are currently unavailable. The `/wynton/home` space should be unaffected.
+<br><span class="timestamp">June 17, 15:05 PDT</span>
 
 
 ## Past Incidents
