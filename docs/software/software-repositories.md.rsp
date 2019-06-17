@@ -26,6 +26,7 @@ module_avail <- function(info) {
   message("module_avail() ...")
   stopifnot(is.list(info), "module_path" %in% names(info))
   module_path <- info$module_path
+  R.utils::mstr(list(info = info))
   stopifnot(utils::file_test("-x", module_path))
   lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
   stopifnot(nzchar(lmod_dir))
@@ -194,6 +195,13 @@ Enable repository: <code>module load <%= name %></code><br>
 <% } ## for (name ...) %>
 
 </div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
+
+<ul class="nav nav-pills">
+<%for (kk in seq_along(module_repositories)) { %>
+<% name <- names(module_repositories)[kk] %>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
+<% } ## for (name ...) %>
+</ul>
 
 
 _The above information was automatically generated on <%= Sys.time() %> from querying `module avail` and `module spider`._
