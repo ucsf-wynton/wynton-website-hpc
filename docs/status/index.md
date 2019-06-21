@@ -65,7 +65,7 @@
 
 ## Past Incidents
 
-### May 17, 2019
+### June 17-18, 2019
 
 #### <span style="color: orange;">Significant file-system outage</span>
 
