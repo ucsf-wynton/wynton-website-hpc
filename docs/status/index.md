@@ -1,10 +1,10 @@
-# UCSF Wynton Status
+# UCSF {{ site.cluster.name }} HPC Status
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC environment operational</strong><br>
+<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
 <em>Fewer slots than ususal will be available March 21-April 5 as the kernel is updated on all compute nodes
 </em>
 </div>
@@ -12,12 +12,12 @@
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC is experiencing significant issues</strong>
+<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
 </div>
 -->
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC environment operational</strong>
+<strong>{{ site.cluster.name }} HPC environment operational</strong>
 </div>
 <!--
 -->

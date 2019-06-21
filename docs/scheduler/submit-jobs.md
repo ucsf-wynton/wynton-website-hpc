@@ -129,7 +129,7 @@ It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  In
 
 ## MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
 
-Wynton provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node across one or more compute nodes.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
+{{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node across one or more compute nodes.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
 
 ```sh
 qsub -pe mpi-8 40 hybrid_mpi.sh

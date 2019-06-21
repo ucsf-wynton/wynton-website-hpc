@@ -17,7 +17,7 @@ If so, you have a few options:
    - Pull down an existing image from public repositories such as Singularity Hub, Docker Hub, and Biocontainers (e.g. `singularity pull shub://nextflow-io/rnatoy` and `singularity shell nextflow-io-rnatoy-master.img`)
    <br><br>
   
-3. Reach out to the [Wynton user community]({{ '/support/index.html' | relative_url }})
+3. Reach out to the [{{ site.cluster.name }} user community]({{ '/support/index.html' | relative_url }})
    - It could be that someone else has already installed it,
      is interested in also installing it, or is willing to help
    <br><br>

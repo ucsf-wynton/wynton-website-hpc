@@ -65,7 +65,7 @@ _Comment:_ Please use the GPU development node only if you need to build or prot
 
 ## Scratch Storage
 
-The Wynton cluster provides two types of scratch storage:
+The {{ site.cluster.name }} cluster provides two types of scratch storage:
 
 * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
 
@@ -81,7 +81,7 @@ There are no per-user quotas in these scratch spaces.  Files not added or modifi
 
 Each user may use up to 500 GiB disk space in the home directory (for users still on `/netapp/home` the limit is 200 GiB).  Research groups can add additional storage space by either mounting their existing storage or purchase new.
 
-**Importantly**, please note that the Wynton HPC storage is _not_ backed up.  Users and labs are responsible to back up their own data outside of Wynton.
+**Importantly**, please note that the {{ site.cluster.name }} HPC storage is _not_ backed up.  Users and labs are responsible to back up their own data outside of {{ site.cluster.name }}.
 
 
 ## Network

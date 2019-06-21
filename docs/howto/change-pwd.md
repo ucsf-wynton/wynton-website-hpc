@@ -1,8 +1,8 @@
-# Wynton Credentials
+# {{ site.cluster.name }} Credentials
 
 ## Change password
 
-To change your Wynton credentials, log into the cluster and call `kpasswd` from one of the _login_ nodes, e.g.
+To change your {{ site.cluster.name }} credentials, log into the cluster and call `kpasswd` from one of the _login_ nodes, e.g.
 
 ```sh
 [alice@{{ site.login.name }} ~]$ kpasswd
@@ -24,18 +24,18 @@ Please note that it takes up to 10 minutes before your new password has propagat
 
 ## Verify credentials
 
-To test your Wynton credentials, try to [login to Wynton via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alternatively, verify them from your browser:
+To test your {{ site.cluster.name }} credentials, try to [login to {{ site.cluster.name }} via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alternatively, verify them from your browser:
 
 1. Go to [https://www.cgl.ucsf.edu/admin/kerbtest.py](https://www.cgl.ucsf.edu/admin/kerbtest.py) in your browser.  A popup panel titled 'Sign in https://www.cgl.ucsf.edu' is opened by the browser.
 
-3. Enter your Wynton login credentials in the two fields 'Username' and 'Password' and click 'Sign in'.
+3. Enter your {{ site.cluster.name }} login credentials in the two fields 'Username' and 'Password' and click 'Sign in'.
 
 4. If you entered correct credentials, you will get to a confirmation page saying so.  If you entered incorrect credentials, there will be no error message and the popup will appear again.
 
 
 ## Reset password
 
-To reset your _Wynton_ password, contact the admins at [wynton_admin@ucsf.edu]([wynton_admin@ucsf.edu).
+To reset your _{{ site.cluster.name }}_ password, contact the admins at [wynton_admin@ucsf.edu]([wynton_admin@ucsf.edu).
 
 [RBVI Kerberos web interface]: https://www.cgl.ucsf.edu/admin/chpass.py
 [UCSF Enterprise Password Standard]: https://wiki.library.ucsf.edu/pages/viewpage.action?spaceKey=ITSI&title=Unified+UCSF+Enterprise+Password+Standard

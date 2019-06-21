@@ -6,7 +6,7 @@
 </div>
 --->
 
-The Wynton cluster supports [Linux containers] via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
+The {{ site.cluster.name }} cluster supports [Linux containers] via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
 
 Singularity, and Linux containers in general, provides solutions to common problems and hurdles that HPC users often face, e.g.
 
@@ -26,7 +26,7 @@ Because you can create and customize your own containers, and because Singularit
 
 ## Instructions
 
-All tasks for using Linux containers, such as downloading, building, and running containers, is done via the `singularity` client and supported on Wynton.  The most common command calls are:
+All tasks for using Linux containers, such as downloading, building, and running containers, is done via the `singularity` client and supported on {{ site.cluster.name }}.  The most common command calls are:
 
 * Use an existing container:
   - `singularity run <image>` - run predefined script within container
@@ -136,7 +136,7 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 [alice@{{ site.devel.name }} lxc]$ 								
 ```
 
-To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the Wynton host system), do:
+To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the {{ site.cluster.name }} host system), do:
 ```sh
 [alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.img
 Singularity rocker_r-base.img:~/lxc> head -3 /etc/os-release

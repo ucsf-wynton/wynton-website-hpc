@@ -5,7 +5,7 @@
 
 ## Available SCLs and their Packages
 
-To list all Software Collections installed on Wynton HPC, use:
+To list all Software Collections installed on the cluster, use:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl --list

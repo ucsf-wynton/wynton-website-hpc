@@ -35,7 +35,7 @@ where N is the number of GPUs your job will use and M is the number of MPI proce
 
 ## GPU relevant resource requests
 
-The GPU nodes in Wynton contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
+The GPU nodes in {{ site.cluster.name }} contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
 
 1. `compute_cap` - describes the Compute Capability (or SM version) of the GPUs in the node (see [NVIDIA's CUDA GPU page] for more details).  `compute_cap` is an integer in keeping with the relevant flags to `nvcc`.  For example, a Compute Capability of 6.1 (e.g. [GeForce GTX 1080]) is represented by `compute_cap=61`.
 

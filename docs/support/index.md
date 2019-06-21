@@ -6,11 +6,11 @@ For questions and feature requests, please use one of the following channels:
   - Subscribe / unsubscribe: (a) go to [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help), (b) click 'Subscribe or Unsubscribe', (c) enter your full name and preferred email address, and (d) click link in confirmation email that arrives within minutes.
   - Web archives: [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help) (only visible to subscribed list members).
 
-2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for Wynton users to interact in real time
+2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time
   - Join: (a) go to [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (b) enter your UCSF(\*) email address. (\*) If you don't have a ucsf.edu address, [let us know]({{ '/about/contact.html' | relative_url }}) and we will send you an invite to your preferred email address.
 
 <!--
-3. the [Wynton issue tracker]
+3. the [{{ site.cluster.name }} issue tracker]
 -->
 
 These are communal forums - feel free to ask questions, answer questions, and participate in discussions.
@@ -18,4 +18,4 @@ These are communal forums - feel free to ask questions, answer questions, and pa
 If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate [dropping us an email]({{ '/about/contact.html' | relative_url }}).
 
 
-[Wynton issue tracker]: https://github.com/UCSF-HPC/wynton/wiki/Todo 
+[{{ site.cluster.name }} issue tracker]: https://github.com/UCSF-HPC/wynton/wiki/Todo 

@@ -5,7 +5,7 @@ To set up password-free file transfers, see <a href="{{ '/howto/log-in-without-p
 
 # Transfer Files and Directories
 
-For _storage_ mounted _directly_ on the Wynton cluster, files can be transferred to and from the cluster using regular file copying, e.g. `cp` and `rsync`.
+For _storage_ mounted _directly_ on the {{ site.cluster.name }} cluster, files can be transferred to and from the cluster using regular file copying, e.g. `cp` and `rsync`.
 For _non-mounted storage_, files may be transferred to and from the cluster via secure copying, e.g. `scp` and `sftp`, which can be utilized via `rsync`.
 For _file downloads_ from online resources, tools such as `curl`, `wget`, and `rsync` may be used.
 
@@ -14,9 +14,9 @@ For _file downloads_ from online resources, tools such as `curl`, `wget`, and `r
 </div>
 
 
-## <span class="glyphicon glyphicon-upload"></span> From your local machine to the Wynton HPC file system
+## <span class="glyphicon glyphicon-upload"></span> From your local machine to the {{ site.cluster.name }} HPC file system
 
-### Copy a single file on your local file system to your Wynton home directory
+### Copy a single file on your local file system to your {{ site.cluster.name }} home directory
 
 To copy a single file to your home directory (`~/`) on the cluster, use
 ```sh
@@ -26,25 +26,25 @@ To copy a single file to your home directory (`~/`) on the cluster, use
 
 ### Copy one or more files to a folder on the cluster
 
-To copy multiple files to Wynton so they appear directly under `~/study/files/`, use
+To copy multiple files to {{ site.cluster.name }} so they appear directly under `~/study/files/`, use
 ```sh
 {local_machine}$ scp *.txt *.R ../some/path/another_file.tsv alice@{{ site.transfer.hostname }}:study/files/
 ```
 
 ### Recursively copy a directory to a folder on the cluster
 
-To copy all content of directory `dataset/` to Wynton so that it appears as `~/study/dataset/`, use
+To copy all content of directory `dataset/` to {{ site.cluster.name }} so that it appears as `~/study/dataset/`, use
 ```sh
 {local_machine}$ scp -r dataset/ alice@{{ site.transfer.hostname }}:study/
 ```
 
 
 
-## <span class="glyphicon glyphicon-download"></span> From the Wynton HPC file system to your local machine
+## <span class="glyphicon glyphicon-download"></span> From the {{ site.cluster.name }} HPC file system to your local machine
 
-### Copy a single file from your Wynton home directory to your local machine
+### Copy a single file from your {{ site.cluster.name }} home directory to your local machine
 
-To copy a single file in your  Wynton home directory to the working directory of your local machine, use
+To copy a single file in your  {{ site.cluster.name }} home directory to the working directory of your local machine, use
 ```sh
 {local_machine}$ cd /path/project
 {local_machine}$ scp alice@{{ site.transfer.hostname }}:one_file.tsv .

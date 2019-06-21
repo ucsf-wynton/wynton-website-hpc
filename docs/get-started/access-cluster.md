@@ -9,17 +9,17 @@ Any shell session that has been idle for more than eight hours will timeout and 
 
 # Login
 
-To access the Wynton cluster you need an account - any UCSF affiliate can get an [account]({{ '/about/join.html' | relative_url }}).  Anyone with a Wynton account, can access the cluster via _Secure Shell (SSH)_.
+To access the {{ site.cluster.name }} cluster you need an account - any UCSF affiliate can get an [account]({{ '/about/join.html' | relative_url }}).  Anyone with a {{ site.cluster.name }} account, can access the cluster via _Secure Shell (SSH)_.
 
 
 ## Instructions
 
-To log into the cluster, assuming your user name on Wynton is `alice` (case sensitive), do the following:
+To log into the cluster, assuming your user name on {{ site.cluster.name }} is `alice` (case sensitive), do the following:
 
 1. Open a terminal (called 'Terminal' on macOS and most Linux distributions, and 'Command Prompt' on Windows 10),
 
 2. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press ENTER, and
-3. when prompted, enter your Wynton password.
+3. when prompted, enter your {{ site.cluster.name }} password.
 
 
 ### Example
@@ -33,7 +33,7 @@ alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 ```
 
 
-If you get `Permission denied, please try again.` when you enter your password, make sure you use the correct Wynton username (case sensitive) and the correct password.
+If you get `Permission denied, please try again.` when you enter your password, make sure you use the correct {{ site.cluster.name }} username (case sensitive) and the correct password.
 
 <div class="alert alert-info" role="alert">
 It is possible to set up password-less authentication via a public-private SSH key pair.  For details, see the how-to page <a href="{{ 'howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.
@@ -47,7 +47,7 @@ The login node is dedicated solely to very basic tasks such as copying and movin
 
 # Logout
 
-Like for all Unix-based system, to log out from Wynton, type `exit` or `logout` (standard Unix commands) and press ENTER.  For example,
+Like for all Unix-based system, to log out from {{ site.cluster.name }}, type `exit` or `logout` (standard Unix commands) and press ENTER.  For example,
 
 ```sh
 [alice@{{ site.login.name }} ~]$ exit
