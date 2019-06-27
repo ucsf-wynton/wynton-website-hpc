@@ -46,6 +46,14 @@ ASCIIGenome is a genome browser based on command line interface and designed for
   Versions: <em>1.15.0</em>
   </dd>
 
+  <dt>bat</dt>
+  <dd>
+    <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
+A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code><br>
+    URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
+  Versions: <em>0.11.0</em>
+  </dd>
+
   <dt>bcl2fastq</dt>
   <dd>
     <strong>bcl2fastq: Illumina Conversion Software</strong><br>
@@ -631,7 +639,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-27 13:54:31 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-27 14:29:08 from querying `module avail` and `module spider`._
 
 
 <style>
