@@ -10,7 +10,7 @@ It is common that research groups maintain their own software stacks. Some of th
 ```sh
 module load CBI
 ```
-Then use `module avail` to list what modules are availble (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+Then use `module avail` to list what modules are available (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
@@ -655,7 +655,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-27 15:00:12 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-27 15:05:42 from querying `module avail` and `module spider`._
 
 
 <style>
