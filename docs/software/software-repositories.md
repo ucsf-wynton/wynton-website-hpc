@@ -51,7 +51,7 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
     <strong>Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
 Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.  Example: <code>bowtie2 --version</code><br>
     URL: <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a><br>
-  Versions: <em>2.3.5</em>
+  Versions: 2.3.5, <em>2.3.5.1</em>
   </dd>
 
   <dt>bwa</dt>
@@ -67,7 +67,7 @@ Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent se
     <strong>byobu: Elegant Enhancement of the Otherwise Functional, Plain, Practical GNU Screen</strong><br>
 Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer. Example: <code>byobu --version</code><br>
     URL: <a href="http://byobu.org">http://byobu.org</a>, <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a><br>
-  Versions: <em>5.127</em>
+  Versions: 5.127, <em>5.129</em>
   </dd>
 
   <dt>CBI-testing</dt>
@@ -91,7 +91,7 @@ Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' 
     <strong>GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor</strong><br>
 At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing. Example: <code>emacs --version</code> and <code>emacs -nw</code>.<br>
     URL: <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a><br>
-  Versions: 25.3, <em>26.1</em>
+  Versions: 25.3, 26.1, <em>26.2</em>
   </dd>
 
   <dt>gatk</dt>
@@ -99,7 +99,7 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
     <strong>Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
-  Versions: <em>4.1.0.0</em>
+  Versions: 4.1.0.0, <em>4.1.2.0</em>
   </dd>
 
   <dt>git-flow</dt>
@@ -107,7 +107,7 @@ Developed in the Data Sciences Platform at the Broad Institute, the toolkit offe
     <strong>git-flow: Git Extension Git Flow (AVH Edition)</strong><br>
 A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model. Example: <code>git flow</code>.<br>
     URL: <a href="https://github.com/petervanderdoes/gitflow-avh">https://github.com/petervanderdoes/gitflow-avh</a>, <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a><br>
-  Versions: <em>1.12.1</em>
+  Versions: 1.12.1, <em>1.12.3</em>
   </dd>
 
   <dt>htop</dt>
@@ -131,7 +131,7 @@ HTSlib is an implementation of a unified C library for accessing common file for
     <strong>kallisto: Near-optimal RNA-Seq Quantification</strong><br>
 kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.  Example: <code>kallisto version</code>.<br>
     URL: <a href="https://pachterlab.github.io/kallisto/about.html">https://pachterlab.github.io/kallisto/about.html</a>, <a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a><br>
-  Versions: 0.45.0, <em>0.45.1</em>
+  Versions: 0.45.0, 0.45.1, <em>0.46.0</em>
   </dd>
 
   <dt>pindel</dt>
@@ -187,7 +187,7 @@ ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --versio
     <strong>STAR: Spliced Transcripts Alignment to a Reference</strong><br>
 STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data. Example: <code>STAR --help</code>.<br>
     URL: <a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a><br>
-  Versions: <em>2.7.0e</em>
+  Versions: 2.7.0e, 2.7.0f, <em>2.7.1a</em>
   </dd>
 
   <dt>tmux</dt>
@@ -373,7 +373,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>modeller</dt>
   <dd>
-  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, <em>SVN</em>
+  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, <em>SVN</em>
   </dd>
 
   <dt>modpipe</dt>
@@ -623,7 +623,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-17 14:03:22 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-27 13:37:21 from querying `module avail` and `module spider`._
 
 
 <style>
