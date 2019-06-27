@@ -70,6 +70,14 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
   Versions: <em>2.20.0</em>
   </dd>
 
+  <dt>bedops</dt>
+  <dd>
+    <strong>BEDOPS: The Fast, Highly Scalable and Easily-Parallelizable Genome Analysis Toolkit</strong><br>
+BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.  Example: <code>bedops --version</code><br>
+    URL: <a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a><br>
+  Versions: <em>2.4.36</em>
+  </dd>
+
   <dt>bowtie2</dt>
   <dd>
     <strong>Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
@@ -647,7 +655,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-27 14:44:38 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-27 15:00:12 from querying `module avail` and `module spider`._
 
 
 <style>
