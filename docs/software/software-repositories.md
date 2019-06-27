@@ -54,6 +54,14 @@ A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>ba
   Versions: <em>0.11.0</em>
   </dd>
 
+  <dt>bcftools</dt>
+  <dd>
+    <strong>BCFtools: Utilities for Variant Calling and Manipulating VCFs and BCFs</strong><br>
+BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.  Example: <code>bcftools --version</code><br>
+    URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
+  Versions: <em>1.9</em>
+  </dd>
+
   <dt>bcl2fastq</dt>
   <dd>
     <strong>bcl2fastq: Illumina Conversion Software</strong><br>
@@ -639,7 +647,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-27 14:29:08 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-27 14:44:38 from querying `module avail` and `module spider`._
 
 
 <style>
