@@ -41,7 +41,7 @@ Enable repository: <code>module load CBI</code><br>
   <dt>asciigenome</dt>
   <dd>
     <strong>ASCIIGenome: Text Only Genome Viewer</strong><br>
-ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.  Example: <code>ASCIIGenome --help</code>, <code>ASCIIGenome http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/supporting/functional_annotation/filtered/ALL.chr21.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf.gz</code>.<br>
+ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.  Example: <code>ASCIIGenome --help</code>.<br>
     URL: <a href="https://github.com/dariober/ASCIIGenome">https://github.com/dariober/ASCIIGenome</a><br>
   Versions: <em>1.15.0</em><br>
   </dd>
@@ -665,7 +665,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-28 16:05:49 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-28 16:33:13 from querying `module avail` and `module spider`._
 
 
 <style>
