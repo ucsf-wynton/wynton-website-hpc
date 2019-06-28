@@ -204,7 +204,8 @@ SAMtools is a suite of programs for interacting with high-throughput sequencing 
 Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.  Example: <code>python --version</code> and <code>pip --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a><br>
   Versions: .incl/33, .incl/34, .incl/36, 3.3, 3.4, <em>3.6</em>
-    NOTE: _Tho use this module, call `module load CBI CBI-testing` first._
+    <br>
+    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
   <dt>shellcheck</dt>
@@ -253,7 +254,8 @@ Tree is a recursive directory listing command that produces a depth indented lis
 A command-line tool for common Wynton HPC queries. Examples: <code>wynton --help</code>.<br>
     URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
   Versions: <em>0.0.5</em>
-    NOTE: _Tho use this module, call `module load CBI CBI-testing` first._
+    <br>
+    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
 </dl>
@@ -665,7 +667,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-28 15:52:30 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-28 15:57:41 from querying `module avail` and `module spider`._
 
 
 <style>
