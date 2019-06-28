@@ -198,12 +198,13 @@ SAMtools is a suite of programs for interacting with high-throughput sequencing 
   Versions: <em>1.9</em>
   </dd>
 
-  <dt>scl-python</dt>
+  <dt>scl-python (part of CBI-testing)</dt>
   <dd>
     <strong>NA</strong><br>
 Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.  Example: <code>python --version</code> and <code>pip --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a><br>
   Versions: .incl/33, .incl/34, .incl/36, 3.3, 3.4, <em>3.6</em>
+    NOTE: _Tho use this module, call `module load CBI CBI-testing` first._
   </dd>
 
   <dt>shellcheck</dt>
@@ -244,6 +245,15 @@ TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq rea
 Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the <code>LS_COLORS</code> environment variable is set and output is to tty.. Example: <code>tree --help</code>.<br>
     URL: <a href="http://mama.indstate.edu/users/ice/tree/">http://mama.indstate.edu/users/ice/tree/</a>,<br>
   Versions: <em>1.8.0</em>
+  </dd>
+
+  <dt>wynton-tools (part of CBI-testing)</dt>
+  <dd>
+    <strong>Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
+A command-line tool for common Wynton HPC queries. Examples: <code>wynton --help</code>.<br>
+    URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
+  Versions: <em>0.0.5</em>
+    NOTE: _Tho use this module, call `module load CBI CBI-testing` first._
   </dd>
 
 </dl>
@@ -655,7 +665,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-06-27 15:05:42 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-06-28 15:52:30 from querying `module avail` and `module spider`._
 
 
 <style>
