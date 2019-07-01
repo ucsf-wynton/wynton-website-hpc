@@ -2,13 +2,10 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong><br>
-<em>Fewer slots than ususal will be available March 21-April 5 as the kernel is updated on all compute nodes
-</em>
+<em>Complete outage planned due maintenance</em>
 </div>
--->
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -61,6 +58,12 @@
 
 
 ## Upcoming and Current Incidents
+
+### July 8-14, 2019
+
+#### <span style="color: orange;">Full system downtime</span>
+**Notice**: Updates to the BeeGFS file system and the operating system that require to bring down all of Wynton HPC will start on the morning of Monday July 8.  Please make sure to log out before then.  The downtime might last the full week.
+<br><span class="timestamp">July 1, 14:15 PDT</span>
 
 
 ## Past Incidents
