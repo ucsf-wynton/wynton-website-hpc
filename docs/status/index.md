@@ -4,7 +4,7 @@
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong><br>
-<em>Complete outage planned due maintenance</em>
+<em>Complete outage planned due to maintenance</em>
 </div>
 
 <!--
