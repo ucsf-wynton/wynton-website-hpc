@@ -14,8 +14,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Soon
 
-* Software stacks: Support for sharing software installations between groups via environment modules (e.g. `module load CBI`)
-
 * Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
 * GPU compute: Add additional communal GPU nodes
@@ -59,6 +57,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * GPU compute: Four communal GPU nodes with a total of 12 GPUs (from the QB3 cluster)
 
 * Development: A dedicated Graphics Processing Unit (GPU) development node for building GPU software
+
+* Software stacks: Support for sharing software installations between groups via environment modules (e.g. `module load CBI`)
 
 
 See also [News].

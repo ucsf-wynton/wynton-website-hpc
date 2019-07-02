@@ -1,5 +1,7 @@
 # News
 
+2019-06-13: <a href="{{ '/software/software-repositories.html' | relative_url }}">Contributed Software Repositories</a> are now available and documented.<br/>
+
 2019-04-30: <a href="{{ '/about/shares.html' | relative_url }}">Contributing Member Shares</a> are now explained and listed online.<br/>
 
 2019-04-15: Add a dedicated GPU development node (after having been in beta testing for several months).<br/>
