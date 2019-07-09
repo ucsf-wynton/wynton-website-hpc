@@ -3,8 +3,8 @@
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
-<em>Complete outage planned due to maintenance</em>
+<strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
+<em>Complete outage due to scheduled maintenance</em>
 </div>
 
 <!--
@@ -13,15 +13,9 @@
 </div>
 -->
 
+<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
-</div>
-<!--
--->
-
-<!--
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<em>Notice: The job scheduler will be taken down on Wednesday January 9 from noon to 1:00pm</em>
 </div>
 -->
 
