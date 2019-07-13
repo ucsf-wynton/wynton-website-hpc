@@ -1,11 +1,13 @@
-# UCSF {{ site.cluster.name }} HPC Status
+ma# UCSF {{ site.cluster.name }} HPC Status
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
+<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
 <em>Complete outage due to scheduled maintenance</em>
 </div>
+-->
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -14,10 +16,10 @@
 -->
 
 <!--
+-->
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
 </div>
--->
 
 
 
@@ -53,14 +55,21 @@
 
 ## Upcoming and Current Incidents
 
-### July 8-14, 2019
+## Past Incidents
+
+### July 8-12, 2019
 
 #### <span style="color: orange;">Full system downtime</span>
+
+**Resolved**: The Wynton HPC environment and the BeeGFS file system are fully functional after updates and upgrades.
+<br><span class="timestamp">July 12, 11:15 PDT</span>
+
+**Notice**: The Wynton HPC environment is down for maintenance.
+<br><span class="timestamp">July 8, 12:00 PDT</span>
+
 **Notice**: Updates to the BeeGFS file system and the operating system that require to bring down all of Wynton HPC will start on the morning of Monday July 8.  Please make sure to log out before then.  The downtime might last the full week.
 <br><span class="timestamp">July 1, 14:15 PDT</span>
 
-
-## Past Incidents
 
 ### June 17-18, 2019
 
