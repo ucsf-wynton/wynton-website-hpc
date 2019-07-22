@@ -5,7 +5,7 @@ This repository contains the [Wynton HPC user website](https://ucsf-hpc.github.i
 
 ## Technical details
 
-This website is built upon [Jekyll](https://jekyllrb.com/), where content is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and rendered by Jejyll into HTML.  The user interface and its style is mainly handled by JavaScript and CSS.
+This website is built upon [Jekyll](https://jekyllrb.com/), where content is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and rendered by Jekyll into HTML.  The user interface and its style is handled mainly by JavaScript and CSS.
 
 To launch a localhost instance of the website, do:
 
