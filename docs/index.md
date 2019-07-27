@@ -1,5 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>: (<em>For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page</em>)<br/>
+2019-07-27 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch are now deprecated - use `/wynton/scratch` instead.  The deprecated mounts will become read-only on 2019-08-01 and removed on 2019-08-09.<br/>
 2019-06-13: <a href="{{ '/software/software-repositories.html' | relative_url }}">Contributed Software Repositories</a> are now available and documented.<br/>
 2019-04-30: <a href="{{ '/about/shares.html' | relative_url }}">Contributing Member Shares</a> are now explained and listed online.<br/>
 2019-04-15: Add a dedicated <a href="{{ '/about/specs.html' | relative_url }}">GPU development node</a> (after having been in beta testing for several months).<br/>
