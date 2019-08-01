@@ -57,6 +57,17 @@ ma# UCSF {{ site.cluster.name }} HPC Status
 
 ## Past Incidents
 
+### July 30, 2019
+
+#### <span style="color: orange;">Power outage</span>
+
+**Resolved**: The Wynton HPC environment is up and running again.
+<br><span class="timestamp">July 30, 14:40 PDT</span>
+
+**Notice**: The Wynton HPC environment is down due to a non-planned power outage at the main data center.
+<br><span class="timestamp">July 30, 08:20 PDT</span>
+
+
 ### July 8-12, 2019
 
 #### <span style="color: orange;">Full system downtime</span>
