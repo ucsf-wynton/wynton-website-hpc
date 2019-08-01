@@ -37,7 +37,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Planned deprecation
 
-* Storage: When new parallel file system (`/wynton`) is fully deployed, discontinue the NetApp storage (e.g. deprecate usage of `/netapp`) as well as `/scrapp/`
+* Storage: When new parallel file system (`/wynton`) is fully deployed, discontinue the NetApp storage (e.g. deprecate usage of `/netapp`) as well as `/scrapp` and `/scrapp2`.
 
 
 ## Accomplished milestones

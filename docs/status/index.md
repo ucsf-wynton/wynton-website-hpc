@@ -1,4 +1,4 @@
-ma# UCSF {{ site.cluster.name }} HPC Status
+# UCSF {{ site.cluster.name }} HPC Status
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
