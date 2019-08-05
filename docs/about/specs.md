@@ -5,6 +5,7 @@
 <dl id="hosttable-summary" class="dl-horizontal">
   <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
+  <dt>GPUs</dt><dd>{{ site.specs.communal_gpus }} communal GPUs plus {{ site.specs.gpus | minus: site.specs.communal_gpus }} GPU-contributor-only GPUs</dd>
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_min }}-{{ site.specs.ram_max }} GiB/node</dd>
   <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</dd>
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>
@@ -21,10 +22,9 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ### Compute Nodes
 
-The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.  In addition, each node has a {{ site.specs.local_tmp_size_min }} TiB `/tmp` drive and {{ site.specs.swap_min }} TiB of swap space.
+The majority of the compute nodes have Intel processors, while a few have AMD processes.  A subset of the compute
+Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.  In addition, each node has a {{ site.specs.local_tmp_size_min }} TiB `/tmp` drive and {{ site.specs.swap_min }} TiB of swap space.
 For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
-
-
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
 
