@@ -1,8 +1,8 @@
 # Created by: Henrik Bengtsson
-# Created on: 2019-06-25 13:21:58
-# Number of hosts: 322
-# Number of cores: 6908
-Node	# Physical Cores	RAM	Local `/scratch`	Local `/tmp`	CPU
+# Created on: 2019-08-06 02:01:32 PDT
+# Number of hosts: 331
+# Number of cores: 7048
+Node	Physical Cores	RAM	Local `/scratch`	Local `/tmp`	CPU
 cc-hmid1	24	512 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 cc-id1	24	256 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 cc-id2	24	256 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
@@ -54,35 +54,36 @@ msg-id29	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id30	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id31	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id32	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
+msg-id33	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id34	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id35	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id36	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id37	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
 msg-id38	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
-msg-id39	24	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2690 v3 2.60GHz
+msg-id39	12	48 GiB	0.5 TiB	4.0 GiB	Intel Xeon X5650 2.67GHz
 msg-ihgpu1	12	48 GiB	0.5 TiB	4.0 GiB	Intel Xeon X5650 2.67GHz
 msg-ihgpu2	12	48 GiB	0.5 TiB	4.0 GiB	Intel Xeon X5650 2.67GHz
-msg-ihgpu3	12	48 GiB	0.5 TiB	4.0 GiB	Intel Xeon X5650 2.67GHz
+msg-ihgpu3	12	48 GiB	0.5 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 msg-ihgpu4	12	48 GiB	0.5 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-msg-ihgpu5	12	48 GiB	0.5 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+msg-ihgpu5	12	256 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2643 v4 3.40GHz
 msg-ihgpu6	12	256 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2643 v4 3.40GHz
 msg-ihgpu7	12	256 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2643 v4 3.40GHz
-msg-ihgpu8	12	256 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2643 v4 3.40GHz
+msg-ihgpu8	16	128 GiB	0.4 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 msg-iogpu1	16	128 GiB	0.4 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-msg-iogpu2	16	128 GiB	0.4 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-msg-iogpu3	16	128 GiB	1.8 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+msg-iogpu2	16	128 GiB	1.8 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+msg-iogpu3	16	128 GiB	0.4 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 msg-iogpu4	16	128 GiB	0.4 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 msg-iogpu5	16	128 GiB	0.4 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-msg-iogpu6	16	128 GiB	0.4 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+msg-iogpu6	16	128 GiB	0.8 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 msg-iogpu7	16	128 GiB	0.8 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 msg-iogpu8	16	128 GiB	0.8 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-msg-iogpu9	16	128 GiB	0.8 TiB	4.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-msg-iogpu10	16	256 GiB	1.1 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
+msg-iogpu9	16	256 GiB	1.1 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
+msg-iogpu10	16	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
 msg-iogpu11	16	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
 msg-iogpu12	16	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
-msg-iogpu13	16	256 GiB	0.3 TiB	4.0 GiB	Intel Xeon E5-2620 v4 2.10GHz
-qb3-ad1	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
-qb3-ad2	24	96 GiB	1.8 TiB	8.0 GiB	AMD Opteron 6174
+msg-iogpu13	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad1	24	96 GiB	1.8 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad2	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
 qb3-ad3	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
 qb3-ad4	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
 qb3-ad5	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
@@ -90,9 +91,9 @@ qb3-ad6	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
 qb3-ad7	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
 qb3-ad8	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
 qb3-ad9	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
-qb3-ad10	24	96 GiB	0.1 TiB	8.0 GiB	AMD Opteron 6174
+qb3-ad10	24	256 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id2	24	256 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
-qb3-id3	24	256 GiB	1.4 TiB	4.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
+qb3-id3	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id4	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id5	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id6	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
@@ -122,7 +123,7 @@ qb3-id31	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id32	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id33	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
 qb3-id34	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
-qb3-id35	24	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v3 2.50GHz
+qb3-id35	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id36	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id37	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id38	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
@@ -166,6 +167,7 @@ qb3-id76	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id77	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id78	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id79	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
+qb3-id80	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id81	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id82	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id83	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
@@ -228,17 +230,19 @@ qb3-id141	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id143	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id144	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
 qb3-id145	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
-qb3-id146	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
-qb3-id147	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2680 v4 2.40GHz
-qb3-idgpu1	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2660 v4 2.00GHz
-qb3-idgpu2	28	256 GiB	1.8 TiB	8.0 GiB	Intel Xeon E5-2660 v4 2.00GHz
-qb3-ih5	12	48 GiB	0.4 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-id146	28	256 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2660 v4 2.00GHz
+qb3-id147	28	256 GiB	1.8 TiB	8.0 GiB	Intel Xeon E5-2660 v4 2.00GHz
+qb3-idgpu1	12	48 GiB	0.4 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-idgpu2	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih5	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih6	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih7	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih8	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih9	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih10	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih11	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih12	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih13	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih14	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih15	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih16	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
@@ -251,36 +255,40 @@ qb3-ih22	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih23	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih24	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih25	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih26	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih26	12	48 GiB	0.4 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih27	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih28	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih29	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih30	12	48 GiB	0.4 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih30	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih31	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih32	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih33	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih34	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih35	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih36	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih37	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih38	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih39	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih40	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih41	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih42	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih43	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih45	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih44	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih45	12	48 GiB	0.4 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih46	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih48	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih49	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih50	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih51	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih52	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih53	12	48 GiB	0.4 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih52	12	48 GiB	1.8 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih53	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih54	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih55	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih56	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih57	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih58	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih59	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih60	12	48 GiB	1.8 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih60	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih61	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih62	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih63	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
@@ -289,39 +297,40 @@ qb3-ih65	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih66	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih67	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
 qb3-ih68	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih69	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih70	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih71	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih72	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih73	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih74	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih75	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
-qb3-ih76	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz
+qb3-ih69	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-ih70	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-ih71	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-ih72	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-ih73	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-ih74	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-ih75	16	64 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-ih76	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io1	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io2	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io3	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io4	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io5	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io6	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io7	16	64 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io7	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io8	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io9	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
 qb3-io10	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io11	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io13	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io14	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io15	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io18	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io19	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io20	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io21	16	64 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io22	16	128 GiB	0.1 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io24	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io25	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io26	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io27	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io28	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-io29	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
-qb3-iogpu1	16	96 GiB	0.9 TiB	4.0 GiB	Intel Xeon Silver 4110 2.10GHz
-qb3-iogpu2	16	128 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2640 v3 2.60GHz
-qb3-iogpu3	16	128 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2640 v3 2.60GHz
+qb3-io11	16	128 GiB	0.1 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io13	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io14	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io15	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io18	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io19	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io20	16	128 GiB	0.4 TiB	8.0 GiB	Intel Xeon E5-2670 0 2.60GHz
+qb3-io21	16	96 GiB	0.9 TiB	4.0 GiB	Intel Xeon Silver 4110 2.10GHz
+qb3-io22	16	128 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2640 v3 2.60GHz
+qb3-io23	16	128 GiB	0.9 TiB	8.0 GiB	Intel Xeon E5-2640 v3 2.60GHz
+qb3-io24	24	256 GiB	0.3 TiB	4.0 GiB	Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz
+qb3-io25	28	256 GiB	0.9 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+qb3-io26	12	48 GiB	0.1 TiB	8.0 GiB	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz
+qb3-io27	12	48 GiB	0.1 TiB	8.0 GiB	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz
+qb3-io28	12	48 GiB	0.1 TiB	8.0 GiB	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz
+qb3-io29	12	48 GiB	0.1 TiB	8.0 GiB	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz
+qb3-iogpu1	12	48 GiB	0.1 TiB	8.0 GiB	Intel(R) Xeon(R) CPU X5650 @ 2.67GHz
+qb3-iogpu2	16	128 GiB	0.4 TiB	8.0 GiB	Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz
+qb3-iogpu3	12	48 GiB	0.1 TiB	8.0 GiB	Intel Xeon X5650 2.67GHz

@@ -382,7 +382,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     var nodes = 0;
     host_table.forEach(function(row) {
       nodes += 1;
-      cores_node = parseInt(row["# Physical Cores"]);
+      cores_node = parseInt(row["Physical Cores"]);
       cores += cores_node;
 
       // No issues?
