@@ -11,12 +11,14 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Increase the default size of users' home directories - currently 200 GiB per user
 
+* Deprecation: The NetApp storage (which includes `/netapp`, `/scrapp` and `/scrapp2`) is being deprecated in favor of new BeeGFS storage (which includes `/wynton/home` and `/wynton/scratch`).
+
+* GPU compute: Add an additional 12 communal GPUs
+
 
 ## Soon
 
 * Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
-
-* GPU compute: Add additional communal GPU nodes
 
 
 ## Near future
@@ -37,7 +39,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Planned deprecation
 
-* Storage: When new parallel file system (`/wynton`) is fully deployed, discontinue the NetApp storage (e.g. deprecate usage of `/netapp`) as well as `/scrapp/`
+* N/A
 
 
 ## Accomplished milestones
