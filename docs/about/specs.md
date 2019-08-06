@@ -9,7 +9,7 @@
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_min }}-{{ site.specs.ram_max }} GiB/node</dd>
   <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</dd>
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>
-  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 200 GiB/user - soon 500 GiB/user)</dd>
+  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 500 GiB/user - except for users still on <code>/netapp</code> who has 200 GiB/user)</dd>
 
 </dl>
 
