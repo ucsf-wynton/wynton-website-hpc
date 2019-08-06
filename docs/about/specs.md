@@ -52,12 +52,12 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ '/get-started/development-prototyping.html' | relative_url }}).
 
-Node                        | # Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
+Node                        | Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
 ----------------------------|-----------------:|---------:|-----------------:|------------------------------:|-------------------:|
-{{ site.dev1.name }}        |                8 |   16 GiB |         0.11 TiB | Intel Xeon E5430 2.66GHz      |                    |
-{{ site.dev2.name }}        |               32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
-{{ site.dev3.name }}        |               32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
-{{ site.gpudev1.name }}     |               12 |   48 GiB |         0.37 TiB | Intel Xeon X5650 2.67GHz      | GeForce GTX 980 Ti |
+{{ site.dev1.name }}        |              8 |   16 GiB |         0.11 TiB | Intel Xeon E5430 2.66GHz      |                    |
+{{ site.dev2.name }}        |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
+{{ site.dev3.name }}        |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
+{{ site.gpudev1.name }}     |             12 |   48 GiB |         0.37 TiB | Intel Xeon X5650 2.67GHz      | GeForce GTX 980 Ti |
 
 _Comment:_ Please use the GPU development node only if you need to build or prototype GPU software.
 <!-- The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors. and local solid state drives (SSDs). -->
@@ -162,7 +162,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
       for (key in row) td = tr.append("td").text(row[key]);
       
       /* Cores */
-      value = parseInt(row["# Physical Cores"]);
+      value = parseInt(row["Physical Cores"]);
       cores += value;
       if (value <= coreMin) coreMin = value;
       if (value >= coreMax) coreMax = value;
