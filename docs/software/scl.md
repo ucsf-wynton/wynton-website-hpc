@@ -12,6 +12,7 @@ To list all Software Collections installed on the cluster, use:
 devtoolset-4
 devtoolset-6
 devtoolset-7
+llvm-toolset-7
 python33
 rh-python34
 rh-python36
