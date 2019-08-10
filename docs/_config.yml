@@ -85,6 +85,9 @@ specs:
   ## User home [TiB]:
   home_size_total: 383
 
+  ## Group home [TiB]:
+  group_size_total: 3800
+
   ## Job queues
   pu_total: 15994
   member_q_total: 5006

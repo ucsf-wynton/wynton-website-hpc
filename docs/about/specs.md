@@ -9,8 +9,8 @@
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_min }}-{{ site.specs.ram_max }} GiB/node</dd>
   <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</dd>
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>
-  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 500 GiB/user - except for users still on <code>/netapp</code> who has 200 GiB/user)</dd>
-
+  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 500 GiB/user)</dd>
+  <dt>Group storage</dt><dd>{{ site.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
 </dl>
 
 ## Software environment
@@ -67,19 +67,18 @@ _Comment:_ Please use the GPU development node only if you need to build or prot
 
 The {{ site.cluster.name }} cluster provides two types of scratch storage:
 
-* Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
-
-* Global `/wynton/scratch/` - {{ site.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+ * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
+ * Global `/wynton/scratch/` - {{ site.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
 ## User and Lab Storage
 
-* `/wynton/home`: {{ site.specs.home_size_total }} TiB storage space
-* `/netapp/home`: {{ site.specs.netapp_home_size_total }} TiB storage space (to be decommissioned)
+ * `/wynton/home`: {{ site.specs.home_size_total }} TiB storage space
+ * `/wynton/group`: {{ site.specs.group_size_total }} TB (= {{ site.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
-Each user may use up to 500 GiB disk space in the home directory (for users still on `/netapp/home` the limit is 200 GiB).  Research groups can add additional storage space by either mounting their existing storage or [purchase new]({{ '/about/pricing-storage.html' | relative_url }}).
+Each user may use up to 500 GiB disk space in the home directory (for users still on legacy `/netapp/home` the limit is 200 GiB).  Research groups can add additional storage space under `/wynton/group` by either mounting their existing storage or [purchase new]({{ '/about/pricing-storage.html' | relative_url }}).
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
 While waiting to receive purchased storage, users may use the global scratch space, which is "unlimited" in size with the important limitation that files older than two weeks will be deleted automatically.
