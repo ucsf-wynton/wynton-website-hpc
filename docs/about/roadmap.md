@@ -9,8 +9,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
 
-* Storage: Increase the default size of users' home directories - currently 200 GiB per user
-
 * Deprecation: The NetApp storage (which includes `/netapp`, `/scrapp` and `/scrapp2`) is being deprecated in favor of new BeeGFS storage (which includes `/wynton/home` and `/wynton/scratch`).
 
 * GPU compute: Add an additional 12 communal GPUs
@@ -26,6 +24,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Storage: Requirements for mounting lab-owned storage into Wynton
 
 * Scheduler: Support interactive jobs (`qlogin`)
+
+* Scheduler: Support for email notification upon job completion (e.g. `qsub -M alice@ucsf.edu`)
 
 * Support: A User Issue Tracker
 
