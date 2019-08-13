@@ -1,5 +1,9 @@
 # Work with Python
 
+<div class="alert alert-info" role="alert">
+The default is Python 2.  To get access to Python 3, see <a href="{{ '/software/scl.html' | relative_url }}">CentOS Software Collections (SCL)</a>.  The below instructions apply to both Python 2 and Python 3.
+</div>
+
 ## Installing Python packages
 
 The standard way to install Python packages is by using the [_pip_](https://packaging.python.org/tutorials/installing-packages/) package management system.  You often see installation instructions such as:
@@ -22,7 +26,7 @@ Installing globally is the easiest, because you don't have to remember to _activ
 
 To install a Python package globally under your home directory, just remember to add `--user` to `pip install`.  For example,
 ```sh
-[alice@{{ site.devel.name }} ~]$ $ pip install --user HTSeq
+[alice@{{ site.devel.name }} ~]$ pip install --user HTSeq
 Collecting HTSeq
   Downloading https://files.pythonhosted.org/packages/5f/e5/5248ec7d3253b3701d663c7a1b10c7d75c7d24193a5ce95f2a86337adaf8/HTSeq-0.11.0-cp27-cp27m-manylinux1_x86_64.whl (1.0MB)
     100% |████████████████████████████████| 1.0MB 3.4MB/s 
@@ -35,16 +39,15 @@ Collecting numpy (from HTSeq)
 Installing collected packages: pysam, numpy, HTSeq
 Successfully installed HTSeq-0.11.0 numpy-1.15.2 pysam-0.15.1
 
-[alice@n6 ~]$
+[alice@{{ site.devel.name }} ~]$
 ```
 
-To see all Python packages that you have installed globally, use `pip list --user`.  To also see packages installed site wide on the cluster, use `pip list`.
-
+To see all Python packages that you have installed globally, use `pip list --user`.  To also see packages installed site wide on the cluster, use `pip list`.  Packages installed with `pip install --user` are typically installed to your `~/.local` folder.
 
 
 ### 2. Installing to a virtual environment (aka "virtualenv")
 
-A Python _virtual environment_ is basically a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ such a virtual environment, environment variables such as `PATH` is updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
+A Python _virtual environment_ is basically a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ a virtual environment, environment variables like `PATH` is updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
 
 Here is an example on how to install the [HTSeq](https://htseq.readthedocs.io/en/master/install.html#installation-on-linux) package in a Python _virtual environment_.
 
@@ -77,7 +80,7 @@ Successfully installed virtualenv-16.1.0
 
 Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  Do the following once:
 ```sh
-[alice@{{ site.devel.name }} ~]$ $ virtualenv my_project
+[alice@{{ site.devel.name }} ~]$ virtualenv my_project
 New python executable in my_project/bin/python2.7
 Also creating executable in my_project/bin/python
 Installing setuptools, pip, wheel...done.
