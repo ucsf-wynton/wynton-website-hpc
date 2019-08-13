@@ -80,7 +80,7 @@ Successfully installed virtualenv-16.1.0
 
 Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  Do the following once:
 ```sh
-[alice@{{ site.devel.name }} ~]$ virtualenv my_project
+[alice@{{ site.devel.name }} ~]$ virtualenv -p $(which python) my_project
 New python executable in my_project/bin/python2.7
 Also creating executable in my_project/bin/python
 Installing setuptools, pip, wheel...done.
@@ -90,6 +90,9 @@ Installing setuptools, pip, wheel...done.
 ~/my_project/bin/python
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
+
+_Comment_: The reason for the `-p $(which python)` option is to make sure that the current Python version is used, i.e. it will work with both Python 2 and Python 3.  If not specified, the virtual environment created will use the same version of Python that was used to install `virtualenv`.
+
 
 Note how `(my_project) ` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  To see what Python packages are currently installed, use:
 ```sh
