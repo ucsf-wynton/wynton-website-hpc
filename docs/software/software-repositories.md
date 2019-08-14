@@ -46,6 +46,14 @@ ASCIIGenome is a genome browser based on command line interface and designed for
   Versions: <em>1.15.0</em><br>
   </dd>
 
+  <dt>bamutil</dt>
+  <dd>
+    <strong>bamUtil: Programs for Working on SAM/BAM Files</strong><br>
+bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, <code>bam</code>. Example: <code>bam help</code>.<br>
+    URL: <a href="https://genome.sph.umich.edu/wiki/BamUtil">https://genome.sph.umich.edu/wiki/BamUtil</a>, <a href="https://github.com/statgen/bamUtil">https://github.com/statgen/bamUtil</a><br>
+  Versions: <em>1.0.14</em><br>
+  </dd>
+
   <dt>bat</dt>
   <dd>
     <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
@@ -76,6 +84,14 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
 BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.  Example: <code>bedops --version</code><br>
     URL: <a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a><br>
   Versions: <em>2.4.36</em><br>
+  </dd>
+
+  <dt>bedtools2</dt>
+  <dd>
+    <strong>bedtools2: The Swiss Army Knife for Genome Arithmetic</strong><br>
+Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF. Example: <code>bedtools --version</code> and <code>ls $BEDTOOLS2_HOME/genomes/</code>.<br>
+    URL: <a href="https://github.com/arq5x/bedtools2/">https://github.com/arq5x/bedtools2/</a><br>
+  Versions: <em>2.28.0</em><br>
   </dd>
 
   <dt>bowtie2</dt>
@@ -673,7 +689,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-07-19 12:25:37 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-08-14 00:53:44 from querying `module avail` and `module spider`._
 
 
 <style>
