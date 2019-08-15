@@ -190,6 +190,22 @@ Pindel can detect breakpoints of large deletions, medium sized insertions, inver
   Versions: <em>0.2.5b8</em><br>
   </dd>
 
+  <dt>plink</dt>
+  <dd>
+    <strong>PLINK: Whole Genome Association Analysis Toolset</strong><br>
+PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: <code>plink --help</code>.<br>
+    URL: <a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a><br>
+  Versions: 1.07, <em>1.90b6.10</em><br>
+  </dd>
+
+  <dt>plink2</dt>
+  <dd>
+    <strong>PLINK2: Whole Genome Association Analysis Toolset</strong><br>
+PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: <code>plink2 --help</code>.<br>
+    URL: <a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a><br>
+  Versions: <em>2.00a2LM</em><br>
+  </dd>
+
   <dt>qtop</dt>
   <dd>
     <strong>qtop: Monitor the State of Queueing Systems, Along with Related Information Relevant on HPC &amp; Grid Clusters</strong><br>
@@ -689,7 +705,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-08-14 00:53:44 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-08-15 03:12:49 from querying `module avail` and `module spider`._
 
 
 <style>
