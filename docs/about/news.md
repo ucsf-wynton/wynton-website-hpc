@@ -1,5 +1,7 @@
 # News
 
+2019-08-15 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch have been removed - use `/wynton/scratch` instead.<br/>
+
 2019-07-27 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch are now deprecated - use `/wynton/scratch` instead.  The deprecated mounts will become read-only on 2019-08-01 and removed on 2019-08-09.<br/>
 
 2019-06-13: <a href="{{ '/software/software-repositories.html' | relative_url }}">Contributed Software Repositories</a> are now available and documented.<br/>
