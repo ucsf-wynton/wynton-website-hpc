@@ -46,6 +46,14 @@ ASCIIGenome is a genome browser based on command line interface and designed for
   Versions: <em>1.15.0</em><br>
   </dd>
 
+  <dt>bamutil</dt>
+  <dd>
+    <strong>bamUtil: Programs for Working on SAM/BAM Files</strong><br>
+bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, <code>bam</code>. Example: <code>bam help</code>.<br>
+    URL: <a href="https://genome.sph.umich.edu/wiki/BamUtil">https://genome.sph.umich.edu/wiki/BamUtil</a>, <a href="https://github.com/statgen/bamUtil">https://github.com/statgen/bamUtil</a><br>
+  Versions: <em>1.0.14</em><br>
+  </dd>
+
   <dt>bat</dt>
   <dd>
     <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
@@ -76,6 +84,14 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
 BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.  Example: <code>bedops --version</code><br>
     URL: <a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a><br>
   Versions: <em>2.4.36</em><br>
+  </dd>
+
+  <dt>bedtools2</dt>
+  <dd>
+    <strong>bedtools2: The Swiss Army Knife for Genome Arithmetic</strong><br>
+Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF. Example: <code>bedtools --version</code> and <code>ls $BEDTOOLS2_HOME/genomes/</code>.<br>
+    URL: <a href="https://github.com/arq5x/bedtools2/">https://github.com/arq5x/bedtools2/</a><br>
+  Versions: <em>2.28.0</em><br>
   </dd>
 
   <dt>bowtie2</dt>
@@ -172,6 +188,22 @@ kallisto is a program for quantifying abundances of transcripts from RNA-Seq dat
 Pindel can detect breakpoints of large deletions, medium sized insertions, inversions, tandem duplications and other structural variants at single-based resolution from next-gen sequence data. It uses a pattern growth approach to identify the breakpoints of these variants from paired-end short reads.  Example: <code>pindel</code>.<br>
     URL: <a href="https://www.sanger.ac.uk/science/tools/pindel">https://www.sanger.ac.uk/science/tools/pindel</a>, <a href="https://github.com/genome/pindel">https://github.com/genome/pindel</a><br>
   Versions: <em>0.2.5b8</em><br>
+  </dd>
+
+  <dt>plink</dt>
+  <dd>
+    <strong>PLINK: Whole Genome Association Analysis Toolset</strong><br>
+PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: <code>plink --help</code>.<br>
+    URL: <a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a><br>
+  Versions: 1.07, <em>1.90b6.10</em><br>
+  </dd>
+
+  <dt>plink2</dt>
+  <dd>
+    <strong>PLINK2: Whole Genome Association Analysis Toolset</strong><br>
+PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: <code>plink2 --help</code>.<br>
+    URL: <a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a><br>
+  Versions: <em>2.00a2LM</em><br>
   </dd>
 
   <dt>qtop</dt>
@@ -673,7 +705,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-07-19 12:25:37 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-08-15 03:12:49 from querying `module avail` and `module spider`._
 
 
 <style>
