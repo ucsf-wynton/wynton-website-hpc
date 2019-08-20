@@ -7,14 +7,14 @@ Access to SBGrid software on Wynton HPC is limited to paying members of the SBGr
 
 ## Verify access to SBGrid
 
-The SBGrid software is only available to paying groups and members of the SBGrid Consortium.  Users who are SBGrid members are part of the `sbgrid` Unix group on the Wynton HPC cluster.  You can verify this by running:
+The [SBGrid] software is installed on Wynton HPC but is available only to paying members of the [SBGrid Consortium](https://sbgrid.org/join/).  Wynton HPC users who are [SBGrid members] are part of the `sbgrid` Unix group on the Wynton HPC cluster.  You can verify this by running:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ groups
 lsd sbgrid
 ```
 
-If `sbgrid` is not part of your output, the you do not have access to the SBGrid software on Wynton HPC.  If you think this is a mistake, please [contact us].
+If `sbgrid` is not part of your output, then you do _not_ have access to the SBGrid software on Wynton HPC.  If you think this is a mistake, please [contact us].
 
 
 ## Enable SBGrid
@@ -50,6 +50,7 @@ In order to use SBGrid software, the SBGrid environment must be enabled.  To ena
 
 
 [SBGrid]: https://sbgrid.org/
+[SBGrid members]: https://sbgrid.org/members/order/-institutions/
 [contact us]: {{ '/about/contact.html' | relative_url }}
 
 <style>
