@@ -1,4 +1,4 @@
-# SBGrid
+# SBGrid Software Collection
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 Access to SBGrid software on Wynton HPC is limited to paying members of the SBGrid Consortium.
