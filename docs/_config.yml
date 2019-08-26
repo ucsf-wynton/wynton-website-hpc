@@ -89,8 +89,8 @@ specs:
   group_size_total: 3800
 
   ## Job queues
-  pu_total: 15994
-  member_q_total: 15994
+  pu_total: 20185
+  member_q_total: 6735
 
   ## Deprecated fields - use above instead /HB 2019-03-11
   cpu_min: 2.0
