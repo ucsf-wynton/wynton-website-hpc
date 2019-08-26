@@ -57,6 +57,17 @@
 
 ## Past Incidents
 
+### August 15, 2019
+
+#### <span style="color: orange;">Power outage</span>
+
+**Resolved**: The Wynton HPC environment is up and running again.
+<br><span class="timestamp">August 15, 21:00 PDT</span>
+
+**Notice**: The Wynton HPC environment is down due to a non-planned power outage at the Diller data center.  Jobs running on compute nodes located in that data center, were terminated.  Jobs running elsewhere may also have been affected because `/wynton/home` went down as well (despite it being mirrored).
+<br><span class="timestamp">August 15, 15:45 PDT</span>
+
+
 ### July 30, 2019
 
 #### <span style="color: orange;">Power outage</span>

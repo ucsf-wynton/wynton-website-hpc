@@ -9,7 +9,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
 
-* Deprecation: The NetApp storage (which includes `/netapp`, `/scrapp` and `/scrapp2`) is being deprecated in favor of new BeeGFS storage (which includes `/wynton/home` and `/wynton/scratch`).
+* Deprecation: The NetApp storage (including `/netapp/home`) is being deprecated in favor of new BeeGFS storage (including `/wynton/home`).
 
 * GPU compute: Add an additional 12 communal GPUs
 
@@ -43,6 +43,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 
 ## Accomplished milestones
+
+* Deprecation: The NetApp scratch storage `/scrapp` and `/scrapp2` has been removed in favor of the BeeGFS-based scratch storage `/wynton/scratch`.
 
 * Pricing model: Description on how to purchase (amount in USD) additional storage space (beyond what is available for free)
 
