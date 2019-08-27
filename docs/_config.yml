@@ -4,9 +4,9 @@ theme: jekyll-theme-minimal
 google_analytics: UA-128646955-1
 
 cluster:
-  name: "Wynton"
-  version: "1.0"
-  
+  name: "SCS"
+  version: "0.1"
+
 login:
   name: "wynlog2"
   hostname: "log2.wynton.ucsf.edu"
@@ -59,11 +59,11 @@ specs:
   gpus: 60
   communal_gpus: 12
   communal_gpu_nodes: 4
-  
+
   ## RAM [GiB]:
   ram_min: 48
   ram_max: 768
-  
+
   ## Disk /swap [GiB]:
   swap_min: 4
   swap_max: 4
@@ -75,13 +75,13 @@ specs:
   ## Local /scratch [TiB]:
   local_scratch_size_min: 0.1
   local_scratch_size_max: 1.8
-  
+
   ## Global /wynton/scratch [TiB]:
   global_scratch_size_total: 492
-  
+
   ## NetApp home [TiB]:
   netapp_home_size_total: 20
-  
+
   ## User home [TiB]:
   home_size_total: 383
 
@@ -103,7 +103,7 @@ specs:
   global_scratch_size: "492 TiB"
   netapp_home_size: "20 TiB"
   home_size: "383 TiB"
-  
+
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
 
