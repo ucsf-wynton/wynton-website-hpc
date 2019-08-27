@@ -11,9 +11,9 @@ Here is how to use `/scratch`:
 
 * **Write intermediate files to folder `$TMPDIR`**.  Bonus: most software already acknowledges `TMPDIR` for their internal temporary files.
 
-* When done, copy files to be kept to your persistent storage, e.g. under `$HOME`.
+* When done, make sure to copy TMPDIR files to be kept to your persistent storage, e.g. to `$HOME`.
 
-* The job-specific TMPDIR folder will be deleted automatically when the job terminates.
+* The **job-specific TMPDIR folder will be deleted automatically when the job terminates**.
 
 * **Specify how much local scratch (TMPDIR) storage your job will need**.  Local storage is limited to [{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node]({{ '/about/specs.html' | relative_url }}).  If your job will use up to 200 GiB of disk space, you can specify this resource as `-l scratch=200G` (in units of GiB) when submitting the job.  A node with 800 GiB of scratch space can support up to four `-l scratch=200G` jobs running at the same time.
 
@@ -24,7 +24,7 @@ Here is a script called `ex-scratch.sh` that illustrates how to copy input files
 
 ```sh
 #!/bin/env bash
-#PBS -j oe
+#$ -cwd  ## use current working directory
 
 ## 1. Use TMPDIR as the temporary working directory
 cd $TMPDIR
