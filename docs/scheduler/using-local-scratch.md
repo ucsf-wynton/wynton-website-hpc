@@ -24,7 +24,7 @@ Here is a script called `ex-scratch.sh` that illustrates how to copy input files
 
 ```sh
 #!/bin/env bash
-#PBS -j oe
+#$ -cwd  ## use current working directory
 
 ## 1. Use TMPDIR as the temporary working directory
 cd $TMPDIR
