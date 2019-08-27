@@ -1,6 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>: (<em>For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page</em>)<br/>
-2019-08-27 Forked version of [Wynton](https://wynton.ucsf.edu/) documentation is live in _beta_.<br/>
+2019-08-27 Forked version of <a href="https://wynton.ucsf.edu/">Wynton</a> documentation is live in <i>beta</i>.<br/>
 <a href="{{ '/about/news.html' | relative_url }}">More ...</a>
 </div>
 
