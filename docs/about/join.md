@@ -12,7 +12,6 @@ The end goal is that the all UCSF researchers should have access to the cluster 
 
 The {{ site.cluster.name }} HPC environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
 
-
 ## Request access
 
 To request access and get an account on the cluster, please [contact us] with the following information:
@@ -26,5 +25,9 @@ To request access and get an account on the cluster, please [contact us] with th
 7. Preferred username and one alternate
 8. Previous HPC cluster experience? (this will help us help you)
 9. (QB3, Sali Lab, MSG users only) Current UID & GID (two integers as reported by `id`), if any
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
+</div>
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
