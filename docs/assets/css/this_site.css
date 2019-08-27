@@ -11,7 +11,7 @@ body {
 
 .navbar-default {
   background-color: #ffdd00;
-  border-color: #dec000;
+  border-color: #228DC9;
   color: #555;
 }
 
@@ -34,18 +34,18 @@ body {
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover {
   color: #000;
 }
-  
+
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555555;
-  background-color: #dec000;
+  background-color: #228DC9;
 }
 
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #dec000;
+  background-color: #228DC9;
 }
 
 .navbar-default .navbar-form {
-  border-color: #dec000;
+  border-color: #228DC9;
 }
 
 a {
@@ -101,7 +101,7 @@ table {
 }
 tr {
     vertical-align: top;
-}    
+}
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -165,7 +165,7 @@ code {
 /*--------------------------------------------------------------*
  * Custom print layout
  *--------------------------------------------------------------*/
-@media print { 
+@media print {
   a, a:after { content: normal !important; }
 
   #sublogocontainer {

@@ -10,21 +10,21 @@
 <div class="collapse in multi-collapse" id="system-metrics">
   <h2>System Metrics</h2>
   
-  <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
+  <div class="status-panel" style="border: 1px solid #228DC9; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
     <span>Available Nodes</span><span style="float: right;">85 nodes (98.8%)</span>
    </div>
    <div id="ActiveNodes"></div>
   </div>
   
-  <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
+  <div class="status-panel" style="border: 1px solid #228DC9; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
     <span>Core Usage</span><span style="float: right;">1385 cores (76.2%)</span>
    </div>
    <div id="CoreUsage"></div>
   </div>
   
-  <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
+  <div class="status-panel" style="border: 1px solid #228DC9; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
     <span>Memory Usage</span><span style="float: right;">8.6 TiB (40.0%)</span>
    </div>
@@ -36,14 +36,14 @@
 <div class="collapse in multi-collapse" id="job-metrics">
   <h2>Job Metrics</h2>
 
-  <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex;">
+  <div class="status-panel" style="border: 1px solid #228DC9; padding: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
     <span>Active Jobs</span><span style="float: right;">356 jobs</span>
    </div>
    <div id="ActiveJobs"></div>
   </div>
   
-  <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex;">
+  <div class="status-panel" style="border: 1px solid #228DC9; padding: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
     <span>Backlog</span><span style="float: right;">45 jobs</span>
    </div>
