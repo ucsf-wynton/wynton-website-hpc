@@ -18,7 +18,7 @@ Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are a
 Alternatively, you can change your password using the [RBVI Kerberos Web Interface].
 
 <div class="alert alert-warning" role="alert">
-Please note that it takes up to 10 minutes before your new password has propagated to all machines on the cluster.
+<strong>Please wait 5-10 minutes before attempting to login with your new password.</strong>  This is because it takes up to 10 minutes before your new password has propagated to all machines on the cluster.
 </div>
 
 
