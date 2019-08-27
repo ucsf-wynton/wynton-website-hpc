@@ -16,15 +16,15 @@ body {
 }
 
 .navbar-default .navbar-brand {
-  color: #555;
+  color: #FFFFFF;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #555;
+  color: #FFFFFF;
 }
 
 .navbar-default .navbar-nav > li > a:focus {
-  color: #000;
+  color: #FFFFFF;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -32,11 +32,11 @@ body {
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover {
-  color: #000;
+  color: #FFFFFF;
 }
 
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
+  color: #FFFFFF;
   background-color: #228DC9;
 }
 
