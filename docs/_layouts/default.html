@@ -34,7 +34,7 @@
         </ul>
       </div>
     </div>
-  </div> 
+  </div>
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,7 +46,7 @@
       <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} HPC {{ site.cluster.version }}</a>
       <div class="navbar-brand"><a class="broadcast" href="{{ '/status/index.html' | relative_url }}"><span class="glyphicon glyphicon-flag"></span></a></div>
     </div>
-    
+
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 
@@ -66,11 +66,11 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{{ '/software/core-software.html' | relative_url }}">CentOS Core Software</a></li>
-            <li><a href="{{ '/software/scl.html' | relative_url }}">CentOS Software Collections (SCL)</a></li>
+            <li><a href="{{ '/software/singularity.html' | relative_url }}">Singularity - Linux Containers</a></li>
+            <!-- <li><a href="{{ '/software/scl.html' | relative_url }}">CentOS Software Collections (SCL)</a></li>
             <li><a href="{{ '/software/software-modules.html' | relative_url }}">Software Modules</a></li>
             <li><a href="{{ '/software/software-repositories.html' | relative_url }}">Software Repositories</a></li>
-            <li><a href="{{ '/software/singularity.html' | relative_url }}">Singularity - Linux Containers</a></li>
-            <li><a href="{{ '/software/sbgrid.html' | relative_url }}">SBGrid Software (restricted access)</a></li>
+            <li><a href="{{ '/software/sbgrid.html' | relative_url }}">SBGrid Software (restricted access)</a></li> -->
             <li><a href="{{ '/software/missing-software.html' | relative_url }}">Missing Software?</a></li>
           </ul>
         </li>
@@ -116,6 +116,8 @@
             <li><a href="{{ '/howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a></li>
 <!--            <li><a href="{{ '/howto/compress-files-(as-a-job).html' | relative_url }}">Compress Files (via Job Queue)</a></li> -->
             <li><a href="{{ '/howto/change-pwd.html' | relative_url }}">Change Password</a></li>
+            <li><a href="{{ '/howto/containers.html' | relative_url }}">Containers</a></li>
+
           </ul>
         </li>
 
@@ -188,7 +190,7 @@
       </footer>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-    
+
 <!--    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script><!-- 38.8 kB -->
 
