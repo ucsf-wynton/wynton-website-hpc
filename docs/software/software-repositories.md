@@ -219,7 +219,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     <strong>R: The R Programming Language</strong><br>
 The R programming language. Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, <em>3.6.1</em><br>
+  Versions: <em>3.6.1</em>, 2.12.2, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
   </dd>
 
   <dt>samtools</dt>
@@ -600,7 +600,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>python/protobuf</dt>
   <dd>
-  Versions: <em>2.3.0</em><br>
+  Versions: 2.3.0, <em>2.5.0</em><br>
   </dd>
 
   <dt>python/pymc</dt>
@@ -640,7 +640,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>python/tables</dt>
   <dd>
-  Versions: 3.3.0, <em>3.4.2</em><br>
+  Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
   <dt>relion</dt>
@@ -705,7 +705,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-08-15 03:12:49 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-09-05 22:37:26 from querying `module avail` and `module spider`._
 
 
 <style>
