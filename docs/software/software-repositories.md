@@ -134,6 +134,14 @@ Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' 
   Versions: 2.1.0, <em>3.0.2</em><br>
   </dd>
 
+  <dt>cufflinks</dt>
+  <dd>
+    <strong>Cufflinks: Transcriptome Assembly and Differential Expression Analysis for RNA-Seq</strong><br>
+Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one, taking into account biases in library preparation protocols. Example: <code>cufflinks</code>.<br>
+    URL: <a href="http://cole-trapnell-lab.github.io/cufflinks/">http://cole-trapnell-lab.github.io/cufflinks/</a>, <a href="https://github.com/cole-trapnell-lab/cufflinks">https://github.com/cole-trapnell-lab/cufflinks</a><br>
+  Versions: <em>2.2.1</em><br>
+  </dd>
+
   <dt>emacs</dt>
   <dd>
     <strong>GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor</strong><br>
@@ -148,6 +156,14 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
   Versions: 4.1.0.0, 4.1.2.0, <em>4.1.3.0</em><br>
+  </dd>
+
+  <dt>gcta</dt>
+  <dd>
+    <strong>GCTA: Genome-wide Complex Trait Analysis</strong><br>
+A tool for Genome-wide Complex Trait Analysis (GCTA). Example: <code>gcta64</code>.<br>
+    URL: <a href="http://cnsgenomics.com/software/gcta/">http://cnsgenomics.com/software/gcta/</a><br>
+  Versions: 1.26.0, <em>1.92.3beta3</em><br>
   </dd>
 
   <dt>git-flow</dt>
@@ -712,7 +728,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-09-07 18:26:12 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-09-07 19:07:44 from querying `module avail` and `module spider`._
 
 
 <style>
