@@ -59,7 +59,7 @@ bamUtil is a repository that contains several programs that perform operations o
     <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
 A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code><br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
-  Versions: <em>0.11.0</em><br>
+  Versions: 0.11.0, <em>0.12.1</em><br>
   </dd>
 
   <dt>bcftools</dt>
@@ -139,7 +139,7 @@ Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' 
     <strong>GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor</strong><br>
 At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing. Example: <code>emacs --version</code> and <code>emacs -nw</code>.<br>
     URL: <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a><br>
-  Versions: 25.3, 26.1, <em>26.2</em><br>
+  Versions: 25.3, 26.1, 26.2, <em>26.3</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -147,7 +147,7 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
     <strong>Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
-  Versions: 4.1.0.0, <em>4.1.2.0</em><br>
+  Versions: 4.1.0.0, 4.1.2.0, <em>4.1.3.0</em><br>
   </dd>
 
   <dt>git-flow</dt>
@@ -222,6 +222,13 @@ The R programming language. Examples: <code>R --version</code> and <code>Rscript
   Versions: <em>3.6.1</em>, 2.12.2, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
   </dd>
 
+  <dt>r-siteconfig</dt>
+  <dd>
+    <strong>R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
+Sets R options and environment variables customized for the current compute environment. Examples: In R, <code>getOption(&quot;repos&quot;)</code>.<br>
+  Versions: <em>0.1</em><br>
+  </dd>
+
   <dt>samtools</dt>
   <dd>
     <strong>SAMtools: Tools (written in C using htslib) for Manipulating Next-Generation Sequencing Data</strong><br>
@@ -252,7 +259,7 @@ ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --versio
     <strong>STAR: Spliced Transcripts Alignment to a Reference</strong><br>
 STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data. Example: <code>STAR --help</code>.<br>
     URL: <a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a><br>
-  Versions: 2.7.0e, 2.7.0f, <em>2.7.1a</em><br>
+  Versions: 2.7.0e, 2.7.0f, 2.7.1a, <em>2.7.2b</em><br>
   </dd>
 
   <dt>tmux</dt>
@@ -705,7 +712,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-09-05 22:37:26 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-09-07 18:26:12 from querying `module avail` and `module spider`._
 
 
 <style>
