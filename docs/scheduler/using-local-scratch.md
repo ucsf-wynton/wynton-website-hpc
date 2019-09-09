@@ -5,7 +5,7 @@ All nodes (compute and development) have their own locally storage mounted as `/
 ## Instructions
 
 <div class="alert alert-warning" role="alert">
-2019-09-09: Currently <code>TMPDIR</code> is only set automatically for job scripts running on the compute nodes.  On development nodes, <code>TMPDIR</code> is <em>not</em> set.  This is likely to change, but in the meanwhile, you need to add <code>TMPDIR=${TMPDIR:-/scratch/$USER}</code> to your script (as shown below) such that it will fall back to <code>/scratch/$USER</code> if not set.
+2019-09-09: Currently <code>TMPDIR</code> is only set automatically for job scripts running on the compute nodes.  On development nodes, <code>TMPDIR</code> is <em>not</em> set.  This is likely to change, but in the meanwhile, you need to set <code>TMPDIR</code> in your script in those cases when it is not set. See below for an example.
 </div>
 
 Here is how to use `/scratch`:
