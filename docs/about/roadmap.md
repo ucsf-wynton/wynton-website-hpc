@@ -29,6 +29,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Support: A User Issue Tracker
 
+* Development: Add a second data transfer node for faster file transfers in to and out from Wynton
+
 
 ## On the horizon
 
