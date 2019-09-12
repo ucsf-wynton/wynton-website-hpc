@@ -29,8 +29,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Support: A User Issue Tracker
 
-* Development: Add a second data transfer node for faster file transfers in to and out from Wynton
-
 
 ## On the horizon
 
@@ -65,6 +63,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Development: A dedicated Graphics Processing Unit (GPU) development node for building GPU software
 
 * Software stacks: Support for sharing software installations between groups via environment modules (e.g. `module load CBI`)
+
+* Development: A second data transfer node for faster file transfers in to and out from Wynton
 
 
 See also [News].

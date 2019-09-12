@@ -41,9 +41,10 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 
 For transferring large data files, it is recommended to use the dedicate data transfer node:
 
-1. {{ site.transfer.name }}: `{{ site.transfer.hostname }}`
+1. {{ site.transfer1.name }}: `{{ site.transfer1.hostname }}`
+2. {{ site.transfer2.name }}: `{{ site.transfer2.hostname }}` - only accessible from within the UCSF network
 
-which has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer node can be accessed via SSH.
+which both has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer nodes can be accessed via SSH.
 
 _Comment_: You can also transfer data via the login nodes, but since those only have 1 Gbps connections, you will see much lower transfer rates.
 

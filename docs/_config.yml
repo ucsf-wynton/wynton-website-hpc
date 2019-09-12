@@ -15,6 +15,11 @@ devel:
   name: "qb3-dev3"
   hostname: "qb3-dev3"
   ip: "172.26.32.8"
+transfer:
+  name: "wyndt1"
+  hostname_deprecated: "wyndt1.compbio.ucsf.edu"
+  hostname: "dt1.wynton.ucsf.edu"
+  ip: "169.230.126.58"
 
 login1:
   name: "wynlog1"
@@ -42,15 +47,15 @@ gpudev1:
   name: "qb3-gpudev1"
   hostname: "qb3-gpudev1"
   ip: "172.26.32.3"
-transfer:
+transfer1:
   name: "wyndt1"
   hostname_deprecated: "wyndt1.compbio.ucsf.edu"
   hostname: "dt1.wynton.ucsf.edu"
   ip: "169.230.126.58"
-transfer_old:
-  name: "wynlog1"
-  hostname: "wynlog1.compbio.ucsf.edu"
-  ip: "169.230.126.77"
+transfer2:
+  name: "dt2"
+  hostname: "dt2.wynton.ucsf.edu"
+  ip: "172.26.1.17"
 
 specs:
   nodes: 331
