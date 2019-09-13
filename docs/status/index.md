@@ -62,7 +62,7 @@
 #### <span style="color: orange;">BeeGFS failure</span>
 
 **Resolved**: The Wynton HPC environment is up and running again. The reason for this downtime was the BeeGFS file server became nonresponsive.
-<br><span class="timestamp">August 15, 20:45 PDT</span>
+<br><span class="timestamp">August 23, 20:45 PDT</span>
 
 **Notice**: The Wynton HPC environment is nonresponsive.
 <br><span class="timestamp">August 23, 16:45 PDT</span>
