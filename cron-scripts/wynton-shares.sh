@@ -2,7 +2,11 @@
 
 TARGET=${TARGET:-$HOME/repositories/UCSF-HPC/wynton/docs/assets/data}
 
-module load CBI CBI-testing wynton-tools
+## wynton shares
+PATH="/wynton/home/cbi/shared/software/CBI-testing/wynton-tools/bin:$PATH"
+
+## wynton shares queries 'qconf'
+PATH="/opt/sge/bin/lx-amd64/:$PATH"
 
 tmpfile=$(mktemp)
 wynton shares tsv > "$tmpfile"
