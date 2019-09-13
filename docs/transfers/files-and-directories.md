@@ -10,7 +10,7 @@ For _non-mounted storage_, files may be transferred to and from the cluster via 
 For _file downloads_ from online resources, tools such as `curl`, `wget`, and `rsync` may be used.
 
 <div class="alert alert-warning" role="alert">
-<a href="{{ '/about/specs.html#compute-nodes' | relative_url }}">Compute nodes</a> have no internet access, i.e. they cannot be used for file transfers other than between mount points.  Although file transfers can also be done via the login nodes, it is recommended to use the <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">dedicated data transfer node</a>, which provides ten times faster transfers.
+<a href="{{ '/about/specs.html#compute-nodes' | relative_url }}">Compute nodes</a> have no internet access, i.e. they cannot be used for file transfers other than between mount points.  Although file transfers can also be done via the login nodes, it is recommended to use one of the <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">dedicated data transfer nodes</a>, which provides ten times faster transfer rates.
 </div>
 
 
