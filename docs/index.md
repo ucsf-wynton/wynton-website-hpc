@@ -1,5 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>: (<em>For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page</em>)<br/>
+2019-09-13: Added another three <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes with a total of 12 GPUs</a>.<br/>
 2019-09-12 Added a second <a href="{{ '/about/specs.html' | relative_url }}">data transfer node</a>.<br/>
 2019-08-15 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch have been removed - use `/wynton/scratch` instead.<br/>
 2019-07-27 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch are now deprecated - use `/wynton/scratch` instead.  The deprecated mounts will become read-only on 2019-08-01 and removed on 2019-08-09.<br/>

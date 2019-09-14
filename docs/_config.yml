@@ -62,8 +62,8 @@ specs:
   physical_cores: 7228
   gpu_nodes: 31
   gpus: 60
-  communal_gpus: 12
-  communal_gpu_nodes: 4
+  communal_gpus: 24
+  communal_gpu_nodes: 7
   
   ## RAM [GiB]:
   ram_min: 48
