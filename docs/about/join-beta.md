@@ -49,7 +49,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  
  <div class="form-group">  
   <label>QB3/CGL Kerberos username</label> <span style="color: red">*</span><br>
-  <input type="text" id="kerberos_username" name="kerberos_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none)" placeholder="Username or 'none'" minlength="4" size="15"><br>
+  <input type="text" id="kerberos_username" name="kerberos_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none|forgot)" placeholder="Username, 'none', or 'forgot'" minlength="4" size="20" required><br>
  </div>
  
  <div class="form-group">  
@@ -76,8 +76,8 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  
  <div class="form-group">  
   <label>Have you ever had an account with UCSF QB3, Sali Lab, or MSG?</label> If yes,<br>
-  <label>UID</label> <input type="text" name="uid" pattern="\d*" placeholder="e.g. 21024" maxlength="5" size="7"> <small>(first integer reported by <code>id</code>)</small><br>
-  <label>GID</label> <input type="text" name="gid" pattern="\d*" placeholder="e.g. 1543" maxlength="5" size="7"> <small>(second integer reported by <code>id</code>)</small><br>
+  <label>UID</label> <input type="text" name="uid" pattern="(\d*|forgot)" placeholder="e.g. 21024 or 'forgot'" maxlength="5" size="12"> <small>(first integer reported by <code>id</code> on those systems)</small><br>
+  <label>GID</label> <input type="text" name="gid" pattern="(\d*|forgot)" placeholder="e.g. 1543 or 'forgot'" maxlength="5" size="12"> <small>(second integer reported by <code>id</code> on those system)</small><br>
  </div>
  
   <br>
