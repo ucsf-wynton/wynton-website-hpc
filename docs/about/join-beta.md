@@ -24,22 +24,22 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 <form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
  <div class="form-group">
   <label for="first_name">First name</label> <span style="color: red">*</span><br>
-  <input type="text" id="first_name" name="first_name" placeholder="Enter first name" minlength="2" required><br>
+  <input type="text" id="first_name" name="first_name" autocomplete="given-name" placeholder="Enter first name" minlength="2" required><br>
  </div>
  
  <div class="form-group">
   <label for="last_name">Last name</label> <span style="color: red">*</span><br>
-  <input type="text" id="last_name" name="last_name" placeholder="Enter last name" minlength="2" required><br>
+  <input type="text" id="last_name" name="last_name" autocomplete="family-name" placeholder="Enter last name" minlength="2" required><br>
  </div>
  
  <div class="form-group">
   <label for="email_address">UCSF email address</label> <span style="color: red">*</span><br>
-  <input type="email" id="email_address" name="email_address" placeholder="Enter email" size="30" required><br>
+  <input type="email" id="email_address" name="email_address" autocomplete="email" placeholder="Enter email" size="30" required><br>
  </div>
  
  <div class="form-group"> 
   <label for="affiliation">UCSF affiliation</label> <span style="color: red">*</span><br>
-  <input type="text" id="affiliation" name="affiliation" placeholder="e.g. faculty, student, postdoc, etc." size="30" minlength="2" required><br>
+  <input type="text" id="affiliation" name="affiliation" autocomplete="organization-title" placeholder="e.g. faculty, student, postdoc, etc." size="30" minlength="2" required><br>
  </div>
  
  <div class="form-group">  
