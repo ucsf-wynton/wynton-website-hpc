@@ -23,18 +23,18 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 
 <form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
  <div class="form-group">
-  <label for="first_name">First name</label> <span style="color: red">*</span><br>
-  <input type="text" id="first_name" name="first_name" autocomplete="given-name" placeholder="Enter first name" minlength="2" required><br>
+  <label for="given_name">First name</label> <span style="color: red">*</span><br>
+  <input type="text" id="given_name" name="given_name" autocomplete="given-name" placeholder="Enter first name" minlength="2" required><br>
  </div>
  
  <div class="form-group">
-  <label for="last_name">Last name</label> <span style="color: red">*</span><br>
-  <input type="text" id="last_name" name="last_name" autocomplete="family-name" placeholder="Enter last name" minlength="2" required><br>
+  <label for="family_name">Last name</label> <span style="color: red">*</span><br>
+  <input type="text" id="family_name" name="family_name" autocomplete="family-name" placeholder="Enter last name" minlength="2" required><br>
  </div>
  
  <div class="form-group">
   <label for="email_address">UCSF email address</label> <span style="color: red">*</span><br>
-  <input type="email" id="email_address" name="email_address" autocomplete="email" placeholder="Enter email" size="30" required><br>
+  <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter email" size="30" required><br>
  </div>
  
  <div class="form-group"> 
@@ -87,14 +87,14 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 
 <script>
 window.onload = function() {
-  if (sessionStorage.first_name) {
-    document.getElementById("first_name").value = sessionStorage.first_name;
+  if (sessionStorage.given_name) {
+    document.getElementById("given_name").value = sessionStorage.given_name;
   }
-  if (sessionStorage.last_name) {
-    document.getElementById("last_name").value = sessionStorage.last_name;
+  if (sessionStorage.family_name) {
+    document.getElementById("family_name").value = sessionStorage.family_name;
   }
-  if (sessionStorage.email_address) {
-    document.getElementById("email_address").value = sessionStorage.email_address;
+  if (sessionStorage.email) {
+    document.getElementById("email").value = sessionStorage.email;
   }
   if (sessionStorage.affiliation) {
     document.getElementById("affiliation").value = sessionStorage.affiliation;
@@ -127,9 +127,9 @@ window.onload = function() {
 
 function storedata() {
   if(typeof(Storage) !== "undefined") {
-    sessionStorage.first_name = document.getElementById("first_name").value;
-    sessionStorage.last_name = document.getElementById("last_name").value;
-    sessionStorage.email_address = document.getElementById("email_address").value;
+    sessionStorage.given_name = document.getElementById("given_name").value;
+    sessionStorage.family_name = document.getElementById("family_name").value;
+    sessionStorage.email = document.getElementById("email").value;
     sessionStorage.affiliation = document.getElementById("affiliation").value;
     sessionStorage.pi = document.getElementById("pi").value;
     sessionStorage.kerberos_username = document.getElementById("kerberos_username").value;
