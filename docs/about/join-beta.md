@@ -48,7 +48,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  </div>
  
  <div class="form-group">  
-  <label>QB3/CGL Kerberos username</label> <span style="color: red">*</span><br>
+  <label>Existing QB3/CGL Kerberos username?</label> <span style="color: red">*</span><br>
   <input type="text" id="kerberos_username" name="kerberos_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none|forgot)" placeholder="Username, 'none', or 'forgot'" minlength="4" size="20" required><br>
  </div>
  
@@ -59,12 +59,12 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  
  <div class="form-group">  
   <label for="username">Username</label> <span style="color: red">*</span><br>
-  <input type="text" id="username" name="username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none)" placeholder="Username or 'none'" minlength="2" size="15" required><br>
+  <input type="text" id="username" name="username" pattern="([A-Za-z]{1}[A-Za-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
  </div>
  
  <div class="form-group">
   <label for="alt_username">Alternative username</label> <span style="color: red">*</span><br>
-  <input type="text" id="alt_username" name="alt_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none)" placeholder="Username or 'none'" minlength="2" size="15" required><br>
+  <input type="text" id="alt_username" name="alt_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
  </div>
  
  <div class="form-group">  
