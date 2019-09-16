@@ -20,12 +20,13 @@ To request access and get an account on the cluster, please [contact us] with th
 2. UCSF email address
 3. UCSF affiliation (faculty, student, postdoc, etc.)
 4. UCSF Principal Investigator (PI), if any
-5. QB3/CGL Kerberos username, if any
+5. UCSF Department or Program
 6. UCSF Employee/Student ID (nine digits; 02xxxxxxx), if any. To find yours, go to <https://myaccess.ucsf.edu/myid>
 7. Preferred username and one alternate
 8. Previous HPC cluster experience? (this will help us help you)
-9. (QB3, Sali Lab, MSG users only) Current UID & GID (two integers as reported by `id`), if any
-
+9. QB3/CGL Kerberos username, if any
+10. (QB3, Sali Lab, MSG users only) Current UID & GID (two integers as reported by `id`), if an
+y
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
