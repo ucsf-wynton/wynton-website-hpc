@@ -46,12 +46,12 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
   <label for="pi">UCSF Principal Investigator (PI)</label> <span style="color: red">*</span><br>
   <input type="text" id="pi" name="pi" size="30" placeholder="Name of your PI, or 'self'" minlength="2" required><br>
  </div>
- 
+
  <div class="form-group">  
-  <label>Existing QB3/CGL Kerberos username?</label> <span style="color: red">*</span><br>
-  <input type="text" id="kerberos_username" name="kerberos_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none|forgot)" placeholder="Username, 'none', or 'forgot'" minlength="4" size="20" required><br>
+  <label for="ucsf_id">UCSF Department or Program</label> <span style="color: red">*</span><br>
+  <input type="text" id="ucsf_id" name="ucsf_dept_program" placeholder="e.g. 'Radiology' or 'BMI'" maxlength="30" size="30" required><br>
  </div>
- 
+
  <div class="form-group">  
   <label for="ucsf_id">UCSF Employee/Student ID</label> <span style="color: red">*</span><br>
   <input type="text" id="ucsf_id" name="ucsf_id" placeholder="02xxxxxxx or 'none'" pattern="(\d{9}|none)" maxlength="9" size="15" required> <small>(nine digits; to find yours, go to <a href="https://myaccess.ucsf.edu/myid">https://myaccess.ucsf.edu/myid</a>)</small><br>
@@ -72,6 +72,11 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
   <input type="text" id="hpc_experience" name="hpc_experience" placeholder="e.g. Slurm, PBS, 'yes', 'no'" minlength="2" size="30">
   <small>(this will help us help you)</small>
   <br>
+ </div>
+ 
+ <div class="form-group">  
+  <label>Existing QB3/CGL Kerberos username?</label> <span style="color: red">*</span><br>
+  <input type="text" id="kerberos_username" name="kerberos_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none|forgot)" placeholder="Username, 'none', or 'forgot'" minlength="4" size="20" required><br>
  </div>
  
  <div class="form-group">  
@@ -102,9 +107,6 @@ window.onload = function() {
   if (sessionStorage.pi) {
     document.getElementById("pi").value = sessionStorage.pi;
   }
-  if (sessionStorage.kerberos_username) {
-    document.getElementById("kerberos_username").value = sessionStorage.kerberos_username;
-  }
   if (sessionStorage.ucsf_id) {
     document.getElementById("ucsf_id").value = sessionStorage.ucsf_id;
   }
@@ -116,6 +118,9 @@ window.onload = function() {
   }
   if (sessionStorage.hpc_experience) {
     document.getElementById("hpc_experience").value = sessionStorage.hpc_experience;
+  }
+  if (sessionStorage.kerberos_username) {
+    document.getElementById("kerberos_username").value = sessionStorage.kerberos_username;
   }
   if (sessionStorage.uid) {
     document.getElementById("uid").value = sessionStorage.uid;
@@ -132,11 +137,11 @@ function storedata() {
     sessionStorage.email = document.getElementById("email").value;
     sessionStorage.affiliation = document.getElementById("affiliation").value;
     sessionStorage.pi = document.getElementById("pi").value;
-    sessionStorage.kerberos_username = document.getElementById("kerberos_username").value;
     sessionStorage.ucsf_id = document.getElementById("ucsf_id").value;
     sessionStorage.username = document.getElementById("username").value;
     sessionStorage.alt_username = document.getElementById("alt_username").value;
     sessionStorage.hpc_experience = document.getElementById("hpc_experience").value;
+    sessionStorage.kerberos_username = document.getElementById("kerberos_username").value;
     sessionStorage.uid = document.getElementById("uid").value;
     sessionStorage.gid = document.getElementById("gid").value;
   }
