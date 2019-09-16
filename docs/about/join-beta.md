@@ -49,7 +49,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 
  <div class="form-group">  
   <label for="ucsf_id">UCSF Department or Program</label> <span style="color: red">*</span><br>
-  <input type="text" id="ucsf_id" name="ucsf_dept_program" placeholder="e.g. 'Radiology' or 'BMI'" maxlength="30" size="30" required><br>
+  <input type="text" id="dept_program" name="dept_program" placeholder="e.g. 'Radiology' or 'BMI'" maxlength="30" size="30" required><br>
  </div>
 
  <div class="form-group">  
@@ -84,7 +84,12 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
   <label>UID</label> <input type="text" name="uid" pattern="(\d*|forgot)" placeholder="e.g. 21024 or 'forgot'" maxlength="5" size="12"> <small>(first integer reported by <code>id</code> on those systems)</small><br>
   <label>GID</label> <input type="text" name="gid" pattern="(\d*|forgot)" placeholder="e.g. 1543 or 'forgot'" maxlength="5" size="12"> <small>(second integer reported by <code>id</code> on those system)</small><br>
  </div>
- 
+
+ <div class="form-group">  
+  <label>Additional comments</label><br>
+  <textarea type="text" id="comments" name="comment" maxlength="512" rows="4" cols="50"></textarea><br>
+ </div>
+
   <br>
   <button type="submit" onclick="storedata()" class="btn btn-primary">Request Account</button>
 </form>
@@ -110,6 +115,9 @@ window.onload = function() {
   if (sessionStorage.ucsf_id) {
     document.getElementById("ucsf_id").value = sessionStorage.ucsf_id;
   }
+  if (sessionStorage.dept_program) {
+    document.getElementById("dept_program").value = sessionStorage.dept_program;
+  }
   if (sessionStorage.username) {
     document.getElementById("username").value = sessionStorage.username;
   }
@@ -128,6 +136,9 @@ window.onload = function() {
   if (sessionStorage.gid) {
     document.getElementById("gid").value = sessionStorage.gid;
   }
+  if (sessionStorage.comment) {
+    document.getElementById("comment").value = sessionStorage.gid;
+  }
 };
 
 function storedata() {
@@ -137,6 +148,7 @@ function storedata() {
     sessionStorage.email = document.getElementById("email").value;
     sessionStorage.affiliation = document.getElementById("affiliation").value;
     sessionStorage.pi = document.getElementById("pi").value;
+    sessionStorage.dept_program = document.getElementById("dept_program").value;
     sessionStorage.ucsf_id = document.getElementById("ucsf_id").value;
     sessionStorage.username = document.getElementById("username").value;
     sessionStorage.alt_username = document.getElementById("alt_username").value;
@@ -144,6 +156,7 @@ function storedata() {
     sessionStorage.kerberos_username = document.getElementById("kerberos_username").value;
     sessionStorage.uid = document.getElementById("uid").value;
     sessionStorage.gid = document.getElementById("gid").value;
+    sessionStorage.comment = document.getElementById("comment").value;
   }
 }
 </script>
