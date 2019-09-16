@@ -5,7 +5,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## In progress
 
-* Expansion: Migrate QB3 users and QB3 compute nodes (~4,000 physical cores) over to Wynton HPC
+* Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to Wynton HPC (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
 
