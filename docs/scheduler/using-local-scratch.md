@@ -5,12 +5,12 @@ All nodes (compute and development) have their own locally storage mounted as `/
 ## Instructions
 
 <div class="alert alert-warning" role="alert">
-2019-09-09: Currently <code>TMPDIR</code> is only set automatically for job scripts running on the compute nodes.  On development nodes, <code>TMPDIR</code> is <em>not</em> set.  This is likely to change, but in the meanwhile, you need to set <code>TMPDIR</code> in your script in those cases when it is not set. See below for an example.
+2019-09-09: Currently <code>TMPDIR</code> is only set automatically for job scripts running on the compute nodes.  On development nodes, <code>TMPDIR</code> is <em>not</em> set - <strike>This is likely to change, but in the meanwhile,</strike> you need to set <code>TMPDIR</code> in your script in those cases when it is not set. See below for an example.
 </div>
 
 Here is how to use `/scratch`:
 
-* **Use environment variable TMPDIR** - it points to an already created job-specific folder under local `/scratch`.
+* **Use environment variable TMPDIR** - on compute nodes, it points to an already created job-specific folder under local `/scratch`.  On other machines, you need to set it.
 
 * **Write intermediate files to folder `$TMPDIR`**.  Bonus: most software already acknowledges `TMPDIR` for their internal temporary files.
 
@@ -30,14 +30,15 @@ Here is a script called `ex-scratch.sh` that illustrates how to copy input files
 #$ -cwd             ## use current working directory
 #$ -l scratch=200G  ## needs 200 GB of /scratch space
 
-## 0. In case TMPDIR is not set, e.g. on development nodes
+## 0. In case TMPDIR is not set, e.g. on development nodes, set
+##    it to local /scratch, if it exists, otherwise to /tmp
 if [[ -z "$TMPDIR" ]]; then
-  TMPDIR=/scratch/$USER
+  if [[ -d /scratch ]]; then TMPDIR=/scratch/$USER; else TMPDIR=/tmp/$USER; fi
   mkdir -p "$TMPDIR"
   export TMPDIR
 fi
 
-## 1. Use TMPDIR as the temporary working directory
+## 1. Use a temporary working directory
 cd "$TMPDIR"
 
 ## 2. Copy input files from global disk to local scratch
