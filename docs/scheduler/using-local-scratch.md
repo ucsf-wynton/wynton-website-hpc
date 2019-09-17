@@ -52,7 +52,7 @@ cp ~/reference.fa .
 mv output.bam ~
 
 ## 5. End-of-job summary
-qstat -j "$JOB_ID"
+[[ -n "$JOB_ID" ]] && qstat -j "$JOB_ID"
 ```
 
 Assume that the total amount of local scratch you need for your input files and your output files and whatever intermediate files `my_pipeline` needs is 100 GiB, and assume that the process requires up to 8 GiB of RAM (=4 GiB per core) to complete.  Moreover, let's say you wish to run in parallel using two cores.  Then you should submit this job script as:
