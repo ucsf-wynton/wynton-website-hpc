@@ -23,7 +23,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Scheduler: Support interactive jobs (`qlogin`)
 
-* Scheduler: Support for email notification upon job completion (e.g. `qsub -M alice@ucsf.edu`)
+* Scheduler: Support for email notification upon job completion (e.g. `qsub -M alice.aliceson@ucsf.edu`)
 
 * Support: A User Issue Tracker
 
