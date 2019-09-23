@@ -41,7 +41,7 @@ alice1@{{ site.devel.name }}:s password: XXXXXXXXXXXXXXXXXXX
 Now, we have an X11 forward setup that runs all the way back to our local computer.  This will allow us to open, for instance, an XTerm window that runs on {{ site.devel.name }} but can be interacted with on the local computer;
 
 ```sh
-[hb-test@qb3-dev3 ~]$ xterm
+[alice@{{ site.devel.name }} ~]$ xterm
 [ ... an XTerm window is opened up ... ]
 ```
 
