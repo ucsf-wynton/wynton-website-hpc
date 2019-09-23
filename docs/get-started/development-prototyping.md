@@ -31,6 +31,7 @@ From one of the login nodes, do:
 
 ```sh
 [alice@{{ site.login.name }} ~]$ ssh {{ site.devel.hostname }}
+alice1@{{ site.devel.name }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.devel.name }} ~]$ 
 ```
 

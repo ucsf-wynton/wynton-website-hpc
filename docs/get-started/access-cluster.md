@@ -27,7 +27,7 @@ When logging in from your local computer, you should see something like:
 
 ```sh
 {local}$ ssh alice@{{ site.login.hostname }}
-alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
+alice1@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ 
 ```
 
