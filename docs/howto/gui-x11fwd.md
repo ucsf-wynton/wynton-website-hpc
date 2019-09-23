@@ -7,7 +7,7 @@ The Wynton HPC environment supports running a graphical user interface (GUI) on 
 First, you will need to install the X2Go Client on your local computer.  For instructions on how to do this, see [Installing X2Go Client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient). When you first run x2goclient:
 
  1. Use the menus to create a **New Session ...**
- 2. Pick a **Session name**, like `Wynton HPC`
+ 2. Pick a **Session name**, e.g. `Wynton HPC`
  3. Set the **Host** to a [development node]. Currently one of: `qb3-dev1`, `qb3-dev2`, `qb3-dev3`, or `qb3-gpudev1`
  4. Set the **Login** to _your_ Wynton HPC username, e.g. `alice`
  5. Check **Use Proxy server for SSH connection**
