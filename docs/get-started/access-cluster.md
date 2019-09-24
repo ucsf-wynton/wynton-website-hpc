@@ -28,8 +28,8 @@ When logging in from your local computer, you should see something like:
 
 ```sh
 {local}$ ssh alice@{{ site.login.hostname }}
-alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
-[alice@{{ site.login.name }} ~]$ 
+alice@{{ site.login.hostname }}\'s password: XXXXXXXXXXXXXXXXXXX
+{{ site.login.name }}.501> 
 ```
 
 
@@ -52,7 +52,7 @@ Like for all Unix-based system, to log out from {{ site.cluster.name }}, type `e
 ```sh
 [alice@{{ site.login.name }} ~]$ exit
 Connection to {{ site.login.hostname }} closed.
-{local}$ 
+{local}$
 ```
 
 An alternative is to press Ctrl-D (sends "End-Of-File" [EOF]) at the command-line prompt.
