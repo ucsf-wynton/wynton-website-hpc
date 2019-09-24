@@ -1,6 +1,6 @@
-<div class="alert alert-info" role="alert">
+<!-- <div class="alert alert-info" role="alert">
 2019-04-12: There are {{ site.specs.communal_gpu_nodes }} GPU nodes with a total of {{ site.specs.communal_gpus }} GPUs and one GPU development node that are available to all users.  Users in groups who contributed GPU hardware will have exclusive access to an additional set of GPUs.
-</div>
+</div> -->
 
 
 # GPU Scheduling
