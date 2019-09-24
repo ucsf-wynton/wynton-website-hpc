@@ -1,141 +1,130 @@
 # Work with Python
 
-<div class="alert alert-info" role="alert">
-The default is Python 2.  To get access to Python 3, see <a href="{{ '/software/scl.html' | relative_url }}">CentOS Software Collections (SCL)</a>.  The below instructions apply to both Python 2 and Python 3.
-</div>
-
 ## Installing Python packages
 
 The standard way to install Python packages is by using the [_pip_](https://packaging.python.org/tutorials/installing-packages/) package management system.  You often see installation instructions such as:
 ```sh
-$ pip install HTSeq
+$ pip install keras
 ```
 
 If you attempt to run this as is on the cluster, you get lots of errors complaining about lack of write permissions etc., which is because it tries to install the package in the system-wide Python package folder.
 
-There are **two ways for non-privileged users to install Python packages using `pip install`**:
-
-1. Install globally to your home directory (typically `~/.local/lib/python2.7/site-packages/`) using `pip install --user ...`
-2. Install locally to a project-specific folder (e.g. `~/projects/htseq_2018/`) using `pip install ...` in a self-contained Python virtual environment
-
-Both are done from the terminal.  Which one you choose depends on your needs; for some projects you may want to use the virtual environment approach whereas for your everyday work you might want to work toward your global Python package stack.
-Installing globally is the easiest, because you don't have to remember to _activate_ a virtual environment and if you need the Python package in different places, you only have to install it once.  However, if you are concerned with reproducibility, or being able to coming back to an old project of yours, you most likely want to use a virtual environment for that project so that its Python packages are _not_ updated when you update or install Python packages globally.
+We recommend users using a virtual environment to install packages locally in their own directories.
 
 
-### 1. Installing globally (aka "user-site")
-
-To install a Python package globally under your home directory, just remember to add `--user` to `pip install`.  For example,
-```sh
-[alice@{{ site.devel.name }} ~]$ pip install --user HTSeq
-Collecting HTSeq
-  Downloading https://files.pythonhosted.org/packages/5f/e5/5248ec7d3253b3701d663c7a1b10c7d75c7d24193a5ce95f2a86337adaf8/HTSeq-0.11.0-cp27-cp27m-manylinux1_x86_64.whl (1.0MB)
-    100% |████████████████████████████████| 1.0MB 3.4MB/s 
-Collecting pysam>=0.9.0 (from HTSeq)
-  Downloading https://files.pythonhosted.org/packages/b4/d8/9afa92bd4b48ebd6896d22bb7cdaeb5aa4577983333df5e99160c62fb6ff/pysam-0.15.1-cp27-cp27m-manylinux1_x86_64.whl (9.0MB)
-    100% |████████████████████████████████| 9.0MB 258kB/s 
-Collecting numpy (from HTSeq)
-  Downloading https://files.pythonhosted.org/packages/c8/c6/e8e430828247adf0fc34e5499cfe17c66022c8afb778542808d009eb1457/numpy-1.15.2-cp27-cp27m-manylinux1_x86_64.whl (13.8MB)
-    100% |████████████████████████████████| 13.8MB 663kB/s 
-Installing collected packages: pysam, numpy, HTSeq
-Successfully installed HTSeq-0.11.0 numpy-1.15.2 pysam-0.15.1
-
-[alice@{{ site.devel.name }} ~]$
-```
-
-To see all Python packages that you have installed globally, use `pip list --user`.  To also see packages installed site wide on the cluster, use `pip list`.  Packages installed with `pip install --user` are typically installed to your `~/.local` folder.
-
-
-### 2. Installing to a virtual environment (aka "virtualenv")
+### Installing to a virtual environment:
 
 A Python _virtual environment_ is basically a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ a virtual environment, environment variables like `PATH` is updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
 
-Here is an example on how to install the [HTSeq](https://htseq.readthedocs.io/en/master/install.html#installation-on-linux) package in a Python _virtual environment_.
-
+Here is an example on how to install [scikit-learn](https://scikit-learn.org/) in a Python _virtual environment_.
 
 <div class="alert alert-info" role="alert">
-Virtual environment are not used just for cluster environments - many Python users and developers choose to use virtual environment on their local computers whenever they work in Python.
+The example below uses Anaconda3-5. For other Anaconda versions, check out the `/netopt/rhel7/versions/python/` directory.
 </div>
-
 
 #### Setup (once per account)
 
-In order to use virtual environments, we need the `virtualenv` tool.  Following the above instructions, you can install it to your _global stack_ as:
+In order to use virtual environments, we use `conda` which is already installed in `/netopt/rhel7/versions/python/`.
+
+In order to use it, we need to first export its location to `$PATH`:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ pip install --user virtualenv
-Collecting virtualenv
-  Downloading https://files.pythonhosted.org/packages/7c/17/9b7b6cddfd255388b58c61e25b091047f6814183e1d63741c8df8dcd65a2/virtualenv-16.1.0-py
-2.py3-none-any.whl (1.9MB)
-    100% |████████████████████████████████| 1.9MB 206kB/s
-Installing collected packages: virtualenv
-Successfully installed virtualenv-16.1.0
-[alice@{{ site.devel.name }} ~]$ which virtualenv
-~/.local/bin/virtualenv
-[alice@{{ site.devel.name }} ~]$ virtualenv --version
-16.1.0
+[alice@{{ site.devel.name }} ~]$ /bin/bash
+[alice@{{ site.devel.name }} ~]$ export PATH='/netopt/rhel7/versions/python/Anaconda3-5.2.0/bin:$PATH'
 ```
 
+<div class="alert alert-info" role="alert">
+If you don't want to do this every time, add the 2 commands above to your `~/.bash_profile`.
+</div>
 
-#### Setup (once per project)
+#### Create virtual environment
 
-Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  Do the following once:
 ```sh
-[alice@{{ site.devel.name }} ~]$ virtualenv -p $(which python) my_project
-New python executable in my_project/bin/python2.7
-Also creating executable in my_project/bin/python
-Installing setuptools, pip, wheel...done.
-[alice@{{ site.devel.name }} ~]$ cd my_project
-[alice@{{ site.devel.name }} my_project]$ . bin/activate   ## IMPORTANT! Note period in front
-(my_project) [alice@{{ site.devel.name }} my_project]$ which python
-~/my_project/bin/python
-(my_project) [alice@{{ site.devel.name }} my_project]$ 
+[alice@{{ site.devel.name }} ~]$ conda create --name sklearn_env python=3.7
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    certifi-2019.9.11          |           py37_0         154 KB
+    setuptools-41.2.0          |           py37_0         630 KB
+    wheel-0.33.6               |           py37_0          40 KB
+    pip-19.2.3                 |           py37_0         1.9 MB
+    ca-certificates-2019.8.28  |                0         132 KB
+    openssl-1.1.1d             |       h7b6447c_1         3.7 MB
+    python-3.7.4               |       h265db76_1        36.5 MB
+    ------------------------------------------------------------
+                                           Total:        43.0 MB
+
+The following NEW packages will be INSTALLED:
+
+    _libgcc_mutex:   0.1-main
+    ca-certificates: 2019.8.28-0
+    certifi:         2019.9.11-py37_0
+    libedit:         3.1.20181209-hc058e9b_0
+    libffi:          3.2.1-hd88cf55_4
+    libgcc-ng:       9.1.0-hdf63c60_0
+    libstdcxx-ng:    9.1.0-hdf63c60_0
+    ncurses:         6.1-he6710b0_1
+    openssl:         1.1.1d-h7b6447c_1
+    pip:             19.2.3-py37_0
+    python:          3.7.4-h265db76_1
+    readline:        7.0-h7b6447c_5
+    setuptools:      41.2.0-py37_0
+    sqlite:          3.29.0-h7b6447c_0
+    tk:              8.6.8-hbc83047_0
+    wheel:           0.33.6-py37_0
+    xz:              5.2.4-h14c3975_4
+    zlib:            1.2.11-h7b6447c_3
+
+Proceed ([y]/n)?
 ```
 
-_Comment_: The reason for the `-p $(which python)` option is to make sure that the current Python version is used, i.e. it will work with both Python 2 and Python 3.  If not specified, the virtual environment created will use the same version of Python that was used to install `virtualenv`.
+#### Install packages into environment
 
+Once the basic python packages have been installed, it's time to install `scikit-learn`:
 
-Note how `(my_project) ` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  To see what Python packages are currently installed, use:
 ```sh
-(my_project) [alice@{{ site.devel.name }} my_project]$ pip list
-Package    Version
----------- -------
-pip        18.1   
-setuptools 40.4.3 
-wheel      0.32.1
-(my_project) [alice@{{ site.devel.name }} my_project]$ 
+[alice@{{ site.login.name }} ~]$ conda activate sklearn_env
+(sklearn_env) {{ site.login.name }}> pip install sklearn
+Collecting sklearn
+  Downloading https://files.pythonhosted.org/packages/1e/7a/dbb3be0ce9bd5c8b7e3d87328e79063f8b263b2b1bfa4774cb1147bfcd3f/sklearn-0.0.tar.gz
+Collecting scikit-learn (from sklearn)
+  Downloading https://files.pythonhosted.org/packages/9f/c5/e5267eb84994e9a92a2c6a6ee768514f255d036f3c8378acfa694e9f2c99/scikit_learn-0.21.3-cp37-cp37m-manylinux1_x86_64.whl (6.7MB)
+     |████████████████████████████████| 6.7MB 156kB/s
+
 ```
 
-
-#### Installing packages (once per package)
-
-Now you can install Python packages using `pip`.  For instance,
-
+#### Test environment
 ```sh
-(my_project) [alice@{{ site.devel.name }} my_project]$ pip install HTSeq
-Collecting HTSeq
-  Downloading https://files.pythonhosted.org/packages/5f/e5/5248ec7d3253b3701d663c7a1b10c7d75c7d24193a5ce95f2a86337adaf8/HTSeq-0.11.0-cp27-cp27m-manylinux1_x86_64.whl (1.0MB)
-    100% |████████████████████████████████| 1.0MB 3.4MB/s 
-Collecting pysam>=0.9.0 (from HTSeq)
-  Downloading https://files.pythonhosted.org/packages/b4/d8/9afa92bd4b48ebd6896d22bb7cdaeb5aa4577983333df5e99160c62fb6ff/pysam-0.15.1-cp27-cp27m-manylinux1_x86_64.whl (9.0MB)
-    100% |████████████████████████████████| 9.0MB 258kB/s 
-Collecting numpy (from HTSeq)
-  Downloading https://files.pythonhosted.org/packages/c8/c6/e8e430828247adf0fc34e5499cfe17c66022c8afb778542808d009eb1457/numpy-1.15.2-cp27-cp27m-manylinux1_x86_64.whl (13.8MB)
-    100% |████████████████████████████████| 13.8MB 663kB/s 
-Installing collected packages: pysam, numpy, HTSeq
-Successfully installed HTSeq-0.11.0 numpy-1.15.2 pysam-0.15.1
+(sklearn_env) {{ site.login.name }}> python
+Python 3.7.4 (default, Aug 13 2019, 20:35:49)
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sklearn
+>>>
 ```
 
 To see which packages are installed in the virtual environment (the "project folder") and what their versions are, do:
 ```sh
-(my_project) [alice@{{ site.devel.name }} my_project]$ pip list
-Package        Version   
--------------- ----------
-HTSeq      0.11.0 
-numpy      1.15.2 
-pip        18.1   
-pysam      0.15.1 
-setuptools 40.4.3 
-wheel      0.32.1
+(sklearn_env) {{ site.login.name }}> pip list
+Package             Version
+------------------- ---------
+certifi             2019.9.11
+h5py                2.10.0
+joblib              0.13.2
+Keras               2.3.0
+Keras-Applications  1.0.8
+Keras-Preprocessing 1.1.0
+numpy               1.17.2
+pip                 19.2.3
+PyYAML              5.1.2
+scikit-learn        0.21.3
+scipy               1.3.1
+setuptools          41.2.0
+six                 1.12.0
+sklearn             0.0
+wheel               0.33.6
 ```
 
 
@@ -145,21 +134,22 @@ wheel      0.32.1
 Whenever you open a new terminal, make sure to _activate_ the virtual environment ("project folder"), otherwise it will not find the packages you've installed.  Pay attention to the shell prompt:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ cd my_project
-[alice@{{ site.devel.name }} my_project]$ pip show HTSeq   ## gives empty output
-[alice@{{ site.devel.name }} my_project]$ . bin/activate   ## ACTIVATE!
-(my_project) [alice@{{ site.devel.name }} my_project]$ pip show HTSeq
-Name: HTSeq
-Version: 0.11.0
-Summary: A framework to process and analyze data from high-throughput sequencing (HTS) assays
-Home-page: https://github.com/simon-anders/htseq
-Author: Simon Anders
-Author-email: sanders@fs.tum.de
-License: GPL3
-Location: ~/my_project/lib/python2.7/site-packages
-Requires: pysam, numpy
-Required-by: 
-[alice@{{ site.devel.name }} my_project]$ 
+alice@{{ site.login.name}}> /bin/bash
+alice@{{ site.login.name}}> export PATH='/netopt/rhel7/versions/python/Anaconda3-5.2.0/bin:/bin:$PATH'
+alice@{{ site.login.name}}> export PATH=/bin:$PATH
+alice@{{ site.login.name}}> source activate sklearn_env
+(sklearn_env) {{ site.login.name}}> pip show scikit-learn
+Name: scikit-learn
+Version: 0.21.3
+Summary: A set of python modules for machine learning and data mining
+Home-page: http://scikit-learn.org
+Author: None
+Author-email: None
+License: new BSD
+Location: /data/rajlab1/user_data/pablo/conda/envs/sklearn_env/lib/python3.7/site-packages
+Requires: numpy, scipy, joblib
+Required-by: sklearn
+
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
@@ -168,8 +158,7 @@ When submitting jobs to the scheduler, make sure the job scripts load all requir
 
 To _deactivate_ a Python virtual environment, either open a fresh terminal (e.g. log out and back in), or use:
 ```sh
-(my_project) [alice@{{ site.devel.name }} ~]$ deactivate
-[alice@{{ site.devel.name }} ~]$ deactivate
+alice@{{ site.login.name}}> source deactivate
 ```
 
-Note how prefix `(my_project) ` was dropped from the shell prompt.
+Note how prefix `(sklearn_env) ` was dropped from the shell prompt.
