@@ -1,108 +1,73 @@
-title: 'UCSF Wynton HPC Cluster'
+title: 'UCSF SCS HPC Cluster'
 theme: jekyll-theme-minimal
 
-google_analytics: UA-128646955-1
+# google_analytics: UA-128646955-1
 
 cluster:
   name: "SCS"
   version: "0.1"
 
 login:
-  name: "wynlog2"
-  hostname: "log2.wynton.ucsf.edu"
+  name: "torch"
+  hostname: "torch.radiology.ucsf.edu"
   ip: "169.230.134.15"
-devel:
-  name: "qb3-dev3"
-  hostname: "qb3-dev3"
-  ip: "172.26.32.8"
 
-login1:
-  name: "wynlog1"
-  hostname_deprecated: "wynlog1.compbio.ucsf.edu"
-  hostname: "log1.wynton.ucsf.edu"
-  ip: "169.230.126.77"
-login2:
-  name: "wynlog2"
-  hostname_deprecated: "wynlog2.cc.ucsf.edu"
-  hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.134.15"
-dev1:
-  name: "qb3-dev1"
-  hostname: "qb3-dev1"
-  ip: "172.26.32.2"
-dev2:
-  name: "qb3-dev2"
-  hostname: "qb3-dev2"
-  ip: "172.26.32.7"
-dev3:
-  name: "qb3-dev3"
-  hostname: "qb3-dev3"
-  ip: "172.26.32.8"
-gpudev1:
-  name: "qb3-gpudev1"
-  hostname: "qb3-gpudev1"
+dgx:
+  name: "juno"
+  hostname: "juno.radiology.ucsf.edu"
   ip: "172.26.32.3"
-transfer:
-  name: "wyndt1"
-  hostname_deprecated: "wyndt1.compbio.ucsf.edu"
-  hostname: "dt1.wynton.ucsf.edu"
-  ip: "169.230.126.58"
-transfer_old:
-  name: "wynlog1"
-  hostname: "wynlog1.compbio.ucsf.edu"
-  ip: "169.230.126.77"
 
-specs:
-  nodes: 331
-  physical_cores: 7048
-  gpu_nodes: 31
-  gpus: 60
-  communal_gpus: 12
-  communal_gpu_nodes: 4
-
-  ## RAM [GiB]:
-  ram_min: 48
-  ram_max: 768
-
-  ## Disk /swap [GiB]:
-  swap_min: 4
-  swap_max: 4
-
-  ## Local /tmp [GiB]:
-  local_tmp_size_min: 4
-  local_tmp_size_max: 8
-
-  ## Local /scratch [TiB]:
-  local_scratch_size_min: 0.1
-  local_scratch_size_max: 1.8
-
-  ## Global /wynton/scratch [TiB]:
-  global_scratch_size_total: 492
-
-  ## NetApp home [TiB]:
-  netapp_home_size_total: 20
-
-  ## User home [TiB]:
-  home_size_total: 383
-
-  ## Group home [TiB]:
-  group_size_total: 3800
-
-  ## Job queues
-  pu_total: 20185
-  member_q_total: 6735
-
-  ## Deprecated fields - use above instead /HB 2019-03-11
-  cpu_min: 2.0
-  cpu_max: 3.4
-  cpu_range: "2.6-3.4 GHz"
-  ram_range: "48-768 GiB"
-  swap_range: "4 GiB"
-  local_tmp_size: "4 GiB"
-  local_scratch_size_range: "0.1-1.8 TiB"
-  global_scratch_size: "492 TiB"
-  netapp_home_size: "20 TiB"
-  home_size: "383 TiB"
+# specs:
+#   nodes: 331
+#   physical_cores: 7048
+#   gpu_nodes: 31
+#   gpus: 60
+#   communal_gpus: 12
+#   communal_gpu_nodes: 4
+#
+#   ## RAM [GiB]:
+#   ram_min: 48
+#   ram_max: 768
+#
+#   ## Disk /swap [GiB]:
+#   swap_min: 4
+#   swap_max: 4
+#
+#   ## Local /tmp [GiB]:
+#   local_tmp_size_min: 4
+#   local_tmp_size_max: 8
+#
+#   ## Local /scratch [TiB]:
+#   local_scratch_size_min: 0.1
+#   local_scratch_size_max: 1.8
+#
+#   ## Global /wynton/scratch [TiB]:
+#   global_scratch_size_total: 492
+#
+#   ## NetApp home [TiB]:
+#   netapp_home_size_total: 20
+#
+#   ## User home [TiB]:
+#   home_size_total: 383
+#
+#   ## Group home [TiB]:
+#   group_size_total: 3800
+#
+#   ## Job queues
+#   pu_total: 20185
+#   member_q_total: 6735
+#
+#   ## Deprecated fields - use above instead /HB 2019-03-11
+#   cpu_min: 2.0
+#   cpu_max: 3.4
+#   cpu_range: "2.6-3.4 GHz"
+#   ram_range: "48-768 GiB"
+#   swap_range: "4 GiB"
+#   local_tmp_size: "4 GiB"
+#   local_scratch_size_range: "0.1-1.8 TiB"
+#   global_scratch_size: "492 TiB"
+#   netapp_home_size: "20 TiB"
+#   home_size: "383 TiB"
 
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
