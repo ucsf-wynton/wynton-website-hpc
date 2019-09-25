@@ -16,6 +16,7 @@ llvm-toolset-7
 python33
 rh-python34
 rh-python36
+rh-ruby25
 
 [alice@{{ site.devel.name }} ~]$ 
 ```
