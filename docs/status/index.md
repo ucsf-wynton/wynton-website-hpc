@@ -55,6 +55,8 @@
 
 ## Upcoming and Current Incidents
 
+## Past Incidents
+
 ### September 24, 2019
 
 #### <span style="color: orange;">BeeGFS failure</span>
@@ -65,8 +67,6 @@
 **Notice**: The Wynton HPC environment is nonresponsive.  Problem is being investigated.
 <br><span class="timestamp">September 24, 17:30 PDT</span>
 
-
-## Past Incidents
 
 ### August 23, 2019
 
