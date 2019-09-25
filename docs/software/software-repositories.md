@@ -59,7 +59,7 @@ bamUtil is a repository that contains several programs that perform operations o
     <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
 A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code><br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
-  Versions: <em>0.11.0</em><br>
+  Versions: 0.11.0, <em>0.12.1</em><br>
   </dd>
 
   <dt>bcftools</dt>
@@ -134,12 +134,20 @@ Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' 
   Versions: 2.1.0, <em>3.0.2</em><br>
   </dd>
 
+  <dt>cufflinks</dt>
+  <dd>
+    <strong>Cufflinks: Transcriptome Assembly and Differential Expression Analysis for RNA-Seq</strong><br>
+Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one, taking into account biases in library preparation protocols. Example: <code>cufflinks</code>.<br>
+    URL: <a href="http://cole-trapnell-lab.github.io/cufflinks/">http://cole-trapnell-lab.github.io/cufflinks/</a>, <a href="https://github.com/cole-trapnell-lab/cufflinks">https://github.com/cole-trapnell-lab/cufflinks</a><br>
+  Versions: <em>2.2.1</em><br>
+  </dd>
+
   <dt>emacs</dt>
   <dd>
     <strong>GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor</strong><br>
 At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing. Example: <code>emacs --version</code> and <code>emacs -nw</code>.<br>
     URL: <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a><br>
-  Versions: 25.3, 26.1, <em>26.2</em><br>
+  Versions: 25.3, 26.1, 26.2, <em>26.3</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -147,7 +155,15 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
     <strong>Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
-  Versions: 4.1.0.0, <em>4.1.2.0</em><br>
+  Versions: 4.1.0.0, 4.1.2.0, <em>4.1.3.0</em><br>
+  </dd>
+
+  <dt>gcta</dt>
+  <dd>
+    <strong>GCTA: Genome-wide Complex Trait Analysis</strong><br>
+A tool for Genome-wide Complex Trait Analysis (GCTA). Example: <code>gcta64</code>.<br>
+    URL: <a href="http://cnsgenomics.com/software/gcta/">http://cnsgenomics.com/software/gcta/</a><br>
+  Versions: 1.26.0, <em>1.92.3beta3</em><br>
   </dd>
 
   <dt>git-flow</dt>
@@ -219,7 +235,14 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     <strong>R: The R Programming Language</strong><br>
 The R programming language. Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, <em>3.6.1</em><br>
+  Versions: <em>3.6.1</em>, 2.12.2, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
+  </dd>
+
+  <dt>r-siteconfig</dt>
+  <dd>
+    <strong>R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
+Sets R options and environment variables customized for the current compute environment. Examples: In R, <code>getOption(&quot;repos&quot;)</code>.<br>
+  Versions: <em>0.1</em><br>
   </dd>
 
   <dt>samtools</dt>
@@ -252,7 +275,7 @@ ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --versio
     <strong>STAR: Spliced Transcripts Alignment to a Reference</strong><br>
 STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data. Example: <code>STAR --help</code>.<br>
     URL: <a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a><br>
-  Versions: 2.7.0e, 2.7.0f, <em>2.7.1a</em><br>
+  Versions: 2.7.0e, 2.7.0f, 2.7.1a, <em>2.7.2b</em><br>
   </dd>
 
   <dt>tmux</dt>
@@ -600,7 +623,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>python/protobuf</dt>
   <dd>
-  Versions: <em>2.3.0</em><br>
+  Versions: 2.3.0, <em>2.5.0</em><br>
   </dd>
 
   <dt>python/pymc</dt>
@@ -640,7 +663,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>python/tables</dt>
   <dd>
-  Versions: 3.3.0, <em>3.4.2</em><br>
+  Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
   <dt>relion</dt>
@@ -705,7 +728,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-08-15 03:12:49 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-09-07 19:07:44 from querying `module avail` and `module spider`._
 
 
 <style>

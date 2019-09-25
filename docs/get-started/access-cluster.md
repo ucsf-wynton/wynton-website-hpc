@@ -2,10 +2,9 @@
 These instructions are primarily written for Linux, macOS, and Windows 10 users.  If you are on a pre-Windows 10, using the <a href="http://www.putty.org/">PuTTY</a> SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
 </div>
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Any shell session that has been idle for more than eight hours will timeout and exit automatically.
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
-
 
 # Login
 
@@ -56,6 +55,10 @@ Connection to {{ site.login.hostname }} closed.
 ```
 
 An alternative is to press Ctrl-D (sends "End-Of-File" [EOF]) at the command-line prompt.
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Any shell session that has been idle for more than eight hours will timeout and exit automatically.
+</div>
 
 
 [development node]: {{ '/get-started/development-prototyping.html' | relative_url }}

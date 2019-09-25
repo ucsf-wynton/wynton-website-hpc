@@ -16,7 +16,6 @@ dgx:
   name: "juno"
   hostname: "juno.radiology.ucsf.edu"
   ip: "172.26.32.3"
-
 # specs:
 #   nodes: 331
 #   physical_cores: 7048
