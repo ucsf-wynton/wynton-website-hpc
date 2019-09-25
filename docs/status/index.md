@@ -9,17 +9,17 @@
 </div>
 -->
 
-<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
 </div>
+<!--
 -->
 
 <!--
--->
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
 </div>
+-->
 
 
 
@@ -54,6 +54,14 @@
 
 
 ## Upcoming and Current Incidents
+
+### September 24, 2019
+
+#### <span style="color: orange;">BeeGFS failure</span>
+
+**Notice**: The Wynton HPC environment is nonresponsive.  Problem is being investigated.
+<br><span class="timestamp">September 24, 17:30 PDT</span>
+
 
 ## Past Incidents
 
