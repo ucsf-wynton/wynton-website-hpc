@@ -182,7 +182,7 @@ A. The filename extension of Singularity images are optional, but using one help
 
 
 [Linux containers]: https://www.wikipedia.org/wiki/Linux_containers
-[Singularity]: http://singularity.lbl.gov/
+[Singularity]: https://sylabs.io/docs/
 [Docker]: https://www.docker.com/
 [Docker Hub]: https://hub.docker.com/
 [rocker/r-base]: https://hub.docker.com/r/rocker/r-base/
