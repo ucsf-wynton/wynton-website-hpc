@@ -1,5 +1,7 @@
 # News
 
+2019-09-13: Added another three <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes with a total of 12 GPUs</a>.<br/>
+
 2019-09-12 Added a second <a href="{{ '/about/specs.html' | relative_url }}">data transfer node</a>.<br/>
 
 2019-08-15 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch have been removed - use `/wynton/scratch` instead.<br/>

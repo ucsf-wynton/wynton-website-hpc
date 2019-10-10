@@ -2,14 +2,15 @@
 
 ## Change password
 
-To change your {{ site.cluster.name }} credentials, log into the cluster and call `kpasswd` from one of the _login_ nodes, e.g.
+To change your {{ site.cluster.name }} credentials, log into the cluster and call `passwd` from one of the _login_ nodes, e.g.
 
 ```sh
-[alice@{{ site.login.name }} ~]$ kpasswd
-Password for alice@CGL.UCSF.EDU: 
-Enter new password: 
-Enter it again: 
-Password changed.
+[alice@{{ site.login.name }} ~]$ passwd
+Changing password for user alice.
+Kerberos 5 Password: 
+New password: 
+Retype new password: 
+passwd: all authentication tokens updated successfully.
 [alice@{{ site.login.name }} ~]$ 
 ```
 

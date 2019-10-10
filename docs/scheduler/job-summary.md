@@ -15,8 +15,8 @@ If you don't know how much resources your job consumes, you can add `qstat -j $J
 ## emulate some CPU processing time
 Rscript -e "x <- rnorm(100e6); for (i in 1:1e3) gc(); summary(x)"
 
-## End-of-job summary
-qstat -j $JOB_ID
+## End-of-job summary, if running as a job
+[[ -n "$JOB_ID" ]] && qstat -j "$JOB_ID"
 ```
 
 As a first guess, we can assume that this script takes at most 5 minutes to run, but let's assume we don't have a good sense on how much memory it will consume, so we submit it as:

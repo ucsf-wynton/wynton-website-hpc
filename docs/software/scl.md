@@ -5,7 +5,7 @@
 
 ## Available SCLs and their Packages
 
-To list all Software Collections installed on the cluster, use:
+To list all Software Collections installed on the _development nodes_, use:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl --list
@@ -16,9 +16,18 @@ llvm-toolset-7
 python33
 rh-python34
 rh-python36
+rh-ruby25
 
 [alice@{{ site.devel.name }} ~]$ 
 ```
+
+_Importantly_, only a subset of the above SCLs are available on the _compute nodes_. Specifically, these are:
+```sh
+python33
+rh-python34
+rh-python36
+```
+
 
 To list all the packages that are part of one or more of these SCLs, use:
 
