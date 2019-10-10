@@ -155,7 +155,7 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
     <strong>Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
-  Versions: 4.1.0.0, 4.1.2.0, <em>4.1.3.0</em><br>
+  Versions: 4.1.0.0, 4.1.2.0, 4.1.3.0, <em>4.1.4.0</em><br>
   </dd>
 
   <dt>gcta</dt>
@@ -190,6 +190,14 @@ HTSlib is an implementation of a unified C library for accessing common file for
   Versions: <em>1.9</em><br>
   </dd>
 
+  <dt>jags</dt>
+  <dd>
+    <strong>JAGS: Just Another Gibbs Sampler</strong><br>
+JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  not wholly unlike BUGS. Example: <code>jags</code> and <code>man jags</code>.<br>
+    URL: <a href="http://mcmc-jags.sourceforge.net/">http://mcmc-jags.sourceforge.net/</a><br>
+  Versions: <em>4.3.0</em><br>
+  </dd>
+
   <dt>kallisto</dt>
   <dd>
     <strong>kallisto: Near-optimal RNA-Seq Quantification</strong><br>
@@ -218,7 +226,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
   <dd>
     <strong>PLINK2: Whole Genome Association Analysis Toolset</strong><br>
 PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: <code>plink2 --help</code>.<br>
-    URL: <a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a><br>
+    URL: <a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a><br>
   Versions: <em>2.00a2LM</em><br>
   </dd>
 
@@ -253,6 +261,13 @@ SAMtools is a suite of programs for interacting with high-throughput sequencing 
   Versions: <em>1.9</em><br>
   </dd>
 
+  <dt>scl-devtoolset (part of CBI-testing)</dt>
+  <dd>
+NA<br>
+  Versions: 4, 6, <em>7</em><br>
+    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+  </dd>
+
   <dt>scl-python (part of CBI-testing)</dt>
   <dd>
     <strong>NA</strong><br>
@@ -267,7 +282,7 @@ Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the cur
     <strong>ShellCheck: A Shell Script Static Analysis Tool</strong><br>
 ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --version</code> and <code>shellcheck -x ~/.bashrc</code>.<br>
     URL: <a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>, <a href="https://github.com/koalaman/shellcheck/">https://github.com/koalaman/shellcheck/</a><br>
-  Versions: <em>0.6.0</em><br>
+  Versions: 0.6.0, <em>0.7.0</em><br>
   </dd>
 
   <dt>star</dt>
@@ -275,7 +290,7 @@ ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --versio
     <strong>STAR: Spliced Transcripts Alignment to a Reference</strong><br>
 STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data. Example: <code>STAR --help</code>.<br>
     URL: <a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a><br>
-  Versions: 2.7.0e, 2.7.0f, 2.7.1a, <em>2.7.2b</em><br>
+  Versions: 2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, <em>2.7.3a</em><br>
   </dd>
 
   <dt>tmux</dt>
@@ -315,7 +330,7 @@ VCFtools is a program package designed for working with VCF files, such as those
     <strong>Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
 A command-line tool for common Wynton HPC queries. Examples: <code>wynton --help</code>.<br>
     URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
-  Versions: <em>0.0.5</em><br>
+  Versions: <em>latest</em><br>
     NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
@@ -666,6 +681,11 @@ Enable repository: <code>module load Sali</code><br>
   Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
+  <dt>python3/nose</dt>
+  <dd>
+  Versions: <em>1.3.7</em><br>
+  </dd>
+
   <dt>relion</dt>
   <dd>
   Versions: 1.4, 2.0.6, <em>3.0.git9a02562</em><br>
@@ -728,7 +748,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-09-07 19:07:44 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-10 11:14:09 from querying `module avail` and `module spider`._
 
 
 <style>
