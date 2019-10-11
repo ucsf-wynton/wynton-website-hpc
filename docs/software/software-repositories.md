@@ -154,6 +154,14 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
   Versions: 25.3, 26.1, 26.2, <em>26.3</em><br>
   </dd>
 
+  <dt>fastqc</dt>
+  <dd>
+    <strong>FastQC: A Quality Control Analysis Tool for High Throughput Sequencing Data</strong><br>
+FastQC is a program designed to spot potential problems in high througput sequencing datasets. It runs a set of analyses on one or more raw sequence files in fastq or bam format and produces a report which summarises the results.  Example: <code>fastqc --version</code>.<br>
+    URL: <a href="https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc">https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc</a>, <a href="https://github.com/s-andrews/FastQC/">https://github.com/s-andrews/FastQC/</a><br>
+  Versions: <em>0.11.8</em><br>
+  </dd>
+
   <dt>gatk</dt>
   <dd>
     <strong>Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
@@ -752,7 +760,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-11 11:03:26 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-11 14:06:29 from querying `module avail` and `module spider`._
 
 
 <style>
