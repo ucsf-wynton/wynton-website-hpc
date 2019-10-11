@@ -6,7 +6,7 @@ WARNING: Do _not_ update this file; it is automatically generated from software-
 
 # Contributed Software Repositories
 
-It is common that research groups maintain their own software stacks. Some of these groups make their stacks available to other cluster user community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  To get access to these repositories and their software, make sure to load them first, e.g.
+It is common that research groups maintain their own software stacks. Some of these groups kindly make their stacks available to the cluster community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  To get access to these repositories and their software, make sure to load them first, e.g.
 ```sh
 module load CBI
 ```
@@ -21,6 +21,10 @@ It is possible to enable a software repository and load specific software in one
 ```sh
 module load CBI python r bwa
 ```
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Please note that below software stacks are <em>not</em> maintained or supported by the Wynton Team.  Instead, they are kindly contributed by individual research groups and often maintained by volunteers - sometimes on their spare time.  Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+</div>
 
 Below are 2 contributed software repositories, each providing a set of software tools.
 
@@ -748,7 +752,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-10 11:14:09 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-11 11:03:26 from querying `module avail` and `module spider`._
 
 
 <style>
