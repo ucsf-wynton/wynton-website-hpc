@@ -21,7 +21,7 @@ rh-ruby25
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-_Importantly_, only a subset of the above SCLs are available on the _compute nodes_. Specifically, these are:
+_Importantly_, only a subset of the above SCLs are available also on the _compute nodes_. Specifically, these are:
 ```sh
 python33
 rh-python34
