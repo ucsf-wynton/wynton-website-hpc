@@ -210,10 +210,18 @@ HTSlib is an implementation of a unified C library for accessing common file for
   Versions: <em>1.9</em><br>
   </dd>
 
+  <dt>igv</dt>
+  <dd>
+    <strong>IGV: The Integrative Genomics Viewer</strong><br>
+The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations. NOTE: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0). Example: <code>igv</code>.<br>
+    URL: <a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a><br>
+  Versions: 2.7.0, <em>2.4.19</em><br>
+  </dd>
+
   <dt>igvtools</dt>
   <dd>
     <strong>IGVTools: Tools for Pre-processing HT-Seq Data Files</strong><br>
-The igvtools utility provides a set of tools for pre-processing data files. Example: <code>igvtools help</code>.<br>
+The igvtools utility provides a set of tools for pre-processing data files. Note, <code>igvtools</code> moved to IGV as of IGV (&gt;= 2.5.0). Example: <code>igvtools help</code>.<br>
     URL: <a href="https://software.broadinstitute.org/software/igv/igvtools">https://software.broadinstitute.org/software/igv/igvtools</a><br>
   Versions: <em>2.4.19</em><br>
   </dd>
@@ -776,7 +784,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-14 15:41:17 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-14 16:00:44 from querying `module avail` and `module spider`._
 
 
 <style>
