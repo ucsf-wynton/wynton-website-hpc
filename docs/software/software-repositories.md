@@ -210,10 +210,18 @@ HTSlib is an implementation of a unified C library for accessing common file for
   Versions: <em>1.9</em><br>
   </dd>
 
+  <dt>igvtools</dt>
+  <dd>
+    <strong>IGVTools: Tools for Pre-processing HT-Seq Data Files</strong><br>
+The igvtools utility provides a set of tools for pre-processing data files. Example: <code>igvtools help</code>.<br>
+    URL: <a href="https://software.broadinstitute.org/software/igv/igvtools">https://software.broadinstitute.org/software/igv/igvtools</a><br>
+  Versions: <em>2.4.19</em><br>
+  </dd>
+
   <dt>jags</dt>
   <dd>
     <strong>JAGS: Just Another Gibbs Sampler</strong><br>
-JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  not wholly unlike BUGS. Example: <code>jags</code> and <code>man jags</code>.<br>
+JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation not wholly unlike BUGS. Example: <code>jags</code> and <code>man jags</code>.<br>
     URL: <a href="http://mcmc-jags.sourceforge.net/">http://mcmc-jags.sourceforge.net/</a><br>
   Versions: <em>4.3.0</em><br>
   </dd>
@@ -768,7 +776,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-14 09:47:47 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-14 15:41:17 from querying `module avail` and `module spider`._
 
 
 <style>
