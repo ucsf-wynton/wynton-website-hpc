@@ -332,7 +332,7 @@ TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq rea
   <dt>tree</dt>
   <dd>
     <strong>tree: List Content of Directories in a Tree-like Format</strong><br>
-Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the <code>LS_COLORS</code> environment variable is set and output is to tty.. Example: <code>tree --help</code>.<br>
+Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the <code>LS_COLORS</code> environment variable is set and output is to tty. Example: <code>tree --help</code>.<br>
     URL: <a href="http://mama.indstate.edu/users/ice/tree/">http://mama.indstate.edu/users/ice/tree/</a>,<br>
   Versions: <em>1.8.0</em><br>
   </dd>
@@ -768,7 +768,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-14 09:42:11 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-14 09:47:47 from querying `module avail` and `module spider`._
 
 
 <style>
