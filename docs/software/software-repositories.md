@@ -175,7 +175,7 @@ Developed in the Data Sciences Platform at the Broad Institute, the toolkit offe
     <strong>GCTA: Genome-wide Complex Trait Analysis</strong><br>
 A tool for Genome-wide Complex Trait Analysis (GCTA). Example: <code>gcta64</code>.<br>
     URL: <a href="http://cnsgenomics.com/software/gcta/">http://cnsgenomics.com/software/gcta/</a><br>
-  Versions: 1.26.0, <em>1.92.3beta3</em><br>
+  Versions: 1.26.0, 1.92.3beta3, <em>1.92.4beta</em><br>
   </dd>
 
   <dt>git-flow</dt>
@@ -184,6 +184,14 @@ A tool for Genome-wide Complex Trait Analysis (GCTA). Example: <code>gcta64</cod
 A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model. Example: <code>git flow</code>.<br>
     URL: <a href="https://github.com/petervanderdoes/gitflow-avh">https://github.com/petervanderdoes/gitflow-avh</a>, <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a><br>
   Versions: 1.12.1, <em>1.12.3</em><br>
+  </dd>
+
+  <dt>hisat2</dt>
+  <dd>
+    <strong>HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes</strong><br>
+HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). Based on an extension of BWT for graphs [Sirén et al. 2014], we designed and implemented a graph FM index (GFM), an original approach and its first implementation to the best of our knowledge. In addition to using one global GFM index that represents a population of human genomes, HISAT2 uses a large set of small GFM indexes that collectively cover the whole genome (each index representing a genomic region of 56 Kbp, with 55,000 indexes needed to cover the human population). These small indexes (called local indexes), combined with several alignment strategies, enable rapid and accurate alignment of sequencing reads. This new indexing scheme is called a Hierarchical Graph FM index (HGFM).  Example: <code>hisat2 --version</code>.<br>
+    URL: <a href="https://ccb.jhu.edu/software/hisat2/">https://ccb.jhu.edu/software/hisat2/</a><br>
+  Versions: <em>2.1.0</em><br>
   </dd>
 
   <dt>htop</dt>
@@ -760,7 +768,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-11 14:06:29 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-14 09:42:11 from querying `module avail` and `module spider`._
 
 
 <style>
