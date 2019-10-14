@@ -2,7 +2,7 @@ PAGE=software-repositories
 
 all: $(PAGE).md
 
-force:
+build:
 	touch $(PAGE).md.rsp
 	make all
 
