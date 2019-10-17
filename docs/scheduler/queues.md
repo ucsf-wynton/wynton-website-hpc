@@ -29,7 +29,7 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Maximum runtime on communal GPU nodes: 2 weeks
   - Maximum runtime on contributed GPU nodes: 2 weeks if you are the contributor, otherwise 2 hours
   - Process priority: 0 (highest)
-  - Availability: {{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are 100% communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are contributed)
+  - Availability: {{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are contributed)
   - Number of GPU slots: {{ site.specs.gpus }}
   - Quota: Unlimited (all users).
   - Purpose: For software that utilize Graphics Processing Units (GPUs)

@@ -66,6 +66,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * GPU compute: An additional 12 communal GPUs on three GPU nodes (2019-09-13)
 
+* GPU policy: All GPU nodes, communal and contributed, are available to all users. When running on another contributors GPU node, run time is limited to 2 hours. (2019-09-20)
 
 See also [News].
 
