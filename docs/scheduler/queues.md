@@ -26,10 +26,12 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the {{ site.cluster.name }} cluster and gain priority access corresponding to the contribution
 
 * **gpu.q**:
-  - Maximum runtime: 2 weeks
+  - Maximum runtime on communal GPU nodes: 2 weeks
+  - Maximum runtime on contributed GPU nodes: 2 weeks if you are the contributor, otherwise 2 hours
   - Process priority: 0 (highest)
-  - Availability: GPU nodes only
-  - Quota: Unlimited (all users). Users/groups who have contributed with GPU hardware will have exclusive access to the GPUs on those nodes
+  - Availability: {{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are 100% communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are contributed)
+  - Number of GPU slots: {{ site.specs.gpus }}
+  - Quota: Unlimited (all users).
   - Purpose: For software that utilize Graphics Processing Units (GPUs)
 
 * **ondemand.q**:
