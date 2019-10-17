@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert">
-2019-09-20: Wynton HPC has {{ site.specs.gpu_nodes }} GPU nodes with a total of {{ site.specs.gpus }} GPUs available to all users. Among these, {{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.specs.gpus | minus: site.specs.communal_gpus }} GPUs, were contributed by different research groups; these groups have higher priority to their contributed GPU nodes than other members.
+2019-09-20: Wynton HPC has {{ site.specs.gpu_nodes }} GPU nodes with a total of {{ site.specs.gpus }} GPUs available to all users. Among these, {{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.specs.gpus | minus: site.specs.communal_gpus }} GPUs, were contributed by different research groups. Contrary to other, <a href="{{ '/scheduler/queues.html' | relative_url }}">contributors are <em>not</em> limited to 2-hour GPU jobs on nodes they contributed</a>.
 There is also one GPU development node that are available to all users.
 </div>
 
