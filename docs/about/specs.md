@@ -5,7 +5,7 @@
 <dl id="hosttable-summary" class="dl-horizontal">
   <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
-  <dt>GPUs</dt><dd>{{ site.specs.communal_gpus }} communal GPUs plus {{ site.specs.gpus | minus: site.specs.communal_gpus }} GPU-contributor-only GPUs</dd>
+  <dt>GPUs</dt><dd>{{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are 100% communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are prioritized for GPU contributors)</dd>
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_min }}-{{ site.specs.ram_max }} GiB/node</dd>
   <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</dd>
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>

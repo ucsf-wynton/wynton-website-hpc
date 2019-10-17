@@ -60,10 +60,10 @@ transfer2:
 specs:
   nodes: 339
   physical_cores: 7228
-  gpu_nodes: 31
-  gpus: 60
-  communal_gpus: 24
+  gpu_nodes: 38
+  gpus: 132
   communal_gpu_nodes: 7
+  communal_gpus: 24
   
   ## RAM [GiB]:
   ram_min: 48
