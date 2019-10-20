@@ -162,6 +162,14 @@ Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' 
   Versions: 2.1.0, 3.0.2, <em>3.1.0</em><br>
   </dd>
 
+  <dt>control-freec</dt>
+  <dd>
+    <strong>Control FREEC: Control-FREE Copy Number and Genotype Caller</strong><br>
+Prediction of copy numbers and allelic content using deep-sequencing data. Example: <code>freec</code>.<br>
+    URL: <a href="http://boevalab.com/FREEC/">http://boevalab.com/FREEC/</a>, <a href="https://github.com/BoevaLab/FREEC/">https://github.com/BoevaLab/FREEC/</a><br>
+  Versions: <em>11.5</em><br>
+  </dd>
+
   <dt>cufflinks</dt>
   <dd>
     <strong>Cufflinks: Transcriptome Assembly and Differential Expression Analysis for RNA-Seq</strong><br>
@@ -858,7 +866,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-20 16:23:22 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-20 16:53:56 from querying `module avail` and `module spider`._
 
 
 <style>
