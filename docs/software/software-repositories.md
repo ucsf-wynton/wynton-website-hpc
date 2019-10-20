@@ -321,6 +321,14 @@ ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --versio
   Versions: 0.6.0, <em>0.7.0</em><br>
   </dd>
 
+  <dt>snpeff</dt>
+  <dd>
+    <strong>SnpEff: Genetic Variant Annotation and Effect Prediction Toolbox</strong><br>
+SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes). Example: <code>snpEff -help</code>  and <code>ClinEff -help</code>, which are aliases for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code> and <code>java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help</code>.<br>
+    URL: <a href="http://snpeff.sourceforge.net/">http://snpeff.sourceforge.net/</a><br>
+  Versions: <em>4.3t</em><br>
+  </dd>
+
   <dt>star</dt>
   <dd>
     <strong>STAR: Spliced Transcripts Alignment to a Reference</strong><br>
@@ -619,7 +627,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>python/ihm</dt>
   <dd>
-  Versions: <em>0.2</em><br>
+  Versions: <em>0.11</em><br>
   </dd>
 
   <dt>python/lru_cache</dt>
@@ -639,7 +647,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>python/msgpack</dt>
   <dd>
-  Versions: <em>0.5.6</em><br>
+  Versions: 0.5.6, <em>0.6.2</em><br>
   </dd>
 
   <dt>python/networkx</dt>
@@ -717,6 +725,16 @@ Enable repository: <code>module load Sali</code><br>
   Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
+  <dt>python3/ihm</dt>
+  <dd>
+  Versions: <em>0.11</em><br>
+  </dd>
+
+  <dt>python3/msgpack</dt>
+  <dd>
+  Versions: <em>0.6.2</em><br>
+  </dd>
+
   <dt>python3/nose</dt>
   <dd>
   Versions: <em>1.3.7</em><br>
@@ -784,7 +802,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-14 16:00:44 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-19 18:02:00 from querying `module avail` and `module spider`._
 
 
 <style>
