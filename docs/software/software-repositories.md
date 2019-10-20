@@ -242,6 +242,14 @@ kallisto is a program for quantifying abundances of transcripts from RNA-Seq dat
   Versions: 0.45.0, 0.45.1, <em>0.46.0</em><br>
   </dd>
 
+  <dt>picard</dt>
+  <dd>
+    <strong>Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats</strong><br>
+Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.  Example: <code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code><br>
+    URL: <a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a><br>
+  Versions: <em>2.21.1</em><br>
+  </dd>
+
   <dt>pindel</dt>
   <dd>
     <strong>pindel: Detection of Indels and Structural Variations</strong><br>
@@ -826,7 +834,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-19 22:01:26 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-19 22:12:38 from querying `module avail` and `module spider`._
 
 
 <style>
