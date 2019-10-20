@@ -98,6 +98,14 @@ Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-
   Versions: <em>2.28.0</em><br>
   </dd>
 
+  <dt>blat</dt>
+  <dd>
+    <strong>BLAT: Fast Sequence Search Command Line Tool</strong><br>
+BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting. Example: <code>blat</code><br>
+    URL: <a href="https://genome.ucsc.edu/goldenPath/help/blatSpec.html">https://genome.ucsc.edu/goldenPath/help/blatSpec.html</a><br>
+  Versions: <em>36x4</em><br>
+  </dd>
+
   <dt>bowtie2</dt>
   <dd>
     <strong>Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
@@ -834,7 +842,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-20 13:33:56 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-20 16:03:39 from querying `module avail` and `module spider`._
 
 
 <style>
