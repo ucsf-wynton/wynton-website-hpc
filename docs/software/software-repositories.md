@@ -279,7 +279,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     <strong>R: The R Programming Language</strong><br>
 The R programming language. Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: <em>3.6.1</em>, 2.12.2, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
+  Versions: <em>3.6.1</em>, 2.12.2, 2.15.0, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
   </dd>
 
   <dt>r-siteconfig</dt>
@@ -359,6 +359,14 @@ TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq rea
 Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the <code>LS_COLORS</code> environment variable is set and output is to tty. Example: <code>tree --help</code>.<br>
     URL: <a href="http://mama.indstate.edu/users/ice/tree/">http://mama.indstate.edu/users/ice/tree/</a>,<br>
   Versions: <em>1.8.0</em><br>
+  </dd>
+
+  <dt>vcf-validator</dt>
+  <dd>
+    <strong>vcf-validator: Validation Suite for Variant Call Format (VCF) Files</strong><br>
+Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input. Example: <code>vcf_validator --help</code>, <code>vcf-debugulator --help</code>, and <code>vcf-assembly-checker --help</code>.<br>
+    URL: <a href="https://github.com/EBIvariation/vcf-validator">https://github.com/EBIvariation/vcf-validator</a><br>
+  Versions: <em>0.9.2</em><br>
   </dd>
 
   <dt>vcftools</dt>
@@ -802,7 +810,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-19 18:02:00 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-19 21:16:07 from querying `module avail` and `module spider`._
 
 
 <style>
