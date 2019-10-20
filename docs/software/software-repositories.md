@@ -98,6 +98,14 @@ Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-
   Versions: <em>2.28.0</em><br>
   </dd>
 
+  <dt>blast</dt>
+  <dd>
+    <strong>BLAST+: Basic Local Alignment Search Tool</strong><br>
+BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance. Example: <code>blastx -version</code><br>
+    URL: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">https://blast.ncbi.nlm.nih.gov/Blast.cgi</a><br>
+  Versions: <em>2.9.0</em><br>
+  </dd>
+
   <dt>blat</dt>
   <dd>
     <strong>BLAT: Fast Sequence Search Command Line Tool</strong><br>
@@ -842,7 +850,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-20 16:03:39 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-20 16:14:20 from querying `module avail` and `module spider`._
 
 
 <style>
