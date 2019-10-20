@@ -135,7 +135,7 @@ This repository provides prototypical environment modules that can change at any
     <strong>Cell Ranger: 10x Genomics Pipeline for Single-Cell Data Analysis</strong><br>
 Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.  Example: <code>cellranger</code><br>
     URL: <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a><br>
-  Versions: 2.1.0, <em>3.0.2</em><br>
+  Versions: 2.1.0, 3.0.2, <em>3.1.0</em><br>
   </dd>
 
   <dt>cufflinks</dt>
@@ -834,7 +834,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-19 22:12:38 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-20 13:33:56 from querying `module avail` and `module spider`._
 
 
 <style>
