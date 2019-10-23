@@ -319,7 +319,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     <strong>R: The R Programming Language</strong><br>
 The R programming language. Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: <em>3.6.1</em>, 2.12.2, 2.15.0, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
+  Versions: <em>3.6.1</em>, 2.12.2, 2.14.0, 2.15.0, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
   </dd>
 
   <dt>r-siteconfig</dt>
@@ -601,7 +601,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>modeller</dt>
   <dd>
-  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, <em>SVN</em><br>
+  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, 9.23-i386, 9.23-x86_64, 9.23, <em>SVN</em><br>
   </dd>
 
   <dt>modpipe</dt>
@@ -866,7 +866,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-10-20 16:53:56 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-10-23 12:36:06 from querying `module avail` and `module spider`._
 
 
 <style>
