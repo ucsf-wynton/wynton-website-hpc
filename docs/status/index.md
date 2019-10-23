@@ -2,6 +2,12 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>The Wynton HPC file system is non-functional due to power issues</strong><br>
+</div>
+<!--
+-->
+
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
@@ -16,10 +22,10 @@
 -->
 
 <!--
--->
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
 </div>
+-->
 
 
 
@@ -54,6 +60,15 @@
 
 
 ## Upcoming and Current Incidents
+
+### October 22-23, 2019
+
+#### <span style="color: orange;">BeeGFS failure</span>
+
+**Notice**: The Wynton HPC file system is non-functional.  It is expected to be resolved by noon on October 23. The underlying problem is that the power backup at the Diller data center did not work as expected during a planned power maintenance.
+
+<br><span class="timestamp">October 22, 21:45 PDT</span>
+
 
 ## Past Incidents
 
