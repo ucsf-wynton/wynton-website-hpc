@@ -62,15 +62,19 @@
 
 ## Upcoming and Current Incidents
 
+
+## Past Incidents
+
 ### October 24, 2019
 
 #### <span style="color: orange;">Login non-functional</span>
 
+**Resolved**: Log in works again.
+<br><span class="timestamp">October 24, 09:45 PDT</span>
+
 **Notice**: It is not possible to log in to the Wynton HPC environment.  This is due to a recent misconfiguration of the LDAP server.
 <br><span class="timestamp">October 24, 09:30 PDT</span>
 
-
-## Past Incidents
 
 ### October 22-23, 2019
 
