@@ -57,6 +57,11 @@ Several CUDA runtimes are installed on the GPU nodes.  They can be loaded via mo
 
 When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable `SGE_GPU` as a comma-delimited set of numbers.  Be sure to send this assignment to your application using the proper format for your application.
 
+For example, if your application uses CUDA, you should limit which GPUs are used with:
+```sh
+export CUDA_VISIBLE_DEVICES=$SGE_GPU
+```
+
 <div class="alert alert-warning" role="alert">
 To avoid overloading GPUs, it is important that each job use only the GPUs it was assigned, which is given by environment variable <code>SGE_GPU</code>.
 </div>
