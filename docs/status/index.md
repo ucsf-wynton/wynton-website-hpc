@@ -63,6 +63,14 @@
 ## Upcoming and Current Incidents
 
 
+### October 25, 2019
+
+#### <span style="color: orange;">Byers Hall power outage glitch</span>
+
+**Notice**: A very brief power outage in the Byers Hall building caused several compute nodes in its Data Center to go down.  Jobs that were running on those compute nodes at the time of the power failure did unfortunately fail.  Nodes are currently being rebooted.
+<br><span class="timestamp">October 25, 13:00 PDT</span>
+
+
 ## Past Incidents
 
 ### October 24, 2019
