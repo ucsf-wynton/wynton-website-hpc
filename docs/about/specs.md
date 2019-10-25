@@ -33,16 +33,16 @@ The compute nodes can only be utilized by [submitting jobs via the scheduler]({{
 
 The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_url }}) via SSH to one of two login nodes:
 
-1. {{ site.login1.name }}: `{{ site.login1.hostname }}`
-2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
+1. `{{ site.login1.hostname }}`
+2. `{{ site.login2.hostname }}`
 
 
 ### Data Transfer Nodes
 
-For transferring large data files, it is recommended to use the dedicate data transfer node:
+For transferring large data files, it is recommended to use onw ofthe dedicate data transfer nodes:
 
-1. {{ site.transfer1.name }}: `{{ site.transfer1.hostname }}`
-2. {{ site.transfer2.name }}: `{{ site.transfer2.hostname }}` - only accessible from within the UCSF network
+1. `{{ site.transfer1.hostname }}`
+2. `{{ site.transfer2.hostname }}`
 
 which both has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer nodes can be accessed via SSH.
 
