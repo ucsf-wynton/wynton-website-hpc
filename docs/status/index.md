@@ -63,9 +63,15 @@
 ## Upcoming and Current Incidents
 
 
+## Past Incidents
+
+
 ### October 25, 2019
 
 #### <span style="color: orange;">Byers Hall power outage glitch</span>
+
+**Resolved**: Development node `qb3-dev2` was rebooted.  Data-transfer node `dt1.wynton.ucsf.edu` is kept offline because it is scheduled to be upgraded next week.
+<br><span class="timestamp">October 28, 15:00 PDT</span>
 
 **Update**: Most compute nodes that went down due to the power glitch has been rebooted.  Data-transfer node `dt1.wynton.ucsf.edu` and development node `qb3-dev2` are still down - they will be brought back online on Monday October 28.
 <br><span class="timestamp">October 25, 14:00 PDT</span>
@@ -73,8 +79,6 @@
 **Notice**: A very brief power outage in the Byers Hall building caused several compute nodes in its Data Center to go down.  Jobs that were running on those compute nodes at the time of the power failure did unfortunately fail.  Log-in, data-transfer, and development nodes were also affected.  All these hosts are currently being rebooted.
 <br><span class="timestamp">October 25, 13:00 PDT</span>
 
-
-## Past Incidents
 
 ### October 24, 2019
 
