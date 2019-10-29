@@ -2,16 +2,16 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
+<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
 </div>
-<!--
 -->
 
-<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>The Wynton HPC file system is non-functional due to power issues</strong><br>
+<strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
+<!--
 -->
 
 <!--
