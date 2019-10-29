@@ -62,6 +62,13 @@
 
 ## Upcoming and Current Incidents
 
+### October 29-November 13, 2019
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). GPU nodes will be rebooted as soon as all GPU jobs complete.  During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target ~7,000 cores) in the graph above.
+<br><span class="timestamp">Oct 29, 16:30 PDT</span>
+
 
 ## Past Incidents
 
