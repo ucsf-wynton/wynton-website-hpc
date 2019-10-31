@@ -11,6 +11,7 @@
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>
   <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 500 GiB/user)</dd>
   <dt>Group storage</dt><dd>{{ site.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
+  <dt>Number of accounts</dt><dd>{{ site.users.nbr_of_accounts }}</dd>
 </dl>
 
 ## Software environment
