@@ -3,6 +3,18 @@
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
 <!--
+<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>{{ site.cluster.name }} HPC environment operational</strong>
+</div>
+-->
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
+</div>
+<!--
+-->
+
+<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
 <em>Complete outage due to scheduled maintenance</em>
@@ -15,11 +27,6 @@
 </div>
 -->
 
-<!--
--->
-<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong>
-</div>
 
 
 
@@ -55,7 +62,52 @@
 
 ## Upcoming and Current Incidents
 
+### October 29-November 13, 2019
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). GPU nodes will be rebooted as soon as all GPU jobs complete.  During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target ~7,000 cores) in the graph above.
+<br><span class="timestamp">Oct 29, 16:30 PDT</span>
+
+
 ## Past Incidents
+
+
+### October 25, 2019
+
+#### <span style="color: orange;">Byers Hall power outage glitch</span>
+
+**Resolved**: Development node `qb3-dev2` was rebooted.  Data-transfer node `dt1.wynton.ucsf.edu` is kept offline because it is scheduled to be upgraded next week.
+<br><span class="timestamp">October 28, 15:00 PDT</span>
+
+**Update**: Most compute nodes that went down due to the power glitch has been rebooted.  Data-transfer node `dt1.wynton.ucsf.edu` and development node `qb3-dev2` are still down - they will be brought back online on Monday October 28.
+<br><span class="timestamp">October 25, 14:00 PDT</span>
+
+**Notice**: A very brief power outage in the Byers Hall building caused several compute nodes in its Data Center to go down.  Jobs that were running on those compute nodes at the time of the power failure did unfortunately fail.  Log-in, data-transfer, and development nodes were also affected.  All these hosts are currently being rebooted.
+<br><span class="timestamp">October 25, 13:00 PDT</span>
+
+
+### October 24, 2019
+
+#### <span style="color: orange;">Login non-functional</span>
+
+**Resolved**: Log in works again.
+<br><span class="timestamp">October 24, 09:45 PDT</span>
+
+**Notice**: It is not possible to log in to the Wynton HPC environment.  This is due to a recent misconfiguration of the LDAP server.
+<br><span class="timestamp">October 24, 09:30 PDT</span>
+
+
+### October 22-23, 2019
+
+#### <span style="color: orange;">BeeGFS failure</span>
+
+**Resolved**: The Wynton HPC BeeGFS file system is fully functional again.  During the outage, `/wynton/group` and `/wynton/scratch` was not working properly, whereas `/wynton/home` was unaffected.
+<br><span class="timestamp">October 23, 10:35 PDT</span>
+
+**Notice**: The Wynton HPC BeeGFS file system is non-functional.  It is expected to be resolved by noon on October 23. The underlying problem is that the power backup at the Diller data center did not work as expected during a planned power maintenance.
+<br><span class="timestamp">October 22, 21:45 PDT</span>
+
 
 ### September 24, 2019
 
