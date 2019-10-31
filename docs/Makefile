@@ -37,6 +37,10 @@ broadcast-off:
 broadcast-on:
 	cd assets/css/ && ln -fs broadcast-on.css broadcast.css
 
+
+_config.yml: _config.yml.rsp
+	Rscript -e R.rsp::rfile $<
+
 assets/data/compute_shares.tsv: FORCE
 	wynton shares tsv > $@
 

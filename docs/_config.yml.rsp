@@ -1,3 +1,7 @@
+<%---------------------------------------------
+ Usage:
+ Rscript -e R.rsp::rfile _config.yml.rsp
+ ---------------------------------------------%>
 title: 'UCSF Wynton HPC Cluster'
 theme: jekyll-theme-minimal
 
@@ -110,7 +114,7 @@ specs:
   home_size: "383 TiB"
 
 users:
-  nbr_of_accounts: 668
+  nbr_of_accounts: <%= system('ldapsearch -h m1 -x -LLL | grep -c "wyntonAccess: TRUE"', intern = TRUE) %>
   
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
