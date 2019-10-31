@@ -46,4 +46,9 @@ assets/data/compute_shares.tsv: FORCE
 
 assets: assets/data/compute_shares.tsv
 
+deploy:
+	git pull
+	git commit -am "Website updated"
+	git push
+
 FORCE:
