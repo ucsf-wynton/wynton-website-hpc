@@ -55,27 +55,33 @@ To use this rocker/r-base container, we first pull it down to a Singularity imag
 [alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.img docker://rocker/r-base
 INFO:    Starting build...
 Getting image source signatures
-Copying blob sha256:2666d10a4f80f49cccd17b0595e4ae921fdb549aca89a64a3ef58279ccd98906
- 47.90 MiB / 47.90 MiB [====================================================] 1s
-Copying blob sha256:2c0f31f3b229517087318909ffeccba5a6492e98e96583d5aa3eddbea6f184d2
+Copying blob sha256:6359bcfdcac7731506d8e89a85e5882f23711354ffe717d8228087cfd6a31fc3
+ 48.65 MiB / 48.65 MiB [====================================================] 2s
+Copying blob sha256:7921cd62653e41062bfc021b7d7475b4a8ff16cb249a4c29974d0d010635d591
  1.80 KiB / 1.80 KiB [======================================================] 0s
-Copying blob sha256:8978e71a606b9425f3b310bcd759aabfc2bcc2855b4e40ce3e589f436c812e68
- 26.11 MiB / 26.11 MiB [====================================================] 0s
-Copying blob sha256:3a18d5b41e174e9774e5c326e009b7b81204c81cc20d0cc122f19dc0a20e060d
+Copying blob sha256:d835b7b583179a707477a96f6e35248894a2effed6af535b01e88e24f051a273
+ 25.93 MiB / 25.93 MiB [====================================================] 1s
+Copying blob sha256:7d1e021b0f81cdcc447f012b462c892a3573a2d879c5b01493367d089cf60782
  842.65 KiB / 842.65 KiB [==================================================] 0s
-Copying blob sha256:3b9876199949ef5adac357dada6fe57f62a5d31a2b678cecdb20b946e46c2bca
- 296 B / 296 B [============================================================] 0s
-Copying blob sha256:1ecd21a8af49252586a8812abbec50fcbde5b490f3ac5893b061602d5c88ea13
- 199.44 MiB / 199.44 MiB [==================================================] 5s
-Copying config sha256:de0dcc63ac6e2793cefa41886635cb01e88b41c52862bc33d7cbef195f075091
- 3.73 KiB / 3.73 KiB [======================================================] 0s
+Copying blob sha256:8e435d138f2bba19b6f85a2f3ef301f4a5d65bdc16ff417b746f9e926e738741
+ 297 B / 297 B [============================================================] 0s
+Copying blob sha256:93d86fef617f6bd75b377f72981c7e8e28113020154f98e121942de5f828d591
+ 199.05 MiB / 199.05 MiB [==================================================] 7s
+Copying config sha256:58ff9f07c993587fd9c31743c22bc4422852eae0b47a8b0d9b5e10e966f8db0d
+ 3.72 KiB / 3.72 KiB [======================================================] 0s
 Writing manifest to image destination
 Storing signatures
+2019/10/31 17:09:37  info unpack layer: sha256:6359bcfdcac7731506d8e89a85e5882f23711354ffe717d8228087cfd6a31fc3
+2019/10/31 17:09:40  info unpack layer: sha256:7921cd62653e41062bfc021b7d7475b4a8ff16cb249a4c29974d0d010635d591
+2019/10/31 17:09:40  info unpack layer: sha256:d835b7b583179a707477a96f6e35248894a2effed6af535b01e88e24f051a273
+2019/10/31 17:09:41  info unpack layer: sha256:7d1e021b0f81cdcc447f012b462c892a3573a2d879c5b01493367d089cf60782
+2019/10/31 17:09:41  info unpack layer: sha256:8e435d138f2bba19b6f85a2f3ef301f4a5d65bdc16ff417b746f9e926e738741
+2019/10/31 17:09:41  info unpack layer: sha256:93d86fef617f6bd75b377f72981c7e8e28113020154f98e121942de5f828d591
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.img
-[hb-test@qb3-dev3 lxc]$ 
+
 [hb-test@qb3-dev3 lxc]$ ll rocker_r-base.img
--rwxr-xr-x. 1 alice lsd 265625600 Jun 13 21:06 rocker_r-base.img
+-rwxr-xr-x. 1 alice lsd 271249408 Oct 31 17:09 rocker_r-base.img
 ```
 
 The above may take a minute or two to complete.
@@ -87,8 +93,7 @@ After this, we can run R within this container using:
 ```sh
 [alice@{{ site.devel.name }} lxc]$ singularity run rocker_r-base.img
 
-
-R version 3.6.0 (2019-04-26) -- "Planting of a Tree"
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
 Copyright (C) 2019 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
@@ -126,7 +131,7 @@ Note that, the Singularity image is marked as an _executable_, which means you c
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.img
 
-R version 3.6.0 (2019-04-26) -- "Planting of a Tree"
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
 Copyright (C) 2019 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 ...
@@ -145,7 +150,7 @@ PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
 Singularity r-base.img:~/lxc> Rscript --version
-R scripting front-end version 3.6.0 (2019-04-26)
+R scripting front-end version 3.6.1 (2019-07-05)
 Singularity r-base.img:~/lxc> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
