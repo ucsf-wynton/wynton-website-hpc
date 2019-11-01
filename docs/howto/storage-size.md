@@ -84,8 +84,8 @@ Note that this storage is shared among all group members and does _not_ count to
 
 ## User disk quota on /netapp/home (deprecated)
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-The <code>/netapp/</code> storage is deprecated and users will be migrated to the new, much faster <code>/wynton/home/</code> file system.
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<strong>The <code>/netapp/</code> storage will be taken offline at the end of December 2019.</strong>.  Please use the much faster <code>/wynton/home/</code> instead.  If you do not have access to the latter, <a href="{{ '/about/contact.html' | relative_url }}">let us know as soon as possible</a>.
 </div>
 
 To check your disk quota on the deprecated `/netapp/home` file system, use `quota`.  For example,

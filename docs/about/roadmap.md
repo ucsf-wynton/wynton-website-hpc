@@ -9,7 +9,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
 
-* Deprecation: The NetApp storage (including `/netapp/home`) is being deprecated in favor of new BeeGFS storage (including `/wynton/home`).
+* Deprecation: The QB3-legacy NetApp storage (including `/netapp/home`) will stop working at the end of **December 2019** in favor of new BeeGFS storage (including `/wynton/home`).
 
 
 ## Soon
@@ -35,10 +35,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
 
 
-## Planned deprecation
-
-* N/A
-
 
 ## Accomplished milestones
 
@@ -60,7 +56,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Software stacks: Support for sharing software installations between groups via environment modules, e.g. `module load CBI` (2019-06-13)
 
-* Deprecation: The NetApp scratch storage `/scrapp` and `/scrapp2` has been removed in favor of the BeeGFS-based scratch storage `/wynton/scratch` (2019-08-15)
+* Storage: The QB3-legacy NetApp scratch storage `/scrapp` and `/scrapp2` has been removed in favor of the BeeGFS-based scratch storage `/wynton/scratch` (2019-08-15)
 
 * Development: A second data transfer node for faster file transfers in to and out from Wynton (2019-09-12)
 
