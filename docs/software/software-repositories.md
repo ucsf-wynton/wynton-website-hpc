@@ -22,7 +22,7 @@ It is possible to enable a software repository and load specific software in one
 module load CBI python r bwa
 ```
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-info" role="alert" style="margin-top: 3ex">
 Please note that below software stacks are <em>not</em> maintained or supported by the Wynton Team.  Instead, they are kindly contributed by individual research groups and often maintained by volunteers - sometimes on their spare time.  Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
