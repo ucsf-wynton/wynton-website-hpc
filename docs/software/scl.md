@@ -1,3 +1,7 @@
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+2019-10-28: Because <code>python3</code> will be available as core software throughout Wynton HPC by November 13, the existing Python SCLs will be deprecated and eventually removed.
+</div>
+
 # CentOS Software Collections (SCL)
 
 > [Software Collections (SCL)](https://en.wikipedia.org/wiki/CentOS#Add-ons_releases) is a CentOS repository that provides a set of dynamic programming languages, database servers, and various related packages. Provided software versions are [...] more recent than their equivalent versions included in the base CentOS distribution [...]  Packages available from the SCL [...] can be optionally enabled per application by using supplied `scl` utility.
@@ -13,9 +17,9 @@ devtoolset-4
 devtoolset-6
 devtoolset-7
 llvm-toolset-7
-python33
-rh-python34
-rh-python36
+python33            # DEPRECATED on 2019-11-13
+rh-python34         # DEPRECATED on 2019-11-13
+rh-python36         # DEPRECATED on 2019-11-13
 rh-ruby25
 
 [alice@{{ site.devel.name }} ~]$ 
@@ -23,9 +27,9 @@ rh-ruby25
 
 _Importantly_, only a subset of the above SCLs are available also on the _compute nodes_. Specifically, these are:
 ```sh
-python33
-rh-python34
-rh-python36
+python33            # DEPRECATED on 2019-11-13
+rh-python34         # DEPRECATED on 2019-11-13
+rh-python36         # DEPRECATED on 2019-11-13
 ```
 
 
