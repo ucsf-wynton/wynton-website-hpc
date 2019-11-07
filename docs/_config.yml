@@ -17,7 +17,7 @@ devel:
   ip: "172.26.32.8"
 transfer:
   name: "dt2"
-  hostname_deprecated: "wyndt1.compbio.ucsf.edu"
+  hostname_deprecated: "dt2.compbio.ucsf.edu"
   hostname: "dt2.wynton.ucsf.edu"
   ip: "172.26.1.17"
 
@@ -48,7 +48,7 @@ gpudev1:
   hostname: "qb3-gpudev1"
   ip: "172.26.32.3"
 transfer1:
-  name: "wyndt1"
+  name: "dt1"
   hostname_deprecated: "wyndt1.compbio.ucsf.edu"
   hostname: "dt1.wynton.ucsf.edu"
   ip: "169.230.126.58"
