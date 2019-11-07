@@ -17,18 +17,15 @@ devel:
   ip: "172.26.32.8"
 transfer:
   name: "dt2"
-  hostname_deprecated: "dt2.compbio.ucsf.edu"
   hostname: "dt2.wynton.ucsf.edu"
   ip: "172.26.1.17"
 
 login1:
   name: "wynlog1"
-  hostname_deprecated: "wynlog1.compbio.ucsf.edu"
   hostname: "log1.wynton.ucsf.edu"
   ip: "169.230.126.77"
 login2:
   name: "wynlog2"
-  hostname_deprecated: "wynlog2.cc.ucsf.edu"
   hostname: "log2.wynton.ucsf.edu"
   ip: "169.230.134.15"
 dev1:
@@ -49,7 +46,6 @@ gpudev1:
   ip: "172.26.32.3"
 transfer1:
   name: "dt1"
-  hostname_deprecated: "wyndt1.compbio.ucsf.edu"
   hostname: "dt1.wynton.ucsf.edu"
   ip: "169.230.126.58"
 transfer2:
