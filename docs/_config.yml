@@ -16,10 +16,10 @@ devel:
   hostname: "qb3-dev3"
   ip: "172.26.32.8"
 transfer:
-  name: "wyndt1"
+  name: "dt2"
   hostname_deprecated: "wyndt1.compbio.ucsf.edu"
-  hostname: "dt1.wynton.ucsf.edu"
-  ip: "169.230.126.58"
+  hostname: "dt2.wynton.ucsf.edu"
+  ip: "172.26.1.17"
 
 login1:
   name: "wynlog1"

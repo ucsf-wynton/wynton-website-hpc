@@ -1,5 +1,9 @@
 # Accessing UCSF Box
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<strong>2019-11-07: Currently, below instructions work on <emph>data transfer nodes</emph> only. Attempts on <emph>development nodes</emph> will result in a "Access failed: 401 Unauthorized".</strong>
+</div>
+
 It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).
 
 In order to do this, **you need to setup a UCSF Box-specific password** as 
