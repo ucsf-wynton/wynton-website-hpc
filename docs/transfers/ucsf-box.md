@@ -1,16 +1,34 @@
 # Accessing UCSF Box
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-<strong>2019-11-07: Currently, below instructions work on <emph>data transfer nodes</emph> only. Attempts on <emph>development nodes</emph> will result in "Access failed: 401 Unauthorized" errors.</strong>
+<strong>Below instructions work on <emph>data transfer nodes</emph> only.</strong> Attempts to use them on <emph>development nodes</emph> will result in "Access failed: 401 Unauthorized" errors.
 </div>
 
-It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).
+It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).  The below instructions works from the Wynton HPC data-transfer nodes as well as your local computer.
 
-In order to do this, **you need to setup a UCSF Box-specific password** as 
-explained in <https://ucsf.app.box.com/services/box_ftp_server>.  Afterward, you can use, for instance, the `lftp` client to verify access to your account;
+
+## Prerequisites
+
+In order to do access UCSF Box as describe below, you need to:
+
+* Setup a **UCSF Box-specific password** as explained in <https://ucsf.app.box.com/services/box_ftp_server>
+
+
+## Accessing UCSF Box over FTPS
+
+With a **UCSF Box-specific password** (see above), you can use, for instance, the `lftp` or `curl` tools to access to your UCSF Box account.  Start by logging in to one of the data-transfer nodes, either directly from outside or via a login node, e.g.
+
+```sh
+[alice@{{ site.login.name }} ~]$ ssh {{ site.transfer.name }}
+alice1@{{ site.transfer.name }}:s password: XXXXXXXXXXXXXXXXXXX
+[alice@{{ site.transfer.name }} ~]$ 
+```
+
+Then, verify that your UCSF Box setup is correct, but logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your Wynton HPC password):
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ lftp --user alice.aliceson@ucsf.edu ftps://ftp.box.com
-Password: XXXXXXXX
+Password: XXXXXXXX  <== UCSF Box password here!
 lftp alice.aliceson@ucsf.edu@ftp.box.com:~> ls
 drwx------  1 owner group     0 Jun 12  2014 Grant_R01.pdf
 drwx------  1 owner group     0 Sep 30  2016 Secure-alice.aliceson@ucsf.edu
@@ -25,7 +43,7 @@ lftp alice.aliceson@ucsf.edu@ftp.box.com:~> exit
 
 ## Automatic authentication
 
-When starting `lftp` as above, you need to manually enter your password, which can be tedious or even prevent automatic file transfers in batch scripts.  A solution to this is to set up the FTP credentials in `~/.netrc`.  Here is what it could look like:
+When starting `lftp` as above, you need to manually enter your password, which can be tedious or even prevent automatic file transfers in batch scripts.  A solution to this is to set up the FTPS credentials in `~/.netrc`.  Here is what it could look like:
 ```
 [alice@{{ site.transfer.name }} ~]$ cat ~/.netrc
 machine ftp.box.com
