@@ -40,12 +40,12 @@ The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_u
 
 ### Data Transfer Nodes
 
-For transferring large data files, it is recommended to use onw ofthe dedicate data transfer nodes:
+For transferring large data files, it is recommended to use one of the dedicate data transfer nodes:
 
 1. `{{ site.transfer1.hostname }}`
 2. `{{ site.transfer2.hostname }}`
 
-which both has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer nodes can be accessed via SSH.
+which both has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As for the login nodes, the transfer nodes can be accessed via SSH.
 
 _Comment_: You can also transfer data via the login nodes, but since those only have 1 Gbps connections, you will see much lower transfer rates.
 
