@@ -36,6 +36,14 @@ HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
 Currently, the Wynton HPC cluster has in total _member.q<sub>total</sub>_ = {{ site.specs.member_q_total }} slots available on the member.q queue.  Jobs on the _member.q_ queue will launch and finish sooner than jobs on the communal, lower-priority _long.q_ queue.  A member.q job will have higher-priority on the CPU than a long.q job in case they run on the same compute node.   It is only contributing members who have access to the member.q queue - non-contributing members will only have access to [queues]({{ '/scheduler/queues.html' | relative_url }}) such as the long.q queue.  **Contributors get _non-expiring, lifetime access_ to a  number of these member.q slots in proportion to their hardware contribution to the cluster.**  The number of member.q slots a particular hardware contribution, which can be monetary(\*) or physical(\*), adds, is based on how much compute power the contribution adds to the cluster.
 The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.specs.pu_total }} _contributed_ processing units on Wynton HPC.
 
+<div class="alert alert-info" role="alert">
+<strong>A lab's contributed processing units (<em>PU<sub>lab</sub></em>) will never expire - it will remain the same until the lab makes additional contributions to the cluster.</strong>
+</div>
+
+As other labs contribute to the cluster, the total computer power (_PU<sub>total</sub>_) and the total number of member.q slots (_member.q<sub>total</sub>_) will increase over time.   This will result in the lab's _relative_ compute share (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) to decrease over time while their number of member.q slots (_member.q<sub>lab</sub>_) will stay approximately(**) the same.
+
+
+### Example: Additional contribution from the Charlie Lab 
 
 Assume that the last addition was from the Charlie Lab contributing {{ pu_times }} compute nodes.  Each of these machines has a {{ slots_add }}-core {{ pu_add_label }} and clocks in at {{ pu_add }} PUs based on the benchmarking, resulting in the processing power added for this lab, but also to the cluster as a whole, to be {{ pu_times }} \* {{ pu_add }} PUs = +{{ pu_delta }} PUs.  In addition to increasing the total amount of contributed PUs, the lab's contribution also increased the total number of member.q slots on the cluster by {{ pu_times }} \* {{ slots_add }} = +{{ slots_delta }} slots.
 
@@ -46,14 +54,11 @@ Instead, if they already had contributed, say, in total {{ pu_0 }} PUs in the pa
 All members of a lab will have access to the lab's member.q slots.  For example, if five out of seven member.q slots are currently in use when another lab member submits four ten-hour jobs, then two of those jobs will end up on the member.q queue whereas the other two will "spill over" to the lower-priority long.q queue.  In contrast, if those jobs were submitted by a non-contributing member, all four would end up on the long.q queue.
 -->
 
-**Note that a lab's contributed processing units (_PU<sub>lab</sub>_) will never expire - it will remain the same until the lab makes additional contributions to the cluster.**  As other labs contribute to the cluster, the total computer power (_PU<sub>total</sub>_) and the total number of member.q slots (_member.q<sub>total</sub>_) will increase over time.   This will result in the lab's _relative_ compute share (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) to decrease over time while their number of member.q slots (_member.q<sub>lab</sub>_) will stay approximately(\**) the same.
+
+### Current Compute Shares
 
 Below table shows the current amount of contributions in terms of Processing Units (PU) and the corresponding number of member.q slots per contributing lab.
 
-<small>
-(*) To be documented.<br>
-(**) The reason for _member.q<sub>lab</sub>_ not remaining exactly the same when _PU<sub>lab</sub>_ does not change, is that the compute power per core is greater for newer hardware compared with older hardware. Because of this, a lab’s number of member.q slots is likely to, ever so slightly, decrease in the long run as the cluster keeps growing. But don’t worry, as the _average compute power per member.q slot increases over time_, your lab's total compute power on the member.q queue remains constant per definition (unless your lab adds further contributions).
-</small>
 
 
 <script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
@@ -118,6 +123,12 @@ d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", fu
 
 Source: [compute_shares.tsv]({{ '/assets/data/compute_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds to a _functional share_ ("fshare").
 
+
+
+<small>
+(*) To be documented.<br>
+(**) The reason for _member.q<sub>lab</sub>_ not remaining exactly the same when _PU<sub>lab</sub>_ does not change, is that the compute power per core is greater for newer hardware compared with older hardware. Because of this, a lab’s number of member.q slots is likely to, ever so slightly, decrease in the long run as the cluster keeps growing. But don’t worry, as the _average compute power per member.q slot increases over time_, your lab's total compute power on the member.q queue remains constant per definition (unless your lab adds further contributions).
+</small>
 
 <style>
 table {
