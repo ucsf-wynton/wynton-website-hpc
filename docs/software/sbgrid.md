@@ -4,7 +4,11 @@
 Access to SBGrid software on Wynton HPC is limited to paying members of the SBGrid Consortium.
 </div>
 
-SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/) for structural biology. It is kept up to date by the [SBGrid] team without needing intervention by the wynton admins. Each lab using SBGrid must pay a yearly fee. This covers usage by anyone in the lab, both on Wynton HPC and any other Linux or Mac computer they own. The annual price depends on how many other labs from UCSF join. There are approximately 12 UCSF labs currently enrolled. See <https://sbgrid.org/join/> for information on how to join.
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+For bug reports related to SBGrid software, please use <a href="https://sbgrid.org/help/?tab=bug">SBGrid's Report Software Bug form</a>.  The Wynton sysadmins does not fix SBGrid problems.
+</div>
+
+SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/) for structural biology. It is kept up to date by the [SBGrid] team without needing intervention by the Wynton HPC admins. Each lab using SBGrid must pay a yearly fee. This covers usage by anyone in the lab, both on Wynton HPC and any other Linux or Mac computer they own. The annual price depends on how many other labs from UCSF join. There are approximately 12 UCSF labs currently enrolled. See <https://sbgrid.org/join/> for information on how to join.
 
 ## Verify access to SBGrid
 
