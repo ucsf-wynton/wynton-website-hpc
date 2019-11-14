@@ -2,16 +2,16 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
 </div>
+<!--
 -->
 
+<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
-<!--
 -->
 
 <!--
@@ -62,15 +62,18 @@
 
 ## Upcoming and Current Incidents
 
-### October 29-November 13, 2019
+
+## Past Incidents
+
+### October 29-November 11, 2019
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
+**Resolved**: All compute nodes have been updated and rebooted.
+<br><span class="timestamp">Nov 11, 01:00 PDT</span>
+
 **Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). GPU nodes will be rebooted as soon as all GPU jobs complete.  During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target ~7,000 cores) in the graph above.
 <br><span class="timestamp">Oct 29, 16:30 PDT</span>
-
-
-## Past Incidents
 
 
 ### October 25, 2019
