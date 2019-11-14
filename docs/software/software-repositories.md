@@ -117,7 +117,7 @@ BLAT - client and server combined into a single program, first building the inde
   <dt>bowtie</dt>
   <dd>
     <strong>Bowtie: A Fast and Sensitive Gapped Read Aligner</strong><br>
-Bowtie is an ultrafast, memory-efficient short read aligner. <em>NOTE: This is Bowtie v1 - not v2</em>.  Example: <code>bowtie --version</code><br>
+Bowtie is an ultrafast, memory-efficient short read aligner. <em>NOTE: This is Bowtie v1 - not v2</em>.  Example: <code>bowtie --version</code> and <code>ls $BOWTIE_HOME/{genomes,indexes}</code><br>
     URL: <a href="http://bowtie-bio.sourceforge.net/index.shtml">http://bowtie-bio.sourceforge.net/index.shtml</a><br>
   Versions: <em>1.2.3</em><br>
   </dd>
@@ -327,7 +327,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     <strong>R: The R Programming Language</strong><br>
 The R programming language. Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: <em>3.6.1</em>, 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0<br>
+  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, <em>3.6.1</em><br>
   </dd>
 
   <dt>r-siteconfig</dt>
@@ -874,7 +874,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-11-13 11:08:10 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-11-13 16:29:21 from querying `module avail` and `module spider`._
 
 
 <style>
