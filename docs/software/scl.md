@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-2019-10-28: Because <code>python3</code> will be available as core software throughout Wynton HPC by November 13, the existing Python SCLs will be deprecated and eventually removed.
+2019-11-13: <code>python3</code> is now available as core software on all development and compute nodes.  Because of this, below Python SCLs will be deprecated and eventually removed.
 </div>
 
 # CentOS Software Collections (SCL)
@@ -17,9 +17,9 @@ devtoolset-4
 devtoolset-6
 devtoolset-7
 llvm-toolset-7
-python33            # DEPRECATED on 2019-11-13
-rh-python34         # DEPRECATED on 2019-11-13
-rh-python36         # DEPRECATED on 2019-11-13
+python33       # DEPRECATED per 2019-11-13
+rh-python34    # DEPRECATED per 2019-11-13
+rh-python36    # DEPRECATED per 2019-11-13
 rh-ruby25
 
 [alice@{{ site.devel.name }} ~]$ 
@@ -27,9 +27,9 @@ rh-ruby25
 
 _Importantly_, only a subset of the above SCLs are available also on the _compute nodes_. Specifically, these are:
 ```sh
-python33            # DEPRECATED on 2019-11-13
-rh-python34         # DEPRECATED on 2019-11-13
-rh-python36         # DEPRECATED on 2019-11-13
+python33       # DEPRECATED per 2019-11-13
+rh-python34    # DEPRECATED per 2019-11-13
+rh-python36    # DEPRECATED per 2019-11-13
 ```
 
 
@@ -53,6 +53,10 @@ rh-python36-python-3.6.3-3.el7.x86_64
 
 
 ## Using SCLs
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+2019-11-13: Below example uses Python SCLs, which are now deprecated, and is therefore outdated. The example will be updated as soon as possible.
+</div>
 
 The current [core-software] installation provides stable but not necessarily the most up-to-date versions of Python, e.g.
 

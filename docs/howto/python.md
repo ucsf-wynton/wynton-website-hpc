@@ -1,7 +1,11 @@
 # Work with Python
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+2019-11-13: <code>python3</code> is now available as core software on all development and compute nodes.  Because of this, below example that rely on Python SCLs are deprecated.  The below examples will be updated and validated accordingly as soon as possible.  They should still be valid for Python 2.
+</div>
+
 <div class="alert alert-info" role="alert">
-The default is Python 2.  To get access to Python 3, see <a href="{{ '/software/scl.html' | relative_url }}">CentOS Software Collections (SCL)</a>.  The below instructions apply to both Python 2 and Python 3.
+The default `python` is Python 2.  To get access to Python 3, use `python3` and `pip3` whereever `python` and `pip` are used below.
 </div>
 
 ## Installing Python packages
