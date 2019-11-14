@@ -5,7 +5,7 @@
 </div>
 
 <div class="alert alert-info" role="alert">
-The default `python` is Python 2.  To get access to Python 3, use `python3` and `pip3` whereever `python` and `pip` are used below.
+The default <code>python</code> is Python 2.  To get access to Python 3, use <code>python3</code> and <code>pip3</code> whereever <code>python</code> and <code>pip</code> are used below.
 </div>
 
 ## Installing Python packages
