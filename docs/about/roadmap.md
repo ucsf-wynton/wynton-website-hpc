@@ -21,8 +21,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Requirements for mounting lab-owned storage into Wynton
 
-* Scheduler: Support interactive jobs (`qlogin`)
-
 * Scheduler: Support for email notification upon job completion (e.g. `qsub -M alice.aliceson@ucsf.edu`)
 
 * Support: A User Issue Tracker
@@ -63,6 +61,9 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * GPU compute: An additional 12 communal GPUs on three GPU nodes (2019-09-13)
 
 * GPU policy: All GPU nodes, communal and contributed, are available to all users. When running on another contributors GPU node, run time is limited to 2 hours. (2019-09-20)
+
+* Scheduler: ~~Support interactive jobs (`qlogin`)~~. The Wynton HPC Team decided against this because it increases the risk of having stale jobs occupying the scheduler and overall underutilizing the HPC environment (2019-??-??)
+
 
 See also [News].
 
