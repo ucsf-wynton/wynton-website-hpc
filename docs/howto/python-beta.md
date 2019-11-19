@@ -4,27 +4,27 @@
 
 # Work with Python
 
-Python 2 and Python 3 are both available and explicitly available as `python2` and `python3`.  The command `python` is an alias for `python2`.  We recommend to be explicit about which Python version you want to use, also when using the default Python 2, i.e. use `python2` when you know your script requires Python 2 and `python3` when you know it requires Python 3.
+Python 2 and Python 3 are both available via `python2` and `python3`.  The command `python` is an alias for `python2`.  We recommend to be explicit about which version you want to use, also when using the default Python 2, i.e. use `python2` when you know your script requires Python 2 and `python3` when you know it requires Python 3.
 
 The below examples uses Python 2, but it works analogously in Python 3, i.e. just replace `python2` with `python3`.
 
 
 ## Installing Python packages
 
-The standard way to install Python packages is by using the [_pip_](https://packaging.python.org/tutorials/installing-packages/) package management system.  You often see installation instructions such as:
+The standard way to install Python packages is by using the [_pip_](https://packaging.python.org/tutorials/installing-packages/) package management system.  You often find installation instructions online such as:
 ```sh
 $ pip install HTSeq
 ```
-It will not work.  If you attempt to run this as-is on the cluster, you get lots of errors complaining about lack of write permissions etc., which is because it tries to install the package in the system-wide Python package folder, which only sysadms have permission to.
+It will not work.  If you attempt to run this as-is on the cluster, you get lots of errors complaining about lack of write permissions etc., which is because it tries to install the package in the system-wide Python package folder (to which only sysadms have write permission).
 
 There are **two ways for non-privileged users to install Python packages using the 'pip' module**:
 
  1. Install globally to your home directory (typically `~/.local/lib/python2.7/site-packages/`) using `python2 -m pip install --user ...`
 
- 2. Install locally to a project-specific folder (e.g. `~/projects/htseq_2018/`) using `python2 -m pip install ...` in a self-contained Python virtual environment
+ 2. Install locally to a project-specific folder (e.g. `~/my_project/`) using `python2 -m pip install ...` in a self-contained Python virtual environment
 
 Both are done from the terminal.  Which one you choose depends on your needs; for some projects you may want to use the virtual environment approach whereas for your everyday work you might want to work toward your global Python package stack.
-Installing globally is the easiest, because you don't have to remember to _activate_ a virtual environment and if you need the Python package in different places, you only have to install it once.  However, if you are concerned with reproducibility, or being able to coming back to an old project of yours, you most likely want to use a virtual environment for that project so that its Python packages are _not_ updated when you update or install Python packages globally.
+Installing globally is the easiest, because you don't have to remember to _activate_ a virtual environment and if you need the Python package in different places, you only have to install it once.  However, if you are concerned about reproducibility, or being able to coming back to an old project of yours, you most likely want to use a virtual environment for that project so that its Python packages are _not_ updated when you update or install Python packages globally. This is also true if you collaborate with others in a shared project folder.
 
 
 ### 1. Installing globally (aka "user-site")
@@ -50,22 +50,23 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 [alice@{{ site.devel.name }} ~]$
 ```
 
-To see all Python packages that you have installed globally, use `python2 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python2 -m pip list`.  Packages installed with `python2 -m pip list --user` are typically installed to your `~/.local/lib/python2.7/site-packages/` folder.  If CLI executables are installed, they are often installed to `~/.local/bin/`.
+To see all Python packages that you have installed globally, use `python2 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python2 -m pip list`.  Packages installed with `python2 -m pip list --user` are typically installed to your `~/.local/lib/python2.7/site-packages/` folder.  If CLI executables are installed with one of those packages, they are often installed to `~/.local/bin/`.
+
 
 
 ### 2. Installing to a virtual environment (aka "virtualenv")
-
-A Python _virtual environment_ is basically a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ a virtual environment, environment variables like `PATH` is updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
-
-Here is an example on how to install the [HTSeq](https://htseq.readthedocs.io/en/master/install.html#installation-on-linux) package in a Python _virtual environment_.
-
 
 <div class="alert alert-info" role="alert">
 Virtual environment are not used just for cluster environments - many Python users and developers choose to use virtual environment on their local computers whenever they work in Python.
 </div>
 
+An alternative to install globally to your home directory, is to install to a local folder using a, so called, Python _virtual environment_.  A virtual environment is a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ a virtual environment, environment variables like `PATH` is updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
 
-#### 2.1 Setup (once per account)
+Below is an example on how to set up a virtual environment and install the [HTSeq](https://htseq.readthedocs.io/en/master/install.html#installation-on-linux) package and all of its dependencies into it.
+
+
+
+#### 2.1 Install required tools (once per account)
 
 In order to use virtual environments, we need the `virtualenv` tool.  Following the above instructions, you can install it to your _global stack_ as:
 
@@ -83,7 +84,7 @@ Successfully installed virtualenv-16.7.7
 ```
 
 
-#### 2.2 Setup (once per project)
+#### 2.2 Create a virtual environment (once per project)
 
 Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  For a project that requires Python 2, do the following (once):
 ```sh
