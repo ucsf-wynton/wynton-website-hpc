@@ -327,7 +327,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     <strong>R: The R Programming Language</strong><br>
 The R programming language. Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, <em>3.6.1</em><br>
+  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, <em>3.6.1</em><br>
   </dd>
 
   <dt>r-siteconfig</dt>
@@ -797,6 +797,141 @@ Enable repository: <code>module load Sali</code><br>
   Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
+  <dt>python2/biopython</dt>
+  <dd>
+  Versions: 1.68, 1.69, <em>1.70</em><br>
+  </dd>
+
+  <dt>python2/bottleneck</dt>
+  <dd>
+  Versions: 1.2.0, <em>1.2.1</em><br>
+  </dd>
+
+  <dt>python2/cycler</dt>
+  <dd>
+  Versions: <em>0.10.0</em><br>
+  </dd>
+
+  <dt>python2/dateutil</dt>
+  <dd>
+  Versions: 1.5, <em>2.6.1</em><br>
+  </dd>
+
+  <dt>python2/decorator</dt>
+  <dd>
+  Versions: 4.0.11, <em>4.2.1</em><br>
+  </dd>
+
+  <dt>python2/functools32</dt>
+  <dd>
+  Versions: <em>3.2.3</em><br>
+  </dd>
+
+  <dt>python2/h5py</dt>
+  <dd>
+  Versions: 2.6.0, 2.7.0, <em>2.7.1</em><br>
+  </dd>
+
+  <dt>python2/ihm</dt>
+  <dd>
+  Versions: <em>0.11</em><br>
+  </dd>
+
+  <dt>python2/lru_cache</dt>
+  <dd>
+  Versions: <em>1.5</em><br>
+  </dd>
+
+  <dt>python2/matplotlib</dt>
+  <dd>
+  Versions: 2.0.0, 2.0.2, <em>2.1.2</em><br>
+  </dd>
+
+  <dt>python2/mdp</dt>
+  <dd>
+  Versions: <em>2.6</em><br>
+  </dd>
+
+  <dt>python2/msgpack</dt>
+  <dd>
+  Versions: 0.5.6, <em>0.6.2</em><br>
+  </dd>
+
+  <dt>python2/networkx</dt>
+  <dd>
+  Versions: <em>1.11</em><br>
+  </dd>
+
+  <dt>python2/nose</dt>
+  <dd>
+  Versions: <em>1.3.7</em><br>
+  </dd>
+
+  <dt>python2/numexpr</dt>
+  <dd>
+  Versions: 2.6.2, <em>2.6.4</em><br>
+  </dd>
+
+  <dt>python2/numpy</dt>
+  <dd>
+  Versions: 1.12.0, 1.13.0, <em>1.14.1</em><br>
+  </dd>
+
+  <dt>python2/pandas</dt>
+  <dd>
+  Versions: 0.19.2, 0.20.2, <em>0.22.0</em><br>
+  </dd>
+
+  <dt>python2/pkgconfig</dt>
+  <dd>
+  Versions: <em>1.2.2</em><br>
+  </dd>
+
+  <dt>python2/protobuf</dt>
+  <dd>
+  Versions: 2.3.0, <em>2.5.0</em><br>
+  </dd>
+
+  <dt>python2/pymc</dt>
+  <dd>
+  Versions: <em>2.3.6</em><br>
+  </dd>
+
+  <dt>python2/pyparsing</dt>
+  <dd>
+  Versions: <em>2.1.10</em><br>
+  </dd>
+
+  <dt>python2/pyrmsd</dt>
+  <dd>
+  Versions: <em>4.1.git48ab119</em><br>
+  </dd>
+
+  <dt>python2/pytz</dt>
+  <dd>
+  Versions: <em>2016.10</em><br>
+  </dd>
+
+  <dt>python2/scikit</dt>
+  <dd>
+  Versions: 0.12, 0.18.1, <em>0.19.1</em><br>
+  </dd>
+
+  <dt>python2/scipy</dt>
+  <dd>
+  Versions: 0.18.1, 0.19.0, <em>1.0.0</em><br>
+  </dd>
+
+  <dt>python2/six</dt>
+  <dd>
+  Versions: <em>1.10.0</em><br>
+  </dd>
+
+  <dt>python2/tables</dt>
+  <dd>
+  Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
+  </dd>
+
   <dt>python3/ihm</dt>
   <dd>
   Versions: <em>0.11</em><br>
@@ -810,6 +945,11 @@ Enable repository: <code>module load Sali</code><br>
   <dt>python3/nose</dt>
   <dd>
   Versions: <em>1.3.7</em><br>
+  </dd>
+
+  <dt>python3/numpy</dt>
+  <dd>
+  Versions: <em>1.17.4</em><br>
   </dd>
 
   <dt>relion</dt>
@@ -874,7 +1014,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-11-13 16:29:21 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-11-20 16:49:46 from querying `module avail` and `module spider`._
 
 
 <style>
