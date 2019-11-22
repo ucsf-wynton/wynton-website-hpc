@@ -218,6 +218,14 @@ A tool for Genome-wide Complex Trait Analysis (GCTA). Example: <code>gcta64</cod
   Versions: 1.26.0, 1.92.3beta3, <em>1.92.4beta</em><br>
   </dd>
 
+  <dt>gdal</dt>
+  <dd>
+    <strong>GDAL: Geospatial Data Abstraction Library</strong><br>
+GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats. Example: <code>gdalinfo --version</code><br>
+    URL: <a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a><br>
+  Versions: <em>2.4.3</em><br>
+  </dd>
+
   <dt>git-flow</dt>
   <dd>
     <strong>git-flow: Git Extension Git Flow (AVH Edition)</strong><br>
@@ -932,9 +940,39 @@ Enable repository: <code>module load Sali</code><br>
   Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
+  <dt>python3/bottleneck</dt>
+  <dd>
+  Versions: <em>1.3.1</em><br>
+  </dd>
+
+  <dt>python3/cycler</dt>
+  <dd>
+  Versions: <em>0.10.0</em><br>
+  </dd>
+
+  <dt>python3/dateutil</dt>
+  <dd>
+  Versions: <em>2.8.1</em><br>
+  </dd>
+
+  <dt>python3/decorator</dt>
+  <dd>
+  Versions: <em>4.4.1</em><br>
+  </dd>
+
   <dt>python3/ihm</dt>
   <dd>
   Versions: <em>0.11</em><br>
+  </dd>
+
+  <dt>python3/kiwisolver</dt>
+  <dd>
+  Versions: <em>1.1.0</em><br>
+  </dd>
+
+  <dt>python3/matplotlib</dt>
+  <dd>
+  Versions: <em>3.1.2</em><br>
   </dd>
 
   <dt>python3/msgpack</dt>
@@ -947,9 +985,39 @@ Enable repository: <code>module load Sali</code><br>
   Versions: <em>1.3.7</em><br>
   </dd>
 
+  <dt>python3/numexpr</dt>
+  <dd>
+  Versions: <em>2.7.0</em><br>
+  </dd>
+
   <dt>python3/numpy</dt>
   <dd>
   Versions: <em>1.17.4</em><br>
+  </dd>
+
+  <dt>python3/pkgconfig</dt>
+  <dd>
+  Versions: <em>1.5.1</em><br>
+  </dd>
+
+  <dt>python3/pyparsing</dt>
+  <dd>
+  Versions: <em>2.4.5</em><br>
+  </dd>
+
+  <dt>python3/pytz</dt>
+  <dd>
+  Versions: <em>2019.3</em><br>
+  </dd>
+
+  <dt>python3/scipy</dt>
+  <dd>
+  Versions: <em>1.3.2</em><br>
+  </dd>
+
+  <dt>python3/six</dt>
+  <dd>
+  Versions: <em>1.13.0</em><br>
   </dd>
 
   <dt>relion</dt>
@@ -1014,7 +1082,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-11-20 16:49:46 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-11-21 20:28:42 from querying `module avail` and `module spider`._
 
 
 <style>
