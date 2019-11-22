@@ -363,7 +363,7 @@ NA<br>
   <dt>scl-python (part of CBI-testing)</dt>
   <dd>
     <strong>NA</strong><br>
-Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.  Example: <code>python --version</code> and <code>pip --version</code>.<br>
+[DEPRECATED: Python SCLs are deprecated on Wynton HPC because <code>python3</code> is now available everywhere.]  Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.  Example: <code>python --version</code> and <code>pip --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a><br>
   Versions: .incl/33, .incl/34, .incl/36, 3.3, 3.4, <em>3.6</em><br>
     NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
@@ -995,6 +995,11 @@ Enable repository: <code>module load Sali</code><br>
   Versions: <em>1.17.4</em><br>
   </dd>
 
+  <dt>python3/pandas</dt>
+  <dd>
+  Versions: <em>0.25.3</em><br>
+  </dd>
+
   <dt>python3/pkgconfig</dt>
   <dd>
   Versions: <em>1.5.1</em><br>
@@ -1082,7 +1087,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-11-21 20:28:42 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-11-22 07:46:13 from querying `module avail` and `module spider`._
 
 
 <style>
