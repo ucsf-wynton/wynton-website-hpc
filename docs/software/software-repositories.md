@@ -527,7 +527,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>Cython</dt>
   <dd>
-  Versions: <em>0.25.2</em><br>
+  Versions: 0.25.2, <em>0.29.14</em><br>
   </dd>
 
   <dt>doxygen</dt>
@@ -577,7 +577,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>hdf5</dt>
   <dd>
-  Versions: 1.8.14, 1.8.17, <em>1.10.1</em><br>
+  Versions: 1.8.14, 1.8.17, 1.10.1, <em>1.10.5</em><br>
   </dd>
 
   <dt>ImageMagick</dt>
@@ -940,6 +940,11 @@ Enable repository: <code>module load Sali</code><br>
   Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
+  <dt>python3/biopython</dt>
+  <dd>
+  Versions: <em>1.75</em><br>
+  </dd>
+
   <dt>python3/bottleneck</dt>
   <dd>
   Versions: <em>1.3.1</em><br>
@@ -960,9 +965,19 @@ Enable repository: <code>module load Sali</code><br>
   Versions: <em>4.4.1</em><br>
   </dd>
 
+  <dt>python3/h5py</dt>
+  <dd>
+  Versions: <em>2.10.0</em><br>
+  </dd>
+
   <dt>python3/ihm</dt>
   <dd>
   Versions: <em>0.11</em><br>
+  </dd>
+
+  <dt>python3/joblib</dt>
+  <dd>
+  Versions: <em>0.14.0</em><br>
   </dd>
 
   <dt>python3/kiwisolver</dt>
@@ -978,6 +993,11 @@ Enable repository: <code>module load Sali</code><br>
   <dt>python3/msgpack</dt>
   <dd>
   Versions: <em>0.6.2</em><br>
+  </dd>
+
+  <dt>python3/networkx</dt>
+  <dd>
+  Versions: <em>2.4</em><br>
   </dd>
 
   <dt>python3/nose</dt>
@@ -1010,9 +1030,19 @@ Enable repository: <code>module load Sali</code><br>
   Versions: <em>2.4.5</em><br>
   </dd>
 
+  <dt>python3/pyrmsd</dt>
+  <dd>
+  Versions: <em>4.1.gita558b8a</em><br>
+  </dd>
+
   <dt>python3/pytz</dt>
   <dd>
   Versions: <em>2019.3</em><br>
+  </dd>
+
+  <dt>python3/scikit</dt>
+  <dd>
+  Versions: <em>0.21.3</em><br>
   </dd>
 
   <dt>python3/scipy</dt>
@@ -1023,6 +1053,11 @@ Enable repository: <code>module load Sali</code><br>
   <dt>python3/six</dt>
   <dd>
   Versions: <em>1.13.0</em><br>
+  </dd>
+
+  <dt>python3/tables</dt>
+  <dd>
+  Versions: <em>3.6.1</em><br>
   </dd>
 
   <dt>relion</dt>
@@ -1087,7 +1122,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-11-22 07:46:13 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-11-26 11:35:29 from querying `module avail` and `module spider`._
 
 
 <style>
