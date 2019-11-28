@@ -6,7 +6,7 @@ set -e
 SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 ## Required software
-module load CBI r
+PATH="/wynton/home/cbi/shared/software/CBI/R-3.6.1/bin:$PATH"
 
 ## Required R packages
 ## FIXME: Freeze an R package library with the required packages
