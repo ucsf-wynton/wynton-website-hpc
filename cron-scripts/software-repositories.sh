@@ -10,7 +10,7 @@ PATH="/wynton/home/cbi/shared/software/CBI/R-3.6.1/bin:$PATH"
 
 ## Required R packages
 ## FIXME: Freeze an R package library with the required packages
-# R_LIBS_USER=...
+R_LIBS_USER=/wynton/home/cbi/hb/R/x86_64-pc-linux-gnu-library/3.6-CBI
 
 ## Session info
 Rscript --version
