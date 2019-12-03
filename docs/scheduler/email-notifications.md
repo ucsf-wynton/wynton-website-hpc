@@ -85,7 +85,7 @@ Job 8968283 (myscript.sh) Complete
  Exit Status      = 0
 ```
 
-The message send when a job is aborted (`-m a`),  for instance via `qdel`, will look like:
+The message sent when a job is aborted (`-m a`),  for instance via `qdel`, will look like:
 
 ```
 From: root <root@wynton.ucsf.edu>
