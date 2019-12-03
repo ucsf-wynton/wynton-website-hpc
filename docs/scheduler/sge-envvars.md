@@ -14,7 +14,9 @@ Some of the environment variables set by the scheduler and available to a job at
 
 * `PE_HOSTFILE` (string) - the absolute path of a file with rows of machines allocated to a parallel job
 
-* `SGE_TASK_ID` (integer or `undefined`) for array jobs, a subtask identifier (default: `undefined`)
+* `SGE_GPU` (comma-separated integers or `undefined`) - set of GPU core indices allocated to a GPU job (default: `undefined`)
+
+* `SGE_TASK_ID` (integer or `undefined`) - subtask identifier for array jobs (default: `undefined`)
 
 * `TMP` (string) - same as `TMPDIR`
 
