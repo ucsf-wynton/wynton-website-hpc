@@ -1,3 +1,7 @@
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<strong>Do not request email notifications for array jobs!</strong>  If done, there will be email messages sent for <em>every single task</em> in the job array.
+</div>
+
 ## Job Email Notifications
 
 Instead of polling `qstat` to check whether submitted jobs are queued, running, or finished, one can tell the job scheduler to send email notifications as jobs are started or completed.  This is done by specifying `qsub` option `-m <when>` and option `-M <recipients>`, where `<when>` specifies under what circumstances an email message should be sent to `<recipients>`.
@@ -8,11 +12,24 @@ To send an email when the job starts, and when it (b)egins, (e)nds, or (a)borts,
 $ qsub -m bea -M alice.bobson@ucsf.edu myscript.sh
 ```
 
-To send an email only when the job completed, successfully or not, skip `b` and use:
+To send an email only when the job completed, successfully or not, skip (b)egin notifications by using only:
 
 ```sh
 $ qsub -m ea -M alice.bobson@ucsf.edu myscript.sh
 ```
+
+
+### Email notifications for array jobs
+
+**Do not request email notifications for array jobs!**  If done, there will be email messages sent for _every single task_ of the job array.  Instead, to get an email notification when a job array completes, submit a "dummy" job that depend on the job array such that it will only launch when the job array completes.  The sole purpose of this dummy job is to trigger an email notification.  For instance, if the job array has job ID 9156754, then submit a job:
+
+```sh
+$ job_id=9156754
+$ echo 'date' | qsub -N "Array_job_${job_id}_done" -m b  -l h_rt=00:00:05 -hold_jid "${job_id}"
+```
+
+This will send an email with 'Array_job_9156754_done' in the subject line as soon as the dummy job launches.
+
 
 
 ### Configure a default recipient
@@ -25,6 +42,10 @@ To avoid having to specify the email address in each `qsub` call, or as an SGE d
 ```
 
 The advantage of specifying the recipient in `~/.sge_request`, instead of in the job script, is that the job script does not carry your personal email address.  If the job script has your email address, then it will be you that get email notifications if someone else copy your script as-is and runs it on the cluster (also other SGE clusters).
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<strong>Please do not specify <code>-m bea</code> in <code>~/.sge_request</code></strong> to make it the default for <em>all</em> of your jobs. If done, you might end up producing thousands of email messages when you submit array job.
+</div>
 
 
 ### Example messages
