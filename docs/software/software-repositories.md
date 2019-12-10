@@ -380,7 +380,7 @@ ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --versio
   <dt>snpeff</dt>
   <dd>
     <strong>SnpEff: Genetic Variant Annotation and Effect Prediction Toolbox</strong><br>
-SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes). Example: <code>snpEff -help</code>  and <code>ClinEff -help</code>, which are aliases for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code> and <code>java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help</code>.<br>
+SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes). Example: <code>snpEff -help</code>, <code>SnpSift -help</code>,  and <code>ClinEff -help</code>, which are aliases for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code>, <code>java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help</code>, and <code>java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help</code>.<br>
     URL: <a href="http://snpeff.sourceforge.net/">http://snpeff.sourceforge.net/</a><br>
   Versions: <em>4.3t</em><br>
   </dd>
@@ -1122,7 +1122,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-12-10 11:10:21 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-12-10 14:44:15 from querying `module avail` and `module spider`._
 
 
 <style>
