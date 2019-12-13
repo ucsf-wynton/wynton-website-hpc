@@ -106,7 +106,7 @@ specs:
   home_size: "383 TiB"
 
 users:
-  nbr_of_accounts: 707
+  nbr_of_accounts: 702
   
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
