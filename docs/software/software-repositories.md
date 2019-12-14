@@ -14,12 +14,12 @@ Then use `module avail` to list what modules are available (or see below).  Next
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
-module load python r bwa
+module load r bwa
 ```
 
 It is possible to enable a software repository and load specific software in one call, e.g.
 ```sh
-module load CBI python r bwa
+module load CBI r bwa bowtie2/2.2.6
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
@@ -1122,7 +1122,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-12-14 11:57:44 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-12-14 12:00:24 from querying `module avail` and `module spider`._
 
 
 <style>
