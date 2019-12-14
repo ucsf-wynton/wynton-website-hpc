@@ -1,5 +1,6 @@
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>: (<em>For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page</em>)<br/>
+2019-12-13: Status page now include <a href="{{ '/status/index.html' | relative_url }}">GPU queue metrics</a>.<br/>
 2019-11-12: Added support for <a href="{{ '/scheduler/email-notifications.html' | relative_url }}">email notifications</a> when a job starts running or ends.<br/>
 2019-09-13: Added another three <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes with a total of 12 GPUs</a>.<br/>
 2019-09-12 Added a second <a href="{{ '/about/specs.html' | relative_url }}">data transfer node</a>.<br/>
