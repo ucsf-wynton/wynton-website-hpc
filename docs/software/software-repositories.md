@@ -71,7 +71,7 @@ A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>ba
     <strong>BCFtools: Utilities for Variant Calling and Manipulating VCFs and BCFs</strong><br>
 BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.  Example: <code>bcftools --version</code><br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: <em>1.9</em><br>
+  Versions: 1.9, <em>1.10</em><br>
   </dd>
 
   <dt>bcl2fastq</dt>
@@ -87,7 +87,7 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
     <strong>BEDOPS: The Fast, Highly Scalable and Easily-Parallelizable Genome Analysis Toolkit</strong><br>
 BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.  Example: <code>bedops --version</code><br>
     URL: <a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a><br>
-  Versions: <em>2.4.36</em><br>
+  Versions: 2.4.36, <em>2.4.37</em><br>
   </dd>
 
   <dt>bedtools2</dt>
@@ -95,7 +95,7 @@ BEDOPS is an open-source command-line toolkit that performs highly efficient and
     <strong>bedtools2: The Swiss Army Knife for Genome Arithmetic</strong><br>
 Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF. Example: <code>bedtools --version</code> and <code>ls $BEDTOOLS2_HOME/genomes/</code>.<br>
     URL: <a href="https://github.com/arq5x/bedtools2/">https://github.com/arq5x/bedtools2/</a><br>
-  Versions: <em>2.28.0</em><br>
+  Versions: 2.28.0, <em>2.29.1</em><br>
   </dd>
 
   <dt>blast</dt>
@@ -143,7 +143,7 @@ Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent se
     <strong>byobu: Elegant Enhancement of the Otherwise Functional, Plain, Practical GNU Screen</strong><br>
 Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer. Example: <code>byobu --version</code><br>
     URL: <a href="http://byobu.org">http://byobu.org</a>, <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a><br>
-  Versions: 5.127, <em>5.129</em><br>
+  Versions: 5.127, 5.129, <em>5.130</em><br>
   </dd>
 
   <dt>CBI-testing</dt>
@@ -199,7 +199,7 @@ FastQC is a program designed to spot potential problems in high througput sequen
     <strong>fzf - A Command-Line Fuzzy Finder</strong><br>
 fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc. Example: <code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>. To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
     URL: <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a><br>
-  Versions: <em>0.18.0</em><br>
+  Versions: 0.18.0, <em>0.19.0</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -263,7 +263,7 @@ HTSlib is an implementation of a unified C library for accessing common file for
     <strong>IGV: The Integrative Genomics Viewer</strong><br>
 The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations. NOTE: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0). Example: <code>igv</code>.<br>
     URL: <a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a><br>
-  Versions: 2.7.0, <em>2.4.19</em><br>
+  Versions: 2.7.0, 2.7.2, <em>2.4.19</em><br>
   </dd>
 
   <dt>igvtools</dt>
@@ -287,7 +287,7 @@ JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hi
     <strong>kallisto: Near-optimal RNA-Seq Quantification</strong><br>
 kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.  Example: <code>kallisto version</code>.<br>
     URL: <a href="https://pachterlab.github.io/kallisto/about.html">https://pachterlab.github.io/kallisto/about.html</a>, <a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a><br>
-  Versions: 0.45.0, 0.45.1, <em>0.46.0</em><br>
+  Versions: 0.45.0, 0.45.1, 0.46.0, <em>0.46.1</em><br>
   </dd>
 
   <dt>picard</dt>
@@ -295,7 +295,7 @@ kallisto is a program for quantifying abundances of transcripts from RNA-Seq dat
     <strong>Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats</strong><br>
 Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.  Example: <code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code><br>
     URL: <a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a><br>
-  Versions: <em>2.21.1</em><br>
+  Versions: 2.21.1, <em>2.21.4</em><br>
   </dd>
 
   <dt>pindel</dt>
@@ -350,7 +350,7 @@ Sets R options and environment variables customized for the current compute envi
     <strong>SAMtools: Tools (written in C using htslib) for Manipulating Next-Generation Sequencing Data</strong><br>
 SAMtools is a suite of programs for interacting with high-throughput sequencing data.  Example: <code>samtools --version</code>.<br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: <em>1.9</em><br>
+  Versions: 1.9, <em>1.10</em><br>
   </dd>
 
   <dt>scl-devtoolset (part of CBI-testing)</dt>
@@ -1122,7 +1122,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-12-12 07:02:36 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-12-14 11:57:44 from querying `module avail` and `module spider`._
 
 
 <style>
