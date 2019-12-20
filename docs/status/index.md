@@ -2,16 +2,16 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
+<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
 </div>
-<!--
 -->
 
-<!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
+<!--
 -->
 
 <!--
@@ -68,6 +68,28 @@
 
 
 ## Past Incidents
+
+### December 20, 2019 - January 4, 2020
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target ~7,500 cores) in the graph above.  Log-in, data-transfer, and development nodes will be rebooted at 15:30 on Friday December 20.  GPU nodes already run the new kernel and are not affected.  
+<br><span class="timestamp">December 20, 10:20 PDT</span>
+
+
+### December 18, 2019
+
+#### <span style="color: orange;">Network/login issues</span>
+
+**Resolved**: The Wynton HPC environment is fully functional again. The BeeGFS filesystem was not working properly during 18:30-22:10 on December 18 resulting in no login access to the cluster and job file I/O being backed up.
+<br><span class="timestamp">May 19, 08:50 PDT</span>
+
+**Update**: The BeeGFS filesystem is non-responsive, which we believe is due to the netowrk switch upgrade.
+<br><span class="timestamp">May 18, 21:00 PDT</span>
+
+**Notice**: One of two network switches will be upgraded on Wednesday December 18 starting at 18:00 and lasting a few hours.  We do not expect this to impact the Wynton HPC environment other than slowing down the network performance to 50%.
+<br><span class="timestamp">May 17, 10:00 PDT</span>
+
 
 ### October 29-November 11, 2019
 
