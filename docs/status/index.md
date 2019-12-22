@@ -67,6 +67,15 @@
 ## Upcoming and Current Incidents
 
 
+### December 22, 2019
+
+#### <span style="color: orange;">Login non-functional</span>
+
+**Notice**: It is not possible to log in to the Wynton HPC environment.  The reason is currently not known.
+<br><span class="timestamp">December 22, 09:15 PDT</span>
+
+
+
 ### December 20, 2019 - January 4, 2020
 
 #### <span style="color: orange;">Kernel maintenance</span>
@@ -84,7 +93,7 @@
 **Resolved**: The Wynton HPC environment is fully functional again. The BeeGFS filesystem was not working properly during 18:30-22:10 on December 18 resulting in no login access to the cluster and job file I/O being backed up.
 <br><span class="timestamp">May 19, 08:50 PDT</span>
 
-**Update**: The BeeGFS filesystem is non-responsive, which we believe is due to the netowrk switch upgrade.
+**Update**: The BeeGFS filesystem is non-responsive, which we believe is due to the network switch upgrade.
 <br><span class="timestamp">May 18, 21:00 PDT</span>
 
 **Notice**: One of two network switches will be upgraded on Wednesday December 18 starting at 18:00 and lasting a few hours.  We do not expect this to impact the Wynton HPC environment other than slowing down the network performance to 50%.
