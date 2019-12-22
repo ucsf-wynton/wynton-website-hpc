@@ -69,7 +69,10 @@
 
 ### December 22, 2019
 
-#### <span style="color: orange;">Login non-functional</span>
+#### <span style="color: orange;">BeeGFS failure</span>
+
+**Update**: The issues with log in was because the responsiveness of one of the BeeGFS file servers became unreliable around 04:20.  Rebooting that server resolved the problem.  The cluster is fully functional again although slower than usual until the file system have been resynced.  After this, there might be a need for one more, brief, reboot.
+<br><span class="timestamp">December 22, 14:40 PDT</span>
 
 **Notice**: It is not possible to log in to the Wynton HPC environment.  The reason is currently not known.
 <br><span class="timestamp">December 22, 09:15 PDT</span>
