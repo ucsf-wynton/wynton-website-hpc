@@ -67,18 +67,6 @@
 ## Upcoming and Current Incidents
 
 
-### December 22, 2019
-
-#### <span style="color: orange;">BeeGFS failure</span>
-
-**Update**: The issues with log in was because the responsiveness of one of the BeeGFS file servers became unreliable around 04:20.  Rebooting that server resolved the problem.  The cluster is fully functional again although slower than usual until the file system have been resynced.  After this, there might be a need for one more, brief, reboot.
-<br><span class="timestamp">December 22, 14:40 PDT</span>
-
-**Notice**: It is not possible to log in to the Wynton HPC environment.  The reason is currently not known.
-<br><span class="timestamp">December 22, 09:15 PDT</span>
-
-
-
 ### December 20, 2019 - January 4, 2020
 
 #### <span style="color: orange;">Kernel maintenance</span>
@@ -88,6 +76,20 @@
 
 
 ## Past Incidents
+
+### December 22, 2019
+
+#### <span style="color: orange;">BeeGFS failure</span>
+
+**Resolved**: No further hiccups were needed during the BeeGFS resynchronization.  Everything is working as expected.
+<br><span class="timestamp">December 23, 10:00 PDT</span>
+
+**Update**: The issues with log in was because the responsiveness of one of the BeeGFS file servers became unreliable around 04:20.  Rebooting that server resolved the problem.  The cluster is fully functional again although slower than usual until the file system have been resynced.  After this, there might be a need for one more, brief, reboot.
+<br><span class="timestamp">December 22, 14:40 PDT</span>
+
+**Notice**: It is not possible to log in to the Wynton HPC environment.  The reason is currently not known.
+<br><span class="timestamp">December 22, 09:15 PDT</span>
+
 
 ### December 18, 2019
 
