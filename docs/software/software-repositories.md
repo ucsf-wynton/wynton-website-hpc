@@ -234,6 +234,14 @@ A collection of Git extensions to provide high-level repository operations for V
   Versions: 1.12.1, <em>1.12.3</em><br>
   </dd>
 
+  <dt>gsl</dt>
+  <dd>
+    <strong>GSL: Gnu Scientific Library</strong><br>
+The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It is free software under the GNU General Public License. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. There are over 1000 functions in total with an extensive test suite. Example: <code>gsl-config --version</code><br>
+    URL: <a href="https://www.gnu.org/software/gsl/">https://www.gnu.org/software/gsl/</a><br>
+  Versions: <em>2.6</em><br>
+  </dd>
+
   <dt>hisat2</dt>
   <dd>
     <strong>HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes</strong><br>
@@ -1122,7 +1130,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-12-25 16:14:06 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-12-27 17:55:38 from querying `module avail` and `module spider`._
 
 
 <style>
