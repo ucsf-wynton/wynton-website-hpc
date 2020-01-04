@@ -234,6 +234,14 @@ A collection of Git extensions to provide high-level repository operations for V
   Versions: 1.12.1, <em>1.12.3</em><br>
   </dd>
 
+  <dt>gsl</dt>
+  <dd>
+    <strong>GSL: Gnu Scientific Library</strong><br>
+The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It is free software under the GNU General Public License. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. There are over 1000 functions in total with an extensive test suite. Example: <code>gsl-config --version</code><br>
+    URL: <a href="https://www.gnu.org/software/gsl/">https://www.gnu.org/software/gsl/</a><br>
+  Versions: <em>2.6</em><br>
+  </dd>
+
   <dt>hisat2</dt>
   <dd>
     <strong>HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes</strong><br>
@@ -362,10 +370,10 @@ NA<br>
 
   <dt>scl-python (part of CBI-testing)</dt>
   <dd>
-    <strong>NA</strong><br>
+    <strong>SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]</strong><br>
 [DEPRECATED: Python SCLs are deprecated on Wynton HPC because <code>python3</code> is now available everywhere.]  Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.  Example: <code>python --version</code> and <code>pip --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a><br>
-  Versions: .incl/33, .incl/34, .incl/36, 3.3, 3.4, <em>3.6</em><br>
+  Versions: 3.3, 3.4, <em>3.6</em><br>
     NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
@@ -1122,7 +1130,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2019-12-18 15:20:55 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2019-12-27 17:55:38 from querying `module avail` and `module spider`._
 
 
 <style>
