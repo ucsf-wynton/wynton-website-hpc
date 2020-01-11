@@ -353,6 +353,14 @@ Sets R options and environment variables customized for the current compute envi
   Versions: <em>0.1</em><br>
   </dd>
 
+  <dt>ripgrep</dt>
+  <dd>
+    <strong>ripgrep - Recursively Searches Directories for a Regex Pattern</strong><br>
+ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.  Examples: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code><br>
+    URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
+  Versions: <em>11.0.2</em><br>
+  </dd>
+
   <dt>samtools</dt>
   <dd>
     <strong>SAMtools: Tools (written in C using htslib) for Manipulating Next-Generation Sequencing Data</strong><br>
@@ -995,7 +1003,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-01-07 16:33:18 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-01-11 12:41:40 from querying `module avail` and `module spider`._
 
 
 <style>
