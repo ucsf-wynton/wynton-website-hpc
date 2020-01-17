@@ -2,8 +2,15 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
+<!--
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong>
+</div>
+-->
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
+<em>File-system maintenance is planned for January 22 at noon-1pm.</em>
 </div>
 <!--
 -->
@@ -65,6 +72,13 @@
 
 
 ## Upcoming and Current Incidents
+
+### January 22, 2020
+
+#### <span style="color: orange;">File-system maintenance</span>
+
+**Notice**: One of the BeeGFS servers, which serve our cluster-wide file system, will be swapped out starting at noon (11:59am) on Wednesday January 22, 2020 and the work is expected to last one hour.  We don't anticipate any downtime because the BeeGFS servers are mirrored for availability.
+<br><span class="timestamp">Jan 16, 14:40 PDT</span>
 
 
 ## Past Incidents
@@ -318,6 +332,7 @@
 
 
 ### January 9, 2019
+
 #### <span style="color: orange;">Job scheduler maintenance downtime</span>
 
 **Resolved**: The SGE job scheduler is now back online and accepts new job submission again.
