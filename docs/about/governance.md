@@ -44,7 +44,7 @@ Committee also resolves any disputes concerning use and governance of the
 cluster. Committee matters are addressed at meetings and by email as needed. To
 ensure continuity of governance, the Committee appoints new members by a
 majority vote. The Committee currently consists of David Agard, Sergio
-Baranzini, Sharmila Majumdar, Brian Shoichet, Tom Ferrin (Co-Chair), Andrej Sali
+Baranzini, Scott Pegg, Brian Shoichet, Tom Ferrin (Co-Chair), Andrej Sali
 (Co-Chair), Mike Keiser (representing guest users), and Rick Larsen (*ex officio*,
 Campus IT).
 
