@@ -2,39 +2,31 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-<!--
-<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong>
-</div>
--->
+{% assign status = "ok" %}
 
+{% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
-<em>File-system maintenance is planned for January 22 at noon-1pm.</em>
+<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
 </div>
-<!--
--->
-
-<!--
+{% elsif status == "kernel-upgrade" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
--->
-
-<!--
+{% elsif status == "full-outage" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
 <em>Complete outage due to scheduled maintenance</em>
 </div>
--->
-
-<!--
+{% elsif status == "notice" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
+<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
+<em>File-system maintenance is planned for January 22 at noon-1pm.</em>
 </div>
--->
-
-
+{% else %}
+<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>{{ site.cluster.name }} HPC environment operational</strong>
+</div>
+{% endif %}
 
 
 ## Queue Metrics
@@ -73,15 +65,22 @@
 
 ## Upcoming and Current Incidents
 
+
+## Past Incidents
+
+
 ### January 22, 2020
 
 #### <span style="color: orange;">File-system maintenance</span>
 
+**Resolved**: The BeeGFS upgrade issue has been resolved.
+<br><span class="timestamp">Jan 22, 14:30 PDT</span>
+
+**Update**: The planned upgrade caused unexpected problems to the BeeGFS file system resulting in `/wynton/group` becoming unstable.
+<br><span class="timestamp">Jan 22, 13:35 PDT</span>
+
 **Notice**: One of the BeeGFS servers, which serve our cluster-wide file system, will be swapped out starting at noon (11:59am) on Wednesday January 22, 2020 and the work is expected to last one hour.  We don't anticipate any downtime because the BeeGFS servers are mirrored for availability.
 <br><span class="timestamp">Jan 16, 14:40 PDT</span>
-
-
-## Past Incidents
 
 
 ### December 20, 2019 - January 4, 2020
