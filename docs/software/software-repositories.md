@@ -199,7 +199,7 @@ FastQC is a program designed to spot potential problems in high througput sequen
     <strong>fzf - A Command-Line Fuzzy Finder</strong><br>
 fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc. Example: <code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>. To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
     URL: <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a><br>
-  Versions: 0.18.0, <em>0.19.0</em><br>
+  Versions: 0.18.0, 0.19.0, <em>0.20.0</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -1003,7 +1003,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-01-23 17:17:08 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-01-24 11:01:21 from querying `module avail` and `module spider`._
 
 
 <style>
