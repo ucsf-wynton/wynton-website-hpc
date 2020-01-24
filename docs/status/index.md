@@ -2,39 +2,31 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-<!--
-<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong>
-</div>
--->
+{% assign status = "ok" %}
 
+{% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
-<em>File-system maintenance is planned for January 22 at noon-1pm.</em>
+<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
 </div>
-<!--
--->
-
-<!--
+{% elsif status == "kernel-upgrade" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
--->
-
-<!--
+{% elsif status == "full-outage" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
 <em>Complete outage due to scheduled maintenance</em>
 </div>
--->
-
-<!--
+{% elsif status == "notice" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
+<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
+<em>File-system maintenance is planned for January 22 at noon-1pm.</em>
 </div>
--->
-
-
+{% else %}
+<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>{{ site.cluster.name }} HPC environment operational</strong>
+</div>
+{% endif %}
 
 
 ## Queue Metrics
@@ -73,15 +65,22 @@
 
 ## Upcoming and Current Incidents
 
+
+## Past Incidents
+
+
 ### January 22, 2020
 
 #### <span style="color: orange;">File-system maintenance</span>
 
+**Resolved**: The BeeGFS upgrade issue has been resolved.
+<br><span class="timestamp">Jan 22, 14:30 PST</span>
+
+**Update**: The planned upgrade caused unexpected problems to the BeeGFS file system resulting in `/wynton/group` becoming unstable.
+<br><span class="timestamp">Jan 22, 13:35 PST</span>
+
 **Notice**: One of the BeeGFS servers, which serve our cluster-wide file system, will be swapped out starting at noon (11:59am) on Wednesday January 22, 2020 and the work is expected to last one hour.  We don't anticipate any downtime because the BeeGFS servers are mirrored for availability.
-<br><span class="timestamp">Jan 16, 14:40 PDT</span>
-
-
-## Past Incidents
+<br><span class="timestamp">Jan 16, 14:40 PST</span>
 
 
 ### December 20, 2019 - January 4, 2020
@@ -89,10 +88,10 @@
 #### <span style="color: orange;">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been updated and rebooted.
-<br><span class="timestamp">Jan 4, 11:00 PDT</span>
+<br><span class="timestamp">Jan 4, 11:00 PST</span>
 
 **Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target ~7,500 cores) in the graph above.  Log-in, data-transfer, and development nodes will be rebooted at 15:30 on Friday December 20.  GPU nodes already run the new kernel and are not affected.  
-<br><span class="timestamp">December 20, 10:20 PDT</span>
+<br><span class="timestamp">December 20, 10:20 PST</span>
 
 
 ### December 22, 2019
@@ -100,13 +99,13 @@
 #### <span style="color: orange;">BeeGFS failure</span>
 
 **Resolved**: No further hiccups were needed during the BeeGFS resynchronization.  Everything is working as expected.
-<br><span class="timestamp">December 23, 10:00 PDT</span>
+<br><span class="timestamp">December 23, 10:00 PST</span>
 
 **Update**: The issues with log in was because the responsiveness of one of the BeeGFS file servers became unreliable around 04:20.  Rebooting that server resolved the problem.  The cluster is fully functional again although slower than usual until the file system have been resynced.  After this, there might be a need for one more, brief, reboot.
-<br><span class="timestamp">December 22, 14:40 PDT</span>
+<br><span class="timestamp">December 22, 14:40 PST</span>
 
 **Notice**: It is not possible to log in to the Wynton HPC environment.  The reason is currently not known.
-<br><span class="timestamp">December 22, 09:15 PDT</span>
+<br><span class="timestamp">December 22, 09:15 PST</span>
 
 
 ### December 18, 2019
@@ -114,13 +113,13 @@
 #### <span style="color: orange;">Network/login issues</span>
 
 **Resolved**: The Wynton HPC environment is fully functional again. The BeeGFS filesystem was not working properly during 18:30-22:10 on December 18 resulting in no login access to the cluster and job file I/O being backed up.
-<br><span class="timestamp">May 19, 08:50 PDT</span>
+<br><span class="timestamp">May 19, 08:50 PST</span>
 
 **Update**: The BeeGFS filesystem is non-responsive, which we believe is due to the network switch upgrade.
-<br><span class="timestamp">May 18, 21:00 PDT</span>
+<br><span class="timestamp">May 18, 21:00 PST</span>
 
 **Notice**: One of two network switches will be upgraded on Wednesday December 18 starting at 18:00 and lasting a few hours.  We do not expect this to impact the Wynton HPC environment other than slowing down the network performance to 50%.
-<br><span class="timestamp">May 17, 10:00 PDT</span>
+<br><span class="timestamp">May 17, 10:00 PST</span>
 
 
 ### October 29-November 11, 2019
@@ -128,7 +127,7 @@
 #### <span style="color: orange;">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been updated and rebooted.
-<br><span class="timestamp">Nov 11, 01:00 PDT</span>
+<br><span class="timestamp">Nov 11, 01:00 PST</span>
 
 **Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). GPU nodes will be rebooted as soon as all GPU jobs complete.  During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target ~7,000 cores) in the graph above.
 <br><span class="timestamp">Oct 29, 16:30 PDT</span>
@@ -304,20 +303,20 @@
 #### <span style="color: orange;">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
-<br><span class="timestamp">Feb 5, 11:30 PDT</span>
+<br><span class="timestamp">Feb 5, 11:30 PST</span>
 
 **Notice**: Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer available slots on the queues than usual. To follow the progress, see the green 'Available CPU cores' curve (target 1,944 cores) in the graph above.
-<br><span class="timestamp">Jan 22, 16:45 PDT</span>
+<br><span class="timestamp">Jan 22, 16:45 PST</span>
 
 
 ### January 23, 2019
 
 #### <span style="color: orange;">Kernel maintenance</span>
 **Resolved**: The login, development and transfer hosts have been rebooted.
-<br><span class="timestamp">Jan 23, 13:00 PDT</span>
+<br><span class="timestamp">Jan 23, 13:00 PST</span>
 
 **Notice**: On Wednesday January 23 at 12:00pm (noon), all of the login, development, and data transfer hosts will be rebooted.  Please be logged out before then.  The hosts should be offline for less than 5 minutes.
-<br><span class="timestamp">Jan 22, 16:45 PDT</span>
+<br><span class="timestamp">Jan 22, 16:45 PST</span>
 
 
 ### January 14, 2019
@@ -325,10 +324,10 @@
 #### <span style="color: orange;">Blocking file-system issues</span>
 
 **Resolved**: The file system under `/wynton/` is back up again.  We are looking into the cause and taking steps to prevent this from happening again.
-<br><span class="timestamp">Jan 9, 12:45 PDT</span>
+<br><span class="timestamp">Jan 9, 12:45 PST</span>
 
 **Investigating**: The file system under `/wynton/` went down around 11:30 am resulting is several critical failures including the scheduler failing.
-<br><span class="timestamp">Jan 14, 11:55 PDT</span>
+<br><span class="timestamp">Jan 14, 11:55 PST</span>
 
 
 ### January 9, 2019
@@ -336,65 +335,65 @@
 #### <span style="color: orange;">Job scheduler maintenance downtime</span>
 
 **Resolved**: The SGE job scheduler is now back online and accepts new job submission again.
-<br><span class="timestamp">Jan 9, 12:45 PDT</span>
+<br><span class="timestamp">Jan 9, 12:45 PST</span>
 
 **Update**: The downtime of the job scheduler will begin on Wednesday January 9 @ noon and is expected to be completed by 1:00pm.
-<br><span class="timestamp">Jan 8, 16:00 PDT</span>
+<br><span class="timestamp">Jan 8, 16:00 PST</span>
 
 **Notice**: There will be a short job-scheduler downtime on Wednesday January 9 due to SGE maintenance.  During this downtime, already running jobs will keep running and queued jobs will remain in the queue, but no new jobs can be submitted.
-<br><span class="timestamp">Dec 20, 12:00 PDT</span>
+<br><span class="timestamp">Dec 20, 12:00 PST</span>
 
 
 ### January 8, 2019
  
 #### <span style="color: orange;">File-system server crash</span>
 **Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 7:30pm and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
-<br><span class="timestamp">Jan 8, 10:15 PDT</span>
+<br><span class="timestamp">Jan 8, 10:15 PST</span>
 
 
 ### December 21, 2018
 #### <span style="color: orange;">Partial file system failure</span>
 
 **Resolved**: Parts of the new BeeGFS file system was non-functional for approx. 1.5 hours during Friday December 21 when a brief maintenance task failed.
-<br><span class="timestamp">Dec 21, 20:50 PDT</span>
+<br><span class="timestamp">Dec 21, 20:50 PST</span>
 
 
 ### December 12-20, 2018
 #### <span style="color: orange;">Nodes down</span>
 
 **Resolved**: All of the `msg-* compute nodes but one are operational.
-<br><span class="timestamp">Dec 20, 16:40 PDT</span>
+<br><span class="timestamp">Dec 20, 16:40 PST</span>
 
 **Notice**: Starting Wednesday December 12 around 11am, several `msg-*` compute nodes went down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeGFS project is completed, which is projected to be done on Wednesday December 19.
-<br><span class="timestamp">Dec 17, 17:00 PDT</span>
+<br><span class="timestamp">Dec 17, 17:00 PST</span>
 
 
 ### December 18, 2018
 #### <span style="color: orange;">Development node does not respond</span>
 **Resolved**: Development node `qb3-dev1` is functional.
-<br><span class="timestamp">Dec 18, 20:50 PDT</span>
+<br><span class="timestamp">Dec 18, 20:50 PST</span>
 
 **Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing tomorrow morning (Wednesday December 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
-<br><span class="timestamp">Dec 18, 16:30 PDT</span>
+<br><span class="timestamp">Dec 18, 16:30 PST</span>
 
 ### November 28-December 19, 2018
 
 #### <span style="color: orange;">Installation of new, larger, and faster storage space</span>
 
 **Resolved**: `/wynton/scratch` is now back online and ready to be used.
-<br><span class="timestamp">Dec 19, 14:20 PDT</span>
+<br><span class="timestamp">Dec 19, 14:20 PST</span>
 
 **Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and Wynton will _not_ be able to migrate until the QB3 cluster has been incorporated into Wynton HPC (see [Roadmap]({{ '/about/roadmap.html' | relative_url }})) or they giving up their QB3 account.
-<br><span class="timestamp">Dec 18, 16:45 PDT</span>
+<br><span class="timestamp">Dec 18, 16:45 PST</span>
 
 **Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 19. We are working on fine tuning the configuration, running performance tests, and resilience tests.
-<br><span class="timestamp">Dec 17, 10:15 PDT</span>
+<br><span class="timestamp">Dec 17, 10:15 PST</span>
 
 **Update**: `/wynton/scratch` has been taken offline.
-<br><span class="timestamp">Dec 12, 10:20 PDT</span>
+<br><span class="timestamp">Dec 12, 10:20 PST</span>
 
 **Reminder**: All of `/wynton/scratch` will be taken offline and completely wiped starting Wednesday December 12 at 8:00am.
-<br><span class="timestamp">Dec 11, 14:45 PDT</span>
+<br><span class="timestamp">Dec 11, 14:45 PST</span>
 
 **Notice**: On Wednesday December 12, 2018, the global scratch space `/wynton/scratch` will be taken offline and completely erased.  Over the week following this, we will be adding to and reconfiguring the storage system in order to provide all users with new, larger, and faster (home) storage space.  The new storage will served using BeeGFS, which is a new much faster file system - a system we have been prototyping and tested via `/wynton/scratch`.  Once migrated to the new storage, a user's home directory quota will be increased from 200 GiB to 500 GiB.  In order to do this, the following upgrade schedule is planned:
 
@@ -411,17 +410,17 @@
 It is our hope to be able to keep the user's home accounts, login nodes, the transfer nodes, and the development nodes available throughout this upgrade period.
 
 _NOTE: If our new setup proves more challenging than anticipated, then we will postpone the SGE downtime to after the holidays, on Wednesday January 9, 2019.  Wynton will remain operational over the holidays, though without `/wynton/scratch`._
-<br><span class="timestamp">Dec 6, 14:30 PDT [edited Dec 18, 17:15 PDT]</span>
+<br><span class="timestamp">Dec 6, 14:30 PST [edited Dec 18, 17:15 PST]</span>
 
 
 ### December 12-14, 2018
 #### <span style="color: orange;">Power failure</span>
 
 **Resolved**: All `mac-*` compute nodes are up and functional.
-<br><span class="timestamp">Dec 14, 12:00 PDT</span>
+<br><span class="timestamp">Dec 14, 12:00 PST</span>
 
 **Investigating**: The compute nodes named `mac-*` (in the Sandler building) went down due to power failure on Wednesday December 12 starting around 5:50am.  Nodes are being rebooted.
-<br><span class="timestamp">Dec 12, 09:05 PDT</span>
+<br><span class="timestamp">Dec 12, 09:05 PST</span>
 
 
 ### November 8, 2018
@@ -429,19 +428,20 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 #### <span style="color: orange;">Partial shutdown due to planned power outage</span>
 
 **Resolved**: The cluster is full functional.  It turns out that none of the compute nodes, and therefore none of the running jobs, were affected by the power outage.
-<br><span class="timestamp">Nov 8, 11:00 PDT</span>
+<br><span class="timestamp">Nov 8, 11:00 PST</span>
 
 **Update**: The queue-metric graphs are being updated again.
-<br><span class="timestamp">Nov 8, 11:00 PDT</span>
+<br><span class="timestamp">Nov 8, 11:00 PST</span>
 
 **Update**: The login nodes, the development nodes and the data transfer node are now functional.
-<br><span class="timestamp">Nov 8, 10:10 PDT</span>
+<br><span class="timestamp">Nov 8, 10:10 PST</span>
 
 **Update**: Login node `wynlog1` is also affected by the power outage.  Use `wynlog2` instead.
-<br><span class="timestamp">Nov 8, 09:10 PDT</span>
+<br><span class="timestamp">Nov 8, 09:10 PST</span>
 
 **Notice**: Parts of the Wynton cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. ~~To follow the reboot progress, see the 'Available CPU cores' curve (target 1,832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
-<br><span class="timestamp">Nov 7, 15:45 PDT</span>
+<br><span class="timestamp">Nov 7, 15:45 PST</span>
+
 
 ### September 28 - October 11, 2018
 
