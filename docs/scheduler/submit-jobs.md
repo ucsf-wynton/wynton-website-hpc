@@ -81,6 +81,11 @@ Note that <code>-l scratch=size</code> specifies <em>space per job</em>, not per
 </div>
 
 
+If your job would benefit from extra-fast [local scratch storage]({{ '/about/specs.html#scratch-storage' | relative_url }}), then you can request a node with either a SSD or NVMe scratch drive via the following flag:
+```sh
+qsub -l ssd_scratch=1
+```
+
 ## Parallel processing (on a single machine)
 
 The scheduler will allocate a single core for your job.  To allow the job to use multiple slots, request the number of slots needed when you submit the job.  For instance, to request four slots (`NSLOTS=4`) _each with 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
