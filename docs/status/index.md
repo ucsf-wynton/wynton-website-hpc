@@ -69,6 +69,17 @@
 ## Past Incidents
 
 
+### January 29, 2020
+
+#### <span style="color: orange;">BeeGFS failure</span>
+
+**Resolved**: The BeeGFS file-system issue has been resolved by rebooting two meta servers.
+<br><span class="timestamp">January 29, 17:00 PDT</span>
+
+**Notice**: There's currently an issue with the BeeGFS file system.  Users reporting that they cannot log in.
+<br><span class="timestamp">January 29, 16:00 PDT</span>
+
+
 ### January 22, 2020
 
 #### <span style="color: orange;">File-system maintenance</span>
