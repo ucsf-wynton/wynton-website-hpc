@@ -56,7 +56,7 @@ module_repositories <- list(
 
   Sali = list(
     name        = "Sali",
-    maintainer  = "Joshua Baker-LePain",
+    maintainer  = "Ben Webb",
     group       = "Sali Lab Software Repository",
     url         = "https://salilab.org/",
     module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
