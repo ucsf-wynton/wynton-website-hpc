@@ -481,7 +481,7 @@ A command-line tool for common Wynton HPC queries. Examples: <code>wynton --help
 
 <h2>Module Software Repository: Sali</h2>
 
-Maintained by: Joshua Baker-LePain, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
+Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
 <br>
 
@@ -1003,7 +1003,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-01-24 11:01:21 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-02-03 18:51:45 from querying `module avail` and `module spider`._
 
 
 <style>
