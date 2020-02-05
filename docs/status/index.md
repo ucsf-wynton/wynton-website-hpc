@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "ok" %}
+{% assign status = "problematic" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -64,6 +64,13 @@
 
 
 ## Upcoming and Current Incidents
+
+### February 5, 2020
+
+#### <span style="color: orange;">Major issues due to NetApp file-system failure</span>
+
+**Notice**: Wynton is experience major issues due to NetApp file-system failure, despite this is being deprecated and not used much these days. It will take a while for everything to come back up and there will be brief BeeGFS outage while we reboot the BeeGFS management node.
+<br><span class="timestamp">February 5, 10:15 PDT</span>
 
 
 ## Past Incidents
