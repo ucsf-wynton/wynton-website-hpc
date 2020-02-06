@@ -65,9 +65,12 @@
 
 ## Upcoming and Current Incidents
 
-### February 5, 2020
+### February 5-7, 2020
 
-#### <span style="color: orange;">Major issues due to NetApp file-system failure</span>
+#### <span style="color: orange;">Major outage due to NetApp file-system failure</span>
+
+**Update**: The failed legacy NetApp server is the cause to the problems, e.g. compute nodes not being responsive causing problems for SGE etc. Because of this, **all of the cluster - login, development, transfer, and computes nodes - will be rebooted tomorrow Friday 2020-02-07**.
+<br><span class="timestamp">February 6, 10:00 PDT</span>
 
 **Notice**: Wynton is experience major issues due to NetApp file-system failure, despite this is being deprecated and not used much these days. The first user report on this came in around 09:00 and the job-queue logs suggests the problem began around 02:00.  It will take a while for everything to come back up and there will be brief BeeGFS outage while we reboot the BeeGFS management node.
 <br><span class="timestamp">February 5, 10:15 PDT</span>
