@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link href="{{ '/assets/css/ucsf-banners.css' | relative_url }}" rel="stylesheet">
     <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ '/assets/css/wynton.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ '/assets/css/dynamics.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/this_site.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/broadcast.css' | relative_url }}" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/ico/favicon.ico?' | relative_url }}">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="Wynton - UCSF Research Computing at Scale">Wynton HPC 1.0</a>
+      <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} HPC {{ site.cluster.version }}</a>
       <div class="navbar-brand"><a class="broadcast" href="{{ '/status/index.html' | relative_url }}"><span class="glyphicon glyphicon-flag"></span></a></div>
     </div>
     
@@ -70,6 +70,7 @@
             <li><a href="{{ '/software/software-modules.html' | relative_url }}">Software Modules</a></li>
             <li><a href="{{ '/software/software-repositories.html' | relative_url }}">Software Repositories</a></li>
             <li><a href="{{ '/software/singularity.html' | relative_url }}">Singularity - Linux Containers</a></li>
+            <li><a href="{{ '/software/sbgrid.html' | relative_url }}">SBGrid Software (restricted access)</a></li>
             <li><a href="{{ '/software/missing-software.html' | relative_url }}">Missing Software?</a></li>
           </ul>
         </li>
@@ -85,6 +86,7 @@
             <li><a href="{{ '/scheduler/using-local-scratch.html' | relative_url }}">Use Local Scratch</a></li>
             <li><a href="{{ '/scheduler/queues.html' | relative_url }}">Available Queues</a></li>
             <li><a href="{{ '/scheduler/advanced-usage.html' | relative_url }}">Advanced Usage</a></li>
+            <li><a href="{{ '/scheduler/email-notifications.html' | relative_url }}">Job Email Notifications</a></li>
             <li><a href="{{ '/scheduler/gpu.html' | relative_url }}">GPU Scheduling</a></li>
           </ul>
         </li>
@@ -93,7 +95,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">File Transfers <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{{ '/transfers/files-and-directories.html' | relative_url }}">Transfer Files and Directories</a></li>
-<!--            <li><a href="{{ '/transfers/ucsf-box.html' | relative_url }}">UCSF Box</a></li> -->
+            <li><a href="{{ '/transfers/ucsf-box.html' | relative_url }}">UCSF Box</a></li>
           </ul>
         </li>
 
@@ -115,6 +117,7 @@
             <li><a href="{{ '/howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a></li>
 <!--            <li><a href="{{ '/howto/compress-files-(as-a-job).html' | relative_url }}">Compress Files (via Job Queue)</a></li> -->
             <li><a href="{{ '/howto/change-pwd.html' | relative_url }}">Change Password</a></li>
+            <li><a href="{{ '/howto/gui-x11fwd.html' | relative_url }}">GUIs</a></li>
           </ul>
         </li>
 
@@ -179,7 +182,7 @@
      <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/tree/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank"><span class="glyphicon glyphicon-edit" title="Contribute to this page"></span></a>
      </span>
 <p class="muted credit" style="font-size: inherits;">
-<a href="{{ '/' | relative_url }}">Wynton HPC</a>
+<a href="{{ '/' | relative_url }}">{{ site.cluster.name }} HPC</a>
 (<a href="http://wynton.ucsf.edu/">front</a>)
 ::
 <a href="https://www.ucsf.edu/">University&nbsp;of&nbsp;California, San&nbsp;Francisco</a>

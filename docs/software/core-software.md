@@ -14,7 +14,7 @@ emacs, nano, vim
 
 <dt>File transfers</dt>
 <dd>
-scp, sftp, rsync<br>
+ftp, lftp, scp, sftp, rsync<br>
 curl, wget<br>
 dos2unix<br>
 </dd>

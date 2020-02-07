@@ -2,23 +2,25 @@
 
 Some of the environment variables set by the scheduler and available to a job at runtime:
 
-* `NSLOTS` (integer) - the number of slots allocated for a parallel job (default: 1)
-
-* `NHOSTS` (integer) - the number of hosts for a parallel job (default: 1)
-
-* `PE_HOSTFILE` (string) - the absolute path of a file with rows of machines allocated to a parallel job
+* `HOSTNAME` (string) - the name of the machine where the job is launched
 
 * `JOB_ID` (integer) - a unique job identifier
 
-* `SGE_TASK_ID` (integer or `undefined`) for array jobs, a subtask identifier (default: `undefined`)
-
 * `JOB_NAME` (string) - the name of the job as it appears on the queue
+
+* `NHOSTS` (integer) - the number of hosts for a parallel job (default: 1)
+
+* `NSLOTS` (integer) - the number of slots allocated for a parallel job (default: 1)
+
+* `PE_HOSTFILE` (string) - the absolute path of a file with rows of machines allocated to a parallel job
+
+* `SGE_GPU` (comma-separated integers or `undefined`) - set of GPU core indices allocated to a GPU job (default: `undefined`)
+
+* `SGE_TASK_ID` (integer or `undefined`) - subtask identifier for array jobs (default: `undefined`)
 
 * `TMP` (string) - same as `TMPDIR`
 
 * `TMPDIR` (string) - the absolute path to a job-specific temporary directory (local on the compute node and owned by `$USER`) that is automatically removed when the job finishes
-
-* `HOSTNAME` (string) - the name of the machine where the job is launched
 
 
 ## Example

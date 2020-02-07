@@ -31,18 +31,18 @@ _Comment_: It is the _compressed_ size that counts towards your disk quota.
 
 
 
-## Disk quota on /wynton/home/
+## User disk quota on /wynton/home/
 
 To check how much storage space you have consumed on `/wynton/home/`, and the total amount available to you, call:
 
 ```sh
-beegfs-ctl --getquota --storagepoolid=11 --uid $USER
+beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"
 ```
 
 For example,
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ beegfs-ctl --getquota --storagepoolid=11 --uid $USER
+[alice@{{ site.devel.name }} ~]$ beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"
       user/group     ||           size          ||    chunk files    
      name     |  id  ||    used    |    hard    ||  used   |  hard   
 --------------|------||------------|------------||---------|---------
@@ -55,16 +55,37 @@ tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used')
 To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 
 ```sh
-beegfs-ctl --getquota --storagepoolid=10 --uid $USER
+beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
 _Comment_: [Files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
 
 
-## Disk quota on /netapp/home (deprecated)
+## Group disk quota on /wynton/group/
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-The <code>/netapp/</code> storage is deprecated and users will be migrated to the new, much faster <code>/wynton/home/</code> file system.
+If your group (lab) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/`.  To check how much storage space your group/lab has consumed on `/wynton/group/`, and the total amount available to you, call:
+
+```sh
+beegfs-ctl --getquota --storagepoolid=12 --gid "$(id --group)"
+```
+
+For example,
+
+```sh
+[alice@{{ site.devel.name }} ~]$ beegfs-ctl --getquota --storagepoolid=12 --gid "$(id --group)"
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+        boblab| 34001||      0 Byte|   40.00 TiB||        0|unlimited
+```
+
+Note that this storage is shared among all group members and does _not_ count toward your personal disk quota under `/wynton/home/`.
+
+
+## User disk quota on /netapp/home (deprecated)
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<strong>The <code>/netapp/</code> storage will be taken offline at the end of December 2019.</strong>.  Please use the much faster <code>/wynton/home/</code> instead.  If you do not have access to the latter, <a href="{{ '/about/contact.html' | relative_url }}">let us know as soon as possible</a>.
 </div>
 
 To check your disk quota on the deprecated `/netapp/home` file system, use `quota`.  For example,

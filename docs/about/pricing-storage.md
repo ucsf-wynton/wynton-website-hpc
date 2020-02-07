@@ -1,6 +1,6 @@
 # Lab-Specific HPC Storage Pricing Model
 
-_Last updated: January 15, 2019_
+_Last updated: February 3, 2020_
 
 
 ## Summary

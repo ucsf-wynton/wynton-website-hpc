@@ -2,7 +2,7 @@
 
 ## Grant Applications
 
-Below are a few examples on how to give details on the Wynton HPC environment in a grant application.  _Please note that the node and CPU cores counts are automatically updated on a daily basis._
+Below are a few examples on how to give details on the {{ site.cluster.name }} HPC environment in a grant application.  _Please note that the node and CPU cores counts are automatically updated on a daily basis._
 
 ### Example 1
 

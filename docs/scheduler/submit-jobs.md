@@ -52,7 +52,7 @@ Note that <code>-l mem_free=size</code> specifies <em>memory per slot</em>, not 
 Specifying the run time will shorten the queuing time - significantly so for short running jobs.
 </div>
 
-By specifying the how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
+By specifying the how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time (= wall time, not CPU time) for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
 ```sh
 qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
 ```
@@ -80,6 +80,11 @@ Please specify <code>-l scratch=size</code> when using local <code>/scratch</cod
 Note that <code>-l scratch=size</code> specifies <em>space per job</em>, not per slot.
 </div>
 
+
+If your job would benefit from extra-fast [local scratch storage]({{ '/about/specs.html#scratch-storage' | relative_url }}), then you can request a node with either a SSD or NVMe scratch drive via the following flag:
+```sh
+qsub -l ssd_scratch=1
+```
 
 ## Parallel processing (on a single machine)
 
@@ -129,7 +134,7 @@ It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  In
 
 ## MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
 
-Wynton provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node across one or more compute nodes.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
+{{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node across one or more compute nodes.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
 
 ```sh
 qsub -pe mpi-8 40 hybrid_mpi.sh

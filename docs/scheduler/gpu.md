@@ -1,5 +1,6 @@
 <div class="alert alert-info" role="alert">
-2019-04-12: There are four GPU nodes with a total of 12 GPUs and GPU development node available to all users.  Users in groups who contributed GPU hardware will have exclusive access to an additional set of GPUs.
+2019-09-20: Wynton HPC has {{ site.specs.gpu_nodes }} GPU nodes with a total of {{ site.specs.gpus }} GPUs available to all users. Among these, {{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.specs.gpus | minus: site.specs.communal_gpus }} GPUs, were contributed by different research groups. Contrary to other, <a href="{{ '/scheduler/queues.html' | relative_url }}">contributors are <em>not</em> limited to 2-hour GPU jobs on nodes they contributed</a>.
+There is also one GPU development node that are available to all users.
 </div>
 
 
@@ -35,7 +36,7 @@ where N is the number of GPUs your job will use and M is the number of MPI proce
 
 ## GPU relevant resource requests
 
-The GPU nodes in Wynton contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
+The GPU nodes in {{ site.cluster.name }} contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
 
 1. `compute_cap` - describes the Compute Capability (or SM version) of the GPUs in the node (see [NVIDIA's CUDA GPU page] for more details).  `compute_cap` is an integer in keeping with the relevant flags to `nvcc`.  For example, a Compute Capability of 6.1 (e.g. [GeForce GTX 1080]) is represented by `compute_cap=61`.
 
@@ -54,7 +55,12 @@ Several CUDA runtimes are installed on the GPU nodes.  They can be loaded via mo
 
 ### GPU selection
 
-When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable `SGE_GPU` as a comma-delimited set of numbers.  Be sure to send this assignment to your application using the proper format for your application.
+When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable `SGE_GPU` as a comma-delimited set of one or more non-negative integers where then number of integers corresponds to the number of GPU cores requested.  For example, a 3-core GPU job (`-q gpu.q -pe smp 3`) may get assigned GPU cores `SGE_GPU=2,0,6` whereas a 1-core GPU job (`-q gpu.q`) may get assigned GPU core `SGE_GPU=5`.  Be sure to send this GPU-core assignment to your application using the proper format for your application.
+
+For example, if your application uses CUDA, you should limit which GPUs are used with:
+```sh
+export CUDA_VISIBLE_DEVICES=$SGE_GPU
+```
 
 <div class="alert alert-warning" role="alert">
 To avoid overloading GPUs, it is important that each job use only the GPUs it was assigned, which is given by environment variable <code>SGE_GPU</code>.

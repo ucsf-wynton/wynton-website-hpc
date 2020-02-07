@@ -1,8 +1,24 @@
 # News
 
+2019-12-13: Status page now include <a href="{{ '/status/index.html' | relative_url }}">GPU queue metrics</a>.<br/>
+
+2019-11-12: Added support for <a href="{{ '/scheduler/email-notifications.html' | relative_url }}">email notifications</a> when a job starts running or ends.<br/>
+
+2019-09-20: New <a href="{{ '/scheduler/queues.html' | relative_url }}">GPU policy</a> in place. All GPU nodes, communal and contributed, are now available to all users. Run time is two weeks, unless for jobs running on a contributed nodes that was not contributed by you in which case the run time is limited to 2 hours.<br/>
+
+2019-09-13: Added another three <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes with a total of 12 GPUs</a>.<br/>
+
+2019-09-12 Added a second <a href="{{ '/about/specs.html' | relative_url }}">data transfer node</a>.<br/>
+
+2019-08-15 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch have been removed - use `/wynton/scratch` instead.<br/>
+
+2019-07-27 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch are now deprecated - use `/wynton/scratch` instead.  The deprecated mounts will become read-only on 2019-08-01 and removed on 2019-08-09.<br/>
+
+2019-06-13: <a href="{{ '/software/software-repositories.html' | relative_url }}">Contributed Software Repositories</a> are now available and documented.<br/>
+
 2019-04-30: <a href="{{ '/about/shares.html' | relative_url }}">Contributing Member Shares</a> are now explained and listed online.<br/>
 
-2019-04-15: Add a dedicated GPU development node (after having been in beta testing for several months).<br/>
+2019-04-15: Added a dedicated GPU development node (after having been in beta testing for several months).<br/>
 
 2019-04-12: Added another two communal GPU nodes available to all users.  There are now four communal GPU nodes with a total of 12 GPUs.<br/>
 

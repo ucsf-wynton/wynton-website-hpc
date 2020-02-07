@@ -25,7 +25,7 @@ In addition to the [core software] tools that are available by default, addition
   <td>
   <strong>Sali Lab Software Repository</strong><br>
   Repository of software shared by the UCSF Sali Lab (<a href="https://salilab.org/">https://salilab.org/</a>).<br>
-  <em>Comment: Contrary to the UCSF QB3 cluster, where these modules were available by default, this repository has to be loaded explicitly in order to have access to its modules on Wynton HPC.</em><br>
+  <em>Comment: Contrary to the UCSF QB3 cluster, where these modules were available by default, this repository has to be loaded explicitly in order to have access to its modules on {{ site.cluster.name }} HPC.</em><br>
   
   Usage: <code>module load Sali</code>
   </td>
@@ -107,7 +107,7 @@ For more information on how to use modules and the `module` command, see `module
 
 ## Technical details
 
-Instead of the classical Tcl-based environment module system commonly available on Linux, Wynton uses a Lua-based environment module system called [Lmod].  Lmod has a several advantages over the Tcl-based module system while being backward compatible, i.e. users of Tcl modules can still use them with Lmod.  There are [a few rare corner cases](http://lmod.readthedocs.io/en/latest/095_tcl2lua.html) where a Tcl module might fail and the module has to be rewritten as a Lua-based module.
+Instead of the classical Tcl-based environment module system commonly available on Linux, the cluster uses a Lua-based environment module system called [Lmod].  Lmod has a several advantages over the Tcl-based module system while being backward compatible, i.e. users of Tcl modules can still use them with Lmod.  There are [a few rare corner cases](http://lmod.readthedocs.io/en/latest/095_tcl2lua.html) where a Tcl module might fail and the module has to be rewritten as a Lua-based module.
 
 When loading a _software repository_ (`module load <repos>`), it will append its module folder to the `$MODULEPATH`.  Unloading it (`module unload <repos>`) will undo any changes.  For instance, `module load <repos>` appends `$MODULEPATH_ROOT/<repos>` to your `$MODULEPATH`.  Multiple software repositories can be loaded in one call, e.g. `module load <repos1> <repos2>`.  It is also possible to load a software repository and some of its software tools in one call, e.g. `module load <repos> <software1> <software2>`.
 

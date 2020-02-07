@@ -1,41 +1,44 @@
 # Created by: hb
-# Created on: 2019-04-30 11:03:59-07:00
-# Total fshares: 15994
-# Total queue_slots: 5006
-# Number of projects: 35
+# Created on: 2020-02-06 03:00:03-08:00
+# Total fshares: 20185
+# Total queue_slots: 6735
+# Number of projects: 38
 fshares	queue_slots	project
-27	8	schreinerlab
-280	88	fraserlab
-253	79	surbecklab
-214	67	ferrinlab
-212	66	elsamadlab
-166	52	dilllab
-12	4	maleylab
-151	47	degradolab
-9	3	sysbiocenter
-11	3	kroganlab
-118	37	tanglab
-119	37	fischbachlab
-109	34	nagarajanmukherjeelab
-90	28	lilab
-901	282	pollardlab
-874	274	mac-users
-64	20	turnbaughlab
-65	20	baranzinilab
-2	1	voigtlab
-2	1	cohenlab
-627	196	kortemmelab
-594	186	jacobsonlab
-54	17	chiulab
-524	164	shoichetlab
-48	15	zaitlenlab
-48	15	saviclab
-497	156	limlab
-475	149	hernandezlab
-445	139	genetics
-4149	1299	agardlab,chenglab,frostlab,stroudlab
-4054	1269	salilab
-36	11	jameslab
-381	119	babbittlab
-351	110	grabelab
-32	10	weissmanlab
+5506	1634	salilab
+4104	1403	agardlab,chenglab,frostlab
+1224	408	pollardlab
+874	292	mac-users
+852	284	kortemmelab
+807	269	jacobsonlab
+712	237	shoichetlab
+675	225	limlab
+645	215	hernandezlab
+589	196	genetics
+517	172	babbittlab
+400	133	grabelab
+380	127	fraserlab
+344	115	surbecklab
+290	97	ferrinlab
+288	96	elsamadlab
+226	75	dilllab
+205	68	degradolab
+182	61	ichs
+161	54	fischbachlab
+160	53	tanglab
+147	59	nagarajanmukherjeelab
+123	41	lilab
+109	36	huanglab
+108	200	stroudlab
+89	29	baranzinilab
+87	29	turnbaughlab
+73	24	chiulab
+65	22	zaitlenlab
+65	22	saviclab
+49	16	jameslab
+43	14	weissmanlab
+36	12	schreinerlab
+17	6	maleylab
+15	5	kroganlab
+12	4	sysbiocenter
+3	1	voigtlab
+3	1	cohenlab

@@ -1,6 +1,12 @@
 <%@meta postprocess="FALSE"%>
+<%-- Add a front-matter warning to the Markdown file --%>
+<!--
+WARNING: Do _not_ update this file; it is automatically generated from software-respository.md.rsp.
+-->
 <%
-library("R.utils")
+library(utils)
+library(R.utils)
+
 trim <- function(x) {
   if (!is.character(x)) return(x)
   x <- sub("^[\t\n\f\r ]*", "", x)
@@ -13,37 +19,50 @@ as_html <- function(x) {
   x
 }
 
-style <- cmdArg(style = FALSE)
+style <- R.utils::cmdArg(style = FALSE)
 
-modulepath <- function(module_repos) {
-  modulepath_root <- "/netapp/home/hb/shared/apps/modulefiles"
-  modulepath <- file.path(modulepath_root, module_repos)
-  if (module_repos == "Legacy-Scyld") modulepath <- "/opt/scyld/modulefiles"
-  if (!utils::file_test("-d", modulepath)) {
-    stop("No such module directory: ", sQuote(modulepath))
-  }
-  modulepath
-}
-
-module_avail <- function(module_repos) {
-  spider <- file.path(Sys.getenv("LMOD_DIR"), "spider")
+#' @importFrom utils file_test
+module_avail <- function(info) {
+  message("module_avail() ...")
+  stopifnot(is.list(info), "module_path" %in% names(info))
+  module_path <- info$module_path
+  R.utils::mstr(list(info = info))
+  stopifnot(utils::file_test("-x", module_path))
+  lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
+  stopifnot(nzchar(lmod_dir))
+  spider <- file.path(lmod_dir, "spider")
+  message(" - spider binary: ", sQuote(spider))
   stopifnot(utils::file_test("-x", spider))
-  json <- system2(spider, args = c("-o jsonSoftwarePage", modulepath(module_repos)), stdout = TRUE)
+  args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
+  message(" - spider arguments: ", paste(args, collapse = " "))
+  json <- system2(spider, args = args, stdout = TRUE)
   x <- jsonlite::fromJSON(json)
   o <- order(x$package)
   x <- x[o,]
   keep <- !grepl("^[.]", x$package)
   x <- x[keep,]
+  message("module_avail() ... done")
   x
 }
 
 module_repositories <- list(
   CBI = list(
-    name       = "CBI",
-    maintainer = "Computational Biology and Informatics",
-    url        = "http://cbi.ucsf.edu"
+    name        = "CBI",
+    maintainer  = "Henrik Bengtsson",
+    group       = "Computational Biology and Informatics",
+    url         = "http://cbi.ucsf.edu",
+    module_path = Sys.getenv("MODULE_ROOT_CBI")
+  ),
+
+  Sali = list(
+    name        = "Sali",
+    maintainer  = "Ben Webb",
+    group       = "Sali Lab Software Repository",
+    url         = "https://salilab.org/",
+    module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
   )
 )
+
 %>
 <% if (style) { %>
 <style type="text/css">
@@ -78,15 +97,7 @@ th, td {
 <% } # if (style) %>
 <% table_of_modules <- function(x, style = c("module", "repos")) { %>
 <% style <- match.arg(style) %>
-<table>
-<tr>
-<% if (style == "module") { %>
-  <th>module &amp; versions</th>
-<% } else if (style == "repos") { %>
-  <th>repository</th>
-<% } %>
-  <th>description</th>
- </tr>
+<dl>
 <% for (ii in seq_len(nrow(x))) { %>
 <%
 m <- x[ii,]
@@ -96,6 +107,7 @@ for (cc in seq_len(ncol(versions))) {
   versions[[cc]] <- trim(versions[[cc]])
 }
 m$versions[[1]] <- versions
+m$parent <- unique(unlist(m$versions[[1]]$parent, use.names = FALSE))
 helps <- unique(versions$help)
 help <- helps[[1]]
 vers <- NULL
@@ -112,81 +124,110 @@ if (!is.null(versions$versionName)) {
   }
 }
 %>
- <tr>
-  <td>
-  <strong><%= m$package %></strong><br>
-  <%= paste(vers, collapse = ", ") %>
-  </td>
-  <td>
-  <strong><%= as_html(help) %></strong><br>
-  <%= as_html(m$description) %><br>
-  <% if (!is.null(m$url) && !is.na(m$url)) { %>
-  URL: <%= as_html(m$url) %><br>
+  <dt><%= m$package %><% if (!is.null(m$parent)) cat(sprintf(" (part of %s)", m$parent)) %></dt>
+  <dd>
+  <% if (!is.null(help)) { %>
+    <strong><%= as_html(help) %></strong><br>
   <% } %>
-  </td>
- </tr>
+  <% if (!is.null(m$description)) { %>
+    <%= as_html(m$description) %><br>
+  <% } %>
+  <% if (!is.null(m$url) && !is.na(m$url)) { %>
+    URL: <%= as_html(m$url) %><br>
+  <% } %>
+  Versions: <%= paste(vers, collapse = ", ") %><br>
+  <% if (!is.null(m$parent)) { %>
+    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+  <% } %>
+  </dd>
+
 <% } # for (ii in ...) %>
-</table>
+</dl>
 <% } ## table_of_modules() %>
 
-<%-- Add a front-matter warning to the Markdown file --%>
-<!--
-WARNING: do _not_ update this file; it is automatically generated from modules.md.rsp and will be overwritten.
--->
-
-<div class="alert alert-danger" role="alert">
-<strong>This is a mockup page!</strong>
-</div>
-
+<%---
 <div class="alert alert-warning" role="alert">
-Environment modules are currently in beta - to enable them, see Configuration / <a href="{{ '/configuration/lmod.html' | relative_url }}">Enable Software Modules</a>.
+<strong>This page is under construction: For currently available software modules, use `module avail`.</strong>
 </div>
+---%>
 
-# Software
 
-To use one or more of the below software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+# Contributed Software Repositories
+
+It is common that research groups maintain their own software stacks. Some of these groups kindly make their stacks available to the cluster community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  To get access to these repositories and their software, make sure to load them first, e.g.
+```sh
+module load CBI
+```
+Then use `module avail` to list what modules are available (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
-module load python r bwa
+module load r bwa
 ```
 
-These software modules are available from different _module repositories_, each providing several modules (more details below).  The available repositories are:
-
-<%
-x <- module_avail("repos")
-keep <- which(sapply(x$versions, FUN = function(v) unique(basename(dirname(v$path)))) == "repos")
-x <- x[keep,]
-keep <- grep("^Legacy-", x$package, invert = TRUE)
-x <- x[keep,]
-table_of_modules(x, style = "repos")
-%>
-<br>
-
-To get access to one or more of these module repositories and see what modules they provide (see below), load them as regular modules, e.g.
+It is possible to enable a software repository and load specific software in one call, e.g.
 ```sh
-module load CBI
-module avail
+module load CBI r bwa bowtie2/2.2.6
 ```
 
-_Technical details_: Loading a module repository will append its folder to the `$MODULEPATH`.  Unloading it will undo any changes.  For instance, `module load CBI` appends `<%= gsub("/home/shared/cbc/apps/modulefiles", "$MODULEPATH_ROOT", modulepath("CBI")) %>` to your `$MODULEPATH`.
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Please note that below software stacks are <em>not</em> maintained or supported by the Wynton Team.  Instead, they are kindly contributed by individual research groups and often maintained by volunteers - sometimes on their spare time.  Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+</div>
 
+Below are <%= length(module_repositories) %> contributed software repositories, each providing a set of software tools.
 
-<% for (module_repos in names(module_repositories)) { %>
+<ul class="nav nav-pills">
+<%for (kk in seq_along(module_repositories)) { %>
+<% name <- names(module_repositories)[kk] %>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
+<% } ## for (name ...) %>
+</ul>
+<div class="tab-content" style="margin-top: 1ex;">
+<%for (kk in seq_along(module_repositories)) { %>
 <%
-info <- module_repositories[[module_repos]]
-x <- module_avail(module_repos)
+  name <- names(module_repositories)[kk]
+  info <- module_repositories[[name]]
+  x <- module_avail(info)
 %>
+<div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-## Module Repository '<%= module_repos %>'
+<h2>Module Software Repository: <%= name %></h2>
 
-Maintained by: [<%= info$maintainer %>](<%= info$url %>)
+Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
+Enable repository: <code>module load <%= name %></code><br>
+<br>
 
 <% table_of_modules(x) %>
-<% } ## for (module_repos ...) %>
+</div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
+
+<% } ## for (name ...) %>
+
+</div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
+
+<ul class="nav nav-pills">
+<%for (kk in seq_along(module_repositories)) { %>
+<% name <- names(module_repositories)[kk] %>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
+<% } ## for (name ...) %>
+</ul>
 
 
-<br>
-<br>
-<br>
-_The above information was automatically generated on <%= Sys.time() %>._
+_The above information was automatically generated on <%= Sys.time() %> from querying `module avail` and `module spider`._
+
+
+<style>
+dl {
+  display: block;
+}
+dt {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: bold;
+  font-size: 120%;
+  margin-top: 1ex;
+  text-decoration: underline;
+}
+dt:after {
+  content: "";
+}
+</style>
+

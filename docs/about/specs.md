@@ -5,11 +5,13 @@
 <dl id="hosttable-summary" class="dl-horizontal">
   <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
   <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
+  <dt>GPUs</dt><dd>{{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are prioritized for GPU contributors)</dd>
   <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_min }}-{{ site.specs.ram_max }} GiB/node</dd>
   <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</dd>
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>
-  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 200 GiB/user - soon 500 GiB/user)</dd>
-
+  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 500 GiB/user)</dd>
+  <dt>Group storage</dt><dd>{{ site.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
+  <dt>Number of accounts</dt><dd>{{ site.users.nbr_of_accounts }}</dd>
 </dl>
 
 ## Software environment
@@ -21,11 +23,9 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ### Compute Nodes
 
-Most compute nodes have Intel processors, while others have AMD processes. The CPU speeds are in the range of {{ site.specs.cpu_min }}-{{ site.specs.cpu_max }} GHz.
+The majority of the compute nodes have Intel processors, while a few have AMD processes.  A subset of the compute
 Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive.  In addition, each node has a {{ site.specs.local_tmp_size_min }} TiB `/tmp` drive and {{ site.specs.swap_min }} TiB of swap space.
 For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
-
-
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
 
@@ -34,17 +34,18 @@ The compute nodes can only be utilized by [submitting jobs via the scheduler]({{
 
 The [cluster can be accessed]({{ '/get-started/access-cluster.html' | relative_url }}) via SSH to one of two login nodes:
 
-1. {{ site.login1.name }}: `{{ site.login1.hostname }}`
-2. {{ site.login2.name }}: `{{ site.login2.hostname }}`
+1. `{{ site.login1.hostname }}`
+2. `{{ site.login2.hostname }}`
 
 
 ### Data Transfer Nodes
 
-For transferring large data files, it is recommended to use the dedicate data transfer node:
+For transferring large data files, it is recommended to use one of the dedicate data transfer nodes:
 
-1. {{ site.transfer.name }}: `{{ site.transfer.hostname }}`
+1. `{{ site.transfer1.hostname }}`
+2. `{{ site.transfer2.hostname }}`
 
-which has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As the login nodes, the transfer node can be accessed via SSH.
+which both has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As for the login nodes, the transfer nodes can be accessed via SSH.
 
 _Comment_: You can also transfer data via the login nodes, but since those only have 1 Gbps connections, you will see much lower transfer rates.
 
@@ -53,12 +54,12 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ '/get-started/development-prototyping.html' | relative_url }}).
 
-Node                        | # Physical Cores |       CPU |      RAM | Local `/scratch` |
-----------------------------|-----------------:|----------:|---------:|-----------------:|
-{{ site.dev1.name }}        |                8 |  2.66 GHz |   16 GiB |         0.11 TiB |
-{{ site.dev2.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
-{{ site.dev3.name }}        |               32 |  2.66 GHz |  512 GiB |         1.1  TiB |
-{{ site.gpudev1.name }}     |               12 |  2.66 GHz |   48 GiB |         0.37 TiB |
+Node                        | Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
+----------------------------|-----------------:|---------:|-----------------:|------------------------------:|-------------------:|
+{{ site.dev1.name }}        |              8 |   16 GiB |         0.11 TiB | Intel Xeon E5430 2.66GHz      |                    |
+{{ site.dev2.name }}        |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
+{{ site.dev3.name }}        |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
+{{ site.gpudev1.name }}     |             12 |   48 GiB |         0.37 TiB | Intel Xeon X5650 2.67GHz      | GeForce GTX 980 Ti |
 
 _Comment:_ Please use the GPU development node only if you need to build or prototype GPU software.
 <!-- The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors. and local solid state drives (SSDs). -->
@@ -66,23 +67,28 @@ _Comment:_ Please use the GPU development node only if you need to build or prot
 
 ## Scratch Storage
 
-The Wynton cluster provides two types of scratch storage:
+The {{ site.cluster.name }} cluster provides two types of scratch storage:
 
-* Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
+ * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
+ * Global `/wynton/scratch/` - {{ site.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
-* Global `/wynton/scratch/` - {{ site.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
-
-There are no per-user quotas in these scratch spaces.  Files not added or modified during the last two weeks will be automatically deleted on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
+There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
 ## User and Lab Storage
 
-* `/wynton/home`: {{ site.specs.home_size_total }} TiB storage space
-* `/netapp/home`: {{ site.specs.netapp_home_size_total }} TiB storage space (to be decommissioned)
+ * `/wynton/home`: {{ site.specs.home_size_total }} TiB storage space
+ * `/wynton/group`: {{ site.specs.group_size_total }} TB (= {{ site.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
-Each user may use up to 500 GiB disk space in the home directory (for users still on `/netapp/home` the limit is 200 GiB).  Research groups can add additional storage space by either mounting their existing storage or purchase new.
+Each user may use up to 500 GiB disk space in the home directory (for users still on legacy `/netapp/home` the limit is 200 GiB).  Research groups can add additional storage space under `/wynton/group` by either mounting their existing storage or [purchase new]({{ '/about/pricing-storage.html' | relative_url }}).
 
-**Importantly**, please note that the Wynton HPC storage is _not_ backed up.  Users and labs are responsible to back up their own data outside of Wynton.
+<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
+While waiting to receive purchased storage, users may use the global scratch space, which is "unlimited" in size with the important limitation that files older than two weeks will be deleted automatically.
+</div>
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
+Importantly, note that <strong>the {{ site.cluster.name }} HPC storage is not backed up</strong>.  Users and labs are responsible to back up their own data outside of {{ site.cluster.name }}.
+</div>
 
 
 ## Network
@@ -126,7 +132,6 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     var thead, tbody, tfoot, tr, td, td_status;
     var value, value2, has_issue;
     var cores = 0, coreMin = 1e9, coreMax = -1e9;
-    var cpuMin = 1e9, cpuMax = -1e9;
     var ram = 0, ramMin = 1e9, ramMax = -1e9;
     var scratch = 0, scratchMin = 1e9, scratchMax = -1e9;
     var nodes_with_issue = 0, cores_with_issue = 0, ram_with_issue = 0;
@@ -136,7 +141,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     host_table.forEach(function(row) {
       /* Ignore column on /tmp size, iff it exists */
       delete row["Local `/tmp`"];
-    
+
       if (nodes == 0) {
         tr = table.append("thead").append("tr");
         tr.append("th").text("Status");
@@ -154,34 +159,29 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
         td_status.text("⚠");  // "⚠" or "✖"
         nodes_with_issue += 1;
       }
-      
+
       for (key in row) td = tr.append("td").text(row[key]);
       
       /* Cores */
-      value = parseInt(row["# Physical Cores"]);
+      value = parseInt(row["Physical Cores"]);
       cores += value;
       if (value <= coreMin) coreMin = value;
       if (value >= coreMax) coreMax = value;
       if (has_issue) cores_with_issue += value;
-  
-      /* CPU */
-      value = parseFloat(row["CPU"].match(/[\d.]+/));
-      if (value <= cpuMin) cpuMin = value;
-      if (value >= cpuMax) cpuMax = value;
-  
+
       /* RAM */
       value = parseFloat(row["RAM"].match(/[\d.]+/));
       ram += value;
       if (value <= ramMin) ramMin = value;
       if (value >= ramMax) ramMax = value;
       if (has_issue) ram_with_issue += value;
-  
+
       /* Scratch */
       value = parseFloat(row["Local `/scratch`"].match(/[\d.]+/));
       scratch += value;
       if (value <= scratchMin) scratchMin = value;
       if (value >= scratchMax) scratchMax = value;
-  
+      
       nodes += 1;
     });
   
@@ -194,10 +194,6 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     value = cores + " cores (" + coreMin + "-" + coreMax + " cores/node, avg. " + (cores/nodes).toFixed(1) + " cores/node)";
     if (addFooter) tr.append("td").text(value);
     d3.select("#hosttable-summary-cores").text(value);
-  
-    value = cpuMin + "-" + cpuMax + " GHz";
-    if (addFooter) tr.append("td").text(value);
-    d3.select("#hosttable-summary-cpu").text(value);
   
     value = ramMin + "-" + ramMax + " GiB/node (" + (ram/1024).toFixed(1) + " TiB in total, avg. " + (ram/nodes).toFixed(1) + " GiB/node or " + (ram/cores).toFixed(1) + " GiB/core)";
     if (addFooter) tr.append("td").text(value);

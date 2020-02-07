@@ -1,13 +1,13 @@
 # 'Hello World' Job
 
-The Wynton cluster farm consists of a large number of [compute nodes] that are ready to serve users' compute tasks (aka jobs).  Since all compute nodes are configured the same way, for instance, they have the exact same set software installed, it does not matter on which compute node your analysis runs.
+The {{ site.cluster.name }} cluster farm consists of a large number of [compute nodes] that are ready to serve users' compute tasks (aka jobs).  Since all compute nodes are configured the same way, for instance, they have the exact same set software installed, it does not matter on which compute node your analysis runs.
 
 At any time, there will be many users using the cluster where some users run a single analysis whereas other run many multi-day jobs in parallel.  In order for users not to step on each others toes and for users to get a fair share of the compute resources, the cluster uses a so called _job scheduler_ to orchestrate the compute requests.  This works by users submitting their compute jobs to the _job queue_.  Then the scheduler will locate a compute node with enough free resources to process the submitted job and launch the job on that compute node.  The scheduler is configured to distribute the compute load across all compute nodes for overall maximum performance and fare share among the users.
 
 
 ## Instructions
 
-The most common way of running compute tasks on the Wynton cluster, consists of:
+The most common way of running compute tasks on the {{ site.cluster.name }} cluster, consists of:
 
 1. creating a script,
 
@@ -17,7 +17,7 @@ The most common way of running compute tasks on the Wynton cluster, consists of:
 
 4. looking at the results, e.g. output data files and text logs.
 
-The Wynton cluster uses [Son of Grid Engine] (SGE) as its scheduler.  SGE provides command `qsub` to submit a script ("job") and command `qstat` to check the status of a job.
+The {{ site.cluster.name }} cluster uses [Son of Grid Engine] (SGE) as its scheduler.  SGE provides command `qsub` to submit a script ("job") and command `qstat` to check the status of a job.
 
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex">

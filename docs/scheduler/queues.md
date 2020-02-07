@@ -23,13 +23,15 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Compute power: {{ site.specs.pu_total }} processing units
   - Number of slots: {{ site.specs.member_q_total }}
   - Quota: Proportional to [your lab's contributed share]({{ '/about/shares.html' | relative_url }}) on the cluster.  When a lab has exhausted all its available member.q slots, additional jobs scheduled by lab members will spill over to the long.q queue
-  - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the Wynton cluster and gain priority access corresponding to the contribution
+  - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the {{ site.cluster.name }} cluster and gain priority access corresponding to the contribution
 
 * **gpu.q**:
-  - Maximum runtime: 2 weeks
+  - Maximum runtime on communal GPU nodes: 2 weeks
+  - Maximum runtime on contributed GPU nodes: 2 weeks if you are the contributor, otherwise 2 hours
   - Process priority: 0 (highest)
-  - Availability: GPU nodes only
-  - Quota: Unlimited (all users). Users/groups who have contributed with GPU hardware will have exclusive access to the GPUs on those nodes
+  - Availability: {{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are contributed)
+  - Number of GPU slots: {{ site.specs.gpus }}
+  - Quota: Unlimited (all users).
   - Purpose: For software that utilize Graphics Processing Units (GPUs)
 
 * **ondemand.q**:

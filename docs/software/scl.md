@@ -1,3 +1,7 @@
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+2019-11-13: <code>python3</code> is now available as core software on all development and compute nodes.  Because of this, below Python SCLs will be deprecated and eventually removed.
+</div>
+
 # CentOS Software Collections (SCL)
 
 > [Software Collections (SCL)](https://en.wikipedia.org/wiki/CentOS#Add-ons_releases) is a CentOS repository that provides a set of dynamic programming languages, database servers, and various related packages. Provided software versions are [...] more recent than their equivalent versions included in the base CentOS distribution [...]  Packages available from the SCL [...] can be optionally enabled per application by using supplied `scl` utility.
@@ -5,19 +9,29 @@
 
 ## Available SCLs and their Packages
 
-To list all Software Collections installed on Wynton HPC, use:
+To list all Software Collections installed on the _development nodes_, use:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl --list
 devtoolset-4
 devtoolset-6
 devtoolset-7
-python33
-rh-python34
-rh-python36
+llvm-toolset-7
+python33       # DEPRECATED per 2019-11-13
+rh-python34    # DEPRECATED per 2019-11-13
+rh-python36    # DEPRECATED per 2019-11-13
+rh-ruby25
 
 [alice@{{ site.devel.name }} ~]$ 
 ```
+
+_Importantly_, only a subset of the above SCLs are available also on the _compute nodes_. Specifically, these are:
+```sh
+python33       # DEPRECATED per 2019-11-13
+rh-python34    # DEPRECATED per 2019-11-13
+rh-python36    # DEPRECATED per 2019-11-13
+```
+
 
 To list all the packages that are part of one or more of these SCLs, use:
 
@@ -39,6 +53,10 @@ rh-python36-python-3.6.3-3.el7.x86_64
 
 
 ## Using SCLs
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+2019-11-13: Below example uses Python SCLs, which are now deprecated, and is therefore outdated. The example will be updated as soon as possible.
+</div>
 
 The current [core-software] installation provides stable but not necessarily the most up-to-date versions of Python, e.g.
 
