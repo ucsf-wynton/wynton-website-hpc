@@ -1,9 +1,11 @@
-# Example:
-# JEKYLL_ENV=production make serve
-JEKYLL_ENV:=${JEKYLL_ENV}
+# Examples:
+# export JEKYLL_HOST=selfhost; make serve 
+# JEKYLL_HOST=selfhost make serve 
+# make serve JEKYLL_HOST=selfhost
+JEKYLL_HOST:=${JEKYLL_HOST}
 
 JEKYLL_OPTS=
-ifeq ($(JEKYLL_ENV),production)
+ifeq ($(JEKYLL_HOST),selfhost)
 JEKYLL_OPTS=--safe --config _config.yml,_config_selfhost.yml
 endif
 
@@ -27,13 +29,13 @@ init: .git/hooks/pre-commit
 
 assets-config:
 	rm -f assets/status
-ifeq ($(JEKYLL_ENV),production)
+ifeq ($(JEKYLL_HOST),selfhost)
 	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status assets/
 #	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status _site/assets/
 endif
 
 start: assets-config
-	PAGES_REPO_NWO=UCSF-HPC/wynton bundle exec jekyll serve --baseurl '/hpc' --port 4001 $(JEKYLL_OPTS) &
+	bundle exec jekyll serve --baseurl '/hpc' --port 4001 $(JEKYLL_OPTS) &
 
 stop:
 	- pkill --echo --count --full jekyll
