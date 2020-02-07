@@ -69,6 +69,9 @@
 
 #### <span style="color: orange;">Major outage due to NetApp file-system failure</span>
 
+**Update**: The login, development and data transfer nodes will be rebooted at 1pm today Friday February 7.
+<br><span class="timestamp">February 7, 12:00 PDT</span>
+
 **Update**: The failed legacy NetApp server is the cause to the problems, e.g. compute nodes not being responsive causing problems for SGE etc. Because of this, **all of the cluster - login, development, transfer, and computes nodes - will be rebooted tomorrow Friday 2020-02-07**.
 <br><span class="timestamp">February 6, 10:00 PDT</span>
 
