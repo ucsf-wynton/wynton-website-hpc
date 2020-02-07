@@ -2,11 +2,15 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "problematic" %}
+{% assign status = "recovering" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
+</div>
+{% elsif status == "recovering" %} 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>{{ site.cluster.name }} HPC is operational with parts of the compute resources being recovered</strong>
 </div>
 {% elsif status == "kernel-upgrade" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -68,6 +72,9 @@
 ### February 5-7, 2020
 
 #### <span style="color: orange;">Major outage due to NetApp file-system failure</span>
+
+**Update**: The majority of the compute nodes have been rebooted and are now online and running jobs.  We will actively monitor the system and assess the how everything works before we considered this incident resolved.
+<br><span class="timestamp">February 7, 13:40 PDT</span>
 
 **Update**: The login, development and data transfer nodes will be rebooted at 1pm today Friday February 7.
 <br><span class="timestamp">February 7, 12:00 PDT</span>
