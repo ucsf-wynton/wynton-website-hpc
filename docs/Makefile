@@ -1,3 +1,13 @@
+# Example:
+# make serve JEKYLL_HOST=selfhost
+JEKYLL_HOST=
+
+JEKYLL_OPTS=
+ifeq ($(JEKYLL_HOST),selfhost)
+JEKYLL_OPTS=--config _config.yml,_config_selfhost.yml
+endif
+
+
 ## Requirements:
 ## * See https://jekyllrb.com/docs/installation/;
 ##   - Ruby Dev (e.g. sudo apt-get install ruby-dev)
@@ -15,8 +25,15 @@ init: .git/hooks/pre-commit
 	cd .git/hooks; \
 	ln -s ../../.githooks/pre-commit .
 
-start:
-	bundle exec jekyll serve --baseurl '/hpc' --port 4001 &
+assets-config:
+	rm -f assets/status
+ifeq ($(JEKYLL_HOST),selfhost)
+#	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status assets/
+	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status _site/assets/
+endif
+
+start: assets-config
+	PAGES_REPO_NWO=UCSF-HPC/wynton bundle exec jekyll serve --baseurl '/hpc' --port 4001 $(JEKYLL_OPTS) &
 
 stop:
 	- pkill --echo --count --full jekyll
