@@ -1,6 +1,6 @@
 # Example:
-# make serve JEKYLL_ENV=production
-JEKYLL_ENV=
+# JEKYLL_ENV=production make serve
+JEKYLL_ENV:=${JEKYLL_ENV}
 
 JEKYLL_OPTS=
 ifeq ($(JEKYLL_ENV),production)
