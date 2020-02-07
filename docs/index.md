@@ -13,7 +13,7 @@ are now four communal GPU nodes with a total of 12 GPUs.<br/>
 </div>
 
 
-# Wynton - UCSF Research Computing at Scale
+# Wynton HPC - UCSF Research Computing at Scale
 
 Wynton is a large, shared high-performance compute (HPC) cluster underlying UCSF's Research Computing Capability. Funded and administered cooperatively by UCSF campus IT and key research groups, it is available to all UCSF researchers, and consists of different profiles suited to various biomedical and health science computing needs.  Researchers can participate using the "co-op" model of resource contribution and sharing.
 
