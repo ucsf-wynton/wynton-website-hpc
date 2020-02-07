@@ -27,14 +27,7 @@ init: .git/hooks/pre-commit
 	cd .git/hooks; \
 	ln -s ../../.githooks/pre-commit .
 
-assets-config:
-	rm -f assets/status
-ifeq ($(JEKYLL_HOST),selfhost)
-	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status assets/
-#	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status _site/assets/
-endif
-
-start: assets-config
+start:
 	bundle exec jekyll serve --baseurl '/hpc' --port 4001 $(JEKYLL_OPTS) &
 
 stop:
