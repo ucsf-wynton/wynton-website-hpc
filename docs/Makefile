@@ -1,10 +1,10 @@
 # Example:
-# make serve JEKYLL_HOST=selfhost
-JEKYLL_HOST=
+# make serve JEKYLL_ENV=production
+JEKYLL_ENV=
 
 JEKYLL_OPTS=
-ifeq ($(JEKYLL_HOST),selfhost)
-JEKYLL_OPTS=--config _config.yml,_config_selfhost.yml
+ifeq ($(JEKYLL_ENV),production)
+JEKYLL_OPTS=--safe --config _config.yml,_config_selfhost.yml
 endif
 
 
@@ -27,9 +27,9 @@ init: .git/hooks/pre-commit
 
 assets-config:
 	rm -f assets/status
-ifeq ($(JEKYLL_HOST),selfhost)
-#	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status assets/
-	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status _site/assets/
+ifeq ($(JEKYLL_ENV),production)
+	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status assets/
+#	ln -fs ~/repositories/UCSF-HPC/wynton-slash/wynton/docs/status _site/assets/
 endif
 
 start: assets-config
