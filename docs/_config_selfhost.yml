@@ -1,2 +1,5 @@
 assets:
   status_root_path: "/hpc/assets"
+
+urls:
+  front_page: "/"

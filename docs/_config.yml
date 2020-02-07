@@ -107,9 +107,12 @@ specs:
 
 users:
   nbr_of_accounts: 733
-  
+
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
+
+urls:
+  front_page: "http://wynton.ucsf.edu/"
 
 plugins:
   - jekyll-target-blank
