@@ -9,8 +9,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
 
-* Deprecation: The QB3-legacy NetApp storage (including `/netapp/home`) will stop working at the end of **December 2019** in favor of new BeeGFS storage (including `/wynton/home`).
-
 
 ## Soon
 
@@ -33,6 +31,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 
 ## Accomplished milestones
+
+* Storage: The QB3-legacy NetApp storage (including `/netapp/home`) was deprecated during 2019 with a deadline on December 2019.  The server was kept up after this deadline and, unfortunately, the server went down on 2020-02-05 and was declared non-recoverable without further resource/funding.
 
 * Migration: The UCSF Memory and Aging Center (MAC) have joined Wynton by contributing new nodes
 
