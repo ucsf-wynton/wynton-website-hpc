@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "recovering" %}
+{% assign status = "ok" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -69,9 +69,14 @@
 
 ## Upcoming and Current Incidents
 
+## Past Incidents
+
 ### February 5-7, 2020
 
 #### <span style="color: orange;">Major outage due to NetApp file-system failure</span>
+
+**Resolved**: The Wynton HPC system is considered fully functional again.  The legacy, deprecated NetApp storage was lost.
+<br><span class="timestamp">February 10, 10:55 PDT</span>
 
 **Update**: The majority of the compute nodes have been rebooted and are now online and running jobs.  We will actively monitor the system and assess the how everything works before we considered this incident resolved.
 <br><span class="timestamp">February 7, 13:40 PDT</span>
@@ -81,12 +86,8 @@
 
 **Update**: The failed legacy NetApp server is the cause to the problems, e.g. compute nodes not being responsive causing problems for SGE etc. Because of this, **all of the cluster - login, development, transfer, and computes nodes - will be rebooted tomorrow Friday 2020-02-07**.
 <br><span class="timestamp">February 6, 10:00 PDT</span>
-
 **Notice**: Wynton is experience major issues due to NetApp file-system failure, despite this is being deprecated and not used much these days. The first user report on this came in around 09:00 and the job-queue logs suggests the problem began around 02:00.  It will take a while for everything to come back up and there will be brief BeeGFS outage while we reboot the BeeGFS management node.
 <br><span class="timestamp">February 5, 10:15 PDT</span>
-
-
-## Past Incidents
 
 
 ### January 29, 2020
