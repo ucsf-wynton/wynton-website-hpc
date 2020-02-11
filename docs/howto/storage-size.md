@@ -82,25 +82,5 @@ For example,
 Note that this storage is shared among all group members and does _not_ count toward your personal disk quota under `/wynton/home/`.
 
 
-## User disk quota on /netapp/home (deprecated)
-
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-<strong>The <code>/netapp/</code> storage will be taken offline at the end of December 2019.</strong>.  Please use the much faster <code>/wynton/home/</code> instead.  If you do not have access to the latter, <a href="{{ '/about/contact.html' | relative_url }}">let us know as soon as possible</a>.
-</div>
-
-To check your disk quota on the deprecated `/netapp/home` file system, use `quota`.  For example,
-
-```sh
-[alice@{{ site.devel.name }} ~]$ quota --no-wrap -f /netapp/home
-Disk quotas for user alice (uid 59999): 
-     Filesystem   space   quota   limit   grace   files   quota   limit   grace
-netapp:/vol/home/0  22436M    200G    300G            239k    315m    630m
-```
-
-tells us that user `alice` has approximately 239,000 files that consumes 22,436 MiB (= 22,436/1024 = 21.9 GiB) of storage space out of 200 GiB available.
-
-_Comment_: Contrary to files on `/wynton/`, files on `/netapp/` are _not_ compressed.
-
-
 
 [lz4]: https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)
