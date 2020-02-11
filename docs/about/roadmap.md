@@ -7,22 +7,25 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to Wynton HPC (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
 
-* Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
-
 
 ## Soon
 
-* Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
+* Website: Move the ucsf-hpc.github.io/wynton/ website to www.wynton.ucsf.edu/hpc/
 
 
 ## Near future
 
+* Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
+
 * Storage: Requirements for mounting lab-owned storage into Wynton
 
-* Support: A User Issue Tracker
+* Forum: A self-hosted User Forum for richer conversations than what's on our Slack channel
 
+* Scheduler: Slurm as a job scheduler instead of SGE
 
 ## On the horizon
+
+* Support: A User Issue Tracker
 
 * Compliance: Support for restricted data analysis
 
@@ -31,8 +34,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 
 ## Accomplished milestones
-
-* Storage: The QB3-legacy NetApp storage (including `/netapp/home`) was deprecated during 2019 with a deadline on December 2019.  The server was kept up after this deadline and, unfortunately, the server went down on 2020-02-05 and was declared non-recoverable without further resource/funding.
 
 * Migration: The UCSF Memory and Aging Center (MAC) have joined Wynton by contributing new nodes
 
@@ -63,6 +64,11 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * GPU policy: All GPU nodes, communal and contributed, are available to all users. When running on another contributors GPU node, run time is limited to 2 hours. (2019-09-20)
 
 * Scheduler: Support for email notification upon job completion, e.g. `qsub -m bea` (2019-11-12)
+
+* Storage: The QB3-legacy NetApp storage (including `/netapp/home`) was deprecated during 2019 with a deadline on December 2019.  The server was kept up after this deadline and, unfortunately, the server went down on 2020-02-05 and was declared non-recoverable without further resource/funding (2020-02-05)
+
+* Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`).  The migration effort ended on 2020-02-05 when the NetApp server failed (2020-02-05)
+
 
 See also [News].
 
