@@ -22,7 +22,7 @@ To access one of the _development node_, say, {{ site.devel.hostname }},
 
 1. make sure you are [logged in to the cluster], and
 
-2. type `ssh {{ site.devel.hostname }}` and press ENTER.
+2. type `ssh {{ site.devel.hostname }}` and press <kbd>ENTER</kbd>.
 
 
 ### Example

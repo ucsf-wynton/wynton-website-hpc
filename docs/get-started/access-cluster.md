@@ -17,7 +17,7 @@ To log into the cluster, assuming your user name on {{ site.cluster.name }} is `
 
 1. Open a terminal (called 'Terminal' on macOS and most Linux distributions, and 'Command Prompt' on Windows 10),
 
-2. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press ENTER, and
+2. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press <kbd>ENTER</kbd>, and
 3. when prompted, enter your {{ site.cluster.name }} password.
 
 
@@ -46,7 +46,7 @@ The login node is dedicated solely to very basic tasks such as copying and movin
 
 # Logout
 
-Like for all Unix-based system, to log out from {{ site.cluster.name }}, type `exit` or `logout` (standard Unix commands) and press ENTER.  For example,
+Like for all Unix-based system, to log out from {{ site.cluster.name }}, type `exit` or `logout` (standard Unix commands) and press <kbd>ENTER</kbd>.  For example,
 
 ```sh
 [alice@{{ site.login.name }} ~]$ exit
@@ -54,7 +54,7 @@ Connection to {{ site.login.hostname }} closed.
 {local}$ 
 ```
 
-An alternative is to press Ctrl-D (sends "End-Of-File" [EOF]) at the command-line prompt.
+An alternative is to press <kbd>Ctrl-D</kbd> (sends "End-Of-File" [EOF]) at the command-line prompt.
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 Any shell session that has been idle for more than eight hours will timeout and exit automatically.
