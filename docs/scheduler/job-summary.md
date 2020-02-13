@@ -106,10 +106,10 @@ Following jobs do not exist:
 191442
 ```
 
-Unfortunately, that does not work because the job no longer exist.  Instead, we have to go look into the SGE logs.  More specifically, we can scan the SGE "accounting" file, which records summaries of all jobs, for information on our terminated job.  The SGE accounting file is huge so we don't want to scan all of it.  Instead, we search only the end of it but making a best guess of what "end of it" means.  Below, we start at the 50,000 last rows and scan for our job. If no output is produced, try to increase the number of lines scanned.
+Unfortunately, that does not work because the job no longer exist.  Instead, we have to go look into the SGE logs.  More specifically, we can scan the SGE "accounting" file, which records summaries of all jobs, for information on our terminated job.  The SGE accounting file is huge so we don't want to scan all of it.  Instead, we search only the end of it but making a best guess of what "end of it" means.  Below, we start at the 100,000 last rows and scan for our job. If no output is produced, try to increase the number of lines scanned.
 
 ```sh
-$ tail -50000 /opt/sge/wynton/common/accounting | qacct -f - -j 191442
+$ tail -100000 /opt/sge/wynton/common/accounting | qacct -f - -j 191442
 ==============================================================
 qname        long.q
 hostname     qb3-id95
