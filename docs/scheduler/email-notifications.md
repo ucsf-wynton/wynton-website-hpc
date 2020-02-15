@@ -6,7 +6,7 @@
 
 Instead of polling `qstat` to check whether submitted jobs are queued, running, or finished, one can tell the job scheduler to send email notifications as jobs are started or completed.  This is done by specifying `qsub` option `-m <when>` and option `-M <recipients>`, where `<when>` specifies under what circumstances an email message should be sent to `<recipients>`.
 
-To send an email when the job starts, and when it (b)egins, (e)nds, or (a)borts, submit the job as:
+To send an email when the job (b)egins, (e)nds, or (a)borts, submit the job as:
 
 ```sh
 $ qsub -m bea -M alice.bobson@ucsf.edu myscript.sh

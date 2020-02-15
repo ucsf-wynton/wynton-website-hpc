@@ -96,7 +96,7 @@ scheduling info:            queue instance "long.q@msg-test3" dropped because it
 
 ## Post-mortem job details
 
-Sometimes your job "just dies". There is often a simply explaination to this but finding out why can be complicated at first, especially if there are no clues in the job log files.
+Sometimes your job "just dies". There is often a simply explanation to this but finding out why can be complicated at first, especially if there are no clues in the job log files.
 
 One common reason for jobs terminating early is that it ran out of the requested runtime (`-l h_rt=<runtime>`).  When that happens, the log files appear to have ended abruptly (which is not too far from the truth).  It is tempting to try us `qstat -j <jobid>` to find out more;
 
