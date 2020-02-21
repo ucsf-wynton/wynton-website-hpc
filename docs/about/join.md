@@ -87,7 +87,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  </div>
  
  <div class="form-group">  
-  <label>Have you ever had an account on another UCSF compute environment, e.g. Cancer Center, Gladstone, Radiology, QB3, Sali Lab?</label><br>
+  <label>Have you ever had an account on another UCSF compute environment, e.g. Cancer Center, Gladstone, Radiology, QB3, or Sali Lab?</label><br>
   If <strong>yes</strong>, enter (UID, GID) or "forgot" below:<br>
   <label>UID</label> <input type="text" name="uid" pattern="(\d*|forgot)" placeholder="e.g. 21024 or 'forgot'" maxlength="5" size="14"> <small>(first integer reported by <code>id</code> on those systems)</small><br>
   <label>GID</label> <input type="text" name="gid" pattern="(\d*|forgot)" placeholder="e.g. 1543 or 'forgot'" maxlength="5" size="14"> <small>(second integer reported by <code>id</code> on those system)</small><br>
