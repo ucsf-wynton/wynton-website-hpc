@@ -17,7 +17,7 @@ login:
   ip: "169.230.134.15"
 devel:
   name: "qb3-dev3"
-  hostname: "qb3-dev3"
+  hostname: "dev3"
   ip: "172.26.32.8"
 transfer:
   name: "dt2"
@@ -34,19 +34,19 @@ login2:
   ip: "169.230.134.15"
 dev1:
   name: "qb3-dev1"
-  hostname: "qb3-dev1"
+  hostname: "dev1"
   ip: "172.26.32.2"
 dev2:
   name: "qb3-dev2"
-  hostname: "qb3-dev2"
+  hostname: "dev2"
   ip: "172.26.32.7"
 dev3:
   name: "qb3-dev3"
-  hostname: "qb3-dev3"
+  hostname: "dev3"
   ip: "172.26.32.8"
 gpudev1:
   name: "qb3-gpudev1"
-  hostname: "qb3-gpudev1"
+  hostname: "gpudev1"
   ip: "172.26.32.3"
 transfer1:
   name: "dt1"
