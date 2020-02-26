@@ -106,13 +106,13 @@ specs:
   home_size: "383 TiB"
 
 users:
-  nbr_of_accounts: 753
+  nbr_of_accounts: 0
   
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
 
 urls:
-  front_page: "http://wynton.ucsf.edu/"
+  front_page: "https://wynton.ucsf.edu/"
 
 plugins:
   - jekyll-target-blank
