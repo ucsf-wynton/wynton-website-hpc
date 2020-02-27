@@ -361,6 +361,14 @@ Sets R options and environment variables customized for the current compute envi
   Versions: <em>0.1</em><br>
   </dd>
 
+  <dt>rclone</dt>
+  <dd>
+    <strong>rclone: Rsync for Cloud Storage and More</strong><br>
+Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, o remote file systems, and in the cloud.  Example: <code>rclone --version</code>, <code>rclone --help</code>, <code>rclone onfig</code>, and <code>info rclone</code>.<br>
+    URL: <a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a><br>
+  Versions: <em>1.51.0</em><br>
+  </dd>
+
   <dt>ripgrep</dt>
   <dd>
     <strong>ripgrep - Recursively Searches Directories for a Regex Pattern</strong><br>
@@ -1011,7 +1019,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-02-27 12:59:48 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-02-27 14:19:13 from querying `module avail` and `module spider`._
 
 
 <style>
