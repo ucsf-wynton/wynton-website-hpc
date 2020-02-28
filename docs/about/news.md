@@ -1,6 +1,6 @@
 # News
 
-2020-02-26: Website moved to <https://www.wynton.ucsf.edu/hpc/>.
+2020-02-26: Website moved to <https://wynton.ucsf.edu/hpc/>.
 
 2020-02-05: The QB3-legacy NetApp storage (`/netapp/`), deprecated with a deadline on December 2019, crashed on 2020-02-05 and was declared non-recoverable without further resource/funding.
 
