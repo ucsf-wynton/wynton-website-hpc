@@ -69,7 +69,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`).  The migration effort ended on 2020-02-05 when the NetApp server failed (2020-02-05)
 
-* Website: Move website from GitHub Pages (https://ucsf-hpc.github.io/wynton/) with on-premise https://www.wynton.ucsf.edu/hpc/
+* Website: Move website from GitHub Pages (https://ucsf-hpc.github.io/wynton/) with on-premise https://wynton.ucsf.edu/hpc/
 
 
 See also [News].
