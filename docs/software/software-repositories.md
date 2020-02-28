@@ -242,6 +242,14 @@ The GNU Scientific Library (GSL) is a numerical library for C and C++ programmer
   Versions: <em>2.6</em><br>
   </dd>
 
+  <dt>hdf5</dt>
+  <dd>
+    <strong>hdf5: A General Purpose Library and File Format for Storing Scientific Data</strong><br>
+Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications. Example: <code>h5cc --version</code><br>
+    URL: <a href="https://www.hdfgroup.org/downloads/hdf5/">https://www.hdfgroup.org/downloads/hdf5/</a><br>
+  Versions: <em>1.10.6</em><br>
+  </dd>
+
   <dt>hisat2</dt>
   <dd>
     <strong>HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes</strong><br>
@@ -351,6 +359,14 @@ The R programming language. Examples: <code>R --version</code> and <code>Rscript
     <strong>R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
 Sets R options and environment variables customized for the current compute environment. Examples: In R, <code>getOption(&quot;repos&quot;)</code>.<br>
   Versions: <em>0.1</em><br>
+  </dd>
+
+  <dt>rclone</dt>
+  <dd>
+    <strong>rclone: Rsync for Cloud Storage and More</strong><br>
+Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, o remote file systems, and in the cloud.  Example: <code>rclone --version</code>, <code>rclone --help</code>, <code>rclone onfig</code>, and <code>info rclone</code>.<br>
+    URL: <a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a><br>
+  Versions: <em>1.51.0</em><br>
   </dd>
 
   <dt>ripgrep</dt>
@@ -1003,7 +1019,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-02-20 18:28:53 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-02-27 14:19:13 from querying `module avail` and `module spider`._
 
 
 <style>
