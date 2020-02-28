@@ -8,7 +8,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
 
  1. Use the menus to create a **New Session ...**
  2. Pick a **Session name**, e.g. `Wynton HPC`
- 3. Set the **Host** to a [development node]. Currently one of: `qb3-dev1`, `qb3-dev2`, `qb3-dev3`, or `qb3-gpudev1`
+ 3. Set the **Host** to a [development node]. Currently one of: `dev1`, `dev2`, `dev3`, or `gpudev1`
  4. Set the **Login** to _your_ Wynton HPC username, e.g. `alice`
  5. Check **Use Proxy server for SSH connection**
  6. Then in the **Proxy server** section:
@@ -38,7 +38,7 @@ alice1@{{ site.devel.name }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-Now, we have an X11 forward setup that runs all the way back to our local computer.  This will allow us to open, for instance, an XTerm window that runs on {{ site.devel.name }} but can be interacted with on the local computer;
+Now, we have an X11 forward setup that runs all the way back to our local computer.  This will allow us to open, for instance, an XTerm window that runs on {{ site.devel.hostname }} but can be interacted with on the local computer;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ xterm
