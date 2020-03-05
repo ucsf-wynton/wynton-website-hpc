@@ -15,7 +15,7 @@ For _file downloads_ from online resources, tools such as `curl`, `wget`, and `r
 
 
 <div class="alert alert-info" role="alert">
-TIPS: Try to use <code>scp -c aes128-gcm@openssh.com ...</code> to speed up the transfer rates.  There can be a fair bit of CPU overhead when SCP encrypts the data before transfering it - this option makes it use a faster encryption cipher.
+TIPS: Try to use <code>scp -c aes128-gcm@openssh.com ...</code> to speed up the transfer rates.  There can be a fair bit of CPU overhead when SCP encrypts the data before transferring it - this option makes it use a faster encryption cipher.
 </div>
 
 
