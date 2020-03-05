@@ -14,6 +14,12 @@ For _file downloads_ from online resources, tools such as `curl`, `wget`, and `r
 </div>
 
 
+<div class="alert alert-info" role="alert">
+TIPS: Try to use <code>scp -c aes128-gcm@openssh.com ...</code> to speed up the transfer rates.  There can be a fair bit of CPU overhead when SCP encrypts the data before transfering it - this option makes it use a faster encryption cipher.
+</div>
+
+
+
 ## <span class="glyphicon glyphicon-upload"></span> From your local machine to the {{ site.cluster.name }} HPC file system
 
 ### Copy a single file on your local file system to your {{ site.cluster.name }} home directory
