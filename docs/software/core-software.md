@@ -44,6 +44,7 @@ java, javac<br>
 lua<br>
 perl<br>
 python<br>
+rustc (Rust)<br>
 </dd>
   
 <dt>System Utilities</dt>
