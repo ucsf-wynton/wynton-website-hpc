@@ -121,7 +121,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  </div>
 
   <br>
-  <button type="submit" onclick="save_form()" class="btn btn-primary">Request Account</button>
+  <button type="submit" onclick="save_form()" class="btn btn-primary">Request Account</button> &nbsp; <em>(An email confirmation will be sent)</em>
 </form>
 
 
