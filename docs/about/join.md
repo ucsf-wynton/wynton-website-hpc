@@ -44,7 +44,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
   <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter email" size="30" required><br>
  </div>
  
- <div class="form-group">  
+ <div class="form-group">
   <label>UCSF affiliation</label> <span style="color: red">*</span><br>
   <fieldset>
    <input type="radio" id="affiliation_0" name="affiliation" value="faculty" required/> Faculty<br>
