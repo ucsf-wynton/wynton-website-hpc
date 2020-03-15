@@ -116,71 +116,36 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 
 
 <script>
-window.onload = function() {
-  if (sessionStorage.given_name) {
-    document.getElementById("given_name").value = sessionStorage.given_name;
-  }
-  if (sessionStorage.family_name) {
-    document.getElementById("family_name").value = sessionStorage.family_name;
-  }
-  if (sessionStorage.email) {
-    document.getElementById("email").value = sessionStorage.email;
-  }
-  if (sessionStorage.affiliation) {
-    document.getElementById("affiliation").value = sessionStorage.affiliation;
-  }
-  if (sessionStorage.pi) {
-    document.getElementById("pi").value = sessionStorage.pi;
-  }
-  if (sessionStorage.ucsf_id) {
-    document.getElementById("ucsf_id").value = sessionStorage.ucsf_id;
-  }
-  if (sessionStorage.dept_program) {
-    document.getElementById("dept_program").value = sessionStorage.dept_program;
-  }
-  if (sessionStorage.username) {
-    document.getElementById("username").value = sessionStorage.username;
-  }
-  if (sessionStorage.alt_username) {
-    document.getElementById("alt_username").value = sessionStorage.alt_username;
-  }
-  if (sessionStorage.ucsf_compute_environments_0) {
-    document.getElementById("ucsf_compute_environments_0").value = sessionStorage.ucsf_compute_environments_0;
-  }
-  if (sessionStorage.ucsf_compute_environments_1) {
-    document.getElementById("ucsf_compute_environments_1").value = sessionStorage.ucsf_compute_environments_1;
-  }
-  if (sessionStorage.ucsf_compute_environments_2) {
-    document.getElementById("ucsf_compute_environments_2").value = sessionStorage.ucsf_compute_environments_2;
-  }
-  if (sessionStorage.ucsf_compute_environments_3) {
-    document.getElementById("ucsf_compute_environments_3").value = sessionStorage.ucsf_compute_environments_3;
-  }
-  if (sessionStorage.ucsf_compute_environments_4) {
-    document.getElementById("ucsf_compute_environments_4").value = sessionStorage.ucsf_compute_environments_4;
-  }
-  if (sessionStorage.ucsf_compute_environments_5) {
-    document.getElementById("ucsf_compute_environments_5").value = sessionStorage.ucsf_compute_environments_5;
-  }
-  if (sessionStorage.ucsf_compute_environments_other) {
-    document.getElementById("ucsf_compute_environments_other").value = sessionStorage.ucsf_compute_environments_other;
-  }
-  if (sessionStorage.kerberos_username) {
-    document.getElementById("kerberos_username").value = sessionStorage.kerberos_username;
-  }
-  if (sessionStorage.uid) {
-    document.getElementById("uid").value = sessionStorage.uid;
-  }
-  if (sessionStorage.gid) {
-    document.getElementById("gid").value = sessionStorage.gid;
-  }
-  if (sessionStorage.hpc_experience) {
-    document.getElementById("hpc_experience").value = sessionStorage.hpc_experience;
-  }
-  if (sessionStorage.comment) {
-    document.getElementById("comment").value = sessionStorage.comment;
+function loaddata() {
+  var name;
+  var value;
+  var names;
+  
+  // Repopulate form fields if already set in session
+  if(typeof(Storage) !== "undefined") {
+    // Text-based fields
+    names = ["given_name", "family_name", "email", "affiliation", "affiliation_other", "pi", "ucsf_id", "dept_program", "username", "alt_username", "ucsf_compute_environments_other", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
+  
+    for (var ii = 0; ii < names.length; ii++) {
+      name = names[ii];
+      value = sessionStorage.getItem(name);
+      if (value !== null) document.getElementById(name).value = value;
+    }
+  
+    // Checkboxes
+    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5"];
+  
+    for (var ii = 0; ii < names.length; ii++) {
+      name = names[ii];
+      value = sessionStorage.getItem(name);
+      if (value !== null) document.getElementById(name).checked = value;
+    }
   }
 };
+
+window.onload = function() {
+  loaddata();
+}
 
 function storedata() {
   if(typeof(Storage) !== "undefined") {
@@ -188,6 +153,7 @@ function storedata() {
     sessionStorage.family_name = document.getElementById("family_name").value;
     sessionStorage.email = document.getElementById("email").value;
     sessionStorage.affiliation = document.getElementById("affiliation").value;
+    sessionStorage.affiliation_other = document.getElementById("affiliation_other").value;
     sessionStorage.pi = document.getElementById("pi").value;
     sessionStorage.dept_program = document.getElementById("dept_program").value;
     sessionStorage.ucsf_id = document.getElementById("ucsf_id").value;
@@ -196,12 +162,12 @@ function storedata() {
     sessionStorage.kerberos_username = document.getElementById("kerberos_username").value;
     sessionStorage.uid = document.getElementById("uid").value;
     sessionStorage.gid = document.getElementById("gid").value;
-    sessionStorage.ucsf_compute_environments_0 = document.getElementById("ucsf_compute_environments_0").value;
-    sessionStorage.ucsf_compute_environments_1 = document.getElementById("ucsf_compute_environments_1").value;
-    sessionStorage.ucsf_compute_environments_2 = document.getElementById("ucsf_compute_environments_2").value;
-    sessionStorage.ucsf_compute_environments_3 = document.getElementById("ucsf_compute_environments_3").value;
-    sessionStorage.ucsf_compute_environments_4 = document.getElementById("ucsf_compute_environments_4").value;
-    sessionStorage.ucsf_compute_environments_5 = document.getElementById("ucsf_compute_environments_5").value;
+    sessionStorage.ucsf_compute_environments_0 = document.getElementById("ucsf_compute_environments_0").checked;
+    sessionStorage.ucsf_compute_environments_1 = document.getElementById("ucsf_compute_environments_1").checked;
+    sessionStorage.ucsf_compute_environments_2 = document.getElementById("ucsf_compute_environments_2").checked;
+    sessionStorage.ucsf_compute_environments_3 = document.getElementById("ucsf_compute_environments_3").checked;
+    sessionStorage.ucsf_compute_environments_4 = document.getElementById("ucsf_compute_environments_4").checked;
+    sessionStorage.ucsf_compute_environments_5 = document.getElementById("ucsf_compute_environments_5").checked;
     sessionStorage.ucsf_compute_environments_other = document.getElementById("ucsf_compute_environments_other").value;
     sessionStorage.hpc_experience = document.getElementById("hpc_experience").value;
     sessionStorage.comment = document.getElementById("comment").value;
@@ -210,3 +176,8 @@ function storedata() {
 </script>
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
+
+
+
+
+
