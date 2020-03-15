@@ -28,7 +28,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
-<form>
+<form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
  <div class="form-group">
   <label for="given_name">First name</label> <span style="color: red">*</span><br>
   <input type="text" id="given_name" name="given_name" autocomplete="given-name" placeholder="Enter first name" minlength="2" required><br>
