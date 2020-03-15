@@ -28,7 +28,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
-<form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
+<form>
  <div class="form-group">
   <label for="given_name">First name</label> <span style="color: red">*</span><br>
   <input type="text" id="given_name" name="given_name" autocomplete="given-name" placeholder="Enter first name" minlength="2" required><br>
@@ -44,11 +44,21 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
   <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter email" size="30" required><br>
  </div>
  
- <div class="form-group"> 
-  <label for="affiliation">UCSF affiliation</label> <span style="color: red">*</span><br>
-  <input type="text" id="affiliation" name="affiliation" autocomplete="organization-title" placeholder="e.g. faculty, student, postdoc, etc." size="30" minlength="2" required><br>
+ <div class="form-group">  
+  <label>UCSF affiliation</label> <span style="color: red">*</span><br>
+  <fieldset>
+   <input type="radio" id="affiliation_0" name="affiliation" value="faculty" required/> Faculty<br>
+   <input type="radio" id="affiliation_1" name="affiliation" value="postdoc"/> Postdoc<br>
+   <input type="radio" id="affiliation_2" name="affiliation" value="staff"/> Staff, research assistant, etc.<br>
+   <input type="radio" id="affiliation_3" name="affiliation" value="student_lab"/> Student (part of a lab)<br>
+   <input type="radio" id="affiliation_4" name="affiliation" value="student_rotating"/> Student (rotating student)<br>
+   <input type="radio" id="affiliation_5" name="affiliation" value="student_misc"/> Student (miscellaneous)<br>
+   <input type="radio" id="affiliation_6" name="affiliation" value="sysadm"/> Sysadm<br>
+   <input type="radio" id="affiliation_7" name="affiliation" value="other"/> Other
+   <input type="text" id="affiliation_other" name="affiliation_other" placeholder="Collaborating with, ..." minlength="2" size="30"><br>
+  </fieldset>
  </div>
- 
+
  <div class="form-group">  
   <label for="pi">UCSF Principal Investigator (PI)</label> <span style="color: red">*</span><br>
   <input type="text" id="pi" name="pi" size="30" placeholder="Name of your PI, or 'self'" minlength="2" required><br>
@@ -135,13 +145,13 @@ function load_form() {
     }
   
     // Checkboxes
-    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5"];
+    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5", "affiliation_6", "affiliation_7"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
       value = sessionStorage.getItem(name);
       obj = document.getElementById(name);
-      if (value !== null && obj !== null) obj.value = value;
+      if (value !== null && obj !== null && value == "true") obj.checked = value;
     }
   }
 }
@@ -163,12 +173,12 @@ function save_form() {
     }
   
     // Checkboxes
-    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5"];
+    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5", "affiliation_6", "affiliation_7"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
       obj = document.getElementById(name);
-      if (obj !== null) sessionStorage.setItem(name, obj.value);
+      if (obj !== null) sessionStorage.setItem(name, obj.checked);
     }
   }
 }
