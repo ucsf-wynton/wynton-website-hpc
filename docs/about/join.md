@@ -111,15 +111,16 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  </div>
 
   <br>
-  <button type="submit" onclick="storedata()" class="btn btn-primary">Request Account</button>
+  <button type="submit" onclick="save_form()" class="btn btn-primary">Request Account</button>
 </form>
 
 
 <script>
-function loaddata() {
+function load_form() {
+  var names;
   var name;
   var value;
-  var names;
+  var obj;
   
   // Repopulate form fields if already set in session
   if(typeof(Storage) !== "undefined") {
@@ -129,7 +130,8 @@ function loaddata() {
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
       value = sessionStorage.getItem(name);
-      if (value !== null) document.getElementById(name).value = value;
+      obj = document.getElementById(name);
+      if (value !== null && obj !== null) obj.value = value;
     }
   
     // Checkboxes
@@ -138,46 +140,42 @@ function loaddata() {
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
       value = sessionStorage.getItem(name);
-      if (value !== null) document.getElementById(name).checked = value;
+      obj = document.getElementById(name);
+      if (value !== null && obj !== null) obj.value = value;
     }
   }
-};
-
-window.onload = function() {
-  loaddata();
 }
 
-function storedata() {
+function save_form() {
+  var names;
+  var name;
+  var obj;
+  
+  // Remember form fields
   if(typeof(Storage) !== "undefined") {
-    sessionStorage.given_name = document.getElementById("given_name").value;
-    sessionStorage.family_name = document.getElementById("family_name").value;
-    sessionStorage.email = document.getElementById("email").value;
-    sessionStorage.affiliation = document.getElementById("affiliation").value;
-    sessionStorage.affiliation_other = document.getElementById("affiliation_other").value;
-    sessionStorage.pi = document.getElementById("pi").value;
-    sessionStorage.dept_program = document.getElementById("dept_program").value;
-    sessionStorage.ucsf_id = document.getElementById("ucsf_id").value;
-    sessionStorage.username = document.getElementById("username").value;
-    sessionStorage.alt_username = document.getElementById("alt_username").value;
-    sessionStorage.kerberos_username = document.getElementById("kerberos_username").value;
-    sessionStorage.uid = document.getElementById("uid").value;
-    sessionStorage.gid = document.getElementById("gid").value;
-    sessionStorage.ucsf_compute_environments_0 = document.getElementById("ucsf_compute_environments_0").checked;
-    sessionStorage.ucsf_compute_environments_1 = document.getElementById("ucsf_compute_environments_1").checked;
-    sessionStorage.ucsf_compute_environments_2 = document.getElementById("ucsf_compute_environments_2").checked;
-    sessionStorage.ucsf_compute_environments_3 = document.getElementById("ucsf_compute_environments_3").checked;
-    sessionStorage.ucsf_compute_environments_4 = document.getElementById("ucsf_compute_environments_4").checked;
-    sessionStorage.ucsf_compute_environments_5 = document.getElementById("ucsf_compute_environments_5").checked;
-    sessionStorage.ucsf_compute_environments_other = document.getElementById("ucsf_compute_environments_other").value;
-    sessionStorage.hpc_experience = document.getElementById("hpc_experience").value;
-    sessionStorage.comment = document.getElementById("comment").value;
+    // Text-based fields
+    names = ["given_name", "family_name", "email", "affiliation", "affiliation_other", "pi", "ucsf_id", "dept_program", "username", "alt_username", "ucsf_compute_environments_other", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
+  
+    for (var ii = 0; ii < names.length; ii++) {
+      name = names[ii];
+      obj = document.getElementById(name);
+      if (obj !== null) sessionStorage.setItem(name, obj.value);
+    }
+  
+    // Checkboxes
+    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5"];
+  
+    for (var ii = 0; ii < names.length; ii++) {
+      name = names[ii];
+      obj = document.getElementById(name);
+      if (obj !== null) sessionStorage.setItem(name, obj.value);
+    }
   }
+}
+
+window.onload = function() {
+  load_form();
 }
 </script>
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
-
-
-
-
-
