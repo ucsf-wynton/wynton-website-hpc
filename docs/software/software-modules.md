@@ -93,7 +93,7 @@ module load r/3.2.0
 _Comment_: If another version of R is already loaded, that will automatically be unloaded before loading the new version.
 
 
-## Using wihin a login shell
+## Using within a login shell
 
 Since `module` is only available on the development and compute nodes,
 its use in a login script (.profile, .bash_profile, .bashrc) needs
@@ -101,7 +101,7 @@ to be guarded:
 ```sh
 if [[ -n "$MODULEPATH" ]]
 then
-module load <software>
+    module load <software>
 fi
 ```
 
