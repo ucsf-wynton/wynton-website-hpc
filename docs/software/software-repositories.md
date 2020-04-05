@@ -63,7 +63,7 @@ bamUtil is a repository that contains several programs that perform operations o
     <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
 A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code><br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
-  Versions: 0.11.0, <em>0.12.1</em><br>
+  Versions: 0.11.0, 0.12.1, <em>0.13.0</em><br>
   </dd>
 
   <dt>bcftools</dt>
@@ -71,7 +71,7 @@ A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>ba
     <strong>BCFtools: Utilities for Variant Calling and Manipulating VCFs and BCFs</strong><br>
 BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.  Example: <code>bcftools --version</code><br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: 1.9, <em>1.10</em><br>
+  Versions: 1.9, 1.10, <em>1.10.2</em><br>
   </dd>
 
   <dt>bcl2fastq</dt>
@@ -87,7 +87,7 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
     <strong>BEDOPS: The Fast, Highly Scalable and Easily-Parallelizable Genome Analysis Toolkit</strong><br>
 BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.  Example: <code>bedops --version</code><br>
     URL: <a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a><br>
-  Versions: 2.4.36, <em>2.4.37</em><br>
+  Versions: 2.4.36, 2.4.37, <em>2.4.38</em><br>
   </dd>
 
   <dt>bedtools2</dt>
@@ -127,7 +127,7 @@ Bowtie is an ultrafast, memory-efficient short read aligner. <em>NOTE: This is B
     <strong>Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
 Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.  Example: <code>bowtie2 --version</code><br>
     URL: <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a><br>
-  Versions: 2.3.5, <em>2.3.5.1</em><br>
+  Versions: 2.3.5, 2.3.5.1, <em>2.4.1</em><br>
   </dd>
 
   <dt>bwa</dt>
@@ -191,7 +191,7 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
     <strong>FastQC: A Quality Control Analysis Tool for High Throughput Sequencing Data</strong><br>
 FastQC is a program designed to spot potential problems in high througput sequencing datasets. It runs a set of analyses on one or more raw sequence files in fastq or bam format and produces a report which summarises the results.  Example: <code>fastqc --version</code>.<br>
     URL: <a href="https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc">https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc</a>, <a href="https://github.com/s-andrews/FastQC/">https://github.com/s-andrews/FastQC/</a><br>
-  Versions: <em>0.11.8</em><br>
+  Versions: 0.11.8, <em>0.11.9</em><br>
   </dd>
 
   <dt>fzf</dt>
@@ -199,7 +199,7 @@ FastQC is a program designed to spot potential problems in high througput sequen
     <strong>fzf - A Command-Line Fuzzy Finder</strong><br>
 fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc. Example: <code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>. To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
     URL: <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a><br>
-  Versions: 0.18.0, 0.19.0, <em>0.20.0</em><br>
+  Versions: 0.18.0, 0.19.0, 0.20.0, <em>0.21.1</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -207,7 +207,7 @@ fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix fil
     <strong>Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
-  Versions: 4.1.0.0, 4.1.2.0, 4.1.3.0, <em>4.1.4.0</em><br>
+  Versions: 4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, <em>4.1.6.0</em><br>
   </dd>
 
   <dt>gcta</dt>
@@ -247,15 +247,15 @@ The GNU Scientific Library (GSL) is a numerical library for C and C++ programmer
     <strong>hdf5: A General Purpose Library and File Format for Storing Scientific Data</strong><br>
 Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications. Example: <code>h5cc --version</code><br>
     URL: <a href="https://www.hdfgroup.org/downloads/hdf5/">https://www.hdfgroup.org/downloads/hdf5/</a><br>
-  Versions: <em>1.10.6</em><br>
+  Versions: 1.10.6, <em>1.12.0</em><br>
   </dd>
 
   <dt>hisat2</dt>
   <dd>
     <strong>HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes</strong><br>
 HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). Based on an extension of BWT for graphs [Sirén et al. 2014], we designed and implemented a graph FM index (GFM), an original approach and its first implementation to the best of our knowledge. In addition to using one global GFM index that represents a population of human genomes, HISAT2 uses a large set of small GFM indexes that collectively cover the whole genome (each index representing a genomic region of 56 Kbp, with 55,000 indexes needed to cover the human population). These small indexes (called local indexes), combined with several alignment strategies, enable rapid and accurate alignment of sequencing reads. This new indexing scheme is called a Hierarchical Graph FM index (HGFM).  Example: <code>hisat2 --version</code>.<br>
-    URL: <a href="https://ccb.jhu.edu/software/hisat2/">https://ccb.jhu.edu/software/hisat2/</a><br>
-  Versions: <em>2.1.0</em><br>
+    URL: <a href="https://daehwankimlab.github.io/hisat2/">https://daehwankimlab.github.io/hisat2/</a>, <a href="https://github.com/DaehwanKimLab/hisat2/">https://github.com/DaehwanKimLab/hisat2/</a><br>
+  Versions: 2.1.0, <em>2.2.0</em><br>
   </dd>
 
   <dt>htop</dt>
@@ -271,7 +271,7 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
     <strong>HTSlib: C Library for High-Throughput Sequencing Data Formats</strong><br>
 HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.  Example: <code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.<br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: <em>1.9</em><br>
+  Versions: 1.9, <em>1.10.2</em><br>
   </dd>
 
   <dt>igv</dt>
@@ -279,7 +279,7 @@ HTSlib is an implementation of a unified C library for accessing common file for
     <strong>IGV: The Integrative Genomics Viewer</strong><br>
 The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations. NOTE: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0). Example: <code>igv</code>.<br>
     URL: <a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a><br>
-  Versions: 2.7.0, 2.7.2, <em>2.4.19</em><br>
+  Versions: 2.7.0, 2.7.2, 2.8.2, <em>2.4.19</em><br>
   </dd>
 
   <dt>igvtools</dt>
@@ -303,15 +303,15 @@ JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hi
     <strong>kallisto: Near-optimal RNA-Seq Quantification</strong><br>
 kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.  Example: <code>kallisto version</code>.<br>
     URL: <a href="https://pachterlab.github.io/kallisto/about.html">https://pachterlab.github.io/kallisto/about.html</a>, <a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a><br>
-  Versions: 0.45.0, 0.45.1, 0.46.0, <em>0.46.1</em><br>
+  Versions: 0.45.0, 0.45.1, 0.46.0, 0.46.1, <em>0.46.2</em><br>
   </dd>
 
   <dt>picard</dt>
   <dd>
     <strong>Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats</strong><br>
 Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.  Example: <code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code><br>
-    URL: <a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a><br>
-  Versions: 2.21.1, <em>2.21.4</em><br>
+    URL: <a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a><br>
+  Versions: 2.21.1, 2.21.4, <em>2.22.2</em><br>
   </dd>
 
   <dt>pindel</dt>
@@ -327,7 +327,7 @@ Pindel can detect breakpoints of large deletions, medium sized insertions, inver
     <strong>PLINK: Whole Genome Association Analysis Toolset</strong><br>
 PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: <code>plink --help</code>.<br>
     URL: <a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a><br>
-  Versions: 1.07, <em>1.90b6.10</em><br>
+  Versions: 1.07, 1.90b6.10, <em>1.90b6.16</em><br>
   </dd>
 
   <dt>plink2</dt>
@@ -335,7 +335,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     <strong>PLINK2: Whole Genome Association Analysis Toolset</strong><br>
 PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: <code>plink2 --help</code>.<br>
     URL: <a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a><br>
-  Versions: <em>2.00a2LM</em><br>
+  Versions: 2.00a2LM, 2.00a2.3, <em>2.00a3LM</em><br>
   </dd>
 
   <dt>qtop</dt>
@@ -374,7 +374,7 @@ Rclone is a command line program to sync files and directories to and from a lar
     <strong>ripgrep - Recursively Searches Directories for a Regex Pattern</strong><br>
 ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.  Examples: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code><br>
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
-  Versions: <em>11.0.2</em><br>
+  Versions: 11.0.2, <em>12.0.1</em><br>
   </dd>
 
   <dt>samtools</dt>
@@ -408,7 +408,7 @@ Enables the CentOS Software Collection (SCL) <code>devtoolset-7</code> in the cu
     <strong>ShellCheck: A Shell Script Static Analysis Tool</strong><br>
 ShellCheck finds bugs in your shell scripts.  Example: <code>shellcheck --version</code> and <code>shellcheck -x ~/.bashrc</code>.<br>
     URL: <a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>, <a href="https://github.com/koalaman/shellcheck/">https://github.com/koalaman/shellcheck/</a><br>
-  Versions: 0.6.0, <em>0.7.0</em><br>
+  Versions: 0.6.0, 0.7.0, <em>0.7.1</em><br>
   </dd>
 
   <dt>snpeff</dt>
@@ -472,7 +472,7 @@ VarScan is a platform-independent mutation caller for targeted, exome, and whole
     <strong>vcf-validator: Validation Suite for Variant Call Format (VCF) Files</strong><br>
 Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input. Example: <code>vcf_validator --help</code>, <code>vcf-debugulator --help</code>, and <code>vcf-assembly-checker --help</code>.<br>
     URL: <a href="https://github.com/EBIvariation/vcf-validator">https://github.com/EBIvariation/vcf-validator</a><br>
-  Versions: <em>0.9.2</em><br>
+  Versions: 0.9.2, <em>0.9.3</em><br>
   </dd>
 
   <dt>vcftools</dt>
@@ -1021,7 +1021,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-04-05 13:58:19 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-04-05 14:49:06 from querying `module avail` and `module spider`._
 
 
 <style>
