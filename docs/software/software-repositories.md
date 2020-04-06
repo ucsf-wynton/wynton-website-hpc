@@ -226,6 +226,14 @@ GDAL is an open source X/MIT licensed translator library for raster and vector g
   Versions: <em>2.4.3</em><br>
   </dd>
 
+  <dt>geos</dt>
+  <dd>
+    <strong>GEOS: Geometry Engine, Open Source</strong><br>
+GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It aims to contain the complete functionality of JTS in C++. This includes all the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced functions. GEOS provides spatial functionality to many other projects and products. Example: <code>geos-config --version</code>.<br>
+    URL: <a href="https://trac.osgeo.org/geos/">https://trac.osgeo.org/geos/</a><br>
+  Versions: 3.5.2, <em>3.8.1</em><br>
+  </dd>
+
   <dt>git-flow</dt>
   <dd>
     <strong>git-flow: Git Extension Git Flow (AVH Edition)</strong><br>
@@ -1021,7 +1029,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-04-05 15:06:13 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-04-06 00:37:51 from querying `module avail` and `module spider`._
 
 
 <style>
