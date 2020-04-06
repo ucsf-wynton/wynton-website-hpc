@@ -41,24 +41,33 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  
  <div class="form-group">
   <label for="email_address">UCSF email address</label> <span style="color: red">*</span><br>
-  <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter email" size="30" required><br>
+  <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter email" size="30" required><br> 
+  <small>(If external collaborator, please provide preferred email id. Also, request your PI to send an email to <a href="mailto:wynton_admin@ucsf.edu">wynton_admin@ucsf.edu</a> approving the request and duration of access)</small><br>
+ </div>
+ 
+ <div class="form-group"> 
+  <label for="affiliation">UCSF affiliation</label> <span style="color: red">*</span><br>
+  <fieldset>
+   <input type="radio" name="affiliation" value="Faculty"> Faculty<br>     
+   <input type="radio" name="affiliation" value="Postdoc"> Postdoc<br>
+   <input type="radio" name="affiliation" value="Staff"> Staff<br>
+   <input type="radio" name="affiliation" value="Research_Assistant"> Research Assistant<br>
+   <input type="radio" name="affiliation" value="Student"> Student<br>
+   <input type="radio" name="affiliation" value="other"> Other<br>
+  </fieldset>
+ </div>
+ <div class="form-group">
+  <label for="other_desc">If 'Other', please clarify </label><br>
+  <input type="text" id="other_desc" name="other_desc" size="30" minlength="2" required><br>
  </div>
  
  <div class="form-group">
-  <label>UCSF affiliation</label> <span style="color: red">*</span><br>
-  <fieldset>
-   <input type="radio" id="affiliation_0" name="affiliation" value="faculty" required/> Faculty<br>
-   <input type="radio" id="affiliation_1" name="affiliation" value="postdoc"/> Postdoc<br>
-   <input type="radio" id="affiliation_2" name="affiliation" value="staff"/> Staff, research assistant, etc.<br>
-   <input type="radio" id="affiliation_3" name="affiliation" value="student_lab"/> Student (part of a lab)<br>
-   <input type="radio" id="affiliation_4" name="affiliation" value="student_rotating"/> Student (rotating student)<br>
-   <input type="radio" id="affiliation_5" name="affiliation" value="student_misc"/> Student (miscellaneous)<br>
-   <input type="radio" id="affiliation_6" name="affiliation" value="sysadm"/> Sysadm<br>
-   <input type="radio" id="affiliation_7" name="affiliation" value="other"/> Other
-   <input type="text" id="affiliation_other" name="affiliation_other" placeholder="Collaborating with, ..." minlength="2" size="30"><br>
-  </fieldset>
+  <label for="student_affiliation"> If 'Student', please select appropriate option</label> <br>
+   		<input type="checkbox" name="student_affiliation" value="Joined_PI_Lab"> Joined PI's Lab<br>
+		<input type="checkbox" name="student_affiliation" value="Rotation"> Rotation<br>
+		<input type="checkbox" name="student_affiliation" value="Course"> For Course<br>
  </div>
-
+ 
  <div class="form-group">  
   <label for="pi">UCSF Principal Investigator (PI)</label> <span style="color: red">*</span><br>
   <input type="text" id="pi" name="pi" size="30" placeholder="Name of your PI, or 'self'" minlength="2" required><br>
