@@ -28,7 +28,7 @@ init: .git/hooks/pre-commit
 	ln -s ../../.githooks/pre-commit .
 
 start:
-	bundle exec jekyll serve --baseurl '/hpc' --port 4001 $(JEKYLL_OPTS) &
+	bundle exec jekyll serve --baseurl '/hpc' --port 4001 $(JEKYLL_OPTS) &>> jekyll.log &
 
 stop:
 	- pkill --echo --count --full jekyll
