@@ -55,9 +55,6 @@ _data/users.yml: FORCE
 
 _data: _data/users.yml
 
-_config.yml: _config.yml.rsp FORCE
-	Rscript -e R.rsp::rfile $<
-
 assets/data/compute_shares.tsv: FORCE
 	wynton shares tsv > $@
 
