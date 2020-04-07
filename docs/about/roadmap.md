@@ -29,8 +29,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Compliance: Support for restricted data analysis
 
-* Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
-
 
 
 ## Accomplished milestones
@@ -57,7 +55,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Scheduler: ~~Support interactive jobs (`qlogin`)~~. The Wynton HPC Team decided against this because it increases the risk of having stale jobs occupying the scheduler and overall underutilizing the HPC environment (Fall 2019)
 
-* Development: A second data transfer node for faster file transfers in to and out from Wynton (2019-09-12)
+* Network: A second data transfer node for faster file transfers in to and out from Wynton (2019-09-12)
 
 * GPU compute: An additional 12 communal GPUs on three GPU nodes (2019-09-13)
 
@@ -69,7 +67,9 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`).  The migration effort ended on 2020-02-05 when the NetApp server failed (2020-02-05)
 
-* Website: Move website from GitHub Pages (https://ucsf-hpc.github.io/wynton/) with on-premise https://wynton.ucsf.edu/hpc/
+* Website: Move website from GitHub Pages (https://ucsf-hpc.github.io/wynton/) to on-premise https://wynton.ucsf.edu/hpc/ (2020-02-26)
+
+* Network: Add a Globus 'Wynton HPC' Endpoint for efficient, secure data transfers (ingress and egress) (2020-04-03)
 
 
 See also [News].
