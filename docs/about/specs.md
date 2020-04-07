@@ -3,14 +3,14 @@
 ## Overview
 
 <dl id="hosttable-summary" class="dl-horizontal">
-  <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.specs.nodes }}</dd>
-  <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.specs.physical_cores }}</dd>
-  <dt>GPUs</dt><dd>{{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are prioritized for GPU contributors)</dd>
-  <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.specs.ram_min }}-{{ site.specs.ram_max }} GiB/node</dd>
-  <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</dd>
-  <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.specs.global_scratch_size_total }} TiB</dd>
-  <dt>User home storage</dt><dd>{{ site.specs.home_size_total }} TiB (maximum 500 GiB/user)</dd>
-  <dt>Group storage</dt><dd>{{ site.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
+  <dt>Compute nodes</dt><dd id="hosttable-summary-nodes">{{ site.data.specs.nodes }}</dd>
+  <dt>Physical cores</dt><dd id="hosttable-summary-cores">{{ site.data.specs.physical_cores }}</dd>
+  <dt>GPUs</dt><dd>{{ site.data.specs.gpus }} GPUs on {{ site.data.specs.gpu_nodes }} GPU nodes ({{ site.data.specs.communal_gpus }}/{{ site.data.specs.communal_gpu_nodes }} GPUs/nodes are communal and {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }}/{{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPUs/nodes are prioritized for GPU contributors)</dd>
+  <dt>RAM</dt><dd id="hosttable-summary-ram">{{ site.data.specs.ram_min }}-{{ site.data.specs.ram_max }} GiB/node</dd>
+  <dt>Local scratch</dt><dd id="hosttable-summary-local-scratch">{{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB/node</dd>
+  <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.data.specs.global_scratch_size_total }} TiB</dd>
+  <dt>User home storage</dt><dd>{{ site.data.specs.home_size_total }} TiB (maximum 500 GiB/user)</dd>
+  <dt>Group storage</dt><dd>{{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
   <dt>Number of accounts</dt><dd>{{ site.data.users.nbr_of_accounts }}</dd>
 </dl>
 
@@ -24,7 +24,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 ### Compute Nodes
 
 The majority of the compute nodes have Intel processors, while a few have AMD processes.  A subset of the compute
-Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.specs.local_tmp_size_min }}-{{ site.specs.local_tmp_size_max }} GiB).
+Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
 For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
@@ -69,16 +69,16 @@ _Comment:_ Please use the GPU development node only if you need to build or prot
 
 The {{ site.cluster.name }} cluster provides two types of scratch storage:
 
- * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
- * Global `/wynton/scratch/` - {{ site.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+ * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
+ * Global `/wynton/scratch/` - {{ site.data.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
 ## User and Lab Storage
 
- * `/wynton/home`: {{ site.specs.home_size_total }} TiB storage space
- * `/wynton/group`: {{ site.specs.group_size_total }} TB (= {{ site.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
+ * `/wynton/home`: {{ site.data.specs.home_size_total }} TiB storage space
+ * `/wynton/group`: {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
 Each user may use up to 500 GiB disk space in the home directory.  Research groups can add additional storage space under `/wynton/group` by either mounting their existing storage or [purchase new]({{ '/about/pricing-storage.html' | relative_url }}).
 
@@ -206,7 +206,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
     d3.select("#hosttable-summary-local-scratch").text(value);
 
 /*
-    value = "{{ site.specs.global_scratch_size }}";
+    value = "{{ site.data.specs.global_scratch_size }}";
     var global_scratch = parseFloat(value.split(" ")[0]);
     value += " (corresponding to " + (global_scratch/nodes).toFixed(2) + " TiB/node or " + (global_scratch/cores).toFixed(3) + " TiB/core)";
     d3.select("#hosttable-summary-global-scratch").text(value);

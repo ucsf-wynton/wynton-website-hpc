@@ -11,7 +11,7 @@ Let the static-site generator (Jekyll) perform calculations for us to make
 it easier to keep the below example automatically up-to-date will based on
 real cluster specs.
 
-The site.specs.* variables are set in the _config.yml file.
+The site.data.specs.* variables are set in the _config.yml file.
 
 HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
 	       this is neater when done in Hugo(?).  Let's wait and see. If
@@ -23,8 +23,8 @@ HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
 {% assign pu_times = 4 %}
 {% assign pu_delta = pu_add | times: pu_times %}
 {% assign slots_delta = slots_add | times: pu_times %}
-{% assign pu_total_0 = site.specs.pu_total | minus: pu_delta %}
-{% assign slots_total_0 = site.specs.member_q_total | minus: slots_delta %}
+{% assign pu_total_0 = site.data.specs.pu_total | minus: pu_delta %}
+{% assign slots_total_0 = site.data.specs.member_q_total | minus: slots_delta %}
 {% assign pu_delta_share = pu_delta | divided_by: pu_total_0 %}
 {% assign slots_delta_share = pu_delta_share | times: slots_total_0 %}
 {% assign pu_0 = 16.3 %}
@@ -33,8 +33,8 @@ HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
 {% assign slots_1 = pu_1_share | times: slots_total_0 %}
 
 
-Currently, the Wynton HPC cluster has in total _member.q<sub>total</sub>_ = {{ site.specs.member_q_total }} slots available on the member.q queue.  Jobs on the _member.q_ queue will launch and finish sooner than jobs on the communal, lower-priority _long.q_ queue.  A member.q job will have higher-priority on the CPU than a long.q job in case they run on the same compute node.   It is only contributing members who have access to the member.q queue - non-contributing members will only have access to [queues]({{ '/scheduler/queues.html' | relative_url }}) such as the long.q queue.  **Contributors get _non-expiring, lifetime access_ to a  number of these member.q slots in proportion to their hardware contribution to the cluster.**  The number of member.q slots a particular hardware contribution, which can be monetary(\*) or physical(\*), adds, is based on how much compute power the contribution adds to the cluster.
-The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.specs.pu_total }} _contributed_ processing units on Wynton HPC.
+Currently, the Wynton HPC cluster has in total _member.q<sub>total</sub>_ = {{ site.data.specs.member_q_total }} slots available on the member.q queue.  Jobs on the _member.q_ queue will launch and finish sooner than jobs on the communal, lower-priority _long.q_ queue.  A member.q job will have higher-priority on the CPU than a long.q job in case they run on the same compute node.   It is only contributing members who have access to the member.q queue - non-contributing members will only have access to [queues]({{ '/scheduler/queues.html' | relative_url }}) such as the long.q queue.  **Contributors get _non-expiring, lifetime access_ to a  number of these member.q slots in proportion to their hardware contribution to the cluster.**  The number of member.q slots a particular hardware contribution, which can be monetary(\*) or physical(\*), adds, is based on how much compute power the contribution adds to the cluster.
+The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.data.specs.pu_total }} _contributed_ processing units on Wynton HPC.
 
 <div class="alert alert-info" role="alert">
 <strong>A lab's contributed processing units (<em>PU<sub>lab</sub></em>) will never expire - it will remain the same until the lab makes additional contributions to the cluster.</strong>
@@ -47,8 +47,8 @@ As other labs contribute to the cluster, the total computer power (_PU<sub>total
 
 Assume that the last addition was from the Charlie Lab contributing {{ pu_times }} compute nodes.  Each of these machines has a {{ slots_add }}-core {{ pu_add_label }} and clocks in at {{ pu_add }} PUs based on the benchmarking, resulting in the processing power added for this lab, but also to the cluster as a whole, to be {{ pu_times }} \* {{ pu_add }} PUs = +{{ pu_delta }} PUs.  In addition to increasing the total amount of contributed PUs, the lab's contribution also increased the total number of member.q slots on the cluster by {{ pu_times }} \* {{ slots_add }} = +{{ slots_delta }} slots.
 
-If this was Charlie Lab's first contribution to Wynton, their share on the member.q queue will be _PU<sub>lab</sub>_ / _PU<sub>total</sub>_ = {{ pu_delta }} / {{ site.specs.pu_total }} = {{ pu_delta_share | times: 100 | round: 3 }}%.  This PU share translates to _member.q<sub>lab</sub>_ = (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) \*_member.q<sub>total</sub>_ = {{ slots_delta_share | round: 0 }} member.q slots ({{ slots_delta_share | round: 2 }} rounded off to the closest integer).
-Instead, if they already had contributed, say, in total {{ pu_0 }} PUs in the past, their computational share would had become _PU<sub>lab</sub>_ = ({{ pu_0 }} + {{ pu_delta }}) / {{ site.specs.pu_total }} = {{ pu_1_share | times: 100 | round: 3 }}%, which, would corresponds to {{ slots_1 | round: 0 }} member.q slots ({{ slots_1 | round: 2 }} rounded off).
+If this was Charlie Lab's first contribution to Wynton, their share on the member.q queue will be _PU<sub>lab</sub>_ / _PU<sub>total</sub>_ = {{ pu_delta }} / {{ site.data.specs.pu_total }} = {{ pu_delta_share | times: 100 | round: 3 }}%.  This PU share translates to _member.q<sub>lab</sub>_ = (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) \*_member.q<sub>total</sub>_ = {{ slots_delta_share | round: 0 }} member.q slots ({{ slots_delta_share | round: 2 }} rounded off to the closest integer).
+Instead, if they already had contributed, say, in total {{ pu_0 }} PUs in the past, their computational share would had become _PU<sub>lab</sub>_ = ({{ pu_0 }} + {{ pu_delta }}) / {{ site.data.specs.pu_total }} = {{ pu_1_share | times: 100 | round: 3 }}%, which, would corresponds to {{ slots_1 | round: 0 }} member.q slots ({{ slots_1 | round: 2 }} rounded off).
 
 <!--
 All members of a lab will have access to the lab's member.q slots.  For example, if five out of seven member.q slots are currently in use when another lab member submits four ten-hour jobs, then two of those jobs will end up on the member.q queue whereas the other two will "spill over" to the lower-priority long.q queue.  In contrast, if those jobs were submitted by a non-contributing member, all four would end up on the long.q queue.

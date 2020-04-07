@@ -9,12 +9,12 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} H
 > Wynton HPC is a distributed high-performance computing cluster with nodes
 > in many different data centers on the UCSF campus.  All Wynton sites are
 > connected by multiple 40 Gbps network connections.  Wynton currently
-> contains {{ site.specs.nodes }} nodes with over
-> {{ site.specs.physical_cores }} CPU cores.
-> RAM in the nodes ranges from {{ site.specs.ram_min }} to
-> {{ site.specs.ram_max }} GiB with an average RAM-to-core ratio of over 10 GiB.
-> There are also {{ site.specs.gpu_nodes}} nodes containing a total of
-> {{ site.specs.gpus }} GPUs.
+> contains {{ site.data.specs.nodes }} nodes with over
+> {{ site.data.specs.physical_cores }} CPU cores.
+> RAM in the nodes ranges from {{ site.data.specs.ram_min }} to
+> {{ site.data.specs.ram_max }} GiB with an average RAM-to-core ratio of over 10 GiB.
+> There are also {{ site.data.specs.gpu_nodes}} nodes containing a total of
+> {{ site.data.specs.gpus }} GPUs.
 > Storage is provided by a parallel filesystem providing 400 TB of mirrored
 > home space and 500 TB of global scratch space.
 > 
@@ -33,7 +33,7 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} H
 > UCSF.  The cluster is run as a co-op, with access for all and priority 
 > given to those who have contributed funds or hardware.  Support is 
 > also provided by UCSF Research IT.  The cluster currently consists of
-> {{ site.specs.nodes }} nodes with {{ site.specs.physical_cores }} cores
-> operating at {{ site.specs.cpu_min }}-{{ site.specs.cpu_max }} GHz.
-> Each node has at least {{ site.specs.ram_min }} GiB of RAM and
-> total home storage is {{ site.specs.home_size_total }} TiB.
+> {{ site.data.specs.nodes }} nodes with {{ site.data.specs.physical_cores }} cores
+> operating at {{ site.data.specs.cpu_min }}-{{ site.data.specs.cpu_max }} GHz.
+> Each node has at least {{ site.data.specs.ram_min }} GiB of RAM and
+> total home storage is {{ site.data.specs.home_size_total }} TiB.
