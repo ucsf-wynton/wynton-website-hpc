@@ -51,7 +51,7 @@ broadcast-on:
 
 
 _data/users.yml: FORCE
-	echo "nbr_of_accounts: $$(ldapsearch -h m1 -x -LLL | grep -c 'wyntonAccess: TRUE')" > $<
+	echo "nbr_of_accounts: $$(ldapsearch -h m1 -x -LLL | grep -c 'wyntonAccess: TRUE')" > $@
 
 _data: _data/users.yml
 
