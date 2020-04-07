@@ -50,6 +50,11 @@ broadcast-on:
 	cd assets/css/ && ln -fs broadcast-on.css broadcast.css
 
 
+_data/users.yml: FORCE
+	echo "nbr_of_accounts: $$(ldapsearch -h m1 -x -LLL | grep -c 'wyntonAccess: TRUE')" > $<
+
+_data: _data/users.yml
+
 _config.yml: _config.yml.rsp FORCE
 	Rscript -e R.rsp::rfile $<
 
