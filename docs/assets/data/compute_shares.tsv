@@ -1,8 +1,8 @@
 # Created by: hb
-# Created on: 2020-04-06 03:00:02-07:00
-# Total fshares: 20185
-# Total queue_slots: 6735
-# Number of projects: 38
+# Created on: 2020-04-06 18:36:57-07:00
+# Total fshares: 20186
+# Total queue_slots: 7023
+# Number of projects: 39
 fshares	queue_slots	project
 5506	1634	salilab
 4104	1403	agardlab,chenglab,frostlab
@@ -42,3 +42,4 @@ fshares	queue_slots	project
 12	4	sysbiocenter
 3	1	voigtlab
 3	1	cohenlab
+1	288	gladstone
