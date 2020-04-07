@@ -1,0 +1,233 @@
+<%@meta postprocess="FALSE"%>
+<%-- Add a front-matter warning to the Markdown file --%>
+<!--
+WARNING: Do _not_ update this file; it is automatically generated from software-respository.md.rsp.
+-->
+<%
+library(utils)
+library(R.utils)
+
+trim <- function(x) {
+  if (!is.character(x)) return(x)
+  x <- sub("^[\t\n\f\r ]*", "", x)
+  sub("[\t\n\f\r ]*$", "", x)
+}
+as_html <- function(x) {
+  if (!is.character(x)) return(x)
+  x <- commonmark::markdown_html(x, extensions = TRUE)
+  x <- gsub("(^<p>|</p>\n$)", "", x)
+  x
+}
+
+style <- R.utils::cmdArg(style = FALSE)
+
+#' @importFrom utils file_test
+module_avail <- function(info) {
+  message("module_avail() ...")
+  stopifnot(is.list(info), "module_path" %in% names(info))
+  module_path <- info$module_path
+  R.utils::mstr(list(info = info))
+  stopifnot(utils::file_test("-x", module_path))
+  lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
+  stopifnot(nzchar(lmod_dir))
+  spider <- file.path(lmod_dir, "spider")
+  message(" - spider binary: ", sQuote(spider))
+  stopifnot(utils::file_test("-x", spider))
+  args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
+  message(" - spider arguments: ", paste(args, collapse = " "))
+  json <- system2(spider, args = args, stdout = TRUE)
+  x <- jsonlite::fromJSON(json)
+  o <- order(x$package)
+  x <- x[o,]
+  keep <- !grepl("^[.]", x$package)
+  x <- x[keep,]
+  message("module_avail() ... done")
+  x
+}
+
+module_repositories <- list(
+  CBI = list(
+    name        = "CBI",
+    maintainer  = "Henrik Bengtsson",
+    group       = "Computational Biology and Informatics",
+    url         = "http://cbi.ucsf.edu",
+    module_path = Sys.getenv("MODULE_ROOT_CBI")
+  ),
+
+  Sali = list(
+    name        = "Sali",
+    maintainer  = "Ben Webb",
+    group       = "Sali Lab Software Repository",
+    url         = "https://salilab.org/",
+    module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
+  )
+)
+
+%>
+<% if (style) { %>
+<style type="text/css">
+table {
+  width: 100%;
+  border: solid 1px black;
+}
+  
+tr {
+  vertical-align: top;
+  text-align: left;
+  padding: 0px;
+}
+  
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+th, td {
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+<% } # if (style) %>
+<% table_of_modules <- function(x, style = c("module", "repos")) { %>
+<% style <- match.arg(style) %>
+<dl>
+<% for (ii in seq_len(nrow(x))) { %>
+<%
+m <- x[ii,]
+m <- lapply(m, FUN = trim)
+versions <- m$versions[[1]]
+for (cc in seq_len(ncol(versions))) {
+  versions[[cc]] <- trim(versions[[cc]])
+}
+m$versions[[1]] <- versions
+m$parent <- unique(unlist(m$versions[[1]]$parent, use.names = FALSE))
+helps <- unique(versions$help)
+help <- helps[[1]]
+vers <- NULL
+if (!is.null(versions$versionName)) {
+  vers <- unique(versions$versionName)
+  if (length(vers) > 1L || vers != "default") {
+    idx <- match(m$defaultVersionName, table = vers)
+    if (length(idx) == 1) {
+      ## FIXME: spider seems to set 'defaultVersionName' randomly /HB 2017-06-30
+      vers[idx] <- sprintf("<em>%s</em>", vers[idx])
+    }
+  } else {
+    vers <- NULL
+  }
+}
+%>
+  <dt><%= m$package %><% if (!is.null(m$parent)) cat(sprintf(" (part of %s)", m$parent)) %></dt>
+  <dd>
+  <% if (!is.null(help)) { %>
+    <strong><%= as_html(help) %></strong><br>
+  <% } %>
+  <% if (!is.null(m$description)) { %>
+    <%= as_html(m$description) %><br>
+  <% } %>
+  <% if (!is.null(m$url) && !is.na(m$url)) { %>
+    URL: <%= as_html(m$url) %><br>
+  <% } %>
+  Versions: <%= paste(vers, collapse = ", ") %><br>
+  <% if (!is.null(m$parent)) { %>
+    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+  <% } %>
+  </dd>
+
+<% } # for (ii in ...) %>
+</dl>
+<% } ## table_of_modules() %>
+
+<%---
+<div class="alert alert-warning" role="alert">
+<strong>This page is under construction: For currently available software modules, use `module avail`.</strong>
+</div>
+---%>
+
+
+# Contributed Software Repositories
+
+It is common that research groups maintain their own software stacks. Some of these groups kindly make their stacks available to the cluster community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  To get access to these repositories and their software, make sure to load them first, e.g.
+```sh
+module load CBI
+```
+Then use `module avail` to list what modules are available (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+```sh
+module load bowtie2
+module load bowtie2/2.2.6
+module load r bwa
+```
+
+It is possible to enable a software repository and load specific software in one call, e.g.
+```sh
+module load CBI r bwa bowtie2/2.2.6
+```
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Please note that below software stacks are <em>not</em> maintained or supported by the Wynton Team.  Instead, they are kindly contributed by individual research groups and often maintained by volunteers - sometimes on their spare time.  Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+</div>
+
+Below are <%= length(module_repositories) %> contributed software repositories, each providing a set of software tools.
+
+<ul class="nav nav-pills">
+<%for (kk in seq_along(module_repositories)) { %>
+<% name <- names(module_repositories)[kk] %>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
+<% } ## for (name ...) %>
+</ul>
+<div class="tab-content" style="margin-top: 1ex;">
+<%for (kk in seq_along(module_repositories)) { %>
+<%
+  name <- names(module_repositories)[kk]
+  info <- module_repositories[[name]]
+  x <- module_avail(info)
+%>
+<div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
+
+<h2>Module Software Repository: <%= name %></h2>
+
+Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
+Enable repository: <code>module load <%= name %></code><br>
+<br>
+
+<% table_of_modules(x) %>
+</div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
+
+<% } ## for (name ...) %>
+
+</div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
+
+<ul class="nav nav-pills">
+<%for (kk in seq_along(module_repositories)) { %>
+<% name <- names(module_repositories)[kk] %>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
+<% } ## for (name ...) %>
+</ul>
+
+
+_The above information was automatically generated on <%= Sys.time() %> from querying `module avail` and `module spider`._
+
+
+<style>
+dl {
+  display: block;
+}
+dt {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: bold;
+  font-size: 120%;
+  margin-top: 1ex;
+  text-decoration: underline;
+}
+dt:after {
+  content: "";
+}
+</style>
+
