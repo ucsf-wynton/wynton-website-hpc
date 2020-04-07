@@ -659,7 +659,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>modeller</dt>
   <dd>
-  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, 9.23-i386, 9.23-x86_64, 9.23, <em>SVN</em><br>
+  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, 9.23-i386, 9.23-x86_64, 9.23, 9.24-i386, 9.24-x86_64, 9.24, <em>SVN</em><br>
   </dd>
 
   <dt>modpipe</dt>
@@ -1029,7 +1029,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-04-06 00:37:51 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-04-06 18:31:55 from querying `module avail` and `module spider`._
 
 
 <style>
