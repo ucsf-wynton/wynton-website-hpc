@@ -4,6 +4,7 @@
 
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>: (<em>For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page</em>)<br/>
+2020-04-14: Progress until the next round of storage purchase can be found on <a href="{{ '/about/pricing-storage.html' | relative_url }}">About -> Storage Pricing</a>.<br/>
 2020-02-26: Website moved to <a href="https://wynton.ucsf.edu/hpc/">https://wynton.ucsf.edu/hpc/</a>.<br/>
 2020-02-05: The QB3-legacy NetApp storage (`/netapp/`), deprecated with a deadline on December 2019, crashed on 2020-02-05 and was declared non-recoverable without further resource/funding.<br/>
 2019-12-13: Status page now include <a href="{{ '/status/index.html' | relative_url }}">GPU queue metrics</a>.<br/>
