@@ -2,7 +2,7 @@
 {% assign progress = site.data.storage_requests.storage_request | times: 100 | divided_by: site.data.storage_requests.storage_per_brick %}
 {% assign remain = site.data.storage_requests.storage_per_brick | minus: site.data.storage_requests.storage_request %}
 
-Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage_requests.storage_request }} out of {{ site.data.storage_requests.storage_per_brick }} TB).</strong> Another {{ remain }} TB needs to be requested before the next order can go out.
+Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage_requests.storage_request }} out of {{ site.data.storage_requests.storage_per_brick }} TB).</strong> Another {{ remain }} TB need to be requested before the next order can go out.
 ({{ site.data.storage_requests.last_updated }})
 </div>
 
