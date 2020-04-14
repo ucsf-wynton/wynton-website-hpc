@@ -1,6 +1,12 @@
-# Lab-Specific HPC Storage Pricing Model
+<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
+{% assign progress = site.data.storage_requests.storage_request | times: 100 | divided_by: site.data.storage_requests.storage_per_brick %}
+{% assign remain = site.data.storage_requests.storage_per_brick | minus: site.data.storage_requests.storage_request %}
 
-_Last updated: February 3, 2020_
+Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage_requests.storage_request }} out of {{ site.data.storage_requests.storage_per_brick }} TB).</strong> Another {{ remain }} TB needs to be requested before the next order can go out.
+({{ site.data.storage_requests.last_updated }})
+</div>
+
+# Lab-Specific HPC Storage Pricing Model
 
 
 ## Summary
@@ -46,3 +52,7 @@ We have an immediate need to provide for Wynton/HPC storage expansion to meet th
 * We assume that our last purchase represents a reasonable scalable unit of storage.  This purchase provided 1,200 TB (raw) storage and two storage servers.  At ~$112,500, this results in a cost of $93/TB (raw) or $136/TB after accounting for RAID-Z2 and BeeGFS filesystem costs. We also need to add two additional metadata servers at a cost of $20,000. Taken together, this results in the $160/TB price.
 
 * The current storage hardware increment is ~$160,000, which may result in some delay between the first contributions and an actual purchase, although there is already pent-up demand and hence we are trying to proceed with the purchase as quickly as possible.
+
+
+_Last updated: February 3, 2020_
+
