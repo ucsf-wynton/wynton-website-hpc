@@ -8,11 +8,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to Wynton HPC (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
 
 
-## Soon
-
-* ...
-
-
 ## Near future
 
 * Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
@@ -23,9 +18,12 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Scheduler: Slurm as a job scheduler instead of SGE
 
+
 ## On the horizon
 
 * Support: A User Issue Tracker
+
+* Network: Support for using Globus transfers to and from UCSF Box via Wynton HPC
 
 * Compliance: Support for restricted data analysis
 
