@@ -879,7 +879,7 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>python3/ihm</dt>
   <dd>
-  Versions: <em>0.11</em><br>
+  Versions: <em>0.15</em><br>
   </dd>
 
   <dt>python3/joblib</dt>
@@ -1029,7 +1029,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-04-13 07:45:19 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-04-19 11:37:27 from querying `module avail` and `module spider`._
 
 
 <style>
