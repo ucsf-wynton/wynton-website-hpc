@@ -22,7 +22,12 @@
 
   - `-l scrapp2=<size>`: this storage resource does not exist on Wynton HPC.
 
+**Q**. _I tried to delete some jobs, and now they're stuck in the state "dr". How can I get rid of them?_
 
+**A**. The most likely cause of this is that node (or nodes) running your jobs crashed.  Since the node(s) can't report back to SGE and confirm the job deletion, the state of the jobs doesn't change.  To force the issue:
+```
+qdel -f $JOB_ID [-t $SGE_TASK_ID]
+```
 
 ## Errors
 
