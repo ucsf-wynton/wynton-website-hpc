@@ -23,8 +23,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ### Compute Nodes
 
-The majority of the compute nodes have Intel processors, while a few have AMD processes.  A subset of the compute
-Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
+The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
 For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
