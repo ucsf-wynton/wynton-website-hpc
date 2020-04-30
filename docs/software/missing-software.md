@@ -23,4 +23,4 @@ If so, you have a few options:
    <br><br>
 
 4. Missing core software or missing SCL?
-   - If a [CentOS core software]({{ '/software/core-software.html' | relative_url }}) or a [CentOS Software Collection (SCL)]({{ '/software/scl.html' | relative_url }}) is missing, it might be that the [the system administrators]({{ '/about/contact.html' | relative_url }}) are willing to add it - please let us know
+   - If a [CentOS core software]({{ '/software/core-software.html' | relative_url }}) or a [CentOS Software Collection (SCL)]({{ '/software/scl.html' | relative_url }}) is missing, it is likely that the [the system administrators]({{ '/about/contact.html' | relative_url }}) are willing to add it - please let us know
