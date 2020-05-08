@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <h2>Module Software Repository: built-in</h2>
 
-Maintained by: Wynton Systems Administrators, <a href="">Wynton</a><br>
+Maintained by: Wynton Systems Administrators, <a href="https://wynton.ucsf.edu/hpc/about/contact.html">Wynton</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
 
 <dl>
@@ -1088,7 +1088,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </ul>
 
 
-_The above information was automatically generated on 2020-05-07 22:44:58 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-07 22:45:45 from querying `module avail` and `module spider`._
 
 
 <style>
