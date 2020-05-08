@@ -50,9 +50,9 @@ Below are 3 software repositories, each providing a set of software tools.
 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in <small>(4)</small></a></li>
-  <li><a data-toggle="pill" href="#queues-CBI">CBI <small>(57)</small></a></li>
-  <li><a data-toggle="pill" href="#queues-Sali">Sali <small>(101)</small></a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in&nbsp;(4)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI">CBI&nbsp;(57)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali">Sali&nbsp;(101)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -1084,12 +1084,12 @@ Please note that this software stacks is maintained and contributed by a researc
 </div> 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in <small>(4)</small></a></li>
-  <li><a data-toggle="pill" href="#queues-CBI">CBI <small>(57)</small></a></li>
-  <li><a data-toggle="pill" href="#queues-Sali">Sali <small>(101)</small></a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in&nbsp;(4)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI">CBI&nbsp;(57)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali">Sali&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-08 10:31:29 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-08 10:32:44 from querying `module avail` and `module spider`._
 
 
 <style>
