@@ -46,14 +46,35 @@ module load CBI r bwa bowtie2/2.2.6
 ```
 
 
-Below are 2 software repositories, each providing a set of software tools.
+Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
   <li><a data-toggle="pill" href="#queues-Sali">Sali</a></li>
 </ul>
 <div class="tab-content" style="margin-top: 1ex;">
-<div id="queues-CBI" class="tab-pane fadein active">
+<div id="queues-built-in" class="tab-pane fadein active">
+
+<h2>Module Software Repository: built-in</h2>
+
+Maintained by: Wynton Systems Administrators, <a href="">Wynton</a><br>
+
+<dl>
+  <dt>julia</dt>
+  <dd>
+  Versions: <em>0.6.4</em><br>
+  </dd>
+
+  <dt>matlab</dt>
+  <dd>
+  Versions: 2018b, 2019a, 2019b, <em>2020a</em><br>
+  </dd>
+
+</dl>
+</div> 
+
+<div id="queues-CBI" class="tab-pane fade">
 
 <h2>Module Software Repository: CBI</h2>
 
@@ -1050,12 +1071,13 @@ Please note that this software stacks is maintained and contributed by a researc
 </div> 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
   <li><a data-toggle="pill" href="#queues-Sali">Sali</a></li>
 </ul>
 
 
-_The above information was automatically generated on 2020-05-07 22:26:52 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-07 22:28:46 from querying `module avail` and `module spider`._
 
 
 <style>
