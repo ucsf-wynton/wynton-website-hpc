@@ -222,17 +222,22 @@ module load CBI r bwa bowtie2/2.2.6
 
 Below are <%= length(module_repositories) %> software repositories, each providing a set of software tools.
 
+<% repos_buttons <- function() { %>
 <ul class="nav nav-pills">
-<%for (kk in seq_along(module_repositories)) { %>
+<% for (kk in seq_along(module_repositories)) { %>
 <%
   name <- names(module_repositories)[kk]
   info <- module_repositories[[name]]
   x <- module_avail(info)
   nbr_of_modules <- nrow(x)
 %>
-  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %> <small>(<%= nbr_of_modules %>)</small></a></li>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><span style="font-weight: bold;"><%= name %></span>&nbsp;(<%= nbr_of_modules %>)</a></li>
 <% } ## for (name ...) %>
 </ul>
+<% } %>
+
+<% repos_buttons() %>
+
 <div class="tab-content" style="margin-top: 1ex;">
 <%for (kk in seq_along(module_repositories)) { %>
 <%
@@ -262,13 +267,7 @@ Please note that this software stacks is maintained and contributed by a researc
 
 </div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
 
-<ul class="nav nav-pills">
-<%for (kk in seq_along(module_repositories)) { %>
-<% name <- names(module_repositories)[kk] %>
-  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
-<% } ## for (name ...) %>
-</ul>
-
+<% repos_buttons() %>
 
 _The above information was automatically generated on <%= Sys.time() %> from querying `module avail` and `module spider`._
 
