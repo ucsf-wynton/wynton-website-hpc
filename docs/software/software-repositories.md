@@ -1055,7 +1055,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </ul>
 
 
-_The above information was automatically generated on 2020-05-07 22:25:57 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-07 22:26:52 from querying `module avail` and `module spider`._
 
 
 <style>
@@ -1073,3 +1073,5 @@ dt:after {
   content: "";
 }
 </style>
+
+[core software]: {{ '/software/core-software.html' | relative_url }}
