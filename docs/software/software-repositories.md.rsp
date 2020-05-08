@@ -27,7 +27,7 @@ module_avail <- function(info) {
   stopifnot(is.list(info), "module_path" %in% names(info))
   module_path <- info$module_path
   R.utils::mstr(list(info = info))
-  stopifnot(utils::file_test("-x", module_path))
+  stopifnot(all(utils::file_test("-x", module_path)))
   lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
   stopifnot(nzchar(lmod_dir))
   spider <- file.path(lmod_dir, "spider")
@@ -50,9 +50,9 @@ module_repositories <- list(
     name        = "built-in",
     maintainer  = "Wynton Systems Administrators",
     group       = "Wynton",
-    url         = "",
+    url         = "https://wynton.ucsf.edu/hpc/about/contact.html",
     contributed = FALSE,
-    module_path = c("/wynton/home/opt/modules") ##, "/etc/modulefiles")
+    module_path = c("/wynton/home/opt/modules", "/etc/modulefiles")
   ),
 
   CBI = list(
@@ -179,7 +179,7 @@ Then we can launch Matlab using:
 [alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
 ```
 
-To see what other modules are available, use:
+To see what other "built-in" modules are available, use:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module avail
@@ -192,7 +192,7 @@ In additional a set of built-in environment modules, there are also modules for 
 module load CBI
 ```
 
-Then use `module avail` to list what modules are available.  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+Then use `module avail` to list what modules and versions are available (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
@@ -225,9 +225,10 @@ Below are <%= length(module_repositories) %> software repositories, each providi
 <h2>Module Software Repository: <%= name %></h2>
 
 Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
-<% if (isTRUE(info$contributed)) { %>
+<% if (!info$contributed) { %>
+Enable repository: <em>this software repository is always enabled</em><br>
+<% } else { %>
 Enable repository: <code>module load <%= name %></code><br>
-<br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
@@ -267,3 +268,5 @@ dt:after {
   content: "";
 }
 </style>
+
+[core software]: {{ '/software/core-software.html' | relative_url }}
