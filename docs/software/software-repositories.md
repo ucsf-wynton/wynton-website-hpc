@@ -59,7 +59,6 @@ Below are 2 software repositories, each providing a set of software tools.
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
-<br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
@@ -533,7 +532,6 @@ A command-line tool for common Wynton HPC queries. Examples: <code>wynton --help
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
-<br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
@@ -1057,7 +1055,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </ul>
 
 
-_The above information was automatically generated on 2020-05-07 22:23:59 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-07 22:25:57 from querying `module avail` and `module spider`._
 
 
 <style>
