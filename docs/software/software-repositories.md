@@ -20,7 +20,7 @@ Then we can launch Matlab using:
 [alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
 ```
 
-To see what other modules are available, use:
+To see what other "built-in" modules are available, use:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module avail
@@ -33,7 +33,7 @@ In additional a set of built-in environment modules, there are also modules for 
 module load CBI
 ```
 
-Then use `module avail` to list what modules are available.  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+Then use `module avail` to list what modules and versions are available (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
@@ -1088,7 +1088,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </ul>
 
 
-_The above information was automatically generated on 2020-05-07 22:45:45 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-07 22:50:04 from querying `module avail` and `module spider`._
 
 
 <style>
