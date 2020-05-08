@@ -4,29 +4,49 @@ WARNING: Do _not_ update this file; it is automatically generated from software-
 
 
 
-# Contributed Software Repositories
+# Software Repositories
 
-It is common that research groups maintain their own software stacks. Some of these groups kindly make their stacks available to the cluster community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  To get access to these repositories and their software, make sure to load them first, e.g.
+In addition to the [core software] tools that are available by default, additional software is available via _environment modules_.  For example, although Matlab is installed on the system, it is not available by default. Instead, we need to "load" its module first, e.g.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load matlab
+[alice@{{ site.devel.name }} ~]$ module list
+
+Currently Loaded Modules:
+  1) matlab/2020a
+```
+Then we can launch Matlab using:
+```sh
+[alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
+```
+
+To see what other modules are available, use:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module avail
+```
+
+
+In additional a set of built-in environment modules, there are also modules for software tools that are installed and maintained by other users or research groups.  To access these, we first need to load the corresponding "Software Repository" module.  For example, to get access to the repository and the software shared by the UCSF Computation Biology and Informatics core (CBI), make sure to load ("enable") the repository first, e.g.
+
 ```sh
 module load CBI
 ```
-Then use `module avail` to list what modules are available (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+
+Then use `module avail` to list what modules are available.  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
-module load r bwa
+module load r
 ```
 
-It is possible to enable a software repository and load specific software in one call, e.g.
+It is possible to (i) enable a software repository and (ii) load a set of software tools in one call, e.g.
 ```sh
 module load CBI r bwa bowtie2/2.2.6
 ```
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that below software stacks are <em>not</em> maintained or supported by the Wynton Team.  Instead, they are kindly contributed by individual research groups and often maintained by volunteers - sometimes on their spare time.  Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
-</div>
 
-Below are 2 contributed software repositories, each providing a set of software tools.
+Below are 2 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
@@ -40,6 +60,10 @@ Below are 2 contributed software repositories, each providing a set of software 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
 <br>
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+</div>
 
 <dl>
   <dt>asciigenome</dt>
@@ -511,6 +535,10 @@ Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Reposi
 Enable repository: <code>module load Sali</code><br>
 <br>
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+</div>
+
 <dl>
   <dt>allosmod</dt>
   <dd>
@@ -629,12 +657,12 @@ Enable repository: <code>module load Sali</code><br>
 
   <dt>imp</dt>
   <dd>
-  Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, <em>2.12.0</em><br>
+  Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, 2.12.0, 2.13.0-i386, 2.13.0-x86_64, <em>2.13.0</em><br>
   </dd>
 
   <dt>imp-fast</dt>
   <dd>
-  Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, <em>2.12.0</em><br>
+  Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, 2.12.0, 2.13.0-i386, 2.13.0-x86_64, <em>2.13.0</em><br>
   </dd>
 
   <dt>libtau</dt>
@@ -1029,7 +1057,7 @@ Enable repository: <code>module load Sali</code><br>
 </ul>
 
 
-_The above information was automatically generated on 2020-05-04 11:11:42 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-07 22:23:59 from querying `module avail` and `module spider`._
 
 
 <style>
@@ -1047,4 +1075,3 @@ dt:after {
   content: "";
 }
 </style>
-
