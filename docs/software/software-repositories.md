@@ -59,8 +59,14 @@ Below are 3 software repositories, each providing a set of software tools.
 <h2>Module Software Repository: built-in</h2>
 
 Maintained by: Wynton Systems Administrators, <a href="">Wynton</a><br>
+Enable repository: <em>this software repository is always enabled</em><br>
 
 <dl>
+  <dt>cuda</dt>
+  <dd>
+  Versions: 7.5, 8.0, 9.1, 9.2, <em>10.1</em><br>
+  </dd>
+
   <dt>julia</dt>
   <dd>
   Versions: <em>0.6.4</em><br>
@@ -69,6 +75,11 @@ Maintained by: Wynton Systems Administrators, <a href="">Wynton</a><br>
   <dt>matlab</dt>
   <dd>
   Versions: 2018b, 2019a, 2019b, <em>2020a</em><br>
+  </dd>
+
+  <dt>mpi</dt>
+  <dd>
+  Versions: <em>openmpi-x86_64</em><br>
   </dd>
 
 </dl>
@@ -1077,7 +1088,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </ul>
 
 
-_The above information was automatically generated on 2020-05-07 22:33:30 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-07 22:39:52 from querying `module avail` and `module spider`._
 
 
 <style>
