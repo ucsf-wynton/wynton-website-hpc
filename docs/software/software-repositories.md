@@ -49,9 +49,9 @@ module load CBI r bwa bowtie2/2.2.6
 Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI">CBI</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali">Sali</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in">built-in <small>(4)</small></a></li>
+  <li><a data-toggle="pill" href="#queues-CBI">CBI <small>(57)</small></a></li>
+  <li><a data-toggle="pill" href="#queues-Sali">Sali <small>(101)</small></a></li>
 </ul>
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="queues-built-in" class="tab-pane fadein active">
@@ -1088,7 +1088,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </ul>
 
 
-_The above information was automatically generated on 2020-05-07 22:50:04 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-08 10:22:06 from querying `module avail` and `module spider`._
 
 
 <style>

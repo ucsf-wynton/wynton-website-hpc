@@ -209,8 +209,13 @@ Below are <%= length(module_repositories) %> software repositories, each providi
 
 <ul class="nav nav-pills">
 <%for (kk in seq_along(module_repositories)) { %>
-<% name <- names(module_repositories)[kk] %>
-  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %></a></li>
+<%
+  name <- names(module_repositories)[kk]
+  info <- module_repositories[[name]]
+  x <- module_avail(info)
+  nbr_of_modules <- nrow(x)
+%>
+  <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><%= name %> <small>(<%= nbr_of_modules %>)</small></a></li>
 <% } ## for (name ...) %>
 </ul>
 <div class="tab-content" style="margin-top: 1ex;">
