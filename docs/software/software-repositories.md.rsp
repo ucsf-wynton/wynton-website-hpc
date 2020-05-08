@@ -22,28 +22,43 @@ as_html <- function(x) {
 style <- R.utils::cmdArg(style = FALSE)
 
 #' @importFrom utils file_test
-module_avail <- function(info) {
-  message("module_avail() ...")
-  stopifnot(is.list(info), "module_path" %in% names(info))
-  module_path <- info$module_path
-  R.utils::mstr(list(info = info))
-  stopifnot(all(utils::file_test("-x", module_path)))
-  lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
-  stopifnot(nzchar(lmod_dir))
-  spider <- file.path(lmod_dir, "spider")
-  message(" - spider binary: ", sQuote(spider))
-  stopifnot(utils::file_test("-x", spider))
-  args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
-  message(" - spider arguments: ", paste(args, collapse = " "))
-  json <- system2(spider, args = args, stdout = TRUE)
-  x <- jsonlite::fromJSON(json)
-  o <- order(x$package)
-  x <- x[o,]
-  keep <- !grepl("^[.]", x$package)
-  x <- x[keep,]
-  message("module_avail() ... done")
-  x
-}
+module_avail <- local({
+  ## Memoization
+  .cache <- list()
+  
+  function(info) {
+    message("module_avail() ...", appendLF = FALSE)
+    stopifnot(is.list(info), "module_path" %in% names(info))
+    module_path <- info$module_path
+    key <- paste(module_path, collapse = ", ")
+    res <- .cache[[key]]
+    if (!is.null(res)) {
+      message("already cached")
+      return(res)
+    }
+
+    message(""); R.utils::mstr(list(info = info))
+    stopifnot(all(utils::file_test("-x", module_path)))
+    lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
+    stopifnot(nzchar(lmod_dir))
+    spider <- file.path(lmod_dir, "spider")
+    message(" - spider binary: ", sQuote(spider))
+    stopifnot(utils::file_test("-x", spider))
+    args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
+    message(" - spider arguments: ", paste(args, collapse = " "))
+    json <- system2(spider, args = args, stdout = TRUE)
+    x <- jsonlite::fromJSON(json)
+    o <- order(x$package)
+    x <- x[o,]
+    keep <- !grepl("^[.]", x$package)
+    x <- x[keep,]
+    message("done")
+
+    .cache[[key]] <<- x
+
+    x
+  }
+})
 
 module_repositories <- list(
   "built-in" = list(
