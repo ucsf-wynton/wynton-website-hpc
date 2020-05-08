@@ -46,11 +46,21 @@ module_avail <- function(info) {
 }
 
 module_repositories <- list(
+  "built-in" = list(
+    name        = "built-in",
+    maintainer  = "Wynton Systems Administrators",
+    group       = "Wynton",
+    url         = "",
+    contributed = FALSE,
+    module_path = c("/wynton/home/opt/modules") ##, "/etc/modulefiles")
+  ),
+
   CBI = list(
     name        = "CBI",
     maintainer  = "Henrik Bengtsson",
     group       = "Computational Biology and Informatics",
     url         = "http://cbi.ucsf.edu",
+    contributed = TRUE,
     module_path = Sys.getenv("MODULE_ROOT_CBI")
   ),
 
@@ -59,6 +69,7 @@ module_repositories <- list(
     maintainer  = "Ben Webb",
     group       = "Sali Lab Software Repository",
     url         = "https://salilab.org/",
+    contributed = TRUE,
     module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
   )
 )
@@ -152,29 +163,49 @@ if (!is.null(versions$versionName)) {
 ---%>
 
 
-# Contributed Software Repositories
+# Software Repositories
 
-It is common that research groups maintain their own software stacks. Some of these groups kindly make their stacks available to the cluster community sparing others the effort having to install those software tools themselves.  This is often done via so called Linux module environments.  To get access to these repositories and their software, make sure to load them first, e.g.
+In addition to the [core software] tools that are available by default, additional software is available via _environment modules_.  For example, although Matlab is installed on the system, it is not available by default. Instead, we need to "load" its module first, e.g.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load matlab
+[alice@{{ site.devel.name }} ~]$ module list
+
+Currently Loaded Modules:
+  1) matlab/2020a
+```
+Then we can launch Matlab using:
+```sh
+[alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
+```
+
+To see what other modules are available, use:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module avail
+```
+
+
+In additional a set of built-in environment modules, there are also modules for software tools that are installed and maintained by other users or research groups.  To access these, we first need to load the corresponding "Software Repository" module.  For example, to get access to the repository and the software shared by the UCSF Computation Biology and Informatics core (CBI), make sure to load ("enable") the repository first, e.g.
+
 ```sh
 module load CBI
 ```
-Then use `module avail` to list what modules are available (or see below).  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
+
+Then use `module avail` to list what modules are available.  Next, to actually get access to one or more of the shared software modules, use `module load <name>` or `module load <name>/<version>`.  Here are a few examples:
 ```sh
 module load bowtie2
 module load bowtie2/2.2.6
-module load r bwa
+module load r
 ```
 
-It is possible to enable a software repository and load specific software in one call, e.g.
+It is possible to (i) enable a software repository and (ii) load a set of software tools in one call, e.g.
 ```sh
 module load CBI r bwa bowtie2/2.2.6
 ```
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that below software stacks are <em>not</em> maintained or supported by the Wynton Team.  Instead, they are kindly contributed by individual research groups and often maintained by volunteers - sometimes on their spare time.  Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
-</div>
 
-Below are <%= length(module_repositories) %> contributed software repositories, each providing a set of software tools.
+Below are <%= length(module_repositories) %> software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <%for (kk in seq_along(module_repositories)) { %>
@@ -194,8 +225,14 @@ Below are <%= length(module_repositories) %> contributed software repositories, 
 <h2>Module Software Repository: <%= name %></h2>
 
 Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
+<% if (isTRUE(info$contributed)) { %>
 Enable repository: <code>module load <%= name %></code><br>
 <br>
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+</div>
+<% } %>
 
 <% table_of_modules(x) %>
 </div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
@@ -230,4 +267,3 @@ dt:after {
   content: "";
 }
 </style>
-
