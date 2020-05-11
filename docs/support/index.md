@@ -11,7 +11,6 @@ For questions and feature requests, please use one of the following channels:
 
 These are communal forums - feel free to ask questions, answer questions, and participate in discussions.
 
----
 
 If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate dropping us an email.
 
