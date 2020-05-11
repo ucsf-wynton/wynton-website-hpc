@@ -10,7 +10,7 @@ For questions and feature requests, please use one of the following channels:
   - Join: (a) go to [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (b) enter your UCSF(\*) email address. (\*) If you don't have a ucsf.edu address, [let us know]({{ '/about/contact.html' | relative_url }}) and we will send you an invite to your preferred email address.
 
 <!--
-3. the [{{ site.cluster.name }} issue tracker]
+4. the [{{ site.cluster.name }} issue tracker]
 -->
 
 These are communal forums - feel free to ask questions, answer questions, and participate in discussions.
@@ -20,7 +20,7 @@ These are communal forums - feel free to ask questions, answer questions, and pa
 If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate dropping us an email.
 
 3. **{{ site.cluster.name }} System Administrators and Managers email list**
-* [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu) - reaches all systems administrators and managers. 
+ [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu) - reaches all systems administrators and managers. 
 
 ---
 
