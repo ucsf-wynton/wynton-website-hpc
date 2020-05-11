@@ -9,10 +9,6 @@ For questions and feature requests, please use one of the following channels:
 2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time
   - Join: (a) go to [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (b) enter your UCSF(\*) email address. (\*) If you don't have a ucsf.edu address, [let us know]({{ '/about/contact.html' | relative_url }}) and we will send you an invite to your preferred email address.
 
-<!--
-4. the [{{ site.cluster.name }} issue tracker]
--->
-
 These are communal forums - feel free to ask questions, answer questions, and participate in discussions.
 
 ---
@@ -30,5 +26,10 @@ To better assist with your issue:
   * If you have problems with jobs (e.g. not running or given errors), make sure to include the job IDs of the job you need help on.
   * Include your username on the cluster.
   * What machine are you trying to use, e.g. login or development node?
+
+<!--
+4. the [{{ site.cluster.name }} issue tracker]
+-->
+
 
 [{{ site.cluster.name }} issue tracker]: https://github.com/UCSF-HPC/wynton/wiki/Todo 
