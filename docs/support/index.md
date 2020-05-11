@@ -16,7 +16,7 @@ These are communal forums - feel free to ask questions, answer questions, and pa
 If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate dropping us an email.
 
 3. **{{ site.cluster.name }} System Administrators and Managers email list**
- [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu) - reaches all systems administrators and managers. 
+  - [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu) - reaches all systems administrators and managers. 
 
 ---
 
