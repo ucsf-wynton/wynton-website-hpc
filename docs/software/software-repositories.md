@@ -50,7 +50,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(4)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(57)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
@@ -77,6 +77,11 @@ Enable repository: <em>this software repository is always enabled</em><br>
   <dt>matlab</dt>
   <dd>
   Versions: 2018b, 2019a, 2019b, <em>2020a</em><br>
+  </dd>
+
+  <dt>matlab-runtime</dt>
+  <dd>
+  Versions: <em>2020a</em><br>
   </dd>
 
   <dt>mpi</dt>
@@ -1084,12 +1089,12 @@ Please note that this software stacks is maintained and contributed by a researc
 </div> 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(4)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(57)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-08 10:36:17 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-11 16:29:25 from querying `module avail` and `module spider`._
 
 
 <style>
