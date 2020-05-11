@@ -15,7 +15,19 @@ For questions and feature requests, please use one of the following channels:
 
 These are communal forums - feel free to ask questions, answer questions, and participate in discussions.
 
-If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate [dropping us an email]({{ '/about/contact.html' | relative_url }}).
+---
 
+If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate dropping us an email.
+
+3. **{{ site.cluster.name }} System Administrators and Managers email list**
+* [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu) - reaches all systems administrators and managers. 
+---
+
+To better assist with your issue:
+  * On emails, please use 'Reply All' in all your correspondence.
+  * Don't include screenshot images; cut'n'paste text.
+  * If you have problems with jobs (e.g. not running or given errors), make sure to include the job IDs of the job you need help on.
+  * Include your username on the cluster.
+  * What machine are you trying to use, e.g. login or development node?
 
 [{{ site.cluster.name }} issue tracker]: https://github.com/UCSF-HPC/wynton/wiki/Todo 
