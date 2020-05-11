@@ -48,3 +48,13 @@ unable to contact qmaster using port 6444 on host "q"
 **A1**. If you belong to a specific group, we can set up a `/wynton/home/your_group/shared/` folder that group members (part of the same Unix group) have write access to. Any such files will count toward the disk quota of the user who owns the files. The typical use case is then that one or more members maintain subdirectories therein.  If you need this, please drop us an email.  Note, if the `groups` command reports `lsd` for you, then you do not belong to a specific group and can unfortunately not get a group-specific folder.
 
 **A2**. Labs who [purchase additional storage]({{ '/about/pricing-storage.html' | relative_url }}) will get a `/wynton/group/your_group/` folder.  Files written in that folder will not count toward users disk quota.
+
+## Contributing to Wynton
+
+**Q**. _Our lab would contribute to Wynton in order to increase our priority.  How can we do this?_
+
+**A**. We welcome donations of any size.  In return, your lab will receive a number of slots in member.q equivalent to the number of cores in a current Standard Node that your contribution would purchase.  Currently, that cost is $170 per slot.
+
+**Q**. _Our lab has some old nodes we'd like to contribute to Wynton in return for priority. Will you take them?_
+
+**A**. Please [get in touch with the Wynton team]({{ '/about/contact.html' | relative_url }}).
