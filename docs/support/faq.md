@@ -53,7 +53,7 @@ unable to contact qmaster using port 6444 on host "q"
 
 **Q**. _Our lab would contribute to Wynton in order to increase our priority.  How can we do this?_
 
-**A**. We welcome donations of any size.  In return, your lab will receive a number of slots in member.q equivalent to the number of cores in a current Standard Node that your contribution would purchase.  Currently, that cost is $170 per slot.
+**A**. We welcome donations of any size.  In return, your lab will receive a number of slots in member.q equivalent to the number of cores in a current Standard Node that your contribution would purchase.  As of May 2020, that cost is $170 per slot.
 
 **Q**. _Our lab has some old nodes we'd like to contribute to Wynton in return for priority. Will you take them?_
 
