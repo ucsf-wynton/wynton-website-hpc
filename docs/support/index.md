@@ -22,7 +22,7 @@ If you have requests that you rather prefer to address directly to the system ad
 
 To better assist with your issue:
   * On emails, please use 'Reply All' in all your correspondence.
-  * Don't include screenshot images; cut'n'paste text.
+  * Don't include screenshot images; cut-and-paste text.
   * If you have problems with jobs (e.g. not running or given errors), make sure to include the job IDs of the job you need help on.
   * Include your username on the cluster.
   * What machine are you trying to use, e.g. login or development node?
