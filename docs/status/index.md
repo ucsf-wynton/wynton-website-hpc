@@ -69,6 +69,20 @@
 
 ## Upcoming and Current Incidents
 
+## Upcoming Incidents
+
+### May 18-22, 2020
+
+#### <span style="color: orange;">File-system maintenance</span>
+
+**Notice**: Work to improve the stability of the BeeGFS filesystem (`/wynton`)
+will be conducted during the week of May 18-22. This involves restarting the
+eight pairs of metadata server processes, which may result in several brief
+stalls of the file system. Each should last less than 5 minutes and operations
+will continue normally after each one.
+<br><span class="timestamp">May 6, 15:10 PST</span>
+
+
 ## Past Incidents
 
 ### February 5-7, 2020
