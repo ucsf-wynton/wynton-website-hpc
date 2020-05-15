@@ -7,7 +7,7 @@ For questions and feature requests, please use one of the following channels:
   - Web archives: N/A <!-- [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help) (only visible to subscribed list members). -->
 
 2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time
-  - Join: (a) go to [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (b) enter your UCSF(\*) email address. (\*) If you don't have a ucsf.edu address, [let us know]({{ '/about/contact.html' | relative_url }}) and we will send you an invite to your preferred email address.
+  - Join: (a) go to [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (b) enter your UCSF(\*) email address. (\*) If you don't have an email address that ends with ucsf.edu, or it for other reasons does not work, [let us know]({{ '/about/contact.html' | relative_url }}) and we will send you an invite to your preferred email address.
 
 These are communal forums - feel free to ask questions, answer questions, and participate in discussions.
 
