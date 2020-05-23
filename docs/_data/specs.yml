@@ -1,5 +1,5 @@
-nodes: 339
-physical_cores: 7228
+nodes: 395
+physical_cores: 9244
 gpu_nodes: 38
 gpus: 132
 communal_gpu_nodes: 7
@@ -7,7 +7,7 @@ communal_gpus: 24
 
 ## RAM [GiB]:
 ram_min: 48
-ram_max: 768
+ram_max: 1512
 
 ## Disk /swap [GiB]:
 swap_min: 4
