@@ -69,11 +69,24 @@
 
 ## Upcoming and Current Incidents
 
-## Upcoming Incidents
+## Current Incidents
 
-### May 18-22, 2020
+### May 18-22, 2020, and beyond
 
 #### <span style="color: orange;">File-system maintenance</span>
+
+**Update**: The BeeGFS filesystem has been upgraded using a patch from the
+vendor. The patch was designed to lower the amount of resynchronization needed
+between the two metadata servers. Unfortunately, after the upgrade we observe
+an increase of resynchronization.  We will keep monitoring the status.  If
+the problem remains, we will consider a rollback to the BeeGFS version used
+prior to May 18.
+<br><span class="timestamp">May 22, 01:25 PST</span>
+
+**Update**: For a short moment around 1 am early Friday, both of our BeeGFS
+metadata servers were down.  This may have lead to some applications
+experiencing I/O errors around this time.
+<br><span class="timestamp">May 22, 01:25 PST</span>
 
 **Notice**: Work to improve the stability of the BeeGFS filesystem (`/wynton`)
 will be conducted during the week of May 18-22. This involves restarting the
