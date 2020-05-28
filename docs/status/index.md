@@ -71,6 +71,14 @@
 
 ## Current Incidents
 
+### May 28, 2020
+
+#### <span style="color: orange;">GPU compute nodes outage</span>
+
+**Investigating**: A large number of GPU compute nodes in the MSG data center are currently down for unknown reasons.  We are investigating the cause.
+<br><span class="timestamp">May 28, 09:35 PST</span>
+
+
 ### May 18-22, 2020, and beyond
 
 #### <span style="color: orange;">File-system maintenance</span>
