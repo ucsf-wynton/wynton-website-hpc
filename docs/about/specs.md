@@ -24,7 +24,9 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 ### Compute Nodes
 
 The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
+<!--
 For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
+-->
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
 
@@ -97,16 +99,19 @@ The majority of the compute nodes are connected to the local network with 1 Gbps
 The cluster itself connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps - providing a file transfer speed of up to (theoretical) 12.5 GB/s = 45 TB/h.
 
 
+<!--
+
 ## Details
 
 ### All Compute Nodes
 
-<script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"><!-- ~80 kB --></script>
-<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"><!-- 2 kB --></script>
+<script src="https://d3js.org/d3.v3.min.js"/>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"/>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"/>
 
-<table id="hosttable">
+<table id="hosttable" style="visibility: hidden">
 </table>
+
 
 <script type="text/javascript" charset="utf-8">
 d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(host_table) {
@@ -223,6 +228,7 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
 
 Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> using [wyntonquery] and [qstat_nodes_in_state_au.tsv](https://github.com/UCSF-HPC/wynton-slash2/blob/master/status/qstat_nodes_in_state_au.tsv).
 
+-->
 
 <style>
 table {
