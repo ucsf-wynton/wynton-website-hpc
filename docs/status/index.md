@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "part-outage" %}
+{% assign status = "notice" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -77,14 +77,6 @@
 
 ## Current Incidents
 
-### May 28, 2020
-
-#### <span style="color: orange;">GPU compute nodes outage</span>
-
-**Investigating**: A large number of GPU compute nodes in the MSG data center are currently down for unknown reasons.  We are investigating the cause.
-<br><span class="timestamp">May 28, 09:35 PST</span>
-
-
 ### May 18-22, 2020, and beyond
 
 #### <span style="color: orange;">File-system maintenance</span>
@@ -111,6 +103,17 @@ will continue normally after each one.
 
 
 ## Past Incidents
+
+### May 28-29, 2020
+
+#### <span style="color: orange;">GPU compute nodes outage</span>
+
+**Resolved**: The GPU compute nodes that went down yesterday have been rebooted.
+<br><span class="timestamp">May 29, 11:10 PST</span>
+
+**Investigating**: A large number of GPU compute nodes in the MSG data center are currently down for unknown reasons.  We are investigating the cause.
+<br><span class="timestamp">May 28, 09:35 PST</span>
+
 
 ### February 5-7, 2020
 
