@@ -108,7 +108,10 @@ will continue normally after each one.
 
 #### <span style="color: orange;">GPU compute nodes outage</span>
 
-**Resolved**: The GPU compute nodes that went down yesterday have been rebooted.
+**Resolved**: The GPU compute nodes are now fully available to serve jobs.
+<br><span class="timestamp">May 29, 12:00 PST</span>
+
+**Update**: The GPU compute nodes that went down yesterday have been rebooted.
 <br><span class="timestamp">May 29, 11:10 PST</span>
 
 **Investigating**: A large number of GPU compute nodes in the MSG data center are currently down for unknown reasons.  We are investigating the cause.
