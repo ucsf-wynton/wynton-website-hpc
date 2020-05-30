@@ -189,8 +189,9 @@ BLAT - client and server combined into a single program, first building the inde
   <dt>bowtie</dt>
   <dd>
     <strong>Bowtie: A Fast and Sensitive Gapped Read Aligner</strong><br>
-Bowtie is an ultrafast, memory-efficient short read aligner. <em>NOTE: This is Bowtie v1 - not v2</em>.<br>
+Bowtie is an ultrafast, memory-efficient short read aligner.<br>
     Example: <code>bowtie --version</code> and <code>ls $BOWTIE_HOME/{genomes,indexes}</code><br>
+    Note: This is Bowtie v1 - not v2_.<br>
     URL: <a href="http://bowtie-bio.sourceforge.net/index.shtml">http://bowtie-bio.sourceforge.net/index.shtml</a><br>
   Versions: <em>1.2.3</em><br>
   </dd>
@@ -1163,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-29 23:32:34 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-29 23:37:35 from querying `module avail` and `module spider`._
 
 
 <style>
