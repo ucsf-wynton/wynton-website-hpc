@@ -123,7 +123,8 @@ bamUtil is a repository that contains several programs that perform operations o
   <dt>bat</dt>
   <dd>
     <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
-A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code><br>
+A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.<br>
+Note: Only the most recent version of this software will be kept.<br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
   Versions: 0.11.0, 0.12.1, <em>0.13.0</em><br>
   </dd>
@@ -1094,7 +1095,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-29 22:41:30 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-29 22:52:22 from querying `module avail` and `module spider`._
 
 
 <style>
