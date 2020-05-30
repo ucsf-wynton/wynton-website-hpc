@@ -509,14 +509,13 @@ SAMtools is a suite of programs for interacting with high-throughput sequencing 
   Versions: 1.9, <em>1.10</em><br>
   </dd>
 
-  <dt>scl-devtoolset (part of CBI-testing)</dt>
+  <dt>scl-devtoolset</dt>
   <dd>
     <strong>SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
 Enables the CentOS Software Collection (SCL) <code>devtoolset-7</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-7</code>, which is an approach that is not officially supported by RedHat/CentOS.<br>
     Example: <code>gcc --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/</a><br>
   Versions: 4, 6, <em>7</em><br>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
   <dt>scl-python (part of CBI-testing)</dt>
@@ -1165,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-30 12:46:20 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-30 12:53:54 from querying `module avail` and `module spider`._
 
 
 <style>
