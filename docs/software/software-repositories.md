@@ -522,9 +522,10 @@ Enables the CentOS Software Collection (SCL) <code>devtoolset-7</code> in the cu
   <dt>scl-python (part of CBI-testing)</dt>
   <dd>
     <strong>SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]</strong><br>
-[DEPRECATED: Python SCLs are deprecated on Wynton HPC because <code>python3</code> is now available everywhere.]  Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.<br>
+Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.<br>
     Example: <code>python --version</code> and <code>pip --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a><br>
+    Warning: This module is DEPRECATED and should no longer be used because Python SCLs are deprecated, which in turn is because Python 3 is now available directly by CentOS.<br>
   Versions: 3.3, 3.4, <em>3.6</em><br>
     Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
@@ -1164,7 +1165,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-29 23:39:08 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-30 12:46:20 from querying `module avail` and `module spider`._
 
 
 <style>
