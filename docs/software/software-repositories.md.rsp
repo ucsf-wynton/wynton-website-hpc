@@ -149,6 +149,20 @@ if (!is.null(versions$versionName)) {
     vers <- NULL
   }
 }
+
+## Extract 'Nnnn: ' content from the end.
+if (length(m$description) > 0L) {
+  pattern <- "(.*) (Examples?|Note|Warning): (.*)"
+  while(grepl(pattern, m$description)) {
+    name <- gsub(pattern, "\\2", m$description)
+    name <- sub("s$", "", name)
+    name <- tolower(name)
+    m[[name]] <- gsub(pattern, "\\3", m$description)
+    m$description <- gsub(pattern, "\\1", m$description)
+  }
+}
+
+
 %>
   <dt><%= m$package %><% if (!is.null(m$parent)) cat(sprintf(" (part of %s)", m$parent)) %></dt>
   <dd>
@@ -158,12 +172,21 @@ if (!is.null(versions$versionName)) {
   <% if (!is.null(m$description)) { %>
     <%= as_html(m$description) %><br>
   <% } %>
+  <% if (!is.null(m$example)) { %>
+    Example: <%= as_html(m$example) %><br>
+  <% } %>
+  <% if (!is.null(m$note)) { %>
+    Note: <%= as_html(m$note) %><br>
+  <% } %>
   <% if (!is.null(m$url) && !is.na(m$url)) { %>
     URL: <%= as_html(m$url) %><br>
   <% } %>
+  <% if (!is.null(m$warning) && !is.na(m$warning)) { %>
+    Warning: <%= as_html(m$warning) %><br>
+  <% } %>
   Versions: <%= paste(vers, collapse = ", ") %><br>
   <% if (!is.null(m$parent)) { %>
-    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   <% } %>
   </dd>
 
