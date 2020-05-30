@@ -128,7 +128,7 @@ bamUtil is a repository that contains several programs that perform operations o
 A cat(1) clone with syntax highlighting and Git integration.<br>
     Example: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.<br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
-    Note: Only the most recent version of this software will be kept.<br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: 0.11.0, 0.12.1, <em>0.13.0</em><br>
   </dd>
 
@@ -217,8 +217,9 @@ Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent se
   <dd>
     <strong>byobu: Elegant Enhancement of the Otherwise Functional, Plain, Practical GNU Screen</strong><br>
 Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer.<br>
-    Example: <code>byobu --version</code><br>
+    Example: <code>byobu --version</code>.<br>
     URL: <a href="http://byobu.org">http://byobu.org</a>, <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: 5.127, 5.129, <em>5.130</em><br>
   </dd>
 
@@ -263,6 +264,7 @@ Cufflinks assembles transcripts, estimates their abundances, and tests for diffe
 At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.<br>
     Example: <code>emacs --version</code> and <code>emacs -nw</code>.<br>
     URL: <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: 25.3, 26.1, 26.2, <em>26.3</em><br>
   </dd>
 
@@ -279,8 +281,10 @@ FastQC is a program designed to spot potential problems in high througput sequen
   <dd>
     <strong>fzf - A Command-Line Fuzzy Finder</strong><br>
 fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.<br>
-    Example: <code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>. To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
+    Example: <code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>.<br>
+    Note: To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
     URL: <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: 0.18.0, 0.19.0, 0.20.0, <em>0.21.1</em><br>
   </dd>
 
@@ -326,6 +330,7 @@ GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JT
 A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model.<br>
     Example: <code>git flow</code>.<br>
     URL: <a href="https://github.com/petervanderdoes/gitflow-avh">https://github.com/petervanderdoes/gitflow-avh</a>, <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: 1.12.1, <em>1.12.3</em><br>
   </dd>
 
@@ -360,8 +365,9 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
   <dd>
     <strong>htop - An Interactive Process Viewer for Unix</strong><br>
 <code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.<br>
-    Example: <code>htop</code><br>
+    Example: <code>htop</code>.<br>
     URL: <a href="http://hisham.hm/htop/">http://hisham.hm/htop/</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: <em>2.2.0</em><br>
   </dd>
 
@@ -452,6 +458,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
 <code>qtop</code> (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC &amp; grid clusters. At present it supports PBS, SGE &amp; OAR families. Please help to increase that list in the Python version of the tool, qtop.py!<br>
     Example: <code>qtop</code> and <code>qtop -FGW</code>.<br>
     URL: <a href="https://github.com/qtop/qtop">https://github.com/qtop/qtop</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: <em>0.9.20161222</em><br>
   </dd>
 
@@ -478,6 +485,7 @@ Sets R options and environment variables customized for the current compute envi
 Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, or remote file systems, and in the cloud.<br>
     Example: <code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>info rclone</code>.<br>
     URL: <a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: <em>1.51.0</em><br>
   </dd>
 
@@ -485,8 +493,9 @@ Rclone is a command line program to sync files and directories to and from a lar
   <dd>
     <strong>ripgrep - Recursively Searches Directories for a Regex Pattern</strong><br>
 ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.<br>
-    Example: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code><br>
+    Example: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.<br>
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: 11.0.2, <em>12.0.1</em><br>
   </dd>
 
@@ -525,6 +534,7 @@ Enables the CentOS Software Collection (SCL) <code>devtoolset-7</code> in the cu
 ShellCheck finds bugs in your shell scripts.<br>
     Example: <code>shellcheck --version</code> and <code>shellcheck -x ~/.bashrc</code>.<br>
     URL: <a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>, <a href="https://github.com/koalaman/shellcheck/">https://github.com/koalaman/shellcheck/</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: 0.6.0, 0.7.0, <em>0.7.1</em><br>
   </dd>
 
@@ -561,6 +571,7 @@ STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner f
 tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more.<br>
     Example: <code>tmux</code> and <code>man tmux</code>.<br>
     URL: <a href="https://github.com/tmux/tmux/wiki">https://github.com/tmux/tmux/wiki</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: <em>2.8</em><br>
   </dd>
 
@@ -579,6 +590,7 @@ TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq rea
 Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the <code>LS_COLORS</code> environment variable is set and output is to tty.<br>
     Example: <code>tree --help</code>.<br>
     URL: <a href="http://mama.indstate.edu/users/ice/tree/">http://mama.indstate.edu/users/ice/tree/</a>,<br>
+    Warning: Only the most recent version of this software will be kept.<br>
   Versions: <em>1.8.0</em><br>
   </dd>
 
@@ -1151,7 +1163,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-29 23:22:15 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-29 23:32:34 from querying `module avail` and `module spider`._
 
 
 <style>
