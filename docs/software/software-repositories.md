@@ -516,7 +516,7 @@ Enables the CentOS Software Collection (SCL) <code>devtoolset-7</code> in the cu
     Example: <code>gcc --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/</a><br>
   Versions: 4, 6, <em>7</em><br>
-    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
   <dt>scl-python (part of CBI-testing)</dt>
@@ -526,7 +526,7 @@ Enables the CentOS Software Collection (SCL) <code>devtoolset-7</code> in the cu
     Example: <code>python --version</code> and <code>pip --version</code>.<br>
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a><br>
   Versions: 3.3, 3.4, <em>3.6</em><br>
-    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
   <dt>shellcheck</dt>
@@ -629,7 +629,7 @@ A command-line tool for common Wynton HPC queries.<br>
     Example: <code>wynton --help</code>.<br>
     URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
   Versions: <em>latest</em><br>
-    NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
 </dl>
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-29 23:37:35 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-29 23:39:08 from querying `module avail` and `module spider`._
 
 
 <style>
