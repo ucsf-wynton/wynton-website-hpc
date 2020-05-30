@@ -125,7 +125,8 @@ Example: <code>bam help</code>.<br>
   <dt>bat</dt>
   <dd>
     <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
-A cat(1) clone with syntax highlighting and Git integration.  Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.<br>
+A cat(1) clone with syntax highlighting and Git integration.<br>
+Examples: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.<br>
 Note: Only the most recent version of this software will be kept.<br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
   Versions: 0.11.0, 0.12.1, <em>0.13.0</em><br>
@@ -448,7 +449,8 @@ Example: <code>plink2 --help</code>.<br>
   <dt>qtop</dt>
   <dd>
     <strong>qtop: Monitor the State of Queueing Systems, Along with Related Information Relevant on HPC &amp; Grid Clusters</strong><br>
-<code>qtop</code> (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC &amp; grid clusters. At present it supports PBS, SGE &amp; OAR families. Please help to increase that list in the Python version of the tool, qtop.py! Examples: <code>qtop</code> and <code>qtop -FGW</code>.<br>
+<code>qtop</code> (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC &amp; grid clusters. At present it supports PBS, SGE &amp; OAR families. Please help to increase that list in the Python version of the tool, qtop.py!<br>
+Examples: <code>qtop</code> and <code>qtop -FGW</code>.<br>
     URL: <a href="https://github.com/qtop/qtop">https://github.com/qtop/qtop</a><br>
   Versions: <em>0.9.20161222</em><br>
   </dd>
@@ -456,7 +458,8 @@ Example: <code>plink2 --help</code>.<br>
   <dt>r</dt>
   <dd>
     <strong>R: The R Programming Language</strong><br>
-The R programming language. Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
+The R programming language.<br>
+Examples: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
   Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, <em>4.0.0</em><br>
   </dd>
@@ -464,7 +467,8 @@ The R programming language. Examples: <code>R --version</code> and <code>Rscript
   <dt>r-siteconfig</dt>
   <dd>
     <strong>R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
-Sets R options and environment variables customized for the current compute environment. Examples: In R, <code>getOption(&quot;repos&quot;)</code>.<br>
+Sets R options and environment variables customized for the current compute environment.<br>
+Examples: In R, <code>getOption(&quot;repos&quot;)</code>.<br>
   Versions: <em>0.1</em><br>
   </dd>
 
@@ -480,7 +484,8 @@ Example: <code>rclone --version</code>, <code>rclone --help</code>, <code>rclone
   <dt>ripgrep</dt>
   <dd>
     <strong>ripgrep - Recursively Searches Directories for a Regex Pattern</strong><br>
-ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.  Examples: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code><br>
+ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.<br>
+Examples: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code><br>
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
   Versions: 11.0.2, <em>12.0.1</em><br>
   </dd>
@@ -607,7 +612,8 @@ Example: <code>vcftools --version</code>.<br>
   <dt>wynton-tools (part of CBI-testing)</dt>
   <dd>
     <strong>Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
-A command-line tool for common Wynton HPC queries. Examples: <code>wynton --help</code>.<br>
+A command-line tool for common Wynton HPC queries.<br>
+Examples: <code>wynton --help</code>.<br>
     URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
   Versions: <em>latest</em><br>
     NOTE: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
@@ -1145,7 +1151,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-29 23:01:34 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-05-29 23:03:19 from querying `module avail` and `module spider`._
 
 
 <style>
