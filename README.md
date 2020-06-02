@@ -1,6 +1,6 @@
 # The Wynton HPC User Website
 
-This repository contains the [Wynton HPC user website](https://ucsf-hpc.github.io/wynton/).
+This repository contains the [Wynton HPC user website](https://wynton.ucsf.edu/hpc/).
 
 
 ## Technical details
