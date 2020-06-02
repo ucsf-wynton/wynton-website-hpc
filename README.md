@@ -20,6 +20,15 @@ To launch a localhost instance of the website, do:
 ```sh
 $ cd docs
 $ bundle exec jekyll serve --port 4001
+Configuration file: /home/alice/wynton/docs/_config.yml
+            Source: /home/alice/wynton/docs
+       Destination: /home/alice/wynton/docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.94 seconds.
+ Auto-regeneration: enabled for '/home/alice/wynton/docs'
+    Server address: http://127.0.0.1:4001
+  Server running... press ctrl-c to stop.
 ```
 
 and then open <http://127.0.0.1:4001> in the web browser.  Note that Jekyll monitors all files and if one of them is updated, then Jekyll will instantaneously re-render the corresponding HTML file.  There is no need to relaunch Jekyll or by other means manually re-render files.  For instance, if there has been updates made to the git repository, doing:
