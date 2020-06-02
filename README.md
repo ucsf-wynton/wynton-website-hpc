@@ -5,6 +5,16 @@ This repository contains the [Wynton HPC user website](https://wynton.ucsf.edu/h
 
 ## Prototype the website locally
 
+To get a local copy of this repos, do:
+
+```sh
+$ cd /path/to/my/repositories
+$ git clone https://github.com/UCSF-HPC/wynton.git
+$ cd wynton
+$ pwd
+/path/to/my/repositories/wynton
+```
+
 To launch a localhost instance of the website, do:
 
 ```sh
@@ -12,7 +22,14 @@ $ cd docs
 $ bundle exec jekyll serve --port 4001
 ```
 
-and then open <http://127.0.0.1:4001> in the web browser.  Note that Jekyll monitors all files and if one of them is updated, then Jekyll will instantaneously re-render the corresponding HTML file.  There is no need to relaunch Jekyll or by other means manually re-render files.
+and then open <http://127.0.0.1:4001> in the web browser.  Note that Jekyll monitors all files and if one of them is updated, then Jekyll will instantaneously re-render the corresponding HTML file.  There is no need to relaunch Jekyll or by other means manually re-render files.  For instance, if there has been updates made to the git repository, doing:
+
+```sh
+$ git pull
+```
+
+will pull down those updates locally and Jekyll will automatically re-render the HTML website.
+
 
 
 ## Spell checking
@@ -23,7 +40,7 @@ $ make spell
 No spelling errors found.
 ```
 
-This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos = "https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as misspelled, they can be added to the 'WORDLIST' file.
+This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos="https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as misspelled, they can be added to the 'WORDLIST' file.
 
 
 
