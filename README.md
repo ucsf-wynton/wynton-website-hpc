@@ -17,6 +17,19 @@ $ bundle exec jekyll serve --port 4001
 and then open <http://127.0.0.1:4001> in the webbrowser.
 
 
+## Spell checking
+
+```sh
+$ cd docs
+$ make spell
+No spelling errors found.
+$
+```
+
+This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is install, e.g. `install.packages("spelling", repos = "https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as mispelled, they can be added to the 'WORDLIST' file.
+
+
+
 ## Licenses
 
 * The _content_ of the Wynton HPC is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> (CC BY-SA 4.0).
