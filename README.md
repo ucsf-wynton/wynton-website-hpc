@@ -16,7 +16,7 @@ $ bundle exec jekyll serve --port 4001
 
 and then open <http://127.0.0.1:4001> in the web browser.
 
-Note that Jekyll monitors all files and if one of the source files are updated, then it will instantaneously re-render the corresponding HTML file.  There is no need to relaunch or by other means manually re-render files.
+Note that Jekyll monitors all files and if one of them are updated, then Jekyll will instantaneously re-render the corresponding HTML file.  There is no need to relaunch or by other means manually re-render files.
 
 
 ## Spell checking
