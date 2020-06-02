@@ -26,7 +26,7 @@ No spelling errors found.
 $
 ```
 
-This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is install, e.g. `install.packages("spelling", repos = "https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as mispelled, they can be added to the 'WORDLIST' file.
+This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos = "https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as mispelled, they can be added to the 'WORDLIST' file.
 
 
 
