@@ -1,4 +1,4 @@
-# Join the Cluster
+ Join the Cluster
 
 
 {{ site.cluster.name }} is a large, shared high-performance compute (HPC) cluster underlying UCSF's Research Computing Capability. Funded and administered cooperatively by UCSF campus IT and key research groups, it is available to all UCSF researchers, and consists of different profiles suited to various biomedical and health science computing needs. Researchers can participate using the “co-op” model of resource contribution and sharing.
@@ -28,6 +28,10 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<strong>Please make sure you provide all the information applicable to you in this form to avaiod any delays</strong>
+</div>
+
 <form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
  <div class="form-group">
   <label for="given_name">First name</label> <span style="color: red">*</span><br>
@@ -42,30 +46,30 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  <div class="form-group">
   <label for="email_address">UCSF email address</label> <span style="color: red">*</span><br>
   <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter email" size="30" required><br> 
-  <small>(If external collaborator, please provide preferred email id. Also, request your PI to send an email to <a href="mailto:wynton_admin@ucsf.edu">wynton_admin@ucsf.edu</a> approving the request and duration of access)</small><br>
+  <small>(**External collaborators only: Please provide your preferred email address)</small>
  </div>
  
  <div class="form-group"> 
   <label for="affiliation">UCSF affiliation</label> <span style="color: red">*</span><br>
   <fieldset>
-   <input type="radio" name="affiliation" value="Faculty"> Faculty<br>     
-   <input type="radio" name="affiliation" value="Postdoc"> Postdoc<br>
-   <input type="radio" name="affiliation" value="Staff"> Staff<br>
-   <input type="radio" name="affiliation" value="Research_Assistant"> Research Assistant<br>
-   <input type="radio" name="affiliation" value="Student"> Student<br>
-   <input type="radio" name="affiliation" value="other"> Other<br>
+   <input type="radio" id="affiliation_0" name="affiliation" value="Faculty"> Faculty<br>     
+   <input type="radio" id="affiliation_1" name="affiliation" value="Postdoc"> Postdoc<br>
+   <input type="radio" id="affiliation_2" name="affiliation" value="Staff"> Staff<br>
+   <input type="radio" id="affiliation_3" name="affiliation" value="Research_Assistant"> Research Assistant<br>
+   <input type="radio" id="affiliation_4" name="affiliation" value="Student"> Student<br>
+   <input type="radio" id="affiliation_5" name="affiliation" value="other"> Other<br>
   </fieldset>
  </div>
  <div class="form-group">
   <label for="other_desc">If 'Other', please clarify </label><br>
-  <input type="text" id="other_desc" name="other_desc" size="30" minlength="2" required><br>
+  <input type="text" id="other_desc" name="other_desc" placeholder="Collaborating with, ..." size="30" minlength="2"><br>
  </div>
  
  <div class="form-group">
   <label for="student_affiliation"> If 'Student', please select appropriate option</label> <br>
-   		<input type="checkbox" name="student_affiliation" value="Joined_PI_Lab"> Joined PI's Lab<br>
-		<input type="checkbox" name="student_affiliation" value="Rotation"> Rotation<br>
-		<input type="checkbox" name="student_affiliation" value="Course"> For Course<br>
+   		<input type="checkbox" id="student_desc_0" name="student_desc" value="Joined_PI_Lab"> Joined PI's Lab<br>
+		<input type="checkbox" id="student_desc_1" name="student_desc" value="Rotation"> Rotation<br>
+		<input type="checkbox" id="student_desc_2" name="student_desc" value="Course"> For Course<br>
  </div>
  
  <div class="form-group">  
@@ -80,17 +84,20 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 
  <div class="form-group">  
   <label for="ucsf_id">UCSF Employee/Student ID</label> <span style="color: red">*</span><br>
-  <input type="text" id="ucsf_id" name="ucsf_id" placeholder="02xxxxxxx or 'none'" pattern="(\d{9}|none)" maxlength="9" size="15" required> <small>(nine digits; to find yours, go to <a href="https://myaccess.ucsf.edu/myid">https://myaccess.ucsf.edu/myid</a>)</small><br>
+  <input type="text" id="ucsf_id" name="ucsf_id" placeholder="02xxxxxxx or 'none'" pattern="(\d{9}|none)" maxlength="9" size="15" required><br> 
+  <small>(**Nine digits: To find yours, go to <a href="https://myaccess.ucsf.edu/myid">https://myaccess.ucsf.edu/myid</a>)</small><br>
  </div>
  
  <div class="form-group">  
   <label for="username">Username</label> <span style="color: red">*</span><br>
   <input type="text" id="username" name="username" pattern="([A-Za-z]{1}[A-Za-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
+  <small>(**Username should be all lower case)</small><br>
  </div>
  
  <div class="form-group">
   <label for="alt_username">Alternative username</label> <span style="color: red">*</span><br>
   <input type="text" id="alt_username" name="alt_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
+  <small>(**This should be different from the one you provided above)</small>
  </div>
  
  <div class="form-group">  
@@ -101,9 +108,8 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
     <input type="checkbox" id="ucsf_compute_environments_2" name="ucsf_compute_environments" value="qb3"/> QB3 (now deprecated)<br>
     <input type="checkbox" id="ucsf_compute_environments_3" name="ucsf_compute_environments" value="radiology"/> Radiology<br>
     <input type="checkbox" id="ucsf_compute_environments_4" name="ucsf_compute_environments" value="sali"/> Sali Lab<br>
-    <input type="checkbox" id="ucsf_compute_environments_5" name="ucsf_compute_environments" value="tipcc"/> TIPCC (Cancer Center compute cluster)<br>
+    <input type="checkbox" id="ucsf_compute_environments_5" name="ucsf_compute_environments" value="rbvi_sacs"/> RBVI/SACS<br>
   </fieldset>
-  Others: <input type="text" id="ucsf_compute_environments_other" name="ucsf_compute_environments_other" placeholder="Other environments, forgot, ..." minlength="2" size="30"><br>
  </div>
  
  <div class="form-group">  
@@ -144,7 +150,7 @@ function load_form() {
   // Repopulate form fields if already set in session
   if(typeof(Storage) !== "undefined") {
     // Text-based fields
-    names = ["given_name", "family_name", "email", "affiliation", "affiliation_other", "pi", "ucsf_id", "dept_program", "username", "alt_username", "ucsf_compute_environments_other", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
+    names = ["given_name", "family_name", "email", "other_desc", "pi", "ucsf_id", "dept_program", "username", "alt_username", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
@@ -154,7 +160,7 @@ function load_form() {
     }
   
     // Checkboxes
-    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5", "affiliation_6", "affiliation_7"];
+    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
@@ -173,7 +179,7 @@ function save_form() {
   // Remember form fields
   if(typeof(Storage) !== "undefined") {
     // Text-based fields
-    names = ["given_name", "family_name", "email", "affiliation", "affiliation_other", "pi", "ucsf_id", "dept_program", "username", "alt_username", "ucsf_compute_environments_other", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
+    names = ["given_name", "family_name", "email", "other_desc", "pi", "ucsf_id", "dept_program", "username", "alt_username", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
@@ -182,7 +188,7 @@ function save_form() {
     }
   
     // Checkboxes
-    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5", "affiliation_6", "affiliation_7"];
+    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
