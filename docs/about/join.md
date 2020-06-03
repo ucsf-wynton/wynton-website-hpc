@@ -113,7 +113,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  </div>
  
  <div class="form-group">  
-  If <strong>yes</strong> to any of the above, please provide (UID, GID) for the main one:<br>
+  If <strong>yes</strong> to any of the above, please run command 'id' on compute environment selected above and provide (UID, GID) for the main one:<br>
   <label>UID</label> <input type="text" id="uid" name="uid" pattern="(\d*|forgot)" placeholder="e.g. 21024 or 'forgot'" maxlength="6" size="14"> <small>(first integer reported by <code>id</code> on those systems)</small><br>
   <label>GID</label> <input type="text" id="gid" name="gid" pattern="(\d*|forgot)" placeholder="e.g. 1543 or 'forgot'" maxlength="6" size="14"> <small>(second integer reported by <code>id</code> on those system)</small><br>
  </div>
@@ -160,7 +160,7 @@ function load_form() {
     }
   
     // Checkboxes
-    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
+    names = ["student_desc_0", "student_desc_1", "student_desc_2", "ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
@@ -188,7 +188,7 @@ function save_form() {
     }
   
     // Checkboxes
-    names = ["ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
+    names =  ["student_desc_0", "student_desc_1", "student_desc_2", "ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
   
     for (var ii = 0; ii < names.length; ii++) {
       name = names[ii];
