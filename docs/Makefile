@@ -41,7 +41,7 @@ wynton:
 	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help
 
 spell:
-	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); words <- spelling::spell_check_files(paths, ignore = readLines("WORDLIST")); words'
+	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); words <- spelling::spell_check_files(paths, ignore = readLines("WORDLIST")); print(words); ok <- (nrow(words) == 0); quit(status = !ok)'
 
 broadcast-off:
 	cd assets/css/ && ln -fs broadcast-off.css broadcast.css
