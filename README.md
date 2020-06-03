@@ -1,3 +1,5 @@
+![ShellCheck](https://github.com/UCSF-HPC/wynton/workflows/ShellCheck/badge.svg)
+
 # The Wynton HPC User Website
 
 This repository contains the [Wynton HPC user website](https://wynton.ucsf.edu/hpc/).  Updates to the 'master' branch will be published and go live within one minute.
