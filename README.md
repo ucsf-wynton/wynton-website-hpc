@@ -1,5 +1,7 @@
 ![Spell check](https://github.com/UCSF-HPC/wynton/workflows/Spell%20check/badge.svg)
+![YAML check](https://github.com/UCSF-HPC/wynton/workflows/YAML%20check/badge.svg)
 ![ShellCheck](https://github.com/UCSF-HPC/wynton/workflows/ShellCheck/badge.svg)
+
 
 # The Wynton HPC User Website
 
