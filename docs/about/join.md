@@ -29,7 +29,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
 </div>
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-<strong>Please make sure you provide all the information applicable to you in this form to avaiod any delays</strong>
+<strong>Please make sure you provide all the information applicable to you in this form to avoid any delays</strong>
 </div>
 
 <form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
@@ -113,7 +113,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
  </div>
  
  <div class="form-group">  
-  If <strong>yes</strong> to any of the above, please run command 'id' on compute environment selected above and provide (UID, GID) for the main one:<br>
+  If <strong>yes</strong> to any of the above, please run command <code>id</code> on compute environment selected above and provide (UID, GID) for the main one:<br>
   <label>UID</label> <input type="text" id="uid" name="uid" pattern="(\d*|forgot)" placeholder="e.g. 21024 or 'forgot'" maxlength="6" size="14"> <small>(first integer reported by <code>id</code> on those systems)</small><br>
   <label>GID</label> <input type="text" id="gid" name="gid" pattern="(\d*|forgot)" placeholder="e.g. 1543 or 'forgot'" maxlength="6" size="14"> <small>(second integer reported by <code>id</code> on those system)</small><br>
  </div>
