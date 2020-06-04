@@ -64,4 +64,7 @@ deploy:
 	git pull
 	git commit -am "Website updated" && git push 2> /dev/null
 
+yaml-check:
+	@Rscript -e 'paths <- dir(path = c(".", "_data"), pattern = "*[.]yml$$", full.names = TRUE, recursive = TRUE); yaml <- lapply(paths, FUN = yaml::read_yaml)'
+
 FORCE:

@@ -1,9 +1,9 @@
 on: [push, pull_request]
 
-name: 'Spell check'
+name: 'YAML check'
 
 jobs:
-  spelling:
+  yaml:
     runs-on: ${{ matrix.config.os }}
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
     if: "! contains(github.event.head_commit.message, '[ci skip]')"
@@ -34,14 +34,14 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ matrix.config.r }}-spelling
+          key: ${{ runner.os }}-r-${{ matrix.config.r }}-yaml
           restore-keys: ${{ runner.os }}-r-${{ matrix.config.r }}-
 
       - name: Install R packages
         run: |
-          remotes::install_cran("spelling")
+          remotes::install_cran("yaml")
         shell: Rscript {0}
 
-      - name: Spell check README and Markdown files
+      - name: Validate YAML files
         run: |
-          make spell
+          make yaml-check
