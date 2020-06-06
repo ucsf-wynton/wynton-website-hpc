@@ -475,8 +475,8 @@ The R programming language.<br>
   <dt>r-siteconfig</dt>
   <dd>
     <strong>R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
-Sets R options and environment variables customized for the current compute environment.<br>
-    Example: In R, <code>getOption(&quot;repos&quot;)</code>.<br>
+Sets R options and environment variables customized for the current compute environment. Notably, it configures R to install packages from local CRAN and Bioconductor mirrors without the need for internet access.<br>
+    Example: In R, <code>install.packages(&quot;ggplot2&quot;)</code>.<br>
   Versions: <em>0.1</em><br>
   </dd>
 
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-05-30 12:53:54 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-06-05 18:28:15 from querying `module avail` and `module spider`._
 
 
 <style>
