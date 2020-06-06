@@ -82,7 +82,7 @@
 
 #### <span style="color: orange;">No internet access from development nodes</span>
 
-**Notice**: Internet access from the development nodes is not available.  This is because the proxy server providing them with internet access had a critical hardware failure.  We know it had failed before 2 pm.  At the most, we cannot provide an estimate when we get to restore this server.
+**Notice**: Internet access from the development nodes is not available.  This is because the proxy server providing them with internet access had a critical hardware failure around 8-9 am this morning.  At the most, we cannot provide an estimate when we get to restore this server.
 <br><span class="timestamp">June 5, 16:45 PST</span>
 
 
