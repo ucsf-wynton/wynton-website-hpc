@@ -30,6 +30,7 @@
 {% elsif status == "notice" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong><br>
+<em>There is no internet access on development nodes.</em><br>
 <em>File-system maintenance is planned during the week of May 18-22, 2020.</em>
 </div>
 {% else %}
@@ -76,6 +77,14 @@
 ## Upcoming and Current Incidents
 
 ## Current Incidents
+
+### June 5, 2020
+
+#### <span style="color: orange;">No internet access from development nodes</span>
+
+**Notice**: Internet access from the development nodes is not available.  This is because the proxy server providing them with internet access had a critical hardware failure.  We know it had failed before 2 pm.  At the most, we cannot provide an estimate when we get to restore this server.
+<br><span class="timestamp">June 5, 16:45 PST</span>
+
 
 ### May 18-22, 2020, and beyond
 
