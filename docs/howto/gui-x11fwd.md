@@ -21,13 +21,13 @@ Then to get a desktop on the development node, select the session, type in your 
 
 #### 3D Graphics with X2Go (coming soon) 
 
-The X2Go client provides basic support for 3D applications with a software implementation of an ancient version of OpenGL.  On the GPU development nodes (*i.e.*, `gpudev1`), you can use hardware accelerated 3D graphics with a recent version of OpenGL.  All you need to do is:
+The X2Go client provides basic support for 3D applications with a software implementation of an ancient version of OpenGL.  On the GPU development nodes (*i.e.*, `gpudev1`), [VirtualGL](https://virtualgl.org/) is installed so you can use hardware accelerated 3D graphics.  All you need to do is:
 
  1. Opt-in by sending email to `wynton_admin@ucsf.edu` with the subject `vglusers`
  2. Wait for confirmation that you have added to the `vglusers` group
- 3. Use the **vglrun** program to run your program on a development node
+ 3. Use the `vglrun` program to run your program on a development node
     - either by starting the application from a terminal
-    - or, by editing a desktop shortcut, and added **vglrun** to the **Exec** line
+    - or, by editing a desktop shortcut, and prepending `vglrun` before the program on the **Exec=** line
 
 For example:
 
