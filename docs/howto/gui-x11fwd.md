@@ -26,7 +26,9 @@ The X2Go client provides basic support for 3D applications with an software impl
  1. Opt-in by sending email to `wynton_admin@ucsf.edu` with the subject "vglusers"
  2. Wait for confirmation that you have added to the `vglusers` group
  3. Use the **vglrun** program to run your program a development node.  For example:
+
         [alice@{{ site.login.name }} ~]$ vglrun your-program
+
  4. Profit!
 
 You have to opt-in because there is a slight security risk.
