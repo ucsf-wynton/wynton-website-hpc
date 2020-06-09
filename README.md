@@ -52,7 +52,6 @@ will pull down those updates locally and Jekyll will automatically re-render the
 ## Spell checking
 
 ```sh
-$ cd docs
 $ make spell
 No spelling errors found.
 ```
