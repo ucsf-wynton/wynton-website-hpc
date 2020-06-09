@@ -30,7 +30,7 @@
 {% elsif status == "notice" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong><br>
-<em>File-system maintenance is planned during the week of May 18-22, 2020.</em>
+<em>There is no internet access on development nodes.</em><br>
 </div>
 {% else %}
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -77,9 +77,24 @@
 
 ## Current Incidents
 
-### May 18-22, 2020, and beyond
+### June 5, 2020
+
+#### <span style="color: orange;">No internet access on development nodes</span>
+
+**Notice**: Internet access from the development nodes is not available.  This is because the proxy server providing them with internet access had a critical hardware failure around 8-9 am this morning.  At the most, we cannot provide an estimate when we get to restore this server.
+<br><span class="timestamp">June 5, 16:45 PST</span>
+
+
+## Past Incidents
+
+### May 18-22, 2020
 
 #### <span style="color: orange;">File-system maintenance</span>
+
+**Update**: The upgrade of the BeeGFS filesystem introduced new issues.
+We decided to rollback the upgrade and we are working with the vendor.
+There is no upgrade planned for the near term.
+<br><span class="timestamp">June 8, 09:00 PST</span>
 
 **Update**: The BeeGFS filesystem has been upgraded using a patch from the
 vendor. The patch was designed to lower the amount of resynchronization needed
@@ -101,8 +116,6 @@ stalls of the file system. Each should last less than 5 minutes and operations
 will continue normally after each one.
 <br><span class="timestamp">May 6, 15:10 PST</span>
 
-
-## Past Incidents
 
 ### May 28-29, 2020
 
