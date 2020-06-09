@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "notice" %}
+{% assign status = "all-ok" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -77,11 +77,14 @@
 
 ## Current Incidents
 
-### June 5, 2020
+### June 5-9, 2020
 
 #### <span style="color: orange;">No internet access on development nodes</span>
 
-**Notice**: Internet access from the development nodes is not available.  This is because the proxy server providing them with internet access had a critical hardware failure around 8-9 am this morning.  At the most, we cannot provide an estimate when we get to restore this server.
+**Resolved**: Internet access from the development nodes is available again.  A new web-proxy server had to be built and deploy.
+<br><span class="timestamp">June 9, 09:15 PST</span>
+
+**Notice**: Internet access from the development nodes is not available.  This is because the proxy server providing them with internet access had a critical hardware failure around 08-09 this morning.  At the most, we cannot provide an estimate when we get to restore this server.
 <br><span class="timestamp">June 5, 16:45 PST</span>
 
 
@@ -104,7 +107,7 @@ the problem remains, we will consider a rollback to the BeeGFS version used
 prior to May 18.
 <br><span class="timestamp">May 22, 01:25 PST</span>
 
-**Update**: For a short moment around 1 am early Friday, both of our BeeGFS
+**Update**: For a short moment around 01:00 early Friday, both of our BeeGFS
 metadata servers were down.  This may have lead to some applications
 experiencing I/O errors around this time.
 <br><span class="timestamp">May 22, 01:25 PST</span>
@@ -141,7 +144,7 @@ will continue normally after each one.
 **Update**: The majority of the compute nodes have been rebooted and are now online and running jobs.  We will actively monitor the system and assess the how everything works before we considered this incident resolved.
 <br><span class="timestamp">February 7, 13:40 PDT</span>
 
-**Update**: The login, development and data transfer nodes will be rebooted at 1pm today Friday February 7.
+**Update**: The login, development and data transfer nodes will be rebooted at 01:00 today Friday February 7.
 <br><span class="timestamp">February 7, 12:00 PDT</span>
 
 **Update**: The failed legacy NetApp server is the cause to the problems, e.g. compute nodes not being responsive causing problems for SGE etc. Because of this, **all of the cluster - login, development, transfer, and computes nodes - will be rebooted tomorrow Friday 2020-02-07**.
@@ -408,7 +411,7 @@ will continue normally after each one.
 **Resolved**: The login, development and transfer hosts have been rebooted.
 <br><span class="timestamp">Jan 23, 13:00 PST</span>
 
-**Notice**: On Wednesday January 23 at 12:00pm (noon), all of the login, development, and data transfer hosts will be rebooted.  Please be logged out before then.  The hosts should be offline for less than 5 minutes.
+**Notice**: On Wednesday January 23 at 12:00 (noon), all of the login, development, and data transfer hosts will be rebooted.  Please be logged out before then.  The hosts should be offline for less than 5 minutes.
 <br><span class="timestamp">Jan 22, 16:45 PST</span>
 
 
@@ -419,7 +422,7 @@ will continue normally after each one.
 **Resolved**: The file system under `/wynton/` is back up again.  We are looking into the cause and taking steps to prevent this from happening again.
 <br><span class="timestamp">Jan 9, 12:45 PST</span>
 
-**Investigating**: The file system under `/wynton/` went down around 11:30 am resulting is several critical failures including the scheduler failing.
+**Investigating**: The file system under `/wynton/` went down around 11:30 resulting is several critical failures including the scheduler failing.
 <br><span class="timestamp">Jan 14, 11:55 PST</span>
 
 
@@ -440,7 +443,7 @@ will continue normally after each one.
 ### January 8, 2019
  
 #### <span style="color: orange;">File-system server crash</span>
-**Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 7:30pm and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
+**Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 07:30 and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
 <br><span class="timestamp">Jan 8, 10:15 PST</span>
 
 
@@ -457,7 +460,7 @@ will continue normally after each one.
 **Resolved**: All of the `msg-* compute nodes but one are operational.
 <br><span class="timestamp">Dec 20, 16:40 PST</span>
 
-**Notice**: Starting Wednesday December 12 around 11am, several `msg-*` compute nodes went down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeGFS project is completed, which is projected to be done on Wednesday December 19.
+**Notice**: Starting Wednesday December 12 around 11:00, several `msg-*` compute nodes went down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeGFS project is completed, which is projected to be done on Wednesday December 19.
 <br><span class="timestamp">Dec 17, 17:00 PST</span>
 
 
@@ -512,7 +515,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Resolved**: All `mac-*` compute nodes are up and functional.
 <br><span class="timestamp">Dec 14, 12:00 PST</span>
 
-**Investigating**: The compute nodes named `mac-*` (in the Sandler building) went down due to power failure on Wednesday December 12 starting around 5:50am.  Nodes are being rebooted.
+**Investigating**: The compute nodes named `mac-*` (in the Sandler building) went down due to power failure on Wednesday December 12 starting around 05:50.  Nodes are being rebooted.
 <br><span class="timestamp">Dec 12, 09:05 PST</span>
 
 
@@ -554,7 +557,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Resolved**: The login, development, and data transfer hosts have been rebooted.
 <br><span class="timestamp">Oct 1, 13:30 PDT</span>
 
-**Notice**: On Monday October 1 at 1:00 pm, all of the login, development, and data transfer hosts will be rebooted.
+**Notice**: On Monday October 1 at 01:00, all of the login, development, and data transfer hosts will be rebooted.
 <br><span class="timestamp">Sept 28, 16:30 PDT</span>
 
 
@@ -562,7 +565,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 #### <span style="color: orange;">Scheduler unreachable</span>
 
-**Resolved**: Around 11pm on Wednesday September 12, the SGE scheduler (“qmaster”) became unreachable such that the scheduler could not be queried and no new jobs could be submitted. Jobs that relied on run-time access to the scheduler may have failed. The problem, which was due to a misconfiguration being introduced, was resolved early morning on Thursday September 13.
+**Resolved**: Around 11:00 on Wednesday September 12, the SGE scheduler (“qmaster”) became unreachable such that the scheduler could not be queried and no new jobs could be submitted. Jobs that relied on run-time access to the scheduler may have failed. The problem, which was due to a misconfiguration being introduced, was resolved early morning on Thursday September 13.
 <br><span class="timestamp">Sept 13, 09:50 PDT</span>
 
 
