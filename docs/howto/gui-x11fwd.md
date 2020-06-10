@@ -26,8 +26,8 @@ The X2Go client provides basic support for 3D applications with a software imple
  1. Opt-in by sending email to `wynton_admin@ucsf.edu` with the subject `vglusers`
  2. Wait for confirmation that you have added to the `vglusers` group
  3. Use the `vglrun` program to run your program on a development node
-    - either by starting the application from a terminal
-    - or, by editing a desktop shortcut, and prepending `vglrun` before the program on the **Exec=** line
+    - either by starting the application from a terminal (example below)
+    - or, by using a wynton desktop shortcut, after editing it in your wynton `~/Desktop` to have `vglrun` inserted before the program name on the **Exec=** line
 
 For example:
 
