@@ -5,6 +5,7 @@ all: $(PAGE).md
 build:
 	touch $(PAGE).md.rsp
 	make all
+	git diff
 
 $(PAGE).md: $(PAGE).md.rsp
 	module load CBI r/3.6.3 && \
