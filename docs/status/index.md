@@ -77,7 +77,7 @@
 
 ## Current Incidents
 
-### June 11 - 26, 2020
+### June 11-26, 2020
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
