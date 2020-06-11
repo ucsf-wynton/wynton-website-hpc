@@ -81,6 +81,9 @@
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
+**Update**: Development node dev3 is not available.  It failed to reboot and requires on-site attention, which might not be possible for several days.  All other log-in, data-transfer, and development nodes were rebooted successfully.
+<br><span class="timestamp">June 11, 15:45 PST</span>
+
 **Notice**: New operating-system kernels are deployed. Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues. To follow the progress, see the green 'Available CPU cores' curve (target ~10,400 cores) in the graph above.  Log-in, data-transfer, and development nodes will be rebooted at 15:30 on Thursday June 11.
 <br><span class="timestamp">June 11, 10:45 PST</span>
 
