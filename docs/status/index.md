@@ -81,6 +81,9 @@
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
+**Update**: Development node dev3 is back online.
+<br><span class="timestamp">June 15, 11:15 PST</span>
+
 **Update**: Development node dev3 is not available.  It failed to reboot and requires on-site attention, which might not be possible for several days.  All other log-in, data-transfer, and development nodes were rebooted successfully.
 <br><span class="timestamp">June 11, 15:45 PST</span>
 
