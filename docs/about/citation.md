@@ -2,7 +2,7 @@
 
 ## Grant Applications
 
-Below are a few examples on how to give details on the {{ site.cluster.name }} HPC environment in a grant application.  _Please note that the node and CPU cores counts are automatically updated on a daily basis._
+Below are a few examples on how to give details on the {{ site.cluster.name }} HPC environment in a grant application.  _The node and CPU cores counts are updated on a regular basis._
 
 ### Example 1
 
@@ -33,7 +33,6 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} H
 > UCSF.  The cluster is run as a co-op, with access for all and priority 
 > given to those who have contributed funds or hardware.  Support is 
 > also provided by UCSF Research IT.  The cluster currently consists of
-> {{ site.data.specs.nodes }} nodes with {{ site.data.specs.physical_cores }} cores
-> operating at {{ site.data.specs.cpu_min }}-{{ site.data.specs.cpu_max }} GHz.
+> {{ site.data.specs.nodes }} nodes with {{ site.data.specs.physical_cores }} cores.
 > Each node has at least {{ site.data.specs.ram_min }} GiB of RAM and
 > total home storage is {{ site.data.specs.home_size_total }} TiB.
