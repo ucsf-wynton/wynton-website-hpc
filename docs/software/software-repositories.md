@@ -266,7 +266,7 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
     Example: <code>emacs --version</code> and <code>emacs -nw</code>.<br>
     URL: <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 25.3, 26.1, 26.2, <em>26.3</em><br>
+  Versions: <em>26.3</em><br>
   </dd>
 
   <dt>fastqc</dt>
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-06-17 08:57:54 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-06-19 19:02:51 from querying `module avail` and `module spider`._
 
 
 <style>
