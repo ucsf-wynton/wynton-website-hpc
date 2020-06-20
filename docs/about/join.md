@@ -81,7 +81,7 @@ To apply for an account on the Wynton HPC cluster, please fill out the following
     <label style="font-weight: normal" for="student_desc_1">Rotation</label><br>
     <input type="checkbox" id="student_desc_2" name="student_desc" value="Course">
     <label style="font-weight: normal" for="student_desc_2">For Course</label><br>
-    <input type="checkbox" id="student_desc_3" name="student_desc" value="Course">
+    <input type="checkbox" id="student_desc_3" name="student_desc" value="Intern">
     <label style="font-weight: normal" for="student_desc_3">Intern</label><br>
   </fieldset>
  </div>
