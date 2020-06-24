@@ -129,7 +129,7 @@ A cat(1) clone with syntax highlighting and Git integration.<br>
     Example: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.<br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 0.11.0, 0.12.1, <em>0.13.0</em><br>
+  Versions: 0.13.0, <em>0.15.4</em><br>
   </dd>
 
   <dt>bcftools</dt>
@@ -156,7 +156,7 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
 BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.<br>
     Example: <code>bedops --version</code><br>
     URL: <a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a><br>
-  Versions: 2.4.36, 2.4.37, <em>2.4.38</em><br>
+  Versions: 2.4.36, 2.4.37, 2.4.38, <em>2.4.39</em><br>
   </dd>
 
   <dt>bedtools2</dt>
@@ -165,7 +165,7 @@ BEDOPS is an open-source command-line toolkit that performs highly efficient and
 Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF.<br>
     Example: <code>bedtools --version</code> and <code>ls $BEDTOOLS2_HOME/genomes/</code>.<br>
     URL: <a href="https://github.com/arq5x/bedtools2/">https://github.com/arq5x/bedtools2/</a><br>
-  Versions: 2.28.0, <em>2.29.1</em><br>
+  Versions: 2.28.0, 2.29.1, <em>2.29.2</em><br>
   </dd>
 
   <dt>blast</dt>
@@ -174,7 +174,7 @@ Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-
 BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance.<br>
     Example: <code>blastx -version</code><br>
     URL: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">https://blast.ncbi.nlm.nih.gov/Blast.cgi</a><br>
-  Versions: <em>2.9.0</em><br>
+  Versions: 2.9.0, <em>2.10.1</em><br>
   </dd>
 
   <dt>blat</dt>
@@ -221,7 +221,7 @@ Byobu is an elegant enhancement of the otherwise functional, plain, practical GN
     Example: <code>byobu --version</code>.<br>
     URL: <a href="http://byobu.org">http://byobu.org</a>, <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 5.127, 5.129, <em>5.130</em><br>
+  Versions: 5.130, <em>5.133</em><br>
   </dd>
 
   <dt>CBI-testing</dt>
@@ -286,7 +286,7 @@ fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix fil
     Note: To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
     URL: <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 0.18.0, 0.19.0, 0.20.0, <em>0.21.1</em><br>
+  Versions: <em>0.21.1</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -295,7 +295,7 @@ fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix fil
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.<br>
     Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
-  Versions: 4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, <em>4.1.6.0</em><br>
+  Versions: 4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, <em>4.1.7.0</em><br>
   </dd>
 
   <dt>gcta</dt>
@@ -304,7 +304,7 @@ Developed in the Data Sciences Platform at the Broad Institute, the toolkit offe
 A tool for Genome-wide Complex Trait Analysis (GCTA).<br>
     Example: <code>gcta64</code>.<br>
     URL: <a href="http://cnsgenomics.com/software/gcta/">http://cnsgenomics.com/software/gcta/</a><br>
-  Versions: 1.26.0, 1.92.3beta3, <em>1.92.4beta</em><br>
+  Versions: 1.26.0, 1.92.3beta3, 1.92.4beta, <em>1.93.2beta</em><br>
   </dd>
 
   <dt>gdal</dt>
@@ -387,7 +387,7 @@ HTSlib is an implementation of a unified C library for accessing common file for
 The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations. NOTE: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).<br>
     Example: <code>igv</code>.<br>
     URL: <a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a><br>
-  Versions: 2.7.0, 2.7.2, 2.8.2, <em>2.4.19</em><br>
+  Versions: 2.7.0, 2.7.2, 2.8.2, 2.8.6, <em>2.4.19</em><br>
   </dd>
 
   <dt>igvtools</dt>
@@ -423,7 +423,7 @@ kallisto is a program for quantifying abundances of transcripts from RNA-Seq dat
 Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.<br>
     Example: <code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code><br>
     URL: <a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a><br>
-  Versions: 2.21.1, 2.21.4, <em>2.22.2</em><br>
+  Versions: 2.21.1, 2.21.4, 2.22.2, <em>2.23.1</em><br>
   </dd>
 
   <dt>pindel</dt>
@@ -441,7 +441,7 @@ Pindel can detect breakpoints of large deletions, medium sized insertions, inver
 PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).<br>
     Example: <code>plink --help</code>.<br>
     URL: <a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a><br>
-  Versions: 1.07, 1.90b6.10, <em>1.90b6.16</em><br>
+  Versions: 1.07, 1.90b6.10, 1.90b6.16, <em>1.90b6.18</em><br>
   </dd>
 
   <dt>plink2</dt>
@@ -487,7 +487,7 @@ Rclone is a command line program to sync files and directories to and from a lar
     Example: <code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>info rclone</code>.<br>
     URL: <a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: <em>1.51.0</em><br>
+  Versions: 1.51.0, <em>1.52.1</em><br>
   </dd>
 
   <dt>ripgrep</dt>
@@ -497,7 +497,7 @@ ripgrep is a line-oriented search tool that recursively searches your current di
     Example: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.<br>
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 11.0.2, <em>12.0.1</em><br>
+  Versions: 11.0.2, 12.0.1, <em>12.1.1</em><br>
   </dd>
 
   <dt>samtools</dt>
@@ -554,7 +554,7 @@ SnpEff is a variant annotation and effect prediction tool. It annotates and pred
 The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives.<br>
     Example: <code>fastq-dump --help</code>.<br>
     URL: <a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a><br>
-  Versions: 2.10.0, <em>2.10.5</em><br>
+  Versions: 2.10.0, 2.10.5, <em>2.10.7</em><br>
   </dd>
 
   <dt>star</dt>
@@ -563,7 +563,7 @@ The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for usi
 STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.<br>
     Example: <code>STAR --help</code>.<br>
     URL: <a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a><br>
-  Versions: 2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, <em>2.7.3a</em><br>
+  Versions: 2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, <em>2.7.5a</em><br>
   </dd>
 
   <dt>tmux</dt>
@@ -610,7 +610,7 @@ VarScan is a platform-independent mutation caller for targeted, exome, and whole
 Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input.<br>
     Example: <code>vcf_validator --help</code>, <code>vcf-debugulator --help</code>, and <code>vcf-assembly-checker --help</code>.<br>
     URL: <a href="https://github.com/EBIvariation/vcf-validator">https://github.com/EBIvariation/vcf-validator</a><br>
-  Versions: 0.9.2, <em>0.9.3</em><br>
+  Versions: 0.9.2, 0.9.3, <em>0.9.4</em><br>
   </dd>
 
   <dt>vcftools</dt>
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-06-22 09:15:04 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-06-23 17:35:27 from querying `module avail` and `module spider`._
 
 
 <style>
