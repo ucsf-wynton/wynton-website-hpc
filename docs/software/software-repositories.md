@@ -313,7 +313,7 @@ A tool for Genome-wide Complex Trait Analysis (GCTA).<br>
 GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.<br>
     Example: <code>gdalinfo --version</code><br>
     URL: <a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a><br>
-  Versions: <em>2.4.3</em><br>
+  Versions: 2.4.3, <em>2.4.4</em><br>
   </dd>
 
   <dt>geos</dt>
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-06-23 17:35:27 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-06-23 17:44:53 from querying `module avail` and `module spider`._
 
 
 <style>
