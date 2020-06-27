@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "kernel-upgrade" %}
+{% assign status = "ok" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -77,9 +77,15 @@
 
 ## Current Incidents
 
+
+## Past Incidents
+
 ### June 11-26, 2020
 
 #### <span style="color: orange;">Kernel maintenance</span>
+
+**Resolved**: All compute nodes have been rebooted.
+<br><span class="timestamp">June 26, 10:45 PST</span>
 
 **Update**: Development node dev3 is back online.
 <br><span class="timestamp">June 15, 11:15 PST</span>
@@ -90,8 +96,6 @@
 **Notice**: New operating-system kernels are deployed. Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues. To follow the progress, see the green 'Available CPU cores' curve (target ~10,400 cores) in the graph above.  Log-in, data-transfer, and development nodes will be rebooted at 15:30 on Thursday June 11.
 <br><span class="timestamp">June 11, 10:45 PST</span>
 
-
-## Past Incidents
 
 ### June 5-9, 2020
 
