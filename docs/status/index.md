@@ -85,9 +85,9 @@
 #### <span style="color: orange;">Development node failures</span>
 
 **Resolved**: All three development nodes have been rebooted.
+<br><span class="timestamp">July 6, 15:20 PDT</span>
 
 **Notice**: The three regular development nodes have all gotten themselves hung up on one particular process.  This affects basic system operations and preventing such basic commands as `ps` and `w`.  To clear this state, we'll be doing an emergency reboot of the dev nodes at about 15:15.
-
 <br><span class="timestamp">July 6, 15:05 PDT</span>
 
 
