@@ -80,21 +80,22 @@
 
 ## Past Incidents
 
+
 ### June 11-26, 2020
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
-<br><span class="timestamp">June 26, 10:45 PST</span>
+<br><span class="timestamp">June 26, 10:45 PDT</span>
 
 **Update**: Development node dev3 is back online.
-<br><span class="timestamp">June 15, 11:15 PST</span>
+<br><span class="timestamp">June 15, 11:15 PDT</span>
 
 **Update**: Development node dev3 is not available.  It failed to reboot and requires on-site attention, which might not be possible for several days.  All other log-in, data-transfer, and development nodes were rebooted successfully.
-<br><span class="timestamp">June 11, 15:45 PST</span>
+<br><span class="timestamp">June 11, 15:45 PDT</span>
 
 **Notice**: New operating-system kernels are deployed. Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues. To follow the progress, see the green 'Available CPU cores' curve (target ~10,400 cores) in the graph above.  Log-in, data-transfer, and development nodes will be rebooted at 15:30 on Thursday June 11.
-<br><span class="timestamp">June 11, 10:45 PST</span>
+<br><span class="timestamp">June 11, 10:45 PDT</span>
 
 
 ### June 5-9, 2020
@@ -102,10 +103,10 @@
 #### <span style="color: orange;">No internet access on development nodes</span>
 
 **Resolved**: Internet access from the development nodes is available again.  A new web-proxy server had to be built and deploy.
-<br><span class="timestamp">June 9, 09:15 PST</span>
+<br><span class="timestamp">June 9, 09:15 PDT</span>
 
 **Notice**: Internet access from the development nodes is not available.  This is because the proxy server providing them with internet access had a critical hardware failure around 08-09 this morning.  At the most, we cannot provide an estimate when we get to restore this server.
-<br><span class="timestamp">June 5, 16:45 PST</span>
+<br><span class="timestamp">June 5, 16:45 PDT</span>
 
 
 ### May 18-22, 2020
@@ -115,7 +116,7 @@
 **Update**: The upgrade of the BeeGFS filesystem introduced new issues.
 We decided to rollback the upgrade and we are working with the vendor.
 There is no upgrade planned for the near term.
-<br><span class="timestamp">June 8, 09:00 PST</span>
+<br><span class="timestamp">June 8, 09:00 PDT</span>
 
 **Update**: The BeeGFS filesystem has been upgraded using a patch from the
 vendor. The patch was designed to lower the amount of resynchronization needed
@@ -123,19 +124,19 @@ between the two metadata servers. Unfortunately, after the upgrade we observe
 an increase of resynchronization.  We will keep monitoring the status.  If
 the problem remains, we will consider a rollback to the BeeGFS version used
 prior to May 18.
-<br><span class="timestamp">May 22, 01:25 PST</span>
+<br><span class="timestamp">May 22, 01:25 PDT</span>
 
 **Update**: For a short moment around 01:00 early Friday, both of our BeeGFS
 metadata servers were down.  This may have lead to some applications
 experiencing I/O errors around this time.
-<br><span class="timestamp">May 22, 01:25 PST</span>
+<br><span class="timestamp">May 22, 01:25 PDT</span>
 
 **Notice**: Work to improve the stability of the BeeGFS filesystem (`/wynton`)
 will be conducted during the week of May 18-22. This involves restarting the
 eight pairs of metadata server processes, which may result in several brief
 stalls of the file system. Each should last less than 5 minutes and operations
 will continue normally after each one.
-<br><span class="timestamp">May 6, 15:10 PST</span>
+<br><span class="timestamp">May 6, 15:10 PDT</span>
 
 
 ### May 28-29, 2020
@@ -143,13 +144,13 @@ will continue normally after each one.
 #### <span style="color: orange;">GPU compute nodes outage</span>
 
 **Resolved**: The GPU compute nodes are now fully available to serve jobs.
-<br><span class="timestamp">May 29, 12:00 PST</span>
+<br><span class="timestamp">May 29, 12:00 PDT</span>
 
 **Update**: The GPU compute nodes that went down yesterday have been rebooted.
-<br><span class="timestamp">May 29, 11:10 PST</span>
+<br><span class="timestamp">May 29, 11:10 PDT</span>
 
 **Investigating**: A large number of GPU compute nodes in the MSG data center are currently down for unknown reasons.  We are investigating the cause.
-<br><span class="timestamp">May 28, 09:35 PST</span>
+<br><span class="timestamp">May 28, 09:35 PDT</span>
 
 
 ### February 5-7, 2020
