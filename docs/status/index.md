@@ -95,7 +95,7 @@
 
 #### <span style="color: orange;">Job scheduler non-working</span>
 
-**Resolved**: The SGE scheduler produced errors when queries and when submitting jobs.  The problem started 00:30 and lasted until 02:45 early Sunday 2020-07-05.
+**Resolved**: The SGE scheduler produced errors when queried or when jobs were submitted or launched.  The problem started 00:30 and lasted until 02:45 early Sunday 2020-07-05.
 <br><span class="timestamp">July 6, 22:00 PDT</span>
 
 
