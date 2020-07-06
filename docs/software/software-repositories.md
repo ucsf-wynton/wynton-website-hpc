@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-06-23 17:44:53 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-07-06 11:11:12 from querying `module avail` and `module spider`._
 
 
 <style>
