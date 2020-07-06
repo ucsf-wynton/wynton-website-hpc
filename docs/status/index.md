@@ -80,6 +80,17 @@
 
 ## Past Incidents
 
+### July 6, 2020
+
+#### <span style="color: orange;">Development node failures</span>
+
+**Resolved**: All three development nodes have been rebooted.
+
+**Notice**: The three regular development nodes have all gotten themselves hung up on one particular process.  This affects basic system operations and preventing such basic commands as `ps` and `w`.  To clear this state, we'll be doing an emergency reboot of the dev nodes at about 15:15.
+
+<br><span class="timestamp">July 6, 15:05 PDT</span>
+
+
 ### July 5, 2020
 
 #### <span style="color: orange;">Job scheduler non-working</span>
