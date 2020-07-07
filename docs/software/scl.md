@@ -16,6 +16,7 @@ To list all Software Collections installed on the _development nodes_, use:
 devtoolset-4
 devtoolset-6
 devtoolset-7
+devtoolset-8
 llvm-toolset-7
 python33       # DEPRECATED per 2019-11-13
 rh-python34    # DEPRECATED per 2019-11-13
