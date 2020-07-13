@@ -512,10 +512,10 @@ SAMtools is a suite of programs for interacting with high-throughput sequencing 
   <dt>scl-devtoolset</dt>
   <dd>
     <strong>SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
-Enables the CentOS Software Collection (SCL) <code>devtoolset-7</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-7</code>, which is an approach that is not officially supported by RedHat/CentOS.<br>
+Enables the CentOS Software Collection (SCL) <code>devtoolset-8</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-8</code>, which is an approach that is not officially supported by RedHat/CentOS.<br>
     Example: <code>gcc --version</code>.<br>
-    URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/</a><br>
-  Versions: 4, 6, <em>7</em><br>
+    URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-8/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-8/</a><br>
+  Versions: 4, 6, 7, <em>8</em><br>
   </dd>
 
   <dt>scl-python (part of CBI-testing)</dt>
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-07-06 11:11:12 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-07-13 13:50:52 from querying `module avail` and `module spider`._
 
 
 <style>
