@@ -554,7 +554,7 @@ SnpEff is a variant annotation and effect prediction tool. It annotates and pred
 The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives.<br>
     Example: <code>fastq-dump --help</code>.<br>
     URL: <a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a><br>
-  Versions: 2.10.0, 2.10.5, <em>2.10.7</em><br>
+  Versions: 2.10.0, 2.10.5, 2.10.7, <em>2.10.8</em><br>
   </dd>
 
   <dt>star</dt>
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-07-13 13:50:52 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-07-13 16:10:06 from querying `module avail` and `module spider`._
 
 
 <style>
