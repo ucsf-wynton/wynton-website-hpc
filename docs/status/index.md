@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "ok" %}
+{% assign status = "notice" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -30,7 +30,7 @@
 {% elsif status == "notice" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment operational</strong><br>
-<em>There is no internet access on development nodes.</em><br>
+<em>The cluster will be shut down completely during August 10-12, 2020 due to major upgrades.</em><br>
 </div>
 {% else %}
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -74,6 +74,17 @@
 
 
 ## Upcoming and Current Incidents
+
+### August 10-12, 2020
+
+#### <span style="color: orange;">Major upgrade</span>
+
+**Notice**: Starting early Monday August 10, the cluster will be powered down
+entirely for maintenance and upgrades, which includes upgrading the network
+and adding lab storage purchased by several groups.  We anticipate that
+the cluster will be available again by the end of Wednesday August 12.
+<br><span class="timestamp">July 24, 15:45 PDT</span>
+
 
 ## Current Incidents
 
