@@ -17,7 +17,7 @@ Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
-* To purchase more storage, please contact [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu)
+* To purchase more storage, please contact [wynton-support@ucsf.edu](mailto:wynton-support@ucsf.edu?subject=Request%20to%20purchase%20dedicated%20storage)
 
 <br>
 
