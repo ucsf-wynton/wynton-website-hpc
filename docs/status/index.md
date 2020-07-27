@@ -77,7 +77,7 @@
 
 ### August 10-12, 2020
 
-#### <span style="color: orange;">Major upgrade</span>
+#### <span style="color: orange;">Full downtime scheduled</span>
 
 **Notice**: Starting early Monday August 10, the cluster will be powered down
 entirely for maintenance and upgrades, which includes upgrading the network
