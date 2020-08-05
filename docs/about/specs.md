@@ -12,6 +12,7 @@
   <dt>User home storage</dt><dd>{{ site.data.specs.home_size_total }} TiB (maximum 500 GiB/user)</dd>
   <dt>Group storage</dt><dd>{{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
   <dt>Number of accounts</dt><dd>{{ site.data.users.nbr_of_accounts }}</dd>
+  <dt>Number of projects</dt><dd>{{ site.data.users.nbr_of_projects }}</dd>
 </dl>
 
 ## Software environment
