@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "notice" %}
+{% assign status = "full-outage" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -17,9 +17,9 @@
 <strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
 {% elsif status == "full-outage" %} 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
-<em>Complete outage due to scheduled maintenance</em>
+<em>Complete outage due to scheduled maintenance for August 10-12, 2020</em>
 </div>
 {% elsif status == "part-outage" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -75,9 +75,15 @@
 
 ## Upcoming and Current Incidents
 
+## Current Incidents
+
 ### August 10-12, 2020
 
 #### <span style="color: orange;">Full downtime scheduled</span>
+
+**Notice**: All of the Wynton HPC environment is down for maintenance
+and upgrades.
+<br><span class="timestamp">August 10, 08:30 PDT</span>
 
 **Notice**: Starting early Monday August 10, the cluster will be powered down
 entirely for maintenance and upgrades, which includes upgrading the network
@@ -85,8 +91,6 @@ and adding lab storage purchased by several groups.  We anticipate that
 the cluster will be available again by the end of Wednesday August 12.
 <br><span class="timestamp">July 24, 15:45 PDT</span>
 
-
-## Current Incidents
 
 
 ## Past Incidents
