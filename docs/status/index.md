@@ -84,7 +84,7 @@
 **Update**: Login node log1, data transfer node dt2, and the development nodes
 are available again.  Compute nodes are going through an upgrade cycle and
 will soon start serving jobs again.  The upgrade work is taking longer than
-usual and will continue also tomorrow Thursday August 13.
+expected and will continue tomorrow Thursday August 13.
 <br><span class="timestamp">August 12, 16:10 PDT</span>
 
 **Notice**: All of the Wynton HPC environment is down for maintenance
