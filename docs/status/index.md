@@ -19,7 +19,7 @@
 {% elsif status == "full-outage" %} 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
-<em>Complete outage due to scheduled maintenance for August 10-12, 2020</em>
+<em>Complete outage due to scheduled maintenance for August 10-13, 2020</em>
 </div>
 {% elsif status == "part-outage" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -77,13 +77,19 @@
 
 ## Current Incidents
 
-### August 10-12, 2020
+### August 10-13, 2020
 
 #### <span style="color: orange;">Full downtime scheduled</span>
 
+**Update**: Login node log1, data transfer node dt2, and the development nodes
+are available again.  Compute nodes are going through an upgrade cycle and
+will soon start serving jobs again.  The upgrade work is taking longer than
+usual and will continue also tomorrow Thursday August 13.
+<br><span class="timestamp">August 12, 16:10 PDT</span>
+
 **Notice**: All of the Wynton HPC environment is down for maintenance
 and upgrades.
-<br><span class="timestamp">August 10, 08:30 PDT</span>
+<br><span class="timestamp">August 10, 00:00 PDT</span>
 
 **Notice**: Starting early Monday August 10, the cluster will be powered down
 entirely for maintenance and upgrades, which includes upgrading the network
