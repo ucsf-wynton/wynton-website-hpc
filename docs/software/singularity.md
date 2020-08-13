@@ -80,7 +80,7 @@ Storing signatures
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.img
 
-[hb-test@qb3-dev3 lxc]$ ll rocker_r-base.img
+[alice@{{ site.devel.name }} lxc]$ ll rocker_r-base.img
 -rwxr-xr-x. 1 alice lsd 271249408 Oct 31 17:09 rocker_r-base.img
 ```
 
