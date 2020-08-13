@@ -81,7 +81,12 @@
 
 #### <span style="color: orange;">Full downtime scheduled</span>
 
-**Update**: Login node log1, data transfer node dt2, and the development nodes
+**Update**: All login, data-transfer, and development nodes are online.
+Additional compute nodes are being upgraded and are soon part of the
+pool serving jobs.
+<br><span class="timestamp">August 13, 14:50 PDT</span>
+
+**Update**: Login node log1, data-transfer node dt2, and the development nodes
 are available again.  Compute nodes are going through an upgrade cycle and
 will soon start serving jobs again.  The upgrade work is taking longer than
 expected and will continue tomorrow Thursday August 13.
