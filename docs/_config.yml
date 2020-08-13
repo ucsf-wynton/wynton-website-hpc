@@ -12,7 +12,7 @@ login:
   hostname: "log2.wynton.ucsf.edu"
   ip: "169.230.134.15"
 devel:
-  name: "qb3-dev3"
+  name: "dev3"
   hostname: "dev3"
   ip: "172.26.32.8"
 transfer:
@@ -29,15 +29,15 @@ login2:
   hostname: "log2.wynton.ucsf.edu"
   ip: "169.230.134.15"
 dev1:
-  name: "qb3-dev1"
+  name: "dev1"
   hostname: "dev1"
   ip: "172.26.32.2"
 dev2:
-  name: "qb3-dev2"
+  name: "dev2"
   hostname: "dev2"
   ip: "172.26.32.7"
 dev3:
-  name: "qb3-dev3"
+  name: "dev3"
   hostname: "dev3"
   ip: "172.26.32.8"
 gpudev1:
