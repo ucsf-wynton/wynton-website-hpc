@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "full-outage" %}
+{% assign status = "ok" %}
 
 {% if status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -77,9 +77,13 @@
 
 ## Current Incidents
 
-### August 10-13, 2020
+### August 10-19, 2020
 
-#### <span style="color: orange;">Full downtime scheduled</span>
+#### <span style="color: orange;">Network and hardware upgrades (full downtime) + new lab storage</span>
+
+**Update**: The network upgrade took longer than expected.  We hope to bring
+the new lab storage online during the next week.
+<br><span class="timestamp">August 13, 21:00 PDT</span>
 
 **Update**: All login, data-transfer, and development nodes are online.
 Additional compute nodes are being upgraded and are soon part of the
