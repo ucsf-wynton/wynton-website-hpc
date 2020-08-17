@@ -65,12 +65,12 @@ sge_o_log_name:             alice
 sge_o_path:                 /opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/wynton/home/alice/.local/bin:/wynton/home/alice/bin
 sge_o_shell:                /bin/bash
 sge_o_workdir:              /wynton/home/alice/ex
-sge_o_host:                 qb3-dev1
+sge_o_host:                 dev1
 account:                    sge
 cwd:                        /wynton/home/alice/ex
 merge:                      y
 hard resource_list:         h_rt=300
-mail_list:                  alice@qb3-dev1
+mail_list:                  alice@dev1
 notify:                     FALSE
 job_name:                   job_summary.sge
 jobshare:                   0
