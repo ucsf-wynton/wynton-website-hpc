@@ -2,7 +2,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "inaccessible" %}
+{% assign status = "ok" %}
 
 {% if status == "inaccessible" %} 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -81,14 +81,6 @@
 
 ## Current Incidents
 
-### August 19, 2020
-
-#### <span style="color: orange;">Cluster inaccessible</span>
-
-**Notice**: The cluster is currently inaccessible for unknown reasons. The problem was first reported around 17:30 on Wednesday August 19.
-<br><span class="timestamp">August 19, 18:15 PDT</span>
-
-
 ### August 10-19, 2020
 
 #### <span style="color: orange;">Network and hardware upgrades (full downtime) + new lab storage</span>
@@ -121,6 +113,17 @@ the cluster will be available again by the end of Wednesday August 12.
 
 
 ## Past Incidents
+
+### August 19, 2020
+
+#### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
+
+**Resolved**: Our BeeGFS file system was non-responsive between 17:22 and 18:52 today because one of its meta servers hung while the other attempted to synchronize to it.
+<br><span class="timestamp">August 19, 19:00 PDT</span>
+
+**Notice**: The cluster is currently inaccessible for unknown reasons. The problem was first reported around 17:30 today.
+<br><span class="timestamp">August 19, 18:15 PDT</span>
+
 
 ### July 6, 2020
 
