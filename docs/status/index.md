@@ -2,9 +2,13 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "ok" %}
+{% assign status = "inaccessible" %}
 
-{% if status == "problematic" %} 
+{% if status == "inaccessible" %} 
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
+<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
+</div>
+{% elsif status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
 </div>
@@ -76,6 +80,14 @@
 ## Upcoming and Current Incidents
 
 ## Current Incidents
+
+### August 19, 2020
+
+#### <span style="color: orange;">Cluster inaccessible</span>
+
+**Notice**: The cluster is currently inaccessible for unknown reasons. The problem was first reported around 17:30 on Wednesday August 19.
+<br><span class="timestamp">August 19, 18:15 PDT</span>
+
 
 ### August 10-19, 2020
 
