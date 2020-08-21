@@ -2,7 +2,22 @@
 
 ## Change password
 
-To change your {{ site.cluster.name }} credentials, log into the cluster and call `passwd` from one of the _login_ nodes, e.g.
+<div class="alert alert-warning" role="alert">
+<strong>Please wait 5-10 minutes before attempting to login with your new password.</strong>  This is because it takes up to 10 minutes before your new password has propagated to all machines on the cluster.
+</div>
+
+You can change your password either via our web interface, or from the Wynton command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
+
+
+
+### From the web browser
+
+You can change your password using the [RBVI Kerberos Web Interface].
+
+
+### From the Wynton command line
+
+If you can log in to {{ site.cluster.name }}, then you can change your credentials by calling `passwd` from one of the _login_ nodes, e.g.
 
 ```sh
 [alice@{{ site.login.name }} ~]$ passwd
@@ -13,14 +28,6 @@ Retype new password:
 passwd: all authentication tokens updated successfully.
 [alice@{{ site.login.name }} ~]$ 
 ```
-
-Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
-
-Alternatively, you can change your password using the [RBVI Kerberos Web Interface].
-
-<div class="alert alert-warning" role="alert">
-<strong>Please wait 5-10 minutes before attempting to login with your new password.</strong>  This is because it takes up to 10 minutes before your new password has propagated to all machines on the cluster.
-</div>
 
 
 ## Verify credentials
