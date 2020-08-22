@@ -81,12 +81,26 @@
 
 ## Current Incidents
 
-### August 10-19, 2020
 
-#### <span style="color: orange;">Network and hardware upgrades (full downtime) + new lab storage</span>
+## Past Incidents
 
-**Update**: The network upgrade took longer than expected.  We hope to bring
-the new lab storage online during the next week.
+
+### August 19, 2020
+
+#### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
+
+**Resolved**: Our BeeGFS file system was non-responsive between 17:22 and 18:52 today because one of its meta servers hung while the other attempted to synchronize to it.
+<br><span class="timestamp">August 19, 19:00 PDT</span>
+
+**Notice**: The cluster is currently inaccessible for unknown reasons. The problem was first reported around 17:30 today.
+<br><span class="timestamp">August 19, 18:15 PDT</span>
+
+
+### August 10-13, 2020
+
+#### <span style="color: orange;">Network and hardware upgrades (full downtime)</span>
+
+**Resolved**: The cluster is fully back up and running.  Several compute nodes still need to be rebooted but we consider this upgrade cycle completed.  The network upgrade took longer than expected, which delayed the processes.  We hope to bring the new lab storage online during the next week.
 <br><span class="timestamp">August 13, 21:00 PDT</span>
 
 **Update**: All login, data-transfer, and development nodes are online.
@@ -110,19 +124,6 @@ and adding lab storage purchased by several groups.  We anticipate that
 the cluster will be available again by the end of Wednesday August 12.
 <br><span class="timestamp">July 24, 15:45 PDT</span>
 
-
-
-## Past Incidents
-
-### August 19, 2020
-
-#### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
-
-**Resolved**: Our BeeGFS file system was non-responsive between 17:22 and 18:52 today because one of its meta servers hung while the other attempted to synchronize to it.
-<br><span class="timestamp">August 19, 19:00 PDT</span>
-
-**Notice**: The cluster is currently inaccessible for unknown reasons. The problem was first reported around 17:30 today.
-<br><span class="timestamp">August 19, 18:15 PDT</span>
 
 
 ### July 6, 2020
