@@ -22,7 +22,7 @@ local_scratch_size_min: 0.1
 local_scratch_size_max: 1.8
 
 ## Global /wynton/scratch [TiB]:
-global_scratch_size_total: 492
+global_scratch_size_total: 615
 
 ## NetApp home [TiB]:
 netapp_home_size_total: 20
