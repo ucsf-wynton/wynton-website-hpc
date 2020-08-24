@@ -31,7 +31,7 @@ netapp_home_size_total: 20
 home_size_total: 383
 
 ## Group home [TiB]:
-group_size_total: 3800
+group_size_total: 5600
 
 ## Job queues
 pu_total: 20186
