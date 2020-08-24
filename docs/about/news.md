@@ -1,6 +1,6 @@
 # News
 
-2020-08-21: Deployed four BeeGFS storage bricks for the group storage `/wynton/group` to 5.6 PiB (was 3.8 TiB).  Groups who purchased storage have had their new group quotas updated.
+2020-08-21: Deployed four BeeGFS storage bricks for the group storage `/wynton/group` to 5.6 PB (was 3.8 PB).  Groups who purchased storage have had their new group quotas updated.
 
 2020-08-21: Increased global `/wynton/scratch` to 615 TiB (was 492 TiB).
 
