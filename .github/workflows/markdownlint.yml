@@ -19,7 +19,4 @@ jobs:
         with:
           files: .
           config_file: docs/.markdownlint.json
-
-      - name: Session information
-        run: markdownlint --version
         
