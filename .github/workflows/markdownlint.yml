@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - name: markdownlint-cli
-      uses: nosborn/github-action-markdown-cli@v1.1.1
-      with:
-        files: *.md */*.mdk */*/*.md */*/*/*.md
-        config_file: .markdownlint.yaml
+      - name: Checkout git repository
+        uses: actions/checkout@v2
+      
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: *.md */*.md */*/*.md */*/*/*.md
+          config_file: .markdownlint.yaml
