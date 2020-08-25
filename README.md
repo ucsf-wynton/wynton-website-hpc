@@ -60,6 +60,24 @@ This requires [R](https://www.r-project.org/) and that the [spelling](https://cr
 
 
 
+## Linting
+
+To validate the Markdown syntax and that we follow a consistent style, run:
+
+```sh
+$ make markdownlint
+*** markdownlint:
+[ OK ] checking ./assets/README.md
+[ OK ] checking ./about/specs.md
+...
+[ OK ] checking ./index.md
+RESULT: 50 OK, 0 ERROR
+```
+
+This requires [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
+
+
+
 ## Technical details
 
 This website is built upon [Jekyll](https://jekyllrb.com/), where content is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and rendered by Jekyll into HTML.  The user interface and its style is handled mainly by JavaScript and CSS.
