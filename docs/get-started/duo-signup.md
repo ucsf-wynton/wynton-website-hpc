@@ -15,10 +15,10 @@ Installing the Duo Mobile app to your mobile phone is the easiest method to use.
 ```sh
  % ssh user@log2.ucsf.edu
 
-The authenticity of host 'log2.wynton.ucsf.edu (169.230.11.22)' can't be established.
+The authenticity of host \'log2.wynton.ucsf.edu (169.230.11.22)\' can't be established.
 ECDSA key fingerprint is SHA256:DrCbFJouT3pRHoPO6rzGNJxX4OOIBuLy/ZdxjIQrx3M.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added 'log2.ucsf.edu,169.230.11.22' (ECDSA) to the list of known hosts.
+Warning: Permanently added \'log2.ucsf.edu,169.230.11.22\' (ECDSA) to the list of known hosts.
 Connection closed by 169.230.11.22 port 22
 ```
 
@@ -33,7 +33,7 @@ Connection closed by 169.230.11.22 port 22
 
 ```sh
  % ssh user@log2.ucsf.edu
-user@log2.wynton.ucsf.edu's password:
+user@log2.wynton.ucsf.edu\'s password:
 Please enroll at https://api-6747fbb1.duosecurity.com/portal?code=61c954f6d6124546&akey=DBPXF7JZIKINNMVHIHZK
 
 Please enroll at https://api-6747fbb1.duosecurity.com/portal?code=61c954f6d6124546&akey=DBPXF7JZIKINNMVHIHZK
@@ -99,7 +99,7 @@ user@log2.ucsf.edu: Permission denied (publickey,gssapi-with-mic,keyboard-intera
       
 ```sh
  $ ssh user@log2.wynton.ucsf.edu
-user@log2.wynton.ucsf.edu's password:
+user@log2.wynton.ucsf.edu\'s password:
 Duo two-factor login for user
 
 Enter a passcode or select one of the following options:
