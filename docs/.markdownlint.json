@@ -31,6 +31,8 @@
 
     "ul-style": false,
 
+    "ul-start-left": false,
+    
     "no-hard-tabs": false,
 
     "no-trailing-punctuation": false,

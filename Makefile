@@ -7,3 +7,6 @@ spell:
 yaml-check:
 	cd docs; $(MAKE) $@
 
+markdownlint:
+	cd docs; $(MAKE) $@
+
