@@ -110,7 +110,7 @@ The below instructions assumes that Ruby and its `gem` command is available on t
 $ gem install --user-install bundler jekyll:3.8.7 listen:3.1.5 liquid:4.0.0 github-pages
 Fetching: bundler-2.1.4.gem (100%)
 WARNING:  You don't have /home/alice/.gem/ruby/2.5.0/bin in your PATH,
-	  gem executables will not run.
+          gem executables will not run.
 Successfully installed bundler-2.1.4
 Parsing documentation for bundler-2.1.4
 Installing ri documentation for bundler-2.1.4

@@ -21,7 +21,7 @@
 
     "no-emphasis-as-header": false,
 
-    "header-increment": false,
+    "header-increment": true,
     
     "code-block-style": false,
 
