@@ -13,9 +13,9 @@ jobs:
     steps:
       - name: Checkout git repository
         uses: actions/checkout@v2
-      
+
       - name: markdownlint-cli
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
-          files: *.md */*.md */*/*.md */*/*/*.md
+          files: .
           config_file: .markdownlint.yaml
