@@ -75,7 +75,9 @@ $ make markdownlint
 RESULT: 50 OK, 0 ERROR
 ```
 
-This requires [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
+If there are errors, the explaination for them can be found on <https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md>.  Several of the rules are disabled in the [docs/.markdownlint.json](https://github.com/UCSF-HPC/wynton/blob/master/docs/.markdownlint.json) configuration file.
+
+To run these tests locally, install [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
 
 
 
