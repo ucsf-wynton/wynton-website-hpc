@@ -33,7 +33,7 @@
 
     "ul-start-left": false,
     
-    "no-hard-tabs": false,
+    "no-hard-tabs": true,
 
     "no-trailing-punctuation": false,
     

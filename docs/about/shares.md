@@ -14,7 +14,7 @@ real cluster specs.
 The site.data.specs.* variables are set in the _config.yml file.
 
 HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
-	       this is neater when done in Hugo(?).  Let's wait and see. If
+               this is neater when done in Hugo(?).  Let's wait and see. If
                not, we might wanna consider RMarkdown to generate this info.
 {% endcomment %}
 {% assign pu_add_label = "2.2 GHz Opteron 6174 CPU" %}

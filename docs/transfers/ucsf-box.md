@@ -51,8 +51,8 @@ When starting `lftp` as above, you need to manually enter your password, which c
 ```
 [alice@{{ site.transfer.name }} ~]$ cat ~/.netrc
 machine ftp.box.com
-	login alice.aliceson@ucsf.edu
-	password AliceSecretPwd2017
+        login alice.aliceson@ucsf.edu
+        password AliceSecretPwd2017
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">

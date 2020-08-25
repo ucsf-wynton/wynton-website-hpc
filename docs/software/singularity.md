@@ -139,7 +139,7 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 > sum(1:10)
 [1] 55
 > q("no")
-[alice@{{ site.devel.name }} lxc]$ 								
+[alice@{{ site.devel.name }} lxc]$
 ```
 
 To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the {{ site.cluster.name }} host system), do:
