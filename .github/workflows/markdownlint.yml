@@ -1,0 +1,15 @@
+on: [push, pull_request]
+
+name: MarkdownLint
+
+jobs:
+  check:
+    if: "! contains(github.event.head_commit.message, '[ci skip]')"
+
+    steps:
+    - name: markdownlint-cli
+      uses: nosborn/github-action-markdown-cli@v1.1.1
+      with:
+        files: "*.md */*.mdk */*/*.md */*/*/*.md"
+        config_file: ".markdownlint.yaml"
+        ignore_files: "_site/*"

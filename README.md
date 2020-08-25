@@ -1,6 +1,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3A%22Spell+check%22"><img src="https://github.com/UCSF-HPC/wynton/workflows/Spell%20check/badge.svg" alt="Spell check" style="max-width:100%;"></a> 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3A%22YAML+check%22"><img src="https://github.com/UCSF-HPC/wynton/workflows/YAML%20check/badge.svg" alt="YAML check" style="max-width:100%;"></a> 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AShellCheck"><img src="https://github.com/UCSF-HPC/wynton/workflows/ShellCheck/badge.svg" alt="ShellCheck" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AMarkdownLint"><img src="https://github.com/UCSF-HPC/wynton/workflows/MarkdownLint/badge.svg" alt="MarkdownLint" style="max-width:100%;"></a>
 
 
 # The Wynton HPC User Website
