@@ -1,4 +1,5 @@
 ## Dictionary of white-listed words
+barcode
 BeeGFS
 Biocontainers
 bioinformatics
@@ -12,6 +13,7 @@ Ctrl
 CUDA
 dev
 dt
+duosecurity
 edu
 envvars
 EOF
@@ -49,6 +51,7 @@ NSF's
 NVidia
 NVMe
 ondemand
+PharmChem
 PIs
 pre
 Programmatically
@@ -84,6 +87,7 @@ UCSF
 UCSF's
 UID
 virtualenv
+VPN
 www
 wynlog
 wynton
