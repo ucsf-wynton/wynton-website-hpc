@@ -17,7 +17,7 @@
 
     "no-space-in-emphasis": false,
 
-    "no-space-in-code": false,
+    "no-space-in-code": true,
 
     "no-emphasis-as-header": false,
 

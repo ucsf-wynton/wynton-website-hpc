@@ -111,7 +111,7 @@ Now, each time you want to work on your project, go to its folder and _active th
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## IMPORTANT! Note period in front
 (my_project) [alice@{{ site.devel.name }} my_project]$
 ```
-Note how `(my_project) ` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  This tells you that you run in a customized Python environment.  Specifically, `python2` now points to a local, frozen version:
+Note how `(my_project)` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  This tells you that you run in a customized Python environment.  Specifically, `python2` now points to a local, frozen version:
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ which python2
 ~/my_project/bin/python2
@@ -210,7 +210,7 @@ To _deactivate_ a Python virtual environment, either open a fresh terminal (e.g.
 [alice@{{ site.devel.name }} ~]$ deactivate
 ```
 
-Note how prefix `(my_project) ` was dropped from the shell prompt and `python2` now points to the system-wide installation;
+Note how prefix `(my_project)` was dropped from the shell prompt and `python2` now points to the system-wide installation;
 ```sh
 [alice@{{ site.devel.name }} ~]$ which python2
 /usr/bin/python2
