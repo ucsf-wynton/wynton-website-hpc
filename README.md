@@ -1,6 +1,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3A%22Spell+check%22"><img src="https://github.com/UCSF-HPC/wynton/workflows/Spell%20check/badge.svg" alt="Spell check" style="max-width:100%;"></a> 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3A%22YAML+check%22"><img src="https://github.com/UCSF-HPC/wynton/workflows/YAML%20check/badge.svg" alt="YAML check" style="max-width:100%;"></a> 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AShellCheck"><img src="https://github.com/UCSF-HPC/wynton/workflows/ShellCheck/badge.svg" alt="ShellCheck" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AMarkdownLint"><img src="https://github.com/UCSF-HPC/wynton/workflows/MarkdownLint/badge.svg" alt="MarkdownLint" style="max-width:100%;"></a>
 
 
 # The Wynton HPC User Website
@@ -57,6 +58,24 @@ No spelling errors found.
 ```
 
 This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos="https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as misspelled, they can be added to the 'docs/WORDLIST' file.
+
+
+
+## Linting
+
+To validate the Markdown syntax and that we follow a consistent style, run:
+
+```sh
+$ make markdownlint
+*** markdownlint:
+[ OK ] checking ./assets/README.md
+[ OK ] checking ./about/specs.md
+...
+[ OK ] checking ./index.md
+RESULT: 50 OK, 0 ERROR
+```
+
+This requires [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
 
 
 
