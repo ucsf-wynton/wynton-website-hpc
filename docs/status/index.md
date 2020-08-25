@@ -46,6 +46,7 @@
 
 
 ## Queue Metrics
+
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-day">Day</a></li>
   <li><a data-toggle="pill" href="#queues-week">Week</a></li>
@@ -459,6 +460,7 @@ will continue normally after each one.
 ### March 21-April 5, 2019
 
 #### <span style="color: orange;">Kernel maintenance</span>
+
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">April 5, 12:00 PDT</span>
 
@@ -472,6 +474,7 @@ will continue normally after each one.
 ### March 22, 2019
 
 #### <span style="color: orange;">Kernel maintenance</span>
+
 **Resolved**: The login, development and transfer hosts have been rebooted.
 <br><span class="timestamp">March 22, 10:35 PDT</span>
 
@@ -493,6 +496,7 @@ will continue normally after each one.
 ### January 23, 2019
 
 #### <span style="color: orange;">Kernel maintenance</span>
+
 **Resolved**: The login, development and transfer hosts have been rebooted.
 <br><span class="timestamp">Jan 23, 13:00 PST</span>
 
@@ -528,11 +532,13 @@ will continue normally after each one.
 ### January 8, 2019
  
 #### <span style="color: orange;">File-system server crash</span>
+
 **Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 07:30 and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
 <br><span class="timestamp">Jan 8, 10:15 PST</span>
 
 
 ### December 21, 2018
+
 #### <span style="color: orange;">Partial file system failure</span>
 
 **Resolved**: Parts of the new BeeGFS file system was non-functional for approx. 1.5 hours during Friday December 21 when a brief maintenance task failed.
@@ -540,6 +546,7 @@ will continue normally after each one.
 
 
 ### December 12-20, 2018
+
 #### <span style="color: orange;">Nodes down</span>
 
 **Resolved**: All of the `msg-* compute nodes but one are operational.
@@ -550,7 +557,9 @@ will continue normally after each one.
 
 
 ### December 18, 2018
+
 #### <span style="color: orange;">Development node does not respond</span>
+
 **Resolved**: Development node `qb3-dev1` is functional.
 <br><span class="timestamp">Dec 18, 20:50 PST</span>
 
@@ -595,6 +604,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 
 ### December 12-14, 2018
+
 #### <span style="color: orange;">Power failure</span>
 
 **Resolved**: All `mac-*` compute nodes are up and functional.

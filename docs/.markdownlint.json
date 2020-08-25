@@ -7,7 +7,7 @@
 
     "blanks-around-fences": false,
 
-    "blanks-around-headers": false,
+    "blanks-around-headers": true,
 
     "blanks-around-lists": false,
 

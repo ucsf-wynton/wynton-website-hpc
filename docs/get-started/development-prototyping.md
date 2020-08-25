@@ -11,6 +11,7 @@ Any shell session that has been idle for more than eight hours will timeout and 
 </div>
 
 ## List of Development Nodes
+
  * {{ site.dev1.hostname }}
  * {{ site.dev2.hostname }}
  * {{ site.dev3.hostname }}
