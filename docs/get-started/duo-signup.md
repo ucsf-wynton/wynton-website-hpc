@@ -65,7 +65,7 @@ user@log2.ucsf.edu: Permission denied (publickey,gssapi-with-mic,keyboard-intera
 
 # Step 6 : What type of phone
 
-  - The page 'What type of phone is ___-___-____ ?' will ask you to select the type of phone
+  - The page 'What type of phone is this number?' will ask you to select the type of phone
     - Select the phone that matches yours
     - Click the green 'Continue button'
 
