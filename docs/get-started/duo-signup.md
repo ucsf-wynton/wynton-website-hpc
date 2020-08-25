@@ -113,5 +113,5 @@ Success. Logging you in...
 Last failed login: Wed Jun 24 13:34:11 PDT 2020 from 73.70.236.131 on ssh:notty
 There were 10 failed login attempts since the last successful login.
 -bash-4.2$ hostname
-log2.ucsf.edu
+log2.wynton.ucsf.edu
 ```
