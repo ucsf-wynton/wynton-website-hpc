@@ -37,7 +37,7 @@
 
     "no-trailing-punctuation": false,
     
-    "no-bare-urls": false,
+    "no-bare-urls": true,
     
     "ol-prefix": false,
     

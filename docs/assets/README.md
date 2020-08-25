@@ -27,4 +27,4 @@ convert images/ucsf-wynton-logo.png -geometry 128x128 -define icon:auto-resize=6
 
 
 ## REFERENCES:
-* [1] https://github.com/ucsf-web-services/ucsf_identity_web_banner_templates
+* [1] <https://github.com/ucsf-web-services/ucsf_identity_web_banner_templates>

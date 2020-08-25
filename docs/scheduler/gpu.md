@@ -109,10 +109,10 @@ report_variables      NONE
 The above shows that host `msg-iogpu3` has 2 GeForce GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
 
 
-[submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
-[list jobs]: {{ '/scheduler/list-jobs.html' | relative_url }}
-[development nodes]: {{ 'get-started/development-prototyping.html' | relative_url }}
 [CUDA Toolkit]: https://developer.nvidia.com/cuda-toolkit
 [CUDA]: https://en.wikipedia.org/wiki/CUDA
 [NVIDIA's CUDA GPU page]: https://developer.nvidia.com/cuda-gpus
 [GeForce GTX 1080]: https://en.wikipedia.org/wiki/GeForce_10_series
+[submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
+[list jobs]: {{ '/scheduler/list-jobs.html' | relative_url }}
+[development nodes]: {{ 'get-started/development-prototyping.html' | relative_url }}

@@ -124,8 +124,8 @@ Instead of the classical Tcl-based environment module system commonly available 
 When loading a _software repository_ (`module load <repos>`), it will append its module folder to the `$MODULEPATH`.  Unloading it (`module unload <repos>`) will undo any changes.  For instance, `module load <repos>` appends `$MODULEPATH_ROOT/<repos>` to your `$MODULEPATH`.  Multiple software repositories can be loaded in one call, e.g. `module load <repos1> <repos2>`.  It is also possible to load a software repository and some of its software tools in one call, e.g. `module load <repos> <software1> <software2>`.
 
 
-[core software]: {{ '/software/core-software.html' | relative_url }}
 [R]: https://www.r-project.org
 [Lmod]: https://github.com/TACC/Lmod
 [Lmod documentation]: https://lmod.readthedocs.io/en/latest/
+[core software]: {{ '/software/core-software.html' | relative_url }}
 [Software Repositories]: {{ '/software/software-repositories.html' | relative_url }}
