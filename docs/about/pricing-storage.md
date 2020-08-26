@@ -30,7 +30,7 @@ Given prices of hard drives, the stated rate might seem high, but there are thre
 
 There are some additional parameters:
 
-* Unlike nodes, the storage cannot be extracted from the system once it’s been brought online. Once a lab or a group has “bought in”, they will not be able to retrieve their portion of storage hardware if they choose to leave Wynton/HPC (unlike compute nodes/shares).
+* Unlike nodes, the storage cannot be extracted from the system once it’s been brought online. Once a lab or a group has “bought in”, they will not be able to retrieve their portion of storage hardware if they choose to leave Wynton HPC (unlike compute nodes/shares).
 
 * The storage is not available for mounting outside of the cluster.
 
@@ -41,7 +41,7 @@ There are some additional parameters:
 
 ## Background
 
-We have an immediate need to provide for Wynton/HPC storage expansion to meet the demands of various research groups on campus. Given the difficulty of predicting longer-term costs and issues, the current pricing is considered short-term and may change as we understand the evolving needs and operational realities of Wynton/HPC. Thus, this pricing model will be re-evaluated at the beginning of the next fiscal year (July 1, 2019). This model is based on some assumptions that are important to understand:
+We have an immediate need to provide for Wynton HPC storage expansion to meet the demands of various research groups on campus. Given the difficulty of predicting longer-term costs and issues, the current pricing is considered short-term and may change as we understand the evolving needs and operational realities of Wynton HPC. Thus, this pricing model will be re-evaluated at the beginning of the next fiscal year (July 1, 2019). This model is based on some assumptions that are important to understand:
 
 * Various components of the shared storage environment are considered “infrastructure” and are currently funded from the ongoing support provided by the campus.  These components include the networking infrastructure, and management and metadata servers that are part of the overall storage infrastructure. We don’t know with certainty that these components will continue to be funded by the campus and this introduces additional uncertainty as to the future pricing for storage, beyond the current offering described here.
 
