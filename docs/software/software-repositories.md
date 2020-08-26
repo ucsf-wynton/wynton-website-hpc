@@ -286,7 +286,7 @@ fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix fil
     Note: To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
     URL: <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: <em>0.21.1</em><br>
+  Versions: 0.21.1, <em>0.22.0</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -794,12 +794,12 @@ Please note that this software stacks is maintained and contributed by a researc
 
   <dt>modeller</dt>
   <dd>
-  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, 9.23-i386, 9.23-x86_64, 9.23, 9.24-i386, 9.24-x86_64, 9.24, <em>SVN</em><br>
+  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, 9.23-i386, 9.23-x86_64, 9.23, 9.24-i386, 9.24-x86_64, 9.24, 9.25-i386, 9.25-x86_64, 9.25, <em>SVN</em><br>
   </dd>
 
   <dt>modpipe</dt>
   <dd>
-  Versions: 2.0.1, 2.0.2, 2.1.0, 2.1.1, 2.1.2, 2.1.3, <em>2.2.0</em><br>
+  Versions: 2.0.1, 2.0.2, 2.1.0, 2.1.1, 2.1.2, 2.1.3, 2.2.0, <em>2.3.0</em><br>
   </dd>
 
   <dt>muscle</dt>
@@ -1164,7 +1164,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-07-15 08:50:36 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-08-26 09:38:50 from querying `module avail` and `module spider`._
 
 
 <style>
