@@ -8,7 +8,7 @@ organization:
   url: "https://wynton.ucsf.edu/"
 
 cluster:
-  name: "Wynton"
+  name: "Wynton HPC"
   version: "1.0"
   
 login:

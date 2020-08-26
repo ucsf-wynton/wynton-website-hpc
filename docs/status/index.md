@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-file MD024 -->
 
-# UCSF {{ site.cluster.name }} HPC Status
+# UCSF {{ site.cluster.name }} Status
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
@@ -8,15 +8,15 @@
 
 {% if status == "inaccessible" %} 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
+<strong>{{ site.cluster.name }} is experiencing significant issues</strong>
 </div>
 {% elsif status == "problematic" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC is experiencing significant issues</strong>
+<strong>{{ site.cluster.name }} is experiencing significant issues</strong>
 </div>
 {% elsif status == "recovering" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC is operational with parts of the compute resources being recovered</strong>
+<strong>{{ site.cluster.name }} is operational with parts of the compute resources being recovered</strong>
 </div>
 {% elsif status == "kernel-upgrade" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -24,23 +24,23 @@
 </div>
 {% elsif status == "full-outage" %} 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment non-operational</strong><br>
+<strong>{{ site.cluster.name }} environment non-operational</strong><br>
 <em>Complete outage due to scheduled maintenance for August 10-13, 2020</em>
 </div>
 {% elsif status == "part-outage" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC is operational but experiencing partial problems</strong><br>
+<strong>{{ site.cluster.name }} is operational but experiencing partial problems</strong><br>
 <em>Several GPU compute nodes are down.</em>
 </div>
 </div>
 {% elsif status == "notice" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong><br>
+<strong>{{ site.cluster.name }} environment operational</strong><br>
 <em>The cluster will be shut down completely during August 10-12, 2020 due to major upgrades.</em><br>
 </div>
 {% else %}
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} HPC environment operational</strong>
+<strong>{{ site.cluster.name }} environment operational</strong>
 </div>
 {% endif %}
 

@@ -11,15 +11,15 @@ The end goal is that the all UCSF researchers should have access to the cluster 
 
 ## Who can join?
 
-The {{ site.cluster.name }} HPC environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
+The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
 
 ## Request access
 
-To apply for an account on the Wynton HPC cluster, please fill out the following form:
+To apply for an account on the {{ site.cluster.name }} cluster, please fill out the following form:
 
 <!--
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex;">
-<strong>Sorry... Wynton HPC account requests are temporarily disabled for up to 24 hours (starting Tuesday Octobers 22, 2019 at noon).</strong> This is due to planned power upgrade in the Diller Building.
+<strong>Sorry... {{ site.cluster.name }} account requests are temporarily disabled for up to 24 hours (starting Tuesday Octobers 22, 2019 at noon).</strong> This is due to planned power upgrade in the Diller Building.
 <br><span class="timestamp">October 22, 2019 @ 11:59 PDT</span>
 </div>
 -->

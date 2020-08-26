@@ -89,7 +89,7 @@ While waiting to receive purchased storage, users may use the global scratch spa
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
-Importantly, note that <strong>the {{ site.cluster.name }} HPC storage is not backed up</strong>.  Users and labs are responsible to back up their own data outside of {{ site.cluster.name }}.
+Importantly, note that <strong>the {{ site.cluster.name }} storage is not backed up</strong>.  Users and labs are responsible to back up their own data outside of {{ site.cluster.name }}.
 </div>
 
 

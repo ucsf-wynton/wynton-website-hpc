@@ -20,7 +20,7 @@ TIPS: Try to use <code>scp -c aes128-gcm@openssh.com ...</code> to speed up the 
 
 
 
-## <span class="glyphicon glyphicon-upload"></span> From your local machine to the {{ site.cluster.name }} HPC file system
+## <span class="glyphicon glyphicon-upload"></span> From your local machine to the {{ site.cluster.name }} file system
 
 ### Copy a single file on your local file system to your {{ site.cluster.name }} home directory
 
@@ -46,7 +46,7 @@ To copy all content of directory `dataset/` to {{ site.cluster.name }} so that i
 
 
 
-## <span class="glyphicon glyphicon-download"></span> From the {{ site.cluster.name }} HPC file system to your local machine
+## <span class="glyphicon glyphicon-download"></span> From the {{ site.cluster.name }} file system to your local machine
 
 ### Copy a single file from your {{ site.cluster.name }} home directory to your local machine
 

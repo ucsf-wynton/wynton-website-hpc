@@ -2,11 +2,11 @@
 
 ## Grant Applications
 
-Below are a few examples on how to give details on the {{ site.cluster.name }} HPC environment in a grant application.  _The node and CPU cores counts are updated on a regular basis._
+Below are a few examples on how to give details on the {{ site.cluster.name }} environment in a grant application.  _The node and CPU cores counts are updated on a regular basis._
 
 ### Example 1
 
-> Wynton HPC is a distributed high-performance computing cluster with nodes
+> {{ site.cluster.name }} is a distributed high-performance computing cluster with nodes
 > in many different data centers on the UCSF campus.  All Wynton sites are
 > connected by multiple 40 Gbps network connections.  Wynton currently
 > contains {{ site.data.specs.nodes }} nodes with over
@@ -29,7 +29,7 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} H
 
 ### Example 2
 
-> Wynton HPC is a computational research cluster shared by investigators at 
+> {{ site.cluster.name }} is a computational research cluster shared by investigators at 
 > UCSF.  The cluster is run as a co-op, with access for all and priority 
 > given to those who have contributed funds or hardware.  Support is 
 > also provided by UCSF Research IT.  The cluster currently consists of

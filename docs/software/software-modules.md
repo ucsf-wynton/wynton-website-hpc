@@ -25,7 +25,7 @@ In addition to the [core software] tools that are available by default, addition
   <td>
   <strong>Sali Lab Software Repository</strong><br>
   Repository of software shared by the UCSF Sali Lab (<a href="https://salilab.org/">https://salilab.org/</a>).<br>
-  <em>Comment: Contrary to the UCSF QB3 cluster, where these modules were available by default, this repository has to be loaded explicitly in order to have access to its modules on {{ site.cluster.name }} HPC.</em><br>
+  <em>Comment: Contrary to the UCSF QB3 cluster, where these modules were available by default, this repository has to be loaded explicitly in order to have access to its modules on {{ site.cluster.name }}.</em><br>
   
   Usage: <code>module load Sali</code>
   </td>
