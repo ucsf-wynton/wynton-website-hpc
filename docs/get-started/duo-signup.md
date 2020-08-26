@@ -1,14 +1,14 @@
 # Duo MFA signup and app install instructions for logging on to {{ site.cluster.name }}
 
-In order to log into Wynton from outside of the UCSF network (not on the VPN), you will need use Duo two factor authentication.
+In order to log into {{ site.cluster.name }} from outside of the UCSF network (not on the VPN), you will need use Duo two factor authentication.
 This is only required if you are on a network outside of UCSF (off-campus and not on the VPN).  If you are on campus
-or using the campus VPN, Duo will not be required for Wynton.
+or using the campus VPN, Duo will not be required for {{ site.cluster.name }}.
 
 Installing the Duo Mobile app to your mobile phone is the easiest method to use.
 
 ## Step 1
 
-  - ssh to log2.wynton.ucsf.edu with your Wynton username
+  - ssh to log2.wynton.ucsf.edu with your {{ site.cluster.nickname }} username
     - Answer `yes` to the question `Are you sure you want to continue connecting (yes/no/[fingerprint])?`
     - The connection will be closed. This is the expected behavior.
 
@@ -25,8 +25,8 @@ Connection closed by 169.230.11.22 port 22
 
 ## Step 2
 
-  - Again, ssh to log2.wynton.ucsf.edu with your Wynton username
-    - Enter your Wynton user password
+  - Again, ssh to log2.wynton.ucsf.edu with your {{ site.cluster.nickname }} username
+    - Enter your {{ site.cluster.nickname }} user password
     - You should then see a message saying to enroll at a particular Duo URL
   - this will followed by a 'Permission denied'. The connection will close. This is the expected behavior.
   - Copy the enrollment URL into your web browser and follow the link in your web browser 
@@ -91,8 +91,8 @@ user@log2.ucsf.edu: Permission denied (publickey,gssapi-with-mic,keyboard-intera
 
 ## Step 10 : Log in using ssh
 
-  - ssh to one of the externally facing Wynton nodes (such as log1, log2, dt1, dt2) with your Wynton username
-    - Enter your Wynton user password
+  - ssh to one of the externally facing {{ site.cluster.name }} nodes (such as log1, log2, dt1, dt2) with your {{ site.cluster.nickname }} username
+    - Enter your {{ site.cluster.nickname }} user password
     - At the prompt, select the method to use Duo
     - Select 1. Duo Push
       - open the Duo Mobile app and click the green 'Accept' button to accept the Push

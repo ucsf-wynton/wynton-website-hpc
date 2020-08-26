@@ -63,9 +63,9 @@ module_avail <- local({
 module_repositories <- list(
   "built-in" = list(
     name        = "built-in",
-    maintainer  = "Wynton Systems Administrators",
-    group       = "Wynton",
-    url         = "https://wynton.ucsf.edu/hpc/about/contact.html",
+    maintainer  = "{{ site.cluster.nickname }} Systems Administrators",
+    group       = "{{ site.cluster.name }}",
+    url         = "{{ '/about/contact.html' | relative_url }}",
     contributed = FALSE,
     module_path = c("/wynton/home/opt/modules", "/etc/modulefiles")
   ),
@@ -279,7 +279,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 Enable repository: <code>module load <%= name %></code><br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 <% } %>
 

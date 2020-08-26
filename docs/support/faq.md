@@ -38,7 +38,7 @@ ssl error (the used certificate is expired)
 unable to contact qmaster using port 6444 on host "q"
 ```
 
-**A**. Your Wynton account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.
+**A**. Your {{ site.cluster.name }} account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.
 
 
 ## Files and folders
@@ -49,12 +49,12 @@ unable to contact qmaster using port 6444 on host "q"
 
 **A2**. Labs who [purchase additional storage]({{ '/about/pricing-storage.html' | relative_url }}) will get a `/wynton/group/your_group/` folder.  Files written in that folder will not count toward users disk quota.
 
-## Contributing to Wynton
+## Contributing to {{ site.cluster.nickname }}
 
-**Q**. _Our lab would contribute to Wynton in order to increase our priority.  How can we do this?_
+**Q**. _Our lab would contribute to {{ site.cluster.name }} in order to increase our priority.  How can we do this?_
 
 **A**. We welcome donations of any size.  In return, your lab will receive a number of slots in member.q equivalent to the number of cores in a current Standard Node that your contribution would purchase.  As of May 2020, that cost is $170 per slot.
 
-**Q**. _Our lab has some old nodes we'd like to contribute to Wynton in return for priority. Will you take them?_
+**Q**. _Our lab has some old nodes we'd like to contribute to {{ site.cluster.name }} in return for priority. Will you take them?_
 
-**A**. Please [get in touch with the Wynton team]({{ '/about/contact.html' | relative_url }}).
+**A**. Please [get in touch with the {{ site.cluster.nickname }} team]({{ '/about/contact.html' | relative_url }}).

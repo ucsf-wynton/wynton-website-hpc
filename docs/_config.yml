@@ -9,6 +9,7 @@ organization:
 
 cluster:
   name: "Wynton HPC"
+  nickname: "Wynton"
   version: "1.0"
   
 login:

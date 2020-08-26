@@ -1,4 +1,4 @@
-# Wynton Dashboard
+# {{ site.cluster.name }} Dashboard
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 

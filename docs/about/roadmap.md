@@ -10,9 +10,9 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Near future
 
-* Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
+* Pricing model: Contributors to {{ site.cluster.name }} get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
-* Storage: Requirements for mounting lab-owned storage into Wynton
+* Storage: Requirements for mounting lab-owned storage into {{ site.cluster.name }}
 
 * Forum: A self-hosted User Forum for richer conversations than what's on our Slack channel
 
@@ -23,7 +23,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Support: A User Issue Tracker
 
-* Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.name }}
+* Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }}
 
 * Compliance: Support for restricted data analysis
 
@@ -31,11 +31,11 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Accomplished milestones
 
-* Migration: The UCSF Memory and Aging Center (MAC) have joined Wynton by contributing new nodes
+* Migration: The UCSF Memory and Aging Center (MAC) have joined {{ site.cluster.name }} by contributing new nodes
 
-* Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into Wynton
+* Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into {{ site.cluster.name }}
 
-* Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from Wynton (2018-08-02)
+* Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from {{ site.cluster.name }} (2018-08-02)
 
 * Storage: Global scratch storage on BeeGFS parallel file system (2018-08-20)
 
@@ -53,7 +53,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Scheduler: ~~Support interactive jobs (`qlogin`)~~. The {{ site.cluster.name }} Team decided against this because it increases the risk of having stale jobs occupying the scheduler and overall underutilizing the HPC environment (Fall 2019)
 
-* Network: A second data transfer node for faster file transfers in to and out from Wynton (2019-09-12)
+* Network: A second data transfer node for faster file transfers in to and out from {{ site.cluster.name }} (2019-09-12)
 
 * GPU compute: An additional 12 communal GPUs on three GPU nodes (2019-09-13)
 
@@ -67,7 +67,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Website: Move website from GitHub Pages (<https://ucsf-hpc.github.io/wynton/>) to on-premise <https://wynton.ucsf.edu/hpc/> (2020-02-26)
 
-* Network: Add a Globus '{{ site.cluster.name }}' Endpoint for efficient, secure data transfers (ingress and egress) (2020-04-03)
+* Network: Add a Globus '{{ site.cluster.nickname }}' Endpoint for efficient, secure data transfers (ingress and egress) (2020-04-03)
 
 
 See also [News].

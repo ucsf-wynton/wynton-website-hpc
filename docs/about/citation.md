@@ -7,8 +7,8 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} e
 ### Example 1
 
 > {{ site.cluster.name }} is a distributed high-performance computing cluster with nodes
-> in many different data centers on the UCSF campus.  All Wynton sites are
-> connected by multiple 40 Gbps network connections.  Wynton currently
+> in many different data centers on the UCSF campus.  All {{ site.cluster.name }} sites are
+> connected by multiple 40 Gbps network connections.  {{ site.cluster.name }} currently
 > contains {{ site.data.specs.nodes }} nodes with over
 > {{ site.data.specs.physical_cores }} CPU cores.
 > RAM in the nodes ranges from {{ site.data.specs.ram_min }} to
@@ -18,7 +18,7 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} e
 > Storage is provided by a parallel filesystem providing 400 TB of mirrored
 > home space and 500 TB of global scratch space.
 > 
-> Wynton is shared by many research groups at UCSF.  Load balancing on the
+> {{ site.cluster.nickname }} is shared by many research groups at UCSF.  Load balancing on the
 > cluster is achieved through SGE (originally Sun Grid Engine). The
 > computing power of the cluster guaranteed to any given research group is
 > directly proportional to the funds that the group contributed to the

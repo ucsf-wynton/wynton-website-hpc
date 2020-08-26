@@ -236,7 +236,7 @@ will continue normally after each one.
 **Update**: The failed legacy NetApp server is the cause to the problems, e.g. compute nodes not being responsive causing problems for SGE etc. Because of this, **all of the cluster - login, development, transfer, and computes nodes - will be rebooted tomorrow Friday 2020-02-07**.
 <br><span class="timestamp">February 6, 10:00 PDT</span>
 
-**Notice**: Wynton is experience major issues due to NetApp file-system failure, despite this is being deprecated and not used much these days. The first user report on this came in around 09:00 and the job-queue logs suggests the problem began around 02:00.  It will take a while for everything to come back up and there will be brief BeeGFS outage while we reboot the BeeGFS management node.
+**Notice**: {{ site.cluster.name }} is experience major issues due to NetApp file-system failure, despite this is being deprecated and not used much these days. The first user report on this came in around 09:00 and the job-queue logs suggests the problem began around 02:00.  It will take a while for everything to come back up and there will be brief BeeGFS outage while we reboot the BeeGFS management node.
 <br><span class="timestamp">February 5, 10:15 PDT</span>
 
 
@@ -573,7 +573,7 @@ will continue normally after each one.
 **Resolved**: `/wynton/scratch` is now back online and ready to be used.
 <br><span class="timestamp">Dec 19, 14:20 PST</span>
 
-**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and Wynton will _not_ be able to migrate until the QB3 cluster has been incorporated into {{ site.cluster.name }} (see [Roadmap]({{ '/about/roadmap.html' | relative_url }})) or they giving up their QB3 account.
+**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and {{ site.cluster.name }} will _not_ be able to migrate until the QB3 cluster has been incorporated into {{ site.cluster.name }} (see [Roadmap]({{ '/about/roadmap.html' | relative_url }})) or they giving up their QB3 account.
 <br><span class="timestamp">Dec 18, 16:45 PST</span>
 
 **Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 19. We are working on fine tuning the configuration, running performance tests, and resilience tests.
@@ -599,7 +599,7 @@ will continue normally after each one.
 
 It is our hope to be able to keep the user's home accounts, login nodes, the transfer nodes, and the development nodes available throughout this upgrade period.
 
-_NOTE: If our new setup proves more challenging than anticipated, then we will postpone the SGE downtime to after the holidays, on Wednesday January 9, 2019.  Wynton will remain operational over the holidays, though without `/wynton/scratch`._
+_NOTE: If our new setup proves more challenging than anticipated, then we will postpone the SGE downtime to after the holidays, on Wednesday January 9, 2019.  {{ site.cluster.name }} will remain operational over the holidays, though without `/wynton/scratch`._
 <br><span class="timestamp">Dec 6, 14:30 PST [edited Dec 18, 17:15 PST]</span>
 
 
@@ -630,7 +630,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Update**: Login node `wynlog1` is also affected by the power outage.  Use `wynlog2` instead.
 <br><span class="timestamp">Nov 8, 09:10 PST</span>
 
-**Notice**: Parts of the Wynton cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. ~~To follow the reboot progress, see the 'Available CPU cores' curve (target 1,832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
+**Notice**: Parts of the {{ site.cluster.name }} cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. ~~To follow the reboot progress, see the 'Available CPU cores' curve (target 1,832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
 <br><span class="timestamp">Nov 7, 15:45 PST</span>
 
 
@@ -671,7 +671,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Resolved**: Nodes were rebooted on August 1 shortly after the power came back.
 <br><span class="timestamp">Aug 2, 08:15 PDT</span>
 
-**Notice**: On Wednesday August 1 at 6:45am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
+**Notice**: On Wednesday August 1 at 6:45am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of {{ site.cluster.name }}'s server rooms.
 <br><span class="timestamp">Jul 30, 20:45 PDT</span>
 
 
@@ -682,7 +682,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Resolved**: The nodes brought down during the July 30 partial shutdown has been rebooted.  Unfortunately, the same partial shutdown has to be repeated within a few days because the work in server room was not completed. Exact date for the next shutdown is not known at this point.
 <br><span class="timestamp">Jul 30, 09:55 PDT</span>
 
-**Notice**: On Monday July 30 at 7:00am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of Wynton's server rooms.
+**Notice**: On Monday July 30 at 7:00am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of {{ site.cluster.name }}'s server rooms.
 <br><span class="timestamp">Jul 29, 21:20 PDT</span>
 
 
@@ -699,7 +699,7 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Update**: The login nodes and and the development nodes are functional. Some compute nodes that went down are back up, but not all.
 <br><span class="timestamp">Jun 18, 10:45 PDT</span>
 
-**Investigating**: The UCSF Mission Bay Campus experienced a power outage on Saturday June 16 causing parts of Wynton to go down.  One of the login nodes (wynlog1), the development node (qb3-dev1), and parts of the compute nodes are currently non-functional.
+**Investigating**: The UCSF Mission Bay Campus experienced a power outage on Saturday June 16 causing parts of {{ site.cluster.name }} to go down.  One of the login nodes (wynlog1), the development node (qb3-dev1), and parts of the compute nodes are currently non-functional.
 <br><span class="timestamp">Jun 17, 15:00 PDT</span>
 
 

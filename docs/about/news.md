@@ -70,11 +70,11 @@
 
 2018-08-20: <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">Global scratch storage</a> on BeeGFS Parallel File System is live - validation and testing completed.
 
-2018-08-02: Added a dedicate <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">10 Gbps transfer node</a> for faster file transfers in to and out from Wynton.
+2018-08-02: Added a dedicate <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">10 Gbps transfer node</a> for faster file transfers in to and out from {{ site.cluster.nickname }}.
 
 2018-07-25: <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">BeeGFS Parallel File System/Storage</a>: Validation completed - user beta testing started.
 
-2017-09-07: Wynton is live.
+2017-09-07: {{ site.cluster.name }} is live.
 
 
 For upcoming features and improvements, please see the [Roadmap].
