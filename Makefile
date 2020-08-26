@@ -1,3 +1,5 @@
+check: shellcheck yaml-check markdownlint spell 
+
 shellcheck:
 	cd cron-scripts; $(MAKE) $@
 
