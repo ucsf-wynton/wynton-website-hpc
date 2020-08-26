@@ -1,5 +1,7 @@
+organization:
+  name: "Wynton"
+  url: "/"
+
 assets:
   status_root_path: "/hpc/assets"
 
-urls:
-  front_page: "/"
