@@ -43,7 +43,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} HPC {{ site.cluster.version }}</a>
+      <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} {{ site.cluster.version }}</a>
       <div class="navbar-brand"><a class="broadcast" href="{{ '/status/index.html' | relative_url }}"><span class="glyphicon glyphicon-flag"></span></a></div>
     </div>
     
@@ -186,8 +186,8 @@
      </span>
 <p class="muted credit" style="font-size: inherits;">
 <a href="https://www.ucsf.edu/">UCSF</a> ::
-<a href="{{ organization.url | default: "https://wynton.ucsf.edu/" }}">Wynton</a> :: 
-<a href="{{ '/' | relative_url }}">{{ site.cluster.name }} HPC</a>
+<a href="{{ organization.url | default: "https://wynton.ucsf.edu/" }}">{{ organization.name | default: "Wynton" }}</a> :: 
+<a href="{{ '/' | relative_url }}">{{ site.cluster.name }}</a>
 </p>
       </footer>
     </div>
