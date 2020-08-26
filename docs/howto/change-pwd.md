@@ -36,7 +36,7 @@ passwd: all authentication tokens updated successfully.
 
 To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.cluster.name }} via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alternatively, verify them from your browser:
 
-1. Go to [https://www.cgl.ucsf.edu/admin/kerbtest.py](https://www.cgl.ucsf.edu/admin/kerbtest.py) in your browser.  A popup panel titled 'Sign in https<span/>://www.cgl.ucsf.edu' is opened by the browser.
+1. Go to <https://www.cgl.ucsf.edu/admin/kerbtest.py> in your browser.  A popup panel titled 'Sign in https<span>://www.cgl.ucsf.edu</span>' is opened by the browser.
 
 3. Enter your {{ site.cluster.nickname }} login credentials in the two fields 'Username' and 'Password' and click 'Sign in'.
 
@@ -45,7 +45,7 @@ To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.c
 
 ## Reset password
 
-To reset your _{{ site.cluster.nickname }}_ password, contact the admins at [wynton_admin@ucsf.edu]([wynton_admin@ucsf.edu).
+To reset your _{{ site.cluster.nickname }}_ password, contact the admins at [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu).
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.

@@ -82,6 +82,22 @@ Several of the rules are disabled in the [docs/.markdownlint.json](https://githu
 To run these tests locally, install [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
 
 
+To validate the Markdown URLs exists, run:
+
+```sh
+$ make markdown-link-check
+*** markdown-link-check:
+[ OK ] checking ./assets/README.md
+[ OK ] checking ./about/specs.md
+...
+[ OK ] checking ./index.md
+RESULT: 50 OK, 0 ERROR
+```
+
+To run these tests locally, install [markdown-link-check](https://github.com/tcort/markdown-link-check).
+
+
+
 
 ## Technical details
 

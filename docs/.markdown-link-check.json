@@ -1,0 +1,16 @@
+{
+	"ignorePatterns": [
+		{
+			"pattern": "^https://www.cgl.ucsf.edu/admin/"
+		}
+	],
+    
+	"replacementPatterns": [
+		{
+			"pattern": "^.attachments",
+			"replacement": "file://some/conventional/folder/.attachments"
+		}
+	],
+    
+	"seealso": "https://github.com/tcort/markdown-link-check"
+}
