@@ -36,27 +36,27 @@
 
 2019-04-12: Added another two communal GPU nodes available to all users.  There are now four communal GPU nodes with a total of 12 GPUs.
 
-2019-04-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">24 nodes (396 cores)</a> from QB3 to Wynton HPC.
+2019-04-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">24 nodes (396 cores)</a> from QB3 to {{ site.cluster.name }}.
 
 2019-04-09: Added the first two communal GPU nodes available to all users.
 
 2019-03-21: To decrease the number of stray shells, any shell session that has been idle for more than eight hours will timeout and exit automatically.
 
-2019-03-17: The majority (136 nodes; 3680 cores) of the QB3 nodes has now been migrated to Wynton HPC.
+2019-03-17: The majority (136 nodes; 3680 cores) of the QB3 nodes has now been migrated to {{ site.cluster.name }}.
 
-2019-03-15: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">8 nodes (224 cores)</a> from QB3 to Wynton HPC.
+2019-03-15: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">8 nodes (224 cores)</a> from QB3 to {{ site.cluster.name }}.
 
-2019-03-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">19 nodes (532 cores)</a> from QB3 to Wynton HPC.
+2019-03-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">19 nodes (532 cores)</a> from QB3 to {{ site.cluster.name }}.
 
-2019-03-08: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">10 nodes (264 cores)</a> from QB3 to Wynton HPC.
+2019-03-08: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">10 nodes (264 cores)</a> from QB3 to {{ site.cluster.name }}.
 
-2019-03-07: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">11 nodes (292 cores)</a> from QB3 to Wynton HPC.
+2019-03-07: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">11 nodes (292 cores)</a> from QB3 to {{ site.cluster.name }}.
 
-2019-03-06: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to Wynton HPC.
+2019-03-06: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to {{ site.cluster.name }}.
 
-2019-03-05: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to Wynton HPC.
+2019-03-05: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to {{ site.cluster.name }}.
 
-2019-03-01: Migrated <a href="{{ '/about/specs.html' | relative_url }}">48 nodes (1344 cores)</a> from QB3 to Wynton HPC.
+2019-03-01: Migrated <a href="{{ '/about/specs.html' | relative_url }}">48 nodes (1344 cores)</a> from QB3 to {{ site.cluster.name }}.
 
 2019-02-14: Added <a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">SGE resource `eth_speed`</a> for requesting minimum network speeds.
 

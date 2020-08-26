@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert">
-<strong>Contributions to the Wynton HPC environment are non-expiring, e.g. contribute once and keep it for life!</strong>
+<strong>Contributions to the {{ site.cluster.name }} environment are non-expiring, e.g. contribute once and keep it for life!</strong>
 </div>
 
 # Contributing Member Shares
@@ -33,8 +33,8 @@ HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
 {% assign slots_1 = pu_1_share | times: slots_total_0 %}
 
 
-Currently, the Wynton HPC cluster has in total _member.q<sub>total</sub>_ = {{ site.data.specs.member_q_total }} slots available on the member.q queue.  Jobs on the _member.q_ queue will launch and finish sooner than jobs on the communal, lower-priority _long.q_ queue.  A member.q job will have higher-priority on the CPU than a long.q job in case they run on the same compute node.   It is only contributing members who have access to the member.q queue - non-contributing members will only have access to [queues]({{ '/scheduler/queues.html' | relative_url }}) such as the long.q queue.  **Contributors get _non-expiring, lifetime access_ to a  number of these member.q slots in proportion to their hardware contribution to the cluster.**  The number of member.q slots a particular hardware contribution, which can be monetary(\*) or physical(\*), adds, is based on how much compute power the contribution adds to the cluster.
-The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.data.specs.pu_total }} _contributed_ processing units on Wynton HPC.
+Currently, the {{ site.cluster.name }} cluster has in total _member.q<sub>total</sub>_ = {{ site.data.specs.member_q_total }} slots available on the member.q queue.  Jobs on the _member.q_ queue will launch and finish sooner than jobs on the communal, lower-priority _long.q_ queue.  A member.q job will have higher-priority on the CPU than a long.q job in case they run on the same compute node.   It is only contributing members who have access to the member.q queue - non-contributing members will only have access to [queues]({{ '/scheduler/queues.html' | relative_url }}) such as the long.q queue.  **Contributors get _non-expiring, lifetime access_ to a  number of these member.q slots in proportion to their hardware contribution to the cluster.**  The number of member.q slots a particular hardware contribution, which can be monetary(\*) or physical(\*), adds, is based on how much compute power the contribution adds to the cluster.
+The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.data.specs.pu_total }} _contributed_ processing units on {{ site.cluster.name }}.
 
 <div class="alert alert-info" role="alert">
 <strong>A lab's contributed processing units (<em>PU<sub>lab</sub></em>) will never expire - it will remain the same until the lab makes additional contributions to the cluster.</strong>

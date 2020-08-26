@@ -5,7 +5,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## In progress
 
-* Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to Wynton HPC (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
+* Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to {{ site.cluster.name }} (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
 
 
 ## Near future
@@ -23,7 +23,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Support: A User Issue Tracker
 
-* Network: Support for using Globus transfers to and from UCSF Box via Wynton HPC
+* Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.name }}
 
 * Compliance: Support for restricted data analysis
 
@@ -51,7 +51,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: The QB3-legacy NetApp scratch storage `/scrapp` and `/scrapp2` has been removed in favor of the BeeGFS-based scratch storage `/wynton/scratch` (2019-08-15)
 
-* Scheduler: ~~Support interactive jobs (`qlogin`)~~. The Wynton HPC Team decided against this because it increases the risk of having stale jobs occupying the scheduler and overall underutilizing the HPC environment (Fall 2019)
+* Scheduler: ~~Support interactive jobs (`qlogin`)~~. The {{ site.cluster.name }} Team decided against this because it increases the risk of having stale jobs occupying the scheduler and overall underutilizing the HPC environment (Fall 2019)
 
 * Network: A second data transfer node for faster file transfers in to and out from Wynton (2019-09-12)
 
@@ -67,7 +67,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Website: Move website from GitHub Pages (<https://ucsf-hpc.github.io/wynton/>) to on-premise <https://wynton.ucsf.edu/hpc/> (2020-02-26)
 
-* Network: Add a Globus 'Wynton HPC' Endpoint for efficient, secure data transfers (ingress and egress) (2020-04-03)
+* Network: Add a Globus '{{ site.cluster.name }}' Endpoint for efficient, secure data transfers (ingress and egress) (2020-04-03)
 
 
 See also [News].

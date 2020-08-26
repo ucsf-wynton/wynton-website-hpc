@@ -624,8 +624,8 @@ VCFtools is a program package designed for working with VCF files, such as those
 
   <dt>wynton-tools (part of CBI-testing)</dt>
   <dd>
-    <strong>Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
-A command-line tool for common Wynton HPC queries.<br>
+    <strong>Wynton Tools: Tools for the {{ site.cluster.name }} Environment</strong><br>
+A command-line tool for common {{ site.cluster.name }} queries.<br>
     Example: <code>wynton --help</code>.<br>
     URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
   Versions: <em>latest</em><br>

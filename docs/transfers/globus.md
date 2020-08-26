@@ -1,18 +1,18 @@
 # Globus
 
-[Globus] is a non-profit service for moving, syncing, and sharing large amounts of data asynchronously in the background.  Transfers are done from and to, so called, _endpoints_.  In order to perform a file transfer from one location to another using the Globus service, both ends must have an endpoint.  Several UCSF departments and services, including the Wynton HPC environment, provide Globus endpoints.  This will allow you to transfer and share data efficiently with any other Globus user in the world.
+[Globus] is a non-profit service for moving, syncing, and sharing large amounts of data asynchronously in the background.  Transfers are done from and to, so called, _endpoints_.  In order to perform a file transfer from one location to another using the Globus service, both ends must have an endpoint.  Several UCSF departments and services, including the {{ site.cluster.name }} environment, provide Globus endpoints.  This will allow you to transfer and share data efficiently with any other Globus user in the world.
 
 ## Setup of Globus endpoints
 
-### Set up a Globus endpoint for your Wynton HPC account
+### Set up a Globus endpoint for your {{ site.cluster.name }} account
 
-If you want to transfer files from or to your Wynton HPC account, you need to set up the 'UCSF Wynton HPC' endpoint.  Below is an outline on how to do this.
+If you want to transfer files from or to your {{ site.cluster.name }} account, you need to set up the 'UCSF {{ site.cluster.name }}' endpoint.  Below is an outline on how to do this.
 
-1. [online] Go to ['UCSF Wynton HPC' endpoint] and click 'Activate'.  This will ask you to enter your Wynton HPC credential, i.e. your Wynton username and password.  Optionally, limit the lifetime of this endpoint by clicking 'Advanced' and select the number of hours you want it to be valid, e.g. `2` hours.
+1. [online] Go to ['UCSF {{ site.cluster.name }}' endpoint] and click 'Activate'.  This will ask you to enter your {{ site.cluster.name }} credential, i.e. your Wynton username and password.  Optionally, limit the lifetime of this endpoint by clicking 'Advanced' and select the number of hours you want it to be valid, e.g. `2` hours.
 
-2. [online] Go to [Endpoints](https://app.globus.org/endpoints), go to the recently activated 'UCSF Wynton HPC' endpoint, and click on 'Open in File Manager'.  This will display the files and folders on your Wynton HPC account.  If you don't see anything, make sure to enter `~/` as the 'Path'.
+2. [online] Go to [Endpoints](https://app.globus.org/endpoints), go to the recently activated 'UCSF {{ site.cluster.name }}' endpoint, and click on 'Open in File Manager'.  This will display the files and folders on your {{ site.cluster.name }} account.  If you don't see anything, make sure to enter `~/` as the 'Path'.
 
-3. [online] When no longer needed, make sure to 'Deactivate Credentials' for your ['UCSF Wynton HPC' endpoint].
+3. [online] When no longer needed, make sure to 'Deactivate Credentials' for your ['UCSF {{ site.cluster.name }}' endpoint].
 
 
 ### Set up a Globus endpoint for your local machine
@@ -49,10 +49,10 @@ To transfer files via the Globus network:
 ## Endpoints of interest
 
 * [Your personal GCP endpoint](https://app.globus.org/endpoints?scope=administered-by-me)
-* ['UCSF Wynton HPC' endpoint](https://app.globus.org/file-manager/collections/9c60dd5e-0c92-11ea-9952-0a8c187e8c12/overview) (UUID `9c60dd5e-0c92-11ea-9952-0a8c187e8c12`)
+* ['UCSF {{ site.cluster.name }}' endpoint](https://app.globus.org/file-manager/collections/9c60dd5e-0c92-11ea-9952-0a8c187e8c12/overview) (UUID `9c60dd5e-0c92-11ea-9952-0a8c187e8c12`)
 
 
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
-['UCSF Wynton HPC' endpoint]: https://app.globus.org/file-manager/collections/9c60dd5e-0c92-11ea-9952-0a8c187e8c12/overview
+['UCSF {{ site.cluster.name }}' endpoint]: https://app.globus.org/file-manager/collections/9c60dd5e-0c92-11ea-9952-0a8c187e8c12/overview

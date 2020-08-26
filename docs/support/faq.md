@@ -12,15 +12,15 @@
 
 **A**: **[For QB3 migrants]** If you are coming from the QB3 cluster, please make sure that your job script does _not_ specify any of the below [QB3-specific SGE resources](https://salilab.org/qb3cluster/Cluster_Topology).  **A job submitted with one or more of these will sit in the queue forever.**
 
-  - `-l arch=linux-x64`: this architecture does not exist on Wynton HPC. This specification can safely be dropped on Wynton HPC. (You could specify, `-l arch=lx-amd64` but that is not needed as all compute nodes now have the same architecture.)
+  - `-l arch=linux-x64`: this architecture does not exist on {{ site.cluster.name }}. This specification can safely be dropped on {{ site.cluster.name }}. (You could specify, `-l arch=lx-amd64` but that is not needed as all compute nodes now have the same architecture.)
 
-  - `-l database=<size>`: this storage resource does not exist on Wynton HPC.
+  - `-l database=<size>`: this storage resource does not exist on {{ site.cluster.name }}.
 
-  - `-l netapp=<size>`: this storage resource does not exist on Wynton HPC. This specification can safely be dropped on Wynton HPC.
+  - `-l netapp=<size>`: this storage resource does not exist on {{ site.cluster.name }}. This specification can safely be dropped on {{ site.cluster.name }}.
 
-  - `-l scrapp=<size>`: this storage resource does not exist on Wynton HPC.
+  - `-l scrapp=<size>`: this storage resource does not exist on {{ site.cluster.name }}.
 
-  - `-l scrapp2=<size>`: this storage resource does not exist on Wynton HPC.
+  - `-l scrapp2=<size>`: this storage resource does not exist on {{ site.cluster.name }}.
 
 **Q**. _I tried to delete some jobs, and now they're stuck in the state "dr". How can I get rid of them?_
 

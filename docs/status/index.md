@@ -20,7 +20,7 @@
 </div>
 {% elsif status == "kernel-upgrade" %} 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>Wynton HPC has fewer slots available than usual due to kernel upgrades</strong><br>
+<strong>{{ site.cluster.name }} has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
 {% elsif status == "full-outage" %} 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -117,7 +117,7 @@ will soon start serving jobs again.  The upgrade work is taking longer than
 expected and will continue tomorrow Thursday August 13.
 <br><span class="timestamp">August 12, 16:10 PDT</span>
 
-**Notice**: All of the Wynton HPC environment is down for maintenance
+**Notice**: All of the {{ site.cluster.name }} environment is down for maintenance
 and upgrades.
 <br><span class="timestamp">August 10, 00:00 PDT</span>
 
@@ -224,7 +224,7 @@ will continue normally after each one.
 
 #### <span style="color: orange;">Major outage due to NetApp file-system failure</span>
 
-**Resolved**: The Wynton HPC system is considered fully functional again.  The legacy, deprecated NetApp storage was lost.
+**Resolved**: The {{ site.cluster.name }} system is considered fully functional again.  The legacy, deprecated NetApp storage was lost.
 <br><span class="timestamp">February 10, 10:55 PDT</span>
 
 **Update**: The majority of the compute nodes have been rebooted and are now online and running jobs.  We will actively monitor the system and assess the how everything works before we considered this incident resolved.
@@ -286,7 +286,7 @@ will continue normally after each one.
 **Update**: The issues with log in was because the responsiveness of one of the BeeGFS file servers became unreliable around 04:20.  Rebooting that server resolved the problem.  The cluster is fully functional again although slower than usual until the file system have been resynced.  After this, there might be a need for one more, brief, reboot.
 <br><span class="timestamp">December 22, 14:40 PST</span>
 
-**Notice**: It is not possible to log in to the Wynton HPC environment.  The reason is currently not known.
+**Notice**: It is not possible to log in to the {{ site.cluster.name }} environment.  The reason is currently not known.
 <br><span class="timestamp">December 22, 09:15 PST</span>
 
 
@@ -294,13 +294,13 @@ will continue normally after each one.
 
 #### <span style="color: orange;">Network/login issues</span>
 
-**Resolved**: The Wynton HPC environment is fully functional again. The BeeGFS filesystem was not working properly during 18:30-22:10 on December 18 resulting in no login access to the cluster and job file I/O being backed up.
+**Resolved**: The {{ site.cluster.name }} environment is fully functional again. The BeeGFS filesystem was not working properly during 18:30-22:10 on December 18 resulting in no login access to the cluster and job file I/O being backed up.
 <br><span class="timestamp">May 19, 08:50 PST</span>
 
 **Update**: The BeeGFS filesystem is non-responsive, which we believe is due to the network switch upgrade.
 <br><span class="timestamp">May 18, 21:00 PST</span>
 
-**Notice**: One of two network switches will be upgraded on Wednesday December 18 starting at 18:00 and lasting a few hours.  We do not expect this to impact the Wynton HPC environment other than slowing down the network performance to 50%.
+**Notice**: One of two network switches will be upgraded on Wednesday December 18 starting at 18:00 and lasting a few hours.  We do not expect this to impact the {{ site.cluster.name }} environment other than slowing down the network performance to 50%.
 <br><span class="timestamp">May 17, 10:00 PST</span>
 
 
@@ -336,7 +336,7 @@ will continue normally after each one.
 **Resolved**: Log in works again.
 <br><span class="timestamp">October 24, 09:45 PDT</span>
 
-**Notice**: It is not possible to log in to the Wynton HPC environment.  This is due to a recent misconfiguration of the LDAP server.
+**Notice**: It is not possible to log in to the {{ site.cluster.name }} environment.  This is due to a recent misconfiguration of the LDAP server.
 <br><span class="timestamp">October 24, 09:30 PDT</span>
 
 
@@ -344,10 +344,10 @@ will continue normally after each one.
 
 #### <span style="color: orange;">BeeGFS failure</span>
 
-**Resolved**: The Wynton HPC BeeGFS file system is fully functional again.  During the outage, `/wynton/group` and `/wynton/scratch` was not working properly, whereas `/wynton/home` was unaffected.
+**Resolved**: The {{ site.cluster.name }} BeeGFS file system is fully functional again.  During the outage, `/wynton/group` and `/wynton/scratch` was not working properly, whereas `/wynton/home` was unaffected.
 <br><span class="timestamp">October 23, 10:35 PDT</span>
 
-**Notice**: The Wynton HPC BeeGFS file system is non-functional.  It is expected to be resolved by noon on October 23. The underlying problem is that the power backup at the Diller data center did not work as expected during a planned power maintenance.
+**Notice**: The {{ site.cluster.name }} BeeGFS file system is non-functional.  It is expected to be resolved by noon on October 23. The underlying problem is that the power backup at the Diller data center did not work as expected during a planned power maintenance.
 <br><span class="timestamp">October 22, 21:45 PDT</span>
 
 
@@ -355,10 +355,10 @@ will continue normally after each one.
 
 #### <span style="color: orange;">BeeGFS failure</span>
 
-**Resolved**: The Wynton HPC environment is up and running again.
+**Resolved**: The {{ site.cluster.name }} environment is up and running again.
 <br><span class="timestamp">September 24, 20:25 PDT</span>
 
-**Notice**: The Wynton HPC environment is nonresponsive.  Problem is being investigated.
+**Notice**: The {{ site.cluster.name }} environment is nonresponsive.  Problem is being investigated.
 <br><span class="timestamp">September 24, 17:30 PDT</span>
 
 
@@ -366,10 +366,10 @@ will continue normally after each one.
 
 #### <span style="color: orange;">BeeGFS failure</span>
 
-**Resolved**: The Wynton HPC environment is up and running again. The reason for this downtime was the BeeGFS file server became nonresponsive.
+**Resolved**: The {{ site.cluster.name }} environment is up and running again. The reason for this downtime was the BeeGFS file server became nonresponsive.
 <br><span class="timestamp">August 23, 20:45 PDT</span>
 
-**Notice**: The Wynton HPC environment is nonresponsive.
+**Notice**: The {{ site.cluster.name }} environment is nonresponsive.
 <br><span class="timestamp">August 23, 16:45 PDT</span>
 
 
@@ -377,10 +377,10 @@ will continue normally after each one.
 
 #### <span style="color: orange;">Power outage</span>
 
-**Resolved**: The Wynton HPC environment is up and running again.
+**Resolved**: The {{ site.cluster.name }} environment is up and running again.
 <br><span class="timestamp">August 15, 21:00 PDT</span>
 
-**Notice**: The Wynton HPC environment is down due to a non-planned power outage at the Diller data center.  Jobs running on compute nodes located in that data center, were terminated.  Jobs running elsewhere may also have been affected because `/wynton/home` went down as well (despite it being mirrored).
+**Notice**: The {{ site.cluster.name }} environment is down due to a non-planned power outage at the Diller data center.  Jobs running on compute nodes located in that data center, were terminated.  Jobs running elsewhere may also have been affected because `/wynton/home` went down as well (despite it being mirrored).
 <br><span class="timestamp">August 15, 15:45 PDT</span>
 
 
@@ -388,10 +388,10 @@ will continue normally after each one.
 
 #### <span style="color: orange;">Power outage</span>
 
-**Resolved**: The Wynton HPC environment is up and running again.
+**Resolved**: The {{ site.cluster.name }} environment is up and running again.
 <br><span class="timestamp">July 30, 14:40 PDT</span>
 
-**Notice**: The Wynton HPC environment is down due to a non-planned power outage at the main data center.
+**Notice**: The {{ site.cluster.name }} environment is down due to a non-planned power outage at the main data center.
 <br><span class="timestamp">July 30, 08:20 PDT</span>
 
 
@@ -399,13 +399,13 @@ will continue normally after each one.
 
 #### <span style="color: orange;">Full system downtime</span>
 
-**Resolved**: The Wynton HPC environment and the BeeGFS file system are fully functional after updates and upgrades.
+**Resolved**: The {{ site.cluster.name }} environment and the BeeGFS file system are fully functional after updates and upgrades.
 <br><span class="timestamp">July 12, 11:15 PDT</span>
 
-**Notice**: The Wynton HPC environment is down for maintenance.
+**Notice**: The {{ site.cluster.name }} environment is down for maintenance.
 <br><span class="timestamp">July 8, 12:00 PDT</span>
 
-**Notice**: Updates to the BeeGFS file system and the operating system that require to bring down all of Wynton HPC will start on the morning of Monday July 8.  Please make sure to log out before then.  The downtime might last the full week.
+**Notice**: Updates to the BeeGFS file system and the operating system that require to bring down all of {{ site.cluster.name }} will start on the morning of Monday July 8.  Please make sure to log out before then.  The downtime might last the full week.
 <br><span class="timestamp">July 1, 14:15 PDT</span>
 
 
@@ -427,7 +427,7 @@ will continue normally after each one.
 **Resolved**: The BeeGFS file system and the cluster is functional again.
 <br><span class="timestamp">May 17, 16:00 PDT</span>
 
-**Investigating**: There is a major slowdown of the BeeGFS file system (`/wynton`), which in turn causes significant problems throughout the Wynton HPC environment.
+**Investigating**: There is a major slowdown of the BeeGFS file system (`/wynton`), which in turn causes significant problems throughout the {{ site.cluster.name }} environment.
 <br><span class="timestamp">May 17, 10:45 PDT</span>
 
 
@@ -438,7 +438,7 @@ will continue normally after each one.
 **Resolved**: The BeeGFS file system, and thereby also the cluster itself, is functional again.
 <br><span class="timestamp">May 16, 10:30 PDT</span>
 
-**Investigating**: The BeeGFS file system (`/wynton`) is experiencing major issues.  This caused all on Wynton HPC to become non-functional.
+**Investigating**: The BeeGFS file system (`/wynton`) is experiencing major issues.  This caused all on {{ site.cluster.name }} to become non-functional.
 <br><span class="timestamp">May 15, 10:00 PDT</span>
 
 
@@ -447,13 +447,13 @@ will continue normally after each one.
 
 #### <span style="color: orange;">Network/login issues</span>
 
-**Resolved**: The UCSF-wide network issue that affected access to Wynton HPC has been resolved.
+**Resolved**: The UCSF-wide network issue that affected access to {{ site.cluster.name }} has been resolved.
 <br><span class="timestamp">May 15, 15:30 PDT</span>
 
 **Update**: The login issue is related to UCSF-wide network issues.
 <br><span class="timestamp">May 15, 13:30 PDT</span>
 
-**Investigating**: There are issues logging in to Wynton HPC.
+**Investigating**: There are issues logging in to {{ site.cluster.name }}.
 <br><span class="timestamp">May 15, 10:15 PDT</span>
 
 
@@ -573,7 +573,7 @@ will continue normally after each one.
 **Resolved**: `/wynton/scratch` is now back online and ready to be used.
 <br><span class="timestamp">Dec 19, 14:20 PST</span>
 
-**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and Wynton will _not_ be able to migrate until the QB3 cluster has been incorporated into Wynton HPC (see [Roadmap]({{ '/about/roadmap.html' | relative_url }})) or they giving up their QB3 account.
+**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and Wynton will _not_ be able to migrate until the QB3 cluster has been incorporated into {{ site.cluster.name }} (see [Roadmap]({{ '/about/roadmap.html' | relative_url }})) or they giving up their QB3 account.
 <br><span class="timestamp">Dec 18, 16:45 PST</span>
 
 **Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 19. We are working on fine tuning the configuration, running performance tests, and resilience tests.
@@ -591,11 +591,11 @@ will continue normally after each one.
 
 * Wednesday December 12-19 (8 days): **`/wynton/scratch` will be unavailable and completely wiped**.  For computational scratch space, please [use local `/scratch` unique to each compute node](https://ucsf-hpc.github.io/wynton/scheduler/using-local-scratch.html).  For _global_ scratch needs, the old and much slower `/scrapp` and `/scrapp2` may also be used.
 
-* ~~Wednesday December 19, 2018 (1/2 day): The Wynton HPC scheduler (SGE) will be taken offline.  No jobs will be able to be submitted until it is restarted.~~
+* ~~Wednesday December 19, 2018 (1/2 day): The {{ site.cluster.name }} scheduler (SGE) will be taken offline.  No jobs will be able to be submitted until it is restarted.~~
 
-* Wednesday December 19, 2018: The upgraded Wynton HPC with the new storage will be available including `/wynton/scratch`.
+* Wednesday December 19, 2018: The upgraded {{ site.cluster.name }} with the new storage will be available including `/wynton/scratch`.
 
-* Wednesday January 9, 2019 (1/2 day): The Wynton HPC scheduler (SGE) will be taken offline temporarily.  No jobs will be able to be submitted until it is restarted.
+* Wednesday January 9, 2019 (1/2 day): The {{ site.cluster.name }} scheduler (SGE) will be taken offline temporarily.  No jobs will be able to be submitted until it is restarted.
 
 It is our hope to be able to keep the user's home accounts, login nodes, the transfer nodes, and the development nodes available throughout this upgrade period.
 

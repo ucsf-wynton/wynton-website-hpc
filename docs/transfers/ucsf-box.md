@@ -8,7 +8,7 @@ Although there is no hard quota in place on UCSF Box, the <strong>storage is lim
 <strong>Below instructions work on <emph>data transfer nodes</emph> only.</strong> Attempts to use them on <emph>development nodes</emph> will result in "Access failed: 401 Unauthorized" errors.
 </div>
 
-It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).  The below instructions works from the Wynton HPC data-transfer nodes as well as your local computer.
+It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).  The below instructions works from the {{ site.cluster.name }} data-transfer nodes as well as your local computer.
 
 
 ## Prerequisites
@@ -28,7 +28,7 @@ alice1@{{ site.transfer.name }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.transfer.name }} ~]$ 
 ```
 
-Then, verify that your UCSF Box setup is correct, but logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your Wynton HPC password):
+Then, verify that your UCSF Box setup is correct, but logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your {{ site.cluster.name }} password):
 
 ```sh
 [alice@{{ site.transfer.name }} ~]$ lftp --user alice.aliceson@ucsf.edu ftps://ftp.box.com

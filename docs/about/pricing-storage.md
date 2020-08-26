@@ -13,7 +13,7 @@ Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage
 
 * All user accounts come with a quota of 500 GiB of storage, which is free of charge
 
-* Additional Wynton HPC storage can be purchased at $160/TB (one-time fee)
+* Additional {{ site.cluster.name }} storage can be purchased at $160/TB (one-time fee)
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 

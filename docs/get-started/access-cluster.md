@@ -13,7 +13,7 @@ The instructions below requires:
 
 * An SSH client available on your local computer
 
-* A Wynton HPC account with valid authentication credentials
+* A {{ site.cluster.name }} account with valid authentication credentials
 
 Users on Linux and macOS have an SSH client built-in, which is available from the terminal as `ssh`.  Users on Microsoft Windows 10 or newer also have a built-in SSH client, which is available from the command line as `ssh`.
 
