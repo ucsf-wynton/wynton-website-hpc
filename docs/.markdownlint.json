@@ -13,7 +13,7 @@
 
     "no-duplicate-header": false,
     
-    "no-trailing-spaces": true,
+    "no-trailing-spaces": false,
 
     "no-space-in-emphasis": false,
 
@@ -23,7 +23,7 @@
 
     "header-increment": true,
     
-    "code-block-style": false,
+    "code-block-style": true,
 
     "fenced-code-language": false,
     

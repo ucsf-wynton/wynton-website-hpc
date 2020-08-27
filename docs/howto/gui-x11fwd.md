@@ -31,7 +31,9 @@ The X2Go client provides basic support for 3D applications with a software imple
 
 For example:
 
-        [alice@{{ site.devel.name }} ~]$ vglrun your-program
+```sh
+[alice@{{ site.devel.name }} ~]$ vglrun your-program
+```
 
 You have to opt-in because there is a slight security risk.  See <https://virtualgl-users.narkive.com/KHab71sF/security-issues-for-virtualgl> case (2) for details.  Case (1) does not apply because all of the development nodes are headless.
 
@@ -40,7 +42,7 @@ You have to opt-in because there is a slight security risk.  See <https://virtua
 
 You can also use X11 forwarding over the SSH connection used to connect to {{ site.cluster.name }}.  Note that, to do this, you will need to be running an X server on your local machine.  To setup the X11 forwarding, just add option `-X` to your SSH call, e.g.
 
-```r
+```sh
 {local}$ ssh -X alice@{{ site.login.hostname }}
 alice1@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ 
