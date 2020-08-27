@@ -11,6 +11,8 @@ cluster:
   name: "Wynton HPC"
   nickname: "Wynton"
   version: "1.0"
+  email_admin: wynton_admin@ucsf.edu
+  email_support: wynton-support@ucsf.edu
   
 login:
   name: "wynlog2"
