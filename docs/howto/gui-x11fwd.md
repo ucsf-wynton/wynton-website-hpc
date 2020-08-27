@@ -19,7 +19,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
 
 Then to get a desktop on the development node, select the session, type in your password, and click **Ok**. After a little while, you will get a window that looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would on your regular desktop.
 
-### 3D Graphics with X2Go (in alpha testing) 
+### 3D Graphics with X2Go (in alpha testing)
 
 The X2Go client provides basic support for 3D applications with a software implementation of an ancient version of OpenGL.  On the GPU development nodes (*i.e.*, `gpudev1`), [VirtualGL](https://virtualgl.org/) is installed so you can use hardware accelerated 3D graphics.  All you need to do is:
 

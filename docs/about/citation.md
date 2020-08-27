@@ -17,7 +17,7 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} e
 > {{ site.data.specs.gpus }} GPUs.
 > Storage is provided by a parallel filesystem providing 400 TB of mirrored
 > home space and 500 TB of global scratch space.
-> 
+>
 > {{ site.cluster.nickname }} is shared by many research groups at UCSF.  Load balancing on the
 > cluster is achieved through SGE (originally Sun Grid Engine). The
 > computing power of the cluster guaranteed to any given research group is
@@ -29,9 +29,9 @@ Below are a few examples on how to give details on the {{ site.cluster.name }} e
 
 ### Example 2
 
-> {{ site.cluster.name }} is a computational research cluster shared by investigators at 
-> UCSF.  The cluster is run as a co-op, with access for all and priority 
-> given to those who have contributed funds or hardware.  Support is 
+> {{ site.cluster.name }} is a computational research cluster shared by investigators at
+> UCSF.  The cluster is run as a co-op, with access for all and priority
+> given to those who have contributed funds or hardware.  Support is
 > also provided by UCSF Research IT.  The cluster currently consists of
 > {{ site.data.specs.nodes }} nodes with {{ site.data.specs.physical_cores }} cores.
 > Each node has at least {{ site.data.specs.ram_min }} GiB of RAM and

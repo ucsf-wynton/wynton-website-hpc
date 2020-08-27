@@ -36,7 +36,7 @@ DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Ple
 Collecting HTSeq
   Cache entry deserialization failed, entry ignored
   Downloading https://files.pythonhosted.org/packages/05/68/2f34983381d9efcdbbc63a551ab4265b5695d92e491532ef1f1d5dcc5375/HTSeq-0.11.2-cp27-cp27mu-manylinux1_x86_64.whl (1.0MB)
-    100% |████████████████████████████████| 1.0MB 685kB/s 
+    100% |████████████████████████████████| 1.0MB 685kB/s
 Requirement already satisfied (use --upgrade to upgrade): numpy in /usr/lib64/python2.7/site-packages (from HTSeq)
 Collecting pysam>=0.9.0 (from HTSeq)
   Cache entry deserialization failed, entry ignored
@@ -74,7 +74,7 @@ In order to use virtual environments, we need the `virtualenv` tool.  Following 
 [alice@{{ site.devel.name }} ~]$ python2 -m pip install --user virtualenv
 Collecting virtualenv
   Downloading https://files.pythonhosted.org/packages/c5/97/00dd42a0fc41e9016b23f07ec7f657f636cb672fad9cf72b80f8f65c6a46/virtualenv-16.7.7-py2.py3-none-any.whl (3.4MB)
-     |████████████████████████████████| 3.4MB 16.4MB/s 
+     |████████████████████████████████| 3.4MB 16.4MB/s
 Installing collected packages: virtualenv
 Successfully installed virtualenv-16.7.7
 [alice@{{ site.devel.name }} ~]$ which virtualenv
@@ -133,8 +133,8 @@ To see what Python packages are installed _in the virtual environment_, use:
 Package    Version
 ---------- -------
 mpi4py     1.3.1  
-pip        19.3.1 
-setuptools 41.6.0 
+pip        19.3.1
+setuptools 41.6.0
 wheel      0.33.6
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
@@ -150,7 +150,7 @@ Collecting HTSeq
   Using cached https://files.pythonhosted.org/packages/05/68/2f34983381d9efcdbbc63a551ab4265b5695d92e491532ef1f1d5dcc5375/HTSeq-0.11.2-cp27-cp27mu-manylinux1_x86_64.whl
 Collecting numpy
   Downloading https://files.pythonhosted.org/packages/d7/b1/3367ea1f372957f97a6752ec725b87886e12af1415216feec9067e31df70/numpy-1.16.5-cp27-cp27mu-manylinux1_x86_64.whl (17.0MB)
-     |████████████████████████████████| 17.0MB 14.4MB/s 
+     |████████████████████████████████| 17.0MB 14.4MB/s
 Collecting pysam>=0.9.0
   Using cached https://files.pythonhosted.org/packages/15/e7/2dab8bb0ac739555e69586f1492f0ff6bc4a1f8312992a83001d3deb77ac/pysam-0.15.3.tar.gz
 Building wheels for collected packages: pysam
@@ -167,12 +167,12 @@ To see which packages are now installed _in the virtual environment_ (the "proje
 (my_project) [alice@{{ site.devel.name }} my_project]$ python2 -m pip list
 Package    Version
 ---------- -------
-HTSeq      0.11.2 
+HTSeq      0.11.2
 mpi4py     1.3.1  
-numpy      1.16.5 
-pip        19.3.1 
-pysam      0.15.3 
-setuptools 41.6.0 
+numpy      1.16.5
+pip        19.3.1
+pysam      0.15.3
+setuptools 41.6.0
 wheel      0.33.6
 ```
 
@@ -233,7 +233,7 @@ Don't use the suggested command call in that message.  Instead, use:
 Cache entry deserialization failed, entry ignored
 Collecting pip
   Downloading https://files.pythonhosted.org/packages/00/b6/9cfa56b4081ad13874b0c6f96af8ce16cfbc1cb06bedf8e9164ce5551ec1/pip-19.3.1-py2.py3-none-any.whl (1.4MB)
-    100% |████████████████████████████████| 1.4MB 590kB/s 
+    100% |████████████████████████████████| 1.4MB 590kB/s
 Installing collected packages: pip
 Successfully installed pip-19.3.1
 ```

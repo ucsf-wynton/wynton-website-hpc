@@ -35,7 +35,7 @@ In order to use SBGrid software, the SBGrid environment must be enabled.  To ena
  acceptance of  the terms of the SBGrid License Agreement included  in the file
  /programs/share/LICENSE.  The applications  distributed by SBGrid are licensed
  exclusively to member laboratories of the SBGrid Consortium.
-******************************************************************************** 
+********************************************************************************
  SBGrid was developed with support from its members, Harvard Medical School,    
  HHMI, and NSF. If use of SBGrid compiled software was an important element     
  in your publication, please include the following reference in your work:      

@@ -1,6 +1,6 @@
 # Shared Cluster Computing at UCSF
 
-**Purpose.** 
+**Purpose.**
 The shared cluster computing at UCSF was founded by basic scientists to support
 their research programs.  In the process, researchers benefit from maximized
 economies of scale in building,
@@ -10,7 +10,7 @@ as the Pacific Research Platform, data storage, job queueing with accounting,
 and systems administration. As a result, the cluster contributes directly to the
 basic mission of UCSF, including research, education, and outreach.
 
-**Principles.** 
+**Principles.**
 The cluster is built on a co-op model rather than a fee-for-service
 model, in contrast to, for example, most technology cores at UCSF and
 high-performance computing provided by Amazon Web Services. In the co-op model,

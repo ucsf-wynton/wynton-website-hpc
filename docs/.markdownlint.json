@@ -13,7 +13,7 @@
 
     "no-duplicate-header": false,
     
-    "no-trailing-spaces": false,
+    "no-trailing-spaces": true,
 
     "no-space-in-emphasis": false,
 

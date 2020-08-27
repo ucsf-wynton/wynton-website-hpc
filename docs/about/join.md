@@ -45,11 +45,11 @@ To apply for an account on the {{ site.cluster.name }} cluster, please fill out 
  
  <div class="form-group">
   <label for="email_address">UCSF email address</label> <span style="color: red">*</span><br>
-  <input type="email" id="email_address" name="email_address" autocomplete="email" placeholder="Enter email" size="30" required><br> 
+  <input type="email" id="email_address" name="email_address" autocomplete="email" placeholder="Enter email" size="30" required><br>
   <small>(<em>External collaborators only:</em> Please provide your preferred email address)</small>
  </div>
  
- <div class="form-group"> 
+ <div class="form-group">
   <fieldset >
    <legend style="border:0;font-size:14px;margin:0"><b>UCSF affiliation</b> <span style="color: red">*</span></legend>
    <input type="radio" id="affiliation_0" name="affiliation" value="Faculty" required>
@@ -99,7 +99,7 @@ To apply for an account on the {{ site.cluster.name }} cluster, please fill out 
 
  <div class="form-group">  
   <label for="ucsf_id">UCSF Employee/Student ID</label> <span style="color: red">*</span><br>
-  <input type="text" id="ucsf_id" name="ucsf_id" placeholder="02xxxxxxx or 'none'" pattern="(\d{9}|none)" maxlength="9" size="15" required><br> 
+  <input type="text" id="ucsf_id" name="ucsf_id" placeholder="02xxxxxxx or 'none'" pattern="(\d{9}|none)" maxlength="9" size="15" required><br>
   <small>(<em>Nine digits: To find yours, go to <a href="https://myaccess.ucsf.edu/myid">https://myaccess.ucsf.edu/myid</a></em>)</small><br>
  </div>
  

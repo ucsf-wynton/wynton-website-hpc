@@ -90,7 +90,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
   </dd>
 
 </dl>
-</div> 
+</div>
 
 <div id="queues-CBI" class="tab-pane fade">
 
@@ -633,7 +633,7 @@ A command-line tool for common {{ site.cluster.name }} queries.<br>
   </dd>
 
 </dl>
-</div> 
+</div>
 
 <div id="queues-Sali" class="tab-pane fade">
 
@@ -1153,10 +1153,10 @@ Please note that this software stacks is maintained and contributed by a researc
   </dd>
 
 </dl>
-</div> 
+</div>
 
 
-</div> 
+</div>
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>

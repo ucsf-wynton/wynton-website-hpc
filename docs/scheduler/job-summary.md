@@ -50,8 +50,8 @@ Here is an example of the job summary outputted from the above job script:
 
 ```sh
 $ cat job_summary.sge.o2854740
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
--5.379004 -0.674312  0.000100  0.000069  0.674541  6.314641 
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+-5.379004 -0.674312  0.000100  0.000069  0.674541  6.314641
 ==============================================================
 job_number:                 2854740
 exec_file:                  job_scripts/2854740

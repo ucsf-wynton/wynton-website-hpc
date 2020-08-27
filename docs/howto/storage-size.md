@@ -12,7 +12,7 @@ Because of this underlying disk compression, command-line tools such as `ls` and
 ```
 The actual space consumed on disk by this file is 256,136,704 bytes (93.3%):
 ```sh
-[alice@{{ site.devel.name }} ~]$ ls -s --block-size 1 rocker_r-base.img 
+[alice@{{ site.devel.name }} ~]$ ls -s --block-size 1 rocker_r-base.img
 256136704 rocker_r-base.img
 ```
 

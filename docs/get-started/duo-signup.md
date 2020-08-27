@@ -29,7 +29,7 @@ Connection closed by 169.230.11.22 port 22
     - Enter your {{ site.cluster.nickname }} user password
     - You should then see a message saying to enroll at a particular Duo URL
   - this will followed by a 'Permission denied'. The connection will close. This is the expected behavior.
-  - Copy the enrollment URL into your web browser and follow the link in your web browser 
+  - Copy the enrollment URL into your web browser and follow the link in your web browser
 
 ```sh
  % ssh user@log2.ucsf.edu
@@ -72,7 +72,7 @@ user@log2.ucsf.edu: Permission denied (publickey,gssapi-with-mic,keyboard-intera
 ## Step 7 : Install Duo Mobile
 
   - The page 'Install Duo Mobile' will instruct you to install the Duo Mobile app on your device
-    - Note: The Duo app might already be installed 
+    - Note: The Duo app might already be installed
     - Click the green 'I have Duo Mobile installed' after you have verified that the Duo Mobile app is installed
     
 ## Step 8 : Activate Duo Mobile
@@ -86,7 +86,7 @@ user@log2.ucsf.edu: Permission denied (publickey,gssapi-with-mic,keyboard-intera
     
 ## Step 9 : Finish Enrollment
 
-  - The 'My settings & Devices' page should like your phone's phone number 
+  - The 'My settings & Devices' page should like your phone's phone number
     - Click the blue 'Finish Enrollment' button
 
 ## Step 10 : Log in using ssh

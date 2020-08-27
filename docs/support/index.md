@@ -19,7 +19,7 @@ If you have requests that you rather prefer to address directly to the system ad
 
 3. **{{ site.cluster.name }} System Administrators and Managers email list**
 
-  - [{{ site.cluster.email_admin }}](mailto:{{ site.cluster.email_admin }}) - reaches all systems administrators and managers. 
+  - [{{ site.cluster.email_admin }}](mailto:{{ site.cluster.email_admin }}) - reaches all systems administrators and managers.
 
 ---
 
@@ -36,4 +36,4 @@ To better assist with your issue:
 -->
 
 
-[{{ site.cluster.name }} issue tracker]: https://github.com/UCSF-HPC/wynton/wiki/Todo 
+[{{ site.cluster.name }} issue tracker]: https://github.com/UCSF-HPC/wynton/wiki/Todo

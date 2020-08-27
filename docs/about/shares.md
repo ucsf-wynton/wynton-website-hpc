@@ -43,7 +43,7 @@ The amount of compute power that contributed hardware adds is based on benchmark
 As other labs contribute to the cluster, the total computer power (_PU<sub>total</sub>_) and the total number of member.q slots (_member.q<sub>total</sub>_) will increase over time.   This will result in the lab's _relative_ compute share (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) to decrease over time while their number of member.q slots (_member.q<sub>lab</sub>_) will stay approximately(**) the same.
 
 
-### Example: Additional contribution from the Charlie Lab 
+### Example: Additional contribution from the Charlie Lab
 
 Assume that the last addition was from the Charlie Lab contributing {{ pu_times }} compute nodes.  Each of these machines has a {{ slots_add }}-core {{ pu_add_label }} and clocks in at {{ pu_add }} PUs based on the benchmarking, resulting in the processing power added for this lab, but also to the cluster as a whole, to be {{ pu_times }} \* {{ pu_add }} PUs = +{{ pu_delta }} PUs.  In addition to increasing the total amount of contributed PUs, the lab's contribution also increased the total number of member.q slots on the cluster by {{ pu_times }} \* {{ slots_add }} = +{{ slots_delta }} slots.
 
