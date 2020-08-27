@@ -1,4 +1,4 @@
-# Duo MFA signup and app install instructions for logging on to {{ site.cluster.name }}
+# Duo MFA Signup and App Install Instructions for Logging on to {{ site.cluster.name }}
 
 In order to log into {{ site.cluster.name }} from outside of the UCSF network (not on the VPN), you will need use Duo two factor authentication.
 This is only required if you are on a network outside of UCSF (off-campus and not on the VPN).  If you are on campus
