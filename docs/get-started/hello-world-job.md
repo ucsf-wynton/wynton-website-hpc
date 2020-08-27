@@ -29,7 +29,7 @@ Further information with detailed examples on job submissions can be found on se
 
 In this example we will run compute jobs that outputs the name of the compute node that runs the job, waits ten seconds to emulate some processing, and the time it runs.  The name of the current machine is available in environment variable `HOSTNAME` (standard in Unix) and the current time is outputted when calling the command `date`.  To do this as a compute job, create a script `~/tests/hello_world` containing:
 
-```
+```sh
 #!/bin/env bash
 
 echo "Hello world, I am running on node $HOSTNAME"

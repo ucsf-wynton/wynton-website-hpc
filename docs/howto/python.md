@@ -223,7 +223,7 @@ Note how prefix `(my_project)` was dropped from the shell prompt and `python2` n
 ### Upgrading pip
 
 You will at times get warnings that you are running an old version of 'pip':
-```
+```sh
 You are using pip version 8.1.2, however version 19.3.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 ```

@@ -119,7 +119,7 @@ The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=y
 ## Step 4: Avoid having to specify SSH option `-i` (on local machine)
 
 It is rather tedious having to specify what private key file to use (`-i ~/.ssh/laptop_to_wynton`) each time you use SSH.  As a last step, we will set the default options for `alice@{{ site.login.hostname }}`.  On your local machine, add the following entry to `~/.ssh/config` (if you don't have the file, create it):
-```
+```lang-none
 Host {{ site.login.hostname }}
   User alice
   IdentityFile ~/.ssh/laptop_to_wynton

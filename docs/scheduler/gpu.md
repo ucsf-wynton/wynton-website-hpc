@@ -44,7 +44,7 @@ The GPU nodes in {{ site.cluster.name }} contain many different generations and 
 
 Specifying either of these resources is not required.  If you do specify one, your job will be scheduled on a GPU node with resources >= those that you requested.  As an example, if you wanted to only run on at least GeForce GTX 1080 generation nodes with more than 10 GB of GPU memory, you would specify:
 
-```
+```sh
 -l compute_cap=61,gpu_mem=10000M
 ```
 

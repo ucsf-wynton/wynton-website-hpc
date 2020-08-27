@@ -2,7 +2,7 @@
 
 ## Sources
 
-```
+```lang-none
 css/
   banner.css [1]
 

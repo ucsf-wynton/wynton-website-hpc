@@ -159,7 +159,7 @@ category     -u alice -q !gpu.q -l h_rt=3600,mem_free=25G -pe smp 10
 
 When looking at this output, we first focus on the lines:
 
-```
+```sh
 failed       37  : qmaster enforced h_rt, h_cpu, or h_vmem limit
 exit_status  137                  (Killed)
 ```
@@ -167,14 +167,14 @@ exit_status  137                  (Killed)
 First of all, the `exit_status` line is not zero (`0`); any software with an exit code other than zero indicates that something went wrong.  It could be due to an error (typically `exit_status = 1`), or as here `137` with suggests that the job was "killed".  If we look at `failed`, we se that some rules were enforced, which in our case suggests that the rule for resource `h_rt` was enforced.
 
 Next, if we look at: 
-```
+```sh
 ru_wallclock 3600s
 ru_utime     1.373s
 ru_stime     0.883s
 ```
 
 We see that the job maxed out at a `ru_wallclock` runtime at 3600 seconds, i.e. 1 hour.  This is indeed the maximum runtime requested, which we can infer from:
-```
+```sh
 category     -u alice -q !gpu.q -l h_rt=3600,mem_free=25G -pe smp 10
 ```
 

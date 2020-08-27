@@ -48,7 +48,7 @@ lftp alice.aliceson@ucsf.edu@ftp.box.com:~> exit
 ## Automatic authentication
 
 When starting `lftp` as above, you need to manually enter your password, which can be tedious or even prevent automatic file transfers in batch scripts.  A solution to this is to set up the FTPS credentials in `~/.netrc`.  Here is what it could look like:
-```
+```sh
 [alice@{{ site.transfer.name }} ~]$ cat ~/.netrc
 machine ftp.box.com
         login alice.aliceson@ucsf.edu

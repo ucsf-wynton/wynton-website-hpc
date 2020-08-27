@@ -26,14 +26,14 @@
 **Q**. _I tried to delete some jobs, and now they're stuck in the state "dr". How can I get rid of them?_
 
 **A**. The most likely cause of this is that node (or nodes) running your jobs crashed.  Since the node(s) can't report back to SGE and confirm the job deletion, the state of the jobs doesn't change.  To force the issue:
-```
+```sh
 qdel -f $JOB_ID [-t $SGE_TASK_ID]
 ```
 
 ## Errors
 
 **Q**. _I just started to get SSL-related errors when using `qsub` and `qstat` that I have never seen before;_
-```
+```sh
 error: commlib error: ssl connect error (SSL handshake error)
 ssl error (the used certificate is expired)
 unable to contact qmaster using port 6444 on host "q"

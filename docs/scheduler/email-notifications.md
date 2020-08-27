@@ -36,7 +36,7 @@ This will send an email with 'Array_job_9156754_done' in the subject line as soo
 
 To avoid having to specify the email address in each `qsub` call, or as an SGE directive in the job script, one can set the default in the `~/.sge_request` (create if missing) by adding:
 
-```
+```sh
 ## Default recipient of job notifications
 -M alice.bobson@ucsf.edu
 ```
@@ -52,7 +52,7 @@ The advantage of specifying the recipient in `~/.sge_request`, instead of in the
 
 The email message sent when a job starts (`-m b`), will look like:
 
-```
+```lang-none
 From: root <root@wynton.ucsf.edu>
 To: alice.bobson@ucsf.edu
 Subject: Job 8968283 (myscript.sh) Started
@@ -66,7 +66,7 @@ Job 8968283 (myscript.sh) Started
 
 and the one sent when a job ends successfully (`-m e`), will look like:
 
-```
+```lang-none
 From: root <root@wynton.ucsf.edu>
 To: alice.bobson@ucsf.edu
 Subject: Job 8968283 (myscript.sh) Complete
@@ -87,7 +87,7 @@ Job 8968283 (myscript.sh) Complete
 
 The message sent when a job is aborted (`-m a`),  for instance via `qdel`, will look like:
 
-```
+```lang-none
 From: root <root@wynton.ucsf.edu>
 To: alice.bobson@ucsf.edu
 Subject: Job 8974017 (myscript.sh) Aborted
