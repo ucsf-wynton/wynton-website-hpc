@@ -18,4 +18,5 @@ jobs:
           use-verbose-mode: yes
           config-file: docs/.markdown-link-check.json
           folder-path: docs/
+          check-modified-files-only: yes
         
