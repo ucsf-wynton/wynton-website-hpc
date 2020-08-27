@@ -8,39 +8,39 @@ Installing the Duo Mobile app to your mobile phone is the easiest method to use.
 
 ## Step 1
 
-  - ssh to log2.wynton.ucsf.edu with your {{ site.cluster.nickname }} username
+  - ssh to {{ site.login.hostname }} with your {{ site.cluster.nickname }} username
     - Answer `yes` to the question `Are you sure you want to continue connecting (yes/no/[fingerprint])?`
     - The connection will be closed. This is the expected behavior.
 
 ```sh
- % ssh user@log2.ucsf.edu
+ {local}$ ssh alice@{{ site.login.hostname }}
 
-The authenticity of host log2.wynton.ucsf.edu (169.230.11.22) can not be established.
+The authenticity of host {{ site.login.hostname }} (169.230.11.22) can not be established.
 ECDSA key fingerprint is SHA256:DrCbFJouT3pRHoPO6rzGNJxX4OOIBuLy/ZdxjIQrx3M.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added log2.ucsf.edu,169.230.11.22 (ECDSA) to the list of known hosts.
+Warning: Permanently added {{ site.login.hostname }},169.230.11.22 (ECDSA) to the list of known hosts.
 Connection closed by 169.230.11.22 port 22
 ```
 
 
 ## Step 2
 
-  - Again, ssh to log2.wynton.ucsf.edu with your {{ site.cluster.nickname }} username
+  - Again, ssh to {{ site.login.hostname }} with your {{ site.cluster.nickname }} username
     - Enter your {{ site.cluster.nickname }} user password
     - You should then see a message saying to enroll at a particular Duo URL
   - this will followed by a 'Permission denied'. The connection will close. This is the expected behavior.
   - Copy the enrollment URL into your web browser and follow the link in your web browser
 
 ```sh
- % ssh user@log2.ucsf.edu
-user@log2.wynton.ucsf.edu password:
+{local}$ ssh alice@{{ site.login.hostname }}
+alice@{{ site.login.hostname }} password:
 Please enroll at https://api-6747fbb1.duosecurity.com/portal?code=61c954f6d6124546&akey=DBPXF7JZIKINNMVHIHZK
 
 Please enroll at https://api-6747fbb1.duosecurity.com/portal?code=61c954f6d6124546&akey=DBPXF7JZIKINNMVHIHZK
 
 Please enroll at https://api-6747fbb1.duosecurity.com/portal?code=61c954f6d6124546&akey=DBPXF7JZIKINNMVHIHZK
 
-user@log2.ucsf.edu: Permission denied (publickey,gssapi-with-mic,keyboard-interactive).
+alice@{{ site.login.hostname }}: Permission denied (publickey,gssapi-with-mic,keyboard-interactive).
 ```
 
 ## Step 3 : Start setup (Duo)
@@ -98,8 +98,8 @@ user@log2.ucsf.edu: Permission denied (publickey,gssapi-with-mic,keyboard-intera
       - open the Duo Mobile app and click the green 'Accept' button to accept the Push
       
 ```sh
- $ ssh user@log2.wynton.ucsf.edu
-user@log2.wynton.ucsf.edu password:
+$ ssh alice@{{ site.login.hostname }}
+alice@{{ site.login.hostname }} password:
 Duo two-factor login for user
 
 Enter a passcode or select one of the following options:
@@ -112,5 +112,5 @@ Passcode or option (1-3): 1
 Success. Logging you in...
 Last failed login: Wed Jun 24 13:34:11 PDT 2020 from 73.70.236.131 on ssh:notty
 There were 10 failed login attempts since the last successful login.
-[user@wynlog2]$
+[alice@{{ site.login.name }}]$
 ```
