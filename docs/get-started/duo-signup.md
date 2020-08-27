@@ -32,7 +32,7 @@ Connection closed by 169.230.11.22 port 22
   - Copy the enrollment URL into your web browser and follow the link in your web browser
 
 ```sh
-{local}$ ssh alice@{{ site.login.hostname }}
+$ ssh alice@{{ site.login.hostname }}
 alice@{{ site.login.hostname }} password:
 Please enroll at https://api-6747fbb1.duosecurity.com/portal?code=61c954f6d6124546&akey=DBPXF7JZIKINNMVHIHZK
 
