@@ -5,6 +5,7 @@
 **Q**. _My submitted job is still in the queue - why is it not running?_
 
 **A**. There could be several reason why your job is not running:
+
   1. If you have access to the members.q queue, it could be that you and other users in your lab are currently using all your slots, which in case your jobs are being queued in the communal long.q queue instead.
   2. The queue where your job is sitting may be full. If so, your job will eventually run.
   3. You might have asked for compute resources that cannot be met, e.g. more memory or more cores than available on any compute node, e.g. `-l mem=4048gb` or `-pe smp 256`.  If so, your job will never run.  Either lower the job's resource needs using `qdel`, or, alternatively,  remove the job (`qdel`) and submit (`qsub`) a new one with adjusted resources.

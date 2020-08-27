@@ -9,7 +9,7 @@
 
     "blanks-around-headers": true,
 
-    "blanks-around-lists": false,
+    "blanks-around-lists": true,
 
     "no-duplicate-header": false,
     
