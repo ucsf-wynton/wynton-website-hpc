@@ -2,6 +2,12 @@
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Starting September 15, 2020, <strong>access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA) when connecting</strong>.
+If you are on the UCSF VPN, you have already authenticated and no further 2FA is required.
+In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See <a href="{{ '/get-started/duo-signup.html' | relative_url }}">Two-Factor Authentication for SSH</a> for instructions.
+</div>
+
 # Login
 
 To access the {{ site.cluster.name }} cluster you need an account - any UCSF affiliate can get an [account]({{ '/about/join.html' | relative_url }}).  Anyone with a {{ site.cluster.name }} account, can access the cluster via _Secure Shell (SSH)_.
