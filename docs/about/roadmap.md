@@ -5,6 +5,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## In progress
 
+* Access: Two-factor authentication (2FA) will be required when accessing the cluster (planned for September 15, 2020)
+
 * Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to {{ site.cluster.name }} (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
 
 
