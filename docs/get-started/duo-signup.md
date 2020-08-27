@@ -46,7 +46,7 @@ alice@{{ site.login.hostname }}: Permission denied (publickey,gssapi-with-mic,ke
 ## Step 3 : Start setup (Duo)
 
   - After copy & pasting the link from Step 2 and hitting Enter, your browser should go to a site on 'duosecurity.com'
-    - The page will say 'Protect Your UCSF PharmChem Account'
+    - The page will say 'Protect Your UCSF Account'
       - Click the green 'Start setup' button to proceed to the next page
     
 ## Step 4 : What type of device are you adding
