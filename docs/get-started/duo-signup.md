@@ -13,7 +13,7 @@ Installing the Duo Mobile app to your mobile phone is the easiest method to use.
     - The connection will be closed. This is the expected behavior.
 
 ```sh
-{local}$ ssh alice@{{ site.login.hostname }}
+$ ssh alice@{{ site.login.hostname }}
 
 The authenticity of host {{ site.login.hostname }} (169.230.11.22) can not be established.
 ECDSA key fingerprint is SHA256:DrCbFJouT3pRHoPO6rzGNJxX4OOIBuLy/ZdxjIQrx3M.
