@@ -3,7 +3,7 @@
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Starting September 15, 2020, <strong>access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA) when connecting</strong>.
+Starting September 15, 2020, <strong>access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).</strong>.
 If you are on the UCSF VPN, you have already authenticated and no further 2FA is required.
 In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See <a href="{{ '/get-started/duo-signup.html' | relative_url }}">Two-Factor Authentication for SSH</a> for instructions.
 </div>
