@@ -110,6 +110,7 @@ Enter a passcode or select one of the following options:
 
 Passcode or option (1-3): 1
 Success. Logging you in...
+Remember connection authentication from 24.5.83.75 for 12 hours? [y/N] n
 Last failed login: Wed Jun 24 13:34:11 PDT 2020 from 73.70.236.131 on ssh:notty
 There were 10 failed login attempts since the last successful login.
 [alice@{{ site.login.name }}]$
