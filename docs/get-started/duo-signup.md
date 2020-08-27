@@ -13,7 +13,7 @@ Installing the Duo Mobile app to your mobile phone is the easiest method to use.
     - The connection will be closed. This is the expected behavior.
 
 ```sh
-$ ssh alice@{{ site.login.hostname }}
+{local}$ ssh alice@{{ site.login.hostname }}
 
 The authenticity of host {{ site.login.hostname }} (169.230.11.22) can not be established.
 ECDSA key fingerprint is SHA256:DrCbFJouT3pRHoPO6rzGNJxX4OOIBuLy/ZdxjIQrx3M.
@@ -32,7 +32,7 @@ Connection closed by 169.230.11.22 port 22
   - Copy the enrollment URL into your web browser and follow the link in your web browser
 
 ```sh
-$ ssh alice@{{ site.login.hostname }}
+{local}$ ssh alice@{{ site.login.hostname }}
 alice@{{ site.login.hostname }} password:
 Please enroll at https://api-6747fbb1.duosecurity.com/portal?code=61c954f6d6124546&akey=DBPXF7JZIKINNMVHIHZK
 
@@ -98,7 +98,7 @@ alice@{{ site.login.hostname }}: Permission denied (publickey,gssapi-with-mic,ke
       - open the Duo Mobile app and click the green 'Accept' button to accept the Push
       
 ```sh
-$ ssh alice@{{ site.login.hostname }}
+{local}$ ssh alice@{{ site.login.hostname }}
 alice@{{ site.login.hostname }} password:
 Duo two-factor login for user
 
