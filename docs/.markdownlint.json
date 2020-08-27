@@ -35,7 +35,7 @@
     
     "no-hard-tabs": true,
 
-    "no-trailing-punctuation": false,
+    "no-trailing-punctuation": { "punctuation": ".,;:!" },
     
     "no-bare-urls": true,
     
