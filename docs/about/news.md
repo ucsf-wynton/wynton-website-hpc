@@ -4,6 +4,8 @@
 
 2020-08-21: Increased global `/wynton/scratch` to 615 TiB (was 492 TiB).
 
+2020-08-21: Prefix qb3- has been dropped from the development node names, which are now named dev1, dev2, dev3, and gpudev1.
+
 2020-05-22: Added 2,016 cores (+27%) via 48 standard nodes (36 cores and 384 GiB of RAM), 4 high-memory nodes (36 cores and 756 GiB of RAM), and 4 huge-memory nodes (36 cores and 1.5 TiB of RAM).
 
 2020-04-14: Progress until the next round of storage purchase can be found on <a href="{{ '/about/pricing-storage.html' | relative_url }}">About -> Storage Pricing</a>.
