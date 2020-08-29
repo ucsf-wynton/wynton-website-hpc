@@ -227,11 +227,12 @@
         ga('send', 'pageview');
     </script>
     {% endif %}
-
+{% comment %}
     <script>
         if (window.location.href.startsWith("https://ucsf-hpc.github.io/wynton/")) {
               window.location.href = window.location.href.replace('https://ucsf-hpc.github.io/wynton/', 'https://wynton.ucsf.edu/hpc/');
         }
     </script>    
+{% endcomment %}
   </body>
 </html>
