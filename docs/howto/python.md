@@ -12,9 +12,11 @@ The below examples uses Python 2, but it works analogously in Python 3, i.e. jus
 ## Installing Python packages
 
 The standard way to install Python packages is by using the [_pip_](https://packaging.python.org/tutorials/installing-packages/) package management system.  You often find installation instructions online such as:
+
 ```sh
 $ pip install HTSeq
 ```
+
 It will _not_ work. If you attempt to run this as-is on the cluster, you get lots of errors complaining about lack of write permissions etc., which is because it tries to install the package in the system-wide Python package folder (to which only sysadms have write permission).  You might also see instructions saying you should use `sudo ...` - that will also not work for the same reason.
 
 There are **two ways for non-privileged users to install Python packages using the 'pip' module**:
@@ -30,6 +32,7 @@ Installing globally is the easiest, because you don't have to remember to _activ
 ### 1. Installing globally (aka "user-site")
 
 First of all, if an online installation instructions says `pip install ...`, replace that with `python2 -m pip install ...`.  Second, to install globally to your home directory, remember to always specify the `--user` option.  For example,
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ python2 -m pip install --user HTSeq
 DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won t be maintained after that date. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
@@ -87,6 +90,7 @@ Successfully installed virtualenv-16.7.7
 #### 2.2 Create a virtual environment (once per project)
 
 Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  For a project that requires Python 2, do the following (once):
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ virtualenv -p $(which python2) my_project
 Running virtualenv with interpreter /usr/bin/python2
@@ -106,17 +110,22 @@ Always remember to specify option <code>-p $(which python2)</code> when you call
 #### 2.3 Activate virtual environment (each time you use project)
 
 Now, each time you want to work on your project, go to its folder and _active the virtual environment_:
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ cd my_project
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## IMPORTANT! Note period in front
 (my_project) [alice@{{ site.devel.name }} my_project]$
 ```
+
 Note how `(my_project)` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  This tells you that you run in a customized Python environment.  Specifically, `python2` now points to a local, frozen version:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ which python2
 ~/my_project/bin/python2
 ```
+
 Similarly, `python` points to:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ which python
 ~/my_project/bin/python
@@ -128,6 +137,7 @@ lrwxrwxrwx. 1 alice boblab 7 Nov 18 14:04 ./bin/python -> python2
 Note how this local `python` command points to the local `python2` command.  What is interesting, and important to notice, is that _if we set up a Python 3 virtual environment, then the local `python` command will point to the local `python3` command_.  In other words, when we use virtual environments, the `python` command will be using either Python 2 or Python3 at our choice.
 
 To see what Python packages are installed _in the virtual environment_, use:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python2 -m pip list
 Package    Version
@@ -163,6 +173,7 @@ Successfully installed HTSeq-0.11.2 numpy-1.16.5 pysam-0.15.3
 ```
 
 To see which packages are now installed _in the virtual environment_ (the "project folder") and what their versions are, do:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python2 -m pip list
 Package    Version
@@ -175,7 +186,6 @@ pysam      0.15.3
 setuptools 41.6.0
 wheel      0.33.6
 ```
-
 
 
 #### 2.5 Returning to a project
@@ -205,12 +215,14 @@ When submitting a job to the scheduler, make sure the job script loads all requi
 </div>
 
 To _deactivate_ a Python virtual environment, either open a fresh terminal (e.g. log out and back in), or use:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} ~]$ deactivate
 [alice@{{ site.devel.name }} ~]$ deactivate
 ```
 
 Note how prefix `(my_project)` was dropped from the shell prompt and `python2` now points to the system-wide installation;
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ which python2
 /usr/bin/python2
@@ -223,11 +235,14 @@ Note how prefix `(my_project)` was dropped from the shell prompt and `python2` n
 ### Upgrading pip
 
 You will at times get warnings that you are running an old version of 'pip':
+
 ```sh
 You are using pip version 8.1.2, however version 19.3.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
+
 Don't use the suggested command call in that message.  Instead, use:
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ python2 -m pip install --user --upgrade pip
 Cache entry deserialization failed, entry ignored
@@ -239,6 +254,7 @@ Successfully installed pip-19.3.1
 ```
 
 To check the installed version of the 'pip' module, use:
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ python2 -m pip --version
 pip 19.3.1 from /wynton/home/boblab/alice/.local/lib/python2.7/site-packages/pip (python 2.7)
