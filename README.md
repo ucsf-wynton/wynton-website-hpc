@@ -124,7 +124,7 @@ _Warning_: It turns out that [the most recent version of Jekyll is not compatibl
 The below instructions assumes that Ruby and its `gem` command is available on the machine.  Other than that, making sure to use option `--user-install` when installing, you should be able install Jekyll to your personal account without admin rights.
 
 ```sh
-$ gem install --user-install bundler jekyll:3.8.7 listen:3.1.5 liquid:4.0.0 github-pages
+$ gem install --user-install bundler jekyll:3.8.7 listen:3.1.5 liquid:4.0.0 github-pages:204
 Fetching: bundler-2.1.4.gem (100%)
 WARNING:  You don't have /home/alice/.gem/ruby/2.5.0/bin in your PATH,
           gem executables will not run.
