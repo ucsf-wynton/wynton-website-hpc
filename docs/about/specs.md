@@ -82,7 +82,7 @@ There are no per-user quotas in these scratch spaces.  **Files not added or modi
  * `/wynton/home`: {{ site.data.specs.home_size_total }} TiB storage space
  * `/wynton/group`: {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
-Each user may use up to 500 GiB disk space in the home directory.  Research groups can add additional storage space under `/wynton/group` by either mounting their existing storage or [purchase new]({{ '/about/pricing-storage.html' | relative_url }}).
+Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group` by either mounting their existing storage or [purchase new]({{ '/about/pricing-storage.html' | relative_url }}).
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
 While waiting to receive purchased storage, users may use the global scratch space, which is "unlimited" in size with the important limitation that files older than two weeks will be deleted automatically.
