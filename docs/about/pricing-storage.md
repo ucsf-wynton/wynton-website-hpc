@@ -13,7 +13,9 @@ Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage
 
 * All user accounts come with a quota of non-expandable 500 GiB of storage in `/wynton/home`, which is free of charge
 
-* Additional {{ site.cluster.name }} storage can be purchased in `/wynton/group` at $160/TB (one-time fee)
+* Global `/wynton/scratch` may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically]({{'/about/specs.html#scratch-storage' | relative_url }})
+
+* Additional, long-term storage can be purchased in `/wynton/group` at $160/TB (one-time fee)
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
@@ -24,7 +26,7 @@ Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage
 
 ## Plan
 
-We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to /wynton/home, purchased storage will be dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (`/wynton/scratch` and `/wynton/home`).
+We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (`/wynton/scratch` and `/wynton/home`).
 
 Given prices of hard drives, the stated rate might seem high, but there are three mitigating factors. First, we have enabled ZFS compression, so the actual available space might be significantly more. Second, the price includes the cost of the networking, metadata servers, storage server, maintenance, and administration. Third, we have proven that the performance of our BeeGFS infrastructure is much higher than the typical NFS server (in some respects, the performance is more than an order of magnitude faster). In the future, if absolutely necessary, we may also charge a “maintenance fee” for storage after the initial 5-year hardware warranty expires, but nothing has been decided as of yet. Similarly, any future storage purchases may be priced differently than that described here, to reflect the situation present at that time.
 
@@ -54,5 +56,5 @@ We have an immediate need to provide for {{ site.cluster.name }} storage expansi
 * The current storage hardware increment is ~$160,000, which may result in some delay between the first contributions and an actual purchase, although there is already pent-up demand and hence we are trying to proceed with the purchase as quickly as possible.
 
 
-_Last updated: February 3, 2020_
+_Last updated: August 31, 2020_
 
