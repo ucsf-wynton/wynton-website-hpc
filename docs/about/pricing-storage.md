@@ -11,9 +11,9 @@ Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage
 
 ## Summary
 
-* All user accounts come with a quota of 500 GiB of storage, which is free of charge
+* All user accounts come with a quota of non-expandable 500 GiB of storage in `/wynton/home`, which is free of charge
 
-* Additional {{ site.cluster.name }} storage can be purchased at $160/TB (one-time fee)
+* Additional {{ site.cluster.name }} storage can be purchased in `/wynton/group` at $160/TB (one-time fee)
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
