@@ -28,7 +28,7 @@ alice1@{{ site.transfer.name }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.transfer.name }} ~]$ 
 ```
 
-Then, verify that your UCSF Box setup is correct, but logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your {{ site.cluster.name }} password):
+Then, verify that your UCSF Box setup is correct by logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your {{ site.cluster.name }} password):
 
 ```sh
 [alice@{{ site.transfer.name }} ~]$ lftp --user alice.aliceson@ucsf.edu ftps://ftp.box.com
