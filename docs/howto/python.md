@@ -33,7 +33,7 @@ Installing globally is the easiest, because you don't have to remember to _activ
 
 First of all, if an online installation instructions says `pip install ...`, replace that with `python2 -m pip install ...`.  Second, to install globally to your home directory, remember to always specify the `--user` option.  For example,
 
-<!-- code-block #1 -->
+<!-- code-block label="pip-install" -->
 ```sh
 [alice@dev3 ~]$ python2 -m pip install --user HTSeq
 Collecting HTSeq

@@ -11,11 +11,8 @@ PS1="[\u@\h \W]\$ "
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Use an empty user Python module folder
 export PYTHONUSERBASE=$(mktemp -d)
-echo "PYTHONUSERBASE=${PYTHONUSERBASE}"
 
 echo "Code block #1"
-mdi_code_block <<EOF
+mdi_code_block --label=pip-install <<EOF
 python2 -m pip install --user HTSeq
 EOF
-
-ls -alR "${PYTHONUSERBASE}"
