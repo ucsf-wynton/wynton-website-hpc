@@ -4,7 +4,7 @@
 # shellcheck disable=SC2034
 MDI_USER=alice
 MDI_HOSTNAME=dev3
-MDI_PWD='~'
+PS1="[\u@\h \W]\$ "
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup
