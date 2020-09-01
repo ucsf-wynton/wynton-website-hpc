@@ -2,7 +2,7 @@
 
 MDI_USER='alice'
 MDI_HOSTNAME='{{ site.devel.name }}'
-MDI_PWD='~'
+PS1="[\u@\h \W]\$ "
 
 mdi_code_block <<EOF
 groups
