@@ -49,39 +49,40 @@ As an illustration on how to use Linux containers with Singularity, we will use 
 
 To use this rocker/r-base container, we first pull it down to a Singularity image file `~/lxc/rocker_r-base.img` as:
 
+<!-- code-block label="build" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ mkdir lxc
 [alice@{{ site.devel.name }} ~]$ cd lxc/
 [alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.img docker://rocker/r-base
 INFO:    Starting build...
 Getting image source signatures
-Copying blob sha256:6359bcfdcac7731506d8e89a85e5882f23711354ffe717d8228087cfd6a31fc3
- 48.65 MiB / 48.65 MiB [====================================================] 2s
-Copying blob sha256:7921cd62653e41062bfc021b7d7475b4a8ff16cb249a4c29974d0d010635d591
- 1.80 KiB / 1.80 KiB [======================================================] 0s
-Copying blob sha256:d835b7b583179a707477a96f6e35248894a2effed6af535b01e88e24f051a273
- 25.93 MiB / 25.93 MiB [====================================================] 1s
-Copying blob sha256:7d1e021b0f81cdcc447f012b462c892a3573a2d879c5b01493367d089cf60782
- 842.65 KiB / 842.65 KiB [==================================================] 0s
-Copying blob sha256:8e435d138f2bba19b6f85a2f3ef301f4a5d65bdc16ff417b746f9e926e738741
- 297 B / 297 B [============================================================] 0s
-Copying blob sha256:93d86fef617f6bd75b377f72981c7e8e28113020154f98e121942de5f828d591
- 199.05 MiB / 199.05 MiB [==================================================] 7s
-Copying config sha256:58ff9f07c993587fd9c31743c22bc4422852eae0b47a8b0d9b5e10e966f8db0d
- 3.72 KiB / 3.72 KiB [======================================================] 0s
+Copying blob sha256:0ab9185ddfe50c951de582032c5e29e21a851a328056e6bee6299e0ff55ec807
+Copying blob sha256:d44275cd8663e9ba25fc43e9bdeca4cbba0a711051884d880231d5a63d9a24f3
+Copying blob sha256:611ac85ce34ee0780b510f3feb8b5555cc4c0d5191747178cdd7a8cf8dc9c53c
+Copying blob sha256:1d9c7fe5df96dd6fe55e9ddc736da684a9bf2df8b5b9d282f2f58e45b27ab256
+Copying blob sha256:915f6b39903d5d5cd1800149b495a92040d0e9c3169acaf488c1225906ad817b
+Copying blob sha256:1cf4e812adf61b22b89b92855730a767dcabf3c7da9676ec1e1e16546ce20ae1
+Copying config sha256:3d369bfa045d9a54f5770aca574512a9b470cea9c0fb543066b218ac2f84b671
 Writing manifest to image destination
 Storing signatures
-2019/10/31 17:09:37  info unpack layer: sha256:6359bcfdcac7731506d8e89a85e5882f23711354ffe717d8228087cfd6a31fc3
-2019/10/31 17:09:40  info unpack layer: sha256:7921cd62653e41062bfc021b7d7475b4a8ff16cb249a4c29974d0d010635d591
-2019/10/31 17:09:40  info unpack layer: sha256:d835b7b583179a707477a96f6e35248894a2effed6af535b01e88e24f051a273
-2019/10/31 17:09:41  info unpack layer: sha256:7d1e021b0f81cdcc447f012b462c892a3573a2d879c5b01493367d089cf60782
-2019/10/31 17:09:41  info unpack layer: sha256:8e435d138f2bba19b6f85a2f3ef301f4a5d65bdc16ff417b746f9e926e738741
-2019/10/31 17:09:41  info unpack layer: sha256:93d86fef617f6bd75b377f72981c7e8e28113020154f98e121942de5f828d591
+2020/09/01 15:01:51  info unpack layer: sha256:0ab9185ddfe50c951de582032c5e29e21a851a328056e6bee6299e0ff55ec807
+2020/09/01 15:01:51  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2020/09/01 15:01:51  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
+2020/09/01 15:01:54  info unpack layer: sha256:d44275cd8663e9ba25fc43e9bdeca4cbba0a711051884d880231d5a63d9a24f3
+2020/09/01 15:01:54  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2020/09/01 15:01:54  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
+2020/09/01 15:01:54  info unpack layer: sha256:611ac85ce34ee0780b510f3feb8b5555cc4c0d5191747178cdd7a8cf8dc9c53c
+2020/09/01 15:01:55  warn xattr{var/cache/apt/archives/partial} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2020/09/01 15:01:55  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/var/cache/apt/archives/partial} destination filesystem does not support xattrs, further warnings will be suppressed
+2020/09/01 15:01:55  info unpack layer: sha256:1d9c7fe5df96dd6fe55e9ddc736da684a9bf2df8b5b9d282f2f58e45b27ab256
+2020/09/01 15:01:55  info unpack layer: sha256:915f6b39903d5d5cd1800149b495a92040d0e9c3169acaf488c1225906ad817b
+2020/09/01 15:01:55  info unpack layer: sha256:1cf4e812adf61b22b89b92855730a767dcabf3c7da9676ec1e1e16546ce20ae1
+2020/09/01 15:02:02  warn xattr{usr/local/lib/R} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2020/09/01 15:02:02  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/usr/local/lib/R} destination filesystem does not support xattrs, further warnings will be suppressed
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.img
-
-[alice@{{ site.devel.name }} lxc]$ ll rocker_r-base.img
--rwxr-xr-x. 1 alice lsd 271249408 Oct 31 17:09 rocker_r-base.img
+[alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.img
+-rwxr-xr-x. 1 hb-test lsd 307957760 Sep  1 15:02 rocker_r-base.img
 ```
 
 The above may take a minute or two to complete.
@@ -162,11 +163,14 @@ ID="centos"
 ### Running a container as a job
 
 When it comes to the scheduler, there is nothing special about Singularity per se - the Singularity software can be used as any other software on the cluster.  As a proof of concept, here is how to calculate the sum of one to ten using R within the above Linux container at the command line:
+
+<!-- code-block label="rscript-sum" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ singularity exec rocker_r-base.img Rscript -e "sum(1:10)"
+[alice@{{ site.devel.name }} lxc]$ singularity exec rocker_r-base.img Rscript -e "sum(1:10)"
 [1] 55
-[alice@{{ site.devel.name }} ~]$
+[alice@{{ site.devel.name }} lxc]$ 
 ```
+
 and here is how to do the same via the job scheduler:
 ```sh
 [alice@{{ site.devel.name }} ~]$ echo 'singularity exec rocker_r-base.img Rscript -e "sum(1:10)"' | qsub -cwd -j yes -N r-base
