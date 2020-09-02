@@ -1,2 +1,0 @@
-[alice@dev3 ~]$ python3 -m pip install --user HTSeq
-sed: -e expression #1, char 12: unknown option to `s'

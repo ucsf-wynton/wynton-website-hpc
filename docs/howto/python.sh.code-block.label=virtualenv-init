@@ -1,0 +1,6 @@
+[alice@dev3 ~]$ virtualenv -p /usr/bin/python3 my_project
+created virtual environment CPython3.6.8.final.0-64 in 7123ms
+  creator CPython3Posix(dest=~/my_project, clear=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
+    added seed packages: pip==20.2.2, setuptools==49.6.0, wheel==0.35.1
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator

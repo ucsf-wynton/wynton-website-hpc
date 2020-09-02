@@ -1,0 +1,10 @@
+(my_project) [alice@dev3 my_project]$ python3 -m pip list
+Package    Version
+---------- --------
+HTSeq      0.12.4
+numpy      1.19.1
+pip        20.2.2
+pysam      0.16.0.1
+setuptools 49.6.0
+wheel      0.35.1
+(my_project) [alice@dev3 my_project]$ 

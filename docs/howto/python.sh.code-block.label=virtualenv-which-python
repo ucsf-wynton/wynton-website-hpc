@@ -1,0 +1,4 @@
+(my_project) [alice@dev3 my_project]$ which python
+~/my_project/bin/python
+(my_project) [alice@dev3 my_project]$ python --version
+Python 3.6.8

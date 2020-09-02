@@ -1,0 +1,3 @@
+[alice@dev3 ~]$ cd my_project
+[alice@dev3 my_project]$ . bin/activate   ## IMPORTANT! Note period in front
+(my_project) [alice@dev3 my_project]$ 
