@@ -101,7 +101,7 @@ Start by creating a folder specific to the project you are currently working on.
 
 <!-- code-block label="virtualenv-init" -->
 ```sh
-[alice@dev3 ~]$ virtualenv -p /usr/bin/python3 my_project
+[alice@dev3 ~]$ virtualenv -p python3 my_project
 created virtual environment CPython3.6.8.final.0-64 in 7123ms
   creator CPython3Posix(dest=~/my_project, clear=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
