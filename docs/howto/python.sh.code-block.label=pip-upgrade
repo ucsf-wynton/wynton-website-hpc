@@ -1,0 +1,7 @@
+[alice@dev3 ~]$ python3 -m pip install --user --upgrade pip
+Cache entry deserialization failed, entry ignored
+Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', timeout('timed out',))': /simple/pip/
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/5a/4a/39400ff9b36e719bdf8f31c99fe1fa7842a42fa77432e584f707a5080063/pip-20.2.2-py2.py3-none-any.whl
+Installing collected packages: pip
+Successfully installed pip-20.2.2

@@ -110,7 +110,7 @@ created virtual environment CPython3.6.8.final.0-64 in 7123ms
 ```
 
 <div class="alert alert-warning" role="alert">
-Always remember to specify option <code>-p $(which python3)</code> when you call <code>virtualenv</code>.  It makes sure that the intended version of Python is used in the virtual environment.
+Always remember to specify option <code>-p python3</code> when you call <code>virtualenv</code>.  It makes sure that the intended version of Python is used in the virtual environment.
 </div>
 
 
@@ -227,7 +227,7 @@ To _deactivate_ a Python virtual environment, either open a fresh terminal (e.g.
 [alice@dev3 ~]$ 
 ```
 
-Note how prefix `(my_project)` was dropped from the shell prompt and `python2` now points to the system-wide installation;
+Note how prefix `(my_project)` was dropped from the shell prompt and `python3` now points to the system-wide installation;
 
 <!-- code-block label="virtualenv-deactivate-which-python3" -->
 ```sh

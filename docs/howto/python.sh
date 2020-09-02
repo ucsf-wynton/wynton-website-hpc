@@ -38,7 +38,7 @@ virtualenv --version
 EOF
 
 mdi_code_block --label=virtualenv-init <<EOF
-virtualenv -p $(which python3) my_project
+virtualenv -p python3 my_project
 EOF
 
 mdi_code_block --label=virtualenv-activate <<EOF
