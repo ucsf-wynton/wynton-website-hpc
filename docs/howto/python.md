@@ -69,6 +69,7 @@ Below is an example on how to set up a virtual environment and install the [HTSe
 
 In order to use virtual environments, we need the `virtualenv` tool.  Following the above instructions, you can install it to your _global stack_ as:
 
+<!-- code-block label="pip-install-virtualenv" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ python2 -m pip install --user virtualenv
 Collecting virtualenv
