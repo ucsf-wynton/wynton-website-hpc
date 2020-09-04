@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(57)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(58)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <h2>Module Software Repository: built-in</h2>
 
-Maintained by: Wynton Systems Administrators, <a href="https://wynton.ucsf.edu/hpc/about/contact.html">Wynton</a><br>
+Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
 
 <dl>
@@ -90,7 +90,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
   </dd>
 
 </dl>
-</div>
+</div> 
 
 <div id="queues-CBI" class="tab-pane fade">
 
@@ -100,7 +100,7 @@ Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Bio
 Enable repository: <code>module load CBI</code><br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
 <dl>
@@ -241,6 +241,15 @@ Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' 
   Versions: 2.1.0, 3.0.2, <em>3.1.0</em><br>
   </dd>
 
+  <dt>cmake</dt>
+  <dd>
+    <strong>CMake: Open-source, Cross-platform Family of Tools Designed to Build, Test and Package Software</strong><br>
+CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.<br>
+    Example: <code>cmake --version</code>.<br>
+    URL: <a href="https://cmake.org/">https://cmake.org/</a><br>
+  Versions: <em>3.18.2</em><br>
+  </dd>
+
   <dt>control-freec</dt>
   <dd>
     <strong>Control FREEC: Control-FREE Copy Number and Genotype Caller</strong><br>
@@ -367,9 +376,9 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
     <strong>htop - An Interactive Process Viewer for Unix</strong><br>
 <code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.<br>
     Example: <code>htop</code>.<br>
-    URL: <a href="http://hisham.hm/htop/">http://hisham.hm/htop/</a><br>
+    URL: <a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: <em>2.2.0</em><br>
+  Versions: 2.2.0, <em>3.0.1</em><br>
   </dd>
 
   <dt>htslib</dt>
@@ -624,8 +633,8 @@ VCFtools is a program package designed for working with VCF files, such as those
 
   <dt>wynton-tools (part of CBI-testing)</dt>
   <dd>
-    <strong>Wynton Tools: Tools for the {{ site.cluster.name }} Environment</strong><br>
-A command-line tool for common {{ site.cluster.name }} queries.<br>
+    <strong>Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
+A command-line tool for common Wynton HPC queries.<br>
     Example: <code>wynton --help</code>.<br>
     URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
   Versions: <em>latest</em><br>
@@ -633,7 +642,7 @@ A command-line tool for common {{ site.cluster.name }} queries.<br>
   </dd>
 
 </dl>
-</div>
+</div> 
 
 <div id="queues-Sali" class="tab-pane fade">
 
@@ -643,7 +652,7 @@ Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Reposi
 Enable repository: <code>module load Sali</code><br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the Wynton admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
 <dl>
@@ -834,7 +843,7 @@ Please note that this software stacks is maintained and contributed by a researc
 
   <dt>phenix</dt>
   <dd>
-  Versions: <em>1.10.1.2155</em><br>
+  Versions: 1.10.1.2155, <em>1.18.2.3874</em><br>
   </dd>
 
   <dt>profit</dt>
@@ -1153,18 +1162,18 @@ Please note that this software stacks is maintained and contributed by a researc
   </dd>
 
 </dl>
-</div>
+</div> 
 
 
-</div>
+</div> 
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(57)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(58)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-08-26 09:38:50 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-09-04 16:49:43 from querying `module avail` and `module spider`._
 
 
 <style>
