@@ -110,7 +110,7 @@ _=/bin/env
 
 ## Environment variables in different languages
 
-Here are some examples how to get the value of environment variable `NSLOTS` in some of the most popular programming languages.  If not set, use `1` as the default value.  All examples coerce the value to a numeric value and then outputs a message with the value.
+Here are some examples how to get the value of environment variable `NSLOTS` in some of the most popular programming languages.  The value is assigned to a local variable `nslots`, and if not set, `1` is used as the default value.  All examples coerce the value to a numeric value and then outputs a message with the value.
 
 ### Bash
 
@@ -132,7 +132,7 @@ fprintf('Number of slots available: %d\n', nslots);
 
 ```python
 import os
-nslots = os.getenv('NSLOTS', '1')  # env var is always a 'character'
+nslots = os.getenv('NSLOTS', '1')  # env var is always a 'str'
 nslots = int(nslots)               # coerce to an 'int'
 print('Number of slots available: ' + nslots)
 ```
@@ -140,7 +140,7 @@ print('Number of slots available: ' + nslots)
 ### R
 
 ```r
-nslots <- Sys.getenv("NSLOTS", "1")  # env var is always a 'str'
+nslots <- Sys.getenv("NSLOTS", "1")  # env var is always a 'character'
 nslots <- as.integer(nslots)         # coerce to an 'integer'
 message("Number of slots available: ", nslots)
 ```
