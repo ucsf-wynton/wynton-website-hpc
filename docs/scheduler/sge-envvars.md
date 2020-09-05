@@ -106,3 +106,43 @@ NSLOTS=4
 SGE_STDIN_PATH=/dev/null
 _=/bin/env
 ```
+
+
+## Environment variables in different languages
+
+Here are some examples how to get the value of environment variable `NSLOTS` in some of the most popular programming languages.  If not set, use `1` as the default value.  All examples coerce the value to a numeric value and then outputs a message with the value.
+
+### Bash
+
+```sh
+nslots=${NSLOTS:-1}
+echo "Number of slots available: ${nslots}"
+```
+
+### Matlab
+
+```matlab
+nslots = getenv('NSLOTS');              % env var is always a 'char'
+if (isempty(nslots)) nslots = '1'; end  % default value
+nslots = str2num(nslots);               % coerce to 'double'
+fprintf('Number of slots available: %d\n', nslots);
+```
+
+### Python
+
+```python
+import os
+nslots = os.getenv('NSLOTS', '1')  # env var is always a 'character'
+nslots = int(nslots)               # coerce to an 'int'
+print('Number of slots available: ' + nslots)
+```
+
+### R
+
+```r
+nslots <- Sys.getenv("NSLOTS", "1")  # env var is always a 'str'
+nslots <- as.integer(nslots)         # coerce to an 'integer'
+message("Number of slots available: ", nslots)
+```
+
+
