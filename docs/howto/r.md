@@ -1,8 +1,7 @@
 # Work with R
 
 R is available on {{ site.cluster.name }} via a [contributed environment module]({{ '/software/software-repositories.html' | relative_url }}).
-
-R is also available as part of the [core-software installation]({{ '/software/core-software.html' | relative_url }}) but because that version of R is outdated and no longer supported by the R developers, we do recommend not to use that version.
+R is also available as part of the [core-software installation]({{ '/software/core-software.html' | relative_url }}) but, because that is an outdated version of R no longer supported by the R developers, we recommend that you do _not_ use that version.
 
 
 ## Accessing R
