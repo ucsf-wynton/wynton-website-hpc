@@ -16,15 +16,16 @@ mdi_adjust_output() {
 
 
 module unload matlab
-
-mdi_code_block --label=module-load-matlab <<EOF
-module load matlab
-matlab -nosplash -nodesktop # mdi-hide <<< "$(printf '1+2${ENTER}quit')"; printf "1+2\nquit\n"
-
-EOF
+## FIXME: https://github.com/HenrikBengtsson/mdi/issues/9
+#mdi_code_block --label=module-load-matlab <<EOF
+#module load matlab
+#matlab -nosplash -nodesktop # mdi-hide <<< "$(printf '1+2${ENTER}quit')"; printf "1+2\nquit\n"
+#
+#EOF
 
 
 module unload matlab
+## FIXME: https://github.com/HenrikBengtsson/mdi/issues/8
 #mdi_code_block --label=matlab-not-found <<EOF
 #matlab
 #EOF

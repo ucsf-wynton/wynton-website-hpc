@@ -6,7 +6,6 @@ MATLAB is available on {{ site.cluster.name }} via a [built-in environment modul
 
 To load the MATLAB module, do:
 
-<!-- code-block label="module-load-matlab" -->
 ```sh
 [alice@dev3 ~]$ module load matlab
 [alice@dev3 ~]$ matlab -nosplash -nodesktop
