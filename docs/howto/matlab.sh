@@ -19,15 +19,12 @@ module unload matlab
 
 mdi_code_block --label=module-load-matlab <<EOF
 module load matlab
-module list
-#matlab -nosplash -nodesktop
-#>> quit
+matlab -nosplash -nodesktop # mdi-hide <<< "$(printf '1+2${ENTER}quit')"; printf "1+2\nquit\n"
 
 EOF
 
 
 module unload matlab
-
-mdi_code_block --label=matlab-not-found <<EOF
-matlab
-EOF
+#mdi_code_block --label=matlab-not-found <<EOF
+#matlab
+#EOF

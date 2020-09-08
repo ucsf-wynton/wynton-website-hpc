@@ -37,7 +37,6 @@ ans =
 
 If you forget to load the MATLAB module, then you will get an error when attempting to start MATLAB:
 
-<!-- code-block label="matlab-not-found" -->
 ```sh
 [alice@dev3 ~]$ matlab
 -bash: matlab: command not found
