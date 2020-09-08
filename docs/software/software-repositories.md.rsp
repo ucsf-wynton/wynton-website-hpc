@@ -203,7 +203,7 @@ if (length(m$description) > 0L) {
 
 # Software Repositories
 
-In addition to the [core software] tools that are available by default, additional software is available via _environment modules_.  For example, although Matlab is installed on the system, it is not available by default. Instead, we need to "load" its module first, e.g.
+In addition to the [core software] tools that are available by default, additional software is available via _environment modules_.  For example, although MATLAB is installed on the system, it is not available by default. Instead, we need to "load" its module first, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load matlab
@@ -212,7 +212,7 @@ In addition to the [core software] tools that are available by default, addition
 Currently Loaded Modules:
   1) matlab/2020a
 ```
-Then we can launch Matlab using:
+Then we can launch MATLAB using:
 ```sh
 [alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
 ```

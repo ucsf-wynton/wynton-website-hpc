@@ -119,7 +119,7 @@ nslots=${NSLOTS:-1}
 echo "Number of slots available: ${nslots}"
 ```
 
-### Matlab
+### MATLAB
 
 ```matlab
 nslots = getenv('NSLOTS');              % env var is always a 'char'
