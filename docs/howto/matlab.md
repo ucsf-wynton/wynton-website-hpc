@@ -44,11 +44,12 @@ If you forget to load the MATLAB module, then you will get an error when attempt
 
 ## Using MATLAB in job scripts
 
-In order to run MATLAB in jobs, the MATLAB environment module needs to be loaded just as when you run it interactive on a development node.  For example, to run the `my_script.m` script, the script should at a minimum contain:
+In order to run MATLAB in jobs, the MATLAB environment module needs to be loaded just as when you run it interactive on a development node.  For example, to run the `my_script.m` script, the job script should at a minimum contain:
 
 ```sh
 #! /usr/bin/env bash
+#$ -cwd   ## SGE directive to run in the current working directory
+
 module load matlab
 matlab -batch my_script
 ```
-
