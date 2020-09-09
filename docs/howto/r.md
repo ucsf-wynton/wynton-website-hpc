@@ -99,7 +99,7 @@ Would you like to create a personal library
 to install packages into? (yes/No/cancel)
 ```
 
-R wants to make sure you are aware what is done, so it will, conservatively, also ask if you accept the default location.  Answer 'yes' for this folder to be created.  Afterward, the package will downloaded and the package installation be done:
+R wants to make sure you are aware what is done, so it will, conservatively, also ask if you accept the default location.  Answer 'yes' for this folder to be created.  After this, the current and all future package installation in R will be installed into this folder without further questions asked.  In this example, we will get:
 
 ```r
 Would you like to create a personal library
@@ -153,8 +153,116 @@ The following objects are masked from ‘package:base’:
 ```
 
 
+### Installing an R package from Bioconductor
+
+Per Bioconductor's best practices, R packages from Bioconductor should be installed using `BiocManager::install()`.  This is to guarantee maximum compatibility between all Bioconductor packages.
+
+
+#### Installing BiocManager (once)
+
+If you already have BiocManager installed, you can skip this section.
+
+When you start out fresh, the package [BiocManager] is not installed meaning that calling `BiocManager::install()` will fail.  We need to start by installing it from CRAN (sic!);
+
+```r
+> install.packages("BiocManager")
+Installing package into ‘/wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+(as ‘lib’ is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
+Content type 'application/x-gzip' length 40205 bytes (39 KB)
+==================================================
+downloaded 39 KB
+
+* installing *source* package ‘BiocManager’ ...
+** package ‘BiocManager’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+^[[I** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+^[[O** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (BiocManager)
+
+The downloaded source packages are in
+	‘/tmp/RtmpohfP1g/downloaded_packages’
+> 
+```
+
+_Comment_: If this is the very first R package you installed, see above CRAN instructions for setting a default CRAN mirror and creating a personal library folder.
+
+
+#### Installing a Bioconductor package
+
+With BiocManager installed, we can now install any Bioconductor package.  For instance, to install [limma], and all of its dependencies, call:
+
+```r
+> BiocManager::install("limma")
+Bioconductor version 3.11 (BiocManager 1.30.10), R 4.0.2 (2020-06-22)
+Installing package(s) 'BiocVersion', 'limma'
+trying URL 'https://bioconductor.org/packages/3.11/bioc/src/contrib/BiocVersion_3.11.1.tar.gz'
+Content type 'application/x-gzip' length 980 bytes
+==================================================
+downloaded 980 bytes
+
+trying URL 'https://bioconductor.org/packages/3.11/bioc/src/contrib/limma_3.44.3.tar.gz'
+Content type 'application/x-gzip' length 1523576 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+^[[I* installing *source* package ‘BiocVersion’ ...
+** using staged installation
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+^[[O** testing if installed package keeps a record of temporary installation path
+* DONE (BiocVersion)
+* installing *source* package ‘limma’ ...
+** using staged installation
+** libs
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -lR
+installing to /wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+^[[I^[[O** help
+^[[I^[[O*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (limma)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpsz02Og/downloaded_packages’
+Installation path not writeable, unable to update packages: MASS, mgcv, nlme,
+  survival
+>
+```
+
+There were no "error" messages, so the installation was successful.  To verify that it worked, we can load the package in R as:
+
+```r
+> library(limma)
+>
+```
+
+
 
 
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: http://bioconductor.org/
+[BiocManager]: https://cran.r-project.org/package=BiocManager
 [zoo]: https://cran.r-project.org/package=zoo
+[limma]: http://bioconductor.org/packages/limma/
