@@ -212,7 +212,7 @@ downloaded 39 KB
 * DONE (BiocManager)
 
 The downloaded source packages are in
-	‘/tmp/RtmpohfP1g/downloaded_packages’
+        ‘/tmp/RtmpohfP1g/downloaded_packages’
 > 
 ```
 
@@ -268,7 +268,7 @@ installing to /wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-C
 * DONE (limma)
 
 The downloaded source packages are in
-	‘/tmp/Rtmpsz02Og/downloaded_packages’
+        ‘/tmp/Rtmpsz02Og/downloaded_packages’
 Installation path not writeable, unable to update packages: MASS, mgcv, nlme,
   survival
 >
