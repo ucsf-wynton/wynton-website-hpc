@@ -65,9 +65,9 @@ Before continuing, it is useful to understand where R packages looks for locally
 
 1. Your personal R package library. This is located under `~/R/`, e.g. `~/R/x86_64-pc-linux-gnu-library/4.0-CBI/`
 
-2. (optional) A site-wide R package library (not used on {{ site.cluster.name }}), e.g. `/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/library`
+2. (optional) A site-wide R package library (not used on {{ site.cluster.name }})
 
-3. The system-wide R package library part of the R installed
+3. The system-wide R package library part of the R installed, e.g. `/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/library`
 
 
 For instance, when we try to load an R package:
