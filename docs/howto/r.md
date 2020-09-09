@@ -164,6 +164,18 @@ The following objects are masked from ‘package:base’:
 ```
 
 
+#### Updating CRAN packages
+
+If a new version of one or more CRAN packages is released, they can be installed by calling:
+
+```r
+> chooseCRANmirror(ind = 1)
+> update.packages()
+...
+```
+
+
+
 ### Installing an R package from Bioconductor
 
 Per Bioconductor's best practices, R packages from Bioconductor should be installed using `BiocManager::install()`.  This is to guarantee maximum compatibility between all Bioconductor packages.
@@ -268,6 +280,17 @@ There were no "error" messages, so the installation was successful.  To verify t
 > library(limma)
 >
 ```
+
+
+#### Updating Bioconductor packages
+
+To install Bioconductor updates, call `BiocManager::install()` without arguments:
+
+```r
+> BiocManager::install()
+```
+
+_Comment_: This will actually also update any CRAN packages.
 
 
 
