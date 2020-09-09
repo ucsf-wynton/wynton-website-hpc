@@ -34,6 +34,15 @@ Save workspace image? [y/n/c]: n
 [alice@dev3 ~]$ 
 ```
 
+To use an older version of R, specify the version when you load R, e.g.
+
+```sh
+[alice@dev3 ~]$ module load CBI
+[alice@dev3 ~]$ module load r/3.5.3
+```
+
+
+
 ## Using R in job scripts
 
 In order to run R in jobs, the above R environment module needs to be loaded just as when you run it interactive on a development node.  For example, to run the `my_script.R` script, the job script should at a minimum contain:
@@ -70,6 +79,8 @@ For instance, when we try to load an R package:
 R will search the above folders in order for R package 'nlme'.
 When you start you fresh, the only R packages available to you are the ones installed in folder (3) - the system-wide library.  The 'nlme' package comes with the R installation, so with a fresh setup, it will be loaded from the third location.
 As we will see below, when you install your own packages, they will all be installed into folder (1) - your personal library.  The first time your run R, the personal library folder does not exists, so R will ask you whether or not you want to create that folder.  If asked, you should always accept (answer 'Yes').  If you had already created this folder, R will install into this folder without asking.
+
+Finally, R undergoes a _major_ update once a year (at the April).  For example, R 4.0.0 was release in April 2020.  The next major release will be R 4.1.0 in April 2021.  Whenever the `y` component in R `x.y.z` version is increased, you will start out with an empty personal package folder specific for R `x.y` (regardless of `z`).  This means that you will have to re-install all R packages you had installed during the year before the new major release came out.  Yes, this can be tedious and can take quite some time but it will improve stability and yet allow the R developers to keep improving R.  Of course, you can still keep using an older version of R and all the packages you have installed for that version - they will not be removed.
 
 
 ### Installing an R package from CRAN
