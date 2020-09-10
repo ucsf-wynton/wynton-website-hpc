@@ -101,7 +101,7 @@ Warning in install.packages("zoo") :
 Would you like to use a personal library instead? (yes/No/cancel)
 ```
 
-We notice two things.  First there is a warning mentioning that a "lib" folder was "not writable".  This is because your personal library folder did not yet exists and R tried to install to location (3) but failed (because you do not have write permission there).  This is when R decided to ask you with you want to install to a personal library.  Answer 'yes':
+We notice two things.  First there is a warning mentioning that a "lib" folder was "not writable".  This is because your personal library folder did not yet exists and R tried to install to location (3) but failed (because you do not have write permission there).  This is where R decided to ask you whether or not you want to install to a personal library.  Answer 'yes':
 
 ```r
 Would you like to use a personal library instead? (yes/No/cancel) yes
