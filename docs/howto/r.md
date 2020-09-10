@@ -59,7 +59,7 @@ Rscript my_script.R
 
 ## Installing R packages
 
-The majority of R packages are available from [CRAN] (Comprehensive R Archive Network).  Another dominant repository of R packages is [Bioconductor], which provides R packages within the Bioinformatics area.  Packages available from Bioconductor are not available on CRAN, and vice versa.  At times, you will find online instructions for installing R packages hosted on, for instance, GitHub and GitLab.  Before installing an R package from such sources, we highly recommend to install the package from CRAN or Bioconductor, if it is available there, because packages hosted on the latter are stable releases and often better tested.
+The majority of R packages are available from [CRAN] (Comprehensive R Archive Network).  Another dominant repository of R packages is [Bioconductor], which provides R packages with a focus on bioinformatics.  Packages available from Bioconductor are not available on CRAN, and vice versa.  At times, you will find online instructions for installing R packages hosted on, for instance, GitHub and GitLab.  Before installing an R package from such sources, we highly recommend to install the package from CRAN or Bioconductor, if it is available there, because packages hosted on the latter are stable releases and often better tested.
 
 Before continuing, it is useful to understand where R packages looks for locally installed R packages.  There are three locations that R considers:
 
@@ -106,7 +106,7 @@ We notice two things.  First there is a warning mentioning that a "lib" folder w
 ```r
 Would you like to use a personal library instead? (yes/No/cancel) yes
 Would you like to create a personal library
-‘~/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+'~/R/x86_64-pc-linux-gnu-library/4.0-CBI'
 to install packages into? (yes/No/cancel)
 ```
 
@@ -114,22 +114,22 @@ R wants to make sure you are aware what is done, so it will, conservatively, als
 
 ```r
 Would you like to create a personal library
-‘~/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+'~/R/x86_64-pc-linux-gnu-library/4.0-CBI'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-8.tar.gz'
 Content type 'application/x-gzip' length 849487 bytes (829 KB)
 ==================================================
 downloaded 829 KB
 
-* installing *source* package ‘zoo’ ...
-** package ‘zoo’ successfully unpacked and MD5 sums checked
+* installing *source* package 'zoo' ...
+** package 'zoo' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
 gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
 gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
 gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
 gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -lR
-installing to /wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-zoo/00new/zoo/libs
+installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst
@@ -145,7 +145,7 @@ installing to /wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-C
 * DONE (zoo)
 
 The downloaded source packages are in
-        ‘/tmp/RtmpVm3e6t/downloaded_packages’
+        '/tmp/RtmpVm3e6t/downloaded_packages'
 >
 ```
 
@@ -154,9 +154,9 @@ If there is no mentioning of an "error" (a "warning" is ok in R but never an "er
 ```r
 > library(zoo)
 
-Attaching package: ‘zoo’
+Attaching package: 'zoo'
 
-The following objects are masked from ‘package:base’:
+The following objects are masked from 'package:base':
 
     as.Date, as.Date.numeric
 
@@ -189,15 +189,15 @@ When you start out fresh, the package [BiocManager] is not installed meaning tha
 
 ```r
 > install.packages("BiocManager")
-Installing package into ‘/wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-CBI’
-(as ‘lib’ is unspecified)
+Installing package into '/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+(as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
 Content type 'application/x-gzip' length 40205 bytes (39 KB)
 ==================================================
 downloaded 39 KB
 
-* installing *source* package ‘BiocManager’ ...
-** package ‘BiocManager’ successfully unpacked and MD5 sums checked
+* installing *source* package 'BiocManager' ...
+** package 'BiocManager' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** R
 ** inst
@@ -212,7 +212,7 @@ downloaded 39 KB
 * DONE (BiocManager)
 
 The downloaded source packages are in
-        ‘/tmp/RtmpohfP1g/downloaded_packages’
+        '/tmp/RtmpohfP1g/downloaded_packages'
 > 
 ```
 
@@ -237,7 +237,7 @@ Content type 'application/x-gzip' length 1523576 bytes (1.5 MB)
 ==================================================
 downloaded 1.5 MB
 
-^[[I* installing *source* package ‘BiocVersion’ ...
+^[[I* installing *source* package 'BiocVersion' ...
 ** using staged installation
 ** help
 *** installing help indices
@@ -246,14 +246,14 @@ downloaded 1.5 MB
 ** testing if installed package can be loaded from final location
 ^[[O** testing if installed package keeps a record of temporary installation path
 * DONE (BiocVersion)
-* installing *source* package ‘limma’ ...
+* installing *source* package 'limma' ...
 ** using staged installation
 ** libs
 gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
 gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
 gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
 gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -lR
-installing to /wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
+installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -268,7 +268,7 @@ installing to /wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.0-C
 * DONE (limma)
 
 The downloaded source packages are in
-        ‘/tmp/Rtmpsz02Og/downloaded_packages’
+        '/tmp/Rtmpsz02Og/downloaded_packages'
 Installation path not writeable, unable to update packages: MASS, mgcv, nlme,
   survival
 >
