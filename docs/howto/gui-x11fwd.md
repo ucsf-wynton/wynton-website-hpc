@@ -14,7 +14,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
  6. Then in the **Proxy server** section:
     - Check **Same login as on X2Go Server**
     - Check **Same password as on X2Go Server**
-    - Set **Host** to a {{ site.cluster.name }} [login node]. Currently one of: `log1.wynton.ucsf.edu` or `log2.wynton.ucsf.edu`
+    - Set **Host** to a {{ site.cluster.name }} [login node]. Currently one of: `{{ site.login1.hostname }}` or `{{ site.login2.hostname }}`
  7. In the **Session type** section, choose `MATE`
 
 Then to get a desktop on the development node, select the session, type in your password, and click **Ok**. After a little while, you will get a window that looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would on your regular desktop.
@@ -25,9 +25,9 @@ The X2Go client provides basic support for 3D applications with a software imple
 
  1. Opt-in by sending email to [{{ site.cluster.email_admin }}](mailto:{{ site.cluster.email_admin }}?subject=vglusers) with the subject `vglusers`
  2. Wait for confirmation that you have added to the `vglusers` group
- 3. Use the `vglrun` program to run your program on a development node
-    - either by starting the application from a terminal (example below)
-    - or, by using a wynton desktop shortcut, after editing it in your wynton `~/Desktop` to have `vglrun` inserted before the program name on the **Exec=** line
+ 3. Use the `vglrun` program to run your program on a development node, either
+    - by starting the application from a terminal (example below), or
+    - by using a Wynton desktop shortcut, after editing it in your Wynton `~/Desktop` to have `vglrun` inserted before the program name on the **Exec=** line
 
 For example:
 
