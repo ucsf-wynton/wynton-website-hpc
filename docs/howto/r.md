@@ -202,12 +202,12 @@ downloaded 39 KB
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
-^[[I** help
+** help
 *** installing help indices
 ** building package indices
 ** installing vignettes
 ** testing if installed package can be loaded from temporary location
-^[[O** testing if installed package can be loaded from final location
+** testing if installed package can be loaded from final location
 ** testing if installed package keeps a record of temporary installation path
 * DONE (BiocManager)
 
@@ -237,14 +237,14 @@ Content type 'application/x-gzip' length 1523576 bytes (1.5 MB)
 ==================================================
 downloaded 1.5 MB
 
-^[[I* installing *source* package 'BiocVersion' ...
+* installing *source* package 'BiocVersion' ...
 ** using staged installation
 ** help
 *** installing help indices
 ** building package indices
 ** testing if installed package can be loaded from temporary location
 ** testing if installed package can be loaded from final location
-^[[O** testing if installed package keeps a record of temporary installation path
+** testing if installed package keeps a record of temporary installation path
 * DONE (BiocVersion)
 * installing *source* package 'limma' ...
 ** using staged installation
@@ -257,8 +257,8 @@ installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
-^[[I^[[O** help
-^[[I^[[O*** installing help indices
+** help
+*** installing help indices
 ** building package indices
 ** installing vignettes
 ** testing if installed package can be loaded from temporary location
@@ -294,9 +294,71 @@ _Comment_: This will actually also update any CRAN packages.
 
 
 
+## Appendix
+
+### Packages that require extra care
+
+#### The Rmpi package
+
+The [Rmpi] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install Rmpi on the cluster, we start by loading the `mpi` module;
+
+```sh
+[alice@dev3 ~]$ module load mpi
+[alice@dev3 ~]$ module load CBI r
+[alice@dev3 ~]$ module list
+
+Currently Loaded Modules:
+  1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.2
+```
+
+Note that you will have to load the `mpi` module also whenever you run R code that requires the Rmpi package.
+
+Continuing, to install Rmpi, we launch R and call the following:
+
+```r
+> install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-RmpiInstalling package into '/wynton/home/cbi/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+(as 'lib' is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz'
+Content type 'application/x-gzip' length 106745 bytes (104 KB)
+==================================================
+downloaded 104 KB
+
+* installing *source* package 'Rmpi' ...
+** package 'Rmpi' successfully unpacked and MD5 sums checked
+** using staged installation
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
+gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -lR
+installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-Rmpi/00new/Rmpi/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (Rmpi)
+
+The downloaded source packages are in
+	'/scratch/alice/RtmpAwBn4a/downloaded_packages'
+>
+```
+
+That's it!
+
+
 
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: http://bioconductor.org/
 [BiocManager]: https://cran.r-project.org/package=BiocManager
 [zoo]: https://cran.r-project.org/package=zoo
+[Rmpi]: https://cran.r-project.org/package=Rmpi
 [limma]: http://bioconductor.org/packages/limma/
