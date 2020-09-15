@@ -348,7 +348,7 @@ installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00
 * DONE (Rmpi)
 
 The downloaded source packages are in
-	'/scratch/alice/RtmpAwBn4a/downloaded_packages'
+        '/scratch/alice/RtmpAwBn4a/downloaded_packages'
 >
 ```
 
