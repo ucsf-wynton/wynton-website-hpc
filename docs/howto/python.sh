@@ -6,7 +6,7 @@ mkdir -p "${TMPDIR}"
 
 # shellcheck disable=SC2034
 MDI_USER=alice
-MDI_HOSTNAME=dev3
+MDI_HOSTNAME={{ site.devel.name }}
 PS1="[\u@\h \W]\$ "
 
 mdi_adjust_output() {

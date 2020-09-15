@@ -9,14 +9,14 @@ R is also available as part of the [core-software installation]({{ '/software/co
 To load the R module available in the CBI software stack, do:
 
 ```sh
-[alice@dev3 ~]$ module load CBI
-[alice@dev3 ~]$ module load r
+[alice@{{ site.devel.name }} ~]$ module load CBI
+[alice@{{ site.devel.name }} ~]$ module load r
 ```
 
 which provides access to a modern version of R:
 
 ```r
-[alice@dev3 ~]$ R
+[alice@{{ site.devel.name }} ~]$ R
 R version 4.0.2 (2020-06-22) -- "Taking Off Again"
 Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -31,14 +31,14 @@ https://www.gnu.org/licenses/.
 [1] 3
 > quit()
 Save workspace image? [y/n/c]: n
-[alice@dev3 ~]$ 
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 To use an older version of R, specify the version when you load R, e.g.
 
 ```sh
-[alice@dev3 ~]$ module load CBI
-[alice@dev3 ~]$ module load r/3.5.3
+[alice@{{ site.devel.name }} ~]$ module load CBI
+[alice@{{ site.devel.name }} ~]$ module load r/3.5.3
 ```
 
 
@@ -303,9 +303,9 @@ _Comment_: This will actually also update any CRAN packages.
 The [Rmpi] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install Rmpi on the cluster, we start by loading the `mpi` module;
 
 ```sh
-[alice@dev3 ~]$ module load mpi
-[alice@dev3 ~]$ module load CBI r
-[alice@dev3 ~]$ module list
+[alice@{{ site.devel.name }} ~]$ module load mpi
+[alice@{{ site.devel.name }} ~]$ module load CBI r
+[alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
   1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.2

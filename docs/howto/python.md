@@ -35,7 +35,7 @@ First of all, if an online installation instructions says `pip install ...`, rep
 
 <!-- code-block label="pip-install-htseq" -->
 ```sh
-[alice@dev3 ~]$ python3 -m pip install --user HTSeq
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user HTSeq
 Collecting HTSeq
   Using cached https://files.pythonhosted.org/packages/c4/04/b9b0c5514dcd09e64481e8ebc242aef162646b6de956ffb44595d1de0f69/HTSeq-0.12.4.tar.gz
 Requirement already satisfied: numpy in /usr/lib64/python3.6/site-packages (from HTSeq)
@@ -69,7 +69,7 @@ In order to use virtual environments, we need the `virtualenv` tool.  Following 
 
 <!-- code-block label="pip-install-virtualenv" -->
 ```sh
-[alice@dev3 ~]$ python3 -m pip install --user virtualenv
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user virtualenv
 Collecting virtualenv
   Using cached https://files.pythonhosted.org/packages/12/51/36c685ff2c1b2f7b4b5db29f3153159102ae0e0adaff3a26fd1448232e06/virtualenv-20.0.31-py2.py3-none-any.whl
 Collecting importlib-resources>=1.0; python_version < "3.7" (from virtualenv)
@@ -88,9 +88,9 @@ Collecting zipp>=0.4; python_version < "3.8" (from importlib-resources>=1.0; pyt
   Using cached https://files.pythonhosted.org/packages/b2/34/bfcb43cc0ba81f527bc4f40ef41ba2ff4080e047acb0586b56b3d017ace4/zipp-3.1.0-py3-none-any.whl
 Installing collected packages: zipp, importlib-resources, appdirs, distlib, importlib-metadata, filelock, six, virtualenv
 Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 importlib-metadata-1.7.0 importlib-resources-3.0.0 six-1.15.0 virtualenv-20.0.31 zipp-3.1.0
-[alice@dev3 ~]$ which virtualenv
+[alice@{{ site.devel.name }} ~]$ which virtualenv
 ~/.local/bin/virtualenv
-[alice@dev3 ~]$ virtualenv --version
+[alice@{{ site.devel.name }} ~]$ virtualenv --version
 virtualenv 20.0.31 from ~/.local/lib/python3.6/site-packages/virtualenv/__init__.py
 ```
 
@@ -101,7 +101,7 @@ Start by creating a folder specific to the project you are currently working on.
 
 <!-- code-block label="virtualenv-init" -->
 ```sh
-[alice@dev3 ~]$ virtualenv -p python3 my_project
+[alice@{{ site.devel.name }} ~]$ virtualenv -p python3 my_project
 created virtual environment CPython3.6.8.final.0-64 in 7123ms
   creator CPython3Posix(dest=~/my_project, clear=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
@@ -120,16 +120,16 @@ Now, each time you want to work on your project, go to its folder and _active th
 
 <!-- code-block label="virtualenv-activate" -->
 ```sh
-[alice@dev3 ~]$ cd my_project
-[alice@dev3 my_project]$ . bin/activate   ## IMPORTANT! Note period in front
-(my_project) [alice@dev3 my_project]$ 
+[alice@{{ site.devel.name }} ~]$ cd my_project
+[alice@{{ site.devel.name }} my_project]$ . bin/activate   ## IMPORTANT! Note period in front
+(my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
 Note how `(my_project)` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  This tells you that you run in a customized Python environment.  Specifically, `python3` now points to a local, frozen version:
 
 <!-- code-block label="virtualenv-which-python3" -->
 ```sh
-(my_project) [alice@dev3 my_project]$ which python3
+(my_project) [alice@{{ site.devel.name }} my_project]$ which python3
 ~/my_project/bin/python3
 ```
 
@@ -137,9 +137,9 @@ Similarly, `python` points to:
 
 <!-- code-block label="virtualenv-which-python" -->
 ```sh
-(my_project) [alice@dev3 my_project]$ which python
+(my_project) [alice@{{ site.devel.name }} my_project]$ which python
 ~/my_project/bin/python
-(my_project) [alice@dev3 my_project]$ python --version
+(my_project) [alice@{{ site.devel.name }} my_project]$ python --version
 Python 3.6.8
 ```
 
@@ -149,13 +149,13 @@ To see what Python packages are installed _in the virtual environment_, use:
 
 <!-- code-block label="virtualenv-pip-list" -->
 ```sh
-(my_project) [alice@dev3 my_project]$ python3 -m pip list
+(my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
 Package    Version
 ---------- -------
 pip        20.2.2
 setuptools 49.6.0
 wheel      0.35.1
-(my_project) [alice@dev3 my_project]$ 
+(my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
 
@@ -165,7 +165,7 @@ With a virtual environment enabled, you can install Python packages to the proje
 
 <!-- code-block label="virtualenv-pip-install-htseq" -->
 ```sh
-(my_project) [alice@dev3 ~]$ python3 -m pip install HTSeq
+(my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install HTSeq
 Collecting HTSeq
   Downloading HTSeq-0.12.4-cp36-cp36m-manylinux2010_x86_64.whl (1.4 MB)
 Collecting pysam
@@ -180,7 +180,7 @@ To see which packages are now installed _in the virtual environment_ (the "proje
 
 <!-- code-block label="virtualenv-pip-list-2" -->
 ```sh
-(my_project) [alice@dev3 my_project]$ python3 -m pip list
+(my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
 Package    Version
 ---------- --------
 HTSeq      0.12.4
@@ -189,7 +189,7 @@ pip        20.2.2
 pysam      0.16.0.1
 setuptools 49.6.0
 wheel      0.35.1
-(my_project) [alice@dev3 my_project]$ 
+(my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
 
@@ -199,9 +199,9 @@ Whenever you open a new terminal, make sure to _activate_ the virtual environmen
 
 <!-- code-block label="virtualenv-activate-2" -->
 ```sh
-[alice@dev3 ~]$ cd my_project 
-[alice@dev3 my_project]$ . bin/activate   ## ACTIVATE
-(my_project) [alice@dev3 my_project]$ pip3 show HTSeq
+[alice@{{ site.devel.name }} ~]$ cd my_project 
+[alice@{{ site.devel.name }} my_project]$ . bin/activate   ## ACTIVATE
+(my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show HTSeq
 Name: HTSeq
 Version: 0.12.4
 Summary: A framework to process and analyze data from high-throughput sequencing (HTS) assays
@@ -212,7 +212,7 @@ License: GPL3
 Location: ~/my_project/lib64/python3.6/site-packages
 Requires: numpy, pysam
 Required-by: 
-(my_project) [alice@dev3 my_project]$ 
+(my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
@@ -223,15 +223,15 @@ To _deactivate_ a Python virtual environment, either open a fresh terminal (e.g.
 
 <!-- code-block label="virtualenv-deactivate" -->
 ```sh
-(my_project) [alice@dev3 ~]$ deactivate
-[alice@dev3 ~]$ 
+(my_project) [alice@{{ site.devel.name }} ~]$ deactivate
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 Note how prefix `(my_project)` was dropped from the shell prompt and `python3` now points to the system-wide installation;
 
 <!-- code-block label="virtualenv-deactivate-which-python3" -->
 ```sh
-[alice@dev3 ~]$ which python3
+[alice@{{ site.devel.name }} ~]$ which python3
 /usr/bin/python3
 ```
 
@@ -252,7 +252,7 @@ Don't use the suggested command call in that message.  Instead, use:
 
 <!-- code-block label="pip-upgrade" -->
 ```sh
-[alice@dev3 ~]$ python3 -m pip install --user --upgrade pip
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user --upgrade pip
 Cache entry deserialization failed, entry ignored
 Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', timeout('timed out',))': /simple/pip/
 Collecting pip
@@ -265,6 +265,6 @@ To check the installed version of the 'pip' module, use:
 
 <!-- code-block label="pip-version-2" -->
 ```sh
-[alice@dev3 ~]$ python3 -m pip --version
+[alice@{{ site.devel.name }} ~]$ python3 -m pip --version
 pip 20.2.2 from ~/.local/lib/python3.6/site-packages/pip (python 3.6)
 ```

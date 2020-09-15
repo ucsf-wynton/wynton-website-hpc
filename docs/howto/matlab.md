@@ -7,8 +7,8 @@ MATLAB is available on {{ site.cluster.name }} via a [built-in environment modul
 To load the MATLAB module, do:
 
 ```sh
-[alice@dev3 ~]$ module load matlab
-[alice@dev3 ~]$ matlab -nosplash -nodesktop
+[alice@{{ site.devel.name }} ~]$ module load matlab
+[alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
 MATLAB is selecting SOFTWARE OPENGL rendering.
 
 
@@ -30,14 +30,14 @@ ans =
 
 >> quit
 
-[alice@dev3 ~]$ 
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 
 If you forget to load the MATLAB module, then you will get an error when attempting to start MATLAB:
 
 ```sh
-[alice@dev3 ~]$ matlab
+[alice@{{ site.devel.name }} ~]$ matlab
 -bash: matlab: command not found
 ```
 
