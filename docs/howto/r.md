@@ -6,7 +6,7 @@ R is also available as part of the [core-software installation]({{ '/software/co
 
 ## Accessing R
 
-To load the R module available in the CBI software stack, do:
+To load the R module available in the [CBI software stack], do:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI
@@ -298,6 +298,33 @@ _Comment_: This will actually also update any CRAN packages.
 
 ### Packages that require extra care
 
+#### The hdf5r package
+
+The [hdf5r] package requires [hdf5 1.8.13 or newer](https://github.com/hhoeflin/hdf5r/issues/115) but the version that comes with CentOS 7/EPEL is only 1.8.12. This will result in the following installation error in R:
+
+```r
+Found hdf5 with version: 1.8.12
+configure: error: The version of hdf5 installed on your system is not sufficient. Please ensure that at least version 1.8.13 is installed
+ERROR: configuration failed for package ‘hdf5r’
+```
+
+ To fix this, load a modern version of 'hdf5' from the [CBI software stack] before installing the package, i.e.
+
+ ```sh
+ [alice@{{ site.devel.name }} ~]$ module load CBI hdf5 r
+ [alice@{{ site.devel.name }} ~]$ module list
+ Currently Loaded Modules:
+  1) CBI   2) hdf5/1.12.0   3) r/4.0.2
+ ```
+ Note that you also need to load the `hdf5` module every time you use the hdf5r package in R.
+
+After this, the hdf5r package will install out of the box, i.e. by calling:
+
+```r
+> install.packages("hdf5r")
+```
+
+
 #### The Rmpi package
 
 The [Rmpi] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install Rmpi on the cluster, we start by loading the `mpi` module;
@@ -306,7 +333,6 @@ The [Rmpi] package does not install out-of-the-box like other R packages.  It re
 [alice@{{ site.devel.name }} ~]$ module load mpi
 [alice@{{ site.devel.name }} ~]$ module load CBI r
 [alice@{{ site.devel.name }} ~]$ module list
-
 Currently Loaded Modules:
   1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.2
 ```
@@ -359,6 +385,8 @@ That's it!
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: http://bioconductor.org/
 [BiocManager]: https://cran.r-project.org/package=BiocManager
-[zoo]: https://cran.r-project.org/package=zoo
+[hdf5r]: https://cran.r-project.org/package=hdf5r
 [Rmpi]: https://cran.r-project.org/package=Rmpi
+[zoo]: https://cran.r-project.org/package=zoo
 [limma]: http://bioconductor.org/packages/limma/
+[CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
