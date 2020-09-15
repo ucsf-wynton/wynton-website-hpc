@@ -305,7 +305,7 @@ The [hdf5r] package requires [hdf5 1.8.13 or newer](https://github.com/hhoeflin/
 ```r
 Found hdf5 with version: 1.8.12
 configure: error: The version of hdf5 installed on your system is not sufficient. Please ensure that at least version 1.8.13 is installed
-ERROR: configuration failed for package ‘hdf5r’
+ERROR: configuration failed for package 'hdf5r'
 ```
 
  To fix this, load a modern version of 'hdf5' from the [CBI software stack] before installing the package, i.e.
@@ -342,7 +342,8 @@ Note that you will have to load the `mpi` module also whenever you run R code th
 Continuing, to install Rmpi, we launch R and call the following:
 
 ```r
-> install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-RmpiInstalling package into '/wynton/home/cbi/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+> install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
+Installing package into '/wynton/home/cbi/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz'
 Content type 'application/x-gzip' length 106745 bytes (104 KB)
