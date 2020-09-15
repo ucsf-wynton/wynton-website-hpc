@@ -145,6 +145,7 @@ and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8`
 #! /usr/bin/env bash
 #$ -cwd   ## SGE directive to run in the current working directory
 
+module load mpi
 export OMP_NUM_THREADS=8
 mpirun -np $NHOSTS /path/to/the_app
 ```
