@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(58)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(102)</a></li>
 </ul>
 
@@ -507,6 +507,15 @@ ripgrep is a line-oriented search tool that recursively searches your current di
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
   Versions: 11.0.2, 12.0.1, <em>12.1.1</em><br>
+  </dd>
+
+  <dt>salmon</dt>
+  <dd>
+    <strong>salmon: Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression</strong><br>
+Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.<br>
+    Example: <code>salmon --version</code>.<br>
+    URL: <a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a><br>
+  Versions: <em>1.3.0</em><br>
   </dd>
 
   <dt>samtools</dt>
@@ -1174,11 +1183,11 @@ Please note that this software stacks is maintained and contributed by a researc
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(58)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(102)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-09-17 16:52:48 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-09-19 14:22:52 from querying `module avail` and `module spider`._
 
 
 <style>
