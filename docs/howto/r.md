@@ -45,7 +45,7 @@ To use an older version of R, specify the version when you load R, e.g.
 
 ## Using R in job scripts
 
-In order to run R in jobs, the above R environment module needs to be loaded just as when you run it interactive on a development node.  For example, to run the `my_script.R` script, the job script should at a minimum contain:
+In order to run R in jobs, the above R environment module needs to be loaded just as when you run it interactively on a development node.  For example, to run the `my_script.R` script, the job script should at a minimum contain:
 
 ```sh
 #! /usr/bin/env bash

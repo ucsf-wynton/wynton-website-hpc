@@ -6,7 +6,7 @@ WARNING: Do _not_ update this file; it is automatically generated from software-
 
 # Software Repositories
 
-In addition to the [core software] tools that are available by default, additional software is available via _environment modules_.  For example, although Matlab is installed on the system, it is not available by default. Instead, we need to "load" its module first, e.g.
+In addition to the [core software] tools that are available by default, additional software is available via _environment modules_.  For example, although MATLAB is installed on the system, it is not available by default. Instead, we need to "load" its module first, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load matlab
@@ -15,7 +15,7 @@ In addition to the [core software] tools that are available by default, addition
 Currently Loaded Modules:
   1) matlab/2020a
 ```
-Then we can launch Matlab using:
+Then we can launch MATLAB using:
 ```sh
 [alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
 ```
@@ -51,8 +51,8 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(58)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(102)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -238,7 +238,7 @@ This repository provides prototypical environment modules that can change at any
 Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.<br>
     Example: <code>cellranger</code><br>
     URL: <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a><br>
-  Versions: 2.1.0, 3.0.2, <em>3.1.0</em><br>
+  Versions: 2.1.0, 3.0.2, 3.1.0, <em>4.0.0</em><br>
   </dd>
 
   <dt>cmake</dt>
@@ -496,7 +496,7 @@ Rclone is a command line program to sync files and directories to and from a lar
     Example: <code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>info rclone</code>.<br>
     URL: <a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 1.51.0, <em>1.52.1</em><br>
+  Versions: 1.51.0, 1.52.1, <em>1.53.1</em><br>
   </dd>
 
   <dt>ripgrep</dt>
@@ -507,6 +507,15 @@ ripgrep is a line-oriented search tool that recursively searches your current di
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
   Versions: 11.0.2, 12.0.1, <em>12.1.1</em><br>
+  </dd>
+
+  <dt>salmon</dt>
+  <dd>
+    <strong>salmon: Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression</strong><br>
+Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.<br>
+    Example: <code>salmon --version</code>.<br>
+    URL: <a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a><br>
+  Versions: <em>1.3.0</em><br>
   </dd>
 
   <dt>samtools</dt>
@@ -572,7 +581,7 @@ The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for usi
 STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.<br>
     Example: <code>STAR --help</code>.<br>
     URL: <a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a><br>
-  Versions: 2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, <em>2.7.5a</em><br>
+  Versions: 2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, <em>2.7.5c</em><br>
   </dd>
 
   <dt>tmux</dt>
@@ -1076,6 +1085,11 @@ Please note that this software stacks is maintained and contributed by a researc
   Versions: <em>1.5.1</em><br>
   </dd>
 
+  <dt>python3/protobuf</dt>
+  <dd>
+  Versions: <em>3.11.2</em><br>
+  </dd>
+
   <dt>python3/pyparsing</dt>
   <dd>
   Versions: <em>2.4.5</em><br>
@@ -1169,11 +1183,11 @@ Please note that this software stacks is maintained and contributed by a researc
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(58)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(102)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-09-04 16:49:43 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-09-19 14:22:52 from querying `module avail` and `module spider`._
 
 
 <style>
