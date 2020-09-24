@@ -17,12 +17,13 @@ The {{ site.cluster.name }} environment is available for _free_ to all UCSF rese
 
 To apply for an account on the {{ site.cluster.name }} cluster, please fill out the following form:
 
-<!--
+
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex;">
-<strong>Sorry... {{ site.cluster.name }} account requests are temporarily disabled for up to 24 hours (starting Tuesday Octobers 22, 2019 at noon).</strong> This is due to planned power upgrade in the Diller Building.
-<br><span class="timestamp">October 22, 2019 @ 11:59 PDT</span>
+<strong>Sorry... {{ site.cluster.name }} account requests are temporarily disabled for up to 24 hours (starting Thursday September 24, 2020 at 07:00).</strong> This is due to web server upgrades.
+<br><span class="timestamp">September 24, 2020 @ 07:00 PDT</span>
 </div>
--->
+
+<!--
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
@@ -223,5 +224,7 @@ window.onload = function() {
   load_form();
 }
 </script>
+
+-->
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
