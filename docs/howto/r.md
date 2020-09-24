@@ -296,6 +296,11 @@ _Comment_: This will actually also update any CRAN packages.
 
 ## Appendix
 
+### Parallel processing in R
+
+If you have an R scripts, and it involves setting up a number of parallel workers in R, do _not_ use `ncores <- detectCores()` of the **parallel** package because it will result in your job hijacking _all_ cores on the compute node regardless of how many cores the scheduler has given you.  Taking up all CPU resources without permission is really bad practice and a common cause for problems.  A much better solution is to use `availableCores()` that is available in the **[future]** package, e.g. as `ncores <- future::availableCores()`.  This function is backward compatible with `detectCores()` while respecting what the scheduler has allocated for your job.
+
+
 ### Packages that require extra care
 
 #### The hdf5r package
@@ -386,6 +391,7 @@ That's it!
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: http://bioconductor.org/
 [BiocManager]: https://cran.r-project.org/package=BiocManager
+[future]: https://cran.r-project.org/package=future
 [hdf5r]: https://cran.r-project.org/package=hdf5r
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [zoo]: https://cran.r-project.org/package=zoo
