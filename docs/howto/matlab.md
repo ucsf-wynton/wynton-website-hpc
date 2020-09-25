@@ -12,10 +12,11 @@ To load the MATLAB module, do:
 MATLAB is selecting SOFTWARE OPENGL rendering.
 
 
-                                              < M A T L A B (R) >
-                                    Copyright 1984-2020 The MathWorks, Inc.
-                                    R2020a (9.8.0.1323502) 64-bit (glnxa64)
-                                               February 25, 2020
+                          < M A T L A B (R) >
+                Copyright 1984-2020 The MathWorks, Inc.
+                Copyright 1984-2020 The MathWorks, Inc.
+                R2020b (9.9.0.1467703) 64-bit (glnxa64)
+                            August 26, 2020
 
  
 To get started, type doc.
