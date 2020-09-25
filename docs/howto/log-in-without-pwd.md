@@ -66,22 +66,43 @@ The public key you can safely share with the world, but <strong>treat your <em>p
 
 ## Step 2: Add the public SSH key (on cluster)
 
-Next, we will set up the cluster to recognize your public SSH key.  For this we will have to log in to the cluster.
+Next, we will set up the cluster to recognize your public SSH key.  Assuming your cluster user name is `alice` in the cluster, the goal is to append the content of the _public_ key file to `~/.ssh/authorized_keys` on the cluster.  There are two ways this can be done.
 
-First, assuming your cluster user name is `alice`, copy the public key file to `~/.ssh` on the cluster:
+**Alternative 1**: If you have the `ssh-copy-id` tool installed on your local computer, then use:
+
+```sh
+{local}$ ssh-copy-id -i ~/.ssh/laptop_to_wynton.pub alice@{{ site.login.hostname }}
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/alice/.ssh/laptop_to_wynton.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+alice@{{ site.login.hostname }}:s password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'alice@{{ site.login.hostname }}'"
+and check to make sure that only the key(s) you wanted were added.
+
+{local}$
+```
+
+Done.
+
+
+
+**Alternative 2**: If you don't have `ssh-copy-id`, you will have to copy the _public_ key file over to the cluster, log in, append it to the target file, and validate file permissions.  Assuming you already have a `~/.ssh` folder on the cluster, first copy the public key file to `~/.ssh` on the cluster:
 ```sh
 {local}$ scp ~/.ssh/laptop_to_wynton.pub alice@{{ site.login.hostname }}:.ssh/
 laptop_to_wynton.pub           100%  390     0.4KB/s   00:00
 ```
 
-Second, log into the cluster (still using a password) and _append_ the public key to `~/.ssh/authorized_keys`:
+Then, log into the cluster (still using a password) and _append_ the public key to `~/.ssh/authorized_keys`:
 ```sh
 {local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}
 alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ cd .ssh
 [alice@{{ site.login.name }} .ssh]$ cat laptop_to_wynton.pub >> authorized_keys
 ```
-Third, make sure that `~/.ssh/authorized_keys` is only accessible to you (otherwise that file will be completely ignored);
+Finally, make sure that `~/.ssh/authorized_keys` is only accessible to you (otherwise that file will be completely ignored);
 ```sh
 [alice@{{ site.login.name }} .ssh]$ chmod u=rw,go= ~/.ssh/authorized_keys
 [alice@{{ site.login.name }} .ssh]$ stat --format=%A ~/.ssh/authorized_keys
@@ -92,6 +113,8 @@ Lastly, log out from the cluster:
 [alice@{{ site.login.name }} .ssh]$ exit
 {local}$ 
 ```
+
+Done.
 
 
 ## Step 3: Test
