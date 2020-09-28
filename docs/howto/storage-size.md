@@ -2,7 +2,7 @@
 
 ## File sizes on /wynton/
 
-The `/wynton/` storage is on a BeeGFS parallel file system. This file system is **automatically compressed** (using the [lz4] compression) before anything is written to the physical drives.  Because of this, a 1.0 MiB file is likely to occupy less that 1.0 MiB of drive space.  Exactly, how much a file is compressed varies greatly with file format but as a rule of thumb plain text files can be compressed more than files in a binary format.  Already compressed files such as GZ or ZIP files are unlikely to be compressed further.
+The `/wynton/` storage is on a [ZFS] file system on top of our BeeGFS parallel storage system. This is **automatically compressed** (using [lz4] compression in ZFS) before anything is written to the physical drives.  Because of this, a 1.0 MiB file is likely to occupy less that 1.0 MiB of drive space.  Exactly, how much a file is compressed varies greatly with file format but as a rule of thumb plain text files can be compressed more than files in a binary format.  Already compressed files such as GZ or ZIP files are unlikely to be compressed further.
 
 Because of this underlying disk compression, command-line tools such as `ls` and `du` may not report what you expect it to report.  For example, consider the Singularity image file `rocker_r-base.img` of size 274,538,527 bytes (= 274,538,527/1024^2 = 261.8 MiB);
 
@@ -84,3 +84,4 @@ Note that this storage is shared among all group members and does _not_ count to
 
 
 [lz4]: https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)
+[ZFS]: https://en.wikipedia.org/wiki/ZFS
