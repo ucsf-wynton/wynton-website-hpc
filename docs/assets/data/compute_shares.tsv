@@ -1,39 +1,39 @@
 # Created by: hb
-# Created on: 2020-09-28 03:00:03-07:00
-# Total fshares: 20186
-# Total queue_slots: 7023
-# Number of projects: 39
+# Created on: 2020-09-30 03:00:03-07:00
+# Total fshares: 20189
+# Total queue_slots: 9128
+# Number of projects: 42
 fshares	queue_slots	project
-5506	1634	salilab
+5506	3305	salilab
 4104	1403	agardlab,chenglab,frostlab
 1224	408	pollardlab
 874	292	mac-users
 852	284	kortemmelab
 807	269	jacobsonlab
-712	237	shoichetlab
+712	281	shoichetlab
 675	225	limlab
 645	215	hernandezlab
 589	196	genetics
 517	172	babbittlab
 400	133	grabelab
-380	127	fraserlab
+380	171	fraserlab
 344	115	surbecklab
 290	97	ferrinlab
 288	96	elsamadlab
 226	75	dilllab
-205	68	degradolab
+205	92	degradolab
 182	61	ichs
 161	54	fischbachlab
 160	53	tanglab
 147	59	nagarajanmukherjeelab
 123	41	lilab
 109	36	huanglab
-108	200	stroudlab
+108	138	stroudlab
 89	29	baranzinilab
 87	29	turnbaughlab
 73	24	chiulab
+65	249	saviclab
 65	22	zaitlenlab
-65	22	saviclab
 49	16	jameslab
 43	14	weissmanlab
 36	12	schreinerlab
@@ -42,4 +42,7 @@ fshares	queue_slots	project
 12	4	sysbiocenter
 3	1	voigtlab
 3	1	cohenlab
+1	31	criswelllab
 1	288	gladstone
+1	25	greenhouselab
+1	101	lynchlab
