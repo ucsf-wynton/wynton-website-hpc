@@ -70,7 +70,7 @@ Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.
 qsub -cwd -l scratch=200G script.sh
 ```
 
-Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes]({{ 'using-local-scratch.html' | relative_url }}).
+Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes]({{ '/scheduler/using-local-scratch.html' | relative_url }}).
 
 <div class="alert alert-warning" role="alert">
 Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
@@ -169,7 +169,7 @@ _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org
 
 ## See also
 
-For further options and advanced usage, see [Advanced Usage]({{ '/advanced-usage.html' | relative_url }}) of the scheduler.
+For further options and advanced usage, see [Advanced Usage]({{ '/scheduler/advanced-usage.html' | relative_url }}) of the scheduler.
 
 [SGE environment variable]: {{ '/scheduler/sge-envvars.html' | relative_url }}
 [Job Summary]: {{ '/scheduler/job-summary.html' | relative_url }}
