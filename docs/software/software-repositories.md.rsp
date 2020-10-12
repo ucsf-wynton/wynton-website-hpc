@@ -158,7 +158,9 @@ if (length(m$description) > 0L) {
     name <- sub("s$", "", name)
     name <- tolower(name)
     m[[name]] <- gsub(pattern, "\\3", m$description)
-    m$description <- gsub(pattern, "\\1", m$description)
+    description <- gsub(pattern, "\\1", m$description)
+    if (is.na(description)) description <- NULL
+    m$description <- description
   }
 }
 
