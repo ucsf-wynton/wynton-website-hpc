@@ -668,37 +668,31 @@ Please note that this software stacks is maintained and contributed by a researc
 <dl>
   <dt>allosmod</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>amber</dt>
   <dd>
-NA<br>
   Versions: <em>11</em><br>
   </dd>
 
   <dt>anaconda</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>blast</dt>
   <dd>
-NA<br>
   Versions: <em>2.2.26</em><br>
   </dd>
 
   <dt>blast+</dt>
   <dd>
-NA<br>
   Versions: 2.2.25, <em>2.2.28</em><br>
   </dd>
 
   <dt>boost</dt>
   <dd>
-NA<br>
   Versions: <em>1.68.0</em><br>
   </dd>
 
@@ -711,43 +705,36 @@ Computational Geometry Algorithms Library<br>
 
   <dt>cmake</dt>
   <dd>
-NA<br>
   Versions: <em>3.12.2</em><br>
   </dd>
 
   <dt>concavity</dt>
   <dd>
-NA<br>
   Versions: <em>0.1</em><br>
   </dd>
 
   <dt>cryptosite</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>cuda</dt>
   <dd>
-NA<br>
   Versions: 6.0.37, 7.5.18, 8.0.61, 9.0.176, <em>10.0.130</em><br>
   </dd>
 
   <dt>Cython</dt>
   <dd>
-NA<br>
   Versions: 0.25.2, <em>0.29.14</em><br>
   </dd>
 
   <dt>doxygen</dt>
   <dd>
-NA<br>
   Versions: 1.8.6, <em>1.8.15</em><br>
   </dd>
 
   <dt>dssp</dt>
   <dd>
-NA<br>
   Versions: 2.0.4, <em>2.2.1</em><br>
   </dd>
 
@@ -760,523 +747,436 @@ A lightweight C++ template library for vector and matrix math<br>
 
   <dt>eman</dt>
   <dd>
-NA<br>
   Versions: 2.12, <em>2.2</em><br>
   </dd>
 
   <dt>featuresketch</dt>
   <dd>
-NA<br>
   Versions: <em>3.0</em><br>
   </dd>
 
   <dt>fpocket</dt>
   <dd>
-NA<br>
   Versions: <em>2.0</em><br>
   </dd>
 
   <dt>gcc</dt>
   <dd>
-NA<br>
   Versions: 5.1.1, 6.4.1, <em>7.3.1</em><br>
   </dd>
 
   <dt>ghostscript</dt>
   <dd>
-NA<br>
   Versions: <em>8.70</em><br>
   </dd>
 
   <dt>gnuplot</dt>
   <dd>
-NA<br>
   Versions: <em>5.0.5</em><br>
   </dd>
 
   <dt>hdf5</dt>
   <dd>
-NA<br>
   Versions: 1.8.14, 1.8.17, 1.10.1, <em>1.10.5</em><br>
   </dd>
 
   <dt>ImageMagick</dt>
   <dd>
-NA<br>
   Versions: <em>6.8.8.10</em><br>
   </dd>
 
   <dt>imp</dt>
   <dd>
-NA<br>
   Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, 2.12.0, 2.13.0-i386, 2.13.0-x86_64, <em>2.13.0</em><br>
   </dd>
 
   <dt>imp-fast</dt>
   <dd>
-NA<br>
   Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, 2.12.0, 2.13.0-i386, 2.13.0-x86_64, <em>2.13.0</em><br>
   </dd>
 
   <dt>libtau</dt>
   <dd>
-NA<br>
   Versions: <em>1.0.1</em><br>
   </dd>
 
   <dt>main</dt>
   <dd>
-NA<br>
   Versions: <em>2013</em><br>
   </dd>
 
   <dt>matlab</dt>
   <dd>
-NA<br>
   Versions: <em>9.5.0.944444</em><br>
   </dd>
 
   <dt>mist</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>modeller</dt>
   <dd>
-NA<br>
   Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, 9.23-i386, 9.23-x86_64, 9.23, 9.24-i386, 9.24-x86_64, 9.24, 9.25-i386, 9.25-x86_64, 9.25, <em>SVN</em><br>
   </dd>
 
   <dt>modpipe</dt>
   <dd>
-NA<br>
   Versions: 2.0.1, 2.0.2, 2.1.0, 2.1.1, 2.1.2, 2.1.3, 2.2.0, <em>2.3.0</em><br>
   </dd>
 
   <dt>muscle</dt>
   <dd>
-NA<br>
   Versions: <em>3.8.31</em><br>
   </dd>
 
   <dt>ninja</dt>
   <dd>
-NA<br>
   Versions: 1.6.0, <em>1.8.2</em><br>
   </dd>
 
   <dt>opencv</dt>
   <dd>
-NA<br>
   Versions: <em>3.4.3</em><br>
   </dd>
 
   <dt>openeye</dt>
   <dd>
-NA<br>
   Versions: <em>2012</em><br>
   </dd>
 
   <dt>patch_dock</dt>
   <dd>
-NA<br>
   Versions: <em>1.3</em><br>
   </dd>
 
   <dt>pcss</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>phenix</dt>
   <dd>
-NA<br>
   Versions: 1.10.1.2155, <em>1.18.2.3874</em><br>
   </dd>
 
   <dt>profit</dt>
   <dd>
-NA<br>
   Versions: <em>3.1</em><br>
   </dd>
 
   <dt>psipred</dt>
   <dd>
-NA<br>
   Versions: <em>4.0</em><br>
   </dd>
 
   <dt>python2/biopython</dt>
   <dd>
-NA<br>
   Versions: 1.68, 1.69, <em>1.70</em><br>
   </dd>
 
   <dt>python2/bottleneck</dt>
   <dd>
-NA<br>
   Versions: 1.2.0, <em>1.2.1</em><br>
   </dd>
 
   <dt>python2/cycler</dt>
   <dd>
-NA<br>
   Versions: <em>0.10.0</em><br>
   </dd>
 
   <dt>python2/dateutil</dt>
   <dd>
-NA<br>
   Versions: 1.5, <em>2.6.1</em><br>
   </dd>
 
   <dt>python2/decorator</dt>
   <dd>
-NA<br>
   Versions: 4.0.11, <em>4.2.1</em><br>
   </dd>
 
   <dt>python2/functools32</dt>
   <dd>
-NA<br>
   Versions: <em>3.2.3</em><br>
   </dd>
 
   <dt>python2/h5py</dt>
   <dd>
-NA<br>
   Versions: 2.6.0, 2.7.0, <em>2.7.1</em><br>
   </dd>
 
   <dt>python2/ihm</dt>
   <dd>
-NA<br>
   Versions: <em>0.11</em><br>
   </dd>
 
   <dt>python2/lru_cache</dt>
   <dd>
-NA<br>
   Versions: <em>1.5</em><br>
   </dd>
 
   <dt>python2/matplotlib</dt>
   <dd>
-NA<br>
   Versions: 2.0.0, 2.0.2, <em>2.1.2</em><br>
   </dd>
 
   <dt>python2/mdp</dt>
   <dd>
-NA<br>
   Versions: <em>2.6</em><br>
   </dd>
 
   <dt>python2/msgpack</dt>
   <dd>
-NA<br>
   Versions: 0.5.6, <em>0.6.2</em><br>
   </dd>
 
   <dt>python2/networkx</dt>
   <dd>
-NA<br>
   Versions: <em>1.11</em><br>
   </dd>
 
   <dt>python2/nose</dt>
   <dd>
-NA<br>
   Versions: <em>1.3.7</em><br>
   </dd>
 
   <dt>python2/numexpr</dt>
   <dd>
-NA<br>
   Versions: 2.6.2, <em>2.6.4</em><br>
   </dd>
 
   <dt>python2/numpy</dt>
   <dd>
-NA<br>
   Versions: 1.12.0, 1.13.0, <em>1.14.1</em><br>
   </dd>
 
   <dt>python2/pandas</dt>
   <dd>
-NA<br>
   Versions: 0.19.2, 0.20.2, <em>0.22.0</em><br>
   </dd>
 
   <dt>python2/pkgconfig</dt>
   <dd>
-NA<br>
   Versions: <em>1.2.2</em><br>
   </dd>
 
   <dt>python2/protobuf</dt>
   <dd>
-NA<br>
   Versions: 2.3.0, <em>2.5.0</em><br>
   </dd>
 
   <dt>python2/pymc</dt>
   <dd>
-NA<br>
   Versions: <em>2.3.6</em><br>
   </dd>
 
   <dt>python2/pyparsing</dt>
   <dd>
-NA<br>
   Versions: <em>2.1.10</em><br>
   </dd>
 
   <dt>python2/pyrmsd</dt>
   <dd>
-NA<br>
   Versions: <em>4.1.git48ab119</em><br>
   </dd>
 
   <dt>python2/pytz</dt>
   <dd>
-NA<br>
   Versions: <em>2016.10</em><br>
   </dd>
 
   <dt>python2/scikit</dt>
   <dd>
-NA<br>
   Versions: 0.12, 0.18.1, <em>0.19.1</em><br>
   </dd>
 
   <dt>python2/scipy</dt>
   <dd>
-NA<br>
   Versions: 0.18.1, 0.19.0, <em>1.0.0</em><br>
   </dd>
 
   <dt>python2/six</dt>
   <dd>
-NA<br>
   Versions: <em>1.10.0</em><br>
   </dd>
 
   <dt>python2/tables</dt>
   <dd>
-NA<br>
   Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
   <dt>python3/biopython</dt>
   <dd>
-NA<br>
   Versions: <em>1.75</em><br>
   </dd>
 
   <dt>python3/bottleneck</dt>
   <dd>
-NA<br>
   Versions: <em>1.3.1</em><br>
   </dd>
 
   <dt>python3/cycler</dt>
   <dd>
-NA<br>
   Versions: <em>0.10.0</em><br>
   </dd>
 
   <dt>python3/dateutil</dt>
   <dd>
-NA<br>
   Versions: <em>2.8.1</em><br>
   </dd>
 
   <dt>python3/decorator</dt>
   <dd>
-NA<br>
   Versions: <em>4.4.1</em><br>
   </dd>
 
   <dt>python3/h5py</dt>
   <dd>
-NA<br>
   Versions: <em>2.10.0</em><br>
   </dd>
 
   <dt>python3/ihm</dt>
   <dd>
-NA<br>
   Versions: <em>0.15</em><br>
   </dd>
 
   <dt>python3/joblib</dt>
   <dd>
-NA<br>
   Versions: <em>0.14.0</em><br>
   </dd>
 
   <dt>python3/kiwisolver</dt>
   <dd>
-NA<br>
   Versions: <em>1.1.0</em><br>
   </dd>
 
   <dt>python3/matplotlib</dt>
   <dd>
-NA<br>
   Versions: <em>3.1.2</em><br>
   </dd>
 
   <dt>python3/msgpack</dt>
   <dd>
-NA<br>
   Versions: <em>0.6.2</em><br>
   </dd>
 
   <dt>python3/networkx</dt>
   <dd>
-NA<br>
   Versions: <em>2.4</em><br>
   </dd>
 
   <dt>python3/nose</dt>
   <dd>
-NA<br>
   Versions: <em>1.3.7</em><br>
   </dd>
 
   <dt>python3/numexpr</dt>
   <dd>
-NA<br>
   Versions: <em>2.7.0</em><br>
   </dd>
 
   <dt>python3/numpy</dt>
   <dd>
-NA<br>
   Versions: <em>1.17.4</em><br>
   </dd>
 
   <dt>python3/pandas</dt>
   <dd>
-NA<br>
   Versions: <em>0.25.3</em><br>
   </dd>
 
   <dt>python3/pkgconfig</dt>
   <dd>
-NA<br>
   Versions: <em>1.5.1</em><br>
   </dd>
 
   <dt>python3/protobuf</dt>
   <dd>
-NA<br>
   Versions: <em>3.11.2</em><br>
   </dd>
 
   <dt>python3/pyparsing</dt>
   <dd>
-NA<br>
   Versions: <em>2.4.5</em><br>
   </dd>
 
   <dt>python3/pyrmsd</dt>
   <dd>
-NA<br>
   Versions: <em>4.1.gita558b8a</em><br>
   </dd>
 
   <dt>python3/pytz</dt>
   <dd>
-NA<br>
   Versions: <em>2019.3</em><br>
   </dd>
 
   <dt>python3/scikit</dt>
   <dd>
-NA<br>
   Versions: <em>0.21.3</em><br>
   </dd>
 
   <dt>python3/scipy</dt>
   <dd>
-NA<br>
   Versions: <em>1.3.2</em><br>
   </dd>
 
   <dt>python3/six</dt>
   <dd>
-NA<br>
   Versions: <em>1.13.0</em><br>
   </dd>
 
   <dt>python3/tables</dt>
   <dd>
-NA<br>
   Versions: <em>3.6.1</em><br>
   </dd>
 
   <dt>relion</dt>
   <dd>
-NA<br>
   Versions: 1.4, 2.0.6, <em>3.0.git9a02562</em><br>
   </dd>
 
   <dt>rosetta</dt>
   <dd>
-NA<br>
   Versions: 3.5, <em>3.10</em><br>
   </dd>
 
   <dt>sali-libraries</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>sali-libraries-i386</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>sali-libraries-x86_64</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>svm_light</dt>
   <dd>
-NA<br>
   Versions: <em>6.0.2</em><br>
   </dd>
 
   <dt>swig</dt>
   <dd>
-NA<br>
   Versions: <em>3.0.12</em><br>
   </dd>
 
   <dt>usearch</dt>
   <dd>
-NA<br>
   Versions: 4.0.43, <em>10.0.240</em><br>
   </dd>
 
   <dt>web_service</dt>
   <dd>
-NA<br>
   Versions: <br>
   </dd>
 
   <dt>zdock</dt>
   <dd>
-NA<br>
   Versions: <em>3.0.2</em><br>
   </dd>
 
@@ -1292,7 +1192,7 @@ NA<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(102)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-10-12 11:57:53 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-10-12 12:07:18 from querying `module avail` and `module spider`._
 
 
 <style>
