@@ -158,9 +158,7 @@ if (length(m$description) > 0L) {
     name <- sub("s$", "", name)
     name <- tolower(name)
     m[[name]] <- gsub(pattern, "\\3", m$description)
-    description <- gsub(pattern, "\\1", m$description)
-    if (is.na(description) || identical(description, "NA")) description <- NULL
-    m$description <- description
+    m$description <- gsub(pattern, "\\1", m$description)
   }
 }
 
@@ -171,7 +169,7 @@ if (length(m$description) > 0L) {
   <% if (!is.null(help)) { %>
     <strong><%= as_html(help) %></strong><br>
   <% } %>
-  <% if (!is.null(m$description)) { %>
+  <% if (!is.null(m$description) && !is.na(m$description)) { %>
     <%= as_html(m$description) %><br>
   <% } %>
   <% if (!is.null(m$example)) { %>
