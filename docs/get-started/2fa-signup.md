@@ -208,7 +208,7 @@ Duo two-factor login for alice
 Enter a passcode or select one of the following options:
 
  1. Duo Push to XXX-XXX-9999
- 2. Phone call to XXX-XXX-9999_
+ 2. Phone call to XXX-XXX-9999
  3. SMS passcodes to XXX-XXX-9999
 
 Passcode or option (1-3): 1
