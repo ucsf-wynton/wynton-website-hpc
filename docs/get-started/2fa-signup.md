@@ -65,6 +65,11 @@ _Comment_: If you are asked to 'Please contact your help or support desk' during
 _Note, during the October 14-28 test phase, the below will work only on **{{ site.login2.hostname }}** and **{{ site.transfer2.hostname }}**._
 
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+We recommend that you read through the below instructions before starting the registration. <strong>You can only register once and you cannot reconfigure your 2FA setup afterwards</strong>.  The only way to update the settings is to contact the {{ site.cluster.name }} admins to reset your 2FA setup.
+</div>
+
+
 ### Step 1: Obtain a Duo registration link
 
 In order to register with Duo 2FA, you need to obtain a registration link (URL) to your personal registration page.  This is done by logging into {{ site.cluster.nickname }} via SSH.
