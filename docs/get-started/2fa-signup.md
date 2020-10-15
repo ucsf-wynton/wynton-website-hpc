@@ -72,9 +72,9 @@ We recommend that you read through the below instructions before starting the re
 
 ### Step 1: Obtain a Duo registration link
 
-In order to register with Duo 2FA, you need to obtain a registration link (URL) to your personal registration page.  This is done by logging into {{ site.cluster.nickname }} via SSH.
+In order to register with Duo 2FA, you need to obtain a registration link (URL) to your personal registration page.  This is done by attempting to log into {{ site.cluster.nickname }} via SSH.
 
-If this is the first time you access {{ site.cluster.name }} via SSH, then you will have to two SSH logins - the first login is just a "trigger" and the second login one will display the registration URL.  If you have priorly logged into to {{ site.cluster.name }}, then you can skip to the second SSH-login instructions below.
+If this is the first time you access {{ site.cluster.name }} via SSH, then you will have to do two SSH logins - the first login is just a "trigger" and the second login one will display the registration URL.  If you have priorly logged into to {{ site.cluster.name }}, then you can skip to the second SSH-login instructions below.
 
 1. SSH to {{ site.login.hostname }} using your {{ site.cluster.nickname }} username
 
