@@ -77,18 +77,16 @@ In order to register with Duo 2FA, you need to obtain a registration link (URL) 
 If this is the first time you access {{ site.cluster.name }} via SSH, then you will have to do two SSH logins - the first login is just a "trigger" and the second login one will display the registration URL.  If you have priorly logged into to {{ site.cluster.name }}, then you can skip to the second SSH-login instructions below.
 
 1. SSH to {{ site.login.hostname }} using your {{ site.cluster.nickname }} username
-
-  - If you are asked the question `Are you sure you want to continue connecting (yes/no/[fingerprint])?`, then answer `yes`
-  - Enter your {{ site.cluster.nickname }} password
-  - The connection will be closed automatically. This is expected
+   - If you are asked the question `Are you sure you want to continue connecting (yes/no/[fingerprint])?`, then answer `yes`
+   - Enter your {{ site.cluster.nickname }} password
+   - The connection will be closed automatically. This is expected
 
 2. Again, SSH to {{ site.login.hostname }} using your {{ site.cluster.nickname }} username
+   - Enter your {{ site.cluster.nickname }} password
+   - After entering you password, you should then see **a message saying to enroll at a particular Duo URL**
+   - This will followed by a 'Permission denied'. The connection will close. This is expected
 
- - Enter your {{ site.cluster.nickname }} password
- - After entering you password, you should then see **a message saying to enroll at a particular Duo URL**
- - This will followed by a 'Permission denied'. The connection will close. This is expected
- 
-3. Go to the enrollment page but copying the URL into your web browser
+3. Go to the enrollment page by copying the URL into your web browser
 
 
 Here is what the above steps will look like:
