@@ -4,7 +4,7 @@ Starting Wednesday October 28, 2020, <strong>access to {{ site.cluster.name }} f
 
 ## Test phase
 
-During October 14-27, **you can prepare for the full 2FA rollout** on {{ site.cluster.name }} already by using login node **{{ site.login2.hostname }}** and data-transfer node **{{ site.transfer2.hostname }}** where we have already enabled 2FA for you to test and validate.  See below instructions for how to register 2FA for your {{ site.cluster.name }} account.
+During October 14-27, **you can prepare for the full 2FA rollout** on {{ site.cluster.name }} already now by using login node **{{ site.login2.hostname }}** and data-transfer node **{{ site.transfer2.hostname }}** where we have already enabled 2FA for you to test and validate.  See below instructions for how to register 2FA for your {{ site.cluster.name }} account.
 
 
 
