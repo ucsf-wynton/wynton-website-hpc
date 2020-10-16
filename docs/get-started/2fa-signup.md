@@ -62,7 +62,7 @@ In order to authenticate via 2FA, you will first have to register your Duo 2FA s
 
 _Comment_: If you are asked to 'Please contact your help or support desk' during the Duo 2FA registration, please contact the [{{ site.cluster.name }} admins] (do _not_ contact the UCSF IT Service Desk).
 
-_Note, during the October 14-28 test phase, the below will work only on **{{ site.login2.hostname }}** and **{{ site.transfer2.hostname }}**._
+_Note, during the October 14-27 test phase, the below will work only on **{{ site.login2.hostname }}** and **{{ site.transfer2.hostname }}**._
 
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
