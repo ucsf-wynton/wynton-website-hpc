@@ -22,7 +22,7 @@ Known issues:
 
  * It is not possible to register multiple authentication methods, e.g. multiple devices and phone numbers
 
- * In order to change your 2FA method, you need to contact the [{{ site.cluster.name }} admins] to reset your existing 2FA registration
+ * If you get a new phone, or want to change your 2FA method or device, you will need to contact the [{{ site.cluster.name }} admins] to reset your existing 2FA registration or resend the registration link
 
  * Support for hardware 2FA keys (e.g. YubiKey, Feitian, etc.) is limited and might not even work.  For example, when registering a hardware key, that will be your only option.  Also, if you have already registered your hardware 2FA key with UCSF (e.g. UCSF VPN), then that physical key can _not_ be used with the {{ site.cluster.nickname }} 2FA system.  This is also true if the hardware key supports two or more security keys (e.g. short press and long press on a YubiKey)
 
