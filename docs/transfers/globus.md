@@ -49,10 +49,10 @@ To transfer files via the Globus network:
 ## Endpoints of interest
 
 * [Your personal GCP endpoint](https://app.globus.org/endpoints?scope=administered-by-me)
-* ['UCSF {{ site.cluster.nickname }}' endpoint] (UUID `9c60dd5e-0c92-11ea-9952-0a8c187e8c12`)
+* ['UCSF {{ site.cluster.nickname }}' endpoint] (UUID `1dd9beaa-14b7-11eb-abe2-0213fe609573`)
 
 
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
-['UCSF {{ site.cluster.nickname }}' endpoint]: https://app.globus.org/file-manager/collections/9c60dd5e-0c92-11ea-9952-0a8c187e8c12/overview
+['UCSF {{ site.cluster.nickname }}' endpoint]: https://app.globus.org/file-manager/collections/1dd9beaa-14b7-11eb-abe2-0213fe609573/overview
