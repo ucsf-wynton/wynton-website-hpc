@@ -22,7 +22,7 @@ Known issues:
 
  * It is not possible to register multiple authentication methods, e.g. multiple devices and phone numbers
 
- * If you get a new phone, or want to change your 2FA method or device, you will need to contact the [{{ site.cluster.name }} admins] to reset your existing 2FA registration or resend the registration link
+ * If you get a new phone, or want to change your 2FA method or device, you will need to contact the [{{ site.cluster.name }} support staff] to reset your existing 2FA registration or resend the registration link
 
  * Support for hardware 2FA keys (e.g. YubiKey, Feitian, etc.) is limited and might not even work.  For example, when registering a hardware key, that will be your only option.  Also, if you have already registered your hardware 2FA key with UCSF (e.g. UCSF VPN), then that physical key can _not_ be used with the {{ site.cluster.nickname }} 2FA system.  This is also true if the hardware key supports two or more security keys (e.g. short press and long press on a YubiKey)
 
@@ -60,13 +60,13 @@ For examples on what it looks like when you authenticate via other options, see 
 
 In order to authenticate via 2FA, you will first have to register your Duo 2FA setup with {{ site.cluster.name }}.  Since they are different 2FA systems, you have to do complete this registration regardless whether or not you have already a registered Duo 2FA for the UCSF VPN.  Below are detailed instruction on how to register 2FA for {{ site.cluster.name }}.
 
-_Comment_: If you are asked to 'Please contact your help or support desk' during the Duo 2FA registration, please contact the [{{ site.cluster.name }} admins] (do _not_ contact the UCSF IT Service Desk).
+_Comment_: If you are asked to 'Please contact your help or support desk' during the Duo 2FA registration, please contact the [{{ site.cluster.name }} support staff] (do _not_ contact the UCSF IT Service Desk).
 
 _Note, during the October 14-27 test phase, the below will work only on **{{ site.login2.hostname }}** and **{{ site.transfer2.hostname }}**._
 
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-We recommend that you read through the below instructions before starting the registration. <strong>You can only register once and you cannot reconfigure your 2FA setup afterwards</strong>.  The only way to update the settings is to contact the {{ site.cluster.name }} admins to reset your 2FA setup.
+We recommend that you read through the below instructions before starting the registration. <strong>You can only register once and you cannot reconfigure your 2FA setup afterwards</strong>.  The only way to update the settings is to contact the {{ site.cluster.name }} support staff to reset your 2FA setup.
 </div>
 
 
@@ -279,4 +279,4 @@ Success. Logging you in...
 ```
 
 [Duo Mobile App]: https://duo.com/product/multi-factor-authentication-mfa/duo-mobile-app
-[{{ site.cluster.name }} admins]: {{ '/support/index.html' | relative_url }}
+[{{ site.cluster.name }} support staff]: {{ '/support/index.html' | relative_url }}

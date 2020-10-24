@@ -19,7 +19,7 @@ Progress on next storage purchase: <strong>{{ progress }}% ({{ site.data.storage
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
-* To purchase more storage, please contact [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}?subject=Request%20to%20purchase%20dedicated%20storage)
+* To purchase more storage, please contact [{{ site.cluster.email_storage }}](mailto:{{ site.cluster.email_storage }}?subject=Request%20to%20purchase%20dedicated%20storage)
 
 <br>
 

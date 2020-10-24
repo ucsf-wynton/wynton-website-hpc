@@ -15,11 +15,11 @@ These are communal forums - feel free to ask questions, answer questions, and pa
 
 ---
 
-If you have requests that you rather prefer to address directly to the system administrators, please don't hesitate dropping us an email.
+If you have requests that you rather prefer to address directly to the {{ site.cluster.nickname }} staff, please don't hesitate dropping us an email.
 
-3. **{{ site.cluster.name }} System Administrators and Managers email list**
+3. **{{ site.cluster.name }} Support email list**
 
-  - [{{ site.cluster.email_admin }}](mailto:{{ site.cluster.email_admin }}) - reaches all systems administrators and managers.
+  - [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) - reaches the {{ site.cluster.nickname }} support staff.
 
 ---
 
