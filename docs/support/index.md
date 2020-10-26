@@ -1,11 +1,12 @@
 # Support Channels
 
+If you have support requests which require {{ site.cluster.nickname }} staff assistance, please don't hesitate dropping us an email.
+
+1. **{{ site.cluster.name }} Support email list**
+
+  - [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) - reaches the {{ site.cluster.nickname }} support staff.
+
 For questions and feature requests, please use one of the following channels:
-
-1. **Mailing list [wynton-help@listsrv.ucsf.edu](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help)** - A communal forum where you can ask for help and discuss problems and solutions (you need to subscribe before you can post messages)
-
-  - Subscribe / unsubscribe: (a) go to [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help), (b) click 'Subscribe or Unsubscribe', (c) enter your full name and preferred email address, and (d) click link in confirmation email that arrives within minutes.
-  - Web archives: N/A <!-- [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help) (only visible to subscribed list members). -->
 
 2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time
 
@@ -15,11 +16,10 @@ These are communal forums - feel free to ask questions, answer questions, and pa
 
 ---
 
-If you have requests that you rather prefer to address directly to the {{ site.cluster.nickname }} staff, please don't hesitate dropping us an email.
+3. **Mailing list [wynton-help@listsrv.ucsf.edu](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help)** - A communal forum where you can ask for help and discuss problems and solutions (you need to subscribe before you can post messages)
 
-3. **{{ site.cluster.name }} Support email list**
-
-  - [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) - reaches the {{ site.cluster.nickname }} support staff.
+  - Subscribe / unsubscribe: (a) go to [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help), (b) click 'Subscribe or Unsubscribe', (c) enter your full name and preferred email address, and (d) click link in confirmation email that arrives within minutes.
+  - Web archives: N/A <!-- [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help) (only visible to subscribed list members). -->
 
 ---
 
