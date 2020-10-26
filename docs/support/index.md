@@ -1,12 +1,12 @@
 # Support Channels
 
-If you have support requests which require {{ site.cluster.nickname }} staff assistance, please don't hesitate dropping us an email.
+If you have questions which require {{ site.cluster.nickname }} staff assistance, please don't hesitate to drop us an email.
 
 1. **{{ site.cluster.name }} Support email list**
 
   - [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) - reaches the {{ site.cluster.nickname }} support staff.
 
-For questions and feature requests, please use one of the following channels:
+For questions, discussion, and feature requests, please use one of the following channels:
 
 2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time
 
