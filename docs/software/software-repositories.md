@@ -52,7 +52,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(102)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -86,7 +86,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt>mpi</dt>
   <dd>
-  Versions: <em>openmpi-x86_64</em><br>
+  Versions: openmpi-x86_64, <em>openmpi3-x86_64</em><br>
   </dd>
 
 </dl>
@@ -668,31 +668,43 @@ Please note that this software stacks is maintained and contributed by a researc
 <dl>
   <dt>allosmod</dt>
   <dd>
+AllosMod utility library<br>
+    URL: <a href="https://github.com/salilab/allosmod-lib/">https://github.com/salilab/allosmod-lib/</a><br>
   Versions: <br>
   </dd>
 
   <dt>amber</dt>
   <dd>
+Amber11, for 64-bit<br>
+    URL: <a href="http://ambermd.org/">http://ambermd.org/</a><br>
   Versions: <em>11</em><br>
   </dd>
 
   <dt>anaconda</dt>
   <dd>
+Anaconda Python distribution<br>
+    URL: <a href="https://www.anaconda.com/">https://www.anaconda.com/</a><br>
   Versions: <br>
   </dd>
 
   <dt>blast</dt>
   <dd>
+Basic Local Alignment Search Tool<br>
+    URL: <a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a><br>
   Versions: <em>2.2.26</em><br>
   </dd>
 
   <dt>blast+</dt>
   <dd>
+Basic Local Alignment Search Tool<br>
+    URL: <a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a><br>
   Versions: 2.2.25, <em>2.2.28</em><br>
   </dd>
 
   <dt>boost</dt>
   <dd>
+The free peer-reviewed portable C++ source libraries<br>
+    URL: <a href="https://www.boost.org/">https://www.boost.org/</a><br>
   Versions: <em>1.68.0</em><br>
   </dd>
 
@@ -705,36 +717,50 @@ Computational Geometry Algorithms Library<br>
 
   <dt>cmake</dt>
   <dd>
+Cross-platform make system<br>
+    URL: <a href="https://cmake.org/">https://cmake.org/</a><br>
   Versions: <em>3.12.2</em><br>
   </dd>
 
   <dt>concavity</dt>
   <dd>
+Ligand binding site prediction from protein sequence and structure<br>
+    URL: <a href="https://compbio.cs.princeton.edu/concavity/">https://compbio.cs.princeton.edu/concavity/</a><br>
   Versions: <em>0.1</em><br>
   </dd>
 
   <dt>cryptosite</dt>
   <dd>
+CryptoSite utility library<br>
+    URL: <a href="https://github.com/salilab/cryptosite/">https://github.com/salilab/cryptosite/</a><br>
   Versions: <br>
   </dd>
 
   <dt>cuda</dt>
   <dd>
+NVIDIA CUDA Toolkit libraries<br>
+    URL: <a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a><br>
   Versions: 6.0.37, 7.5.18, 8.0.61, 9.0.176, <em>10.0.130</em><br>
   </dd>
 
   <dt>Cython</dt>
   <dd>
+A language for writing Python extension modules<br>
+    URL: <a href="https://cython.org/">https://cython.org/</a><br>
   Versions: 0.25.2, <em>0.29.14</em><br>
   </dd>
 
   <dt>doxygen</dt>
   <dd>
+A documentation system for C/C++<br>
+    URL: <a href="http://www.doxygen.org/index.html">http://www.doxygen.org/index.html</a><br>
   Versions: 1.8.6, <em>1.8.15</em><br>
   </dd>
 
   <dt>dssp</dt>
   <dd>
+Secondary structure assignment<br>
+    URL: <a href="https://swift.cmbi.umcn.nl/gv/dssp/">https://swift.cmbi.umcn.nl/gv/dssp/</a><br>
   Versions: 2.0.4, <em>2.2.1</em><br>
   </dd>
 
@@ -747,126 +773,175 @@ A lightweight C++ template library for vector and matrix math<br>
 
   <dt>eman</dt>
   <dd>
+Single Particle Analysis and Electron Micrograph Analysis<br>
+    URL: <a href="https://blake.bcm.edu/emanwiki/EMAN2">https://blake.bcm.edu/emanwiki/EMAN2</a><br>
   Versions: 2.12, <em>2.2</em><br>
   </dd>
 
   <dt>featuresketch</dt>
   <dd>
+Ursula's featuresketch script; run feature_sketch.sh then feature_sketch.py<br>
   Versions: <em>3.0</em><br>
   </dd>
 
   <dt>fpocket</dt>
   <dd>
+Protein pocket (cavity) detection algorithm<br>
+    URL: <a href="https://github.com/Discngine/fpocket">https://github.com/Discngine/fpocket</a><br>
   Versions: <em>2.0</em><br>
   </dd>
 
   <dt>gcc</dt>
   <dd>
+Various compilers (C, C++, Objective-C, Java, ...)<br>
+    URL: <a href="https://gcc.gnu.org/">https://gcc.gnu.org/</a><br>
   Versions: 5.1.1, 6.4.1, <em>7.3.1</em><br>
   </dd>
 
   <dt>ghostscript</dt>
   <dd>
+A PostScript interpreter and renderer<br>
+    URL: <a href="https://www.ghostscript.com/">https://www.ghostscript.com/</a><br>
   Versions: <em>8.70</em><br>
   </dd>
 
   <dt>gnuplot</dt>
   <dd>
+A program for plotting mathematical expressions and data<br>
+    URL: <a href="http://www.gnuplot.info/">http://www.gnuplot.info/</a><br>
   Versions: <em>5.0.5</em><br>
   </dd>
 
   <dt>hdf5</dt>
   <dd>
+A general purpose library and file format for storing scientific data<br>
+    URL: <a href="https://support.hdfgroup.org/HDF5/">https://support.hdfgroup.org/HDF5/</a><br>
   Versions: 1.8.14, 1.8.17, 1.10.1, <em>1.10.5</em><br>
   </dd>
 
   <dt>ImageMagick</dt>
   <dd>
+An X application for displaying and manipulating images<br>
+    URL: <a href="https://imagemagick.org/">https://imagemagick.org/</a><br>
   Versions: <em>6.8.8.10</em><br>
   </dd>
 
   <dt>imp</dt>
   <dd>
-  Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, 2.12.0, 2.13.0-i386, 2.13.0-x86_64, <em>2.13.0</em><br>
+Integrative Modeling Platform (version 2.13.0, with only usage checks turned on)<br>
+    URL: <a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a><br>
+  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, <em>2.13.0</em><br>
   </dd>
 
   <dt>imp-fast</dt>
   <dd>
-  Versions: last_ok_build-i386, last_ok_build-x86_64, last_ok_build, nightly-i386, nightly-x86_64, nightly, 2.0.0-i386, 2.0.0-x86_64, 2.0.0, 2.0.1-i386, 2.0.1-x86_64, 2.0.1, 2.1.0-i386, 2.1.0-x86_64, 2.1.0, 2.1.1-i386, 2.1.1-x86_64, 2.1.1, 2.2.0-i386, 2.2.0-x86_64, 2.2.0, 2.2.1-i386, 2.2.1-x86_64, 2.2.1, 2.3.0-i386, 2.3.0-x86_64, 2.3.0, 2.3.1-i386, 2.3.1-x86_64, 2.3.1, 2.4.0-i386, 2.4.0-x86_64, 2.4.0, 2.5.0-i386, 2.5.0-x86_64, 2.5.0, 2.6.0-i386, 2.6.0-x86_64, 2.6.0, 2.6.1-i386, 2.6.1-x86_64, 2.6.1, 2.6.2-i386, 2.6.2-x86_64, 2.6.2, 2.7.0-i386, 2.7.0-x86_64, 2.7.0, 2.8.0-i386, 2.8.0-x86_64, 2.8.0, 2.9.0-i386, 2.9.0-x86_64, 2.9.0, 2.10.0-i386, 2.10.0-x86_64, 2.10.0, 2.10.1-i386, 2.10.1-x86_64, 2.10.1, 2.11.0-i386, 2.11.0-x86_64, 2.11.0, 2.11.1-i386, 2.11.1-x86_64, 2.11.1, 2.12.0-i386, 2.12.0-x86_64, 2.12.0, 2.13.0-i386, 2.13.0-x86_64, <em>2.13.0</em><br>
+Integrative Modeling Platform (version 2.13.0, fast build)<br>
+    URL: <a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a><br>
+  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, <em>2.13.0</em><br>
   </dd>
 
   <dt>libtau</dt>
   <dd>
+Code from the SAMBA group at TAU<br>
+    URL: <a href="https://integrativemodeling.org/libTAU.html">https://integrativemodeling.org/libTAU.html</a><br>
   Versions: <em>1.0.1</em><br>
   </dd>
 
   <dt>main</dt>
   <dd>
+Dusan Turk's MAIN program<br>
+    URL: <a href="https://stef.ijs.si/">https://stef.ijs.si/</a><br>
   Versions: <em>2013</em><br>
   </dd>
 
   <dt>matlab</dt>
   <dd>
+Language for technical computing<br>
+    URL: <a href="https://www.mathworks.com/products/matlab.html">https://www.mathworks.com/products/matlab.html</a><br>
   Versions: <em>9.5.0.944444</em><br>
   </dd>
 
   <dt>mist</dt>
   <dd>
+MiST - Mass spectrometry interaction STatistics<br>
+    URL: <a href="https://github.com/salilab/mist/">https://github.com/salilab/mist/</a><br>
   Versions: <br>
   </dd>
 
   <dt>modeller</dt>
   <dd>
-  Versions: SVN-i386, SVN-x86_64, 9.10-i386, 9.10-x86_64, 9.10, 9.11-i386, 9.11-x86_64, 9.11, 9.12-i386, 9.12-x86_64, 9.12, 9.13-i386, 9.13-x86_64, 9.13, 9.14-i386, 9.14-x86_64, 9.14, 9.15-i386, 9.15-x86_64, 9.15, 9.16-i386, 9.16-x86_64, 9.16, 9.17-i386, 9.17-x86_64, 9.17, 9.18-i386, 9.18-x86_64, 9.18, 9.19-i386, 9.19-x86_64, 9.19, 9.20-i386, 9.20-x86_64, 9.20, 9.21-i386, 9.21-x86_64, 9.21, 9.22-i386, 9.22-x86_64, 9.22, 9.23-i386, 9.23-x86_64, 9.23, 9.24-i386, 9.24-x86_64, 9.24, 9.25-i386, 9.25-x86_64, 9.25, <em>SVN</em><br>
+MODELLER comparative modeling<br>
+    URL: <a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a><br>
+  Versions: 9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, <em>SVN</em><br>
   </dd>
 
   <dt>modpipe</dt>
   <dd>
+ModPipe (sets $MODPIPE; only works on the cluster)<br>
+    URL: <a href="https://salilab.org/modpipe/">https://salilab.org/modpipe/</a><br>
   Versions: 2.0.1, 2.0.2, 2.1.0, 2.1.1, 2.1.2, 2.1.3, 2.2.0, <em>2.3.0</em><br>
   </dd>
 
   <dt>muscle</dt>
   <dd>
+Multiple alignment program for protein sequences<br>
+    URL: <a href="http://www.drive5.com/muscle/">http://www.drive5.com/muscle/</a><br>
   Versions: <em>3.8.31</em><br>
   </dd>
 
   <dt>ninja</dt>
   <dd>
+A small build system with a focus on speed<br>
+    URL: <a href="https://ninja-build.org/">https://ninja-build.org/</a><br>
   Versions: 1.6.0, <em>1.8.2</em><br>
   </dd>
 
   <dt>opencv</dt>
   <dd>
+Collection of algorithms for computer vision<br>
+    URL: <a href="https://opencv.org/">https://opencv.org/</a><br>
   Versions: <em>3.4.3</em><br>
   </dd>
 
   <dt>openeye</dt>
   <dd>
+OpenEye products (work on any 64-bit node)<br>
+    URL: <a href="https://www.eyesopen.com/">https://www.eyesopen.com/</a><br>
   Versions: <em>2012</em><br>
   </dd>
 
   <dt>patch_dock</dt>
   <dd>
+Molecular Docking Based on Shape Complementarity Principles<br>
+    URL: <a href="https://bioinfo3d.cs.tau.ac.il/PatchDock/">https://bioinfo3d.cs.tau.ac.il/PatchDock/</a><br>
   Versions: <em>1.3</em><br>
   </dd>
 
   <dt>pcss</dt>
   <dd>
+Peptide Classification using Sequence and Structure<br>
+    URL: <a href="https://github.com/salilab/pcss">https://github.com/salilab/pcss</a><br>
   Versions: <br>
   </dd>
 
   <dt>phenix</dt>
   <dd>
+Python-based Hierarchical ENvironment for Integrated Xtallography<br>
+    URL: <a href="https://www.phenix-online.org/">https://www.phenix-online.org/</a><br>
   Versions: 1.10.1.2155, <em>1.18.2.3874</em><br>
   </dd>
 
   <dt>profit</dt>
   <dd>
+ProFit, a protein least squares fitting program<br>
+    URL: <a href="http://www.bioinf.org.uk/software/profit/">http://www.bioinf.org.uk/software/profit/</a><br>
   Versions: <em>3.1</em><br>
   </dd>
 
   <dt>psipred</dt>
   <dd>
+Accurate protein secondary structure prediction<br>
+    URL: <a href="http://bioinf.cs.ucl.ac.uk/psipred/">http://bioinf.cs.ucl.ac.uk/psipred/</a><br>
   Versions: <em>4.0</em><br>
   </dd>
 
@@ -1007,176 +1082,231 @@ A lightweight C++ template library for vector and matrix math<br>
 
   <dt>python3/biopython</dt>
   <dd>
+Python tools for computational molecular biology<br>
+    URL: <a href="https://biopython.org/">https://biopython.org/</a><br>
   Versions: <em>1.75</em><br>
   </dd>
 
   <dt>python3/bottleneck</dt>
   <dd>
+Collection of fast NumPy array functions written in Cython<br>
+    URL: <a href="https://github.com/pydata/bottleneck">https://github.com/pydata/bottleneck</a><br>
   Versions: <em>1.3.1</em><br>
   </dd>
 
   <dt>python3/cycler</dt>
   <dd>
+Composable style cycles<br>
+    URL: <a href="https://github.com/matplotlib/cycler">https://github.com/matplotlib/cycler</a><br>
   Versions: <em>0.10.0</em><br>
   </dd>
 
   <dt>python3/dateutil</dt>
   <dd>
+Powerful extensions to the standard datetime module<br>
+    URL: <a href="https://dateutil.readthedocs.io/en/stable/">https://dateutil.readthedocs.io/en/stable/</a><br>
   Versions: <em>2.8.1</em><br>
   </dd>
 
   <dt>python3/decorator</dt>
   <dd>
+Module to simplify usage of decorators<br>
+    URL: <a href="https://github.com/micheles/decorator">https://github.com/micheles/decorator</a><br>
   Versions: <em>4.4.1</em><br>
   </dd>
 
   <dt>python3/h5py</dt>
   <dd>
+Python interface to the Hierarchical Data Format library<br>
+    URL: <a href="https://www.h5py.org/">https://www.h5py.org/</a><br>
   Versions: <em>2.10.0</em><br>
   </dd>
 
   <dt>python3/ihm</dt>
   <dd>
+Python package for handling IHM mmCIF files<br>
+    URL: <a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a><br>
   Versions: <em>0.15</em><br>
   </dd>
 
   <dt>python3/joblib</dt>
   <dd>
+Lightweight pipelining: using Python functions as pipeline jobs<br>
+    URL: <a href="https://joblib.readthedocs.io/en/latest/">https://joblib.readthedocs.io/en/latest/</a><br>
   Versions: <em>0.14.0</em><br>
   </dd>
 
   <dt>python3/kiwisolver</dt>
   <dd>
+A fast implementation of the Cassowary constraint solver<br>
+    URL: <a href="https://github.com/nucleic/kiwi">https://github.com/nucleic/kiwi</a><br>
   Versions: <em>1.1.0</em><br>
   </dd>
 
   <dt>python3/matplotlib</dt>
   <dd>
+Python 2D plotting library<br>
+    URL: <a href="https://matplotlib.org/">https://matplotlib.org/</a><br>
   Versions: <em>3.1.2</em><br>
   </dd>
 
   <dt>python3/msgpack</dt>
   <dd>
+A Python MessagePack (de)serializer<br>
+    URL: <a href="https://msgpack.org/">https://msgpack.org/</a><br>
   Versions: <em>0.6.2</em><br>
   </dd>
 
   <dt>python3/networkx</dt>
   <dd>
+Creates and Manipulates Graphs and Networks<br>
+    URL: <a href="https://networkx.github.io/">https://networkx.github.io/</a><br>
   Versions: <em>2.4</em><br>
   </dd>
 
   <dt>python3/nose</dt>
   <dd>
+Discovery-based unittest extension for Python3<br>
+    URL: <a href="https://nose.readthedocs.io/en/latest/">https://nose.readthedocs.io/en/latest/</a><br>
   Versions: <em>1.3.7</em><br>
   </dd>
 
   <dt>python3/numexpr</dt>
   <dd>
+Fast numerical array expression evaluator for Python and NumPy<br>
+    URL: <a href="https://github.com/pydata/numexpr">https://github.com/pydata/numexpr</a><br>
   Versions: <em>2.7.0</em><br>
   </dd>
 
   <dt>python3/numpy</dt>
   <dd>
+A fast multidimensional array facility for Python<br>
+    URL: <a href="https://numpy.org/">https://numpy.org/</a><br>
   Versions: <em>1.17.4</em><br>
   </dd>
 
   <dt>python3/pandas</dt>
   <dd>
+Python Data Analysis Library<br>
+    URL: <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a><br>
   Versions: <em>0.25.3</em><br>
   </dd>
 
   <dt>python3/pkgconfig</dt>
   <dd>
+A Python interface to the pkg-config command line tool<br>
+    URL: <a href="https://github.com/matze/pkgconfig">https://github.com/matze/pkgconfig</a><br>
   Versions: <em>1.5.1</em><br>
   </dd>
 
   <dt>python3/protobuf</dt>
   <dd>
+Protocol Buffers - Google's data interchange format<br>
+    URL: <a href="https://developers.google.com/protocol-buffers/">https://developers.google.com/protocol-buffers/</a><br>
   Versions: <em>3.11.2</em><br>
   </dd>
 
   <dt>python3/pyparsing</dt>
   <dd>
+An object-oriented approach to text processing<br>
+    URL: <a href="https://github.com/pyparsing/pyparsing/">https://github.com/pyparsing/pyparsing/</a><br>
   Versions: <em>2.4.5</em><br>
   </dd>
 
   <dt>python3/pyrmsd</dt>
   <dd>
+Way of performing RMSD calculations of large sets of structures<br>
+    URL: <a href="https://github.com/salilab/pyRMSD">https://github.com/salilab/pyRMSD</a><br>
   Versions: <em>4.1.gita558b8a</em><br>
   </dd>
 
   <dt>python3/pytz</dt>
   <dd>
+World Timezone Definitions for Python<br>
+    URL: <a href="https://pythonhosted.org/pytz/">https://pythonhosted.org/pytz/</a><br>
   Versions: <em>2019.3</em><br>
   </dd>
 
   <dt>python3/scikit</dt>
   <dd>
+A set of python modules for machine learning and data mining<br>
+    URL: <a href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a><br>
   Versions: <em>0.21.3</em><br>
   </dd>
 
   <dt>python3/scipy</dt>
   <dd>
+Scipy: Scientific Tools for Python<br>
+    URL: <a href="https://www.scipy.org/">https://www.scipy.org/</a><br>
   Versions: <em>1.3.2</em><br>
   </dd>
 
   <dt>python3/six</dt>
   <dd>
+Python 2 and 3 compatibility utilities<br>
+    URL: <a href="https://github.com/benjaminp/six">https://github.com/benjaminp/six</a><br>
   Versions: <em>1.13.0</em><br>
   </dd>
 
   <dt>python3/tables</dt>
   <dd>
+Hierarchical datasets in Python<br>
+    URL: <a href="http://www.pytables.org/">http://www.pytables.org/</a><br>
   Versions: <em>3.6.1</em><br>
   </dd>
 
   <dt>relion</dt>
   <dd>
+Electron cryo-microscopy refinement<br>
+    URL: <a href="https://github.com/3dem/relion">https://github.com/3dem/relion</a><br>
   Versions: 1.4, 2.0.6, <em>3.0.git9a02562</em><br>
   </dd>
 
   <dt>rosetta</dt>
   <dd>
+Computational modeling and analysis of protein structures<br>
+    URL: <a href="https://www.rosettacommons.org/">https://www.rosettacommons.org/</a><br>
   Versions: 3.5, <em>3.10</em><br>
   </dd>
 
   <dt>sali-libraries</dt>
   <dd>
-  Versions: <br>
-  </dd>
-
-  <dt>sali-libraries-i386</dt>
-  <dd>
-  Versions: <br>
-  </dd>
-
-  <dt>sali-libraries-x86_64</dt>
-  <dd>
+Makes available libraries usually only present on the Sali interactive nodes<br>
   Versions: <br>
   </dd>
 
   <dt>svm_light</dt>
   <dd>
+Support Vector Machine<br>
+    URL: <a href="http://svmlight.joachims.org/">http://svmlight.joachims.org/</a><br>
   Versions: <em>6.0.2</em><br>
   </dd>
 
   <dt>swig</dt>
   <dd>
+Connects C/C++/Objective C to some high-level programming languages<br>
+    URL: <a href="http://www.swig.org/">http://www.swig.org/</a><br>
   Versions: <em>3.0.12</em><br>
   </dd>
 
   <dt>usearch</dt>
   <dd>
+High-throughput search and clustering tool<br>
+    URL: <a href="http://www.drive5.com/usearch/">http://www.drive5.com/usearch/</a><br>
   Versions: 4.0.43, <em>10.0.240</em><br>
   </dd>
 
   <dt>web_service</dt>
   <dd>
+Command line interface (web_service.py) to most lab web services<br>
+    URL: <a href="https://github.com/salilab/saliweb">https://github.com/salilab/saliweb</a><br>
   Versions: <br>
   </dd>
 
   <dt>zdock</dt>
   <dd>
+Rigid body docking<br>
+    URL: <a href="http://zdock.umassmed.edu/">http://zdock.umassmed.edu/</a><br>
   Versions: <em>3.0.2</em><br>
   </dd>
 
@@ -1189,10 +1319,10 @@ A lightweight C++ template library for vector and matrix math<br>
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(102)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-10-12 12:07:18 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-10-27 10:53:34 from querying `module avail` and `module spider`._
 
 
 <style>
