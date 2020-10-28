@@ -16,7 +16,7 @@ If you have questions which require {{ site.cluster.nickname }} staff assistance
 
   - [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) - reaches the {{ site.cluster.nickname }} support staff.
 
-For questions, discussion, and feature requests, please use one of the following channels:
+For questions, discussion, and feature requests, please use the following slack channel:
 
 2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time
 
