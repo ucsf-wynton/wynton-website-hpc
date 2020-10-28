@@ -2,12 +2,12 @@
 
 To better assist with your issue:
 
-  * On emails, please use 'Reply All' in all your correspondence.
-  * Don't include screenshot images; cut-and-paste text.
-  * If you have problems with jobs (e.g. not running or given errors), make sure to include the job IDs of the job you need help on.
   * Include your username on the cluster.
   * What machine are you trying to use, e.g. login or development node?
-  * Never include PHI or other sensitive data in unencrypted emails or slack channels. If you need to include sensitive data, use the UCSF encrypted email system by using the term "Secure:" at the start of the email subject. Do not include sensitive data in your slack posts.
+  * On emails, please use 'Reply All' in all your correspondence.
+  * Don't include screenshot images; cut-and-paste text from the console.
+  * If you have problems with jobs (e.g. not running or given errors), make sure to include the job IDs of the job you need help on.
+  * Never include PHI or other sensitive data in unencrypted emails or slack channels. If you need to include sensitive data, use the UCSF encrypted email system (invoke by including "Secure:" at the start of the email subject line.) Do not include sensitive data in your slack posts.
   
 ---
 
@@ -19,7 +19,7 @@ If you have questions which require {{ site.cluster.nickname }} staff assistance
 
 For questions, discussion, and feature requests, please use the following slack channels:
 
-2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time
+2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time.
 
   - Join: (a) go to [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (b) enter your UCSF(\*) email address. (\*) If you don't have an email address that ends with ucsf.edu, or it for other reasons does not work, [let us know]({{ '/about/contact.html' | relative_url }}) and we will send you an invite to your preferred email address.
 
