@@ -7,6 +7,7 @@ To better assist with your issue:
   * If you have problems with jobs (e.g. not running or given errors), make sure to include the job IDs of the job you need help on.
   * Include your username on the cluster.
   * What machine are you trying to use, e.g. login or development node?
+  * Never include PHI or other sensitive data in unencrypted emails or slack channels. If you need to include sensitive data, use the UCSF encrypted email system by using the term "Secure:" at the start of the email subject. Do not include sensitive data in your slack posts.
   
 ---
 
