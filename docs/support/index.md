@@ -28,7 +28,7 @@ These are communal forums - feel free to ask questions, answer questions, and pa
 (Mailing list deprecated, will be deleted soon due to lack of use.)
 3. **Mailing list [wynton-help@listsrv.ucsf.edu](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help)** - A communal forum where you can ask for help and discuss problems and solutions (you need to subscribe before you can post messages)
   - Subscribe / unsubscribe: (a) go to [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help), (b) click 'Subscribe or Unsubscribe', (c) enter your full name and preferred email address, and (d) click link in confirmation email that arrives within minutes.
-  - Web archives: N/A <!-- [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help) (only visible to subscribed list members). -->
+  - Web archives: N/A [list homepage](https://listsrv.ucsf.edu/cgi-bin/wa?A0=wynton-help) (only visible to subscribed list members).
 -->
 
 
