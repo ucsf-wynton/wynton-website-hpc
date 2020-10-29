@@ -3,7 +3,7 @@
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Starting Wednesday October 28, 2020, <strong>access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).</strong>
+Starting Thursday October 29, 2020, <strong>access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).</strong>
 If you are on the UCSF VPN, you have already authenticated and no further 2FA is required.
 In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See <a href="{{ '/get-started/duo-signup.html' | relative_url }}">Two-Factor Authentication for SSH</a> for instructions.
 </div>
@@ -29,12 +29,19 @@ Another alternative, which some might find easier, is to connect to the cluster 
 
 ## Instructions
 
+<div class="alert alert-info" role="alert">
+<strong>If this is the first time you access {{ site.cluster.name }} and you are outside of the UCSF network, we recommend that you first log onto the UCSF VPN before continuing below.</strong>  This avoids having to deal with {{ site.cluster.nickname }}'s two-factor authentication that is otherwise required when accessing the cluster from outside of the UCSF.  Note that this advice is just to get you started.  In the long run, you do not want to be on the very bandwidth-limited UCSF VPN if you are transferring large amounts of files to and from Wynton to your local machine.
+</div>
+
 To log into the cluster, assuming your user name on {{ site.cluster.name }} is `alice` (case sensitive), do the following:
 
-1. Open a terminal (called 'Terminal' on macOS and most Linux distributions, and 'Command Prompt' on Windows 10),
+1. For first-timers outside of the UCSF network, log onto the UCSF VPN,
 
-2. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press <kbd>ENTER</kbd>, and
-3. when prompted, enter your {{ site.cluster.name }} password.
+2. open a terminal (called 'Terminal' on macOS and most Linux distributions, and 'Command Prompt' on Windows 10),
+
+3. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press <kbd>ENTER</kbd>, and
+
+4. when prompted, enter your {{ site.cluster.name }} password.
 
 
 ### Example
