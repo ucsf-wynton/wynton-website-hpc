@@ -7,7 +7,7 @@ To better assist with your issue:
   * On emails, please use 'Reply All' in all your correspondence.
   * Don't include screenshot images; cut-and-paste text from the console.
   * If you have problems with jobs (e.g. not running or given errors), make sure to include the job IDs of the job you need help on.
-  * Never include PHI or other sensitive data in unencrypted emails or slack channels. If you need to include sensitive data, use the UCSF encrypted email system (invoke by including "Secure:" at the start of the email subject line.) Do not include sensitive data in your slack posts.
+  * Never include PHI or other sensitive data in unencrypted emails or Slack channels. If you need to include sensitive data, use the UCSF encrypted email system (invoke by including "Secure:" at the start of the email subject line.) Do not include sensitive data in your Slack posts.
   
 ---
 
@@ -17,7 +17,7 @@ If you have questions which require {{ site.cluster.nickname }} staff assistance
 
   - [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) - reaches the {{ site.cluster.nickname }} support staff.
 
-For questions, discussion, and feature requests, please use the following slack channels:
+For questions, discussion, and feature requests, please use the following Slack channels:
 
 2. **Slack workspace [ucsf-wynton](https://ucsf-wynton.slack.com/)** - A communal forum for {{ site.cluster.name }} users to interact in real time.
 
