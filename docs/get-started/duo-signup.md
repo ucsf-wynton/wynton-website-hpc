@@ -2,10 +2,6 @@
 
 Starting Thursday October 29, 2020, <strong>access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).</strong>   If you connecting via the UCSF campus network, 2FA is _not_ required.  Likewise, if you are on the UCSF VPN, you are already fully authenticated on the campus network and _no_ further 2FA is needed to access {{ site.cluster.name }}.  In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.
 
-## Test phase
-
-During October 14-28, **you can prepare for the full 2FA rollout** on {{ site.cluster.name }} already now by using login node **{{ site.login2.hostname }}** and data-transfer node **{{ site.transfer2.hostname }}** where we have already enabled 2FA for you to test and validate.  See below instructions for how to register 2FA for your {{ site.cluster.name }} account.
-
 
 
 ## Requirements
@@ -61,8 +57,6 @@ For examples on what it looks like when you authenticate via other options, see 
 In order to authenticate via 2FA, you will first have to register your Duo 2FA setup with {{ site.cluster.name }}.  Since they are different 2FA systems, you have to do complete this registration regardless whether or not you have already a registered Duo 2FA for the UCSF VPN.  Below are detailed instruction on how to register 2FA for {{ site.cluster.name }}.
 
 _Comment_: If you are asked to 'Please contact your help or support desk' during the Duo 2FA registration, please contact the [{{ site.cluster.name }} support staff] (do _not_ contact the UCSF IT Service Desk).
-
-_Note, during the October 14-28 test phase, the below will work only on **{{ site.login2.hostname }}** and **{{ site.transfer2.hostname }}**._
 
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
