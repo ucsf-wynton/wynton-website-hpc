@@ -335,14 +335,14 @@ After this, the hdf5r package will install out of the box, i.e. by calling:
 The [Rmpi] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install Rmpi on the cluster, we start by loading the `mpi` module;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load mpi
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
 [alice@{{ site.devel.name }} ~]$ module load CBI r
 [alice@{{ site.devel.name }} ~]$ module list
 Currently Loaded Modules:
   1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.2
 ```
 
-Note that you will have to load the `mpi` module also whenever you run R code that requires the Rmpi package.
+Make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires the Rmpi package.
 
 Continuing, to install Rmpi, we launch R and call the following:
 
