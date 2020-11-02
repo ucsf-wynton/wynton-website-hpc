@@ -10,6 +10,7 @@ In order to maximize the efficiency of the cluster and **decrease your** (and ot
 * [Work toward local scratch]({{ '/scheduler/using-local-scratch.html' | relative_url }}) on the compute nodes (&rArr; faster processing and less load on shared disk I/O)
 
 Some additional guidelines for optimum use of the BeeGFS file system on Wynton:
+
 * Prefer fewer, large files over many small ones
 * If writing many files, spread them out over a number of directories including SGE output and error files
 * Users are strongly encouraged to keep the number of reads and writes to a single directory to a reasonable number
