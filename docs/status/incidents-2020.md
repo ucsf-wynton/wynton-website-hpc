@@ -1,3 +1,11 @@
+### November 5, 2020
+
+#### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
+
+**Resolved**: Our BeeGFS file system was non-responsive during 01:20-04:00 on 2020-11-05 because one of the meta servers hung.
+<br><span class="timestamp">November 5, 08:55 PDT</span>
+
+
 ### October 21, 2020
 
 #### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
