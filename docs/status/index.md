@@ -80,9 +80,9 @@
 </div>
 
 
-## Upcoming and Current Incidents
+## Current Incidents
 
-### Current Incidents
+### November 4, 2020
 
 #### <span style="color: orange;">Compute nodes not serving jobs (due to network switch failure)</span>
 
