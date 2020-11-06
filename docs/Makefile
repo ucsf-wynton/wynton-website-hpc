@@ -155,4 +155,7 @@ markdown-link-check:
 	  exit 1
 	fi
 
+
+check: spell markdownlint markdown-link-check
+
 FORCE:
