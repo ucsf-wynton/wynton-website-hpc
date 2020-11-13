@@ -315,13 +315,14 @@ ERROR: configuration failed for package 'hdf5r'
 
  To fix this, load a modern version of 'hdf5' from the [CBI software stack] before installing the package, i.e.
 
- ```sh
- [alice@{{ site.devel.name }} ~]$ module load CBI hdf5 r
- [alice@{{ site.devel.name }} ~]$ module list
- Currently Loaded Modules:
-  1) CBI   2) hdf5/1.12.0   3) r/4.0.2
- ```
- Note that you also need to load the `hdf5` module every time you use the hdf5r package in R.
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI hdf5 r
+[alice@{{ site.devel.name }} ~]$ module list
+Currently Loaded Modules:
+ 1) CBI   2) hdf5/1.12.0   3) r/4.0.2
+```
+
+Note that you also need to load the `hdf5` module every time you use the hdf5r package in R.
 
 After this, the hdf5r package will install out of the box, i.e. by calling:
 
@@ -357,6 +358,7 @@ ERROR: compilation failed for package 'RcppArmadillo'
 To get access to a modern compiler, we can use one of the SCL `devtoolset`:s, either through [traditional SCL approaches] or by loading the `scl-devtoolset` module from the [CBI software stack];
 
 ```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
 [alice@{{ site.devel.name }} ~]$ gcc --version | head -1
 gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 ```
