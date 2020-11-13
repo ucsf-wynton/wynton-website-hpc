@@ -54,7 +54,7 @@ For examples on what it looks like when you authenticate via other options, see 
 
 ## Registration for 2FA on {{ site.cluster.name }}
 
-In order to authenticate via 2FA, you will first have to register your Duo 2FA setup with {{ site.cluster.name }}.  Since they are different 2FA systems, you have to do complete this registration regardless whether or not you have already a registered Duo 2FA for the UCSF VPN.  Below are detailed instruction on how to register 2FA for {{ site.cluster.name }}.
+In order to authenticate via 2FA, you will first have to register your Duo 2FA setup with {{ site.cluster.name }}.  Since they are different 2FA systems, you have to complete this registration regardless whether or not you have already registered Duo 2FA for the UCSF VPN.  Below are detailed instructions on how to register 2FA for {{ site.cluster.name }}.
 
 _Comment_: If you are asked to 'Please contact your help or support desk' during the Duo 2FA registration, please contact the [{{ site.cluster.name }} support staff] (do _not_ contact the UCSF IT Service Desk).
 
