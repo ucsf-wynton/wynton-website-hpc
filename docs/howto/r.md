@@ -363,11 +363,16 @@ To get access to a modern compiler, we can use one of the SCL `devtoolset`:s, ei
 gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 ```
 
-After this, RcppArmadillo will install out of the box in R;
+So by loading this module, we get access to a newer compiler version and RcppArmadillo will install out of the box in R, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI r
 [alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
+[alice@{{ site.devel.name }} ~]$ module list
+
+Currently Loaded Modules:
+  1) CBI   2) r/4.0.2   3) scl-devtoolset/8
+
 [alice@{{ site.devel.name }} ~]$ R
 ...
 > install.packages("RcppArmadillo")
