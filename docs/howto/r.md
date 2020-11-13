@@ -330,6 +330,50 @@ After this, the hdf5r package will install out of the box, i.e. by calling:
 ```
 
 
+#### The RcppArmadillo package
+
+The _installation_ of the [RcppArmadillo] package requires a newer C++ compiler than what comes with CentOS 7.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ gcc --version | head -1
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
+```
+
+An attempt to install RcppArmadillo with this rather old version results in compilation errors like:
+
+```r
+> install.packages("RcppArmadillo")
+...
+../inst/include/armadillo_bits/arma_version.hpp:33:33: error: from previous declaration 'arma::arma_version::patch'
+
+   static constexpr unsigned int patch = ARMA_VERSION_PATCH;
+RcppArmadillo.cpp:28:40: error: declaration of 'constexpr const unsigned int arma::arma_version::patch' outside of class is not definition [-fpermissive]
+ const unsigned int arma::arma_version::patch;
+                                        ^
+make: *** [RcppArmadillo.o] Error 1
+ERROR: compilation failed for package 'RcppArmadillo'
+```
+
+To get access to a modern compiler, we can use one of the SCL `devtoolset`:s, either through [traditional SCL approaches] or by loading the `scl-devtoolset` module from the [CBI software stack];
+
+```sh
+[alice@{{ site.devel.name }} ~]$ gcc --version | head -1
+gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
+```
+
+After this, RcppArmadillo will install out of the box in R;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI r
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
+[alice@{{ site.devel.name }} ~]$ R
+...
+> install.packages("RcppArmadillo")
+```
+
+Note, it is only when you install this R package that you need `scl-devtoolset`.  There is no need for it when loading the RcppArmadillo package later on.  
+
+
 #### The Rmpi package
 
 The [Rmpi] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install Rmpi on the cluster, we start by loading the `mpi` module;
@@ -393,7 +437,9 @@ That's it!
 [BiocManager]: https://cran.r-project.org/package=BiocManager
 [future]: https://cran.r-project.org/package=future
 [hdf5r]: https://cran.r-project.org/package=hdf5r
+[RcppArmadillo]: https://cran.r-project.org/package=RcppArmadillo
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: http://bioconductor.org/packages/limma/
 [CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
+[traditional SCL approaches]: {{ '/software/scl.html' | relative_url }}
