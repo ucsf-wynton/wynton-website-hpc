@@ -1,5 +1,7 @@
 # Globus File Sharing
 
+Below are instructions on how to share a specific folder on {{ site.cluster.nickname }} with specific Globus users.  These users do _neither_ have to have a {{ site.cluster.nickname }} account or have to be UCSF employees - you can share with anyone who has a Globus account.  When sharing, you can specify whether the person you share with should have read-only access or write access.  Typically, if you want to make large data files available for download, you will share with read-only permission.  If you want to receive data from a collaborator, you can give them write permission. 
+
 
 ## Creating a Shared Globus Endpoint
 
