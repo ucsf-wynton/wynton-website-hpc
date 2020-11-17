@@ -331,6 +331,7 @@ After this, the hdf5r package will install out of the box, i.e. by calling:
 ```
 
 
+<!---
 #### The RcppArmadillo package
 
 The _installation_ of the [RcppArmadillo] package requires a newer C++ compiler than what comes with CentOS 7.
@@ -379,7 +380,7 @@ Currently Loaded Modules:
 ```
 
 Note, it is only when you install this R package that you need `scl-devtoolset`.  There is no need for it when loading the RcppArmadillo package later on.  
-
+--->
 
 #### The Rmpi package
 
