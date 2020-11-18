@@ -4,7 +4,7 @@
 
 ## The Bash startup process
 
-Unless you have explicitly requested to use a different shell than Bash, you will be running a Bash shell when you log onto any of {{ site.cluster.name }}'s machines.  You can see confirm this by looking at the value of the `SHELL` environment variable;
+Unless you have explicitly requested to use a different shell than Bash, you will be running a Bash shell when you log onto any of {{ site.cluster.name }}'s machines.  You can confirm this by looking at the value of the `SHELL` environment variable;
 
 <!-- code-block label="bash-SHELL" -->
 ```sh
