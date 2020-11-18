@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD010 -->
+
 # Work with Bash
 
 ## The Bash startup process
@@ -36,8 +38,10 @@ if [ -f /etc/bashrc ]; then
 fi
 ```
 
-This Bash statement (i) checks if the file `/etc/bashrc` exists, and if it does, then that file is also "sourced" by the `. /etc/bashrc` line.   The period in front is not a mistake; sometimes you see a period sometimes you see `source`, which works the same.
+This Bash statement (i) checks if the file `/etc/bashrc` exists, and (ii) if it does, then that file is also "sourced" by the `. /etc/bashrc` line.   The period in front is not a mistake; sometimes you see a period sometimes you see `source`, which works the same.
 
-If we would look at the `/etc/bashrc` file, we would find a lot of things but lets not go into the details.  The only thing we need to know is that `. /etc/bashrc` will bring in all of the essential, central configuration that the system administrators have setup for us.  **It is critical that your `~/.bashrc` sources the `/etc/bashrc` file; do _not_ remove that if-then statement!**
+If we would look at the `/etc/bashrc` file, we would find a lot of things but lets not go into the details.  The only thing we need to know is that `. /etc/bashrc` will bring in all of the essential, central configuration that the system administrators have setup for us.
 
-
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+It is critical that your <code>~/.bashrc</code> sources the <code>/etc/bashrc</code> file. Do <em>not</em> remove the if-then statement that sources that file!
+</div>
