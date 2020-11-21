@@ -816,7 +816,7 @@ A program for plotting mathematical expressions and data<br>
   <dd>
 A general purpose library and file format for storing scientific data<br>
     URL: <a href="https://support.hdfgroup.org/HDF5/">https://support.hdfgroup.org/HDF5/</a><br>
-  Versions: 1.8.14, 1.8.17, 1.10.1, <em>1.10.5</em><br>
+  Versions: 1.8.14, 1.8.17, 1.10.1, 1.10.5, <em>1.10.6</em><br>
   </dd>
 
   <dt>ImageMagick</dt>
@@ -828,16 +828,16 @@ An X application for displaying and manipulating images<br>
 
   <dt>imp</dt>
   <dd>
-Integrative Modeling Platform (version 2.13.0, with only usage checks turned on)<br>
+Integrative Modeling Platform (version 2.14.0, with only usage checks turned on)<br>
     URL: <a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a><br>
-  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, <em>2.13.0</em><br>
+  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, <em>2.14.0</em><br>
   </dd>
 
   <dt>imp-fast</dt>
   <dd>
-Integrative Modeling Platform (version 2.13.0, fast build)<br>
+Integrative Modeling Platform (version 2.14.0, fast build)<br>
     URL: <a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a><br>
-  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, <em>2.13.0</em><br>
+  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, <em>2.14.0</em><br>
   </dd>
 
   <dt>libtau</dt>
@@ -1133,7 +1133,7 @@ Python package for handling IHM mmCIF files<br>
   <dd>
 Lightweight pipelining: using Python functions as pipeline jobs<br>
     URL: <a href="https://joblib.readthedocs.io/en/latest/">https://joblib.readthedocs.io/en/latest/</a><br>
-  Versions: <em>0.14.0</em><br>
+  Versions: 0.14.0, <em>0.17.0</em><br>
   </dd>
 
   <dt>python3/kiwisolver</dt>
@@ -1322,7 +1322,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-10-29 12:27:24 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2020-11-20 18:32:23 from querying `module avail` and `module spider`._
 
 
 <style>
