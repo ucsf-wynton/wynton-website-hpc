@@ -82,12 +82,6 @@
 
 ## Current Incidents
 
-### November 4, 2020
-
-#### <span style="color: orange;">Compute nodes not serving jobs (due to network switch failure)</span>
-
-**Notice**: 74 compute nodes, including several GPU nodes, were taken off the job scheduler around 14:00 on 2020-11-04 due to a faulty network switch. The network switch needs to be replaced in order to resolve this.
-<br><span class="timestamp">November 4, 16:10 PDT</span>
 
 
 ## Past Incidents
