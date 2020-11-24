@@ -4,7 +4,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "ok" %}
+{% assign status = "notice" %}
 
 {% if status == "inaccessible" %}
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -36,7 +36,7 @@
 {% elsif status == "notice" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} environment operational</strong><br>
-<em>The cluster will be shut down completely during August 10-12, 2020 due to major upgrades.</em><br>
+<em>The cluster will be shut down completely during December 7-9, 2020 due to system upgrades.</em><br>
 </div>
 {% else %}
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
@@ -82,6 +82,12 @@
 
 ## Current Incidents
 
+{% include_relative incidents-current.md %}
+
+
+## Upcoming incidents
+
+{% include_relative incidents-upcoming.md %}
 
 
 ## Past Incidents
