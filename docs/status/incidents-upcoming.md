@@ -2,13 +2,13 @@
 
 #### <span style="color: orange;">Network upgrades (full downtime)</span>
 
-**Reviced notice**: We have decided to hold back on upgrading BeeGFS during
+**Revised notice**: We have decided to hold back on upgrading BeeGFS during
 the downtime and only focus on the remain parts including network upgrades.
 The scope of the work is still non-trivial.  There is a risk that the
 downtime will extend into Thursday December 10.  However, if everything go
 smoothly, we hope that Wynton HPC will be back up by the end of Monday or
-during the Tuesday.  There will only be one continous downtime, that is, when
-the cluster comes back up, it will stay up.
+during the Tuesday.  There will only be one continuous downtime, that is,
+when the cluster comes back up, it will stay up.
 <br><span class="timestamp">December 3, 09:00 PDT</span>
 
 **Notice**: Starting early Monday December 7, the cluster will be powered down
