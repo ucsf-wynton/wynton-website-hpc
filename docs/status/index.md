@@ -36,7 +36,7 @@
 {% elsif status == "notice" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} environment operational</strong><br>
-<em>The cluster will be shut down completely during December 7-9, 2020 due to system upgrades.</em><br>
+<em>The cluster will be shut down completely during December 7-10, 2020 due to system upgrades.</em><br>
 </div>
 {% else %}
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
