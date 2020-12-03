@@ -59,7 +59,7 @@ To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: There are no user or disk quotas on `wynton\scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
+_Comment_: There are no user or disk quotas on `/wynton/scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
 
 
 ## Group disk quota on /wynton/group/
