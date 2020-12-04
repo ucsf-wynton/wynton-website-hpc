@@ -16,11 +16,13 @@ Similarly to the UCSF VPN, {{ site.cluster.name }} requires two-factor authentic
 
 Known issues:
 
- * It is not possible to register multiple authentication methods, e.g. multiple devices and phone numbers
+ * It is not possible to register multiple authentication methods, e.g. multiple devices and phone numbers.
 
- * If you wish to change your 2FA method, phone number, or SMS number, you will need to contact the [{{ site.cluster.name }} support staff] to reset your existing 2FA registration or resend the registration link
+ * If you wish to change your 2FA method, phone number, or SMS number, you will need to contact the [{{ site.cluster.name }} support staff] to reset your existing 2FA registration or resend the registration link.
+ 
+ * If you receive a message from DUO that you, "have been locked out due to excessive authentication failures," you will need to contact the [{{ site.cluster.name }} support staff] to have your DUO account re-enabled.
 
- * Support for hardware 2FA keys (e.g. YubiKey, Feitian, etc.) is limited and might not even work.  For example, when registering a hardware key, that will be your only option.  Also, if you have already registered your hardware 2FA key with UCSF (e.g. UCSF VPN), then that physical key can _not_ be used with the {{ site.cluster.nickname }} 2FA system.  This is also true if the hardware key supports two or more security keys (e.g. short press and long press on a YubiKey)
+ * Support for hardware 2FA keys (e.g. YubiKey, Feitian, etc.) is limited and might not even work.  For example, when registering a hardware key, that will be your only option.  Also, if you have already registered your hardware 2FA key with UCSF (e.g. UCSF VPN), then that physical key can _not_ be used with the {{ site.cluster.nickname }} 2FA system.  This is also true if the hardware key supports two or more security keys (e.g. short press and long press on a YubiKey).
 
 
 Got a new smart phone?  After installing the Duo Mobile App on the new device, you can transfer the Wynton 2FA credentials from your old phone to your new phone via 'Connect a new phone' in the Duo Mobile App's 'Settings' on both devices.
