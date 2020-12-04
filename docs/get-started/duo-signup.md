@@ -20,7 +20,7 @@ Known issues:
 
  * If you wish to change your 2FA method, phone number, or SMS number, you will need to contact the [{{ site.cluster.name }} support staff] to reset your existing 2FA registration or resend the registration link.
  
- * If you receive a message from DUO that you, "have been locked out due to excessive authentication failures," you will need to contact the [{{ site.cluster.name }} support staff] to have your DUO account re-enabled.
+ * If you receive a message from Duo that you, "have been locked out due to excessive authentication failures," you will need to contact the [{{ site.cluster.name }} support staff] to have your Duo account re-enabled.
 
  * Support for hardware 2FA keys (e.g. YubiKey, Feitian, etc.) is limited and might not even work.  For example, when registering a hardware key, that will be your only option.  Also, if you have already registered your hardware 2FA key with UCSF (e.g. UCSF VPN), then that physical key can _not_ be used with the {{ site.cluster.nickname }} 2FA system.  This is also true if the hardware key supports two or more security keys (e.g. short press and long press on a YubiKey).
 
