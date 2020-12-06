@@ -2,7 +2,23 @@
 
 The {{ site.cluster.name }} environment supports running a graphical user interface (GUI) on {{ site.cluster.name }} while viewing and interacting with it on your local computer.  More specifically, and in more technical terms, {{ site.cluster.name }} supports X2Go and X11 Forwarding.
 
+
 ## X2Go
+
+<!--
+### Requirements
+
+Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }} from the outside of the UCSF network _when using SSH password_(\*).  Instead, for X2Go Client to connect from outside of the UCSF network, you need to:
+
+* have a working [SSH key pair] set up.
+
+_Comment_: We are working on being able to connect via SSH password while on the UCSF VPN.  Stay tuned for this solution. /2020-12-03
+
+(\*) This used to work prior to the introduction of {{ site.cluster.nickname }} 2FA over SSH on 2020-10-29.
+
+-->
+
+### Setup of the X2Go Client
 
 First, you will need to install the X2Go Client on your local computer.  For instructions on how to do this, see [Installing X2Go Client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient). When you first run x2goclient:
 
@@ -17,7 +33,16 @@ First, you will need to install the X2Go Client on your local computer.  For ins
     - Set **Host** to a {{ site.cluster.name }} [login node]. Currently one of: `{{ site.login1.hostname }}` or `{{ site.login2.hostname }}`
  7. In the **Session type** section, choose `MATE`
 
-Then to get a desktop on the development node, select the session, type in your password, and click **Ok**. After a little while, you will get a window that looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would on your regular desktop.
+
+### Logging in
+
+After completing the above setup, you can get to a desktop on the development node by selecting the session, typing in your password, and clicking **Ok**. After a little while, you will get a window that looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would on your regular desktop.
+
+
+<div class="alert alert-warning" role="alert">
+If you get a dialog saying '<strong>Error: Connection failed. bash: x2golistsessions: command not found</strong>', then you have missed configuring a 'Proxy server' in Steps 5-6.
+</div>
+
 
 ### 3D Graphics with X2Go (in alpha testing)
 
@@ -64,5 +89,8 @@ Now, we have an X11 forward setup that runs all the way back to our local comput
 ```
 
 
+
+
 [development node]: {{ '/about/specs.html' | relative_url }}#development-nodes
 [login node]: {{ '/about/specs.html' | relative_url }}#login-nodes
+[SSH key pair]: {{ '/howto/log-in-without-pwd.html' | relative_url }}
