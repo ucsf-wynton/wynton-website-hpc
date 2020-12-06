@@ -51,6 +51,7 @@ For example,
 
 tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your <a href="{{ '/about/specs.html' | relative_url }}">500-GiB home storage space</a> is reported as 1000 GiB by the `beegfs-ctl` tool.
 
+## User disk usage on /wynton/scratch/
 
 To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 
@@ -58,7 +59,7 @@ To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: [Files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
+_Comment_: There are no user or group quotas on `/wynton/scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
 
 
 ## Group disk quota on /wynton/group/
