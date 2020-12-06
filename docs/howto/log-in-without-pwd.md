@@ -33,8 +33,7 @@ _Explanation:_ The above `chmod` settings specify that you as a user (`u`) have 
 
 Next, we will generate a private-public SSH key pair (stored in two files) that is unique for accessing the cluster:
 ```sh
-{local}$ cd ~/.ssh   ## <== IMPORTANT
-{local}$ ssh-keygen -f laptop_to_wynton
+{local}$ ssh-keygen -f ~/.ssh/laptop_to_wynton
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
