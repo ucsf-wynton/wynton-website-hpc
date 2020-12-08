@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Network upgrades (full downtime)</span>
 
+**Update**: The upgrade is paused and will resume tomorrow.  We hope to be bring all of the cluster back online by the end of tomorrow.  For now, login node 'log2' (but not 'log1'), and data-transfer nodes 'dt1', and 'dt2' are back online and can be used for accessing files.  The scheduler remains down so it will not be possible to submit jobs at time stage.
+<br><span class="timestamp">December 7, 17:00 PDT</span>
+
 **Update**: The upgrades have started.  Access to Wynton HPC has been disable as of 10:30 this morning.  The schedulers stopped launching queued jobs as of 23:30 last night.
 <br><span class="timestamp">December 7, 10:30 PDT</span>
 
