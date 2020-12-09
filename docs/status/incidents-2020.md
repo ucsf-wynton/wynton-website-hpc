@@ -2,7 +2,7 @@
 
 #### <span style="color: orange;">Major upgrades (full downtime)</span>
 
-**Resolved**: The upgrade has been completed.  The cluster back online, including all of the login, data-transfer, and development nodes, as well as the majority of the compute nodes.  The scheduler is processing jobs again.
+**Resolved**: The upgrade has been completed.  The cluster back online, including all of the login, data-transfer, and development nodes, as well as the majority of the compute nodes.  The scheduler is processing jobs again.  All hosts now run CentOS 7.9.
 <br><span class="timestamp">December 8, 16:30 PDT</span>
 
 **Update**: The upgrade is paused and will resume tomorrow.  We hope to be bring all of the cluster back online by the end of tomorrow.  For now, login node 'log2' (but not 'log1'), and data-transfer nodes 'dt1', and 'dt2' are back online and can be used for accessing files.  Development nodes 'dev1' and 'dev3' are also available (please make sure to leave room for others).  The scheduler remains down, i.e. it is is not be possible to submit jobs.
