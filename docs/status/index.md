@@ -4,7 +4,7 @@
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "full-outage" %}
+{% assign status = "ok" %}
 
 {% if status == "inaccessible" %}
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
