@@ -107,13 +107,13 @@ To apply for an account on the {{ site.cluster.name }} cluster, please fill out 
  
  <div class="form-group">  
   <label for="username">Username</label> <span style="color: red">*</span><br>
-  <input type="text" id="username" name="username" pattern="([A-Za-z]{1}[A-Za-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
+  <input type="text" id="username" name="username" pattern="([a-z]{1}[a-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
   <small>(<em>Username should be all lower case</em>)</small><br>
  </div>
  
  <div class="form-group">
   <label for="alt_username">Alternative username</label> <span style="color: red">*</span><br>
-  <input type="text" id="alt_username" name="alt_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
+  <input type="text" id="alt_username" name="alt_username" pattern="([a-z]{1}[a-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
   <small>(<em>This should be different from the one you provided above</em>)</small>
  </div>
  
