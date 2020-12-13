@@ -1,3 +1,14 @@
+### December 11, 2020
+
+#### <span style="color: orange;">Rebooting login and development nodes</span>
+
+**Resolved**: All login and development nodes have been rebooted.
+<br><span class="timestamp">December 12, 17:00 PDT</span>
+
+**Notice**: Login node 'log1.wynton.ucsf.edu' and all the development nodes will be rebooted at 4:30 PM today Friday.  This is needed in order to roll back the new BeeGFS setting introduced during the upgrades earlier this week.
+<br><span class="timestamp">December 11, 13:50 PDT</span>
+
+
 ### December 7-8, 2020
 
 #### <span style="color: orange;">Major upgrades (full downtime)</span>
