@@ -15,22 +15,29 @@
   <dt>Number of projects</dt><dd>{{ site.data.users.nbr_of_projects }}</dd>
 </dl>
 
-## Software environment
+
+## Summary of Compute Environment
+
+| Feature     | Login Nodes | Transfer Nodes          | Development Nodes | Compute Nodes |
+| ---- | ---------- | ----------------------- | ------------ | ---- |
+| SSH access from outside of cluster | ✓ (2FA if outside of UCSF) | ✓ (2FA if outside of UCSF) | no                                                          | no |
+| SSH access from inside of cluster | ✓ | ✓ | ✓ | no |
+| Outbound access | Within UCSF only: SSH and SFTP | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, GIT+SSH | Via proxy: HTTP/HTTPS, GIT+SSH(\*) | no |
+| Network speed | 1 Gbps | 10 Gbps | 1 Gbps | 1,10,40 Gbps |
+| Core software | Minimal | Minimal | Same as compute nodes + compilers and source-code packages | CentOS and EPEL  packages                   |
+| modules (software stacks) | no | no | ✓ | ✓ |
+| Global file system | ✓ | ✓ | ✓ | ✓ |
+| Job submission | ✓ | no | ✓ | ✓ |
+| Purpose | Submit and query jobs. SSH to development nodes. File management. | Fast in- & outbound file transfers. File management. | Compile and install software. Prototype and test job scripts. Submit and query jobs. Version control (clone, pull, push). File management. | Running short and long-running job scripts. |                                                     
+
+(\*) GIT+SSH access on development nodes is restricted to git.bioconductor.org, bitbucket.org, gitea.com, github.com / gist.github.com, gitlab.com, and git.ucsf.edu.
 
 All nodes on the cluster runs [CentOS] 7 which is updated on a regular basis.
 The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{ '/scheduler/queues.html' | relative_url }}) for both communal and lab-priority tasks.
 
-## Hardware
 
-### Compute Nodes
 
-The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
-<!--
-For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
--->
-
-The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
-
+## Details
 
 ### Login Nodes
 
@@ -67,7 +74,19 @@ _Comment:_ Please use the GPU development node only if you need to build or prot
 <!-- The development nodes have Intel Xeon CPU E5430 @ 2.66 GHz processors. and local solid state drives (SSDs). -->
 
 
-## Scratch Storage
+### Compute Nodes
+
+The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
+<!--
+For additional details on the compute nodes, see the <a href="#details">Details</a> section below.
+-->
+
+The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ '/scheduler/submit-jobs.html' | relative_url }}) - it is _not_ possible to explicitly log in to compute nodes.
+
+
+## File System
+
+### Scratch Storage
 
 The {{ site.cluster.name }} cluster provides two types of scratch storage:
 
@@ -77,7 +96,7 @@ The {{ site.cluster.name }} cluster provides two types of scratch storage:
 There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
-## User and Lab Storage
+### User and Lab Storage
 
  * `/wynton/home`: {{ site.data.specs.home_size_total }} TiB storage space
  * `/wynton/group`: {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space

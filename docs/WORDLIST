@@ -222,3 +222,6 @@ unencrypted
 RcppArmadillo
 howto
 pwd
+bioconductor
+gitea
+gitlab
