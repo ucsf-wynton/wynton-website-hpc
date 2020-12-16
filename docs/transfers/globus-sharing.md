@@ -22,7 +22,7 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
    * Click 'Create Share'
    
 7. On the 'Permission' tab, click 'Add Permissions - Share With' and Enter:
-   * Path: Above path again
+   * Path: `/`
    * Share with: 'user' (the default)
    * Username of Email: the Globus ID email address of the user you'll be sharing with.  If they don't have a Globus ID email address, use their regular email -- they'll be prompted to create a Globus ID.
    * Permissions: 'read' (user can download) or 'write' (user can also upload)
