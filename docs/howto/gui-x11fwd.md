@@ -5,18 +5,18 @@ The {{ site.cluster.name }} environment supports running a graphical user interf
 
 ## X2Go
 
-<!--
 ### Requirements
 
-Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }} from the outside of the UCSF network _when using SSH password_(\*).  Instead, for X2Go Client to connect from outside of the UCSF network, you need to:
+Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }} from the outside of the UCSF network _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to either:
 
-* have a working [SSH key pair] set up.
+1. make sure you are on the UCSF network, e.g. by first connecting to the UCSF VPN, or
 
-_Comment_: We are working on being able to connect via SSH password while on the UCSF VPN.  Stay tuned for this solution. /2020-12-03
+2. have a working [SSH key pair] set up and configured the X2Go client accordingly in order to connect from outside the UCSF network using the {{ site.cluster.nickname }} 2FA system.
+
+The first alternative is the easiest with the only downside being the limited bandwidth that the UCSF VPN provides.  The second alternative is more complicated to set up and some users fail to get it to work - we're still investigating.
 
 (\*) This used to work prior to the introduction of {{ site.cluster.nickname }} 2FA over SSH on 2020-10-29.
 
--->
 
 ### Setup of the X2Go Client
 
