@@ -169,6 +169,11 @@ d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", functi
       for (key in row) td = tr.append("td").text(row[key]);
     });
 
+
+    /* WORKAROUND: The host table is not updates; instead pull in the static information. /HB 2020-12-16 */
+    nodes = {{ site.data.specs.nodes }};
+    cores = {{ site.data.specs.physical_cores }};
+    
     var p = d3.select("#hosttablemessage");
     if (nodes_with_issues > 0) {
       p.text("Currently, " + (100*nodes_with_issues/nodes).toFixed(1) + "% (" + nodes_with_issues + " of " + nodes + ") of the nodes, corresponding to " + (100*cores_with_issues/cores).toFixed(1) + "% (" + cores_with_issues + " of " + cores + ") of the cores, are reported to have a queuing state 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes), which means they will not take on any new jobs.");
