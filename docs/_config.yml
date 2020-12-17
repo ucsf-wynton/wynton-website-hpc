@@ -15,7 +15,7 @@ cluster:
   email_storage: storage@wynton.ucsf.edu
   
 login:
-  name: "wynlog2"
+  name: "log2"
   hostname: "log2.wynton.ucsf.edu"
   ip: "169.230.134.15"
 devel:
@@ -28,11 +28,11 @@ transfer:
   ip: "172.26.1.17"
 
 login1:
-  name: "wynlog1"
+  name: "log1"
   hostname: "log1.wynton.ucsf.edu"
   ip: "169.230.126.77"
 login2:
-  name: "wynlog2"
+  name: "log2"
   hostname: "log2.wynton.ucsf.edu"
   ip: "169.230.134.15"
 dev1:
