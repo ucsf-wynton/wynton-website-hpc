@@ -1,3 +1,14 @@
+### December 8-17, 2020
+
+#### <span style="color: orange;">Limited accessibility of Login node log1</span>
+
+**Resolved**: Login node 'log1.wynton.ucsf.edu' can again be accessed from outside of the UCSF network.
+<br><span class="timestamp">December 17, 14:20 PDT</span>
+
+**Notice**: Login node 'log1.wynton.ucsf.edu' is only accessible from within UCSF network. This is a side effect of the recent network upgrades. We are waiting for The UCSF IT Network to resolve this for us.  Until resolved, please use the alternative 'log2.wynton.ucsf.edu' login node when connecting from outside of the UCSF network.
+<br><span class="timestamp">December 8, 23:00 PDT</span>
+
+
 ### December 11-16, 2020
 
 #### <span style="color: orange;">Rebooting compute nodes</span>
