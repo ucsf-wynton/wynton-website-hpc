@@ -2,7 +2,7 @@
 
 ## Grant Applications
 
-Below are a few examples on how to give details on the {{ site.cluster.name }} environment in a grant application.  _The node and CPU cores counts are updated on a regular basis._
+Below are a few examples on how to give details on the {{ site.cluster.name }} environment in a grant application.  _The node, CPU and GPU core counts are updated on a regular basis._
 
 ### Example 1
 
