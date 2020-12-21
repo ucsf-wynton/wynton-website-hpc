@@ -374,7 +374,7 @@ and then append the below content to that file (using your favorite text editor)
 CXX14 = g++
 CXX14STD = -std=gnu++14
 CXX14FLAGS = -g -O2
-CXX11PICFLAGS = -fpic
+CXX14PICFLAGS = -fpic
 ```
 
 You can confirm that you got it right by verifying that you get the same information as below:
