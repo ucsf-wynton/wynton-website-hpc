@@ -309,15 +309,15 @@ CentOS 7 comes with a rather old version of gcc, specifically gcc v4.8.5 (2015-0
 
 ```r
 > install.packages("xgboost")
-Installing package into ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
-(as ‘lib’ is unspecified)
+Installing package into '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+(as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.2.0.1.tar.gz'
 Content type 'application/x-gzip' length 971402 bytes (948 KB)
 ==================================================
 downloaded 948 KB
 
-* installing *source* package ‘xgboost’ ...
-** package ‘xgboost’ successfully unpacked and MD5 sums checked
+* installing *source* package 'xgboost' ...
+** package 'xgboost' successfully unpacked and MD5 sums checked
 ** using staged installation
 checking for gcc... gcc
 checking whether the C compiler works... yes
@@ -335,13 +335,13 @@ configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
 Error: C++14 standard requested but CXX14 is not defined
-* removing ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+* removing '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost'
 
 The downloaded source packages are in
-        ‘/tmp/RtmpgLK2YP/downloaded_packages’
+        '/tmp/RtmpgLK2YP/downloaded_packages'
 Warning message:
 In install.packages("xgboost") :
-  installation of package ‘xgboost’ had non-zero exit status
+  installation of package 'xgboost' had non-zero exit status
 > 
 ```
 
