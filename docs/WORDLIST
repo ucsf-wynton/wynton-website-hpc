@@ -225,3 +225,6 @@ pwd
 bioconductor
 gitea
 gitlab
+CXX
+gcc
+xgboost

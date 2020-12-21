@@ -303,6 +303,119 @@ If you have an R scripts, and it involves setting up a number of parallel worker
 
 ### Packages that require extra care
 
+#### The xgboost package ("C++14 standard requested but CXX14 is not defined") 
+
+CentOS 7 comes with a rather old version of gcc, specifically gcc v4.8.5 (2015-06-23).  This does not support C++14 standard.  Because of this, you will find that some R packages that rely on modern C++ standards such as C++14 and C++17 will fail to compile.  Sometimes the you will get an informative error but in some cases it can be a rather obscure error message.  The **xgboost** package will give an informative error message;
+
+```r
+> install.packages("xgboost")
+Installing package into ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+(as ‘lib’ is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.2.0.1.tar.gz'
+Content type 'application/x-gzip' length 971402 bytes (948 KB)
+==================================================
+downloaded 948 KB
+
+* installing *source* package ‘xgboost’ ...
+** package ‘xgboost’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking Backtrace lib... 
+checking for backtrace in -lexecinfo... no
+checking endian... 
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+Error: C++14 standard requested but CXX14 is not defined
+* removing ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+
+The downloaded source packages are in
+        ‘/tmp/RtmpgLK2YP/downloaded_packages’
+Warning message:
+In install.packages("xgboost") :
+  installation of package ‘xgboost’ had non-zero exit status
+> 
+```
+
+To fix this, we need to:
+
+1. Use a more recent version of gcc
+
+2. Configure R to recognize C++14
+
+First, to use a more recent version of gcc available in one of the SCL `devtoolset`:s, either through [traditional SCL approaches] or by loading the `scl-devtoolset` module from the [CBI software stack];
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
+[alice@{{ site.devel.name }} ~]$ gcc --version | head -1
+gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
+```
+
+Second, to configure R to recognize this version, you need to make sure you have a file `~/.R/Makevars`, which you can if you don't already have it as:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ mkdir ~/.R
+[alice@{{ site.devel.name }} ~]$ touch ~/.R/Makevars
+```
+
+and then append the below content to that file (using your favorite text editor):
+
+```sh
+## Add support for C++14
+## Requires a modern version of 'gcc', e.g. module load CBI scl-devtools
+CXX14 = g++
+CXX14STD = -std=gnu++14
+CXX14FLAGS = -g -O2
+CXX11PICFLAGS = -fpic
+```
+
+You can confirm that you got it right by verifying that you get the same information as below:
+
+```sh
+$ R CMD config --all | grep CXX14
+CXX14 = g++
+CXX14STD = -std=gnu++14
+CXX14FLAGS = -g -O2
+CXX14PICFLAGS = -fpic
+SHLIB_CXX14LD = g++ -std=gnu++14
+SHLIB_CXX14LDFLAGS = -shared
+```
+
+
+After this, you will from now on be able to compile R packages that require C++14 **as long as you loaded/enabled an SCL that provides a modern gcc compile**.  For example,
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI r
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
+[alice@{{ site.devel.name }} ~]$ module list
+
+Currently Loaded Modules:
+  1) CBI   2) r/4.0.2   3) scl-devtoolset/8
+
+[alice@{{ site.devel.name }} ~]$ R
+...
+> install.packages("xgboost")
+...
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (xgboost)
+```
+
+will now work.
+
+Note, it is only when you install this R package that you need `scl-devtoolset`.  There is no need for it when loading the 'xgboost' package later on.
+
+
+
+
 #### The hdf5r package
 
 The [hdf5r] package requires [hdf5 1.8.13 or newer](https://github.com/hhoeflin/hdf5r/issues/115) but the version that comes with CentOS 7/EPEL is only 1.8.12. This will result in the following installation error in R:
