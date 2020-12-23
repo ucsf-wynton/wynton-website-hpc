@@ -584,7 +584,7 @@ ERROR: dependency 'gert' is not available for package 'usethis'
 * removing '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/usethis'
 
 The downloaded source packages are in
-	'/tmp/RtmphoOvBT/downloaded_packages'
+        '/tmp/RtmphoOvBT/downloaded_packages'
 Warning messages:
 1: In install.packages("usethis") :
   installation of package 'gert' had non-zero exit status
