@@ -552,6 +552,68 @@ The downloaded source packages are in
 That's it!
 
 
+#### The devtools, usethis packages
+
+As of usethis 2.0.0 (2020-12-10), which [devtools] depends on, the [gert] package is a required dependency, which currently causes installation issues.  The 'gert' package requires the CentOS 'libgit2-devel' system package, which is not yet to be installed on {{ site.cluster.nickname }}.  Because this system package is missing, we get the following error when attempting to install 'usethis':
+
+```r
+> install.packages("usethis")
+...
+* installing *source* package 'gert' ...
+** package 'gert' successfully unpacked and MD5 sums checked
+** using staged installation
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lgit2
+----------------------------- ANTICONF -------------------------------
+Configuration failed to find libgit2 library. Try installing:
+ * brew: libgit2 (MacOS)
+ * deb: libgit2-dev (Debian, Ubuntu, etc)
+ * rpm: libgit2-devel (Fedora, CentOS, RHEL)
+If libgit2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a libgit2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:18: fatal error: git2.h: No such file or directory
+compilation terminated.
+----------------------------------------------------------------------
+ERROR: configuration failed for package 'gert'
+...
+
+ERROR: dependency 'gert' is not available for package 'usethis'
+* removing '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/usethis'
+
+The downloaded source packages are in
+	'/tmp/RtmphoOvBT/downloaded_packages'
+Warning messages:
+1: In install.packages("usethis") :
+  installation of package 'gert' had non-zero exit status
+2: In install.packages("usethis") :
+  installation of package 'usethis' had non-zero exit status
+```
+
+
+
+Until 'libgit2-devel' has been installed on the cluster, a workaround is to install the previous version of 'usethis'.  The easiest is to install the version that was available on the day before the problematic version was released.  This can be done by installing from [Microsoft's daily CRAN snapshots](https://mran.microsoft.com/timemachine) using:
+
+```r
+> install.packages("usethis", repos="https://cran.microsoft.com/snapshot/2020-12-09")
+```
+
+Alternatively, you can install directly from the [CRAN Archives](https://cran.r-project.org/src/contrib/Archive/usethis/) using:
+
+```r
+> install.packages(c("git2r", "rematch2"))   # installs additional dependencies
+> install.packages("https://cran.r-project.org/src/contrib/Archive/usethis/usethis_1.6.3.tar.gz")
+```
+
+Although this is not the latest version, it should get you going until the sysadms have installed the missing CentOS package.  For example, you should now be able to install 'devtools' using:
+
+```r
+> install.packages("devtools")
+```
+
+
 
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: http://bioconductor.org/
@@ -561,6 +623,9 @@ That's it!
 [RcppArmadillo]: https://cran.r-project.org/package=RcppArmadillo
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [zoo]: https://cran.r-project.org/package=zoo
+[usethis]: https://cran.r-project.org/package=usethis
+[gert]: https://cran.r-project.org/package=gert
+[devtools]: https://cran.r-project.org/package=devtools
 [limma]: http://bioconductor.org/packages/limma/
 [CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
 [traditional SCL approaches]: {{ '/software/scl.html' | relative_url }}

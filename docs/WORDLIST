@@ -228,3 +228,7 @@ gitlab
 CXX
 gcc
 xgboost
+devtools
+usethis
+gert
+libgit
