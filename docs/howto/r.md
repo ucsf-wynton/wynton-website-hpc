@@ -554,7 +554,7 @@ That's it!
 
 #### The devtools, usethis packages
 
-As of usethis 2.0.0 (2020-12-10), which [devtools] depends on, the [gert] package is a required dependency, which currently causes installation issues.  The 'gert' package requires the CentOS 'libgit2-devel' system package, which is not yet to be installed on {{ site.cluster.nickname }}.  Because this system package is missing, we get the following error when attempting to install 'usethis':
+As of usethis 2.0.0 (2020-12-10), which [devtools] depends on, the [gert] package is a required dependency, which currently causes installation issues.  The 'gert' package requires the CentOS 'libgit2-devel' system package, which is yet to be installed on {{ site.cluster.nickname }}.  Because this system package is missing, we get the following error when attempting to install 'usethis':
 
 ```r
 > install.packages("usethis")
