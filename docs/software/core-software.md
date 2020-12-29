@@ -32,7 +32,7 @@ git, svn
 <dt>Text, Documents, and Reports</dt>
 <dd>
 hunspell<br>
-doxygen, pandoc<br>
+pandoc<br>
 LaTeX, PDF and Postscript tools<br>
 </dd>
 
@@ -59,7 +59,7 @@ singularity
 </dl>
 
 <br>
-_Note:_ These core tools will be updated without notice as the operating system is updated on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the tools originate from the (stable) [CentOS 7 EPEL] repository.  To see what software and system libraries that are installed, run `yum list installed`.  Please note that, compared to compute nodes, the development nodes have additional software installed (typically named `-devel`) needed to build and compile from source.
+_Note:_ These core tools will be updated without notice as the operating system is updated on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the tools originate from the (stable) CentOS 7 [EPEL] repositories.  To see what software and system libraries that are installed, run `yum list installed`.  Please note that, compared to compute nodes, the development nodes have additional software installed (typically named `-devel`) needed to build and compile from source.
 
 
 <style>
@@ -68,5 +68,6 @@ dt {
 }
 </style>  
 
-[CentOS 7 EPEL]: https://centos.pkgs.org/7/epel-x86_64/
+[Extras]: https://centos.pkgs.org/7/centos-extras-x86_64/
+[EPEL]: https://centos.pkgs.org/7/epel-x86_64/
 [Software Repositories]: {{ '/software/software-repositories.html' | relative_url }}
