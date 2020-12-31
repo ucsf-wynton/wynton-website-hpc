@@ -55,4 +55,5 @@ To transfer files via the Globus network:
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
+<!-- markdownlint-disable-file MD034 -->
 ['{{ site.globus.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus.uuid }}/overview
