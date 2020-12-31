@@ -177,6 +177,7 @@ bashrc
 UCOP
 configurational
 GCP
+uuid
 UUID
 dr
 PuTTY
@@ -232,3 +233,4 @@ devtools
 usethis
 gert
 libgit
+MyAccess
