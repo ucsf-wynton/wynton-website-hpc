@@ -6,13 +6,13 @@
 
 ### Set up a Globus endpoint for your {{ site.cluster.nickname }} account
 
-If you want to transfer files from or to your {{ site.cluster.nickname }} account, you need to set up the 'UCSF {{ site.cluster.nickname }}' endpoint.  Below is an outline on how to do this.
+If you want to transfer files from or to your {{ site.cluster.nickname }} account, you need to set up the '{{ site.globus.name }}' endpoint.  Below is an outline on how to do this.
 
-1. [online] Go to ['UCSF {{ site.cluster.nickname }}' endpoint] and click 'Activate'.  This will ask you to enter your {{ site.cluster.nickname }} credential, i.e. your {{ site.cluster.nickname }} username and password.  Optionally, limit the lifetime of this endpoint by clicking 'Advanced' and select the number of hours you want it to be valid, e.g. `2` hours.
+1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials. Then find the Endpoints menu on the left and click it. Then locate the ['{{ site.globus.name }}' endpoint] and click 'Activate'.  This will ask you to enter your {{ site.cluster.nickname }} credential, i.e. your {{ site.cluster.nickname }} username and password.  Optionally, limit the lifetime of this endpoint by clicking 'Advanced' and select the number of hours you want it to be valid, e.g. `2` hours.
 
-2. [online] Go to [Endpoints](https://app.globus.org/endpoints), go to the recently activated 'UCSF {{ site.cluster.nickname }}' endpoint, and click on 'Open in File Manager'.  This will display the files and folders on your {{ site.cluster.nickname }} account.  If you don't see anything, make sure to enter `~/` as the 'Path'.
+2. [online] Go to [Endpoints](https://app.globus.org/endpoints), go to the recently activated '{{ site.globus.name }}' endpoint, and click on 'Open in File Manager'.  This will display the files and folders on your {{ site.cluster.nickname }} account.  If you don't see anything, make sure to enter `~/` as the 'Path'.
 
-3. [online] When no longer needed, make sure to 'Deactivate Credentials' for your ['UCSF {{ site.cluster.nickname }}' endpoint].
+3. [online] When no longer needed, make sure to 'Deactivate Credentials' for your '{{ site.globus.name }}' endpoint.
 
 
 ### Set up a Globus endpoint for your local machine
@@ -49,10 +49,10 @@ To transfer files via the Globus network:
 ## Endpoints of interest
 
 * [Your personal GCP endpoint](https://app.globus.org/endpoints?scope=administered-by-me)
-* ['UCSF {{ site.cluster.nickname }}' endpoint] (UUID `1dd9beaa-14b7-11eb-abe2-0213fe609573`)
+* ['{{ site.globus.name }}' endpoint] (UUID `{{ site.globus.uuid }}`)
 
 
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
-['UCSF {{ site.cluster.nickname }}' endpoint]: https://app.globus.org/file-manager/collections/1dd9beaa-14b7-11eb-abe2-0213fe609573/overview
+['{{ site.globus.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus.uuid }}/overview

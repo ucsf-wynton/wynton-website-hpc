@@ -59,7 +59,11 @@ transfer2:
   name: "dt2"
   hostname: "dt2.wynton.ucsf.edu"
   ip: "172.26.1.17"
-  
+
+globus:
+  name: "UCSF Wynton HPC"
+  uuid: 1dd9beaa-14b7-11eb-abe2-0213fe609573
+
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
 
