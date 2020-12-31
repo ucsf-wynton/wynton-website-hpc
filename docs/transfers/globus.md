@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file MD034 -->
+
 # Globus
 
 [Globus] is a non-profit service for moving, syncing, and sharing large amounts of data asynchronously in the background.  Transfers are done from and to, so called, _endpoints_.  In order to perform a file transfer from one location to another using the Globus service, both ends must have an endpoint.  Several UCSF departments and services, including the {{ site.cluster.name }} environment, provide Globus endpoints.  This will allow you to transfer and share data efficiently with any other Globus user in the world.
@@ -55,5 +57,4 @@ To transfer files via the Globus network:
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
-<!-- markdownlint-disable-file MD034 -->
 ['{{ site.globus.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus.uuid }}/overview
