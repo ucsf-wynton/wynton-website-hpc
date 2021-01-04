@@ -51,7 +51,7 @@ module load CBI r
 After this, the `R` and the `Rscript` commands are available on the search path (`PATH`), e.g.
 ```sh
 $ Rscript --version
-R scripting front-end version 3.5.3 (2019-03-11)
+R scripting front-end version 4.0.3 (2020-10-10)
 ```
 
 <div class="alert alert-warning" role="alert">
