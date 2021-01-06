@@ -221,7 +221,7 @@ Byobu is an elegant enhancement of the otherwise functional, plain, practical GN
     Example: <code>byobu --version</code>.<br>
     URL: <a href="http://byobu.org">http://byobu.org</a>, <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 5.130, <em>5.133</em><br>
+  Versions: <em>5.133</em><br>
   </dd>
 
   <dt>CBI-testing</dt>
@@ -342,7 +342,7 @@ A collection of Git extensions to provide high-level repository operations for V
     Example: <code>git flow</code>.<br>
     URL: <a href="https://github.com/petervanderdoes/gitflow-avh">https://github.com/petervanderdoes/gitflow-avh</a>, <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 1.12.1, <em>1.12.3</em><br>
+  Versions: <em>1.12.3</em><br>
   </dd>
 
   <dt>gsl</dt>
@@ -374,12 +374,12 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
 
   <dt>htop</dt>
   <dd>
-    <strong>htop - An Interactive Process Viewer for Unix</strong><br>
+    <strong>htop: An Interactive Process Viewer for Unix</strong><br>
 <code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.<br>
     Example: <code>htop</code>.<br>
     URL: <a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 2.2.0, <em>3.0.4</em><br>
+  Versions: <em>3.0.4</em><br>
   </dd>
 
   <dt>htslib</dt>
@@ -508,7 +508,7 @@ ripgrep is a line-oriented search tool that recursively searches your current di
     Example: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.<br>
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 11.0.2, 12.0.1, <em>12.1.1</em><br>
+  Versions: <em>12.1.1</em><br>
   </dd>
 
   <dt>salmon</dt>
@@ -1428,7 +1428,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-01-05 19:03:49 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-01-06 08:17:25 from querying `module avail` and `module spider`._
 
 
 <style>
