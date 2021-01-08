@@ -189,7 +189,7 @@ export OMP_NUM_THREADS=8
 mpirun -np $NHOSTS /path/to/the_app
 ```
 
-_Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.	
+_Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.
 
 <div class="alert alert-warning" role="alert">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <code>NSLOTS</code> is not a multiple of eight, then the job will be stuck in the queue forever and never run.
