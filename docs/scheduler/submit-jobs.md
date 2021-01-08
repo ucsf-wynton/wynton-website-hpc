@@ -17,9 +17,9 @@ This job submission will submit `script.sh` to the job scheduler which will even
 
 ## Sample submit script
 
-Before you can submit jobs to the compute nodes, you should prepare a script like the one below. Split your jobs into smaller taks varying only in input parameters. You can then submit the jobs from a login node or a dev node. (Note: _do not_ include the `#--` comments in your script - that won't work.)
+Before you can submit jobs to the compute nodes, you should prepare a script like the one below. Split your jobs into smaller tasks varying only in input parameters. You can then submit the jobs from a login node or a dev node. (Note: _do not_ include the `#--` comments in your script - that won't work.)
 
-```
+```sh
 #!/bin/bash                        #-- what is the language of this shell
 #                                  #-- Any line that starts with #$ is an instruction to SGE
 #$ -S /bin/bash                    #-- the shell for the job
@@ -49,7 +49,8 @@ Before you can submit jobs to the compute nodes, you should prepare a script lik
 date
 hostname
 
-qstat -j $JOB_ID                                  # This is useful for debugging and usage purposes,
+## End-of-job summary, if running as a job
+[[ -n "$JOB_ID" ]] && qstat -j "$JOB_ID"          # This is useful for debugging and usage purposes,
                                                   # e.g. "did my job exceed its memory request?"
 ```
 
@@ -133,8 +134,9 @@ The scheduler will make sure your job is launched on a node with at least four s
 
 Note, when writing your script, use [SGE environment variable] `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
 ```sh
-bwa aln -t $NSLOTS ...
+bwa aln -t "${NSLOTS:-1}" ...	
 ```
+By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.	
 
 _Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric multiprocessing'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) and indicates that the job will run on a single machine using one or more cores.
 
@@ -182,10 +184,12 @@ and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8`
 #! /usr/bin/env bash
 #$ -cwd   ## SGE directive to run in the current working directory
 
-module load mpi
+module load mpi/openmpi-x86_64
 export OMP_NUM_THREADS=8
 mpirun -np $NHOSTS /path/to/the_app
 ```
+
+_Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.	
 
 <div class="alert alert-warning" role="alert">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <code>NSLOTS</code> is not a multiple of eight, then the job will be stuck in the queue forever and never run.
@@ -195,8 +199,8 @@ _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org
 
 ## Tips
 
-- An array job is a collection of similar serial jobs which can be submitted and controlled together. For example, -t 1-10 runs 10 tasks in an array. Each task runs the same script, but gets a different value for the $SGE_TASK_ID environment variable (from '1' to '10' in this example). You can use this to choose different inputs or other parameters for each task.
-- The SGE manual pages are installed on the login and dev nodes. For more info on any SGE command, just type the name of command (e.g., man qsub).
+- An array job is a collection of similar serial jobs which can be submitted and controlled together. For example, `-t 1-10` runs 10 tasks in an array. Each task runs the same script, but gets a different value for the `$SGE_TASK_ID` environment variable (from '1' to '10' in this example). You can use this to choose different inputs or other parameters for each task.
+- The SGE manual pages are installed on the login and dev nodes. For more info on any SGE command, just type the name of command (e.g., `man qsub`).
 
 
 
@@ -211,7 +215,7 @@ _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org
 
 ## See also
 
-For further options and advanced usage, see [Advanced Usage]({{ '/advanced-usage.html' | relative_url }}) of the scheduler.
+For further options and advanced usage, see [Advanced Usage]({{ '/scheduler/advanced-usage.html' | relative_url }}) of the scheduler.
 
 [SGE environment variable]: {{ '/scheduler/sge-envvars.html' | relative_url }}
 [Job Summary]: {{ '/scheduler/job-summary.html' | relative_url }}
