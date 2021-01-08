@@ -134,9 +134,9 @@ The scheduler will make sure your job is launched on a node with at least four s
 
 Note, when writing your script, use [SGE environment variable] `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
 ```sh
-bwa aln -t "${NSLOTS:-1}" ...	
+bwa aln -t "${NSLOTS:-1}" ...
 ```
-By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.	
+By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.
 
 _Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric multiprocessing'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) and indicates that the job will run on a single machine using one or more cores.
 
