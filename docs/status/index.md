@@ -92,12 +92,18 @@
 ## Past Incidents
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#2020"><span style="font-weight: bold;">2020</span></a></li>
+  <li class="active"><a data-toggle="pill" href="#2021"><span style="font-weight: bold;">2021</span></a></li>
+  <li><a data-toggle="pill" href="#2020"><span style="font-weight: bold;">2020</span></a></li>
   <li><a data-toggle="pill" href="#2019"><span style="font-weight: bold;">2019</span></a></li>
   <li><a data-toggle="pill" href="#2018"><span style="font-weight: bold;">2018</span></a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
+<div id="2021" class="tab-pane fadein active">
+<section markdown="1">
+{% include_relative incidents-2021.md %}
+</section>
+</div>
 <div id="2020" class="tab-pane fadein active">
 <section markdown="1">
 {% include_relative incidents-2020.md %}
