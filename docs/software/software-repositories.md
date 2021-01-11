@@ -52,7 +52,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -110,7 +110,7 @@ Please note that this software stacks is maintained and contributed by a researc
 ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.<br>
     Example: <code>ASCIIGenome --help</code>.<br>
     URL: <a href="https://github.com/dariober/ASCIIGenome">https://github.com/dariober/ASCIIGenome</a><br>
-  Versions: <em>1.15.0</em><br>
+  Versions: 1.15.0, <em>1.16.0</em><br>
   </dd>
 
   <dt>bamutil</dt>
@@ -124,12 +124,12 @@ bamUtil is a repository that contains several programs that perform operations o
 
   <dt>bat</dt>
   <dd>
-    <strong>bat - A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
+    <strong>bat: A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
 A cat(1) clone with syntax highlighting and Git integration.<br>
     Example: <code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.<br>
     URL: <a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 0.13.0, <em>0.15.4</em><br>
+  Versions: <em>0.17.1</em><br>
   </dd>
 
   <dt>bcftools</dt>
@@ -138,7 +138,7 @@ A cat(1) clone with syntax highlighting and Git integration.<br>
 BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.<br>
     Example: <code>bcftools --version</code><br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: 1.9, 1.10, <em>1.10.2</em><br>
+  Versions: 1.9, 1.10, 1.10.2, <em>1.11</em><br>
   </dd>
 
   <dt>bcl2fastq</dt>
@@ -174,7 +174,7 @@ Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-
 BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance.<br>
     Example: <code>blastx -version</code><br>
     URL: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">https://blast.ncbi.nlm.nih.gov/Blast.cgi</a><br>
-  Versions: 2.9.0, <em>2.10.1</em><br>
+  Versions: 2.9.0, 2.10.1, <em>2.11.0</em><br>
   </dd>
 
   <dt>blat</dt>
@@ -191,9 +191,9 @@ BLAT - client and server combined into a single program, first building the inde
     <strong>Bowtie: A Fast and Sensitive Gapped Read Aligner</strong><br>
 Bowtie is an ultrafast, memory-efficient short read aligner.<br>
     Example: <code>bowtie --version</code> and <code>ls $BOWTIE_HOME/{genomes,indexes}</code><br>
-    Note: This is Bowtie v1 - not v2_.<br>
+    Note: This is Bowtie v1 - <em>not v2</em>.<br>
     URL: <a href="http://bowtie-bio.sourceforge.net/index.shtml">http://bowtie-bio.sourceforge.net/index.shtml</a><br>
-  Versions: <em>1.2.3</em><br>
+  Versions: 1.2.3, <em>1.3.0</em><br>
   </dd>
 
   <dt>bowtie2</dt>
@@ -202,7 +202,7 @@ Bowtie is an ultrafast, memory-efficient short read aligner.<br>
 Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.<br>
     Example: <code>bowtie2 --version</code><br>
     URL: <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a><br>
-  Versions: 2.3.5, 2.3.5.1, <em>2.4.1</em><br>
+  Versions: 2.3.5, 2.3.5.1, 2.4.1, <em>2.4.2</em><br>
   </dd>
 
   <dt>bwa</dt>
@@ -221,7 +221,7 @@ Byobu is an elegant enhancement of the otherwise functional, plain, practical GN
     Example: <code>byobu --version</code>.<br>
     URL: <a href="http://byobu.org">http://byobu.org</a>, <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 5.130, <em>5.133</em><br>
+  Versions: <em>5.133</em><br>
   </dd>
 
   <dt>CBI-testing</dt>
@@ -238,8 +238,8 @@ This repository provides prototypical environment modules that can change at any
 Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.<br>
     Example: <code>cellranger</code>.<br>
     URL: <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a><br>
-    Warning: To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg' making those the default. To overrider this, set the corresponding command-line arguments, e.g. <code>cellranger count --localcores=$NSLOTS ...</code>.<br>
-  Versions: 2.1.0, 3.0.2, 3.1.0, <em>4.0.0</em><br>
+    Warning: To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.<br>
+  Versions: 2.1.0, 3.0.2, 3.1.0, 4.0.0, <em>5.0.1</em><br>
   </dd>
 
   <dt>cmake</dt>
@@ -248,7 +248,7 @@ Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' 
 CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.<br>
     Example: <code>cmake --version</code>.<br>
     URL: <a href="https://cmake.org/">https://cmake.org/</a><br>
-  Versions: <em>3.18.2</em><br>
+  Versions: 3.18.2, <em>3.19.2</em><br>
   </dd>
 
   <dt>control-freec</dt>
@@ -257,7 +257,7 @@ CMake is cross-platform free and open-source software for managing the build pro
 Prediction of copy numbers and allelic content using deep-sequencing data.<br>
     Example: <code>freec</code>.<br>
     URL: <a href="http://boevalab.com/FREEC/">http://boevalab.com/FREEC/</a>, <a href="https://github.com/BoevaLab/FREEC/">https://github.com/BoevaLab/FREEC/</a><br>
-  Versions: <em>11.5</em><br>
+  Versions: 11.5, <em>11.6</em><br>
   </dd>
 
   <dt>cufflinks</dt>
@@ -276,7 +276,7 @@ At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming 
     Example: <code>emacs --version</code> and <code>emacs -nw</code>.<br>
     URL: <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: <em>26.3</em><br>
+  Versions: 26.3, <em>27.1</em><br>
   </dd>
 
   <dt>fastqc</dt>
@@ -296,7 +296,7 @@ fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix fil
     Note: To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.<br>
     URL: <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 0.21.1, <em>0.22.0</em><br>
+  Versions: <em>0.22.0</em><br>
   </dd>
 
   <dt>gatk</dt>
@@ -305,7 +305,7 @@ fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix fil
 Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.<br>
     Example: <code>gatk --help</code> and <code>gatk --list</code>.<br>
     URL: <a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a><br>
-  Versions: 4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, <em>4.1.7.0</em><br>
+  Versions: 4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, <em>4.1.9.0</em><br>
   </dd>
 
   <dt>gcta</dt>
@@ -342,7 +342,7 @@ A collection of Git extensions to provide high-level repository operations for V
     Example: <code>git flow</code>.<br>
     URL: <a href="https://github.com/petervanderdoes/gitflow-avh">https://github.com/petervanderdoes/gitflow-avh</a>, <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 1.12.1, <em>1.12.3</em><br>
+  Versions: <em>1.12.3</em><br>
   </dd>
 
   <dt>gsl</dt>
@@ -374,12 +374,12 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
 
   <dt>htop</dt>
   <dd>
-    <strong>htop - An Interactive Process Viewer for Unix</strong><br>
+    <strong>htop: An Interactive Process Viewer for Unix</strong><br>
 <code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.<br>
     Example: <code>htop</code>.<br>
     URL: <a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 2.2.0, <em>3.0.1</em><br>
+  Versions: <em>3.0.4</em><br>
   </dd>
 
   <dt>htslib</dt>
@@ -388,16 +388,17 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
 HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.<br>
     Example: <code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.<br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: 1.9, <em>1.10.2</em><br>
+  Versions: 1.9, 1.10.2, <em>1.11</em><br>
   </dd>
 
   <dt>igv</dt>
   <dd>
     <strong>IGV: The Integrative Genomics Viewer</strong><br>
-The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations. NOTE: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).<br>
+The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.<br>
     Example: <code>igv</code>.<br>
+    Note: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).<br>
     URL: <a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a><br>
-  Versions: 2.7.0, 2.7.2, 2.8.2, 2.8.6, <em>2.4.19</em><br>
+  Versions: 2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, <em>2.8.13</em><br>
   </dd>
 
   <dt>igvtools</dt>
@@ -433,7 +434,7 @@ kallisto is a program for quantifying abundances of transcripts from RNA-Seq dat
 Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.<br>
     Example: <code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code><br>
     URL: <a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a><br>
-  Versions: 2.21.1, 2.21.4, 2.22.2, <em>2.23.1</em><br>
+  Versions: 2.21.1, 2.21.4, 2.22.2, 2.23.1, <em>2.24.0</em><br>
   </dd>
 
   <dt>pindel</dt>
@@ -451,7 +452,7 @@ Pindel can detect breakpoints of large deletions, medium sized insertions, inver
 PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).<br>
     Example: <code>plink --help</code>.<br>
     URL: <a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a><br>
-  Versions: 1.07, 1.90b6.10, 1.90b6.16, <em>1.90b6.18</em><br>
+  Versions: 1.07, 1.90b6.10, 1.90b6.16, 1.90b6.18, <em>1.90b6.21</em><br>
   </dd>
 
   <dt>plink2</dt>
@@ -479,7 +480,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
 The R programming language.<br>
     Example: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, <em>4.0.2</em><br>
+  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, <em>4.0.3</em><br>
   </dd>
 
   <dt>r-siteconfig</dt>
@@ -497,7 +498,7 @@ Rclone is a command line program to sync files and directories to and from a lar
     Example: <code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>info rclone</code>.<br>
     URL: <a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 1.51.0, 1.52.1, <em>1.53.1</em><br>
+  Versions: <em>1.53.3</em><br>
   </dd>
 
   <dt>ripgrep</dt>
@@ -507,7 +508,7 @@ ripgrep is a line-oriented search tool that recursively searches your current di
     Example: <code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.<br>
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 11.0.2, 12.0.1, <em>12.1.1</em><br>
+  Versions: <em>12.1.1</em><br>
   </dd>
 
   <dt>salmon</dt>
@@ -516,7 +517,7 @@ ripgrep is a line-oriented search tool that recursively searches your current di
 Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.<br>
     Example: <code>salmon --version</code>.<br>
     URL: <a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a><br>
-  Versions: <em>1.3.0</em><br>
+  Versions: 1.3.0, <em>1.4.0</em><br>
   </dd>
 
   <dt>samtools</dt>
@@ -525,16 +526,16 @@ Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq r
 SAMtools is a suite of programs for interacting with high-throughput sequencing data.<br>
     Example: <code>samtools --version</code>.<br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: 1.9, <em>1.10</em><br>
+  Versions: 1.9, 1.10, <em>1.11</em><br>
   </dd>
 
   <dt>scl-devtoolset</dt>
   <dd>
     <strong>SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
-Enables the CentOS Software Collection (SCL) <code>devtoolset-8</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-8</code>, which is an approach that is not officially supported by RedHat/CentOS.<br>
+Enables the CentOS Software Collection (SCL) <code>devtoolset-9</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-9</code>, which is an approach that is not officially supported by RedHat/CentOS.<br>
     Example: <code>gcc --version</code>.<br>
-    URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-8/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-8/</a><br>
-  Versions: 4, 6, 7, <em>8</em><br>
+    URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-9/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-9/</a><br>
+  Versions: 4, 6, 7, 8, <em>9</em><br>
   </dd>
 
   <dt>scl-python (part of CBI-testing)</dt>
@@ -555,7 +556,7 @@ ShellCheck finds bugs in your shell scripts.<br>
     Example: <code>shellcheck --version</code> and <code>shellcheck -x ~/.bashrc</code>.<br>
     URL: <a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>, <a href="https://github.com/koalaman/shellcheck/">https://github.com/koalaman/shellcheck/</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
-  Versions: 0.6.0, 0.7.0, <em>0.7.1</em><br>
+  Versions: <em>0.7.1</em><br>
   </dd>
 
   <dt>snpeff</dt>
@@ -564,7 +565,7 @@ ShellCheck finds bugs in your shell scripts.<br>
 SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).<br>
     Example: <code>snpEff -help</code>, <code>SnpSift -help</code>,  and <code>ClinEff -help</code>, which are aliases for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code>, <code>java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help</code>, and <code>java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help</code>.<br>
     URL: <a href="http://snpeff.sourceforge.net/">http://snpeff.sourceforge.net/</a><br>
-  Versions: <em>4.3t</em><br>
+  Versions: 4.3t, <em>5.0c</em><br>
   </dd>
 
   <dt>sratoolkit</dt>
@@ -572,8 +573,8 @@ SnpEff is a variant annotation and effect prediction tool. It annotates and pred
     <strong>SRA Toolkit: Tools and Libraries for Using Data in the INSDC Sequence Read Archives</strong><br>
 The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives.<br>
     Example: <code>fastq-dump --help</code>.<br>
-    URL: <a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a><br>
-  Versions: 2.10.0, 2.10.4, 2.10.5, 2.10.7, <em>2.10.8</em><br>
+    URL: <a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a>, <a href="https://github.com/ncbi/sra-tools">https://github.com/ncbi/sra-tools</a><br>
+  Versions: 2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, <em>2.10.9</em><br>
   </dd>
 
   <dt>star</dt>
@@ -582,7 +583,7 @@ The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for usi
 STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.<br>
     Example: <code>STAR --help</code>.<br>
     URL: <a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a><br>
-  Versions: 2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, <em>2.7.5c</em><br>
+  Versions: 2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, 2.7.5c, <em>2.7.7a</em><br>
   </dd>
 
   <dt>tmux</dt>
@@ -1080,6 +1081,13 @@ Accurate protein secondary structure prediction<br>
   Versions: 3.3.0, 3.4.2, <em>3.5.2</em><br>
   </dd>
 
+  <dt>python3/attrs</dt>
+  <dd>
+Classes Without Boilerplate<br>
+    URL: <a href="https://www.attrs.org/">https://www.attrs.org/</a><br>
+  Versions: <em>20.3.0</em><br>
+  </dd>
+
   <dt>python3/biopython</dt>
   <dd>
 Python tools for computational molecular biology<br>
@@ -1115,6 +1123,13 @@ Module to simplify usage of decorators<br>
   Versions: <em>4.4.1</em><br>
   </dd>
 
+  <dt>python3/flake8</dt>
+  <dd>
+The modular source code checker: pep8 pyflakes and co<br>
+    URL: <a href="https://gitlab.com/pycqa/flake8">https://gitlab.com/pycqa/flake8</a><br>
+  Versions: <em>3.8.4</em><br>
+  </dd>
+
   <dt>python3/h5py</dt>
   <dd>
 Python interface to the Hierarchical Data Format library<br>
@@ -1127,6 +1142,20 @@ Python interface to the Hierarchical Data Format library<br>
 Python package for handling IHM mmCIF files<br>
     URL: <a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a><br>
   Versions: <em>0.15</em><br>
+  </dd>
+
+  <dt>python3/importlib-metadata</dt>
+  <dd>
+Read metadata from Python packages<br>
+    URL: <a href="https://github.com/python/importlib_metadata">https://github.com/python/importlib_metadata</a><br>
+  Versions: <em>3.3.0</em><br>
+  </dd>
+
+  <dt>python3/iniconfig</dt>
+  <dd>
+Brain-dead simple parsing of ini files<br>
+    URL: <a href="https://github.com/RonnyPfannschmidt/iniconfig">https://github.com/RonnyPfannschmidt/iniconfig</a><br>
+  Versions: <em>1.1.1</em><br>
   </dd>
 
   <dt>python3/joblib</dt>
@@ -1148,6 +1177,13 @@ A fast implementation of the Cassowary constraint solver<br>
 Python 2D plotting library<br>
     URL: <a href="https://matplotlib.org/">https://matplotlib.org/</a><br>
   Versions: <em>3.1.2</em><br>
+  </dd>
+
+  <dt>python3/mccabe</dt>
+  <dd>
+McCabe checker, plugin for flake8<br>
+    URL: <a href="https://github.com/pycqa/mccabe">https://github.com/pycqa/mccabe</a><br>
+  Versions: <em>0.6.1</em><br>
   </dd>
 
   <dt>python3/msgpack</dt>
@@ -1185,6 +1221,13 @@ A fast multidimensional array facility for Python<br>
   Versions: <em>1.17.4</em><br>
   </dd>
 
+  <dt>python3/packaging</dt>
+  <dd>
+Core utilities for Python packages<br>
+    URL: <a href="https://github.com/pypa/packaging">https://github.com/pypa/packaging</a><br>
+  Versions: <em>20.8</em><br>
+  </dd>
+
   <dt>python3/pandas</dt>
   <dd>
 Python Data Analysis Library<br>
@@ -1199,11 +1242,39 @@ A Python interface to the pkg-config command line tool<br>
   Versions: <em>1.5.1</em><br>
   </dd>
 
+  <dt>python3/pluggy</dt>
+  <dd>
+A minimalist production ready plugin system<br>
+    URL: <a href="https://github.com/pytest-dev/pluggy">https://github.com/pytest-dev/pluggy</a><br>
+  Versions: <em>0.13.1</em><br>
+  </dd>
+
   <dt>python3/protobuf</dt>
   <dd>
 Protocol Buffers - Google's data interchange format<br>
     URL: <a href="https://developers.google.com/protocol-buffers/">https://developers.google.com/protocol-buffers/</a><br>
   Versions: <em>3.11.2</em><br>
+  </dd>
+
+  <dt>python3/py</dt>
+  <dd>
+Cross-python path, ini-parsing, io, code, log facilities<br>
+    URL: <a href="https://py.readthedocs.io/en/latest/">https://py.readthedocs.io/en/latest/</a><br>
+  Versions: <em>1.10.0</em><br>
+  </dd>
+
+  <dt>python3/pycodestyle</dt>
+  <dd>
+Python style guide checker<br>
+    URL: <a href="https://pycodestyle.readthedocs.io/">https://pycodestyle.readthedocs.io/</a><br>
+  Versions: <em>2.6.0</em><br>
+  </dd>
+
+  <dt>python3/pyflakes</dt>
+  <dd>
+Passive checker of Python programs<br>
+    URL: <a href="https://github.com/PyCQA/pyflakes">https://github.com/PyCQA/pyflakes</a><br>
+  Versions: <em>2.2.0</em><br>
   </dd>
 
   <dt>python3/pyparsing</dt>
@@ -1218,6 +1289,20 @@ An object-oriented approach to text processing<br>
 Way of performing RMSD calculations of large sets of structures<br>
     URL: <a href="https://github.com/salilab/pyRMSD">https://github.com/salilab/pyRMSD</a><br>
   Versions: <em>4.1.gita558b8a</em><br>
+  </dd>
+
+  <dt>python3/pytest</dt>
+  <dd>
+Simple powerful testing with Python<br>
+    URL: <a href="https://docs.pytest.org/en/latest/">https://docs.pytest.org/en/latest/</a><br>
+  Versions: <em>6.2.1</em><br>
+  </dd>
+
+  <dt>python3/pytest-flake8</dt>
+  <dd>
+pytest plugin to check FLAKE8 requirements<br>
+    URL: <a href="https://github.com/tholo/pytest-flake8">https://github.com/tholo/pytest-flake8</a><br>
+  Versions: <em>1.0.7</em><br>
   </dd>
 
   <dt>python3/pytz</dt>
@@ -1253,6 +1338,27 @@ Python 2 and 3 compatibility utilities<br>
 Hierarchical datasets in Python<br>
     URL: <a href="http://www.pytables.org/">http://www.pytables.org/</a><br>
   Versions: <em>3.6.1</em><br>
+  </dd>
+
+  <dt>python3/toml</dt>
+  <dd>
+Python Library for Tom's Obvious, Minimal Language<br>
+    URL: <a href="https://github.com/uiri/toml">https://github.com/uiri/toml</a><br>
+  Versions: <em>0.10.2</em><br>
+  </dd>
+
+  <dt>python3/typing-extensions</dt>
+  <dd>
+Backported and Experimental Type Hints for Python 3.5+<br>
+    URL: <a href="https://pypi.org/project/typing-extensions/">https://pypi.org/project/typing-extensions/</a><br>
+  Versions: <em>3.7.4.3</em><br>
+  </dd>
+
+  <dt>python3/zipp</dt>
+  <dd>
+Backport of pathlib-compatible object wrapper for zip files<br>
+    URL: <a href="https://github.com/jaraco/zipp">https://github.com/jaraco/zipp</a><br>
+  Versions: <em>3.4.0</em><br>
   </dd>
 
   <dt>relion</dt>
@@ -1319,10 +1425,10 @@ Rigid body docking<br>
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2020-11-20 18:32:23 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-01-06 08:17:25 from querying `module avail` and `module spider`._
 
 
 <style>
