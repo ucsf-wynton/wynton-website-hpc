@@ -22,6 +22,7 @@ lsd sbgrid
 
 If `sbgrid` is not part of your output, then you do _not_ have access to the SBGrid software on {{ site.cluster.name }}.  If you think this is a mistake, please [contact us].
 
+NOTE: SBGrid is only available on dev2, dev3, and the compute nodes. It is not installed on the login or data transfer nodes. (SBGrid is also installed on dev1, but many of SBGrid's programs have been compiled to be compatible with instructions for newer CPUs, so they no longer run on dev1.)
 
 ## Enable SBGrid
 
