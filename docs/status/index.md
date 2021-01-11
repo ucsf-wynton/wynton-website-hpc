@@ -79,6 +79,11 @@
 </div>
 
 
+## {{ site.cluster.name }} Grafana Dashboard
+
+Detailed statistics on the file-system load and other cluster metrics can be found on the [{{ site.cluster.name }} Grafana Dashboard](https://mon.wynton.ucsf.edu/grafana).  To access this, make sure you are on the UCSF network.  Use your {{ site.cluster.name }} credential to log in.
+
+
 ## Current Incidents
 
 {% include_relative incidents-current.md %}
