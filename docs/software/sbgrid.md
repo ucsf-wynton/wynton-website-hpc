@@ -22,9 +22,9 @@ lsd sbgrid
 
 If `sbgrid` is not part of your output, then you do _not_ have access to the SBGrid software on {{ site.cluster.name }}.  If you think this is a mistake, please [contact us].
 
-### NOTE: SBGrid is only available on dev2, dev3, and the compute nodes. It is not installed on the login or data transfer nodes. (SBGrid is also installed on dev1, but many of SBGrid's programs have been compiled to be compatible with instructions for newer CPUs, so they no longer run on dev1.)
+NOTE: SBGrid is only available on dev2, dev3, and the compute nodes. It is not installed on the login or data transfer nodes. (SBGrid is also installed on dev1, but many of SBGrid's programs have been compiled to be compatible with instructions for newer CPUs, so they no longer run on dev1.)
 
-### NOTE: SBGrid is only compatible with newer CPUs. Cluster jobs with SBGrid specific programs may fail if sent to older cluster nodes. To prevent jobs being sent to older nodes, when submitting jobs to Wynton with SBGrid programs/environments, require a minimum network speed of 10g using the following variable on the command line, "qsub -cwd -l eth_speed=10 example_script.sh", or include the following, "#$ -l eth_speed=10", in your job script.
+NOTE: SBGrid is only compatible with newer CPUs. Cluster jobs with SBGrid specific programs may fail if sent to older cluster nodes. To prevent jobs being sent to older nodes, when submitting jobs to Wynton with SBGrid programs/environments, require a minimum network speed of 10g using the following variable on the command line, `qsub -cwd -l eth_speed=10 example_script.sh`, or include the following, `#$ -l eth_speed=10`, in your job script.
 
 ## Enable SBGrid
 
