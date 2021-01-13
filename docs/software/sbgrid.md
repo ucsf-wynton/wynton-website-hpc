@@ -10,6 +10,7 @@ For bug reports related to SBGrid software, please use <a href="https://sbgrid.o
 
 SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/) for structural biology. It is kept up to date by the [SBGrid] team without needing intervention by the {{ site.cluster.nickname }} admins. Each lab using SBGrid must pay a yearly fee. This covers usage by anyone in the lab, both on {{ site.cluster.name }} and any other Linux or Mac computer they own. The annual price depends on how many other labs from UCSF join. There are approximately 12 UCSF labs currently enrolled. See <https://sbgrid.org/join/> for information on how to join.
 
+
 ## Verify access to SBGrid
 
 The SBGrid software stack is installed on {{ site.cluster.name }} but is available only to paying members of the [SBGrid Consortium](https://sbgrid.org/join/).  {{ site.cluster.name }} users who are [SBGrid members] are part of the `sbgrid` Unix group on the {{ site.cluster.name }} cluster.  You can verify this by running:
@@ -22,11 +23,16 @@ lsd sbgrid
 
 If `sbgrid` is not part of your output, then you do _not_ have access to the SBGrid software on {{ site.cluster.name }}.  If you think this is a mistake, please [contact us].
 
-NOTE: SBGrid is only available on dev2, dev3, and the compute nodes. It is not installed on the login or data transfer nodes. (SBGrid is also installed on dev1, but many of SBGrid's programs have been compiled to be compatible with instructions for newer CPUs, so they no longer run on dev1.)
-
-NOTE: SBGrid is only compatible with newer CPUs. Cluster jobs with SBGrid specific programs may fail if sent to older cluster nodes. To prevent jobs being sent to older nodes, when submitting jobs to Wynton with SBGrid programs/environments, require a minimum network speed of 10g using the following variable on the command line, `qsub -cwd -l eth_speed=10 example_script.sh`, or include the following, `#$ -l eth_speed=10`, in your job script.
 
 ## Enable SBGrid
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<span>⚠️</span> Among the development nodes, SBGrid works best on dev2 and dev3.  On the dev1, <em>some</em> of the SBGrid software tools give run-time errors, e.g. 'Illegal instruction', because they have been compiled for CPUs that are newer than dev1's CPUs.
+</div>
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<span>⚠️</span> Among the compute nodes, SBGrid works best on "modern" compute nodes with modern CPUs.  To make sure your SBGrid job ends up a on a node with a modern CPU, specify SGE option <code>-l eth_speed=10</code>, which will direct the job to a machine with a minimum network speed of 10 Gbps, which is a proxy for "modern".  In contrast, and depending on which SBGrid software is used, jobs running on older machines may produce errors, e.g. 'Illegal instruction'.
+</div>
 
 In order to use SBGrid software, the SBGrid environment must be enabled.  To enable the SBGrid, in the shell or in a job script, do:
 
