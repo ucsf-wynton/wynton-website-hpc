@@ -27,7 +27,7 @@ If `sbgrid` is not part of your output, then you do _not_ have access to the SBG
 ## Enable SBGrid
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-<span>⚠️</span> Among the development nodes, SBGrid works best on dev2 and dev3.  On the dev1, <em>some</em> of the SBGrid software tools give run-time errors, e.g. 'Illegal instruction', because they have been compiled for CPUs that are newer than dev1's CPUs.
+<span>⚠️</span> Among the development nodes, SBGrid works best on dev2 and dev3.  On dev1 and gpudev1, the CPUs are older and <em>some</em> of the SBGrid software tools assumes newer CPUs resulting in run-time errors, e.g. 'Illegal instruction'.
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
