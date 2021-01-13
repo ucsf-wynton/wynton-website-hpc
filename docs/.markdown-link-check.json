@@ -4,8 +4,12 @@
 			"pattern": "^https://www.cgl.ucsf.edu/admin/"
 		},
 		{
+			"pattern": "^https://mon.wynton.ucsf.edu/"
+		},
+		{
 			"pattern": "^https://listsrv.ucsf.edu/"
 		}
+
 	],
     
 	"replacementPatterns": [
