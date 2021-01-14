@@ -56,33 +56,25 @@ To use this rocker/r-base container, we first pull it down to a Singularity imag
 [alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.img docker://rocker/r-base
 INFO:    Starting build...
 Getting image source signatures
-Copying blob sha256:0ab9185ddfe50c951de582032c5e29e21a851a328056e6bee6299e0ff55ec807
-Copying blob sha256:d44275cd8663e9ba25fc43e9bdeca4cbba0a711051884d880231d5a63d9a24f3
-Copying blob sha256:611ac85ce34ee0780b510f3feb8b5555cc4c0d5191747178cdd7a8cf8dc9c53c
-Copying blob sha256:1d9c7fe5df96dd6fe55e9ddc736da684a9bf2df8b5b9d282f2f58e45b27ab256
-Copying blob sha256:915f6b39903d5d5cd1800149b495a92040d0e9c3169acaf488c1225906ad817b
-Copying blob sha256:1cf4e812adf61b22b89b92855730a767dcabf3c7da9676ec1e1e16546ce20ae1
-Copying config sha256:3d369bfa045d9a54f5770aca574512a9b470cea9c0fb543066b218ac2f84b671
+Copying blob sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
+Copying blob sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
+Copying blob sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
+Copying blob sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
+Copying blob sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
+Copying blob sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
+Copying config sha256:97c4fe6614a8a627eceeeb91e2fabcffd9fceb89b6e36d526462de4fefbcaab5
 Writing manifest to image destination
 Storing signatures
-2020/09/01 15:01:51  info unpack layer: sha256:0ab9185ddfe50c951de582032c5e29e21a851a328056e6bee6299e0ff55ec807
-2020/09/01 15:01:51  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
-2020/09/01 15:01:51  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
-2020/09/01 15:01:54  info unpack layer: sha256:d44275cd8663e9ba25fc43e9bdeca4cbba0a711051884d880231d5a63d9a24f3
-2020/09/01 15:01:54  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
-2020/09/01 15:01:54  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
-2020/09/01 15:01:54  info unpack layer: sha256:611ac85ce34ee0780b510f3feb8b5555cc4c0d5191747178cdd7a8cf8dc9c53c
-2020/09/01 15:01:55  warn xattr{var/cache/apt/archives/partial} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
-2020/09/01 15:01:55  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/var/cache/apt/archives/partial} destination filesystem does not support xattrs, further warnings will be suppressed
-2020/09/01 15:01:55  info unpack layer: sha256:1d9c7fe5df96dd6fe55e9ddc736da684a9bf2df8b5b9d282f2f58e45b27ab256
-2020/09/01 15:01:55  info unpack layer: sha256:915f6b39903d5d5cd1800149b495a92040d0e9c3169acaf488c1225906ad817b
-2020/09/01 15:01:55  info unpack layer: sha256:1cf4e812adf61b22b89b92855730a767dcabf3c7da9676ec1e1e16546ce20ae1
-2020/09/01 15:02:02  warn xattr{usr/local/lib/R} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
-2020/09/01 15:02:02  warn xattr{/tmp/rootfs-b0e5b484-ec9e-11ea-86bf-1418773e5343/usr/local/lib/R} destination filesystem does not support xattrs, further warnings will be suppressed
+2021/01/14 08:45:20  info unpack layer: sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
+2021/01/14 08:45:24  info unpack layer: sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
+2021/01/14 08:45:24  info unpack layer: sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
+2021/01/14 08:45:25  info unpack layer: sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
+2021/01/14 08:45:25  info unpack layer: sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
+2021/01/14 08:45:25  info unpack layer: sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.img
 [alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.img
--rwxr-xr-x. 1 hb-test lsd 307957760 Sep  1 15:02 rocker_r-base.img
+-rwxr-xr-x. 1 alice boblab 297021440 Jan 14 08:45 rocker_r-base.img
 ```
 
 The above may take a minute or two to complete.
