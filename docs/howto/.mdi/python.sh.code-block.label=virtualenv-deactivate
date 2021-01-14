@@ -1,0 +1,2 @@
+(my_project) [alice@{{ site.devel.name }} ~]$ deactivate
+[alice@{{ site.devel.name }} ~]$ 

@@ -15,7 +15,7 @@ SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/) fo
 
 The SBGrid software stack is installed on {{ site.cluster.name }} but is available only to paying members of the [SBGrid Consortium](https://sbgrid.org/join/).  {{ site.cluster.name }} users who are [SBGrid members] are part of the `sbgrid` Unix group on the {{ site.cluster.name }} cluster.  You can verify this by running:
 
-<!-- code-block #1 -->
+<!-- code-block label="groups" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ groups
 lsd sbgrid
@@ -36,7 +36,7 @@ If `sbgrid` is not part of your output, then you do _not_ have access to the SBG
 
 In order to use SBGrid software, the SBGrid environment must be enabled.  To enable the SBGrid, in the shell or in a job script, do:
 
-<!-- code-block #2 -->
+<!-- code-block label="sbgrid" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ source /programs/sbgrid.shrc
 ********************************************************************************

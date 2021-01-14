@@ -1,4 +1,4 @@
-[alice@dev3 ~]$ python3 -m pip install --user virtualenv
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user virtualenv
 Collecting virtualenv
   Using cached https://files.pythonhosted.org/packages/12/51/36c685ff2c1b2f7b4b5db29f3153159102ae0e0adaff3a26fd1448232e06/virtualenv-20.0.31-py2.py3-none-any.whl
 Collecting importlib-resources>=1.0; python_version < "3.7" (from virtualenv)
@@ -17,7 +17,7 @@ Collecting zipp>=0.4; python_version < "3.8" (from importlib-resources>=1.0; pyt
   Using cached https://files.pythonhosted.org/packages/b2/34/bfcb43cc0ba81f527bc4f40ef41ba2ff4080e047acb0586b56b3d017ace4/zipp-3.1.0-py3-none-any.whl
 Installing collected packages: zipp, importlib-resources, appdirs, distlib, importlib-metadata, filelock, six, virtualenv
 Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 importlib-metadata-1.7.0 importlib-resources-3.0.0 six-1.15.0 virtualenv-20.0.31 zipp-3.1.0
-[alice@dev3 ~]$ which virtualenv
+[alice@{{ site.devel.name }} ~]$ which virtualenv
 ~/.local/bin/virtualenv
-[alice@dev3 ~]$ virtualenv --version
+[alice@{{ site.devel.name }} ~]$ virtualenv --version
 virtualenv 20.0.31 from ~/.local/lib/python3.6/site-packages/virtualenv/__init__.py
