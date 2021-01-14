@@ -1,11 +1,5 @@
 # Singularity - Linux Containers
 
-<!---
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-2019-06-12: Singularity 3.2.1 is now available. We will update the below instructions, which were based on Singularity 2.6.1, as soon as we can.
-</div>
---->
-
 The {{ site.cluster.name }} cluster supports [Linux containers] via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
 
 Singularity, and Linux containers in general, provides solutions to common problems and hurdles that HPC users often face, e.g.
