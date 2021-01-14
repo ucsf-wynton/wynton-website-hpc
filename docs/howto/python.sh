@@ -1,7 +1,11 @@
 #! /usr/bin/env bash
 #' @usage: mdi build python.sh
 
-export TMPDIR=${TMPDIR:-/scratch/$USER/mdi}
+TMPDIR="${TMPDIR:-/scratch/$USER}"
+[[ -z "${TMPDIR}" ]] && { 2>&1 echo "ERROR: TMPDIR is empty"; exit 1; }
+
+export TMPDIR="${TMPDIR}/mdi"
+[[ -d "${TMPDIR}" ]] && rm -rf "${TMPDIR}"
 mkdir -p "${TMPDIR}"
 
 # shellcheck disable=SC2034
@@ -14,7 +18,9 @@ mdi_adjust_output() {
     local group tilde tmpdir
     group=$(id --name --group)
     tilde="~"
-    tmpdir=$(echo "${TMPDIR:-/scratch/${USER}}" | sed "s|${USER}|${MDI_USER}|")
+    ## tmpdir=$(echo "${TMPDIR:-/scratch/${USER}}" | sed "s|${USER}|${MDI_USER}|")
+    ## Our PYTHON examples run in ${TMPDIR} but should look like ${HOME}
+    tmpdir="~"
     mdi_replace_pwd | sed "s|${HOME}|${tilde}|g" | sed "s|${TMPDIR}|${tmpdir}|g" | sed "s|\b${USER}\b|${MDI_USER}|g" | sed "s|\b${group}\b|${MDI_GROUP}|g"
 }
 
