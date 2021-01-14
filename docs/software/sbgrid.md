@@ -18,7 +18,7 @@ The SBGrid software stack is installed on {{ site.cluster.name }} but is availab
 <!-- code-block label="groups" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ groups
-lsd sbgrid
+boblab sbgrid
 ```
 
 If `sbgrid` is not part of your output, then you do _not_ have access to the SBGrid software on {{ site.cluster.name }}.  If you think this is a mistake, please [contact us].
@@ -55,16 +55,16 @@ In order to use SBGrid software, the SBGrid environment must be enabled.  To ena
  Software used in the project was installed and configured by SBGrid.                   
  cite: eLife 2013;2:e01456, Collaboration gets the most out of software.                
 ********************************************************************************
- SBGrid installation last updated: 2020-08-20
+ SBGrid installation last updated: 2021-01-11
  Please submit bug reports and help requests to:       <bugs@sbgrid.org>  or
                                                        <http://sbgrid.org/bugs>
             For additional information visit https://sbgrid.org/wiki
 ********************************************************************************
                               SBGrid Announcements
- - RELION users: 3.1-beta versions now use OpenMPI 3.1.6. 
-    see https://sbgrid.org/software/titles/relion 
- - MacOS 10.15 Catalina users: 
-    please see https://sbgrid.org/wiki/catalina 
+ - There are known issues with MacOS 11.0 “Big Sur” and some SBGrid 
+   applications. We recommend not upgrading Apple computers to 11.0 
+   until these issues can be addressed.
+     see https://sbgrid.org/wiki/big_sur for more info. 
 ******************************************************************************** 
 ```
 
