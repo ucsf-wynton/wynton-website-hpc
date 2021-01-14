@@ -1,9 +1,4 @@
 (my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install HTSeq
-Collecting HTSeq
-  Downloading HTSeq-0.12.4-cp36-cp36m-manylinux2010_x86_64.whl (1.4 MB)
-Collecting pysam
-  Using cached pysam-0.16.0.1-cp36-cp36m-manylinux1_x86_64.whl (9.9 MB)
-Collecting numpy
-  Downloading numpy-1.19.1-cp36-cp36m-manylinux2010_x86_64.whl (14.5 MB)
-Installing collected packages: pysam, numpy, HTSeq
-Successfully installed HTSeq-0.12.4 numpy-1.19.1 pysam-0.16.0.1
+Requirement already satisfied: HTSeq in ./my_project/lib64/python3.6/site-packages (0.13.5)
+Requirement already satisfied: pysam in ./my_project/lib64/python3.6/site-packages (from HTSeq) (0.16.0.1)
+Requirement already satisfied: numpy in ./my_project/lib64/python3.6/site-packages (from HTSeq) (1.19.5)

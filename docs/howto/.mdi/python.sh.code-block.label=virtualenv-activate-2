@@ -2,13 +2,13 @@
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## ACTIVATE
 (my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show HTSeq
 Name: HTSeq
-Version: 0.12.4
+Version: 0.13.5
 Summary: A framework to process and analyze data from high-throughput sequencing (HTS) assays
 Home-page: https://github.com/htseq
 Author: Simon Anders, Fabio Zanini
 Author-email: fabio.zanini@unsw.edu.au
 License: GPL3
 Location: ~/my_project/lib64/python3.6/site-packages
-Requires: numpy, pysam
+Requires: pysam, numpy
 Required-by: 
 (my_project) [alice@{{ site.devel.name }} my_project]$ 

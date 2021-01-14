@@ -1,7 +1,11 @@
 (my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
 Package    Version
----------- -------
-pip        20.2.2
-setuptools 49.6.0
-wheel      0.35.1
+---------- --------
+HTSeq      0.13.5
+mpi4py     1.3.1
+numpy      1.19.5
+pip        20.3.3
+pysam      0.16.0.1
+setuptools 51.1.2
+wheel      0.36.2
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
