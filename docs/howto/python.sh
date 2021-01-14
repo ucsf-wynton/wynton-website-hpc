@@ -5,15 +5,19 @@ export TMPDIR=${TMPDIR:-/scratch/$USER/mdi}
 mkdir -p "${TMPDIR}"
 
 # shellcheck disable=SC2034
-MDI_USER=alice
-MDI_HOSTNAME={{ site.devel.name }}
+MDI_USER="alice"
+MDI_GROUP="boblab"
+MDI_HOSTNAME="{{ site.devel.name }}"
 PS1="[\u@\h \W]\$ "
 
 mdi_adjust_output() {
-    local tilde
-    tilde='~'
-    mdi_replace_pwd | sed "s|${HOME}|${tilde}|g" | sed "s|${TMPDIR}|${tilde}|g" 
+    local group tilde tmpdir
+    group=$(id --name --group)
+    tilde="~"
+    tmpdir=$(echo "${TMPDIR:-/scratch/${USER}}" | sed "s|${USER}|${MDI_USER}|")
+    mdi_replace_pwd | sed "s|${HOME}|${tilde}|g" | sed "s|${TMPDIR}|${tmpdir}|g" | sed "s|\b${USER}\b|${MDI_USER}|g" | sed "s|\b${group}\b|${MDI_GROUP}|g"
 }
+
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup
