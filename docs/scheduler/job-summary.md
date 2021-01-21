@@ -183,4 +183,4 @@ category     -u alice -q !gpu.q -l h_rt=3600,mem_free=25G -pe smp 10
 
 ### See also
 
-You can read about all `qacct` output fields and what the report on in `man accounting`.
+You can read about all `qacct` output fields and what they mean in `man sge_status` and `man accounting`.
