@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 # Usage: mdi build singularity.sh
 
+export R_PROFILE=
+export R_ENVIRON=
+
 MDI_USER='alice'
 MDI_GROUP='boblab'
 MDI_HOSTNAME='{{ site.devel.name }}'
