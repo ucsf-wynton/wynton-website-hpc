@@ -7,6 +7,11 @@ organization:
   name: "Wynton"
   url: "https://wynton.ucsf.edu/"
 
+user:
+  name: "alice"
+  email: "alice.aliceson@ucsf.edu"
+  home: "/wynton/home/boblab/alice"
+  
 cluster:
   name: "Wynton HPC"
   nickname: "Wynton"
