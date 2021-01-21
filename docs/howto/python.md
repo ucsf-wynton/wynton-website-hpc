@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert">
-2019-11-13: Python 3 is now available.  If possible, we recommend to be explicit about which version to use by specifying either <code>python2</code> and <code>python3</code> in your scripts.
+If possible, we recommend to be explicit about which version to use by specifying either <code>python2</code> and <code>python3</code> in your scripts.
 </div>
 
 # Work with Python
@@ -37,12 +37,10 @@ First of all, if an online installation instructions says `pip install ...`, rep
 ```sh
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user HTSeq
 Collecting HTSeq
-  Cache entry deserialization failed, entry ignored
   Using cached https://files.pythonhosted.org/packages/7e/2e/60045d925c3b8da3f6a7869ce9ae77fd6360ea8749c3ab7f62198b3deed7/HTSeq-0.13.5.tar.gz
 Requirement already satisfied: numpy in /usr/lib64/python3.6/site-packages (from HTSeq)
 Collecting pysam (from HTSeq)
-  Cache entry deserialization failed, entry ignored
-  Using cached https://files.pythonhosted.org/packages/87/a1/73e80a7a873f3fb0e52d368a4343eb9882b737c932b95020d82251f1087e/pysam-0.16.0.1-cp36-cp36m-manylinux1_x86_64.whl
+  Downloading https://files.pythonhosted.org/packages/87/a1/73e80a7a873f3fb0e52d368a4343eb9882b737c932b95020d82251f1087e/pysam-0.16.0.1-cp36-cp36m-manylinux1_x86_64.whl (9.9MB)
 Installing collected packages: pysam, HTSeq
   Running setup.py install for HTSeq: started
     Running setup.py install for HTSeq: finished with status 'done'
@@ -56,7 +54,7 @@ To see all Python packages that you have installed globally, use `python3 -m pip
 ### 2. Installing to a virtual environment (aka "virtualenv")
 
 <div class="alert alert-info" role="alert">
-Virtual environment are not used just for cluster environments - many Python users and developers choose to use virtual environment on their local computers whenever they work in Python.
+Virtual environment are not used just on computer clusters - many Python users and developers choose to use virtual environment on their local computers whenever they work in Python.
 </div>
 
 An alternative to install globally to your home directory, is to install to a local folder using a, so called, Python _virtual environment_.  A virtual environment is a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ a virtual environment, environment variables like `PATH` is updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
@@ -73,43 +71,43 @@ In order to use virtual environments, we need the `virtualenv` tool.  Following 
 ```sh
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user virtualenv
 Collecting virtualenv
-  Using cached https://files.pythonhosted.org/packages/2c/a5/bb663a902f4e8e0a55e58b5b4cb6eb1460408603f50b942d756952f916c2/virtualenv-20.3.1-py2.py3-none-any.whl
-Collecting distlib<1,>=0.3.1 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/f5/0a/490fa011d699bb5a5f3a0cf57de82237f52a6db9d40f33c53b2736c9a1f9/distlib-0.3.1-py2.py3-none-any.whl
-Collecting filelock<4,>=3.0.0 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/93/83/71a2ee6158bb9f39a90c0dea1637f81d5eef866e188e1971a1b1ab01a35a/filelock-3.0.12-py3-none-any.whl
-Collecting six<2,>=1.9.0 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
+  Downloading https://files.pythonhosted.org/packages/1a/c6/bb564f5eec616d241e85d741f00a07f5f50ea12989022ad49bc66876993c/virtualenv-20.2.2-py2.py3-none-any.whl (5.7MB)
 Collecting appdirs<2,>=1.4.3 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/3b/00/2344469e2084fb287c2e0b57b72910309874c3245463acd6cf5e3db69324/appdirs-1.4.4-py2.py3-none-any.whl
-Collecting importlib-resources>=1.0; python_version < "3.7" (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/c6/c9/c267e6ff93460c0f467f243e2144b46d5c409c339d31d587d5d98def49e5/importlib_resources-5.0.0-py3-none-any.whl
+  Downloading https://files.pythonhosted.org/packages/3b/00/2344469e2084fb287c2e0b57b72910309874c3245463acd6cf5e3db69324/appdirs-1.4.4-py2.py3-none-any.whl
 Collecting importlib-metadata>=0.12; python_version < "3.8" (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/f3/ed/da40116a204abb5c4dd1d929346d33e0d29cedb2cedd18ea98f0385dcd92/importlib_metadata-3.4.0-py3-none-any.whl
-Collecting zipp>=0.4; python_version < "3.8" (from importlib-resources>=1.0; python_version < "3.7"->virtualenv)
-  Using cached https://files.pythonhosted.org/packages/41/ad/6a4f1a124b325618a7fb758b885b68ff7b058eec47d9220a12ab38d90b1f/zipp-3.4.0-py3-none-any.whl
+  Downloading https://files.pythonhosted.org/packages/7a/85/ac225e35048e050a6351b6f1251cdb2b6060092f2c6840aff1d6319941b1/importlib_metadata-3.3.0-py3-none-any.whl
+Collecting filelock<4,>=3.0.0 (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/93/83/71a2ee6158bb9f39a90c0dea1637f81d5eef866e188e1971a1b1ab01a35a/filelock-3.0.12-py3-none-any.whl
+Collecting six<2,>=1.9.0 (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
+Collecting importlib-resources>=1.0; python_version < "3.7" (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/e1/44/a4d7387e5207e66e567c04f87b652a9a174335043838ee7f85ef05f28945/importlib_resources-4.1.1-py3-none-any.whl
+Collecting distlib<1,>=0.3.1 (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/f5/0a/490fa011d699bb5a5f3a0cf57de82237f52a6db9d40f33c53b2736c9a1f9/distlib-0.3.1-py2.py3-none-any.whl (335kB)
 Collecting typing-extensions>=3.6.4; python_version < "3.8" (from importlib-metadata>=0.12; python_version < "3.8"->virtualenv)
-  Using cached https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl
-Installing collected packages: distlib, filelock, six, appdirs, zipp, importlib-resources, typing-extensions, importlib-metadata, virtualenv
-Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 importlib-metadata-3.4.0 importlib-resources-5.0.0 six-1.15.0 typing-extensions-3.7.4.3 virtualenv-20.3.1 zipp-3.4.0
+  Downloading https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl
+Collecting zipp>=0.5 (from importlib-metadata>=0.12; python_version < "3.8"->virtualenv)
+  Downloading https://files.pythonhosted.org/packages/41/ad/6a4f1a124b325618a7fb758b885b68ff7b058eec47d9220a12ab38d90b1f/zipp-3.4.0-py3-none-any.whl
+Installing collected packages: appdirs, typing-extensions, zipp, importlib-metadata, filelock, six, importlib-resources, distlib, virtualenv
+Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 importlib-metadata-3.3.0 importlib-resources-4.1.1 six-1.15.0 typing-extensions-3.7.4.3 virtualenv-20.2.2 zipp-3.4.0
 [alice@{{ site.devel.name }} ~]$ which virtualenv
 ~/.local/bin/virtualenv
 [alice@{{ site.devel.name }} ~]$ virtualenv --version
-virtualenv 20.3.1 from ~/.local/lib/python3.6/site-packages/virtualenv/__init__.py
+virtualenv 20.2.2 from ~/.local/lib/python3.6/site-packages/virtualenv/__init__.py
 ```
 
 
 #### 2.2 Create a virtual environment (once per project)
 
-Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  For a project that requires Python 2, do the following (once):
+Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  For a project that requires Python 3, do the following (once):
 
 <!-- code-block label="virtualenv-init" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ virtualenv -p python3 my_project
-created virtual environment CPython3.6.8.final.0-64 in 3608ms
+created virtual environment CPython3.6.8.final.0-64 in 2694ms
   creator CPython3Posix(dest=~/my_project, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
-    added seed packages: pip==20.3.3, setuptools==51.1.2, wheel==0.36.2
+    added seed packages: pip==20.3.1, setuptools==51.0.0, wheel==0.36.1
   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
 ```
 
@@ -155,14 +153,13 @@ To see what Python packages are installed _in the virtual environment_, use:
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
 Package    Version
----------- --------
-HTSeq      0.13.5
+---------- -------
 mpi4py     1.3.1
-numpy      1.19.5
-pip        20.3.3
-pysam      0.16.0.1
-setuptools 51.1.2
-wheel      0.36.2
+pip        20.3.1
+setuptools 51.0.0
+wheel      0.36.1
+WARNING: You are using pip version 20.3.1; however, version 20.3.3 is available.
+You should consider upgrading via the '~/my_project/bin/python3 -m pip install --upgrade pip' command.
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
@@ -174,9 +171,16 @@ With a virtual environment enabled, you can install Python packages to the proje
 <!-- code-block label="virtualenv-pip-install-htseq" -->
 ```sh
 (my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install HTSeq
-Requirement already satisfied: HTSeq in ./my_project/lib64/python3.6/site-packages (0.13.5)
-Requirement already satisfied: pysam in ./my_project/lib64/python3.6/site-packages (from HTSeq) (0.16.0.1)
-Requirement already satisfied: numpy in ./my_project/lib64/python3.6/site-packages (from HTSeq) (1.19.5)
+Collecting HTSeq
+  Downloading HTSeq-0.13.5-cp36-cp36m-manylinux2010_x86_64.whl (1.3 MB)
+Collecting numpy
+  Downloading numpy-1.19.5-cp36-cp36m-manylinux2010_x86_64.whl (14.8 MB)
+Collecting pysam
+  Using cached pysam-0.16.0.1-cp36-cp36m-manylinux1_x86_64.whl (9.9 MB)
+Installing collected packages: pysam, numpy, HTSeq
+Successfully installed HTSeq-0.13.5 numpy-1.19.5 pysam-0.16.0.1
+WARNING: You are using pip version 20.3.1; however, version 20.3.3 is available.
+You should consider upgrading via the '~/my_project/bin/python3 -m pip install --upgrade pip' command.
 ```
 
 To see which packages are now installed _in the virtual environment_ (the "project folder") and what their versions are, do:
@@ -189,10 +193,12 @@ Package    Version
 HTSeq      0.13.5
 mpi4py     1.3.1
 numpy      1.19.5
-pip        20.3.3
+pip        20.3.1
 pysam      0.16.0.1
-setuptools 51.1.2
-wheel      0.36.2
+setuptools 51.0.0
+wheel      0.36.1
+WARNING: You are using pip version 20.3.1; however, version 20.3.3 is available.
+You should consider upgrading via the '~/my_project/bin/python3 -m pip install --upgrade pip' command.
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
@@ -248,7 +254,7 @@ Note how prefix `(my_project)` was dropped from the shell prompt and `python3` n
 You will at times get warnings that you are running an old version of 'pip':
 
 ```sh
-You are using pip version 8.1.2, however version 20.2.2 is available.
+You are using pip version 8.1.2, however version 20.3.3 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
 
@@ -259,7 +265,8 @@ Don't use the suggested command call in that message.  Instead, use:
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user --upgrade pip
 Cache entry deserialization failed, entry ignored
 Collecting pip
-  Using cached https://files.pythonhosted.org/packages/54/eb/4a3642e971f404d69d4f6fa3885559d67562801b99d7592487f1ecc4e017/pip-20.3.3-py2.py3-none-any.whl
+  Cache entry deserialization failed, entry ignored
+  Downloading https://files.pythonhosted.org/packages/54/eb/4a3642e971f404d69d4f6fa3885559d67562801b99d7592487f1ecc4e017/pip-20.3.3-py2.py3-none-any.whl (1.5MB)
 Installing collected packages: pip
 Successfully installed pip-20.3.3
 ```
