@@ -1,0 +1,35 @@
+> install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
+Installing package into '/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+(as 'lib' is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz'
+Content type 'application/x-gzip' length 106745 bytes (104 KB)
+==================================================
+downloaded 104 KB
+
+* installing *source* package 'Rmpi' ...
+** package 'Rmpi' successfully unpacked and MD5 sums checked
+** using staged installation
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
+gcc -std=gnu99 -shared -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -lR
+installing to /c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-Rmpi/00new/Rmpi/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (Rmpi)
+
+The downloaded source packages are in
+        '/scratch/alice/RtmpAwBn4a/downloaded_packages'
+>
