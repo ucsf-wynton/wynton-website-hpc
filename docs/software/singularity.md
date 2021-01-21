@@ -59,16 +59,16 @@ Copying blob sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45
 Copying config sha256:97c4fe6614a8a627eceeeb91e2fabcffd9fceb89b6e36d526462de4fefbcaab5
 Writing manifest to image destination
 Storing signatures
-2021/01/20 17:46:14  info unpack layer: sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
-2021/01/20 17:46:17  info unpack layer: sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
-2021/01/20 17:46:17  info unpack layer: sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
-2021/01/20 17:46:18  info unpack layer: sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
-2021/01/20 17:46:18  info unpack layer: sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
-2021/01/20 17:46:18  info unpack layer: sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
+2021/01/20 18:15:46  info unpack layer: sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
+2021/01/20 18:15:49  info unpack layer: sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
+2021/01/20 18:15:49  info unpack layer: sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
+2021/01/20 18:15:50  info unpack layer: sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
+2021/01/20 18:15:50  info unpack layer: sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
+2021/01/20 18:15:50  info unpack layer: sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.img
 [alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.img
--rwxr-xr-x. 1 alice boblab 297025536 Jan 20 17:46 rocker_r-base.img
+-rwxr-xr-x. 1 alice boblab 297025536 Jan 20 18:16 rocker_r-base.img
 ```
 
 The above may take a minute or two to complete.
@@ -77,11 +77,13 @@ The above may take a minute or two to complete.
 ### Running a container
 
 After this, we can run R within this container using:
+
+<!-- code-block label="run" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ singularity run rocker_r-base.img
 
-R version 3.6.1 (2019-07-05) -- "Action of the Toes"
-Copyright (C) 2019 The R Foundation for Statistical Computing
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -102,10 +104,12 @@ Type 'q()' to quit R.
 [1] 55
 > q()
 Save workspace image? [y/n/c]: n
-[alice@{{ site.devel.name }} lxc]$ 
+[alice@{{ site.devel.name }} lxc]$
 ```
 
 Exactly what is "run" is defined by the so called "runscript" of the Singularity container, or the ["CMD"](https://hub.docker.com/r/rocker/r-base/~/dockerfile/) if imported from a Docker container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
+
+<!-- code-block label="exec" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ singularity exec rocker_r-base.img R --quiet
 > sum(1:10)
@@ -115,13 +119,28 @@ Exactly what is "run" is defined by the so called "runscript" of the Singularity
 ```
 
 Note that, the Singularity image is marked as an _executable_, which means you can run it as any other executable, e.g.
+
+<!-- code-block label="command" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.img
 
-R version 3.6.1 (2019-07-05) -- "Action of the Toes"
-Copyright (C) 2019 The R Foundation for Statistical Computing
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
-...
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
 
 > sum(1:10)
 [1] 55
@@ -130,6 +149,8 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 ```
 
 To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the {{ site.cluster.name }} host system), do:
+
+<!-- code-block label="shell" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.img
 Singularity rocker_r-base.img:~/lxc> head -3 /etc/os-release
@@ -137,7 +158,7 @@ PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
 Singularity r-base.img:~/lxc> Rscript --version
-R scripting front-end version 3.6.1 (2019-07-05)
+R scripting front-end version 4.0.3 (2020-10-10)
 Singularity r-base.img:~/lxc> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
@@ -157,11 +178,30 @@ When it comes to the scheduler, there is nothing special about Singularity per s
 [alice@{{ site.devel.name }} lxc]$ 
 ```
 
-and here is how to do the same via the job scheduler:
+To run this as a batch job, we need to create a job script.
+
 ```sh
-[alice@{{ site.devel.name }} ~]$ echo 'singularity exec rocker_r-base.img Rscript -e "sum(1:10)"' | qsub -cwd -j yes -N r-base
-Your job 5570948 ("r-base") has been submitted
-[alice@{{ site.devel.name }} ~]$ cat r-base.o5570948
+[alice@{{ site.devel.name }} lxc]$ cat demo-singularity.sh
+#!/usr/bin/bash
+#$ -N demo-singularity
+#$ -l mem_free=100M
+#$ -l h_rt=00:05:00
+#$ -j y
+
+./rocker_r-base.img Rscript -e "sum(1:10)"
+```
+
+And now submit with `qsub`:
+
+```sh
+[alice@{{ site.devel.name }} lxc]$ qsub demo-singularity.sh
+Your job 1657 ("hello_world") has been submitted
+```
+
+Check results:
+
+```sh
+[alice@{{ site.devel.name }} lxc]$ cat demo-singularity.o5987
 [1] 55
 ```
 
