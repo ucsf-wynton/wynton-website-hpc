@@ -1,0 +1,26 @@
+> install.packages("BiocManager")
+Installing package into '/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+(as 'lib' is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
+Content type 'application/x-gzip' length 40205 bytes (39 KB)
+==================================================
+downloaded 39 KB
+
+* installing *source* package 'BiocManager' ...
+** package 'BiocManager' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (BiocManager)
+
+The downloaded source packages are in
+        '/tmp/RtmpohfP1g/downloaded_packages'
+> 

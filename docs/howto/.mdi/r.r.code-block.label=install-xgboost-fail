@@ -1,0 +1,45 @@
+> install.packages("xgboost")
+Installing package into ‘/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+(as ‘lib’ is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.3.2.1.tar.gz'
+Content type 'application/x-gzip' length 966797 bytes (944 KB)
+==================================================
+downloaded 944 KB
+
+* installing *source* package ‘xgboost’ ...
+** package ‘xgboost’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking Backtrace lib... 
+checking for backtrace in -lexecinfo... no
+checking endian... 
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+Makevars:17: -DXGBOOST_STRICT_R_MODE=1
+Makevars:17: -DDMLC_LOG_BEFORE_THROW=0
+Makevars:17: -DDMLC_ENABLE_STD_THREAD=1
+Makevars:17: -DDMLC_DISABLE_STDIN=1
+Makevars:17: -DDMLC_LOG_CUSTOMIZE=1
+Makevars:17: -DXGBOOST_CUSTOMIZE_LOGGER=1
+Makevars:17: -DRABIT_CUSTOMIZE_MSG_
+g++ -std=gnu++14 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -I./include -I./dmlc-core/include -I./rabit/include -I. -DXGBOOST_STRICT_R_MODE=1 -DDMLC_LOG_BEFORE_THROW=0 -DDMLC_ENABLE_STD_THREAD=1 -DDMLC_DISABLE_STDIN=1 -DDMLC_LOG_CUSTOMIZE=1 -DXGBOOST_CUSTOMIZE_LOGGER=1 -DRABIT_CUSTOMIZE_MSG_  -I/usr/local/include  -fopenmp -DDMLC_CMAKE_LITTLE_ENDIAN=1 -pthread -fpic  -g -O2 -c xgboost_R.cc -o xgboost_R.o
+g++: error: unrecognized command line option ‘-std=gnu++14’
+make: *** [xgboost_R.o] Error 1
+ERROR: compilation failed for package ‘xgboost’
+* removing ‘/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+* restoring previous ‘/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+
+The downloaded source packages are in
+        ‘/scratch/alice/RtmptCoZVr/downloaded_packages’
+Warning message:
+In install.packages("xgboost") :
+  installation of package ‘xgboost’ had non-zero exit status
