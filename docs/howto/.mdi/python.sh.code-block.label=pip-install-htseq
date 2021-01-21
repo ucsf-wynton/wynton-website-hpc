@@ -1,10 +1,8 @@
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user HTSeq
 Collecting HTSeq
-  Cache entry deserialization failed, entry ignored
   Using cached https://files.pythonhosted.org/packages/7e/2e/60045d925c3b8da3f6a7869ce9ae77fd6360ea8749c3ab7f62198b3deed7/HTSeq-0.13.5.tar.gz
 Requirement already satisfied: numpy in /usr/lib64/python3.6/site-packages (from HTSeq)
 Collecting pysam (from HTSeq)
-  Cache entry deserialization failed, entry ignored
   Using cached https://files.pythonhosted.org/packages/87/a1/73e80a7a873f3fb0e52d368a4343eb9882b737c932b95020d82251f1087e/pysam-0.16.0.1-cp36-cp36m-manylinux1_x86_64.whl
 Installing collected packages: pysam, HTSeq
   Running setup.py install for HTSeq: started
