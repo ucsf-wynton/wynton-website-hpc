@@ -1,5 +1,5 @@
 > install.packages("xgboost")
-Installing package into ‘/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+Installing package into ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
 (as ‘lib’ is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.3.2.1.tar.gz'
 Content type 'application/x-gzip' length 966797 bytes (944 KB)
@@ -31,12 +31,12 @@ Makevars:17: -DDMLC_DISABLE_STDIN=1
 Makevars:17: -DDMLC_LOG_CUSTOMIZE=1
 Makevars:17: -DXGBOOST_CUSTOMIZE_LOGGER=1
 Makevars:17: -DRABIT_CUSTOMIZE_MSG_
-g++ -std=gnu++14 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -I./include -I./dmlc-core/include -I./rabit/include -I. -DXGBOOST_STRICT_R_MODE=1 -DDMLC_LOG_BEFORE_THROW=0 -DDMLC_ENABLE_STD_THREAD=1 -DDMLC_DISABLE_STDIN=1 -DDMLC_LOG_CUSTOMIZE=1 -DXGBOOST_CUSTOMIZE_LOGGER=1 -DRABIT_CUSTOMIZE_MSG_  -I/usr/local/include  -fopenmp -DDMLC_CMAKE_LITTLE_ENDIAN=1 -pthread -fpic  -g -O2 -c xgboost_R.cc -o xgboost_R.o
+g++ -std=gnu++14 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -I./include -I./dmlc-core/include -I./rabit/include -I. -DXGBOOST_STRICT_R_MODE=1 -DDMLC_LOG_BEFORE_THROW=0 -DDMLC_ENABLE_STD_THREAD=1 -DDMLC_DISABLE_STDIN=1 -DDMLC_LOG_CUSTOMIZE=1 -DXGBOOST_CUSTOMIZE_LOGGER=1 -DRABIT_CUSTOMIZE_MSG_  -I/usr/local/include  -fopenmp -DDMLC_CMAKE_LITTLE_ENDIAN=1 -pthread -fpic  -g -O2 -c xgboost_R.cc -o xgboost_R.o
 g++: error: unrecognized command line option ‘-std=gnu++14’
 make: *** [xgboost_R.o] Error 1
 ERROR: compilation failed for package ‘xgboost’
-* removing ‘/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
-* restoring previous ‘/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+* removing ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+* restoring previous ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
 
 The downloaded source packages are in
         ‘/scratch/alice/RtmptCoZVr/downloaded_packages’

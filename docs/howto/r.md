@@ -128,11 +128,11 @@ downloaded 829 KB
 ** package 'zoo' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -lR
-installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-zoo/00new/zoo/libs
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -lR
+installing to /wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst
@@ -193,7 +193,7 @@ When you start out fresh, the package [BiocManager] is not installed meaning tha
 <!-- code-block label="install-BiocManager" -->
 ```r
 > install.packages("BiocManager")
-Installing package into '/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+Installing package into '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
 Content type 'application/x-gzip' length 40205 bytes (39 KB)
@@ -301,7 +301,7 @@ CentOS 7 comes with a rather old version of gcc, specifically gcc v4.8.5 (2015-0
 <!-- code-block label="install-xgboost-fail" -->
 ```r
 > install.packages("xgboost")
-Installing package into ‘/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+Installing package into ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
 (as ‘lib’ is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.3.2.1.tar.gz'
 Content type 'application/x-gzip' length 966797 bytes (944 KB)
@@ -337,15 +337,14 @@ g++ -std=gnu++14 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include
 g++: error: unrecognized command line option ‘-std=gnu++14’
 make: *** [xgboost_R.o] Error 1
 ERROR: compilation failed for package ‘xgboost’
-* removing ‘/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
-* restoring previous ‘/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+* removing ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+* restoring previous ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
 
 The downloaded source packages are in
         ‘/scratch/alice/RtmptCoZVr/downloaded_packages’
 Warning message:
 In install.packages("xgboost") :
   installation of package ‘xgboost’ had non-zero exit status
->
 ```
 
 To fix this, we need to:
@@ -463,7 +462,7 @@ Continuing, to install Rmpi, we launch R and call the following:
 <!-- code-block label="install-Rmpi" -->
 ```r
 > install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
-Installing package into '/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+Installing package into '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz'
 Content type 'application/x-gzip' length 106745 bytes (104 KB)
@@ -476,11 +475,11 @@ downloaded 104 KB
 configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -lR
-installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-Rmpi/00new/Rmpi/libs
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
+gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -lR
+installing to /wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo
 ** inst

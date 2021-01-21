@@ -9,10 +9,10 @@ downloaded 1.5 MB
 * installing *source* package 'limma' ...
 ** using staged installation
 ** libs
-gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -std=gnu99 -shared -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -lR
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -lR
 installing to /home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
