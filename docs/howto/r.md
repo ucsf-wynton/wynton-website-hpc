@@ -15,9 +15,10 @@ To load the R module available in the [CBI software stack], do:
 
 which provides access to a modern version of R:
 
+<!-- code-block label="simple" -->
 ```r
-[alice@{{ site.devel.name }} ~]$ R
-R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+alice@{{ site.devel.name }} ~]$ R
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
 Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
@@ -67,7 +68,8 @@ Before continuing, it is useful to understand where R packages looks for locally
 
 2. (optional) A site-wide R package library (not used on {{ site.cluster.name }})
 
-3. The system-wide R package library part of the R installed, e.g. `/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/library`
+3. The system-wide R package library part of the R installed, e.g. `/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/library`
+
 
 
 For instance, when we try to load an R package:
@@ -77,7 +79,7 @@ For instance, when we try to load an R package:
 ```
 
 R will search the above folders in order for R package 'nlme'.
-When you start out fresh, the only R packages available to you are the ones installed in folder (3) - the system-wide library.  The 'nlme' package comes with the R installation, so with a fresh setup, it will be loaded from the third location.
+When you start you fresh, the only R packages available to you are the ones installed in folder (3) - the system-wide library.  The 'nlme' package comes with the R installation, so with a fresh setup, it will be loaded from the third location.
 As we will see below, when you install your own packages, they will all be installed into folder (1) - your personal library.  The first time your run R, the personal library folder does not exists, so R will ask you whether or not you want to create that folder.  If asked, you should always accept (answer 'Yes').  If you had already created this folder, R will install into this folder without asking.
 
 Finally, R undergoes a _main_ update once a year (in April).  For example, R 4.0.0 was release in April 2020.  The next main release will be R 4.1.0 in April 2021.  Whenever the `y` component in R `x.y.z` version is increased, you will start out with an empty personal package folder specific for R `x.y` (regardless of `z`).  This means that you will have to re-install all R packages you had installed during the year before the new main release came out.  Yes, this can be tedious and can take quite some time but it will improve stability and yet allow the R developers to keep improving R.  Of course, you can still keep using an older version of R and all the packages you have installed for that version - they will not be removed.
@@ -112,6 +114,7 @@ to install packages into? (yes/No/cancel)
 
 R wants to make sure you are aware what is done, so it will, conservatively, also ask if you accept the default location.  Answer 'yes' for this folder to be created.  After this, the current and all future package installation in R will be installed into this folder without further questions asked.  In this example, we will get:
 
+<!-- code-block label="install-zoo" -->
 ```r
 Would you like to create a personal library
 '~/R/x86_64-pc-linux-gnu-library/4.0-CBI'
@@ -187,6 +190,7 @@ If you already have BiocManager installed, you can skip this section.
 
 When you start out fresh, the package [BiocManager] is not installed meaning that calling `BiocManager::install()` will fail.  We need to start by installing it from CRAN (sic!);
 
+<!-- code-block label="install-BiocManager" -->
 ```r
 > install.packages("BiocManager")
 Installing package into '/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
@@ -223,37 +227,24 @@ _Comment_: If this is the very first R package you installed, see above CRAN ins
 
 With BiocManager installed, we can now install any Bioconductor package.  For instance, to install [limma], and all of its dependencies, call:
 
+<!-- code-block label="install-limma" -->
 ```r
 > BiocManager::install("limma")
-Bioconductor version 3.11 (BiocManager 1.30.10), R 4.0.2 (2020-06-22)
-Installing package(s) 'BiocVersion', 'limma'
-trying URL 'https://bioconductor.org/packages/3.11/bioc/src/contrib/BiocVersion_3.11.1.tar.gz'
-Content type 'application/x-gzip' length 980 bytes
-==================================================
-downloaded 980 bytes
-
-trying URL 'https://bioconductor.org/packages/3.11/bioc/src/contrib/limma_3.44.3.tar.gz'
-Content type 'application/x-gzip' length 1523576 bytes (1.5 MB)
+Bioconductor version 3.12 (BiocManager 1.30.10), R 4.0.3 (2020-10-10)
+Installing package(s) 'limma'
+trying URL 'https://bioconductor.org/packages/3.12/bioc/src/contrib/limma_3.46.0.tar.gz'
+Content type 'application/x-gzip' length 1527170 bytes (1.5 MB)
 ==================================================
 downloaded 1.5 MB
 
-* installing *source* package 'BiocVersion' ...
-** using staged installation
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded from temporary location
-** testing if installed package can be loaded from final location
-** testing if installed package keeps a record of temporary installation path
-* DONE (BiocVersion)
 * installing *source* package 'limma' ...
 ** using staged installation
 ** libs
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/lib -lR
-installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -lR
+installing to /home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -268,9 +259,9 @@ installing to /wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00
 * DONE (limma)
 
 The downloaded source packages are in
-        '/tmp/Rtmpsz02Og/downloaded_packages'
-Installation path not writeable, unable to update packages: MASS, mgcv, nlme,
-  survival
+        '/scratch/alice/Rtmpz9uHdz/downloaded_packages'
+Installation path not writeable, unable to update packages: codetools, foreign,
+  KernSmooth, Matrix, nlme
 >
 ```
 
@@ -303,21 +294,22 @@ If you have an R scripts, and it involves setting up a number of parallel worker
 
 ### Packages that require extra care
 
-#### The xgboost package ("C++14 standard requested but CXX14 is not defined") 
+#### The xgboost package ("C++14 standard requested but CXX14 is not defined")
 
 CentOS 7 comes with a rather old version of gcc, specifically gcc v4.8.5 (2015-06-23).  This does not support C++14 standard.  Because of this, you will find that some R packages that rely on modern C++ standards such as C++14 and C++17 will fail to compile.  Sometimes the you will get an informative error but in some cases it can be a rather obscure error message.  The **xgboost** package will give an informative error message;
 
+<!-- code-block label="install-xgboost-fail" -->
 ```r
 > install.packages("xgboost")
-Installing package into '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
-(as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.2.0.1.tar.gz'
-Content type 'application/x-gzip' length 971402 bytes (948 KB)
+Installing package into ‘/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
+(as ‘lib’ is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.3.2.1.tar.gz'
+Content type 'application/x-gzip' length 966797 bytes (944 KB)
 ==================================================
-downloaded 948 KB
+downloaded 944 KB
 
-* installing *source* package 'xgboost' ...
-** package 'xgboost' successfully unpacked and MD5 sums checked
+* installing *source* package ‘xgboost’ ...
+** package ‘xgboost’ successfully unpacked and MD5 sums checked
 ** using staged installation
 checking for gcc... gcc
 checking whether the C compiler works... yes
@@ -334,15 +326,26 @@ checking endian...
 configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
-Error: C++14 standard requested but CXX14 is not defined
-* removing '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost'
+Makevars:17: -DXGBOOST_STRICT_R_MODE=1
+Makevars:17: -DDMLC_LOG_BEFORE_THROW=0
+Makevars:17: -DDMLC_ENABLE_STD_THREAD=1
+Makevars:17: -DDMLC_DISABLE_STDIN=1
+Makevars:17: -DDMLC_LOG_CUSTOMIZE=1
+Makevars:17: -DXGBOOST_CUSTOMIZE_LOGGER=1
+Makevars:17: -DRABIT_CUSTOMIZE_MSG_
+g++ -std=gnu++14 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -I./include -I./dmlc-core/include -I./rabit/include -I. -DXGBOOST_STRICT_R_MODE=1 -DDMLC_LOG_BEFORE_THROW=0 -DDMLC_ENABLE_STD_THREAD=1 -DDMLC_DISABLE_STDIN=1 -DDMLC_LOG_CUSTOMIZE=1 -DXGBOOST_CUSTOMIZE_LOGGER=1 -DRABIT_CUSTOMIZE_MSG_  -I/usr/local/include  -fopenmp -DDMLC_CMAKE_LITTLE_ENDIAN=1 -pthread -fpic  -g -O2 -c xgboost_R.cc -o xgboost_R.o
+g++: error: unrecognized command line option ‘-std=gnu++14’
+make: *** [xgboost_R.o] Error 1
+ERROR: compilation failed for package ‘xgboost’
+* removing ‘/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+* restoring previous ‘/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
 
 The downloaded source packages are in
-        '/tmp/RtmpgLK2YP/downloaded_packages'
+        ‘/scratch/alice/RtmptCoZVr/downloaded_packages’
 Warning message:
 In install.packages("xgboost") :
-  installation of package 'xgboost' had non-zero exit status
-> 
+  installation of package ‘xgboost’ had non-zero exit status
+>
 ```
 
 To fix this, we need to:
@@ -354,7 +357,7 @@ To fix this, we need to:
 First, to use a more recent version of gcc available in one of the SCL `devtoolset`:s, either through [traditional SCL approaches] or by loading the `scl-devtoolset` module from the [CBI software stack];
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset/8
 [alice@{{ site.devel.name }} ~]$ gcc --version | head -1
 gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 ```
@@ -389,16 +392,15 @@ SHLIB_CXX14LD = g++ -std=gnu++14
 SHLIB_CXX14LDFLAGS = -shared
 ```
 
-
 After this, you will from now on be able to compile R packages that require C++14 **as long as you loaded/enabled an SCL that provides a modern gcc compile**.  For example,
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI r
-[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset/8
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) r/4.0.2   3) scl-devtoolset/8
+  1) CBI   2) r/4.0.3   3) scl-devtoolset/8
 
 [alice@{{ site.devel.name }} ~]$ R
 ...
@@ -415,7 +417,6 @@ Note, it is only when you install this R package that you need `scl-devtoolset`.
 
 
 
-
 #### The hdf5r package
 
 The [hdf5r] package requires [hdf5 1.8.13 or newer](https://github.com/hhoeflin/hdf5r/issues/115) but the version that comes with CentOS 7/EPEL is only 1.8.12. This will result in the following installation error in R:
@@ -428,14 +429,13 @@ ERROR: configuration failed for package 'hdf5r'
 
  To fix this, load a modern version of 'hdf5' from the [CBI software stack] before installing the package, i.e.
 
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI hdf5 r
-[alice@{{ site.devel.name }} ~]$ module list
-Currently Loaded Modules:
- 1) CBI   2) hdf5/1.12.0   3) r/4.0.2
-```
-
-Note that you also need to load the `hdf5` module every time you use the hdf5r package in R.
+ ```sh
+ [alice@{{ site.devel.name }} ~]$ module load CBI hdf5 r
+ [alice@{{ site.devel.name }} ~]$ module list
+ Currently Loaded Modules:
+  1) CBI   2) hdf5/1.12.0   3) r/4.0.3
+ ```
+ Note that you also need to load the `hdf5` module every time you use the hdf5r package in R.
 
 After this, the hdf5r package will install out of the box, i.e. by calling:
 
@@ -443,57 +443,6 @@ After this, the hdf5r package will install out of the box, i.e. by calling:
 > install.packages("hdf5r")
 ```
 
-
-<!---
-#### The RcppArmadillo package
-
-The _installation_ of the [RcppArmadillo] package requires a newer C++ compiler than what comes with CentOS 7.
-
-```sh
-[alice@{{ site.devel.name }} ~]$ gcc --version | head -1
-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
-```
-
-An attempt to install RcppArmadillo with this rather old version results in compilation errors like:
-
-```r
-> install.packages("RcppArmadillo")
-...
-../inst/include/armadillo_bits/arma_version.hpp:33:33: error: from previous declaration 'arma::arma_version::patch'
-
-   static constexpr unsigned int patch = ARMA_VERSION_PATCH;
-RcppArmadillo.cpp:28:40: error: declaration of 'constexpr const unsigned int arma::arma_version::patch' outside of class is not definition [-fpermissive]
- const unsigned int arma::arma_version::patch;
-                                        ^
-make: *** [RcppArmadillo.o] Error 1
-ERROR: compilation failed for package 'RcppArmadillo'
-```
-
-To get access to a modern compiler, we can use one of the SCL `devtoolset`:s, either through [traditional SCL approaches] or by loading the `scl-devtoolset` module from the [CBI software stack];
-
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
-[alice@{{ site.devel.name }} ~]$ gcc --version | head -1
-gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
-```
-
-So by loading this module, we get access to a newer compiler version and RcppArmadillo will install out of the box in R, e.g.
-
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI r
-[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset
-[alice@{{ site.devel.name }} ~]$ module list
-
-Currently Loaded Modules:
-  1) CBI   2) r/4.0.2   3) scl-devtoolset/8
-
-[alice@{{ site.devel.name }} ~]$ R
-...
-> install.packages("RcppArmadillo")
-```
-
-Note, it is only when you install this R package that you need `scl-devtoolset`.  There is no need for it when loading the RcppArmadillo package later on.  
---->
 
 #### The Rmpi package
 
@@ -504,16 +453,17 @@ The [Rmpi] package does not install out-of-the-box like other R packages.  It re
 [alice@{{ site.devel.name }} ~]$ module load CBI r
 [alice@{{ site.devel.name }} ~]$ module list
 Currently Loaded Modules:
-  1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.2
+  1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.3
 ```
 
 Make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires the Rmpi package.
 
 Continuing, to install Rmpi, we launch R and call the following:
 
+<!-- code-block label="install-Rmpi" -->
 ```r
 > install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
-Installing package into '/wynton/home/cbi/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+Installing package into '/wynton/home/bobson/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz'
 Content type 'application/x-gzip' length 106745 bytes (104 KB)
