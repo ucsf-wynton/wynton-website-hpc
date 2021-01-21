@@ -99,7 +99,7 @@ Now, in order to install, for instance, the [zoo] package available on CRAN, cal
 ```r
 > install.packages("zoo")
 Warning in install.packages("zoo") :
-  'lib = "/wynton/home/cbi/shared/software/CBI/R-4.0.2/lib64/R/library"' is not writable
+  'lib = "/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
 ```
 
