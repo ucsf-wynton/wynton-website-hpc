@@ -1,0 +1,34 @@
+Would you like to create a personal library
+'~/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+to install packages into? (yes/No/cancel) yes
+trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-8.tar.gz'
+Content type 'application/x-gzip' length 849487 bytes (829 KB)
+==================================================
+downloaded 829 KB
+
+* installing *source* package 'zoo' ...
+** package 'zoo' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -std=gnu99 -shared -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -lR
+installing to /c4/home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-zoo/00new/zoo/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (zoo)
+
+The downloaded source packages are in
+        '/tmp/RtmpVm3e6t/downloaded_packages'
+>

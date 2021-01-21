@@ -1,0 +1,16 @@
+alice@{{ site.devel.name }} ~]$ R
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under the terms of the
+GNU General Public License versions 2 or 3.
+For more information about these matters see
+https://www.gnu.org/licenses/.
+
+> 1+2
+[1] 3
+> quit()
+Save workspace image? [y/n/c]: n
+[alice@{{ site.devel.name }} ~]$ 

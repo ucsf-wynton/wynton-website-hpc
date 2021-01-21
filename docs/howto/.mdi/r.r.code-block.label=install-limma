@@ -1,0 +1,34 @@
+> BiocManager::install("limma")
+Bioconductor version 3.12 (BiocManager 1.30.10), R 4.0.3 (2020-10-10)
+Installing package(s) 'limma'
+trying URL 'https://bioconductor.org/packages/3.12/bioc/src/contrib/limma_3.46.0.tar.gz'
+Content type 'application/x-gzip' length 1527170 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+* installing *source* package 'limma' ...
+** using staged installation
+** libs
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -std=gnu99 -I"/software/c4/cbi/software/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -std=gnu99 -shared -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/software/c4/cbi/software/R-4.0.3/lib64/R/lib -lR
+installing to /home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (limma)
+
+The downloaded source packages are in
+        '/scratch/alice/Rtmpz9uHdz/downloaded_packages'
+Installation path not writeable, unable to update packages: codetools, foreign,
+  KernSmooth, Matrix, nlme
+>
