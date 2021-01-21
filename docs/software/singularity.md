@@ -59,16 +59,16 @@ Copying blob sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45
 Copying config sha256:97c4fe6614a8a627eceeeb91e2fabcffd9fceb89b6e36d526462de4fefbcaab5
 Writing manifest to image destination
 Storing signatures
-2021/01/14 08:45:20  info unpack layer: sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
-2021/01/14 08:45:24  info unpack layer: sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
-2021/01/14 08:45:24  info unpack layer: sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
-2021/01/14 08:45:25  info unpack layer: sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
-2021/01/14 08:45:25  info unpack layer: sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
-2021/01/14 08:45:25  info unpack layer: sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
+2021/01/20 17:46:14  info unpack layer: sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
+2021/01/20 17:46:17  info unpack layer: sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
+2021/01/20 17:46:17  info unpack layer: sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
+2021/01/20 17:46:18  info unpack layer: sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
+2021/01/20 17:46:18  info unpack layer: sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
+2021/01/20 17:46:18  info unpack layer: sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.img
 [alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.img
--rwxr-xr-x. 1 alice boblab 297021440 Jan 14 08:45 rocker_r-base.img
+-rwxr-xr-x. 1 alice boblab 297025536 Jan 20 17:46 rocker_r-base.img
 ```
 
 The above may take a minute or two to complete.
