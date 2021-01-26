@@ -1,5 +1,7 @@
 # News
 
+2020-01-25: We now offer weekly <a href="{{ '/support/index.html' | relative_url }}">Office Hours</a>.
+
 2020-10-29: Access to Wynton's login and data-transfer nodes <a href="{{ '/get-started/duo-signup.html' | relative_url }}">requires 2FA authentication</a>.
 
 2020-08-21: Deployed four BeeGFS storage bricks for the group storage `/wynton/group` to 5.6 PB (was 3.8 PB).  Groups who purchased storage have had their new group quotas updated.
