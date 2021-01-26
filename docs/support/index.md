@@ -24,7 +24,7 @@ For questions, discussion, and feature requests, please use our **Slack workspac
 
    * **[ucsf-wynton](https://ucsf-wynton.slack.com/)** - a communal forum for {{ site.cluster.name }} users to interact in real time.  We encourage everyone to engage, e.g. ask questions, answer questions, share tips and tricks, and participate in discussions.  To join: (i) go to the [signup page](https://join.slack.com/t/ucsf-wynton/signup), and (ii) enter your UCSF email address. (\*) If you don't have one of the recognized email domains, or it for other reasons does not work, reach out to us on the above email address and we will send you an invite to your preferred email address.
 
-If you prefer in-person support, please visiting our **Office Hours**:
+If you prefer in-person support, please visit our **Office Hours**:
 
    * We hold online **Office Hours every Tuesday at 11-noon** (1 hour) - you can find the Zoom URL in the message-of-the-day (MOTD) that you get when you log into Wynton.  Alternatively, see the Wynton-Announce 'Wynton Office Hours' email on 2021-01-25.
 
