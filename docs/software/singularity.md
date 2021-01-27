@@ -191,7 +191,7 @@ To make also these folders available within the container, we can use `singulari
 
 <!-- code-block label="shell-bind" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,/c4/scratch,/boblab rocker_r-base.img
+[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,/c4/scratch,{{ site.user.labfolder }} rocker_r-base.img
 Singularity> ls /scratch
 alice
 Singularity> ls /c4/scratch
