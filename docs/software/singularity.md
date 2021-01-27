@@ -167,6 +167,42 @@ VERSION="7 (Core)"
 ID="centos"
 ```
 
+
+### Access other cluster folders than your home folder
+
+When running a container, only a few of the folders available "outside" are available "inside" the container.  By default, you have access to the current working directory (= `$PWD`) and your home folder (= `$HOME`).   In contrast, without further specifications, you will not have access to standard folders such as local `/scratch` and global `/c4/scratch`.  Similarly, lab folders such as `{{ site.user.labfolder }}` are not available from inside the container.
+
+<!-- code-block label="shell-nobind" -->
+```sh
+[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.img
+Singularity> ls /scratch
+ls: cannot access '/scratch': No such file or directory
+Singularity> ls /c4/scratch
+ls: cannot access '/c4/scratch': No such file or directory
+Singularity> ls {{ site.user.labfolder }}
+ls: cannot access '{{ site.user.labfolder }}': No such file or directory
+Singularity> echo $TMPDIR
+/scratch/alice
+Singularity> ls "$TMPDIR"
+ls: cannot access '/scratch/alice': No such file or directory
+```
+
+To make also these folders available within the container, we can use `singularity` option `--bind`.  In its simplest form, we can just list the folders we want to make available, e.g.
+
+<!-- code-block label="shell-bind" -->
+```sh
+[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,/c4/scratch,/boblab rocker_r-base.img
+Singularity> ls /scratch
+alice
+Singularity> ls /c4/scratch
+alice
+Singularity> ls {{ site.user.labfolder }}
+data1  data2
+```
+
+See `singularity help instance start` for more details and other ways to mount and rename folders within the container.
+
+
 ### Running a container as a job
 
 When it comes to the scheduler, there is nothing special about Singularity per se - the Singularity software can be used as any other software on the cluster.  As a proof of concept, here is how to calculate the sum of one to ten using R within the above Linux container at the command line:

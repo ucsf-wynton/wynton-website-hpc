@@ -11,6 +11,7 @@ user:
   name: "alice"
   email: "alice.aliceson@ucsf.edu"
   home: "/wynton/home/boblab/alice"
+  labfolder: "/wynton/group/boblab"
   
 cluster:
   name: "Wynton HPC"
