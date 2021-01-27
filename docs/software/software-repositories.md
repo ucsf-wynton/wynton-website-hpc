@@ -873,7 +873,7 @@ MiST - Mass spectrometry interaction STatistics<br>
   <dd>
 MODELLER comparative modeling<br>
     URL: <a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a><br>
-  Versions: 9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, <em>SVN</em><br>
+  Versions: 9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, <em>SVN</em><br>
   </dd>
 
   <dt>modpipe</dt>
@@ -1428,7 +1428,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-01-06 08:17:25 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-01-26 17:18:37 from querying `module avail` and `module spider`._
 
 
 <style>
