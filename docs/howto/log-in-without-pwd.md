@@ -1,3 +1,8 @@
+---
+context:
+  - login
+---
+
 # Log in without Password
 
 These instructions explains how to set up your local computer such that you can log into the compute cluster, or copy files to and from the cluster, without having to enter your password each time.

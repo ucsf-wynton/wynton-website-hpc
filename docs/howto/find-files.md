@@ -1,3 +1,8 @@
+---
+context:
+  - login
+---
+
 # Find Files
 
 ## Find files with a certain filename extension

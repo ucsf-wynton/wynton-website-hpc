@@ -49,9 +49,7 @@
     
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-
         <li><a href="{{ '/status/index.html' | relative_url }}">Status</a></li>
-
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -171,9 +169,17 @@
 </nav>
 
 <div id="wrap">
-
       <section>
 
+{% unless page.context contains "login" or page.context contains "xfer" %}
+{% if content contains "language-sh" %}
+{% assign tmp_text = "Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks." %}
+<div align="right">
+<span style="font-size: smaller; font-style: italic; text-decoration: underline;" title="{{ tmp_text }}" onclick="alert(&quot;{{ tmp_text }}&quot;)"/>Examples not working?</span>
+</div>
+{% endif %}
+{% endunless %}
+        
       {{ content }}
 
       </section>
@@ -196,7 +202,6 @@
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     
-<!--    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script><!-- 38.8 kB -->
 
 <script>

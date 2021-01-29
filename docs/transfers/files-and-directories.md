@@ -1,3 +1,8 @@
+---
+context:
+  - xfer
+---
+
 <div class="alert alert-info" role="alert">
 To set up password-free file transfers, see <a href="{{ '/howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.  Then there is also no need to specify your cluster username.
 </div>

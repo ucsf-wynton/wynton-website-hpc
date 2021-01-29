@@ -1,7 +1,12 @@
+---
+context:
+  - xfer
+---
+
 # Accessing UCSF Box
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-Although there is no hard quota in place on UCSF Box, the <strong>storage is limited</strong> and not really meant to store large data sets. There are reports that the UCSF Box maintainers have started to reach out to users who misuse it to store huge amounts of data. Please use it responsibly. /2020-01-27
+Although there is no hard quota in place on UCSF Box, the <strong>storage is limited</strong> and not really meant to store large data sets. There are reports that the UCSF Box maintainers have started to reach out to users who misuse it to store huge amounts of data. Please use it responsibly.
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">

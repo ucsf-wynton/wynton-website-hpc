@@ -1,3 +1,8 @@
+---
+context:
+  - login
+---
+
 <!-- markdownlint-disable-file MD034 -->
 
 # {{ site.cluster.name }} Credentials

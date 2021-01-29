@@ -1,3 +1,8 @@
+---
+context:
+  - login
+---
+
 # Graphical User Interfaces (GUI)
 
 The {{ site.cluster.name }} environment supports running a graphical user interface (GUI) on {{ site.cluster.name }} while viewing and interacting with it on your local computer.  More specifically, and in more technical terms, {{ site.cluster.name }} supports X2Go and X11 Forwarding.

@@ -1,3 +1,8 @@
+---
+context:
+  - login
+---
+
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
