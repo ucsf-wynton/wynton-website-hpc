@@ -1,38 +1,40 @@
+---
+status: kernel-upgrade
+---
+
 <!-- markdownlint-disable-file MD024 -->
 
 # UCSF {{ site.cluster.name }} Status
 
 <!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
 
-{% assign status = "ok" %}
-
-{% if status == "inaccessible" %}
+{% if page.status == "inaccessible" %}
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} is experiencing significant issues</strong>
 </div>
-{% elsif status == "problematic" %}
+{% elsif page.status == "problematic" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} is experiencing significant issues</strong>
 </div>
-{% elsif status == "recovering" %}
+{% elsif page.status == "recovering" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} is operational with parts of the compute resources being recovered</strong>
 </div>
-{% elsif status == "kernel-upgrade" %}
+{% elsif page.status == "kernel-upgrade" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} has fewer slots available than usual due to kernel upgrades</strong><br>
 </div>
-{% elsif status == "full-outage" %}
+{% elsif page.status == "full-outage" %}
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} environment non-operational</strong><br>
 <em>Complete outage due to scheduled maintenance during December 7-10, 2020</em>
 </div>
-{% elsif status == "part-outage" %}
+{% elsif page.status == "part-outage" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} is operational but experiencing partial problems</strong><br>
 <em>Several GPU compute nodes are down.</em>
 </div>
-{% elsif status == "notice" %}
+{% elsif page.status == "notice" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} environment operational</strong><br>
 <em>The cluster will be shut down completely during December 7-10, 2020 due to system upgrades.</em><br>
