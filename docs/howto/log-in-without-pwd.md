@@ -102,7 +102,7 @@ laptop_to_{{ site.cluster.nickname | downcase }}.pub           100%  390     0.4
 
 Then, log into the cluster (still using a password) and _append_ the public key to `~/.ssh/authorized_keys`:
 ```sh
-{local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}
+{local}$ ssh -o PreferredAuthentications=keyboard-interactive,password alice@{{ site.login.hostname }}
 alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ cd .ssh
 [alice@{{ site.login.name }} .ssh]$ cat laptop_to_{{ site.cluster.nickname | downcase }}.pub >> authorized_keys
@@ -133,7 +133,7 @@ You will be asked to enter your _passphrase_, if you chose one above.
 
 If you get
 ```sh
-Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic,keyboard-interactive,password).
 ```
 then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your local machine (see Step 1).  If it still does not work, check the `~/.ssh` permissions on the cluster (analogously to Step 1).
 
