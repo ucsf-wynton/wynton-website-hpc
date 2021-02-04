@@ -1,4 +1,4 @@
-### February 1-February 3, 2021
+### February 1-3, 2021
 
 #### <span style="color: orange;">Development node not available</span>
 
