@@ -83,7 +83,7 @@ _Note_: Don't forget that period (`.`) at the end - it indicates copy [the folde
 
 ## GUI file transfer clients 
 
-In addition to using command-line file transfer clients, some users might use graphical desktop clients to performan file transfers. 
+In addition to using command-line file transfer clients, some users might use graphical desktop clients to perform file transfers. 
 
 <div class="alert alert-info" role="alert">
 Wynton requires multifactor authentication so there are a couple additional configuration steps that might be necessary.
