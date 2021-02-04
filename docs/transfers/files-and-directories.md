@@ -90,10 +90,12 @@ Wynton requires multifactor authentication so there are a couple additional conf
 </div>
 
 If using the Cyberduck application, from the menu:
+
 - navigate to `Preferences -> Transfers -> General` 
 - change the Transfer Files setting "Use browser connection" instead of "Open Multiple connections"
 
 If using the FileZilla application:
+
 - in the General tab, select "SFTP" as the Protocol instead of "FTP"
 - for Logon Type select "Interactive" instead of "Ask for Password"
 - under the Transfer Settings tab you might need to click the "Limit number of simultaneous connections" and make sure the "Maximum number of connections" is set to 1
