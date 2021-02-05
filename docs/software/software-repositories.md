@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(60)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
@@ -509,6 +509,16 @@ ripgrep is a line-oriented search tool that recursively searches your current di
     URL: <a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a><br>
     Warning: Only the most recent version of this software will be kept.<br>
   Versions: <em>12.1.1</em><br>
+  </dd>
+
+  <dt>rstudio</dt>
+  <dd>
+    <strong>rstudio: RStudio Desktop</strong><br>
+The RStudio Desktop.<br>
+    Example: <code>rstudio</code>.<br>
+    URL: <a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a><br>
+    Warning: This software works only on the development nodes and requires that X11 Forwarding or NX is enabled.<br>
+  Versions: <em>1.4.1103</em><br>
   </dd>
 
   <dt>salmon</dt>
@@ -1424,11 +1434,11 @@ Rigid body docking<br>
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(59)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(60)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-01-29 09:08:20 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-02-05 15:32:41 from querying `module avail` and `module spider`._
 
 
 <style>
