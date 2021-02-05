@@ -11,6 +11,7 @@ CGL
 CMD
 Ctrl
 CUDA
+Cyberduck
 dev
 dt
 duosecurity
@@ -19,6 +20,8 @@ envvars
 EOF
 FASTQ
 favicon
+FileZilla
+FTP
 Gbps
 GeForce
 GiB
@@ -72,6 +75,7 @@ Sandler
 scalable
 se
 sexualized
+SFTP
 sge
 SGE
 signup
