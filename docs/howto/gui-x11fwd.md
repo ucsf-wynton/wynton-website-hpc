@@ -54,7 +54,7 @@ Dialog: **Remember connection authentication for 12 hours? [y/N]**
 
 _Input y (This is important, it does NOT work if you choose "N")_
 
-Dialog: (This may happen with some configurations, if so, enter your Wynton Password. We are investigating.)**MATE on dev2**
+Dialog: **MATE on dev2** (This may happen with some configurations, even if you are using SSH Keys. We are investigating.)
 
 _Enter Wynton Password_
 
