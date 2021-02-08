@@ -46,7 +46,7 @@ Dialog: **Enter Passphrase to decrypt a key**
 
 _Enter ssh key passphrase (if set)_
 
-Dialog: **Choose DUO Authentication Method**
+Dialog: **Choose DUO Authentication Method** (Only if connecting from off campus.)
 
 _Perform Duo Authentication as prompted_
 
