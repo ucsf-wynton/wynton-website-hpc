@@ -44,7 +44,7 @@ Dialog: **Enter Passphrase to decrypt a key**
 
 _Enter ssh key passphrase (if set)_
 
-Dialog: DUO Authentication. **Choose DUO Authentication Method**
+Dialog: **Choose DUO Authentication Method**
 
 _Perform Duo Authentication as prompted_
 
