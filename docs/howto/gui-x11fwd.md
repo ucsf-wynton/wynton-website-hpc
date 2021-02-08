@@ -12,13 +12,7 @@ The {{ site.cluster.name }} environment supports running a graphical user interf
 
 ### Requirements
 
-Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }} from the outside of the UCSF network _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to either:
-
-1. make sure you are on the UCSF network, e.g. by first connecting to the UCSF VPN, or
-
-2. have a working [SSH key pair] set up and configured the X2Go client accordingly in order to connect from outside the UCSF network using the {{ site.cluster.nickname }} 2FA system.
-
-The first alternative is the easiest with the only downside being the limited bandwidth that the UCSF VPN provides.  The second alternative is more complicated to set up.
+Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }}  _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to have a working [SSH key pair] set up and configured the X2Go client accordingly in order to connect from outside the UCSF network using the {{ site.cluster.nickname }} 2FA system.
 
 ### Setup of the X2Go Client (once)
 
@@ -43,31 +37,32 @@ First, you will need to install the X2Go Client on your local computer.  For ins
 ### Logging in
 
 Launch x2go client.
+
 Double Click configured session (above).
 
-Dialog:
-**Enter Passphrase to decrypt a key**
+Dialog: **Enter Passphrase to decrypt a key**
+
 Enter ssh key passphrase (if set)
 
-Dialog: DUO Authentication.
-**Choose DUO Authentication Method**
+Dialog: DUO Authentication. **Choose DUO Authentication Method**
+
 Perform Duo Authentication as prompted
 
-Dialog: 
-**Remember connection authentication for 12 hours? [y/N]**
+Dialog: **Remember connection authentication for 12 hours? [y/N]**
+
 Input y (This is important, it does NOT work if you choose "N")
 
-Dialog: (This may happen with some configurations, if so, enter your Wynton Password. We are investigating.)
-**MATE on dev2**
+Dialog: (This may happen with some configurations, if so, enter your Wynton Password. We are investigating.)**MATE on dev2**
+
 Enter Wynton Password
 
-Dialog:
-**Enter passphrase to decrypt a key.**
+Dialog: **Enter passphrase to decrypt a key.**
+
 Enter ssh key passphrase (if set)
 
-Dialog:
-**Enter passphrase to decrypt a key.**
-•	Enter ssh key passphrase (if set)
+Dialog: **Enter passphrase to decrypt a key.**
+
+Enter ssh key passphrase (if set)
 
 Wait, Wait, MATE launches.
 
