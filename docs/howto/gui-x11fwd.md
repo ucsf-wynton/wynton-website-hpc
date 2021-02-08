@@ -18,10 +18,7 @@ Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.clu
 
 2. have a working [SSH key pair] set up and configured the X2Go client accordingly in order to connect from outside the UCSF network using the {{ site.cluster.nickname }} 2FA system.
 
-The first alternative is the easiest with the only downside being the limited bandwidth that the UCSF VPN provides.  The second alternative is more complicated to set up and some users fail to get it to work - we're still investigating.
-
-(\*) This used to work prior to the introduction of {{ site.cluster.nickname }} 2FA over SSH on 2020-10-29.
-
+The first alternative is the easiest with the only downside being the limited bandwidth that the UCSF VPN provides.  The second alternative is more complicated to set up.
 
 ### Setup of the X2Go Client (once)
 
@@ -31,22 +28,49 @@ First, you will need to install the X2Go Client on your local computer.  For ins
  2. Pick a **Session name**, e.g. `{{ site.cluster.name }}`
  3. Set the **Host** to a [development node]. Currently one of: `dev1`, `dev2`, `dev3`, or `gpudev1`
  4. Set the **Login** to _your_ {{ site.cluster.name }} username, e.g. `alice`
- 5. Check **Use Proxy server for SSH connection**
- 6. Then in the **Proxy server** section:
+ 5. In the **Use RSA/DSA key for ssh connection**, enter the path to the your private SSH Key.
+ 6. Select **Try auto login (via SSH Agent or default SSH key)**
+ 7. Check **Use Proxy server for SSH connection**
+ 8. Then in the **Proxy server** section:
     - Check **Same login as on X2Go Server**
     - Check **Same password as on X2Go Server**
     - Set **Host** to a {{ site.cluster.name }} [login node]. Currently one of: `{{ site.login1.hostname }}` or `{{ site.login2.hostname }}`
+    - In the **RSA/DSA key:** field enter the path to your private SSH Key.
+    - Select **SSH Agent or default SSH key**
  7. In the **Session type** section, choose `MATE`
 
 
 ### Logging in
 
-After completing the above setup, you can get to a desktop on the development node by selecting the session, typing in your password, and clicking **Ok**. After a little while, you will get a window that looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would on your regular desktop.
+Launch x2go client.
+Double Click configured session (above).
 
+Dialog:
+**Enter Passphrase to decrypt a key**
+Enter ssh key passphrase (if set)
 
-<div class="alert alert-warning" role="alert">
-If you get a dialog saying '<strong>Error: Connection failed. bash: x2golistsessions: command not found</strong>', then you have missed configuring a 'Proxy server' in Steps 5-6.
-</div>
+Dialog: DUO Authentication.
+**Choose DUO Authentication Method**
+Perform Duo Authentication as prompted
+
+Dialog: 
+**Remember connection authentication for 12 hours? [y/N]**
+Input y (This is important, it does NOT work if you choose "N")
+
+Dialog: (This may happen with some configurations, if so, enter your Wynton Password. We are investigating.)
+**MATE on dev2**
+Enter Wynton Password
+
+Dialog:
+**Enter passphrase to decrypt a key.**
+Enter ssh key passphrase (if set)
+
+Dialog:
+**Enter passphrase to decrypt a key.**
+•	Enter ssh key passphrase (if set)
+
+Wait, Wait, MATE launches.
+
 
 
 ### 3D Graphics with X2Go (in alpha testing)
