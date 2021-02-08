@@ -42,27 +42,27 @@ Double Click configured session (above).
 
 Dialog: **Enter Passphrase to decrypt a key**
 
-Enter ssh key passphrase (if set)
+_Enter ssh key passphrase (if set)_
 
 Dialog: DUO Authentication. **Choose DUO Authentication Method**
 
-Perform Duo Authentication as prompted
+_Perform Duo Authentication as prompted_
 
 Dialog: **Remember connection authentication for 12 hours? [y/N]**
 
-Input y (This is important, it does NOT work if you choose "N")
+_Input y (This is important, it does NOT work if you choose "N")_
 
 Dialog: (This may happen with some configurations, if so, enter your Wynton Password. We are investigating.)**MATE on dev2**
 
-Enter Wynton Password
+_Enter Wynton Password_
 
 Dialog: **Enter passphrase to decrypt a key.**
 
-Enter ssh key passphrase (if set)
+_Enter ssh key passphrase (if set)_
 
 Dialog: **Enter passphrase to decrypt a key.**
 
-Enter ssh key passphrase (if set)
+_Enter ssh key passphrase (if set)_
 
 Wait, Wait, MATE launches.
 
