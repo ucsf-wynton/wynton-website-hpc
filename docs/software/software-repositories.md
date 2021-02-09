@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(60)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(61)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
@@ -426,6 +426,16 @@ kallisto is a program for quantifying abundances of transcripts from RNA-Seq dat
     Example: <code>kallisto version</code>.<br>
     URL: <a href="https://pachterlab.github.io/kallisto/about.html">https://pachterlab.github.io/kallisto/about.html</a>, <a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a><br>
   Versions: 0.45.0, 0.45.1, 0.46.0, 0.46.1, <em>0.46.2</em><br>
+  </dd>
+
+  <dt>mc</dt>
+  <dd>
+    <strong>mc: Midnight Commander</strong><br>
+GNU Midnight Commander is a visual file manager. It's a feature rich full-screen text mode application that allows you to copy, move and delete files and whole directory trees, search for files and run commands in the subshell. Internal viewer and editor are included.<br>
+    Example: <code>mc</code> and <code>mc --version</code>.<br>
+    URL: <a href="http://www.midnight-commander.org/">http://www.midnight-commander.org/</a>, <a href="https://github.com/MidnightCommander/mc">https://github.com/MidnightCommander/mc</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
+  Versions: <em>4.8.26</em><br>
   </dd>
 
   <dt>picard</dt>
@@ -1434,11 +1444,11 @@ Rigid body docking<br>
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(60)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(61)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-02-05 15:32:41 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-02-09 10:57:28 from querying `module avail` and `module spider`._
 
 
 <style>
