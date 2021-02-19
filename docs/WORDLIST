@@ -1,4 +1,5 @@
 ## Dictionary of white-listed words
+AMD
 barcode
 BeeGFS
 Biocontainers
@@ -20,6 +21,7 @@ duosecurity
 edu
 envvars
 EOF
+EPYC
 FASTQ
 favicon
 FileZilla

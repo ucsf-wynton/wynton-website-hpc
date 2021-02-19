@@ -138,7 +138,7 @@ A cat(1) clone with syntax highlighting and Git integration.<br>
 BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.<br>
     Example: <code>bcftools --version</code><br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: 1.9, 1.10, 1.10.2, <em>1.11</em><br>
+  Versions: 1.9, 1.10, 1.11, <em>1.10.2</em><br>
   </dd>
 
   <dt>bcl2fastq</dt>
@@ -388,7 +388,7 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
 HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.<br>
     Example: <code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.<br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: 1.9, 1.10.2, <em>1.11</em><br>
+  Versions: 1.9, 1.11, <em>1.10.2</em><br>
   </dd>
 
   <dt>igv</dt>
@@ -500,7 +500,7 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
 The R programming language.<br>
     Example: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, <em>4.0.3</em><br>
+  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, 4.0.3, <em>4.0.4</em><br>
   </dd>
 
   <dt>r-siteconfig</dt>
@@ -556,7 +556,7 @@ Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq r
 SAMtools is a suite of programs for interacting with high-throughput sequencing data.<br>
     Example: <code>samtools --version</code>.<br>
     URL: <a href="http://www.htslib.org/">http://www.htslib.org/</a><br>
-  Versions: 1.9, 1.10, <em>1.11</em><br>
+  Versions: 1.9, 1.11, <em>1.10</em><br>
   </dd>
 
   <dt>scl-devtoolset</dt>
@@ -1458,7 +1458,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-02-11 12:52:51 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-02-17 12:23:12 from querying `module avail` and `module spider`._
 
 
 <style>
