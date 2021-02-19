@@ -5,7 +5,7 @@ _Example specifications and pricing as of February 2021_
 
 ## Pricing for prioritized compute ("CPU")
 
-* CPU: (2) Intel Xeon Gold 6240 2.6 GHz 18-core processors
+* CPU: 2 × Intel Xeon Gold 6240 2.6 GHz 18-core processors
 * RAM: 384 GiB/node
 * Quote: 23,645 USD
 
@@ -18,8 +18,8 @@ _Example specifications and pricing as of February 2021_
 There is also one GPU development node that is available to all users.
 </div>
 
-* CPU: (1) AMD EPYC 7502P 2.5 GHz 32-core processor
-* GPU: (4) NVidia RTX 3090
+* CPU: 1 × AMD EPYC 7502P 2.5 GHz 32-core processor
+* GPU: 4 × NVidia RTX 3090
 * RAM: 512 GiB/node
 * Quote: 17,837 USD
 
