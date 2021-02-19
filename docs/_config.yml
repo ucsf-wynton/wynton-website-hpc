@@ -19,7 +19,7 @@ cluster:
   version: "1.0"
   email_support: support@wynton.ucsf.edu
   email_storage: storage@wynton.ucsf.edu
-  status: kernel-upgrade
+  status: ok
   
 login:
   name: "log2"
