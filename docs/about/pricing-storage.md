@@ -6,8 +6,9 @@ Progress on next storage purchase started on {{ site.data.storage_requests.start
 ({{ site.data.storage_requests.last_updated }})
 </div>
 
-# Lab-Specific HPC Storage Pricing Model
+# Pricing for Extra Storage
 
+Research groups can purchase additional storage on {{ site.cluster.nickname }} beyond the user-specific storage that is free to all.
 
 ## Summary
 
@@ -24,9 +25,9 @@ Progress on next storage purchase started on {{ site.data.storage_requests.start
 <br>
 
 
-## Plan
+## Lab-Specific HPC Storage Pricing Model
 
-We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (`/wynton/scratch` and `/wynton/home`).
+We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group` and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (`/wynton/scratch` and `/wynton/home`).
 
 Given prices of hard drives, the stated rate might seem high, but there are three mitigating factors. First, we have enabled ZFS compression, so the actual available space might be significantly more. Second, the price includes the cost of the networking, metadata servers, storage server, maintenance, and administration. Third, we have proven that the performance of our BeeGFS infrastructure is much higher than the typical NFS server (in some respects, the performance is more than an order of magnitude faster). In the future, if absolutely necessary, we may also charge a “maintenance fee” for storage after the initial 5-year hardware warranty expires, but nothing has been decided as of yet. Similarly, any future storage purchases may be priced differently than that described here, to reflect the situation present at that time.
 
