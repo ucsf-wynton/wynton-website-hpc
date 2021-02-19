@@ -1,12 +1,13 @@
 # Lab-Specific Compute node and GPU Pricing Model
 
+_Example specifications and pricing as of February 2021_
+
+
 ## Compute nodes
 
-Example specifications and pricing as of February 2021
-
-* CPU: (2) Intel Xeon Gold 6240 2.6GHz 18-core processors
-* Memory: 384GB
-* quote: $23,645
+* CPU: (2) Intel Xeon Gold 6240 2.6 GHz 18-core processors
+* Memory: 384 GiB
+* Quote: 23,645 USD
 
 
 ## GPU
@@ -16,10 +17,11 @@ Example specifications and pricing as of February 2021
 There is also one GPU development node that is available to all users.
 </div>
 
-* CPU: (1) AMD EPYC 7502P 2.5GHz 32-core processor
-* GPU: (4) NVidia RTX 3090 
-* Memory: 512GB 
-* quote: $17,837
+* CPU: (1) AMD EPYC 7502P 2.5 GHz 32-core processor
+* GPU: (4) NVidia RTX 3090
+* Memory: 512 GiB
+* Quote: 17,837 USD
+
 
 ## Summary
 
