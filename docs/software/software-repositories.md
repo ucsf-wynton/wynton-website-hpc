@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(63)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(64)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
@@ -653,6 +653,16 @@ Tree is a recursive directory listing command that produces a depth indented lis
     URL: <a href="http://mama.indstate.edu/users/ice/tree/">http://mama.indstate.edu/users/ice/tree/</a>,<br>
     Warning: Only the most recent version of this software will be kept.<br>
   Versions: <em>1.8.0</em><br>
+  </dd>
+
+  <dt>up</dt>
+  <dd>
+    <strong>up: The Ultimate Plumber</strong><br>
+A tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results. Interactively and incrementally explore textual data in Linux using text-processing utils such as grep, sort, cut, paste, awk, wc, perl, etc.  When done, press Ctrl-C to view final pipe commands, or Ctrl-X to save it to file.<br>
+    Example: <code>up --help</code>, <code>ls | up</code> (exit with Ctrl-C).<br>
+    URL: <a href="https://github.com/akavel/up">https://github.com/akavel/up</a><br>
+    Warning: Only the most recent version of this software will be kept.<br>
+  Versions: <em>0.4</em><br>
   </dd>
 
   <dt>varscan</dt>
@@ -1464,11 +1474,11 @@ Rigid body docking<br>
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(63)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(64)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-02-20 08:44:49 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-02-20 09:03:40 from querying `module avail` and `module spider`._
 
 
 <style>
