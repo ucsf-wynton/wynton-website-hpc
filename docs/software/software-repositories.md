@@ -50,7 +50,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(64)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
@@ -64,6 +64,11 @@ Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '
 Enable repository: <em>this software repository is always enabled</em><br>
 
 <dl>
+  <dt>amber</dt>
+  <dd>
+  Versions: <em>20</em><br>
+  </dd>
+
   <dt>cuda</dt>
   <dd>
   Versions: 7.5, 8.0, 9.1, 9.2, <em>10.1</em><br>
@@ -979,7 +984,7 @@ Peptide Classification using Sequence and Structure<br>
   <dd>
 Python-based Hierarchical ENvironment for Integrated Xtallography<br>
     URL: <a href="https://www.phenix-online.org/">https://www.phenix-online.org/</a><br>
-  Versions: 1.10.1.2155, <em>1.18.2.3874</em><br>
+  Versions: 1.10.1.2155, 1.18.2.3874, <em>1.19.1.4122</em><br>
   </dd>
 
   <dt>profit</dt>
@@ -1473,12 +1478,12 @@ Rigid body docking<br>
 </div> 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(5)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(64)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-02-20 09:22:10 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-02-23 15:32:01 from querying `module avail` and `module spider`._
 
 
 <style>
