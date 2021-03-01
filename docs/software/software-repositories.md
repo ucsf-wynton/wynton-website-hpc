@@ -523,7 +523,7 @@ The R programming language.<br>
     <strong>R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
 Sets R options and environment variables customized for the current compute environment. Notably, it configures R to install packages from local CRAN and Bioconductor mirrors without the need for internet access.<br>
     Example: In R, <code>install.packages(&quot;ggplot2&quot;)</code>.<br>
-  Versions: <em>0.1</em><br>
+  Versions: 0.1, <em>0.2</em><br>
   </dd>
 
   <dt>rclone</dt>
@@ -1483,7 +1483,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-02-23 15:32:01 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-03-01 13:12:05 from querying `module avail` and `module spider`._
 
 
 <style>
