@@ -31,7 +31,7 @@ If `sbgrid` is not part of your output, then you do _not_ have access to the SBG
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-<span>⚠️</span> Among the compute nodes, SBGrid works best on "modern" compute nodes with modern CPUs.  To make sure your SBGrid job ends up a on a node with a modern CPU, specify SGE option <code>-l eth_speed=10</code>, which will direct the job to a machine with a minimum network speed of 10 Gbps, which is a proxy for "modern".  In contrast, and depending on which SBGrid software is used, jobs running on older machines may produce errors, e.g. 'Illegal instruction'.
+<span>⚠️</span> If you are running SBGrid software and receive an error message regarding "Illegal Instructions", this means that the version of the software you are trying to run requires a CPU feature that some of the compute nodes do not support. Many of the default versions of programs included with SBGrid work best on "modern" compute nodes with modern CPUs. For SBGrid this means "Haswell+". (Though read the documentation for the software you are trying to use, if you encounter an error that references "Illegal Instructions". You may be able to use a version of the software compiled for "pre-Haswell" CPUs.)  Alternatively, if you want to use the newer software, you will need to make sure your SBGrid job ends up a on a node with a modern CPU. To do this, specify SGE option <code>"-l hostname=qb3-id*"</code>, a group of more modern nodes.
 </div>
 
 In order to use SBGrid software, the SBGrid environment must be enabled.  To enable the SBGrid, in the shell or in a job script, do:
