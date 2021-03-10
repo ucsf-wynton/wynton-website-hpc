@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(64)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
@@ -497,6 +497,15 @@ PLINK is a free, open-source whole genome association analysis toolset, designed
     Example: <code>plink2 --help</code>.<br>
     URL: <a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a><br>
   Versions: 2.00a2LM, 2.00a2.3, <em>2.00a3LM</em><br>
+  </dd>
+
+  <dt>proj</dt>
+  <dd>
+    <strong>PROJ: PROJ Coordinate Transformation Software Library</strong><br>
+PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves.<br>
+    Example: <code>proj</code> and <code>man proj</code>.<br>
+    URL: <a href="https://trac.osgeo.org/geos/">https://trac.osgeo.org/geos/</a><br>
+  Versions: <em>4.9.3</em><br>
   </dd>
 
   <dt>qtop</dt>
@@ -1479,11 +1488,11 @@ Rigid body docking<br>
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(64)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-03-09 18:05:48 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-03-09 20:54:46 from querying `module avail` and `module spider`._
 
 
 <style>
