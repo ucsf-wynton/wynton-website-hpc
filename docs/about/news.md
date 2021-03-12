@@ -1,5 +1,7 @@
 # News
 
+2021-03-12: Zsh is now also available in addition to the officially supported Bash, our default shell, Csh, and Tsch.
+
 2021-01-25: We now offer weekly <a href="{{ '/support/index.html' | relative_url }}">Office Hours</a>.
 
 2020-10-29: Access to Wynton's login and data-transfer nodes <a href="{{ '/get-started/duo-signup.html' | relative_url }}">requires 2FA authentication</a>.
