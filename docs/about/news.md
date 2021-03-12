@@ -1,6 +1,6 @@
 # News
 
-2021-03-12: Zsh is now also available in addition to the officially supported Bash, our default shell, Csh, and Tsch.
+2021-03-12: Zsh is now also available in addition to the officially supported Bash, our default shell, Csh, and Tcsh.
 
 2021-01-25: We now offer weekly <a href="{{ '/support/index.html' | relative_url }}">Office Hours</a>.
 
