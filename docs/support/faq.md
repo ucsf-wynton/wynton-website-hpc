@@ -43,7 +43,7 @@ unable to contact qmaster using port 6444 on host "q"
 
 **Q**. _I tried to change my shell using the unix command `chsh` and I got an error telling me, "chsh: user "alice" does not exist".
 
-**A**. {{ site.cluster.nickname}} account attributes are managed via a remote directory system which are not manipulable via local tools. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team]({{ '/about/contact.html' | relative_url }}), let us know your preferred shell, and we will change it for you. Note, The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell may result in reduced functionality or errors which we may not be able to help you with.
+**A**. {{ site.cluster.nickname}} account attributes are managed via a remote directory system which is not manipulable via local tools like `chsh`. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team]({{ '/about/contact.html' | relative_url }}), let us know your preferred shell, and we will change it for you. Note, The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell may result in reduced functionality or errors which we may not be able to help you with.
 
 **Q**. _I cannot SSH into the development nodes - I get 'IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!' and 'Host key verification failed.'.  What is going on?_
 
