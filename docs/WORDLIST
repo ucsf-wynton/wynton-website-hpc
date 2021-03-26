@@ -1,5 +1,6 @@
 ## Dictionary of white-listed words
 AMD
+alice
 barcode
 BeeGFS
 Biocontainers
@@ -9,6 +10,7 @@ CBI
 CentOS
 cgl
 CGL
+chsh
 CMD
 Ctrl
 CUDA
