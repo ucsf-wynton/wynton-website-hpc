@@ -1,3 +1,14 @@
+### March 26, 2021
+
+#### <span style="color: orange;">Cluster not accessible (due to network outage)</span>
+
+**Resolved**: The malfunctioning network link between two of Wynton's data centers, which affected our BeeGFS file system and Wynton HPC as a whole, has been restored.
+<br><span class="timestamp">March 26, 21:30 PDT</span>
+
+**Notification**: Campus network issues causing major Wynton HPC issues including extremely slow access to our BeeGFS file system.  This was first reported around 11:30 today.  A ticket has been filed with the UCSF Network.  ETA is unknown.
+<br><span class="timestamp">March 26, 12:30 PDT</span>
+
+
 ### January 29-February 12, 2021
 
 #### <span style="color: orange;">Kernel maintenance</span>
