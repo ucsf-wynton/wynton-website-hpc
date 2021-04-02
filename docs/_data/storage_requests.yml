@@ -4,7 +4,7 @@
 storage_per_brick: 668
 
 ## Total storage requested this far [TB]
-storage_request: 642
+storage_request: 653
 
 start_date: 2020-06-08
-last_updated: 2021-03-31
+last_updated: 2021-04-02
