@@ -524,7 +524,7 @@ PROJ is a generic coordinate transformation software that transforms geospatial 
 The R programming language.<br>
     Example: <code>R --version</code> and <code>Rscript --version</code>.<br>
     URL: <a href="https://www.r-project.org/">https://www.r-project.org/</a><br>
-  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, 4.0.3, <em>4.0.4</em><br>
+  Versions: 2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, <em>4.0.5</em><br>
   </dd>
 
   <dt>r-siteconfig</dt>
@@ -770,7 +770,7 @@ Basic Local Alignment Search Tool<br>
   <dd>
 The free peer-reviewed portable C++ source libraries<br>
     URL: <a href="https://www.boost.org/">https://www.boost.org/</a><br>
-  Versions: <em>1.68.0</em><br>
+  Versions: 1.68.0, <em>1.73.0</em><br>
   </dd>
 
   <dt>cgal</dt>
@@ -937,7 +937,7 @@ MiST - Mass spectrometry interaction STatistics<br>
   <dd>
 MODELLER comparative modeling<br>
     URL: <a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a><br>
-  Versions: 9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, <em>SVN</em><br>
+  Versions: 9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, <em>SVN</em><br>
   </dd>
 
   <dt>modpipe</dt>
@@ -1456,7 +1456,7 @@ Support Vector Machine<br>
   <dd>
 Connects C/C++/Objective C to some high-level programming languages<br>
     URL: <a href="http://www.swig.org/">http://www.swig.org/</a><br>
-  Versions: <em>3.0.12</em><br>
+  Versions: 3.0.12, <em>4.0.2</em><br>
   </dd>
 
   <dt>usearch</dt>
@@ -1492,7 +1492,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-03-09 20:54:46 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-04-01 09:52:43 from querying `module avail` and `module spider`._
 
 
 <style>
