@@ -41,6 +41,10 @@ unable to contact qmaster using port 6444 on host "q"
 
 **A**. Your {{ site.cluster.name }} account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.
 
+**Q**. _I am getting timeout errors when trying to connect via x2go from a MacOS Computer, the status hangs on "connecting";_
+
+**A**. This appears to be a communication problem between x2go and XQuartz. The only way we've found to resolve this issue is to **Completely** remove XQuartz from the MacOS Computer and then re-install XQuartz. After re-installation of XQuartz, x2go has worked again.
+
 **Q**. _I tried to change my shell using the unix command `chsh` and I got an error telling me, "chsh: user "alice" does not exist"._
 
 **A**. First, let me assure you, your account does exist! You ARE logged in, after all. However, {{ site.cluster.nickname}} account attributes are managed via a remote directory system which is not manipulable via local tools like `chsh`. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team]({{ '/about/contact.html' | relative_url }}), let us know your preferred shell, and we will change it for you. Note: The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell than these may result in reduced functionality or errors which may be beyond the scope of our support.
