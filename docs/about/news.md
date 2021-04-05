@@ -1,5 +1,7 @@
 # News
 
+2021-04-05: We have improved the purchasing and accounting workflow for <a href="{{ '/support/pricing-storage.html' | relative_url }}">lab storage orders</a> resulting in shorter waiting times.
+
 2021-03-12: Zsh is now also available in addition to the officially supported Bash, our default shell, Csh, and Tcsh.
 
 2021-01-25: We now offer weekly <a href="{{ '/support/index.html' | relative_url }}">Office Hours</a>.

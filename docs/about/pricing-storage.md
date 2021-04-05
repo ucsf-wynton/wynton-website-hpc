@@ -1,9 +1,5 @@
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
-{% assign progress = site.data.storage_requests.storage_request | times: 100 | divided_by: site.data.storage_requests.storage_per_brick %}
-{% assign remain = site.data.storage_requests.storage_per_brick | minus: site.data.storage_requests.storage_request %}
-
-Progress on next storage purchase started on {{ site.data.storage_requests.start_date }}: <strong>{{ progress }}% ({{ site.data.storage_requests.storage_request }} out of {{ site.data.storage_requests.storage_per_brick }} TB)</strong>. Another {{ remain }} TB need to be requested before the next order can go out.
-({{ site.data.storage_requests.last_updated }})
+2021-04-05: We have improved the purchasing and accounting workflow for lab storage orders.  This means that we can allocate lab storage much sooner than what was possible in the past.
 </div>
 
 # Pricing for Extra Storage
