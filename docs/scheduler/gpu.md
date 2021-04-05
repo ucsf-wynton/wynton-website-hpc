@@ -31,7 +31,7 @@ If your application requires MPI, you should still use the proper parallel envir
 qsub -q gpu.q -pe mpi_onehost N ...
 mpirun -np M --oversubscribe ...
 ```
-where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).
+where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).  Please note that, at the moment, each GPU job must limit itself to a single host.
 
 
 ## GPU relevant resource requests
