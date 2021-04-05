@@ -41,9 +41,18 @@ unable to contact qmaster using port 6444 on host "q"
 
 **A**. Your {{ site.cluster.name }} account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.
 
-**Q**. _I am getting timeout errors when trying to connect via x2go from a MacOS Computer, the status hangs on "connecting";_
+**Q**. _I am getting timeout errors when trying to connect via x2go from a MacOS Computer, the x2go status hangs on "connecting"; In the x2go logs you will see:_
 
-**A**. This appears to be a communication problem between x2go and XQuartz. The only way we've found to resolve this issue is to **Completely** remove XQuartz from the MacOS Computer and then re-install XQuartz. After re-installation of XQuartz, x2go has worked again.
+```sh
+Info: Forwarding X11 connections to display '/private/tmp/com.apple.launchd.C24DSqSnIF/org.xquartz:0'.
+Info: Forwarding auxiliary X11 connections to display '/private/tmp/com.apple.launchd.C24DSqSnIF/org.xquartz:0'.
+Session: Session started at 'Tue Mar  2 13:00:37 2021'.
+Connection timeout, abortingSession: Terminating session at 'Tue Mar  2 13:01:05 2021'.
+Info: Waiting the cleanup timeout to complete.
+Session: Session terminated at 'Tue Mar  2 13:01:07 2021'.
+```
+
+**A**. This appears to be a communication problem between x2go and XQuartz. The only way we've found to resolve this issue is to **Completely** remove XQuartz from the MacOS Computer and then re-install XQuartz. Please follow recommendations for completely removing the XQuartz application and all related files. (Search for any files or folders with the program’s name or developer’s name in the ~/Library/Preferences/, ~/Library/Application Support/ and ~/Library/Caches/ folders.) After re-installation of XQuartz, x2go should work again. If not, please contact [the {{ site.cluster.nickname }} team]({{ '/about/contact.html' | relative_url }}).
 
 **Q**. _I tried to change my shell using the unix command `chsh` and I got an error telling me, "chsh: user "alice" does not exist"._
 
