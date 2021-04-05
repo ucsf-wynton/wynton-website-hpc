@@ -52,7 +52,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(117)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -76,7 +76,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt>julia</dt>
   <dd>
-  Versions: <em>0.6.4</em><br>
+  Versions: 0.6.4, <em>1.6.0</em><br>
   </dd>
 
   <dt>matlab</dt>
@@ -860,7 +860,7 @@ Protein pocket (cavity) detection algorithm<br>
   <dd>
 Various compilers (C, C++, Objective-C, Java, ...)<br>
     URL: <a href="https://gcc.gnu.org/">https://gcc.gnu.org/</a><br>
-  Versions: 5.1.1, 6.4.1, <em>7.3.1</em><br>
+  Versions: 5.1.1, 6.4.1, 7.3.1, <em>10.2.1</em><br>
   </dd>
 
   <dt>ghostscript</dt>
@@ -903,6 +903,13 @@ Integrative Modeling Platform (version 2.14.0, with only usage checks turned on)
 Integrative Modeling Platform (version 2.14.0, fast build)<br>
     URL: <a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a><br>
   Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, <em>2.14.0</em><br>
+  </dd>
+
+  <dt>itcell</dt>
+  <dd>
+Integrative T-cell epitope prediction<br>
+    URL: <a href="https://github.com/salilab/itcell-lib">https://github.com/salilab/itcell-lib</a><br>
+  Versions: <br>
   </dd>
 
   <dt>libtau</dt>
@@ -1445,6 +1452,13 @@ Makes available libraries usually only present on the Sali interactive nodes<br>
   Versions: <br>
   </dd>
 
+  <dt>scwrl</dt>
+  <dd>
+Protein side-chain conformation prediction program<br>
+    URL: <a href="http://dunbrack.fccc.edu/SCWRL4.php">http://dunbrack.fccc.edu/SCWRL4.php</a><br>
+  Versions: <em>4.0</em><br>
+  </dd>
+
   <dt>svm_light</dt>
   <dd>
 Support Vector Machine<br>
@@ -1489,10 +1503,10 @@ Rigid body docking<br>
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(115)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(117)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-04-01 09:52:43 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-04-05 12:03:20 from querying `module avail` and `module spider`._
 
 
 <style>
