@@ -17,6 +17,7 @@ devtoolset-4
 devtoolset-6
 devtoolset-7
 devtoolset-8
+devtoolset-9
 llvm-toolset-7
 python33       # DEPRECATED per 2019-11-13
 rh-python34    # DEPRECATED per 2019-11-13
