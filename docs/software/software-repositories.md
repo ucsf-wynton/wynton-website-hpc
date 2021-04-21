@@ -50,9 +50,9 @@ Below are 3 software repositories, each providing a set of software tools.
 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(117)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -92,6 +92,15 @@ Enable repository: <em>this software repository is always enabled</em><br>
   <dt>mpi</dt>
   <dd>
   Versions: openmpi-x86_64, <em>openmpi3-x86_64</em><br>
+  </dd>
+
+  <dt>openjdk</dt>
+  <dd>
+    <strong>openjdk-runtime: Open Java Development Kit</strong><br>
+OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.<br>
+    Example: <code>java -version</code> and <code>javac -version</code>.<br>
+    URL: <a href="https://openjdk.java.net/">https://openjdk.java.net/</a><br>
+  Versions: 1.8.0.282.b08-1, <em>11.0.10.0.9-0</em><br>
   </dd>
 
 </dl>
@@ -628,7 +637,8 @@ SnpEff is a variant annotation and effect prediction tool. It annotates and pred
 The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives.<br>
     Example: <code>fastq-dump --help</code>.<br>
     URL: <a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a>, <a href="https://github.com/ncbi/sra-tools">https://github.com/ncbi/sra-tools</a><br>
-  Versions: 2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, <em>2.10.9</em><br>
+    Warning: To work around a bug where <code>fasterq-dump</code> crashes the local machine, it has been tweaked such that it uses <code>$TMPDIR</code> rather than <code>$PWD</code> as the default temporary folder.<br>
+  Versions: 2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, <em>2.11.0</em><br>
   </dd>
 
   <dt>star</dt>
@@ -766,25 +776,26 @@ Basic Local Alignment Search Tool<br>
   Versions: 2.2.25, <em>2.2.28</em><br>
   </dd>
 
-  <dt>boost</dt>
+  <dt>boost (part of gcc/10.2.1)</dt>
   <dd>
 The free peer-reviewed portable C++ source libraries<br>
     URL: <a href="https://www.boost.org/">https://www.boost.org/</a><br>
   Versions: 1.68.0, <em>1.73.0</em><br>
+    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
   <dt>cgal</dt>
   <dd>
 Computational Geometry Algorithms Library<br>
     URL: <a href="https://www.cgal.org/">https://www.cgal.org/</a><br>
-  Versions: <em>4.12.1</em><br>
+  Versions: 4.12.1, <em>5.1</em><br>
   </dd>
 
   <dt>cmake</dt>
   <dd>
 Cross-platform make system<br>
     URL: <a href="https://cmake.org/">https://cmake.org/</a><br>
-  Versions: <em>3.12.2</em><br>
+  Versions: 3.12.2, <em>3.18.3</em><br>
   </dd>
 
   <dt>concavity</dt>
@@ -884,6 +895,13 @@ A general purpose library and file format for storing scientific data<br>
   Versions: 1.8.14, 1.8.17, 1.10.1, 1.10.5, <em>1.10.6</em><br>
   </dd>
 
+  <dt>ifort</dt>
+  <dd>
+Intel Fortran compiler<br>
+    URL: <a href="http://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html">http://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html</a><br>
+  Versions: <em>10.1.022</em><br>
+  </dd>
+
   <dt>ImageMagick</dt>
   <dd>
 An X application for displaying and manipulating images<br>
@@ -968,11 +986,12 @@ A small build system with a focus on speed<br>
   Versions: 1.6.0, <em>1.8.2</em><br>
   </dd>
 
-  <dt>opencv</dt>
+  <dt>opencv (part of gcc/10.2.1)</dt>
   <dd>
 Collection of algorithms for computer vision<br>
     URL: <a href="https://opencv.org/">https://opencv.org/</a><br>
-  Versions: <em>3.4.3</em><br>
+  Versions: 3.4.3, <em>4.3.0</em><br>
+    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
   <dt>openeye</dt>
@@ -1320,11 +1339,12 @@ A minimalist production ready plugin system<br>
   Versions: <em>0.13.1</em><br>
   </dd>
 
-  <dt>python3/protobuf</dt>
+  <dt>python3/protobuf (part of gcc/10.2.1)</dt>
   <dd>
 Protocol Buffers - Google's data interchange format<br>
     URL: <a href="https://developers.google.com/protocol-buffers/">https://developers.google.com/protocol-buffers/</a><br>
   Versions: <em>3.11.2</em><br>
+    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
   <dt>python3/py</dt>
@@ -1501,12 +1521,12 @@ Rigid body docking<br>
 </div> 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(117)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-04-05 12:03:20 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-04-21 14:22:40 from querying `module avail` and `module spider`._
 
 
 <style>
