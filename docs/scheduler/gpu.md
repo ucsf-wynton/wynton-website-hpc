@@ -75,13 +75,13 @@ Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores
 ## GPU use monitoring
 
 We have installed NVIDIA's [Data Center GPU Manager](https://docs.nvidia.com/datacenter/dcgm/latest/index.html) on all GPU nodes to allow the profiling of GPU jobs.  To use it, add the following to your job script just before you launch the GPU-utilizing process:
-```
+```sh
 gpuprof=$(dcgmi group -c mygpus -a $SGE_GPU | awk '{print $10}')
 dcgmi stats -g $gpuprof -e
 dcgmi stats -g $gpuprof -s $JOB_ID
 ```
 And then put the following after that process ends:
-```
+```sh
 dcgmi stats -g $gpuprof -x $JOB_ID
 dcgmi stats -g $gpuprof -v -j $JOB_ID
 dcgmi group -d $gpuprof
