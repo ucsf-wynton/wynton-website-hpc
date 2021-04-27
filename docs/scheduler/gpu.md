@@ -74,7 +74,22 @@ Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores
 
 ## GPU use monitoring
 
-While it is not possible to log directly into the GPU nodes to monitor their usage, several statistics are available from the login hosts.  For example:
+We have installed NVIDIA's [Data Center GPU Manager](https://docs.nvidia.com/datacenter/dcgm/latest/index.html) on all GPU nodes to allow the profiling of GPU jobs.  To use it, add the following to your job script just before you launch the GPU-utilizing process:
+```
+gpuprof=$(dcgmi group -c mygpus -a $SGE_GPU | awk '{print $10}')
+dcgmi stats -g $gpuprof -e
+dcgmi stats -g $gpuprof -s $JOB_ID
+```
+And then put the following after that process ends:
+```
+dcgmi stats -g $gpuprof -x $JOB_ID
+dcgmi stats -g $gpuprof -v -j $JOB_ID
+dcgmi group -d $gpuprof
+```
+The GPU stats will be written to the job's output file.  If you'd rather they go elsewhere, then direct the output of
+`dcgmi stats ... -v -j $JOB_ID` to the file where you want the GPU profiling info.
+
+It is also possible to see several statistics from the login hosts.  For example:
 ```sh
 [alice@{{ site.devel.name }} ~]$ qconf -se msg-iogpu3
 hostname              msg-iogpu3
