@@ -25,7 +25,7 @@
 <strong>{{ site.cluster.name }} environment non-operational</strong><br>
 <em>Complete outage due to scheduled maintenance during December 7-10, 2020</em>
 </div>
-{% elsif site.cluster.status == "part-outage" %}
+{% elsif site.cluster.status == "partial-outage" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} is operational but experiencing partial problems</strong><br>
 <em>Several GPU compute nodes are down.</em>
