@@ -71,7 +71,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt>cuda</dt>
   <dd>
-  Versions: 7.5, 8.0, 9.1, 9.2, <em>10.1</em><br>
+  Versions: 7.5, 8.0, 9.1, 9.2, 10.1, <em>11.0</em><br>
   </dd>
 
   <dt>julia</dt>
@@ -1526,7 +1526,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-04-21 14:22:40 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-05-05 11:17:23 from querying `module avail` and `module spider`._
 
 
 <style>
