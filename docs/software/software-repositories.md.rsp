@@ -134,6 +134,8 @@ for (cc in seq_len(ncol(versions))) {
 }
 m$versions[[1]] <- versions
 m$parent <- unique(unlist(m$versions[[1]]$parent, use.names = FALSE))
+## FIXME /HB 2021-05-05
+if (!is.null(m$parent) && !is.element(m$parent, c("CBI-testing"))) m$parent <- NULL
 helps <- unique(versions$help)
 help <- helps[[1]]
 vers <- NULL
