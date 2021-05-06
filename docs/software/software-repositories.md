@@ -781,7 +781,7 @@ Basic Local Alignment Search Tool<br>
 The free peer-reviewed portable C++ source libraries<br>
     URL: <a href="https://www.boost.org/">https://www.boost.org/</a><br>
   Versions: 1.68.0, <em>1.73.0</em><br>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load Sali gcc/10.2.1</code> first.</em>
   </dd>
 
   <dt>cgal</dt>
@@ -991,7 +991,7 @@ A small build system with a focus on speed<br>
 Collection of algorithms for computer vision<br>
     URL: <a href="https://opencv.org/">https://opencv.org/</a><br>
   Versions: 3.4.3, <em>4.3.0</em><br>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load Sali gcc/10.2.1</code> first.</em>
   </dd>
 
   <dt>openeye</dt>
@@ -1344,7 +1344,7 @@ A minimalist production ready plugin system<br>
 Protocol Buffers - Google's data interchange format<br>
     URL: <a href="https://developers.google.com/protocol-buffers/">https://developers.google.com/protocol-buffers/</a><br>
   Versions: <em>3.11.2</em><br>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load Sali gcc/10.2.1</code> first.</em>
   </dd>
 
   <dt>python3/py</dt>
@@ -1526,7 +1526,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-05-05 11:17:23 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-05-05 22:42:19 from querying `module avail` and `module spider`._
 
 
 <style>

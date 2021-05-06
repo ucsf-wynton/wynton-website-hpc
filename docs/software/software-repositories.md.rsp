@@ -186,7 +186,8 @@ if (length(m$description) > 0L) {
   <% } %>
   Versions: <%= paste(vers, collapse = ", ") %><br>
   <% if (!is.null(m$parent)) { %>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+  <% R.utils::mstr(m) %>
+    Note: <em>To use this module, call <code>module load <%= attr(x, "repository") %> <%= m$parent %></code> first.</em>
   <% } %>
   </dd>
 
@@ -267,6 +268,7 @@ Below are <%= length(module_repositories) %> software repositories, each providi
   name <- names(module_repositories)[kk]
   info <- module_repositories[[name]]
   x <- module_avail(info)
+  attr(x, "repository") <- name
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
