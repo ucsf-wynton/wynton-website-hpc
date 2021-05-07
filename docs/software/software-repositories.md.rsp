@@ -134,6 +134,8 @@ for (cc in seq_len(ncol(versions))) {
 }
 m$versions[[1]] <- versions
 m$parent <- unique(unlist(m$versions[[1]]$parent, use.names = FALSE))
+## FIXME /HB 2021-05-05
+if (!is.null(m$parent) && !is.element(m$parent, c("CBI-testing"))) m$parent <- NULL
 helps <- unique(versions$help)
 help <- helps[[1]]
 vers <- NULL
@@ -186,7 +188,8 @@ if (length(m$description) > 0L) {
   <% } %>
   Versions: <%= paste(vers, collapse = ", ") %><br>
   <% if (!is.null(m$parent)) { %>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
+  <% R.utils::mstr(m) %>
+    Note: <em>To use this module, call <code>module load <%= attr(x, "repository") %> <%= m$parent %></code> first.</em>
   <% } %>
   </dd>
 
@@ -267,6 +270,7 @@ Below are <%= length(module_repositories) %> software repositories, each providi
   name <- names(module_repositories)[kk]
   info <- module_repositories[[name]]
   x <- module_avail(info)
+  attr(x, "repository") <- name
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
