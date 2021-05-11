@@ -2,7 +2,7 @@
 
 #### <span style="color: orange;">Full downtime (major maintenance)</span>
 
-**Notice**: The Wynton HPC environment will be shutdown late afternoon on Tuesday May 25, 2021, for maintenance.  We expect the cluster to be back online late Wednesday May 26.  To allow for an orderly shutdown of Wynton, the queues have been disabled starting at 3:30 pm on May 25.  Between now and then, only jobs whose runtimes end before that time will be able to start.  Jobs whose runtimes would run into the maintenance window will remain in the queue.
+**Notice**: The Wynton HPC environment will be shut down late afternoon on Tuesday May 25, 2021, for maintenance.  We expect the cluster to be back online late Wednesday May 26.  To allow for an orderly shutdown of Wynton, the queues have been disabled starting at 3:30 pm on May 25.  Between now and then, only jobs whose runtimes end before that time will be able to start.  Jobs whose runtimes would run into the maintenance window will remain in the queue.
 <br>
 <span class="timestamp">May 10, 16:40 PDT</span>
 
