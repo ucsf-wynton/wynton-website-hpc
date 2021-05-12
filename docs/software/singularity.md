@@ -113,7 +113,7 @@ Exactly what is "run" is defined by the so called "runscript" of the Singularity
 
 <!-- code-block label="exec" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity exec rocker_r-base.img R --quiet
+[alice@{{ site.devel.name }} lxc]$ singularity exec rocker_r-base.sif R --quiet
 > sum(1:10)
 [1] 55
 > q("no")
@@ -124,7 +124,7 @@ Note that, the Singularity image is marked as an _executable_, which means you c
 
 <!-- code-block label="command" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.img
+[alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.sif
 
 R version 4.0.5 (2021-03-31) -- "Shake and Throw"
 Copyright (C) 2021 The R Foundation for Statistical Computing
@@ -154,14 +154,14 @@ To launch a shell within this container, and to also convince yourselves that th
 
 <!-- code-block label="shell" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.img
-Singularity rocker_r-base.img:~/lxc> head -3 /etc/os-release
+[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.sif
+Singularity rocker_r-base.sif:~/lxc> head -3 /etc/os-release
 PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
-Singularity r-base.img:~/lxc> Rscript --version
+Singularity r-base.sif:~/lxc> Rscript --version
 R scripting front-end version 4.0.5 (2021-03-31)
-Singularity r-base.img:~/lxc> exit
+Singularity r-base.sif:~/lxc> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
 NAME="CentOS Linux"
@@ -176,7 +176,7 @@ When running a container, only a few of the folders available "outside" are avai
 
 <!-- code-block label="shell-nobind" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.img
+[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.sif
 Singularity> ls /scratch
 ls: cannot access '/scratch': No such file or directory
 Singularity> ls /c4/scratch
@@ -193,7 +193,7 @@ To make also these folders available within the container, we can use `singulari
 
 <!-- code-block label="shell-bind" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,/c4/scratch,{{ site.user.labfolder }} rocker_r-base.img
+[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,/c4/scratch,{{ site.user.labfolder }} rocker_r-base.sif
 Singularity> ls /scratch
 alice
 Singularity> ls /c4/scratch

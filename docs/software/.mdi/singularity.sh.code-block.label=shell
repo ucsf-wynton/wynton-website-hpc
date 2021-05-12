@@ -1,11 +1,11 @@
-[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.img
-Singularity rocker_r-base.img:~/lxc> head -3 /etc/os-release
+[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.sif
+Singularity rocker_r-base.sif:~/lxc> head -3 /etc/os-release
 PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
-Singularity r-base.img:~/lxc> Rscript --version
+Singularity r-base.sif:~/lxc> Rscript --version
 R scripting front-end version 4.0.5 (2021-03-31)
-Singularity r-base.img:~/lxc> exit
+Singularity r-base.sif:~/lxc> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
 NAME="CentOS Linux"

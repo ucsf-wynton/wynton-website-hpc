@@ -1,4 +1,4 @@
-[alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.img
+[alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.sif
 
 R version 4.0.5 (2021-03-31) -- "Shake and Throw"
 Copyright (C) 2021 The R Foundation for Statistical Computing
