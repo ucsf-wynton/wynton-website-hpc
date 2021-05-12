@@ -1,24 +1,26 @@
 [alice@{{ site.devel.name }} ~]$ mkdir lxc
 [alice@{{ site.devel.name }} ~]$ cd lxc/
-[alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.img docker://rocker/r-base
+[alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.sif docker://rocker/r-base
 INFO:    Starting build...
 Getting image source signatures
-Copying blob sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
-Copying blob sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
-Copying blob sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
-Copying blob sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
-Copying blob sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
-Copying blob sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
-Copying config sha256:97c4fe6614a8a627eceeeb91e2fabcffd9fceb89b6e36d526462de4fefbcaab5
+Copying blob sha256:2aa31e5eaa2f63b21f0a451e58e0bdf8a356a365b4a0edc3cb0f7699c463a538
+Copying blob sha256:8153434e6f7c9253254e97e38daa52ab228a7d088d3c3a9a654b416d7698d32d
+Copying blob sha256:7c1ce3d135b31965248be165220b014c91f17e8df3e8a25c380e8a419221565d
+Copying blob sha256:299b00db75f9f67fa990b93ba16fe3c3ea69715daae498345ae8fd9978c0b392
+Copying blob sha256:fbb97aa921ad54c0f02b06a4df7b5097dcd9d39a7c0db85bebe4b87d02721026
+Copying blob sha256:3f6521b7b8173d4e888f4c0b5eec5e163dd139dede728cfa96f51fd8e633116e
+Copying blob sha256:46c03ae7f5ccb76a0643ce9b59ae502bedaf5e87721da070eca11eb4a7dc3e1a
+Copying config sha256:21b47887f3a15cf7ed3c99f463763843133d84346a773ec78a44abd8ffeb9505
 Writing manifest to image destination
 Storing signatures
-2021/01/20 18:15:46  info unpack layer: sha256:4363cc52203477cd66948034ae4a1db71cbfd27fddb648dd9c590161de1f8634
-2021/01/20 18:15:49  info unpack layer: sha256:84b4f34362bc84334554760f8f2546095e5fef74322efaa7979fd1121ae927e5
-2021/01/20 18:15:49  info unpack layer: sha256:5a06f0a021cad74bf9b4aa18538585dbef393e3e227fbb960f8bc327e6547581
-2021/01/20 18:15:50  info unpack layer: sha256:642a4d4f99ab3f2cf657380497eeede11a9d0263428287296bdc8f71de78795f
-2021/01/20 18:15:50  info unpack layer: sha256:d36c605538a66ebff6ae01e73f30069b5bd8e8292ffd7d275cd65f4804b2edae
-2021/01/20 18:15:50  info unpack layer: sha256:b6393690e1508d90cb0d3cb9a31dc8679ecc46a949d796e2447b91b4af45e159
+2021/05/11 16:51:14  info unpack layer: sha256:2aa31e5eaa2f63b21f0a451e58e0bdf8a356a365b4a0edc3cb0f7699c463a538
+2021/05/11 16:51:17  info unpack layer: sha256:8153434e6f7c9253254e97e38daa52ab228a7d088d3c3a9a654b416d7698d32d
+2021/05/11 16:51:17  info unpack layer: sha256:7c1ce3d135b31965248be165220b014c91f17e8df3e8a25c380e8a419221565d
+2021/05/11 16:51:18  info unpack layer: sha256:299b00db75f9f67fa990b93ba16fe3c3ea69715daae498345ae8fd9978c0b392
+2021/05/11 16:51:18  info unpack layer: sha256:fbb97aa921ad54c0f02b06a4df7b5097dcd9d39a7c0db85bebe4b87d02721026
+2021/05/11 16:51:18  info unpack layer: sha256:3f6521b7b8173d4e888f4c0b5eec5e163dd139dede728cfa96f51fd8e633116e
+2021/05/11 16:51:18  info unpack layer: sha256:46c03ae7f5ccb76a0643ce9b59ae502bedaf5e87721da070eca11eb4a7dc3e1a
 INFO:    Creating SIF file...
-INFO:    Build complete: rocker_r-base.img
-[alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.img
--rwxr-xr-x. 1 alice boblab 297025536 Jan 20 18:16 rocker_r-base.img
+INFO:    Build complete: rocker_r-base.sif
+[alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.sif
+-rwxr-xr-x. 1 alice boblab 309747712 May 11 16:51 rocker_r-base.sif
