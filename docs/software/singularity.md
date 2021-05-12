@@ -41,7 +41,7 @@ For full details, see `singularity --help`, `man singularity`, and the [Singular
 
 As an illustration on how to use Linux containers with Singularity, we will use the Docker container [rocker/r-base] available on Docker Hub.  This particular container provides the latest release of the [R] software in an Ubuntu OS environment.  Containers available from Singularity Hub, Biocontainers, and elsewhere, can be downloaded and used analogously.
 
-To use this rocker/r-base container, we first pull it down to a Singularity image file `~/lxc/rocker_r-base.img` as:
+To use this rocker/r-base container, we first pull it down to a Singularity image file `~/lxc/rocker_r-base.sif` as:
 
 <!-- code-block label="build" -->
 ```sh
@@ -226,7 +226,7 @@ To run this as a batch job, we need to create a job script.
 #$ -l h_rt=00:05:00
 #$ -j y
 
-./rocker_r-base.img Rscript -e "sum(1:10)"
+./rocker_r-base.sif Rscript -e "sum(1:10)"
 ```
 
 And now submit with `qsub`:

@@ -14,7 +14,7 @@ If so, you have a few options:
 
 2. Use [Singularity]({{ '/software/singularity.html' | relative_url }}) to run it via a Linux container
    - Create your own Linux containers
-   - Pull down an existing image from public repositories such as Singularity Hub, Docker Hub, and Biocontainers (e.g. `singularity pull shub://nextflow-io/rnatoy` and `singularity shell nextflow-io-rnatoy-master.img`)
+   - Pull down an existing image from public repositories such as Singularity Hub, Docker Hub, and Biocontainers (e.g. `singularity pull shub://nextflow-io/rnatoy` and `singularity shell nextflow-io-rnatoy-master.sif`)
    <br><br>
   
 3. Reach out to the [{{ site.cluster.name }} user community]({{ '/support/index.html' | relative_url }})
