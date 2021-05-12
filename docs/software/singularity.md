@@ -126,8 +126,8 @@ Note that, the Singularity image is marked as an _executable_, which means you c
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.img
 
-R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
-Copyright (C) 2020 The R Foundation for Statistical Computing
+R version 4.0.5 (2021-03-31) -- "Shake and Throw"
+Copyright (C) 2021 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -160,7 +160,7 @@ PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
 Singularity r-base.img:~/lxc> Rscript --version
-R scripting front-end version 4.0.3 (2020-10-10)
+R scripting front-end version 4.0.5 (2021-03-31)
 Singularity r-base.img:~/lxc> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release

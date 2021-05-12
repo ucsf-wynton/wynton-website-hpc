@@ -4,7 +4,7 @@ PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
 Singularity r-base.img:~/lxc> Rscript --version
-R scripting front-end version 4.0.3 (2020-10-10)
+R scripting front-end version 4.0.5 (2021-03-31)
 Singularity r-base.img:~/lxc> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
