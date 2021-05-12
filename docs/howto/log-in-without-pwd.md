@@ -27,16 +27,19 @@ These instructions are primarily written for Linux, macOS, and Windows 10 users.
 ### Step 1: Generate private-public SSH key pair (on local machine)
 
 _On your local machine_, open a terminal.  If missing, create a private `~/.ssh/` folder:
+
 ```sh
 {local}$ mkdir ~/.ssh
 {local}$ chmod u=rwx,go= ~/.ssh
 {local}$ stat --format=%A ~/.ssh
 drwx------
 ```
+
 _Explanation:_ The above `chmod` settings specify that you as a user (`u`) have read (`r`) and write (`w`) permissions for this directory.  In addition, you have executable (`x`) permission, which also means you can set it as your working directory.  Continuing, the settings also specify that other users in your group (`g`) as well as all other (`o`) users on the system have no access at all (empty permission).  The `stat` output, which confirms this, consists of four parts: `d` tells us it is a directory, `rw-` specifies the permission for the user (`u`), and the following `---` and `---` specifies the permissions for the group (`g`), and all others (`o`), respectively.
 
 
 Next, we will generate a private-public SSH key pair (stored in two files) that is unique for accessing the cluster:
+
 ```sh
 {local}$ cd ~/.ssh   ## <== IMPORTANT
 {local}$ ssh-keygen -f laptop_to_{{ site.cluster.nickname | downcase }}
@@ -60,6 +63,7 @@ The key\'s randomart image is:
 |+B*O+.           |
 +----[SHA256]-----+
 ```
+
 <div class="alert alert-info" role="alert">
 If you specify a passphrase, your local operating system will ask for the passphrase <em>the first time</em> you try to log in to the cluster.  All other login attempts will be passphrase (and password) free (until you reboot the machine).  This should work out of the box on macOS and most Linux distributions - on Windows you need to set up your SSH agent manually (or use an empty passphrase).  If you choose to use an empty passphrase, make sure that your machine is safe and uses a highly secure local login password.
 </div>
@@ -95,25 +99,31 @@ Done.
 
 
 **Alternative 2**: If you don't have `ssh-copy-id`, you will have to copy the _public_ key file over to the cluster, log in, append it to the target file, and validate file permissions.  Assuming you already have a `~/.ssh` folder on the cluster, first copy the public key file to `~/.ssh` on the cluster:
+
 ```sh
 {local}$ scp ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}.pub alice@{{ site.login.name }}:.ssh/
 laptop_to_{{ site.cluster.nickname | downcase }}.pub           100%  390     0.4KB/s   00:00
 ```
 
 Then, log into the cluster (still using a password) and _append_ the public key to `~/.ssh/authorized_keys`:
+
 ```sh
 {local}$ ssh -o PreferredAuthentications=keyboard-interactive,password alice@{{ site.login.hostname }}
 alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ cd .ssh
 [alice@{{ site.login.name }} .ssh]$ cat laptop_to_{{ site.cluster.nickname | downcase }}.pub >> authorized_keys
 ```
+
 Finally, make sure that `~/.ssh/authorized_keys` is only accessible to you (otherwise that file will be completely ignored);
+
 ```sh
 [alice@{{ site.login.name }} .ssh]$ chmod u=rw,go= ~/.ssh/authorized_keys
 [alice@{{ site.login.name }} .ssh]$ stat --format=%A ~/.ssh/authorized_keys
 -rw-------
 ```
+
 Lastly, log out from the cluster:
+
 ```sh
 [alice@{{ site.login.name }} .ssh]$ exit
 {local}$ 
@@ -125,19 +135,24 @@ Done.
 ## Step 3: Test
 
 You should now be able to log into the cluster from your local computer without having to enter the cluster password.  Try the following:
+
 ```sh
-{local}$ ssh -o PreferredAuthentications=publickey -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }} alice@{{ site.login.hostname }}
+{local}$ ssh -o PreferredAuthentications=publickey,keyboard-interactive -o IdentitiesOnly=yes -i ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }} alice@{{ site.login.hostname }}
 [alice@{{ site.login.name }} ~]$ 
 ```
+
 You will be asked to enter your _passphrase_, if you chose one above.
 
 If you get
+
 ```sh
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic,keyboard-interactive,password).
 ```
+
 then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your local machine (see Step 1).  If it still does not work, check the `~/.ssh` permissions on the cluster (analogously to Step 1).
 
-The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, these options can be dropped and you can now use:
+The reason why we use `-o PreferredAuthentications=publickey,keyboard-interactive -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, these options can be dropped and you can now use:
+
 ```sh
 {local}$ ssh -i ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }} alice@{{ site.login.hostname }}
 [alice@{{ site.login.name }} ~]$ 
@@ -147,6 +162,7 @@ The reason why we use `-o PreferredAuthentications=publickey -o IdentitiesOnly=y
 ## Step 4: Avoid having to specify SSH option `-i` (on local machine)
 
 It is rather tedious having to specify what private key file to use (`-i ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}`) each time you use SSH.  As a last step, we will set the default options for `alice@{{ site.login.hostname }}`.  On your local machine, add the following entry to `~/.ssh/config` (if you don't have the file, create it):
+
 ```lang-none
 Host {{ site.login.hostname }}
   User alice
@@ -154,6 +170,7 @@ Host {{ site.login.hostname }}
 ```
 
 With all of the above, you should now be able to log in to the cluster using:
+
 ```sh
 {local}$ ssh {{ site.login.hostname }}
 [alice@{{ site.login.name }} ~]$ 
