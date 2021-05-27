@@ -28,7 +28,7 @@
 {% elsif site.cluster.status == "partial-outage" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} is operational but experiencing partial problems</strong><br>
-<em>Several GPU compute nodes are down.</em>
+<em>The cluster is currently being revived after the scheduled maintenance</em>
 </div>
 {% elsif site.cluster.status == "notice" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
