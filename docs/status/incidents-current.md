@@ -1,10 +1,14 @@
-### May 25-27, 2021
+### May 25-28, 2021
 
 #### <span style="color: orange;">Full downtime (major maintenance)</span>
 
+**Update**: The development nodes are now back too.  For the PHI pilot project, development node pgpudev1 is back up, but pdev1 is still down.
+<br>
+<span class="timestamp">May 28, 10:00 PDT</span>
+
 **Update**: Wynton is partially back up and running.  Both login hosts are up (log1 and log2). The job scheduler, SGE, accepts new jobs and and launches queued jobs. Two thirds of the compute node slots are back up serving jobs. Work is done to bring up the the development nodes and the data transfer hosts (dt1 and dt2).
 <br>
-<span class="timestamp">May 26, 10:30 PDT</span>
+<span class="timestamp">May 27, 10:30 PDT</span>
 
 **Update**: We hit more than a few snags today. Our filesystem, BeeGFS, is up and running, but it still needs some work.  The login hosts are up, but SGE is not and neither are the dev nodes.  We will continue the work early tomorrow Thursday.
 <br>
