@@ -93,7 +93,7 @@ Offending ECDSA key in /wynton/home/bobson/alice/.ssh/known_hosts:18
 to identify that we want to remove the key on line 18.  To remove that line, use:
 
 ```sh
-$ sed -i '18d' .ssh/known_hosts
+$ sed -i '18d' ~/.ssh/known_hosts
 ```
 
 Then retry.
