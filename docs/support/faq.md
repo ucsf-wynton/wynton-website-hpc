@@ -58,7 +58,7 @@ Session: Session terminated at 'Tue Mar  2 13:01:07 2021'.
 
 **A**. First, let me assure you, your account does exist! You ARE logged in, after all. However, {{ site.cluster.nickname}} account attributes are managed via a remote directory system which is not manipulable via local tools like `chsh`. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team]({{ '/about/contact.html' | relative_url }}), let us know your preferred shell, and we will change it for you. Note: The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell than these may result in reduced functionality or errors which may be beyond the scope of our support.
 
-**Q**. _I cannot SSH into the development nodes - I get 'IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!' and 'Host key verification failed.'.  What is going on?_
+**Q**. _I cannot SSH into the development nodes - I get 'IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!' and 'Host key verification failed.'  What is going on?_
 
 **A**. This most likely happens because we have re-built the problematic development node resulting in its internal security keys having changed since you last access that machine.  If the problem error looks like:
 
@@ -78,13 +78,19 @@ ECDSA host key for dev1 has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-then the solution is to remove that offending key from your personal `~/.ssh/known_hosts` file.  If we look at:
+then the solution is to remove that offending key from your personal `~/.ssh/known_hosts` file.  If you get this error when you try to access, say, dev1, then use:
+
+```sh
+$ ssh-keygen -R dev1
+```
+
+to remove all SSH keys associated with that machine.  Alternatively, you can manually remove the problematic key by looking at:
 
 ```lang-none
 Offending ECDSA key in /wynton/home/bobson/alice/.ssh/known_hosts:18
 ```
 
-we see that the problematic key is in this case on line 18.  To remove that line, use:
+to identify that we want to remove the key on line 18.  To remove that line, use:
 
 ```sh
 $ sed -i '18d' .ssh/known_hosts
