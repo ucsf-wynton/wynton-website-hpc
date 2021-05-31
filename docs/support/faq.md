@@ -78,7 +78,7 @@ ECDSA host key for dev1 has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-then the solution is to remove that offending key from your personal `~/.ssh/known_hosts` file.  If you get this error when you try to access, say, dev1, then use:
+then the solution is to remove that offending key from your personal `~/.ssh/known_hosts` file on {{ site.cluster.nickname }}.  If you get this error when you try to access, say, dev1, then use:
 
 ```sh
 $ ssh-keygen -R dev1
