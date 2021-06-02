@@ -9,6 +9,14 @@
 
 #### <span style="color: orange;">Full downtime (major maintenance)</span>
 
+**Update**: Both data transfer nodes are back online since a while, but dt2 can only be reached from within the Wynton cluster.
+<br>
+<span class="timestamp">June 1, 13:45 PDT</span>
+
+**Update**: A large number of of the remaining compute nodes have been booted up.  There are now ~8,600 cores serving jobs.
+<br>
+<span class="timestamp">June 1, 10:15 PDT</span>
+
 **Update**: The development nodes are now back too.  For the PHI pilot project, development node pgpudev1 is back up, but pdev1 is still down.
 <br>
 <span class="timestamp">May 28, 10:00 PDT</span>
