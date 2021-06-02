@@ -1,3 +1,15 @@
+### June 1-2, 2021
+
+**Resolved**: Password updates works again.
+<br>
+<span class="timestamp">June 2, 10:30 PDT</span>
+
+**Notice**: Due to technical issues, it is currently not possible to change your Wynton password.  If attempted from the web interface, you will get an error on "Password change not successful! (kadmin: Communication failure with server while initializing kadmin interface )".  If attempted using 'passwd', you will get "passwd: Authentication token manipulation error".
+<br>
+<span class="timestamp">June 1, 10:30 PDT</span>
+
+
+
 ### April 28 - May 7, 2021
 
 #### <span style="color: orange;">Many GPU nodes down (due to cooling issues)</span>
