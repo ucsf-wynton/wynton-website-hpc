@@ -301,15 +301,15 @@ CentOS 7 comes with a rather old version of gcc, specifically gcc v4.8.5 (2015-0
 <!-- code-block label="install-xgboost-fail" -->
 ```r
 > install.packages("xgboost")
-Installing package into ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI’
-(as ‘lib’ is unspecified)
+Installing package into '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+(as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/xgboost_1.3.2.1.tar.gz'
 Content type 'application/x-gzip' length 966797 bytes (944 KB)
 ==================================================
 downloaded 944 KB
 
-* installing *source* package ‘xgboost’ ...
-** package ‘xgboost’ successfully unpacked and MD5 sums checked
+* installing *source* package 'xgboost' ...
+** package 'xgboost' successfully unpacked and MD5 sums checked
 ** using staged installation
 checking for gcc... gcc
 checking whether the C compiler works... yes
@@ -334,17 +334,17 @@ Makevars:17: -DDMLC_LOG_CUSTOMIZE=1
 Makevars:17: -DXGBOOST_CUSTOMIZE_LOGGER=1
 Makevars:17: -DRABIT_CUSTOMIZE_MSG_
 g++ -std=gnu++14 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG -I./include -I./dmlc-core/include -I./rabit/include -I. -DXGBOOST_STRICT_R_MODE=1 -DDMLC_LOG_BEFORE_THROW=0 -DDMLC_ENABLE_STD_THREAD=1 -DDMLC_DISABLE_STDIN=1 -DDMLC_LOG_CUSTOMIZE=1 -DXGBOOST_CUSTOMIZE_LOGGER=1 -DRABIT_CUSTOMIZE_MSG_  -I/usr/local/include  -fopenmp -DDMLC_CMAKE_LITTLE_ENDIAN=1 -pthread -fpic  -g -O2 -c xgboost_R.cc -o xgboost_R.o
-g++: error: unrecognized command line option ‘-std=gnu++14’
+g++: error: unrecognized command line option '-std=gnu++14'
 make: *** [xgboost_R.o] Error 1
-ERROR: compilation failed for package ‘xgboost’
-* removing ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
-* restoring previous ‘/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost’
+ERROR: compilation failed for package 'xgboost'
+* removing '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost'
+* restoring previous '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/xgboost'
 
 The downloaded source packages are in
-        ‘/scratch/alice/RtmptCoZVr/downloaded_packages’
+        '/scratch/alice/RtmptCoZVr/downloaded_packages'
 Warning message:
 In install.packages("xgboost") :
-  installation of package ‘xgboost’ had non-zero exit status
+  installation of package 'xgboost' had non-zero exit status
 ```
 
 To fix this, we need to:
@@ -501,6 +501,76 @@ The downloaded source packages are in
 That's it!
 
 
+#### The pbdMPI package
+
+Similarly to the [Rmpi] package (above), the [pbdMPI] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install pbdMPI on the cluster, we start by loading the `mpi` module;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
+[alice@{{ site.devel.name }} ~]$ module load CBI r
+[alice@{{ site.devel.name }} ~]$ module list
+Currently Loaded Modules:
+  1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.5
+```
+
+Make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires the pbdMPI package.
+
+Continuing, to install pbdMPI, we launch R and call the following:
+
+<!-- code-block label="install-pbMPI" -->
+```r
+> install.packages("pbdMPI", configure.args="--with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
+trying URL 'https://cloud.r-project.org/src/contrib/pbdMPI_0.4-3.tar.gz'
+Content type 'application/x-gzip' length 519462 bytes (507 KB)
+==================================================
+downloaded 507 KB
+
+* installing *source* package 'pbdMPI' ...
+** package 'pbdMPI' successfully unpacked and MD5 sums checked
+** using staged installation
+setting mpi include path from MPI_INCLUDE
+checking for sed... /usr/bin/sed
+checking for mpicc... mpicc
+checking for ompi_info... ompi_info
+checking for pkg-config... /usr/bin/pkg-config
+>> TMP_FOUND = Nothing found from mpicc --show & sed nor pkg-config ...
+checking for openpty in -lutil... yes
+checking for main in -lpthread... yes
+ 
+******************* Results of pbdMPI package configure *****************
+ 
+>> MPIRUN = /usr/lib64/openmpi/bin/mpirun
+>> MPIEXEC = /usr/lib64/openmpi/bin/mpiexec
+>> ORTERUN = /usr/lib64/openmpi/bin/orterun
+>> TMP_LIB = 
+>> TMP_LIBNAME = 
+>> TMP_FOUND = Nothing found from mpicc --show & sed nor pkg-config ...
+>> MPI_ROOT = 
+>> MPITYPE = OPENMPI
+>> MPI_INCLUDE_PATH = /usr/include/openmpi-x86_64
+>> MPI_LIBPATH = /usr/lib64/openmpi/lib
+>> MPI_LIBNAME = 
+>> MPI_LIBS =  -lutil -lpthread
+>> MPI_DEFS = -DMPI2
+>> MPI_INCL2 = 
+>> MPI_LDFLAGS = 
+>> PKG_CPPFLAGS = -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI
+>> PKG_LIBS = -L/usr/lib64/openmpi/lib -lmpi  -lutil -lpthread
+>> PROF_LDFLAGS = 
+>> ENABLE_LD_LIBRARY_PATH = no
+ 
+*************************************************************************
+...
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (pbdMPI)
+
+The downloaded source packages are in
+        '/scratch/alice/RtmpMyfMUc/downloaded_packages'
+```
+
+
+
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: http://bioconductor.org/
 [BiocManager]: https://cran.r-project.org/package=BiocManager
@@ -508,6 +578,7 @@ That's it!
 [hdf5r]: https://cran.r-project.org/package=hdf5r
 [RcppArmadillo]: https://cran.r-project.org/package=RcppArmadillo
 [Rmpi]: https://cran.r-project.org/package=Rmpi
+[pbdMPI]: https://cran.r-project.org/package=pbdMPI
 [zoo]: https://cran.r-project.org/package=zoo
 [usethis]: https://cran.r-project.org/package=usethis
 [gert]: https://cran.r-project.org/package=gert

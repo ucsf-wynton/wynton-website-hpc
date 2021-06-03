@@ -264,3 +264,4 @@ pdev
 pgpudev
 kadmin
 passwd
+pbdMPI
