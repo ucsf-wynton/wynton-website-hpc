@@ -64,11 +64,11 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ '/get-started/development-prototyping.html' | relative_url }}).
 
 Node                        | Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
-----------------------------|-----------------:|---------:|-----------------:|------------------------------:|-------------------:|
+----------------------------|---------------:|---------:|-----------------:|------------------------------:|-------------------:|
 {{ site.dev1.hostname }}    |             72 |  384 GiB |         0.93 TiB | Intel Gold 6240 2.60GHz       |                    |
 {{ site.dev2.hostname }}    |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
 {{ site.dev3.hostname }}    |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
-{{ site.gpudev1.hostname }} |             12 |   48 GiB |         0.37 TiB | Intel Xeon X5650 2.67GHz      | GeForce GTX 980 Ti |
+{{ site.gpudev1.hostname }} |             32 |  128 GiB |         0.82 TiB | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
 
 _Comment:_ Please use the GPU development node only if you need to build or prototype GPU software.
 
