@@ -26,13 +26,14 @@ Your job 453717 ("envvar") has been submitted
 When finished, check the content of the job output file:
 
 ```sh
-$ grep -E "(HOSTNAME|PWD|TMPDIR|NSLOTS|NHOSTS|SGE_|JOB_)" envvar.o453717
+$ grep -E "(HOSTNAME|PWD|TMPDIR|NSLOTS|NHOSTS|SGE_|JOB_|PE_)" envvar.o453717
 HOSTNAME=qb3-id14
 JOB_ID=453717
 JOB_NAME=envvar
 JOB_SCRIPT=/var/spool/sge/wynton/qb3-id14/job_scripts/453717
 NHOSTS=1
 NSLOTS=4
+PE_HOSTFILE=/var/spool/sge/wynton/qb3-id1469/active_jobs/453717.1/pe_hostfile
 PWD=/wynton/home/boblab/alice/test
 SGE_ACCOUNT=sge
 SGE_ARCH=lx-amd64
