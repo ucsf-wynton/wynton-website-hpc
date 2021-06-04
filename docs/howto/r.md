@@ -501,9 +501,9 @@ The downloaded source packages are in
 That's it!
 
 
-#### The pbdMPI package
+#### The pbdMPI and pbdPROF packages
 
-Similarly to the [Rmpi] package (above), the [pbdMPI] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install pbdMPI on the cluster, we start by loading the `mpi` module;
+Similarly to the [Rmpi] package (above), the [pbdMPI] and the [pbdPROF] packages do not install out-of-the-box like other R packages.  They requires special care to install.  To install pbdMPI or pbdPROF on the cluster, we start by loading the `mpi` module;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
@@ -513,9 +513,9 @@ Currently Loaded Modules:
   1) mpi/openmpi-x86_64   2) CBI   3) r/4.0.5
 ```
 
-Make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires the pbdMPI package.
+Make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires the pbdMPI package or the pbdPROF package.
 
-Continuing, to install pbdMPI, we launch R and call the following:
+Continuing, to install pbdMPI, or similarly for pbdPROF, we launch R and call:
 
 <!-- code-block label="install-pbMPI" -->
 ```r
@@ -579,6 +579,7 @@ The downloaded source packages are in
 [RcppArmadillo]: https://cran.r-project.org/package=RcppArmadillo
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
+[pbdPROF]: https://cran.r-project.org/package=pbdPROF
 [zoo]: https://cran.r-project.org/package=zoo
 [usethis]: https://cran.r-project.org/package=usethis
 [gert]: https://cran.r-project.org/package=gert
