@@ -443,6 +443,16 @@ After this, the hdf5r package will install out of the box, i.e. by calling:
 ```
 
 
+#### The udunits2 package
+
+The [udunits2] package does not install out of the box due to a [bug](https://github.com/pacificclimate/Rudunits2/issues/25), but it can be installed using:
+
+```r
+> install.packages("udunits2", configure.args="--with-udunits2-include=/usr/include/udunits2")
+```
+
+
+
 #### The Rmpi package
 
 The [Rmpi] package does not install out-of-the-box like other R packages.  It requires special care to install.  To install Rmpi on the cluster, we start by loading the `mpi` module;
@@ -584,6 +594,7 @@ The downloaded source packages are in
 [usethis]: https://cran.r-project.org/package=usethis
 [gert]: https://cran.r-project.org/package=gert
 [devtools]: https://cran.r-project.org/package=devtools
+[udunits2]: https://cran.r-project.org/package=udunits2
 [limma]: http://bioconductor.org/packages/limma/
 [CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
 [traditional SCL approaches]: {{ '/software/scl.html' | relative_url }}
