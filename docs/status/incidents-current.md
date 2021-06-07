@@ -1,6 +1,10 @@
-### May 25-June 2, 2021
+### May 25-June 7, 2021
 
 #### <span style="color: orange;">Full downtime (major maintenance)</span>
+
+**Update**: dt2 can now be reached from outside the Wynton cluster.
+<br>
+<span class="timestamp">June 7, 13:15 PDT</span>
 
 **Update**: Login node log2 cannot be reached from the UCSF Housing WiFi network.  If you are on that network, use log1 until this has been resolved.
 <br>
