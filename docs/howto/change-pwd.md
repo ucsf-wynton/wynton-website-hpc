@@ -3,15 +3,6 @@ context:
   - login
 ---
 
-<div class="alert alert-danger" role="alert">
-2021-06-01: Due to technical issues, <strong>it is currently not possible to change your Wynton password</strong>.
-If attempted from the web interface, you will get an error on "Password change not successful! (kadmin: Communication failure with server while initializing kadmin interface )".  If attempted using 'passwd', you will get "passwd: Authentication token manipulation error". 
-</div>
-
-**Notice**: 
-<br>
-<span class="timestamp">June 1, 10:30 PDT</span>
-
 
 <!-- markdownlint-disable-file MD034 -->
 
