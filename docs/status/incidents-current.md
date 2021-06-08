@@ -2,6 +2,11 @@
 
 #### <span style="color: orange;">Full downtime (major maintenance)</span>
 
+
+**Update**: Login node log2 can now be reached from the UCSF Housing WiFi network.
+<br>
+<span class="timestamp">June 7, 17:00 PDT</span>
+
 **Update**: dt2 can now be reached from outside the Wynton cluster.
 <br>
 <span class="timestamp">June 7, 13:15 PDT</span>
