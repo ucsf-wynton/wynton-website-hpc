@@ -76,6 +76,15 @@ INFO:    Build complete: rocker_r-base.sif
 The above may take a minute or two to complete.
 
 
+### Building a container using Singularity Remote Builder
+
+The `singularity build` command requires sudo privileges to build from a local definition file, however if you build from a Docker or Singularity online hub, the command should work without sudo.
+
+To use the remote build option one first needs a [Sylabs.io](https://cloud.sylabs.io/builder) access token, which can be generated after logging in to Sylabs.io.
+
+Then add the `--remote` option to the command: `singularity build --remote output.sif ./example.def` where output.sif is the output Singularity image resulting from the build and example.def is your Singularity definition file.
+
+
 ### Running a container
 
 After this, we can run R within this container using:
