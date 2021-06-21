@@ -121,20 +121,25 @@ th, td {
 }
 </style>
 <% } # if (style) %>
-<% table_of_modules <- function(x, style = c("module", "repos")) { %>
+<% table_of_modules <- function(modules, style = c("module", "repos")) { %>
 <% style <- match.arg(style) %>
 <dl>
-<% for (ii in seq_len(nrow(x))) { %>
+<% for (ii in seq_len(nrow(modules))) { %>
 <%
-m <- x[ii,]
+m <- modules[ii,]
 m <- lapply(m, FUN = trim)
 versions <- m$versions[[1]]
 for (cc in seq_len(ncol(versions))) {
   versions[[cc]] <- trim(versions[[cc]])
 }
 m$versions[[1]] <- versions
-m$parent <- unique(unlist(m$versions[[1]]$parent, use.names = FALSE))
+m$parent <- m$versions[[1]]$parent
+R.utils::cstr(m)
+R.utils::cstr("--------")
+m$parent <- unique(unlist(m$parent, use.names = FALSE))
+R.utils::cstr(m)
 ## FIXME /HB 2021-05-05
+stopifnot(length(m$parent) <= 1L)
 if (!is.null(m$parent) && !is.element(m$parent, c("CBI-testing"))) m$parent <- NULL
 helps <- unique(versions$help)
 help <- helps[[1]]
@@ -254,8 +259,8 @@ Below are <%= length(module_repositories) %> software repositories, each providi
 <%
   name <- names(module_repositories)[kk]
   info <- module_repositories[[name]]
-  x <- module_avail(info)
-  nbr_of_modules <- nrow(x)
+  modules <- module_avail(info)
+  nbr_of_modules <- nrow(modules)
 %>
   <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><span style="font-weight: bold;"><%= name %></span>&nbsp;(<%= nbr_of_modules %>)</a></li>
 <% } ## for (name ...) %>
@@ -269,12 +274,13 @@ Below are <%= length(module_repositories) %> software repositories, each providi
 <%
   name <- names(module_repositories)[kk]
   info <- module_repositories[[name]]
-  x <- module_avail(info)
-  attr(x, "repository") <- name
+  modules <- module_avail(info)
+  nbr_of_modules <- nrow(modules)
+  attr(modules, "repository") <- name
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-<h2>Module Software Repository: <%= name %></h2>
+<h2>Module Software Repository: <%= name %> (<%= nbr_of_modules %>)</h2>
 
 Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
 <% if (!info$contributed) { %>
@@ -287,7 +293,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </div>
 <% } %>
 
-<% table_of_modules(x) %>
+<% table_of_modules(modules) %>
 </div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
 
 <% } ## for (name ...) %>
