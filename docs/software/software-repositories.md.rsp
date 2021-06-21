@@ -54,6 +54,25 @@ module_avail <- local({
     x <- x[keep,]
     message("done")
 
+
+    message("Prune ...")
+    versions <- x$versions
+    versions <- lapply(versions, FUN = function(version) {
+      path <- version$path
+      ## WORKAROUND
+      keep <- lapply(module_path, FUN = function(mpath) grepl(mpath, path, fixed = TRUE))
+      keep <- Reduce(`|`, keep)
+      if (!all(keep)) {
+        version <- version[keep, ]
+        path <- path[keep]
+	version$path <- path
+      }
+      version
+    })
+    ns <- lapply(versions, FUN = nrow)
+    x <- x[ns > 0, ]
+    message("done")
+
     .cache[[key]] <<- x
 
     x
@@ -67,7 +86,7 @@ module_repositories <- list(
     group       = "{{ site.cluster.name }}",
     url         = "{{ '/about/contact.html' | relative_url }}",
     contributed = FALSE,
-    module_path = c("/wynton/home/opt/modules", "/etc/modulefiles")
+    module_path = c("/wynton/home/opt/modules", "/etc/modulefiles")[2]
   ),
 
   CBI = list(
@@ -88,6 +107,7 @@ module_repositories <- list(
     module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
   )
 )
+
 
 %>
 <% if (style) { %>
@@ -121,21 +141,26 @@ th, td {
 }
 </style>
 <% } # if (style) %>
-<% table_of_modules <- function(x, style = c("module", "repos")) { %>
+<% table_of_modules <- function(modules, style = c("module", "repos")) { %>
 <% style <- match.arg(style) %>
 <dl>
-<% for (ii in seq_len(nrow(x))) { %>
+<% for (ii in seq_len(nrow(modules))) { %>
 <%
-m <- x[ii,]
+m <- modules[ii,]
 m <- lapply(m, FUN = trim)
 versions <- m$versions[[1]]
 for (cc in seq_len(ncol(versions))) {
   versions[[cc]] <- trim(versions[[cc]])
 }
 m$versions[[1]] <- versions
-m$parent <- unique(unlist(m$versions[[1]]$parent, use.names = FALSE))
+parent <- m$versions[[1]]$parent
+parent <- unique(unlist(parent, use.names = FALSE))
 ## FIXME /HB 2021-05-05
-if (!is.null(m$parent) && !is.element(m$parent, c("CBI-testing"))) m$parent <- NULL
+parent <- setdiff(parent, c("built-in", "Sali"))
+parent <- setdiff(parent, c("CBI", "Sali"))
+if (length(parent) > 0 && !is.element(parent, c("CBI-testing"))) parent <- character(0)
+stopifnot(length(parent) <= 1L)
+m$parent <- parent
 helps <- unique(versions$help)
 help <- helps[[1]]
 vers <- NULL
@@ -166,7 +191,7 @@ if (length(m$description) > 0L) {
 
 
 %>
-  <dt><%= m$package %><% if (!is.null(m$parent)) cat(sprintf(" (part of %s)", m$parent)) %></dt>
+  <dt><%= m$package %><% if (length(m$parent) > 0) cat(sprintf(" (part of %s)", m$parent)) %></dt>
   <dd>
   <% if (!is.null(help)) { %>
     <strong><%= as_html(help) %></strong><br>
@@ -187,9 +212,9 @@ if (length(m$description) > 0L) {
     Warning: <%= as_html(m$warning) %><br>
   <% } %>
   Versions: <%= paste(vers, collapse = ", ") %><br>
-  <% if (!is.null(m$parent)) { %>
+  <% if (length(m$parent) > 0) { %>
   <% R.utils::mstr(m) %>
-    Note: <em>To use this module, call <code>module load <%= attr(x, "repository") %> <%= m$parent %></code> first.</em>
+    Note: <em>To use this module, call <code>module load <%= attr(modules, "repository") %> <%= m$parent %></code> first.</em>
   <% } %>
   </dd>
 
@@ -254,8 +279,8 @@ Below are <%= length(module_repositories) %> software repositories, each providi
 <%
   name <- names(module_repositories)[kk]
   info <- module_repositories[[name]]
-  x <- module_avail(info)
-  nbr_of_modules <- nrow(x)
+  modules <- module_avail(info)
+  nbr_of_modules <- nrow(modules)
 %>
   <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><span style="font-weight: bold;"><%= name %></span>&nbsp;(<%= nbr_of_modules %>)</a></li>
 <% } ## for (name ...) %>
@@ -269,12 +294,13 @@ Below are <%= length(module_repositories) %> software repositories, each providi
 <%
   name <- names(module_repositories)[kk]
   info <- module_repositories[[name]]
-  x <- module_avail(info)
-  attr(x, "repository") <- name
+  modules <- module_avail(info)
+  nbr_of_modules <- nrow(modules)
+  attr(modules, "repository") <- name
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-<h2>Module Software Repository: <%= name %></h2>
+<h2>Module Software Repository: <%= name %> (<%= nbr_of_modules %>)</h2>
 
 Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
 <% if (!info$contributed) { %>
@@ -287,7 +313,7 @@ Please note that this software stacks is maintained and contributed by a researc
 </div>
 <% } %>
 
-<% table_of_modules(x) %>
+<% table_of_modules(modules) %>
 </div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
 
 <% } ## for (name ...) %>

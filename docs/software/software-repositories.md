@@ -50,7 +50,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
 </ul>
@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="queues-built-in" class="tab-pane fadein active">
 
-<h2>Module Software Repository: built-in</h2>
+<h2>Module Software Repository: built-in (9)</h2>
 
 Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
@@ -66,12 +66,22 @@ Enable repository: <em>this software repository is always enabled</em><br>
 <dl>
   <dt>amber</dt>
   <dd>
-  Versions: <em>20</em><br>
+Amber11, for 64-bit<br>
+    URL: <a href="http://ambermd.org/">http://ambermd.org/</a><br>
+  Versions: 20, <em>11</em><br>
+  </dd>
+
+  <dt>CBI</dt>
+  <dd>
+    <strong>The Computational Biology and Informatics (CBI) Software Repository</strong><br>
+Repository of software shared by the Computational Biology and Informatics (<a href="http://cbi.ucsf.edu">http://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.<br>
+    URL: <a href="http://cbi.ucsf.edu/">http://cbi.ucsf.edu/</a><br>
+  Versions: <br>
   </dd>
 
   <dt>cuda</dt>
   <dd>
-  Versions: 7.5, 8.0, 9.1, 9.2, 10.1, <em>11.0</em><br>
+  Versions: 6.0.37, 7.5, 7.5.18, 8.0, 8.0.61, 9.0.176, 9.1, 9.2, 10.0.130, 10.1, <em>11.0</em><br>
   </dd>
 
   <dt>julia</dt>
@@ -81,12 +91,12 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt>matlab</dt>
   <dd>
-  Versions: 2018b, 2019a, 2019b, 2020a, <em>2020b</em><br>
+  Versions: 9.5.0.944444, 2018b, 2019a, 2019b, 2020a, 2020b, <em>2021a</em><br>
   </dd>
 
   <dt>matlab-runtime</dt>
   <dd>
-  Versions: 2020a, <em>2020b</em><br>
+  Versions: 2020a, 2020b, <em>2021a</em><br>
   </dd>
 
   <dt>mpi</dt>
@@ -103,12 +113,18 @@ OpenJDK is a free and open-source implementation of the Java Platform, Standard 
   Versions: 1.8.0.282.b08-1, <em>11.0.10.0.9-0</em><br>
   </dd>
 
+  <dt>Sali</dt>
+  <dd>
+    <strong>Sali lab software repository</strong><br>
+  Versions: <br>
+  </dd>
+
 </dl>
 </div> 
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2>Module Software Repository: CBI</h2>
+<h2>Module Software Repository: CBI (65)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -731,7 +747,7 @@ A command-line tool for common Wynton HPC queries.<br>
 
 <div id="queues-Sali" class="tab-pane fade">
 
-<h2>Module Software Repository: Sali</h2>
+<h2>Module Software Repository: Sali (118)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -910,16 +926,16 @@ An X application for displaying and manipulating images<br>
 
   <dt>imp</dt>
   <dd>
-Integrative Modeling Platform (version 2.14.0, with only usage checks turned on)<br>
+Integrative Modeling Platform (version 2.15.0, with only usage checks turned on)<br>
     URL: <a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a><br>
-  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, <em>2.14.0</em><br>
+  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, <em>2.15.0</em><br>
   </dd>
 
   <dt>imp-fast</dt>
   <dd>
-Integrative Modeling Platform (version 2.14.0, fast build)<br>
+Integrative Modeling Platform (version 2.15.0, fast build)<br>
     URL: <a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a><br>
-  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, <em>2.14.0</em><br>
+  Versions: last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, <em>2.15.0</em><br>
   </dd>
 
   <dt>itcell</dt>
@@ -1518,12 +1534,12 @@ Rigid body docking<br>
 </div> 
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
+  <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-05-05 22:52:07 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-06-21 13:04:16 from querying `module avail` and `module spider`._
 
 
 <style>
