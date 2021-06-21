@@ -42,7 +42,7 @@ To log into the cluster, assuming your user name on {{ site.cluster.name }} is `
 
 1. For first-timers outside of the UCSF network, log onto the UCSF VPN,
 
-2. open a terminal (called 'Terminal' on macOS and most Linux distributions, and 'Command Prompt' on Windows 10),
+2. open a terminal (called 'Terminal' on MacOS and most Linux distributions, and 'Command Prompt' on Windows 10),
 
 3. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press <kbd>ENTER</kbd>, and
 
