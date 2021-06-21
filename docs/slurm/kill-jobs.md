@@ -1,4 +1,4 @@
-## Slurm Kill Jobs
+## Cancel Slurm Jobs
 
 To cancel a specific job, use:
 
