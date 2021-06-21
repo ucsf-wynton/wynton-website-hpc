@@ -43,7 +43,7 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
 |**Set working directory**|-wd [directory]|```--workdir=[dir_name]```|
 |**Resource sharing**|-l exclusive|```--exclusive OR--shared```|
 |**Memory size**|-l mem_free=[memory][K,M,G]|```--mem=[mem][M,G,T]``` OR ```--mem-per-cpu=[mem][M,G,T]```|
-|**Use Lab Account**|-A [account]|	```--account=[account]```|
+|**Use Lab Account**|-A [account]|```--account=[account]```|
 |**Tasks per node**|(Fixed allocation_rule in PE)|```--tasks-per-node=[count]```|
 |**Job dependancy**|-hold_jid [job_id or job_name]|```--depend=[state:job_id]```|
 |**Job project**|-P [name]|```--wckey=[name]```|
