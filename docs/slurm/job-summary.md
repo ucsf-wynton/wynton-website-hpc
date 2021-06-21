@@ -39,12 +39,12 @@ The full details are available at the end.
 
 From this we learn that:
 
-  -  JobID: 5121.batch - the job id and job step
-  -  AveCPU: 00:00.000 - average (system + user) CPU time (mm:ss.uuu)
-  -  MaxRSS: 3186112K - maximum memory use (resident set size); --mem must be greater than this
-  -  MaxPages: 0 - maximum number of memory cache misses (page faults); the smaller this number, the more efficient is the software implemented
-  -  MaxDiskRead: 9295463 - maximum number of bytes read
-  -  MaxDiskWrite: 16167 - maximum number of bytes written
+  - JobID: 5121.batch - the job id and job step
+  - AveCPU: 00:00.000 - average (system + user) CPU time (mm:ss.uuu)
+  - MaxRSS: 3186112K - maximum memory use (resident set size); --mem must be greater than this
+  - MaxPages: 0 - maximum number of memory cache misses (page faults); the smaller this number, the more efficient is the software implemented
+  - MaxDiskRead: 9295463 - maximum number of bytes read
+  - MaxDiskWrite: 16167 - maximum number of bytes written
 
 See `man sstat` for details on these and what other fields are available.
 
