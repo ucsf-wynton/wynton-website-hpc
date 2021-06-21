@@ -1288,7 +1288,7 @@ Enables the CentOS Software Collection (SCL) <code>devtoolset-9</code> in the cu
   Versions: 4, 6, 7, 8, <em>9</em><br>
   </dd>
 
-  <dt>scl-python (part of CBI)  (part of CBI-testing)</dt>
+  <dt>scl-python (part of CBI-testing)</dt>
   <dd>
     <strong>SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]</strong><br>
 Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.<br>
@@ -1296,7 +1296,7 @@ Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the cur
     URL: <a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a><br>
     Warning: This module is DEPRECATED and should no longer be used because Python SCLs are deprecated, which in turn is because Python 3 is now available directly by CentOS.<br>
   Versions: 3.3, 3.4, <em>3.6</em><br>
-    Note: <em>To use this module, call <code>module load built-in CBICBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load built-in CBI-testing</code> first.</em>
   </dd>
 
   <dt>scwrl</dt>
@@ -1438,14 +1438,14 @@ Command line interface (web_service.py) to most lab web services<br>
   Versions: <br>
   </dd>
 
-  <dt>wynton-tools (part of CBI)  (part of CBI-testing)</dt>
+  <dt>wynton-tools (part of CBI-testing)</dt>
   <dd>
     <strong>Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
 A command-line tool for common Wynton HPC queries.<br>
     Example: <code>wynton --help</code>.<br>
     URL: <a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a><br>
   Versions: <em>latest</em><br>
-    Note: <em>To use this module, call <code>module load built-in CBICBI-testing</code> first.</em>
+    Note: <em>To use this module, call <code>module load built-in CBI-testing</code> first.</em>
   </dd>
 
   <dt>zdock</dt>
@@ -2875,7 +2875,7 @@ Rigid body docking<br>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-06-21 11:10:11 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-06-21 12:21:27 from querying `module avail` and `module spider`._
 
 
 <style>
