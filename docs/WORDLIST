@@ -27,10 +27,12 @@ BWA
 cancelled
 cancelled
 CBI
+cci
 cellranger
 CentOS
 cgl
 CGL
+chsh
 cli
 CLI
 CMD
@@ -38,6 +40,7 @@ config
 configurational
 cpu
 cronjob
+csh
 cshrc
 Ctrl
 CUDA
@@ -51,6 +54,7 @@ dev
 devtools
 Diller
 dir
+DSA
 dr
 dt
 duosecurity
@@ -62,12 +66,14 @@ endcomment
 envvars
 EOF
 EPEL
+EPYC
 failover
 FASTQ
 favicon
 Feitian
 Ferrin
 filesystem
+FileZilla
 fshare
 Gbps
 Gbytes
@@ -114,12 +120,14 @@ io
 jid
 JobID
 json
+kadmin
 Keiser
 Kerberos
 kerbtest
 keypair
 KHab
 KiB
+lbl
 LDAP
 LePain
 libgit
@@ -138,6 +146,7 @@ MaxDiskRead
 MaxDiskWrite
 MaxPages
 MaxRSS
+Mbps
 md
 mem
 mem
@@ -167,6 +176,7 @@ ntasks
 NUM
 NVidia
 NVMe
+NX
 officio
 OMP
 ondemand
@@ -176,8 +186,13 @@ OpenMPI
 Opteron
 oversubscription
 passcode
+passwd
+pbdMPI
+pbdPROF
+pdev
 pe
 Pegg
+pgpudev
 PharmChem
 PIs
 pre
@@ -218,6 +233,7 @@ Roadmap
 rollout
 rosetta
 RSA
+RTX
 runscript
 sacct
 Sali
@@ -244,6 +260,8 @@ ShareAlike
 Sharmila
 ShellCheck
 Shoichet
+sif
+SIF
 SIGKILL
 signup
 sinfo
@@ -269,7 +287,9 @@ subtask
 sudo
 Sylabs
 sysadms
+taks
 TBs
+Tcsh
 teardown
 teardown
 TiB
@@ -281,6 +301,7 @@ UCOP
 ucsf
 UCSF
 UCSF's
+udunits
 UID
 underutilizing
 unencrypted
@@ -316,3 +337,4 @@ yml
 YubiKey
 YYMMDDhhmm
 ZFS
+Zsh
