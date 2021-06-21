@@ -26,7 +26,7 @@ Submitted batch job 6258
 
 Will run 32 taks and also produce a series of 32 output and 32 error files, 1 for each array task. Since `array=0-31` was used the index will start at 0 and end at 31 (if `array=1-32` were instead used the same number of output and error files would be created, but the index would start at 1 and end at 32).
 
-In generating the filenames of output and error files in the `testarray.sh` erxample, the `%A` represents the Slurm job id and the `%a` the array task id.
+In generating the filenames of output and error files in the `testarray.sh` example, the `%A` represents the Slurm job id and the `%a` the array task id.
 
 ```sh
 test_6258_0.err

@@ -39,16 +39,16 @@ The full details are available at the end.
 
 From this we learn that:
 
-  -  JobID: 5121.batch - the job id and job step
-  -  AveCPU: 00:00.000 - average (system + user) CPU time (mm:ss.uuu)
-  -  MaxRSS: 3186112K - maximum memory use (resident set size); --mem must be greater than this
-  -  MaxPages: 0 - maximum number of memory cache misses (page faults); the smaller this number, the more efficient is the software implemented
-  -  MaxDiskRead: 9295463 - maximum number of bytes read
-  -  MaxDiskWrite: 16167 - maximum number of bytes written
+  - JobID: 5121.batch - the job id and job step
+  - AveCPU: 00:00.000 - average (system + user) CPU time (mm:ss.uuu)
+  - MaxRSS: 3186112K - maximum memory use (resident set size); --mem must be greater than this
+  - MaxPages: 0 - maximum number of memory cache misses (page faults); the smaller this number, the more efficient is the software implemented
+  - MaxDiskRead: 9295463 - maximum number of bytes read
+  - MaxDiskWrite: 16167 - maximum number of bytes written
 
 See `man sstat` for details on these and what other fields are available.
 
-_Comment_: The reason for the ‘AveCPU’ time being zero is currently unknown to us /2020-01-05
+_Comment_: The reason for the "AveCPU" time being zero is currently unknown to us /2020-01-05
 
 
 ## Job summary of an already finished job
@@ -64,7 +64,7 @@ Complementary to outputting `sstat` information at the end of a job, we can also
 ```
 For more details and additional statistics collected, see man `sacct`.
 
-With this information, we can narrow down that the total processing time was 46 seconds (`Elapsed=00:00:46`) and that the maximum amount of resident set size memory used was ~3,111 MiB (`MaxRSS=3186112K`). With the help of Elapsed and MaxRSS from previous runs, we can re-submit this job script with more relevant resource specifications in our Slurm options within the script (eg `--mem=3500M`). Remember it pays to keep the mem request as small as possible. Jobs with large memory requests will sit in the queue longer.
+With this information, we can narrow down that the total processing time was 46 seconds (`Elapsed=00:00:46`) and that the maximum amount of resident set size memory used was ~3,111 MiB (`MaxRSS=3186112K`). With the help of Elapsed and MaxRSS from previous runs, we can re-submit this job script with more relevant resource specifications in our Slurm options within the script (e.g. `--mem=3500M`). Remember it pays to keep the mem request as small as possible. Jobs with large memory requests will sit in the queue longer.
 
 ## Post-mortem job details
 

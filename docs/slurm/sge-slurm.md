@@ -2,7 +2,7 @@
 
 Sun Grid Engine (SGE) and Slurm job scheduler concepts are overall somewhat similar, but the commands for interacting with the scheduler are different. Below is a table of some common SGE commands and their Slurm equivalents to make use of as you use the new cluster and adapt your batch scripts to SLURM.
 
-This page is a partial adaption of the Schedmd ["rosetta"](https://slurm.schedmd.com/rosetta.pdf) pdf. For more details and equivalent commands from other schedulers, i.e. PBS and LSF, see that doc. 
+This page is a partial adaption of the SchedMD ["rosetta"](https://slurm.schedmd.com/rosetta.pdf) pdf. For more details and equivalent commands from other schedulers, i.e. PBS and LSF, see that doc. 
 
 In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summary.pdf) pdf from SchedMD is extremely useful. I suggest you print it that pdf out and pin it to your bulletin board to aid in learning your way around SLURM.
 
@@ -31,36 +31,36 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
 |**count of nodes**|N/A|-N [min[-max]]|
 |**CPU count**|-pe [PE] [count]|-n [count]|
 |**Wall clock limit**|-l h_rt=[seconds]|-t [min] OR -t [days-hh:mm:ss]|
-|**Standard out file**|	-o [file_name]|	-o [file_name]|
-|**Standard error file**|	-e [file_name]|	-e [file_name]|
-|**Combine STDOUT & STDERR files**| -j yes| (use -o without -e)|
+|**Standard out file**|-o [file_name]|-o [file_name]|
+|**Standard error file**|-e [file_name]|-e [file_name]|
+|**Combine STDOUT & STDERR files**|-j yes| (use -o without -e)|
 |**Copy environment**|-V| ```--export=[ALL or NONE or variables]```|
 |**Treat Job As Run In Login Shell**|DEFAULT| Include the following line in your script: ```. $HOME/.bash_profile```|
-|**Event notification**|-m abe|	```--mail-type=[events]```|
-|**Specify Email Notification Recipient**|	-M [address]|	```--mail-user=[address]```|
-|**Job name**|	-N [name]|	```--job-name=[name]```|
-|**Job name**|	-N [name]|	```--job-name=[name]```|
-|**Set working directory**|	-wd [directory]|	```--workdir=[dir_name]```|
-|**Resource sharing**|	-l exclusive|	```--exclusive OR--shared```|
-|**Memory size**|	-l mem_free=[memory][K,M,G]|	```--mem=[mem][M,G,T]``` OR ```--mem-per-cpu=[mem][M,G,T]```|
-|**Use Lab Account**|	-A [account]|	```--account=[account]```|
-|**Tasks per node**|	(Fixed allocation_rule in PE)|	```--tasks-per-node=[count]```|
-|**Job dependancy**|	-hold_jid [job_id or job_name]|	```--depend=[state:job_id]```|
-|**Job project**|	-P [name]|	```--wckey=[name]```|
-|**Job host preference**|	-q [queue]@[node] OR -q[queue]@@[hostgroup]|	```--nodelist=[nodes]``` AND/OR ```--exclude=[nodes]```|
-|**Quality of service**||	 	```--qos=[name]```|
-|**Job arrays**|	-t [array_spec]|	```--array=[array_spec]```|
-|**Generic Resources**|	-l [resource]=[value]|	```--gres=[resource_spec]```|
+|**Event notification**|-m abe|```--mail-type=[events]```|
+|**Specify Email Notification Recipient**|-M [address]|```--mail-user=[address]```|
+|**Job name**|-N [name]|```--job-name=[name]```|
+|**Job name**|-N [name]|```--job-name=[name]```|
+|**Set working directory**|-wd [directory]|```--workdir=[dir_name]```|
+|**Resource sharing**|-l exclusive|```--exclusive OR--shared```|
+|**Memory size**|-l mem_free=[memory][K,M,G]|```--mem=[mem][M,G,T]``` OR ```--mem-per-cpu=[mem][M,G,T]```|
+|**Use Lab Account**|-A [account]|```--account=[account]```|
+|**Tasks per node**|(Fixed allocation_rule in PE)|```--tasks-per-node=[count]```|
+|**Job dependancy**|-hold_jid [job_id or job_name]|```--depend=[state:job_id]```|
+|**Job project**|-P [name]|```--wckey=[name]```|
+|**Job host preference**|-q [queue]@[node] OR -q[queue]@@[hostgroup]|```--nodelist=[nodes]``` AND/OR ```--exclude=[nodes]```|
+|**Quality of service**||```--qos=[name]```|
+|**Job arrays**|-t [array_spec]|```--array=[array_spec]```|
+|**Generic Resources**|-l [resource]=[value]|```--gres=[resource_spec]```|
 |**Constraint**||```-C``` OR ```--constraint=[list of features required or desired by job]```|
-|**Begin Time**|	-a [YYMMDDhhmm]|	```--begin=YYYY-MM-DD[THH:MM[:SS]]```|
+|**Begin Time**|-a [YYMMDDhhmm]|```--begin=YYYY-MM-DD[THH:MM[:SS]]```|
 
 **SGE**
-```
+```sh
    qstat
    qstat -u username 
    qstat -f
 ```
-```
+```sh
    qsub
    qsub -N jobname
    qsub -l h_rt=24:00:00
@@ -71,12 +71,12 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
    qsub -l scratch_free=20G
 ```   
 **Slurm**
-```
+```sh
    squeue
    squeue -u username 
    squeue -al
 ```
-```
+```sh
    sbatch
    sbatch -J jobname
    sbatch -t 24:00:00
@@ -86,7 +86,7 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
    sbatch -e filename
 ```
 **Example SGE batch script for a single-core application**
-```
+```sh
 #!/bin/bash
 #
 #
@@ -106,7 +106,7 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
 <call your app here>
 ```
 **Example Slurm batch script for a single-core application**
-```
+```sh
 #!/bin/bash
 #
 #

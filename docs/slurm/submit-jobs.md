@@ -187,6 +187,7 @@ module load mpi/openmpi-x86_64
 mpirun ./hellompi
 
 ```
+
 ## Hybrid MPI (multi-threaded multi-node MPI jobs)
 
 Slurm example to run a hybrid MPI/OpenMPI job.

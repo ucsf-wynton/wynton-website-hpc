@@ -34,7 +34,7 @@ $ sbatch --mail-type=BEGIN,END,FAIL --mail-user=alice.bobson@ucsf.edu myscript.s
 
 The email message sent when a job starts (`--mail-type=BEGIN`), will look like:
 
-```
+```sh
 From: root <root@wynton.ucsf.edu>
 To: alice.bobson@ucsf.edu
 Subject: Slurm Job_id=8968283 Name=myscript.sh Began, Queued time 00:00:01
@@ -42,7 +42,7 @@ Subject: Slurm Job_id=8968283 Name=myscript.sh Began, Queued time 00:00:01
 
 and the one sent when a job ends successfully (`--mail-type=END`), will look like:
 
-```
+```sh
 From: SLURM <slurm@wynton.ucsf.edu>
 To: alice.bobson@ucsf.edu
 Subject: Slurm Job_id=8968283 Name=myscript.sh Ended, Run time 00:00:00, COMPLETED, ExitCode 0
@@ -50,7 +50,7 @@ Subject: Slurm Job_id=8968283 Name=myscript.sh Ended, Run time 00:00:00, COMPLET
 
 The message sent when a job is cancelled (`--mail-type=END`),  for instance via `scancel`, will look like:
 
-```
+```sh
 From: SLURM <slurm@wynton.ucsf.edu>
 To: alice.bobson@ucsf.edu
 Subject: Slurm Job_id=8974017 Name=myscript.sh Ended, Run time 00:00:18, CANCELLED, ExitCode 0

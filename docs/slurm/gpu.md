@@ -42,7 +42,7 @@ The GPU nodes in {{ site.cluster.name }} contain many different generations and 
 
 Specifying the type of GPU resources is not required.  If you do specify one, your job will be scheduled on a GPU node of the model specified.  As an example, if you wanted to only run on a GPU node with a Tesla K80, you would specify:
 
-```
+```sh
 --gres=gpu:telsa_k80
 ```
 Note: that doesn't allow for "run on anything this generation or above" type jobs, rather it will only run the job on a GPU node with the exact model specified.
