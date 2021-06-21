@@ -45,7 +45,7 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
 |**Memory size**|-l mem_free=[memory][K,M,G]|```--mem=[mem][M,G,T]``` OR ```--mem-per-cpu=[mem][M,G,T]```|
 |**Use Lab Account**|-A [account]|```--account=[account]```|
 |**Tasks per node**|(Fixed allocation_rule in PE)|```--tasks-per-node=[count]```|
-|**Job dependancy**|-hold_jid [job_id or job_name]|```--depend=[state:job_id]```|
+|**Job dependency**|-hold_jid [job_id or job_name]|```--depend=[state:job_id]```|
 |**Job project**|-P [name]|```--wckey=[name]```|
 |**Job host preference**|-q [queue]@[node] OR -q[queue]@@[hostgroup]|```--nodelist=[nodes]``` AND/OR ```--exclude=[nodes]```|
 |**Quality of service**||```--qos=[name]```|
