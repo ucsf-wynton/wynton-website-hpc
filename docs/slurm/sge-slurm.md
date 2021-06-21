@@ -31,26 +31,26 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
 |**count of nodes**|N/A|-N [min[-max]]|
 |**CPU count**|-pe [PE] [count]|-n [count]|
 |**Wall clock limit**|-l h_rt=[seconds]|-t [min] OR -t [days-hh:mm:ss]|
-|**Standard out file**|	-o [file_name]|-o [file_name]|
-|**Standard error file**|	-e [file_name]|-e [file_name]|
-|**Combine STDOUT & STDERR files**| -j yes| (use -o without -e)|
+|**Standard out file**|-o [file_name]|-o [file_name]|
+|**Standard error file**|-e [file_name]|-e [file_name]|
+|**Combine STDOUT & STDERR files**|-j yes| (use -o without -e)|
 |**Copy environment**|-V| ```--export=[ALL or NONE or variables]```|
 |**Treat Job As Run In Login Shell**|DEFAULT| Include the following line in your script: ```. $HOME/.bash_profile```|
 |**Event notification**|-m abe|```--mail-type=[events]```|
 |**Specify Email Notification Recipient**|-M [address]|```--mail-user=[address]```|
-|**Job name**|	-N [name]|```--job-name=[name]```|
-|**Job name**|	-N [name]|```--job-name=[name]```|
+|**Job name**|-N [name]|```--job-name=[name]```|
+|**Job name**|-N [name]|```--job-name=[name]```|
 |**Set working directory**|-wd [directory]|```--workdir=[dir_name]```|
 |**Resource sharing**|-l exclusive|```--exclusive OR--shared```|
-|**Memory size**|	-l mem_free=[memory][K,M,G]|```--mem=[mem][M,G,T]``` OR ```--mem-per-cpu=[mem][M,G,T]```|
-|**Use Lab Account**|	-A [account]|	```--account=[account]```|
-|**Tasks per node**|	(Fixed allocation_rule in PE)|```--tasks-per-node=[count]```|
-|**Job dependancy**|	-hold_jid [job_id or job_name]|```--depend=[state:job_id]```|
-|**Job project**|	-P [name]|```--wckey=[name]```|
+|**Memory size**|-l mem_free=[memory][K,M,G]|```--mem=[mem][M,G,T]``` OR ```--mem-per-cpu=[mem][M,G,T]```|
+|**Use Lab Account**|-A [account]|	```--account=[account]```|
+|**Tasks per node**|(Fixed allocation_rule in PE)|```--tasks-per-node=[count]```|
+|**Job dependancy**|-hold_jid [job_id or job_name]|```--depend=[state:job_id]```|
+|**Job project**|-P [name]|```--wckey=[name]```|
 |**Job host preference**|-q [queue]@[node] OR -q[queue]@@[hostgroup]|```--nodelist=[nodes]``` AND/OR ```--exclude=[nodes]```|
 |**Quality of service**||```--qos=[name]```|
-|**Job arrays**|	-t [array_spec]|```--array=[array_spec]```|
-|**Generic Resources**|	-l [resource]=[value]|```--gres=[resource_spec]```|
+|**Job arrays**|-t [array_spec]|```--array=[array_spec]```|
+|**Generic Resources**|-l [resource]=[value]|```--gres=[resource_spec]```|
 |**Constraint**||```-C``` OR ```--constraint=[list of features required or desired by job]```|
 |**Begin Time**|-a [YYMMDDhhmm]|```--begin=YYYY-MM-DD[THH:MM[:SS]]```|
 
