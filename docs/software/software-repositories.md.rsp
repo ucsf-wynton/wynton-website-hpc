@@ -54,6 +54,25 @@ module_avail <- local({
     x <- x[keep,]
     message("done")
 
+
+    message("Prune ...")
+    versions <- x$versions
+    versions <- lapply(versions, FUN = function(version) {
+      path <- version$path
+      ## WORKAROUND
+      keep <- lapply(module_path, FUN = function(mpath) grepl(mpath, path, fixed = TRUE))
+      keep <- Reduce(`|`, keep)
+      if (!all(keep)) {
+        version <- version[keep, ]
+        path <- path[keep]
+	version$path <- path
+      }
+      version
+    })
+    ns <- lapply(versions, FUN = nrow)
+    x <- x[ns > 0, ]
+    message("done")
+
     .cache[[key]] <<- x
 
     x
@@ -67,7 +86,7 @@ module_repositories <- list(
     group       = "{{ site.cluster.name }}",
     url         = "{{ '/about/contact.html' | relative_url }}",
     contributed = FALSE,
-    module_path = c("/wynton/home/opt/modules", "/etc/modulefiles")
+    module_path = c("/wynton/home/opt/modules", "/etc/modulefiles")[2]
   ),
 
   CBI = list(
@@ -88,6 +107,7 @@ module_repositories <- list(
     module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
   )
 )
+
 
 %>
 <% if (style) { %>
