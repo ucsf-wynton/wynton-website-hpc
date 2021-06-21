@@ -2,7 +2,7 @@
 
 Sun Grid Engine (SGE) and Slurm job scheduler concepts are overall somewhat similar, but the commands for interacting with the scheduler are different. Below is a table of some common SGE commands and their Slurm equivalents to make use of as you use the new cluster and adapt your batch scripts to SLURM.
 
-This page is a partial adaption of the Schedmd ["rosetta"](https://slurm.schedmd.com/rosetta.pdf) pdf. For more details and equivalent commands from other schedulers, i.e. PBS and LSF, see that doc. 
+This page is a partial adaption of the SchedMD ["rosetta"](https://slurm.schedmd.com/rosetta.pdf) pdf. For more details and equivalent commands from other schedulers, i.e. PBS and LSF, see that doc. 
 
 In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summary.pdf) pdf from SchedMD is extremely useful. I suggest you print it that pdf out and pin it to your bulletin board to aid in learning your way around SLURM.
 
