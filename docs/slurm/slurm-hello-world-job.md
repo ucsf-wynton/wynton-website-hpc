@@ -21,7 +21,7 @@ The {{ site.cluster.name }} cluster uses SLURM as its scheduler.  Slurm provides
 
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex">
-Further information with detailed examples on job submissions can be found on separate pages under the 'Scheduler' menu.
+Further information with detailed examples on job submissions can be found on separate pages under the 'Slurm' menu.
 </div>
 
 
