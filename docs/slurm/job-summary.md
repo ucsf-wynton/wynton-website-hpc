@@ -48,7 +48,7 @@ From this we learn that:
 
 See `man sstat` for details on these and what other fields are available.
 
-_Comment_: The reason for the ‘AveCPU’ time being zero is currently unknown to us /2020-01-05
+_Comment_: The reason for the "AveCPU" time being zero is currently unknown to us /2020-01-05
 
 
 ## Job summary of an already finished job
