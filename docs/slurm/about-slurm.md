@@ -1,4 +1,8 @@
-### Slurm
+### Slurm Pilot
+
+Slurm is currently being piloted on a small subset of Wynton nodes. If you are interested in being part of the pilot, contact the _{{ site.cluster.nickname }}_ support staff at [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}).
+
+Following the successful test and validation for our environment it will be made available to the wider campus community.
 
 Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters currently in testing at the UCSF Wynton organization. We will be gradually cutting groups over to Slurm as resources are allocated to the new cluster.
 
