@@ -64,7 +64,7 @@ Complementary to outputting `sstat` information at the end of a job, we can also
 ```
 For more details and additional statistics collected, see man `sacct`.
 
-With this information, we can narrow down that the total processing time was 46 seconds (`Elapsed=00:00:46`) and that the maximum amount of resident set size memory used was ~3,111 MiB (`MaxRSS=3186112K`). With the help of Elapsed and MaxRSS from previous runs, we can re-submit this job script with more relevant resource specifications in our Slurm options within the script (eg `--mem=3500M`). Remember it pays to keep the mem request as small as possible. Jobs with large memory requests will sit in the queue longer.
+With this information, we can narrow down that the total processing time was 46 seconds (`Elapsed=00:00:46`) and that the maximum amount of resident set size memory used was ~3,111 MiB (`MaxRSS=3186112K`). With the help of Elapsed and MaxRSS from previous runs, we can re-submit this job script with more relevant resource specifications in our Slurm options within the script (e.g. `--mem=3500M`). Remember it pays to keep the mem request as small as possible. Jobs with large memory requests will sit in the queue longer.
 
 ## Post-mortem job details
 
