@@ -55,12 +55,12 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
 |**Begin Time**|	-a [YYMMDDhhmm]|	```--begin=YYYY-MM-DD[THH:MM[:SS]]```|
 
 **SGE**
-```
+```sh
    qstat
    qstat -u username 
    qstat -f
 ```
-```
+```sh
    qsub
    qsub -N jobname
    qsub -l h_rt=24:00:00
@@ -71,12 +71,12 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
    qsub -l scratch_free=20G
 ```   
 **Slurm**
-```
+```sh
    squeue
    squeue -u username 
    squeue -al
 ```
-```
+```sh
    sbatch
    sbatch -J jobname
    sbatch -t 24:00:00
@@ -86,7 +86,7 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
    sbatch -e filename
 ```
 **Example SGE batch script for a single-core application**
-```
+```sh
 #!/bin/bash
 #
 #
@@ -106,7 +106,7 @@ In addition, the ["SLURM Command Reference"](https://slurm.schedmd.com/pdfs/summ
 <call your app here>
 ```
 **Example Slurm batch script for a single-core application**
-```
+```sh
 #!/bin/bash
 #
 #
