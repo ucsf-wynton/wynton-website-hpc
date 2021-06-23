@@ -8,7 +8,6 @@ Andrej
 au
 AveCPU
 backfill
-backfill
 Baranzini
 barcode
 bashrc
@@ -24,7 +23,6 @@ bioinformatics
 bitbucket
 borts
 BWA
-cancelled
 cancelled
 CBI
 cci
@@ -149,13 +147,11 @@ MaxRSS
 Mbps
 md
 mem
-mem
 MiB
 misconfiguration
 mortem
 MOTD
 msg
-multifactor
 multifactor
 myaccess
 MyAccess
@@ -168,7 +164,6 @@ NetApp
 NFS
 nlme
 nodelist
-NODELIST
 NODELIST
 nonresponsive
 NSF's
@@ -223,7 +218,6 @@ repo
 repos
 reproducibility
 REQUEUE
-REQUEUE
 resynced
 resynchronization
 RMarkdown
@@ -267,7 +261,6 @@ signup
 sinfo
 slurm
 Slurm
-Slurm
 SLURM
 slurm_load_jobs
 SMP
@@ -290,7 +283,6 @@ sysadms
 taks
 TBs
 Tcsh
-teardown
 teardown
 TiB
 tmp
@@ -318,11 +310,9 @@ walltime
 wd
 WORDLIST
 workdir
-workdir
 WORKDIR
 www
 wynlog
-wynton
 Wynton
 wyntonquery
 Wynton's
