@@ -21,7 +21,7 @@ If you want to transfer files from or to your {{ site.cluster.nickname }} accoun
 
 If you want to transfer files from or to your local machine, you need to set up a personal endpoint on that machine.  Below is an outline on how to do this.  For full details, see the [Globus Docs How To](https://docs.globus.org/how-to/).
 
-1. [local] Make sure [Globus Connect Personal] is installed on your local machine (available for macOS, Linux, and MS Windows)
+1. [local] Make sure [Globus Connect Personal] is installed on your local machine (available for MacOS, Linux, and MS Windows)
 
 2. [local] (optional) The default is that Globus will have access to all of the content under your home directory, e.g. when connected to Globus you will be able to browse it from the Global website online.  To limit this, create a folder to be used solely for Globus transfers, e.g. `~/globus/`.  Launch the 'Globus Connect Personal' software, go to 'Preferences' and change the 'Access Path Configuration' to `~/globus`. Then, click 'Save'.
 
