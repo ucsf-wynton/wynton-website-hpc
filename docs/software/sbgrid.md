@@ -61,7 +61,7 @@ In order to use SBGrid software, the SBGrid environment must be enabled.  To ena
             For additional information visit https://sbgrid.org/wiki
 ********************************************************************************
                               SBGrid Announcements
- - There are known issues with MacOS 11.0 “Big Sur” and some SBGrid 
+ - There are known issues with macOS 11.0 “Big Sur” and some SBGrid 
    applications. We recommend not upgrading Apple computers to 11.0 
    until these issues can be addressed.
      see https://sbgrid.org/wiki/big_sur for more info. 

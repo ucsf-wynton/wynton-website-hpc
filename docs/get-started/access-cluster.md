@@ -26,7 +26,7 @@ The instructions below requires:
 
 * A {{ site.cluster.name }} account with valid authentication credentials
 
-Users on Linux and MacOS have an SSH client built-in, which is available from the terminal as `ssh`.  Users on Microsoft Windows 10 or newer also have a built-in SSH client, which is available from the command line as `ssh`.
+Users on Linux and macOS have an SSH client built-in, which is available from the terminal as `ssh`.  Users on Microsoft Windows 10 or newer also have a built-in SSH client, which is available from the command line as `ssh`.
 
 _Microsoft Windows 8 or older:_ If you are on Windows 8 or older, you do _not_ have a built-in SSH client.  If so, we recommend to install the <a href="http://www.putty.org/">PuTTY</a> SSH client, which has slightly different command-line interface but it has full SSH support.  Please consult the PuTTY documentation and user forums for further instructions.
 Another alternative, which some might find easier, is to connect to the cluster using the <a href="{{ 'howto/gui-x11fwd.html' | relative_url }}">X2Go</a> software.
@@ -42,7 +42,7 @@ To log into the cluster, assuming your user name on {{ site.cluster.name }} is `
 
 1. For first-timers outside of the UCSF network, log onto the UCSF VPN,
 
-2. open a terminal (called 'Terminal' on MacOS and most Linux distributions, and 'Command Prompt' on Windows 10),
+2. open a terminal (called 'Terminal' on macOS and most Linux distributions, and 'Command Prompt' on Windows 10),
 
 3. at the terminal prompt, type `ssh alice@{{ site.login.hostname }}` and press <kbd>ENTER</kbd>, and
 
