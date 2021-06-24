@@ -1,3 +1,17 @@
+### June 24, 2021
+
+#### <span style="color: orange;">Cluster not accessible (due to BeeGFS issues)</span>
+
+**Resolved**: Wynton and BeeGFS is back online. The problem was due to failed disks. Unfortunately, about 10% of the space in `/wynton/scratch/` went bad, meaning some files are missing or corrupted.  It is neither possible to recover them nor identify which files or folders are affected.  In other words, expect some oddness if you had data under `/wynton/scratch/`.  There will also be some hiccups over the next several days as we get everything in ZFS and BeeGFS back into an as stable state as possible.
+<br><span class="timestamp">June 24, 14:55 PDT</span>
+
+**Update**: We're working hard on getting BeeGFS back up. We were not able to recover the bad storage target, so it looks like there will be some data loss on `/wynton/scratch/`. More updates soon.
+<br><span class="timestamp">June 24, 13:45 PDT</span>
+
+**Notification**: The Wynton environment cannot be accessed at the moment.  This is because the global file system, BeeGFS, is experiencing issues since early this morning. The problem is being investigated.
+<br><span class="timestamp">June 24, 07:00 PDT</span>
+
+
 ### May 25-June 7, 2021
 
 #### <span style="color: orange;">Full downtime (major maintenance)</span>

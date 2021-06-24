@@ -67,6 +67,8 @@ broadcast-off:
 broadcast-on:
 	cd assets/css/ && ln -fs broadcast-on.css broadcast.css
 
+status-ok: broadcast-off
+	sed -i -E 's/^([[:space:]]*status:)[[:space:]]+(.*)/\1 ok/' _config.yml
 
 _data/users.yml: FORCE
 	echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE | grep -c ^uid:)" > $@
