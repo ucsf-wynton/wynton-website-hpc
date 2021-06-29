@@ -164,10 +164,10 @@ It is currently _not_ possible to request _interactive_ jobs (aka `srun`).  Inst
 
 ## MPI: Parallel processing 
 
-{{ site.cluster.name }} provides an MPI parallel environment via OpenMPI.  For instance, to request an MPI job with in total 64 slots (`-n64`), submit it as:
+{{ site.cluster.name }} provides an MPI parallel environment via OpenMPI.  For instance, to request an MPI job with in total 64 slots (`--ntasks=64`), submit it as:
 
 ```sh
-srun -n64 hellompi.sh
+srun --ntasks=64 hellompi.sh
 ```
 Here is an example script:
 
