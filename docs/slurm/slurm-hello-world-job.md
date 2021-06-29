@@ -17,7 +17,7 @@ The most common way of running compute tasks on the {{ site.cluster.name }} clus
 
 4. looking at the results, e.g. output data files and text logs.
 
-The {{ site.cluster.name }} cluster uses SLURM as its scheduler.  Slurm provides command `sbatch` to submit a script ("job") and command `squeue` to check the status of a job.
+The {{ site.cluster.name }} cluster uses [Slurm] as its scheduler.  [Slurm] provides command `sbatch` to submit a script ("job") and command `squeue` to check the status of a job.
 
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex">
@@ -84,7 +84,7 @@ There is of course nothing preventing us from submitting the same script multipl
 
 [compute nodes]: {{ '/about/specs.html' | relative_url }}
 
-[Slurm](https://slurm.schedmd.com/)
+[Slurm]: {{(https://slurm.schedmd.com/)}}
 
 [Submit Jobs]: {{ '/slurm/submit-jobs.html' | relative_url }}
 
