@@ -119,15 +119,16 @@ module load cellranger/3.1.0
 
 The scheduler will allocate a single core for your job.  To allow the job to use multiple slots, request the number of slots needed when you submit the job.  For instance, to request four slots (`NSLOTS=4`) _each with 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
 ```sh
-sbatch --ntasks=4 --mem-per-cpu=2G script.sh
+sbatch --nodes=1 --ntasks=4 --mem-per-cpu=2G script.sh
 ```
 The scheduler will make sure your job is launched on a node with at least four slots available.
- 
-Note, when writing your script, use [SGE environment variable] `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
-```sh
-bwa aln -t $NSLOTS ...
-```
 
+``` Does This Work with Slurm?
+Note, when writing your script, use [Slurm environment variable] `SLURM_CPUS_ON_NODE`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
+```sh
+bwa aln -t $SLURM_CPUS_ON_NODE ...
+```
+```
 _Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric multiprocessing'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) and indicates that the job will run on a single machine using one or more cores.
 
 
