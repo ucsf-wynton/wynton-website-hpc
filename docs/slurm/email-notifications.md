@@ -28,14 +28,14 @@ $ sbatch --mail-type=BEGIN,END,FAIL --mail-user=alice.bobson@ucsf.edu myscript.s
 
 ### Email notifications for array jobs
 
-**Do not request email notifications type ARRAY_TASKS!** By default, you will receive mail about the begin and end of a job array. If you specify --mail-type=ARRAY_TASKS, there will be multiple email messages sent for _every single task_ of the job array.
+**Do not request email notifications type ARRAY_TASKS!** By default, you will receive mail about the begin and end of a job array. If you specify `--mail-type=ARRAY_TASKS`, there will be multiple email messages sent for _every single task_ of the job array.
 
 ### Example messages
 
 The email message sent when a job starts (`--mail-type=BEGIN`), will look like:
 
 ```sh
-From: root <root@wynton.ucsf.edu>
+From: SLURM <slurm@wynton.ucsf.edu>
 To: alice.bobson@ucsf.edu
 Subject: Slurm Job_id=8968283 Name=myscript.sh Began, Queued time 00:00:01
 ```
