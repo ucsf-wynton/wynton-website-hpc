@@ -35,7 +35,7 @@ sbatch --mem-per-cpu=10G script.sh
 
 The scheduler will launch this job on the first available compute node with that amount of memory available.
 
-_TIPS_: Add `squeue $JOB_ID` to the end of your script to find out how much memory and CPU time your job needed.  See [Job Summary] page for more details.
+_TIPS_: Add `squeue $SLURM_JOB_ID` to the end of your script to find out how much memory and CPU time your job needed.  See [Job Summary] page for more details.
 
 <div class="alert alert-warning" role="alert">
 A job that consumes more memory than requested may be terminated by the administrators and in the future possibly automatically by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
