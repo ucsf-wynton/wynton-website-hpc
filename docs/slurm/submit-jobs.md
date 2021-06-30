@@ -8,7 +8,7 @@ sbatch --ntasks=4 --mem-per-cpu=2G --tmp=50G --time=00:20:00 script.sh
 
 This job submission will submit `script.sh` to the job scheduler which will eventually launch the job on one the compute nodes that can meet the resource needs of the job.  Exactly, what these options are is explained below sections, but in summary, the above will result in:
 
-* `--workdir=<directory>`: the working directory will be set to the same directory as from where the submission was done unless specified otherwise with --workdir
+* `--workdir=<directory>`: the working directory will be set to the same directory as from where the submission was done unless specified otherwise with `--workdir`
 * `-n 4` / `--ntasks=4`: the job will be allotted four slots ("cores") on a single machine
 * `--mem-per-cpu=2G`: the job will be allotted 2 GiB of RAM per slot, i.e. 8 GiB in total.
 * `--tmp=50G`: the job will be launched on a compute node with at least 50 GiB of local `/scratch` available
@@ -59,7 +59,7 @@ sbatch --mem-per-cpu=2G --time=00:03:00 script.sh
 ```
 
 <div class="alert alert-warning" role="alert">
-If not specified, the default run time is 10 minutes.  A job that runs longer than the requested run time will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
+If not specified, the default run time is 30 minutes.  A job that runs longer than the requested run time will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
 </div>
 
 
@@ -219,11 +219,11 @@ mpirun ./hellohybrid
 
 The options are similar to running an MPI job, with some differences:
 
-"--ntasks=4" specifies the number of MPI processes (“tasks”).
+`--ntasks=4` specifies the number of MPI processes (“tasks”).
 
-"--cpus-per-task=8" allocates 8 CPUs for each task.
+`--cpus-per-task=8` allocates 8 CPUs for each task.
 
-"export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK" sets the number of OpenMP threads to the number of requested cores (CPUs) for each task.
+`export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK` sets the number of OpenMP threads to the number of requested cores (CPUs) for each task.
 
 
 _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org/wiki/Message_Passing_Interface).
