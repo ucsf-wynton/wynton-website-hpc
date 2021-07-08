@@ -15,8 +15,8 @@ To request multiple features/constraints, you must add the following line to you
 
 |**Operator Function**|**Operator Symbol**|**Example**|
 |:---|:---|:---|
-|**AND**|& (ampersand)|#SBATCH --constraint=“cpu_xeon&sse4”|
-|**OR**|\| (pipe)|#SBATCH --constraint=“xeon_E52630 \| xeon_E52650 \|xeon_E52670”|
+|**AND**|& (ampersand)|`#SBATCH --constraint=“cpu_xeon&sse4”`|
+|**OR**|\| (pipe)|`#SBATCH --constraint=“xeon_E52630 \`| xeon_E52650 \|xeon_E52670”|
 
 Example:
 
@@ -33,17 +33,17 @@ mpirun /opt/apps/my_app/my_binary
 ```
 
   - Job requests 2 hours of runtime (time=02:00:00)
-  - Job requests 32GB of memory (4GB per CPU)
+  - Job requests 32 GiB of memory (4 GiB per CPU)
   - Job requests only nodes with 10g network connections
 
 |**Feature**|**Description**|
 |:---|:---|
 |cpu_xeon|Select nodes with Intel Xeon CPUs only|
 |cpu_amd|Select nodes with AMD CPUs only|
-|10g|Select nodes with 10g Network connections only|
-|40g|Select nodes with 40g Network connections only|
+|10g|Select nodes with 10 Gbps network connections only|
+|40g|Select nodes with 40 Gbps Network connections only|
 |sse4|Select only nodes with sse4 (and above) CPU instruction set|
-|sse41|Select only nodes with sse41 (and above) CPU instruction set|
-|sse42|Select only nodes with sse42 (and above) CPU instruction set|
-|xeon_E52640|Select only nodes with Intel Xeon E_52640 CPUs|
+|sse41|Select only nodes with sse4-1 (and above) CPU instruction set|
+|sse42|Select only nodes with sse4-2 (and above) CPU instruction set|
+|xeon_E52640|Select only nodes with Intel Xeon E-52640 CPUs|
 |xeon_6240|Select only nodes with Intel Xeon Gold 6240 CPUs|
