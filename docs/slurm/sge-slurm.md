@@ -12,7 +12,7 @@ In addition, the ["Slurm Command Reference"](https://slurm.schedmd.com/pdfs/summ
 |**Job Deletion**|`qdel [job_id]`|`scancel [SLURM_JOB_ID]`|
 |**Job Status by job**|`qstat -u \* [-j job_id]`|`squeue [-j job_id]`|
 |**Job Status by User**|`qstat [-u user_name]`|`squeue -u [user_name]`|
-|**Job Jold**|`qhold [job_id]`|`scontrol hold [job_id]`|
+|**Job Hold**|`qhold [job_id]`|`scontrol hold [job_id]`|
 |**Job Release**|`qrls [job_id]`|`scontrol release [job_id]`|
 |**Queue List**|`qconf -sql`|`squeue`|
 |**List Nodes**|`qhost`|`sinfo -N` OR `scontrol show nodes`|
