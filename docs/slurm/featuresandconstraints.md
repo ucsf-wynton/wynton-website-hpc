@@ -15,8 +15,8 @@ To request multiple features/constraints, you must add the following line to you
 
 |**Operator Function**|**Operator Symbol**|**Example**|
 |:---|:---|:---|
-|**AND**|& (ampersand)|#SBATCH --constraint=“cpu_xeon&sse4”|
-|**OR**|\| (pipe)|#SBATCH --constraint=“xeon_E52630 \| xeon_E52650 \|xeon_E52670”|
+|**AND**|& (ampersand)|#SBATCH --constraint=“cpu_xeon & sse4”|
+|**OR**|\| (pipe)|#SBATCH --constraint=“xeon_E52630\|xeon_E52650\|xeon_E52670”|
 
 Example:
 
