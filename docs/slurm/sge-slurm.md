@@ -94,7 +94,7 @@ In addition, the ["Slurm Command Reference"](https://slurm.schedmd.com/pdfs/summ
 #$ -j y
 #$ -o test.output
 #$ -cwd
-#$ -M $USER@ucsf.edu
+#$ -M alice.bobson@ucsf.edu
 #$ -m bea
 # Request 5 hours run time
 #$ -l h_rt=05:00:00
