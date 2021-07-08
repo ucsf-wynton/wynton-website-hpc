@@ -113,12 +113,11 @@ In addition, the ["Slurm Command Reference"](https://slurm.schedmd.com/pdfs/summ
 #SBATCH -J test
 #SBATCH -o test."%j".out
 #SBATCH -e test."%j".err
-# Unecessary, start in "current working directory" is default in slurm. To specify another dir, use #SBATCH -D $WORKING_DIRECTORY or --chdir=[$WORKING_DIRECTORY]
-#SBATCH --mail-user $USER@ucsf.edu
-#SBATCH --mail-type=ALL
+#SBATCH --mail-user=alice.bobson@ucsf.edu
+#SBATCH --mail-type=BEGIN,END,FAIL
 # Request 5 hours run time
 #SBATCH -t 05:00:00
-# #SBATCH-A $LAB_ACCOUNT or --account=$LAB_ACCOUNT only necessary if you have more than one Lab association, otherwise default Lab Account association used
+## SBATCH -A $LAB_ACCOUNT or --account=$LAB_ACCOUNT #(only necessary if you have more than one Lab association, otherwise default Lab Account association used)
 #SBATCH --mem=4000
 
  
