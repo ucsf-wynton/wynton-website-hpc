@@ -118,7 +118,7 @@ In addition, the ["Slurm Command Reference"](https://slurm.schedmd.com/pdfs/summ
 # Request 5 hours run time
 #SBATCH -t 05:00:00
 ## SBATCH -A $LAB_ACCOUNT or --account=$LAB_ACCOUNT #(only necessary if you have more than one Lab association, otherwise default Lab Account association used)
-#SBATCH --mem=4000
+#SBATCH --mem=4GB
 
  
 <load modules, call your app here>
