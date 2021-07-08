@@ -34,7 +34,7 @@ In addition, the ["Slurm Command Reference"](https://slurm.schedmd.com/pdfs/summ
 |**Standard out file**|`-o [file_name]`|`-o [file_name]`|
 |**Standard error file**|`-e [file_name]`|`-e [file_name]`|
 |**Combine STDOUT & STDERR files**|`-j yes`|`(use -o without -e)`|
-|**Copy environment**|-V| `--export=[ALL or NONE or variables]`|
+|**Copy environment**|`-V`| `--export=[ALL or NONE or variables]`|
 |**Treat Job As Run In Login Shell**|DEFAULT| Include the following line in your script: `. $HOME/.bash_profile`|
 |**Event notification**|`-m abe`|`--mail-type=[events]`|
 |**Specify Email Notification Recipient**|`-M [address]`|`--mail-user=[address]`|
