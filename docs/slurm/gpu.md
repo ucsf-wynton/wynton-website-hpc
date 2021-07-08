@@ -24,13 +24,13 @@ sbatch --gres=gpu:1 ...
 ```
 Jobs requiring more than one GPU must be submitted like this up to the number of GPUs in an individual server.
 ```sh
-sbatch --gres=gpu:N -n1 -N1
+sbatch --gres=gpu:N --ntasks=1 --nodes=1
 ```
 where N is the number of GPUs the job will use.
 
 If your application requires MPI, you should still use the proper parallel environment regardless of how many GPUs you'll be using:
 ```sh
-sbatch --gres=gpu:N -nM -N1
+sbatch --gres=gpu:N -ntasks=M -nodes=1
 mpirun -np M --oversubscribe ...
 ```
 where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).
