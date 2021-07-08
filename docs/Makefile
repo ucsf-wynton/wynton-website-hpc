@@ -72,7 +72,7 @@ status-ok: broadcast-off
 
 _data/users.yml: FORCE
 	echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE | grep -c ^uid:)" > $@
-	echo "nbr_of_projects: $$(qconf -sprjl | wc -l)" >> $@
+	echo "nbr_of_projects: $$(qconf -sprjl | wc -l | grep -vE '^[[:space:]]*0[[:space:]]*$$')" >> $@
 
 _data: _data/users.yml
 
