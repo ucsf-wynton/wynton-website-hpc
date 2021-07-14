@@ -37,7 +37,9 @@ CMD
 config
 configurational
 cpu
+cron
 cronjob
+crontab
 csh
 cshrc
 Ctrl
