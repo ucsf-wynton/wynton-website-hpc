@@ -10,6 +10,16 @@
 This repository contains the [Wynton HPC user website](https://wynton.ucsf.edu/hpc/).  Updates to the 'master' branch will be published and go live within one minute.
 
 
+## Dynamically generated data
+
+The website provides dynamic summaries of data that are produced on regular basis by crontab jobs.  Below are some of the data files used:
+
+* Data: [docs/assets/data/compute_shares.tsv](https://github.com/UCSF-HPC/wynton/blob/master/docs/assets/data/compute_shares.tsv)
+  - used on: https://wynton.ucsf.edu/hpc/about/shares.html
+  - generate manual: `(cd docs; make assets)`
+  - generate via cronjob: [cron-scripts/wynton-shares.sh](https://github.com/UCSF-HPC/wynton/blob/master/cron-scripts/wynton-shares.sh)
+
+
 ## Prototype the website locally
 
 To get a local copy of this repos, do:
