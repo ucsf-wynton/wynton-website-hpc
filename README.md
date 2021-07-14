@@ -14,9 +14,14 @@ This repository contains the [Wynton HPC user website](https://wynton.ucsf.edu/h
 
 The website provides dynamic summaries of data that are produced on regular basis by crontab jobs.  Below are some of the data files used:
 
+* Data: [docs/_data/users.yml](https://github.com/UCSF-HPC/wynton/blob/master/docs/_data/users.yml)
+  - used by: Jekyll to generate https://wynton.ucsf.edu/hpc/about/specs.html
+  - generate manual: `(cd docs; make _data/users.yml)`
+  - generate via cronjob: [cron-scripts/wynton-users.sh](https://github.com/UCSF-HPC/wynton/blob/master/cron-scripts/wynton-users.sh)
+
 * Data: [docs/assets/data/compute_shares.tsv](https://github.com/UCSF-HPC/wynton/blob/master/docs/assets/data/compute_shares.tsv)
-  - used on: https://wynton.ucsf.edu/hpc/about/shares.html
-  - generate manual: `(cd docs; make assets)`
+  - used by: JavaScript to generated table on https://wynton.ucsf.edu/hpc/about/shares.html
+  - generate manual: `(cd docs; make assets/data/compute_shares.tsv)`
   - generate via cronjob: [cron-scripts/wynton-shares.sh](https://github.com/UCSF-HPC/wynton/blob/master/cron-scripts/wynton-shares.sh)
 
 
