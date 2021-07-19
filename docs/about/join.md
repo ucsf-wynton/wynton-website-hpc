@@ -15,7 +15,7 @@ The {{ site.cluster.name }} environment is available for _free_ to all UCSF rese
 
 ## How Long Will It Take For My Wynton Account Request To Be Processed?
 
-The {{ site.cluster.name }} staff will make every effort to process your account request and create the account within 5 business days of confirmation of your contact information.
+The {{ site.cluster.name }} staff will make every effort to process your account request and create the account within 5 business days of confirmation of your affiliation and contact information.
 
 ## Request access
 
