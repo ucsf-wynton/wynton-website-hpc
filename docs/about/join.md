@@ -13,6 +13,10 @@ The end goal is that the all UCSF researchers should have access to the cluster 
 
 The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
 
+## How Long Will It Take For My Wynton Account Request To Be Processed
+
+The {{ site.cluster.name }} staff will make every effort to process your account request within 5 business days of confirmation of your contact information.
+
 ## Request access
 
 To apply for an account on the {{ site.cluster.name }} cluster, please fill out the following form:
