@@ -71,8 +71,13 @@ status-ok: broadcast-off
 	sed -i -E 's/^([[:space:]]*status:)[[:space:]]+(.*)/\1 ok/' _config.yml
 
 _data/users.yml: FORCE
-	echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE | grep -c ^uid:)" > $@
-	echo "nbr_of_projects: $$(qconf -sprjl | wc -l | grep -vE '^[[:space:]]*0*[[:space:]]*$$')" >> $@
+	echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE | grep -c ^uid:)" > $@.tmp
+	echo "nbr_of_projects: $$(qconf -sprjl | wc -l | grep -vE '^[[:space:]]*0*[[:space:]]*$$')" >> $@.tmp
+	if ! grep -q -E "nbr_of_projects:[[:space:]]*$$" $@.tmp; then \
+	  mv $@.tmp $@; \
+	else \
+	  >&2 echo "WARNING: Empty 'nbr_of_project'. Ignoring. Keeping old."; \
+	fi
 
 _data: _data/users.yml
 
