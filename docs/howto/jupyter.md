@@ -1,18 +1,20 @@
-# Jupyter Notebooks
+# Jupyter Notebook
 
-## Nodes to run Jupyter notebooks on
+## Where to to run Jupyter Notebook
 
-Jupyter notebooks should only be run on the Wynton development nodes. 
+[Jupyter Notebook] should only be run on the {{ site.cluster.name }} development nodes.
 
-## Connect to Jupyter notebook - X2Go
+## Connect to Jupyter Notebook
 
-The easiest method to run a Jupyter notebook on one of the dev nodes and interact with it using a remote computer (e.g. your laptop) is to use the X2Go software to connect to one of the dev nodes,then launch a notebook + web browser on the dev node. The GUI window for the web browser will appear on your remote computer and the notebook will be running on Wynton.
+The easiest method to run a Jupyter Notebook on one of the development nodes and interact with on your local computer is to use the X2Go software to connect to one of the development nodes, then launch a Jupyter Notebook and a web browser on the development node. The web browser will appear on your remote computer in the X2Go interface while the Jupyter Notebook will be running on {{ site.cluster.name }}.
 
-- See the Wynton documentation on [installing X2Go](https://wynton.ucsf.edu/hpc/howto/gui-x11fwd.html)
-- Use X2Go connect to one of the Wynton dev nodes
-- If you have Anaconda Python installed in your home directory, you can launch a notebook using the `jupyter notebook` command from the terminal (the terminal connected by X2Go)
-  - the `jupyter notebook` command should also start the web browser 
+See the ['Graphical User Interfaces (GUI)'](https://wynton.ucsf.edu/hpc/howto/gui-x11fwd.html) for how to setup and use X2Go via one of the {{ site.cluster.name }} development nodes.
+
+<div class="alert alert-info" role="alert">
+If you use Python via your own <em>Anaconda</em> installation, instead of the Python version provided by Wynton, you can launch a Jupyter Notebook using the <code>jupyter notebook</code> command from the terminal connected by X2Go, which will also launch the web browser.
+</div>
 
 
 
 
+[Jupyter Notebook]: https://jupyter-notebook.readthedocs.io/en/stable/
