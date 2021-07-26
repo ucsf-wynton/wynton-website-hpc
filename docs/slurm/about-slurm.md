@@ -10,4 +10,5 @@ Following the successful test and validation for our environment it will be made
 
 Finally, it arbitrates contention for resources by managing a queue of pending work. Optional plugins can be used for accounting, advanced reservation, gang scheduling (time sharing for parallel jobs), backfill scheduling, topology optimized resource selection, resource limits by user or bank account, and sophisticated multifactor job prioritization algorithms.
 
-[Slurm]: {{ 'https://slurm.schedmd.com/' }}
+[Slurm]: https://slurm.schedmd.com/
+

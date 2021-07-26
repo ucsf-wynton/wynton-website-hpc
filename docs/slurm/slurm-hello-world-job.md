@@ -84,7 +84,6 @@ There is of course nothing preventing us from submitting the same script multipl
 
 [compute nodes]: {{ '/about/specs.html' | relative_url }}
 
-[Slurm]: {{ 'https://slurm.schedmd.com/' }}
+[Slurm]: https://slurm.schedmd.com/
 
 [Submit Jobs]: {{ '/slurm/submit-jobs.html' | relative_url }}
-
