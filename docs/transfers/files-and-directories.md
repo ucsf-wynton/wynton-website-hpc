@@ -81,7 +81,8 @@ To copy all content of directory `dataset/` on the cluster so that it appears as
 
 _Note_: Don't forget that period (`.`) at the end - it indicates copy [the folder] "to the current directory".
 
-## GUI file transfer clients 
+
+## GUI file-transfer clients 
 
 In addition to using command-line file transfer clients, some users might use graphical desktop clients to perform file transfers. 
 
@@ -89,14 +90,21 @@ In addition to using command-line file transfer clients, some users might use gr
 Wynton requires multifactor authentication so there are a couple additional configuration steps that might be necessary.
 </div>
 
-If using the Cyberduck application, from the menu:
+### Cyberduck 
+
+When using [Cyberduck], from the menu:
 
 - navigate to `Preferences -> Transfers -> General` 
-- change the Transfer Files setting "Use browser connection" instead of "Open Multiple connections"
+- change the Transfer Files setting 'Use browser connection' instead of 'Open Multiple connections'
 
-If using the FileZilla application:
+### FileZilla
 
-- in the General tab, select "SFTP" as the Protocol instead of "FTP"
-- for Logon Type select "Interactive" instead of "Ask for Password"
-- under the Transfer Settings tab you might need to click the "Limit number of simultaneous connections" and make sure the "Maximum number of connections" is set to 1
+When using [FileZilla], do:
 
+- in the General tab, select 'SFTP' as the Protocol instead of 'FTP'
+- for Logon Type, select 'Interactive' instead of 'Ask for Password'
+- under the Transfer Settings tab, you might need to click the 'Limit number of simultaneous connections' and make sure the 'Maximum number of connections' is set to 1
+
+
+[Cyberduck]: https://cyberduck.io/
+[FileZilla]: https://filezilla-project.org/
