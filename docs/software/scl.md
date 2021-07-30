@@ -49,28 +49,12 @@ rh-ruby25-runtime-2.5-2.el7.x86_64
 
 ## Using SCLs
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-2019-11-13: Below example uses Python SCLs, which are now deprecated, and is therefore outdated. The example will be updated as soon as possible.
-</div>
+Ruby's interactive shell can be launched via the `irb` command.  However, because it is available as a core software, we need to access it via the Ruby SCL.  Here is an example how to check the version of the Ruby shell:
 
-The current [core-software] installation provides stable but not necessarily the most up-to-date versions of Python, e.g.
-
+<!-- code-block label="ruby-ex-1" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ python --version
-Python 2.7.5
-
-[alice@{{ site.devel.name }} ~]$ python3 --version
-Python 3.4.9
-```
-
-To use a newer version of Python provided by one of the above SCLs, prefix the `python ...` command (quoted) with `scl enable <name>`, e.g.
-
-```sh
-[alice@{{ site.devel.name }} ~]$ scl enable rh-python36 "python --version"
-Python 3.6.3
-
-[alice@{{ site.devel.name }} ~]$ scl enable rh-python36 "python3 --version"
-Python 3.6.3
+[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby25 "irb --version"
+irb 0.9.6(09/06/30)
 ```
 
 _Importantly_, this approach of prefixing the original command call works also in job scripts.
@@ -78,23 +62,19 @@ _Importantly_, this approach of prefixing the original command call works also i
 
 If you work interactively on one of the development nodes, you can also launch a new shell (typically Bash) with one or more SCLs enabled:
 
+<!-- code-block label="ruby-ex-2" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl enable rh-python36 $SHELL
-
-[alice@{{ site.devel.name }} ~]$ python --version
-Python 3.6.3
-
-[alice@{{ site.devel.name }} ~]$ python3 --version
-Python 3.6.3
+[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby25 $SHELL
+[alice@{{ site.devel.name }} ~]$ irb --version
+irb 0.9.6(09/06/30)
 ```
 
-To "unload" these SCLs, just return to the previous shell by exiting new SCL-enabled shell, i.e.
+To "unload" an SCLs, just return to the previous shell by exiting new SCL-enabled shell, i.e.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ exit
 
-[alice@{{ site.devel.name }} ~]$ python --version
-Python 2.7.5
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 
