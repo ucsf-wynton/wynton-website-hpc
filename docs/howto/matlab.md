@@ -13,12 +13,11 @@ MATLAB is selecting SOFTWARE OPENGL rendering.
 
 
                           < M A T L A B (R) >
-                Copyright 1984-2020 The MathWorks, Inc.
-                Copyright 1984-2020 The MathWorks, Inc.
-                R2020b (9.9.0.1467703) 64-bit (glnxa64)
-                            August 26, 2020
+                Copyright 1984-2021 The MathWorks, Inc.
+                R2021a (9.10.0.1602886) 64-bit (glnxa64)
+                           February 17, 2021
 
- 
+
 To get started, type doc.
 For product information, visit www.mathworks.com.
  
@@ -52,5 +51,24 @@ In order to run MATLAB in jobs, the MATLAB environment module needs to be loaded
 #$ -cwd   ## SGE directive to run in the current working directory
 
 module load matlab
-matlab -batch my_script.m
+matlab -singleCompThread -batch my_script.m
 ```
+
+The `-batch` option tells MATLAB to run the `my_script.m` script in batch mode, in contrast to interactive mode.  The `-singleCompThread` option tells MATLAB to run in sequential mode; this prevents your job for overusing the compute nodes by mistake.
+
+
+### Parallel processing in MATLAB
+
+If your MATLAB code supports parallel processing, make sure to [specify the number of CPU cores](({{ '/scheduler/submit-jobs.html' | relative_url }})) when submitting your job submit, e.g. `-pe smp 4` will request four cores on one machine, which in turn will set environment variable `NSLOTS` to `4`.  To make your MATLAB script respect this, add the following at the top of your script:
+
+```matlab
+%% Make MATLAB respect the number of cores that the SGE scheduler
+%% has alloted the job.  If not specified, run with a single core,
+%% e.g. when running on a development node
+nslots = getenv('NSLOTS');              % env var is always a 'char'
+if (isempty(nslots)) nslots = '1'; end  % default value
+nslots = str2num(nslots);               % coerce to 'double'
+maxNumCompThreads(nslots);              % number of cores MATLAB may use
+```
+
+and then launch your MATLAB script _without_ option `-singleCompThread`, e.g. `matlab -batch my_script.m`.
