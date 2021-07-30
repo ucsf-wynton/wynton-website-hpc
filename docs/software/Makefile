@@ -19,6 +19,10 @@ sbgrid:
 	mdi build $@.sh
 	mdi inject $@.md
 
+scl:
+	mdi build $@.sh
+	mdi inject $@.md
+
 singularity:
 	mdi build $@.sh
 	mdi inject $@.md
