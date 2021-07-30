@@ -145,6 +145,7 @@ Macromolecular
 mailto
 Majumdar
 markdownlint
+matlab
 MaxDiskRead
 MaxDiskWrite
 MaxPages
@@ -185,6 +186,7 @@ OpenMP
 OpenMPI
 Opteron
 oversubscription
+parallelly
 passcode
 passwd
 pbdMPI
