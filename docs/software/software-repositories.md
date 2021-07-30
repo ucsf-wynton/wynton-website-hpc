@@ -52,7 +52,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -747,7 +747,7 @@ A command-line tool for common Wynton HPC queries.<br>
 
 <div id="queues-Sali" class="tab-pane fade">
 
-<h2>Module Software Repository: Sali (118)</h2>
+<h2>Module Software Repository: Sali (120)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -900,7 +900,7 @@ A PostScript interpreter and renderer<br>
   <dd>
 A program for plotting mathematical expressions and data<br>
     URL: <a href="http://www.gnuplot.info/">http://www.gnuplot.info/</a><br>
-  Versions: <em>5.0.5</em><br>
+  Versions: 5.0.5, <em>5.4.2</em><br>
   </dd>
 
   <dt>hdf5</dt>
@@ -1234,6 +1234,13 @@ The modular source code checker: pep8 pyflakes and co<br>
   Versions: <em>3.8.4</em><br>
   </dd>
 
+  <dt>python3/future</dt>
+  <dd>
+Clean single-source support for Python 3 and 2<br>
+    URL: <a href="https://python-future.org/">https://python-future.org/</a><br>
+  Versions: <em>0.18.2</em><br>
+  </dd>
+
   <dt>python3/h5py</dt>
   <dd>
 Python interface to the Hierarchical Data Format library<br>
@@ -1288,6 +1295,13 @@ Python 2D plotting library<br>
 McCabe checker, plugin for flake8<br>
     URL: <a href="https://github.com/pycqa/mccabe">https://github.com/pycqa/mccabe</a><br>
   Versions: <em>0.6.1</em><br>
+  </dd>
+
+  <dt>python3/mdp</dt>
+  <dd>
+Modular toolkit for Data Processing<br>
+    URL: <a href="http://mdp-toolkit.sourceforge.net/">http://mdp-toolkit.sourceforge.net/</a><br>
+  Versions: <em>3.6</em><br>
   </dd>
 
   <dt>python3/msgpack</dt>
@@ -1536,10 +1550,10 @@ Rigid body docking<br>
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
   <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(65)</a></li>
-  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(118)</a></li>
+  <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-06-30 12:52:58 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-07-30 15:02:36 from querying `module avail` and `module spider`._
 
 
 <style>
