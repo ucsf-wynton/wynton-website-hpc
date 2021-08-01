@@ -15,4 +15,16 @@ deploy: $(PAGE).md
 	git commit $< -m "SOFTWARE: Rebuilt set of available modules" &> /dev/null; true
 	git push &> /dev/null; true
 
+sbgrid:
+	mdi build $@.sh
+	mdi inject $@.md
+
+scl:
+	mdi build $@.sh
+	mdi inject $@.md
+
+singularity:
+	mdi build $@.sh
+	mdi inject $@.md
+
 
