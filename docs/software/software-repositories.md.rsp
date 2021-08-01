@@ -238,7 +238,7 @@ In addition to the [core software] tools that are available by default, addition
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) matlab/2020a
+  1) matlab/2021a
 ```
 Then we can launch MATLAB using:
 ```sh
