@@ -5,7 +5,7 @@ There is also one GPU development node that is available to all users.
 
 # Contributing Member GPU Shares
 
-Below table shows the which labs have access to dedicated Graphical Processing Unit (GPU) compute nodes.
+Below table shows which labs have access to dedicated Graphical Processing Unit (GPU) compute nodes and how many.
 
 
 <script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
