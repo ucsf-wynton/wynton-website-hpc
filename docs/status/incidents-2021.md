@@ -1,3 +1,14 @@
+### July 23-July 28, 2021
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Resolved**: The majority of the compute nodes have been rebooted after only four days, which was quicker than the maximum of 14 days.
+<br><span class="timestamp">July 28, 08:00 PST</span>
+
+**Notice**: New operating-system kernels are deployed. Login, data-transfer, and development nodes will be rebooted at 13:00 on Friday July 23 at 1:00 pm.  Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues. To follow the progress, see the green 'Available CPU cores' curve (target ~10,400 cores) in the graph above.  
+<br><span class="timestamp">July 23, 07:40 PST</span>
+
+
 ### June 24, 2021
 
 #### <span style="color: orange;">Cluster not accessible (due to BeeGFS issues)</span>
