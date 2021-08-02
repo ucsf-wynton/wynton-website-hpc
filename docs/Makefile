@@ -82,7 +82,8 @@ _data/users.yml: FORCE
 _data: _data/users.yml
 
 assets/data/compute_shares.tsv: FORCE
-	wynton shares tsv > $@
+	wynton shares tsv > $@.tmp
+	grep -q -E "^# Total queue_slots:[[:space:]]*0$$" $@.tmp || mv $@.tmp $@
 
 assets: assets/data/compute_shares.tsv
 
