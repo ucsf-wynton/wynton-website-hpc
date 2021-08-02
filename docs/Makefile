@@ -85,7 +85,10 @@ assets/data/compute_shares.tsv: FORCE
 	wynton shares tsv > $@.tmp
 	grep -q -E "^# Total queue_slots:[[:space:]]*0$$" $@.tmp || mv $@.tmp $@
 
-assets: assets/data/compute_shares.tsv
+assets/data/gpu_shares.tsv: FORCE
+	wynton gpushares tsv > $@
+
+assets: assets/data/compute_shares.tsv assets/data/gpu_shares.tsv
 
 deploy:
 	git pull
