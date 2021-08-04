@@ -16,6 +16,11 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><!-- ~90 kB --></script>
+  {% if site.docsearch.api_key %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+    <link rel="stylesheet" href="{{ '/assets/css/docsearch.css' | relative_url }}" rel="stylesheet"/>
+    
+  {% endif %}
   </head>
   <body>
 <nav class="navbar navbar-default navbar-fixed-top" id="topnavbar">
@@ -49,7 +54,26 @@
     
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="{{ '/status/index.html' | relative_url }}">Status</a></li>
+        <li>
+          <ul class="nav navbar-nav">
+           <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+            <div class="form-group">
+              <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
+                <input type="search" id="search-input" class="form-control ds-input" name="search-input" id="search-input" placeholder="🔎" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" style="position: relative; vertical-align: top;" dir="auto" onfocus="document.getElementById('menunavbar').style.display='none';" onfocusout="document.getElementById('menunavbar').style.display='inline'; this.value='';">
+                <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15.4px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre>
+                <span class="ds-dropdown-menu" style="position: absolute; top: 100%; z-index: 100; left: 0px; right: auto; display: none;" role="listbox" id="algolia-autocomplete-listbox-0"><div class="ds-dataset-1"></div></span>
+              </span>
+             </div>
+            </form>
+          </ul>
+        <li>
+      </ul>
+      
+      <ul class="nav navbar-nav" id="menunavbar">
+        <li>
+          <a href="{{ '/status/index.html' | relative_url }}">Status</a>
+        </li>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -186,7 +210,7 @@
             <li><a href="{{ '/about/contact.html' | relative_url }}">Contact</a></li>
           </ul>
         </li>
-      </ul>
+      </ul>      
     </div>
   </div>
 </nav>
@@ -257,7 +281,17 @@
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
     </script>
-    {% endif %}
+  {% endif %}
+  {% if site.docsearch.api_key %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+    apiKey: '{{ site.docsearch.api_key }}',
+    indexName: '{{ site.docsearch.index_name }}',
+    inputSelector: 'input#search-input.form-control',
+    debug: false // Set debug to true if you want to inspect the dropdown
+    });
+    </script>     
+  {% endif %}
 {% comment %}
     <script>
         if (window.location.href.startsWith("https://ucsf-hpc.github.io/wynton/")) {
