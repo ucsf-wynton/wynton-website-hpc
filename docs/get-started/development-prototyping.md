@@ -11,6 +11,7 @@ Any shell session that has been idle for more than eight hours will timeout and 
 </div>
 
 ## List of Development Nodes
+
  * {{ site.dev1.hostname }}
  * {{ site.dev2.hostname }}
  * {{ site.dev3.hostname }}
@@ -22,7 +23,7 @@ To access one of the _development node_, say, {{ site.devel.hostname }},
 
 1. make sure you are [logged in to the cluster], and
 
-2. type `ssh {{ site.devel.hostname }}` and press ENTER.
+2. type `ssh {{ site.devel.hostname }}` and press <kbd>ENTER</kbd>.
 
 
 ### Example

@@ -1,4 +1,4 @@
-# Advanced Scheduler Usage 
+# Advanced Scheduler Usage
 
 ## Programmatically get job id
 

@@ -1,6 +1,6 @@
 <div class="alert alert-info" role="alert">
-2019-09-20: Wynton HPC has {{ site.specs.gpu_nodes }} GPU nodes with a total of {{ site.specs.gpus }} GPUs available to all users. Among these, {{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.specs.gpus | minus: site.specs.communal_gpus }} GPUs, were contributed by different research groups. Contrary to other, <a href="{{ '/scheduler/queues.html' | relative_url }}">contributors are <em>not</em> limited to 2-hour GPU jobs on nodes they contributed</a>.
-There is also one GPU development node that are available to all users.
+{{ site.cluster.name }} has {{ site.data.specs.gpu_nodes }} GPU nodes with a total of {{ site.data.specs.gpus }} GPUs available to all users. Among these, {{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} GPUs, were contributed by different research groups. GPU jobs are limited to 2 hours in length when run on GPUs not contributed by the running user's lab.  In contrast, <a href="{{ '/scheduler/queues.html' | relative_url }}">contributors are <em>not</em> limited to 2-hour GPU jobs on nodes they contributed</a>.
+There is also one GPU development node that is available to all users.
 </div>
 
 
@@ -31,7 +31,7 @@ If your application requires MPI, you should still use the proper parallel envir
 qsub -q gpu.q -pe mpi_onehost N ...
 mpirun -np M --oversubscribe ...
 ```
-where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).
+where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).  Please note that, at the moment, each GPU job must limit itself to a single host.
 
 
 ## GPU relevant resource requests
@@ -44,7 +44,7 @@ The GPU nodes in {{ site.cluster.name }} contain many different generations and 
 
 Specifying either of these resources is not required.  If you do specify one, your job will be scheduled on a GPU node with resources >= those that you requested.  As an example, if you wanted to only run on at least GeForce GTX 1080 generation nodes with more than 10 GB of GPU memory, you would specify:
 
-```
+```sh
 -l compute_cap=61,gpu_mem=10000M
 ```
 
@@ -74,7 +74,22 @@ Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores
 
 ## GPU use monitoring
 
-While it is not possible to log directly into the GPU nodes to monitor their usage, several statistics are available from the login hosts.  For example:
+We have installed NVIDIA's [Data Center GPU Manager](https://docs.nvidia.com/datacenter/dcgm/latest/index.html) on all GPU nodes to allow the profiling of GPU jobs.  To use it, add the following to your job script just before you launch the GPU-utilizing process:
+```sh
+gpuprof=$(dcgmi group -c mygpus -a $SGE_GPU | awk '{print $10}')
+dcgmi stats -g $gpuprof -e
+dcgmi stats -g $gpuprof -s $JOB_ID
+```
+And then put the following after that process ends:
+```sh
+dcgmi stats -g $gpuprof -x $JOB_ID
+dcgmi stats -g $gpuprof -v -j $JOB_ID
+dcgmi group -d $gpuprof
+```
+The GPU stats will be written to the job's output file.  If you'd rather they go elsewhere, then direct the output of
+`dcgmi stats ... -v -j $JOB_ID` to the file where you want the GPU profiling info.
+
+It is also possible to see several statistics from the login hosts.  For example:
 ```sh
 [alice@{{ site.devel.name }} ~]$ qconf -se msg-iogpu3
 hostname              msg-iogpu3
@@ -109,10 +124,10 @@ report_variables      NONE
 The above shows that host `msg-iogpu3` has 2 GeForce GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
 
 
-[submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
-[list jobs]: {{ '/scheduler/list-jobs.html' | relative_url }}
-[development nodes]: {{ 'get-started/development-prototyping.html' | relative_url }}
 [CUDA Toolkit]: https://developer.nvidia.com/cuda-toolkit
 [CUDA]: https://en.wikipedia.org/wiki/CUDA
 [NVIDIA's CUDA GPU page]: https://developer.nvidia.com/cuda-gpus
 [GeForce GTX 1080]: https://en.wikipedia.org/wiki/GeForce_10_series
+[submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
+[list jobs]: {{ '/scheduler/list-jobs.html' | relative_url }}
+[development nodes]: {{ 'get-started/development-prototyping.html' | relative_url }}

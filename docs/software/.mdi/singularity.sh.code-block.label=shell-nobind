@@ -1,0 +1,11 @@
+[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.sif
+Singularity> ls /scratch
+ls: cannot access '/scratch': No such file or directory
+Singularity> ls /c4/scratch
+ls: cannot access '/c4/scratch': No such file or directory
+Singularity> ls {{ site.user.labfolder }}
+ls: cannot access '{{ site.user.labfolder }}': No such file or directory
+Singularity> echo $TMPDIR
+/scratch/alice
+Singularity> ls "$TMPDIR"
+ls: cannot access '/scratch/alice': No such file or directory

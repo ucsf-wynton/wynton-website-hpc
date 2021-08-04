@@ -15,6 +15,44 @@ This job submission will submit `script.sh` to the job scheduler which will even
 * `-l h_rt=00:20:00`: the scheduler knows that the job to run no longer than 20 minutes allowing it to be scheduled much sooner than if no run-time was specified
 * `script.sh`: the shell script to be run
 
+## Sample submit script
+
+Before you can submit jobs to the compute nodes, you should prepare a script like the one below. Split your jobs into smaller tasks varying only in input parameters. You can then submit the jobs from a login node or a dev node. (Note: _do not_ include the `#--` comments in your script - that won't work.)
+
+```sh
+#!/bin/bash                        #-- what is the language of this shell
+#                                  #-- Any line that starts with #$ is an instruction to SGE
+#$ -S /bin/bash                    #-- the shell for the job
+#$ -o [dir]                        #-- output directory (fill in)
+#$ -e [dir]                        #-- error directory (fill in)
+#$ -cwd                            #-- tell the job that it should start in your working directory
+#$ -r y                            #-- tell the system that if a job crashes, it should be restarted
+#$ -j y                            #-- tell the system that the STDERR and STDOUT should be joined
+#$ -l mem_free=1G                  #-- submits on nodes with enough free memory (required)
+#$ -l scratch=1G                   #-- SGE resources (home and scratch disks)
+#$ -l h_rt=24:00:00                #-- runtime limit (see above; this requests 24 hours)
+##$ -t 1-10                        #-- remove first '#' to specify the number of
+                                   #-- tasks if desired (see Tips section on this page)
+
+# Anything under here can be a bash script
+
+# If you used the -t option above, this same script will be run for each task,
+# but with $SGE_TASK_ID set to a different value each time (1-10 in this case).
+# The commands below are one way to select a different input (PDB codes in
+# this example) for each task.  Note that the bash arrays are indexed from 0,
+# while task IDs start at 1, so the first entry in the tasks array variable
+# is simply a placeholder
+
+#tasks=(0 1bac 2xyz 3ijk 4abc 5def 6ghi 7jkl 8mno 9pqr 1stu )
+#input="${tasks[$SGE_TASK_ID]}"
+
+date
+hostname
+
+## End-of-job summary, if running as a job
+[[ -n "$JOB_ID" ]] && qstat -j "$JOB_ID"          # This is useful for debugging and usage purposes,
+                                                  # e.g. "did my job exceed its memory request?"
+```
 
 
 ## Submit a script to run in the current working directory
@@ -65,12 +103,12 @@ If not specified, the default run time is 10 minutes.  A job that runs longer th
 
 ## Using local scratch storage
 
-Each compute node has {{ site.specs.local_scratch_size_min }}-{{ site.specs.local_scratch_size_max }} TiB of [local scratch storage]({{ '/about/specs.html#scratch-storage' | relative_url }}) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
+Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage]({{ '/about/specs.html#scratch-storage' | relative_url }}) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
 ```sh
 qsub -cwd -l scratch=200G script.sh
 ```
 
-Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes](using-local-scratch.html).
+Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes]({{ '/using-local-scratch.html' | relative_url }}).
 
 <div class="alert alert-warning" role="alert">
 Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
@@ -96,8 +134,9 @@ The scheduler will make sure your job is launched on a node with at least four s
 
 Note, when writing your script, use [SGE environment variable] `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
 ```sh
-bwa aln -t $NSLOTS ...
+bwa aln -t "${NSLOTS:-1}" ...
 ```
+By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.
 
 _Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric multiprocessing'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) and indicates that the job will run on a single machine using one or more cores.
 
@@ -145,15 +184,23 @@ and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8`
 #! /usr/bin/env bash
 #$ -cwd   ## SGE directive to run in the current working directory
 
+module load mpi/openmpi-x86_64
 export OMP_NUM_THREADS=8
 mpirun -np $NHOSTS /path/to/the_app
 ```
+
+_Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.
 
 <div class="alert alert-warning" role="alert">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <code>NSLOTS</code> is not a multiple of eight, then the job will be stuck in the queue forever and never run.
 </div>
 
 _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org/wiki/Message_Passing_Interface).
+
+## Tips
+
+- An array job is a collection of similar serial jobs which can be submitted and controlled together. For example, `-t 1-10` runs 10 tasks in an array. Each task runs the same script, but gets a different value for the `$SGE_TASK_ID` environment variable (from '1' to '10' in this example). You can use this to choose different inputs or other parameters for each task.
+- The SGE manual pages are installed on the login and dev nodes. For more info on any SGE command, just type the name of command (e.g., `man qsub`).
 
 
 
@@ -168,7 +215,7 @@ _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org
 
 ## See also
 
-For further options and advanced usage, see [Advanced Usage](advanced-usage.html) of the scheduler.
+For further options and advanced usage, see [Advanced Usage]({{ '/scheduler/advanced-usage.html' | relative_url }}) of the scheduler.
 
 [SGE environment variable]: {{ '/scheduler/sge-envvars.html' | relative_url }}
 [Job Summary]: {{ '/scheduler/job-summary.html' | relative_url }}

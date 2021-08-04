@@ -29,7 +29,7 @@ Further information with detailed examples on job submissions can be found on se
 
 In this example we will run compute jobs that outputs the name of the compute node that runs the job, waits ten seconds to emulate some processing, and the time it runs.  The name of the current machine is available in environment variable `HOSTNAME` (standard in Unix) and the current time is outputted when calling the command `date`.  To do this as a compute job, create a script `~/tests/hello_world` containing:
 
-```
+```sh
 #!/bin/env bash
 
 echo "Hello world, I am running on node $HOSTNAME"
@@ -54,12 +54,12 @@ Note how it takes ten seconds between the `Hello world` message and the time sta
 [alice@{{ site.devel.name }} tests]$ qsub -cwd -j yes hello_world
 Your job 201 ("hello_world") has been submitted
 ```
-_Explanation of command-line options_: The `-cwd` option tells the scheduler to launch the `hello_world` script and output the job log files to the current working directory (here `~/tests/`).  The `-j yes` option specifies that error message should be merged with regular output (instead of outputting to separate log files). 
+_Explanation of command-line options_: The `-cwd` option tells the scheduler to launch the `hello_world` script and output the job log files to the current working directory (here `~/tests/`).  The `-j yes` option specifies that error message should be merged with regular output (instead of outputting to separate log files).
 
 When submitting a job, the scheduler assigned the job an identifier ("job id").  In the above example, the job id is '201'.  Immediately after the job has been submitted, we can see that it queued but not launched;
 ```sh
 [alice@{{ site.devel.name }} tests]$ qstat
-job-ID prior   name       user   state submit/start at     queue              slots ja-task-ID 
+job-ID prior   name       user   state submit/start at     queue              slots ja-task-ID
 ----------------------------------------------------------------------------------------------
    201 0.00000 hello_worl alice  qw    08/01/2017 03:34:19                        1        
 ```
@@ -67,7 +67,7 @@ job-ID prior   name       user   state submit/start at     queue              sl
 Later, when the job has been launched on one of the compute nodes, and we will something like:
 ```sh
 [alice@{{ site.devel.name }} tests]$ qstat
-job-ID prior   name       user   state submit/start at     queue              slots ja-task-ID 
+job-ID prior   name       user   state submit/start at     queue              slots ja-task-ID
 ----------------------------------------------------------------------------------------------
    201 0.95000 hello_worl alice  r     08/01/2017 03:34:19 member.q@cin-hmid1     1
 ```
@@ -85,7 +85,7 @@ Mon Aug 28 16:32:12 PDT 2017
 There is of course nothing preventing us from submitting the same script multiple times.  If done, each submission will result in the script be launched on a compute node and a unique log file `hello_world.o<job_id>` will be outputted.  Please try that and see what `qstat` outputs.   Now, you may want to pass different arguments to your script each time, e.g. each job should process a different input data file.  For information on how to do this, see the [Submit Jobs] page.
 
 
-[compute nodes]: {{ '/about/specs.html' | relative_url }}
 [Son of Grid Engine]: https://arc.liv.ac.uk/trac/SGE
+[compute nodes]: {{ '/about/specs.html' | relative_url }}
 [Submit Jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
 

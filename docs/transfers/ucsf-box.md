@@ -1,10 +1,19 @@
+---
+context:
+  - xfer
+---
+
 # Accessing UCSF Box
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+Although there is no hard quota in place on UCSF Box, the <strong>storage is limited</strong> and not really meant to store large data sets. There are reports that the UCSF Box maintainers have started to reach out to users who misuse it to store huge amounts of data. Please use it responsibly.
+</div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 <strong>Below instructions work on <emph>data transfer nodes</emph> only.</strong> Attempts to use them on <emph>development nodes</emph> will result in "Access failed: 401 Unauthorized" errors.
 </div>
 
-It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).  The below instructions works from the Wynton HPC data-transfer nodes as well as your local computer.
+It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).  The below instructions works from the {{ site.cluster.name }} data-transfer nodes as well as your local computer.
 
 
 ## Prerequisites
@@ -24,7 +33,7 @@ alice1@{{ site.transfer.name }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.transfer.name }} ~]$ 
 ```
 
-Then, verify that your UCSF Box setup is correct, but logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your Wynton HPC password):
+Then, verify that your UCSF Box setup is correct by logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your {{ site.cluster.name }} password):
 
 ```sh
 [alice@{{ site.transfer.name }} ~]$ lftp --user alice.aliceson@ucsf.edu ftps://ftp.box.com
@@ -44,11 +53,11 @@ lftp alice.aliceson@ucsf.edu@ftp.box.com:~> exit
 ## Automatic authentication
 
 When starting `lftp` as above, you need to manually enter your password, which can be tedious or even prevent automatic file transfers in batch scripts.  A solution to this is to set up the FTPS credentials in `~/.netrc`.  Here is what it could look like:
-```
+```sh
 [alice@{{ site.transfer.name }} ~]$ cat ~/.netrc
 machine ftp.box.com
-	login alice.aliceson@ucsf.edu
-	password AliceSecretPwd2017
+        login alice.aliceson@ucsf.edu
+        password AliceSecretPwd2017
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
@@ -58,7 +67,7 @@ machine ftp.box.com
 **Since the password is fully visible in plain text, make sure to keep this file private at all times**, otherwise users on the system can see all your credentials, i.e.
 ```sh
 [alice@{{ site.transfer.name }} ~]$ chmod 600 ~/.netrc
-[alice@{{ site.transfer.name }} ~]$ ls -l ~/.netrc 
+[alice@{{ site.transfer.name }} ~]$ ls -l ~/.netrc
 -rw------- 1 alice alice 72 Jul  3 15:10 /home/alice/.netrc
 ```
 

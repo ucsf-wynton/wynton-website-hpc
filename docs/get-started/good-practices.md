@@ -4,7 +4,14 @@ The {{ site.cluster.name }} cluster is high-performance compute resource used by
 
 In order to maximize the efficiency of the cluster and **decrease your** (and others) **queuing and processing times**, please try make yourself familiar with the following guidelines:
 
-* Identify and [specify]({{ '/scheduler/submit-jobs.html' | relative_url }}) the amount of resources your jobs need (&rArr; better utilization and load balancing) 
+* Identify and [specify]({{ '/scheduler/submit-jobs.html' | relative_url }}) the amount of resources your jobs need (&rArr; better utilization and load balancing)
 * Make your script agile to [SGE resources allocated to your job]({{ '/scheduler/sge-envvars.html' | relative_url }}) (&rArr; scalable and lower risk of using resources not requested)
 
 * [Work toward local scratch]({{ '/scheduler/using-local-scratch.html' | relative_url }}) on the compute nodes (&rArr; faster processing and less load on shared disk I/O)
+
+Some additional guidelines for optimum use of the BeeGFS file system on Wynton:
+
+* Prefer fewer, large files over many small ones
+* If writing many files, spread them out over a number of directories including SGE output and error files
+* Users are strongly encouraged to keep the number of reads and writes to a single directory to a reasonable number
+* Don't include anything in `/wynton` in your default `LD_LIBRARY_PATH`

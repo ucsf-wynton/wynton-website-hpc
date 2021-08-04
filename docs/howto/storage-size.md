@@ -2,7 +2,7 @@
 
 ## File sizes on /wynton/
 
-The `/wynton/` storage is on a BeeGFS parallel file system. This file system is **automatically compressed** (using the [lz4] compression) before anything is written to the physical drives.  Because of this, a 1.0 MiB file is likely to occupy less that 1.0 MiB of drive space.  Exactly, how much a file is compressed varies greatly with file format but as a rule of thumb plain text files can be compressed more than files in a binary format.  Already compressed files such as GZ or ZIP files are unlikely to be compressed further.
+The `/wynton/` storage is on a [ZFS] file system on top of our BeeGFS parallel storage system. This is **automatically compressed** (using [lz4] compression in ZFS) before anything is written to the physical drives.  Because of this, a 1.0 MiB file is likely to occupy less that 1.0 MiB of drive space.  Exactly, how much a file is compressed varies greatly with file format but as a rule of thumb plain text files can be compressed more than files in a binary format.  Already compressed files such as GZ or ZIP files are unlikely to be compressed further.
 
 Because of this underlying disk compression, command-line tools such as `ls` and `du` may not report what you expect it to report.  For example, consider the Singularity image file `rocker_r-base.img` of size 274,538,527 bytes (= 274,538,527/1024^2 = 261.8 MiB);
 
@@ -12,7 +12,7 @@ Because of this underlying disk compression, command-line tools such as `ls` and
 ```
 The actual space consumed on disk by this file is 256,136,704 bytes (93.3%):
 ```sh
-[alice@{{ site.devel.name }} ~]$ ls -s --block-size 1 rocker_r-base.img 
+[alice@{{ site.devel.name }} ~]$ ls -s --block-size 1 rocker_r-base.img
 256136704 rocker_r-base.img
 ```
 
@@ -51,6 +51,7 @@ For example,
 
 tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your <a href="{{ '/about/specs.html' | relative_url }}">500-GiB home storage space</a> is reported as 1000 GiB by the `beegfs-ctl` tool.
 
+## User disk usage on /wynton/scratch/
 
 To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 
@@ -58,7 +59,7 @@ To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: [Files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
+_Comment_: There are no user or group quotas on `/wynton/scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
 
 
 ## Group disk quota on /wynton/group/
@@ -82,25 +83,6 @@ For example,
 Note that this storage is shared among all group members and does _not_ count toward your personal disk quota under `/wynton/home/`.
 
 
-## User disk quota on /netapp/home (deprecated)
-
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-<strong>The <code>/netapp/</code> storage will be taken offline at the end of December 2019.</strong>.  Please use the much faster <code>/wynton/home/</code> instead.  If you do not have access to the latter, <a href="{{ '/about/contact.html' | relative_url }}">let us know as soon as possible</a>.
-</div>
-
-To check your disk quota on the deprecated `/netapp/home` file system, use `quota`.  For example,
-
-```sh
-[alice@{{ site.devel.name }} ~]$ quota --no-wrap -f /netapp/home
-Disk quotas for user alice (uid 59999): 
-     Filesystem   space   quota   limit   grace   files   quota   limit   grace
-netapp:/vol/home/0  22436M    200G    300G            239k    315m    630m
-```
-
-tells us that user `alice` has approximately 239,000 files that consumes 22,436 MiB (= 22,436/1024 = 21.9 GiB) of storage space out of 200 GiB available.
-
-_Comment_: Contrary to files on `/wynton/`, files on `/netapp/` are _not_ compressed.
-
-
 
 [lz4]: https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)
+[ZFS]: https://en.wikipedia.org/wiki/ZFS

@@ -1,0 +1,26 @@
+[alice@{{ site.devel.name }} ~]$ mkdir lxc
+[alice@{{ site.devel.name }} ~]$ cd lxc/
+[alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.sif docker://rocker/r-base
+INFO:    Starting build...
+Getting image source signatures
+Copying blob sha256:420047682034904224708ffcbc863130ba6bce56f9d642605dccd2d375af6969
+Copying blob sha256:e603e00f9478df8f9435c78d26e7ae28f5af4bdcb4132435141c8b515c6c8e18
+Copying blob sha256:c6ea85836d4d314e5a036814df370488276d0cf327b6ceb9a0af6fe6a4bf6166
+Copying blob sha256:d585e1cbeb2fd3ecc65c3200c0de6af1f3124b4a5679e08477d262919e880bc7
+Copying blob sha256:5ac5c0d19fbb6c61f4e7d5b08f66fc659d3530ae2f01c874e154268a7648776c
+Copying blob sha256:f833cf076231770cf7616d55ce466dd3e303eefff0185007978aff5a11709ac7
+Copying blob sha256:52321ce7fbaf0726407f41ec0d8240bf3db1730a7d8b257e7ee66b311e168bc8
+Copying config sha256:f1b04a6cdfec8d38e91f60af908c7e93d91b60b836f0075ab718c17271dd3f9c
+Writing manifest to image destination
+Storing signatures
+2021/07/30 15:08:56  info unpack layer: sha256:420047682034904224708ffcbc863130ba6bce56f9d642605dccd2d375af6969
+2021/07/30 15:09:00  info unpack layer: sha256:e603e00f9478df8f9435c78d26e7ae28f5af4bdcb4132435141c8b515c6c8e18
+2021/07/30 15:09:00  info unpack layer: sha256:c6ea85836d4d314e5a036814df370488276d0cf327b6ceb9a0af6fe6a4bf6166
+2021/07/30 15:09:01  info unpack layer: sha256:d585e1cbeb2fd3ecc65c3200c0de6af1f3124b4a5679e08477d262919e880bc7
+2021/07/30 15:09:01  info unpack layer: sha256:5ac5c0d19fbb6c61f4e7d5b08f66fc659d3530ae2f01c874e154268a7648776c
+2021/07/30 15:09:01  info unpack layer: sha256:f833cf076231770cf7616d55ce466dd3e303eefff0185007978aff5a11709ac7
+2021/07/30 15:09:01  info unpack layer: sha256:52321ce7fbaf0726407f41ec0d8240bf3db1730a7d8b257e7ee66b311e168bc8
+INFO:    Creating SIF file...
+INFO:    Build complete: rocker_r-base.sif
+[alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.sif
+-rwxr-xr-x. 1 alice boblab 308523008 Jul 30 15:09 rocker_r-base.sif

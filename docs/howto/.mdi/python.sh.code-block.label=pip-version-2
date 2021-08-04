@@ -1,0 +1,2 @@
+[alice@{{ site.devel.name }} ~]$ python3 -m pip --version
+pip 20.3.3 from ~/.local/lib/python3.6/site-packages/pip (python 3.6)

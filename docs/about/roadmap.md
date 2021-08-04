@@ -5,40 +5,37 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## In progress
 
-* Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to Wynton HPC (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
-
-* Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`)
-
-* Deprecation: The QB3-legacy NetApp storage (including `/netapp/home`) will stop working at the end of **December 2019** in favor of new BeeGFS storage (including `/wynton/home`).
-
-
-## Soon
-
-* Pricing model: Contributors to Wynton get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
+* Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to {{ site.cluster.name }} (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
 
 
 ## Near future
 
-* Storage: Requirements for mounting lab-owned storage into Wynton
+* Pricing model: Contributors to {{ site.cluster.name }} get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
-* Support: A User Issue Tracker
+* Storage: Requirements for mounting lab-owned storage into {{ site.cluster.name }}
+
+* Forum: A self-hosted User Forum for richer conversations than what's on our Slack channel
+
+* Scheduler: Slurm as a job scheduler instead of SGE.  This will be introduced in stages.  We will start with a beta-test phase where 12 nodes (in total 432 cores) will be dedicated for Slurm scheduling.  After a successful beta testing, we will start migrating over nodes from the SGE scheduler to the new Slurm scheduler.
 
 
 ## On the horizon
 
-* Compliance: Support for restricted data analysis
+* Support: A User Issue Tracker
 
-* Network: Add a Globus endpoint for efficient, secure data transfers (ingress and egress)
+* Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }}
+
+* Compliance: Support for restricted data analysis
 
 
 
 ## Accomplished milestones
 
-* Migration: The UCSF Memory and Aging Center (MAC) have joined Wynton by contributing new nodes
+* Migration: The UCSF Memory and Aging Center (MAC) have joined {{ site.cluster.name }} by contributing new nodes
 
-* Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into Wynton
+* Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into {{ site.cluster.name }}
 
-* Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from Wynton (2018-08-02)
+* Development: Dedicated 10 Gbps transfer node for faster file transfers in to and out from {{ site.cluster.name }} (2018-08-02)
 
 * Storage: Global scratch storage on BeeGFS parallel file system (2018-08-20)
 
@@ -54,15 +51,26 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: The QB3-legacy NetApp scratch storage `/scrapp` and `/scrapp2` has been removed in favor of the BeeGFS-based scratch storage `/wynton/scratch` (2019-08-15)
 
-* Scheduler: ~~Support interactive jobs (`qlogin`)~~. The Wynton HPC Team decided against this because it increases the risk of having stale jobs occupying the scheduler and overall underutilizing the HPC environment (Fall 2019)
+* Scheduler: ~~Support interactive jobs (`qlogin`)~~. The {{ site.cluster.name }} Team decided against this because it increases the risk of having stale jobs occupying the scheduler and overall underutilizing the HPC environment (Fall 2019)
 
-* Development: A second data transfer node for faster file transfers in to and out from Wynton (2019-09-12)
+* Network: A second data transfer node for faster file transfers in to and out from {{ site.cluster.name }} (2019-09-12)
 
 * GPU compute: An additional 12 communal GPUs on three GPU nodes (2019-09-13)
 
 * GPU policy: All GPU nodes, communal and contributed, are available to all users. When running on another contributors GPU node, run time is limited to 2 hours. (2019-09-20)
 
 * Scheduler: Support for email notification upon job completion, e.g. `qsub -m bea` (2019-11-12)
+
+* Storage: The QB3-legacy NetApp storage (including `/netapp/home`) was deprecated during 2019 with a deadline on December 2019.  The server was kept up after this deadline and, unfortunately, the server went down on 2020-02-05 and was declared non-recoverable without further resource/funding (2020-02-05)
+
+* Storage: Migrate home directories from the NetApp server (`/netapp/home/`) to the new, faster BeeGFS parallel file system (`/wynton/home/`).  The migration effort ended on 2020-02-05 when the NetApp server failed (2020-02-05)
+
+* Website: Move website from GitHub Pages (<https://ucsf-hpc.github.io/wynton/>) to on-premise <https://wynton.ucsf.edu/hpc/> (2020-02-26)
+
+* Network: Add a Globus '{{ site.cluster.nickname }}' Endpoint for efficient, secure data transfers (ingress and egress) (2020-04-03)
+
+* Access: Two-factor authentication (2FA) is required for accessing the cluster (2020-10-29)
+
 
 See also [News].
 

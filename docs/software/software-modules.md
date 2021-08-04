@@ -25,7 +25,7 @@ In addition to the [core software] tools that are available by default, addition
   <td>
   <strong>Sali Lab Software Repository</strong><br>
   Repository of software shared by the UCSF Sali Lab (<a href="https://salilab.org/">https://salilab.org/</a>).<br>
-  <em>Comment: Contrary to the UCSF QB3 cluster, where these modules were available by default, this repository has to be loaded explicitly in order to have access to its modules on {{ site.cluster.name }} HPC.</em><br>
+  <em>Comment: Contrary to the UCSF QB3 cluster, where these modules were available by default, this repository has to be loaded explicitly in order to have access to its modules on {{ site.cluster.name }}.</em><br>
   
   Usage: <code>module load Sali</code>
   </td>
@@ -51,7 +51,7 @@ module load CBI r
 After this, the `R` and the `Rscript` commands are available on the search path (`PATH`), e.g.
 ```sh
 $ Rscript --version
-R scripting front-end version 3.5.3 (2019-03-11)
+R scripting front-end version 4.0.3 (2020-10-10)
 ```
 
 <div class="alert alert-warning" role="alert">
@@ -93,6 +93,18 @@ module load r/3.2.0
 _Comment_: If another version of R is already loaded, that will automatically be unloaded before loading the new version.
 
 
+## Using within a login shell
+
+Since `module` is only available on the development and compute nodes,
+its use in a login script (.profile, .bash_profile, .bashrc) needs
+to be guarded:
+```sh
+if [[ -n "$MODULEPATH" ]]
+then
+    module load <software>
+fi
+```
+
 
 <br>
 <div class="alert alert-info" role="alert">
@@ -112,8 +124,8 @@ Instead of the classical Tcl-based environment module system commonly available 
 When loading a _software repository_ (`module load <repos>`), it will append its module folder to the `$MODULEPATH`.  Unloading it (`module unload <repos>`) will undo any changes.  For instance, `module load <repos>` appends `$MODULEPATH_ROOT/<repos>` to your `$MODULEPATH`.  Multiple software repositories can be loaded in one call, e.g. `module load <repos1> <repos2>`.  It is also possible to load a software repository and some of its software tools in one call, e.g. `module load <repos> <software1> <software2>`.
 
 
-[core software]: {{ '/software/core-software.html' | relative_url }}
 [R]: https://www.r-project.org
 [Lmod]: https://github.com/TACC/Lmod
 [Lmod documentation]: https://lmod.readthedocs.io/en/latest/
+[core software]: {{ '/software/core-software.html' | relative_url }}
 [Software Repositories]: {{ '/software/software-repositories.html' | relative_url }}

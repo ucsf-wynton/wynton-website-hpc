@@ -1,3 +1,8 @@
+---
+context:
+  - xfer
+---
+
 <div class="alert alert-info" role="alert">
 To set up password-free file transfers, see <a href="{{ '/howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.  Then there is also no need to specify your cluster username.
 </div>
@@ -14,13 +19,19 @@ For _file downloads_ from online resources, tools such as `curl`, `wget`, and `r
 </div>
 
 
-## <span class="glyphicon glyphicon-upload"></span> From your local machine to the {{ site.cluster.name }} HPC file system
+<div class="alert alert-info" role="alert">
+TIPS: Try to use <code>scp -c aes128-gcm@openssh.com ...</code> to speed up the transfer rates.  There can be a fair bit of CPU overhead when SCP encrypts the data before transferring it - this option makes it use a faster encryption cipher.
+</div>
+
+
+
+## <span class="glyphicon glyphicon-upload"></span> From your local machine to the {{ site.cluster.name }} file system
 
 ### Copy a single file on your local file system to your {{ site.cluster.name }} home directory
 
 To copy a single file to your home directory (`~/`) on the cluster, use
 ```sh
-{local_machine}$ scp one_file.tsv alice@{{ site.transfer.hostname }}:~/
+{local}$ scp one_file.tsv alice@{{ site.transfer.hostname }}:~/
 ```
 
 
@@ -28,26 +39,26 @@ To copy a single file to your home directory (`~/`) on the cluster, use
 
 To copy multiple files to {{ site.cluster.name }} so they appear directly under `~/study/files/`, use
 ```sh
-{local_machine}$ scp *.txt *.R ../some/path/another_file.tsv alice@{{ site.transfer.hostname }}:study/files/
+{local}$ scp *.txt *.R ../some/path/another_file.tsv alice@{{ site.transfer.hostname }}:study/files/
 ```
 
 ### Recursively copy a directory to a folder on the cluster
 
 To copy all content of directory `dataset/` to {{ site.cluster.name }} so that it appears as `~/study/dataset/`, use
 ```sh
-{local_machine}$ scp -r dataset/ alice@{{ site.transfer.hostname }}:study/
+{local}$ scp -r dataset/ alice@{{ site.transfer.hostname }}:study/
 ```
 
 
 
-## <span class="glyphicon glyphicon-download"></span> From the {{ site.cluster.name }} HPC file system to your local machine
+## <span class="glyphicon glyphicon-download"></span> From the {{ site.cluster.name }} file system to your local machine
 
 ### Copy a single file from your {{ site.cluster.name }} home directory to your local machine
 
 To copy a single file in your  {{ site.cluster.name }} home directory to the working directory of your local machine, use
 ```sh
-{local_machine}$ cd /path/project
-{local_machine}$ scp alice@{{ site.transfer.hostname }}:one_file.tsv .
+{local}$ cd /path/project
+{local}$ scp alice@{{ site.transfer.hostname }}:one_file.tsv .
 ```
 
 _Note_: Don't forget that period (`.`) at the end - it indicates copy [the file] "to the current directory".
@@ -57,15 +68,43 @@ _Note_: Don't forget that period (`.`) at the end - it indicates copy [the file]
 
 To copy multiple files from `~/study/files/` on the cluster to `~/study/` on your local machine, do:
 ```sh
-{local_machine}$ scp alice@{{ site.transfer.hostname }}:study/files/*.txt alice@{{ site.transfer.hostname }}:study/files/*.R ~/study/
+{local}$ scp alice@{{ site.transfer.hostname }}:study/files/*.txt alice@{{ site.transfer.hostname }}:study/files/*.R ~/study/
 ```
 
 ### Recursively copy a folder from the cluster
 
 To copy all content of directory `dataset/` on the cluster so that it appears as `dataset/` in your local working directory, use
 ```sh
-{local_machine}$ cd /path/project
-{local_machine}$ scp -r alice@{{ site.transfer.hostname }}:dataset/ .
+{local}$ cd /path/project
+{local}$ scp -r alice@{{ site.transfer.hostname }}:dataset/ .
 ```
 
 _Note_: Don't forget that period (`.`) at the end - it indicates copy [the folder] "to the current directory".
+
+
+## GUI file-transfer clients 
+
+In addition to using command-line file transfer clients, some users might use graphical desktop clients to perform file transfers. 
+
+<div class="alert alert-info" role="alert">
+Wynton requires multifactor authentication so there are a couple additional configuration steps that might be necessary.
+</div>
+
+### Cyberduck 
+
+When using [Cyberduck], from the menu:
+
+- navigate to `Preferences -> Transfers -> General` 
+- change the Transfer Files setting 'Use browser connection' instead of 'Open Multiple connections'
+
+### FileZilla
+
+When using [FileZilla], do:
+
+- in the General tab, select 'SFTP' as the Protocol instead of 'FTP'
+- for Logon Type, select 'Interactive' instead of 'Ask for Password'
+- under the Transfer Settings tab, you might need to click the 'Limit number of simultaneous connections' and make sure the 'Maximum number of connections' is set to 1
+
+
+[Cyberduck]: https://cyberduck.io/
+[FileZilla]: https://filezilla-project.org/

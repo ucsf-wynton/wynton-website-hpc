@@ -2,9 +2,9 @@
 2018-10-06: This is a mockup page with mockup information.
 </div>
 
-# Wynton Compute and Storage Pricing
+# {{ site.cluster.name }} Compute and Storage Pricing
 
-The Wynton cluster is built on a co-op model where every contributing research group has immediate access to the cluster **computing power** and/or **storage capacity** _proportionate to their contribution_.  In addition, **all members** (free and contributing), have access to a baseline fraction of the cluster computing power and storage capacity regardless of their contribution.
+The {{ site.cluster.name }} cluster is built on a co-op model where every contributing research group has immediate access to the cluster **computing power** and/or **storage capacity** _proportionate to their contribution_.  In addition, **all members** (free and contributing), have access to a baseline fraction of the cluster computing power and storage capacity regardless of their contribution.
 
 | Description                                          | Free | Compute contributor | Storage contributor
 |------------------------------------------------------|:----:|:-------------------:|:-------------------:
@@ -39,7 +39,7 @@ As of October 2018, **a compute unit with four nodes (112 cores), 384 GiB RAM, ~
 
 ### Bring your own compute
 
-As of October 2018, the **minimal requirement for hardware contributions is 8 cores, 16 GiB RAM, and 1 Gbps networking**.  Please note that contributed hardware will be placed on Wynton's private network, wiped, and reinstalled with the standard Wynton image.
+As of October 2018, the **minimal requirement for hardware contributions is 8 cores, 16 GiB RAM, and 1 Gbps networking**.  Please note that contributed hardware will be placed on {{ site.cluster.nickname }}'s private network, wiped, and reinstalled with the standard {{ site.cluster.name }} image.
 
 
 ## Storage pricing

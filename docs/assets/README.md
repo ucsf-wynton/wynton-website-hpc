@@ -2,7 +2,7 @@
 
 ## Sources
 
-```
+```lang-none
 css/
   banner.css [1]
 
@@ -19,6 +19,7 @@ The logo was downloaded (on 2017-08-18) from the settings of Slack team [ucsf-wy
 
 
 ## How the favicon was created
+
 The favicon was created from the UCSF CBC logo using [ImageMagick](http://www.imagemagick.org/):
 ```sh
 cd assets/
@@ -26,5 +27,6 @@ convert images/ucsf-wynton-logo.png -geometry 128x128 -define icon:auto-resize=6
 ```
 
 
-## REFERENCES:
-* [1] https://github.com/ucsf-web-services/ucsf_identity_web_banner_templates
+## References
+
+* [1] <https://github.com/ucsf-web-services/ucsf_identity_web_banner_templates>

@@ -1,5 +1,3 @@
 # Contact Information
 
-{{ site.cluster.name }} System Administrators and Managers:
-
-* [wynton_admin@ucsf.edu](mailto:wynton_admin@ucsf.edu) - reaches all systems administrators and managers.
+To reach {{ site.cluster.nickname }} support staff by email and for other support options, please refer to [the Support page]({{'/support/index.html' | relative_url }}).

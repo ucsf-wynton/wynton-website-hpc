@@ -1,0 +1,7 @@
+[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,/c4/scratch,{{ site.user.labfolder }} rocker_r-base.sif
+Singularity> ls /scratch
+alice
+Singularity> ls /c4/scratch
+alice
+Singularity> ls {{ site.user.labfolder }}
+data1  data2

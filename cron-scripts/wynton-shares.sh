@@ -10,5 +10,10 @@ PATH="/opt/sge/bin/lx-amd64/:$PATH"
 
 tmpfile=$(mktemp)
 wynton shares tsv > "$tmpfile"
+grep -q -E "^# Total queue_slots:[[:space:]]*0$$" "$tmpfile" || mv "$tmpfile" "${TARGET}/compute_shares.tsv"
 
-mv "$tmpfile" "${TARGET}/compute_shares.tsv"
+wynton gpushares tsv > "$tmpfile"
+mv "$tmpfile" "${TARGET}/gpu_shares.tsv"
+
+
+

@@ -1,0 +1,13 @@
+[alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.sif
+Singularity> head -3 /etc/os-release
+PRETTY_NAME="Debian GNU/Linux buster/sid"
+NAME="Debian GNU/Linux"
+ID=debian
+Singularity> Rscript --version
+R scripting front-end version 4.1.0 (2021-05-18)
+Singularity> exit
+
+[alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"

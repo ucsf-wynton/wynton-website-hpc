@@ -1,0 +1,23 @@
+{
+	"ignorePatterns": [
+		{
+			"pattern": "^https://www.cgl.ucsf.edu/admin/"
+		},
+		{
+			"pattern": "^https://mon.wynton.ucsf.edu/"
+		},
+		{
+			"pattern": "^https://listsrv.ucsf.edu/"
+		}
+
+	],
+    
+	"replacementPatterns": [
+		{
+			"pattern": "^.attachments",
+			"replacement": "file://some/conventional/folder/.attachments"
+		}
+	],
+    
+	"seealso": "https://github.com/tcort/markdown-link-check"
+}

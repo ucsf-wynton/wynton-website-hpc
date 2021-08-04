@@ -10,36 +10,39 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Purpose: Low-latency needs, e.g. pipeline prototyping and quick turn-around analysis
 
 * **long.q**:
-  - Maximum runtime: 2 weeks
+  - Maximum runtime: 2 weeks (336 hours)
   - Process priority: 19 (lowest)
   - Availability: all compute nodes
   - Quota: Unlimited (all users)
   - Purpose: General needs
 
 * **member.q**:
-  - Maximum runtime: 2 weeks
+  - Maximum runtime: 2 weeks (336 hours)
   - Process priority: 0 (highest)
   - Availability: all compute nodes except GPU and institutionally purchased nodes
-  - Compute power: {{ site.specs.pu_total }} processing units
-  - Number of slots: {{ site.specs.member_q_total }}
+  - Compute power: {{ site.data.specs.pu_total }} processing units
+  - Number of slots: {{ site.data.specs.member_q_total }}
   - Quota: Proportional to [your lab's contributed share]({{ '/about/shares.html' | relative_url }}) on the cluster.  When a lab has exhausted all its available member.q slots, additional jobs scheduled by lab members will spill over to the long.q queue
   - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the {{ site.cluster.name }} cluster and gain priority access corresponding to the contribution
 
 * **gpu.q**:
-  - Maximum runtime on communal GPU nodes: 2 weeks
-  - Maximum runtime on contributed GPU nodes: 2 weeks if you are the contributor, otherwise 2 hours
+  - Maximum runtime on communal GPU nodes: 2 weeks (336 hours)
+  - Maximum runtime on contributed GPU nodes: 2 weeks (336 hours) if you are the contributor, otherwise 2 hours
   - Process priority: 0 (highest)
-  - Availability: {{ site.specs.gpus }} GPUs on {{ site.specs.gpu_nodes }} GPU nodes ({{ site.specs.communal_gpus }}/{{ site.specs.communal_gpu_nodes }} GPUs/nodes are communal and {{ site.specs.gpus | minus: site.specs.communal_gpus }}/{{ site.specs.gpu_nodes | minus: site.specs.communal_gpu_nodes }} GPUs/nodes are contributed)
-  - Number of GPU slots: {{ site.specs.gpus }}
+  - Availability: {{ site.data.specs.gpus }} GPUs on {{ site.data.specs.gpu_nodes }} GPU nodes ({{ site.data.specs.communal_gpus }}/{{ site.data.specs.communal_gpu_nodes }} GPUs/nodes are communal and {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }}/{{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPUs/nodes are contributed)
+  - Number of GPU slots: {{ site.data.specs.gpus }}
   - Quota: Unlimited (all users).
   - Purpose: For software that utilize Graphics Processing Units (GPUs)
 
 * **ondemand.q**:
-  - Maximum runtime: 2 weeks
+  - Maximum runtime: 2 weeks (336 hours)
   - Process priority: 0 (highest)
   - Availability: Institutionally purchased nodes only
   - Quota: Available upon application and approval by the [steering committee]
   - Purpose: Intended for scheduled, high-priority computing needs and / or temporary paid priority access
+
+
+_Comment_: Here "runtime" means "walltime", i.e. the runtime of a job is how long it runs according to the clock on the wall, not the amount of CPU time.
 
 
 ## Usage

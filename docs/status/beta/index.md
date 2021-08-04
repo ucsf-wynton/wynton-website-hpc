@@ -1,4 +1,4 @@
-# Wynton Dashboard
+# {{ site.cluster.name }} Dashboard
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -143,8 +143,8 @@ Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-
             stepmode: 'backward'
           },
           {
-	    step: 'all'
-	  }
+            step: 'all'
+          }
         ]},
 /*      rangeslider: {range: ['2015-02-17', '2017-02-16']}, */
       type: 'date'

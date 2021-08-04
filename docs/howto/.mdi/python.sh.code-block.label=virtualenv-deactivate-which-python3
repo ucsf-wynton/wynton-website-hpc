@@ -1,0 +1,2 @@
+[alice@{{ site.devel.name }} ~]$ which python3
+/usr/bin/python3

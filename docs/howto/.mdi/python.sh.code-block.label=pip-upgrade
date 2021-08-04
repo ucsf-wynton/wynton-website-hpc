@@ -1,0 +1,5 @@
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user --upgrade pip
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/54/eb/4a3642e971f404d69d4f6fa3885559d67562801b99d7592487f1ecc4e017/pip-20.3.3-py2.py3-none-any.whl
+Installing collected packages: pip
+Successfully installed pip-20.3.3

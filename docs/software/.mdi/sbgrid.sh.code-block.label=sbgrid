@@ -1,0 +1,22 @@
+[alice@{{ site.devel.name }} ~]$ source /programs/sbgrid.shrc
+********************************************************************************
+                  Software Support by SBGrid (www.sbgrid.org)
+********************************************************************************
+ Your use of the applications contained in the /programs  directory constitutes
+ acceptance of  the terms of the SBGrid License Agreement included  in the file
+ /programs/share/LICENSE.  The applications  distributed by SBGrid are licensed
+ exclusively to member laboratories of the SBGrid Consortium.
+              Run sbgrid-accept-license to remove the above message.  
+********************************************************************************
+ SBGrid was developed with support from its members, Harvard Medical School,    
+ HHMI, and NSF. If use of SBGrid compiled software was an important element     
+ in your publication, please include the following reference in your work:      
+                                                                                      
+ Software used in the project was installed and configured by SBGrid.                   
+ cite: eLife 2013;2:e01456, Collaboration gets the most out of software.                
+********************************************************************************
+ SBGrid installation last updated: 2021-07-30
+ Please submit bug reports and help requests to:       <bugs@sbgrid.org>  or
+                                                       <http://sbgrid.org/bugs>
+            For additional information visit https://sbgrid.org/wiki
+********************************************************************************
