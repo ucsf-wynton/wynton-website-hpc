@@ -1,0 +1,7 @@
+input[type="search"] {
+  max-width: 3.5rem;
+}
+
+input[type="search"]:focus {
+  max-width: 30rem;
+}
