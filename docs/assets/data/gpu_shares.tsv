@@ -1,11 +1,3 @@
 # Created by: hb
-# Created on: 2021-08-04 10:38:49-07:00
+# Created on: 2021-08-05 03:00:03-07:00
 project	nbr_of_hosts	hosts
-rosenberglab	1	msg-ihgpu5
-agardlab,chenglab,frostlab,stroudlab,gpu-collab	23	msg-iogpu1,msg-iogpu2,msg-iogpu3,msg-iogpu4,msg-iogpu5,msg-iogpu6,msg-iogpu7,msg-iogpu8,msg-iogpu9,msg-iogpu11,msg-iogpu12,msg-iogpu13,msg-ihgpu1,msg-ihgpu2,msg-ihgpu3,msg-ihgpu4,msg-ihgpu5,qb3-idgpu3,qb3-idgpu4,qb3-idgpu5,qb3-idgpu11,qb3-idgpu12,qb3-iogpu5
-grabelab	4	cc-idgpu1,cc-idgpu2,cc-idgpu3,cc-idgpu4
-genetics,arnaoutlab	1	qb3-iogpu1
-huanglab	1	cc-idgpu5
-jacobsonlab,arnaoutlab	1	qb3-idgpu6
-gladstone,pollardlab	1	qb3-idgpu10
-i4h	1	qb3-iogpu4
