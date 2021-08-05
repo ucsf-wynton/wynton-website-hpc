@@ -55,7 +55,7 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-<!--          
+  {% if site.docsearch.api_key %}
           <ul class="nav navbar-nav">
            <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
             <div class="form-group">
@@ -69,7 +69,8 @@
           </ul>
         <li>
       </ul>
--->      
+  {% endif %}
+
       <ul class="nav navbar-nav" id="menunavbar">
         <li>
           <a href="{{ '/status/index.html' | relative_url }}">Status</a>
