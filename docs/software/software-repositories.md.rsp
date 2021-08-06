@@ -191,27 +191,27 @@ if (length(m$description) > 0L) {
 
 
 %>
-  <dt><%= m$package %><% if (length(m$parent) > 0) cat(sprintf(" (part of %s)", m$parent)) %></dt>
-  <dd>
+  <dt class="module-name"><%= m$package %><% if (length(m$parent) > 0) cat(sprintf(" (part of %s)", m$parent)) %></dt>
+  <dd class="module-details">
   <% if (!is.null(help)) { %>
-    <strong><%= as_html(help) %></strong><br>
+    <strong class="module-help"><%= as_html(help) %></strong><br>
   <% } %>
   <% if (!is.null(m$description) && !is.na(m$description)) { %>
-    <%= as_html(m$description) %><br>
+    <span class="module-description"><%= as_html(m$description) %></span><br>
   <% } %>
   <% if (!is.null(m$example)) { %>
-    Example: <%= as_html(m$example) %><br>
+    Example: <span class="module-example"><%= as_html(m$example) %></span><br>
   <% } %>
   <% if (!is.null(m$note)) { %>
-    Note: <%= as_html(m$note) %><br>
+    Note: <span class="module-note"><%= as_html(m$note) %></span><br>
   <% } %>
   <% if (!is.null(m$url) && !is.na(m$url)) { %>
-    URL: <%= as_html(m$url) %><br>
+    URL: <span class="module-url"><%= as_html(m$url) %></span><br>
   <% } %>
   <% if (!is.null(m$warning) && !is.na(m$warning)) { %>
-    Warning: <%= as_html(m$warning) %><br>
+    Warning: <span class="module-warning"><%= as_html(m$warning) %></span><br>
   <% } %>
-  Versions: <%= paste(vers, collapse = ", ") %><br>
+  Versions: <span class="module-version"><%= paste(vers, collapse = ", ") %></span><br>
   <% if (length(m$parent) > 0) { %>
   <% R.utils::mstr(m) %>
     Note: <em>To use this module, call <code>module load <%= attr(modules, "repository") %> <%= m$parent %></code> first.</em>
