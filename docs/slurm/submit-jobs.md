@@ -34,8 +34,8 @@ Before you can submit jobs to the compute nodes, you should prepare a script lik
 
 # Anything under here can be a bash script
 
-# If you used the -t option above, this same script will be run for each task,
-# but with $SGE_TASK_ID set to a different value each time (1-10 in this case).
+# If you used the --array option above, this same script will be run for each task,
+# but with $SLURM_ARRAY_JOB_ID set to a different value each time (1-10 in this case).
 # The commands below are one way to select a different input (PDB codes in
 # this example) for each task.  Note that the bash arrays are indexed from 0,
 # while task IDs start at 1, so the first entry in the tasks array variable
