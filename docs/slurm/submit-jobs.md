@@ -20,7 +20,8 @@ This job submission will submit `script.sh` to the job scheduler which will even
 Before you can submit jobs to the compute nodes, you should prepare a script like the one below. Split your jobs into smaller tasks varying only in input parameters. You can then submit the jobs from a login node or a dev node. (Note: _do not_ include the `#--` comments in your script - that won't work.)
 
 ```sh
-#!/bin/bash                             #-- what is the language of this shell & what language is your job in
+#!/bin/bash                             
+#                                       #-- what is the language of this shell & what language is your job in
 #                                       #-- Any line that starts with #SBATCH is an instruction to Slurm
 #SBATCH --output=[dir/file]             #-- output file relative to current directory (fill in)
 #SBATCH --error=[dir/file]              #-- error file relative to current directory (fill in, omit if you want to combine output and error)
