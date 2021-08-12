@@ -173,7 +173,7 @@ _Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric mul
 
 ## Minimum network speed (1g=1 Gbps, 10g=10 Gbps, 40g=40 Gbps)
 
-The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the constraint reflecting the speed (sic!) resource, e.g. to request the job be run only on a server with a 10g or 40g connection, the pipe (|) is used to specify the "or" operator for the two values.
+The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the constraint reflecting the speed (sic!) resource, e.g. to request the job be run only on a server with a 10g or 40g connection, the pipe (`|`) is used to specify the "or" operator for the two values.
 
 ```sh
 sbatch --constraint="10g|40g"
