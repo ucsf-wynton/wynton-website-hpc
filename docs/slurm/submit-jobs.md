@@ -52,13 +52,13 @@ hostname
                                                                                                                               # e.g. "did my job exceed its memory request?"
 ```
 
-## Submit a script to run in the current working directory
+## Submit a script
 
-To submit a shell script to the scheduler such that it will run in the current working directory (`-cwd`), use:
+To submit a shell script to the scheduler use:
 ```sh
 sbatch script.sh
 ```
-The scheduler will assign your job a unique (numeric) job ID.
+The scheduler will assign your job a unique (numeric) job ID (SLURM_JOB_ID).
 
 
 ## Specifying (maximum) memory usage
