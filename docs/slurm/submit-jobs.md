@@ -15,7 +15,41 @@ This job submission will submit `script.sh` to the job scheduler which will even
 * `--time=00:20:00`: the scheduler knows that the job to run no longer than 20 minutes allowing it to be scheduled much sooner than if no run-time was specified
 * `script.sh`: the shell script to be run
 
+## Sample submit script
 
+Before you can submit jobs to the compute nodes, you should prepare a script like the one below. Split your jobs into smaller tasks varying only in input parameters. You can then submit the jobs from a login node or a dev node. (Note: _do not_ include the `#--` comments in your script - that won't work.)
+
+```sh
+#!/bin/bash                             #-- what is the language of this shell & what language is your job in
+#                                       #-- Any line that starts with #SBATCH is an instruction to Slurm
+#SBATCH --output=[dir/file]             #-- output file relative to current directory (fill in)
+#SBATCH --error=[dir/file]              #-- error file relative to current directory (fill in, omit if you want to combine output and error)
+#SBATCH --requeue                       #-- tell the system that if a job crashes, it should be requeud
+#SBATCH --mem-per-cpu=100MB             #-- submits on nodes with enough free memory (required)
+#SBATCH --tmp=200GB                     #-- TMP/Scratch Space Available for job
+#SBATCH --time=24:00:00                 #-- runtime limit (see above; this requests 24 hours)
+##SBATCH --array=1-10                   #-- remove first '#' to specify the number of
+                                        #-- tasks if desired (see Tips section on this page)
+
+# Anything under here can be a bash script
+
+# If you used the -t option above, this same script will be run for each task,
+# but with $SGE_TASK_ID set to a different value each time (1-10 in this case).
+# The commands below are one way to select a different input (PDB codes in
+# this example) for each task.  Note that the bash arrays are indexed from 0,
+# while task IDs start at 1, so the first entry in the tasks array variable
+# is simply a placeholder
+
+#tasks=(0 1bac 2xyz 3ijk 4abc 5def 6ghi 7jkl 8mno 9pqr 1stu )
+#input="${tasks[$SLURM_TASK_ID]}"
+
+date
+hostname
+
+## End-of-job summary, if running as a job
+[[ -n "$SLURM_JOB_ID" ]] && sstat --format="JobID,AveCPU,MaxRSS,MaxPages,MaxDiskRead,MaxDiskWrite" -j "$SLURM_JOB_ID"         # This is useful for debugging and usage purposes,
+                                                                                                                              # e.g. "did my job exceed its memory request?"
+```
 
 ## Submit a script to run in the current working directory
 
@@ -68,7 +102,7 @@ If not specified, the default run time is 30 minutes.  A job that runs longer th
 
 Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage]({{ '/about/specs.html#scratch-storage' | relative_url }}) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `--tmp=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
 ```sh
-sbatch --tmp=200G script.sh
+sbatch --tmp=200GB script.sh
 ```
 
 Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes]({{ 'using-local-scratch.html' | relative_url}}).
