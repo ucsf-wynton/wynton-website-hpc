@@ -273,6 +273,11 @@ _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org
 * Working directory: If not specified (e.g. `-cwd`), the default working directory is `$HOME`.
 -->
 
+## Tips
+
+- An array job is a collection of similar serial jobs which can be submitted and controlled together. For example, `--array=1-10` runs 10 tasks in an array. Each task runs the same script, but gets a different value for the `$SLURM_ARRAY_JOB_ID` environment variable (from '1' to '10' in this example). You can use this to choose different inputs or other parameters for each task.
+- The Slurm manual pages are installed on all login and dev nodes. For more information type `man sbatch`, `man squeue`, `man sinfo`, etc.
+
 
 ## See also
 
