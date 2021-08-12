@@ -34,6 +34,7 @@ chsh
 cli
 CLI
 CMD
+conda
 config
 configurational
 cpu
@@ -154,6 +155,8 @@ Mbps
 md
 mem
 MiB
+miniconda
+Miniconda
 misconfiguration
 mortem
 MOTD
@@ -266,6 +269,8 @@ SIF
 SIGKILL
 signup
 sinfo
+singularity
+Singularity
 slurm
 Slurm
 SLURM
