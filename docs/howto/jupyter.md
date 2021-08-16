@@ -36,25 +36,27 @@ In this example the local port your web browser would connect to is 8157 and the
 To establish the "tunnel" using ssh port forwarding:
 
 ```sh
-[alice@local ~]$ ssh alice@dev3.wynton.ucsf.edu -J alice@log2.wynton.ucsf.edu -L 8157:localhost:8890
+[alice@local ~]$ ssh alice@{{ site.devel.name }}.wynton.ucsf.edu -J alice@log2.wynton.ucsf.edu -L 8157:localhost:8890
 
-Duo two-factor login for murashka
+Duo two-factor login for alice
 Enter a passcode or select one of the following options:
 
- 1. Duo Push to XXX-XXX-9540
+ 1. Duo Push to XXX-XXX-9999
+ 2. Phone call to XXX-XXX-9999
+ 3. SMS passcodes to XXX-XXX-9999
 
 Passcode or option (1-3): 1
 Success. Logging you in...
 Remember connection authentication from c-73-70-233-129 for 12 hours? [y/N] n  
 
-[alice@dev3 ~]$ 
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 Then launch a new Jupyter notebook running on the development node:
 
 ```sh
-[alice@dev3]$ jupyter notebook --port 8890
-[I 10:50:23.319 NotebookApp] Serving notebooks from local directory: /wynton/home/alice
+[alice@{{ site.devel.name }}]$ jupyter notebook --port 8890
+[I 10:50:23.319 NotebookApp] Serving notebooks from local directory: {{ site.user.home }}
 [I 10:50:23.319 NotebookApp] Jupyter Notebook 6.4.3 is running at:
 [I 10:50:23.319 NotebookApp] http://localhost:8890/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
 [I 10:50:23.319 NotebookApp]  or http://127.0.0.1:8890/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
@@ -63,7 +65,7 @@ Then launch a new Jupyter notebook running on the development node:
 [C 10:50:23.581 NotebookApp]
 
     To access the notebook, open this file in a browser:
-        file:///wynton/home/admins/murashka/.local/share/jupyter/runtime/nbserver-27971-open.html
+        file://{{ site.user.home }}/.local/share/jupyter/runtime/nbserver-27971-open.html
     Or copy and paste one of these URLs:
         http://localhost:8890/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
      or http://127.0.0.1:8890/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
