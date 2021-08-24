@@ -19,6 +19,14 @@ If using an Anaconda/Miniconda environment, using the `conda` package manager to
 
 ```
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Note: During startup Python does a lot of small file operations locating all the required files. 
+
+The system version Python is installed on the local filesystemon Wynton nodes and should have a faster startup time. 
+
+For Anaconda and conda environments installed in a home directory both the Python interpreter and all of it's modules reside on the shared parallel file system.  The operations to look up the needed files are metadata heavy and can strain the parallel file system resulting in slower startup performance for the script. In particular if the script is a batch job executing on many compute nodes, the performance impact has the potential to slow operations down for all users. 
+</div>
+
 ## Connect to Jupyter Notebook - using ssh port forwarding 
 
 In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter notebook is running on the development node is 8890.  These ports are configured when you establish the ssh "tunnel":
