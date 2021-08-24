@@ -2,7 +2,7 @@
 
 ## Where to to run Jupyter Notebook
 
-[Jupyter Notebook] should only be run on the {{ site.cluster.name }} development nodes. However you cannot connect directly from outside {{ site.cluster.name }} directly to a development node but rather either need to use ssh port forwarding to establish the connection with a local web browser, else use X2Go to redirect the desktop from the development server to your local desktop and launch a remote web browser there.
+[Jupyter Notebook] should only be run on the {{ site.cluster.name }} development nodes. However you cannot connect from outside {{ site.cluster.name }} directly to a development node but rather either need to use ssh port forwarding to establish the connection with a local web browser, else use X2Go to redirect the desktop from the development server to your local desktop and launch a remote web browser there.
 
 This assumes you have Jupyter installed with whichever Python you usually use.
 
@@ -18,6 +18,14 @@ If using an Anaconda/Miniconda environment, using the `conda` package manager to
 [alice@dev3 ~]$ conda install -c conda-forge notebook
 
 ```
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+Note: During startup Python does a lot of small file operations locating all the required files. 
+
+The system version Python is installed on the local filesystem on Wynton nodes and should have a faster startup time. 
+
+For Anaconda and conda environments installed in a home directory both the Python interpreter and all of it's modules reside on the shared parallel file system.  The operations to look up the needed files are metadata heavy and can strain the parallel file system resulting in slower startup performance for the script. In particular if the script is a batch job executing on many compute nodes, the performance impact has the potential to slow operations down for all users. 
+</div>
 
 ## Connect to Jupyter Notebook - using ssh port forwarding 
 
