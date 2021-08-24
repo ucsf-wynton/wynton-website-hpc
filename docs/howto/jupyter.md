@@ -2,7 +2,7 @@
 
 ## Where to to run Jupyter Notebook
 
-[Jupyter Notebook] should only be run on the {{ site.cluster.name }} development nodes. However you cannot connect directly from outside {{ site.cluster.name }} directly to a development node but rather either need to use ssh port forwarding to establish the connection with a local web browser, else use X2Go to redirect the desktop from the development server to your local desktop and launch a remote web browser there.
+[Jupyter Notebook] should only be run on the {{ site.cluster.name }} development nodes. However you cannot connect from outside {{ site.cluster.name }} directly to a development node but rather either need to use ssh port forwarding to establish the connection with a local web browser, else use X2Go to redirect the desktop from the development server to your local desktop and launch a remote web browser there.
 
 This assumes you have Jupyter installed with whichever Python you usually use.
 
