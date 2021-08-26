@@ -53,6 +53,7 @@ lftp alice.aliceson@ucsf.edu@ftp.box.com:~> exit
 ## Automatic authentication
 
 When starting `lftp` as above, you need to manually enter your password, which can be tedious or even prevent automatic file transfers in batch scripts.  A solution to this is to set up the FTPS credentials in `~/.netrc`.  Here is what it could look like:
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ cat ~/.netrc
 machine ftp.box.com
@@ -65,6 +66,7 @@ machine ftp.box.com
 </div>
 
 **Since the password is fully visible in plain text, make sure to keep this file private at all times**, otherwise users on the system can see all your credentials, i.e.
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ chmod 600 ~/.netrc
 [alice@{{ site.transfer.name }} ~]$ ls -l ~/.netrc
@@ -72,6 +74,7 @@ machine ftp.box.com
 ```
 
 To verify that the automatic authentication works, try to log in again. You should no longer be prompted for your password - instead `lftp` gets it automatically from `~/.netrc`.  For example:
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ lftp --user alice.aliceson@ucsf.edu ftps://ftp.box.com
 lftp alice.aliceson@ucsf.edu@ftp.box.com:~> ls
@@ -81,7 +84,8 @@ lftp alice.aliceson@ucsf.edu@ftp.box.com:~> exit
 $ 
 ```
 
-Note that `curl` also recognizes `~/.netrc` credentials, e.g.
+Note that `curl` also recognizes `~/.netrc` credentials.  For example, to download a specific file, we can do:
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ curl --netrc -O ftps://ftp.box.com/Grant_R01.pdf
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -89,4 +93,10 @@ Note that `curl` also recognizes `~/.netrc` credentials, e.g.
 100 15.6M  100 15.6M    0     0  1561k      0  0:00:10  0:00:10 --:--:-- 3918k
 [alice@{{ site.transfer.name }} ~]$ ls -la Grant_R01.pdf
 -rw-r--r-- 1 alice cluster 16453180 Jul 10 21:13 Grant_R01.pdf
+```
+
+To upload a file, we can do:
+
+```sh
+[alice@{{ site.transfer.name }} ~]$ curl --netrc --upload-file notes.txt ftps://ftp.box.com/
 ```
