@@ -8,9 +8,8 @@ Because IT security requirements, operating systems, and hardware are continuall
 
 Use of the {{ site.cluster.name }} cluster is subject to UCSF's policy on [Authorized and Acceptable Use of Electronic Information Resources](https://policies.ucsf.edu/policy/650-18).
 
+Upon separation from UCSF, a Wynton user home directory an it's contents may be transferred to the user's PI in accordance with the Authorized and Acceptable Use of Electronic Information Resources policy (650-18) "i. An account that is not deleted upon loss of affiliation shall be transferred to another UCSF faculty or staff person designated as being responsible for the account."
 
 The {{ site.organization.name }} OPS team is tasked with implementing the policies established by the Faculty Steering Committee and with ensuring that the cluster runs effectively and efficiently. Users agree not to attempt to circumvent policies nor avoid restrictions imposed by the {{ site.organization.name }} OPS team.  
 
 Under no circumstances are users to share their account and password with others.
-
-
