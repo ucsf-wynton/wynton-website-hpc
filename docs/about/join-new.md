@@ -21,21 +21,10 @@ The {{ site.cluster.name }} staff will make every effort to process your account
 
 To apply for an account on the {{ site.cluster.name }} cluster, please fill out the following form:
 
-<!--
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex;">
-<strong>Sorry... {{ site.cluster.name }} account requests are temporarily disabled for 10-15 minutes due to a web server upgrade.</strong>
-<br><span class="timestamp">March 17, 2021 @ 12:15 PDT</span>
-</div>
-
--->
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
-</div>
-
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-<strong>Please make sure you provide all the information applicable to you in this form to avoid any delays</strong>
 </div>
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
