@@ -40,4 +40,38 @@ From the "Categories" select "Accounts, Access, and Email".
 
 From the list of, "Accounts, Access, and Email," services select, "[Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)".
 
+Fill out the form.
+
+If you have succesfully logged into MyAccess/DUO, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
+
+In the "UCSF Principle Investigator (PI) Approver Name, enter the name of the your supervisor and select the matching name from the pull down. This should populate the "UCSF PI Email" and "UCSF PI Department or Program" fields.
+
+Select "Yes" or "No" from the "Does this user already have an existing account on Wynton?" pull down.
+
+Select "No" from the "Do you Require Access to PHI Data" pull down. (Wynton is not currently Approved for PHI Data.)
+
+If you are filling the form out for yourself, the "Requested For" field will be autopopulated with your name.
+
+If you are requesting an account another user, enter their name and find them in the pull down.
+
+If they are a non-UCSF affiliate, select "Check this box if you cannot find their User Name in the database" and enter their First Name, Last Name, and contact email address.
+
+Select a UCSF Title from the pull down menu.
+
+Enter the Country, State, and Institution of origin.
+
+If you are a UCSF Employee, the UCSF Employee/Student ID should be autopopulated from the "Requested For" field. If you are not a UCSF employee, student, staff or faculty, enter "none".
+
+If you have had accounts with any of the affiliated computing environments, select them.
+
+Enter your desired UserName.
+
+Enter an alternative Username.
+
+Provide any additional comments.
+
+Check the box consenting to, "If the individual(s)for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."
+
+Click Submit.
+
 [contact us]: {{ '/about/contact.html' | relative_url }}
