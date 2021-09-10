@@ -42,6 +42,8 @@ From the list of, "Accounts, Access, and Email," services select, "[Request a Wy
 
 Fill out the form.
 
+## Detailed instructions regarding the Wynton Account Form.
+
 If you have succesfully logged into MyAccess/DUO, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
 
 In the "UCSF Principle Investigator (PI) Approver Name, enter the name of the your supervisor and select the matching name from the pull down. This should populate the "UCSF PI Email" and "UCSF PI Department or Program" fields.
