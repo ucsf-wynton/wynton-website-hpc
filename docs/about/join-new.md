@@ -58,7 +58,7 @@ If they are a non-UCSF affiliate, select "Check this box if you cannot find thei
 
 Select a UCSF Title from the pull down menu.
 
-Enter the Country, State, and Institution of origin.
+Enter the Country and State of Origin. If you are associated with an institution other than UCSF, enter it in the "Institution" field.
 
 If you are a UCSF Employee, the UCSF Employee/Student ID should be autopopulated from the "Requested For" field. If you are not a UCSF employee, student, staff or faculty, enter "none".
 
