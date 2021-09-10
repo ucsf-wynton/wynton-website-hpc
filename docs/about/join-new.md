@@ -64,7 +64,7 @@ If you are a UCSF Employee, the UCSF Employee/Student ID should be autopopulated
 
 If you have had accounts with any of the affiliated computing environments, select them.
 
-Enter your desired UserName.
+Enter your desired Username.
 
 Enter an alternative Username.
 
