@@ -54,7 +54,7 @@ Select "No" from the "Do you Require Access to PHI Data" pull down. (Wynton is n
 
 If you are filling the form out for yourself, the "Requested For" field will be autopopulated with your name.
 
-If you are requesting an account another user, enter their name and find them in the pull down.
+If you are requesting an account for another user, enter their name and find them in the pull down.
 
 If they are a non-UCSF affiliate, select "Check this box if you cannot find their User Name in the database" and enter their First Name, Last Name, and contact email address.
 
