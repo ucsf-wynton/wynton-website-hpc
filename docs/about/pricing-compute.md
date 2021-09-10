@@ -7,7 +7,7 @@ _Example specifications and pricing as of February 2021_
 
 * CPU: 2 × Intel Xeon Gold 6240 2.6 GHz 18-core processors
 * RAM: 384 GiB/node
-* Quote: 23,645 USD
+* Quote: 23,645 USD for 4 nodes in a 2U chassis
 
 
 
