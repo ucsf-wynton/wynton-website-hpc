@@ -48,9 +48,13 @@ Fill out the form.
 
 ## Detailed instructions regarding the Wynton account form
 
+### Requested By/Approver
+
 If you have successfully logged into MyAccess/Duo, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
 
 In the "UCSF Principle Investigator (PI) Approver Name, enter the name of the your supervisor and select the matching name from the pull down. This should populate the "UCSF PI Email" and "UCSF PI Department or Program" fields.
+
+### Account Details
 
 Select "Yes" or "No" from the "Does this user already have an existing account on Wynton?" pull down.
 
@@ -74,7 +78,9 @@ Enter your desired Wynton Username.
 
 Enter a desired alternative Wynton Username (If your first choice is already in use).
 
-Provide any additional comments.
+### Comments and Submit
+
+Provide any additional comments in the text field.
 
 Check the box consenting to, "If the individual(s)for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."
 
