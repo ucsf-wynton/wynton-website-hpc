@@ -67,9 +67,9 @@ If you are a UCSF Employee, the UCSF Employee/Student ID should be autopopulated
 
 If you have had accounts with any of the affiliated computing environments, select them.
 
-Enter your desired Username.
+Enter your desired Wynton Username.
 
-Enter an alternative Username.
+Enter a desired alternative Wynton Username (If your first choice is already in use).
 
 Provide any additional comments.
 
