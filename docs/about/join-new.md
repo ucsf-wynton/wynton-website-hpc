@@ -45,7 +45,7 @@ Fill out the form.
 
 ## Detailed instructions regarding the Wynton Account Form.
 
-If you have succesfully logged into MyAccess/DUO, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
+If you have successfully logged into MyAccess/DUO, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
 
 In the "UCSF Principle Investigator (PI) Approver Name, enter the name of the your supervisor and select the matching name from the pull down. This should populate the "UCSF PI Email" and "UCSF PI Department or Program" fields.
 
@@ -83,6 +83,6 @@ If you are the person for whom the account has been requested, you will also rec
 
 Please simply reply to this email, taking care not to alter the subject line. Also, please include the body of the previous email in your reply.
 
-Once your email contact address has been confirmed, (and any neccessary trainings or attestations have been completed,) Wynton Staff will make every effort to process your new account request within 5 business days.
+Once your email contact address has been confirmed, (and any necessary training or attestations have been completed,) Wynton Staff will make every effort to process your new account request within 5 business days.
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
