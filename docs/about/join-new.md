@@ -12,7 +12,7 @@ The end goal is that the all UCSF researchers should have access to the cluster 
 
 The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
 
-If you are an non-UCSF affiliate, you will need to have the UCSF Staff, student, postdoc, or PI you are associated with request your account for you.
+If you are an non-UCSF affiliate, you will need to have the UCSF staff, student, postdoc, or PI you are associated with request your account for you.
 
 
 ## How long will it take for my Wynton account request to be processed?
@@ -24,7 +24,7 @@ The {{ site.cluster.name }} staff will make every effort to process your account
 
 To apply for an account on the {{ site.cluster.name }} cluster, please follow the following link and fill out the Web Form for a Wynton Account. 
 
-**Note: The following form is only available to UCSF staff, students, postdocs, and faculty. If you are an non-UCSF affiliate, you will need to have the UCSF Staff, student, postdoc, or PI you are associated with request your account for you.**
+**Note: The following form is only available to UCSF staff, students, postdocs, and faculty. If you are an non-UCSF affiliate, you will need to have the UCSF staff, student, postdoc, or PI you are associated with request your account for you.**
 
 [Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)
 
@@ -37,7 +37,7 @@ To apply for an account on the {{ site.cluster.name }} cluster, please follow th
 
 Go to [help.ucsf.edu](https://help.ucsf.edu)
 
-Select "Request Specific Services" (You will be prompted for UCSF and/or DUO Login).
+Select "Request Specific Services" (You will be prompted for UCSF and/or Duo Login).
 
 From the "Categories" select "Accounts, Access, and Email".
 
@@ -48,7 +48,7 @@ Fill out the form.
 
 ## Detailed instructions regarding the Wynton account form
 
-If you have successfully logged into MyAccess/DUO, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
+If you have successfully logged into MyAccess/Duo, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
 
 In the "UCSF Principle Investigator (PI) Approver Name, enter the name of the your supervisor and select the matching name from the pull down. This should populate the "UCSF PI Email" and "UCSF PI Department or Program" fields.
 
