@@ -33,7 +33,7 @@ To apply for an account on the {{ site.cluster.name }} cluster, please follow th
 </div>
 
 
-## Long way around
+## To Access From Service Now
 
 Go to [help.ucsf.edu](https://help.ucsf.edu)
 
