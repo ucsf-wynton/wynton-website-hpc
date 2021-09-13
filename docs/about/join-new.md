@@ -32,7 +32,7 @@ To apply for an account on the {{ site.cluster.name }} cluster, please follow th
 
 ## Long Way Around
 
-Go to [Help.UCSF.EDU](https://help.ucsf.edu)
+Go to [help.ucsf.edu](https://help.ucsf.edu)
 
 Select "Request Specific Services" (You will be prompted for UCSF and/or DUO Login).
 
