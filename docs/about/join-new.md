@@ -21,8 +21,9 @@ The {{ site.cluster.name }} staff will make every effort to process your account
 
 ## Request access
 
-To apply for an account on the {{ site.cluster.name }} cluster, please follow the following link and fill out the Web Form for a Wynton Account.
+To apply for an account on the {{ site.cluster.name }} cluster, please follow the following link and fill out the Web Form for a Wynton Account. 
 
+**Note: The following form is only available to UCSF staff, students, postdocs, and faculty. If you are an non-UCSF affiliate, you will need to have the UCSF Staff, student, postdoc, or PI you are associated with request your account for you.**
 
 [Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)
 
