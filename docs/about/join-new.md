@@ -1,6 +1,5 @@
 # Join the Cluster
 
-
 {{ site.cluster.name }} is a large, shared high-performance compute (HPC) cluster underlying UCSF's Research Computing Capability. Funded and administered cooperatively by UCSF campus IT and key research groups, it is available to all UCSF researchers, and consists of different profiles suited to various biomedical and health science computing needs. Researchers can participate using the “co-op” model of resource contribution and sharing.
 
 
@@ -15,9 +14,11 @@ The {{ site.cluster.name }} environment is available for _free_ to all UCSF rese
 
 If you are an non-UCSF affiliate, you will need to have the UCSF Staff, student, postdoc, or PI you are associated with request your account for you.
 
-## How Long Will It Take For My Wynton Account Request To Be Processed?
+
+## How long will it take for my Wynton account request to be processed?
 
 The {{ site.cluster.name }} staff will make every effort to process your account request and create the account within 5 business days of confirmation of your affiliation and contact information.
+
 
 ## Request access
 
@@ -31,7 +32,8 @@ To apply for an account on the {{ site.cluster.name }} cluster, please follow th
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
-## Long Way Around
+
+## Long way around
 
 Go to [help.ucsf.edu](https://help.ucsf.edu)
 
@@ -43,7 +45,8 @@ From the list of, "Accounts, Access, and Email," services select, [Request a Wyn
 
 Fill out the form.
 
-## Detailed instructions regarding the Wynton Account Form.
+
+## Detailed instructions regarding the Wynton account form
 
 If you have successfully logged into MyAccess/DUO, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
 
