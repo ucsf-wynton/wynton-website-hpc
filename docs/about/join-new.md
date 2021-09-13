@@ -81,6 +81,6 @@ You will shortly receive an email with a subject similar to "Email Validation re
 
 Please simply reply to this email, taking care not to alter the subject line. Also, please include the body of the previous email in your reply.
 
-Once your email contact address has been confirmed, and any neccessary trainings or attestations have been completed, Wynton Staff will make every effort to process your new account request within 5 business days.
+Once your email contact address has been confirmed, (and any neccessary trainings or attestations have been completed,) Wynton Staff will make every effort to process your new account request within 5 business days.
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
