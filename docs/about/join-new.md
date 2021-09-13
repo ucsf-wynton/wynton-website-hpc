@@ -77,4 +77,10 @@ Check the box consenting to, "If the individual(s)for whom I am requesting acces
 
 Click Submit.
 
+You will shortly receive an email with a subject similar to "Email Validation required for RITM0305233 Wynton HPC Account Request" and a body similar to:
+
+Please simply reply to this email, taking care not to alter the subject line. Also, please include the body of the previous email in your reply.
+
+Once your email contact address has been confirmed, and any neccessary trainings or attestations have been completed, Wynton Staff will make every effort to process your new account request within 5 business days.
+
 [contact us]: {{ '/about/contact.html' | relative_url }}
