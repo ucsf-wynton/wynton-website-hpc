@@ -75,7 +75,7 @@ Provide any additional comments.
 
 Check the box consenting to, "If the individual(s)for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."
 
-Click Submit.
+Click the "Submit" button on the right.
 
 You will shortly receive an email with a subject similar to "Email Validation required for RITM0305233 Wynton HPC Account Request" and a body similar to:
 
