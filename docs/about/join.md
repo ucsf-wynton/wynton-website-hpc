@@ -1,6 +1,5 @@
 # Join the Cluster
 
-
 {{ site.cluster.name }} is a large, shared high-performance compute (HPC) cluster underlying UCSF's Research Computing Capability. Funded and administered cooperatively by UCSF campus IT and key research groups, it is available to all UCSF researchers, and consists of different profiles suited to various biomedical and health science computing needs. Researchers can participate using the “co-op” model of resource contribution and sharing.
 
 
@@ -13,9 +12,11 @@ The end goal is that the all UCSF researchers should have access to the cluster 
 
 The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
 
-## How Long Will It Take For My Wynton Account Request To Be Processed?
+
+## How long will it take for my Wynton account request to be processed?
 
 The {{ site.cluster.name }} staff will make every effort to process your account request and create the account within 5 business days of confirmation of your affiliation and contact information.
+
 
 ## Request access
 
