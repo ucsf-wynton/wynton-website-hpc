@@ -77,7 +77,9 @@ Check the box consenting to, "If the individual(s)for whom I am requesting acces
 
 Click the "Submit" button on the right.
 
-You will shortly receive an email with a subject similar to "Email Validation required for RITM0305233 Wynton HPC Account Request" and a body similar to:
+If you are the "Requestor" of the account, you will shortly receive an email confirming the creation of the ticket with a subject similar to, "Request Item RITM0305233 -- opened on your behalf".
+
+If you are the person for whom the account has been requested, you will also receive an email with the subject similar to, "Email Validation required for RITM0305233 Wynton HPC Account Request".
 
 Please simply reply to this email, taking care not to alter the subject line. Also, please include the body of the previous email in your reply.
 
