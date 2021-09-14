@@ -70,7 +70,7 @@ Select a **"UCSF Title"** from the pull down menu. If you are not a UCSF Staff, 
 
 Select the **"Country"** and **"State"** of Origin. If you are associated with an institution other than UCSF, enter it in the **"Institution"** field.
 
-If you are a UCSF Employee, the UCSF Employee/Student ID should be autopopulated from the **"Requested For"** field. If you are not a UCSF employee, student, staff or faculty, enter "none".
+If you are a UCSF Employee, the **"UCSF Employee/Student ID"** field should be autopopulated from the name you entered in the **"Requested For"** field. If you are not a UCSF employee, student, staff or faculty, enter "none".
 
 If you have had accounts with any of the affiliated computing environments, select them.
 
