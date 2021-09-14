@@ -10,7 +10,7 @@ Cluster compute nodes are purchased by Wynton in units which contain 4 Compute N
 * CPU/node: 2 × Intel Xeon Gold 6240 2.6 GHz 18-core processors
 * RAM/node: 384 GiB
 
-**Price per 4 node unit: 23,645 USD for 4 nodes in a 2U chassis**
+**Price per 4 compute node unit: 23,645 USD for 4 nodes in a 2U chassis**
 
 
 
