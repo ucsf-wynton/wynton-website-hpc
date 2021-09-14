@@ -66,7 +66,7 @@ If you are requesting an account for another user, enter their name and select i
 
 If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
 
-Select a **"UCSF Title"** from the pull down menu.
+Select a **"UCSF Title"** from the pull down menu. If you are not a UCSF Staff, faculty, or student, select something that approximates your title/role.
 
 Select the **"Country"** and **"State"** of Origin. If you are associated with an institution other than UCSF, enter it in the **"Institution"** field.
 
