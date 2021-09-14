@@ -25,7 +25,7 @@ There is also one GPU development node that is available to all users.
 * GPU: 4 × NVidia RTX 3090
 * RAM: 512 GiB/node
 
-**Quote: 17,837 USD**
+**Price per GPU node: 17,837 USD**
 
 
 ## How to purchase
