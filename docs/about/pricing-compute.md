@@ -5,12 +5,12 @@ _Example specifications and pricing as of February 2021_
 
 ## Pricing for prioritized compute ("CPU")
 
-Cluster compute nodes are purchased by Wynton in units which contain 4 Compute Nodes in a single 2u chassis. Partial nodes can be purchased and contributions will be pooled towards a full system.
+Cluster compute nodes are purchased by Wynton in units which contain 4 Compute Nodes in a single chassis. Partial nodes can be purchased and contributions will be pooled towards a full system.
 
 * CPU/node: 2 × Intel Xeon Gold 6240 2.6 GHz 18-core processors
 * RAM/node: 384 GiB
 
-**Price per 4 compute node unit: 23,645 USD for 4 nodes in a 2U chassis**
+**Price per 4 compute node unit: 23,645 USD (for 4 nodes in a 2U chassis)**
 
 
 
