@@ -37,11 +37,11 @@ To apply for an account on the {{ site.cluster.name }} cluster, please follow th
 
 Go to [help.ucsf.edu](https://help.ucsf.edu)
 
-Select "Request Specific Services" (You will be prompted for UCSF and/or Duo Login).
+Select **"Request Specific Services"** (You will be prompted for UCSF and/or Duo Login).
 
-From the "Categories" select "Accounts, Access, and Email".
+From the **"Categories"** select **"Accounts, Access, and Email"**.
 
-From the list of, "Accounts, Access, and Email," services select, [Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f).
+From the list of, **"Accounts, Access, and Email,"** services select, **[Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)**.
 
 Fill out the form.
 
@@ -50,27 +50,27 @@ Fill out the form.
 
 ### Requested By/Approver
 
-If you have successfully logged into MyAccess/Duo, the "Requested By Name" and "Requested by Email" should be autopopulated with your information from the UCSF Directory.
+If you have successfully logged into MyAccess/Duo, the **"Requested By Name"** and **"Requested by Email"** should be autopopulated with your information from the UCSF Directory.
 
-In the "UCSF Principle Investigator (PI) Approver Name, enter the name of the your supervisor and select the matching name from the pull down. This should populate the "UCSF PI Email" and "UCSF PI Department or Program" fields.
+In the **"UCSF Principle Investigator (PI) Approver Name"**, enter the name of the your supervisor and select the matching name from the pull down. This should populate the **"UCSF PI Email"** and **"UCSF PI Department or Program"** fields.
 
 ### Account Details
 
-Select "Yes" or "No" from the "Does this user already have an existing account on Wynton?" pull down.
+Select "Yes" or "No" from the **"Does this user already have an existing account on Wynton?"** pull down.
 
-Select "No" from the "Do you Require Access to PHI Data" pull down. (Wynton is not currently Approved for PHI Data.)
+Select "No" from the **"Do you Require Access to PHI Data"** pull down. (Wynton is not currently Approved for PHI Data.)
 
 If you are filling the form out for yourself, the "Requested For" field will be autopopulated with your name.
 
 If you are requesting an account for another user, enter their name and select it from the pull down.
 
-If they are a non-UCSF affiliate, select "Check this box if you cannot find their User Name in the database" and enter their First Name, Last Name, and contact email address.
+If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
 
-Select a UCSF Title from the pull down menu.
+Select a **"UCSF Title"** from the pull down menu.
 
-Enter the Country and State of Origin. If you are associated with an institution other than UCSF, enter it in the "Institution" field.
+Select the **"Country"** and **"State"** of Origin. If you are associated with an institution other than UCSF, enter it in the **"Institution"** field.
 
-If you are a UCSF Employee, the UCSF Employee/Student ID should be autopopulated from the "Requested For" field. If you are not a UCSF employee, student, staff or faculty, enter "none".
+If you are a UCSF Employee, the UCSF Employee/Student ID should be autopopulated from the **"Requested For"** field. If you are not a UCSF employee, student, staff or faculty, enter "none".
 
 If you have had accounts with any of the affiliated computing environments, select them.
 
@@ -82,15 +82,15 @@ Enter a desired alternative Wynton Username (If your first choice is already in 
 
 Provide any additional comments in the text field.
 
-Check the box consenting to, "If the individual(s)for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."
+Check the box consenting to, **"If the individual(s)for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."**
 
-Click the "Submit" button on the right.
+Click the **"Submit"** button on the right.
 
 If you are the "Requestor" of the account, you will shortly receive an email confirming the creation of the ticket with a subject similar to, "Request Item RITM0305233 -- opened on your behalf".
 
 If you are the person for whom the account has been requested, you will also receive an email with the subject similar to, "Email Validation required for RITM0305233 Wynton HPC Account Request".
 
-Please simply reply to this email, taking care not to alter the subject line. Also, please include the body of the email in your reply.
+Please simply reply to the "Email Validation required..." email, taking care not to alter the subject line. Also, please include the body of the email in your reply.
 
 Once your email contact address has been confirmed, (and any necessary training or attestations have been completed,) Wynton Staff will make every effort to process your new account request within 5 business days.
 
