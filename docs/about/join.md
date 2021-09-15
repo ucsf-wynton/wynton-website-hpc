@@ -12,6 +12,8 @@ The end goal is that the all UCSF researchers should have access to the cluster 
 
 The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
 
+If you are an non-UCSF affiliate, you will need to have the UCSF staff, student, postdoc, or PI you are associated with request your account for you.
+
 
 ## How long will it take for my Wynton account request to be processed?
 
@@ -20,216 +22,78 @@ The {{ site.cluster.name }} staff will make every effort to process your account
 
 ## Request access
 
-To apply for an account on the {{ site.cluster.name }} cluster, please fill out the following form:
+To apply for an account on the {{ site.cluster.name }} cluster, please follow the link below and fill out the ServiceNow Web Form for a Wynton Account. 
 
-<!--
+[Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f) (You will be prompted for DUO/MyAccess SSO Authentication)
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex;">
-<strong>Sorry... {{ site.cluster.name }} account requests are temporarily disabled for 10-15 minutes due to a web server upgrade.</strong>
-<br><span class="timestamp">March 17, 2021 @ 12:15 PDT</span>
-</div>
-
--->
+**Note: The form linked above is only available to UCSF staff, students, postdocs, and faculty. If you are an non-UCSF affiliate who does not have a UCSF Guest Account, ([Request a UCSF Guest Account](https://wiki.library.ucsf.edu/display/IAM/Guest+Accounts)), you will need to have the UCSF staff, student, postdoc, or PI you are associated with request the account for you.**
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-<strong>Please make sure you provide all the information applicable to you in this form to avoid any delays</strong>
-</div>
 
-<form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
- <div class="form-group">
-  <label for="given_name">First name</label> <span style="color: red">*</span><br>
-  <input type="text" id="given_name" name="given_name" autocomplete="given-name" placeholder="Enter first name" minlength="2" required><br>
- </div>
- 
- <div class="form-group">
-  <label for="family_name">Last name</label> <span style="color: red">*</span><br>
-  <input type="text" id="family_name" name="family_name" autocomplete="family-name" placeholder="Enter last name" minlength="2" required><br>
- </div>
- 
- <div class="form-group">
-  <label for="email_address">UCSF email address</label> <span style="color: red">*</span><br>
-  <input type="email" id="email_address" name="email_address" autocomplete="email" placeholder="Enter email" size="30" required><br>
-  <small>(<em>External collaborators only:</em> Please provide your preferred email address)</small>
- </div>
- 
- <div class="form-group">
-  <fieldset >
-   <legend style="border:0;font-size:14px;margin:0"><b>UCSF affiliation</b> <span style="color: red">*</span></legend>
-   <input type="radio" id="affiliation_0" name="affiliation" value="Faculty" required>
-   <label style="font-weight: normal" for="affiliation_0">Faculty</label><br>
-   <input type="radio" id="affiliation_1" name="affiliation" value="Postdoc">
-   <label style="font-weight: normal" for="affiliation_1">Postdoc</label><br>
-   <input type="radio" id="affiliation_2" name="affiliation" value="Staff">
-   <label style="font-weight: normal" for="affiliation_2">Staff</label><br>
-   <input type="radio" id="affiliation_3" name="affiliation" value="Research_Assistant">
-   <label style="font-weight: normal" for="affiliation_3">Research Assistant</label><br>
-   <input type="radio" id="affiliation_4" name="affiliation" value="Student">
-   <label style="font-weight: normal" for="affiliation_4">Student</label><br>
-   <input type="radio" id="affiliation_5" name="affiliation" value="Other">
-   <label style="font-weight: normal" for="affiliation_5">Other</label><br>
-  </fieldset>
- </div>
+## To Access From Service Now
 
- <div class="form-group">
-  <label for="other_desc">If 'Other', please clarify </label><br>
-  <input type="text" id="other_desc" name="other_desc" placeholder="Collaborating with, ..." size="30" minlength="2"><br>
- </div>
- 
- <div class="form-group">
-  <fieldset>
-    <legend style="border:0;font-size:14px;margin:0"><b>If 'Student', please select appropriate option</b></legend>
-    <input type="checkbox" id="student_desc_0" name="student_desc" value="Joined_PI_Lab">
-    <label style="font-weight: normal" for="student_desc_0">Joined PI's Lab</label><br>
-    <input type="checkbox" id="student_desc_1" name="student_desc" value="Rotation">
-    <label style="font-weight: normal" for="student_desc_1">Rotation</label><br>
-    <input type="checkbox" id="student_desc_2" name="student_desc" value="Course">
-    <label style="font-weight: normal" for="student_desc_2">For Course</label><br>
-    <input type="checkbox" id="student_desc_3" name="student_desc" value="Intern">
-    <label style="font-weight: normal" for="student_desc_3">Intern</label><br>
-  </fieldset>
- </div>
- 
- <div class="form-group">  
-  <label for="pi">UCSF Principal Investigator (PI)</label> <span style="color: red">*</span><br>
-  <input type="text" id="pi" name="pi" size="30" placeholder="Name of your PI, or 'self'" minlength="2" required><br>
-  <small>(<em>Provide PI's full name</em>)</small><br>
- </div>
+Go to [help.ucsf.edu](https://help.ucsf.edu)
 
- <div class="form-group">  
-  <label for="dept_program">UCSF Department or Program</label> <span style="color: red">*</span><br>
-  <input type="text" id="dept_program" name="dept_program" placeholder="e.g. 'Radiology' or 'BMI'" maxlength="30" size="30" required><br>
- </div>
+Select **"Request Specific Services"** (You will be prompted for UCSF and/or Duo Login).
 
- <div class="form-group">  
-  <label for="ucsf_id">UCSF Employee/Student ID</label> <span style="color: red">*</span><br>
-  <input type="text" id="ucsf_id" name="ucsf_id" placeholder="02xxxxxxx or 'none'" pattern="(\d{9}|none)" maxlength="9" size="15" required><br>
-  <small>(<em>Nine digits: To find yours, go to <a href="https://myaccess.ucsf.edu/myid">https://myaccess.ucsf.edu/myid</a></em>)</small><br>
- </div>
- 
- <div class="form-group">  
-  <label for="username">Username</label> <span style="color: red">*</span><br>
-  <input type="text" id="username" name="username" pattern="([a-z]{1}[a-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
-  <small>(<em>Username should be all lower case</em>)</small><br>
- </div>
- 
- <div class="form-group">
-  <label for="alt_username">Alternative username</label> <span style="color: red">*</span><br>
-  <input type="text" id="alt_username" name="alt_username" pattern="([a-z]{1}[a-z0-9]+)" placeholder="Username" minlength="2" size="15" required><br>
-  <small>(<em>This should be different from the one you provided above</em>)</small>
- </div>
- 
- <div class="form-group">  
-  <fieldset>
-  <legend style="border:0;font-size:14px;margin:0"><b>Have you ever had an account on another UCSF compute environment? </b><span style="color: red">*</span></legend>
-    <input type="checkbox" id="ucsf_compute_environments_0" name="ucsf_compute_environments" value="none">
-    <label style="font-weight: normal" for="ucsf_compute_environments_0">No</label><br>
-    <input type="checkbox" id="ucsf_compute_environments_1" name="ucsf_compute_environments" value="gladstone">
-    <label style="font-weight: normal" for="ucsf_compute_environments_1"> Gladstone</label><br>
-    <input type="checkbox" id="ucsf_compute_environments_2" name="ucsf_compute_environments" value="qb3">
-    <label style="font-weight: normal" for="ucsf_compute_environments_2"> QB3 (now deprecated)</label><br>
-    <input type="checkbox" id="ucsf_compute_environments_3" name="ucsf_compute_environments" value="radiology">
-    <label style="font-weight: normal" for="ucsf_compute_environments_3"> Radiology</label><br>
-    <input type="checkbox" id="ucsf_compute_environments_4" name="ucsf_compute_environments" value="sali">
-    <label style="font-weight: normal" for="ucsf_compute_environments_4"> Sali Lab</label><br>
-    <input type="checkbox" id="ucsf_compute_environments_5" name="ucsf_compute_environments" value="rbvi_sacs">
-    <label style="font-weight: normal" for="ucsf_compute_environments_5"> RBVI/SACS</label><br>
-  </fieldset>
- </div>
- 
- <div class="form-group">  
-  If <strong>yes</strong> to any of the above, please run command <code>id</code> on compute environment selected above and provide (UID, GID) for the main one:<br>
-  <label for="uid">UID</label> <input type="text" id="uid" name="uid" pattern="(\d*|forgot)" placeholder="e.g. 21024 or 'forgot'" maxlength="6" size="14"> <small>(first integer reported by <code>id</code> on those systems)</small><br>
-  <label for="gid">GID</label> <input type="text" id="gid" name="gid" pattern="(\d*|forgot)" placeholder="e.g. 1543 or 'forgot'" maxlength="6" size="14"> <small>(second integer reported by <code>id</code> on those system)</small><br>
- </div>
+From the **"Categories"** select **"Accounts, Access, and Email"**.
 
- <div class="form-group">  
-  <label for="kerberos_username">Existing UCSF QB3/CGL Kerberos username?</label> <span style="color: red">*</span><br>
-  <input type="text" id="kerberos_username" name="kerberos_username" pattern="([A-Za-z]{1}[A-Za-z0-9]+|none|forgot)" placeholder="Username, 'none', or 'forgot'" minlength="4" size="20" required><br>
- </div>
- 
- <div class="form-group">  
-  <label for="hpc_experience">Previous HPC cluster experience?</label><br>
-  <input type="text" id="hpc_experience" name="hpc_experience" placeholder="e.g. Slurm, PBS, 'yes', 'no'" minlength="2" size="30">
-  <small>(this will help us help you)</small>
-  <br>
- </div>
- 
- <div class="form-group">  
-  <label for="comment">Additional comments</label><br>
-  <textarea type="text" id="comment" name="comment" maxlength="512" rows="4" cols="50"></textarea><br>
- </div>
+From the list of, **"Accounts, Access, and Email,"** services select, **[Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)**.
 
-  <br>
-  <button type="submit" onclick="save_form()" class="btn btn-primary">Request Account</button> &nbsp; <em>(An email confirmation will be sent)</em>
-</form>
+Fill out the form.
 
 
-<script>
-function load_form() {
-  var names;
-  var name;
-  var value;
-  var obj;
-  
-  // Repopulate form fields if already set in session
-  if(typeof(Storage) !== "undefined") {
-    // Text-based fields
-    names = ["given_name", "family_name", "email_address", "other_desc", "pi", "ucsf_id", "dept_program", "username", "alt_username", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
-  
-    for (var ii = 0; ii < names.length; ii++) {
-      name = names[ii];
-      value = sessionStorage.getItem(name);
-      obj = document.getElementById(name);
-      if (value !== null && obj !== null) obj.value = value;
-    }
-  
-    // Checkboxes
-    names = ["student_desc_0", "student_desc_1", "student_desc_2", "student_desc_3", "ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
-  
-    for (var ii = 0; ii < names.length; ii++) {
-      name = names[ii];
-      value = sessionStorage.getItem(name);
-      obj = document.getElementById(name);
-      if (value !== null && obj !== null && value == "true") obj.checked = value;
-    }
-  }
-}
+## Detailed instructions regarding the Wynton account form
 
-function save_form() {
-  var names;
-  var name;
-  var obj;
-  
-  // Remember form fields
-  if(typeof(Storage) !== "undefined") {
-    // Text-based fields
-    names = ["given_name", "family_name", "email_address", "other_desc", "pi", "ucsf_id", "dept_program", "username", "alt_username", "kerberos_username", "uid", "gid", "hpc_experience", "comment"];
-  
-    for (var ii = 0; ii < names.length; ii++) {
-      name = names[ii];
-      obj = document.getElementById(name);
-      if (obj !== null) sessionStorage.setItem(name, obj.value);
-    }
-  
-    // Checkboxes
-    names =  ["student_desc_0", "student_desc_1", "student_desc_2", "student_desc_3", "ucsf_compute_environments_0", "ucsf_compute_environments_1", "ucsf_compute_environments_2", "ucsf_compute_environments_3", "ucsf_compute_environments_4", "ucsf_compute_environments_5", "affiliation_0", "affiliation_1", "affiliation_2", "affiliation_3", "affiliation_4", "affiliation_5"];
-  
-    for (var ii = 0; ii < names.length; ii++) {
-      name = names[ii];
-      obj = document.getElementById(name);
-      if (obj !== null) sessionStorage.setItem(name, obj.checked);
-    }
-  }
-}
+### Requested By/Approver
 
-window.onload = function() {
-  load_form();
-}
-</script>
+If you have successfully logged into MyAccess/Duo, the **"Requested By Name"** and **"Requested by Email"** should be autopopulated with your information from the UCSF Directory.
 
+In the **"UCSF Principle Investigator (PI) Approver Name"**, enter the name of the your supervisor and select the matching name from the pull down. This should populate the **"UCSF PI Email"** and **"UCSF PI Department or Program"** fields.
+
+### Account Details
+
+Select "Yes" or "No" from the **"Does this user already have an existing account on Wynton?"** pull down.
+
+Select "No" from the **"Do you Require Access to PHI Data"** pull down. (Wynton is not currently Approved for PHI Data.)
+
+If you are filling the form out for yourself, the **"Requested For"** field will be autopopulated with your name.
+
+If you are requesting an account for another user, enter their name and select it from the pull down.
+
+If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
+
+Select a **"UCSF Title"** from the pull down menu. If you are not a UCSF Staff, faculty, or student, select something that approximates your title/role.
+
+Select the **"Country"** and **"State"** of Origin. If you are associated with an institution other than UCSF, enter it in the **"Institution"** field.
+
+If you are a UCSF Employee, the **"UCSF Employee/Student ID"** field should be autopopulated from the name you entered in the **"Requested For"** field. If you are not a UCSF employee, student, staff or faculty, enter "none".
+
+If you have had accounts with any of the affiliated computing environments, select them.
+
+Enter your desired Wynton Username.
+
+Enter a desired alternative Wynton Username (If your first choice is already in use).
+
+### Comments and Submit
+
+Provide any additional comments in the text field.
+
+Check the box consenting to, **"If the individual(s)for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."**
+
+Click the **"Submit"** button on the right.
+
+If you are the "Requestor" of the account, you will shortly receive an email confirming the creation of the ticket with a subject similar to, "Request Item RITM0305233 -- opened on your behalf".
+
+If you are the person for whom the account has been requested, you will also receive an email with the subject similar to, "Email Validation required for RITM0305233 Wynton HPC Account Request".
+
+Please simply reply to the "Email Validation required..." email, taking care not to alter the subject line. Also, please include the body of the email in your reply.
+
+Once your email contact address has been validated, (and any necessary training or attestations have been completed,) Wynton Staff will make every effort to process your new account request within 5 business days.
+
+If you have any problems with the form or questions about filling it out, please don't hesitate to [contact us].
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
