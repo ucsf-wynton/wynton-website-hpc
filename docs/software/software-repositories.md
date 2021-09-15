@@ -611,10 +611,10 @@ Please note that this software stacks is maintained and contributed by a researc
   <dt class="module-name">scl-devtoolset</dt>
   <dd class="module-details">
     <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
-    <span class="module-description">Enables the CentOS Software Collection (SCL) <code>devtoolset-9</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-9</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
+    <span class="module-description">Enables the CentOS Software Collection (SCL) <code>devtoolset-10</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-10</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
     Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-    URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-9/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-9/</a></span><br>
-  Versions: <span class="module-version">4, 6, 7, 8, <em>9</em></span><br>
+    URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-10/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-10/</a></span><br>
+  Versions: <span class="module-version">4, 6, 7, 8, 9, <em>10</em></span><br>
   </dd>
 
   <dt class="module-name">scl-python (part of CBI-testing)</dt>
@@ -1553,7 +1553,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-09-13 11:30:47 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-09-15 07:29:53 from querying `module avail` and `module spider`._
 
 
 <style>
