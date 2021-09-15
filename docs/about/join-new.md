@@ -92,6 +92,6 @@ If you are the person for whom the account has been requested, you will also rec
 
 Please simply reply to the "Email Validation required..." email, taking care not to alter the subject line. Also, please include the body of the email in your reply.
 
-Once your email contact address has been confirmed, (and any necessary training or attestations have been completed,) Wynton Staff will make every effort to process your new account request within 5 business days.
+Once your email contact address has been validated, (and any necessary training or attestations have been completed,) Wynton Staff will make every effort to process your new account request within 5 business days.
 
 [contact us]: {{ '/about/contact.html' | relative_url }}
