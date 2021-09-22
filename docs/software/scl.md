@@ -77,6 +77,12 @@ To "unload" an SCLs, just return to the previous shell by exiting new SCL-enable
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
+## Developer Toolset gcc versions
+The `devtoolset` SCLs each include a specific version of gcc.  Those versions are:
+ * devtoolset-7 -> gcc 7.3.1
+ * devtoolset-8 -> gcc 8.3.1
+ * devtoolset-9 -> gcc 9.3.1
+ * devtoolset-10 -> gcc 10.2.1
 
 ## See Also
 
