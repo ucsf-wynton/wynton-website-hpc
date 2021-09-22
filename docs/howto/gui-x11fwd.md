@@ -136,7 +136,7 @@ Now, since we should not run anything on the login nodes, the next step is to he
 ```sh
 [alice@{{ site.login.name }} ~]$ ssh -X {{ site.devel.hostname }}
 alice1@{{ site.devel.name }}:s password: XXXXXXXXXXXXXXXXXXX
-[alice@{{ site.login.name }} ~]$ echo "DISPLAY='$DISPLAY'"
+[alice@{{ site.devel.name }} ~]$ echo "DISPLAY='$DISPLAY'"
 DISPLAY='localhost:14.0'
 [alice@{{ site.devel.name }} ~]$
 ```
