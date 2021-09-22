@@ -1,5 +1,7 @@
 # News
 
+2021-09-22: Added 2,048 cores (+20%) via 16 huge-memory nodes (128 cores and 1 TiB of RAM)
+
 2021-05-28: GPU development node gpudev1 has been upgraded to a machine with 32 CPU cores, 128 GiB RAM, and NVIDIA Tesla K80 (was 12 cores, 48 GiB RAM, and GeForce GTX 980 Ti)
 
 2021-05-28: Development node dev1 has been upgraded to a machine with 72 CPU cores and 384 GiB RAM (was 8 cores and 16 GiB RAM)
