@@ -159,7 +159,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version"><em>0.17.1</em></span><br>
+  Versions: <span class="module-version">0.17.1, <em>0.18.3</em></span><br>
   </dd>
 
   <dt class="module-name">bcftools</dt>
@@ -167,8 +167,8 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">BCFtools: Utilities for Variant Calling and Manipulating VCFs and BCFs</strong><br>
     <span class="module-description">BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.</span><br>
     Example: <span class="module-example"><code>bcftools --version</code></span><br>
-    URL: <span class="module-url"><a href="http://www.htslib.org/">http://www.htslib.org/</a></span><br>
-  Versions: <span class="module-version">1.9, 1.10, 1.11, <em>1.10.2</em></span><br>
+    URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/bcftools">https://github.com/samtools/bcftools</a></span><br>
+  Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, <em>1.13</em></span><br>
   </dd>
 
   <dt class="module-name">bcl2fastq</dt>
@@ -204,7 +204,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance.</span><br>
     Example: <span class="module-example"><code>blastx -version</code></span><br>
     URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">https://blast.ncbi.nlm.nih.gov/Blast.cgi</a></span><br>
-  Versions: <span class="module-version">2.9.0, 2.10.1, <em>2.11.0</em></span><br>
+  Versions: <span class="module-version">2.9.0, 2.10.1, 2.11.0, <em>2.12.0</em></span><br>
   </dd>
 
   <dt class="module-name">blat</dt>
@@ -223,7 +223,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>bowtie --version</code> and <code>ls $BOWTIE_HOME/{genomes,indexes}</code></span><br>
     Note: <span class="module-note">This is Bowtie v1 - <em>not v2</em>.</span><br>
     URL: <span class="module-url"><a href="http://bowtie-bio.sourceforge.net/index.shtml">http://bowtie-bio.sourceforge.net/index.shtml</a></span><br>
-  Versions: <span class="module-version">1.2.3, <em>1.3.0</em></span><br>
+  Versions: <span class="module-version">1.2.3, 1.3.0, <em>1.3.1</em></span><br>
   </dd>
 
   <dt class="module-name">bowtie2</dt>
@@ -232,7 +232,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
     Example: <span class="module-example"><code>bowtie2 --version</code></span><br>
     URL: <span class="module-url"><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a></span><br>
-  Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, <em>2.4.2</em></span><br>
+  Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, <em>2.4.4</em></span><br>
   </dd>
 
   <dt class="module-name">bwa</dt>
@@ -269,7 +269,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>cellranger</code>.</span><br>
     URL: <span class="module-url"><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a></span><br>
     Warning: <span class="module-warning">To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.</span><br>
-  Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, <em>5.0.1</em></span><br>
+  Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, <em>6.1.1</em></span><br>
   </dd>
 
   <dt class="module-name">cmake</dt>
@@ -306,7 +306,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>emacs --version</code> and <code>emacs -nw</code>.</span><br>
     URL: <span class="module-url"><a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">26.3, <em>27.1</em></span><br>
+  Versions: <span class="module-version">26.3, 27.1, <em>27.2</em></span><br>
   </dd>
 
   <dt class="module-name">fastqc</dt>
@@ -326,7 +326,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">0.22.0, <em>0.25.1</em></span><br>
+  Versions: <span class="module-version">0.22.0, 0.25.1, <em>0.27.2</em></span><br>
   </dd>
 
   <dt class="module-name">gatk</dt>
@@ -335,7 +335,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.</span><br>
     Example: <span class="module-example"><code>gatk --help</code> and <code>gatk --list</code>.</span><br>
     URL: <span class="module-url"><a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a></span><br>
-  Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, <em>4.1.9.0</em></span><br>
+  Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, <em>4.2.2.0</em></span><br>
   </dd>
 
   <dt class="module-name">gcta</dt>
@@ -382,7 +382,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>glow README.md</code>, <code>glow --pager README.md</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/charmbracelet/glow">https://github.com/charmbracelet/glow</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version"><em>1.3.0</em></span><br>
+  Versions: <span class="module-version">1.3.0, <em>1.4.1</em></span><br>
   </dd>
 
   <dt class="module-name">gsl</dt>
@@ -391,16 +391,16 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It is free software under the GNU General Public License. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. There are over 1000 functions in total with an extensive test suite.</span><br>
     Example: <span class="module-example"><code>gsl-config --version</code></span><br>
     URL: <span class="module-url"><a href="https://www.gnu.org/software/gsl/">https://www.gnu.org/software/gsl/</a></span><br>
-  Versions: <span class="module-version"><em>2.6</em></span><br>
+  Versions: <span class="module-version">2.6, <em>2.7</em></span><br>
   </dd>
 
   <dt class="module-name">hdf5</dt>
   <dd class="module-details">
     <strong class="module-help">hdf5: A General Purpose Library and File Format for Storing Scientific Data</strong><br>
     <span class="module-description">Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications.</span><br>
-    Example: <span class="module-example"><code>h5cc --version</code></span><br>
+    Example: <span class="module-example"><code>h5stat --version</code></span><br>
     URL: <span class="module-url"><a href="https://www.hdfgroup.org/downloads/hdf5/">https://www.hdfgroup.org/downloads/hdf5/</a></span><br>
-  Versions: <span class="module-version">1.10.6, <em>1.12.0</em></span><br>
+  Versions: <span class="module-version">1.10.6, 1.12.0, <em>1.12.1</em></span><br>
   </dd>
 
   <dt class="module-name">hisat2</dt>
@@ -419,7 +419,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>htop</code>.</span><br>
     URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">3.0.4, <em>3.0.5</em></span><br>
+  Versions: <span class="module-version">3.0.4, 3.0.5, <em>3.1.0</em></span><br>
   </dd>
 
   <dt class="module-name">htslib</dt>
@@ -427,8 +427,8 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">HTSlib: C Library for High-Throughput Sequencing Data Formats</strong><br>
     <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
     Example: <span class="module-example"><code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.</span><br>
-    URL: <span class="module-url"><a href="http://www.htslib.org/">http://www.htslib.org/</a></span><br>
-  Versions: <span class="module-version">1.9, 1.11, <em>1.10.2</em></span><br>
+    URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a></span><br>
+  Versions: <span class="module-version">1.9, 1.10.2, 1.11, <em>1.13</em></span><br>
   </dd>
 
   <dt class="module-name">igv</dt>
@@ -438,7 +438,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>igv</code>.</span><br>
     Note: <span class="module-note">IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).</span><br>
     URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a></span><br>
-  Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, <em>2.9.1</em></span><br>
+  Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, <em>2.11.0</em></span><br>
   </dd>
 
   <dt class="module-name">igvtools</dt>
@@ -475,7 +475,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>mc</code> and <code>mc --version</code>.</span><br>
     URL: <span class="module-url"><a href="http://www.midnight-commander.org/">http://www.midnight-commander.org/</a>, <a href="https://github.com/MidnightCommander/mc">https://github.com/MidnightCommander/mc</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version"><em>4.8.26</em></span><br>
+  Versions: <span class="module-version">4.8.26, <em>4.8.27</em></span><br>
   </dd>
 
   <dt class="module-name">pandoc</dt>
@@ -485,7 +485,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
     URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version"><em>2.11.4</em></span><br>
+  Versions: <span class="module-version">2.11.4, <em>2.14.2</em></span><br>
   </dd>
 
   <dt class="module-name">picard</dt>
@@ -494,7 +494,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</span><br>
     Example: <span class="module-example"><code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code></span><br>
     URL: <span class="module-url"><a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a></span><br>
-  Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, <em>2.24.0</em></span><br>
+  Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, <em>2.26.2</em></span><br>
   </dd>
 
   <dt class="module-name">pindel</dt>
@@ -528,8 +528,8 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <strong class="module-help">PROJ: PROJ Coordinate Transformation Software Library</strong><br>
     <span class="module-description">PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves.</span><br>
-    Example: <span class="module-example"><code>proj</code> and <code>man proj</code>.</span><br>
-    URL: <span class="module-url"><a href="https://trac.osgeo.org/geos/">https://trac.osgeo.org/geos/</a></span><br>
+    Example: <span class="module-example"><code>geod</code>, <code>proj</code> and <code>man proj</code>.</span><br>
+    URL: <span class="module-url"><a href="https://proj.org/">https://proj.org/</a></span><br>
   Versions: <span class="module-version"><em>4.9.3</em></span><br>
   </dd>
 
@@ -567,7 +567,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>info rclone</code>.</span><br>
     URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">1.53.3, <em>1.54.0</em></span><br>
+  Versions: <span class="module-version">1.53.3, 1.54.0, <em>1.56.1</em></span><br>
   </dd>
 
   <dt class="module-name">ripgrep</dt>
@@ -577,7 +577,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version"><em>12.1.1</em></span><br>
+  Versions: <span class="module-version">12.1.1, <em>13.0.0</em></span><br>
   </dd>
 
   <dt class="module-name">rstudio</dt>
@@ -585,9 +585,9 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">rstudio: RStudio Desktop</strong><br>
     <span class="module-description">The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.</span><br>
     Example: <span class="module-example"><code>rstudio</code>. If you get blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
-    URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a></span><br>
+    URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></span><br>
     Warning: <span class="module-warning">This software works only on the development nodes and requires that X11 Forwarding or NX is enabled. For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
-  Versions: <span class="module-version"><em>1.4.1103</em></span><br>
+  Versions: <span class="module-version">1.4.1103, <em>1.4.1717</em></span><br>
   </dd>
 
   <dt class="module-name">salmon</dt>
@@ -596,7 +596,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.</span><br>
     Example: <span class="module-example"><code>salmon --version</code>.</span><br>
     URL: <span class="module-url"><a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a></span><br>
-  Versions: <span class="module-version">1.3.0, <em>1.4.0</em></span><br>
+  Versions: <span class="module-version">1.3.0, 1.4.0, <em>1.5.2</em></span><br>
   </dd>
 
   <dt class="module-name">samtools</dt>
@@ -604,8 +604,8 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">SAMtools: Tools (written in C using htslib) for Manipulating Next-Generation Sequencing Data</strong><br>
     <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
     Example: <span class="module-example"><code>samtools --version</code>.</span><br>
-    URL: <span class="module-url"><a href="http://www.htslib.org/">http://www.htslib.org/</a></span><br>
-  Versions: <span class="module-version">1.9, 1.11, <em>1.10</em></span><br>
+    URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a></span><br>
+  Versions: <span class="module-version">1.9, 1.10, 1.11, <em>1.13</em></span><br>
   </dd>
 
   <dt class="module-name">scl-devtoolset</dt>
@@ -635,7 +635,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>shellcheck --version</code> and <code>shellcheck -x ~/.bashrc</code>.</span><br>
     URL: <span class="module-url"><a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>, <a href="https://github.com/koalaman/shellcheck/">https://github.com/koalaman/shellcheck/</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version"><em>0.7.1</em></span><br>
+  Versions: <span class="module-version">0.7.1, <em>0.7.2</em></span><br>
   </dd>
 
   <dt class="module-name">snpeff</dt>
@@ -644,7 +644,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).</span><br>
     Example: <span class="module-example"><code>snpEff -help</code>, <code>SnpSift -help</code>,  and <code>ClinEff -help</code>, which are aliases for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code>, <code>java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help</code>, and <code>java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help</code>.</span><br>
     URL: <span class="module-url"><a href="http://snpeff.sourceforge.net/">http://snpeff.sourceforge.net/</a></span><br>
-  Versions: <span class="module-version">4.3t, <em>5.0c</em></span><br>
+  Versions: <span class="module-version">4.3t, 5.0c, <em>5.0e</em></span><br>
   </dd>
 
   <dt class="module-name">sratoolkit</dt>
@@ -654,7 +654,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>fastq-dump --help</code>.</span><br>
     URL: <span class="module-url"><a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a>, <a href="https://github.com/ncbi/sra-tools">https://github.com/ncbi/sra-tools</a></span><br>
     Warning: <span class="module-warning">To work around a bug where <code>fasterq-dump</code> crashes the local machine, it has been tweaked such that it uses <code>$TMPDIR</code> rather than <code>$PWD</code> as the default temporary folder and it will only use two threads instead of six by default.</span><br>
-  Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, <em>2.11.0</em></span><br>
+  Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, <em>2.11.1</em></span><br>
   </dd>
 
   <dt class="module-name">star</dt>
@@ -663,7 +663,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.</span><br>
     Example: <span class="module-example"><code>STAR --help</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a></span><br>
-  Versions: <span class="module-version">2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, 2.7.5c, <em>2.7.7a</em></span><br>
+  Versions: <span class="module-version">2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, 2.7.5c, 2.7.7a, <em>2.7.9a</em></span><br>
   </dd>
 
   <dt class="module-name">tmux</dt>
@@ -1553,7 +1553,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-09-15 07:29:53 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-09-22 16:28:04 from querying `module avail` and `module spider`._
 
 
 <style>
