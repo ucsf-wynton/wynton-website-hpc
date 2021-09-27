@@ -3,11 +3,6 @@
 _The below "timeline" is a rough outline on when we can expect different milestones to be accomplished - the order does not reflect their relative priorities or the amount of effort spent_.
 
 
-## In progress
-
-* Expansion: Migrate QB3 users and QB3 compute nodes (7,000 physical cores) over to {{ site.cluster.name }} (approximately 1,500 out of 7,000 cores still to be migrated - September 2019)
-
-
 ## Near future
 
 * Pricing model: Contributors to {{ site.cluster.name }} get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
@@ -71,12 +66,13 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Access: Two-factor authentication (2FA) is required for accessing the cluster (2020-10-29)
 
+* Compute: QB3 hardware migration to {{ site.cluster.name }} considered complete (approximately 5,500 out of 7,000 physical cores migrated) (2021-09-27)
+
 
 See also [News].
-
-
 
 [QB3]: https://salilab.org/qb3cluster/
 [BeeGFS]: https://www.beegfs.io/
 [Globus]: https://www.globus.org/
 [News]: {{ '/about/news.html' | relative_url }}
+## In progress
