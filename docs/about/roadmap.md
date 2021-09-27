@@ -75,4 +75,3 @@ See also [News].
 [BeeGFS]: https://www.beegfs.io/
 [Globus]: https://www.globus.org/
 [News]: {{ '/about/news.html' | relative_url }}
-## In progress
