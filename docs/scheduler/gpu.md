@@ -33,6 +33,7 @@ mpirun -np M --oversubscribe ...
 ```
 where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).  Please note that, at the moment, each GPU job must limit itself to a single host.
 
+NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This allows for proper scheduling of GPU jobs on member and institutional nodes.  If your job does not include a runtime request, it may be removed from the queue.  Runtime requests are hard limits, so your job will be killed by SGE when it hits this limit.  Be sure to request enought time for you job to finish.  
 
 ## GPU relevant resource requests
 
@@ -47,7 +48,6 @@ Specifying either of these resources is not required.  If you do specify one, yo
 ```sh
 -l compute_cap=61,gpu_mem=10000M
 ```
-
 
 ## Running GPU applications
 
