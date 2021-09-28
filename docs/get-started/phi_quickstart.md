@@ -1,10 +1,10 @@
 # PHI Quickstart
 
-## Wynton PHI user responsibilities:
+## Wynton PHI user responsibilities
 
 - Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ '/about/governance.html' | relative_url }})
 - Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ '/about/governance.html' | relative_url }})
-- PHI users must use PHI-specific nodes to connect to Wynton:
+- PHI users must use PHI-specific nodes to connect to Wynton
   - login: `plog1`
   - dev: `pdev1`, `pgpudev1`
   - data transfer: `pdt1`
