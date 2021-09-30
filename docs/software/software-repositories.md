@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(66)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(67)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
@@ -124,7 +124,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2>Module Software Repository: CBI (66)</h2>
+<h2>Module Software Repository: CBI (67)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -440,6 +440,15 @@ Please note that this software stacks is maintained and contributed by a researc
   Versions: <span class="module-version">1.9, 1.10.2, 1.11, <em>1.13</em></span><br>
   </dd>
 
+  <dt class="module-name">htstools</dt>
+  <dd class="module-details">
+    <strong class="module-help">htstools: Tools to Process BAM Files for Downstream Copy-Number Analysis</strong><br>
+    <span class="module-description">Contains three tools (dnafrags, ppflag-fixer, snp-pileup) written by Alex Studer to process bam files for downstream copy number analysis.</span><br>
+    Example: <span class="module-example"><code>snp-pileup --help</code>.</span><br>
+    URL: <span class="module-url"><a href="https://github.com/mskcc/htstools">https://github.com/mskcc/htstools</a></span><br>
+  Versions: <span class="module-version"><em>0.1.1</em></span><br>
+  </dd>
+
   <dt class="module-name">igv</dt>
   <dd class="module-details">
     <strong class="module-help">IGV: The Integrative Genomics Viewer</strong><br>
@@ -596,7 +605,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>rstudio</code>. If you get blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
     URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></span><br>
     Warning: <span class="module-warning">This software works only on the development nodes and requires that X11 Forwarding or NX is enabled. For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
-  Versions: <span class="module-version">1.4.1103, <em>1.4.1717</em></span><br>
+  Versions: <span class="module-version">1.4.1103, 1.4.1717, <em>2021.09.0+351</em></span><br>
   </dd>
 
   <dt class="module-name">salmon</dt>
@@ -1558,11 +1567,11 @@ Please note that this software stacks is maintained and contributed by a researc
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(66)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(67)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-09-28 14:40:18 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-09-29 16:44:13 from querying `module avail` and `module spider`._
 
 
 <style>
