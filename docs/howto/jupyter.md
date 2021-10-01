@@ -6,13 +6,13 @@
 
 This assumes you have Jupyter installed with whichever Python you usually use.
 
-If using the standard system Python, Jupyter notebooks can be installed using `pip`:
+If using the standard system Python, Jupyter Notebook can be installed using `pip`:
 
 ```sh
 [alice@dev3 ~]$ python3 -m pip install --user notebook
 ```
 
-If using an Anaconda/Miniconda environment, using the `conda` package manager to install Jupyter notebooks should be used:
+If using an Anaconda/Miniconda environment, using the `conda` package manager to install Jupyter Notebook should be used:
 
 ```sh
 [alice@dev3 ~]$ conda install -c conda-forge notebook
@@ -29,7 +29,7 @@ For Anaconda and conda environments installed in a home directory both the Pytho
 
 ## Connect to Jupyter Notebook - using ssh port forwarding 
 
-In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter notebook is running on the development node is 8890.  These ports are configured when you establish the ssh "tunnel":
+In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter Notebook is running on the development node is 8890.  These ports are configured when you establish the ssh "tunnel":
 
 ```sh
    local                                  remote 
@@ -60,7 +60,7 @@ Remember connection authentication from c-73-70-233-129 for 12 hours? [y/N] n
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-Then launch a new Jupyter notebook running on the development node:
+Then launch a new Jupyter Notebook running on the development node:
 
 ```sh
 [alice@{{ site.devel.name }}]$ jupyter notebook --port 8890
