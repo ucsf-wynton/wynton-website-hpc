@@ -2,7 +2,7 @@
 
 ## Where to to run Jupyter Notebook
 
-[Jupyter Notebook] should only be run on the {{ site.cluster.name }} development nodes. However you cannot connect from outside {{ site.cluster.name }} directly to a development node but rather either need to use ssh port forwarding to establish the connection with a local web browser, else use X2Go to redirect the desktop from the development server to your local desktop and launch a remote web browser there.
+[Jupyter Notebook] should only be run on the {{ site.cluster.name }} development nodes. However you cannot connect from outside {{ site.cluster.name }} directly to a development node but rather either need to use SSH port forwarding to establish the connection with a local web browser, else use X2Go to redirect the desktop from the development server to your local desktop and launch a remote web browser there.
 
 This assumes you have Jupyter installed with whichever Python you usually use.
 
@@ -27,9 +27,9 @@ The system version Python is installed on the local filesystem on Wynton nodes a
 For Anaconda and conda environments installed in a home directory both the Python interpreter and all of it's modules reside on the shared parallel file system.  The operations to look up the needed files are metadata heavy and can strain the parallel file system resulting in slower startup performance for the script. In particular if the script is a batch job executing on many compute nodes, the performance impact has the potential to slow operations down for all users. 
 </div>
 
-## Connect to Jupyter Notebook - using ssh port forwarding 
+## Connect to Jupyter Notebook - using SSH port forwarding 
 
-In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter Notebook is running on the development node is 8890.  These ports are configured when you establish the ssh "tunnel":
+In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter Notebook is running on the development node is 8890.  These ports are configured when you establish the SSH tunnel:
 
 ```sh
    local                                  remote 
@@ -41,7 +41,7 @@ In this example the local port your web browser would connect to is 8157 and the
 └────────┘          └────────┘            └────────┘ 
 ```
 
-To establish the "tunnel" using ssh port forwarding:
+To establish the "tunnel" using SSH port forwarding:
 
 ```sh
 [alice@local ~]$ ssh alice@{{ site.devel.name }}.wynton.ucsf.edu -J alice@log2.wynton.ucsf.edu -L 8157:localhost:8890
