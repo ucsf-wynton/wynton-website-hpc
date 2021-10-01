@@ -126,7 +126,8 @@ qsub -l ssd_scratch=1
 
 ## Parallel processing 
 
-By default, the scheduler will allocate a single core for your job.  To allow the job to use multiple CPU cores, you must run your job in a SGE parallel environment (PE) and tell SGE how many cores the job will use.  Please note that jobs using multiple cores running outside of a parallel environment are subject to termination without warning by the Wynton admins.  There are 4 parallel environments on Wynton:
+By default, the scheduler will allocate a single core for your job.  To allow the job to use multiple CPU cores, you must run your job in a SGE parallel environment (PE) and tell SGE how many cores the job will use.  Please note that jobs using multiple cores running outside of a parallel environment are subject to termination without warning by the Wynton admins.  There are four parallel environments on Wynton:
+
 * `smp`: for multithreaded jobs using ['Symmetric multiprocessing'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing (SMP)
 * `mpi`: for parallel jobs using MPI
 * `mpi_onehost`: for tightly coupled parallel jobs using MPI which run best on a single host
@@ -148,12 +149,15 @@ By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back
 <strong>Do not use more cores than requested!</strong> - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using <code>NSLOTS</code> avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.  One such environment variable is OMP_NUM_THREADS.  For bash scripts, use <code>export OMP_NUM_THREADS=${NSLOTS:-1}</code>.
 </div>
 
+
 ### MPI
-There are 2 versions of MPI on Wynton:
+
+There are two versions of MPI on Wynton:
+
  * OpenMPI 3.1.3, available via `module load mpi` or `module load mpi/openmpi3-x86_64`
  * OpenMPI 1.10.7, available via `module laod mpi/openmpi-x86_64`
 
-To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script.  MPI jobs running on multiple hosts communiate over the network.  For certain types of applications (known as tightly coupled), this can slow a job down more than the multiple cores can speed it up.  Run these types of jobs in the `mpi_onehost` PE to keep the job on a single compute node.
+To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script.  MPI jobs running on multiple hosts communicate over the network.  For certain types of applications (known as tightly coupled), this can slow a job down more than the multiple cores can speed it up.  Run these types of jobs in the `mpi_onehost` PE to keep the job on a single compute node.
 
 ### MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
 
@@ -162,6 +166,7 @@ To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your applica
 ```sh
 qsub -pe mpi-8 40 hybrid_mpi.sh
 ```
+
 and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8` (the eight slots per node) and then launches the MPI application using `mpirun -np $NHOSTS /path/to/the_app` where `NHOSTS` is automatically set by SGE (here `NHOSTS=5`):
 
 ```sh
@@ -178,6 +183,7 @@ _Note_: When working with MPI, it is important to use the exact same version as 
 <div class="alert alert-warning" role="alert">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <code>NSLOTS</code> is not a multiple of eight, then the job will be stuck in the queue forever and never run.
 </div>
+
 
 ## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps)
 
