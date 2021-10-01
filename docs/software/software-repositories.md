@@ -195,7 +195,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF.</span><br>
     Example: <span class="module-example"><code>bedtools --version</code> and <code>ls $BEDTOOLS2_HOME/genomes/</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/arq5x/bedtools2/">https://github.com/arq5x/bedtools2/</a></span><br>
-  Versions: <span class="module-version">2.28.0, 2.29.1, 2.29.2, <em>2.30.0</em></span><br>
+  Versions: <span class="module-version">2.26.0, 2.28.0, 2.29.1, 2.29.2, <em>2.30.0</em></span><br>
   </dd>
 
   <dt class="module-name">blast</dt>
@@ -1571,7 +1571,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-09-29 16:44:13 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-10-01 16:50:11 from querying `module avail` and `module spider`._
 
 
 <style>
