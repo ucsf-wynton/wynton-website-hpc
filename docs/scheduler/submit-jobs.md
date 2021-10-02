@@ -128,7 +128,7 @@ qsub -l ssd_scratch=1
 
 By default, the scheduler will allocate a single core for your job.  To allow the job to use multiple CPU cores, you must run your job in a SGE parallel environment (PE) and tell SGE how many cores the job will use.  Please note that jobs using multiple cores running outside of a parallel environment are subject to termination without warning by the Wynton admins.  There are four parallel environments on Wynton:
 
-* `smp`: for multithreaded jobs using ['Symmetric multiprocessing'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing (SMP)
+* `smp`: for multithreaded jobs using ['Symmetric multiprocessing (SMP)'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing)
 * `mpi`: for parallel jobs using MPI
 * `mpi_onehost`: for tightly coupled parallel jobs using MPI which run best on a single host
 * `mpi-8`: for Hybrid MPI (multi-threaded multi-node MPI jobs)
