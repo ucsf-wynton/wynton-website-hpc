@@ -173,11 +173,12 @@ It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  In
 
 ## MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
 
-{{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node across one or more compute nodes.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
+{{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node _across one or more compute nodes_.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
 
 ```sh
 qsub -pe mpi-8 40 hybrid_mpi.sh
 ```
+
 and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8` (the eight slots per node) and then launches the MPI application using `mpirun -np $NHOSTS /path/to/the_app` where `NHOSTS` is automatically set by SGE (here `NHOSTS=5`):
 
 ```sh
@@ -188,6 +189,14 @@ module load mpi/openmpi-x86_64
 export OMP_NUM_THREADS=8
 mpirun -np $NHOSTS /path/to/the_app
 ```
+
+<!--
+To request a job where all MPI tasks run on the same machine, use: 
+
+```sh
+qsub -pe mpi_onehost 40 hybrid_mpi.sh
+```
+-->
 
 _Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.
 
