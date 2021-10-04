@@ -74,14 +74,14 @@ SHA256:FaARLbkE3sHP2a33Zgqa/sNXTqqWzZAeu6T43wST4ok.
 Please contact your system administrator.
 Add correct host key in /wynton/home/bobson/alice/.ssh/known_hosts to get rid of this message.
 Offending ECDSA key in /wynton/home/bobson/alice/.ssh/known_hosts:18
-ECDSA host key for dev1 has changed and you have requested strict checking.
+ECDSA host key for {{ site.devel.name }} has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-then the solution is to remove that offending key from your personal `~/.ssh/known_hosts` file on {{ site.cluster.nickname }}.  If you get this error when you try to access, say, dev1, then use:
+then the solution is to remove that offending key from your personal `~/.ssh/known_hosts` file on {{ site.cluster.nickname }}.  If you get this error when you try to access, say, {{ site.devel.name }}, then use:
 
 ```sh
-$ ssh-keygen -R dev1
+$ ssh-keygen -R {{ site.devel.name }}
 ```
 
 to remove all SSH keys associated with that machine.  Alternatively, you can manually remove the problematic key by looking at:
