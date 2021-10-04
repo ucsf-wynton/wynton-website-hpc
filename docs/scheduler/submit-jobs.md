@@ -124,54 +124,42 @@ If your job would benefit from extra-fast [local scratch storage]({{ '/about/spe
 qsub -l ssd_scratch=1
 ```
 
-## Parallel processing (on a single machine)
+## Parallel processing 
 
-The scheduler will allocate a single core for your job.  To allow the job to use multiple slots, request the number of slots needed when you submit the job.  For instance, to request four slots (`NSLOTS=4`) _each with 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
+By default, the scheduler will allocate a single core for your job.  To allow the job to use multiple CPU cores, you must run your job in a SGE parallel environment (PE) and tell SGE how many cores the job will use.  Please note that jobs using multiple cores running outside of a parallel environment are subject to termination without warning by the Wynton admins.  There are four parallel environments on Wynton:
+
+* `smp`: for multithreaded jobs using ['Symmetric multiprocessing (SMP)'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing)
+* `mpi`: for parallel jobs using MPI
+* `mpi_onehost`: for tightly coupled parallel jobs using MPI which run best on a single host
+* `mpi-8`: for Hybrid MPI (multi-threaded multi-node MPI jobs)
+
+For any of the above environments, you must request the number of slots needed when you submit the job.  For instance, to request four slots (`NSLOTS=4`) in the SMP PE _each with 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
 ```sh
 qsub -pe smp 4 -l mem_free=2G script.sh
 ```
 The scheduler will make sure your job is launched on a node with at least four slots available.
 
-Note, when writing your script, use [SGE environment variable] `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
+Note, when writing your script, use SGE environment variable `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
 ```sh
 bwa aln -t "${NSLOTS:-1}" ...
 ```
 By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.
 
-_Comment_: PE stands for 'Parallel environment'.  SMP stands for ['Symmetric multiprocessing'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) and indicates that the job will run on a single machine using one or more cores.
-
-
 <div class="alert alert-danger" role="alert">
-<strong>Do not use more cores than requested!</strong> - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using <code>NSLOTS</code> avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.
+<strong>Do not use more cores than requested!</strong> - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using <code>NSLOTS</code> avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.  One such environment variable is OMP_NUM_THREADS.  For bash scripts, use <code>export OMP_NUM_THREADS=${NSLOTS:-1}</code>.
 </div>
 
 
-## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps)
+### MPI
 
-The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
-```sh
-qsub -cwd -l eth_speed=10 script.sh
-```
-A job requesting `eth_speed=40` will end up on a 40 Gbps node, and a job requesting `eth_speed=1` (default) will end up on any node.
+There are two versions of MPI on Wynton:
 
+ * OpenMPI 3.1.3, available via `module load mpi` or `module load mpi/openmpi3-x86_64`
+ * OpenMPI 1.10.7, available via `module laod mpi/openmpi-x86_64`
 
+To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script.  MPI jobs running on multiple hosts communicate over the network.  For certain types of applications (known as tightly coupled), this can slow a job down more than the multiple cores can speed it up.  Run these types of jobs in the `mpi_onehost` PE to keep the job on a single compute node.
 
-## Passing arguments to script
-
-You can pass arguments to a job script similarly to how one passes argument to a script executed on the command line, e.g.
-```sh
-qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"' --debug
-```
-Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
-
-
-## Interactive jobs
-
-It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
-
-
-
-## MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
+### MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
 
 {{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node _across one or more compute nodes_.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
 
@@ -203,6 +191,33 @@ _Note_: When working with MPI, it is important to use the exact same version as 
 <div class="alert alert-warning" role="alert">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <code>NSLOTS</code> is not a multiple of eight, then the job will be stuck in the queue forever and never run.
 </div>
+
+
+## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps)
+
+The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
+```sh
+qsub -cwd -l eth_speed=10 script.sh
+```
+A job requesting `eth_speed=40` will end up on a 40 Gbps node, and a job requesting `eth_speed=1` (default) will end up on any node.
+
+
+
+## Passing arguments to script
+
+You can pass arguments to a job script similarly to how one passes argument to a script executed on the command line, e.g.
+```sh
+qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"' --debug
+```
+Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
+
+
+## Interactive jobs
+
+It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
+
+
+
 
 _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org/wiki/Message_Passing_Interface).
 
