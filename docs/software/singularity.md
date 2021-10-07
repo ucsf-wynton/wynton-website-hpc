@@ -29,15 +29,15 @@ All tasks for using Linux containers, such as downloading, building, and running
   - `singularity shell <image>` - run bash shell within container
 
 * Build a container:
-  - `singularity build <path>` - build a Singularity from local specifications
-  - `singularity build <url>`  - import Singularity or Docker container available online
+  - `singularity build <url>`  - import an existing Singularity or Docker container available online
+  - `singularity build --remote <image> <def file>` - build a Singularity from local specifications in definition file
 
 For full details, see `singularity --help`, `man singularity`, and the [Singularity] website.
 
 
 ## Example
 
-### Building a container
+### Building a Singularity container from an existing Docker Hub image
 
 As an illustration on how to use Linux containers with Singularity, we will use the Docker container [rocker/r-base] available on Docker Hub.  This particular container provides the latest release of the [R] software in an Ubuntu OS environment.  Containers available from Singularity Hub, Biocontainers, and elsewhere, can be downloaded and used analogously.
 
@@ -74,15 +74,6 @@ INFO:    Build complete: rocker_r-base.sif
 ```
 
 The above may take a minute or two to complete.
-
-
-### Building a container using Singularity Remote Builder
-
-The `singularity build` command requires sudo privileges to build from a local definition file, however if you build from a Docker or Singularity online hub, the command should work without sudo.
-
-To use the remote build option one first needs a [Sylabs.io](https://cloud.sylabs.io/builder) access token, which can be generated after logging in to Sylabs.io.
-
-Then add the `--remote` option to the command: `singularity build --remote output.sif ./example.def` where output.sif is the output Singularity image resulting from the build and example.def is your Singularity definition file.
 
 
 ### Running a container
@@ -252,6 +243,68 @@ Check results:
 [1] 55
 ```
 
+### Building a container using Singularity Remote Builder
+
+The `singularity build` command requires sudo privileges to build from a local definition file, however one option is to use the Sylabs.io Remote Builder which does not require sudo. 
+
+To use the remote build option one first needs a [Sylabs.io](https://cloud.sylabs.io/builder) access token, which can be generated after logging in to Sylabs.io.
+
+Then add the `--remote` option to the `singularity build` command: `singularity build –remote <image> <def file>`  where \<image\> is the desired name of the Singularity image resulting from the build and \<def file\> is your Singularity definition file.
+
+The official [Singularity documentation](https://sylabs.io/guides/3.8/user-guide/definition_files.html) has more information on definition files.
+
+This is an example of building a Singularity container using the Remote Builder to run the [IsoSeq3](https://github.com/PacificBiosciences/IsoSeq) application:
+
+- Create a definition file using a text editor on Wynton containing
+
+```sh
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%post
+  /opt/conda/bin/conda config --add channels bioconda
+  /opt/conda/bin/conda install isoseq3
+
+%runscript
+  /opt/conda/bin/isoseq3
+```
+
+- from one of the Wynton dev nodes use the `singularity build --remote` command
+
+```sh
+[alice@{{ site.devel.name }}]$ singularity build --remote isoseq3 isoseq3.def
+INFO:    Remote "default" added.
+INFO:    Access Token Verified!
+INFO:    Token stored in /root/.singularity/remote.yaml
+INFO:    Remote "default" now in use.
+INFO:    Starting build...
+Getting image source signatures
+...
+INFO:    Adding runscript
+INFO:    Creating SIF file...
+INFO:    Build complete: /tmp/image-4018701584
+WARNING: Skipping container verification
+148.5MiB / 148.5MiB [======================================] 100 % 68.0 MiB/s 0s
+
+Library storage: using 297.00 MiB out of 11.00 GiB quota (2.6% used)
+Container URL: https://cloud.sylabs.io/library/...
+INFO:    Build complete: isoseq3
+```
+
+- a Singularity container image file named `isoseq3` should now exist along with the definition file
+
+```sh
+[alice@{{ site.devel.name }}]$ ls -1
+isoseq3
+isoseq3.def
+```
+
+- Singularity images are executable, since the `%runscript` in the definition file specifies to run the isoseq3 command, you can use it like this
+
+```sh
+[alice@{{ site.devel.name }}]$ isoseq3 --version
+isoseq3 3.4.0 (commit v3.4.0)
+```
 
 
 ## FAQ
