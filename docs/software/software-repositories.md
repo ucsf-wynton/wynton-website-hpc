@@ -865,7 +865,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">A language for writing Python extension modules</span><br>
     URL: <span class="module-url"><a href="https://cython.org/">https://cython.org/</a></span><br>
-  Versions: <span class="module-version">0.25.2, <em>0.29.14</em></span><br>
+  Versions: <span class="module-version">0.25.2, 0.29.14, <em>0.29.24</em></span><br>
   </dd>
 
   <dt class="module-name">doxygen</dt>
@@ -1216,7 +1216,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">Classes Without Boilerplate</span><br>
     URL: <span class="module-url"><a href="https://www.attrs.org/">https://www.attrs.org/</a></span><br>
-  Versions: <span class="module-version"><em>20.3.0</em></span><br>
+  Versions: <span class="module-version">20.3.0, <em>21.2.0</em></span><br>
   </dd>
 
   <dt class="module-name">python3/biopython</dt>
@@ -1580,7 +1580,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-10-02 10:35:07 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-10-08 12:04:07 from querying `module avail` and `module spider`._
 
 
 <style>
