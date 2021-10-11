@@ -34,6 +34,9 @@ All tasks for using Linux containers, such as downloading, building, and running
 
 For full details, see `singularity --help`, `man singularity`, and the [Singularity] website.
 
+* Install Singularity or Docker on your own machine:
+  - Create a Singularity image on your own workstation and transfer the image to Wynton
+  - Create a Docker image on your own workstation and transfer the image to Wynton
 
 ## Example
 
@@ -305,6 +308,19 @@ isoseq3.def
 [alice@{{ site.devel.name }}]$ isoseq3 --version
 isoseq3 3.4.0 (commit v3.4.0)
 ```
+
+
+### Create a Singularity image on your own workstation and transfer the image to Wynton
+
+You can install Singularity on a Linux host where you have root access an and build the container image there using `sudo singularity build`
+
+Then the finished container image can be transferred to Wynton for use.
+
+If you do not have a Linux workstation, a Linux virtual machine is easy to install on Windows and macOS.
+
+### Create a Docker image on your own workstation and transfer the image to Wynton
+
+Similarity to installing Singularity on a Linux workstation, you can install Docker on a workstation you have access to and upload the Docker image to a registry such as [Docker Hub](https://hub.docker.com/) or [quay.io](https://quay.io/search). Docker images can be converted to a Singularity container.
 
 
 ## FAQ
