@@ -21,7 +21,7 @@ Cluster compute nodes are purchased by Wynton in units which contain 4 Compute N
 </div>
 
 * CPU: 1 × AMD EPYC 7502P 2.5 GHz 32-core processor
-* GPU: 4 × NVidia RTX 3090
+* GPU: 4 × Nvidia RTX 3090
 * RAM: 512 GiB/node
 
 **Price per GPU node: 17,837 USD**

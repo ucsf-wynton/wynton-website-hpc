@@ -151,10 +151,10 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 #### <span style="color: orange;">Power outage</span>
 
-**Resolved**: The NVidia-driver issue occurring on some of the GPU compute nodes has been fixed.
+**Resolved**: The Nvidia-driver issue occurring on some of the GPU compute nodes has been fixed.
 <br><span class="timestamp">Jun 26, 11:55 PDT</span>
 
-**Update**: Some of the compute nodes with GPUs are still down due to issues with the NVidia drivers.
+**Update**: Some of the compute nodes with GPUs are still down due to issues with the Nvidia drivers.
 <br><span class="timestamp">Jun 19, 13:50 PDT</span>
 
 **Update**: The login nodes and and the development nodes are functional. Some compute nodes that went down are back up, but not all.
