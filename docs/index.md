@@ -4,13 +4,13 @@
 
 <div class="alert alert-info" role="alert">
 <strong>NEWS</strong>: (<em>For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page</em>)<br/>
+2021-10-01: Added another four <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes</a> each with four Nvidia A40 GPUs (48 GiB GPU RAM) and a 32-core CPU and 512 GB RAM
 2021-09-22: Added 2,048 cores (+20%) via 16 huge-memory nodes (128 cores and 1 TiB of RAM)<br/>
 2021-05-28: GPU development node gpudev1 has been upgraded to a machine with 32 CPU cores, 128 GiB RAM, and NVIDIA Tesla K80 (was 12 cores, 48 GiB RAM, and GeForce GTX 980 Ti)<br/>
 2021-05-28: Development node dev1 has been upgraded to a machine with 72 CPU cores and 384 GiB RAM (was 8 cores and 16 GiB RAM).<br/>
 2021-04-05: We have improved the purchasing and accounting workflow for <a href="{{ '/about/pricing-storage.html' | relative_url }}">lab storage orders</a> resulting in shorter waiting times.<br/>
 2021-03-12: Zsh is now also available in addition to the officially supported Bash, our default shell, Csh, and Tcsh.<br/>
 2021-01-25: We now offer weekly <a href="{{ '/support/index.html' | relative_url }}">Office Hours</a>.<br/>
-2020-10-29: Access to Wynton's login and data-transfer nodes <a href="{{ '/get-started/duo-signup.html' | relative_url }}">requires 2FA authentication</a>.<br/>
 <a href="{{ '/about/news.html' | relative_url }}">More ...</a>
 </div>
 

@@ -1,9 +1,9 @@
-nodes: 445
-physical_cores: 12476
-gpu_nodes: 38
-gpus: 132
-communal_gpu_nodes: 7
-communal_gpus: 24
+nodes: 449
+physical_cores: 12572
+gpu_nodes: 42
+gpus: 148
+communal_gpu_nodes: 11
+communal_gpus: 48
 
 ## RAM [GiB]:
 ram_min: 48
