@@ -21,7 +21,7 @@ devtoolset-9
 llvm-toolset-7
 rh-python36
 rh-ruby25
-rh-fuby26
+rh-ruby26
 rh-ruby27
 rh-ruby30
 ```

@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(68)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(69)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
@@ -124,7 +124,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2>Module Software Repository: CBI (68)</h2>
+<h2>Module Software Repository: CBI (69)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -655,6 +655,15 @@ Please note that this software stacks is maintained and contributed by a researc
     Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
   </dd>
 
+  <dt class="module-name">scl-rh-ruby</dt>
+  <dd class="module-details">
+    <strong class="module-help">SCL Ruby: Ruby</strong><br>
+    <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-ruby30</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-ruby30</code>, which is an approach that is not of ficially supported by RedHat/CentOS.</span><br>
+    Example: <span class="module-example"><code>irb --help</code>, <code>ruby --help</code>, <code>ruby script.rb</code>.</span><br>
+    URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/">https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/</a></span><br>
+  Versions: <span class="module-version">25, 26, 27, <em>30</em></span><br>
+  </dd>
+
   <dt class="module-name">shellcheck</dt>
   <dd class="module-details">
     <strong class="module-help">ShellCheck: A Shell Script Static Analysis Tool</strong><br>
@@ -865,7 +874,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">A language for writing Python extension modules</span><br>
     URL: <span class="module-url"><a href="https://cython.org/">https://cython.org/</a></span><br>
-  Versions: <span class="module-version">0.25.2, <em>0.29.14</em></span><br>
+  Versions: <span class="module-version">0.25.2, 0.29.14, <em>0.29.24</em></span><br>
   </dd>
 
   <dt class="module-name">doxygen</dt>
@@ -1216,7 +1225,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">Classes Without Boilerplate</span><br>
     URL: <span class="module-url"><a href="https://www.attrs.org/">https://www.attrs.org/</a></span><br>
-  Versions: <span class="module-version"><em>20.3.0</em></span><br>
+  Versions: <span class="module-version">20.3.0, <em>21.2.0</em></span><br>
   </dd>
 
   <dt class="module-name">python3/biopython</dt>
@@ -1576,11 +1585,11 @@ Please note that this software stacks is maintained and contributed by a researc
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(68)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(69)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-10-02 10:35:07 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-10-08 12:43:47 from querying `module avail` and `module spider`._
 
 
 <style>
