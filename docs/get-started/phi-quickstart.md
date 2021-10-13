@@ -1,5 +1,13 @@
 # PHI Quickstart
 
+## UCSF Data Classification Standard & Restricted Data Types
+
+- Please see [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information regarding UCSF's data classification standard:
+
+  - [Personally Identifiable Information (PII)](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard#PII)
+  - [Protected Health Information (PHI)](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard#phi)
+
+
 ## First step: Wynton accounts
 
 - If you either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI, fill out the Request a Wynton Account / Modify an Existing account form on the [Wynton - Join the Cluster]({{ '/about/join.html' | relative_url }}) page.
@@ -12,7 +20,7 @@
 - Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ '/about/governance.html' | relative_url }})
 - Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ '/about/governance.html' | relative_url }})
 - PHI users must use PHI-specific nodes to connect to Wynton
-  - login: `plog1`
+  - login/data transfer: `plog1`
   - dev: `pdev1`, `pgpudev1`
 - Data containing PHI must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected` location
 - Additionally, PIs using PHI on Wynton or approving users that use PHI on Wynton:
@@ -21,5 +29,4 @@
   - The PI must notify Wynton when departing UCSF and transfer to another UCSF owner or archive their projects and data
   - PIs must communicate any change in security requirements in research agreements to Wynton admins
 - If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office](https://hipaa.ucsf.edu/)
-
 
