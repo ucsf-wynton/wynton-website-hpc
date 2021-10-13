@@ -18,8 +18,8 @@
 
 #### Scheduled kernel maintenance
 
-* Damage: None
 * Impact: Fewer compute nodes than usual until rebooted
+* Damage: None
 * Occurrences:
   1. 2020-01-29 (up to 14 days)
   1. 2020-07-23 (up to 14 days)
