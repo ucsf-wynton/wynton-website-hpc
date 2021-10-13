@@ -5,16 +5,16 @@
 * Impact: No file access, no compute resources available
 * Damage: None
 * Occurrences:
-  1. 2020-12-07 (30 hours)
   1. 2020-08-10 (93 hours)
+  1. 2020-12-07 (30 hours)
   
 #### Scheduled kernel maintenance
 
 * Damage: None
 * Impact: Fewer compute nodes than usual until rebooted
 * Occurrences:
-  1. 2020-12-11 (up to 14 days)
   1. 2020-06-11 (up to 14 days)
+  1. 2020-12-11 (up to 14 days)
 
 #### Unscheduled downtimes due to power outage
 
@@ -28,22 +28,22 @@
 * Impact: No file access
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
 * Occurrences:
-  1. 2020-11-05 (3 hours) - BeeGFS non-responsive
-  1. 2020-10-21 (3 hours) - BeeGFS non-responsive
-  1. 2020-08-19 (1.5 hours) - BeeGFS non-responsive
-  1. 2020-05-22 (0.5 hours) - BeeGFS non-responsive to failed upgrade
-  1. 2020-02-05 (51.5 hours) - Legacy NetApp file system failed
-  1. 2020-01-29 (1.0 hours) - BeeGFS non-responsive
   1. 2020-01-22 (2.5 hours) - BeeGFS failure to failed upgrade
+  1. 2020-01-29 (1.0 hours) - BeeGFS non-responsive
+  1. 2020-02-05 (51.5 hours) - Legacy NetApp file system failed
+  1. 2020-05-22 (0.5 hours) - BeeGFS non-responsive to failed upgra  1. 2020-08-19 (1.5 hours) - BeeGFS non-responsive
+  1. 2020-10-21 (3 hours) - BeeGFS non-responsive
+  1. 2020-11-05 (3 hours) - BeeGFS non-responsive
+de
 
 #### Unscheduled downtimes due to other reasons
 
 * Impact: Less compute resources
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
 * Occurrences:
-  1. 2020-11-04 (288 hours) - ~80 compute nodes lost due to network switch failure
-  1. 2020-07-04 (2 hours) - SGE scheduler failed
   1. 2020-05-28 (26.5 hours) - MSG Data Center outage affecting many GPU compute nodes
+  1. 2020-07-04 (2 hours) - SGE scheduler failed
+  1. 2020-11-04 (288 hours) - ~80 compute nodes lost due to network switch failure
 
 
 ### December 8-17, 2020
