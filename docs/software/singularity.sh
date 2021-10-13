@@ -8,6 +8,7 @@ export R_PROFILE_USER=
 
 MDI_USER='alice'
 MDI_GROUP='boblab'
+# shellcheck disable=SC2034
 MDI_HOSTNAME='{{ site.devel.name }}'
 PS1="[\u@\h \W]\$ "
 

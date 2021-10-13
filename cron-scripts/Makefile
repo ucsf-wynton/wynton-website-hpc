@@ -1,2 +1,2 @@
-shellcheck:
+cron-shellcheck:
 	shellcheck -x -- *.sh

@@ -58,9 +58,6 @@ serve: start
 wynton:
 	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help
 
-spell:
-	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); words <- spelling::spell_check_files(paths, ignore = readLines("WORDLIST")); print(words); ok <- (nrow(words) == 0); quit(status = !ok)'
-
 broadcast-off:
 	cd assets/css/ && ln -fs broadcast-off.css broadcast.css
 
@@ -94,8 +91,15 @@ deploy:
 	git pull
 	git commit -am "Website updated [ci skip]" && git push 2> /dev/null
 
+
+spell:
+	@echo "*** $@:"
+	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); words <- spelling::spell_check_files(paths, ignore = readLines("WORDLIST")); print(words); ok <- (nrow(words) == 0); quit(status = !ok)'
+
 yaml-check:
+	@echo "*** $@:"
 	@Rscript -e 'paths <- dir(path = c(".", "_data"), pattern = "*[.]yml$$", full.names = TRUE, recursive = TRUE); yaml <- lapply(paths, FUN = yaml::read_yaml)'
+	@echo "All ok"
 
 markdownlint:
 	@stdout=$(TMPDIR)/stdout
@@ -166,7 +170,35 @@ markdown-link-check:
 	  exit 1
 	fi
 
+markin-shellcheck:
+	@stdout=$(TMPDIR)/stdout
 
-check: spell markdownlint markdown-link-check
+	ok_count=0
+	error_count=0
+	config=.markdown-link-check.json
+
+	echo "*** $@:"
+	files=$$(find . -type f -name "*.sh" -not -path "./_site/*")
+	for file in $$files; do
+	   $(TPUT) && printf "[    ] checking %s" "$$file"
+	   if shellcheck -x "$$file" &>> "$$stdout" ; then
+	     ok_count=$$((ok_count+1))
+	     $(TPUT) && printf "\r"
+	     printf "[$(OK)] checking %s\\n" "$$file"
+	   else
+	     error_count=$$((error_count+1))
+	     $(TPUT) && printf "\r"
+	     printf "[$(FAIL)] checking %s\\n" "$$file"
+	   fi
+	done
+
+	echo "RESULT: $$ok_count OK, $$error_count ERROR"
+	if (( error_count > 0 )); then
+	  grep -B 1 -E "(^ERROR:|^\[(✖|x)\]|Status: [0-9]+$$)" "$$stdout"
+	  cat "$$stdout"
+	  exit 1
+	fi
+
+check: spell yaml-check markin-shellcheck markdownlint markdown-link-check
 
 FORCE:

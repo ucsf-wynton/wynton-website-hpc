@@ -19,5 +19,5 @@ jobs:
 
     - name: ShellCheck
       run: |
-        make shellcheck
+        make cron-shellcheck
 

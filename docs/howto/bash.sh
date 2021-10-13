@@ -5,6 +5,7 @@ mkdir -p "${TMPDIR}"
 
 # shellcheck disable=SC2034
 MDI_USER=alice
+# shellcheck disable=SC2034
 MDI_HOSTNAME="{{ site.devel.name }}"
 PS1="[\u@\h \W]\$ "
 
