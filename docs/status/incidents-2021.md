@@ -5,7 +5,7 @@
   - Scheduled: 64 hours (= 5.1 days)
   - Unscheduled: 45 hours (= 3.8 days)
   - Total: 179.5 hours (= 7.5 days)
-  - External factors: 20% of the above downtime, corresponding to 37 hours (=1.5 days), where due to external factors
+  - External factors: 20% of the above downtime, corresponding to 37 hours (=1.5 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -30,7 +30,7 @@
 * Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
 * Occurrences:
   - 2021-08-26 (28 hours) - Planned Byers Hall power shutdown failed
-* Total downtime: 28 hours of which 28 hours where due to external factors
+* Total downtime: 28 hours of which 28 hours were due to external factors
   
 
 #### Unscheduled downtimes due to file-system failures
@@ -41,7 +41,7 @@
   1. 2020-03-26 (9 hours) - Campus networks issues causing significant BeeGFS slowness
   1. 2020-07-23 (8 hours) - BeeGFS silently failed disks
   1. 2020-11-05 (3 hours) - BeeGFS non-responsive
-* Total downtime: 20 hours of which 9 hours where due to external factors
+* Total downtime: 20 hours of which 9 hours were due to external factors
 
 #### Unscheduled downtimes due to other reasons
 
