@@ -12,7 +12,7 @@
 - Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ '/about/governance.html' | relative_url }})
 - Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ '/about/governance.html' | relative_url }})
 - PHI users must use PHI-specific nodes to connect to Wynton
-  - login: `plog1`
+  - login/data transfer: `plog1`
   - dev: `pdev1`, `pgpudev1`
 - Data containing PHI must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected` location
 - Additionally, PIs using PHI on Wynton or approving users that use PHI on Wynton:
