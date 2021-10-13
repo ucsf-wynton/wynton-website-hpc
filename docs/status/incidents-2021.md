@@ -25,7 +25,7 @@ start: 2021-08-26T09:15:00
 stop: 2021-08-27T13:15:00
 length: 28.0 hours
 severity: major-outage
-affected: beegfs, compute
+affected: jobs, beegfs, compute
 reason: external
  -->
 
@@ -59,7 +59,7 @@ start: 2021-06-24T07:00:00
 stop: 2021-06-24T14:55:00
 length: 8.0 hours
 severity: major-outage
-affected: beegfs, compute
+affected: jobs, beegfs, compute
 reason: external
  -->
 
@@ -116,7 +116,7 @@ start: 2021-05-25T16:00:00
 stop: 2021-06-28T10:00:00
 length: 64 hours
 severity: under-maintenance
-affected: beegfs, compute
+affected: jobs, beegfs, compute
 reason: scheduled
  -->
 
@@ -155,7 +155,7 @@ start: 2021-04-28T16:30:00
 stop: 2021-05-07T11:10:00
 length: 210 hours
 severity: partial-outage
-affected: compute-gpu
+affected: jobs-gpu, compute-gpu
 reason: external
  -->
 

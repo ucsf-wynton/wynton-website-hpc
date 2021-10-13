@@ -68,7 +68,7 @@ start: 2020-11-23T16:50:00
 stop: 2020-12-08T16:30:00
 length: 360 hours
 severity: under-maintenance
-affected: beegfs, compute, *
+affected: jobs, beegfs, compute, *
 reason: scheduled
  -->
 
@@ -87,8 +87,8 @@ reason: scheduled
 start: 2020-11-23T16:50:00
 stop: 2020-12-08T16:30:00
 length: 360 hours
-severity: major-outage
-affected: network, compute, ...
+severity: partial-outage
+affected: jobs, network, compute, ...
 reason: external
  -->
 
@@ -105,7 +105,7 @@ start: 2020-11-05T01:20:00
 stop: 2020-11-05T04:00:00
 length: 3 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -126,7 +126,7 @@ start: 2020-10-21T09:30:00
 stop: 2020-10-21T11:15:00
 length: 3.0 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -146,7 +146,7 @@ start: 2020-08-19T17:22:00
 stop: 2020-08-19T18:52:00
 length: 1.5 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -184,7 +184,7 @@ start: 2020-08-10T00:00:00
 stop: 2020-08-13T21:00:00
 length: 93 hours
 severity: under-maintenance
-affected: beegfs, compute, *
+affected: jobs, beegfs, compute, *
 reason: scheduled
  -->
 
@@ -213,7 +213,7 @@ start: 2020-07-06T00:30:00
 stop: 2020-07-06T02:45:00
 length: 2.0 hours
 severity: partial-outage
-affected: scheduler
+affected: jobs, scheduler
 reason: internal
  -->
 
@@ -280,7 +280,7 @@ start: 2020-05-22T01:00:00
 stop: 2020-05-22T01:15:00
 length: 0.5 hours
 severity: partial-outage
-affected: beegfs
+affected: jobs, beegfs
 reason: internal
  -->
 
@@ -303,7 +303,7 @@ start: 2020-05-28T09:35:00
 stop: 2020-05-29T12:00:00
 length: 26.5 hours
 severity: partial-outage
-affected: compute-gpu
+affected: jobs, compute-gpu
 reason: internal
  -->
 
@@ -332,7 +332,7 @@ start: 2020-02-05T10:15:00
 stop: 2020-02-07T13:40:00
 length: 51.5 hours
 severity: major-outage
-affected: compute, ...
+affected: jobs, compute, ...
 reason: internal
  -->
 
@@ -352,7 +352,7 @@ start: 2020-01-29T16:00:00
 stop: 2020-01-29T17:00:00
 length: 1.0 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -376,7 +376,7 @@ start: 2020-01-22T12:00:00
 stop: 2020-01-22T14:30:00
 length: 2.5 hours
 severity: under-maintenance
-affected: beegfs, *
+affected: jobs, beegfs, *
 reason: scheduled
  -->
 

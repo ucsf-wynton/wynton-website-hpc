@@ -1,3 +1,51 @@
+### Operational Summary for 2019
+
+#### Scheduled maintenance downtimes
+
+* Impact: No file access, no compute resources available
+* Damage: None
+* Occurrences:
+  1. 2021-01-09 (1.0 hours) - job scheduler updates
+  1. 2021-07-08 (95 hours)
+
+#### Scheduled kernel maintenance
+
+* Damage: None
+* Impact: Fewer compute nodes than usual until rebooted
+* Occurrences:
+  1. 2019-01-22 (up to 14 days)
+  1. 2019-03-21 (up to 14 days)
+  1. 2019-10-29 (up to 14 days)
+  1. 2019-12-22 (up to 14 days)
+
+
+#### Unscheduled downtimes due to power outage
+
+* Impact: No file access, no compute resources available
+* Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
+* Occurrences:
+  1. 2019-07-30 (6.5 hour) - Byers Hall power outage
+er maintenance
+  1. 2019-08-15 (5.5 hour) - Diller power outage
+  1. 2019-10-22 (13.0 hour) - Diller power backup failed during pow  1. 2019-10-25 (1.0 hour) - Byers Hall power outage
+
+
+#### Unscheduled downtimes due to file-system failures
+
+* Impact: No file access
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2019-01-08 (2.0 hours) - BeeGFS server non-responsive
+  1. 2019-01-14 (1.5 hours) - BeeGFS non-responsive
+  1. 2019-05-15 (24.5 hours) - BeeGFS non-responsive
+  1. 2019-05-17 (5.0 hours) - BeeGFS slowdown
+  1. 2019-06-17 (10.5 hours) - BeeGFS non-responsive
+  1. 2019-08-23 (4.0 hours) - BeeGFS server non-responsive
+  1. 2019-09-24 (3.0 hours) - BeeGFS server non-responsive
+  1. 2019-12-18 (3.5 hours) - Network switch upgrade
+  1. 2019-12-22 (5.5 hours) - BeeGFS server non-responsive
+
+
 ### December 20, 2019 - January 4, 2020
 
 #### <span style="color: orange;">Kernel maintenance</span>
@@ -27,7 +75,7 @@ start: 2019-12-22T09:15:00
 stop: 2019-12-22T14:40:00
 length: 5.5 hours
 severity: major-outage
-affected: beegfs, *
+affected: jobs, beegfs, *
 reason: internal
  -->
 
@@ -66,6 +114,7 @@ reason: internal
 <br><span class="timestamp">Oct 29, 16:30 PDT</span>
 
 
+
 ### October 25, 2019
 
 #### <span style="color: orange;">Byers Hall power outage glitch</span>
@@ -84,7 +133,7 @@ start: 2019-10-25T12:00:00
 stop: 2019-10-25T13:00:00
 length: 1.0 hours
 severity: partial-outage
-affected: compute
+affected: jobs, compute
 reason: external
  -->
 
@@ -115,7 +164,7 @@ start: 2019-10-22T21:45:00
 stop: 2019-10-23T10:35:00
 length: 13.0 hours
 severity: major-outage
-affected: beegfs
+affected: jobs, beegfs
 reason: external
  -->
 
@@ -135,7 +184,7 @@ start: 2019-09-24T17:30:00
 stop: 2019-09-24T20:25:00
 length: 3.0 hours
 severity: major-outage
-affected: beegfs
+affected: jobs, beegfs
 reason: internal
  -->
 
@@ -155,7 +204,7 @@ start: 2019-08-23T16:45:00
 stop: 2019-08-23T20:45:00
 length: 4.0 hours
 severity: major-outage
-affected: beegfs
+affected: jobs, beegfs
 reason: internal
  -->
 
@@ -170,6 +219,15 @@ reason: internal
 **Notice**: The {{ site.cluster.name }} environment is down due to a non-planned power outage at the Diller data center.  Jobs running on compute nodes located in that data center, were terminated.  Jobs running elsewhere may also have been affected because `/wynton/home` went down as well (despite it being mirrored).
 <br><span class="timestamp">August 15, 15:45 PDT</span>
 
+<!--
+start: 2019-08-15T15:45:00
+stop: 2019-08-15T21:00:00
+length: 5.5 hours
+severity: major-outage
+affected: jobs, beegfs
+reason: external
+ -->
+
 
 ### July 30, 2019
 
@@ -180,6 +238,15 @@ reason: internal
 
 **Notice**: The {{ site.cluster.name }} environment is down due to a non-planned power outage at the main data center.
 <br><span class="timestamp">July 30, 08:20 PDT</span>
+
+<!--
+start: 2019-07-30T08:20:00
+stop: 2019-07-30T14:40:00
+length: 6.5 hours
+severity: major-outage
+affected: jobs, beegfs
+reason: external
+ -->
 
 
 ### July 8-12, 2019
@@ -195,6 +262,15 @@ reason: internal
 **Notice**: Updates to the BeeGFS file system and the operating system that require to bring down all of {{ site.cluster.name }} will start on the morning of Monday July 8.  Please make sure to log out before then.  The downtime might last the full week.
 <br><span class="timestamp">July 1, 14:15 PDT</span>
 
+<!--
+start: 2019-07-08T12:00:00
+stop: 2019-07-12T11:15:00
+length: 95 hours
+severity: under-maintenance
+affected: beegfs, compute, *
+reason: scheduled
+ -->
+
 
 ### June 17-18, 2019
 
@@ -205,6 +281,15 @@ reason: internal
 
 **Investigating**: Parts of `/wynton/scratch` and `/wynton/group` are currently unavailable. The `/wynton/home` space should be unaffected.
 <br><span class="timestamp">June 17, 15:05 PDT</span>
+
+<!--
+start: 2019-06-17T15:05:00
+stop: 2019-06-18T01:30:00
+length: 10.5 hours
+severity: partial-outage
+affected: jobs, beegfs
+reason: internal
+ -->
 
 
 ### May 17, 2019
@@ -218,6 +303,16 @@ reason: internal
 <br><span class="timestamp">May 17, 10:45 PDT</span>
 
 
+<!--
+start: 2019-05-17T10:45:00
+stop: 2019-05-17T16:00:00
+length: 5.0 hours
+severity: major-outage
+affected: jobs, beegfs
+reason: internal
+ -->
+
+
 ### May 15-16, 2019
 
 #### <span style="color: orange;">Major outage due to file-system issues</span>
@@ -227,6 +322,15 @@ reason: internal
 
 **Investigating**: The BeeGFS file system (`/wynton`) is experiencing major issues.  This caused all on {{ site.cluster.name }} to become non-functional.
 <br><span class="timestamp">May 15, 10:00 PDT</span>
+
+<!--
+start: 2019-05-15T10:00:00
+stop: 2019-05-16T10:30:00
+length: 24.5 hours
+severity: major-outage
+affected: jobs, beegfs
+reason: internal
+ -->
 
 
 
@@ -301,6 +405,15 @@ reason: internal
 **Investigating**: The file system under `/wynton/` went down around 11:30 resulting is several critical failures including the scheduler failing.
 <br><span class="timestamp">Jan 14, 11:55 PST</span>
 
+<!--
+start: 2019-01-14T11:30:00
+stop: 2019-01-14T12:45:00
+length: 1.5 hours
+severity: major-outage
+affected: jobs, beegfs
+reason: internal
+ -->
+
 
 ### January 9, 2019
 
@@ -315,6 +428,14 @@ reason: internal
 **Notice**: There will be a short job-scheduler downtime on Wednesday January 9 due to SGE maintenance.  During this downtime, already running jobs will keep running and queued jobs will remain in the queue, but no new jobs can be submitted.
 <br><span class="timestamp">Dec 20, 12:00 PST</span>
 
+<!--
+start: 2019-01-09T12:00:00
+stop: 2019-07-12T12:45:00
+length: 1.0 hours
+severity: under-maintenance
+affected: n/a
+reason: scheduled
+ -->
 
 ### January 8, 2019
  
@@ -322,3 +443,12 @@ reason: internal
 
 **Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 07:30 and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
 <br><span class="timestamp">Jan 8, 10:15 PST</span>
+
+<!--
+start: 2019-01-08T07:30:00
+stop: 2019-01-08T09:20:00
+length: 2.0 hours
+severity: partial-outage
+affected: jobs, beegfs
+reason: internal
+ -->
