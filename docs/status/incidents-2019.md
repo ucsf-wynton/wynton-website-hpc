@@ -34,7 +34,6 @@
 * Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
 * Occurrences:
   1. 2019-07-30 (6.5 hour) - Byers Hall power outage
-er maintenance
   1. 2019-08-15 (5.5 hour) - Diller power outage
   1. 2019-10-25 (1.0 hour) - Byers Hall power outage
   1. 2019-10-22 (13.0 hour) - Diller power backup failed during power maintenance
