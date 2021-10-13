@@ -29,5 +29,5 @@ Cluster compute nodes are purchased by Wynton in units which contain 4 Compute N
 
 ## How to purchase
 
-To purchase compute nodes or GPUs, please contact [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) to discuss the specifics (requirements, pricing, availability and current lead times).
+To purchase compute nodes or GPUs, please contact [{{ site.cluster.email_compute }}](mailto:{{ site.cluster.email_compute }}?subject=Request%20to%20purchase%20compute) to discuss the specifics (requirements, pricing, availability and current lead times).
 Single GPU cards cannot be purchased, only a full GPU node. However, just like partial compute nodes can be purchased, GPU purchase requests can also be pooled towards a full system.
