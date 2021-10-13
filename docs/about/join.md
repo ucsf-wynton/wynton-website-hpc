@@ -29,25 +29,8 @@ To apply for an account on the {{ site.cluster.name }} cluster, please follow th
 _Note: The form linked above is only available to UCSF staff, students, postdocs, and faculty. If you are an non-UCSF affiliate who does not have a UCSF Guest Account, ([Request a UCSF Guest Account](https://wiki.library.ucsf.edu/display/IAM/Guest+Accounts)), you will need to have the UCSF staff, student, postdoc, or PI you are associated with request the account for you._
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-<strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
+<strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to [contact us] if you don't know how to do this - we're here to help.
 </div>
-
-
-## Miscellaneous
-
-### To access the Wynton account request from inside UCSF ServiceNow
-
-1. Go to [help.ucsf.edu](https://help.ucsf.edu)
-
-2. Select **"Request Specific Services"** (You will be prompted for UCSF and/or Duo Login).
-
-3. From the **"Categories"** select **"Accounts, Access, and Email"**.
-
-4. From the list of, **"Accounts, Access, and Email,"** services select, **[Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)**.
-
-5. Fill out the form.
-
-
 
 ### Detailed instructions regarding the Wynton account form
 
