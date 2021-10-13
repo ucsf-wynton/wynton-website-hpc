@@ -1,4 +1,4 @@
-check: spell shellcheck yaml-check markdownlint markdown-link-check
+check: spell yaml-check markdownlint markdown-link-check markin-shellcheck cron-shellcheck 
 
 cron-shellcheck:
 	cd cron-scripts; $(MAKE) $@
