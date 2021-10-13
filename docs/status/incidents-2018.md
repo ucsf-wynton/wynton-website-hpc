@@ -1,9 +1,64 @@
+### Operational Summary for 2018 Q3-Q4
+
+* Full downtime:
+
+  - Scheduled: 0 hours = 0.0%
+  - Unscheduled: 84 hours = 3.5 days = 1.9%
+  - Total: 84 hours = 3.5 days = 1.9%
+  - External factors: 100% of the above downtime, corresponding to 84 hours (=3.5 days), were due to external factors
+  
+
+#### Scheduled maintenance downtimes
+
+* Impact: No file access, no compute resources available
+* Damage: None
+* Occurrences:
+  - None
+* Total downtime: 0.0 hours
+
+#### Scheduled kernel maintenance
+
+* Impact: Fewer compute nodes than usual until rebooted
+* Damage: None
+* Occurrences:
+  1. 2018-09-28 (up to 14 days)
+
+
+#### Unscheduled downtimes due to power outage
+
+* Impact: No file access, no compute resources available
+* Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
+* Occurrences:
+  1. 2018-06-17 (23 hours) - Campus power outage
+  1. 2018-11-08 (19 hours) - Byers Hall power maintenance without notice
+  1. 2018-12-14 (42 hours) - Sandler Building power outage
+* Total downtime: 84 hours of which 84 hours were due to external factors
+
+#### Unscheduled downtimes due to file-system failures
+
+* Impact: No file access
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  - None.
+* Total downtime: 0.0 hours
+
+
+
 ### December 21, 2018
 
 #### <span style="color: orange;">Partial file system failure</span>
 
 **Resolved**: Parts of the new BeeGFS file system was non-functional for approx. 1.5 hours during Friday December 21 when a brief maintenance task failed.
 <br><span class="timestamp">Dec 21, 20:50 PST</span>
+
+<!--
+start: 2018-12-21T12:00:00
+stop: 2018-12-21T13:30:00
+length: 1.5 hours
+severity: major-outage
+affected: jobs, beegfs, *
+reason: internal
+ -->
 
 
 ### December 12-20, 2018
@@ -16,6 +71,15 @@
 **Notice**: Starting Wednesday December 12 around 11:00, several `msg-*` compute nodes went down (~200 cores in total).  The cause of this is unknown.  Because it might be related to the BeeGFS migration project, the troubleshooting of this incident will most likely not start until the BeeGFS project is completed, which is projected to be done on Wednesday December 19.
 <br><span class="timestamp">Dec 17, 17:00 PST</span>
 
+<!--
+start: 2018-12-20T16:40:00
+stop: 2018-12-17T17:00:00
+length: 72 hours
+severity: partial-outage
+affected: jobs, compute, *
+reason: internal
+ -->
+
 
 ### December 18, 2018
 
@@ -26,6 +90,7 @@
 
 **Investigating**: Development node `qb3-dev1` does not respond to SSH. This will be investigated the first thing tomorrow morning (Wednesday December 19).  In the meanwhile, development node `qb3-gpudev1`, which is "under construction", may be used.
 <br><span class="timestamp">Dec 18, 16:30 PST</span>
+
 
 ### November 28-December 19, 2018
 
@@ -63,6 +128,16 @@ It is our hope to be able to keep the user's home accounts, login nodes, the tra
 _NOTE: If our new setup proves more challenging than anticipated, then we will postpone the SGE downtime to after the holidays, on Wednesday January 9, 2019.  {{ site.cluster.name }} will remain operational over the holidays, though without `/wynton/scratch`._
 <br><span class="timestamp">Dec 6, 14:30 PST [edited Dec 18, 17:15 PST]</span>
 
+<!--
+start: 2018-12-12T10:20:00
+stop: 2018-12-19T14:20:00
+length: 172 hours
+severity: under-maintenance
+affected: beegfs-scratch, *
+reason: scheduled
+ -->
+
+
 
 ### December 12-14, 2018
 
@@ -73,6 +148,15 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 **Investigating**: The compute nodes named `mac-*` (in the Sandler building) went down due to power failure on Wednesday December 12 starting around 05:50.  Nodes are being rebooted.
 <br><span class="timestamp">Dec 12, 09:05 PST</span>
+
+<!--
+start: 2018-12-12T05:50:00
+stop: 2018-12-14T12:00:00
+length: 42 hours
+severity: partial-outage
+affected: jobs, compute
+reason: external
+ -->
 
 
 ### November 8, 2018
@@ -93,6 +177,15 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 **Notice**: Parts of the {{ site.cluster.name }} cluster will be shut down on November 8 at 4:00am.  This shutdown takes place due to the UCSF Facilities shutting down power in the Byers Hall.  Jobs running on affected compute nodes will be terminated abruptly.  Compute nodes with battery backup or in other buildings will not be affected.  Nodes will be rebooted as soon as the power comes back. ~~To follow the reboot progress, see the 'Available CPU cores' curve (target 1,832 cores) in the graph above.~~  Unfortunately, the above queue-metric graphs cannot be updated during the power outage.
 <br><span class="timestamp">Nov 7, 15:45 PST</span>
+
+<!--
+start: 2018-11-08T04:00:00
+stop: 2018-11-08T23:00:00
+length: 19 hours
+severity: under-maintenance, partial-outage
+affected: jobs, compute, *
+reason: scheduled, external
+ -->
 
 
 ### September 28 - October 11, 2018
@@ -124,6 +217,15 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Resolved**: Around 11:00 on Wednesday September 12, the SGE scheduler (“qmaster”) became unreachable such that the scheduler could not be queried and no new jobs could be submitted. Jobs that relied on run-time access to the scheduler may have failed. The problem, which was due to a misconfiguration being introduced, was resolved early morning on Thursday September 13.
 <br><span class="timestamp">Sept 13, 09:50 PDT</span>
 
+<!--
+start: 2018-09-12T11:00:00
+stop: 2018-09-13T08:00:00
+length: 21 hours
+severity: partial-outage
+affected: jobs, scheduler, compute, *
+reason: internal
+ -->
+
 
 ### August 1, 2018
 
@@ -135,6 +237,14 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 **Notice**: On Wednesday August 1 at 6:45am, parts of the compute nodes (msg-io{1-10} + msg-*gpu) will be powered down. They will be brought back online within 1-2 hours.  The reason is a planned power shutdown affecting one of {{ site.cluster.name }}'s server rooms.
 <br><span class="timestamp">Jul 30, 20:45 PDT</span>
 
+<!--
+start: 2018-08-01T07:15:00
+stop: 2018-08-01T06:45:00
+length: 0.5 hours
+severity: scheduled, partial-outage
+affected: jobs, scheduler, compute, *
+reason: external
+ -->
 
 ### July 30, 2018
 
@@ -162,3 +272,12 @@ _NOTE: If our new setup proves more challenging than anticipated, then we will p
 
 **Investigating**: The UCSF Mission Bay Campus experienced a power outage on Saturday June 16 causing parts of {{ site.cluster.name }} to go down.  One of the login nodes (wynlog1), the development node (qb3-dev1), and parts of the compute nodes are currently non-functional.
 <br><span class="timestamp">Jun 17, 15:00 PDT</span>
+
+<!--
+start: 2018-06-17T15:00:00
+stop: 2018-06-19T13:50:00
+length: 23 hours
+severity: partial-outage
+affected: jobs, scheduler, compute, *
+reason: external
+ -->

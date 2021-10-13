@@ -2,10 +2,10 @@
 
 * Full downtime:
 
-  - Scheduled: 64 hours (= 5.1 days)
-  - Unscheduled: 45 hours (= 3.8 days)
-  - Total: 179.5 hours (= 7.5 days)
-  - External factors: 20% of the above downtime, corresponding to 37 hours (=1.5 days), were due to external factors
+  - Scheduled: 64 hours (= 2.7 days)
+  - Unscheduled: 48 hours (= 2.0 days)
+  - Total: 112 hours (= 4.7 days)
+  - External factors: 33% of the above downtime, corresponding to 37 hours (=1.5 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -18,8 +18,8 @@
 
 #### Scheduled kernel maintenance
 
-* Damage: None
 * Impact: Fewer compute nodes than usual until rebooted
+* Damage: None
 * Occurrences:
   1. 2020-01-29 (up to 14 days)
   1. 2020-07-23 (up to 14 days)
