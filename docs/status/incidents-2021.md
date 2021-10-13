@@ -4,8 +4,8 @@
 
   - Scheduled: 64 hours (= 5.1 days)
   - Unscheduled: 45 hours (= 3.8 days)
-  - Total: 179.5 hours (= 7.5 days)
-  - External factors: 20% of the above downtime, corresponding to 37 hours (=1.5 days), were due to external factors
+  - Total: 109 hours (= 4.5 days)
+  - External factors: 34% of the above downtime, corresponding to 37 hours (=1.5 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
