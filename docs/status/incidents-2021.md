@@ -1,3 +1,57 @@
+### Operational Summary for 2021 (this far)
+
+* Full downtime:
+
+  - Scheduled: 64 hours (= 2.7 days)
+  - Unscheduled: 48 hours (= 2.0 days)
+  - Total: 112 hours (= 4.7 days)
+  - External factors: 33% of the above downtime, corresponding to 37 hours (=1.5 days), were due to external factors
+
+
+#### Scheduled maintenance downtimes
+
+* Impact: No file access, no compute resources available
+* Damage: None
+* Occurrences:
+  1. 2021-05-25 (64 hours)
+* Total downtime: 64 hours
+
+#### Scheduled kernel maintenance
+
+* Impact: Fewer compute nodes than usual until rebooted
+* Damage: None
+* Occurrences:
+  1. 2020-01-29 (up to 14 days)
+  1. 2020-07-23 (up to 14 days)
+
+#### Unscheduled downtimes due to power outage
+
+* Impact: No file access, no compute resources available
+* Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
+* Occurrences:
+  - 2021-08-26 (28 hours) - Planned Byers Hall power shutdown failed
+* Total downtime: 28 hours of which 28 hours were due to external factors
+  
+
+#### Unscheduled downtimes due to file-system failures
+
+* Impact: No file access
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2020-03-26 (9 hours) - Campus networks issues causing significant BeeGFS slowness
+  1. 2020-07-23 (8 hours) - BeeGFS silently failed disks
+  1. 2020-11-05 (3 hours) - BeeGFS non-responsive
+* Total downtime: 20 hours of which 9 hours were due to external factors
+
+#### Unscheduled downtimes due to other reasons
+
+* Impact: Less compute resources
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2021-04-28 (210 hours) - GPU taken down due to server room cooling issues
+* Total downtime: 0 hours
+
+
 ### August 26-September 10, 2021
 
 #### <span style="color: orange;">Byers Hall power outage & file-system corruption</span>
@@ -25,7 +79,7 @@ start: 2021-08-26T09:15:00
 stop: 2021-08-27T13:15:00
 length: 28.0 hours
 severity: major-outage
-affected: beegfs, compute
+affected: jobs, beegfs, compute
 reason: external
  -->
 
@@ -59,7 +113,7 @@ start: 2021-06-24T07:00:00
 stop: 2021-06-24T14:55:00
 length: 8.0 hours
 severity: major-outage
-affected: beegfs, compute
+affected: jobs, beegfs, compute
 reason: external
  -->
 
@@ -116,7 +170,7 @@ start: 2021-05-25T16:00:00
 stop: 2021-06-28T10:00:00
 length: 64 hours
 severity: under-maintenance
-affected: beegfs, compute
+affected: jobs, beegfs, compute
 reason: scheduled
  -->
 
@@ -155,7 +209,7 @@ start: 2021-04-28T16:30:00
 stop: 2021-05-07T11:10:00
 length: 210 hours
 severity: partial-outage
-affected: compute-gpu
+affected: jobs-gpu, compute-gpu
 reason: external
  -->
 

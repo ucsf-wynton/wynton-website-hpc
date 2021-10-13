@@ -690,7 +690,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>fastq-dump --help</code>.</span><br>
     URL: <span class="module-url"><a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a>, <a href="https://github.com/ncbi/sra-tools">https://github.com/ncbi/sra-tools</a></span><br>
     Warning: <span class="module-warning">To work around a bug where <code>fasterq-dump</code> crashes the local machine, it has been tweaked such that it uses <code>$TMPDIR</code> rather than <code>$PWD</code> as the default temporary folder and it will only use two threads instead of six by default.</span><br>
-  Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, <em>2.11.1</em></span><br>
+  Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, 2.11.1, <em>2.11.2</em></span><br>
   </dd>
 
   <dt class="module-name">star</dt>
@@ -1372,7 +1372,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">A fast multidimensional array facility for Python</span><br>
     URL: <span class="module-url"><a href="https://numpy.org/">https://numpy.org/</a></span><br>
-  Versions: <span class="module-version"><em>1.17.4</em></span><br>
+  Versions: <span class="module-version">1.17.4, <em>1.19.5</em></span><br>
   </dd>
 
   <dt class="module-name">python3/packaging</dt>
@@ -1589,7 +1589,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-10-08 12:43:47 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-10-13 14:20:04 from querying `module avail` and `module spider`._
 
 
 <style>

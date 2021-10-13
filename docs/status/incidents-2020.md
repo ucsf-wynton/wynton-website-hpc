@@ -1,3 +1,64 @@
+### Operational Summary for 2020
+
+* Full downtime:
+
+  - Scheduled: 123 hours = 5.1 days = 1.4%
+  - Unscheduled: 91.5 hours = 3.8 days = 1.0%
+  - Total: 214.5 hours = 8.9 days = 2.4%
+  - External factors: 12% of the above downtime, corresponding to 26.5 hours (=1.1 days), were due to external factors
+
+
+#### Scheduled maintenance downtimes
+
+* Impact: No file access, no compute resources available
+* Damage: None
+* Occurrences:
+  1. 2020-08-10 (93 hours)
+  1. 2020-12-07 (30 hours)
+* Total downtime: 123 hours
+
+#### Scheduled kernel maintenance
+
+* Impact: Fewer compute nodes than usual until rebooted
+* Damage: None
+* Occurrences:
+  1. 2020-06-11 (up to 14 days)
+  1. 2020-12-11 (up to 14 days)
+
+#### Unscheduled downtimes due to power outage
+
+* Impact: No file access, no compute resources available
+* Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
+* Occurrences:
+  - None
+* Total downtime: 0 hours
+
+#### Unscheduled downtimes due to file-system failures
+
+* Impact: No file access
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2020-01-22 (2.5 hours) - BeeGFS failure to failed upgrade
+  1. 2020-01-29 (1.0 hours) - BeeGFS non-responsive
+  1. 2020-02-05 (51.5 hours) - Legacy NetApp file system failed
+  1. 2020-05-22 (0.5 hours) - BeeGFS non-responsive to failed upgrade
+  1. 2020-08-19 (1.5 hours) - BeeGFS non-responsive
+  1. 2020-10-21 (3 hours) - BeeGFS non-responsive
+  1. 2020-11-05 (3 hours) - BeeGFS non-responsive
+* Total downtime: 63.0 hours
+
+
+#### Unscheduled downtimes due to other reasons
+
+* Impact: Less compute resources
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2020-05-28 (26.5 hours) - MSG Data Center outage affecting many GPU compute nodes
+  1. 2020-07-04 (2 hours) - SGE scheduler failed
+  1. 2020-11-04 (288 hours) - ~80 compute nodes lost due to network switch failure
+* Total downtime: 28.5 hours of which 26.5 hours were due to external factors
+
+
 ### December 8-17, 2020
 
 #### <span style="color: orange;">Limited accessibility of Login node log1</span>
@@ -64,11 +125,11 @@ the cluster is back online by the end of Wednesday December 9.
 <br><span class="timestamp">November 23, 16:50 PDT</span>
 
 <!--
-start: 2020-11-23T16:50:00
+start: 2020-12-07T10:30:00
 stop: 2020-12-08T16:30:00
-length: 360 hours
+length: 30 hours
 severity: under-maintenance
-affected: beegfs, compute, *
+affected: jobs, beegfs, compute, *
 reason: scheduled
  -->
 
@@ -84,11 +145,11 @@ reason: scheduled
 <br><span class="timestamp">November 4, 16:10 PDT</span>
 
 <!--
-start: 2020-11-23T16:50:00
-stop: 2020-12-08T16:30:00
+start: 2020-11-04T16:50:00
+stop: 2020-11-16T16:30:00
 length: 360 hours
-severity: major-outage
-affected: network, compute, ...
+severity: partial-outage
+affected: jobs, network, compute, ...
 reason: external
  -->
 
@@ -105,7 +166,7 @@ start: 2020-11-05T01:20:00
 stop: 2020-11-05T04:00:00
 length: 3 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -126,7 +187,7 @@ start: 2020-10-21T09:30:00
 stop: 2020-10-21T11:15:00
 length: 3.0 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -146,7 +207,7 @@ start: 2020-08-19T17:22:00
 stop: 2020-08-19T18:52:00
 length: 1.5 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -184,7 +245,7 @@ start: 2020-08-10T00:00:00
 stop: 2020-08-13T21:00:00
 length: 93 hours
 severity: under-maintenance
-affected: beegfs, compute, *
+affected: jobs, beegfs, compute, *
 reason: scheduled
  -->
 
@@ -213,7 +274,7 @@ start: 2020-07-06T00:30:00
 stop: 2020-07-06T02:45:00
 length: 2.0 hours
 severity: partial-outage
-affected: scheduler
+affected: jobs, scheduler
 reason: internal
  -->
 
@@ -280,7 +341,7 @@ start: 2020-05-22T01:00:00
 stop: 2020-05-22T01:15:00
 length: 0.5 hours
 severity: partial-outage
-affected: beegfs
+affected: jobs, beegfs
 reason: internal
  -->
 
@@ -303,7 +364,7 @@ start: 2020-05-28T09:35:00
 stop: 2020-05-29T12:00:00
 length: 26.5 hours
 severity: partial-outage
-affected: compute-gpu
+affected: jobs, compute-gpu
 reason: internal
  -->
 
@@ -332,7 +393,7 @@ start: 2020-02-05T10:15:00
 stop: 2020-02-07T13:40:00
 length: 51.5 hours
 severity: major-outage
-affected: compute, ...
+affected: jobs, compute, ...
 reason: internal
  -->
 
@@ -352,7 +413,7 @@ start: 2020-01-29T16:00:00
 stop: 2020-01-29T17:00:00
 length: 1.0 hours
 severity: major-outage
-affected: beegfs, ...
+affected: jobs, beegfs, ...
 reason: internal
  -->
 
@@ -376,7 +437,7 @@ start: 2020-01-22T12:00:00
 stop: 2020-01-22T14:30:00
 length: 2.5 hours
 severity: under-maintenance
-affected: beegfs, *
+affected: jobs, beegfs, *
 reason: scheduled
  -->
 
