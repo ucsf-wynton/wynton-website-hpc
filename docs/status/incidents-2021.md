@@ -1,3 +1,45 @@
+### Operational Summary for 2021 (this far)
+
+#### Scheduled maintenance downtimes
+
+* Impact: No file access, no compute resources available
+* Damage: None
+* Occurrences:
+  1. 2021-05-25 (64 hours)
+  
+#### Scheduled kernel maintenance
+
+* Damage: None
+* Impact: Fewer compute nodes than usual until rebooted
+* Occurrences:
+  1. 2020-01-29 (up to 14 days)
+  1. 2020-07-23 (up to 14 days)
+
+#### Unscheduled downtimes due to power outage
+
+* Impact: No file access, no compute resources available
+* Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
+* Occurrences:
+  - 2021-08-26 (28 hours) - Planned Byers Hall power shutdown failed
+  
+
+#### Unscheduled downtimes due to file-system failures
+
+* Impact: No file access
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2020-03-26 (9 hours) - Campus networks issues causing significant BeeGFS slowness
+  1. 2020-07-23 (8 hours) - BeeGFS silently failed disks
+  1. 2020-11-05 (3 hours) - BeeGFS non-responsive
+
+#### Unscheduled downtimes due to other reasons
+
+* Impact: Less compute resources
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2021-04-28 (210 hours) - GPU taken down due to server room cooling issues
+
+
 ### August 26-September 10, 2021
 
 #### <span style="color: orange;">Byers Hall power outage & file-system corruption</span>

@@ -31,7 +31,8 @@
   1. 2020-01-22 (2.5 hours) - BeeGFS failure to failed upgrade
   1. 2020-01-29 (1.0 hours) - BeeGFS non-responsive
   1. 2020-02-05 (51.5 hours) - Legacy NetApp file system failed
-  1. 2020-05-22 (0.5 hours) - BeeGFS non-responsive to failed upgra  1. 2020-08-19 (1.5 hours) - BeeGFS non-responsive
+  1. 2020-05-22 (0.5 hours) - BeeGFS non-responsive to failed upgrade
+  1. 2020-08-19 (1.5 hours) - BeeGFS non-responsive
   1. 2020-10-21 (3 hours) - BeeGFS non-responsive
   1. 2020-11-05 (3 hours) - BeeGFS non-responsive
 de
