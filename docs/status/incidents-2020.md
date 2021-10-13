@@ -1,3 +1,51 @@
+### Operational Summary for 2020
+
+#### Scheduled maintenance downtimes
+
+* Impact: No file access, no compute resources available
+* Damage: None
+* Occurrences:
+  1. 2020-12-07 (30 hours)
+  1. 2020-08-10 (93 hours)
+  
+#### Scheduled kernel maintenance
+
+* Damage: None
+* Impact: Fewer compute nodes than usual until rebooted
+* Occurrences:
+  1. 2020-12-11 (up to 14 days)
+  1. 2020-06-11 (up to 14 days)
+
+#### Unscheduled downtimes due to power outage
+
+* Impact: No file access, no compute resources available
+* Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
+* Occurrences:
+  - None
+
+#### Unscheduled downtimes due to file-system failures
+
+* Impact: No file access
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2020-11-05 (3 hours) - BeeGFS non-responsive
+  1. 2020-10-21 (3 hours) - BeeGFS non-responsive
+  1. 2020-08-19 (1.5 hours) - BeeGFS non-responsive
+  1. 2020-05-22 (0.5 hours) - BeeGFS non-responsive to failed upgrade
+  1. 2020-02-05 (51.5 hours) - Legacy NetApp file system failed
+  1. 2020-01-29 (1.0 hours) - BeeGFS non-responsive
+  1. 2020-01-22 (2.5 hours) - BeeGFS failure to failed upgrade
+
+#### Unscheduled downtimes due to other reasons
+
+* Impact: Less compute resources
+* Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
+* Occurrences:
+  1. 2020-11-04 (288 hours) - ~80 compute nodes lost due to network switch failure
+  1. 2020-07-04 (2 hours) - SGE scheduler failed
+  1. 2020-05-28 (26.5 hours) - MSG Data Center outage affecting many GPU compute nodes
+
+
 ### December 8-17, 2020
 
 #### <span style="color: orange;">Limited accessibility of Login node log1</span>
@@ -64,9 +112,9 @@ the cluster is back online by the end of Wednesday December 9.
 <br><span class="timestamp">November 23, 16:50 PDT</span>
 
 <!--
-start: 2020-11-23T16:50:00
+start: 2020-12-07T10:30:00
 stop: 2020-12-08T16:30:00
-length: 360 hours
+length: 30 hours
 severity: under-maintenance
 affected: jobs, beegfs, compute, *
 reason: scheduled
@@ -84,8 +132,8 @@ reason: scheduled
 <br><span class="timestamp">November 4, 16:10 PDT</span>
 
 <!--
-start: 2020-11-23T16:50:00
-stop: 2020-12-08T16:30:00
+start: 2020-11-04T16:50:00
+stop: 2020-11-16T16:30:00
 length: 360 hours
 severity: partial-outage
 affected: jobs, network, compute, ...
