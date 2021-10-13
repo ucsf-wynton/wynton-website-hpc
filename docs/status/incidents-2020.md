@@ -63,6 +63,15 @@ we will have to unroll the BeeGFS upgrade, which in case we anticipate that
 the cluster is back online by the end of Wednesday December 9.
 <br><span class="timestamp">November 23, 16:50 PDT</span>
 
+<!--
+start: 2020-11-23T16:50:00
+stop: 2020-12-08T16:30:00
+length: 360 hours
+severity: under-maintenance
+affected: beegfs, compute, *
+reason: scheduled
+ -->
+
 
 ### November 4-16, 2020
 
@@ -74,6 +83,15 @@ the cluster is back online by the end of Wednesday December 9.
 **Notice**: 74 compute nodes, including several GPU nodes, were taken off the job scheduler around 14:00 on 2020-11-04 due to a faulty network switch. The network switch needs to be replaced in order to resolve this.
 <br><span class="timestamp">November 4, 16:10 PDT</span>
 
+<!--
+start: 2020-11-23T16:50:00
+stop: 2020-12-08T16:30:00
+length: 360 hours
+severity: major-outage
+affected: network, compute, ...
+reason: external
+ -->
+
 
 ### November 5, 2020
 
@@ -81,6 +99,16 @@ the cluster is back online by the end of Wednesday December 9.
 
 **Resolved**: Our BeeGFS file system was non-responsive during 01:20-04:00 on 2020-11-05 because one of the meta servers hung.
 <br><span class="timestamp">November 5, 08:55 PDT</span>
+
+<!--
+start: 2020-11-05T01:20:00
+stop: 2020-11-05T04:00:00
+length: 3 hours
+severity: major-outage
+affected: beegfs, ...
+reason: internal
+ -->
+
 
 
 ### October 21, 2020
@@ -93,6 +121,15 @@ the cluster is back online by the end of Wednesday December 9.
 **Notice**: The cluster is currently inaccessible for unknown reasons. The problem was first reported around 09:30 today.
 <br><span class="timestamp">October 21, 10:45 PDT</span>
 
+<!--
+start: 2020-10-21T09:30:00
+stop: 2020-10-21T11:15:00
+length: 3.0 hours
+severity: major-outage
+affected: beegfs, ...
+reason: internal
+ -->
+
 
 ### August 19, 2020
 
@@ -103,6 +140,15 @@ the cluster is back online by the end of Wednesday December 9.
 
 **Notice**: The cluster is currently inaccessible for unknown reasons. The problem was first reported around 17:30 today.
 <br><span class="timestamp">August 19, 18:15 PDT</span>
+
+<!--
+start: 2020-08-19T17:22:00
+stop: 2020-08-19T18:52:00
+length: 1.5 hours
+severity: major-outage
+affected: beegfs, ...
+reason: internal
+ -->
 
 
 ### August 10-13, 2020
@@ -133,6 +179,15 @@ and adding lab storage purchased by several groups.  We anticipate that
 the cluster will be available again by the end of Wednesday August 12.
 <br><span class="timestamp">July 24, 15:45 PDT</span>
 
+<!--
+start: 2020-08-10T00:00:00
+stop: 2020-08-13T21:00:00
+length: 93 hours
+severity: under-maintenance
+affected: beegfs, compute, *
+reason: scheduled
+ -->
+
 
 
 ### July 6, 2020
@@ -152,6 +207,15 @@ the cluster will be available again by the end of Wednesday August 12.
 
 **Resolved**: The SGE scheduler produced errors when queried or when jobs were submitted or launched.  The problem started 00:30 and lasted until 02:45 early Sunday 2020-07-05.
 <br><span class="timestamp">July 6, 22:00 PDT</span>
+
+<!--
+start: 2020-07-06T00:30:00
+stop: 2020-07-06T02:45:00
+length: 2.0 hours
+severity: partial-outage
+affected: scheduler
+reason: internal
+ -->
 
 
 ### June 11-26, 2020
@@ -211,6 +275,15 @@ stalls of the file system. Each should last less than 5 minutes and operations
 will continue normally after each one.
 <br><span class="timestamp">May 6, 15:10 PDT</span>
 
+<!--
+start: 2020-05-22T01:00:00
+stop: 2020-05-22T01:15:00
+length: 0.5 hours
+severity: partial-outage
+affected: beegfs
+reason: internal
+ -->
+
 
 ### May 28-29, 2020
 
@@ -224,6 +297,15 @@ will continue normally after each one.
 
 **Investigating**: A large number of GPU compute nodes in the MSG data center are currently down for unknown reasons.  We are investigating the cause.
 <br><span class="timestamp">May 28, 09:35 PDT</span>
+
+<!--
+start: 2020-05-28T09:35:00
+stop: 2020-05-29T12:00:00
+length: 26.5 hours
+severity: partial-outage
+affected: compute-gpu
+reason: internal
+ -->
 
 
 ### February 5-7, 2020
@@ -245,6 +327,15 @@ will continue normally after each one.
 **Notice**: {{ site.cluster.name }} is experience major issues due to NetApp file-system failure, despite this is being deprecated and not used much these days. The first user report on this came in around 09:00 and the job-queue logs suggests the problem began around 02:00.  It will take a while for everything to come back up and there will be brief BeeGFS outage while we reboot the BeeGFS management node.
 <br><span class="timestamp">February 5, 10:15 PDT</span>
 
+<!--
+start: 2020-02-05T10:15:00
+stop: 2020-02-07T13:40:00
+length: 51.5 hours
+severity: major-outage
+affected: compute, ...
+reason: internal
+ -->
+
 
 ### January 29, 2020
 
@@ -255,6 +346,16 @@ will continue normally after each one.
 
 **Notice**: There's currently an issue with the BeeGFS file system.  Users reporting that they cannot log in.
 <br><span class="timestamp">January 29, 16:00 PDT</span>
+
+<!--
+start: 2020-01-29T16:00:00
+stop: 2020-01-29T17:00:00
+length: 1.0 hours
+severity: major-outage
+affected: beegfs, ...
+reason: internal
+ -->
+
 
 
 ### January 22, 2020
@@ -269,6 +370,15 @@ will continue normally after each one.
 
 **Notice**: One of the BeeGFS servers, which serve our cluster-wide file system, will be swapped out starting at noon (11:59am) on Wednesday January 22, 2020 and the work is expected to last one hour.  We don't anticipate any downtime because the BeeGFS servers are mirrored for availability.
 <br><span class="timestamp">Jan 16, 14:40 PST</span>
+
+<!--
+start: 2020-01-22T12:00:00
+stop: 2020-01-22T14:30:00
+length: 2.5 hours
+severity: under-maintenance
+affected: beegfs, *
+reason: scheduled
+ -->
 
 
 ### December 20, 2019 - January 4, 2020

@@ -16,11 +16,20 @@
 **Resolved**: No further hiccups were needed during the BeeGFS resynchronization.  Everything is working as expected.
 <br><span class="timestamp">December 23, 10:00 PST</span>
 
-**Update**: The issues with log in was because the responsiveness of one of the BeeGFS file servers became unreliable around 04:20.  Rebooting that server resolved the problem.  The cluster is fully functional again although slower than usual until the file system have been resynced.  After this, there might be a need for one more, brief, reboot.
+**Update**: The issues with login was because the responsiveness of one of the BeeGFS file servers became unreliable around 04:20.  Rebooting that server resolved the problem.  The cluster is fully functional again although slower than usual until the file system have been resynced.  After this, there might be a need for one more, brief, reboot.
 <br><span class="timestamp">December 22, 14:40 PST</span>
 
 **Notice**: It is not possible to log in to the {{ site.cluster.name }} environment.  The reason is currently not known.
 <br><span class="timestamp">December 22, 09:15 PST</span>
+
+<!--
+start: 2019-12-22T09:15:00
+stop: 2019-12-22T14:40:00
+length: 5.5 hours
+severity: major-outage
+affected: beegfs, *
+reason: internal
+ -->
 
 
 ### December 18, 2019
@@ -28,13 +37,22 @@
 #### <span style="color: orange;">Network/login issues</span>
 
 **Resolved**: The {{ site.cluster.name }} environment is fully functional again. The BeeGFS filesystem was not working properly during 18:30-22:10 on December 18 resulting in no login access to the cluster and job file I/O being backed up.
-<br><span class="timestamp">May 19, 08:50 PST</span>
+<br><span class="timestamp">December 19, 08:50 PST</span>
 
 **Update**: The BeeGFS filesystem is non-responsive, which we believe is due to the network switch upgrade.
-<br><span class="timestamp">May 18, 21:00 PST</span>
+<br><span class="timestamp">December 18, 21:00 PST</span>
 
 **Notice**: One of two network switches will be upgraded on Wednesday December 18 starting at 18:00 and lasting a few hours.  We do not expect this to impact the {{ site.cluster.name }} environment other than slowing down the network performance to 50%.
-<br><span class="timestamp">May 17, 10:00 PST</span>
+<br><span class="timestamp">December 17, 10:00 PST</span>
+
+<!--
+start: 2019-12-18T18:30:00
+stop: 2019-12-19T22:10:00
+length: 3.5 hours
+severity: major-outage
+affected: beegfs, *
+reason: internal
+ -->
 
 
 ### October 29-November 11, 2019
@@ -61,6 +79,15 @@
 **Notice**: A very brief power outage in the Byers Hall building caused several compute nodes in its Data Center to go down.  Jobs that were running on those compute nodes at the time of the power failure did unfortunately fail.  Log-in, data-transfer, and development nodes were also affected.  All these hosts are currently being rebooted.
 <br><span class="timestamp">October 25, 13:00 PDT</span>
 
+<!--
+start: 2019-10-25T12:00:00
+stop: 2019-10-25T13:00:00
+length: 1.0 hours
+severity: partial-outage
+affected: compute
+reason: external
+ -->
+
 
 ### October 24, 2019
 
@@ -83,6 +110,15 @@
 **Notice**: The {{ site.cluster.name }} BeeGFS file system is non-functional.  It is expected to be resolved by noon on October 23. The underlying problem is that the power backup at the Diller data center did not work as expected during a planned power maintenance.
 <br><span class="timestamp">October 22, 21:45 PDT</span>
 
+<!--
+start: 2019-10-22T21:45:00
+stop: 2019-10-23T10:35:00
+length: 13.0 hours
+severity: major-outage
+affected: beegfs
+reason: external
+ -->
+
 
 ### September 24, 2019
 
@@ -94,6 +130,15 @@
 **Notice**: The {{ site.cluster.name }} environment is nonresponsive.  Problem is being investigated.
 <br><span class="timestamp">September 24, 17:30 PDT</span>
 
+<!--
+start: 2019-09-24T17:30:00
+stop: 2019-09-24T20:25:00
+length: 3.0 hours
+severity: major-outage
+affected: beegfs
+reason: internal
+ -->
+
 
 ### August 23, 2019
 
@@ -104,6 +149,15 @@
 
 **Notice**: The {{ site.cluster.name }} environment is nonresponsive.
 <br><span class="timestamp">August 23, 16:45 PDT</span>
+
+<!--
+start: 2019-08-23T16:45:00
+stop: 2019-08-23T20:45:00
+length: 4.0 hours
+severity: major-outage
+affected: beegfs
+reason: internal
+ -->
 
 
 ### August 15, 2019

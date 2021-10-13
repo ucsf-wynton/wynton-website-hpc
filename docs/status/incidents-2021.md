@@ -20,6 +20,15 @@
 **Notice**: The cluster is down after an unplanned power outage in the main data center. The power is back online but several of our systems, including BeeGFS servers, did not come back up automatically and will require on-site, manual actions.
 <br><span class="timestamp">August 26, 09:15 PDT</span>
 
+<!--
+start: 2021-08-26T09:15:00
+stop: 2021-08-27T13:15:00
+length: 28.0 hours
+severity: major-outage
+affected: beegfs, compute
+reason: external
+ -->
+
 
 ### July 23-July 28, 2021
 
@@ -44,6 +53,15 @@
 
 **Notification**: The Wynton environment cannot be accessed at the moment.  This is because the global file system, BeeGFS, is experiencing issues since early this morning. The problem is being investigated.
 <br><span class="timestamp">June 24, 07:00 PDT</span>
+
+<!--
+start: 2021-06-24T07:00:00
+stop: 2021-06-24T14:55:00
+length: 8.0 hours
+severity: major-outage
+affected: beegfs, compute
+reason: external
+ -->
 
 
 ### May 25-June 7, 2021
@@ -93,6 +111,16 @@
 <br>
 <span class="timestamp">May 3, 11:00 PDT</span>
 
+<!--
+start: 2021-05-25T16:00:00
+stop: 2021-06-28T10:00:00
+length: 64 hours
+severity: under-maintenance
+affected: beegfs, compute
+reason: scheduled
+ -->
+
+
 
 ### June 1-2, 2021
 
@@ -122,6 +150,15 @@
 <br>
 <span class="timestamp">April 28, 16:30 PDT</span>
 
+<!--
+start: 2021-04-28T16:30:00
+stop: 2021-05-07T11:10:00
+length: 210 hours
+severity: partial-outage
+affected: compute-gpu
+reason: external
+ -->
+
 
 ### March 26, 2021
 
@@ -133,6 +170,15 @@
 **Notification**: Campus network issues causing major Wynton HPC issues including extremely slow access to our BeeGFS file system.  This was first reported around 11:30 today.  A ticket has been filed with the UCSF Network.  ETA is unknown.
 <br><span class="timestamp">March 26, 12:30 PDT</span>
 
+<!--
+start: 2021-03-26T12:30:00
+stop: 2021-03-26T21:30:00
+length: 9 hours
+severity: major-outage
+affected: beegfs, compute
+reason: external
+ -->
+
 
 ### January 29-February 12, 2021
 
@@ -143,6 +189,7 @@
 
 **Notice**: New operating-system kernels are deployed. Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues. To follow the progress, see the green 'Available CPU cores' curve (target ~10,400 cores) in the graph above.  Login, data-transfer, and development nodes will be rebooted at 13:00 on Monday February 1.
 <br><span class="timestamp">January 31, 17:00 PST</span>
+
 
 
 ### February 1-3, 2021
