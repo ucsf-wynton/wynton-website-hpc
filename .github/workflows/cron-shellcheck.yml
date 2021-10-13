@@ -1,6 +1,6 @@
 on: [push, pull_request]
 
-name: CRON_ShellCheck
+name: CRON ShellCheck
 
 jobs:
   CRON_ShellCheck:    
