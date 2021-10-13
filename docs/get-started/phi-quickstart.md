@@ -4,7 +4,7 @@
 
 - If you either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI, fill out the Request a Wynton Account / Modify an Existing account form on the [Wynton - Join the Cluster]({{ '/about/join.html' | relative_url }}) page.
 
-- All PHI users must sign a Statement of Responsibility form agreeing to the responsibilities of handling PII and/or PHI data.
+- All PHI users must sign a Statement of Responsibility form agreeing to the responsibilities of handling PII and/or PHI data and take the training in the handling of PII/PHI data and keep the training up to date.
 
 
 ## Wynton PHI user responsibilities
