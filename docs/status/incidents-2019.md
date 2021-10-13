@@ -5,6 +5,7 @@
   - Scheduled: 96 hours = 4.0 days = 1.1%
   - Unscheduled: 83.5 hours = 3.5 days = 1.0%
   - Total: 179.5 hours = 7.5 days = 2.0%
+  - External factors: 15% of the above downtime, corresponding to 26 hours (=1.1 days), where due to external factors
   
 
 #### Scheduled maintenance downtimes
@@ -35,9 +36,9 @@
   1. 2019-07-30 (6.5 hour) - Byers Hall power outage
 er maintenance
   1. 2019-08-15 (5.5 hour) - Diller power outage
-  1. 2019-10-22 (13.0 hour) - Diller power backup failed during pow  1. 2019-10-25 (1.0 hour) - Byers Hall power outage
-* Total downtime: 25.0 hours
-
+  1. 2019-10-25 (1.0 hour) - Byers Hall power outage
+  1. 2019-10-22 (13.0 hour) - Diller power backup failed during power maintenance
+* Total downtime: 26.0 hours of which 26.0 hours where due to external factors
 
 #### Unscheduled downtimes due to file-system failures
 
@@ -53,7 +54,7 @@ er maintenance
   1. 2019-09-24 (3.0 hours) - BeeGFS server non-responsive
   1. 2019-12-18 (3.5 hours) - Network switch upgrade
   1. 2019-12-22 (5.5 hours) - BeeGFS server non-responsive
-* Total downtime: 58.5 hours
+* Total downtime: 58.5 hours of which 0 hours where due to external factors
 
 
 ### December 20, 2019 - January 4, 2020

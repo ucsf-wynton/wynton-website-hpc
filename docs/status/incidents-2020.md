@@ -4,7 +4,8 @@
 
   - Scheduled: 123 hours = 5.1 days = 1.4%
   - Unscheduled: 91.5 hours = 3.8 days = 1.0%
-  - Total: 179.5 hours = 7.5 days = 2.4%
+  - Total: 214.5 hours = 8.9 days = 2.4%
+  - External factors: 12% of the above downtime, corresponding to 26.5 hours (=1.1 days), where due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -55,7 +56,7 @@
   1. 2020-05-28 (26.5 hours) - MSG Data Center outage affecting many GPU compute nodes
   1. 2020-07-04 (2 hours) - SGE scheduler failed
   1. 2020-11-04 (288 hours) - ~80 compute nodes lost due to network switch failure
-* Total downtime: 28.5 hours
+* Total downtime: 28.5 hours of which 26.5 hours where due to external factors
 
 
 ### December 8-17, 2020
