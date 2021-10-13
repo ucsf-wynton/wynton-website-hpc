@@ -1,5 +1,12 @@
 ### Operational Summary for 2020
 
+* Full downtime:
+
+  - Scheduled: 123 hours = 5.1 days = 1.4%
+  - Unscheduled: 91.5 hours = 3.8 days = 1.0%
+  - Total: 179.5 hours = 7.5 days = 2.4%
+
+
 #### Scheduled maintenance downtimes
 
 * Impact: No file access, no compute resources available
@@ -7,7 +14,8 @@
 * Occurrences:
   1. 2020-08-10 (93 hours)
   1. 2020-12-07 (30 hours)
-  
+* Total downtime: 123 hours
+
 #### Scheduled kernel maintenance
 
 * Damage: None
@@ -22,6 +30,7 @@
 * Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
 * Occurrences:
   - None
+* Total downtime: 0 hours
 
 #### Unscheduled downtimes due to file-system failures
 
@@ -35,7 +44,8 @@
   1. 2020-08-19 (1.5 hours) - BeeGFS non-responsive
   1. 2020-10-21 (3 hours) - BeeGFS non-responsive
   1. 2020-11-05 (3 hours) - BeeGFS non-responsive
-de
+* Total downtime: 63.0 hours
+
 
 #### Unscheduled downtimes due to other reasons
 
@@ -45,6 +55,7 @@ de
   1. 2020-05-28 (26.5 hours) - MSG Data Center outage affecting many GPU compute nodes
   1. 2020-07-04 (2 hours) - SGE scheduler failed
   1. 2020-11-04 (288 hours) - ~80 compute nodes lost due to network switch failure
+* Total downtime: 28.5 hours
 
 
 ### December 8-17, 2020

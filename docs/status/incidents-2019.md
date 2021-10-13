@@ -1,5 +1,12 @@
 ### Operational Summary for 2019
 
+* Full downtime:
+
+  - Scheduled: 96 hours = 4.0 days = 1.1%
+  - Unscheduled: 83.5 hours = 3.5 days = 1.0%
+  - Total: 179.5 hours = 7.5 days = 2.0%
+  
+
 #### Scheduled maintenance downtimes
 
 * Impact: No file access, no compute resources available
@@ -7,6 +14,7 @@
 * Occurrences:
   1. 2021-01-09 (1.0 hours) - job scheduler updates
   1. 2021-07-08 (95 hours)
+* Total downtime: 96.0 hours
 
 #### Scheduled kernel maintenance
 
@@ -28,6 +36,7 @@
 er maintenance
   1. 2019-08-15 (5.5 hour) - Diller power outage
   1. 2019-10-22 (13.0 hour) - Diller power backup failed during pow  1. 2019-10-25 (1.0 hour) - Byers Hall power outage
+* Total downtime: 25.0 hours
 
 
 #### Unscheduled downtimes due to file-system failures
@@ -44,6 +53,7 @@ er maintenance
   1. 2019-09-24 (3.0 hours) - BeeGFS server non-responsive
   1. 2019-12-18 (3.5 hours) - Network switch upgrade
   1. 2019-12-22 (5.5 hours) - BeeGFS server non-responsive
+* Total downtime: 58.5 hours
 
 
 ### December 20, 2019 - January 4, 2020
