@@ -21,17 +21,17 @@ cluster:
   status: ok
   
 login:
-  name: "log2"
-  hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.134.15"
+  name: "log1"
+  hostname: "log1.wynton.ucsf.edu"
+  ip: "169.230.126.77"
 devel:
-  name: "dev3"
-  hostname: "dev3"
-  ip: "172.26.32.8"
+  name: "dev2"
+  hostname: "dev2"
+  ip: "172.26.32.7"
 transfer:
-  name: "dt2"
-  hostname: "dt2.wynton.ucsf.edu"
-  ip: "172.26.1.17"
+  name: "dt1"
+  hostname: "dt1.wynton.ucsf.edu"
+  ip: "169.230.126.58"
 
 login1:
   name: "log1"
