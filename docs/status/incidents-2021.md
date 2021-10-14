@@ -123,6 +123,7 @@ reason: external
 #### <span style="color: orange;">Full downtime (major maintenance)</span>
 
 **Resolved**: All remaining issues from the downtime have been resolved.
+<br>
 <span class="timestamp">June 7, 17:00 PDT</span>
 
 **Update**: Login node log2 can now be reached from the UCSF Housing WiFi network.
