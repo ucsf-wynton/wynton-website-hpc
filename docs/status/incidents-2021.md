@@ -52,6 +52,20 @@
 * Total downtime: 0 hours
 
 
+### October 25-26, 2021
+
+#### <span style="color: orange;">File-system maintenance</span>
+
+**Resolved**: Resynchronization of all file-system meta servers is complete, which concludes the maintenance.
+<br><span class="timestamp">October 26, 09:45 PDT</span>
+
+**Update**: The maintenance work has started.
+<br><span class="timestamp">October 25, 14:00 PDT</span>
+
+**Notice**: We will perform BeeGFS maintenance work starting Monday October 25 at 2:00 pm.  During this work, the filesystem might be less performant.  We don't anticipate any downtime.
+<br><span class="timestamp">October 21, 12:10 PDT</span>
+
+
 ### August 26-September 10, 2021
 
 #### <span style="color: orange;">Byers Hall power outage & file-system corruption</span>
