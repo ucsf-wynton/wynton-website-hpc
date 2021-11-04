@@ -262,7 +262,7 @@ ttr:last-child { border-top: 2px solid #000; }
 </style>
 
 [CentOS]: https://www.centos.org/
-[Son of Grid Engine]: https://arc.liv.ac.uk/trac/SGE
+[Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
 [wyntonquery]: https://github.com/UCSF-HPC/wyntonquery
 [host_table.tsv]: {{ '/assets/data/host_table.tsv' | relative_url }}

@@ -85,7 +85,7 @@ Mon Aug 28 16:32:12 PDT 2017
 There is of course nothing preventing us from submitting the same script multiple times.  If done, each submission will result in the script be launched on a compute node and a unique log file `hello_world.o<job_id>` will be outputted.  Please try that and see what `qstat` outputs.   Now, you may want to pass different arguments to your script each time, e.g. each job should process a different input data file.  For information on how to do this, see the [Submit Jobs] page.
 
 
-[Son of Grid Engine]: https://arc.liv.ac.uk/trac/SGE
+[Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [compute nodes]: {{ '/about/specs.html' | relative_url }}
 [Submit Jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
 
