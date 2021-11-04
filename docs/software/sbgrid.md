@@ -18,16 +18,17 @@ Each lab using SBGrid must pay a yearly fee. This covers usage by anyone
 in the lab, both on {{ site.cluster.name }} and any other Linux or Mac
 computer they own. The annual price depends on how many other labs from
 UCSF join. There are approximately 12 UCSF labs currently enrolled.
-See <https://sbgrid.org/join/> for information on how to join.
+See the [SBGrid] website for information on how to join.
 
 
 ## Verify access to SBGrid
 
-The SBGrid software stack is installed on {{ site.cluster.name }} but
-is available only to paying members of the
-[SBGrid Consortium](https://sbgrid.org/join/).  {{ site.cluster.name }}
-users who are [SBGrid members] are part of the `sbgrid` Unix group on
-the {{ site.cluster.name }} cluster.  You can verify this by running:
+The SBGrid software stack is installed on {{ site.cluster.name }}, but
+is available only to paying members, which are listed on the
+[SBGrid Member Labs] webpage.  As a {{ site.cluster.name }} user part
+of a paying lab, you will have access to SBGrid on the
+{{ site.cluster.name }} cluster from being part of the `sbgrid` Unix
+group.  You can verify that this is get case by running:
 
 <!-- code-block label="groups" -->
 ```sh
@@ -35,9 +36,9 @@ the {{ site.cluster.name }} cluster.  You can verify this by running:
 boblab sbgrid
 ```
 
-If `sbgrid` is not part of your output, then you do _not_ have access
-to the SBGrid software on {{ site.cluster.name }}.  If you think this
-is a mistake, please [contact us].
+If `sbgrid` is not part of your output, then you currently do _not_
+have access to the SBGrid software on {{ site.cluster.name }}.  If you
+think this is a mistake, please [contact us] so we can add you.
 
 
 ## Enable SBGrid
@@ -99,7 +100,7 @@ enabled.  To enable the SBGrid, in the shell or in a job script, do:
 
 
 [SBGrid]: https://sbgrid.org/
-[SBGrid members]: https://sbgrid.org/members/order/-institutions/
+[SBGrid Member Labs]: https://sbgrid.org/members/order/-institutions/
 [contact us]: {{ '/about/contact.html' | relative_url }}
 
 <style>
