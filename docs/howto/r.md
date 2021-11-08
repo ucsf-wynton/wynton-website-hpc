@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert">
-The below instructions where composed when R 4.0.x was the default version. When using the most recent version of R, R 4.1.x, more packages installs out of the box.  So, some of the below workarounds are no longer needed.
+The below instructions where composed when R 4.0.x was the default version. When using the most recent version of R, R 4.1.x, more packages installs out of the box.  Because of this, some of the below workarounds are no longer needed.
 </div>
 
 # Work with R
