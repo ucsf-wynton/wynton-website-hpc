@@ -52,6 +52,21 @@
 * Total downtime: 0 hours
 
 
+### November 9, 2021
+
+**Notice**: There was a brief PG&E power outage early Tuesday November 9 around 01:20.  This affected the power on the Mission Bay campus, including the data center housing Wynton.  The parts of our system with redundant power were fine, but many of the compute nodes are on PG&E-power only and, therefore, went down.  As a result, lots of jobs crashed.  We will restart the nodes that crashed manually during the day today.
+<br><span class="timestamp">November 9, 09:10 PDT</span>
+
+<!--
+start: 2021-11-09T01:20:00
+stop: 2021-11-??T??:??:00
+length: ?? hours
+severity: partial-outage
+affected: jobs, compute
+reason: external
+ -->
+
+
 ### October 25-26, 2021
 
 #### <span style="color: orange;">File-system maintenance</span>
