@@ -3,9 +3,9 @@
 * Full downtime:
 
   - Scheduled: 64 hours (= 2.7 days)
-  - Unscheduled: 48 hours (= 2.0 days)
-  - Total: 112 hours (= 4.7 days)
-  - External factors: 33% of the above downtime, corresponding to 37 hours (=1.5 days), were due to external factors
+  - Unscheduled: 58 hours (= 2.4 days)
+  - Total: 122 hours (= 5.1 days)
+  - External factors: 39% of the above downtime, corresponding to 47 hours (=2.0 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -30,7 +30,8 @@
 * Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
 * Occurrences:
   - 2021-08-26 (28 hours) - Planned Byers Hall power shutdown failed
-* Total downtime: 28 hours of which 28 hours were due to external factors
+  - 2021-11-09 (10 hours) - Unplanned PG&E power outage
+* Total downtime: 38 hours of which 38 hours were due to external factors
   
 
 #### Unscheduled downtimes due to file-system failures
@@ -54,13 +55,16 @@
 
 ### November 9, 2021
 
+**Resolved**: All hosts have been rebooted and are now up and running.
+<br><span class="timestamp">November 9, 11:00 PST</span>
+
 **Notice**: There was a brief PG&E power outage early Tuesday November 9 around 01:20.  This affected the power on the Mission Bay campus, including the data center housing Wynton.  The parts of our system with redundant power were fine, but many of the compute nodes are on PG&E-power only and, therefore, went down.  As a result, lots of jobs crashed.  We will restart the nodes that crashed manually during the day today.
-<br><span class="timestamp">November 9, 09:10 PDT</span>
+<br><span class="timestamp">November 9, 09:10 PST</span>
 
 <!--
 start: 2021-11-09T01:20:00
-stop: 2021-11-??T??:??:00
-length: ?? hours
+stop: 2021-11-09T11:00:00
+length: 10 hours
 severity: partial-outage
 affected: jobs, compute
 reason: external
