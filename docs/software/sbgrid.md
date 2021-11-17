@@ -9,7 +9,7 @@ For bug reports related to SBGrid software, please use
 <a href="https://sbgrid.org/help/?tab=bug">SBGrid's Report Software Bug
 form</a>.
 The {{ site.cluster.nickname }} sysadmins do not fix SBGrid problems.
-/div>
+</div>
 
 SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/)
 for structural biology.  It is kept up to date by the [SBGrid] team
