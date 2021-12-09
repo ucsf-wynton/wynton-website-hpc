@@ -21,8 +21,9 @@
 * Impact: Fewer compute nodes than usual until rebooted
 * Damage: None
 * Occurrences:
-  1. 2020-01-29 (up to 14 days)
-  1. 2020-07-23 (up to 14 days)
+  1. 2021-01-29 (up to 14 days)
+  2. 2021-07-23 (up to 14 days)
+<!--  3. 2021-12-08 (up to 14 days) -->
 
 #### Unscheduled downtimes due to power outage
 
@@ -39,9 +40,9 @@
 * Impact: No file access
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
 * Occurrences:
-  1. 2020-03-26 (9 hours) - Campus networks issues causing significant BeeGFS slowness
-  1. 2020-07-23 (8 hours) - BeeGFS silently failed disks
-  1. 2020-11-05 (3 hours) - BeeGFS non-responsive
+  1. 2021-03-26 (9 hours) - Campus networks issues causing significant BeeGFS slowness
+  1. 2021-07-23 (8 hours) - BeeGFS silently failed disks
+  1. 2021-11-05 (3 hours) - BeeGFS non-responsive
 * Total downtime: 20 hours of which 9 hours were due to external factors
 
 #### Unscheduled downtimes due to other reasons
