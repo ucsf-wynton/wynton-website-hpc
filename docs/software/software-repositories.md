@@ -81,7 +81,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt class="module-name">cuda</dt>
   <dd class="module-details">
-  Versions: <span class="module-version">6.0.37, 7.5, 7.5.18, 8.0, 8.0.61, 9.0.176, 9.1, 9.2, 10.0.130, 10.1, <em>11.0</em></span><br>
+  Versions: <span class="module-version">6.0.37, 7.5, 7.5.18, 8.0, 8.0.61, 9.0.176, 9.1, 9.2, 10.0.130, 10.1, 11.0, <em>11.5.0</em></span><br>
   </dd>
 
   <dt class="module-name">julia</dt>
@@ -91,7 +91,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt class="module-name">matlab</dt>
   <dd class="module-details">
-  Versions: <span class="module-version">9.5.0.944444, 2018b, 2019a, 2019b, 2020a, 2020b, <em>2021a</em></span><br>
+  Versions: <span class="module-version">9.5.0.944444, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, <em>2021b</em></span><br>
   </dd>
 
   <dt class="module-name">matlab-runtime</dt>
@@ -825,7 +825,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">Basic Local Alignment Search Tool</span><br>
     URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-  Versions: <span class="module-version">2.2.25, <em>2.2.28</em></span><br>
+  Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
   </dd>
 
   <dt class="module-name">boost</dt>
@@ -865,9 +865,7 @@ Please note that this software stacks is maintained and contributed by a researc
 
   <dt class="module-name">cuda</dt>
   <dd class="module-details">
-    <span class="module-description">NVIDIA CUDA Toolkit libraries</span><br>
-    URL: <span class="module-url"><a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a></span><br>
-  Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, <em>10.0.130</em></span><br>
+  Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, <em>11.5.0</em></span><br>
   </dd>
 
   <dt class="module-name">Cython</dt>
@@ -962,16 +960,16 @@ Please note that this software stacks is maintained and contributed by a researc
 
   <dt class="module-name">imp</dt>
   <dd class="module-details">
-    <span class="module-description">Integrative Modeling Platform (version 2.15.0, with only usage checks turned on)</span><br>
+    <span class="module-description">Integrative Modeling Platform (version 2.16.0, with only usage checks turned on)</span><br>
     URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-  Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, <em>2.15.0</em></span><br>
+  Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, <em>2.16.0</em></span><br>
   </dd>
 
   <dt class="module-name">imp-fast</dt>
   <dd class="module-details">
-    <span class="module-description">Integrative Modeling Platform (version 2.15.0, fast build)</span><br>
+    <span class="module-description">Integrative Modeling Platform (version 2.16.0, fast build)</span><br>
     URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-  Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, <em>2.15.0</em></span><br>
+  Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, <em>2.16.0</em></span><br>
   </dd>
 
   <dt class="module-name">itcell</dt>
@@ -1013,7 +1011,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">MODELLER comparative modeling</span><br>
     URL: <span class="module-url"><a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a></span><br>
-  Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, <em>SVN</em></span><br>
+  Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, 10.2, <em>SVN</em></span><br>
   </dd>
 
   <dt class="module-name">modpipe</dt>
@@ -1589,7 +1587,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-11-01 09:55:42 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-12-15 16:40:53 from querying `module avail` and `module spider`._
 
 
 <style>
