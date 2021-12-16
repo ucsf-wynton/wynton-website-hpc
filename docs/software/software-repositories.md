@@ -96,7 +96,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt class="module-name">matlab-runtime</dt>
   <dd class="module-details">
-  Versions: <span class="module-version">2020a, 2020b, <em>2021a</em></span><br>
+  Versions: <span class="module-version">2020a, 2020b, 2021a, <em>2021b</em></span><br>
   </dd>
 
   <dt class="module-name">mpi</dt>
@@ -1587,7 +1587,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-12-15 16:40:53 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2021-12-16 09:59:05 from querying `module avail` and `module spider`._
 
 
 <style>
