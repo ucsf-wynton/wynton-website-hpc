@@ -29,8 +29,8 @@ devel:
   hostname: "dev2"
   ip: "172.26.32.7"
 transfer:
-  name: "dt1"
-  hostname: "dt1.wynton.ucsf.edu"
+  name: "dt2"
+  hostname: "dt2.wynton.ucsf.edu"
   ip: "169.230.126.58"
 
 login1:
