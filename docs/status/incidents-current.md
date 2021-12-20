@@ -1,3 +1,11 @@
+### December 19-20, 2021
+
+#### <span style="color: orange;">Data-transfer node issue</span>
+
+**Notice**: Data-transfer node `dt1` has issues. Please use `dt2` until resolved. The first report on this problem came yesterday at 21:30.
+<br><span class="timestamp">Dec 20, 09:30 PST</span>
+
+
 ### December 8-December 22, 2021
 
 #### <span style="color: orange;">Kernel maintenance</span>
