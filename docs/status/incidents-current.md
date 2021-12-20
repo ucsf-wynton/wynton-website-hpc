@@ -1,6 +1,9 @@
 ### December 19-20, 2021
 
-#### <span style="color: orange;">Data-transfer node issue</span>
+#### <span style="color: orange;">Globus and data-transfer node issue</span>
+
+**Update**: Globus file transfers to and from Wynton are not working.  This is because Globus relies on the data-transfer node `dt1`, which is currently down.
+<br><span class="timestamp">Dec 20, 15:30 PST</span>
 
 **Notice**: Data-transfer node `dt1` has issues. Please use `dt2` until resolved. The first report on this problem came yesterday at 21:30.
 <br><span class="timestamp">Dec 20, 09:30 PST</span>
