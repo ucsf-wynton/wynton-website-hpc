@@ -10,7 +10,7 @@
 </div>
 {% elsif site.cluster.status == "problematic" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} is experiencing significant issues</strong>
+File transfers via Globus does not work on <strong>{{ site.cluster.name }}</strong> due to issues with data-transfer node dt1.wynton.ucsf.edu
 </div>
 {% elsif site.cluster.status == "recovering" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">

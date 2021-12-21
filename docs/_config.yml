@@ -18,7 +18,7 @@ cluster:
   email_support: support@wynton.ucsf.edu
   email_storage: storage@wynton.ucsf.edu
   email_compute: compute@wynton.ucsf.edu
-  status: kernel-upgrade
+  status: problematic
   
 login:
   name: "log1"
