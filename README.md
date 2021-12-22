@@ -74,7 +74,7 @@ $ make spell
 No spelling errors found.
 ```
 
-This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos="https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as misspelled, they can be added to the 'docs/WORDLIST' file.
+This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos="https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as misspelled, they can be added to the [`docs/WORDLIST`](https://github.com/UCSF-HPC/wynton/blob/master/docs/WORDLIST) file.
 
 
 
