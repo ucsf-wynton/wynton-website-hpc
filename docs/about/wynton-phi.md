@@ -37,8 +37,8 @@ With Wynton PHI, researchers have access to Wynton HPC's entire computing power 
 
 The Wynton HPC environment is available for free to all UCSF researchers and their collaborators. This means every user has access to 500 GiB of space in their home directory plus the entire scratch space, and they can run their jobs at basic priority levels. There is also a paid model for users to schedule jobs at a higher priority and also to purchase additional dedicated storage. Here is more information:
 
-* https://wynton.ucsf.edu/hpc/about/pricing-compute.html
-* https://wynton.ucsf.edu/hpc/about/pricing-storage.html
+* [Compute Node Pricing](https://wynton.ucsf.edu/hpc/about/pricing-compute.html)
+* [Dedicated Storage Pricing](https://wynton.ucsf.edu/hpc/about/pricing-storage.html)
 
 ## Professional Support
 
@@ -71,9 +71,9 @@ Also - as with any new system in place, we are sure there will be other things t
 
 Depending on your project, Wynton PHI may or may not be the best fit for your project. So we encourage you to also evaluate the following options at UCSF to work with PHI data:
 
-* RAE - https://it.ucsf.edu/service/rae
-* Data Center Services - https://it.ucsf.edu/service/data-center-services
-* UCSF Secure Cloud - https://cloudservices.ucsf.edu/
+* [RAE](https://it.ucsf.edu/service/rae)
+* [Data Center Services](https://it.ucsf.edu/service/data-center-services)
+* [UCSF Secure Cloud](https://cloudservices.ucsf.edu/)
 
 # Acknowledgments
 
