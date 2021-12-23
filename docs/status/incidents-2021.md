@@ -23,7 +23,7 @@
 * Occurrences:
   1. 2021-01-29 (up to 14 days)
   2. 2021-07-23 (up to 14 days)
-<!--  3. 2021-12-08 (up to 14 days) -->
+  3. 2021-12-08 (up to 14 days)
 
 #### Unscheduled downtimes due to power outage
 
@@ -53,6 +53,17 @@
   1. 2021-04-28 (210 hours) - GPU taken down due to server room cooling issues
 * Total downtime: 0 hours
 
+
+
+### December 8-December 23, 2021
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Resolved**: All compute nodes have been rebooted.
+<br><span class="timestamp">Dec 23, 12:00 PST</span>
+
+**Notice**: New operating-system kernels are deployed. Login, data-transfer, and development nodes will be rebooted tomorrow Thursday December 9 at 11:00.  Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues. To follow the progress, see the green 'Available CPU cores' curve (target ~12,500 cores) in the graph above.  
+<br><span class="timestamp">Dec 8, 16:30 PST</span>
 
 
 ### December 19-21, 2021
