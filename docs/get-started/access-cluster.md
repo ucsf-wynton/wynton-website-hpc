@@ -1,4 +1,8 @@
 ---
+title: Wynton HPC Login & Logout
+---
+
+---
 context:
   - login
 ---

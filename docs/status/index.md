@@ -1,3 +1,7 @@
+---
+title: Wynton HPC Status
+---
+
 <!-- markdownlint-disable-file MD024 -->
 
 # UCSF {{ site.cluster.name }} Status
