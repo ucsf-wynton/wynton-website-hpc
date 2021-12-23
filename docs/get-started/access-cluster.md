@@ -1,8 +1,5 @@
 ---
 title: Wynton HPC Login & Logout
----
-
----
 context:
   - login
 ---
@@ -16,6 +13,8 @@ context:
 If you are on the UCSF VPN, you have already authenticated and no further 2FA is required.
 In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See <a href="{{ '/get-started/duo-signup.html' | relative_url }}">Two-Factor Authentication for SSH</a> for instructions.
 </div>
+
+<!-- markdownlint-disable-file MD025 -->
 
 # Login
 
