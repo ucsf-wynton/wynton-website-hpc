@@ -68,6 +68,7 @@ Below table shows the current amount of contributions in terms of Processing Uni
 <table id="hosttable">
 </table>
 
+<!-- markdownlint-disable-file MD011 -->
 <script type="text/javascript" charset="utf-8">
 d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", function(host_table) {
   // extract date from header comments
