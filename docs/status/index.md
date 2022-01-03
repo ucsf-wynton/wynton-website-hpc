@@ -97,41 +97,24 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 
 ## Past Incidents
 
+{% assign years = "2022,2021,2020,2019,2018" | split: ',' %}
+
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#2022"><span style="font-weight: bold;">2022</span></a></li>
-  <li><a data-toggle="pill" href="#2021"><span style="font-weight: bold;">2021</span></a></li>
-  <li><a data-toggle="pill" href="#2020"><span style="font-weight: bold;">2020</span></a></li>
-  <li><a data-toggle="pill" href="#2019"><span style="font-weight: bold;">2019</span></a></li>
-  <li><a data-toggle="pill" href="#2018"><span style="font-weight: bold;">2018</span></a></li>
+{% for year in years %}
+  <li{% if year == years[0] %} class="active"{% endif %}><a data-toggle="pill" href="#{{ year }}"><span style="font-weight: bold;">{{ year }}</span></a></li>
+{% endfor %}
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
-<div id="2022" class="tab-pane fadein active">
+{% for year in years %}
+<div id="{{ year }}" class="tab-pane {% if year == years[0] %}fadein active{% else %}fade{% endif %}">
 <section markdown="1">
-{% include_relative incidents-2022.md %}
+{% include_relative incidents-{{ year }}.md %}
 </section>
 </div>
-<div id="2021" class="tab-pane fade">
-<section markdown="1">
-{% include_relative incidents-2021.md %}
-</section>
-</div>
-<div id="2020" class="tab-pane fade">
-<section markdown="1">
-{% include_relative incidents-2020.md %}
-</section>
-</div>
-<div id="2019" class="tab-pane fade">
-<section markdown="1">
-{% include_relative incidents-2019.md %}
-</section>
-</div>
-<div id="2018" class="tab-pane fade">
-<section markdown="1">
-{% include_relative incidents-2018.md %}
-</section>
-</div>
-</div>
+{% endfor %}
+
+
 
 
 <!-- DO NOT EDIT ANYTHING BELOW -->
