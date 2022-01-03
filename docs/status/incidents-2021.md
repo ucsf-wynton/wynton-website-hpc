@@ -1,10 +1,10 @@
-### Operational Summary for 2021 (this far)
+### Operational Summary for 2021
 
 * Full downtime:
 
-  - Scheduled: 64 hours (= 2.7 days)
-  - Unscheduled: 58 hours (= 2.4 days)
-  - Total: 122 hours (= 5.1 days)
+  - Scheduled: 64 hours = 2.7 days = 0.73%
+  - Unscheduled: 58 hours = 2.4 days = 0.66%
+  - Total: 122 hours = 5.1 days = 0.14%
   - External factors: 39% of the above downtime, corresponding to 47 hours (=2.0 days), were due to external factors
 
 
