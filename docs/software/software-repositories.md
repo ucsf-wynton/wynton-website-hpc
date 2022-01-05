@@ -168,7 +168,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.</span><br>
     Example: <span class="module-example"><code>bcftools --version</code></span><br>
     URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/bcftools">https://github.com/samtools/bcftools</a></span><br>
-  Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, <em>1.13</em></span><br>
+  Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, <em>1.14</em></span><br>
   </dd>
 
   <dt class="module-name">bcl2fastq</dt>
@@ -186,7 +186,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.</span><br>
     Example: <span class="module-example"><code>bedops --version</code></span><br>
     URL: <span class="module-url"><a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a></span><br>
-  Versions: <span class="module-version">2.4.36, 2.4.37, 2.4.38, <em>2.4.39</em></span><br>
+  Versions: <span class="module-version">2.4.36, 2.4.37, 2.4.38, 2.4.39, <em>2.4.40</em></span><br>
   </dd>
 
   <dt class="module-name">bedtools2</dt>
@@ -269,7 +269,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>cellranger</code>.</span><br>
     URL: <span class="module-url"><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a></span><br>
     Warning: <span class="module-warning">To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.</span><br>
-  Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, <em>6.1.1</em></span><br>
+  Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, <em>6.1.2</em></span><br>
   </dd>
 
   <dt class="module-name">cmake</dt>
@@ -437,7 +437,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
     Example: <span class="module-example"><code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.</span><br>
     URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a></span><br>
-  Versions: <span class="module-version">1.9, 1.10.2, 1.11, <em>1.13</em></span><br>
+  Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, <em>1.14</em></span><br>
   </dd>
 
   <dt class="module-name">htstools</dt>
@@ -512,7 +512,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
     URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">2.11.4, <em>2.14.2</em></span><br>
+  Versions: <span class="module-version">2.11.4, 2.14.2, <em>2.16.2</em></span><br>
   </dd>
 
   <dt class="module-name">picard</dt>
@@ -539,7 +539,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
     Example: <span class="module-example"><code>plink --help</code>.</span><br>
     URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a></span><br>
-  Versions: <span class="module-version">1.07, 1.90b6.10, 1.90b6.16, 1.90b6.18, <em>1.90b6.21</em></span><br>
+  Versions: <span class="module-version">1.07, 1.90b6.10, 1.90b6.16, 1.90b6.18, 1.90b6.21, <em>1.90b6.24</em></span><br>
   </dd>
 
   <dt class="module-name">plink2</dt>
@@ -594,7 +594,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>info rclone</code>.</span><br>
     URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">1.53.3, 1.54.0, <em>1.56.1</em></span><br>
+  Versions: <span class="module-version">1.53.3, 1.54.0, 1.56.1, <em>1.57.0</em></span><br>
   </dd>
 
   <dt class="module-name">ripgrep</dt>
@@ -612,9 +612,9 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">rstudio: RStudio Desktop</strong><br>
     <span class="module-description">The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.</span><br>
     Example: <span class="module-example"><code>rstudio</code>. If you get blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
-    URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></span><br>
+    URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a>, <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></span><br>
     Warning: <span class="module-warning">This software works only on the development nodes and requires that X11 Forwarding or NX is enabled. For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
-  Versions: <span class="module-version">1.4.1103, 1.4.1717, <em>2021.09.0+351</em></span><br>
+  Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, <em>2021.09.1-372</em></span><br>
   </dd>
 
   <dt class="module-name">salmon</dt>
@@ -623,7 +623,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.</span><br>
     Example: <span class="module-example"><code>salmon --version</code>.</span><br>
     URL: <span class="module-url"><a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a></span><br>
-  Versions: <span class="module-version">1.3.0, 1.4.0, <em>1.5.2</em></span><br>
+  Versions: <span class="module-version">1.3.0, 1.4.0, 1.5.2, <em>1.6.0</em></span><br>
   </dd>
 
   <dt class="module-name">samtools</dt>
@@ -632,7 +632,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
     Example: <span class="module-example"><code>samtools --version</code>.</span><br>
     URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a></span><br>
-  Versions: <span class="module-version">1.9, 1.10, 1.11, <em>1.13</em></span><br>
+  Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, <em>1.14</em></span><br>
   </dd>
 
   <dt class="module-name">scl-devtoolset</dt>
@@ -671,7 +671,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>shellcheck --version</code> and <code>shellcheck -x ~/.bashrc</code>.</span><br>
     URL: <span class="module-url"><a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>, <a href="https://github.com/koalaman/shellcheck/">https://github.com/koalaman/shellcheck/</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">0.7.1, <em>0.7.2</em></span><br>
+  Versions: <span class="module-version">0.7.1, 0.7.2, <em>0.8.0</em></span><br>
   </dd>
 
   <dt class="module-name">snpeff</dt>
@@ -690,7 +690,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>fastq-dump --help</code>.</span><br>
     URL: <span class="module-url"><a href="https://ncbi.github.io/sra-tools/">https://ncbi.github.io/sra-tools/</a>, <a href="https://github.com/ncbi/sra-tools">https://github.com/ncbi/sra-tools</a></span><br>
     Warning: <span class="module-warning">To work around a bug where <code>fasterq-dump</code> crashes the local machine, it has been tweaked such that it uses <code>$TMPDIR</code> rather than <code>$PWD</code> as the default temporary folder and it will only use two threads instead of six by default.</span><br>
-  Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, 2.11.1, <em>2.11.2</em></span><br>
+  Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, 2.11.1, 2.11.2, <em>2.11.3</em></span><br>
   </dd>
 
   <dt class="module-name">star</dt>
@@ -1587,7 +1587,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-01-04 18:29:25 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-01-04 20:47:42 from querying `module avail` and `module spider`._
 
 
 <style>
