@@ -326,7 +326,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">0.22.0, 0.25.1, <em>0.27.2</em></span><br>
+  Versions: <span class="module-version">0.22.0, 0.25.1, 0.27.2, <em>0.29.0</em></span><br>
   </dd>
 
   <dt class="module-name">gatk</dt>
@@ -334,8 +334,8 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
     <span class="module-description">Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.</span><br>
     Example: <span class="module-example"><code>gatk --help</code> and <code>gatk --list</code>.</span><br>
-    URL: <span class="module-url"><a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk/">https://github.com/broadinstitute/gatk/</a></span><br>
-  Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, <em>4.2.2.0</em></span><br>
+    URL: <span class="module-url"><a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk">https://github.com/broadinstitute/gatk</a>, <a href="https://github.com/broadgsa/gatk">https://github.com/broadgsa/gatk</a>, <a href="https://console.cloud.google.com/storage/browser/gatk-software/package-archive">https://console.cloud.google.com/storage/browser/gatk-software/package-archive</a>, <a href="ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/">ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/</a></span><br>
+  Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, 4.2.2.0, <em>4.2.4.1</em></span><br>
   </dd>
 
   <dt class="module-name">gcta</dt>
@@ -428,7 +428,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>htop</code>.</span><br>
     URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">3.0.4, 3.0.5, <em>3.1.0</em></span><br>
+  Versions: <span class="module-version">3.0.4, 3.0.5, 3.1.0, <em>3.1.2</em></span><br>
   </dd>
 
   <dt class="module-name">htslib</dt>
@@ -455,8 +455,8 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.</span><br>
     Example: <span class="module-example"><code>igv</code>.</span><br>
     Note: <span class="module-note">IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).</span><br>
-    URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a></span><br>
-  Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, <em>2.11.0</em></span><br>
+    URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://software.broadinstitute.org/software/igv/download">https://software.broadinstitute.org/software/igv/download</a></span><br>
+  Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, <em>2.11.9</em></span><br>
   </dd>
 
   <dt class="module-name">igvtools</dt>
@@ -521,7 +521,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</span><br>
     Example: <span class="module-example"><code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code></span><br>
     URL: <span class="module-url"><a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a></span><br>
-  Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, <em>2.26.2</em></span><br>
+  Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2.26.2, <em>2.26.10</em></span><br>
   </dd>
 
   <dt class="module-name">pindel</dt>
@@ -1587,7 +1587,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2021-12-16 09:59:05 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-01-04 18:29:25 from querying `module avail` and `module spider`._
 
 
 <style>
