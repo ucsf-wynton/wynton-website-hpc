@@ -99,6 +99,27 @@ $ sed -i '18d' ~/.ssh/known_hosts
 Then retry.
 
 
+**Q**. _Why do I get "incorrect password attempts" when using `sudo` despite entering my password correctly?_
+
+**A**. The `sudo` command is only available to system administrators.  It is a command used to run a specific software as root, that is, with administrator privileges, e.g. when installing a software tool centrally on the current machine.  For security reasons, but also because installing software centrally impacts all other users and might break the existing setup, individual users do _not_ have the rights to use `sudo`.  If you end up calling `sudo` by mistake, just press <kbd>Ctrl-C</kbd> when you are prompted for your password to terminate the attempt, e.g.
+
+```sh
+$ sudo make install
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for alice: <Ctrl-C>
+
+$
+```
+
+
+
 ## Files and folders
 
 **Q**. _Is it possible to have a common folder where our lab group members can share files and software?_
