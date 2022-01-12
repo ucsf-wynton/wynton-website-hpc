@@ -48,4 +48,4 @@
 
 **Q.**. What is I want to share data between `/wynton/protected/group` (PHI) and `/wynton/group` (non-PHI) directories?
 
-**A.**. Users with PHI access still have access to `/wynton/group`, as do Wynton non-PHI users. However, PHI data should never be stored under `/wynton/group` and PHI data should never be shared witha a user who does not have PHI access.
+**A.**. Users with PHI access still have access to `/wynton/group`, as do Wynton non-PHI users. However, PHI data should never be stored under `/wynton/group` and PHI data should never be shared with a user who does not have PHI access.
