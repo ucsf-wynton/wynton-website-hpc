@@ -1,20 +1,7 @@
 SHELL=bash
 .ONESHELL:
 
-TMPDIR:=$(shell mktemp -d)
-
-## Colored strings?
-ifdef TERM
-	TPUT:=true
-	OK  :=$(shell tput setaf 2; printf "%s" " OK "; tput sgr0)
-	FAIL:=$(shell tput setaf 1; printf "%s" "FAIL"; tput sgr0)
-	YAMLLINT_OPTS:=-f colored
-else
-	TPUT:=false
-	OK  :=$(shell printf "%s" " OK ")
-	FAIL:=$(shell printf "%s" "FAIL")
-	YAMLLINT_OPTS:=
-endif
+include Makefile.checks
 
 # Examples:
 # export JEKYLL_HOST=selfhost; make serve 
@@ -90,115 +77,5 @@ assets: assets/data/compute_shares.tsv assets/data/gpu_shares.tsv
 deploy:
 	git pull
 	git commit -am "Website updated [ci skip]" && git push 2> /dev/null
-
-
-spell:
-	@echo "*** $@:"
-	@Rscript -e 'paths <- dir(path = c("."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); words <- spelling::spell_check_files(paths, ignore = readLines("WORDLIST")); print(words); ok <- (nrow(words) == 0); quit(status = !ok)' || { printf "\n\nSUGGESTION: If you believe these are correctly spelled, add them to 'docs/WORDLIST'\n\n"; exit 1; }
-
-yaml-check:
-	@echo "*** $@:"
-	@Rscript -e 'paths <- dir(path = c(".", "_data"), pattern = "*[.]yml$$", full.names = TRUE, recursive = TRUE); yaml <- lapply(paths, FUN = yaml::read_yaml)'
-	@echo "All ok"
-
-markdownlint:
-	@stdout=$(TMPDIR)/stdout
-
-	ok_count=0
-	error_count=0
-	config=.markdownlint.json
-
-	echo "*** $@:"
-	if [[ ! -f "$$config" ]]; then
-	   echo "File not found: $$config (PWD=$$PWD)"
-	   ls -la
-	   exit 1
-	fi
-
-	files=$$(find . -type f -name "*.md" -not -path "./_site/*")
-	for file in $$files; do
-	   $(TPUT) && printf "[    ] checking %s" "$$file"
-	   if markdownlint --config "$$config" "$$file" 2>> "$$stdout" ; then
-	     ok_count=$$((ok_count+1))
-	     $(TPUT) && printf "\r"
-	     printf "[$(OK)] checking %s\\n" "$$file"
-	   else
-	     error_count=$$((error_count+1))
-	     $(TPUT) && printf "\r"
-	     printf "[$(FAIL)] checking %s\\n" "$$file"
-	   fi
-	done
-
-	echo "RESULT: $$ok_count OK, $$error_count ERROR"
-	if (( error_count > 0 )); then
-	  cat "$$stdout"
-	  exit 1
-	fi
-
-markdown-link-check:
-	@stdout=$(TMPDIR)/stdout
-
-	ok_count=0
-	error_count=0
-	config=.markdown-link-check.json
-
-	echo "*** $@:"
-	if [[ ! -f "$$config" ]]; then
-	   echo "File not found: $$config (PWD=$$PWD)"
-	   ls -la
-	   exit 1
-	fi
-
-	files=$$(find . -type f -name "*.md" -not -path "./_site/*")
-	for file in $$files; do
-	   $(TPUT) && printf "[    ] checking %s" "$$file"
-	   if markdown-link-check --quiet --config "$$config" "$$file" &>> "$$stdout" ; then
-	     ok_count=$$((ok_count+1))
-	     $(TPUT) && printf "\r"
-	     printf "[$(OK)] checking %s\\n" "$$file"
-	   else
-	     error_count=$$((error_count+1))
-	     $(TPUT) && printf "\r"
-	     printf "[$(FAIL)] checking %s\\n" "$$file"
-	   fi
-	done
-
-	echo "RESULT: $$ok_count OK, $$error_count ERROR"
-	if (( error_count > 0 )); then
-	  grep -B 1 -E "(^ERROR:|^\[(✖|x)\]|Status: [0-9]+$$)" "$$stdout"
-	  echo "$$stdout"
-	  exit 1
-	fi
-
-markin-shellcheck:
-	@stdout=$(TMPDIR)/stdout
-
-	ok_count=0
-	error_count=0
-	config=.markdown-link-check.json
-
-	echo "*** $@:"
-	files=$$(find . -type f -name "*.sh" -not -path "./_site/*")
-	for file in $$files; do
-	   $(TPUT) && printf "[    ] checking %s" "$$file"
-	   if shellcheck -x "$$file" &>> "$$stdout" ; then
-	     ok_count=$$((ok_count+1))
-	     $(TPUT) && printf "\r"
-	     printf "[$(OK)] checking %s\\n" "$$file"
-	   else
-	     error_count=$$((error_count+1))
-	     $(TPUT) && printf "\r"
-	     printf "[$(FAIL)] checking %s\\n" "$$file"
-	   fi
-	done
-
-	echo "RESULT: $$ok_count OK, $$error_count ERROR"
-	if (( error_count > 0 )); then
-	  grep -B 1 -E "(^ERROR:|^\[(✖|x)\]|Status: [0-9]+$$)" "$$stdout"
-	  cat "$$stdout"
-	  exit 1
-	fi
-
-check: spell yaml-check markin-shellcheck markdownlint markdown-link-check
 
 FORCE:
