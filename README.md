@@ -2,8 +2,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3A%22YAML+check%22"><img src="https://github.com/UCSF-HPC/wynton/workflows/YAML%20check/badge.svg" alt="YAML check" style="max-width:100%;"></a> 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AMarkdownLint"><img src="https://github.com/UCSF-HPC/wynton/workflows/MarkdownLint/badge.svg" alt="MarkdownLint" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AMarkdown%20URLs"><img src="https://github.com/UCSF-HPC/wynton/workflows/Markdown%20URLs/badge.svg" alt="Markdown URLs" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions/workflows/markin-shellcheck.yml"><img src="https://github.com/UCSF-HPC/wynton/actions/workflows/markin-shellcheck.yml/badge.svg" alt="ShellCheck of Markin (MDI) shells scripts" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions/workflows/cron-shellcheck.yml"><img src="https://github.com/UCSF-HPC/wynton/actions/workflows/cron-shellcheck.yml/badge.svg" alt="ShellCheck of CRON scripts" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions/workflows/shellcheck.yml"><img src="https://github.com/UCSF-HPC/wynton/actions/workflows/shellcheck.yml/badge.svg" alt="ShellCheck" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions/workflows/odds-and-ends.yml"><img src="https://github.com/UCSF-HPC/wynton/actions/workflows/odds-and-ends.yml/badge.svg" alt="Odds and Ends" style="max-width:100%;"></a>
 
 # The Wynton HPC User Website
