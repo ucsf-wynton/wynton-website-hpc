@@ -23,7 +23,7 @@
   - The PI must notify Wynton of any users who have transferred departments and no longer require access to study data
   - The PI must notify Wynton when departing UCSF and transfer to another UCSF owner or archive their projects and data
   - The PI is responsible for ensuring that any user added to a Wynton PHI project that requires IRB approval, is listed on the IRB
-  - The PI or study owner is responsible for classifying and taking inventory of data within their Wynton PHI project 
+  - The PI is responsible for classifying and taking inventory of data within their Wynton PHI project 
   - The PI must notify Wynton of any change in security requirements in research agreements to Wynton admins
 
 ## Wynton PHI user responsibilities
