@@ -7,8 +7,12 @@
 			"pattern": "^https://mon.wynton.ucsf.edu/"
 		},
 		{
-			"pattern": "^https://listsrv.ucsf.edu/"
+			"pattern": "^https://support.box.com/hc/en-us/articles/360043697414-Using-Box-with-FTP-or-FTPS"
+		},
+		{
+		        "pattern": "^https://listsrv.ucsf.edu/"
 		}
+                    
 
 	],
     
