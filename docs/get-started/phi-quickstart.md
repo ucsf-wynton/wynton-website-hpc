@@ -13,10 +13,8 @@
 - If you either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI:
   - link to [learn more about the Wynton cluster]({{ '/about/join.html' | relative_url }})
   - link to actually [request a Wynton PHI account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)
-- All PHI users must sign a Statement of Responsibility form agreeing to the responsibilities of handling PII and/or PHI data and take the training in the handling of PII/PHI data and keep the training up to date.
-  - Complete this form to trigger a request to sign the Statement of Responsibility form:
-    - [ServiceNow - Statement of Responsibility request form](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=41a561fe2b255200d23a308505da1505&sysparm_category=7886c3cf2beab98019d7c71317da1598)
-    - **Important**: The email address associated with a new Statement of Responsibility must exactly match the user's original email address.
+- A link will be emailed to a Statement of Responsibility form that all users applying for PHI access must sign agreeing to the responsibilities of handling PII and/or PHI data, take the training in the handling of PII/PHI data, and keep the training up to date.
+  - **Important**: The email address associated with a new Statement of Responsibility must exactly match the user's original email address.
 
 ## Wynton PHI PI responsibilities
 
