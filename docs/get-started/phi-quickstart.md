@@ -10,8 +10,9 @@
 
 ## First step: Wynton accounts
 
-- If you either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI, fill out the Request a Wynton Account / Modify an Existing account form on the [Wynton - Join the Cluster]({{ '/about/join.html' | relative_url }}) page.
-
+- If you either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI:
+  - learn more about the Wynton cluster - [click here]({{ '/about/join.html' | relative_url }})
+  - to actually request a Wynton PHI account - [click here](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)
 - All PHI users must sign a Statement of Responsibility form agreeing to the responsibilities of handling PII and/or PHI data and take the training in the handling of PII/PHI data and keep the training up to date.
 
 ## Wynton PHI PI responsibilities
