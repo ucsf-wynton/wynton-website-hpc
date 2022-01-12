@@ -20,7 +20,7 @@ It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a 
 
 In order to do access UCSF Box as describe below, you need to:
 
-* Setup a **UCSF Box-specific password** as explained in <https://ucsf.app.box.com/services/box_ftp_server>
+* Setup a **UCSF Box-specific password** as explained in <https://support.box.com/hc/en-us/articles/360043697414-Using-Box-with-FTP-or-FTPS>
 
 
 ## Accessing UCSF Box over FTPS
