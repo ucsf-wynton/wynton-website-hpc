@@ -36,37 +36,35 @@ alice1@{{ site.transfer.name }}:s password: XXXXXXXXXXXXXXXXXXX
 Then, verify that your UCSF Box setup is correct by logging into the root of your UCSF Box folder using your **UCSF Box-specific password** (not your {{ site.cluster.name }} password):
 
 ```sh
-[alice@{{ site.transfer.name }} ~]$ lftp --user alice.aliceson@ucsf.edu ftps://ftp.box.com
+[alice@{{ site.transfer.name }} ~]$ lftp --user {{ site.user.email }} ftps://ftp.box.com
 Password: XXXXXXXX  <== UCSF Box password here!
-lftp alice.aliceson@ucsf.edu@ftp.box.com:~> ls
+lftp {{ site.user.email }}@ftp.box.com:~> ls
 drwx------  1 owner group     0 Jun 12  2014 Grant_R01.pdf
-drwx------  1 owner group     0 Sep 30  2016 Secure-alice.aliceson@ucsf.edu
-lftp alice.aliceson@ucsf.edu@ftp.box.com:~> exit
+drwx------  1 owner group     0 Sep 30  2016 Secure-{{ site.user.email }}
+lftp {{ site.user.email }}@ftp.box.com:~> exit
 [alice@{{ site.transfer.name }} ~]$ 
 ```
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex">
-<strong>Never specify your password via a command-line argument!  If you do, it will be visible to all other users via commands such as <code>ps</code> and <code>htop</code>.</strong>
+<span>🛑</span> <strong>Never specify your password via a command-line argument!  If you do, it will be visible to all other users via commands such as <code>ps</code> and <code>htop</code>.</strong>
 </div>
 
 
 ## Automatic authentication
 
 When starting `lftp` as above, you need to manually enter your password, which can be tedious or even prevent automatic file transfers in batch scripts.  A solution to this is to set up the FTPS credentials in `~/.netrc`.  Here is what it could look like:
-
 ```sh
 [alice@{{ site.transfer.name }} ~]$ cat ~/.netrc
 machine ftp.box.com
-        login alice.aliceson@ucsf.edu
+        login {{ site.user.email }}
         password AliceSecretPwd2017
 ```
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-<strong>The <code>~/.netrc</code> file must be kept private, otherwise its content could be readable to other users.</strong>
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<span>🛑</span> <strong>The <code>~/.netrc</code> file must be kept private, otherwise its content could be readable to other users.</strong>
 </div>
 
 **Since the password is fully visible in plain text, make sure to keep this file private at all times**, otherwise users on the system can see all your credentials, i.e.
-
 ```sh
 [alice@{{ site.transfer.name }} ~]$ chmod 600 ~/.netrc
 [alice@{{ site.transfer.name }} ~]$ ls -l ~/.netrc
@@ -74,18 +72,16 @@ machine ftp.box.com
 ```
 
 To verify that the automatic authentication works, try to log in again. You should no longer be prompted for your password - instead `lftp` gets it automatically from `~/.netrc`.  For example:
-
 ```sh
-[alice@{{ site.transfer.name }} ~]$ lftp --user alice.aliceson@ucsf.edu ftps://ftp.box.com
-lftp alice.aliceson@ucsf.edu@ftp.box.com:~> ls
+[alice@{{ site.transfer.name }} ~]$ lftp --user {{ site.user.email }} ftps://ftp.box.com
+lftp {{ site.user.email }}@ftp.box.com:~> ls
 drwx------  1 owner group     0 Jun 12  2014 Grant_R01.pdf
-drwx------  1 owner group     0 Sep 30  2016 Secure-alice.aliceson@ucsf.edu
-lftp alice.aliceson@ucsf.edu@ftp.box.com:~> exit
+drwx------  1 owner group     0 Sep 30  2016 Secure-{{ site.user.email }}
+lftp {{ site.user.email }}@ftp.box.com:~> exit
 $ 
 ```
 
-Note that `curl` also recognizes `~/.netrc` credentials.  For example, to download a specific file, we can do:
-
+Note that `curl` also recognizes `~/.netrc` credentials, e.g.
 ```sh
 [alice@{{ site.transfer.name }} ~]$ curl --netrc -O ftps://ftp.box.com/Grant_R01.pdf
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -96,7 +92,7 @@ Note that `curl` also recognizes `~/.netrc` credentials.  For example, to downlo
 ```
 
 To upload a file, we can do:
-
+ 
 ```sh
 [alice@{{ site.transfer.name }} ~]$ curl --netrc --upload-file notes.txt ftps://ftp.box.com/
 ```
