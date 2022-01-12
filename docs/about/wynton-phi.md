@@ -1,6 +1,6 @@
 # Wynton PHI
 
-Wynton PHI environment is available to all UCSF researchers and affiliates as of December 17, 2021. This means Wynton users can now use the entire Wynton HPC environment (449 compute nodes with 12,572 physical cores + 148 GPUs on 42 GPU nodes, and counting) to process research computing jobs involving Protected Health Information (PHI) and/or sensitive data. Please submit <a href="https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f">this form</a> to request an account and use <a href="https://wynton.ucsf.edu/hpc/support/index.html">these support channels</a> for any help you need. Allowing for the time for onboarding new accounts and set up new PHI projects, we expect to start enabling new PHI users January 5, 2022 onward.
+Wynton PHI environment is available to all UCSF researchers and affiliates as of December 17, 2021. This means Wynton users can now use the entire Wynton HPC environment (449 compute nodes with 12,572 physical cores + 148 GPUs on 42 GPU nodes, and counting) to process research computing jobs involving Protected Health Information (PHI) and/or sensitive data. Please submit [Apply for Wynton PHI] on ServiceNow to request an account and use <a href="https://wynton.ucsf.edu/hpc/support/index.html">these support channels</a> for any help you need. Allowing for the time for onboarding new accounts and set up new PHI projects, we expect to start enabling new PHI users January 5, 2022 onward.
 
 ## Background
 
@@ -46,7 +46,7 @@ Unlike running research computing jobs on individual workstations or lab network
 
 ## How to get a Wynton PHI account
 
-Please submit <a href="https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f">this form</a> to request an account on Wynton PHI. This will initiate an automated onboarding process to check that you meet the following prerequisites:
+Please submit [Apply for Wynton PHI] on ServiceNow to request an account on Wynton PHI. This will initiate an automated onboarding process to check that you meet the following prerequisites:
 
 * Valid email address
 * PI approval to work on Wynton PHI
@@ -102,3 +102,6 @@ Finally - we hope adding this new major feature will tremendously help UCSF rese
 Thanks!
 
 Your Wynton Admin Team
+
+
+[Apply for Wynton PHI]: https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f

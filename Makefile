@@ -1,7 +1,10 @@
-check: spell yaml-check markdownlint markdown-link-check markin-shellcheck cron-shellcheck 
+check: spell shellcheck yaml-check markdownlint markdown-link-check check-usernames check-here-links
 
 cron-shellcheck:
-	cd cron-scripts; $(MAKE) $@
+	cd cron-scripts; $(MAKE) shellcheck
+
+## Backward compatibility /HB 2022-01-12
+shellcheck: cron-shellcheck
 
 markin-shellcheck:
 	cd docs; $(MAKE) $@
@@ -16,4 +19,10 @@ markdownlint:
 	cd docs; $(MAKE) $@
 
 markdown-link-check:
+	cd docs; $(MAKE) $@
+
+check-usernames:
+	cd docs; $(MAKE) $@
+
+check-here-links:
 	cd docs; $(MAKE) $@
