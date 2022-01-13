@@ -380,3 +380,7 @@ xgboost
 xxxxxxx
 yml
 hc
+cxx
+prebuilt
+samtools
+subfolder
