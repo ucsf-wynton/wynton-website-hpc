@@ -8,13 +8,13 @@ context:
 The {{ site.cluster.name }} environment supports running a graphical user interface (GUI) on {{ site.cluster.name }} while viewing and interacting with it on your local computer.  More specifically, and in more technical terms, {{ site.cluster.name }} supports NX and X11 Forwarding protocols.
 
 
-## X2Go (NX protocol)
+## X2Go (Remote Desktop)
 
 ### Requirements
 
 Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }}  _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to have a working [SSH key pair] set up and configured the X2Go Client. 
 
-If you are connecting to {{ site.cluster.nickname }} from off campus, you will also have to have 2 Factor Authentication setup.
+If you are connecting to {{ site.cluster.nickname }} from off campus, you will also have to use Two Factor Authentication (2FA) for {{ site.cluster.nickname }}.  This is _not_ needed if you are connected via the UCSF VPN.
 
 
 ### Setup of the X2Go Client (once)
