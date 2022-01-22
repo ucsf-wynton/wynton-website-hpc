@@ -34,7 +34,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
     - Set **Host** to a {{ site.cluster.name }} [login node]. Currently one of: `{{ site.login1.hostname }}` or `{{ site.login2.hostname }}`
     - In the **RSA/DSA key:** field enter the path to your private SSH Key.
     - Select **SSH Agent or default SSH key**
- 7. In the **Session type** section, choose `MATE`
+ 9. In the **Session type** section, choose `MATE`
 
 
 ### Logging in
@@ -50,7 +50,7 @@ With the above setup, the following instructions opens a remote desktop window o
 6. Dialog **MATE on dev2**: _Enter your {{ site.cluster.name }} password_ (this happens for unknown reasons to _some_ users, even when using SSH keys)
 7. Dialog **Enter passphrase to decrypt a key**: _Enter ssh key passphrase, if set_
 8. Dialog **Enter passphrase to decrypt a key**: _Enter ssh key passphrase, if set_ (yes, twice)
-9. Wait! It will take a long time before the MATE window to appear.
+9. Wait! It will take a long time before the MATE window to appear, looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would do on your regular desktop.
 
 
 <div class="alert alert-warning" role="alert">
