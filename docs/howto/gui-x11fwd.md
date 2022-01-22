@@ -12,9 +12,10 @@ The {{ site.cluster.name }} environment supports running a graphical user interf
 
 ### Requirements
 
-Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }}  _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to have a working [SSH key pair] set up and configured the X2Go client. 
+Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }}  _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to have a working [SSH key pair] set up and configured the X2Go Client. 
 
 If you are connecting to {{ site.cluster.nickname }} from off campus, you will also have to have 2 Factor Authentication setup.
+
 
 ### Setup of the X2Go Client (once)
 
@@ -38,51 +39,34 @@ First, you will need to install the X2Go Client on your local computer.  For ins
 
 ### Logging in
 
-Launch x2go client.
+With the above setup, the following instructions opens a remote desktop window on your local computer:
 
-Double Click configured session (above).
-
-Dialog: **Enter Passphrase to decrypt a key**
-
-_Enter ssh key passphrase (if set)_
-
-Dialog: **Choose DUO Authentication Method** (Only if connecting from off campus.)
-
-_Perform Duo Authentication as prompted_
-
-Dialog: **Remember connection authentication for 12 hours? [y/N]**
-
-_Input y (This is important, it does NOT work if you choose "N")_
-
-Dialog: **MATE on dev2** (This may happen with some configurations, even if you are using SSH Keys. We are investigating.)
-
-_Enter Wynton Password_
-
-Dialog: **Enter passphrase to decrypt a key.**
-
-_Enter ssh key passphrase (if set)_
-
-Dialog: **Enter passphrase to decrypt a key.**
-
-_Enter ssh key passphrase (if set)_
-
-Wait, Wait, MATE launches.
+1. Launch the X2Go Client on your local machine
+2. Double click the session configured (above)
+3. Dialog **Enter Passphrase to decrypt a key**: _Enter ssh key passphrase, if set, otherwise just <kbd>ENTER</kbd>_
+4. If connecting from an off-campus location and not already authenticated:
+   - Dialog **Choose DUO Authentication Method**: _Perform Duo Authentication as prompted_
+   - Dialog **Remember connection authentication for 12 hours? [y/N]**: _Answer y_ (this is important, it does _not_ work if you choose 'no')
+6. Dialog **MATE on dev2**: _Enter your {{ site.cluster.name }} password_ (this happens for unknown reasons to _some_ users, even when using SSH keys)
+7. Dialog **Enter passphrase to decrypt a key**: _Enter ssh key passphrase, if set_
+8. Dialog **Enter passphrase to decrypt a key**: _Enter ssh key passphrase, if set_ (yes, twice)
+9. Wait! It will take a long time before the MATE window to appear.
 
 
 <div class="alert alert-warning" role="alert">
-If you get a dialog saying '<strong>Error: Connection failed. bash: x2golistsessions: command not found</strong>', then you have missed configuring a 'Proxy server' in Steps 7-8.
+If you get a dialog saying '<strong>Error: Connection failed. bash: x2golistsessions: command not found</strong>', then you have missed configuring a 'Proxy server' in Steps 7-8 of Section 'Setup of the X2Go Client (once)'.
 </div>
 
 
 ### 3D Graphics with X2Go (in alpha testing)
 
-The X2Go client provides basic support for 3D applications with a software implementation of an ancient version of OpenGL.  On the GPU development nodes (*i.e.*, `gpudev1`), [VirtualGL](https://virtualgl.org/) is installed so you can use hardware accelerated 3D graphics.  All you need to do is:
+The X2Go Client provides basic support for 3D applications with a software implementation of an ancient version of OpenGL.  On the GPU development nodes (i.e., `gpudev1`), [VirtualGL] is installed so you can use hardware accelerated 3D graphics.  All you need to do is:
 
  1. Opt-in by sending email to [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}?subject=vglusers) with the subject `vglusers`
  2. Wait for confirmation that you have added to the `vglusers` group
  3. Use the `vglrun` program to run your program on a development node, either
     - by starting the application from a terminal (example below), or
-    - by using a Wynton desktop shortcut, after editing it in your Wynton `~/Desktop` to have `vglrun` inserted before the program name on the **Exec=** line
+    - by using a {{ site.cluster.name }} desktop shortcut, after editing it in your {{ site.cluster.name }} `~/Desktop` to have `vglrun` inserted before the program name on the **Exec=** line
 
 For example:
 
@@ -136,7 +120,6 @@ If you are on macOS, you need to use <code>ssh -Y ...</code> instead of <code>ss
 </div>
 
 
-
 ### Log into a development node with X11 forwarding
 
 Now, since we should not run anything on the login nodes, the next step is to head over to one of the development nodes.  When doing so, we have remember to keep using X11 forward, that is, we need to use `-X` also here;
@@ -170,6 +153,7 @@ _Tips:_ You can login into a development node in a single call by "jumping" (`-J
 
 
 
+[VirtualGL]: https://virtualgl.org
 [XQuartz]: https://www.xquartz.org
 [development node]: {{ '/about/specs.html' | relative_url }}#development-nodes
 [login node]: {{ '/about/specs.html' | relative_url }}#login-nodes
