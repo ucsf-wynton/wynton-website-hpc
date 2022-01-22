@@ -1,19 +1,19 @@
 > BiocManager::install("limma")
-Bioconductor version 3.12 (BiocManager 1.30.10), R 4.0.3 (2020-10-10)
+Bioconductor version 3.14 (BiocManager 1.30.16), R 4.1.2 (2021-11-01)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.12/bioc/src/contrib/limma_3.46.0.tar.gz'
-Content type 'application/x-gzip' length 1527170 bytes (1.5 MB)
+trying URL 'https://bioconductor.org/packages/3.14/bioc/src/contrib/limma_3.50.0.tar.gz'
+Content type 'application/x-gzip' length 1555883 bytes (1.5 MB)
 ==================================================
 downloaded 1.5 MB
 
 * installing *source* package 'limma' ...
 ** using staged installation
 ** libs
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -std=gnu99 -I"/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -std=gnu99 -shared -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L/wynton/home/cbi/shared/software/CBI/R-4.0.3/lib64/R/lib -lR
-installing to /home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00new/limma/libs
+gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/lib -lR
+installing to /c4/home/alice/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -29,6 +29,4 @@ installing to /home/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI/00LOCK-limma/00n
 
 The downloaded source packages are in
         '/scratch/alice/Rtmpz9uHdz/downloaded_packages'
-Installation path not writeable, unable to update packages: codetools, foreign,
-  KernSmooth, Matrix, nlme
 >

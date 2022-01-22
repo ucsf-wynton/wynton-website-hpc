@@ -1,10 +1,10 @@
 > install.packages("BiocManager")
-Installing package into '/wynton/home/boblab/alice/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+Installing package into '/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'
-Content type 'application/x-gzip' length 40205 bytes (39 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.16.tar.gz'
+Content type 'application/x-gzip' length 262502 bytes (256 KB)
 ==================================================
-downloaded 39 KB
+downloaded 256 KB
 
 * installing *source* package 'BiocManager' ...
 ** package 'BiocManager' successfully unpacked and MD5 sums checked

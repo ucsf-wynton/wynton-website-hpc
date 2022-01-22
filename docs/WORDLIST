@@ -384,3 +384,7 @@ cxx
 prebuilt
 samtools
 subfolder
+gdal
+GDAL
+pdbMPI
+tiledb
