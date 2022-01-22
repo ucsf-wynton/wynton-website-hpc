@@ -5,7 +5,7 @@ context:
 
 # Graphical User Interfaces (GUI)
 
-The {{ site.cluster.name }} environment supports running a graphical user interface (GUI) on {{ site.cluster.name }} while viewing and interacting with it on your local computer.  More specifically, and in more technical terms, {{ site.cluster.name }} supports NX and X11 Forwarding protocols
+The {{ site.cluster.name }} environment supports running a graphical user interface (GUI) on {{ site.cluster.name }} while viewing and interacting with it on your local computer.  More specifically, and in more technical terms, {{ site.cluster.name }} supports NX and X11 Forwarding protocols.
 
 
 ## X2Go (NX protocol)
@@ -69,6 +69,10 @@ _Enter ssh key passphrase (if set)_
 Wait, Wait, MATE launches.
 
 
+<div class="alert alert-warning" role="alert">
+If you get a dialog saying '<strong>Error: Connection failed. bash: x2golistsessions: command not found</strong>', then you have missed configuring a 'Proxy server' in Steps 7-8.
+</div>
+
 
 ### 3D Graphics with X2Go (in alpha testing)
 
@@ -110,13 +114,12 @@ If `DISPLAY` is empty, that is, you get:
 DISPLAY=''
 ```
 
-then you don't have a local X server set up and the below will _not_ work.
-
+then you don't have a local X server set up and the below will _not_ work.  If you are on macOS, we recommend installing open-source [XQuartz].
 
 
 ### Log into the cluster with X11 forwarding
 
-To setup the X11 forwarding when connecting to the cluster, just add option `-X` to your SSH call.  For performance reasons, we will also add option `-C` to enable SSH compression.  By using compression, the responsiveness and latency in GUIs will be much smaller - our benchmarks show a 5-7 times improvement when connected via the UCSF VPN (~60 Mbps download and ~5 Mbps upload).  To login with X11 forwarding and compression enabled, do:
+To setup the X11 forwarding when connecting to the cluster, add option `-X`, or `-Y` on macOS, to your SSH call. For performance reasons, we will also add option `-C` to enable SSH compression.  By using compression, the responsiveness and latency in GUIs will be much smaller - our benchmarks show a 5-7 times improvement when connected via the UCSF VPN (~60 Mbps download and ~5 Mbps upload).  To login with X11 forwarding and compression enabled, do:
 
 ```sh
 {local}$ ssh -X -C alice@{{ site.login.hostname }}
@@ -126,7 +129,12 @@ DISPLAY='localhost:20.0'
 [alice@{{ site.login.name }} ~]$
 ```
 
-By checking that `DISPLAY` is set, we know that X11 forwarding is in place.  If `DISPLAY` is empty, then make sure you have specified `-X`.
+By checking that `DISPLAY` is set, we know that X11 forwarding is in place.  If `DISPLAY` is empty, then make sure you have specified `-X` (or `-Y`).
+
+<div class="alert alert-warning" role="alert">
+If you are on macOS, you need to use <code>ssh -Y ...</code> instead of <code>ssh -X ...</code>. This is because macOS does not trust remote X servers by default.
+</div>
+
 
 
 ### Log into a development node with X11 forwarding
@@ -162,7 +170,7 @@ _Tips:_ You can login into a development node in a single call by "jumping" (`-J
 
 
 
-
+[XQuartz]: https://www.xquartz.org
 [development node]: {{ '/about/specs.html' | relative_url }}#development-nodes
 [login node]: {{ '/about/specs.html' | relative_url }}#login-nodes
 [SSH key pair]: {{ '/howto/log-in-without-pwd.html' | relative_url }}
