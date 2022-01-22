@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(69)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(70)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
@@ -124,7 +124,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2>Module Software Repository: CBI (69)</h2>
+<h2>Module Software Repository: CBI (70)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -232,7 +232,7 @@ Please note that this software stacks is maintained and contributed by a researc
     <span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
     Example: <span class="module-example"><code>bowtie2 --version</code></span><br>
     URL: <span class="module-url"><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a></span><br>
-  Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, <em>2.4.4</em></span><br>
+  Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, <em>2.4.5</em></span><br>
   </dd>
 
   <dt class="module-name">bwa</dt>
@@ -297,6 +297,16 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>cufflinks</code>.</span><br>
     URL: <span class="module-url"><a href="http://cole-trapnell-lab.github.io/cufflinks/">http://cole-trapnell-lab.github.io/cufflinks/</a>, <a href="https://github.com/cole-trapnell-lab/cufflinks">https://github.com/cole-trapnell-lab/cufflinks</a></span><br>
   Versions: <span class="module-version"><em>2.2.1</em></span><br>
+  </dd>
+
+  <dt class="module-name">easycatfs</dt>
+  <dd class="module-details">
+    <strong class="module-help">easycatfs: Easy Read-Only Mounting of Slow Folders onto a Local Drive</strong><br>
+    <span class="module-description">This is Linux command-line tool for mounting one or more folders on a network file system on a local disk such that the local-disk folders mirrors everything (read-only) on the network folder. This will result in (i) faster repeated access to files, and (ii) decreased load on the network file system. This is particularly beneficial when working on high-performance compute (HPC) clusters used by hundreds and thousands of processes and users simultaneously..</span><br>
+    Example: <span class="module-example"><code>easycatfs --help</code> and <code>easycatfs mount /shared/data</code>.</span><br>
+    URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/easycatfs">https://github.com/HenrikBengtsson/easycatfs</a></span><br>
+    Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+  Versions: <span class="module-version">0.1.2, 0.1.3, <em>0.1.4</em></span><br>
   </dd>
 
   <dt class="module-name">emacs</dt>
@@ -611,10 +621,10 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <strong class="module-help">rstudio: RStudio Desktop</strong><br>
     <span class="module-description">The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.</span><br>
-    Example: <span class="module-example"><code>rstudio</code>. If you get blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
+    Example: <span class="module-example"><code>rstudio</code>.  If you get blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
     URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a>, <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></span><br>
-    Warning: <span class="module-warning">This software works only on the development nodes and requires that X11 Forwarding or NX is enabled. For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
-  Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, <em>2021.09.1-372</em></span><br>
+    Warning: <span class="module-warning">This software works only on the development nodes. It requires a connection with X11 Forwarding enabled. It does <em>not</em> work with X2Go (gives error &quot;GLX 1.3 or later is required&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
+  Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, <em>2021.09.2-382</em></span><br>
   </dd>
 
   <dt class="module-name">salmon</dt>
@@ -1583,11 +1593,11 @@ Please note that this software stacks is maintained and contributed by a researc
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(69)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(70)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-01-04 20:47:42 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-01-22 09:19:04 from querying `module avail` and `module spider`._
 
 
 <style>
