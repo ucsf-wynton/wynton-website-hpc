@@ -10,6 +10,13 @@
 ## grafana_storage_totals 24  ## default
 ## grafana_storage_totals 1
 ##
+## Requirements:
+## Authentication to Grafana is done via NETRC, e.g. ~/.netrc with:
+##
+##   machine mon.wynton.ucsf.edu
+##           login alice
+##           password AlicePassword1234
+##
 ## Author: Henrik Bengtsson (2022)
 ## License: MIT
 grafana_storage_totals() {
