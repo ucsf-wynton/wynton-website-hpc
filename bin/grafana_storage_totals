@@ -1,0 +1,33 @@
+#! /usr/bin/env bash
+## Description:
+## Download Grafana Storage-Total Graphs
+##
+## Usage:
+## grafana_storage_totals <last-hours>
+##
+## Examples:
+## grafana_storage_totals
+## grafana_storage_totals 24  ## default
+## grafana_storage_totals 1
+##
+## Author: Henrik Bengtsson (2022)
+## License: MIT
+grafana_storage_totals() {
+  local panelId width height now hours file url
+
+  ## How far back in time?
+  hours=${1:-24}
+
+  panelId=2
+  width=1000
+  height=500
+  file="grafana_storage_totals_hours=${hours}.png"
+  now=$(date "+%s")
+  to_ms=$((1000 * now))
+  from_ms=$((to_ms - hours * 3600 * 1000))
+  url="https://mon.wynton.ucsf.edu/grafana/render/d-solo/JToVm_Uik/storage-totals?orgId=1&panelId=${panelId}&from=${from_ms}&to=${to_ms}&width=${width}&height=${height}"
+  curl --netrc "$url" -o "$file"
+  echo "$file"
+}
+
+grafana_storage_totals "$@"
