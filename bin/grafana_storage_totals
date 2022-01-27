@@ -3,15 +3,20 @@
 ## Download Grafana Storage-Total Graphs
 ##
 ## Usage:
-## grafana_storage_totals <last-hours>
+## grafana_storage_totals <last>
+##
+## where <last> specifies the most recent <last> hours.
+## Alternatively, <last> can be 'hour', 'day', 'week',
+## 'month', and 'year'.
 ##
 ## Examples:
-## grafana_storage_totals       # default (=24)
-## grafana_storage_totals 1     # last hour
-## grafana_storage_totals 24    # last day
-## grafana_storage_totals 168   # last week
-## grafana_storage_totals 720   # last 30 days
-## grafana_storage_totals 8760  # last 365 days
+## grafana_storage_totals       # default (hour)
+## grafana_storage_totals 1     # last 1 hour
+## grafana_storage_totals hour
+## grafana_storage_totals day
+## grafana_storage_totals week
+## grafana_storage_totals month
+## grafana_storage_totals year
 ##
 ## Requirements:
 ## Authentication to Grafana is done via NETRC, e.g. ~/.netrc with:
@@ -23,15 +28,39 @@
 ## Author: Henrik Bengtsson (2022)
 ## License: MIT
 grafana_storage_totals() {
-  local panelId width height now hours file url
+  local panelId width height now period hours file url
 
   ## How far back in time?
-  hours=${1:-24}
+  period=${1:?}
+
+  case "${period}" in
+    hour)
+      hours=1
+      ;;
+    day)
+      hours=24
+      ;;
+    week)
+      hours=168
+      ;;
+    month)
+      hours=720   ##  30 days
+      ;;
+    year)
+      hours=8760  ## 365 days
+      ;;
+    *)
+      hours=${period}
+      ;;
+  esac
+
+  ## Assert 'hours' is an integer
+  echo "${hours}" | grep -q -E "^[[:digit:]]+$" || { 2>&1 echo "ERROR: Unknown value: ${hours}"; exit 1; }
 
   panelId=2
   width=681
   height=319
-  file="grafana_storage_totals_hours=${hours}.png"
+  file="grafana_storage_totals-${period}.png"
   now=$(date "+%s")
   to_ms=$((1000 * now))
   from_ms=$((to_ms - hours * 3600 * 1000))
