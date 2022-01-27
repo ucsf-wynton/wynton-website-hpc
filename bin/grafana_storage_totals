@@ -6,9 +6,12 @@
 ## grafana_storage_totals <last-hours>
 ##
 ## Examples:
-## grafana_storage_totals
-## grafana_storage_totals 24  ## default
-## grafana_storage_totals 1
+## grafana_storage_totals       # default (=24)
+## grafana_storage_totals 1     # last hour
+## grafana_storage_totals 24    # last day
+## grafana_storage_totals 168   # last week
+## grafana_storage_totals 720   # last 30 days
+## grafana_storage_totals 8760  # last 365 days
 ##
 ## Requirements:
 ## Authentication to Grafana is done via NETRC, e.g. ~/.netrc with:
