@@ -56,19 +56,31 @@ File transfers via Globus does not work on <strong>{{ site.cluster.name }}</stro
 <div class="tab-content" style="margin-top: 1ex;">
   <div id="by-day" class="tab-pane fade in active">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-day.png" alt="queues usage during the last day"/><br>
-    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-day.png" alt="GPU queues usage during the last day"/>
+    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-day.png" alt="GPU queues usage during the last day"/><br>
+<!--    
+    <img src="{{ site.assets.status_root_path }}/status/figures/grafana_storage_totals-day.png" alt="BeeGFS I/O throughput during the last day"/><br>
+-->
   </div>
   <div id="by-week" class="tab-pane fade">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-week.png" alt="queues usage during the last week"/><br>
-    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-week.png" alt="GPU queues usage during the last week"/>
+    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-week.png" alt="GPU queues usage during the last week"/><br>
+<!--    
+    <img src="{{ site.assets.status_root_path }}/status/figures/grafana_storage_totals-week.png" alt="BeeGFS I/O throughput during the last week"/><br>
+-->    
   </div>
   <div id="by-month" class="tab-pane fade">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-month.png" alt="queues usage during the last month"/><br>
-    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-month.png" alt="GPU queues usage during the last month"/>
+    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-month.png" alt="GPU queues usage during the last month"/><br>
+<!--    
+    <img src="{{ site.assets.status_root_path }}/status/figures/grafana_storage_totals-month.png" alt="BeeGFS I/O throughput during the last month"/><br>
+-->    
   </div>
   <div id="by-year" class="tab-pane fade">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-year.png" alt="queues usage during the last year"/><br>
-    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-year.png" alt="GPU queues usage during the last year"/>
+    <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-year.png" alt="GPU queues usage during the last year"/><br>
+<!--    
+    <img src="{{ site.assets.status_root_path }}/status/figures/grafana_storage_totals-year.png" alt="BeeGFS I/O throughput during the last year"/><br>
+-->    
   </div>
 </div>
 
