@@ -48,25 +48,25 @@ File transfers via Globus does not work on <strong>{{ site.cluster.name }}</stro
 ## Queue Metrics
 
 <ul class="nav nav-pills">
-  <li class="active"><a data-toggle="pill" href="#queues-day">Day</a></li>
-  <li><a data-toggle="pill" href="#queues-week">Week</a></li>
-  <li><a data-toggle="pill" href="#queues-month">Month</a></li>
-  <li><a data-toggle="pill" href="#queues-year">Year</a></li>
+  <li class="active"><a data-toggle="pill" href="#by-day">Day</a></li>
+  <li><a data-toggle="pill" href="#by-week">Week</a></li>
+  <li><a data-toggle="pill" href="#by-month">Month</a></li>
+  <li><a data-toggle="pill" href="#by-year">Year</a></li>
 </ul>
 <div class="tab-content" style="margin-top: 1ex;">
-  <div id="queues-day" class="tab-pane fade in active">
+  <div id="by-day" class="tab-pane fade in active">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-day.png" alt="queues usage during the last day"/><br>
     <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-day.png" alt="GPU queues usage during the last day"/>
   </div>
-  <div id="queues-week" class="tab-pane fade">
+  <div id="by-week" class="tab-pane fade">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-week.png" alt="queues usage during the last week"/><br>
     <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-week.png" alt="GPU queues usage during the last week"/>
   </div>
-  <div id="queues-month" class="tab-pane fade">
+  <div id="by-month" class="tab-pane fade">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-month.png" alt="queues usage during the last month"/><br>
     <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-month.png" alt="GPU queues usage during the last month"/>
   </div>
-  <div id="queues-year" class="tab-pane fade">
+  <div id="by-year" class="tab-pane fade">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-year.png" alt="queues usage during the last year"/><br>
     <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-year.png" alt="GPU queues usage during the last year"/>
   </div>
