@@ -26,8 +26,8 @@ grafana_storage_totals() {
   hours=${1:-24}
 
   panelId=2
-  width=1000
-  height=500
+  width=681
+  height=319
   file="grafana_storage_totals_hours=${hours}.png"
   now=$(date "+%s")
   to_ms=$((1000 * now))
