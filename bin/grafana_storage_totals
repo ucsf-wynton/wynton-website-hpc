@@ -32,6 +32,15 @@ grafana_storage_totals() {
   now=$(date "+%s")
   to_ms=$((1000 * now))
   from_ms=$((to_ms - hours * 3600 * 1000))
+
+  ## To find the URL format in the Wynton HPC Grafana,
+  ## 
+  ## 1. Go to 'Storage Tools'
+  ## 2. Select 'Share' pull-down menu entry for panel 'Aggregate Disk Throughput'
+  ## 3. In tab 'Link' in the 'Share Panel' dialog, click 'Direct link rendered image'
+  ## 4. The opened URL will be the PNG image we want to download, e.g.
+  ##    https://mon.wynton.ucsf.edu/grafana/render/d-solo/JToVm_Uik/storage-totals?panelId=2&orgId=1&from=1607879825896&to=1607901425896&width=1000&height=500&tz=America%2FLos_Angeles
+    
   url="https://mon.wynton.ucsf.edu/grafana/render/d-solo/JToVm_Uik/storage-totals?orgId=1&panelId=${panelId}&from=${from_ms}&to=${to_ms}&width=${width}&height=${height}"
   curl --netrc "$url" -o "$file"
   echo "$file"
