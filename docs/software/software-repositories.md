@@ -110,7 +110,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
     <span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.</span><br>
     Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
     URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a></span><br>
-  Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
+  Versions: <span class="module-version">1.8.0.282.b08-1, <em>11.0.10.0.9-0</em></span><br>
   </dd>
 
   <dt class="module-name">Sali</dt>
@@ -677,10 +677,11 @@ Please note that this software stacks is maintained and contributed by a researc
   <dt class="module-name">scl-devtoolset</dt>
   <dd class="module-details">
     <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
-    <span class="module-description">Enables the CentOS Software Collection (SCL) <code>devtoolset-10</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-10</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
+    <span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
     Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-    URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-10/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-10/</a></span><br>
-  Versions: <span class="module-version">4, 6, 7, 8, 9, <em>10</em></span><br>
+    URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/10">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/10</a></span><br>
+    Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
+  Versions: <span class="module-version">4, 7, 8, 9, <em>10</em></span><br>
   </dd>
 
   <dt class="module-name">scl-python (part of CBI-testing)</dt>
@@ -1626,7 +1627,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-01-31 10:48:07 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-01-31 11:56:13 from querying `module avail` and `module spider`._
 
 
 <style>
