@@ -110,7 +110,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
     <span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.</span><br>
     Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
     URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a></span><br>
-  Versions: <span class="module-version">1.8.0.282.b08-1, <em>11.0.10.0.9-0</em></span><br>
+  Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
   </dd>
 
   <dt class="module-name">Sali</dt>
@@ -653,7 +653,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>rsc --help</code> and <code>rsc start --port=random</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a></span><br>
     Warning: <span class="module-warning">This is work under construction!</span><br>
-  Versions: <span class="module-version">0.2.0, <em>0.2.1</em></span><br>
+  Versions: <span class="module-version"><em>0.3.0</em></span><br>
   </dd>
 
   <dt class="module-name">salmon</dt>
@@ -1626,7 +1626,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-01-28 10:45:31 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-01-31 10:48:07 from querying `module avail` and `module spider`._
 
 
 <style>
