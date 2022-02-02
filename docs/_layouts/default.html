@@ -225,6 +225,10 @@
 <div id="wrap">
       <section>
 
+<div class="alert alert-warning" role="alert">
+2022-02-02: The Wynton webserver will be down between noon on February 2 and the morning of February 3. Please use <a href="https://ucsf-hpc.github.io/wynton/">https://ucsf-hpc.github.io/wynton/</a> in the meanwhile. This is due to a scheduled power outage, which only affects the webserver.
+</div>
+        
 {% unless page.context contains "login" or page.context contains "xfer" %}
 {% if content contains "language-sh" %}
 {% assign tmp_text = "Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks." %}
