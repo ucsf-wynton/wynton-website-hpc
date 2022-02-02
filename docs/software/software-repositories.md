@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(70)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(73)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
@@ -124,7 +124,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2>Module Software Repository: CBI (70)</h2>
+<h2>Module Software Repository: CBI (73)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -134,6 +134,15 @@ Please note that this software stacks is maintained and contributed by a researc
 </div>
 
 <dl>
+  <dt class="module-name">apache-ant</dt>
+  <dd class="module-details">
+    <strong class="module-help">Apache Ant: A Java Library and Command-Line Tool to Build Software</strong><br>
+    <span class="module-description">Apache Ant is a Java library and command-line tool that help building software.</span><br>
+    Example: <span class="module-example"><code>ant -h</code></span><br>
+    URL: <span class="module-url"><a href="https://ant.apache.org/bindownload.cgi">https://ant.apache.org/bindownload.cgi</a></span><br>
+  Versions: <span class="module-version"><em>1.10.12</em></span><br>
+  </dd>
+
   <dt class="module-name">asciigenome</dt>
   <dd class="module-details">
     <strong class="module-help">ASCIIGenome: Text Only Genome Viewer</strong><br>
@@ -277,8 +286,8 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">CMake: Open-source, Cross-platform Family of Tools Designed to Build, Test and Package Software</strong><br>
     <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
     Example: <span class="module-example"><code>cmake --version</code>.</span><br>
-    URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a></span><br>
-  Versions: <span class="module-version">3.18.2, <em>3.19.2</em></span><br>
+    URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a></span><br>
+  Versions: <span class="module-version">3.18.2, 3.19.2, <em>3.22.2</em></span><br>
   </dd>
 
   <dt class="module-name">control-freec</dt>
@@ -306,7 +315,7 @@ Please note that this software stacks is maintained and contributed by a researc
     Example: <span class="module-example"><code>easycatfs --help</code> and <code>easycatfs mount /shared/data</code>.</span><br>
     URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/easycatfs">https://github.com/HenrikBengtsson/easycatfs</a></span><br>
     Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-  Versions: <span class="module-version">0.1.2, 0.1.3, <em>0.1.4</em></span><br>
+  Versions: <span class="module-version">0.1.2, 0.1.3, 0.1.4, <em>0.1.5</em></span><br>
   </dd>
 
   <dt class="module-name">emacs</dt>
@@ -627,6 +636,26 @@ Please note that this software stacks is maintained and contributed by a researc
   Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, <em>2021.09.2-382</em></span><br>
   </dd>
 
+  <dt class="module-name">rstudio-server</dt>
+  <dd class="module-details">
+    <strong class="module-help">RStudio Server: The RStudio Server</strong><br>
+    <span class="module-description">The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.</span><br>
+    Example: <span class="module-example"><code>rserver</code>.</span><br>
+    URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-server">https://rstudio.com/products/rstudio/#rstudio-server</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a></span><br>
+    Warning: <span class="module-warning">This is work under construction!</span><br>
+  Versions: <span class="module-version"><em>2021.09.2-382</em></span><br>
+  </dd>
+
+  <dt class="module-name">rstudio-server-controller</dt>
+  <dd class="module-details">
+    <strong class="module-help">RSC: An RStudio Server Controller</strong><br>
+    <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
+    Example: <span class="module-example"><code>rsc --help</code> and <code>rsc start --port=random</code>.</span><br>
+    URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a></span><br>
+    Warning: <span class="module-warning">This is work under construction!</span><br>
+  Versions: <span class="module-version"><em>0.3.0</em></span><br>
+  </dd>
+
   <dt class="module-name">salmon</dt>
   <dd class="module-details">
     <strong class="module-help">salmon: Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression</strong><br>
@@ -648,10 +677,11 @@ Please note that this software stacks is maintained and contributed by a researc
   <dt class="module-name">scl-devtoolset</dt>
   <dd class="module-details">
     <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
-    <span class="module-description">Enables the CentOS Software Collection (SCL) <code>devtoolset-10</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-10</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
+    <span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
     Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-    URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-10/">https://www.softwarecollections.org/en/scls/rhscl/devtoolset-10/</a></span><br>
-  Versions: <span class="module-version">4, 6, 7, 8, 9, <em>10</em></span><br>
+    URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/10">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/10</a></span><br>
+    Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
+  Versions: <span class="module-version">4, 7, 8, 9, <em>10</em></span><br>
   </dd>
 
   <dt class="module-name">scl-python (part of CBI-testing)</dt>
@@ -1593,11 +1623,11 @@ Please note that this software stacks is maintained and contributed by a researc
 
 <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(70)</a></li>
+  <li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(73)</a></li>
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-01-22 14:19:38 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-01 13:26:51 from querying `module avail` and `module spider`._
 
 
 <style>

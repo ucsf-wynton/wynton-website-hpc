@@ -179,7 +179,7 @@ if (!is.null(versions$versionName)) {
 
 ## Extract 'Nnnn: ' content from the end.
 if (length(m$description) > 0L) {
-  pattern <- "(.*) (Examples?|Note|Warning): (.*)"
+  pattern <- "(.*)[[:space:]]+(Examples?|Note|Warning):[[:space:]]+(.*)"
   while(grepl(pattern, m$description)) {
     name <- gsub(pattern, "\\2", m$description)
     name <- sub("s$", "", name)
