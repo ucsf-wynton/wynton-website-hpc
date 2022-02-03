@@ -1,0 +1,90 @@
+library(utils)
+library(R.utils)
+library(jsonlite)
+library(commonmark)
+
+options(onMissingPath = "warning")
+
+style <- R.utils::cmdArg(style = FALSE)
+
+trim <- function(x) {
+  if (!is.character(x)) return(x)
+  x <- sub("^[\t\n\f\r ]*", "", x)
+  sub("[\t\n\f\r ]*$", "", x)
+}
+
+as_html <- function(x) {
+  if (!is.character(x)) return(x)
+  x <- commonmark::markdown_html(x, extensions = TRUE)
+  x <- gsub("(^<p>|</p>\n$)", "", x)
+  x
+}
+
+#' @importFrom utils file_test
+module_avail <- local({
+  ## Memoization
+  .cache <- list()
+  
+  function(info, onMissingPath = getOption("onMissingPath", c("error", "warning", "ignore"))) {
+    message("module_avail() ...", appendLF = FALSE)
+    onMissingPath <- match.arg(onMissingPath)
+    
+    stopifnot(is.list(info), "module_path" %in% names(info))
+    module_path <- info$module_path
+    key <- paste(module_path, collapse = ", ")
+    res <- .cache[[key]]
+    if (!is.null(res)) {
+      message("already cached")
+      return(res)
+    }
+
+    message(""); R.utils::mstr(list(info = info))
+    if (all(!nzchar(module_path))) {
+      stop("Specified empty folder(s): ", paste(sQuote(module_path), collapse = ", "))
+    }
+    unknown <- module_path[!utils::file_test("-x", module_path)]
+    if (length(unknown) > 0) {
+      msg <- sprintf("No such folder(s): %s", paste(sQuote(unknown), collapse = ", "))
+      if (onMissingPath == "error") stop(msg)
+      if (onMissingPath == "warning") warning(msg)
+      return(NULL)
+    }
+    lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
+    stopifnot(nzchar(lmod_dir))
+    spider <- file.path(lmod_dir, "spider")
+    message(" - spider binary: ", sQuote(spider))
+    stopifnot(utils::file_test("-x", spider))
+    args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
+    message(" - spider arguments: ", paste(args, collapse = " "))
+    json <- system2(spider, args = args, stdout = TRUE)
+    x <- jsonlite::fromJSON(json)
+    o <- order(x$package)
+    x <- x[o,]
+    keep <- !grepl("^[.]", x$package)
+    x <- x[keep,]
+    message("done")
+
+
+    message("Prune ...")
+    versions <- x$versions
+    versions <- lapply(versions, FUN = function(version) {
+      path <- version$path
+      ## WORKAROUND
+      keep <- lapply(module_path, FUN = function(mpath) grepl(mpath, path, fixed = TRUE))
+      keep <- Reduce(`|`, keep)
+      if (!all(keep)) {
+        version <- version[keep, ]
+        path <- path[keep]
+	version$path <- path
+      }
+      version
+    })
+    ns <- lapply(versions, FUN = nrow)
+    x <- x[ns > 0, ]
+    message("done")
+
+    .cache[[key]] <<- x
+
+    x
+  }
+})
