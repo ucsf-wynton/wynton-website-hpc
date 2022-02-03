@@ -155,7 +155,7 @@ check-usernames:
 	  exit 1
 	fi
 
-check-leftovers:
+check-leftovers-from-C4:
 	@stdout=$(TMPDIR)/stdout
 	rm -f "$$stdout"
 
@@ -167,7 +167,7 @@ check-leftovers:
 	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
-	   pattern="#[ ]*[$$]|/wynton/|NSLOTS|-cwd|SGE|SLURM_NPROCS"
+	   pattern="#[ ]*SBATCH|/c4/|SLURM|SBATCH|sbatch|squeue|sstat|sacct"
 	   if [[ "$$file" =~ envvars.md$$ ]]; then
 	     pattern=$$(echo "$$pattern" | sed 's/|SLURM_NPROCS//')
 	   elif [[ "$$file" =~ (software-repositories).md$$ ]]; then
@@ -223,4 +223,4 @@ markin-shellcheck:
 
 check-markdown: markdownlint markdown-link-check
 
-check: check-here-links check-usernames spell check-markdown check-leftovers 
+check: check-here-links check-usernames spell check-markdown check-leftovers-from-C4
