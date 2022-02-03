@@ -9,6 +9,7 @@ trim <- function(x) {
   sub("[\t\n\f\r ]*$", "", x)
 }
 
+#' @importFrom commonmark markdown_html
 as_html <- function(x) {
   if (!is.character(x)) return(x)
   x <- commonmark::markdown_html(x, extensions = TRUE)
@@ -16,6 +17,9 @@ as_html <- function(x) {
   x
 }
 
+#' @importFrom utils file_test
+#' @importFrom R.utils mstr
+#' @importFrom jsonlite fromJSON
 #' @importFrom utils file_test
 module_avail <- local({
   ## Memoization
