@@ -109,7 +109,7 @@ See also the how-to page on ['Work with R']({{ '/howto/r.html' | relative_url }}
 ### Ruby
 
 ```ruby
-nslots = ENV["SLURM_NPROCS"] || "1"  # env var is always a 'String'
+nslots = ENV["NSLOTS"] || "1"        # env var is always a 'String'
 nslots = nslots.to_i                 # coerce to 'Integer'
 puts "Number of slots available: #{nslots}"
 ```
