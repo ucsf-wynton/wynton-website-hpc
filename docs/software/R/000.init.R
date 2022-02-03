@@ -126,6 +126,9 @@ parse_module <- function(m) {
   ## Parse help
   helps <- unique(versions$help)
   help <- helps[[1]]
+  m$help <- help
+
+  ## Parse versions
   vers <- NULL
   if (!is.null(versions$versionName)) {
     vers <- unique(versions$versionName)

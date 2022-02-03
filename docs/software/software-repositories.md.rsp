@@ -56,27 +56,17 @@ m <- parse_module(modules[ii,])
 %>
   <dt class="module-name"><%= m$package %><% if (length(m$parent) > 0) cat(sprintf(" (part of %s)", m$parent)) %></dt>
   <dd class="module-details">
-  <% if (!is.null(m$help)) { %>
-    <strong class="module-help"><%= as_html(m$help) %></strong><br>
-  <% } %>
-  <% if (!is.null(m$description)) { %>
-    <span class="module-description"><%= as_html(m$description) %></span><br>
-  <% } %>
-  <% if (!is.null(m$example)) { %>
-    Example: <span class="module-example"><%= as_html(m$example) %></span><br>
-  <% } %>
-  <% if (!is.null(m$note)) { %>
-    Note: <span class="module-note"><%= as_html(m$note) %></span><br>
-  <% } %>
-  <% if (!is.null(m$url)) { %>
-    URL: <span class="module-url"><%= as_html(m$url) %></span><br>
-  <% } %>
-  <% if (!is.null(m$maintainer)) { %>
-    Maintainer: <span class="module-maintainer"><%= as_html(m$maintainer) %></span><br>
-  <% } %>
-  <% if (!is.null(m$warning)) { %>
-    Warning: <span class="module-warning"><%= as_html(m$warning) %></span><br>
-  <% } %>
+<%
+  fields <- c("help", "description", Example="example", Note="note", URL="url", Maintainer="maintainer", Warning="warning")
+  fields <- intersect(fields, names(m))
+  for (kk in seq_along(fields)) {
+    label <- names(fields)[kk]
+    field <- fields[kk]
+    if (!is.null(label) && nzchar(label)) cat(sprintf("%s: ", label))
+    class <- if (field == "help") "strong" else "span"
+    cat(sprintf('<%s class="module-%s">%s</%s><br>\n', class, field, as_html(m[[field]]), class))
+  }
+%>
   <% if (length(m$vers) > 0) { %>
     Versions: <span class="module-version"><%= paste(m$vers, collapse = ", ") %></span><br>
   <% } %>
