@@ -57,22 +57,19 @@ m <- parse_module(modules[ii,])
   <dt class="module-name"><%= m$package %><% if (length(m$parent) > 0) cat(sprintf(" (part of %s)", m$parent)) %></dt>
   <dd class="module-details">
 <%
-  fields <- c("help", "description", Example="example", Note="note", URL="url", Maintainer="maintainer", Warning="warning")
+  fields <- c("help", "description", Example="example", Note="note", URL="url", Maintainer="maintainer", Warning="warning", Versions="version")
   fields <- fields[fields %in% names(m)]
   for (kk in seq_along(fields)) {
     label <- names(fields)[kk]
     field <- fields[kk]
-#    R.utils::cstr(list(kk = kk, label = label, field = field, fields = fields))
     if (!is.null(label) && nzchar(label)) cat(sprintf("%s: ", label))
     class <- if (field == "help") "strong" else "span"
-    cat(sprintf('<%s class="module-%s">%s</%s><br>\n', class, field, as_html(m[[field]]), class))
+    value <- m[[field]]
+    if (length(value) > 0) value <- paste(value, collapse = ", ")
+    cat(sprintf('<%s class="module-%s">%s</%s><br>\n', class, field, as_html(value), class))
   }
 %>
-  <% if (length(m$vers) > 0) { %>
-    Versions: <span class="module-version"><%= paste(m$vers, collapse = ", ") %></span><br>
-  <% } %>
   <% if (length(m$parent) > 0) { %>
-  <% R.utils::mstr(m) %>
     Note: <em>To use this module, call <code>module load <%= attr(modules, "repository") %> <%= m$parent %></code> first.</em>
   <% } %>
   </dd>

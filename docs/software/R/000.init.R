@@ -142,8 +142,8 @@ parse_module <- function(m) {
       vers <- NULL
     }
   }
-  m$vers <- vers
-  
+  m$version <- vers
+
   ## Extract 'Nnnn: ' content from the end.
   if (length(m$description) > 0L) {
     pattern <- "(.*)[[:space:]]+(Examples?|Note|Warning|Maintainer):[[:space:]]+(.*)"
