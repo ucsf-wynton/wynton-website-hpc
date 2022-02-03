@@ -132,12 +132,6 @@ if (length(m$description) > 0L) {
 </dl>
 <% } ## table_of_modules() %>
 
-<%---
-<div class="alert alert-warning" role="alert">
-<strong>This page is under construction: For currently available software modules, use `module avail`.</strong>
-</div>
----%>
-
 
 # Software Repositories
 
