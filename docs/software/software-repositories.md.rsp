@@ -7,6 +7,21 @@ WARNING: Do _not_ update this file; it is automatically generated from software-
 source("R/000.init.R")
 source("R/001.config.R")
 
+options(onMissingPath = "warning")
+
+modules_sets <- lapply(names(module_repositories), FUN = function(name) {
+  info <- module_repositories[[name]]
+  modules <- module_avail(info)
+  attr(modules, "repository") <- name
+  modules
+})
+names(modules_sets) <- names(module_repositories)
+
+## Drop empty sets
+modules_sets <- modules_sets[lengths(modules_sets) > 0]
+
+style <- R.utils::cmdArg(style = FALSE)
+
 %>
 <% if (style) { %>
 <style type="text/css">
@@ -174,17 +189,14 @@ module load CBI r bwa bowtie2/2.4.2
 ```
 
 
-Below are <%= length(module_repositories) %> software repositories, each providing a set of software tools.
+Below are <%= length(modules_sets) %> software repositories, each providing a set of software tools.
 
 <% repos_buttons <- function() { %>
 <ul class="nav nav-pills">
-<% for (kk in seq_along(module_repositories)) { %>
+<% for (kk in seq_along(modules_sets)) { %>
 <%
-  name <- names(module_repositories)[kk]
-  info <- module_repositories[[name]]
-  modules <- module_avail(info)
-  ## No modules?
-  if (is.null(modules)) next
+  name <- names(modules_sets)[kk]
+  modules <- modules_sets[[name]]
   nbr_of_modules <- nrow(modules)
 %>
   <li<%= if (kk == 1) ' class="active"' %>><a data-toggle="pill" href="#queues-<%= name %>"><span style="font-weight: bold;"><%= name %></span>&nbsp;(<%= nbr_of_modules %>)</a></li>
@@ -195,15 +207,12 @@ Below are <%= length(module_repositories) %> software repositories, each providi
 <% repos_buttons() %>
 
 <div class="tab-content" style="margin-top: 1ex;">
-<%for (kk in seq_along(module_repositories)) { %>
+<%for (kk in seq_along(modules_sets)) { %>
 <%
-  name <- names(module_repositories)[kk]
-  info <- module_repositories[[name]]
-  modules <- module_avail(info)
-  ## No modules?
-  if (is.null(modules)) next
+  name <- names(modules_sets)[kk]
+  modules <- modules_sets[[name]]
   nbr_of_modules <- nrow(modules)
-  attr(modules, "repository") <- name
+  info <- attr(modules, "info")
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 

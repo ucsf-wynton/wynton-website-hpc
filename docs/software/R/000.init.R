@@ -3,10 +3,6 @@ library(R.utils)
 library(jsonlite)
 library(commonmark)
 
-options(onMissingPath = "warning")
-
-style <- R.utils::cmdArg(style = FALSE)
-
 trim <- function(x) {
   if (!is.character(x)) return(x)
   x <- sub("^[\t\n\f\r ]*", "", x)
@@ -81,6 +77,7 @@ module_avail <- local({
     })
     ns <- lapply(versions, FUN = nrow)
     x <- x[ns > 0, ]
+    attr(x, "info") <- info
     message("done")
 
     .cache[[key]] <<- x
