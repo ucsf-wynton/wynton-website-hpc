@@ -93,7 +93,7 @@ Now we can configure the build to install to this folder:
 
 ```sh
 [alice@{{ site.devel.name }} samtools-1.14]$ ./configure --prefix=$HOME/software/samtools-1.14
-configure: running /bin/sh ./configure --disable-option-checking '--prefix=/c4/home/alice/software/samtools-1.14'  --cache-file=/dev/null --srcdir=.
+configure: running /bin/sh ./configure --disable-option-checking '--prefix={{ site.user.home }}/software/samtools-1.14'  --cache-file=/dev/null --srcdir=.
 checking for gcc... gcc
 checking whether the C compiler works... yes
 checking for C compiler default output file name... a.out
@@ -194,11 +194,11 @@ If we got this far, all we have to do is to install the software we just configu
 
 ```sh
 [alice@{{ site.devel.name }} samtools-1.14]$ make install
-mkdir -p -m 755 /c4/home/alice/software/samtools-1.14/bin /c4/home/alice/software/samtools-1.14/bin /c4/home/alice/software/samtools-1.14/share/man/man1
-install -p samtools /c4/home/alice/software/samtools-1.14/bin
-install -p misc/ace2sam misc/maq2sam-long misc/maq2sam-short misc/md5fa misc/md5sum-lite misc/wgsim /c4/home/alice/software/samtools-1.14/bin
-install -p misc/blast2sam.pl misc/bowtie2sam.pl misc/export2sam.pl misc/fasta-sanitize.pl misc/interpolate_sam.pl misc/novo2sam.pl misc/plot-ampliconstats misc/plot-bamstats misc/psl2sam.pl misc/sam2vcf.pl misc/samtools.pl misc/seq_cache_populate.pl misc/soap2sam.pl misc/wgsim_eval.pl misc/zoom2sam.pl /c4/home/alice/software/samtools-1.14/bin
-install -p -m 644 doc/samtools*.1 misc/wgsim.1 /c4/home/alice/software/samtools-1.14/share/man/man1
+mkdir -p -m 755 {{ site.user.home }}/software/samtools-1.14/bin {{ site.user.home }}/software/samtools-1.14/bin {{ site.user.home }}/software/samtools-1.14/share/man/man1
+install -p samtools {{ site.user.home }}/software/samtools-1.14/bin
+install -p misc/ace2sam misc/maq2sam-long misc/maq2sam-short misc/md5fa misc/md5sum-lite misc/wgsim {{ site.user.home }}/software/samtools-1.14/bin
+install -p misc/blast2sam.pl misc/bowtie2sam.pl misc/export2sam.pl misc/fasta-sanitize.pl misc/interpolate_sam.pl misc/novo2sam.pl misc/plot-ampliconstats misc/plot-bamstats misc/psl2sam.pl misc/sam2vcf.pl misc/samtools.pl misc/seq_cache_populate.pl misc/soap2sam.pl misc/wgsim_eval.pl misc/zoom2sam.pl {{ site.user.home }}/software/samtools-1.14/bin
+install -p -m 644 doc/samtools*.1 misc/wgsim.1 {{ site.user.home }}/software/samtools-1.14/share/man/man1
 [alice@{{ site.devel.name }} samtools-1.14]$ 
 ```
 
