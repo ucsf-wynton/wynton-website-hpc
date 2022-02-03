@@ -175,15 +175,15 @@ ID="centos"
 
 ### Access other cluster folders than your home folder
 
-When running a container, only a few of the folders available "outside" are available "inside" the container.  By default, you have access to the current working directory (= `$PWD`) and your home folder (= `$HOME`).   In contrast, without further specifications, you will not have access to standard folders such as local `/scratch` and global `/c4/scratch`.  Similarly, lab folders such as `{{ site.user.labfolder }}` are not available from inside the container.
+When running a container, only a few of the folders available "outside" are available "inside" the container.  By default, you have access to the current working directory (= `$PWD`) and your home folder (= `$HOME`).   In contrast, without further specifications, you will not have access to standard folders such as local `/scratch` and global `{{ site.path.global_scratch }}`.  Similarly, lab folders such as `{{ site.user.labfolder }}` are not available from inside the container.
 
 <!-- code-block label="shell-nobind" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ singularity shell rocker_r-base.sif
 Singularity> ls /scratch
 ls: cannot access '/scratch': No such file or directory
-Singularity> ls /c4/scratch
-ls: cannot access '/c4/scratch': No such file or directory
+Singularity> ls {{ site.path.global_scratch }}
+ls: cannot access '{{ site.path.global_scratch }}': No such file or directory
 Singularity> ls {{ site.user.labfolder }}
 ls: cannot access '{{ site.user.labfolder }}': No such file or directory
 Singularity> echo $TMPDIR
@@ -196,10 +196,10 @@ To make also these folders available within the container, we can use `singulari
 
 <!-- code-block label="shell-bind" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,/c4/scratch,{{ site.user.labfolder }} rocker_r-base.sif
+[alice@{{ site.devel.name }} lxc]$ singularity shell --bind /scratch,{{ site.path.global_scratch }},{{ site.user.labfolder }} rocker_r-base.sif
 Singularity> ls /scratch
 alice
-Singularity> ls /c4/scratch
+Singularity> ls {{ site.path.global_scratch }}
 alice
 Singularity> ls {{ site.user.labfolder }}
 data1  data2

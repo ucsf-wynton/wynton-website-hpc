@@ -20,6 +20,9 @@ cluster:
   email_compute: compute@wynton.ucsf.edu
   status: ok
 
+path:
+  global_scratch: /wynton/scratch
+  
 software:
   cbi_root: /wynton/home/cbi/shared/software
   
