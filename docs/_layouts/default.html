@@ -238,7 +238,12 @@
 {% endif %}
 {% endunless %}
         
-      {{ content }}
+{% comment %}
+An alternative to {{ content }} that injects anchor links
+The styling (e.g. appear on hover) is done in CSS
+Source: https://github.com/allejo/jekyll-anchor-headings
+{% endcomment %}
+{% include anchor_headings.html html=content anchorBody="#" anchorClass="anchor-heading" %}
 
       </section>
       <footer>

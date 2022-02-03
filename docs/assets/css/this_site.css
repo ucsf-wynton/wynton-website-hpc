@@ -147,6 +147,35 @@ h2, h3, h4, h5, h6 {
     scroll-margin-top: 116px;
 }
 
+/* https://github.com/allejo/jekyll-anchor-headings */
+.anchor-heading {
+    visibility: hidden;
+}
+
+h1:hover .anchor-heading {
+    visibility: visible;
+}
+
+h2:hover .anchor-heading {
+    visibility: visible;
+}
+
+h3:hover .anchor-heading {
+    visibility: visible;
+}
+
+h4:hover .anchor-heading {
+    visibility: visible;
+}
+
+h5:hover .anchor-heading {
+    visibility: visible;
+}
+
+h6:hover .anchor-heading {
+    visibility: visible;
+}
+
 a:hover, a:focus {
   font-weight: normal;
 }
