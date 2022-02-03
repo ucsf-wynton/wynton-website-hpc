@@ -111,7 +111,7 @@ Versions: <span class="module-version">openmpi-x86_64, <em>openmpi3-x86_64</em><
 <span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.</span><br>
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
 URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a></span><br>
-Versions: <span class="module-version">1.8.0.282.b08-1, <em>11.0.10.0.9-0</em></span><br>
+Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
   </dd>
 
   <dt class="module-name">Sali</dt>
@@ -1618,7 +1618,7 @@ Versions: <span class="module-version"><em>3.0.2</em></span><br>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-03 02:37:34 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-03 11:32:00 from querying `module avail` and `module spider`._
 
 
 <style>
