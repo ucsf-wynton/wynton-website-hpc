@@ -1,3 +1,5 @@
+SHELL=bash
+
 PAGE=software-repositories
 
 all: $(PAGE).md
