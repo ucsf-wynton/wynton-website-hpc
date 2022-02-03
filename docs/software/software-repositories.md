@@ -78,7 +78,6 @@ Enable repository: <em>this software repository is always enabled</em><br>
     Example: <span class="module-example"><code>module load CBI</code> and then <code>module avail</code>.</span><br>
     URL: <span class="module-url"><a href="https://cbi.ucsf.edu/">https://cbi.ucsf.edu/</a></span><br>
     Maintainer: <span class="module-maintainer">Henrik Bengtsson, CBI</span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">cuda</dt>
@@ -118,7 +117,6 @@ Enable repository: <em>this software repository is always enabled</em><br>
   <dt class="module-name">Sali</dt>
   <dd class="module-details">
     <strong class="module-help">Sali lab software repository</strong><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
 </dl>
@@ -270,7 +268,6 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!</strong><br>
     <span class="module-description">This repository provides prototypical environment modules that can change at any time. They will live in this CBI-testing repository until they have proven to work and be stable - only then they will be considered for the main CBI repository.  WARNING: Use at your own risk.</span><br>
     URL: <span class="module-url"><a href="http://cbi.ucsf.edu/">http://cbi.ucsf.edu/</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">cellranger</dt>
@@ -839,7 +836,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">AllosMod utility library</span><br>
     URL: <span class="module-url"><a href="https://github.com/salilab/allosmod-lib/">https://github.com/salilab/allosmod-lib/</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">amber</dt>
@@ -853,7 +849,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">Anaconda Python distribution</span><br>
     URL: <span class="module-url"><a href="https://www.anaconda.com/">https://www.anaconda.com/</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">blast</dt>
@@ -902,7 +897,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">CryptoSite utility library</span><br>
     URL: <span class="module-url"><a href="https://github.com/salilab/cryptosite/">https://github.com/salilab/cryptosite/</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">cuda</dt>
@@ -1018,7 +1012,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">Integrative T-cell epitope prediction</span><br>
     URL: <span class="module-url"><a href="https://github.com/salilab/itcell-lib">https://github.com/salilab/itcell-lib</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">libtau</dt>
@@ -1046,7 +1039,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">MiST - Mass spectrometry interaction STatistics</span><br>
     URL: <span class="module-url"><a href="https://github.com/salilab/mist/">https://github.com/salilab/mist/</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">modeller</dt>
@@ -1102,7 +1094,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">Peptide Classification using Sequence and Structure</span><br>
     URL: <span class="module-url"><a href="https://github.com/salilab/pcss">https://github.com/salilab/pcss</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">phenix</dt>
@@ -1572,7 +1563,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dt class="module-name">sali-libraries</dt>
   <dd class="module-details">
     <span class="module-description">Makes available libraries usually only present on the Sali interactive nodes</span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">scwrl</dt>
@@ -1607,7 +1597,6 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
     <span class="module-description">Command line interface (web_service.py) to most lab web services</span><br>
     URL: <span class="module-url"><a href="https://github.com/salilab/saliweb">https://github.com/salilab/saliweb</a></span><br>
-  Versions: <span class="module-version"></span><br>
   </dd>
 
   <dt class="module-name">zdock</dt>
@@ -1629,7 +1618,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-02 18:02:32 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-02 18:03:44 from querying `module avail` and `module spider`._
 
 
 <style>
