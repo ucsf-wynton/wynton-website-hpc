@@ -65,7 +65,11 @@ m <- parse_module(modules[ii,])
     if (!is.null(label) && nzchar(label)) cat(sprintf("%s: ", label))
     class <- if (field == "help") "strong" else "span"
     value <- m[[field]]
-    if (length(value) > 0) value <- paste(value, collapse = ", ")
+    if (field == "version") {
+      idx <- which(names(value) == "default")
+      if (length(idx) > 0) value[idx] <- sprintf("<em>%s</em>", value[idx])
+      value <- paste(value, collapse = ", ")
+    }
     cat(sprintf('<%s class="module-%s">%s</%s><br>\n', class, field, as_html(value), class))
   }
 %>

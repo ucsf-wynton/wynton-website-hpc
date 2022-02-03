@@ -132,11 +132,12 @@ parse_module <- function(m) {
   vers <- NULL
   if (!is.null(versions$versionName)) {
     vers <- unique(versions$versionName)
+    names(vers) <- rep("", times = length(vers))
     if (length(vers) > 1L || vers != "default") {
       idx <- match(m$defaultVersionName, table = vers)
       if (length(idx) == 1) {
         ## FIXME: spider seems to set 'defaultVersionName' randomly /HB 2017-06-30
-        vers[idx] <- sprintf("<em>%s</em>", vers[idx])
+        names(vers)[idx] <- "default"
       }
     } else {
       vers <- NULL
