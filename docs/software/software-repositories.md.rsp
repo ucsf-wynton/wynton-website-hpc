@@ -58,10 +58,11 @@ m <- parse_module(modules[ii,])
   <dd class="module-details">
 <%
   fields <- c("help", "description", Example="example", Note="note", URL="url", Maintainer="maintainer", Warning="warning")
-  fields <- intersect(fields, names(m))
+  fields <- fields[fields %in% names(m)]
   for (kk in seq_along(fields)) {
     label <- names(fields)[kk]
     field <- fields[kk]
+#    R.utils::cstr(list(kk = kk, label = label, field = field, fields = fields))
     if (!is.null(label) && nzchar(label)) cat(sprintf("%s: ", label))
     class <- if (field == "help") "strong" else "span"
     cat(sprintf('<%s class="module-%s">%s</%s><br>\n', class, field, as_html(m[[field]]), class))
