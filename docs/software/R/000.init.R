@@ -2,6 +2,7 @@ library(utils)
 library(R.utils)
 library(jsonlite)
 library(commonmark)
+library(gtools)
 
 trim <- function(x) {
   if (!is.character(x)) return(x)
@@ -134,9 +135,12 @@ parse_module <- function(m) {
     vers <- unique(versions$versionName)
     names(vers) <- rep("", times = length(vers))
     if (length(vers) > 1L || vers != "default") {
+      ## Sort versions
+      vers <- gtools::mixedsort(vers)
       idx <- match(m$defaultVersionName, table = vers)
       if (length(idx) == 1) {
         ## FIXME: spider seems to set 'defaultVersionName' randomly /HB 2017-06-30
+        ## Yup, this is still a problem with Lmod 6.6 /HB 2022-02-03
         names(vers)[idx] <- "default"
       }
     } else {
