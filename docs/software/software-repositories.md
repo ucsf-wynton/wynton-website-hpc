@@ -77,6 +77,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
     <span class="module-description">Repository of modules shared by UCSF Computational Biology and Informatics. When loading this module, you will get access to a large number of software modules.  When unloading the module, any software modules from this CBI software repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.</span><br>
     Example: <span class="module-example"><code>module load CBI</code> and then <code>module avail</code>.</span><br>
     URL: <span class="module-url"><a href="https://cbi.ucsf.edu/">https://cbi.ucsf.edu/</a></span><br>
+    Maintainer: <span class="module-maintainer">Henrik Bengtsson, CBI</span><br>
   Versions: <span class="module-version"></span><br>
   </dd>
 
@@ -1628,7 +1629,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-02 17:55:29 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-02 18:02:32 from querying `module avail` and `module spider`._
 
 
 <style>
