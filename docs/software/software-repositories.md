@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="queues-built-in" class="tab-pane fadein active">
 
-<h2>Module Software Repository: built-in (9)</h2>
+<h2 id="module-software-repository-built-in">Module Software Repository: built-in (9)</h2>
 
 Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
@@ -111,7 +111,7 @@ Versions: <span class="module-version">openmpi-x86_64, <em>openmpi3-x86_64</em><
 <span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.</span><br>
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
 URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a></span><br>
-Versions: <span class="module-version">1.8.0.282.b08-1, <em>11.0.10.0.9-0</em></span><br>
+Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
   </dd>
 
   <dt class="module-name">Sali</dt>
@@ -124,7 +124,7 @@ Versions: <span class="module-version">1.8.0.282.b08-1, <em>11.0.10.0.9-0</em></
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2>Module Software Repository: CBI (73)</h2>
+<h2 id="module-software-repository-cbi">Module Software Repository: CBI (73)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -822,7 +822,7 @@ Versions: <span class="module-version"><em>latest</em></span><br>
 
 <div id="queues-Sali" class="tab-pane fade">
 
-<h2>Module Software Repository: Sali (120)</h2>
+<h2 id="module-software-repository-sali">Module Software Repository: Sali (120)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -1618,7 +1618,7 @@ Versions: <span class="module-version"><em>3.0.2</em></span><br>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-03 02:37:34 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-03 11:52:58 from querying `module avail` and `module spider`._
 
 
 <style>

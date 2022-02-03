@@ -139,7 +139,11 @@ Below are <%= length(modules_sets) %> software repositories, each providing a se
 %>
 <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
-<h2>Module Software Repository: <%= name %> (<%= nbr_of_modules %>)</h2>
+<%
+link_text <- sprintf("Module Software Repository: %s", name)
+header_id <- gsub("[^[:alnum:]]+", "-", tolower(link_text))
+%>
+<h2 id="<%= header_id %>"><%= link_text %> (<%= nbr_of_modules %>)</h2>
 
 Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
 <% if (!info$contributed) { %>
