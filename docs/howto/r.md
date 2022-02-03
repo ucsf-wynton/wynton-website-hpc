@@ -74,7 +74,7 @@ Before continuing, it is useful to understand where R packages looks for locally
 
 2. (optional) A site-wide R package library (not used on {{ site.cluster.name }})
 
-3. The system-wide R package library part of the R installed, e.g. `/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/library`
+3. The system-wide R package library part of the R installed, e.g. `{{ site.software.cbi_root }}/R-4.1.2-gcc8/lib64/R/library`
 
 
 
@@ -105,7 +105,7 @@ Now, in order to install, for instance, the **[zoo]** package available on CRAN,
 ```r
 > install.packages("zoo")
 Warning in install.packages("zoo") :
-  'lib = "/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/library"' is not writable
+  'lib = "{{ site.software.cbi_root }}/R-4.1.2-gcc8/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
 ```
 
@@ -134,10 +134,10 @@ downloaded 775 KB
 ** package 'zoo' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/lib -lR
+gcc -I"{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -I"{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -shared -L{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/lib -lR
 installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
@@ -244,10 +244,10 @@ downloaded 1.5 MB
 * installing *source* package 'limma' ...
 ** using staged installation
 ** libs
-gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L/c4/home/alice/software/R-devel/R-4-1-branch/lib/R/lib -lR
+gcc -I"{{ site.software.cbi_root }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.software.cbi_root }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"{{ site.software.cbi_root }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L{{ site.software.cbi_root }}/CBI/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.software.cbi_root }}/CBI/R-4.1.2-gcc8/lib64/R/lib -lR
 installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
@@ -401,14 +401,13 @@ downloaded 103 KB
 configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
-gcc -I"/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.software.cbi_root }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
-gcc -I"/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.software.cbi_root }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
-gcc -I"/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.software.cbi_root }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L/software/c4/cbi/software/R-4.
-1.2-gcc8/lib64/R/lib -lR
+gcc -shared -L{{ site.software.cbi_root }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.software.cbi_root }}/R-4.1.2-gcc8/lib64/R/lib -lR
 installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo

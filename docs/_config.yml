@@ -19,6 +19,9 @@ cluster:
   email_storage: storage@wynton.ucsf.edu
   email_compute: compute@wynton.ucsf.edu
   status: ok
+
+software:
+  cbi_root: /wynton/home/cbi/shared/software
   
 login:
   name: "log1"
