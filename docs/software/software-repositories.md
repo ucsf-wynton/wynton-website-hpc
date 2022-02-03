@@ -73,9 +73,10 @@ Enable repository: <em>this software repository is always enabled</em><br>
 
   <dt class="module-name">CBI</dt>
   <dd class="module-details">
-    <strong class="module-help">The Computational Biology and Informatics (CBI) Software Repository</strong><br>
-    <span class="module-description">Repository of software shared by the Computational Biology and Informatics (<a href="http://cbi.ucsf.edu">http://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.</span><br>
-    URL: <span class="module-url"><a href="http://cbi.ucsf.edu/">http://cbi.ucsf.edu/</a></span><br>
+    <strong class="module-help">Module Repository by Computational Biology and Informatics (CBI)</strong><br>
+    <span class="module-description">Repository of modules shared by Computational Biology and Informatics (<a href="http://cbi.ucsf.edu/">http://cbi.ucsf.edu/</a>). When loading this module, you will get access to a large number of software modules.  When unloading the module, any software modules from this CBI repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.</span><br>
+    Example: <span class="module-example"><code>module load CBI</code> and then <code>module avail</code>.</span><br>
+    URL: <span class="module-url"><a href="https://cbi.ucsf.edu/">https://cbi.ucsf.edu/</a></span><br>
   Versions: <span class="module-version"></span><br>
   </dd>
 
@@ -738,8 +739,8 @@ Please note that this software stacks is maintained and contributed by a researc
     <strong class="module-help">STAR: Spliced Transcripts Alignment to a Reference</strong><br>
     <span class="module-description">STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.</span><br>
     Example: <span class="module-example"><code>STAR --help</code>.</span><br>
-    URL: <span class="module-url"><a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a></span><br>
-  Versions: <span class="module-version">2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, 2.7.5c, 2.7.7a, <em>2.7.9a</em></span><br>
+    URL: <span class="module-url"><a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a>, <a href="https://github.com/alexdobin/STAR/blob/master/CHANGES.md">https://github.com/alexdobin/STAR/blob/master/CHANGES.md</a> (changelog)</span><br>
+  Versions: <span class="module-version">2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, 2.7.5c, 2.7.7a, 2.7.9a, <em>2.7.10a</em></span><br>
   </dd>
 
   <dt class="module-name">tmux</dt>
@@ -1627,7 +1628,7 @@ Please note that this software stacks is maintained and contributed by a researc
   <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-01 13:26:51 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-02 16:30:59 from querying `module avail` and `module spider`._
 
 
 <style>
