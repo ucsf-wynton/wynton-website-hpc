@@ -22,9 +22,7 @@ cluster:
 
 path:
   global_scratch: /wynton/scratch
-  
-software:
-  cbi_root: /wynton/home/cbi/shared/software
+  cbi_software: /wynton/home/cbi/shared/software
   
 login:
   name: "log1"
