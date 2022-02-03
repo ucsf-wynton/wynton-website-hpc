@@ -12,7 +12,7 @@ options(onMissingPath = "warning")
 modules_sets <- lapply(names(module_repositories), FUN = function(name) {
   info <- module_repositories[[name]]
   modules <- module_avail(info)
-  attr(modules, "repository") <- name
+  if (!is.null(modules)) attr(modules, "repository") <- name
   modules
 })
 names(modules_sets) <- names(module_repositories)
@@ -191,7 +191,7 @@ module load CBI r bwa bowtie2/2.4.2
 
 Below are <%= length(modules_sets) %> software repositories, each providing a set of software tools.
 
-<% repos_buttons <- function() { %>
+<% repos_buttons <- function(modules_sets) { %>
 <ul class="nav nav-pills">
 <% for (kk in seq_along(modules_sets)) { %>
 <%
@@ -204,7 +204,7 @@ Below are <%= length(modules_sets) %> software repositories, each providing a se
 </ul>
 <% } %>
 
-<% repos_buttons() %>
+<% repos_buttons(modules_sets) %>
 
 <div class="tab-content" style="margin-top: 1ex;">
 <%for (kk in seq_along(modules_sets)) { %>
@@ -236,7 +236,7 @@ Please note that this software stacks is maintained and contributed by a researc
 
 </div> <%-- <div class="tab-content" style="margin-top: 1ex;"> --%>
 
-<% repos_buttons() %>
+<% repos_buttons(modules_sets) %>
 
 _The above information was automatically generated on <%= Sys.time() %> from querying `module avail` and `module spider`._
 
