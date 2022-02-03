@@ -482,11 +482,15 @@ The downloaded source packages are in
 ```
 
 
+
 ### Packages requiring more modern GCC compilers
 
-CentOS 7 comes with a rather old version of GCC, specifically gcc v4.8.5 (2015-06-23).  Because of this, the `r` CBI modules will automatically load a modern version (`scl-devtoolset/8`), which provides gcc 8.3.1 (2019-03-11). That version support the C++14 standard and most of the C++17 standard.  Because of this, almost all CRAN and Bioconductor packages will install out of the box, when using R from the CBI software repository.
+CentOS 7 comes with a rather old version of GCC, specifically gcc v4.8.5 (2015-06-23).  Because of this, the `r` CBI modules will automatically load a modern version (`scl-devtoolset/8`), which provides gcc 8.3.1 (2019-03-11). That version support the C++14 standard and most of the C++17 standard.  Because of this, almost all CRAN and Bioconductor packages will install out of the box, when using R from the CBI software repository.  However, there are few CRAN packages that requires an even newer version of GCC.
 
-However, there are few CRAN packages that requires an even newer version of GCC.  The **[tiledb]** package is one of them.  If we try to install it, we will get a rather obscure error message;
+
+#### The **tiledb** package
+
+The **[tiledb]** package require a newer GCC version that 8.3.1.  If we try to install it, we will get a rather obscure error message;
 
 ```r
 > install.packages("tiledb")
@@ -571,6 +575,65 @@ Note, it is only when you install this R package that you need `scl-devtoolset`.
 _Comment_: Starting with R 4.2.0 (April 2022), the `r` module will load a `scl-devtoolset/9`, or newer.
 
 
+### Packages requiring a modern CMake
+
+CentOS 7 comes with a very old version of CMake; `cmake --version` reports 2.8.12.2 (2014-01-28).  There is also `cmake3`, which is of version 3.17.5 (2020-09-15).  Unfortunately, naming the CMake v3 executable `cmake3` is a RedHat convention that few software tools are configured to search during installation. Because of this, they end up using the much older CMake v2 executable.
+In R, only some packages that require CMake, and even fewer requires CMake v3. When there is a need for CMake v3, we can use `module load CBI cmake` to load a modern version of CMake.
+
+
+#### The **nloptr** package
+
+The **[nloptr]** package [requires CMake 3.15.0 or newer since **nloptr** 2.0.0](https://github.com/astamm/nloptr/issues/100#issuecomment-1023624456).  If we try to install it with the default `cmake`, we get several errors:
+
+```r
+> install.packages("nloptr")
+...
+using NLopt via local cmake build on x86_64 
+set CMAKE_BIN=/usr/bin/cmake
+set CC=gcc
+set CFLAGS=-I/usr/local/include -fpic -g -O2
+set CXX=g++
+set CXXFLAGS=-std=gnu++11 -I/usr/local/include -fpic -g -O2
+set LDFLAGS=-L/usr/local/lib64
+CMake Error: The source directory "/tmp/Rtmp95zAsb/R.INSTALL4ecfdb12c49/nloptr/src/nlopt-build" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+Unknown argument -j
+Unknown argument 2
+Usage: cmake --build <dir> [options] [-- [native-options]]
+Options:
+  <dir>          = Project binary directory to be built.
+  --target <tgt> = Build <tgt> instead of default targets.
+  --config <cfg> = For multi-configuration tools, choose <cfg>.
+  --clean-first  = Build target 'clean' first, then build.
+                   (To clean only, use --target 'clean'.)
+  --use-stderr   = Don't merge stdout/stderr output and pass the
+                   original stdout/stderr handles to the native
+                   tool so it can use the capabilities of the
+                   calling terminal (e.g. colored output).
+  --             = Pass remaining options to the native tool.
+CMake Error: The source directory "/tmp/Rtmp95zAsb/R.INSTALL4ecfdb12c49/nloptr/src/nlopt" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+cp: cannot stat 'nlopt/include/*': No such file or directory
+...
+opt
+collect2: error: ld returned 1 exit status
+make: *** [/wynton/home/alice/shared/software/CBI/R-4.1.2-gcc8/lib64/R/share/make/shlib.mk:10: nloptr.so] Error 1
+ERROR: compilation failed for package ‘nloptr’
+* removing ‘/wynton/home/bengtsson/hb-test/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8/nloptr’
+```
+
+The solution is to load CMake v3 before launching R, as:
+
+```sh
+[hb-test@dev2 ~]$ module load CBI cmake
+[hb-test@dev2 ~]$ cmake --version
+cmake version 3.22.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+```
+
+After this, **nloptr** installs out of the box.  There is _no_ need to load the `cmake` module when using the **nloptr** package.
+
 
 
 [CRAN]: https://cran.r-project.org/
@@ -584,6 +647,7 @@ _Comment_: Starting with R 4.2.0 (April 2022), the `r` module will load a `scl-d
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [sf]: https://cran.r-project.org/package=sf
 [tiledb]: https://cran.r-project.org/package=tiledb
+[nloptr]: https://cran.r-project.org/package=nloptr
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: http://bioconductor.org/packages/limma/
 [CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}

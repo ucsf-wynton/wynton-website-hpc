@@ -388,3 +388,6 @@ gdal
 GDAL
 pdbMPI
 tiledb
+CMake
+nloptr
+RedHat
