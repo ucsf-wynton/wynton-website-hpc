@@ -577,7 +577,7 @@ _Comment_: Starting with R 4.2.0 (April 2022), the `r` module will load a `scl-d
 ### Packages requiring a modern CMake
 
 CentOS 7 comes with a very old version of CMake; `cmake --version` reports 2.8.12.2 (2014-01-28).  There is also `cmake3`, which is of version 3.17.5 (2020-09-15).  Unfortunately, naming the CMake v3 executable `cmake3` is a RedHat convention that few software tools are configured to search during installation. Because of this, they end up using the much older CMake v2 executable.
-In R, only some packages that require CMake, and even fewer requires CMake v3. When there is a need for CMake v3, we can use `module load CBI cmake` to load a modern version of CMake.
+In R, only some packages require CMake, and even fewer requires CMake v3. When there is a need for CMake v3, we can use `module load CBI cmake` to load a modern version of CMake.
 
 
 #### The **nloptr** package
