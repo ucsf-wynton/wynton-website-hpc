@@ -1,7 +1,3 @@
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-2019-11-13: <code>python3</code> is now available as core software on all development and compute nodes.  Because of this, below Python SCLs are deprecated and eventually removed.
-</div>
-
 # CentOS Software Collections (SCL)
 
 > [Software Collections (SCL)](https://en.wikipedia.org/wiki/CentOS#Add-ons_releases) is a CentOS repository that provides a set of dynamic programming languages, database servers, and various related packages. Provided software versions are [...] more recent than their equivalent versions included in the base CentOS distribution [...]  Packages available from the SCL [...] can be optionally enabled per application by using supplied `scl` utility.
@@ -82,28 +78,56 @@ To "unload" an SCLs, just return to the previous shell by exiting new SCL-enable
 ```
 
 
-## Developer Toolsets
+## Version details on the different SCLs
 
-The `devtoolset` SCLs each include a specific version of the GNU Compiler Collection (GCC), which provides the `gcc` compiler among other tools.  Here are the `gcc` versions provided by each SCL:
+### Developer Toolset SCLs
+
+The `devtoolset-NN` SCLs each include a specific version of the GNU Compiler Collection (GCC), which provides the `gcc` compiler among other tools.  Here are the `gcc` versions provided by these SCLs:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl enable devtoolset-7 "gcc --version | head -1"
 gcc (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
-```
 
-```sh
 [alice@{{ site.devel.name }} ~]$ scl enable devtoolset-8 "gcc --version | head -1"
 gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
-```
 
-```sh
 [alice@{{ site.devel.name }} ~]$ scl enable devtoolset-9 "gcc --version | head -1"
 gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)
-```
 
-```sh
 [alice@{{ site.devel.name }} ~]$ scl enable devtoolset-10 "gcc --version | head -1"
 gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)
+```
+
+
+### Python SCLs
+
+The `rh-pythonNN` SCLs each include a specific version of Python.  Here are the `ptyhon` versions provided by these SCLs:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ scl enable rh-python36 "python --version"
+Python 3.6.12
+
+[alice@{{ site.devel.name }} ~]$ scl enable rh-python38 "python --version"
+Python 3.8.11
+```
+
+
+### Ruby SCLs
+
+The `rh-rubyNN` SCLs each include a specific version of Ruby.  Here are the `irb` versions provided by these SCLs:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby25 "irb --version"
+irb 0.9.6(09/06/30)
+
+[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby26 "irb --version"
+irb 1.0.0 (2018-12-18)
+
+[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby27 "irb --version"
+irb 1.2.6 (2020-09-14)
+
+[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby30 "irb --version"
+irb 1.3.5 (2021-04-03)
 ```
 
 
