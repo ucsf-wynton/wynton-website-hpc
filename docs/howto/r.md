@@ -123,7 +123,7 @@ R wants to make sure you are aware what is done, so it will, conservatively, als
 <!-- code-block label="install-zoo" -->
 ```r
 Would you like to create a personal library
-'~/R/x86_64-pc-linux-gnu-library/4.0-CBI'
+'~/R/x86_64-pc-linux-gnu-library/4.0-CBI-gcc8'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-9.tar.gz'
 Content type 'application/x-gzip' length 793891 bytes (775 KB)
@@ -134,10 +134,10 @@ downloaded 775 KB
 ** package 'zoo' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-gcc -I"{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L{{ site.software.cbi_home }}/CBI/R-4.1.2-gcc8/lib64/R/lib -lR
+gcc -I"{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -I"{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -shared -L{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/lib -lR
 installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
@@ -244,10 +244,10 @@ downloaded 1.5 MB
 * installing *source* package 'limma' ...
 ** using staged installation
 ** libs
-gcc -I"{{ site.path.cbi_software }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ site.path.cbi_software }}/CBI/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ site.path.cbi_software }}/CBI/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/CBI/R-4.1.2-gcc8/lib64/R/lib -lR
+gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -lR
 installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
@@ -616,8 +616,8 @@ cp: cannot stat 'nlopt/include/*': No such file or directory
 ...
 opt
 collect2: error: ld returned 1 exit status
-make: *** [.../software/CBI/R-4.1.2-gcc8/lib64/R/share/make/shlib.mk:10: nloptr.so] Error 1
-ERROR: compilation failed for package ‘nloptr’
+make: *** [{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/share/make/shlib.mk:10: nloptr.so] Error 1
+ERROR: compilation failed for package 'nloptr'
 ```
 
 The solution is to load CMake v3 before launching R, as:
