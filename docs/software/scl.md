@@ -81,14 +81,31 @@ To "unload" an SCLs, just return to the previous shell by exiting new SCL-enable
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-## Developer Toolset gcc versions
 
-The `devtoolset` SCLs each include a specific version of gcc.  Those versions are:
+## Developer Toolsets
 
- * devtoolset-7 -> gcc 7.3.1
- * devtoolset-8 -> gcc 8.3.1
- * devtoolset-9 -> gcc 9.3.1
- * devtoolset-10 -> gcc 10.2.1
+The `devtoolset` SCLs each include a specific version of the GNU Compiler Collection (GCC), which provides the `gcc` compiler among other tools.  Here are the `gcc` versions provided by each SCL:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-7 "gcc --version | head -1"
+gcc (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+```
+
+```sh
+[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-8 "gcc --version | head -1"
+gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
+```
+
+```sh
+[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-9 "gcc --version | head -1"
+gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)
+```
+
+```sh
+[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-10 "gcc --version | head -1"
+gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)
+```
+
 
 ## See Also
 
