@@ -134,10 +134,10 @@ downloaded 775 KB
 ** package 'zoo' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-gcc -I"{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L{{ site.software.cbi_home }}/R-4.1.2-gcc8/lib64/R/lib -lR
+gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -shared -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -lR
 installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
