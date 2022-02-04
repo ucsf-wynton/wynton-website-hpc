@@ -101,7 +101,7 @@ gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)
 
 ### Python SCLs
 
-The `rh-pythonNN` SCLs each include a specific version of Python.  Here are the `ptyhon` versions provided by these SCLs:
+The `rh-pythonNN` SCLs each include a specific version of Python.  Here are the `python` versions provided by these SCLs:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl enable rh-python36 "python --version"
