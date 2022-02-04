@@ -129,7 +129,7 @@ Note that, the Singularity image is marked as an _executable_, which means you c
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.sif
 
-R version 4.0.5 (2021-03-31) -- "Shake and Throw"
+R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
 Copyright (C) 2021 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
