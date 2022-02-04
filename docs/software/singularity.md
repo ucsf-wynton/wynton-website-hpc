@@ -312,7 +312,7 @@ isoseq3 3.4.0 (commit v3.4.0)
 
 ### Create a Singularity image on your own workstation and transfer the image to Wynton
 
-You can install Singularity on a Linux host where you have root access an and build the container image there using `sudo singularity build`
+You can install Singularity on a Linux host where you have root access and build the container image there using `sudo singularity build`.
 
 Then the finished container image can be transferred to Wynton for use.
 
@@ -328,9 +328,8 @@ Similarity to installing Singularity on a Linux workstation, you can install Doc
 Q. _Why not Docker?_  
 A. Docker is one of the most popular and well-known software solutions for using Linux Containers. However, contrary to Singularity, it turns out that it is hard to get Docker to play well with multi-tenant HPC environments.
 
-Q. _What's the filename extension `*.sif`?_
-
-First of all, the filename extension is optional, and some prefer to drop them, e.g. `rocker_r-base` instead of `rocker_r-base.sif`.  SIF, which is short for the [Singularity Container Image Format](https://github.com/hpcng/sif), is a file format that can hold a Linux container environments in a single file.  You might also see Singularity images named `*.img` and `*.simg`, which are legacy file formats that Singularity used in the past, where `*.img` indicates a _writable_ (ext3) images whereas `*.simg` indicates a read-only (squashfs) image.](https://groups.google.com/a/lbl.gov/d/msg/singularity/Cq7kIbN_L68/2mOdkwx2BAAJ)
+Q. _What's the filename extension `*.sif`?_  
+A. First of all, the filename extension is optional, and some prefer to drop them, e.g. `rocker_r-base` instead of `rocker_r-base.sif`.  SIF, which is short for the [Singularity Container Image Format](https://github.com/hpcng/sif), is a file format that can hold a Linux container environments in a single file.  You might also see Singularity images named `*.img` and `*.simg`, which are legacy file formats that Singularity used in the past, where `*.img` indicates a _writable_ (ext3) images whereas `*.simg` indicates a read-only (squashfs) image.](https://groups.google.com/a/lbl.gov/d/msg/singularity/Cq7kIbN_L68/2mOdkwx2BAAJ)
 
 
 [Linux containers]: https://www.wikipedia.org/wiki/Linux_containers
