@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
+<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
@@ -246,7 +246,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2 id="module-software-repository-cbi">Module Software Repository: CBI (74)</h2>
+<h2 id="module-software-repository-cbi">Module Software Repository: CBI (75)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2339,6 +2339,52 @@ end
 local path = dirname(myFileName())
 local pathname = pathJoin(path, &quot;.incl&quot;, version_sans_period .. &quot;.lua&quot;)
 loadfile(pathname)()
+</code></pre>
+
+</details>
+  </dd>
+
+  <dt class="module-name">scl-rh-python</dt>
+  <dd class="module-details">
+<strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]</strong><br>
+<span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
+Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
+URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
+Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
+Versions: <span class="module-version">36, <em>38</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+local scl_name = &quot;rh-python&quot; .. version
+
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, Python&quot;)
+whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
+whatis([[
+Description: Enables the CentOS Software Collection (SCL) `rh-python&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable rh-python&lt;version&gt;`, which is not officially supported by RedHat/CentOS.
+Example: `python --version`, and `pip --version`.
+Warning: Older versions may be removed in the future.
+]])
+
+local home = &quot;/opt/rh/rh-python&quot; .. version
+if not isDir(home) then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) ..
+ &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
+end
+
+-- Don't edit! Created using: 
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/rh-python38/enable
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/lib64&quot;)
+prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/rh-python38/root/usr/share/man&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/bin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/local/bin&quot;)
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/lib64/pkgconfig&quot;)
+prepend_path(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-python38/root/usr/share&quot;)
 </code></pre>
 
 </details>
@@ -5035,11 +5081,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
+<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 14:42:53 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 15:40:23 from querying `module avail` and `module spider`._
 
 
 <style>
