@@ -51,7 +51,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(73)</a></li>
+<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
@@ -107,10 +107,12 @@ Versions: <span class="module-version">openmpi-x86_64, <em>openmpi3-x86_64</em><
 
   <dt class="module-name">openjdk</dt>
   <dd class="module-details">
-<strong class="module-help">openjdk-runtime: Open Java Development Kit</strong><br>
-<span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.</span><br>
-Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
-URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a></span><br>
+<strong class="module-help">openjdk: Open Java Development Kit</strong><br>
+<span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun M<br />
+icrosystems began in 2006.</span><br>
+Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code> (SDK only).</span><br>
+Note: <span class="module-note">This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).</span><br>
+URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a>, <a href="https://openjdk.java.net/projects/jdk/">https://openjdk.java.net/projects/jdk/</a> (changelog), <a href="https://github.com/openjdk/jdk">https://github.com/openjdk/jdk</a> (source code)</span><br>
 Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
   </dd>
 
@@ -124,7 +126,7 @@ Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2 id="module-software-repository-cbi">Module Software Repository: CBI (73)</h2>
+<h2 id="module-software-repository-cbi">Module Software Repository: CBI (74)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -169,6 +171,15 @@ Example: <span class="module-example"><code>bat README.md</code>, <code>bat scri
 URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
 Versions: <span class="module-version">0.17.1, <em>0.18.3</em></span><br>
+  </dd>
+
+  <dt class="module-name">bats-core</dt>
+  <dd class="module-details">
+<strong class="module-help">bats: Bash Automated Testing System</strong><br>
+<span class="module-description">Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.</span><br>
+Example: <span class="module-example"><code>bats --version</code>, <code>bats --help</code>, <code>man bats</code>, <code>man 7 bats</code>, and <code>bats tests/</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/bats-core/bats-core">https://github.com/bats-core/bats-core</a>, <a href="https://github.com/bats-core/bats-core#version-history">https://github.com/bats-core/bats-core#version-history</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/">https://bats-core.readthedocs.io/en/stable/</a> (documentation)</span><br>
+Versions: <span class="module-version"><em>1.5.0</em></span><br>
   </dd>
 
   <dt class="module-name">bcftools</dt>
@@ -649,10 +660,10 @@ Versions: <span class="module-version"><em>2021.09.2-382</em></span><br>
   <dd class="module-details">
 <strong class="module-help">RSC: An RStudio Server Controller</strong><br>
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
-Example: <span class="module-example"><code>rsc --help</code> and <code>rsc start --port=random</code>.</span><br>
+Example: <span class="module-example"><code>rsc --help</code> and <code>rsc start --port=uid</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a></span><br>
 Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version"><em>0.3.0</em></span><br>
+Versions: <span class="module-version">0.3.0, <em>0.3.1</em></span><br>
   </dd>
 
   <dt class="module-name">salmon</dt>
@@ -1614,11 +1625,11 @@ Versions: <span class="module-version"><em>3.0.2</em></span><br>
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(73)</a></li>
+<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-03 11:52:58 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 11:25:29 from querying `module avail` and `module spider`._
 
 
 <style>
