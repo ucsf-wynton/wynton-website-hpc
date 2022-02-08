@@ -81,6 +81,7 @@ module_avail <- local({
     })
     ns <- lapply(versions, FUN = nrow)
     x <- x[ns > 0, ]
+
     attr(x, "info") <- info
     message("done")
 
@@ -133,6 +134,7 @@ parse_module <- function(m) {
   m$help <- help
 
   ## Parse versions
+  path <- m$versions[[1]]$path
   vers <- NULL
   if (!is.null(versions$versionName)) {
     vers <- unique(versions$versionName)
@@ -162,7 +164,11 @@ parse_module <- function(m) {
       m$description <- gsub(pattern, "\\1", m$description)
     }
   }
-  
+
+  ## Get the Lua module code
+  path <- m$versions[[1]]$path
+  R.utils::cprint(path)
+
   ## Trim fields
   for (field in c("description", "url", "warning")) {
     if (is.null(m[[field]])) next

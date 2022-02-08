@@ -76,6 +76,13 @@ m <- parse_module(modules[ii,])
   <% if (length(m$parent) > 0) { %>
     Note: <em>To use this module, call <code>module load <%= attr(modules, "repository") %> <%= m$parent %></code> first.</em>
   <% } %>
+  <% if (length(m$code) > 0) { %>
+    <details>
+<pre>
+<% paste(m$code, collapse = "\n") %>
+</pre>
+    </details>
+  <% } %>
   </dd>
 
 <% } # for (ii in ...) %>
