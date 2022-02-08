@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
+<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
@@ -246,7 +246,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="queues-CBI" class="tab-pane fade">
 
-<h2 id="module-software-repository-cbi">Module Software Repository: CBI (75)</h2>
+<h2 id="module-software-repository-cbi">Module Software Repository: CBI (74)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2289,56 +2289,6 @@ prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/share/man&
 prepend_path(&quot;PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/bin&quot;)
 setenv(&quot;PCP_DIR&quot;,&quot;/opt/rh/devtoolset-10/root&quot;)
 prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib64/pkgconfig&quot;)
-</code></pre>
-
-</details>
-  </dd>
-
-  <dt class="module-name">scl-python (part of CBI-testing)</dt>
-  <dd class="module-details">
-<strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]</strong><br>
-<span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python36</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python36</code>, which is not officially supported by RedHat/CentOS.</span><br>
-Example: <span class="module-example"><code>python --version</code> and <code>pip --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python36/">https://www.softwarecollections.org/en/scls/rhscl/rh-python36/</a></span><br>
-Warning: <span class="module-warning">This module is DEPRECATED and should no longer be used because Python SCLs are deprecated, which in turn is because Python 3 is now available directly by CentOS.</span><br>
-Versions: <span class="module-version">3.3, 3.4, <em>3.6</em></span><br>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-local version_sans_period = string.gsub(version, &quot;%.&quot;, &quot;&quot;)
-local scl_name = &quot;rh-python&quot; .. version_sans_period
-if version == &quot;3.3&quot; then
-  scl_name = &quot;python&quot; .. version_sans_period
-end  
-
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: programming, Python&quot;)
-whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
-whatis(&quot;Description: Enables the CentOS Software Collection (SCL) `&quot; .. scl_name .. &quot;` in the current environment.  This is an alternative to calling `source scl_source enable &quot; .. scl_name .. &quot;`, which is not officially supported by RedHat/CentOS.  Example: `python --version` and `pip --version`.  Warning: This module is DEPRECATED and should no longer be used because Python SCLs are deprecated, which in turn is because Python 3 is now available directly by CentOS.&quot;)
-
-
-require &quot;posix&quot;
-function isdir(fn)
-  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
-end
-
-local home = &quot;/opt/rh/rh-python&quot; .. version_sans_period
-
-if not isdir(home) then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) ..
- &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
-end
-
-
-local path = dirname(myFileName())
-local pathname = pathJoin(path, &quot;.incl&quot;, version_sans_period .. &quot;.lua&quot;)
-loadfile(pathname)()
 </code></pre>
 
 </details>
@@ -5081,11 +5031,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
+<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 15:40:23 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 15:42:15 from querying `module avail` and `module spider`._
 
 
 <style>
