@@ -134,7 +134,6 @@ parse_module <- function(m) {
   m$help <- help
 
   ## Parse versions
-  path <- m$versions[[1]]$path
   vers <- NULL
   if (!is.null(versions$versionName)) {
     vers <- unique(versions$versionName)
@@ -166,8 +165,16 @@ parse_module <- function(m) {
   }
 
   ## Get the Lua module code
-  path <- m$versions[[1]]$path
-  R.utils::cprint(path)
+  names <- names(m[["version"]])
+  idx <- which(names == "default")
+  if (length(idx) == 0L && length(names) == 1L) idx <- 1L
+  ## R.utils::cstr(list(idx = idx, names = names, default = m[["version"]][idx], versions = m$versions[[1]], default = m$versions[[1]][idx, ], path=m$versions[[1]][idx,"path"]))
+  if (length(idx) == 1L && is.finite(idx)) {
+    path <- m$versions[[1]][idx,"path"]
+    if (!is.na(path) && utils::file_test("-f", path)) {
+      m$code <- readLines(path, warn = FALSE)
+    }
+  }
 
   ## Trim fields
   for (field in c("description", "url", "warning")) {
