@@ -72,13 +72,15 @@ Versions: <span class="module-version">20, <em>11</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Amber11, for 64-bit"
-module-whatis "URL: http://ambermd.org/"
+module-whatis &quot;Description: Amber11, for 64-bit&quot;
+module-whatis &quot;URL: http://ambermd.org/&quot;
 setenv        AMBERHOME       /wynton/group/sali/AMBER/amber11/
 prepend-path  PATH            /wynton/group/sali/AMBER/amber11/bin
 prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -98,9 +100,9 @@ Versions: <span class="module-version">6.0.37, 7.5, 7.5.18, 8.0, 8.0.61, 9.0.176
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "NVIDIA CUDA Toolkit libraries"
+module-whatis &quot;NVIDIA CUDA Toolkit libraries&quot;
 if ![file exists /usr/bin/g++] {
   module load gcc
 }
@@ -108,6 +110,8 @@ prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-11.5.0
 prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
 prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/pkgconfig
 setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -118,11 +122,13 @@ Versions: <span class="module-version">0.6.4, <em>1.6.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Julia programming language"
+module-whatis &quot;Julia programming language&quot;
 prepend-path  PATH      /usr/local/julia-1.6.0/bin
 prepend-path  MANPATH   /usr/local/julia-1.6.0/share/man
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -133,11 +139,13 @@ Versions: <span class="module-version">9.5.0.944444, 2018b, 2019a, 2019b, 2020a,
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Language for technical computing"
+module-whatis &quot;Language for technical computing&quot;
 prepend-path  PATH                /usr/local/matlab/R2021b/bin
 setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton.ucsf.edu
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -148,10 +156,12 @@ Versions: <span class="module-version">2020a, 2020b, 2021a, <em>2021b</em></span
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "MATLAB Runtime for making use of MATLAB Compiler applications"
+module-whatis &quot;MATLAB Runtime for making use of MATLAB Compiler applications&quot;
 prepend-path  LD_LIBRARY_PATH     /usr/local/matlab/R2021b/runtime/glnxa64:/usr/local/matlab/R2021b/bin/glnxa64:/usr/local/matlab/R2021b/sys/os/glnxa64:/usr/local/matlab/R2021b/extern/bin/glnxa64
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -162,7 +172,7 @@ Versions: <span class="module-version">openmpi-x86_64, <em>openmpi3-x86_64</em><
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 #
 #  OpenMPI module for use with 'environment-modules' package:
 #
@@ -183,6 +193,8 @@ setenv			MPI_PYTHON2_SITEARCH	/usr/lib64/python2.7/site-packages/openmpi3
 setenv			MPI_COMPILER	openmpi3-x86_64
 setenv			MPI_SUFFIX	_openmpi3
 setenv	 		MPI_HOME	/usr/lib64/openmpi3
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -199,13 +211,13 @@ Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help("openjdk: Open Java Development Kit")
+<pre><code class="language-lua">help(&quot;openjdk: Open Java Development Kit&quot;)
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: programming, java")
-whatis("URL: https://openjdk.java.net/, https://openjdk.java.net/projects/jdk/ (changelog), https://github.com/openjdk/jdk (source code)")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, java&quot;)
+whatis(&quot;URL: https://openjdk.java.net/, https://openjdk.java.net/projects/jdk/ (changelog), https://github.com/openjdk/jdk (source code)&quot;)
 whatis([[
 Description: OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun M\
 icrosystems began in 2006.
@@ -213,18 +225,20 @@ Examples: `java -version` and `javac -version` (SDK only).
 Note: This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).
 ]])
 
-local root = "/usr/lib/jvm"
+local root = &quot;/usr/lib/jvm&quot;
 
 -- Use SDK, if available, otherwise JRE
-local home = pathJoin(root, "java" .. "-" .. version)
+local home = pathJoin(root, &quot;java&quot; .. &quot;-&quot; .. version)
 if not isDir(home) then -- isDir() supports symlinked folders
-    home = pathJoin(root, "jre" .. "-" .. version)
+    home = pathJoin(root, &quot;jre&quot; .. &quot;-&quot; .. version)
 end
 
-setenv("JAVA_HOME", home)
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
-prepend_path("CPATH", pathJoin(home, "include"))
+setenv(&quot;JAVA_HOME&quot;, home)
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -259,22 +273,24 @@ Versions: <span class="module-version"><em>1.10.12</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Apache Ant: A Java Library and Command-Line Tool to Build Software
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: programming")
-whatis("URL: https://ant.apache.org/bindownload.cgi")
-whatis("Description: Apache Ant is a Java library and command-line tool that help building software.  Example: `ant -h`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming&quot;)
+whatis(&quot;URL: https://ant.apache.org/bindownload.cgi&quot;)
+whatis(&quot;Description: Apache Ant is a Java library and command-line tool that help building software.  Example: `ant -h`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -290,22 +306,24 @@ Versions: <span class="module-version">1.15.0, <em>1.16.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 ASCIIGenome: Text Only Genome Viewer
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, viewer")
-whatis("URL: https://github.com/dariober/ASCIIGenome")
-whatis("Description: ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.  Example: `ASCIIGenome --help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, viewer&quot;)
+whatis(&quot;URL: https://github.com/dariober/ASCIIGenome&quot;)
+whatis(&quot;Description: ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.  Example: `ASCIIGenome --help`.&quot;)
 -- too long for small screens: `ASCIIGenome http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/supporting/functional_annotation/filtered/ALL.chr21.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf.gz`
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, "ASCIIGenome" .. "-" .. version)
-prepend_path("PATH", home)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, &quot;ASCIIGenome&quot; .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, home)
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -321,21 +339,23 @@ Versions: <span class="module-version"><em>1.0.14</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 bamUtil: Programs for Working on SAM/BAM Files
 ]])
 
-local name = "bamUtil"
+local name = &quot;bamUtil&quot;
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: version control")
-whatis("URL: https://genome.sph.umich.edu/wiki/BamUtil, https://github.com/statgen/bamUtil")
-whatis("Description: bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, `bam`. Example: `bam help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: version control&quot;)
+whatis(&quot;URL: https://genome.sph.umich.edu/wiki/BamUtil, https://github.com/statgen/bamUtil&quot;)
+whatis(&quot;Description: bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, `bam`. Example: `bam help`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -351,23 +371,25 @@ Versions: <span class="module-version">0.17.1, <em>0.18.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 bat: A cat(1) Clone with Syntax Highlighting and Git Integration
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: utility, file viewer")
-whatis("URL: https://github.com/sharkdp/bat")
-whatis("Description: A cat(1) clone with syntax highlighting and Git integration.  Examples: `bat README.md`, `bat scripts/*.sh`, and `bat src/*.c`.  Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, file viewer&quot;)
+whatis(&quot;URL: https://github.com/sharkdp/bat&quot;)
+whatis(&quot;Description: A cat(1) clone with syntax highlighting and Git integration.  Examples: `bat README.md`, `bat scripts/*.sh`, and `bat src/*.c`.  Warning: Only the most recent version of this software will be kept.&quot;)
 
 -- Local variables
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
-prepend_path("MANPATH", pathJoin(home, "man", "man1"))
+prepend_path(&quot;PATH&quot;, home)
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;, &quot;man1&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -382,26 +404,28 @@ Versions: <span class="module-version"><em>1.5.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 bats: Bash Automated Testing System
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: bash, shell, testing")
-whatis("URL: https://github.com/bats-core/bats-core, https://github.com/bats-core/bats-core#version-history (changelog), https://bats-core.readthedocs.io/en/stable/ (documentation)")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: bash, shell, testing&quot;)
+whatis(&quot;URL: https://github.com/bats-core/bats-core, https://github.com/bats-core/bats-core#version-history (changelog), https://bats-core.readthedocs.io/en/stable/ (documentation)&quot;)
 whatis([[
 Description: Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.
 Example: `bats --version`, `bats --help`, `man bats`, `man 7 bats`, and `bats tests/`.
 ]])
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -416,29 +440,31 @@ Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, <em>1.14</
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 BCFtools: Utilities for Variant Calling and Manipulating VCFs and BCFs
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://www.htslib.org/, https://github.com/samtools/bcftools")
-whatis("Description: BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.  Example: `bcftools --version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://www.htslib.org/, https://github.com/samtools/bcftools&quot;)
+whatis(&quot;Description: BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.  Example: `bcftools --version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
-pushenv("BCFTOOLS_PLUGINS", pathJoin(home, "libexec", name))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+pushenv(&quot;BCFTOOLS_PLUGINS&quot;, pathJoin(home, &quot;libexec&quot;, name))
 
 
 -- Warn about bug https://github.com/samtools/htslib/issues/1236
-if (mode() == "load" and version == "1.11") then
-  LmodMessage("MODULE WARNING: " .. name .. " " .. version .. " has a bug that results in valid but incorrect CIGAR strings. Because of this, it is recommended to use an older or a newer version instead. For details, see https://github.com/samtools/htslib/issues/1236")
+if (mode() == &quot;load&quot; and version == &quot;1.11&quot;) then
+  LmodMessage(&quot;MODULE WARNING: &quot; .. name .. &quot; &quot; .. version .. &quot; has a bug that results in valid but incorrect CIGAR strings. Because of this, it is recommended to use an older or a newer version instead. For details, see https://github.com/samtools/htslib/issues/1236&quot;)
 end
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -453,21 +479,23 @@ Versions: <span class="module-version"><em>2.20.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 bcl2fastq: Illumina Conversion Software
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, Illumina")
-whatis("URL: https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html")
-whatis("Description: bcl2fastq Conversion Software both demultiplexes data and converts BCL files generated by Illumina sequencing systems to standard FASTQ file formats for downstream analysis.  Example: `bcl2fastq --version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, Illumina&quot;)
+whatis(&quot;URL: https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html&quot;)
+whatis(&quot;Description: bcl2fastq Conversion Software both demultiplexes data and converts BCL files generated by Illumina sequencing systems to standard FASTQ file formats for downstream analysis.  Example: `bcl2fastq --version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -483,21 +511,23 @@ Versions: <span class="module-version">2.4.36, 2.4.37, 2.4.38, 2.4.39, <em>2.4.4
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 BEDOPS: The Fast, Highly Scalable and Easily-Parallelizable Genome Analysis Toolkit
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: ")
-whatis("URL: https://bedops.readthedocs.io/, https://github.com/bedops/bedops")
-whatis("Description: BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.  Example: `bedops --version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: &quot;)
+whatis(&quot;URL: https://bedops.readthedocs.io/, https://github.com/bedops/bedops&quot;)
+whatis(&quot;Description: BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.  Example: `bedops --version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -512,29 +542,31 @@ Versions: <span class="module-version">2.26.0, 2.28.0, 2.29.1, 2.29.2, <em>2.30.
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 bedtools2: The Swiss Army Knife for Genome Arithmetic
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://github.com/arq5x/bedtools2/")
-whatis("Description: Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF. Example: `bedtools --version` and `ls $BEDTOOLS2_HOME/genomes/`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://github.com/arq5x/bedtools2/&quot;)
+whatis(&quot;Description: Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF. Example: `bedtools --version` and `ls $BEDTOOLS2_HOME/genomes/`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 -- custom; helps find $BEDTOOLS2_HOME/genomes
-pushenv("BEDTOOLS2_HOME", home)
+pushenv(&quot;BEDTOOLS2_HOME&quot;, home)
 
 
 
 
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -550,20 +582,22 @@ Versions: <span class="module-version">2.9.0, 2.10.1, 2.11.0, <em>2.12.0</em></s
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 BLAST+: Basic Local Alignment Search Tool
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: programming, scripting")
-whatis("URL: https://blast.ncbi.nlm.nih.gov/Blast.cgi")
-whatis("Description: BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance. Example: `blastx -version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, scripting&quot;)
+whatis(&quot;URL: https://blast.ncbi.nlm.nih.gov/Blast.cgi&quot;)
+whatis(&quot;Description: BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance. Example: `blastx -version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
-prepend_path("PATH", pathJoin(home, "bin"))
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -579,20 +613,22 @@ Versions: <span class="module-version"><em>36x4</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 BLAT: Fast Sequence Search Command Line Tool
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, alignment")
-whatis("URL: https://genome.ucsc.edu/goldenPath/help/blatSpec.html")
-whatis("Description: BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting. Example: `blat`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, alignment&quot;)
+whatis(&quot;URL: https://genome.ucsc.edu/goldenPath/help/blatSpec.html&quot;)
+whatis(&quot;Description: BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting. Example: `blat`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
-prepend_path("PATH", home)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -608,21 +644,23 @@ Versions: <span class="module-version">1.2.3, 1.3.0, <em>1.3.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Bowtie: A Fast and Sensitive Gapped Read Aligner
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: http://bowtie-bio.sourceforge.net/index.shtml")
-whatis("Description: Bowtie is an ultrafast, memory-efficient short read aligner.  Note: This is Bowtie v1 - _not v2_.  Example: `bowtie --version` and `ls $BOWTIE_HOME/{genomes,indexes}`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: http://bowtie-bio.sourceforge.net/index.shtml&quot;)
+whatis(&quot;Description: Bowtie is an ultrafast, memory-efficient short read aligner.  Note: This is Bowtie v1 - _not v2_.  Example: `bowtie --version` and `ls $BOWTIE_HOME/{genomes,indexes}`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
-prepend_path("PATH", home)
-pushenv("BOWTIE_HOME", home)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, home)
+pushenv(&quot;BOWTIE_HOME&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -637,21 +675,23 @@ Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, <em>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Bowtie 2: A Fast and Sensitive Gapped Read Aligner
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml")
-whatis("Description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.  Example: `bowtie2 --version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml&quot;)
+whatis(&quot;Description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.  Example: `bowtie2 --version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+
+</code></pre>
 
 </pre>
 </details>
@@ -667,22 +707,24 @@ Versions: <span class="module-version"><em>0.7.17</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 BWA: Burrows-Wheeler Aligner
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: http://bio-bwa.sourceforge.net/")
-whatis("Description: Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. Example: `bwa`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: http://bio-bwa.sourceforge.net/&quot;)
+whatis(&quot;Description: Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. Example: `bwa`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
-prepend_path("MANPATH", pathJoin(home, "man"))
+prepend_path(&quot;PATH&quot;, home)
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -699,22 +741,24 @@ Versions: <span class="module-version"><em>5.133</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 byobu: Elegant Enhancement of the Otherwise Functional, Plain, Practical GNU Screen
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: terminal, SSHH")
-whatis("URL: http://byobu.org, https://github.com/dustinkirkland/byobu")
-whatis("Description: Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer.  Example: `byobu --version`.  Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: terminal, SSHH&quot;)
+whatis(&quot;URL: http://byobu.org, https://github.com/dustinkirkland/byobu&quot;)
+whatis(&quot;Description: Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer.  Example: `byobu --version`.  Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH",  pathJoin(home, "bin"))
-prepend_path("MANPATH",  pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;,  pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -738,30 +782,32 @@ Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1,
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Cell Ranger: 10x Genomics Pipeline for Single-Cell Data Analysis
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, 10x genomics")
-whatis("URL: https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger")
-whatis("Description: Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.  Example: `cellranger`.  Warning: To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable `MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'` making those the default.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, 10x genomics&quot;)
+whatis(&quot;URL: https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger&quot;)
+whatis(&quot;Description: Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.  Example: `cellranger`.  Warning: To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable `MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'` making those the default.&quot;)
 
-load("bcl2fastq")
+load(&quot;bcl2fastq&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
 
 -- Make CellRanger run on a single core with little memory by default
 -- This prevents a single Cell Ranger process from hijacking all
 -- available CPU and memory resources.
 -- REFERENCES:
 -- * https://martian-lang.org/advanced-features/#job-management
-pushenv("MROFLAGS", "--localcores=1 --localmem=8 --limit-loadavg")
+pushenv(&quot;MROFLAGS&quot;, &quot;--localcores=1 --localmem=8 --limit-loadavg&quot;)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -776,22 +822,24 @@ Versions: <span class="module-version">3.18.2, 3.19.2, <em>3.22.2</em></span><br
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 CMake: Open-source, Cross-platform Family of Tools Designed to Build, Test and Package Software
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: development, make")
-whatis("URL: https://cmake.org/, https://github.com/Kitware/CMake/releases")
-whatis("Description: CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries. Example: `cmake --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: development, make&quot;)
+whatis(&quot;URL: https://cmake.org/, https://github.com/Kitware/CMake/releases&quot;)
+whatis(&quot;Description: CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries. Example: `cmake --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH",  pathJoin(home, "bin"))
-prepend_path("MANPATH",  pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;,  pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -807,21 +855,23 @@ Versions: <span class="module-version">11.5, <em>11.6</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Control FREEC: Control-FREE Copy Number and Genotype Caller
 ]])
 
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: ")
-whatis("URL: http://boevalab.com/FREEC/, https://github.com/BoevaLab/FREEC/")
-whatis("Description: Prediction of copy numbers and allelic content using deep-sequencing data. Example: `freec`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: &quot;)
+whatis(&quot;URL: http://boevalab.com/FREEC/, https://github.com/BoevaLab/FREEC/&quot;)
+whatis(&quot;Description: Prediction of copy numbers and allelic content using deep-sequencing data. Example: `freec`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local name = "FREEC"
-local home = pathJoin(root, name .. "-" .. version)
-prepend_path("PATH", pathJoin(home, "bin"))
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local name = &quot;FREEC&quot;
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -837,21 +887,23 @@ Versions: <span class="module-version"><em>2.2.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Cufflinks: Transcriptome Assembly and Differential Expression Analysis for RNA-Seq
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: http://cole-trapnell-lab.github.io/cufflinks/, https://github.com/cole-trapnell-lab/cufflinks")
-whatis("Description: Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one, taking into account biases in library preparation protocols. Example: `cufflinks`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: http://cole-trapnell-lab.github.io/cufflinks/, https://github.com/cole-trapnell-lab/cufflinks&quot;)
+whatis(&quot;Description: Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one, taking into account biases in library preparation protocols. Example: `cufflinks`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -867,21 +919,23 @@ Versions: <span class="module-version">0.1.2, 0.1.3, 0.1.4, <em>0.1.5</em></span
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 easycatfs: Easy Read-Only Mounting of Slow Folders onto a Local Drive
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: utility, files, hpc")
-whatis("URL: https://github.com/HenrikBengtsson/easycatfs")
-whatis("Description: This is Linux command-line tool for mounting one or more folders on a network file system on a local disk such that the local-disk folders mirrors everything (read-only) on the network folder. This will result in (i) faster repeated access to files, and (ii) decreased load on the network file system. This is particularly beneficial when working on high-performance compute (HPC) clusters used by hundreds and thousands of processes and users simultaneously..  Example: `easycatfs --help` and `easycatfs mount /shared/data`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, files, hpc&quot;)
+whatis(&quot;URL: https://github.com/HenrikBengtsson/easycatfs&quot;)
+whatis(&quot;Description: This is Linux command-line tool for mounting one or more folders on a network file system on a local disk such that the local-disk folders mirrors everything (read-only) on the network folder. This will result in (i) faster repeated access to files, and (ii) decreased load on the network file system. This is particularly beneficial when working on high-performance compute (HPC) clusters used by hundreds and thousands of processes and users simultaneously..  Example: `easycatfs --help` and `easycatfs mount /shared/data`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -897,22 +951,24 @@ Versions: <span class="module-version">26.3, 27.1, <em>27.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: editor, text")
-whatis("URL: https://www.gnu.org/software/emacs/")
-whatis("Description: At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing. Example: `emacs --version` and `emacs -nw`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: editor, text&quot;)
+whatis(&quot;URL: https://www.gnu.org/software/emacs/&quot;)
+whatis(&quot;Description: At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing. Example: `emacs --version` and `emacs -nw`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -927,21 +983,23 @@ Versions: <span class="module-version">0.11.8, <em>0.11.9</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 FastQC: A Quality Control Analysis Tool for High Throughput Sequencing Data
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, qc")
-whatis("URL: https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc, https://github.com/s-andrews/FastQC/")
-whatis("Description: FastQC is a program designed to spot potential problems in high througput sequencing datasets. It runs a set of analyses on one or more raw sequence files in fastq or bam format and produces a report which summarises the results.  Example: `fastqc --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, qc&quot;)
+whatis(&quot;URL: https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc, https://github.com/s-andrews/FastQC/&quot;)
+whatis(&quot;Description: FastQC is a program designed to spot potential problems in high througput sequencing datasets. It runs a set of analyses on one or more raw sequence files in fastq or bam format and produces a report which summarises the results.  Example: `fastqc --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, "FastQC" .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, &quot;FastQC&quot; .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+
+</code></pre>
 
 </pre>
 </details>
@@ -959,25 +1017,27 @@ Versions: <span class="module-version">0.22.0, 0.25.1, 0.27.2, <em>0.29.0</em></
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 fzf: A Command-Line Fuzzy Finder
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: cli, shell")
-whatis("URL: https://github.com/junegunn/fzf, https://github.com/junegunn/fzf/wiki")
-whatis("Description: fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc. Example: `fzf --version` and `emacs \"$(fzf)\"`. Note: To install tab completions and key bindinds to your shell, call `$FZF_HOME/install`. To uninstall, use `$FZF_HOME/uninstall`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: cli, shell&quot;)
+whatis(&quot;URL: https://github.com/junegunn/fzf, https://github.com/junegunn/fzf/wiki&quot;)
+whatis(&quot;Description: fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc. Example: `fzf --version` and `emacs \&quot;$(fzf)\&quot;`. Note: To install tab completions and key bindinds to your shell, call `$FZF_HOME/install`. To uninstall, use `$FZF_HOME/uninstall`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 
 -- Custom
-pushenv("FZF_HOME", home)
+pushenv(&quot;FZF_HOME&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -992,34 +1052,36 @@ Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, genome")
-whatis("URL: https://software.broadinstitute.org/gatk/, https://github.com/broadinstitute/gatk, https://github.com/broadgsa/gatk, https://console.cloud.google.com/storage/browser/gatk-software/package-archive, ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/")
-whatis("Description: Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: `gatk --help` and `gatk --list`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, genome&quot;)
+whatis(&quot;URL: https://software.broadinstitute.org/gatk/, https://github.com/broadinstitute/gatk, https://github.com/broadgsa/gatk, https://console.cloud.google.com/storage/browser/gatk-software/package-archive, ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/&quot;)
+whatis(&quot;Description: Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: `gatk --help` and `gatk --list`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-local version_x = string.gsub(version, "[.].*", "")
-if (version_x == "1") then
-  -- GATK v1.* requires Java (<= 1.7)
-  local cluster = os.getenv("CLUSTER")
-  if (cluster == "tipcc") then
-    load("jdk/1.7.0")
+local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
+if (version_x == &quot;1&quot;) then
+  -- GATK v1.* requires Java (&lt;= 1.7)
+  local cluster = os.getenv(&quot;CLUSTER&quot;)
+  if (cluster == &quot;tipcc&quot;) then
+    load(&quot;jdk/1.7.0&quot;)
   else
-    depends_on("openjdk/1.6.0")
+    depends_on(&quot;openjdk/1.6.0&quot;)
   end
-  pushenv("GATK_HOME", home)
+  pushenv(&quot;GATK_HOME&quot;, home)
 else
-  prepend_path("PATH", home)
+  prepend_path(&quot;PATH&quot;, home)
 end
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -1035,21 +1097,23 @@ Versions: <span class="module-version">1.26.0, 1.92.3beta3, 1.92.4beta, <em>1.93
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 GCTA: Genome-wide Complex Trait Analysis
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: genome")
-whatis("URL: http://cnsgenomics.com/software/gcta/")
-whatis("Description: A tool for Genome-wide Complex Trait Analysis (GCTA). Example: `gcta64`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: genome&quot;)
+whatis(&quot;URL: http://cnsgenomics.com/software/gcta/&quot;)
+whatis(&quot;Description: A tool for Genome-wide Complex Trait Analysis (GCTA). Example: `gcta64`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1064,30 +1128,32 @@ Versions: <span class="module-version">2.4.3, <em>2.4.4</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 GDAL: Geospatial Data Abstraction Library
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: spatial, library")
-whatis("URL: https://gdal.org/, https://github.com/OSGeo/gdal")
-whatis("Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats. Example: `gdalinfo --version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: spatial, library&quot;)
+whatis(&quot;URL: https://gdal.org/, https://github.com/OSGeo/gdal&quot;)
+whatis(&quot;Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats. Example: `gdalinfo --version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 
 -- linking
-prepend_path("LD_RUN_PATH", pathJoin(home, "lib"))
+prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 
 -- building
-prepend_path("CPATH",  pathJoin(home, "include"))
-prepend_path("CFLAGS", "-I" .. pathJoin(home, "include"), " ")
-prepend_path("LDFLAGS", "-L" .. pathJoin(home, "lib"), " ")
+prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
+prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
+prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1102,29 +1168,31 @@ Versions: <span class="module-version">3.5.2, 3.7.3, 3.8.1, <em>3.9.1</em></span
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 GEOS: Geometry Engine, Open Source
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: statistics, spatial")
-whatis("URL: https://trac.osgeo.org/geos/")
-whatis("Description: GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It aims to contain the complete functionality of JTS in C++. This includes all the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced functions. GEOS provides spatial functionality to many other projects and products. Example: `geos-config --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: statistics, spatial&quot;)
+whatis(&quot;URL: https://trac.osgeo.org/geos/&quot;)
+whatis(&quot;Description: GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It aims to contain the complete functionality of JTS in C++. This includes all the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced functions. GEOS provides spatial functionality to many other projects and products. Example: `geos-config --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 -- execution
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 -- linking
-prepend_path("LD_RUN_PATH", pathJoin(home, "lib"))
+prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 -- building
-prepend_path("CPATH",  pathJoin(home, "include"))
-prepend_path("CFLAGS", "-I" .. pathJoin(home, "include"), " ")
-prepend_path("LDFLAGS", "-L" .. pathJoin(home, "lib"), " ")
+prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
+prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
+prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1139,21 +1207,23 @@ Versions: <span class="module-version"><em>2.0.23</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 GISTIC2: Genomic Identification of Significant Targets in Cancer (GISTIC), version 2
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://software.broadinstitute.org/cancer/cga/gistic, https://github.com/broadinstitute/gistic2, https://www.genepattern.org/modules/docs/GISTIC_2.0/7")
-whatis("Description: GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.  Example: `gistic2`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://software.broadinstitute.org/cancer/cga/gistic, https://github.com/broadinstitute/gistic2, https://www.genepattern.org/modules/docs/GISTIC_2.0/7&quot;)
+whatis(&quot;Description: GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.  Example: `gistic2`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1169,21 +1239,23 @@ Versions: <span class="module-version"><em>1.12.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 git-flow: Git Extension Git Flow (AVH Edition)
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: version control")
-whatis("URL: https://github.com/petervanderdoes/gitflow-avh, https://github.com/nvie/gitflow")
-whatis("Description: A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model. Example: `git flow`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: version control&quot;)
+whatis(&quot;URL: https://github.com/petervanderdoes/gitflow-avh, https://github.com/nvie/gitflow&quot;)
+whatis(&quot;Description: A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model. Example: `git flow`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1199,22 +1271,24 @@ Versions: <span class="module-version">1.3.0, <em>1.4.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 glow: Render Markdown on the CLI, with Pizzazz!
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: utility, file viewer, pager, markdown")
-whatis("URL: https://github.com/charmbracelet/glow")
-whatis("Description: Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI.  Use it to discover markdown files, read documentation directly on the command line and stash markdown files to your own private collection so you can read them anywhere. Glow will find local markdown files in subdirectories or a local Git repository.  Examples: `glow README.md`, `glow --pager README.md`.  Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, file viewer, pager, markdown&quot;)
+whatis(&quot;URL: https://github.com/charmbracelet/glow&quot;)
+whatis(&quot;Description: Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI.  Use it to discover markdown files, read documentation directly on the command line and stash markdown files to your own private collection so you can read them anywhere. Glow will find local markdown files in subdirectories or a local Git repository.  Examples: `glow README.md`, `glow --pager README.md`.  Warning: Only the most recent version of this software will be kept.&quot;)
 
 -- Local variables
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1229,24 +1303,26 @@ Versions: <span class="module-version">2.6, <em>2.7</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 GSL: Gnu Scientific Library
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: library")
-whatis("URL: https://www.gnu.org/software/gsl/")
-whatis("Description: The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It is free software under the GNU General Public License. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. There are over 1000 functions in total with an extensive test suite. Example: `gsl-config --version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: library&quot;)
+whatis(&quot;URL: https://www.gnu.org/software/gsl/&quot;)
+whatis(&quot;Description: The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It is free software under the GNU General Public License. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. There are over 1000 functions in total with an extensive test suite. Example: `gsl-config --version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
-prepend_path("PKG_CONFIG_PATH", pathJoin(home, "lib", "pkgconfig"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1261,27 +1337,29 @@ Versions: <span class="module-version">1.10.6, 1.12.0, <em>1.12.1</em></span><br
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 hdf5: A General Purpose Library and File Format for Storing Scientific Data
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: library")
-whatis("URL: https://www.hdfgroup.org/downloads/hdf5/")
-whatis("Description: Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications. Example: `h5stat --version`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: library&quot;)
+whatis(&quot;URL: https://www.hdfgroup.org/downloads/hdf5/&quot;)
+whatis(&quot;Description: Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications. Example: `h5stat --version`&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
--- prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+-- prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 
-prepend_path("CPATH",  pathJoin(home, "include"))
--- prepend_path("CFLAGS", "-I" .. pathJoin(home, "include"), " ")
--- prepend_path("LDFLAGS", "-L" .. pathJoin(home, "lib"), " ")
+prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
+-- prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
+-- prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1296,21 +1374,23 @@ Versions: <span class="module-version">2.1.0, <em>2.2.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: Programming, Statistics")
-whatis("URL: https://daehwankimlab.github.io/hisat2/, https://github.com/DaehwanKimLab/hisat2/")
-whatis("Description: HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). Based on an extension of BWT for graphs [Sirén et al. 2014], we designed and implemented a graph FM index (GFM), an original approach and its first implementation to the best of our knowledge. In addition to using one global GFM index that represents a population of human genomes, HISAT2 uses a large set of small GFM indexes that collectively cover the whole genome (each index representing a genomic region of 56 Kbp, with 55,000 indexes needed to cover the human population). These small indexes (called local indexes), combined with several alignment strategies, enable rapid and accurate alignment of sequencing reads. This new indexing scheme is called a Hierarchical Graph FM index (HGFM).  Example: `hisat2 --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: Programming, Statistics&quot;)
+whatis(&quot;URL: https://daehwankimlab.github.io/hisat2/, https://github.com/DaehwanKimLab/hisat2/&quot;)
+whatis(&quot;Description: HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). Based on an extension of BWT for graphs [Sirén et al. 2014], we designed and implemented a graph FM index (GFM), an original approach and its first implementation to the best of our knowledge. In addition to using one global GFM index that represents a population of human genomes, HISAT2 uses a large set of small GFM indexes that collectively cover the whole genome (each index representing a genomic region of 56 Kbp, with 55,000 indexes needed to cover the human population). These small indexes (called local indexes), combined with several alignment strategies, enable rapid and accurate alignment of sequencing reads. This new indexing scheme is called a Hierarchical Graph FM index (HGFM).  Example: `hisat2 --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1326,22 +1406,24 @@ Versions: <span class="module-version">3.0.4, 3.0.5, 3.1.0, <em>3.1.2</em></span
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 htop: An Interactive Process Viewer for Unix
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: system, utility")
-whatis("URL: https://htop.dev, https://github.com/htop-dev/htop")
-whatis("Description: `htop` is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses. Example: `htop`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: system, utility&quot;)
+whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop&quot;)
+whatis(&quot;Description: `htop` is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses. Example: `htop`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1356,30 +1438,32 @@ Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, <em>1.14</em></s
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 HTSlib: C Library for High-Throughput Sequencing Data Formats
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, programming")
-whatis("URL: https://www.htslib.org/, https://github.com/samtools/htslib")
-whatis("Description: HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.  Example: `bgzip --version`, `htsfile --version`, and `tabix --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, programming&quot;)
+whatis(&quot;URL: https://www.htslib.org/, https://github.com/samtools/htslib&quot;)
+whatis(&quot;Description: HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.  Example: `bgzip --version`, `htsfile --version`, and `tabix --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
-prepend_path("PKG_CONFIG_PATH", pathJoin(home, "lib", "pkgconfig"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
 
 
 -- Warn about bug https://github.com/samtools/htslib/issues/1236
-if (mode() == "load" and version == "1.11") then
-  LmodMessage("MODULE WARNING: " .. name .. " " .. version .. " has a bug that results in valid but incorrect CIGAR strings. Because of this, it is recommended to use an older or a newer version instead. For details, see https://github.com/samtools/htslib/issues/1236")
+if (mode() == &quot;load&quot; and version == &quot;1.11&quot;) then
+  LmodMessage(&quot;MODULE WARNING: &quot; .. name .. &quot; &quot; .. version .. &quot; has a bug that results in valid but incorrect CIGAR strings. Because of this, it is recommended to use an older or a newer version instead. For details, see https://github.com/samtools/htslib/issues/1236&quot;)
 end
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1394,23 +1478,25 @@ Versions: <span class="module-version"><em>0.1.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 htstools: Tools to Process BAM Files for Downstream Copy-Number Analysis
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://github.com/mskcc/htstools")
-whatis("Description: Contains three tools (dnafrags, ppflag-fixer, snp-pileup) written by Alex Studer to process bam files for downstream copy number analysis.  Example: `snp-pileup --help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://github.com/mskcc/htstools&quot;)
+whatis(&quot;Description: Contains three tools (dnafrags, ppflag-fixer, snp-pileup) written by Alex Studer to process bam files for downstream copy number analysis.  Example: `snp-pileup --help`.&quot;)
 
-depends_on("htslib")
+depends_on(&quot;htslib&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1426,25 +1512,27 @@ Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.1
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 IGV: The Integrative Genomics Viewer
 ]])
 
 -- local name = myModuleName()
-local name = "IGV"
+local name = &quot;IGV&quot;
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://software.broadinstitute.org/software/igv/, https://software.broadinstitute.org/software/igv/download")
-whatis("Description: The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.  Example: `igv`.  Note: IGV (>= 2.5.0) requires Java 11. Coincidentally, `igvtools` is integrated with IGV (>= 2.5.0).")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://software.broadinstitute.org/software/igv/, https://software.broadinstitute.org/software/igv/download&quot;)
+whatis(&quot;Description: The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.  Example: `igv`.  Note: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, `igvtools` is integrated with IGV (&gt;= 2.5.0).&quot;)
 
--- depends_on("jdk")
+-- depends_on(&quot;jdk&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
-prepend_path("PATH", home)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, home)
 
-set_alias("igv", home .. "/igv.sh")
+set_alias(&quot;igv&quot;, home .. &quot;/igv.sh&quot;)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1459,22 +1547,24 @@ Versions: <span class="module-version"><em>2.4.19</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 IGVTools: Tools for Pre-processing HT-Seq Data Files
 ]])
 
 -- local name = myModuleName()
-local name = "IGVTools"
+local name = &quot;IGVTools&quot;
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://software.broadinstitute.org/software/igv/igvtools")
-whatis("Description: The igvtools utility provides a set of tools for pre-processing data files. Note, `igvtools` moved to IGV as of IGV (>= 2.5.0). Example: `igvtools help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://software.broadinstitute.org/software/igv/igvtools&quot;)
+whatis(&quot;Description: The igvtools utility provides a set of tools for pre-processing data files. Note, `igvtools` moved to IGV as of IGV (&gt;= 2.5.0). Example: `igvtools help`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1489,35 +1579,37 @@ Versions: <span class="module-version"><em>4.3.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 JAGS: Just Another Gibbs Sampler
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: statistics")
-whatis("URL: http://mcmc-jags.sourceforge.net/")
-whatis("Description: JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation not wholly unlike BUGS. Example: `jags` and `man jags`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: statistics&quot;)
+whatis(&quot;URL: http://mcmc-jags.sourceforge.net/&quot;)
+whatis(&quot;Description: JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation not wholly unlike BUGS. Example: `jags` and `man jags`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, "JAGS" .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, &quot;JAGS&quot; .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
-prepend_path("PKG_CONFIG_PATH", pathJoin(home, "lib", "pkgconfig"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
 
 -- AD HOC:
 -- R package 'rjags' uses 'JAGS_LIBDIR' and 'JAGS_INCLUDEDIR' (INSTALL)
 -- Comment: Appears not to be needed /HB 2020-03-09
--- pushenv("JAGS_INCLUDEDIR", pathJoin(home, "include"))
--- pushenv("JAGS_LIBDIR", pathJoin(home, "lib"))
+-- pushenv(&quot;JAGS_INCLUDEDIR&quot;, pathJoin(home, &quot;include&quot;))
+-- pushenv(&quot;JAGS_LIBDIR&quot;, pathJoin(home, &quot;lib&quot;))
 
 -- R package 'runjags' uses 'JAGS_LIB' and 'JAGS_INCLUDE' (README)
 -- Comment: Email maintainer about diff to 'rjags' /HB 2020-03-09
--- pushenv("JAGS_INCLUDE", pathJoin(home, "include")) -- Not needed /HB 2020-03-09
-pushenv("JAGS_LIB", pathJoin(home, "lib"))
+-- pushenv(&quot;JAGS_INCLUDE&quot;, pathJoin(home, &quot;include&quot;)) -- Not needed /HB 2020-03-09
+pushenv(&quot;JAGS_LIB&quot;, pathJoin(home, &quot;lib&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1532,21 +1624,23 @@ Versions: <span class="module-version">0.45.0, 0.45.1, 0.46.0, 0.46.1, <em>0.46.
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 kallisto: Near-optimal RNA-Seq Quantification
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://pachterlab.github.io/kallisto/about.html, https://github.com/pachterlab/kallisto")
-whatis("Description: kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.  Example: `kallisto version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://pachterlab.github.io/kallisto/about.html, https://github.com/pachterlab/kallisto&quot;)
+whatis(&quot;Description: kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.  Example: `kallisto version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+
+</code></pre>
 
 </pre>
 </details>
@@ -1563,22 +1657,24 @@ Versions: <span class="module-version">4.8.26, <em>4.8.27</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 mc: Midnight Commander
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: Programming, Statistics")
-whatis("URL: http://www.midnight-commander.org/, https://github.com/MidnightCommander/mc")
-whatis("Description: GNU Midnight Commander is a visual file manager. It's a feature rich full-screen text mode application that allows you to copy, move and delete files and whole directory trees, search for files and run commands in the subshell. Internal viewer and editor are included. Examples: `mc` and `mc --version`.  Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: Programming, Statistics&quot;)
+whatis(&quot;URL: http://www.midnight-commander.org/, https://github.com/MidnightCommander/mc&quot;)
+whatis(&quot;Description: GNU Midnight Commander is a visual file manager. It's a feature rich full-screen text mode application that allows you to copy, move and delete files and whole directory trees, search for files and run commands in the subshell. Internal viewer and editor are included. Examples: `mc` and `mc --version`.  Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1593,27 +1689,29 @@ Versions: <span class="module-version">1.1.1, 1.1.4, <em>1.1.5</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 muTect: Identification of Somatic Point Mutations in Next Generation Sequencing Data of Cancer Genomes
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing, genome")
-whatis("URL: https://github.com/broadinstitute/mutect, https://software.broadinstitute.org/cancer/cga/mutect")
-whatis("Description: MuTect is a method developed at the Broad Institute for the reliable and accurate identification of somatic point mutations in next generation sequencing data of cancer genomes. Example: `mutect`, which is short for `java -Xmx2g -jar \"$MUTECT_JAR\"`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing, genome&quot;)
+whatis(&quot;URL: https://github.com/broadinstitute/mutect, https://software.broadinstitute.org/cancer/cga/mutect&quot;)
+whatis(&quot;Description: MuTect is a method developed at the Broad Institute for the reliable and accurate identification of somatic point mutations in next generation sequencing data of cancer genomes. Example: `mutect`, which is short for `java -Xmx2g -jar \&quot;$MUTECT_JAR\&quot;`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-name = "muTect"
-pushenv("MUTECT_HOME", home)
-local jarfile = pathJoin(home, name .. "-" .. version .. ".jar")
-pushenv("MUTECT_JAR", jarfile)
-set_alias("mutect", "java -Xmx2g -jar " .. jarfile)
+name = &quot;muTect&quot;
+pushenv(&quot;MUTECT_HOME&quot;, home)
+local jarfile = pathJoin(home, name .. &quot;-&quot; .. version .. &quot;.jar&quot;)
+pushenv(&quot;MUTECT_JAR&quot;, jarfile)
+set_alias(&quot;mutect&quot;, &quot;java -Xmx2g -jar &quot; .. jarfile)
 
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -1630,22 +1728,24 @@ Versions: <span class="module-version">2.11.4, 2.14.2, <em>2.16.2</em></span><br
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Pandoc: A Universal Document Converter
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: cli, shell")
-whatis("URL: https://pandoc.org/, https://github.com/jgm/pandoc")
-whatis("Description: Pandoc is a Haskell library and software tool for converting from one markup format to another, and a command-line tool that uses this library.  Example: `pandoc --version`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: cli, shell&quot;)
+whatis(&quot;URL: https://pandoc.org/, https://github.com/jgm/pandoc&quot;)
+whatis(&quot;Description: Pandoc is a Haskell library and software tool for converting from one markup format to another, and a command-line tool that uses this library.  Example: `pandoc --version`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1660,30 +1760,32 @@ Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: http://broadinstitute.github.io/picard/, https://github.com/broadinstitute/picard")
-whatis("Description: Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.  Example: `picard -h`, which is an alias for `java -jar $PICARD_HOME/picard.jar -h`")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: http://broadinstitute.github.io/picard/, https://github.com/broadinstitute/picard&quot;)
+whatis(&quot;Description: Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.  Example: `picard -h`, which is an alias for `java -jar $PICARD_HOME/picard.jar -h`&quot;)
 
-local version_x = string.gsub(version, "[.].*", "")
-if (version_x == "1") then
-  -- Pindel 1.64 requires Java (<= 1.6)
-  local cluster = os.getenv("CLUSTER")
-  depends_on("openjdk/1.6.0")
+local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
+if (version_x == &quot;1&quot;) then
+  -- Pindel 1.64 requires Java (&lt;= 1.6)
+  local cluster = os.getenv(&quot;CLUSTER&quot;)
+  depends_on(&quot;openjdk/1.6.0&quot;)
 end
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
-pushenv("PICARD_HOME", home)
-set_alias("picard", "java -jar " .. pathJoin(home, "picard.jar"))
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+pushenv(&quot;PICARD_HOME&quot;, home)
+set_alias(&quot;picard&quot;, &quot;java -jar &quot; .. pathJoin(home, &quot;picard.jar&quot;))
 
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -1699,23 +1801,25 @@ Versions: <span class="module-version"><em>0.2.5b8</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 pindel: Detection of Indels and Structural Variations
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://www.sanger.ac.uk/science/tools/pindel, https://github.com/genome/pindel")
-whatis("Description: Pindel can detect breakpoints of large deletions, medium sized insertions, inversions, tandem duplications and other structural variants at single-based resolution from next-gen sequence data. It uses a pattern growth approach to identify the breakpoints of these variants from paired-end short reads.  Example: `pindel`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://www.sanger.ac.uk/science/tools/pindel, https://github.com/genome/pindel&quot;)
+whatis(&quot;Description: Pindel can detect breakpoints of large deletions, medium sized insertions, inversions, tandem duplications and other structural variants at single-based resolution from next-gen sequence data. It uses a pattern growth approach to identify the breakpoints of these variants from paired-end short reads.  Example: `pindel`.&quot;)
 
-load("htslib")
+load(&quot;htslib&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+
+</code></pre>
 
 </pre>
 </details>
@@ -1731,22 +1835,24 @@ Versions: <span class="module-version">1.07, 1.90b6.10, 1.90b6.16, 1.90b6.18, 1.
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 PLINK: Whole Genome Association Analysis Toolset
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: genomics")
-whatis("URL: https://www.cog-genomics.org/plink/")
-whatis("Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: `plink --help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: genomics&quot;)
+whatis(&quot;URL: https://www.cog-genomics.org/plink/&quot;)
+whatis(&quot;Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: `plink --help`.&quot;)
 
 -- Local variables
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1761,22 +1867,24 @@ Versions: <span class="module-version">2.00a2LM, 2.00a2.3, <em>2.00a3LM</em></sp
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 PLINK2: Whole Genome Association Analysis Toolset
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: genomics")
-whatis("URL: https://www.cog-genomics.org/plink/2.0/, https://github.com/chrchang/plink-ng")
-whatis("Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: `plink2 --help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: genomics&quot;)
+whatis(&quot;URL: https://www.cog-genomics.org/plink/2.0/, https://github.com/chrchang/plink-ng&quot;)
+whatis(&quot;Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data). Example: `plink2 --help`.&quot;)
 
 -- Local variables
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1791,28 +1899,28 @@ Versions: <span class="module-version"><em>4.9.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 PROJ: PROJ Coordinate Transformation Software Library
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: statistics, spatial")
-whatis("URL: https://proj.org/")
-whatis("Description: PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves. Example: `geod`, `proj` and `man proj`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: statistics, spatial&quot;)
+whatis(&quot;URL: https://proj.org/&quot;)
+whatis(&quot;Description: PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves. Example: `geod`, `proj` and `man proj`.&quot;)
 
-if (version >= "7.2.0") then
-  depends_on("sqlite")
+if (version &gt;= &quot;7.2.0&quot;) then
+  depends_on(&quot;sqlite&quot;)
 end
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
-prepend_path("PKG_CONFIG_PATH", pathJoin(home, "lib", "pkgconfig"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
 
 
 -- From 'make install':
@@ -1826,6 +1934,8 @@ prepend_path("PKG_CONFIG_PATH", pathJoin(home, "lib", "pkgconfig"))
 --      during linking
 --    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
 --    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1841,22 +1951,24 @@ Versions: <span class="module-version"><em>0.9.20161222</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
-qtop: Monitor the State of Queueing Systems, Along with Related Information Relevant on HPC & Grid Clusters
+<pre><code class="language-lua">help([[
+qtop: Monitor the State of Queueing Systems, Along with Related Information Relevant on HPC &amp; Grid Clusters
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: system, utility")
-whatis("URL: https://github.com/qtop/qtop")
-whatis("Description: `qtop` (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC & grid clusters. At present it supports PBS, SGE & OAR families. Please help to increase that list in the Python version of the tool, qtop.py! Examples: `qtop` and `qtop -FGW`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: system, utility&quot;)
+whatis(&quot;URL: https://github.com/qtop/qtop&quot;)
+whatis(&quot;Description: `qtop` (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC &amp; grid clusters. At present it supports PBS, SGE &amp; OAR families. Please help to increase that list in the Python version of the tool, qtop.py! Examples: `qtop` and `qtop -FGW`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
-append_path("PYTHONPATH", home)
+prepend_path(&quot;PATH&quot;, home)
+append_path(&quot;PYTHONPATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1871,68 +1983,68 @@ Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 R: The R Programming Language
 ]])
 
 local name = myModuleName()
-local version = "4.1.1-gcc8"
-whatis("Version: " .. version)
-whatis("Keywords: Programming, Statistics")
-whatis("URL: https://www.r-project.org/")
-whatis("Description: The R programming language. Examples: `R --version` and `Rscript --version`.")
+local version = &quot;4.1.1-gcc8&quot;
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: Programming, Statistics&quot;)
+whatis(&quot;URL: https://www.r-project.org/&quot;)
+whatis(&quot;Description: The R programming language. Examples: `R --version` and `Rscript --version`.&quot;)
 
-require "posix"
+require &quot;posix&quot;
 function isdir(fn)
-  return (posix.stat(fn, "type") == "directory")
+  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
 end
 
 has_devtoolset = function(version)
-  local path = pathJoin("/opt", "rh", "devtoolset-" .. version)
+  local path = pathJoin(&quot;/opt&quot;, &quot;rh&quot;, &quot;devtoolset-&quot; .. version)
   return(isdir(path))
 end
 
-local name = "R"
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local name = &quot;R&quot;
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 
 local v = version
-v = string.gsub(v, "-.*", "")
+v = string.gsub(v, &quot;-.*&quot;, &quot;&quot;)
 
 -- WORKAROUND: R 3.6.0 is not compatible with BeeGFS
-if v == "3.6.0" then
-  pushenv("R_INSTALL_STAGED", "false")
+if v == &quot;3.6.0&quot; then
+  pushenv(&quot;R_INSTALL_STAGED&quot;, &quot;false&quot;)
 else
-  pushenv("R_INSTALL_STAGED", "true")
+  pushenv(&quot;R_INSTALL_STAGED&quot;, &quot;true&quot;)
 end
 
-local r_libs_user="~/R/%p-library/%v-CBI"
+local r_libs_user=&quot;~/R/%p-library/%v-CBI&quot;
 
-if (v >= "4.1.0") then
-  local gv = string.gsub(version, v, "")
-  gv = string.gsub(gv, "-alpha", "")
-  gv = string.gsub(gv, "-beta", "")
-  gv = string.gsub(gv, "-gcc", "")
-  if (gv > "4") then
-    r_libs_user = r_libs_user .. "-gcc" .. gv
+if (v &gt;= &quot;4.1.0&quot;) then
+  local gv = string.gsub(version, v, &quot;&quot;)
+  gv = string.gsub(gv, &quot;-alpha&quot;, &quot;&quot;)
+  gv = string.gsub(gv, &quot;-beta&quot;, &quot;&quot;)
+  gv = string.gsub(gv, &quot;-gcc&quot;, &quot;&quot;)
+  if (gv &gt; &quot;4&quot;) then
+    r_libs_user = r_libs_user .. &quot;-gcc&quot; .. gv
     if has_devtoolset(gv) then
-      depends_on("scl-devtoolset/" .. gv)
+      depends_on(&quot;scl-devtoolset/&quot; .. gv)
     end
   end
 end
 
--- Avoid R CMD build warning on "invalid uid value replaced by that for user 'nobody'"
+-- Avoid R CMD build warning on &quot;invalid uid value replaced by that for user 'nobody'&quot;
 -- https://stackoverflow.com/questions/30599326
-pushenv("R_BUILD_TAR", "tar")
+pushenv(&quot;R_BUILD_TAR&quot;, &quot;tar&quot;)
 
 -- In-house env var for R repositories mirrored locally
-local r_repos_root = pathJoin(os.getenv("CBI_SHARED_ROOT"), "mirrors", "r-mirrors")
-pushenv("R_REPOS_ROOT", r_repos_root)
-pushenv("R_REPOS_CRAN", "file://" .. pathJoin(r_repos_root, "cran"))
-pushenv("R_LOCAL_CRAN", "file://" .. pathJoin(r_repos_root, "cran"))
+local r_repos_root = pathJoin(os.getenv(&quot;CBI_SHARED_ROOT&quot;), &quot;mirrors&quot;, &quot;r-mirrors&quot;)
+pushenv(&quot;R_REPOS_ROOT&quot;, r_repos_root)
+pushenv(&quot;R_REPOS_CRAN&quot;, &quot;file://&quot; .. pathJoin(r_repos_root, &quot;cran&quot;))
+pushenv(&quot;R_LOCAL_CRAN&quot;, &quot;file://&quot; .. pathJoin(r_repos_root, &quot;cran&quot;))
 
 -- R packages built from native code and installed using R from EPEL is *not*
 -- always compatible with ditto installed using R from the CBI software stack.
@@ -1941,25 +2053,27 @@ pushenv("R_LOCAL_CRAN", "file://" .. pathJoin(r_repos_root, "cran"))
 -- we will not change this for such users.  The heuristic is to check if the
 -- built-in R_LIBS_USER folder already exists. If not, then it's safe to use
 -- one specific to the CBI stack.
-pushenv("R_LIBS_USER", r_libs_user)
+pushenv(&quot;R_LIBS_USER&quot;, r_libs_user)
 
 -- WORKAROUND: utils::download.file(), which is for instance used by install.packages()
 -- have a built-in timeout at 60 seconds.  This might be too short for some larger
 -- Bioconductor annotation packages, e.g. 'SNPlocs.Hsapiens.dbSNP150.GRCh38' (2.10 GB).
-pushenv("R_DEFAULT_INTERNET_TIMEOUT", "180") -- 3 minutes timeout instead of 1 minute
+pushenv(&quot;R_DEFAULT_INTERNET_TIMEOUT&quot;, &quot;180&quot;) -- 3 minutes timeout instead of 1 minute
 
 -- WORKAROUND: gert 1.1.0 (2021-01-25) installs toward a static libgit2 that
 -- gives 'Illegal instruction' on some hosts (with older CPUs?)
 -- See https://github.com/r-lib/gert/issues/117
-pushenv("USE_SYSTEM_LIBGIT2", "true")
+pushenv(&quot;USE_SYSTEM_LIBGIT2&quot;, &quot;true&quot;)
 
 -- WORKAROUND: Package udunits2 does not install out of the box and requires
 -- manually specifying 'configure.args' during install unless we set the
 -- following environment variable
-local path = "/usr/include/udunits2"
+local path = &quot;/usr/include/udunits2&quot;
 if (isdir(path)) then
-  pushenv("UDUNITS2_INCLUDE", path)
+  pushenv(&quot;UDUNITS2_INCLUDE&quot;, path)
 end
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -1973,22 +2087,24 @@ Versions: <span class="module-version">0.1, <em>0.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 R Site Configuration: Tweaks to R for the Current Compute Environment
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: R, configuration")
-whatis("Description: Sets R options and environment variables customized for the current compute environment. Notably, it configures R to install packages from local CRAN and Bioconductor mirrors without the need for internet access.  Examples: In R, `install.packages(\"ggplot2\")`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: R, configuration&quot;)
+whatis(&quot;Description: Sets R options and environment variables customized for the current compute environment. Notably, it configures R to install packages from local CRAN and Bioconductor mirrors without the need for internet access.  Examples: In R, `install.packages(\&quot;ggplot2\&quot;)`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 -- Set site-wide (sic!) Renviron and Rprofile files
-pushenv("R_ENVIRON", pathJoin(home, "Renviron.site"))
-pushenv("R_PROFILE", pathJoin(home, "Rprofile.site"))
+pushenv(&quot;R_ENVIRON&quot;, pathJoin(home, &quot;Renviron.site&quot;))
+pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2004,22 +2120,24 @@ Versions: <span class="module-version">1.53.3, 1.54.0, 1.56.1, <em>1.57.0</em></
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 rclone: Rsync for Cloud Storage and More
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: files, transfers")
-whatis("URL: https://rclone.org/, https://github.com/rclone/rclone")
-whatis("Description: Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, or remote file systems, and in the cloud.  Example: `rclone --version`, `rclone --help`, `rclone config`, and `info rclone`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: files, transfers&quot;)
+whatis(&quot;URL: https://rclone.org/, https://github.com/rclone/rclone&quot;)
+whatis(&quot;Description: Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, or remote file systems, and in the cloud.  Example: `rclone --version`, `rclone --help`, `rclone config`, and `info rclone`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
-prepend_path("MANPATH", home)
+prepend_path(&quot;PATH&quot;, home)
+prepend_path(&quot;MANPATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2035,22 +2153,24 @@ Versions: <span class="module-version">12.1.1, <em>13.0.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 ripgrep: Recursively Searches Directories for a Regex Pattern
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: utility, files, search")
-whatis("URL: https://github.com/BurntSushi/ripgrep")
-whatis("Description: ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.  Examples: `rg --version` and `rg -i 'lorem ipsum'`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, files, search&quot;)
+whatis(&quot;URL: https://github.com/BurntSushi/ripgrep&quot;)
+whatis(&quot;Description: ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.  Examples: `rg --version` and `rg -i 'lorem ipsum'`. Warning: Only the most recent version of this software will be kept.&quot;)
 
 -- Local variables
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2066,23 +2186,25 @@ Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.0
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 RStudio Desktop: The RStudio Desktop IDE for R
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: programming, R, GUI")
-whatis("URL: https://rstudio.com/products/rstudio/#rstudio-desktop, https://www.rstudio.com/products/rstudio/release-notes/, https://www.rstudio.com/products/rstudio/download/")
-whatis("Description: The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.  Example: `rstudio`.  If you get blank window, retry with `QMLSCENE_DEVICE=softwarecontext rstudio`.  Warning: This software works only on the development nodes. It requires a connection with X11 Forwarding enabled. It does *not* work with X2Go (gives error \"GLX 1.3 or later is required\"). For best performance, use SSH compression when using X11 Forwarding, i.e. `ssh -X -C ...`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, R, GUI&quot;)
+whatis(&quot;URL: https://rstudio.com/products/rstudio/#rstudio-desktop, https://www.rstudio.com/products/rstudio/release-notes/, https://www.rstudio.com/products/rstudio/download/&quot;)
+whatis(&quot;Description: The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.  Example: `rstudio`.  If you get blank window, retry with `QMLSCENE_DEVICE=softwarecontext rstudio`.  Warning: This software works only on the development nodes. It requires a connection with X11 Forwarding enabled. It does *not* work with X2Go (gives error \&quot;GLX 1.3 or later is required\&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. `ssh -X -C ...`.&quot;)
 
-depends_on("r")
+depends_on(&quot;r&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -2099,23 +2221,25 @@ Versions: <span class="module-version"><em>2021.09.2-382</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 RStudio Server: The RStudio Server
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: programming, R, GUI")
-whatis("URL: https://rstudio.com/products/rstudio/#rstudio-server, https://www.rstudio.com/products/rstudio/release-notes/")
-whatis("Description: The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.  Example: `rserver`.  Warning: This is work under construction!")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, R, GUI&quot;)
+whatis(&quot;URL: https://rstudio.com/products/rstudio/#rstudio-server, https://www.rstudio.com/products/rstudio/release-notes/&quot;)
+whatis(&quot;Description: The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.  Example: `rserver`.  Warning: This is work under construction!&quot;)
 
-depends_on("r")
+depends_on(&quot;r&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -2132,24 +2256,26 @@ Versions: <span class="module-version">0.3.0, <em>0.3.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 RSC: An RStudio Server Controller
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: programming, R, GUI")
-whatis("URL: https://github.com/UCSF-CBI/rstudio-server-controller")
-whatis("Description: The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.  Example: `rsc --help` and `rsc start --port=uid`.  Warning: This is work under construction!")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, R, GUI&quot;)
+whatis(&quot;URL: https://github.com/UCSF-CBI/rstudio-server-controller&quot;)
+whatis(&quot;Description: The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.  Example: `rsc --help` and `rsc start --port=uid`.  Warning: This is work under construction!&quot;)
 
-depends_on("r")
-depends_on("rstudio-server")
+depends_on(&quot;r&quot;)
+depends_on(&quot;rstudio-server&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+</code></pre>
 
 </pre>
 </details>
@@ -2165,22 +2291,24 @@ Versions: <span class="module-version">1.3.0, 1.4.0, 1.5.2, <em>1.6.0</em></span
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 salmon: Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://combine-lab.github.io/salmon/, https://github.com/COMBINE-lab/salmon")
-whatis("Description: Highly-accurate & wicked fast transcript-level quantification from RNA-seq reads using selective alignment.  Example: `salmon --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://combine-lab.github.io/salmon/, https://github.com/COMBINE-lab/salmon&quot;)
+whatis(&quot;Description: Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.  Example: `salmon --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("LD_LIBRARY_PATH", pathJoin(home, "lib"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2195,34 +2323,36 @@ Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, <em>1.14</em></spa
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 SAMtools: Tools (written in C using htslib) for Manipulating Next-Generation Sequencing Data
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://www.htslib.org/, https://github.com/samtools/samtools")
-whatis("Description: SAMtools is a suite of programs for interacting with high-throughput sequencing data.  Example: `samtools --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://www.htslib.org/, https://github.com/samtools/samtools&quot;)
+whatis(&quot;Description: SAMtools is a suite of programs for interacting with high-throughput sequencing data.  Example: `samtools --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-local version_x = string.gsub(version, "[.].*", "")
-if (version_x == "0") then
-  prepend_path("PATH", home)
-  prepend_path("PATH", pathJoin(home, "bcftools"))
-  prepend_path("PATH", pathJoin(home, "misc"))
+local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
+if (version_x == &quot;0&quot;) then
+  prepend_path(&quot;PATH&quot;, home)
+  prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bcftools&quot;))
+  prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;misc&quot;))
 else
-  prepend_path("PATH", pathJoin(home, "bin"))
+  prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 end
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 
 -- Warn about bug https://github.com/samtools/htslib/issues/1236
-if (mode() == "load" and version == "1.11") then
-  LmodMessage("MODULE WARNING: " .. name .. " " .. version .. " has a bug that results in valid but incorrect CIGAR strings. Because of this, it is recommended to use an older or a newer version instead. For details, see https://github.com/samtools/htslib/issues/1236")
+if (mode() == &quot;load&quot; and version == &quot;1.11&quot;) then
+  LmodMessage(&quot;MODULE WARNING: &quot; .. name .. &quot; &quot; .. version .. &quot; has a bug that results in valid but incorrect CIGAR strings. Because of this, it is recommended to use an older or a newer version instead. For details, see https://github.com/samtools/htslib/issues/1236&quot;)
 end
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2238,43 +2368,45 @@ Versions: <span class="module-version">4, 7, 8, 9, <em>10</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-local scl_name = "devtoolset" .. "-" .. version
+local scl_name = &quot;devtoolset&quot; .. &quot;-&quot; .. version
 
-whatis("Version: " .. version)
-whatis("Keywords: programming, gcc")
-whatis("URL: https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/" .. version)
-whatis("Description: These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) `devtoolset-<version>` in the current environment.  This is an alternative to calling `source scl_source enable devtoolset-<version>`, which is an approach that is not officially supported by RedHat/CentOS.  Example: `gcc --version`.  Warning: Older versions may be removed in the future.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, gcc&quot;)
+whatis(&quot;URL: https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/&quot; .. version)
+whatis(&quot;Description: These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) `devtoolset-&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable devtoolset-&lt;version&gt;`, which is an approach that is not officially supported by RedHat/CentOS.  Example: `gcc --version`.  Warning: Older versions may be removed in the future.&quot;)
 
 
-require "posix"
+require &quot;posix&quot;
 function isdir(fn)
-  return (posix.stat(fn, "type") == "directory")
+  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
 end
 
-local home = pathJoin("/opt", "rh", scl_name)
+local home = pathJoin(&quot;/opt&quot;, &quot;rh&quot;, scl_name)
 
 if not isdir(home) then
-  LmodError("Module '" .. myModuleFullName() .. "' is not supported because this host '" .. os.getenv("HOSTNAME") .. "' does not have path '" .. home .. "'")
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
 end
 
 
 -- Don't edit! Created using: 
 -- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/devtoolset-10/enable
-prepend_path("INFOPATH","/opt/rh/devtoolset-10/root/usr/share/info")
-prepend_path("LD_LIBRARY_PATH","/opt/rh/devtoolset-10/root/usr/lib/dyninst")
-prepend_path("LD_LIBRARY_PATH","/opt/rh/devtoolset-10/root/usr/lib64/dyninst")
-prepend_path("LD_LIBRARY_PATH","/opt/rh/devtoolset-10/root/usr/lib")
-prepend_path("LD_LIBRARY_PATH","/opt/rh/devtoolset-10/root/usr/lib64")
-prepend_path("MANPATH","/opt/rh/devtoolset-10/root/usr/share/man")
-prepend_path("PATH","/opt/rh/devtoolset-10/root/usr/bin")
-setenv("PCP_DIR","/opt/rh/devtoolset-10/root")
-prepend_path("PKG_CONFIG_PATH","/opt/rh/devtoolset-10/root/usr/lib64/pkgconfig")
+prepend_path(&quot;INFOPATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/share/info&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib/dyninst&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib64/dyninst&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib64&quot;)
+prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/share/man&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/bin&quot;)
+setenv(&quot;PCP_DIR&quot;,&quot;/opt/rh/devtoolset-10/root&quot;)
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib64/pkgconfig&quot;)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2291,40 +2423,42 @@ Versions: <span class="module-version">3.3, 3.4, <em>3.6</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-local version_sans_period = string.gsub(version, "%.", "")
-local scl_name = "rh-python" .. version_sans_period
-if version == "3.3" then
-  scl_name = "python" .. version_sans_period
+local version_sans_period = string.gsub(version, &quot;%.&quot;, &quot;&quot;)
+local scl_name = &quot;rh-python&quot; .. version_sans_period
+if version == &quot;3.3&quot; then
+  scl_name = &quot;python&quot; .. version_sans_period
 end  
 
-whatis("Version: " .. version)
-whatis("Keywords: programming, Python")
-whatis("URL: https://www.softwarecollections.org/en/scls/rhscl/" .. scl_name .. "/")
-whatis("Description: Enables the CentOS Software Collection (SCL) `" .. scl_name .. "` in the current environment.  This is an alternative to calling `source scl_source enable " .. scl_name .. "`, which is not officially supported by RedHat/CentOS.  Example: `python --version` and `pip --version`.  Warning: This module is DEPRECATED and should no longer be used because Python SCLs are deprecated, which in turn is because Python 3 is now available directly by CentOS.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, Python&quot;)
+whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
+whatis(&quot;Description: Enables the CentOS Software Collection (SCL) `&quot; .. scl_name .. &quot;` in the current environment.  This is an alternative to calling `source scl_source enable &quot; .. scl_name .. &quot;`, which is not officially supported by RedHat/CentOS.  Example: `python --version` and `pip --version`.  Warning: This module is DEPRECATED and should no longer be used because Python SCLs are deprecated, which in turn is because Python 3 is now available directly by CentOS.&quot;)
 
 
-require "posix"
+require &quot;posix&quot;
 function isdir(fn)
-  return (posix.stat(fn, "type") == "directory")
+  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
 end
 
-local home = "/opt/rh/rh-python" .. version_sans_period
+local home = &quot;/opt/rh/rh-python&quot; .. version_sans_period
 
 if not isdir(home) then
-  LmodError("Module '" .. myModuleFullName() .. "' is not supported because this host '" .. os.getenv("HOSTNAME") ..
- "' does not have path '" .. home .. "'")
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) ..
+ &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
 end
 
 
 local path = dirname(myFileName())
-local pathname = pathJoin(path, ".incl", version_sans_period .. ".lua")
+local pathname = pathJoin(path, &quot;.incl&quot;, version_sans_period .. &quot;.lua&quot;)
 loadfile(pathname)()
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2339,40 +2473,42 @@ Versions: <span class="module-version">25, 26, 27, <em>30</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 SCL Ruby: Ruby
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-local scl_name = "rh-ruby" .. version
+local scl_name = &quot;rh-ruby&quot; .. version
 
-whatis("Version: " .. version)
-whatis("Keywords: programming, Ruby")
-whatis("URL: https://www.softwarecollections.org/en/scls/rhscl/" .. scl_name .. "/")
-whatis("Description: Enables the CentOS Software Collection (SCL) `" .. scl_name .. "` in the current environment.  This is an alternative to calling `source scl_source enable " .. scl_name .. "`, which is an approach that is not of ficially supported by RedHat/CentOS.  Example: `irb --help`, `ruby --help`, `ruby script.rb`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, Ruby&quot;)
+whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
+whatis(&quot;Description: Enables the CentOS Software Collection (SCL) `&quot; .. scl_name .. &quot;` in the current environment.  This is an alternative to calling `source scl_source enable &quot; .. scl_name .. &quot;`, which is an approach that is not of ficially supported by RedHat/CentOS.  Example: `irb --help`, `ruby --help`, `ruby script.rb`.&quot;)
 
 
-require "posix"
+require &quot;posix&quot;
 function isdir(fn)
-  return (posix.stat(fn, "type") == "directory")
+  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
 end
 
-local home = "/opt/rh/" .. scl_name
+local home = &quot;/opt/rh/&quot; .. scl_name
 
 if not isdir(home) then
-  LmodError("Module '" .. myModuleFullName() .. "' is not supported because this host '" .. os.getenv("HOSTNAME") .. "' does not have path '" .. home .. "'")
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
 end
 -- Don't edit! Created using: 
 -- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/rh-ruby30/enable
-setenv("LD_LIBRARY_PATH","/opt/rh/rh-ruby30/root/usr/local/lib64:/opt/rh/rh-ruby30/root/usr/lib64")
-prepend_path("MANPATH","/opt/rh/rh-ruby30/root/usr/share/man")
-prepend_path("MANPATH","/opt/rh/rh-ruby30/root/usr/local/share/man")
-prepend_path("PATH","/opt/rh/rh-ruby30/root/usr/bin")
-prepend_path("PATH","/opt/rh/rh-ruby30/root/usr/local/bin")
-prepend_path("PKG_CONFIG_PATH","/opt/rh/rh-ruby30/root/usr/lib64/pkgconfig")
-prepend_path("PKG_CONFIG_PATH","/opt/rh/rh-ruby30/root/usr/local/lib64/pkgconfig")
-setenv("XDG_DATA_DIRS","/opt/rh/rh-ruby30/root/usr/local/share:/opt/rh/rh-ruby30/root/usr/share:/usr/local/share:/usr/share")
+setenv(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/lib64:/opt/rh/rh-ruby30/root/usr/lib64&quot;)
+prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/share/man&quot;)
+prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/share/man&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/bin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/bin&quot;)
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/lib64/pkgconfig&quot;)
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/lib64/pkgconfig&quot;)
+setenv(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/share:/opt/rh/rh-ruby30/root/usr/share:/usr/local/share:/usr/share&quot;)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2388,21 +2524,23 @@ Versions: <span class="module-version">0.7.1, 0.7.2, <em>0.8.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 ShellCheck: A Shell Script Static Analysis Tool
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: programming, shell, sh, bash, dash, ksh")
-whatis("URL: https://www.shellcheck.net/, https://github.com/koalaman/shellcheck/")
-whatis("Description: ShellCheck finds bugs in your shell scripts.  Example: `shellcheck --version` and `shellcheck -x ~/.bashrc`.  Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, shell, sh, bash, dash, ksh&quot;)
+whatis(&quot;URL: https://www.shellcheck.net/, https://github.com/koalaman/shellcheck/&quot;)
+whatis(&quot;Description: ShellCheck finds bugs in your shell scripts.  Example: `shellcheck --version` and `shellcheck -x ~/.bashrc`.  Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+
+</code></pre>
 
 </pre>
 </details>
@@ -2418,34 +2556,36 @@ Versions: <span class="module-version">4.3t, 5.0c, <em>5.0e</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 SnpEff: Genetic Variant Annotation and Effect Prediction Toolbox
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: high-throughput sequencing")
-whatis("URL: http://snpeff.sourceforge.net/")
-whatis("Description: SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes). Example: `snpEff -help`, `SnpSift -help`,  and `ClinEff -help`, which are aliases for `java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help`, `java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help`, and `java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: high-throughput sequencing&quot;)
+whatis(&quot;URL: http://snpeff.sourceforge.net/&quot;)
+whatis(&quot;Description: SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes). Example: `snpEff -help`, `SnpSift -help`,  and `ClinEff -help`, which are aliases for `java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help`, `java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help`, and `java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help`.&quot;)
 
-local name = "snpEff"
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local name = &quot;snpEff&quot;
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-pushenv("SNPEFF_HOME", home)
+pushenv(&quot;SNPEFF_HOME&quot;, home)
 
-local jarfile = pathJoin(home, "snpEff", "snpEff.jar")
-pushenv("SNPEFF", jarfile)
-set_alias("snpEff", "java -jar " .. jarfile)
+local jarfile = pathJoin(home, &quot;snpEff&quot;, &quot;snpEff.jar&quot;)
+pushenv(&quot;SNPEFF&quot;, jarfile)
+set_alias(&quot;snpEff&quot;, &quot;java -jar &quot; .. jarfile)
 
-local jarfile = pathJoin(home, "snpEff", "SnpSift.jar")
-pushenv("SNPSIFT", jarfile)
-set_alias("SnpSift", "java -jar " .. jarfile)
+local jarfile = pathJoin(home, &quot;snpEff&quot;, &quot;SnpSift.jar&quot;)
+pushenv(&quot;SNPSIFT&quot;, jarfile)
+set_alias(&quot;SnpSift&quot;, &quot;java -jar &quot; .. jarfile)
 
-local jarfile = pathJoin(home, "clinEff", "ClinEff.jar")
-pushenv("CLINEFF", jarfile)
-set_alias("ClinEff", "java -jar " .. jarfile)
+local jarfile = pathJoin(home, &quot;clinEff&quot;, &quot;ClinEff.jar&quot;)
+pushenv(&quot;CLINEFF&quot;, jarfile)
+set_alias(&quot;ClinEff&quot;, &quot;java -jar &quot; .. jarfile)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2461,20 +2601,20 @@ Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 SRA Toolkit: Tools and Libraries for Using Data in the INSDC Sequence Read Archives
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://ncbi.github.io/sra-tools/, https://github.com/ncbi/sra-tools")
-whatis("Description: The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives. Example: `fastq-dump --help`. Warning: To work around a bug where `fasterq-dump` crashes the local machine, it has been tweaked such that it uses `$TMPDIR` rather than `$PWD` as the default temporary folder and it will only use two threads instead of six by default.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://ncbi.github.io/sra-tools/, https://github.com/ncbi/sra-tools&quot;)
+whatis(&quot;Description: The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives. Example: `fastq-dump --help`. Warning: To work around a bug where `fasterq-dump` crashes the local machine, it has been tweaked such that it uses `$TMPDIR` rather than `$PWD` as the default temporary folder and it will only use two threads instead of six by default.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
-prepend_path("PATH", pathJoin(home, "bin"))
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 -- WORKAROUND: fasterq-dump crashes machines!
 -- Not sure exactly why, but one hypothesis is that the file system is
@@ -2487,11 +2627,13 @@ prepend_path("PATH", pathJoin(home, "bin"))
 -- 2021-08-20].  Ideally, we would limit it to a single thread, but the
 -- tool will ignore '--threads 1' and use the default six threads. [3]
 -- [3] https://github.com/ncbi/sra-tools/issues/494
--- In sratoolkit (>= 2.11.2) it might be that we no longer need to use
+-- In sratoolkit (&gt;= 2.11.2) it might be that we no longer need to use
 -- '--threads 2' [4]. As soon as we have verified that in a safe
 -- environment, we'll drop it
 -- [4] https://github.com/ncbi/sra-tools/issues/463#issuecomment-942410725
-set_shell_function("fasterq-dump", 'command fasterq-dump --threads 2 --temp "$(mktemp -d)" "$@"', '')
+set_shell_function(&quot;fasterq-dump&quot;, 'command fasterq-dump --threads 2 --temp &quot;$(mktemp -d)&quot; &quot;$@&quot;', '')
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2506,23 +2648,25 @@ Versions: <span class="module-version">2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2
 <details>
 <summary>Module code: view</summary>
 <pre>
-help("STAR: Spliced Transcripts Alignment to a Reference")
+<pre><code class="language-lua">help(&quot;STAR: Spliced Transcripts Alignment to a Reference&quot;)
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://github.com/alexdobin/STAR, https://github.com/alexdobin/STAR/blob/master/CHANGES.md (changelog)")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://github.com/alexdobin/STAR, https://github.com/alexdobin/STAR/blob/master/CHANGES.md (changelog)&quot;)
 whatis([[
 Description: STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.
 Example: `STAR --help`.
 ]])
 
-local name = "STAR"
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local name = &quot;STAR&quot;
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin", "Linux_x86_64_static"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;, &quot;Linux_x86_64_static&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2538,22 +2682,24 @@ Versions: <span class="module-version"><em>2.8</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 tmux: A Terminal Multiplexer
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: screen, tmux")
-whatis("URL: https://github.com/tmux/tmux/wiki")
-whatis("Description: tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more.  Example: `tmux` and `man tmux`. Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: screen, tmux&quot;)
+whatis(&quot;URL: https://github.com/tmux/tmux/wiki&quot;)
+whatis(&quot;Description: tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more.  Example: `tmux` and `man tmux`. Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2568,21 +2714,23 @@ Versions: <span class="module-version"><em>2.1.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 TopHat: A Spliced Read Mapper for RNA-Seq
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: Programming, Statistics")
-whatis("URL: https://ccb.jhu.edu/software/tophat/index.shtml, https://github.com/infphilo/tophat")
-whatis("Description: TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to mammalian-sized genomes using the ultra high-throughput short read aligner Bowtie, and then analyzes the mapping results to identify splice junctions between exons.  Example: `tophat --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: Programming, Statistics&quot;)
+whatis(&quot;URL: https://ccb.jhu.edu/software/tophat/index.shtml, https://github.com/infphilo/tophat&quot;)
+whatis(&quot;Description: TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to mammalian-sized genomes using the ultra high-throughput short read aligner Bowtie, and then analyzes the mapping results to identify splice junctions between exons.  Example: `tophat --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+
+</code></pre>
 
 </pre>
 </details>
@@ -2599,22 +2747,24 @@ Versions: <span class="module-version"><em>1.8.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 tree: List Content of Directories in a Tree-like Format
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: files, utility")
-whatis("URL: http://mama.indstate.edu/users/ice/tree/, ")
-whatis("Description: Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the `LS_COLORS` environment variable is set and output is to tty. Example: `tree --help`.  Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: files, utility&quot;)
+whatis(&quot;URL: http://mama.indstate.edu/users/ice/tree/, &quot;)
+whatis(&quot;Description: Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the `LS_COLORS` environment variable is set and output is to tty. Example: `tree --help`.  Warning: Only the most recent version of this software will be kept.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "man"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2630,22 +2780,24 @@ Versions: <span class="module-version"><em>0.4</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 up: The Ultimate Plumber
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: utility, cli")
-whatis("URL: https://github.com/akavel/up")
-whatis("Description: A tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results. Interactively and incrementally explore textual data in Linux using text-processing utils such as grep, sort, cut, paste, awk, wc, perl, etc.  When done, press Ctrl-C to view final pipe commands, or Ctrl-X to save it to file.  Examples: `up --help`, `ls | up` (exit with Ctrl-C).  Warning: Only the most recent version of this software will be kept.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, cli&quot;)
+whatis(&quot;URL: https://github.com/akavel/up&quot;)
+whatis(&quot;Description: A tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results. Interactively and incrementally explore textual data in Linux using text-processing utils such as grep, sort, cut, paste, awk, wc, perl, etc.  When done, press Ctrl-C to view final pipe commands, or Ctrl-X to save it to file.  Examples: `up --help`, `ls | up` (exit with Ctrl-C).  Warning: Only the most recent version of this software will be kept.&quot;)
 
 -- Local variables
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", home)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2660,25 +2812,27 @@ Versions: <span class="module-version"><em>2.4.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 VarScan: Variant Detection in Massively Parallel Sequencing Data
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: high-throughput sequencing")
-whatis("URL: https://dkoboldt.github.io/varscan/")
-whatis("Description: VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments. Example: `varscan`, which is an alias to `java -jar $VARSCAN_HOME/VarScan.jar`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: high-throughput sequencing&quot;)
+whatis(&quot;URL: https://dkoboldt.github.io/varscan/&quot;)
+whatis(&quot;Description: VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments. Example: `varscan`, which is an alias to `java -jar $VARSCAN_HOME/VarScan.jar`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-name = "VarScan"
-local home = pathJoin(root, name .. "-" .. version)
-pushenv("VARSCAN_HOME", home)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+name = &quot;VarScan&quot;
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+pushenv(&quot;VARSCAN_HOME&quot;, home)
 
-local jarfile = home .. "/" .. name .. ".v" .. version .. ".jar"
-set_alias("varscan", "java -jar " .. jarfile)
+local jarfile = home .. &quot;/&quot; .. name .. &quot;.v&quot; .. version .. &quot;.jar&quot;
+set_alias(&quot;varscan&quot;, &quot;java -jar &quot; .. jarfile)
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -2694,20 +2848,22 @@ Versions: <span class="module-version">0.9.2, 0.9.3, <em>0.9.4</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 vcf-validator: Validation Suite for Variant Call Format (VCF) Files
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://github.com/EBIvariation/vcf-validator")
-whatis("Description: Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input. Example: `vcf_validator --help`, `vcf-debugulator --help`, and `vcf-assembly-checker --help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://github.com/EBIvariation/vcf-validator&quot;)
+whatis(&quot;Description: Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input. Example: `vcf_validator --help`, `vcf-debugulator --help`, and `vcf-assembly-checker --help`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
-prepend_path("PATH", home)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2722,24 +2878,26 @@ Versions: <span class="module-version"><em>0.1.16</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 VCFtools: Tools Written in Perl and C++ for Working with VCF Files
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: sequencing")
-whatis("URL: https://vcftools.github.io/")
-whatis("Description: VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. The aim of VCFtools is to provide easily accessible methods for working with complex genetic variation data in the form of VCF files. Example: `vcftools --version`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://vcftools.github.io/&quot;)
+whatis(&quot;Description: VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. The aim of VCFtools is to provide easily accessible methods for working with complex genetic variation data in the form of VCF files. Example: `vcftools --version`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI")
-local home = pathJoin(root, name .. "-" .. version)
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path("PATH", pathJoin(home, "bin"))
-prepend_path("MANPATH", pathJoin(home, "share", "man"))
-pushenv("PERL5LIB", pathJoin(home, "share", "perl5"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot;))
 
+
+</code></pre>
 
 </pre>
 </details>
@@ -2756,21 +2914,23 @@ Versions: <span class="module-version"><em>latest</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-help([[
+<pre><code class="language-lua">help([[
 Wynton Tools: Tools for the Wynton HPC Environment
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-whatis("Version: " .. version)
-whatis("Keywords: HPC")
-whatis("URL: https://github.com/UCSF-HPC/wynton-tools/")
-whatis("Description: A command-line tool for common Wynton HPC queries. Examples: `wynton --help`.")
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: HPC&quot;)
+whatis(&quot;URL: https://github.com/UCSF-HPC/wynton-tools/&quot;)
+whatis(&quot;Description: A command-line tool for common Wynton HPC queries. Examples: `wynton --help`.&quot;)
 
-local root = os.getenv("SOFTWARE_ROOT_CBI") .. "-testing"
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;) .. &quot;-testing&quot;
 local home = pathJoin(root, name)
 
-prepend_path("PATH", pathJoin(home, "bin"))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2804,13 +2964,15 @@ Versions: <span class="module-version"><em>11</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Amber11, for 64-bit"
-module-whatis "URL: http://ambermd.org/"
+module-whatis &quot;Description: Amber11, for 64-bit&quot;
+module-whatis &quot;URL: http://ambermd.org/&quot;
 setenv        AMBERHOME       /wynton/group/sali/AMBER/amber11/
 prepend-path  PATH            /wynton/group/sali/AMBER/amber11/bin
 prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2829,11 +2991,13 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Basic Local Alignment Search Tool"
-module-whatis "URL: https://blast.ncbi.nlm.nih.gov"
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2846,11 +3010,13 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Basic Local Alignment Search Tool"
-module-whatis "URL: https://blast.ncbi.nlm.nih.gov/"
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2863,19 +3029,21 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: The free peer-reviewed portable C++ source libraries"
-module-whatis "URL: https://www.boost.org/"
+module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
+module-whatis &quot;URL: https://www.boost.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
   prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
   prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
   prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
 } else {
   set curMod [module-info name]
-  puts stderr "'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead"
+  puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
   break
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2888,18 +3056,20 @@ Versions: <span class="module-version">4.12.1, <em>5.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Computational Geometry Algorithms Library"
-module-whatis "URL: https://www.cgal.org/"
+module-whatis &quot;Description: Computational Geometry Algorithms Library&quot;
+module-whatis &quot;URL: https://www.cgal.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
   module load boost/1.73.0 cmake/3.18.3
   setenv CGAL_DIR /salilab/diva1/programs/x86_64linux/cgal-5.1/share/cmake/CGAL
 } else {
   set curMod [module-info name]
-  puts stderr "'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead"
+  puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
   break
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2912,11 +3082,13 @@ Versions: <span class="module-version">3.12.2, <em>3.18.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Cross-platform make system"
-module-whatis "URL: https://cmake.org/"
+module-whatis &quot;Description: Cross-platform make system&quot;
+module-whatis &quot;URL: https://cmake.org/&quot;
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/cmake-3.18.3/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2929,12 +3101,14 @@ Versions: <span class="module-version"><em>0.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Ligand binding site prediction from protein sequence and structure"
-module-whatis "URL: https://compbio.cs.princeton.edu/concavity/"
+module-whatis &quot;Description: Ligand binding site prediction from protein sequence and structure&quot;
+module-whatis &quot;URL: https://compbio.cs.princeton.edu/concavity/&quot;
 module load sali-libraries
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/concavity-0.1/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2951,9 +3125,9 @@ Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "NVIDIA CUDA Toolkit libraries"
+module-whatis &quot;NVIDIA CUDA Toolkit libraries&quot;
 if ![file exists /usr/bin/g++] {
   module load gcc
 }
@@ -2961,6 +3135,8 @@ prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-11.5.0
 prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
 prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/pkgconfig
 setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2973,12 +3149,14 @@ Versions: <span class="module-version">0.25.2, 0.29.14, <em>0.29.24</em></span><
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A language for writing Python extension modules"
-module-whatis "URL: https://cython.org/"
+module-whatis &quot;Description: A language for writing Python extension modules&quot;
+module-whatis &quot;URL: https://cython.org/&quot;
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.24/bin
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.24/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -2991,11 +3169,13 @@ Versions: <span class="module-version">1.8.6, <em>1.8.15</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A documentation system for C/C++"
-module-whatis "URL: http://www.doxygen.org/index.html"
+module-whatis &quot;Description: A documentation system for C/C++&quot;
+module-whatis &quot;URL: http://www.doxygen.org/index.html&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/doxygen-1.8.15/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3008,13 +3188,15 @@ Versions: <span class="module-version">2.0.4, <em>2.2.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Secondary structure assignment"
-module-whatis "URL: https://swift.cmbi.umcn.nl/gv/dssp/"
+module-whatis &quot;Description: Secondary structure assignment&quot;
+module-whatis &quot;URL: https://swift.cmbi.umcn.nl/gv/dssp/&quot;
 module load sali-libraries
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/dssp-2.2.1/bin
 prepend-path  MANPATH         /salilab/diva1/programs/x86_64linux/dssp-2.2.1/man
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3027,11 +3209,13 @@ Versions: <span class="module-version"><em>3.3.5</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A lightweight C++ template library for vector and matrix math"
-module-whatis "URL: http://eigen.tuxfamily.org"
+module-whatis &quot;Description: A lightweight C++ template library for vector and matrix math&quot;
+module-whatis &quot;URL: http://eigen.tuxfamily.org&quot;
 prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/eigen-3.3.5/include
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3044,16 +3228,18 @@ Versions: <span class="module-version">2.12, <em>2.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Single Particle Analysis and Electron Micrograph Analysis"
-module-whatis "URL: https://blake.bcm.edu/emanwiki/EMAN2"
+module-whatis &quot;Description: Single Particle Analysis and Electron Micrograph Analysis&quot;
+module-whatis &quot;URL: https://blake.bcm.edu/emanwiki/EMAN2&quot;
 module load python2/numpy/1.14.1 hdf5/1.10.1
 module load python2/matplotlib
 setenv       EMAN2DIR        /salilab/diva1/programs/x86_64linux/eman-py27-2.2
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/eman-py27-2.2/bin
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/eman-py27-2.2/lib
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/eman-py27-2.2/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3065,10 +3251,12 @@ Versions: <span class="module-version"><em>3.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Ursula's featuresketch script; run feature_sketch.sh then feature_sketch.py"
+module-whatis &quot;Description: Ursula's featuresketch script; run feature_sketch.sh then feature_sketch.py&quot;
 prepend-path  PATH  /salilab/diva1/programs/x86_64linux/featuresketch-3.0/programs/feature_sketch
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3081,12 +3269,14 @@ Versions: <span class="module-version"><em>2.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Protein pocket (cavity) detection algorithm"
-module-whatis "URL: https://github.com/Discngine/fpocket"
+module-whatis &quot;Description: Protein pocket (cavity) detection algorithm&quot;
+module-whatis &quot;URL: https://github.com/Discngine/fpocket&quot;
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/fpocket-2.0/bin
 prepend-path MANPATH         /salilab/diva1/programs/x86_64linux/fpocket-2.0/man
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3099,10 +3289,10 @@ Versions: <span class="module-version">5.1.1, 6.4.1, 7.3.1, <em>10.2.1</em></spa
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Various compilers (C, C++, Objective-C, Java, ...)"
-module-whatis "URL: https://gcc.gnu.org/"
+module-whatis &quot;Description: Various compilers (C, C++, Objective-C, Java, ...)&quot;
+module-whatis &quot;URL: https://gcc.gnu.org/&quot;
 prepend-path  MODULEPATH      /salilab/diva1/home/modules-gcc10
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/gcc-10.2.1/bin
 prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/gcc-10.2.1/lib64
@@ -3112,16 +3302,18 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
 
 if [ module-info mode load ] {
   if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
-    puts stderr "WARNING: gcc 10 has a different C++ ABI to the default compiler"
-    puts stderr "         (gcc 4) on CentOS. This means that if you try to link"
-    puts stderr "         code compiled with gcc 10 against C++ libraries compiled"
-    puts stderr "         with gcc 4, you'll get link errors. To fix this, rebuild"
-    puts stderr "         the libraries with gcc 10 too. Some common libraries"
-    puts stderr "         (e.g. boost, opencv, protobuf) have already been built"
-    puts stderr "         with gcc 10 as modules. For more information, see"
-    puts stderr "         https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dual_abi.html"
+    puts stderr &quot;WARNING: gcc 10 has a different C++ ABI to the default compiler&quot;
+    puts stderr &quot;         (gcc 4) on CentOS. This means that if you try to link&quot;
+    puts stderr &quot;         code compiled with gcc 10 against C++ libraries compiled&quot;
+    puts stderr &quot;         with gcc 4, you'll get link errors. To fix this, rebuild&quot;
+    puts stderr &quot;         the libraries with gcc 10 too. Some common libraries&quot;
+    puts stderr &quot;         (e.g. boost, opencv, protobuf) have already been built&quot;
+    puts stderr &quot;         with gcc 10 as modules. For more information, see&quot;
+    puts stderr &quot;         https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dual_abi.html&quot;
   }
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3134,15 +3326,17 @@ Versions: <span class="module-version"><em>8.70</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A PostScript interpreter and renderer"
-module-whatis "URL: https://www.ghostscript.com/"
+module-whatis &quot;Description: A PostScript interpreter and renderer&quot;
+module-whatis &quot;URL: https://www.ghostscript.com/&quot;
 module load sali-libraries
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/ghostscript-8.70/bin
 prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/ghostscript-8.70/lib64
 prepend-path  GS_FONTPATH     /salilab/diva1/programs/x86_64linux/ghostscript-8.70/share/fonts/default/Type1
 prepend-path  GS_FONTPATH     /salilab/diva1/programs/x86_64linux/ghostscript-8.70/share/fonts/default/ghostscript
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3155,12 +3349,14 @@ Versions: <span class="module-version">5.0.5, <em>5.4.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A program for plotting mathematical expressions and data"
-module-whatis "URL: http://www.gnuplot.info/"
+module-whatis &quot;Description: A program for plotting mathematical expressions and data&quot;
+module-whatis &quot;URL: http://www.gnuplot.info/&quot;
 prepend-path  GNUPLOT_FONTPATH /salilab/diva1/programs/linux/fonts
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/gnuplot-5.4.2/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3173,14 +3369,16 @@ Versions: <span class="module-version">1.8.14, 1.8.17, 1.10.1, 1.10.5, <em>1.10.
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A general purpose library and file format for storing scientific data"
-module-whatis "URL: https://support.hdfgroup.org/HDF5/"
+module-whatis &quot;Description: A general purpose library and file format for storing scientific data&quot;
+module-whatis &quot;URL: https://support.hdfgroup.org/HDF5/&quot;
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/bin
 prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/lib
 prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/include
 prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3193,13 +3391,15 @@ Versions: <span class="module-version"><em>10.1.022</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Intel Fortran compiler"
-module-whatis "URL: http://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html"
+module-whatis &quot;Description: Intel Fortran compiler&quot;
+module-whatis &quot;URL: http://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/ifort-10.1.022/opt/intel/fce/10.1.022/bin
 prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/ifort-10.1.022/opt/intel/fce/10.1.022/lib
 prepend-path  MANPATH         /salilab/diva1/programs/x86_64linux/ifort-10.1.022/usr/share/man
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3212,15 +3412,17 @@ Versions: <span class="module-version"><em>6.8.8.10</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: An X application for displaying and manipulating images"
-module-whatis "URL: https://imagemagick.org/"
+module-whatis &quot;Description: An X application for displaying and manipulating images&quot;
+module-whatis &quot;URL: https://imagemagick.org/&quot;
 module load sali-libraries
 module load ghostscript
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/ImageMagick-6.8.8.10/bin
 prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/ImageMagick-6.8.8.10/lib64
 prepend-path  PERL5LIB        /salilab/diva1/programs/x86_64linux/ImageMagick-6.8.8.10/lib64/perl*
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3233,10 +3435,10 @@ Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Integrative Modeling Platform (version 2.16.0, with only usage checks turned on)"
-module-whatis "URL: https://integrativemodeling.org/"
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.16.0, with only usage checks turned on)&quot;
+module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load sali-libraries
 set topdir /salilab/diva1/home/imp/main/2.16.0
 prepend-path  PATH            ${topdir}/bin/release64
@@ -3245,7 +3447,7 @@ prepend-path  PYTHONPATH      ${topdir}/lib/release64
 
 # Find IMP.mpi linked against the right version of OpenMPI
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
-  if {[info exists ::env(MPI_SUFFIX) ] && [string compare $::env(MPI_SUFFIX) "_openmpi3"] == 0} {
+  if {[info exists ::env(MPI_SUFFIX) ] &amp;&amp; [string compare $::env(MPI_SUFFIX) &quot;_openmpi3&quot;] == 0} {
     # CentOS 7 with mpi/openmpi3 module loaded
     prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
     prepend-path  PYTHONPATH      ${topdir}/lib/release64/openmpi-4.0
@@ -3260,6 +3462,8 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
   prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
   prepend-path  PYTHONPATH      ${topdir}/lib/release64/openmpi-4.0
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3272,10 +3476,10 @@ Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Integrative Modeling Platform (version 2.16.0, fast build)"
-module-whatis "URL: https://integrativemodeling.org/"
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.16.0, fast build)&quot;
+module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load sali-libraries
 set topdir /salilab/diva1/home/imp/main/2.16.0
 prepend-path  PATH            ${topdir}/bin/fast64
@@ -3284,7 +3488,7 @@ prepend-path  PYTHONPATH      ${topdir}/lib/fast64
 
 # Find IMP.mpi linked against the right version of OpenMPI
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
-  if {[info exists ::env(MPI_SUFFIX) ] && [string compare $::env(MPI_SUFFIX) "_openmpi3"] == 0} {
+  if {[info exists ::env(MPI_SUFFIX) ] &amp;&amp; [string compare $::env(MPI_SUFFIX) &quot;_openmpi3&quot;] == 0} {
     # CentOS 7 with mpi/openmpi3 module loaded
     prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
     prepend-path  PYTHONPATH      ${topdir}/lib/release64/openmpi-4.0
@@ -3299,6 +3503,8 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
   prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
   prepend-path  PYTHONPATH      ${topdir}/lib/release64/openmpi-4.0
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3317,13 +3523,15 @@ Versions: <span class="module-version"><em>1.0.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Code from the SAMBA group at TAU"
-module-whatis "URL: https://integrativemodeling.org/libTAU.html"
+module-whatis &quot;Description: Code from the SAMBA group at TAU&quot;
+module-whatis &quot;URL: https://integrativemodeling.org/libTAU.html&quot;
 prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/libtau-py27-1.0.1/lib64
 prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/libtau-py27-1.0.1/include
 prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/libtau-py27-1.0.1/lib64
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3336,33 +3544,35 @@ Versions: <span class="module-version"><em>2013</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
-module-whatis "Description: Dusan Turk's MAIN program"
-module-whatis "URL: https://stef.ijs.si/"
+<pre><code class="language-lua">#%Module 1.0
+module-whatis &quot;Description: Dusan Turk's MAIN program&quot;
+module-whatis &quot;URL: https://stef.ijs.si/&quot;
 set MAIN /salilab/diva1/programs/x86_64linux/MAIN/
 setenv MAIN ${MAIN}
 
-setenv MAIN_CMDS "${MAIN}cmds/"
-setenv MAIN_CMDS_NEW "${MAIN}cmds_new/"
-setenv MAIN_UTILS "${MAIN}utils/"
-setenv MAIN_SYMM "${MAIN}symm/"
-setenv MAIN_DOC "${MAIN}doc/"
-setenv MAIN_COM "${MAIN}doc/com/"
-setenv MAIN_MENU "${MAIN}doc/menu/"
-setenv MAIN_CONF "${MAIN}config/"
-setenv MAIN_R3D_FONT "${MAIN}crke/"
+setenv MAIN_CMDS &quot;${MAIN}cmds/&quot;
+setenv MAIN_CMDS_NEW &quot;${MAIN}cmds_new/&quot;
+setenv MAIN_UTILS &quot;${MAIN}utils/&quot;
+setenv MAIN_SYMM &quot;${MAIN}symm/&quot;
+setenv MAIN_DOC &quot;${MAIN}doc/&quot;
+setenv MAIN_COM &quot;${MAIN}doc/com/&quot;
+setenv MAIN_MENU &quot;${MAIN}doc/menu/&quot;
+setenv MAIN_CONF &quot;${MAIN}config/&quot;
+setenv MAIN_R3D_FONT &quot;${MAIN}crke/&quot;
 
-prepend-path PATH "${MAIN}:${MAIN}prog:${MAIN}config"
+prepend-path PATH &quot;${MAIN}:${MAIN}prog:${MAIN}config&quot;
 
-set-alias mainps "${MAIN}mainps_2013.exe_LINUX_G95-64" 
-set-alias psmain "${MAIN}mainps_2013.exe_LINUX_G95-64"
-set-alias new "${MAIN}new.exe_LINUX_G95-64"
-set-alias new_gf "${MAIN}new.exe_LINUX_GFORT"
-set-alias l95 "make -f ${MAIN}source/makefile.LINUX_G95-64"
-set-alias lgf "make -f ${MAIN}source/.make_new_LINUX_GFORT"
+set-alias mainps &quot;${MAIN}mainps_2013.exe_LINUX_G95-64&quot; 
+set-alias psmain &quot;${MAIN}mainps_2013.exe_LINUX_G95-64&quot;
+set-alias new &quot;${MAIN}new.exe_LINUX_G95-64&quot;
+set-alias new_gf &quot;${MAIN}new.exe_LINUX_GFORT&quot;
+set-alias l95 &quot;make -f ${MAIN}source/makefile.LINUX_G95-64&quot;
+set-alias lgf &quot;make -f ${MAIN}source/.make_new_LINUX_GFORT&quot;
 
-set-alias sou "cd ${MAIN}source"
-set-alias tes "cd ${MAIN}test"
+set-alias sou &quot;cd ${MAIN}source&quot;
+set-alias tes &quot;cd ${MAIN}test&quot;
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3375,11 +3585,13 @@ Versions: <span class="module-version"><em>9.5.0.944444</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Language for technical computing"
-module-whatis "URL: https://www.mathworks.com/products/matlab.html"
+module-whatis &quot;Description: Language for technical computing&quot;
+module-whatis &quot;URL: https://www.mathworks.com/products/matlab.html&quot;
 prepend-path  PATH               /salilab/diva1/programs/x86_64linux/matlab-r2018b/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3398,16 +3610,18 @@ Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16,
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: MODELLER comparative modeling"
-module-whatis "URL: https://salilab.org/modeller/"
+module-whatis &quot;Description: MODELLER comparative modeling&quot;
+module-whatis &quot;URL: https://salilab.org/modeller/&quot;
 set topdir /salilab/diva1/home/modeller/SVN
 prepend-path  PATH            ${topdir}/bin
 prepend-path  LD_LIBRARY_PATH ${topdir}/lib/x86_64-intel8
 prepend-path  PKG_CONFIG_PATH ${topdir}/lib/x86_64-intel8/pkgconfig
 prepend-path  PYTHONPATH      ${topdir}/lib/x86_64-intel8
 prepend-path  PYTHONPATH      ${topdir}/modlib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3420,15 +3634,17 @@ Versions: <span class="module-version">2.0.1, 2.0.2, 2.1.0, 2.1.1, 2.1.2, 2.1.3,
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
-module-whatis "Description: ModPipe (sets \$MODPIPE; only works on the cluster)"
-module-whatis "URL: https://salilab.org/modpipe/"
+<pre><code class="language-lua">#%Module 1.0
+module-whatis &quot;Description: ModPipe (sets \$MODPIPE; only works on the cluster)&quot;
+module-whatis &quot;URL: https://salilab.org/modpipe/&quot;
 if [file exists /wynton/home] {
   setenv			MODPIPE	/wynton/home/sali/ModPipe/2.3.0
 } else {
-  puts stderr "Sorry, this module only works on the cluster (or other machine that has /wynton/home mounted)"
+  puts stderr &quot;Sorry, this module only works on the cluster (or other machine that has /wynton/home mounted)&quot;
   break
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3441,11 +3657,13 @@ Versions: <span class="module-version"><em>3.8.31</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Multiple alignment program for protein sequences"
-module-whatis "URL: http://www.drive5.com/muscle/"
+module-whatis &quot;Description: Multiple alignment program for protein sequences&quot;
+module-whatis &quot;URL: http://www.drive5.com/muscle/&quot;
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/muscle-3.8.31/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3458,11 +3676,13 @@ Versions: <span class="module-version">1.6.0, <em>1.8.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A small build system with a focus on speed"
-module-whatis "URL: https://ninja-build.org/"
+module-whatis &quot;Description: A small build system with a focus on speed&quot;
+module-whatis &quot;URL: https://ninja-build.org/&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/ninja-1.8.2/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3475,10 +3695,10 @@ Versions: <span class="module-version">3.4.3, <em>4.3.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Collection of algorithms for computer vision"
-module-whatis "URL: https://opencv.org/"
+module-whatis &quot;Description: Collection of algorithms for computer vision&quot;
+module-whatis &quot;URL: https://opencv.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
   module load hdf5/1.10.6
   prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/bin
@@ -3488,9 +3708,11 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
   prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib/python2.7/site-packages
 } else {
   set curMod [module-info name]
-  puts stderr "'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead"
+  puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
   break
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3503,17 +3725,19 @@ Versions: <span class="module-version"><em>2012</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
-module-whatis "Description: OpenEye products (work on any 64-bit node)"
-module-whatis "URL: https://www.eyesopen.com/"
+<pre><code class="language-lua">#%Module 1.0
+module-whatis &quot;Description: OpenEye products (work on any 64-bit node)&quot;
+module-whatis &quot;URL: https://www.eyesopen.com/&quot;
 if [file exists /wynton/group] {
   prepend-path		PATH		/wynton/group/sali/openeye/bin
   prepend-path		PYTHONPATH	/wynton/group/sali/openeye/wrappers/v2012.Oct.1/python
   setenv			OE_LICENSE	/wynton/group/sali/openeye/oe_license.txt
 } else {
-  puts stderr "Sorry, this module only works on the cluster (or other machine that has /wynton/group mounted)"
+  puts stderr &quot;Sorry, this module only works on the cluster (or other machine that has /wynton/group mounted)&quot;
   break
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3526,12 +3750,14 @@ Versions: <span class="module-version"><em>1.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Molecular Docking Based on Shape Complementarity Principles"
-module-whatis "URL: https://bioinfo3d.cs.tau.ac.il/PatchDock/"
+module-whatis &quot;Description: Molecular Docking Based on Shape Complementarity Principles&quot;
+module-whatis &quot;URL: https://bioinfo3d.cs.tau.ac.il/PatchDock/&quot;
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/patch_dock-1.3/bin/cdr
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/patch_dock-1.3/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3550,13 +3776,15 @@ Versions: <span class="module-version">1.10.1.2155, 1.18.2.3874, <em>1.19.1.4122
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python-based Hierarchical ENvironment for Integrated Xtallography"
-module-whatis "URL: https://www.phenix-online.org/"
+module-whatis &quot;Description: Python-based Hierarchical ENvironment for Integrated Xtallography&quot;
+module-whatis &quot;URL: https://www.phenix-online.org/&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/phenix-1.19.1.4122/phenix-1.19.1-4122/build/bin
 setenv        PHENIX          /salilab/diva1/programs/x86_64linux/phenix-1.19.1.4122/phenix-1.19.1-4122
 setenv        PHENIX_VERSION  1.19.1-4122
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3569,11 +3797,13 @@ Versions: <span class="module-version"><em>3.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: ProFit, a protein least squares fitting program"
-module-whatis "URL: http://www.bioinf.org.uk/software/profit/"
+module-whatis &quot;Description: ProFit, a protein least squares fitting program&quot;
+module-whatis &quot;URL: http://www.bioinf.org.uk/software/profit/&quot;
 prepend-path  PATH           /salilab/diva1/programs/x86_64linux/profit-3.1
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3586,13 +3816,15 @@ Versions: <span class="module-version"><em>4.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Accurate protein secondary structure prediction"
-module-whatis "URL: http://bioinf.cs.ucl.ac.uk/psipred/"
+module-whatis &quot;Description: Accurate protein secondary structure prediction&quot;
+module-whatis &quot;URL: http://bioinf.cs.ucl.ac.uk/psipred/&quot;
 module load blast
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/psipred-4.0/bin
 setenv        PSIPRED_LIB     /salilab/diva1/programs/x86_64linux/psipred-4.0/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3603,12 +3835,14 @@ Versions: <span class="module-version">1.68, 1.69, <em>1.70</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Python tools for computational molecular biology"
+module-whatis &quot;Python tools for computational molecular biology&quot;
 conflict python3
 module load python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py27-1.70/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3619,12 +3853,14 @@ Versions: <span class="module-version">1.2.0, <em>1.2.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Collection of fast NumPy array functions written in Cython"
+module-whatis &quot;Collection of fast NumPy array functions written in Cython&quot;
 conflict python3
 module load python2/numpy/1.14.1 python2/scipy/1.0.0
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py27-1.2.1/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3635,12 +3871,14 @@ Versions: <span class="module-version"><em>0.10.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Composable style cycles"
+module-whatis &quot;Composable style cycles&quot;
 conflict python3
 module load python2/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/cycler-0.10.0/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3651,12 +3889,14 @@ Versions: <span class="module-version">1.5, <em>2.6.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Powerful extensions to the standard datetime module"
+module-whatis &quot;Powerful extensions to the standard datetime module&quot;
 conflict python3
 module load python2/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/dateutil-2.6.1/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3667,11 +3907,13 @@ Versions: <span class="module-version">4.0.11, <em>4.2.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Module to simplify usage of decorators"
+module-whatis &quot;Module to simplify usage of decorators&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/decorator-4.2.1/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3682,11 +3924,13 @@ Versions: <span class="module-version"><em>3.2.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Backport of the functools module from Python 3.2.3."
+module-whatis &quot;Backport of the functools module from Python 3.2.3.&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/functools32-3.2.3/lib/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3697,12 +3941,14 @@ Versions: <span class="module-version">2.6.0, 2.7.0, <em>2.7.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Python interface to the Hierarchical Data Format library"
+module-whatis &quot;Python interface to the Hierarchical Data Format library&quot;
 conflict python3
 module load python2/numpy/1.13.0 hdf5/1.10.1 python2/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py27-2.7.1/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3713,12 +3959,14 @@ Versions: <span class="module-version"><em>0.11</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Python package for handling IHM mmCIF files"
+module-whatis &quot;Python package for handling IHM mmCIF files&quot;
 conflict python3
 module load python2/msgpack
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/ihm/python2.7/python-ihm
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3729,11 +3977,13 @@ Versions: <span class="module-version"><em>1.5</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Backport of functools.lru_cache from Python 3.3"
+module-whatis &quot;Backport of functools.lru_cache from Python 3.3&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/lru_cache-1.5/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3744,9 +3994,9 @@ Versions: <span class="module-version">2.0.0, 2.0.2, <em>2.1.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Python 2D plotting library"
+module-whatis &quot;Python 2D plotting library&quot;
 conflict python3
 module load python2/cycler
 module load python2/numpy/1.14.1
@@ -3757,6 +4007,8 @@ module load python2/functools32
 module load python2/lru_cache
 prepend-path PYTHONPATH   /salilab/diva1/programs/x86_64linux/matplotlib-py27-2.1.2/lib64/python2.7/site-packages
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-py27-2.1.2/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3767,12 +4019,14 @@ Versions: <span class="module-version"><em>2.6</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Modular toolkit for Data Processing"
+module-whatis &quot;Modular toolkit for Data Processing&quot;
 conflict python3
 module load python2/scipy
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-2.6
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3783,11 +4037,13 @@ Versions: <span class="module-version">0.5.6, <em>0.6.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "A Python MessagePack (de)serializer"
+module-whatis &quot;A Python MessagePack (de)serializer&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.6.2/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3798,14 +4054,16 @@ Versions: <span class="module-version"><em>1.11</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Creates and Manipulates Graphs and Networks"
+module-whatis &quot;Creates and Manipulates Graphs and Networks&quot;
 conflict python3
 module load python2/scipy/0.18.1
 module load python2/pyparsing
 module load python2/decorator
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/networkx-1.11/lib/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3816,12 +4074,14 @@ Versions: <span class="module-version"><em>1.3.7</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Discovery-based unittest extension for Python"
+module-whatis &quot;Discovery-based unittest extension for Python&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/nose-1.3.7/lib/python2.7/site-packages
 prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3832,12 +4092,14 @@ Versions: <span class="module-version">2.6.2, <em>2.6.4</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Fast numerical array expression evaluator for Python and NumPy"
+module-whatis &quot;Fast numerical array expression evaluator for Python and NumPy&quot;
 conflict python3
 module load python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py27-2.6.4/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3848,13 +4110,15 @@ Versions: <span class="module-version">1.12.0, 1.13.0, <em>1.14.1</em></span><br
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "A fast multidimensional array facility for Python"
+module-whatis &quot;A fast multidimensional array facility for Python&quot;
 conflict python3
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/lib64/python2.7/site-packages
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/bin
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3865,15 +4129,17 @@ Versions: <span class="module-version">0.19.2, 0.20.2, <em>0.22.0</em></span><br
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Python Data Analysis Library"
+module-whatis &quot;Python Data Analysis Library&quot;
 conflict python3
 module load python2/numpy/1.14.1
 module load python2/dateutil
 module load python2/matplotlib
 module load python2/pytz
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-py27-0.22.0/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3884,11 +4150,13 @@ Versions: <span class="module-version"><em>1.2.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "A Python interface to the pkg-config command line tool"
+module-whatis &quot;A Python interface to the pkg-config command line tool&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pkgconfig-1.2.2/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3899,11 +4167,13 @@ Versions: <span class="module-version">2.3.0, <em>2.5.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Python bindings for Google Protocol Buffers"
+module-whatis &quot;Python bindings for Google Protocol Buffers&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/protobuf-2.5.0/lib/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3914,15 +4184,17 @@ Versions: <span class="module-version"><em>2.3.6</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Markov Chain Monte Carlo sampling toolkit"
+module-whatis &quot;Markov Chain Monte Carlo sampling toolkit&quot;
 conflict python3
 module load python2/numpy/1.14.1
 module load python2/scipy/1.0.0
 module load python2/tables/3.4.2
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib64/python2.7/site-packages
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3933,11 +4205,13 @@ Versions: <span class="module-version"><em>2.1.10</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "An object-oriented approach to text processing"
+module-whatis &quot;An object-oriented approach to text processing&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pyparsing-2.1.10/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3948,12 +4222,14 @@ Versions: <span class="module-version"><em>4.1.git48ab119</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Way of performing RMSD calculations of large sets of structures"
+module-whatis &quot;Way of performing RMSD calculations of large sets of structures&quot;
 conflict python3
 module load cuda/7.5.18 python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py27-4.1.git48ab119
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3964,11 +4240,13 @@ Versions: <span class="module-version"><em>2016.10</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "World Timezone Definitions for Python"
+module-whatis &quot;World Timezone Definitions for Python&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2016.10/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3979,13 +4257,15 @@ Versions: <span class="module-version">0.12, 0.18.1, <em>0.19.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "A set of python modules for machine learning and data mining"
+module-whatis &quot;A set of python modules for machine learning and data mining&quot;
 conflict python3
 module load sali-libraries
 module load python2/numpy/1.14.1 python2/scipy/1.0.0
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-py27-0.19.1/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -3996,12 +4276,14 @@ Versions: <span class="module-version">0.18.1, 0.19.0, <em>1.0.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Scipy: Scientific Tools for Python"
+module-whatis &quot;Scipy: Scientific Tools for Python&quot;
 conflict python3
 module load python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py27-1.0.0/lib64/python2.7/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4012,11 +4294,13 @@ Versions: <span class="module-version"><em>1.10.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Python 2 and 3 compatibility utilities"
+module-whatis &quot;Python 2 and 3 compatibility utilities&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/six-1.10.0/lib/python2.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4027,9 +4311,9 @@ Versions: <span class="module-version">3.3.0, 3.4.2, <em>3.5.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Hierarchical datasets in Python"
+module-whatis &quot;Hierarchical datasets in Python&quot;
 conflict python3
 module load python2/numpy/1.14.1
 module load python2/numexpr/2.6.4
@@ -4037,6 +4321,8 @@ module load hdf5/1.10.1
 module load python2/six
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tables-py27-3.5.2/lib64/python2.7/site-packages
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py27-3.5.2/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4049,12 +4335,14 @@ Versions: <span class="module-version">20.3.0, <em>21.2.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Classes Without Boilerplate"
-module-whatis "URL: https://www.attrs.org/"
+module-whatis &quot;Description: Classes Without Boilerplate&quot;
+module-whatis &quot;URL: https://www.attrs.org/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/attrs-21.2.0/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4067,13 +4355,15 @@ Versions: <span class="module-version"><em>1.75</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python tools for computational molecular biology"
-module-whatis "URL: https://biopython.org/"
+module-whatis &quot;Description: Python tools for computational molecular biology&quot;
+module-whatis &quot;URL: https://biopython.org/&quot;
 conflict python2
 module load python3/numpy/1.17.4
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py36-1.75/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4086,13 +4376,15 @@ Versions: <span class="module-version"><em>1.3.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Collection of fast NumPy array functions written in Cython"
-module-whatis "URL: https://github.com/pydata/bottleneck"
+module-whatis &quot;Description: Collection of fast NumPy array functions written in Cython&quot;
+module-whatis &quot;URL: https://github.com/pydata/bottleneck&quot;
 conflict python2
 module load python3/numpy/1.17.4 python3/scipy/1.3.2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py36-1.3.1/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4105,13 +4397,15 @@ Versions: <span class="module-version"><em>0.10.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Composable style cycles"
-module-whatis "URL: https://github.com/matplotlib/cycler"
+module-whatis &quot;Description: Composable style cycles&quot;
+module-whatis &quot;URL: https://github.com/matplotlib/cycler&quot;
 conflict python2
 module load python3/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/cycler-py36-0.10.0/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4124,13 +4418,15 @@ Versions: <span class="module-version"><em>2.8.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Powerful extensions to the standard datetime module"
-module-whatis "URL: https://dateutil.readthedocs.io/en/stable/"
+module-whatis &quot;Description: Powerful extensions to the standard datetime module&quot;
+module-whatis &quot;URL: https://dateutil.readthedocs.io/en/stable/&quot;
 conflict python2
 module load python3/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/dateutil-2.8.1/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4143,12 +4439,14 @@ Versions: <span class="module-version"><em>4.4.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Module to simplify usage of decorators"
-module-whatis "URL: https://github.com/micheles/decorator"
+module-whatis &quot;Description: Module to simplify usage of decorators&quot;
+module-whatis &quot;URL: https://github.com/micheles/decorator&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/decorator-4.4.1/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4161,10 +4459,10 @@ Versions: <span class="module-version"><em>3.8.4</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: The modular source code checker: pep8 pyflakes and co"
-module-whatis "URL: https://gitlab.com/pycqa/flake8"
+module-whatis &quot;Description: The modular source code checker: pep8 pyflakes and co&quot;
+module-whatis &quot;URL: https://gitlab.com/pycqa/flake8&quot;
 conflict python2
 module load python3/importlib-metadata
 module load python3/mccabe
@@ -4172,6 +4470,8 @@ module load python3/pycodestyle
 module load python3/pyflakes
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/flake8-3.8.4/lib/python3.6/site-packages
 prepend-path  PATH   /salilab/diva1/programs/linux/flake8-3.8.4/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4184,13 +4484,15 @@ Versions: <span class="module-version"><em>0.18.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Clean single-source support for Python 3 and 2"
-module-whatis "URL: https://python-future.org/"
+module-whatis &quot;Description: Clean single-source support for Python 3 and 2&quot;
+module-whatis &quot;URL: https://python-future.org/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/future-0.18.2/lib/python3.6/site-packages
 prepend-path  PATH   /salilab/diva1/programs/linux/future-0.18.2/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4203,13 +4505,15 @@ Versions: <span class="module-version"><em>2.10.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python interface to the Hierarchical Data Format library"
-module-whatis "URL: https://www.h5py.org/"
+module-whatis &quot;Description: Python interface to the Hierarchical Data Format library&quot;
+module-whatis &quot;URL: https://www.h5py.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5 hdf5/1.10.5 python3/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4222,13 +4526,15 @@ Versions: <span class="module-version"><em>0.15</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python package for handling IHM mmCIF files"
-module-whatis "URL: https://github.com/ihmwg/python-ihm"
+module-whatis &quot;Description: Python package for handling IHM mmCIF files&quot;
+module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/ihm/python3.6/python-ihm
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4241,15 +4547,17 @@ Versions: <span class="module-version"><em>3.3.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Read metadata from Python packages"
-module-whatis "URL: https://github.com/python/importlib_metadata"
+module-whatis &quot;Description: Read metadata from Python packages&quot;
+module-whatis &quot;URL: https://github.com/python/importlib_metadata&quot;
 conflict python2
 module load python3/zipp
 module load python3/toml
 module load python3/typing-extensions
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/importlib-metadata-3.3.0/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4262,12 +4570,14 @@ Versions: <span class="module-version"><em>1.1.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Brain-dead simple parsing of ini files"
-module-whatis "URL: https://github.com/RonnyPfannschmidt/iniconfig"
+module-whatis &quot;Description: Brain-dead simple parsing of ini files&quot;
+module-whatis &quot;URL: https://github.com/RonnyPfannschmidt/iniconfig&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/iniconfig-1.1.1/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4280,12 +4590,14 @@ Versions: <span class="module-version">0.14.0, <em>0.17.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Lightweight pipelining: using Python functions as pipeline jobs"
-module-whatis "URL: https://joblib.readthedocs.io/en/latest/"
+module-whatis &quot;Description: Lightweight pipelining: using Python functions as pipeline jobs&quot;
+module-whatis &quot;URL: https://joblib.readthedocs.io/en/latest/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/joblib-0.17.0/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4298,12 +4610,14 @@ Versions: <span class="module-version"><em>1.1.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A fast implementation of the Cassowary constraint solver"
-module-whatis "URL: https://github.com/nucleic/kiwi"
+module-whatis &quot;Description: A fast implementation of the Cassowary constraint solver&quot;
+module-whatis &quot;URL: https://github.com/nucleic/kiwi&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/kiwisolver-py36-1.1.0/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4316,10 +4630,10 @@ Versions: <span class="module-version"><em>3.1.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python 2D plotting library"
-module-whatis "URL: https://matplotlib.org/"
+module-whatis &quot;Description: Python 2D plotting library&quot;
+module-whatis &quot;URL: https://matplotlib.org/&quot;
 conflict python2
 module load python3/cycler
 module load python3/numpy/1.19.5
@@ -4329,6 +4643,8 @@ module load python3/pytz
 module load python3/kiwisolver
 prepend-path PYTHONPATH   /salilab/diva1/programs/x86_64linux/matplotlib-py36-3.1.2/lib64/python3.6/site-packages
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-py36-3.1.2/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4341,12 +4657,14 @@ Versions: <span class="module-version"><em>0.6.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: McCabe checker, plugin for flake8"
-module-whatis "URL: https://github.com/pycqa/mccabe"
+module-whatis &quot;Description: McCabe checker, plugin for flake8&quot;
+module-whatis &quot;URL: https://github.com/pycqa/mccabe&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mccabe-0.6.1/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4359,13 +4677,15 @@ Versions: <span class="module-version"><em>3.6</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Modular toolkit for Data Processing"
-module-whatis "URL: http://mdp-toolkit.sourceforge.net/"
+module-whatis &quot;Description: Modular toolkit for Data Processing&quot;
+module-whatis &quot;URL: http://mdp-toolkit.sourceforge.net/&quot;
 conflict python2
 module load python3/scipy python3/future python3/scikit
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4378,12 +4698,14 @@ Versions: <span class="module-version"><em>0.6.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A Python MessagePack (de)serializer"
-module-whatis "URL: https://msgpack.org/"
+module-whatis &quot;Description: A Python MessagePack (de)serializer&quot;
+module-whatis &quot;URL: https://msgpack.org/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.6.2/py3/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4396,15 +4718,17 @@ Versions: <span class="module-version"><em>2.4</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Creates and Manipulates Graphs and Networks"
-module-whatis "URL: https://networkx.github.io/"
+module-whatis &quot;Description: Creates and Manipulates Graphs and Networks&quot;
+module-whatis &quot;URL: https://networkx.github.io/&quot;
 conflict python2
 module load python3/scipy/1.3.2
 module load python3/pyparsing
 module load python3/decorator
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/networkx-2.4/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4417,13 +4741,15 @@ Versions: <span class="module-version"><em>1.3.7</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Discovery-based unittest extension for Python3"
-module-whatis "URL: https://nose.readthedocs.io/en/latest/"
+module-whatis &quot;Description: Discovery-based unittest extension for Python3&quot;
+module-whatis &quot;URL: https://nose.readthedocs.io/en/latest/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/nose-1.3.7/py3/lib/python3.6/site-packages
 prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/py3/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4436,13 +4762,15 @@ Versions: <span class="module-version"><em>2.7.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Fast numerical array expression evaluator for Python and NumPy"
-module-whatis "URL: https://github.com/pydata/numexpr"
+module-whatis &quot;Description: Fast numerical array expression evaluator for Python and NumPy&quot;
+module-whatis &quot;URL: https://github.com/pydata/numexpr&quot;
 conflict python2
 module load python3/numpy/1.19.5
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py36-2.7.0/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4455,14 +4783,16 @@ Versions: <span class="module-version">1.17.4, <em>1.19.5</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A fast multidimensional array facility for Python"
-module-whatis "URL: https://numpy.org/"
+module-whatis &quot;Description: A fast multidimensional array facility for Python&quot;
+module-whatis &quot;URL: https://numpy.org/&quot;
 conflict python2
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/numpy-py36-1.19.5/lib64/python3.6/site-packages
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/numpy-py36-1.19.5/bin
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py36-1.19.5/lib
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4475,13 +4805,15 @@ Versions: <span class="module-version"><em>20.8</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Core utilities for Python packages"
-module-whatis "URL: https://github.com/pypa/packaging"
+module-whatis &quot;Description: Core utilities for Python packages&quot;
+module-whatis &quot;URL: https://github.com/pypa/packaging&quot;
 conflict python2
 module load python3/pyparsing
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/packaging-20.8/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4494,16 +4826,18 @@ Versions: <span class="module-version"><em>0.25.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python Data Analysis Library" 
-module-whatis "URL: https://pandas.pydata.org/"
+module-whatis &quot;Description: Python Data Analysis Library&quot; 
+module-whatis &quot;URL: https://pandas.pydata.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5
 module load python3/dateutil
 module load python3/matplotlib
 module load python3/pytz
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-py36-0.25.3/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4516,12 +4850,14 @@ Versions: <span class="module-version"><em>1.5.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A Python interface to the pkg-config command line tool"
-module-whatis "URL: https://github.com/matze/pkgconfig"
+module-whatis &quot;Description: A Python interface to the pkg-config command line tool&quot;
+module-whatis &quot;URL: https://github.com/matze/pkgconfig&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pkgconfig-1.5.1/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4534,13 +4870,15 @@ Versions: <span class="module-version"><em>0.13.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A minimalist production ready plugin system"
-module-whatis "URL: https://github.com/pytest-dev/pluggy"
+module-whatis &quot;Description: A minimalist production ready plugin system&quot;
+module-whatis &quot;URL: https://github.com/pytest-dev/pluggy&quot;
 conflict python2
 module load python3/importlib-metadata
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pluggy-0.13.1/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4553,10 +4891,10 @@ Versions: <span class="module-version"><em>3.11.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Protocol Buffers - Google's data interchange format"
-module-whatis "URL: https://developers.google.com/protocol-buffers/"
+module-whatis &quot;Description: Protocol Buffers - Google's data interchange format&quot;
+module-whatis &quot;URL: https://developers.google.com/protocol-buffers/&quot;
 conflict python2
 module load python3/six
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64/python3.6/site-packages
@@ -4565,6 +4903,8 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3
 prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/share/emacs/site-lisp
 prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/include
 prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4577,12 +4917,14 @@ Versions: <span class="module-version"><em>1.10.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Cross-python path, ini-parsing, io, code, log facilities"
-module-whatis "URL: https://py.readthedocs.io/en/latest/"
+module-whatis &quot;Description: Cross-python path, ini-parsing, io, code, log facilities&quot;
+module-whatis &quot;URL: https://py.readthedocs.io/en/latest/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/py-1.10.0/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4595,13 +4937,15 @@ Versions: <span class="module-version"><em>2.6.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python style guide checker"
-module-whatis "URL: https://pycodestyle.readthedocs.io/"
+module-whatis &quot;Description: Python style guide checker&quot;
+module-whatis &quot;URL: https://pycodestyle.readthedocs.io/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pycodestyle-2.6.0/lib/python3.6/site-packages
 prepend-path  PATH   /salilab/diva1/programs/linux/pycodestyle-2.6.0/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4614,13 +4958,15 @@ Versions: <span class="module-version"><em>2.2.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Passive checker of Python programs"
-module-whatis "URL: https://github.com/PyCQA/pyflakes"
+module-whatis &quot;Description: Passive checker of Python programs&quot;
+module-whatis &quot;URL: https://github.com/PyCQA/pyflakes&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pyflakes-2.2.0/lib/python3.6/site-packages
 prepend-path  PATH   /salilab/diva1/programs/linux/pyflakes-2.2.0/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4633,12 +4979,14 @@ Versions: <span class="module-version"><em>2.4.5</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: An object-oriented approach to text processing"
-module-whatis "URL: https://github.com/pyparsing/pyparsing/"
+module-whatis &quot;Description: An object-oriented approach to text processing&quot;
+module-whatis &quot;URL: https://github.com/pyparsing/pyparsing/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyparsing-py36-2.4.5/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4651,13 +4999,15 @@ Versions: <span class="module-version"><em>4.1.gita558b8a</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Way of performing RMSD calculations of large sets of structures"
-module-whatis "URL: https://github.com/salilab/pyRMSD"
+module-whatis &quot;Description: Way of performing RMSD calculations of large sets of structures&quot;
+module-whatis &quot;URL: https://github.com/salilab/pyRMSD&quot;
 conflict python2
 module load cuda/7.5.18 python3/numpy/1.17.4 python3/scipy/1.3.2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py36-4.1.gita558b8a
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4670,10 +5020,10 @@ Versions: <span class="module-version"><em>6.2.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Simple powerful testing with Python"
-module-whatis "URL: https://docs.pytest.org/en/latest/"
+module-whatis &quot;Description: Simple powerful testing with Python&quot;
+module-whatis &quot;URL: https://docs.pytest.org/en/latest/&quot;
 conflict python2
 module load python3/toml
 module load python3/importlib-metadata
@@ -4684,6 +5034,8 @@ module load python3/pluggy
 module load python3/py
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytest-6.2.1/lib/python3.6/site-packages
 prepend-path  PATH   /salilab/diva1/programs/linux/pytest-6.2.1/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4696,13 +5048,15 @@ Versions: <span class="module-version"><em>1.0.7</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: pytest plugin to check FLAKE8 requirements"
-module-whatis "URL: https://github.com/tholo/pytest-flake8"
+module-whatis &quot;Description: pytest plugin to check FLAKE8 requirements&quot;
+module-whatis &quot;URL: https://github.com/tholo/pytest-flake8&quot;
 conflict python2
 module load python3/flake8
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytest-flake8-1.0.7/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4715,12 +5069,14 @@ Versions: <span class="module-version"><em>2019.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: World Timezone Definitions for Python"
-module-whatis "URL: https://pythonhosted.org/pytz/"
+module-whatis &quot;Description: World Timezone Definitions for Python&quot;
+module-whatis &quot;URL: https://pythonhosted.org/pytz/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2019.3/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4733,14 +5089,16 @@ Versions: <span class="module-version"><em>0.21.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: A set of python modules for machine learning and data mining"
-module-whatis "URL: https://scikit-learn.org/stable/index.html"
+module-whatis &quot;Description: A set of python modules for machine learning and data mining&quot;
+module-whatis &quot;URL: https://scikit-learn.org/stable/index.html&quot;
 conflict python2
 module load sali-libraries
 module load python3/numpy/1.19.5 python3/scipy/1.3.2 python3/joblib
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-py36-0.21.3/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4753,13 +5111,15 @@ Versions: <span class="module-version"><em>1.3.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Scipy: Scientific Tools for Python" 
-module-whatis "URL: https://www.scipy.org/"
+module-whatis &quot;Description: Scipy: Scientific Tools for Python&quot; 
+module-whatis &quot;URL: https://www.scipy.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py36-1.3.2/lib64/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4772,12 +5132,14 @@ Versions: <span class="module-version"><em>1.13.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python 2 and 3 compatibility utilities"
-module-whatis "URL: https://github.com/benjaminp/six"
+module-whatis &quot;Description: Python 2 and 3 compatibility utilities&quot;
+module-whatis &quot;URL: https://github.com/benjaminp/six&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/six-1.13.0/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4790,10 +5152,10 @@ Versions: <span class="module-version"><em>3.6.1</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Hierarchical datasets in Python"
-module-whatis "URL: http://www.pytables.org/"
+module-whatis &quot;Description: Hierarchical datasets in Python&quot;
+module-whatis &quot;URL: http://www.pytables.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5
 module load python3/numexpr/2.7.0
@@ -4801,6 +5163,8 @@ module load hdf5/1.10.5
 module load python3/six
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tables-py36-3.6.1/lib64/python3.6/site-packages
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py36-3.6.1/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4813,12 +5177,14 @@ Versions: <span class="module-version"><em>0.10.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Python Library for Tom's Obvious, Minimal Language"
-module-whatis "URL: https://github.com/uiri/toml"
+module-whatis &quot;Description: Python Library for Tom's Obvious, Minimal Language&quot;
+module-whatis &quot;URL: https://github.com/uiri/toml&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/toml-0.10.2/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4831,12 +5197,14 @@ Versions: <span class="module-version"><em>3.7.4.3</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Backported and Experimental Type Hints for Python 3.5+"
-module-whatis "URL: https://pypi.org/project/typing-extensions/"
+module-whatis &quot;Description: Backported and Experimental Type Hints for Python 3.5+&quot;
+module-whatis &quot;URL: https://pypi.org/project/typing-extensions/&quot;
 conflict python2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/typing-extensions-3.7.4.3/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4849,13 +5217,15 @@ Versions: <span class="module-version"><em>3.4.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Backport of pathlib-compatible object wrapper for zip files"
-module-whatis "URL: https://github.com/jaraco/zipp"
+module-whatis &quot;Description: Backport of pathlib-compatible object wrapper for zip files&quot;
+module-whatis &quot;URL: https://github.com/jaraco/zipp&quot;
 conflict python2
 module load python3/toml
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/zipp-3.4.0/lib/python3.6/site-packages
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4868,10 +5238,10 @@ Versions: <span class="module-version">1.4, 2.0.6, <em>3.0.git9a02562</em></span
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Electron cryo-microscopy refinement"
-module-whatis "URL: https://github.com/3dem/relion"
+module-whatis &quot;Description: Electron cryo-microscopy refinement&quot;
+module-whatis &quot;URL: https://github.com/3dem/relion&quot;
 module load cuda/7.5.18
 # would use is-avail, but Lmod doesn't support that
 if [file exists /etc/modulefiles/mpi/openmpi-x86_64] { 
@@ -4894,6 +5264,8 @@ if [file exists /lib64/libX11.so.6] {
 } else {
   prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/relion-3.0.git9a02562/lib
 }
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4906,12 +5278,14 @@ Versions: <span class="module-version">3.5, <em>3.10</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Computational modeling and analysis of protein structures"
-module-whatis "URL: https://www.rosettacommons.org/"
+module-whatis &quot;Description: Computational modeling and analysis of protein structures&quot;
+module-whatis &quot;URL: https://www.rosettacommons.org/&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/rosetta-3.10/bin
 setenv        ROSETTA3_DB     /salilab/diva1/programs/x86_64linux/rosetta-3.10/database
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4929,11 +5303,13 @@ Versions: <span class="module-version"><em>4.0</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Protein side-chain conformation prediction program"
-module-whatis "URL: http://dunbrack.fccc.edu/SCWRL4.php"
+module-whatis &quot;Description: Protein side-chain conformation prediction program&quot;
+module-whatis &quot;URL: http://dunbrack.fccc.edu/SCWRL4.php&quot;
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/scwrl-4.0/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4946,11 +5322,13 @@ Versions: <span class="module-version"><em>6.0.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Support Vector Machine"
-module-whatis "URL: http://svmlight.joachims.org/"
+module-whatis &quot;Description: Support Vector Machine&quot;
+module-whatis &quot;URL: http://svmlight.joachims.org/&quot;
 prepend-path  PATH /salilab/diva1/programs/x86_64linux/svm_light-6.0.2
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4963,11 +5341,13 @@ Versions: <span class="module-version">3.0.12, <em>4.0.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Connects C/C++/Objective C to some high-level programming languages"
-module-whatis "URL: http://www.swig.org/"
+module-whatis &quot;Description: Connects C/C++/Objective C to some high-level programming languages&quot;
+module-whatis &quot;URL: http://www.swig.org/&quot;
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/swig-4.0.2/bin
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -4980,11 +5360,13 @@ Versions: <span class="module-version">4.0.43, <em>10.0.240</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: High-throughput search and clustering tool"
-module-whatis "URL: http://www.drive5.com/usearch/"
+module-whatis &quot;Description: High-throughput search and clustering tool&quot;
+module-whatis &quot;URL: http://www.drive5.com/usearch/&quot;
 prepend-path  PATH            /salilab/diva1/programs/linux/usearch-10.0.240/
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -5003,11 +5385,13 @@ Versions: <span class="module-version"><em>3.0.2</em></span><br>
 <details>
 <summary>Module code: view</summary>
 <pre>
-#%Module 1.0
+<pre><code class="language-lua">#%Module 1.0
 
-module-whatis "Description: Rigid body docking"
-module-whatis "URL: http://zdock.umassmed.edu/"
+module-whatis &quot;Description: Rigid body docking&quot;
+module-whatis &quot;URL: http://zdock.umassmed.edu/&quot;
 prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
+</code></pre>
+
 </pre>
 </details>
   </dd>
@@ -5024,7 +5408,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 12:26:20 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 13:24:38 from querying `module avail` and `module spider`._
 
 
 <style>
