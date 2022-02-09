@@ -57,9 +57,9 @@ module load CBI r bwa bowtie2/2.4.2
 Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
-<li id="nav-pill-before-built-in" class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li id="nav-pill-before-CBI"><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
-<li id="nav-pill-before-Sali"><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
+<li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
+<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">cbi</span>&nbsp;(74)</a></li>
+<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">sali</span>&nbsp;(120)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -244,7 +244,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 </dl>
 </div> 
 
-<div id="queues-CBI" class="tab-pane fade">
+<div id="queues-cbi" class="tab-pane fade">
 
 <h2 id="module-software-repository-cbi">Module Software Repository: CBI (74)</h2>
 
@@ -2789,7 +2789,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 </dl>
 </div> 
 
-<div id="queues-Sali" class="tab-pane fade">
+<div id="queues-sali" class="tab-pane fade">
 
 <h2 id="module-software-repository-sali">Module Software Repository: Sali (120)</h2>
 
@@ -5030,12 +5030,12 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 </div> 
 
 <ul class="nav nav-pills">
-<li id="nav-pill-before-built-in" class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li id="nav-pill-before-CBI"><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
-<li id="nav-pill-before-Sali"><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
+<li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
+<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">cbi</span>&nbsp;(74)</a></li>
+<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 20:52:32 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 21:42:50 from querying `module avail` and `module spider`._
 
 
 <style>
@@ -5053,5 +5053,17 @@ dt:after {
   content: "";
 }
 </style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  var hash = window.location.hash;
+  var pattern = "#module-software-repository-";
+  if (hash.startsWith(pattern)) {
+    var name = hash.substring(pattern.length);
+    alert(name);
+    $('a[href="#queues-' + name + '"]').click();
+  }
+})
+</script>
 
 [core software]: {{ '/software/core-software.html' | relative_url }}
