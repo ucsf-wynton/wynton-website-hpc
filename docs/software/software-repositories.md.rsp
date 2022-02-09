@@ -206,7 +206,6 @@ $(document).ready(function() {
   var pattern = "#module-software-repository-";
   if (hash.startsWith(pattern)) {
     var name = hash.substring(pattern.length);
-    alert(name);
     $('a[href="#queues-' + name + '"]').click();
   }
 })

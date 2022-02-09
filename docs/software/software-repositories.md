@@ -5035,7 +5035,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 21:42:50 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 21:48:12 from querying `module avail` and `module spider`._
 
 
 <style>
@@ -5060,7 +5060,6 @@ $(document).ready(function() {
   var pattern = "#module-software-repository-";
   if (hash.startsWith(pattern)) {
     var name = hash.substring(pattern.length);
-    alert(name);
     $('a[href="#queues-' + name + '"]').click();
   }
 })
