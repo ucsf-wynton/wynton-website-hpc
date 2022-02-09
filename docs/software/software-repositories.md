@@ -58,8 +58,8 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">cbi</span>&nbsp;(74)</a></li>
-<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">sali</span>&nbsp;(120)</a></li>
+<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
+<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -5031,11 +5031,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">cbi</span>&nbsp;(74)</a></li>
-<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">sali</span>&nbsp;(120)</a></li>
+<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
+<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 21:48:12 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 22:12:41 from querying `module avail` and `module spider`._
 
 
 <style>
