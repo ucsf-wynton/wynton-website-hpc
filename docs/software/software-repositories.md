@@ -57,9 +57,9 @@ module load CBI r bwa bowtie2/2.4.2
 Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
-<li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
+<li id="nav-pill-before-built-in" class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
+<li id="nav-pill-before-CBI"><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
+<li id="nav-pill-before-Sali"><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -5030,12 +5030,12 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 </div> 
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
-<li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
+<li id="nav-pill-before-built-in" class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
+<li id="nav-pill-before-CBI"><a data-toggle="pill" href="#queues-CBI"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
+<li id="nav-pill-before-Sali"><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 20:30:38 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 20:52:32 from querying `module avail` and `module spider`._
 
 
 <style>
