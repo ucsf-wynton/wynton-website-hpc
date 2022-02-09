@@ -2296,7 +2296,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/li
 
   <dt class="module-name">scl-rh-python</dt>
   <dd class="module-details">
-<strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]</strong><br>
+<strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
@@ -2305,7 +2305,7 @@ Versions: <span class="module-version">36, <em>38</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
-SCL Python: Python with Additional Utilities via CentOS Software Collections [DEPRECATED]
+SCL Python: Python with Additional Utilities via CentOS Software Collections
 ]])
 
 local name = myModuleName()
@@ -5035,7 +5035,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-Sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-08 15:42:15 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-08 15:46:54 from querying `module avail` and `module spider`._
 
 
 <style>
