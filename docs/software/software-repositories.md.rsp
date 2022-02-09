@@ -153,7 +153,7 @@ Below are <%= length(modules_sets) %> software repositories, each providing a se
   nbr_of_modules <- nrow(modules)
   info <- attr(modules, "info")
 %>
-<div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
+<div id="queues-<%= tolower(name) %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
 <%
 link_text <- sprintf("Module Software Repository: %s", name)
@@ -173,7 +173,7 @@ Please note that this software stacks is maintained and contributed by a researc
 <% } %>
 
 <% table_of_modules(modules) %>
-</div> <%-- <div id="queues-<%= name %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
+</div> <%-- <div id="queues-<%= tolower(name) %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
 
 <% } ## for (name ...) %>
 
@@ -199,5 +199,17 @@ dt:after {
   content: "";
 }
 </style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  var hash = window.location.hash;
+  var pattern = "#module-software-repository-";
+  if (hash.startsWith(pattern)) {
+    var name = hash.substring(pattern.length);
+    alert(name);
+    $('a[href="#queues-' + name + '"]').click();
+  }
+})
+</script>
 
 [core software]: {{ '/software/core-software.html' | relative_url }}
