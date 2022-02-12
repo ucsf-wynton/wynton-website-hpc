@@ -58,8 +58,8 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
-<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
+<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
+<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -246,7 +246,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="queues-cbi" class="tab-pane fade">
 
-<h2 id="module-software-repository-cbi">Module Software Repository: CBI (74)</h2>
+<h2 id="module-software-repository-cbi">Module Software Repository: CBI (75)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="http://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -919,6 +919,41 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
+</details>
+  </dd>
+
+  <dt class="module-name">expect</dt>
+  <dd class="module-details">
+<strong class="module-help">expect:</strong><br>
+<span class="module-description">Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.</span><br>
+Example: <span class="module-example"><code>expect -version</code>, and <code>man expect</code>.</span><br>
+URL: <span class="module-url"><a href="https://core.tcl-lang.org/expect/index">https://core.tcl-lang.org/expect/index</a>, <a href="https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip">https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip</a> (changelog), <a href="https://sourceforge.net/projects/expect/files/Expect/">https://sourceforge.net/projects/expect/files/Expect/</a> (download), <a href="https://core.tcl-lang.org/expect/dir?ci=tip">https://core.tcl-lang.org/expect/dir?ci=tip</a> (source code)</span><br>
+Versions: <span class="module-version"><em>5.45.4</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+expect: 
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, R, GUI&quot;)
+whatis(&quot;URL: https://core.tcl-lang.org/expect/index, https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip (changelog), https://sourceforge.net/projects/expect/files/Expect/ (download), https://core.tcl-lang.org/expect/dir?ci=tip (source code)&quot;)
+whatis([[
+Description: Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.
+Example: `expect -version`, and `man expect`.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;libs&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+
 </code></pre>
 
 </details>
@@ -2163,6 +2198,7 @@ Warning: This is work under construction!
 
 depends_on(&quot;r&quot;)
 depends_on(&quot;rstudio-server&quot;)
+try_load(&quot;expect&quot;)
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -2795,7 +2831,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 <div id="queues-sali" class="tab-pane fade">
 
-<h2 id="module-software-repository-sali">Module Software Repository: Sali (120)</h2>
+<h2 id="module-software-repository-sali">Module Software Repository: Sali (121)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -4233,7 +4269,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
-Versions: <span class="module-version"><em>0.15</em></span><br>
+Versions: <span class="module-version">0.15, <em>0.27</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4242,7 +4278,7 @@ module-whatis &quot;Description: Python package for handling IHM mmCIF files&quo
 module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/ihm/python3.6/python-ihm
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.27/lib64/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -4380,6 +4416,25 @@ module-whatis &quot;URL: http://mdp-toolkit.sourceforge.net/&quot;
 conflict python2
 module load python3/scipy python3/future python3/scikit
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/site-packages
+</code></pre>
+
+</details>
+  </dd>
+
+  <dt class="module-name">python3/modelcif</dt>
+  <dd class="module-details">
+<span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
+URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
+Versions: <span class="module-version"><em>0.2</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Python package for handling ModelCIF mmCIF files&quot;
+module-whatis &quot;URL: https://github.com/ihmwg/python-modelcif&quot;
+conflict python2
+module load python3/ihm
+prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.2/lib/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -5035,11 +5090,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(74)</a></li>
-<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(120)</a></li>
+<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
+<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-10 22:38:25 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-11 18:18:23 from querying `module avail` and `module spider`._
 
 
 <style>
