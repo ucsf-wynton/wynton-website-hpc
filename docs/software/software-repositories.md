@@ -2175,7 +2175,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
   <dd class="module-details">
 <strong class="module-help">RSC: An RStudio Server Controller</strong><br>
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
-Example: <span class="module-example"><code>rsc --help</code>, and <code>rsc start --port=uid</code>.</span><br>
+Example: <span class="module-example"><code>rsc --help</code>, and <code>rsc start</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work under construction!</span><br>
 Versions: <span class="module-version">0.3.0, 0.3.1, 0.3.3, 0.3.4, 0.4.0, <em>0.5.0</em></span><br>
@@ -2192,7 +2192,7 @@ whatis(&quot;Keywords: programming, R, RStudio Server, GUI&quot;)
 whatis(&quot;URL: https://github.com/UCSF-CBI/rstudio-server-controller, https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md (changelog)&quot;)
 whatis([[
 Description: The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.
-Examples: `rsc --help`, and `rsc start --port=uid`.
+Examples: `rsc --help`, and `rsc start`.
 Warning: This is work under construction!
 ]])
 
@@ -5094,7 +5094,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-11 18:18:23 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-11 18:21:24 from querying `module avail` and `module spider`._
 
 
 <style>
