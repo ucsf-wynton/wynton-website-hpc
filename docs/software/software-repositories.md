@@ -926,22 +926,22 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
   <dt class="module-name">expect</dt>
   <dd class="module-details">
-<strong class="module-help">expect:</strong><br>
+<strong class="module-help">expect: Programmed Dialogue with Interactive Programs</strong><br>
 <span class="module-description">Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.</span><br>
 Example: <span class="module-example"><code>expect -version</code>, and <code>man expect</code>.</span><br>
-URL: <span class="module-url"><a href="https://core.tcl-lang.org/expect/index">https://core.tcl-lang.org/expect/index</a>, <a href="https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip">https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip</a> (changelog), <a href="https://sourceforge.net/projects/expect/files/Expect/">https://sourceforge.net/projects/expect/files/Expect/</a> (download), <a href="https://core.tcl-lang.org/expect/dir?ci=tip">https://core.tcl-lang.org/expect/dir?ci=tip</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://core.tcl-lang.org/expect/index">https://core.tcl-lang.org/expect/index</a>, <a href="https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip">https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip</a> (changelog), <a href="https://core.tcl-lang.org/expect/dir?ci=tip">https://core.tcl-lang.org/expect/dir?ci=tip</a> (source code), <a href="https://sourceforge.net/projects/expect/files/Expect/">https://sourceforge.net/projects/expect/files/Expect/</a> (download)</span><br>
 Versions: <span class="module-version"><em>5.45.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
-expect: 
+expect: Programmed Dialogue with Interactive Programs
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: programming, R, GUI&quot;)
-whatis(&quot;URL: https://core.tcl-lang.org/expect/index, https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip (changelog), https://sourceforge.net/projects/expect/files/Expect/ (download), https://core.tcl-lang.org/expect/dir?ci=tip (source code)&quot;)
+whatis(&quot;Keywords: scripting, programming&quot;)
+whatis(&quot;URL: https://core.tcl-lang.org/expect/index, https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip (changelog), https://core.tcl-lang.org/expect/dir?ci=tip (source code), https://sourceforge.net/projects/expect/files/Expect/ (download)&quot;)
 whatis([[
 Description: Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.
 Example: `expect -version`, and `man expect`.
@@ -1923,14 +1923,9 @@ whatis(&quot;Keywords: Programming, Statistics&quot;)
 whatis(&quot;URL: https://www.r-project.org/&quot;)
 whatis(&quot;Description: The R programming language. Examples: `R --version` and `Rscript --version`.&quot;)
 
-require &quot;posix&quot;
-function isdir(fn)
-  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
-end
-
 has_devtoolset = function(version)
   local path = pathJoin(&quot;/opt&quot;, &quot;rh&quot;, &quot;devtoolset-&quot; .. version)
-  return(isdir(path))
+  return(isDir(path))
 end
 
 local name = &quot;R&quot;
@@ -1970,10 +1965,14 @@ end
 pushenv(&quot;R_BUILD_TAR&quot;, &quot;tar&quot;)
 
 -- In-house env var for R repositories mirrored locally
-local r_repos_root = pathJoin(os.getenv(&quot;CBI_SHARED_ROOT&quot;), &quot;mirrors&quot;, &quot;r-mirrors&quot;)
-pushenv(&quot;R_REPOS_ROOT&quot;, r_repos_root)
-pushenv(&quot;R_REPOS_CRAN&quot;, &quot;file://&quot; .. pathJoin(r_repos_root, &quot;cran&quot;))
-pushenv(&quot;R_LOCAL_CRAN&quot;, &quot;file://&quot; .. pathJoin(r_repos_root, &quot;cran&quot;))
+local r_repos_root = os.getenv(&quot;CBI_SHARED_ROOT&quot;)
+if (r_repos_root) then
+  LmodMessage(&quot;r_repos_root=&quot; .. r_repos_root)
+  r_repos_root = pathJoin(r_repos_root, &quot;mirrors&quot;, &quot;r-mirrors&quot;)
+  pushenv(&quot;R_REPOS_ROOT&quot;, r_repos_root)
+  pushenv(&quot;R_REPOS_CRAN&quot;, &quot;file://&quot; .. pathJoin(r_repos_root, &quot;cran&quot;))
+  pushenv(&quot;R_LOCAL_CRAN&quot;, &quot;file://&quot; .. pathJoin(r_repos_root, &quot;cran&quot;))
+end
 
 -- R packages built from native code and installed using R from EPEL is *not*
 -- always compatible with ditto installed using R from the CBI software stack.
@@ -1998,7 +1997,7 @@ pushenv(&quot;USE_SYSTEM_LIBGIT2&quot;, &quot;true&quot;)
 -- manually specifying 'configure.args' during install unless we set the
 -- following environment variable
 local path = &quot;/usr/include/udunits2&quot;
-if (isdir(path)) then
+if (isDir(path)) then
   pushenv(&quot;UDUNITS2_INCLUDE&quot;, path)
 end
 </code></pre>
@@ -2178,7 +2177,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>rsc --help</code>, and <code>rsc start</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version">0.3.0, 0.3.1, 0.3.3, 0.3.4, 0.4.0, <em>0.5.0</em></span><br>
+Versions: <span class="module-version">0.3.0, 0.3.1, 0.3.3, 0.3.4, 0.4.0, 0.5.0, <em>0.6.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5094,7 +5093,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-11 18:21:24 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-13 21:02:47 from querying `module avail` and `module spider`._
 
 
 <style>
