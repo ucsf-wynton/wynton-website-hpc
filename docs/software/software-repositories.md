@@ -1029,8 +1029,8 @@ pushenv(&quot;FZF_HOME&quot;, home)
 <strong class="module-help">Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
 <span class="module-description">Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.</span><br>
 Example: <span class="module-example"><code>gatk --help</code> and <code>gatk --list</code>.</span><br>
-URL: <span class="module-url"><a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk">https://github.com/broadinstitute/gatk</a>, <a href="https://github.com/broadgsa/gatk">https://github.com/broadgsa/gatk</a>, <a href="https://console.cloud.google.com/storage/browser/gatk-software/package-archive">https://console.cloud.google.com/storage/browser/gatk-software/package-archive</a>, <a href="ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/">ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/</a></span><br>
-Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, 4.2.2.0, <em>4.2.4.1</em></span><br>
+URL: <span class="module-url"><a href="https://software.broadinstitute.org/gatk/">https://software.broadinstitute.org/gatk/</a>, <a href="https://github.com/broadinstitute/gatk">https://github.com/broadinstitute/gatk</a> (source code), <a href="https://github.com/broadinstitute/gatk/releases">https://github.com/broadinstitute/gatk/releases</a> (change log), <a href="https://github.com/broadgsa/gatk">https://github.com/broadgsa/gatk</a> (legacy), <a href="https://console.cloud.google.com/storage/browser/gatk-software/package-archive">https://console.cloud.google.com/storage/browser/gatk-software/package-archive</a> (legacy), <a href="ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/">ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/</a> (legacy)</span><br>
+Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, 4.2.2.0, 4.2.4.1, <em>4.2.5.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1041,8 +1041,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing, genome&quot;)
-whatis(&quot;URL: https://software.broadinstitute.org/gatk/, https://github.com/broadinstitute/gatk, https://github.com/broadgsa/gatk, https://console.cloud.google.com/storage/browser/gatk-software/package-archive, ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/&quot;)
-whatis(&quot;Description: Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.  Example: `gatk --help` and `gatk --list`.&quot;)
+whatis(&quot;URL: https://software.broadinstitute.org/gatk/, https://github.com/broadinstitute/gatk (source code), https://github.com/broadinstitute/gatk/releases (change log), https://github.com/broadgsa/gatk (legacy), https://console.cloud.google.com/storage/browser/gatk-software/package-archive (legacy), ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/ (legacy)&quot;)
+whatis([[
+Description: Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.
+Example: `gatk --help` and `gatk --list`.
+]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -1050,7 +1053,7 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
 if (version_x == &quot;1&quot;) then
   -- GATK v1.* requires Java (&lt;= 1.7)
-  local cluster = os.getenv(&quot;CLUSTER&quot;)
+  local cluster = os.getenv(&quot;CLUSTER&quot;) or &quot;&quot;
   if (cluster == &quot;tipcc&quot;) then
     load(&quot;jdk/1.7.0&quot;)
   else
@@ -1060,8 +1063,6 @@ if (version_x == &quot;1&quot;) then
 else
   prepend_path(&quot;PATH&quot;, home)
 end
-
-
 </code></pre>
 
 </details>
@@ -5093,7 +5094,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-14 09:39:17 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-14 15:23:42 from querying `module avail` and `module spider`._
 
 
 <style>
