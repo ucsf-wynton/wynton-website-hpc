@@ -354,7 +354,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.17.1, <em>0.18.3</em></span><br>
+Versions: <span class="module-version"><em>0.18.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -870,7 +870,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>easycatfs --help</code> and <code>easycatfs mount /shared/data</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/easycatfs">https://github.com/HenrikBengtsson/easycatfs</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.1.2, 0.1.3, 0.1.4, <em>0.1.5</em></span><br>
+Versions: <span class="module-version"><em>0.1.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -991,13 +991,13 @@ prepend_path(&quot;PATH&quot;, home)
 
   <dt class="module-name">fzf</dt>
   <dd class="module-details">
-<strong class="module-help">fzf - A Command-Line Fuzzy Finder</strong><br>
+<strong class="module-help">fzf: A Command-Line Fuzzy Finder</strong><br>
 <span class="module-description">fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.</span><br>
 Example: <span class="module-example"><code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>.</span><br>
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.22.0, 0.25.1, 0.27.2, <em>0.29.0</em></span><br>
+Versions: <span class="module-version"><em>0.29.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1237,7 +1237,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>glow README.md</code>, <code>glow --pager README.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/charmbracelet/glow">https://github.com/charmbracelet/glow</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.3.0, <em>1.4.1</em></span><br>
+Versions: <span class="module-version"><em>1.4.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1364,7 +1364,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.0.4, 3.0.5, 3.1.0, <em>3.1.2</em></span><br>
+Versions: <span class="module-version"><em>3.1.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1601,7 +1601,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>mc</code> and <code>mc --version</code>.</span><br>
 URL: <span class="module-url"><a href="http://www.midnight-commander.org/">http://www.midnight-commander.org/</a>, <a href="https://github.com/MidnightCommander/mc">https://github.com/MidnightCommander/mc</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.8.26, <em>4.8.27</em></span><br>
+Versions: <span class="module-version"><em>4.8.27</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2010,7 +2010,7 @@ end
 <strong class="module-help">R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
 <span class="module-description">Sets R options and environment variables customized for the current compute environment. Notably, it configures R to install packages from local CRAN and Bioconductor mirrors without the need for internet access.</span><br>
 Example: <span class="module-example">In R, <code>install.packages(&quot;ggplot2&quot;)</code>.</span><br>
-Versions: <span class="module-version">0.1, <em>0.2</em></span><br>
+Versions: <span class="module-version"><em>0.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2041,7 +2041,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>info rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.53.3, 1.54.0, 1.56.1, <em>1.57.0</em></span><br>
+Versions: <span class="module-version"><em>1.57.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2067,12 +2067,12 @@ prepend_path(&quot;MANPATH&quot;, home)
 
   <dt class="module-name">ripgrep</dt>
   <dd class="module-details">
-<strong class="module-help">ripgrep - Recursively Searches Directories for a Regex Pattern</strong><br>
+<strong class="module-help">ripgrep: Recursively Searches Directories for a Regex Pattern</strong><br>
 <span class="module-description">ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.</span><br>
 Example: <span class="module-example"><code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a></span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">12.1.1, <em>13.0.0</em></span><br>
+Versions: <span class="module-version"><em>13.0.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2177,7 +2177,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>rsc --help</code>, and <code>rsc start</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version">0.3.0, 0.3.1, 0.3.3, 0.3.4, 0.4.0, 0.5.0, <em>0.6.0</em></span><br>
+Versions: <span class="module-version"><em>0.6.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5093,7 +5093,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-13 21:02:47 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-14 09:37:50 from querying `module avail` and `module spider`._
 
 
 <style>
