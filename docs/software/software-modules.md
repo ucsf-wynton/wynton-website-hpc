@@ -13,7 +13,7 @@ In addition to the [core software] tools that are available by default, addition
   </td>
   <td>
   <strong>The Computational Biology and Informatics (CBI) Software Repository</strong><br>
-  Repository of software shared by the Computational Biology and Informatics (<a href="http://cbi.ucsf.edu">http://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.<br>
+  Repository of software shared by the Computational Biology and Informatics (<a href="https://cbi.ucsf.edu">https://cbi.ucsf.edu</a>) at the UCSF Helen Diller Family Comprehensive Cancer Center.<br>
   Usage: <code>module load CBI</code>
   </td>
  </tr>

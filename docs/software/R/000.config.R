@@ -12,7 +12,7 @@ module_repositories <- list(
     name        = "CBI",
     maintainer  = "Henrik Bengtsson",
     group       = "Computational Biology and Informatics",
-    url         = "http://cbi.ucsf.edu",
+    url         = "https://cbi.ucsf.edu",
     contributed = TRUE,
     module_path = Sys.getenv("MODULE_ROOT_CBI")
   ),
