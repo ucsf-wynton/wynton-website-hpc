@@ -36,7 +36,7 @@ File transfers via Globus does not work on <strong>{{ site.cluster.name }}</stro
 {% elsif site.cluster.status == "notice" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} environment operational</strong><br>
-<em>The cluster will be shut down completely on May 25, 2021 for maintenance. Starting May 11, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time.</em><br>
+<em>The cluster will be shut down for maintenance between February 28 and March 2, 2022. Starting February 14, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time.</em><br>
 </div>
 {% else %}
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">

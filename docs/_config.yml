@@ -18,7 +18,7 @@ cluster:
   email_support: support@wynton.ucsf.edu
   email_storage: storage@wynton.ucsf.edu
   email_compute: compute@wynton.ucsf.edu
-  status: ok
+  status: notice
 
 path:
   global_scratch: /wynton/scratch
