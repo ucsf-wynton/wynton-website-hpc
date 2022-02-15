@@ -79,7 +79,11 @@ module_avail <- local({
       }
       version
     })
-    ns <- lapply(versions, FUN = nrow)
+    ns <- vapply(versions, FUN.VALUE = NA_integer_, FUN = function(version) {
+      ## Hidden modules have version == list()
+      if (is.null(dim(version))) 0L else nrow(version)
+    })
+    stopifnot(is.numeric(ns), !anyNA(ns))
     x <- x[ns > 0, ]
 
     attr(x, "info") <- info
