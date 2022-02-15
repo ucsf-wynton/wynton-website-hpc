@@ -1063,6 +1063,9 @@ if (version_x == &quot;1&quot;) then
 else
   prepend_path(&quot;PATH&quot;, home)
 end
+
+-- Tweak Java for the current environment
+depends_on(&quot;java-tweaks&quot;)
 </code></pre>
 
 </details>
@@ -1487,6 +1490,9 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 prepend_path(&quot;PATH&quot;, home)
 
 set_alias(&quot;igv&quot;, home .. &quot;/igv.sh&quot;)
+
+-- Tweak Java for the current environment
+depends_on(&quot;java-tweaks&quot;)
 </code></pre>
 
 </details>
@@ -1649,14 +1655,24 @@ whatis(&quot;Description: MuTect is a method developed at the Broad Institute fo
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
+if (version == &quot;1.0.27783&quot;) then
+  -- muTect 1.0.27783 requires Java (&lt;= 1.7)
+  local cluster = os.getenv(&quot;CLUSTER&quot;)
+  if (cluster == &quot;tipcc&quot;) then
+    load(&quot;jdk/1.7.0&quot;)
+  else
+    depends_on(&quot;openjdk/1.6.0&quot;)
+  end
+end
+
 name = &quot;muTect&quot;
 pushenv(&quot;MUTECT_HOME&quot;, home)
 local jarfile = pathJoin(home, name .. &quot;-&quot; .. version .. &quot;.jar&quot;)
 pushenv(&quot;MUTECT_JAR&quot;, jarfile)
 set_alias(&quot;mutect&quot;, &quot;java -Xmx2g -jar &quot; .. jarfile)
 
-
-
+-- Tweak Java for the current environment
+depends_on(&quot;java-tweaks&quot;)
 </code></pre>
 
 </details>
@@ -1697,27 +1713,32 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
   <dd class="module-details">
 <strong class="module-help">Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats</strong><br>
 <span class="module-description">Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</span><br>
-Example: <span class="module-example"><code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code></span><br>
-URL: <span class="module-url"><a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a></span><br>
+Example: <span class="module-example"><code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code>&quot;</span><br>
+URL: <span class="module-url"><a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard/releases">https://github.com/broadinstitute/picard/releases</a> (changelog), <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a> (source code)</span><br>
 Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2.26.2, <em>2.26.10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
-Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats
+Picard: Command-Line Tools for Manipulating High-throughput Sequencing Data and Formats
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: http://broadinstitute.github.io/picard/, https://github.com/broadinstitute/picard&quot;)
-whatis(&quot;Description: Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.  Example: `picard -h`, which is an alias for `java -jar $PICARD_HOME/picard.jar -h`&quot;)
+whatis(&quot;URL: http://broadinstitute.github.io/picard/, https://github.com/broadinstitute/picard/releases (changelog), https://github.com/broadinstitute/picard (source code)&quot;)
+whatis([[
+Description: Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.
+Examples: `picard -h`, which is an alias for `java -jar $PICARD_HOME/picard.jar -h`&quot;
+]])
 
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
 if (version_x == &quot;1&quot;) then
   -- Pindel 1.64 requires Java (&lt;= 1.6)
-  local cluster = os.getenv(&quot;CLUSTER&quot;)
   depends_on(&quot;openjdk/1.6.0&quot;)
+else
+  -- As of version 2.0.1 (Nov. 2015) Picard requires Java 1.8 (jdk8u66)
+  depends_on(&quot;openjdk/1.8.0&quot;)
 end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -1725,8 +1746,8 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 pushenv(&quot;PICARD_HOME&quot;, home)
 set_alias(&quot;picard&quot;, &quot;java -jar &quot; .. pathJoin(home, &quot;picard.jar&quot;))
 
-
-
+-- Tweak Java for the current environment
+depends_on(&quot;java-tweaks&quot;)
 </code></pre>
 
 </details>
@@ -2496,6 +2517,9 @@ set_alias(&quot;SnpSift&quot;, &quot;java -jar &quot; .. jarfile)
 local jarfile = pathJoin(home, &quot;clinEff&quot;, &quot;ClinEff.jar&quot;)
 pushenv(&quot;CLINEFF&quot;, jarfile)
 set_alias(&quot;ClinEff&quot;, &quot;java -jar &quot; .. jarfile)
+
+-- Tweak Java for the current environment
+depends_on(&quot;java-tweaks&quot;)
 </code></pre>
 
 </details>
@@ -2706,7 +2730,7 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">VarScan: Variant Detection in Massively Parallel Sequencing Data</strong><br>
 <span class="module-description">VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments.</span><br>
 Example: <span class="module-example"><code>varscan</code>, which is an alias to <code>java -jar $VARSCAN_HOME/VarScan.jar</code>.</span><br>
-URL: <span class="module-url"><a href="https://dkoboldt.github.io/varscan/">https://dkoboldt.github.io/varscan/</a></span><br>
+URL: <span class="module-url"><a href="https://dkoboldt.github.io/varscan/">https://dkoboldt.github.io/varscan/</a>, <a href="https://github.com/dkoboldt/varscan">https://github.com/dkoboldt/varscan</a></span><br>
 Versions: <span class="module-version"><em>2.4.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2718,7 +2742,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: high-throughput sequencing&quot;)
-whatis(&quot;URL: https://dkoboldt.github.io/varscan/&quot;)
+whatis(&quot;URL: https://dkoboldt.github.io/varscan/, https://github.com/dkoboldt/varscan&quot;)
 whatis(&quot;Description: VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments. Example: `varscan`, which is an alias to `java -jar $VARSCAN_HOME/VarScan.jar`.&quot;)
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2729,7 +2753,8 @@ pushenv(&quot;VARSCAN_HOME&quot;, home)
 local jarfile = home .. &quot;/&quot; .. name .. &quot;.v&quot; .. version .. &quot;.jar&quot;
 set_alias(&quot;varscan&quot;, &quot;java -jar &quot; .. jarfile)
 
-
+-- Tweak Java for the current environment
+depends_on(&quot;java-tweaks&quot;)
 </code></pre>
 
 </details>
@@ -5094,7 +5119,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-14 15:23:42 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-15 15:01:59 from querying `module avail` and `module spider`._
 
 
 <style>
