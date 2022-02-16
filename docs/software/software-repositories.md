@@ -70,8 +70,8 @@ Below are 3 software repositories, each providing a set of software tools.
 Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
 
+<h3 id="module-built-in-amber" class="module-name">amber</h3>
 <dl>
-  <dt class="module-name">amber</dt>
   <dd class="module-details">
 <span class="module-description">Amber11, for 64-bit</span><br>
 URL: <span class="module-url"><a href="http://ambermd.org/">http://ambermd.org/</a></span><br>
@@ -89,8 +89,9 @@ prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
 
 </details>
   </dd>
-
-  <dt class="module-name">CBI</dt>
+</dl>
+<h3 id="module-built-in-cbi" class="module-name">CBI</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Module Repository by UCSF Computational Biology and Informatics (CBI)</strong><br>
 <span class="module-description">Repository of modules shared by UCSF Computational Biology and Informatics. When loading this module, you will get access to a large number of software modules.  When unloading the module, any software modules from this CBI software repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.</span><br>
@@ -116,8 +117,9 @@ prepend_path(&quot;MODULEPATH&quot;, &quot;/wynton/home/cbi/shared/modulefiles/C
 
 </details>
   </dd>
-
-  <dt class="module-name">cuda</dt>
+</dl>
+<h3 id="module-built-in-cuda" class="module-name">cuda</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">6.0.37, 7.5, 7.5.18, 8.0, 8.0.61, 9.0.176, 9.1, 9.2, 10.0.130, 10.1, 11.0, <em>11.5.0</em></span><br>
 <details>
@@ -136,8 +138,9 @@ setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0
 
 </details>
   </dd>
-
-  <dt class="module-name">julia</dt>
+</dl>
+<h3 id="module-built-in-julia" class="module-name">julia</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">0.6.4, <em>1.6.0</em></span><br>
 <details>
@@ -151,8 +154,9 @@ prepend-path  MANPATH   /usr/local/julia-1.6.0/share/man
 
 </details>
   </dd>
-
-  <dt class="module-name">matlab</dt>
+</dl>
+<h3 id="module-built-in-matlab" class="module-name">matlab</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">9.5.0.944444, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, <em>2021b</em></span><br>
 <details>
@@ -166,8 +170,9 @@ setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton
 
 </details>
   </dd>
-
-  <dt class="module-name">matlab-runtime</dt>
+</dl>
+<h3 id="module-built-in-matlab-runtime" class="module-name">matlab-runtime</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">2020a, 2020b, 2021a, <em>2021b</em></span><br>
 <details>
@@ -180,8 +185,9 @@ prepend-path  LD_LIBRARY_PATH     /usr/local/matlab/R2021b/runtime/glnxa64:/usr/
 
 </details>
   </dd>
-
-  <dt class="module-name">mpi</dt>
+</dl>
+<h3 id="module-built-in-mpi" class="module-name">mpi</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">openmpi-x86_64, <em>openmpi3-x86_64</em></span><br>
 <details>
@@ -211,8 +217,9 @@ setenv	 		MPI_HOME	/usr/lib64/openmpi3
 
 </details>
   </dd>
-
-  <dt class="module-name">openjdk</dt>
+</dl>
+<h3 id="module-built-in-openjdk" class="module-name">openjdk</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">openjdk: Open Java Development Kit</strong><br>
 <span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun M<br />
@@ -253,8 +260,9 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">Sali</dt>
+</dl>
+<h3 id="module-built-in-sali" class="module-name">Sali</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Sali lab software repository</strong><br>
 <details>
@@ -265,7 +273,6 @@ prepend_path(&quot;MODULEPATH&quot;, &quot;/salilab/diva1/home/modules&quot;)
 
 </details>
   </dd>
-
 </dl>
 </div> 
 
@@ -280,8 +287,8 @@ Enable repository: <code>module load CBI</code><br>
 Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
+<h3 id="module-cbi-apache-ant" class="module-name">apache-ant</h3>
 <dl>
-  <dt class="module-name">apache-ant</dt>
   <dd class="module-details">
 <strong class="module-help">Apache Ant: A Java Library and Command-Line Tool to Build Software</strong><br>
 <span class="module-description">Apache Ant is a Java library and command-line tool that help building software.</span><br>
@@ -311,8 +318,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">asciigenome</dt>
+</dl>
+<h3 id="module-cbi-asciigenome" class="module-name">asciigenome</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">ASCIIGenome: Text Only Genome Viewer</strong><br>
 <span class="module-description">ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.</span><br>
@@ -342,8 +350,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">bamutil</dt>
+</dl>
+<h3 id="module-cbi-bamutil" class="module-name">bamutil</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">bamUtil: Programs for Working on SAM/BAM Files</strong><br>
 <span class="module-description">bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, <code>bam</code>.</span><br>
@@ -371,8 +380,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">bat</dt>
+</dl>
+<h3 id="module-cbi-bat" class="module-name">bat</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">bat: A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
 <span class="module-description">A cat(1) clone with syntax highlighting and Git integration.</span><br>
@@ -403,8 +413,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;, &quot;man1&quo
 
 </details>
   </dd>
-
-  <dt class="module-name">bats-core</dt>
+</dl>
+<h3 id="module-cbi-bats-core" class="module-name">bats-core</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">bats: Bash Automated Testing System</strong><br>
 <span class="module-description">Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.</span><br>
@@ -437,8 +448,9 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">bcftools</dt>
+</dl>
+<h3 id="module-cbi-bcftools" class="module-name">bcftools</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">BCFtools: Utilities for Variant Calling and Manipulating VCFs and BCFs</strong><br>
 <span class="module-description">BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.</span><br>
@@ -474,8 +486,9 @@ end
 
 </details>
   </dd>
-
-  <dt class="module-name">bcl2fastq</dt>
+</dl>
+<h3 id="module-cbi-bcl2fastq" class="module-name">bcl2fastq</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">bcl2fastq: Illumina Conversion Software</strong><br>
 <span class="module-description">bcl2fastq Conversion Software both demultiplexes data and converts BCL files generated by Illumina sequencing systems to standard FASTQ file formats for downstream analysis.</span><br>
@@ -504,8 +517,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">bedops</dt>
+</dl>
+<h3 id="module-cbi-bedops" class="module-name">bedops</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">BEDOPS: The Fast, Highly Scalable and Easily-Parallelizable Genome Analysis Toolkit</strong><br>
 <span class="module-description">BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.</span><br>
@@ -533,8 +547,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">bedtools2</dt>
+</dl>
+<h3 id="module-cbi-bedtools2" class="module-name">bedtools2</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">bedtools2: The Swiss Army Knife for Genome Arithmetic</strong><br>
 <span class="module-description">Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF.</span><br>
@@ -571,8 +586,9 @@ pushenv(&quot;BEDTOOLS2_HOME&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">blast</dt>
+</dl>
+<h3 id="module-cbi-blast" class="module-name">blast</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">BLAST+: Basic Local Alignment Search Tool</strong><br>
 <span class="module-description">BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance.</span><br>
@@ -600,8 +616,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">blat</dt>
+</dl>
+<h3 id="module-cbi-blat" class="module-name">blat</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">BLAT: Fast Sequence Search Command Line Tool</strong><br>
 <span class="module-description">BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting.</span><br>
@@ -628,8 +645,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">bowtie</dt>
+</dl>
+<h3 id="module-cbi-bowtie" class="module-name">bowtie</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Bowtie: A Fast and Sensitive Gapped Read Aligner</strong><br>
 <span class="module-description">Bowtie is an ultrafast, memory-efficient short read aligner.</span><br>
@@ -658,8 +676,9 @@ pushenv(&quot;BOWTIE_HOME&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">bowtie2</dt>
+</dl>
+<h3 id="module-cbi-bowtie2" class="module-name">bowtie2</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
 <span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
@@ -688,8 +707,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">bwa</dt>
+</dl>
+<h3 id="module-cbi-bwa" class="module-name">bwa</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">BWA: Burrows-Wheeler Aligner</strong><br>
 <span class="module-description">Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.</span><br>
@@ -719,8 +739,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">byobu</dt>
+</dl>
+<h3 id="module-cbi-byobu" class="module-name">byobu</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">byobu: Elegant Enhancement of the Otherwise Functional, Plain, Practical GNU Screen</strong><br>
 <span class="module-description">Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer.</span><br>
@@ -751,8 +772,9 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 
 </details>
   </dd>
-
-  <dt class="module-name">CBI-testing</dt>
+</dl>
+<h3 id="module-cbi-cbi-testing" class="module-name">CBI-testing</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!</strong><br>
 <span class="module-description">This repository provides prototypical environment modules that can change at any time. They will live in this CBI-testing repository until they have proven to work and be stable - only then they will be considered for the main CBI repository.  WARNING: Use at your own risk.</span><br>
@@ -782,8 +804,9 @@ prepend_path(&quot;MODULEPATH&quot;, modules_home)
 
 </details>
   </dd>
-
-  <dt class="module-name">cellranger</dt>
+</dl>
+<h3 id="module-cbi-cellranger" class="module-name">cellranger</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Cell Ranger: 10x Genomics Pipeline for Single-Cell Data Analysis</strong><br>
 <span class="module-description">Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.</span><br>
@@ -821,8 +844,9 @@ pushenv(&quot;MROFLAGS&quot;, &quot;--localcores=1 --localmem=8 --limit-loadavg&
 
 </details>
   </dd>
-
-  <dt class="module-name">cmake</dt>
+</dl>
+<h3 id="module-cbi-cmake" class="module-name">cmake</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">CMake: Open-source, Cross-platform Family of Tools Designed to Build, Test and Package Software</strong><br>
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
@@ -852,8 +876,9 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 
 </details>
   </dd>
-
-  <dt class="module-name">control-freec</dt>
+</dl>
+<h3 id="module-cbi-control-freec" class="module-name">control-freec</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Control FREEC: Control-FREE Copy Number and Genotype Caller</strong><br>
 <span class="module-description">Prediction of copy numbers and allelic content using deep-sequencing data.</span><br>
@@ -882,8 +907,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">cufflinks</dt>
+</dl>
+<h3 id="module-cbi-cufflinks" class="module-name">cufflinks</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Cufflinks: Transcriptome Assembly and Differential Expression Analysis for RNA-Seq</strong><br>
 <span class="module-description">Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one, taking into account biases in library preparation protocols.</span><br>
@@ -911,8 +937,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">easycatfs</dt>
+</dl>
+<h3 id="module-cbi-easycatfs" class="module-name">easycatfs</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">easycatfs: Easy Read-Only Mounting of Slow Folders onto a Local Drive</strong><br>
 <span class="module-description">This is Linux command-line tool for mounting one or more folders on a network file system on a local disk such that the local-disk folders mirrors everything (read-only) on the network folder. This will result in (i) faster repeated access to files, and (ii) decreased load on the network file system. This is particularly beneficial when working on high-performance compute (HPC) clusters used by hundreds and thousands of processes and users simultaneously..</span><br>
@@ -941,8 +968,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">emacs</dt>
+</dl>
+<h3 id="module-cbi-emacs" class="module-name">emacs</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor</strong><br>
 <span class="module-description">At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.</span><br>
@@ -972,8 +1000,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 </details>
   </dd>
-
-  <dt class="module-name">expect</dt>
+</dl>
+<h3 id="module-cbi-expect" class="module-name">expect</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">expect: Programmed Dialogue with Interactive Programs</strong><br>
 <span class="module-description">Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.</span><br>
@@ -1007,8 +1036,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 </details>
   </dd>
-
-  <dt class="module-name">fastqc</dt>
+</dl>
+<h3 id="module-cbi-fastqc" class="module-name">fastqc</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">FastQC: A Quality Control Analysis Tool for High Throughput Sequencing Data</strong><br>
 <span class="module-description">FastQC is a program designed to spot potential problems in high througput sequencing datasets. It runs a set of analyses on one or more raw sequence files in fastq or bam format and produces a report which summarises the results.</span><br>
@@ -1037,8 +1067,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">fzf</dt>
+</dl>
+<h3 id="module-cbi-fzf" class="module-name">fzf</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">fzf: A Command-Line Fuzzy Finder</strong><br>
 <span class="module-description">fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.</span><br>
@@ -1072,8 +1103,9 @@ pushenv(&quot;FZF_HOME&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">gatk</dt>
+</dl>
+<h3 id="module-cbi-gatk" class="module-name">gatk</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Genome Analysis Toolkit (GATK): Variant Discovery in High-Throughput Sequencing Data</strong><br>
 <span class="module-description">Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.</span><br>
@@ -1119,8 +1151,9 @@ depends_on(&quot;java-tweaks&quot;)
 
 </details>
   </dd>
-
-  <dt class="module-name">gcta</dt>
+</dl>
+<h3 id="module-cbi-gcta" class="module-name">gcta</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">GCTA: Genome-wide Complex Trait Analysis</strong><br>
 <span class="module-description">A tool for Genome-wide Complex Trait Analysis (GCTA).</span><br>
@@ -1148,8 +1181,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">gdal</dt>
+</dl>
+<h3 id="module-cbi-gdal" class="module-name">gdal</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
 <span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
@@ -1186,8 +1220,9 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 
 </details>
   </dd>
-
-  <dt class="module-name">geos</dt>
+</dl>
+<h3 id="module-cbi-geos" class="module-name">geos</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">GEOS: Geometry Engine, Open Source</strong><br>
 <span class="module-description">GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It aims to contain the complete functionality of JTS in C++. This includes all the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced functions. GEOS provides spatial functionality to many other projects and products.</span><br>
@@ -1223,8 +1258,9 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 
 </details>
   </dd>
-
-  <dt class="module-name">gistic2</dt>
+</dl>
+<h3 id="module-cbi-gistic2" class="module-name">gistic2</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">GISTIC2: Genomic Identification of Significant Targets in Cancer (GISTIC), version 2</strong><br>
 <span class="module-description">GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.</span><br>
@@ -1252,8 +1288,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">git-flow</dt>
+</dl>
+<h3 id="module-cbi-git-flow" class="module-name">git-flow</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">git-flow: Git Extension Git Flow (AVH Edition)</strong><br>
 <span class="module-description">A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model.</span><br>
@@ -1282,8 +1319,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">glow</dt>
+</dl>
+<h3 id="module-cbi-glow" class="module-name">glow</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">glow: Render Markdown on the CLI, with Pizzazz!</strong><br>
 <span class="module-description">Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI.  Use it to discover markdown files, read documentation directly on the command line and stash markdown files to your own private collection so you can read them anywhere. Glow will find local markdown files in subdirectories or a local Git repository.</span><br>
@@ -1313,8 +1351,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">gsl</dt>
+</dl>
+<h3 id="module-cbi-gsl" class="module-name">gsl</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">GSL: Gnu Scientific Library</strong><br>
 <span class="module-description">The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It is free software under the GNU General Public License. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. There are over 1000 functions in total with an extensive test suite.</span><br>
@@ -1345,8 +1384,9 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 
 </details>
   </dd>
-
-  <dt class="module-name">hdf5</dt>
+</dl>
+<h3 id="module-cbi-hdf5" class="module-name">hdf5</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">hdf5: A General Purpose Library and File Format for Storing Scientific Data</strong><br>
 <span class="module-description">Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications.</span><br>
@@ -1380,8 +1420,9 @@ prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">hisat2</dt>
+</dl>
+<h3 id="module-cbi-hisat2" class="module-name">hisat2</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes</strong><br>
 <span class="module-description">HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). Based on an extension of BWT for graphs [Sirén et al. 2014], we designed and implemented a graph FM index (GFM), an original approach and its first implementation to the best of our knowledge. In addition to using one global GFM index that represents a population of human genomes, HISAT2 uses a large set of small GFM indexes that collectively cover the whole genome (each index representing a genomic region of 56 Kbp, with 55,000 indexes needed to cover the human population). These small indexes (called local indexes), combined with several alignment strategies, enable rapid and accurate alignment of sequencing reads. This new indexing scheme is called a Hierarchical Graph FM index (HGFM).</span><br>
@@ -1409,8 +1450,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">htop</dt>
+</dl>
+<h3 id="module-cbi-htop" class="module-name">htop</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">htop: An Interactive Process Viewer for Unix</strong><br>
 <span class="module-description"><code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.</span><br>
@@ -1440,8 +1482,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 </details>
   </dd>
-
-  <dt class="module-name">htslib</dt>
+</dl>
+<h3 id="module-cbi-htslib" class="module-name">htslib</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">HTSlib: C Library for High-Throughput Sequencing Data Formats</strong><br>
 <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
@@ -1478,8 +1521,9 @@ end
 
 </details>
   </dd>
-
-  <dt class="module-name">htstools</dt>
+</dl>
+<h3 id="module-cbi-htstools" class="module-name">htstools</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">htstools: Tools to Process BAM Files for Downstream Copy-Number Analysis</strong><br>
 <span class="module-description">Contains three tools (dnafrags, ppflag-fixer, snp-pileup) written by Alex Studer to process bam files for downstream copy number analysis.</span><br>
@@ -1509,8 +1553,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">igv</dt>
+</dl>
+<h3 id="module-cbi-igv" class="module-name">igv</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">IGV: The Integrative Genomics Viewer</strong><br>
 <span class="module-description">The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.</span><br>
@@ -1546,8 +1591,9 @@ depends_on(&quot;java-tweaks&quot;)
 
 </details>
   </dd>
-
-  <dt class="module-name">igvtools</dt>
+</dl>
+<h3 id="module-cbi-igvtools" class="module-name">igvtools</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">IGVTools: Tools for Pre-processing HT-Seq Data Files</strong><br>
 <span class="module-description">The igvtools utility provides a set of tools for pre-processing data files. Note, <code>igvtools</code> moved to IGV as of IGV (&gt;= 2.5.0).</span><br>
@@ -1576,8 +1622,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">jags</dt>
+</dl>
+<h3 id="module-cbi-jags" class="module-name">jags</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">JAGS: Just Another Gibbs Sampler</strong><br>
 <span class="module-description">JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation not wholly unlike BUGS.</span><br>
@@ -1619,8 +1666,9 @@ pushenv(&quot;JAGS_LIB&quot;, pathJoin(home, &quot;lib&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">kallisto</dt>
+</dl>
+<h3 id="module-cbi-kallisto" class="module-name">kallisto</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">kallisto: Near-optimal RNA-Seq Quantification</strong><br>
 <span class="module-description">kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.</span><br>
@@ -1649,8 +1697,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">mc</dt>
+</dl>
+<h3 id="module-cbi-mc" class="module-name">mc</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">mc: Midnight Commander</strong><br>
 <span class="module-description">GNU Midnight Commander is a visual file manager. It's a feature rich full-screen text mode application that allows you to copy, move and delete files and whole directory trees, search for files and run commands in the subshell. Internal viewer and editor are included.</span><br>
@@ -1680,8 +1729,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 </details>
   </dd>
-
-  <dt class="module-name">mutect</dt>
+</dl>
+<h3 id="module-cbi-mutect" class="module-name">mutect</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">muTect: Identification of Somatic Point Mutations in Next Generation Sequencing Data of Cancer Genomes</strong><br>
 <span class="module-description">MuTect is a method developed at the Broad Institute for the reliable and accurate identification of somatic point mutations in next generation sequencing data of cancer genomes.</span><br>
@@ -1726,8 +1776,9 @@ depends_on(&quot;java-tweaks&quot;)
 
 </details>
   </dd>
-
-  <dt class="module-name">pandoc</dt>
+</dl>
+<h3 id="module-cbi-pandoc" class="module-name">pandoc</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Pandoc: A Universal Document Converter</strong><br>
 <span class="module-description">Pandoc is a Haskell library and software tool for converting from one markup format to another, and a command-line tool that uses this library.</span><br>
@@ -1757,8 +1808,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 </details>
   </dd>
-
-  <dt class="module-name">picard</dt>
+</dl>
+<h3 id="module-cbi-picard" class="module-name">picard</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats</strong><br>
 <span class="module-description">Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</span><br>
@@ -1801,8 +1853,9 @@ depends_on(&quot;java-tweaks&quot;)
 
 </details>
   </dd>
-
-  <dt class="module-name">pindel</dt>
+</dl>
+<h3 id="module-cbi-pindel" class="module-name">pindel</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">pindel: Detection of Indels and Structural Variations</strong><br>
 <span class="module-description">Pindel can detect breakpoints of large deletions, medium sized insertions, inversions, tandem duplications and other structural variants at single-based resolution from next-gen sequence data. It uses a pattern growth approach to identify the breakpoints of these variants from paired-end short reads.</span><br>
@@ -1833,8 +1886,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">plink</dt>
+</dl>
+<h3 id="module-cbi-plink" class="module-name">plink</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">PLINK: Whole Genome Association Analysis Toolset</strong><br>
 <span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
@@ -1863,8 +1917,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">plink2</dt>
+</dl>
+<h3 id="module-cbi-plink2" class="module-name">plink2</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">PLINK2: Whole Genome Association Analysis Toolset</strong><br>
 <span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
@@ -1893,8 +1948,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">proj</dt>
+</dl>
+<h3 id="module-cbi-proj" class="module-name">proj</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">PROJ: PROJ Coordinate Transformation Software Library</strong><br>
 <span class="module-description">PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves.</span><br>
@@ -1942,8 +1998,9 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 
 </details>
   </dd>
-
-  <dt class="module-name">qtop</dt>
+</dl>
+<h3 id="module-cbi-qtop" class="module-name">qtop</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">qtop: Monitor the State of Queueing Systems, Along with Related Information Relevant on HPC &amp; Grid Clusters</strong><br>
 <span class="module-description"><code>qtop</code> (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC &amp; grid clusters. At present it supports PBS, SGE &amp; OAR families. Please help to increase that list in the Python version of the tool, qtop.py!</span><br>
@@ -1973,8 +2030,9 @@ append_path(&quot;PYTHONPATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">r</dt>
+</dl>
+<h3 id="module-cbi-r" class="module-name">r</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">R: The R Programming Language</strong><br>
 <span class="module-description">The R programming language.</span><br>
@@ -2075,8 +2133,9 @@ end
 
 </details>
   </dd>
-
-  <dt class="module-name">r-siteconfig</dt>
+</dl>
+<h3 id="module-cbi-r-siteconfig" class="module-name">r-siteconfig</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">R Site Configuration: Tweaks to R for the Current Compute Environment</strong><br>
 <span class="module-description">Sets R options and environment variables customized for the current compute environment. Notably, it configures R to install packages from local CRAN and Bioconductor mirrors without the need for internet access.</span><br>
@@ -2104,8 +2163,9 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">rclone</dt>
+</dl>
+<h3 id="module-cbi-rclone" class="module-name">rclone</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">rclone: Rsync for Cloud Storage and More</strong><br>
 <span class="module-description">Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, or remote file systems, and in the cloud.</span><br>
@@ -2135,8 +2195,9 @@ prepend_path(&quot;MANPATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">ripgrep</dt>
+</dl>
+<h3 id="module-cbi-ripgrep" class="module-name">ripgrep</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">ripgrep: Recursively Searches Directories for a Regex Pattern</strong><br>
 <span class="module-description">ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.</span><br>
@@ -2166,8 +2227,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">rstudio</dt>
+</dl>
+<h3 id="module-cbi-rstudio" class="module-name">rstudio</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">rstudio: RStudio Desktop</strong><br>
 <span class="module-description">The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.</span><br>
@@ -2203,8 +2265,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">rstudio-server</dt>
+</dl>
+<h3 id="module-cbi-rstudio-server" class="module-name">rstudio-server</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">RStudio Server: The RStudio Server</strong><br>
 <span class="module-description">The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.</span><br>
@@ -2240,8 +2303,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">rstudio-server-controller</dt>
+</dl>
+<h3 id="module-cbi-rstudio-server-controller" class="module-name">rstudio-server-controller</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">RSC: An RStudio Server Controller</strong><br>
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
@@ -2279,8 +2343,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">salmon</dt>
+</dl>
+<h3 id="module-cbi-salmon" class="module-name">salmon</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">salmon: Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression</strong><br>
 <span class="module-description">Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.</span><br>
@@ -2309,8 +2374,9 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">samtools</dt>
+</dl>
+<h3 id="module-cbi-samtools" class="module-name">samtools</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">SAMtools: Tools (written in C using htslib) for Manipulating Next-Generation Sequencing Data</strong><br>
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
@@ -2351,8 +2417,9 @@ end
 
 </details>
   </dd>
-
-  <dt class="module-name">scl-devtoolset</dt>
+</dl>
+<h3 id="module-cbi-scl-devtoolset" class="module-name">scl-devtoolset</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
 <span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
@@ -2403,8 +2470,9 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/li
 
 </details>
   </dd>
-
-  <dt class="module-name">scl-rh-python</dt>
+</dl>
+<h3 id="module-cbi-scl-rh-python" class="module-name">scl-rh-python</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
@@ -2449,8 +2517,9 @@ prepend_path(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-python38/root/usr/share&
 
 </details>
   </dd>
-
-  <dt class="module-name">scl-rh-ruby</dt>
+</dl>
+<h3 id="module-cbi-scl-rh-ruby" class="module-name">scl-rh-ruby</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">SCL Ruby: Ruby</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-ruby30</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-ruby30</code>, which is an approach that is not of ficially supported by RedHat/CentOS.</span><br>
@@ -2497,8 +2566,9 @@ setenv(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/share:/o
 
 </details>
   </dd>
-
-  <dt class="module-name">shellcheck</dt>
+</dl>
+<h3 id="module-cbi-shellcheck" class="module-name">shellcheck</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">ShellCheck: A Shell Script Static Analysis Tool</strong><br>
 <span class="module-description">ShellCheck finds bugs in your shell scripts.</span><br>
@@ -2528,8 +2598,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">snpeff</dt>
+</dl>
+<h3 id="module-cbi-snpeff" class="module-name">snpeff</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">SnpEff: Genetic Variant Annotation and Effect Prediction Toolbox</strong><br>
 <span class="module-description">SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).</span><br>
@@ -2573,8 +2644,9 @@ depends_on(&quot;java-tweaks&quot;)
 
 </details>
   </dd>
-
-  <dt class="module-name">sratoolkit</dt>
+</dl>
+<h3 id="module-cbi-sratoolkit" class="module-name">sratoolkit</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">SRA Toolkit: Tools and Libraries for Using Data in the INSDC Sequence Read Archives</strong><br>
 <span class="module-description">The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives.</span><br>
@@ -2619,8 +2691,9 @@ set_shell_function(&quot;fasterq-dump&quot;, 'command fasterq-dump --threads 2 -
 
 </details>
   </dd>
-
-  <dt class="module-name">star</dt>
+</dl>
+<h3 id="module-cbi-star" class="module-name">star</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">STAR: Spliced Transcripts Alignment to a Reference</strong><br>
 <span class="module-description">STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.</span><br>
@@ -2650,8 +2723,9 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;, &quot;Linux_x86_6
 
 </details>
   </dd>
-
-  <dt class="module-name">tmux</dt>
+</dl>
+<h3 id="module-cbi-tmux" class="module-name">tmux</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">tmux: A Terminal Multiplexer</strong><br>
 <span class="module-description">tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more.</span><br>
@@ -2681,8 +2755,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 </details>
   </dd>
-
-  <dt class="module-name">tophat</dt>
+</dl>
+<h3 id="module-cbi-tophat" class="module-name">tophat</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">TopHat: A Spliced Read Mapper for RNA-Seq</strong><br>
 <span class="module-description">TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to mammalian-sized genomes using the ultra high-throughput short read aligner Bowtie, and then analyzes the mapping results to identify splice junctions between exons.</span><br>
@@ -2711,8 +2786,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">tree</dt>
+</dl>
+<h3 id="module-cbi-tree" class="module-name">tree</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">tree: List Content of Directories in a Tree-like Format</strong><br>
 <span class="module-description">Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the <code>LS_COLORS</code> environment variable is set and output is to tty.</span><br>
@@ -2742,8 +2818,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 
 </details>
   </dd>
-
-  <dt class="module-name">up</dt>
+</dl>
+<h3 id="module-cbi-up" class="module-name">up</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">up: The Ultimate Plumber</strong><br>
 <span class="module-description">A tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results. Interactively and incrementally explore textual data in Linux using text-processing utils such as grep, sort, cut, paste, awk, wc, perl, etc.  When done, press Ctrl-C to view final pipe commands, or Ctrl-X to save it to file.</span><br>
@@ -2773,8 +2850,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">varscan</dt>
+</dl>
+<h3 id="module-cbi-varscan" class="module-name">varscan</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">VarScan: Variant Detection in Massively Parallel Sequencing Data</strong><br>
 <span class="module-description">VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments.</span><br>
@@ -2808,8 +2886,9 @@ depends_on(&quot;java-tweaks&quot;)
 
 </details>
   </dd>
-
-  <dt class="module-name">vcf-validator</dt>
+</dl>
+<h3 id="module-cbi-vcf-validator" class="module-name">vcf-validator</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">vcf-validator: Validation Suite for Variant Call Format (VCF) Files</strong><br>
 <span class="module-description">Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input.</span><br>
@@ -2836,8 +2915,9 @@ prepend_path(&quot;PATH&quot;, home)
 
 </details>
   </dd>
-
-  <dt class="module-name">vcftools</dt>
+</dl>
+<h3 id="module-cbi-vcftools" class="module-name">vcftools</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">VCFtools: Tools Written in Perl and C++ for Working with VCF Files</strong><br>
 <span class="module-description">VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. The aim of VCFtools is to provide easily accessible methods for working with complex genetic variation data in the form of VCF files.</span><br>
@@ -2869,8 +2949,9 @@ pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot
 
 </details>
   </dd>
-
-  <dt class="module-name">wynton-tools (part of CBI-testing)</dt>
+</dl>
+<h3 id="module-cbi-wynton-tools" class="module-name">wynton-tools</h3>
+<dl>
   <dd class="module-details">
 <strong class="module-help">Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
 <span class="module-description">A command-line tool for common Wynton HPC queries.</span><br>
@@ -2899,7 +2980,6 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </details>
   </dd>
-
 </dl>
 </div> 
 
@@ -2914,8 +2994,8 @@ Enable repository: <code>module load Sali</code><br>
 Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
+<h3 id="module-sali-allosmod" class="module-name">allosmod</h3>
 <dl>
-  <dt class="module-name">allosmod</dt>
   <dd class="module-details">
 <span class="module-description">AllosMod utility library</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/allosmod-lib/">https://github.com/salilab/allosmod-lib/</a></span><br>
@@ -2935,8 +3015,9 @@ prepend-path  PYTHONPATH      ${topdir}/python
 
 </details>
   </dd>
-
-  <dt class="module-name">amber</dt>
+</dl>
+<h3 id="module-sali-amber" class="module-name">amber</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Amber11, for 64-bit</span><br>
 URL: <span class="module-url"><a href="http://ambermd.org/">http://ambermd.org/</a></span><br>
@@ -2954,8 +3035,9 @@ prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
 
 </details>
   </dd>
-
-  <dt class="module-name">anaconda</dt>
+</dl>
+<h3 id="module-sali-anaconda" class="module-name">anaconda</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Anaconda Python distribution</span><br>
 URL: <span class="module-url"><a href="https://www.anaconda.com/">https://www.anaconda.com/</a></span><br>
@@ -2970,8 +3052,9 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/anaconda3/bin/
 
 </details>
   </dd>
-
-  <dt class="module-name">blast</dt>
+</dl>
+<h3 id="module-sali-blast" class="module-name">blast</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Basic Local Alignment Search Tool</span><br>
 URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
@@ -2987,8 +3070,9 @@ prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/b
 
 </details>
   </dd>
-
-  <dt class="module-name">blast+</dt>
+</dl>
+<h3 id="module-sali-blast-" class="module-name">blast+</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Basic Local Alignment Search Tool</span><br>
 URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
@@ -3004,8 +3088,9 @@ prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">boost</dt>
+</dl>
+<h3 id="module-sali-boost" class="module-name">boost</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">The free peer-reviewed portable C++ source libraries</span><br>
 URL: <span class="module-url"><a href="https://www.boost.org/">https://www.boost.org/</a></span><br>
@@ -3029,8 +3114,9 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
 
 </details>
   </dd>
-
-  <dt class="module-name">cgal</dt>
+</dl>
+<h3 id="module-sali-cgal" class="module-name">cgal</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Computational Geometry Algorithms Library</span><br>
 URL: <span class="module-url"><a href="https://www.cgal.org/">https://www.cgal.org/</a></span><br>
@@ -3053,8 +3139,9 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
 
 </details>
   </dd>
-
-  <dt class="module-name">cmake</dt>
+</dl>
+<h3 id="module-sali-cmake" class="module-name">cmake</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Cross-platform make system</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a></span><br>
@@ -3070,8 +3157,9 @@ prepend-path PATH               /salilab/diva1/programs/x86_64linux/cmake-3.18.3
 
 </details>
   </dd>
-
-  <dt class="module-name">concavity</dt>
+</dl>
+<h3 id="module-sali-concavity" class="module-name">concavity</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Ligand binding site prediction from protein sequence and structure</span><br>
 URL: <span class="module-url"><a href="https://compbio.cs.princeton.edu/concavity/">https://compbio.cs.princeton.edu/concavity/</a></span><br>
@@ -3088,8 +3176,9 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/concavity-0.1/b
 
 </details>
   </dd>
-
-  <dt class="module-name">cryptosite</dt>
+</dl>
+<h3 id="module-sali-cryptosite" class="module-name">cryptosite</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">CryptoSite utility library</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/cryptosite/">https://github.com/salilab/cryptosite/</a></span><br>
@@ -3117,8 +3206,9 @@ prepend-path  PYTHONPATH      ${topdir}/python
 
 </details>
   </dd>
-
-  <dt class="module-name">cuda</dt>
+</dl>
+<h3 id="module-sali-cuda" class="module-name">cuda</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, <em>11.5.0</em></span><br>
 <details>
@@ -3137,8 +3227,9 @@ setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0
 
 </details>
   </dd>
-
-  <dt class="module-name">Cython</dt>
+</dl>
+<h3 id="module-sali-cython" class="module-name">Cython</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A language for writing Python extension modules</span><br>
 URL: <span class="module-url"><a href="https://cython.org/">https://cython.org/</a></span><br>
@@ -3155,8 +3246,9 @@ prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-py27-0.2
 
 </details>
   </dd>
-
-  <dt class="module-name">doxygen</dt>
+</dl>
+<h3 id="module-sali-doxygen" class="module-name">doxygen</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A documentation system for C/C++</span><br>
 URL: <span class="module-url"><a href="http://www.doxygen.org/index.html">http://www.doxygen.org/index.html</a></span><br>
@@ -3172,8 +3264,9 @@ prepend-path  PATH            /salilab/diva1/programs/x86_64linux/doxygen-1.8.15
 
 </details>
   </dd>
-
-  <dt class="module-name">dssp</dt>
+</dl>
+<h3 id="module-sali-dssp" class="module-name">dssp</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Secondary structure assignment</span><br>
 URL: <span class="module-url"><a href="https://swift.cmbi.umcn.nl/gv/dssp/">https://swift.cmbi.umcn.nl/gv/dssp/</a></span><br>
@@ -3191,8 +3284,9 @@ prepend-path  MANPATH         /salilab/diva1/programs/x86_64linux/dssp-2.2.1/man
 
 </details>
   </dd>
-
-  <dt class="module-name">eigen</dt>
+</dl>
+<h3 id="module-sali-eigen" class="module-name">eigen</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A lightweight C++ template library for vector and matrix math</span><br>
 URL: <span class="module-url"><a href="http://eigen.tuxfamily.org">http://eigen.tuxfamily.org</a></span><br>
@@ -3208,8 +3302,9 @@ prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/eigen-3.3.5/
 
 </details>
   </dd>
-
-  <dt class="module-name">eman</dt>
+</dl>
+<h3 id="module-sali-eman" class="module-name">eman</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Single Particle Analysis and Electron Micrograph Analysis</span><br>
 URL: <span class="module-url"><a href="https://blake.bcm.edu/emanwiki/EMAN2">https://blake.bcm.edu/emanwiki/EMAN2</a></span><br>
@@ -3230,8 +3325,9 @@ prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/eman-py27-2.2/l
 
 </details>
   </dd>
-
-  <dt class="module-name">featuresketch</dt>
+</dl>
+<h3 id="module-sali-featuresketch" class="module-name">featuresketch</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Ursula's featuresketch script; run feature_sketch.sh then feature_sketch.py</span><br>
 Versions: <span class="module-version"><em>3.0</em></span><br>
@@ -3245,8 +3341,9 @@ prepend-path  PATH  /salilab/diva1/programs/x86_64linux/featuresketch-3.0/progra
 
 </details>
   </dd>
-
-  <dt class="module-name">fpocket</dt>
+</dl>
+<h3 id="module-sali-fpocket" class="module-name">fpocket</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Protein pocket (cavity) detection algorithm</span><br>
 URL: <span class="module-url"><a href="https://github.com/Discngine/fpocket">https://github.com/Discngine/fpocket</a></span><br>
@@ -3263,8 +3360,9 @@ prepend-path MANPATH         /salilab/diva1/programs/x86_64linux/fpocket-2.0/man
 
 </details>
   </dd>
-
-  <dt class="module-name">gcc</dt>
+</dl>
+<h3 id="module-sali-gcc" class="module-name">gcc</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Various compilers (C, C++, Objective-C, Java, ...)</span><br>
 URL: <span class="module-url"><a href="https://gcc.gnu.org/">https://gcc.gnu.org/</a></span><br>
@@ -3298,8 +3396,9 @@ if [ module-info mode load ] {
 
 </details>
   </dd>
-
-  <dt class="module-name">ghostscript</dt>
+</dl>
+<h3 id="module-sali-ghostscript" class="module-name">ghostscript</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A PostScript interpreter and renderer</span><br>
 URL: <span class="module-url"><a href="https://www.ghostscript.com/">https://www.ghostscript.com/</a></span><br>
@@ -3319,8 +3418,9 @@ prepend-path  GS_FONTPATH     /salilab/diva1/programs/x86_64linux/ghostscript-8.
 
 </details>
   </dd>
-
-  <dt class="module-name">gnuplot</dt>
+</dl>
+<h3 id="module-sali-gnuplot" class="module-name">gnuplot</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A program for plotting mathematical expressions and data</span><br>
 URL: <span class="module-url"><a href="http://www.gnuplot.info/">http://www.gnuplot.info/</a></span><br>
@@ -3337,8 +3437,9 @@ prepend-path  PATH            /salilab/diva1/programs/x86_64linux/gnuplot-5.4.2/
 
 </details>
   </dd>
-
-  <dt class="module-name">hdf5</dt>
+</dl>
+<h3 id="module-sali-hdf5" class="module-name">hdf5</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A general purpose library and file format for storing scientific data</span><br>
 URL: <span class="module-url"><a href="https://support.hdfgroup.org/HDF5/">https://support.hdfgroup.org/HDF5/</a></span><br>
@@ -3357,8 +3458,9 @@ prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/
 
 </details>
   </dd>
-
-  <dt class="module-name">ifort</dt>
+</dl>
+<h3 id="module-sali-ifort" class="module-name">ifort</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Intel Fortran compiler</span><br>
 URL: <span class="module-url"><a href="http://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html">http://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html</a></span><br>
@@ -3376,8 +3478,9 @@ prepend-path  MANPATH         /salilab/diva1/programs/x86_64linux/ifort-10.1.022
 
 </details>
   </dd>
-
-  <dt class="module-name">ImageMagick</dt>
+</dl>
+<h3 id="module-sali-imagemagick" class="module-name">ImageMagick</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">An X application for displaying and manipulating images</span><br>
 URL: <span class="module-url"><a href="https://imagemagick.org/">https://imagemagick.org/</a></span><br>
@@ -3397,8 +3500,9 @@ prepend-path  PERL5LIB        /salilab/diva1/programs/x86_64linux/ImageMagick-6.
 
 </details>
   </dd>
-
-  <dt class="module-name">imp</dt>
+</dl>
+<h3 id="module-sali-imp" class="module-name">imp</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Integrative Modeling Platform (version 2.16.0, with only usage checks turned on)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
@@ -3436,8 +3540,9 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
 
 </details>
   </dd>
-
-  <dt class="module-name">imp-fast</dt>
+</dl>
+<h3 id="module-sali-imp-fast" class="module-name">imp-fast</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Integrative Modeling Platform (version 2.16.0, fast build)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
@@ -3475,8 +3580,9 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
 
 </details>
   </dd>
-
-  <dt class="module-name">itcell</dt>
+</dl>
+<h3 id="module-sali-itcell" class="module-name">itcell</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Integrative T-cell epitope prediction</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/itcell-lib">https://github.com/salilab/itcell-lib</a></span><br>
@@ -3493,8 +3599,9 @@ prepend-path  PATH            ${topdir}/scripts
 
 </details>
   </dd>
-
-  <dt class="module-name">libtau</dt>
+</dl>
+<h3 id="module-sali-libtau" class="module-name">libtau</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Code from the SAMBA group at TAU</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/libTAU.html">https://integrativemodeling.org/libTAU.html</a></span><br>
@@ -3512,8 +3619,9 @@ prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/libtau-py27-
 
 </details>
   </dd>
-
-  <dt class="module-name">main</dt>
+</dl>
+<h3 id="module-sali-main" class="module-name">main</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Dusan Turk's MAIN program</span><br>
 URL: <span class="module-url"><a href="https://stef.ijs.si/">https://stef.ijs.si/</a></span><br>
@@ -3551,8 +3659,9 @@ set-alias tes &quot;cd ${MAIN}test&quot;
 
 </details>
   </dd>
-
-  <dt class="module-name">matlab</dt>
+</dl>
+<h3 id="module-sali-matlab" class="module-name">matlab</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Language for technical computing</span><br>
 URL: <span class="module-url"><a href="https://www.mathworks.com/products/matlab.html">https://www.mathworks.com/products/matlab.html</a></span><br>
@@ -3568,8 +3677,9 @@ prepend-path  PATH               /salilab/diva1/programs/x86_64linux/matlab-r201
 
 </details>
   </dd>
-
-  <dt class="module-name">mist</dt>
+</dl>
+<h3 id="module-sali-mist" class="module-name">mist</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">MiST - Mass spectrometry interaction STatistics</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/mist/">https://github.com/salilab/mist/</a></span><br>
@@ -3586,8 +3696,9 @@ prepend-path  PATH            ${topdir}/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">modeller</dt>
+</dl>
+<h3 id="module-sali-modeller" class="module-name">modeller</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">MODELLER comparative modeling</span><br>
 URL: <span class="module-url"><a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a></span><br>
@@ -3608,8 +3719,9 @@ prepend-path  PYTHONPATH      ${topdir}/modlib
 
 </details>
   </dd>
-
-  <dt class="module-name">modpipe</dt>
+</dl>
+<h3 id="module-sali-modpipe" class="module-name">modpipe</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">ModPipe (sets $MODPIPE; only works on the cluster)</span><br>
 URL: <span class="module-url"><a href="https://salilab.org/modpipe/">https://salilab.org/modpipe/</a></span><br>
@@ -3629,8 +3741,9 @@ if [file exists /wynton/home] {
 
 </details>
   </dd>
-
-  <dt class="module-name">muscle</dt>
+</dl>
+<h3 id="module-sali-muscle" class="module-name">muscle</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Multiple alignment program for protein sequences</span><br>
 URL: <span class="module-url"><a href="http://www.drive5.com/muscle/">http://www.drive5.com/muscle/</a></span><br>
@@ -3646,8 +3759,9 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/muscle-3.8.31/b
 
 </details>
   </dd>
-
-  <dt class="module-name">ninja</dt>
+</dl>
+<h3 id="module-sali-ninja" class="module-name">ninja</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A small build system with a focus on speed</span><br>
 URL: <span class="module-url"><a href="https://ninja-build.org/">https://ninja-build.org/</a></span><br>
@@ -3663,8 +3777,9 @@ prepend-path  PATH            /salilab/diva1/programs/x86_64linux/ninja-1.8.2/bi
 
 </details>
   </dd>
-
-  <dt class="module-name">opencv</dt>
+</dl>
+<h3 id="module-sali-opencv" class="module-name">opencv</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Collection of algorithms for computer vision</span><br>
 URL: <span class="module-url"><a href="https://opencv.org/">https://opencv.org/</a></span><br>
@@ -3691,8 +3806,9 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
 
 </details>
   </dd>
-
-  <dt class="module-name">openeye</dt>
+</dl>
+<h3 id="module-sali-openeye" class="module-name">openeye</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">OpenEye products (work on any 64-bit node)</span><br>
 URL: <span class="module-url"><a href="https://www.eyesopen.com/">https://www.eyesopen.com/</a></span><br>
@@ -3714,8 +3830,9 @@ if [file exists /wynton/group] {
 
 </details>
   </dd>
-
-  <dt class="module-name">patch_dock</dt>
+</dl>
+<h3 id="module-sali-patch-dock" class="module-name">patch_dock</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Molecular Docking Based on Shape Complementarity Principles</span><br>
 URL: <span class="module-url"><a href="https://bioinfo3d.cs.tau.ac.il/PatchDock/">https://bioinfo3d.cs.tau.ac.il/PatchDock/</a></span><br>
@@ -3732,8 +3849,9 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/patch_dock-1.3/
 
 </details>
   </dd>
-
-  <dt class="module-name">pcss</dt>
+</dl>
+<h3 id="module-sali-pcss" class="module-name">pcss</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Peptide Classification using Sequence and Structure</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/pcss">https://github.com/salilab/pcss</a></span><br>
@@ -3756,8 +3874,9 @@ if [file exists /wynton/home/sali] {
 
 </details>
   </dd>
-
-  <dt class="module-name">phenix</dt>
+</dl>
+<h3 id="module-sali-phenix" class="module-name">phenix</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python-based Hierarchical ENvironment for Integrated Xtallography</span><br>
 URL: <span class="module-url"><a href="https://www.phenix-online.org/">https://www.phenix-online.org/</a></span><br>
@@ -3775,8 +3894,9 @@ setenv        PHENIX_VERSION  1.19.1-4122
 
 </details>
   </dd>
-
-  <dt class="module-name">profit</dt>
+</dl>
+<h3 id="module-sali-profit" class="module-name">profit</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">ProFit, a protein least squares fitting program</span><br>
 URL: <span class="module-url"><a href="http://www.bioinf.org.uk/software/profit/">http://www.bioinf.org.uk/software/profit/</a></span><br>
@@ -3792,8 +3912,9 @@ prepend-path  PATH           /salilab/diva1/programs/x86_64linux/profit-3.1
 
 </details>
   </dd>
-
-  <dt class="module-name">psipred</dt>
+</dl>
+<h3 id="module-sali-psipred" class="module-name">psipred</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Accurate protein secondary structure prediction</span><br>
 URL: <span class="module-url"><a href="http://bioinf.cs.ucl.ac.uk/psipred/">http://bioinf.cs.ucl.ac.uk/psipred/</a></span><br>
@@ -3811,8 +3932,9 @@ setenv        PSIPRED_LIB     /salilab/diva1/programs/x86_64linux/psipred-4.0/li
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/biopython</dt>
+</dl>
+<h3 id="module-sali-python2-biopython" class="module-name">python2/biopython</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">1.68, 1.69, <em>1.70</em></span><br>
 <details>
@@ -3827,8 +3949,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py27-1.
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/bottleneck</dt>
+</dl>
+<h3 id="module-sali-python2-bottleneck" class="module-name">python2/bottleneck</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">1.2.0, <em>1.2.1</em></span><br>
 <details>
@@ -3843,8 +3966,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py27-1
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/cycler</dt>
+</dl>
+<h3 id="module-sali-python2-cycler" class="module-name">python2/cycler</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>0.10.0</em></span><br>
 <details>
@@ -3859,8 +3983,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/cycler-0.10.0/lib
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/dateutil</dt>
+</dl>
+<h3 id="module-sali-python2-dateutil" class="module-name">python2/dateutil</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">1.5, <em>2.6.1</em></span><br>
 <details>
@@ -3875,8 +4000,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/dateutil-2.6.1/lib/pyth
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/decorator</dt>
+</dl>
+<h3 id="module-sali-python2-decorator" class="module-name">python2/decorator</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">4.0.11, <em>4.2.1</em></span><br>
 <details>
@@ -3890,8 +4016,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/decorator-4.2.1/l
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/functools32</dt>
+</dl>
+<h3 id="module-sali-python2-functools32" class="module-name">python2/functools32</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>3.2.3</em></span><br>
 <details>
@@ -3905,8 +4032,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/functools32-3.2.3
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/h5py</dt>
+</dl>
+<h3 id="module-sali-python2-h5py" class="module-name">python2/h5py</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">2.6.0, 2.7.0, <em>2.7.1</em></span><br>
 <details>
@@ -3921,8 +4049,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py27-2.7.1/l
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/ihm</dt>
+</dl>
+<h3 id="module-sali-python2-ihm" class="module-name">python2/ihm</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>0.11</em></span><br>
 <details>
@@ -3937,8 +4066,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/ihm/python2.7/pyt
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/lru_cache</dt>
+</dl>
+<h3 id="module-sali-python2-lru-cache" class="module-name">python2/lru_cache</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.5</em></span><br>
 <details>
@@ -3952,8 +4082,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/lru_cache-1.5/lib
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/matplotlib</dt>
+</dl>
+<h3 id="module-sali-python2-matplotlib" class="module-name">python2/matplotlib</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">2.0.0, 2.0.2, <em>2.1.2</em></span><br>
 <details>
@@ -3975,8 +4106,9 @@ prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-py27
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/mdp</dt>
+</dl>
+<h3 id="module-sali-python2-mdp" class="module-name">python2/mdp</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.6</em></span><br>
 <details>
@@ -3991,8 +4123,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-2.6
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/msgpack</dt>
+</dl>
+<h3 id="module-sali-python2-msgpack" class="module-name">python2/msgpack</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">0.5.6, <em>0.6.2</em></span><br>
 <details>
@@ -4006,8 +4139,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.6.
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/networkx</dt>
+</dl>
+<h3 id="module-sali-python2-networkx" class="module-name">python2/networkx</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.11</em></span><br>
 <details>
@@ -4024,8 +4158,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/networkx-1.11/lib
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/nose</dt>
+</dl>
+<h3 id="module-sali-python2-nose" class="module-name">python2/nose</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.3.7</em></span><br>
 <details>
@@ -4040,8 +4175,9 @@ prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/numexpr</dt>
+</dl>
+<h3 id="module-sali-python2-numexpr" class="module-name">python2/numexpr</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">2.6.2, <em>2.6.4</em></span><br>
 <details>
@@ -4056,8 +4192,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py27-2.6.
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/numpy</dt>
+</dl>
+<h3 id="module-sali-python2-numpy" class="module-name">python2/numpy</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">1.12.0, 1.13.0, <em>1.14.1</em></span><br>
 <details>
@@ -4073,8 +4210,9 @@ prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py27-1.14
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/pandas</dt>
+</dl>
+<h3 id="module-sali-python2-pandas" class="module-name">python2/pandas</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">0.19.2, 0.20.2, <em>0.22.0</em></span><br>
 <details>
@@ -4092,8 +4230,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-py27-0.22.
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/pkgconfig</dt>
+</dl>
+<h3 id="module-sali-python2-pkgconfig" class="module-name">python2/pkgconfig</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.2.2</em></span><br>
 <details>
@@ -4107,8 +4246,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pkgconfig-1.2.2/l
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/protobuf</dt>
+</dl>
+<h3 id="module-sali-python2-protobuf" class="module-name">python2/protobuf</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">2.3.0, <em>2.5.0</em></span><br>
 <details>
@@ -4122,8 +4262,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/protobuf-2.5.0/li
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/pymc</dt>
+</dl>
+<h3 id="module-sali-python2-pymc" class="module-name">python2/pymc</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.3.6</em></span><br>
 <details>
@@ -4141,8 +4282,9 @@ prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/pyparsing</dt>
+</dl>
+<h3 id="module-sali-python2-pyparsing" class="module-name">python2/pyparsing</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.1.10</em></span><br>
 <details>
@@ -4156,8 +4298,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pyparsing-2.1.10/lib/py
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/pyrmsd</dt>
+</dl>
+<h3 id="module-sali-python2-pyrmsd" class="module-name">python2/pyrmsd</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>4.1.git48ab119</em></span><br>
 <details>
@@ -4172,8 +4315,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py27-4.1.g
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/pytz</dt>
+</dl>
+<h3 id="module-sali-python2-pytz" class="module-name">python2/pytz</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2016.10</em></span><br>
 <details>
@@ -4187,8 +4331,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2016.10/lib/python
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/scikit</dt>
+</dl>
+<h3 id="module-sali-python2-scikit" class="module-name">python2/scikit</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">0.12, 0.18.1, <em>0.19.1</em></span><br>
 <details>
@@ -4204,8 +4349,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-py27-0.19.
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/scipy</dt>
+</dl>
+<h3 id="module-sali-python2-scipy" class="module-name">python2/scipy</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">0.18.1, 0.19.0, <em>1.0.0</em></span><br>
 <details>
@@ -4220,8 +4366,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py27-1.0.0/
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/six</dt>
+</dl>
+<h3 id="module-sali-python2-six" class="module-name">python2/six</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.10.0</em></span><br>
 <details>
@@ -4235,8 +4382,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/six-1.10.0/lib/py
 
 </details>
   </dd>
-
-  <dt class="module-name">python2/tables</dt>
+</dl>
+<h3 id="module-sali-python2-tables" class="module-name">python2/tables</h3>
+<dl>
   <dd class="module-details">
 Versions: <span class="module-version">3.3.0, 3.4.2, <em>3.5.2</em></span><br>
 <details>
@@ -4255,8 +4403,9 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py27-3.5
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/attrs</dt>
+</dl>
+<h3 id="module-sali-python3-attrs" class="module-name">python3/attrs</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Classes Without Boilerplate</span><br>
 URL: <span class="module-url"><a href="https://www.attrs.org/">https://www.attrs.org/</a></span><br>
@@ -4273,8 +4422,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/attrs-21.2.0/lib/python
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/biopython</dt>
+</dl>
+<h3 id="module-sali-python3-biopython" class="module-name">python3/biopython</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python tools for computational molecular biology</span><br>
 URL: <span class="module-url"><a href="https://biopython.org/">https://biopython.org/</a></span><br>
@@ -4292,8 +4442,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py36-1.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/bottleneck</dt>
+</dl>
+<h3 id="module-sali-python3-bottleneck" class="module-name">python3/bottleneck</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Collection of fast NumPy array functions written in Cython</span><br>
 URL: <span class="module-url"><a href="https://github.com/pydata/bottleneck">https://github.com/pydata/bottleneck</a></span><br>
@@ -4311,8 +4462,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py36-1
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/cycler</dt>
+</dl>
+<h3 id="module-sali-python3-cycler" class="module-name">python3/cycler</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Composable style cycles</span><br>
 URL: <span class="module-url"><a href="https://github.com/matplotlib/cycler">https://github.com/matplotlib/cycler</a></span><br>
@@ -4330,8 +4482,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/cycler-py36-0.10.0/lib/
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/dateutil</dt>
+</dl>
+<h3 id="module-sali-python3-dateutil" class="module-name">python3/dateutil</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Powerful extensions to the standard datetime module</span><br>
 URL: <span class="module-url"><a href="https://dateutil.readthedocs.io/en/stable/">https://dateutil.readthedocs.io/en/stable/</a></span><br>
@@ -4349,8 +4502,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/dateutil-2.8.1/lib/pyth
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/decorator</dt>
+</dl>
+<h3 id="module-sali-python3-decorator" class="module-name">python3/decorator</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Module to simplify usage of decorators</span><br>
 URL: <span class="module-url"><a href="https://github.com/micheles/decorator">https://github.com/micheles/decorator</a></span><br>
@@ -4367,8 +4521,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/decorator-4.4.1/lib/pyt
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/flake8</dt>
+</dl>
+<h3 id="module-sali-python3-flake8" class="module-name">python3/flake8</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">The modular source code checker: pep8 pyflakes and co</span><br>
 URL: <span class="module-url"><a href="https://gitlab.com/pycqa/flake8">https://gitlab.com/pycqa/flake8</a></span><br>
@@ -4390,8 +4545,9 @@ prepend-path  PATH   /salilab/diva1/programs/linux/flake8-3.8.4/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/future</dt>
+</dl>
+<h3 id="module-sali-python3-future" class="module-name">python3/future</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Clean single-source support for Python 3 and 2</span><br>
 URL: <span class="module-url"><a href="https://python-future.org/">https://python-future.org/</a></span><br>
@@ -4409,8 +4565,9 @@ prepend-path  PATH   /salilab/diva1/programs/linux/future-0.18.2/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/h5py</dt>
+</dl>
+<h3 id="module-sali-python3-h5py" class="module-name">python3/h5py</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python interface to the Hierarchical Data Format library</span><br>
 URL: <span class="module-url"><a href="https://www.h5py.org/">https://www.h5py.org/</a></span><br>
@@ -4428,8 +4585,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/ihm</dt>
+</dl>
+<h3 id="module-sali-python3-ihm" class="module-name">python3/ihm</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
@@ -4447,8 +4605,9 @@ prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.27/lib64/
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/importlib-metadata</dt>
+</dl>
+<h3 id="module-sali-python3-importlib-metadata" class="module-name">python3/importlib-metadata</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Read metadata from Python packages</span><br>
 URL: <span class="module-url"><a href="https://github.com/python/importlib_metadata">https://github.com/python/importlib_metadata</a></span><br>
@@ -4468,8 +4627,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/importlib-metadata-3.3.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/iniconfig</dt>
+</dl>
+<h3 id="module-sali-python3-iniconfig" class="module-name">python3/iniconfig</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Brain-dead simple parsing of ini files</span><br>
 URL: <span class="module-url"><a href="https://github.com/RonnyPfannschmidt/iniconfig">https://github.com/RonnyPfannschmidt/iniconfig</a></span><br>
@@ -4486,8 +4646,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/iniconfig-1.1.1/lib/pyt
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/joblib</dt>
+</dl>
+<h3 id="module-sali-python3-joblib" class="module-name">python3/joblib</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Lightweight pipelining: using Python functions as pipeline jobs</span><br>
 URL: <span class="module-url"><a href="https://joblib.readthedocs.io/en/latest/">https://joblib.readthedocs.io/en/latest/</a></span><br>
@@ -4504,8 +4665,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/joblib-0.17.0/lib/pytho
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/kiwisolver</dt>
+</dl>
+<h3 id="module-sali-python3-kiwisolver" class="module-name">python3/kiwisolver</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A fast implementation of the Cassowary constraint solver</span><br>
 URL: <span class="module-url"><a href="https://github.com/nucleic/kiwi">https://github.com/nucleic/kiwi</a></span><br>
@@ -4522,8 +4684,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/kiwisolver-py36-1
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/matplotlib</dt>
+</dl>
+<h3 id="module-sali-python3-matplotlib" class="module-name">python3/matplotlib</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python 2D plotting library</span><br>
 URL: <span class="module-url"><a href="https://matplotlib.org/">https://matplotlib.org/</a></span><br>
@@ -4547,8 +4710,9 @@ prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-py36
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/mccabe</dt>
+</dl>
+<h3 id="module-sali-python3-mccabe" class="module-name">python3/mccabe</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">McCabe checker, plugin for flake8</span><br>
 URL: <span class="module-url"><a href="https://github.com/pycqa/mccabe">https://github.com/pycqa/mccabe</a></span><br>
@@ -4565,8 +4729,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mccabe-0.6.1/lib/python
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/mdp</dt>
+</dl>
+<h3 id="module-sali-python3-mdp" class="module-name">python3/mdp</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Modular toolkit for Data Processing</span><br>
 URL: <span class="module-url"><a href="http://mdp-toolkit.sourceforge.net/">http://mdp-toolkit.sourceforge.net/</a></span><br>
@@ -4584,8 +4749,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/s
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/modelcif</dt>
+</dl>
+<h3 id="module-sali-python3-modelcif" class="module-name">python3/modelcif</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
@@ -4603,8 +4769,9 @@ prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.2/lib/pyth
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/msgpack</dt>
+</dl>
+<h3 id="module-sali-python3-msgpack" class="module-name">python3/msgpack</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A Python MessagePack (de)serializer</span><br>
 URL: <span class="module-url"><a href="https://msgpack.org/">https://msgpack.org/</a></span><br>
@@ -4621,8 +4788,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.6.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/networkx</dt>
+</dl>
+<h3 id="module-sali-python3-networkx" class="module-name">python3/networkx</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Creates and Manipulates Graphs and Networks</span><br>
 URL: <span class="module-url"><a href="https://networkx.github.io/">https://networkx.github.io/</a></span><br>
@@ -4642,8 +4810,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/networkx-2.4/lib/python
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/nose</dt>
+</dl>
+<h3 id="module-sali-python3-nose" class="module-name">python3/nose</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Discovery-based unittest extension for Python3</span><br>
 URL: <span class="module-url"><a href="https://nose.readthedocs.io/en/latest/">https://nose.readthedocs.io/en/latest/</a></span><br>
@@ -4661,8 +4830,9 @@ prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/py3/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/numexpr</dt>
+</dl>
+<h3 id="module-sali-python3-numexpr" class="module-name">python3/numexpr</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Fast numerical array expression evaluator for Python and NumPy</span><br>
 URL: <span class="module-url"><a href="https://github.com/pydata/numexpr">https://github.com/pydata/numexpr</a></span><br>
@@ -4680,8 +4850,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py36-2.7.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/numpy</dt>
+</dl>
+<h3 id="module-sali-python3-numpy" class="module-name">python3/numpy</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A fast multidimensional array facility for Python</span><br>
 URL: <span class="module-url"><a href="https://numpy.org/">https://numpy.org/</a></span><br>
@@ -4700,8 +4871,9 @@ prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py36-1.19
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/packaging</dt>
+</dl>
+<h3 id="module-sali-python3-packaging" class="module-name">python3/packaging</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Core utilities for Python packages</span><br>
 URL: <span class="module-url"><a href="https://github.com/pypa/packaging">https://github.com/pypa/packaging</a></span><br>
@@ -4719,8 +4891,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/packaging-20.8/lib/pyth
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pandas</dt>
+</dl>
+<h3 id="module-sali-python3-pandas" class="module-name">python3/pandas</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python Data Analysis Library</span><br>
 URL: <span class="module-url"><a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a></span><br>
@@ -4741,8 +4914,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-py36-0.25.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pkgconfig</dt>
+</dl>
+<h3 id="module-sali-python3-pkgconfig" class="module-name">python3/pkgconfig</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A Python interface to the pkg-config command line tool</span><br>
 URL: <span class="module-url"><a href="https://github.com/matze/pkgconfig">https://github.com/matze/pkgconfig</a></span><br>
@@ -4759,8 +4933,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pkgconfig-1.5.1/lib/pyt
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pluggy</dt>
+</dl>
+<h3 id="module-sali-python3-pluggy" class="module-name">python3/pluggy</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A minimalist production ready plugin system</span><br>
 URL: <span class="module-url"><a href="https://github.com/pytest-dev/pluggy">https://github.com/pytest-dev/pluggy</a></span><br>
@@ -4778,8 +4953,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pluggy-0.13.1/lib/pytho
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/protobuf</dt>
+</dl>
+<h3 id="module-sali-python3-protobuf" class="module-name">python3/protobuf</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Protocol Buffers - Google's data interchange format</span><br>
 URL: <span class="module-url"><a href="https://developers.google.com/protocol-buffers/">https://developers.google.com/protocol-buffers/</a></span><br>
@@ -4802,8 +4978,9 @@ prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py3
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/py</dt>
+</dl>
+<h3 id="module-sali-python3-py" class="module-name">python3/py</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Cross-python path, ini-parsing, io, code, log facilities</span><br>
 URL: <span class="module-url"><a href="https://py.readthedocs.io/en/latest/">https://py.readthedocs.io/en/latest/</a></span><br>
@@ -4820,8 +4997,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/py-1.10.0/lib/python3.6
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pycodestyle</dt>
+</dl>
+<h3 id="module-sali-python3-pycodestyle" class="module-name">python3/pycodestyle</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python style guide checker</span><br>
 URL: <span class="module-url"><a href="https://pycodestyle.readthedocs.io/">https://pycodestyle.readthedocs.io/</a></span><br>
@@ -4839,8 +5017,9 @@ prepend-path  PATH   /salilab/diva1/programs/linux/pycodestyle-2.6.0/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pyflakes</dt>
+</dl>
+<h3 id="module-sali-python3-pyflakes" class="module-name">python3/pyflakes</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Passive checker of Python programs</span><br>
 URL: <span class="module-url"><a href="https://github.com/PyCQA/pyflakes">https://github.com/PyCQA/pyflakes</a></span><br>
@@ -4858,8 +5037,9 @@ prepend-path  PATH   /salilab/diva1/programs/linux/pyflakes-2.2.0/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pyparsing</dt>
+</dl>
+<h3 id="module-sali-python3-pyparsing" class="module-name">python3/pyparsing</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">An object-oriented approach to text processing</span><br>
 URL: <span class="module-url"><a href="https://github.com/pyparsing/pyparsing/">https://github.com/pyparsing/pyparsing/</a></span><br>
@@ -4876,8 +5056,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyparsing-py36-2.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pyrmsd</dt>
+</dl>
+<h3 id="module-sali-python3-pyrmsd" class="module-name">python3/pyrmsd</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Way of performing RMSD calculations of large sets of structures</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/pyRMSD">https://github.com/salilab/pyRMSD</a></span><br>
@@ -4895,8 +5076,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py36-4.1.g
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pytest</dt>
+</dl>
+<h3 id="module-sali-python3-pytest" class="module-name">python3/pytest</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Simple powerful testing with Python</span><br>
 URL: <span class="module-url"><a href="https://docs.pytest.org/en/latest/">https://docs.pytest.org/en/latest/</a></span><br>
@@ -4921,8 +5103,9 @@ prepend-path  PATH   /salilab/diva1/programs/linux/pytest-6.2.1/bin
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pytest-flake8</dt>
+</dl>
+<h3 id="module-sali-python3-pytest-flake8" class="module-name">python3/pytest-flake8</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">pytest plugin to check FLAKE8 requirements</span><br>
 URL: <span class="module-url"><a href="https://github.com/tholo/pytest-flake8">https://github.com/tholo/pytest-flake8</a></span><br>
@@ -4940,8 +5123,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytest-flake8-1.0.7/lib
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/pytz</dt>
+</dl>
+<h3 id="module-sali-python3-pytz" class="module-name">python3/pytz</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">World Timezone Definitions for Python</span><br>
 URL: <span class="module-url"><a href="https://pythonhosted.org/pytz/">https://pythonhosted.org/pytz/</a></span><br>
@@ -4958,8 +5142,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2019.3/lib/python3
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/scikit</dt>
+</dl>
+<h3 id="module-sali-python3-scikit" class="module-name">python3/scikit</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">A set of python modules for machine learning and data mining</span><br>
 URL: <span class="module-url"><a href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a></span><br>
@@ -4978,8 +5163,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-py36-0.21.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/scipy</dt>
+</dl>
+<h3 id="module-sali-python3-scipy" class="module-name">python3/scipy</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Scipy: Scientific Tools for Python</span><br>
 URL: <span class="module-url"><a href="https://www.scipy.org/">https://www.scipy.org/</a></span><br>
@@ -4997,8 +5183,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py36-1.3.2/
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/six</dt>
+</dl>
+<h3 id="module-sali-python3-six" class="module-name">python3/six</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python 2 and 3 compatibility utilities</span><br>
 URL: <span class="module-url"><a href="https://github.com/benjaminp/six">https://github.com/benjaminp/six</a></span><br>
@@ -5015,8 +5202,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/six-1.13.0/lib/python3.
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/tables</dt>
+</dl>
+<h3 id="module-sali-python3-tables" class="module-name">python3/tables</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Hierarchical datasets in Python</span><br>
 URL: <span class="module-url"><a href="http://www.pytables.org/">http://www.pytables.org/</a></span><br>
@@ -5038,8 +5226,9 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py36-3.6
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/toml</dt>
+</dl>
+<h3 id="module-sali-python3-toml" class="module-name">python3/toml</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Python Library for Tom's Obvious, Minimal Language</span><br>
 URL: <span class="module-url"><a href="https://github.com/uiri/toml">https://github.com/uiri/toml</a></span><br>
@@ -5056,8 +5245,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/toml-0.10.2/lib/python3
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/typing-extensions</dt>
+</dl>
+<h3 id="module-sali-python3-typing-extensions" class="module-name">python3/typing-extensions</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Backported and Experimental Type Hints for Python 3.5+</span><br>
 URL: <span class="module-url"><a href="https://pypi.org/project/typing-extensions/">https://pypi.org/project/typing-extensions/</a></span><br>
@@ -5074,8 +5264,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/typing-extensions-3.7.4
 
 </details>
   </dd>
-
-  <dt class="module-name">python3/zipp</dt>
+</dl>
+<h3 id="module-sali-python3-zipp" class="module-name">python3/zipp</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Backport of pathlib-compatible object wrapper for zip files</span><br>
 URL: <span class="module-url"><a href="https://github.com/jaraco/zipp">https://github.com/jaraco/zipp</a></span><br>
@@ -5093,8 +5284,9 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/zipp-3.4.0/lib/python3.
 
 </details>
   </dd>
-
-  <dt class="module-name">relion</dt>
+</dl>
+<h3 id="module-sali-relion" class="module-name">relion</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Electron cryo-microscopy refinement</span><br>
 URL: <span class="module-url"><a href="https://github.com/3dem/relion">https://github.com/3dem/relion</a></span><br>
@@ -5131,8 +5323,9 @@ if [file exists /lib64/libX11.so.6] {
 
 </details>
   </dd>
-
-  <dt class="module-name">rosetta</dt>
+</dl>
+<h3 id="module-sali-rosetta" class="module-name">rosetta</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Computational modeling and analysis of protein structures</span><br>
 URL: <span class="module-url"><a href="https://www.rosettacommons.org/">https://www.rosettacommons.org/</a></span><br>
@@ -5149,8 +5342,9 @@ setenv        ROSETTA3_DB     /salilab/diva1/programs/x86_64linux/rosetta-3.10/d
 
 </details>
   </dd>
-
-  <dt class="module-name">sali-libraries</dt>
+</dl>
+<h3 id="module-sali-sali-libraries" class="module-name">sali-libraries</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Makes available libraries usually only present on the Sali interactive nodes</span><br>
 <details>
@@ -5172,8 +5366,9 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
 
 </details>
   </dd>
-
-  <dt class="module-name">scwrl</dt>
+</dl>
+<h3 id="module-sali-scwrl" class="module-name">scwrl</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Protein side-chain conformation prediction program</span><br>
 URL: <span class="module-url"><a href="http://dunbrack.fccc.edu/SCWRL4.php">http://dunbrack.fccc.edu/SCWRL4.php</a></span><br>
@@ -5189,8 +5384,9 @@ prepend-path PATH               /salilab/diva1/programs/x86_64linux/scwrl-4.0/bi
 
 </details>
   </dd>
-
-  <dt class="module-name">svm_light</dt>
+</dl>
+<h3 id="module-sali-svm-light" class="module-name">svm_light</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Support Vector Machine</span><br>
 URL: <span class="module-url"><a href="http://svmlight.joachims.org/">http://svmlight.joachims.org/</a></span><br>
@@ -5206,8 +5402,9 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/svm_light-6.0.2
 
 </details>
   </dd>
-
-  <dt class="module-name">swig</dt>
+</dl>
+<h3 id="module-sali-swig" class="module-name">swig</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Connects C/C++/Objective C to some high-level programming languages</span><br>
 URL: <span class="module-url"><a href="http://www.swig.org/">http://www.swig.org/</a></span><br>
@@ -5223,8 +5420,9 @@ prepend-path PATH               /salilab/diva1/programs/x86_64linux/swig-4.0.2/b
 
 </details>
   </dd>
-
-  <dt class="module-name">usearch</dt>
+</dl>
+<h3 id="module-sali-usearch" class="module-name">usearch</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">High-throughput search and clustering tool</span><br>
 URL: <span class="module-url"><a href="http://www.drive5.com/usearch/">http://www.drive5.com/usearch/</a></span><br>
@@ -5240,8 +5438,9 @@ prepend-path  PATH            /salilab/diva1/programs/linux/usearch-10.0.240/
 
 </details>
   </dd>
-
-  <dt class="module-name">web_service</dt>
+</dl>
+<h3 id="module-sali-web-service" class="module-name">web_service</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Command line interface (web_service.py) to most lab web services</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/saliweb">https://github.com/salilab/saliweb</a></span><br>
@@ -5256,8 +5455,9 @@ prepend-path  PATH            /salilab/diva1/programs/linux/web_service
 
 </details>
   </dd>
-
-  <dt class="module-name">zdock</dt>
+</dl>
+<h3 id="module-sali-zdock" class="module-name">zdock</h3>
+<dl>
   <dd class="module-details">
 <span class="module-description">Rigid body docking</span><br>
 URL: <span class="module-url"><a href="http://zdock.umassmed.edu/">http://zdock.umassmed.edu/</a></span><br>
@@ -5273,7 +5473,6 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 </details>
   </dd>
-
 </dl>
 </div> 
 
@@ -5286,7 +5485,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-16 14:59:40 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-16 15:32:24 from querying `module avail` and `module spider`._
 
 
 <style>
