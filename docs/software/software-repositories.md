@@ -97,6 +97,24 @@ prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
 Example: <span class="module-example"><code>module load CBI</code> and then <code>module avail</code>.</span><br>
 URL: <span class="module-url"><a href="https://cbi.ucsf.edu/">https://cbi.ucsf.edu/</a></span><br>
 Maintainer: <span class="module-maintainer">Henrik Bengtsson, CBI</span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help(&quot;Module Repository by UCSF Computational Biology and Informatics (CBI)&quot;)
+
+whatis(&quot;Keywords: UCSF, CBI&quot;)
+whatis(&quot;URL: https://cbi.ucsf.edu/&quot;)
+whatis([[
+Description: Repository of modules shared by UCSF Computational Biology and Informatics. When loading this module, you will get access to a large number of software modules.  When unloading the module, any software modules from this CBI software repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.
+Example: `module load CBI` and then `module avail`.
+Maintainer: Henrik Bengtsson, CBI
+]])
+
+pushenv(&quot;SOFTWARE_ROOT_CBI&quot;, &quot;/wynton/home/cbi/shared/software/CBI&quot;)
+pushenv(&quot;MODULE_ROOT_CBI&quot;, &quot;/wynton/home/cbi/shared/modulefiles/CBI&quot;)
+prepend_path(&quot;MODULEPATH&quot;, &quot;/wynton/home/cbi/shared/modulefiles/CBI&quot;)
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">cuda</dt>
@@ -239,6 +257,13 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
   <dt class="module-name">Sali</dt>
   <dd class="module-details">
 <strong class="module-help">Sali lab software repository</strong><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help(&quot;Sali lab software repository&quot;)
+prepend_path(&quot;MODULEPATH&quot;, &quot;/salilab/diva1/home/modules&quot;)
+</code></pre>
+
+</details>
   </dd>
 
 </dl>
@@ -732,6 +757,30 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 <strong class="module-help">The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!</strong><br>
 <span class="module-description">This repository provides prototypical environment modules that can change at any time. They will live in this CBI-testing repository until they have proven to work and be stable - only then they will be considered for the main CBI repository.  WARNING: Use at your own risk.</span><br>
 URL: <span class="module-url"><a href="http://cbi.ucsf.edu/">http://cbi.ucsf.edu/</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!
+]])
+
+local name = myModuleName()
+whatis(&quot;Title: The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!&quot;)
+whatis(&quot;Description: This repository provides prototypical environment modules that can change at any time. They will live in this CBI-testing repository until they have proven to work and be stable - only then they will be considered for the main CBI repository.  WARNING: Use at your own risk.&quot;)
+whatis(&quot;URL: http://cbi.ucsf.edu/&quot;)
+whatis(&quot;BugReports: Please contact the maintainer of this repository&quot;)
+whatis(&quot;Maintainer: Henrik Bengtsson, Computational Biology and Informatics (http://cbi.ucsf.edu)&quot;)
+whatis(&quot;Keywords: UCSF, CBI, repository, testing&quot;)
+
+local root = &quot;/wynton/home/cbi/shared&quot;
+local software_home = pathJoin(root, &quot;software&quot;, name)
+local modules_home = pathJoin(root, &quot;modulefiles&quot;, name)
+
+setenv(&quot;SOFTWARE_ROOT_CBI_TESTING&quot;, software_home)
+setenv(&quot;MODULE_ROOT_CBI_TESTING&quot;, modules_home)
+prepend_path(&quot;MODULEPATH&quot;, modules_home)
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">cellranger</dt>
@@ -2870,6 +2919,21 @@ Please note that this software stacks is maintained and contributed by a researc
   <dd class="module-details">
 <span class="module-description">AllosMod utility library</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/allosmod-lib/">https://github.com/salilab/allosmod-lib/</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: AllosMod utility library&quot;
+module-whatis &quot;URL: https://github.com/salilab/allosmod-lib/&quot;
+module load modeller
+module load dssp
+module load profit
+set topdir /salilab/diva1/programs/x86_64linux/allosmod
+prepend-path  PATH            ${topdir}/bin
+prepend-path  PYTHONPATH      ${topdir}/python
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">amber</dt>
@@ -2895,6 +2959,16 @@ prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
   <dd class="module-details">
 <span class="module-description">Anaconda Python distribution</span><br>
 URL: <span class="module-url"><a href="https://www.anaconda.com/">https://www.anaconda.com/</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Anaconda Python distribution&quot;
+module-whatis &quot;URL: https://www.anaconda.com/&quot;
+prepend-path  PATH       /salilab/diva1/home/anaconda/anaconda3/bin/
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">blast</dt>
@@ -3019,6 +3093,29 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/concavity-0.1/b
   <dd class="module-details">
 <span class="module-description">CryptoSite utility library</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/cryptosite/">https://github.com/salilab/cryptosite/</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: CryptoSite utility library&quot;
+module-whatis &quot;URL: https://github.com/salilab/cryptosite/&quot;
+module load modeller
+module load muscle
+module load dssp
+module load fpocket
+module load concavity
+module load patch_dock
+module load imp
+module load blast+
+module load usearch
+module load python2/scikit/0.12
+module load python2/biopython
+set topdir /salilab/diva1/programs/linux/cryptosite
+prepend-path  PATH            ${topdir}/bin
+prepend-path  PYTHONPATH      ${topdir}/python
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">cuda</dt>
@@ -3383,6 +3480,18 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
   <dd class="module-details">
 <span class="module-description">Integrative T-cell epitope prediction</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/itcell-lib">https://github.com/salilab/itcell-lib</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Integrative T-cell epitope prediction&quot;
+module-whatis &quot;URL: https://github.com/salilab/itcell-lib&quot;
+module load imp scwrl
+set topdir /salilab/diva1/programs/x86_64linux/itcell-lib
+prepend-path  PATH            ${topdir}/scripts
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">libtau</dt>
@@ -3464,6 +3573,18 @@ prepend-path  PATH               /salilab/diva1/programs/x86_64linux/matlab-r201
   <dd class="module-details">
 <span class="module-description">MiST - Mass spectrometry interaction STatistics</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/mist/">https://github.com/salilab/mist/</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: MiST - Mass spectrometry interaction STatistics&quot;
+module-whatis &quot;URL: https://github.com/salilab/mist/&quot;
+module load python3/scikit
+set topdir /salilab/diva1/programs/linux/mist
+prepend-path  PATH            ${topdir}/bin
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">modeller</dt>
@@ -3616,6 +3737,24 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/patch_dock-1.3/
   <dd class="module-details">
 <span class="module-description">Peptide Classification using Sequence and Structure</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/pcss">https://github.com/salilab/pcss</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Peptide Classification using Sequence and Structure&quot;
+module-whatis &quot;URL: https://github.com/salilab/pcss&quot;
+if [file exists /wynton/home/sali] {
+  module load svm_light
+  set topdir /wynton/home/sali/peptide
+  prepend-path  PATH      ${topdir}/bin
+  prepend-path  PERL5LIB  ${topdir}/lib
+} else {
+  puts stderr &quot;Sorry, this module only works on the cluster (or other machine that has /wynton/home/sali mounted)&quot;
+  break
+}
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">phenix</dt>
@@ -5014,6 +5153,24 @@ setenv        ROSETTA3_DB     /salilab/diva1/programs/x86_64linux/rosetta-3.10/d
   <dt class="module-name">sali-libraries</dt>
   <dd class="module-details">
 <span class="module-description">Makes available libraries usually only present on the Sali interactive nodes</span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Makes available libraries usually only present on the Sali interactive nodes&quot;
+prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+  if [file exists /etc/dnf/dnf.conf] {
+    prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64/centos8
+  } elseif [file exists /etc/systemd/system.conf] {
+    prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64/centos7
+  } else {
+    prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64/centos
+  }
+}
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">scwrl</dt>
@@ -5088,6 +5245,16 @@ prepend-path  PATH            /salilab/diva1/programs/linux/usearch-10.0.240/
   <dd class="module-details">
 <span class="module-description">Command line interface (web_service.py) to most lab web services</span><br>
 URL: <span class="module-url"><a href="https://github.com/salilab/saliweb">https://github.com/salilab/saliweb</a></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Command line interface (web_service.py) to most lab web services&quot;
+module-whatis &quot;URL: https://github.com/salilab/saliweb&quot;
+prepend-path  PATH            /salilab/diva1/programs/linux/web_service
+</code></pre>
+
+</details>
   </dd>
 
   <dt class="module-name">zdock</dt>
@@ -5119,7 +5286,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-15 15:01:59 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-16 14:59:40 from querying `module avail` and `module spider`._
 
 
 <style>
