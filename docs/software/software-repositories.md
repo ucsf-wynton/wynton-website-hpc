@@ -5485,7 +5485,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-16 16:16:00 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-16 16:18:24 from querying `module avail` and `module spider`._
 
 
 <style>
@@ -5507,7 +5507,29 @@ dt:after {
 <script type="text/javascript">
 $(document).ready(function() {
   var hash = window.location.hash;
-  var pattern = "#module-software-repository-";
+  var pattern;
+
+  /* Linked to a module repository? */
+  pattern = "#repository_";
+  if (hash.startsWith(pattern)) {
+    var repo = hash.substring(pattern.length);
+    $('a[href="#queues-' + repo + "']').click();
+    return
+  }
+
+  /* Linked to a module in a module repository? */
+  pattern = "#module_";
+  if (hash.startsWith(pattern)) {
+    var repo_module = hash.substring(pattern.length);
+    var repo = repo_module.replace(new RegExp("[_].*$"), "");
+    $('a[href="#queues-' + repo + '"]').click().delay(300);
+    var module = repo_module.replace(new RegExp("^[^_]*[_]"), "");
+    $('a[href="#' + hash + '"]').click();
+    return
+  }
+
+  /* Backward compatibility */
+  pattern = "#module-software-repository-";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
     $('a[href="#queues-' + repo + "']').click();
