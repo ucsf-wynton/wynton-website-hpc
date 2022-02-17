@@ -5513,6 +5513,7 @@ $(document).ready(function() {
   pattern = "#repository_";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
+    alert("repo="+repo);
     $('a[href="#queues-' + repo + '"]').click();
     return;
   }
@@ -5521,9 +5522,11 @@ $(document).ready(function() {
   pattern = "#module_";
   if (hash.startsWith(pattern)) {
     var repo_module = hash.substring(pattern.length);
-    var repo = repo_module.replace(new RegExp("[_].*$"), "");
+    var repo = repo_module.replace(new RegExp("_.*$"), "");
+    alert("repo="+repo);
     $('a[href="#queues-' + repo + '"]').click().delay(300);
-    var module = repo_module.replace(new RegExp("^[^_]*[_]"), "");
+    var module = repo_module.replace(new RegExp("^[^_]*_"), "");
+    alert("module="+module);
     $('a[href="#' + hash + '"]').click();
     return;
   }
