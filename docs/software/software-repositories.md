@@ -65,7 +65,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="queues-built-in" class="tab-pane fadein active">
 
-<h2 id="module-software-repository-built-in">Module Software Repository: built-in (9)</h2>
+<h2 id="repository-built-in">Module Software Repository: built-in (9)</h2>
 
 Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
@@ -278,7 +278,7 @@ prepend_path(&quot;MODULEPATH&quot;, &quot;/salilab/diva1/home/modules&quot;)
 
 <div id="queues-cbi" class="tab-pane fade">
 
-<h2 id="module-software-repository-cbi">Module Software Repository: CBI (75)</h2>
+<h2 id="repository-cbi">Module Software Repository: CBI (75)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2985,7 +2985,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 <div id="queues-sali" class="tab-pane fade">
 
-<h2 id="module-software-repository-sali">Module Software Repository: Sali (121)</h2>
+<h2 id="repository-sali">Module Software Repository: Sali (121)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -5485,7 +5485,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-16 16:31:29 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-16 16:34:44 from querying `module avail` and `module spider`._
 
 
 <style>
