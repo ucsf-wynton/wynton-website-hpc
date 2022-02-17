@@ -57,13 +57,13 @@ module load CBI r bwa bowtie2/2.4.2
 Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
-<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
+<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
-<div id="button-repository-built-in" class="tab-pane fadein active">
+<div id="button_repository_built-in" class="tab-pane fadein active">
 
 <h2 id="repository_built-in">Module Software Repository: built-in (9)</h2>
 
@@ -276,7 +276,7 @@ prepend_path(&quot;MODULEPATH&quot;, &quot;/salilab/diva1/home/modules&quot;)
 </dl>
 </div> 
 
-<div id="button-repository-cbi" class="tab-pane fade">
+<div id="button_repository_cbi" class="tab-pane fade">
 
 <h2 id="repository_cbi">Module Software Repository: CBI (75)</h2>
 
@@ -2983,7 +2983,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 </dl>
 </div> 
 
-<div id="button-repository-sali" class="tab-pane fade">
+<div id="button_repository_sali" class="tab-pane fade">
 
 <h2 id="repository_sali">Module Software Repository: Sali (121)</h2>
 
@@ -5480,12 +5480,12 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 </div> 
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#queues-built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#queues-cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
-<li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
+<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(75)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-16 22:40:28 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-16 22:50:55 from querying `module avail` and `module spider`._
 
 
 <style>
@@ -5513,7 +5513,7 @@ $(document).ready(function() {
   pattern = "#repository_";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
-    $('a[href="#button-repository-' + repo + '"]').click();
+    $('a[href="#button_repository_' + repo + '"]').click();
     return;
   }
 
@@ -5522,7 +5522,7 @@ $(document).ready(function() {
   if (hash.startsWith(pattern)) {
     var repo_module = hash.substring(pattern.length);
     var repo = repo_module.replace(new RegExp("_.*$"), "");
-    $('a[href="#button-repository-' + repo + '"]').click().delay(300);
+    $('a[href="#button_repository_' + repo + '"]').click().delay(300);
     $('a[href="' + hash + '"]').focus();
     return;
   }
@@ -5531,7 +5531,7 @@ $(document).ready(function() {
   pattern = "#module-software-repository-";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
-    $('a[href="#button-repository-' + repo + '"]').click();
+    $('a[href="#button_repository_' + repo + '"]').click();
     return;
   }
 
@@ -5539,7 +5539,7 @@ $(document).ready(function() {
   if (hash.startsWith(pattern)) {
     var repo_module = hash.substring(pattern.length);
     var repo = repo_module.replace(new RegExp("[-].*$"), "");
-    $('a[href="#button-repository-' + repo + '"]').click().delay(300);
+    $('a[href="#button_repository_' + repo + '"]').click().delay(300);
     $('a[href="' + hash + '"]').focus();
     return;
   }
