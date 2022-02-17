@@ -212,7 +212,7 @@ $(document).ready(function() {
     var repo = hash.substring(pattern_repo.length);
     $('a[href="#queues-' + repo + '"]').click();
   } else if (hash.startsWith(pattern_module)) {
-    var repo_module = hash.substring(pattern_repo.length);
+    var repo_module = hash.substring(pattern_module.length);
     var repo = repo_module.replace(new RegExp("[-].*$"), "");
     $('a[href="#queues-' + repo + '"]').click();
     var module = repo_module.replace(new RegExp("^[^-]*[-]"), "");
