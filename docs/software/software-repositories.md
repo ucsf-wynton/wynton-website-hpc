@@ -5485,7 +5485,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#queues-sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-02-16 16:09:23 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-02-16 16:16:00 from querying `module avail` and `module spider`._
 
 
 <style>
@@ -5507,17 +5507,21 @@ dt:after {
 <script type="text/javascript">
 $(document).ready(function() {
   var hash = window.location.hash;
-  var pattern_repo = "#module-software-repository-";
-  var pattern_module = "#module-";
-  if (hash.startsWith(pattern_repo)) {
-    var repo = hash.substring(pattern_repo.length);
-    $('a[href="#queues-' + repo + '"]').click();
-  } else if (hash.startsWith(pattern_module)) {
-    var repo_module = hash.substring(pattern_module.length);
+  var pattern = "#module-software-repository-";
+  if (hash.startsWith(pattern)) {
+    var repo = hash.substring(pattern.length);
+    $('a[href="#queues-' + repo + "']').click();
+    return
+  }
+
+  pattern = "#module-";
+  if (hash.startsWith(pattern)) {
+    var repo_module = hash.substring(pattern.length);
     var repo = repo_module.replace(new RegExp("[-].*$"), "");
-    $('a[href="#queues-' + repo + '"]').click();
+    $('a[href="#queues-' + repo + '"]').click().delay(300);
     var module = repo_module.replace(new RegExp("^[^-]*[-]"), "");
     $('a[href="#' + hash + '"]').click();
+    return
   }
 })
 </script>
