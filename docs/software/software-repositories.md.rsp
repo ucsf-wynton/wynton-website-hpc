@@ -156,7 +156,7 @@ Below are <%= length(modules_sets) %> software repositories, each providing a se
   nbr_of_modules <- nrow(modules)
   info <- attr(modules, "info")
 %>
-<div id="queues-<%= tolower(name) %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
+<div id="button-repository-<%= tolower(name) %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
 <%
 header_id <- sprintf("repository_%s", tolower(name))
@@ -176,7 +176,7 @@ Please note that this software stacks is maintained and contributed by a researc
 <% } %>
 
 <% table_of_modules(modules) %>
-</div> <%-- <div id="queues-<%= tolower(name) %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
+</div> <%-- <div id="button-repository-<%= tolower(name) %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>"> --%>
 
 <% } ## for (name ...) %>
 
@@ -212,7 +212,7 @@ $(document).ready(function() {
   pattern = "#repository_";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
-    $('a[href="#queues-' + repo + '"]').click();
+    $('a[href="#button-repository-' + repo + '"]').click();
     return;
   }
 
@@ -221,7 +221,7 @@ $(document).ready(function() {
   if (hash.startsWith(pattern)) {
     var repo_module = hash.substring(pattern.length);
     var repo = repo_module.replace(new RegExp("_.*$"), "");
-    $('a[href="#queues-' + repo + '"]').click().delay(300);
+    $('a[href="#button-repository-' + repo + '"]').click().delay(300);
     $('a[href="' + hash + '"]').focus();
     return;
   }
@@ -230,7 +230,7 @@ $(document).ready(function() {
   pattern = "#module-software-repository-";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
-    $('a[href="#queues-' + repo + '"]').click();
+    $('a[href="#button-repository-' + repo + '"]').click();
     return;
   }
 
@@ -238,7 +238,7 @@ $(document).ready(function() {
   if (hash.startsWith(pattern)) {
     var repo_module = hash.substring(pattern.length);
     var repo = repo_module.replace(new RegExp("[-].*$"), "");
-    $('a[href="#queues-' + repo + '"]').click().delay(300);
+    $('a[href="#button-repository-' + repo + '"]').click().delay(300);
     $('a[href="' + hash + '"]').focus();
     return;
   }
