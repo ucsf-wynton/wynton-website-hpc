@@ -5523,8 +5523,7 @@ $(document).ready(function() {
     var repo_module = hash.substring(pattern.length);
     var repo = repo_module.replace(new RegExp("_.*$"), "");
     $('a[href="#queues-' + repo + '"]').click().delay(300);
-    var module = repo_module.replace(new RegExp("^[^_]*_"), "");
-    $('a[href="#' + hash + '"]').click();
+    $('a[href="' + hash + '"]').focus();
     return;
   }
 
@@ -5541,8 +5540,7 @@ $(document).ready(function() {
     var repo_module = hash.substring(pattern.length);
     var repo = repo_module.replace(new RegExp("[-].*$"), "");
     $('a[href="#queues-' + repo + '"]').click().delay(300);
-    var module = repo_module.replace(new RegExp("^[^-]*[-]"), "");
-    $('a[href="#' + hash + '"]').click();
+    $('a[href="' + hash + '"]').focus();
     return;
   }
 })
