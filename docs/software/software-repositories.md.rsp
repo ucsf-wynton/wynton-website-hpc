@@ -56,12 +56,16 @@ th, td {
 <% } # if (style) %>
 <% table_of_modules <- function(modules, style = c("module", "repos")) { %>
 <% style <- match.arg(style) %>
-<dl>
 <% for (ii in seq_len(nrow(modules))) { %>
 <%
 m <- parse_module(modules[ii,])
 %>
-  <dt class="module-name"><%= m$package %><% if (length(m$parent) > 0) cat(sprintf(" (part of %s)", m$parent)) %></dt>
+<%
+header_id <- sprintf("module-%s-%s", name, m$package)
+header_id <- gsub("[^[:alnum:]]+", "-", tolower(header_id))
+%>
+<h3 id="<%= header_id %>" class="module-name"><%= m$package %></h3>
+<dl>
   <dd class="module-details">
 <%
   fields <- c("help", "description", Example="example", Note="note", URL="url", Maintainer="maintainer", Warning="warning", Versions="version")
@@ -93,9 +97,8 @@ as_html(code)
 </details>
   <% } %>
   </dd>
-
-<% } # for (ii in ...) %>
 </dl>
+<% } # for (ii in ...) %>
 <% } ## table_of_modules() %>
 
 
@@ -203,10 +206,17 @@ dt:after {
 <script type="text/javascript">
 $(document).ready(function() {
   var hash = window.location.hash;
-  var pattern = "#module-software-repository-";
-  if (hash.startsWith(pattern)) {
-    var name = hash.substring(pattern.length);
-    $('a[href="#queues-' + name + '"]').click();
+  var pattern_repo = "#module-software-repository-";
+  var pattern_module = "#module-";
+  if (hash.startsWith(pattern_repo)) {
+    var repo = hash.substring(pattern_repo.length);
+    $('a[href="#queues-' + repo + '"]').click();
+  } else if (hash.startsWith(pattern_module)) {
+    var repo_module = hash.substring(pattern_repo.length);
+    var repo = repo_module.replace(new RegExp("[-].*$"), "");
+    $('a[href="#queues-' + repo + '"]').click();
+    var module = repo_module.replace(new RegExp("^[^-]*[-]"), "");
+    $('a[href="#' + hash + '"]').click();
   }
 })
 </script>
