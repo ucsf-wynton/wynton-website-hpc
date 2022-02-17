@@ -61,8 +61,8 @@ th, td {
 m <- parse_module(modules[ii,])
 %>
 <%
-header_id <- sprintf("module-%s-%s", name, m$package)
-header_id <- gsub("[^[:alnum:]]+", "-", tolower(header_id))
+header_id <- sprintf("module_%s_%s", tolower(name), tolower(m$package))
+header_id <- gsub("[^[:alnum:]]+", "-", header_id)
 %>
 <h3 id="<%= header_id %>" class="module-name"><%= m$package %></h3>
 <dl>
@@ -159,10 +159,10 @@ Below are <%= length(modules_sets) %> software repositories, each providing a se
 <div id="queues-<%= tolower(name) %>" class="tab-pane fade<%= if (kk == 1) 'in active' %>">
 
 <%
-link_text <- sprintf("Module Software Repository: %s", name)
-header_id <- gsub("[^[:alnum:]]+", "-", tolower(link_text))
+header_id <- sprintf("repository_%s", tolower(name))
+header_id <- gsub("[^[:alnum:]]+", "-", header_id)
 %>
-<h2 id="<%= header_id %>"><%= link_text %> (<%= nbr_of_modules %>)</h2>
+<h2 id="<%= header_id %>">Module Software Repository: <%= name %> (<%= nbr_of_modules %>)</h2>
 
 Maintained by: <%= info$maintainer %>, <a href="<%= info$url %>"><%= info$group %></a><br>
 <% if (!info$contributed) { %>
