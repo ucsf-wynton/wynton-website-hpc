@@ -5508,13 +5508,13 @@ dt:after {
 $(document).ready(function() {
   var hash = window.location.hash;
   var pattern;
-
+  
   /* Linked to a module repository? */
   pattern = "#repository_";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
-    $('a[href="#queues-' + repo + "']').click();
-    return
+    $('a[href="#queues-' + repo + '"]').click();
+    return;
   }
 
   /* Linked to a module in a module repository? */
@@ -5525,15 +5525,15 @@ $(document).ready(function() {
     $('a[href="#queues-' + repo + '"]').click().delay(300);
     var module = repo_module.replace(new RegExp("^[^_]*[_]"), "");
     $('a[href="#' + hash + '"]').click();
-    return
+    return;
   }
 
   /* Backward compatibility */
   pattern = "#module-software-repository-";
   if (hash.startsWith(pattern)) {
     var repo = hash.substring(pattern.length);
-    $('a[href="#queues-' + repo + "']').click();
-    return
+    $('a[href="#queues-' + repo + '"]').click();
+    return;
   }
 
   pattern = "#module-";
@@ -5543,7 +5543,7 @@ $(document).ready(function() {
     $('a[href="#queues-' + repo + '"]').click().delay(300);
     var module = repo_module.replace(new RegExp("^[^-]*[-]"), "");
     $('a[href="#' + hash + '"]').click();
-    return
+    return;
   }
 })
 </script>
