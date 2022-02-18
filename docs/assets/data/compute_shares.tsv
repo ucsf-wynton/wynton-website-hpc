@@ -1,8 +1,8 @@
 # Created by: hb
-# Created on: 2022-02-17 03:00:02-08:00
-# Total fshares: 20191
-# Total queue_slots: 9932
-# Number of projects: 44
+# Created on: 2022-02-18 03:00:03-08:00
+# Total fshares: 20209
+# Total queue_slots: 10267
+# Number of projects: 52
 fshares	queue_slots	project
 5506	3305	salilab
 4104	1403	agardlab,chenglab,frostlab
@@ -29,7 +29,7 @@ fshares	queue_slots	project
 123	41	lilab
 109	36	huanglab
 108	138	stroudlab
-89	29	baranzinilab
+89	176	baranzinilab
 87	29	turnbaughlab
 73	24	chiulab
 65	249	saviclab
@@ -38,13 +38,21 @@ fshares	queue_slots	project
 43	14	weissmanlab
 36	12	schreinerlab
 17	6	maleylab
-15	5	kroganlab
+15	36	kroganlab
 12	4	sysbiocenter
+6	choulab	
+6	choulab	
 3	1	voigtlab
 3	1	cohenlab
 1	6	choulab
+1	6	choulab
+1	5	medinalab
+1	35	brainardlab
 1	31	criswelllab
 1	30	wilsonlab
 1	288	gladstone
 1	25	EPPIcenter
+1	1	krausslab
+1	10	mcmanuslab
 1	101	lynchlab
+1	100	capralab
