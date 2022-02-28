@@ -27,7 +27,7 @@ File transfers via Globus does not work on <strong>{{ site.cluster.name }}</stro
 {% elsif site.cluster.status == "full-outage" %}
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
 <strong>{{ site.cluster.name }} environment non-operational</strong><br>
-<em>Complete outage due to scheduled maintenance during December 7-10, 2020</em>
+<em>Complete outage due to scheduled maintenance during February 28-March 2, 2022</em>
 </div>
 {% elsif site.cluster.status == "partial-outage" %}
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
