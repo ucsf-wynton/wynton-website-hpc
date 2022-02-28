@@ -2,7 +2,7 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
-**Update**: The Wynton environment is now offline for maintanence work.
+**Update**: The Wynton environment is now offline for maintenance work.
 <br><span class="timestamp">February 28, 10:00 PDT</span>
 
 **Clarification**: The shutdown will take place early Monday morning February 28, 2022.  Also, this is on a Monday and not on a Tuesday (as previously written below).
