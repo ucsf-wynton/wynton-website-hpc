@@ -2,11 +2,6 @@
 title: Wynton HPC Status
 ---
 
-<div class="alert alert-{{ site.data.status.level }}" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;" markdown="1">
-**{{ site.cluster.name }} is {{ site.data.status.condition }}**  
-_{{ site.data.status.message }}_
-</div>
-
 <!-- markdownlint-disable-file MD024 MD025 -->
 
 # UCSF {{ site.cluster.name }} Status
