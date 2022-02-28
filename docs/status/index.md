@@ -2,48 +2,14 @@
 title: Wynton HPC Status
 ---
 
+<div class="alert alert-{{ site.cluster.status.level }}" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;" markdown="1">
+**{{ site.cluster.name }} is {{ site.cluster.status.condition }}**  
+_{{ site.cluster.status.message }}_
+</div>
+
 <!-- markdownlint-disable-file MD024 MD025 -->
 
 # UCSF {{ site.cluster.name }} Status
-
-<!-- To display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css -->
-
-{% if site.cluster.status == "inaccessible" %}
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} is experiencing significant issues</strong>
-</div>
-{% elsif site.cluster.status == "problematic" %}
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-File transfers via Globus does not work on <strong>{{ site.cluster.name }}</strong> due to issues with data-transfer node dt1.wynton.ucsf.edu
-</div>
-{% elsif site.cluster.status == "recovering" %}
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} is operational with parts of the compute resources being recovered</strong>
-</div>
-{% elsif site.cluster.status == "kernel-upgrade" %}
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} has fewer slots available than usual due to kernel upgrades</strong><br>
-</div>
-{% elsif site.cluster.status == "full-outage" %}
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} environment non-operational</strong><br>
-<em>Complete outage due to scheduled maintenance during February 28-March 2, 2022</em>
-</div>
-{% elsif site.cluster.status == "partial-outage" %}
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} is operational but experiencing partial problems</strong><br>
-</div>
-{% elsif site.cluster.status == "notice" %}
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} environment operational</strong><br>
-<em>The cluster will be shut down for maintenance between February 28 and March 2, 2022. Starting February 14, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time.</em><br>
-</div>
-{% else %}
-<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;">
-<strong>{{ site.cluster.name }} environment operational</strong>
-</div>
-{% endif %}
-
 
 ## Queue Metrics
 
