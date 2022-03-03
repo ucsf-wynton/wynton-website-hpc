@@ -9,19 +9,19 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Storage: Requirements for mounting lab-owned storage into {{ site.cluster.name }}
 
-* Forum: A self-hosted User Forum for richer conversations than what's on our Slack channel
-
-* Scheduler: Slurm as a job scheduler instead of SGE.  This will be introduced in stages.  We will start with a beta-test phase where 12 nodes (in total 432 cores) will be dedicated for Slurm scheduling.  After a successful beta testing, we will start migrating over nodes from the SGE scheduler to the new Slurm scheduler.
-
 
 ## On the horizon
+
+* Forum: A self-hosted User Forum for richer conversations than what's on our Slack channel
 
 * Support: A User Issue Tracker
 
 * Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }}
 
-* Compliance: Support for restricted data analysis
 
+## Postponed
+
+* Scheduler: Slurm as a job scheduler instead of SGE.  ~~This will be introduced in stages.  We will start with a beta-test phase where 12 nodes (in total 432 cores) will be dedicated for Slurm scheduling.  After a successful beta testing, we will start migrating over nodes from the SGE scheduler to the new Slurm scheduler.~~ The result of the test phase was that we cannot migrate to Slurm, because Slurm does not support our co-op model. We might revisit this for future versions of Slurm.
 
 
 ## Accomplished milestones
@@ -67,6 +67,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Access: Two-factor authentication (2FA) is required for accessing the cluster (2020-10-29)
 
 * Compute: QB3 hardware migration to {{ site.cluster.name }} considered complete (approximately 5,500 out of 7,000 physical cores migrated) (2021-09-27)
+
+* Compliance: Add support for restricted data analysis ("Wynton PHI") (2021-12-17)
 
 
 See also [News].
