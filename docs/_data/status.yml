@@ -14,15 +14,15 @@
 #
 # Technical details: This information is used in _layouts/default.html.
 
-level: danger
-condition: is non-operational
-message: Complete outage due to scheduled maintenance during February 28-March 2, 2022
+level: info
+condition: is operational
 
 # ------------------------------------------------------------------------------------
 # Common status content
 # ------------------------------------------------------------------------------------
-# level: info
-# condition: is perational
+# level: danger
+# condition: is non-operational
+# message: Complete outage due to scheduled maintenance during February 28-March 2, 2022
 
 # level: danger
 # condition: experiences significant issues
