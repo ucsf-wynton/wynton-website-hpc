@@ -167,7 +167,7 @@ That's it.  You can now launch the website locally as above.
 
 ## Wynton maintenance tasks
 
-The website is hosted on an webserver called `wynton-web`. Whenever that server is rebooted, one has to _manually_ log in to account `www-jekyll` and run:
+The website is hosted on an web server called `wynton-web`. Whenever that server is rebooted, one has to _manually_ log in to account `www-jekyll` and run:
 
 ```sh
 [www-jekyll@wynton-web ~]$ make restart
