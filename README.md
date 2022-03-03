@@ -165,6 +165,18 @@ Set that PATH in your `~/.bashrc` startup file to make it apply automatically.
 That's it.  You can now launch the website locally as above.
 
 
+## Wynton maintenance tasks
+
+The website is hosted on an webserver called `wynton-web`. Whenever that server is rebooted, one has to _manually_ log in to account `www-jekyll` and run:
+
+```sh
+[www-jekyll@wynton-web ~]$ make restart
+```
+
+This will launch to proxy Jekyll servers that hosts the status graphs.
+
+
+
 ## Licenses
 
 * The _content_ of the Wynton HPC is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> (CC BY-SA 4.0).
