@@ -66,11 +66,14 @@ The cluster has development nodes for the purpose of validating scripts, prototy
 Node                        | Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
 ----------------------------|---------------:|---------:|-----------------:|------------------------------:|-------------------:|
 {{ site.dev1.hostname }}    |             72 |  384 GiB |         0.93 TiB | Intel Gold 6240 2.60GHz       |                    |
-{{ site.dev2.hostname }}    |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
-{{ site.dev3.hostname }}    |             32 |  512 GiB |         1.1  TiB | Intel Xeon E5-2640 v3 2.60GHz |                    |
+{{ site.dev2.hostname }}    |             48 |  512 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
+{{ site.dev3.hostname }}    |             48 |  256 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
 {{ site.gpudev1.hostname }} |             32 |  128 GiB |         0.82 TiB | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
 
 _Comment:_ Please use the GPU development node only if you need to build or prototype GPU software.
+<!--
+Source: `nproc --all`, `free -ht`, `df -B /scratch`, `lscpu`, and `lspci | grep 3D`
+-->
 
 
 ### Compute Nodes
