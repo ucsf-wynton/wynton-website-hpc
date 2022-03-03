@@ -180,6 +180,8 @@ category     -u alice -q !gpu.q -l h_rt=3600,mem_free=25G -pe smp 10
 
 **Conclusion**: Job 191442 was killed by the job scheduler because it ran out of its requested runtime.
 
+_Comment_: For jobs that finished on or prior to 2022-03-02, use the SGE accounting file `/opt/sge/wynton/common/accounting-20220302`.
+
 
 ### See also
 
