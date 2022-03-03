@@ -173,7 +173,7 @@ The website is hosted on an webserver called `wynton-web`. Whenever that server 
 [www-jekyll@wynton-web ~]$ make restart
 ```
 
-This will launch to proxy Jekyll servers that hosts the status graphs.
+This will launch two proxy Jekyll servers that hosts the status graphs, etc.
 
 
 
