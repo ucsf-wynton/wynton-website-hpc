@@ -17,7 +17,8 @@ This job submission will submit `script.sh` to the job scheduler which will even
 
 ## Sample submit script
 
-Before you can submit jobs to the compute nodes, you should prepare a script like the one below. Split your jobs into smaller tasks varying only in input parameters. You can then submit the jobs from a login node or a dev node. (Note: _do not_ include the `#--` comments in your script - that won't work.)
+Before you can submit jobs to the compute nodes, you should prepare a script like the one below. Split your jobs into smaller tasks varying only in input parameters. You can then submit the jobs from a login node or a dev node.
+
 
 ```sh
 #!/bin/bash                        #-- what is the language of this shell
