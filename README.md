@@ -5,7 +5,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton-website-hpc/actions/workflows/shellcheck.yml"><img src="https://github.com/ucsf-wynton/wynton-website-hpc/actions/workflows/shellcheck.yml/badge.svg" alt="ShellCheck" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton-website-hpc/actions/workflows/odds-and-ends.yml"><img src="https://github.com/ucsf-wynton/wynton-website-hpc/actions/workflows/odds-and-ends.yml/badge.svg" alt="Odds and Ends" style="max-width:100%;"></a>
 
-# The Wynton HPC User Website
+# The Wynton HPC Website
 
 This repository contains the  Wynton HPC website <https://wynton.ucsf.edu/hpc/>.  Updates to the 'master' branch will be published and go live within minutes.  There is also a near-live GitHub Pages mirror at <https://ucsf-wynton.github.io/wynton-website-hpc/>.
 
