@@ -1,28 +1,28 @@
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3A%22Spell+check%22"><img src="https://github.com/UCSF-HPC/wynton/workflows/Spell%20check/badge.svg" alt="Spell check" style="max-width:100%;"></a> 
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3A%22YAML+check%22"><img src="https://github.com/UCSF-HPC/wynton/workflows/YAML%20check/badge.svg" alt="YAML check" style="max-width:100%;"></a> 
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AMarkdownLint"><img src="https://github.com/UCSF-HPC/wynton/workflows/MarkdownLint/badge.svg" alt="MarkdownLint" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions?query=workflow%3AMarkdown%20URLs"><img src="https://github.com/UCSF-HPC/wynton/workflows/Markdown%20URLs/badge.svg" alt="Markdown URLs" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions/workflows/shellcheck.yml"><img src="https://github.com/UCSF-HPC/wynton/actions/workflows/shellcheck.yml/badge.svg" alt="ShellCheck" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/UCSF-HPC/wynton/actions/workflows/odds-and-ends.yml"><img src="https://github.com/UCSF-HPC/wynton/actions/workflows/odds-and-ends.yml/badge.svg" alt="Odds and Ends" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton/actions?query=workflow%3A%22Spell+check%22"><img src="https://github.com/ucsf-wynton/wynton/workflows/Spell%20check/badge.svg" alt="Spell check" style="max-width:100%;"></a> 
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton/actions?query=workflow%3A%22YAML+check%22"><img src="https://github.com/ucsf-wynton/wynton/workflows/YAML%20check/badge.svg" alt="YAML check" style="max-width:100%;"></a> 
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton/actions?query=workflow%3AMarkdownLint"><img src="https://github.com/ucsf-wynton/wynton/workflows/MarkdownLint/badge.svg" alt="MarkdownLint" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton/actions?query=workflow%3AMarkdown%20URLs"><img src="https://github.com/ucsf-wynton/wynton/workflows/Markdown%20URLs/badge.svg" alt="Markdown URLs" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton/actions/workflows/shellcheck.yml"><img src="https://github.com/ucsf-wynton/wynton/actions/workflows/shellcheck.yml/badge.svg" alt="ShellCheck" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ucsf-wynton/wynton/actions/workflows/odds-and-ends.yml"><img src="https://github.com/ucsf-wynton/wynton/actions/workflows/odds-and-ends.yml/badge.svg" alt="Odds and Ends" style="max-width:100%;"></a>
 
 # The Wynton HPC User Website
 
-This repository contains the  Wynton HPC website <https://wynton.ucsf.edu/hpc/>.  Updates to the 'master' branch will be published and go live within minutes.  There is also a near-live GitHub Pages mirror at <https://ucsf-hpc.github.io/wynton/>.
+This repository contains the  Wynton HPC website <https://wynton.ucsf.edu/hpc/>.  Updates to the 'master' branch will be published and go live within minutes.  There is also a near-live GitHub Pages mirror at <https://ucsf-wynton.github.io/wynton/>.
 
 
 ## Dynamically generated data
 
 The website provides dynamic summaries of data that are produced on regular basis by crontab jobs.  Below are some of the data files used:
 
-* Data: [docs/_data/users.yml](https://github.com/UCSF-HPC/wynton/blob/master/docs/_data/users.yml)
+* Data: [docs/_data/users.yml](https://github.com/ucsf-wynton/wynton/blob/master/docs/_data/users.yml)
   - used by: Jekyll to generate https://wynton.ucsf.edu/hpc/about/specs.html
   - generate manual: `(cd docs; make _data/users.yml)`
-  - generate via cronjob: [cron-scripts/wynton-users.sh](https://github.com/UCSF-HPC/wynton/blob/master/cron-scripts/wynton-users.sh)
+  - generate via cronjob: [cron-scripts/wynton-users.sh](https://github.com/ucsf-wynton/wynton/blob/master/cron-scripts/wynton-users.sh)
 
-* Data: [docs/assets/data/compute_shares.tsv](https://github.com/UCSF-HPC/wynton/blob/master/docs/assets/data/compute_shares.tsv)
+* Data: [docs/assets/data/compute_shares.tsv](https://github.com/ucsf-wynton/wynton/blob/master/docs/assets/data/compute_shares.tsv)
   - used by: JavaScript to generated table on https://wynton.ucsf.edu/hpc/about/shares.html
   - generate manual: `(cd docs; make assets/data/compute_shares.tsv)`
-  - generate via cronjob: [cron-scripts/wynton-shares.sh](https://github.com/UCSF-HPC/wynton/blob/master/cron-scripts/wynton-shares.sh)
+  - generate via cronjob: [cron-scripts/wynton-shares.sh](https://github.com/ucsf-wynton/wynton/blob/master/cron-scripts/wynton-shares.sh)
 
 
 ## Prototype the website locally
@@ -31,7 +31,7 @@ To get a local copy of this repos, do:
 
 ```sh
 $ cd /path/to/my/repositories
-$ git clone https://github.com/UCSF-HPC/wynton.git
+$ git clone https://github.com/ucsf-wynton/wynton.git
 $ cd wynton
 $ pwd
 /path/to/my/repositories/wynton
@@ -73,7 +73,7 @@ $ make spell
 No spelling errors found.
 ```
 
-This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos="https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as misspelled, they can be added to the [`docs/WORDLIST`](https://github.com/UCSF-HPC/wynton/blob/master/docs/WORDLIST) file.
+This requires [R](https://www.r-project.org/) and that the [spelling](https://cran.r-project.org/package=spelling) R package is installed, e.g. `install.packages("spelling", repos="https://cloud.r-project.org")`.  If there are words that are incorrectly flagged as misspelled, they can be added to the [`docs/WORDLIST`](https://github.com/ucsf-wynton/wynton/blob/master/docs/WORDLIST) file.
 
 
 
@@ -93,7 +93,7 @@ RESULT: 50 OK, 0 ERROR
 
 If there are errors, the explanation for them can be found on <https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md>.  The online [markdownlint demo](https://dlaa.me/markdownlint/) can be useful to better understand certain errors.
 
-Several of the rules are disabled in the [docs/.markdownlint.json](https://github.com/UCSF-HPC/wynton/blob/master/docs/.markdownlint.json) configuration file.
+Several of the rules are disabled in the [docs/.markdownlint.json](https://github.com/ucsf-wynton/wynton/blob/master/docs/.markdownlint.json) configuration file.
 
 To run these tests locally, install [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
 
@@ -119,10 +119,10 @@ To run these tests locally, install [markdown-link-check](https://github.com/tco
 
 This website is built upon [Jekyll](https://jekyllrb.com/), where content is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and rendered by Jekyll into HTML.  The user interface and its style is handled mainly by JavaScript and CSS.
 
-* <https://github.com/UCSF-HPC/wynton/>:
+* <https://github.com/ucsf-wynton/wynton/>:
   - The source Git repository for the website
   
-* <https://ucsf-hpc.github.io/wynton/>:
+* <https://ucsf-wynton.github.io/wynton/>:
   - The legacy website rendered by GitHub Pages (near instant)
   - Only kept up until everyone has moved to the official site
 
