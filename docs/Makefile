@@ -11,7 +11,7 @@ JEKYLL_HOST:=${JEKYLL_HOST}
 
 JEKYLL_OPTS=
 ifeq ($(JEKYLL_HOST),selfhost)
-JEKYLL_OPTS=--safe --config _config.yml,_config_selfhost.yml
+JEKYLL_OPTS=--safe --baseurl '/hpc' --config _config.yml,_config_selfhost.yml
 endif
 
 
@@ -33,7 +33,7 @@ init: .git/hooks/pre-commit
 	ln -s ../../.githooks/pre-commit .
 
 start:
-	bundle exec jekyll serve --baseurl '/hpc' --port 4001 $(JEKYLL_OPTS) 2>> jekyll.log &
+	bundle exec jekyll serve --port 4001 $(JEKYLL_OPTS) 2>> jekyll.log &
 
 stop:
 	- pkill --echo --count --full jekyll
