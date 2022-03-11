@@ -14,8 +14,13 @@
 #
 # Technical details: This information is used in _layouts/default.html.
 
-level: info
+#level: info
+#condition: is operational
+
+level: warning
 condition: is operational
+message: There will be a brief, 15-minute network outage sometimes between 21:00 on Monday 2022-03-14 and 05:00 on Tuesday 2022-03-15
+
 
 # ------------------------------------------------------------------------------------
 # Common status content
@@ -28,22 +33,22 @@ condition: is operational
 # condition: experiences significant issues
 # message: The system is inaccessible
 
-# level: warn
+# level: warning
 # condition: experiences file-transfer issues
 # message: File transfers via Globus does not work due to issues with data-transfer node dt1.wynton.ucsf.edu
 
-# level: warn
+# level: warning
 # condition: is operational but recovering
 # message: Parts of the compute nodes are being rebooted
 
-# level: warn
+# level: warning
 # condition: runs at lower capacity
 # message: Fewer compute slots are available due to kernel upgrades
 
-# level: warn
+# level: warning
 # condition: experiences partial problems
 # message: 
 
-# level: warn
+# level: warning
 # condition: is operational
 # message: The cluster will be shut down for maintenance between February 28 and March 2, 2022. Starting February 14, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time
