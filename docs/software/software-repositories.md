@@ -1075,7 +1075,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.</span><br>
 Example: <span class="module-example"><code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>.</span><br>
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a></span><br>
+URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog) <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (docs)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
 Versions: <span class="module-version"><em>0.29.0</em></span><br>
 <details>
@@ -1088,8 +1088,12 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: cli, shell&quot;)
-whatis(&quot;URL: https://github.com/junegunn/fzf, https://github.com/junegunn/fzf/wiki&quot;)
-whatis(&quot;Description: fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc. Example: `fzf --version` and `emacs \&quot;$(fzf)\&quot;`. Note: To install tab completions and key bindinds to your shell, call `$FZF_HOME/install`. To uninstall, use `$FZF_HOME/uninstall`. Warning: Only the most recent version of this software will be kept.&quot;)
+whatis(&quot;URL: https://github.com/junegunn/fzf, https://github.com/junegunn/fzf/blob/master/CHANGELOG.md (changelog) https://github.com/junegunn/fzf/wiki (docs)&quot;)
+whatis([[
+Description: fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+Examples: `fzf --version` and `emacs &quot;$(fzf)&quot;`. Note: To install tab completions and key bindinds to your shell, call `$FZF_HOME/install`. To uninstall, use `$FZF_HOME/uninstall`.
+Warning: Only the most recent version of this software will be kept.
+]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -2312,7 +2316,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>rsc --help</code>, and <code>rsc start</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version">0.6.0, 0.8.0, <em>0.8.1</em></span><br>
+Versions: <span class="module-version">0.6.0, 0.8.0, 0.8.1, <em>0.8.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5485,7 +5489,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-03-10 08:39:27 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-03-17 08:12:31 from querying `module avail` and `module spider`._
 
 
 <style>
