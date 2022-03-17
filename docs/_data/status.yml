@@ -14,17 +14,18 @@
 #
 # Technical details: This information is used in _layouts/default.html.
 
-#level: info
-#condition: is operational
-
-level: warning
+level: info
 condition: is operational
-message: There will be a brief, 15-minute network outage sometimes between 21:00 on Monday 2022-03-14 and 05:00 on Tuesday 2022-03-15
+
 
 
 # ------------------------------------------------------------------------------------
 # Common status content
 # ------------------------------------------------------------------------------------
+#level: warning
+#condition: is operational
+#message: There will be a brief, 15-minute network outage sometimes between 21:00 on Monday 2022-03-14 and 05:00 on Tuesday 2022-03-15
+
 # level: danger
 # condition: is non-operational
 # message: Complete outage due to scheduled maintenance during February 28-March 2, 2022
