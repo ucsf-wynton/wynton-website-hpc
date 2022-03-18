@@ -229,8 +229,10 @@
 <div class="alert alert-{{ site.data.status.level }}" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;" markdown="1">
 <strong>{{ site.cluster.name }} {{ site.data.status.condition }}</strong></br>
 {% if site.data.status.message != nil %}<em>{{ site.data.status.message }}</em></br>{% endif %}
-{% if page.url != "/status/" %}
-<a href="{{ '/status/index.html' | relative_url }}">More details ...</a>
+{% if page.url == "/status/" %}
+<a href="#current-incidents">More details ...</a>
+{% else %}
+<a href="{{ '/status/index.html' | relative_url }}#current-incidents">More details ...</a>
 {% endif %}
 </div>
 {% endif %}
