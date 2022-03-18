@@ -14,8 +14,14 @@
 #
 # Technical details: This information is used in _layouts/default.html.
 
+# Default:
 level: info
 condition: is operational
+
+# Actual status
+level: danger
+condition: experiences significant issues
+message: Cluster is not accessible because of BeeGFS issues
 
 
 
