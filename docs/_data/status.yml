@@ -2,15 +2,16 @@
 #
 # Arguments:
 # * level:     One of 'info', 'warning', or 'danger'
-# * condition: Title sentence starting with a third-person verb without an ending
-#              period
+# * condition: Title sentence starting with a third-person verb without an
+#              ending period
 # * message:   Free text message giving more details
 #
-# If level == 'danger', then the status banner is displayed on all pages, otherwise
-# only on the status page.
+# If level == 'danger', then the status banner is displayed on all pages,
+# otherwise only on the status page.
 #
-# Note, to display the 'broadcast' icon in the navbar, edit assets/css/broadcast.css,
-# which can be done by 'make broadcast-on' and 'make broadcast-off'
+# Note, to display the 'broadcast' icon in the navbar, edit
+# assets/css/broadcast.css, which can be done by 'make broadcast-on' and
+# 'make broadcast-off'.
 #
 # Technical details: This information is used in _layouts/default.html.
 
@@ -20,14 +21,17 @@ condition: is operational
 
 # Actual status
 level: danger
-condition: experiences significant issues
-message: Cluster is not accessible because of BeeGFS issues
+condition: experiences partial problems
+message: The SGE scheduler is offline until BeeGFS issues have been resolved
 
 
-
-# ------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # Common status content
-# ------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
+#level: danger
+#condition: experiences significant issues
+#message: Cluster is not accessible because of BeeGFS issues
+
 #level: warning
 #condition: is operational
 #message: There will be a brief, 15-minute network outage sometimes between 21:00 on Monday 2022-03-14 and 05:00 on Tuesday 2022-03-15
