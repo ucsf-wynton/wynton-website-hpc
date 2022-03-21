@@ -1,6 +1,6 @@
 ### March 18 - ongoing, 2022
 
-#### <span style="color: orange;">Cluster is not accessible because of BeeGFS issues</span>
+#### <span style="color: orange;">Job scheduler is disabled because of BeeGFS issues</span>
 
 **Update**: The BeeGFS file system troubleshooting continues. The job queue is still disabled. We have been with the BeeGFS vendors and we are collecting debug information to allow them to troubleshoot the problem. At the same time, we are trying to identify if there is a particular job and software running on the queue that might cause this. If so, we hope to narrow in on the problem further. We have no estimate when this can be fixed. We have another call scheduled with the vendor tomorrow morning.
 <br><span class="timestamp">March 22, 11:45 PDT</span>
