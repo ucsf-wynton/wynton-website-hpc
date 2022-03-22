@@ -127,7 +127,7 @@ python3 -m pip --version
 EOF
 
 ## Python 2 only supports pip (< 21)
-python2 -m pip install --user --upgrade "pip==20.3"
+python2 -m pip install --user --upgrade "pip==20.3" &> /dev/null
 mdi_code_block --label=pip2-upgrade <<EOF
 python2 -m pip install --user --upgrade "pip<21"
 EOF
