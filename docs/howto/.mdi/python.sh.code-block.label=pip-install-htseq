@@ -1,9 +1,9 @@
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user HTSeq
 Collecting HTSeq
-  Downloading https://files.pythonhosted.org/packages/e4/23/aca490d5cf3265dc4b97907231ebb7a4c5b666b4df8eeb815328bef5178b/HTSeq-1.99.2.tar.gz (37.0MB)
+  Using cached https://files.pythonhosted.org/packages/e4/23/aca490d5cf3265dc4b97907231ebb7a4c5b666b4df8eeb815328bef5178b/HTSeq-1.99.2.tar.gz
     Complete output from command python setup.py egg_info:
     Error in setup script for HTSeq:
     HTSeq requires Python 3.7+.
     
     ----------------------------------------
-Command "python setup.py egg_info" failed with error code 1 in ~/pip-build-mfi83zl0/HTSeq/
+Command "python setup.py egg_info" failed with error code 1 in ~/pip-build-zjprxg_x/HTSeq/

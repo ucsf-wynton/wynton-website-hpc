@@ -1,8 +1,6 @@
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user --upgrade pip
-Cache entry deserialization failed, entry ignored
 Collecting pip
-  Cache entry deserialization failed, entry ignored
-  Downloading https://files.pythonhosted.org/packages/a4/6d/6463d49a933f547439d6b5b98b46af8742cc03ae83543e4d7688c2420f8b/pip-21.3.1-py3-none-any.whl (1.7MB)
+  Using cached https://files.pythonhosted.org/packages/a4/6d/6463d49a933f547439d6b5b98b46af8742cc03ae83543e4d7688c2420f8b/pip-21.3.1-py3-none-any.whl
 Installing collected packages: pip
 Successfully installed pip-21.3.1
 You are using pip version 21.3.1, however version 22.0.4 is available.
