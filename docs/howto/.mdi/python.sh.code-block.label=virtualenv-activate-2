@@ -9,6 +9,6 @@ Author: Simon Anders, Fabio Zanini
 Author-email: fabio.zanini@unsw.edu.au
 License: GPL3
 Location: ~/my_project/lib64/python3.6/site-packages
-Requires: pysam, numpy
+Requires: numpy, pysam
 Required-by: 
 (my_project) [alice@{{ site.devel.name }} my_project]$ 

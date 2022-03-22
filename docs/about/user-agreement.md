@@ -1,4 +1,4 @@
-# {{ site.cluster.name }} User Agreement and Disclaimer
+# User Agreement and Disclaimer
 
 By using {{ site.cluster.name }}, you agree to abide by the statement of its [Purpose, Principles and Governance]({{ '/about/governance.html' | relative_url }}).
 
