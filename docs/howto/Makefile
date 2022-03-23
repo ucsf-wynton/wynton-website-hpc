@@ -1,10 +1,10 @@
 all:
 
 %.md: FORCE
-	mdi inject "$@"
+	markin inject "$@"
 
 r: FORCE
-	mdi build "$@".sh
+	markin build "$@".sh
 	sed -i 's|/R-4.1.2-gcc8|/R-4.1.3-gcc8|g' .mdi/r.code-block*
 	sed -i 's|/R-4-1-branch|/R-4.1.3-gcc8|g' .mdi/r.code-block*
 
@@ -15,12 +15,12 @@ r: FORCE
 	sed -i 's|/4.0-CBI-gcc8|4.1-CBI-gcc8|g' .mdi/r.code-block*
 	sed -i 's|/c4/home/alice/|{{ site.user.home }}|g' .mdi/r.code-block*
 
-	mdi inject "$@".md
+	markin inject "$@".md
 
 	sed -i 's|/R-4.1.2-gcc8|/R-4.1.3-gcc8|g' "$@".md
 
 python: FORCE
-	mdi build "$@".sh
-	mdi inject "$@".md
+	markin build "$@".sh
+	markin inject "$@".md
 
 FORCE:
