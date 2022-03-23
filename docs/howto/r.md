@@ -481,6 +481,16 @@ The downloaded source packages are in
 ```
 
 
+### Packages requiring extra care
+
+#### The **udunits2** package
+
+The **[udunits2]** package does not install out of the box.  It seems to be due to a problem with the package itself, and the suggested instructions that the package gives on setting environment variable `UDUNITS2_INCLUDE` do not work.  A workaround to install the package is to do:
+
+```sh
+install.packages("udunits2", configure.args="--with-udunits2-include=/usr/include/udunits2")   
+```
+
 
 ### Packages requiring more modern GCC compilers
 
@@ -646,6 +656,7 @@ After this, **nloptr** installs out of the box.  There is _no_ need to load the 
 [sf]: https://cran.r-project.org/package=sf
 [tiledb]: https://cran.r-project.org/package=tiledb
 [nloptr]: https://cran.r-project.org/package=nloptr
+[udunits2]: https://cran.r-project.org/package=udunits2
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: http://bioconductor.org/packages/limma/
 [CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
