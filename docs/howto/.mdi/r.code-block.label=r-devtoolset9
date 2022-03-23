@@ -1,0 +1,11 @@
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset/9
+
+The following have been reloaded with a version change:
+  1) scl-devtoolset/8 => scl-devtoolset/9
+
+[alice@{{ site.devel.name }} ~]$ gcc --version
+gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+

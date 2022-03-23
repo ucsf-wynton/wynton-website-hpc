@@ -1,4 +1,4 @@
 (my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install HTSeq
 Requirement already satisfied: HTSeq in ./my_project/lib64/python3.6/site-packages (0.13.5)
-Requirement already satisfied: numpy in ./my_project/lib64/python3.6/site-packages (from HTSeq) (1.19.5)
 Requirement already satisfied: pysam in ./my_project/lib64/python3.6/site-packages (from HTSeq) (0.18.0)
+Requirement already satisfied: numpy in ./my_project/lib64/python3.6/site-packages (from HTSeq) (1.19.5)
