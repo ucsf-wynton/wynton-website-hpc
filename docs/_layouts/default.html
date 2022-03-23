@@ -230,7 +230,9 @@
 <strong>{{ site.cluster.name }} {{ site.data.status.condition }}</strong></br>
 {% if site.data.status.message != nil %}<em>{{ site.data.status.message }}</em></br>{% endif %}
 {% if page.url == "/status/" %}
+{% if site.data.status.level != "info" %}
 <a href="#current-incidents">More details ...</a>
+{% endif %}
 {% else %}
 <a href="{{ '/status/index.html' | relative_url }}#current-incidents">More details ...</a>
 {% endif %}

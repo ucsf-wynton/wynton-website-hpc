@@ -19,15 +19,15 @@
 level: info
 condition: is operational
 
-# Actual status
-level: danger
-condition: experiences partial problems
-message: The SGE scheduler is offline until BeeGFS issues have been resolved
-
 
 # ----------------------------------------------------------------------------
 # Common status content
 # ----------------------------------------------------------------------------
+# Actual status
+#level: danger
+#condition: experiences partial problems
+#message: The SGE scheduler is offline until BeeGFS issues have been resolved
+
 #level: danger
 #condition: experiences significant issues
 #message: Cluster is not accessible because of BeeGFS issues
