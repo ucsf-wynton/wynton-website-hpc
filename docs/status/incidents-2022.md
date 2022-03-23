@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 53.5 hours (= 2.3 days)
-  - Unscheduled: 100.5 hours (= 4.2 days)
-  - Total: 154.0 hours (= 6.4 days)
+  - Unscheduled: 100 hours (= 4.2 days)
+  - Total: 153.5 hours (= 6.4 days)
   - External factors: 0% of the above downtime, corresponding to 0 hours (=0.0 days), were due to external factors
 
 
@@ -35,8 +35,8 @@
 * Impact: No file access
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
 * Occurrences:
-  - 2022-03-18 (100.5 hours): Major BeeGFS issues
-* Total downtime: 100.5 hours of which 0 hours were due to external factors
+  - 2022-03-18 (100 hours): Major BeeGFS issues
+* Total downtime: 100.0 hours of which 0 hours were due to external factors
 
 #### Unscheduled downtimes due to other reasons
 
@@ -69,8 +69,8 @@
 
 <!--
 start: 2022-03-18T11:45:00
-stop: 2022-03-22T16:15:00?
-length: 100.5 hours
+stop: 2022-03-22T15:45:00
+length: 100.0 hours
 severity: major-outage
 affected: jobs, beegfs, compute
 reason: beegfs
