@@ -24,6 +24,11 @@ condition: is operational
 #condition: does not run jobs
 #message: The SGE scheduler and all compute nodes are offline due to major cooling issues
 
+# Actual status
+level: warning
+condition: experiences partial problems
+message: BeeGFS might hang at times until a BeeGFS bug fix is available
+
 
 # ----------------------------------------------------------------------------
 # Common status content
