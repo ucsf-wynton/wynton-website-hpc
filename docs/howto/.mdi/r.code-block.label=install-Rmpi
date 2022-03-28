@@ -1,5 +1,5 @@
 > install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
-Installing package into '/c4/home/alice/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8'                                
+Installing package into '{{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8'                                
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.6-9.2.tar.gz'
 Content type 'application/x-gzip' length 106030 bytes (103 KB)
@@ -12,15 +12,15 @@ downloaded 103 KB
 configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
-gcc -I"/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
-gcc -I"/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
-gcc -I"/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L/software/c4/cbi/software/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L/software/c4/cbi/software/R-4.
+gcc -shared -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/R-4.
 1.2-gcc8/lib64/R/lib -lR
-installing to /c4/home/alice/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8/00LOCK-Rmpi/00new/Rmpi/libs
+installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo
 ** inst

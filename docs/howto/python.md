@@ -1,8 +1,8 @@
+# Work with Python
+
 <div class="alert alert-warning" role="alert">
 If possible, we recommend to be explicit about which version to use by specifying either <code>python2</code> and <code>python3</code> in your scripts.
 </div>
-
-# Work with Python
 
 Python 2 and Python 3 are both available via `python2` and `python3`.  The command `python` is an alias for `python2`.  We recommend to be explicit about which version you want to use, also when using the default Python 2, i.e. use `python2` when you know your script requires Python 2 and `python3` when you know it requires Python 3.
 
@@ -43,7 +43,7 @@ Collecting HTSeq
     HTSeq requires Python 3.7+.
     
     ----------------------------------------
-Command "python setup.py egg_info" failed with error code 1 in ~/pip-build-s8vgvkbp/HTSeq/
+Command "python setup.py egg_info" failed with error code 1 in ~/pip-build-jq6o3xw2/HTSeq/
 ```
 
 To see all Python packages that you have installed globally, use `python3 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python3 -m pip list`.  Packages installed with `python3 -m pip list --user` are typically installed to your `~/.local/lib/python3.6/site-packages/` folder.  If CLI executables are installed with one of those packages, they are often installed to `~/.local/bin/`.
@@ -71,23 +71,23 @@ In order to use virtual environments, we need the `virtualenv` tool.  Following 
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user virtualenv
 Collecting virtualenv
   Using cached https://files.pythonhosted.org/packages/9b/f8/f0d32db111db20d82fd5ac94de1c0250f322237cfa6499031a81cf6b9379/virtualenv-20.13.4-py2.py3-none-any.whl
-Collecting importlib-metadata>=0.12; python_version < "3.8" (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/a0/a1/b153a0a4caf7a7e3f15c2cd56c7702e2cf3d89b1b359d1f1c5e59d68f4ce/importlib_metadata-4.8.3-py3-none-any.whl
 Collecting six<2,>=1.9.0 (from virtualenv)
   Using cached https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl
-Collecting distlib<1,>=0.3.1 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/ac/a3/8ee4f54d5f12e16eeeda6b7df3dfdbda24e6cc572c86ff959a4ce110391b/distlib-0.3.4-py2.py3-none-any.whl
-Collecting importlib-resources>=1.0; python_version < "3.7" (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/24/1b/33e489669a94da3ef4562938cd306e8fa915e13939d7b8277cb5569cb405/importlib_resources-5.4.0-py3-none-any.whl
+Collecting importlib-metadata>=0.12; python_version < "3.8" (from virtualenv)
+  Using cached https://files.pythonhosted.org/packages/a0/a1/b153a0a4caf7a7e3f15c2cd56c7702e2cf3d89b1b359d1f1c5e59d68f4ce/importlib_metadata-4.8.3-py3-none-any.whl
 Collecting filelock<4,>=3.2 (from virtualenv)
   Using cached https://files.pythonhosted.org/packages/84/ce/8916d10ef537f3f3b046843255f9799504aa41862bfa87844b9bdc5361cd/filelock-3.4.1-py3-none-any.whl
+Collecting importlib-resources>=1.0; python_version < "3.7" (from virtualenv)
+  Using cached https://files.pythonhosted.org/packages/24/1b/33e489669a94da3ef4562938cd306e8fa915e13939d7b8277cb5569cb405/importlib_resources-5.4.0-py3-none-any.whl
+Collecting distlib<1,>=0.3.1 (from virtualenv)
+  Using cached https://files.pythonhosted.org/packages/ac/a3/8ee4f54d5f12e16eeeda6b7df3dfdbda24e6cc572c86ff959a4ce110391b/distlib-0.3.4-py2.py3-none-any.whl
 Collecting platformdirs<3,>=2 (from virtualenv)
   Using cached https://files.pythonhosted.org/packages/b1/78/dcfd84d3aabd46a9c77260fb47ea5d244806e4daef83aa6fe5d83adb182c/platformdirs-2.4.0-py3-none-any.whl
 Collecting typing-extensions>=3.6.4; python_version < "3.8" (from importlib-metadata>=0.12; python_version < "3.8"->virtualenv)
   Using cached https://files.pythonhosted.org/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl
 Collecting zipp>=0.5 (from importlib-metadata>=0.12; python_version < "3.8"->virtualenv)
   Using cached https://files.pythonhosted.org/packages/bd/df/d4a4974a3e3957fd1c1fa3082366d7fff6e428ddb55f074bf64876f8e8ad/zipp-3.6.0-py3-none-any.whl
-Installing collected packages: typing-extensions, zipp, importlib-metadata, six, distlib, importlib-resources, filelock, platformdirs, virtualenv
+Installing collected packages: six, typing-extensions, zipp, importlib-metadata, filelock, importlib-resources, distlib, platformdirs, virtualenv
 Successfully installed distlib-0.3.4 filelock-3.4.1 importlib-metadata-4.8.3 importlib-resources-5.4.0 platformdirs-2.4.0 six-1.16.0 typing-extensions-4.1.1 virtualenv-20.13.4 zipp-3.6.0
 [alice@{{ site.devel.name }} ~]$ which virtualenv
 ~/.local/bin/virtualenv
@@ -103,7 +103,7 @@ Start by creating a folder specific to the project you are currently working on.
 <!-- code-block label="virtualenv-init" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ virtualenv -p python3 my_project
-created virtual environment CPython3.6.8.final.0-64 in 2618ms
+created virtual environment CPython3.6.8.final.0-64 in 5978ms
   creator CPython3Posix(dest=~/my_project, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
     added seed packages: pip==21.3.1, setuptools==59.6.0, wheel==0.37.1
@@ -269,4 +269,23 @@ To check the installed version of the 'pip' module, use:
 ```sh
 [alice@{{ site.devel.name }} ~]$ python3 -m pip --version
 pip 21.3.1 from ~/.local/lib/python3.6/site-packages/pip (python 3.6)
+```
+
+
+#### Python 2: Only pip (< 21) is supported
+
+Python 2 reached the end of its life on 2020-01-01 in favor of Python 3. At this point, the pip maintainers decided to stop making newer versions backward compatible with Python 2. Because of this, Python 2 only supports pip (< 21). To upgrade to the latest supported pip version for Python 2, we can use:
+
+<!-- code-block label="pip2-upgrade" -->
+```sh
+[alice@{{ site.devel.name }} ~]$ python2 -m pip install --user --upgrade "pip<21"
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Collecting pip<21
+  Using cached pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 20.3
+    Uninstalling pip-20.3:
+      Successfully uninstalled pip-20.3
+Successfully installed pip-20.3.4
 ```

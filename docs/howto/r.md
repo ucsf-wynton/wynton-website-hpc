@@ -14,11 +14,12 @@ To load the R module available in the [CBI software stack], do:
 
 which provides access to a modern version of R:
 
-<!-- code-block label="simple" -->
+<!-- code-block label="r-one-plus-two" -->
 ```r
-alice@{{ site.devel.name }} ~]$ R
-R version 4.1.2 Patched (2021-11-01 r81123) -- "Bird Hippie"
-Copyright (C) 2021 The R Foundation for Statistical Computing
+[alice@{{ site.devel.name }} ~]$ R 
+
+R version 4.1.3 (2022-03-10) -- "One Push-Up"
+Copyright (C) 2022 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -74,7 +75,7 @@ Before continuing, it is useful to understand where R packages looks for locally
 
 2. (optional) A site-wide R package library (not used on {{ site.cluster.name }})
 
-3. The system-wide R package library part of the R installed, e.g. `{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/library`
+3. The system-wide R package library part of the R installed, e.g. `{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/library`
 
 
 
@@ -105,7 +106,7 @@ Now, in order to install, for instance, the **[zoo]** package available on CRAN,
 ```r
 > install.packages("zoo")
 Warning in install.packages("zoo") :
-  'lib = "{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/library"' is not writable
+  'lib = "{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
 ```
 
@@ -123,7 +124,7 @@ R wants to make sure you are aware what is done, so it will, conservatively, als
 <!-- code-block label="install-zoo" -->
 ```r
 Would you like to create a personal library
-'~/R/x86_64-pc-linux-gnu-library/4.0-CBI-gcc8'
+'~/R/x86_64-pc-linux-gnu-library/4.0-CBI'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-9.tar.gz'
 Content type 'application/x-gzip' length 793891 bytes (775 KB)
@@ -134,11 +135,11 @@ downloaded 775 KB
 ** package 'zoo' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -lR
-installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-zoo/00new/zoo/libs
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -shared -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/lib -lR
+installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst
@@ -197,7 +198,7 @@ If you already have **[BiocManager]** installed, you can skip this section.  Whe
 <!-- code-block label="install-BiocManager" -->
 ```r
 > install.packages("BiocManager")
-Installing package into '{{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8'
+Installing package into '{{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.16.tar.gz'
 Content type 'application/x-gzip' length 262502 bytes (256 KB)
@@ -244,11 +245,11 @@ downloaded 1.5 MB
 * installing *source* package 'limma' ...
 ** using staged installation
 ** libs
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -lR
-installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-limma/00new/limma/libs
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/lib -lR
+installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -308,11 +309,17 @@ ERROR: configuration failed for package 'hdf5r'
 
  To fix this, load a modern version of 'hdf5' from the [CBI software stack] before installing the package, i.e.
 
+<!-- code-block label="r-hdf5" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI hdf5 r
+[alice@{{ site.devel.name }} ~]$ module load CBI hdf5
 [alice@{{ site.devel.name }} ~]$ module list
+
 Currently Loaded Modules:
- 1) CBI   2) hdf5/1.12.0   3) r/4.1.2
+  1) mpi/openmpi-x86_64   3) scl-devtoolset/8   5) gdal/2.4.4
+  2) CBI                  4) r/4.1.3            6) hdf5/1.12.1
+
+ 
+
 ```
  
 Note that you also need to load the `hdf5` module every time you use the **hdf5r** package in R.
@@ -346,12 +353,17 @@ ERROR: configuration failed for package 'sf'
 
  To fix this, load a modern version of GDAL from the [CBI software stack] before installing the package, i.e.
 
+<!-- code-block label="r-gdal" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI gdal
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-devtoolset/8   3) r/4.1.2   4) gdal/2.4.4
+  1) mpi/openmpi-x86_64   3) scl-devtoolset/8   5) gdal/2.4.4
+  2) CBI                  4) r/4.1.3
+
+ 
+
 ```
  
 After this, the **sf** package will install out of the box, i.e. by calling:
@@ -368,12 +380,16 @@ Note that you also need to load the `gdal` module every time you use the **gdal*
 
 Several R packages that rely on the Message Passing Interface (MPI) do not install out-of-the-box like other R packages.  At a minimum, they require that the built-in `mpi` module is loaded;
 
+<!-- code-block label="r-openmpi" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
-[alice@{{ site.devel.name }} ~]$ module load CBI r
 [alice@{{ site.devel.name }} ~]$ module list
+
 Currently Loaded Modules:
-  1) mpi/openmpi-x86_64   2) CBI   3) r/4.1.2
+  1) CBI   2) scl-devtoolset/8   3) r/4.1.3   4) mpi/openmpi-x86_64
+
+ 
+
 ```
 
 _Importantly_, make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires these MPI-dependent R packages.
@@ -388,7 +404,7 @@ The **[Rmpi]** package does not install out-of-the-box like other R packages.  T
 <!-- code-block label="install-Rmpi" -->
 ```r
 > install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
-Installing package into '{{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8'                                
+Installing package into '{{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8'                                
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.6-9.2.tar.gz'
 Content type 'application/x-gzip' length 106030 bytes (103 KB)
@@ -401,14 +417,15 @@ downloaded 103 KB
 configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/lib -lR
-installing to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8/00LOCK-Rmpi/00new/Rmpi/libs
+gcc -shared -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/R-4.
+1.2-gcc8/lib64/R/lib -lR
+installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-CBI-gcc8/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo
 ** inst
@@ -481,6 +498,16 @@ The downloaded source packages are in
 ```
 
 
+### Packages requiring extra care
+
+#### The **udunits2** package
+
+The **[udunits2]** package does not install out of the box.  It seems to be due to a problem with the package itself, and the suggested instructions that the package gives on setting environment variable `UDUNITS2_INCLUDE` do not work.  A workaround to install the package is to do:
+
+```sh
+install.packages("udunits2", configure.args="--with-udunits2-include=/usr/include/udunits2")   
+```
+
 
 ### Packages requiring more modern GCC compilers
 
@@ -518,21 +545,19 @@ ERROR: loading failed
 
 You have to be an up-to-date, experienced C++ programmer to troubleshoot this.  For mortals like the rest of us, all we can do is to [report upstream](https://github.com/TileDB-Inc/TileDB-R/issues/333) and try with a more modern version of GCC.  Indeed, if we use something never than GCC 8.3.1 (2019-03-01), e.g.
 
+<!-- code-block label="r-devtoolset9" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset/9
+
 The following have been reloaded with a version change:
   1) scl-devtoolset/8 => scl-devtoolset/9
 
-[alice@{{ site.devel.name }} ~]$ module list
-
-Currently Loaded Modules:
-  1) CBI   2) r/4.1.2   3) scl-devtoolset/9
-  
 [alice@{{ site.devel.name }} ~]$ gcc --version
 gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)
 Copyright (C) 2019 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
 ```
 
 it will work;
@@ -616,14 +641,19 @@ cp: cannot stat 'nlopt/include/*': No such file or directory
 ...
 opt
 collect2: error: ld returned 1 exit status
-make: *** [{{ site.path.cbi_software }}/R-4.1.2-gcc8/lib64/R/share/make/shlib.mk:10: nloptr.so] Error 1
+make: *** [{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/share/make/shlib.mk:10: nloptr.so] Error 1
 ERROR: compilation failed for package 'nloptr'
 ```
 
 The solution is to load CMake v3 before launching R, as:
 
+<!-- code-block label="r-cmake" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI cmake
+
+The following have been reloaded with a version change:
+  1) scl-devtoolset/9 => scl-devtoolset/8
+
 [alice@{{ site.devel.name }} ~]$ cmake --version
 cmake version 3.22.2
 
@@ -646,6 +676,7 @@ After this, **nloptr** installs out of the box.  There is _no_ need to load the 
 [sf]: https://cran.r-project.org/package=sf
 [tiledb]: https://cran.r-project.org/package=tiledb
 [nloptr]: https://cran.r-project.org/package=nloptr
+[udunits2]: https://cran.r-project.org/package=udunits2
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: http://bioconductor.org/packages/limma/
 [CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
