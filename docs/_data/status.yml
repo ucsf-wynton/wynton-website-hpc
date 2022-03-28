@@ -19,6 +19,11 @@
 level: info
 condition: is operational
 
+# Actual status
+#level: danger
+#condition: does not run jobs
+#message: The SGE scheduler and all compute nodes are offline due to major cooling issues
+
 
 # ----------------------------------------------------------------------------
 # Common status content

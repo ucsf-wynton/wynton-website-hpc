@@ -3,9 +3,9 @@
 * Full downtime:
 
   - Scheduled: 53.5 hours (= 2.3 days)
-  - Unscheduled: 105 hours (= 4.4 days)
-  - Total: 158.5 hours (= 6.6 days)
-  - External factors: 0% of the above downtime, corresponding to 0 hours (=0.0 days), were due to external factors
+  - Unscheduled: 154 hours (= 6.4 days)
+  - Total: 207.5 hours (= 8.6 days)
+  - External factors: 23% of the above downtime, corresponding to 48 hours (=2.0 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -35,17 +35,40 @@
 * Impact: No file access
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
 * Occurrences:
+  - 2022-03-28 (1 hours): Major BeeGFS issues
   - 2022-03-26 (5 hours): Major BeeGFS issues
   - 2022-03-18 (100 hours): Major BeeGFS issues
-* Total downtime: 105.0 hours of which 0 hours were due to external factors
+* Total downtime: 106.0 hours of which 0 hours were due to external factors
 
 #### Unscheduled downtimes due to other reasons
 
 * Impact: Less compute resources
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers may have failed, cluster not accessible
 * Occurrences:
-  - N/A
-* Total downtime: 0 hours of which 0 hours were due to external factors
+  - 2022-03-26 (48 hours): Data-center cooling issues
+* Total downtime: 48 hours of which 48 hours were due to external factors
+
+
+
+### March 26, 2022
+
+#### <span style="color: orange;">Job scheduler is disabled due to cooling issues</span>
+
+**Resolved**: The compute nodes and the job scheduler are up and running again.
+<br><span class="timestamp">March 26, 11:00 PDT</span>
+
+**Notice**: The job scheduler as disabled and running jobs where terminated on Saturday 2022-03-26 around 09:00. This was done due to an emergency shutdown because the ambient temperature in the data center started to rise around 08:00 and at 09:00 it hit the critical level, where our monitoring system automatically shuts down compute nodes to prevent further damage. This resulted in the room temperature coming down to normal levels again. We are waiting on UCSF Facilities to restore cooling in the data center.
+<br><span class="timestamp">March 26, 10:30 PDT</span>
+
+<!--
+start: 2022-03-26T03:00:00
+stop: 2022-03-26T09:00:00
+length: 6 hours
+severity: major-outage
+affected: jobs
+reason: external
+ -->
+
 
 
 
@@ -53,7 +76,7 @@
 
 #### <span style="color: orange;">Major BeeGFS issues</span>
 
-**Resolved**: Just after 03:00 Saturday morning BeeGFS hung. Recover actions were taken at 07:30 and the problem was resolved before 08:00. We have tracked down the problem occur when a user runs more than one `rm -r `/wynton/path/to/folder` concurrently on the same folder. This is a bug in BeeGFS that vendors is aware of.
+**Resolved**: Just after 03:00 on Saturday 2022-03-26 morning BeeGFS hung. Recover actions were taken at 07:30 and the problem was resolved before 08:00. We have tracked down the problem occur when a user runs more than one `rm -r `/wynton/path/to/folder` concurrently on the same folder. This is a bug in BeeGFS that vendors is aware of.
 <br><span class="timestamp">March 26, 10:30 PDT</span>
 
 <!--
