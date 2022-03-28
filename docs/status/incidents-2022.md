@@ -76,7 +76,7 @@ reason: external
 
 #### <span style="color: orange;">Major BeeGFS issues</span>
 
-**Resolved**: Just after 03:00 on Saturday 2022-03-26 morning BeeGFS hung. Recover actions were taken at 07:30 and the problem was resolved before 08:00. We have tracked down the problem occur when a user runs more than one `rm -r `/wynton/path/to/folder` concurrently on the same folder. This is a bug in BeeGFS that vendors is aware of.
+**Resolved**: Just after 03:00 on Saturday 2022-03-26 morning BeeGFS hung. Recover actions were taken at 07:30 and the problem was resolved before 08:00. We have tracked down the problem occur when a user runs more than one `rm -r /wynton/path/to/folder` concurrently on the same folder. This is a bug in BeeGFS that vendors is aware of.
 <br><span class="timestamp">March 26, 10:30 PDT</span>
 
 <!--
