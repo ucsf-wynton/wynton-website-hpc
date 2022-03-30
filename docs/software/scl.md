@@ -11,6 +11,7 @@ To list all Software Collections installed on the _development nodes_, use:
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl --list
 devtoolset-10
+devtoolset-11
 devtoolset-7
 devtoolset-8
 devtoolset-9
@@ -31,19 +32,19 @@ To list all the packages that are part of one or more of these SCLs, use:
 <!-- code-block label="list-one" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl --list rh-ruby25
-rh-ruby25-rubygem-did_you_mean-1.2.0-9.el7.noarch
-rh-ruby25-rubygem-bigdecimal-1.3.4-9.el7.x86_64
-rh-ruby25-rubygem-rdoc-6.0.1.1-9.el7.noarch
-rh-ruby25-2.5-2.el7.x86_64
-rh-ruby25-rubygem-openssl-2.1.2-9.el7.x86_64
-rh-ruby25-rubygems-2.7.6.3-9.el7.noarch
-rh-ruby25-rubygem-psych-3.0.2-9.el7.x86_64
-rh-ruby25-ruby-2.5.9-9.el7.x86_64
 rh-ruby25-rubygem-io-console-0.4.6-9.el7.x86_64
 rh-ruby25-rubygem-json-2.1.0-9.el7.x86_64
-rh-ruby25-ruby-irb-2.5.9-9.el7.noarch
-rh-ruby25-ruby-libs-2.5.9-9.el7.x86_64
+rh-ruby25-rubygems-2.7.6.3-9.el7.noarch
 rh-ruby25-runtime-2.5-2.el7.x86_64
+rh-ruby25-rubygem-openssl-2.1.2-9.el7.x86_64
+rh-ruby25-2.5-2.el7.x86_64
+rh-ruby25-ruby-irb-2.5.9-9.el7.noarch
+rh-ruby25-rubygem-did_you_mean-1.2.0-9.el7.noarch
+rh-ruby25-rubygem-bigdecimal-1.3.4-9.el7.x86_64
+rh-ruby25-ruby-2.5.9-9.el7.x86_64
+rh-ruby25-ruby-libs-2.5.9-9.el7.x86_64
+rh-ruby25-rubygem-psych-3.0.2-9.el7.x86_64
+rh-ruby25-rubygem-rdoc-6.0.1.1-9.el7.noarch
 ```
 
 

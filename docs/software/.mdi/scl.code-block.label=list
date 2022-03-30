@@ -1,5 +1,6 @@
 [alice@{{ site.devel.name }} ~]$ scl --list
 devtoolset-10
+devtoolset-11
 devtoolset-7
 devtoolset-8
 devtoolset-9
