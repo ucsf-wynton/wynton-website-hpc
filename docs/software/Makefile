@@ -18,15 +18,15 @@ deploy: $(PAGE).md
 	git push &> /dev/null; true
 
 sbgrid:
-	mdi build $@.sh
-	mdi inject $@.md
+	markin build $@.sh
+	markin inject $@.md
 
 scl:
-	mdi build $@.sh
-	mdi inject $@.md
+	markin build $@.sh
+	markin inject $@.md
 
 singularity:
-	mdi build $@.sh
-	mdi inject $@.md
+	markin build $@.sh
+	markin inject $@.md
 
 

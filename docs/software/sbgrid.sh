@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+# Usage: markin build sbgrid.sh
 
 ## Sanity checks
 groups | grep -qw "sbgrid" || { 2>&1 echo "ERROR: User is not in the 'sbgrid' group: $USER"; exit 1; }
