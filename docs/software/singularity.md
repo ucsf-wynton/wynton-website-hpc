@@ -53,27 +53,25 @@ To use this rocker/r-base container, we first pull it down to a Singularity imag
 [alice@{{ site.devel.name }} lxc]$ singularity build rocker_r-base.sif docker://rocker/r-base
 INFO:    Starting build...
 Getting image source signatures
-Copying blob sha256:420047682034904224708ffcbc863130ba6bce56f9d642605dccd2d375af6969
-Copying blob sha256:e603e00f9478df8f9435c78d26e7ae28f5af4bdcb4132435141c8b515c6c8e18
-Copying blob sha256:c6ea85836d4d314e5a036814df370488276d0cf327b6ceb9a0af6fe6a4bf6166
-Copying blob sha256:d585e1cbeb2fd3ecc65c3200c0de6af1f3124b4a5679e08477d262919e880bc7
-Copying blob sha256:5ac5c0d19fbb6c61f4e7d5b08f66fc659d3530ae2f01c874e154268a7648776c
-Copying blob sha256:f833cf076231770cf7616d55ce466dd3e303eefff0185007978aff5a11709ac7
-Copying blob sha256:52321ce7fbaf0726407f41ec0d8240bf3db1730a7d8b257e7ee66b311e168bc8
-Copying config sha256:f1b04a6cdfec8d38e91f60af908c7e93d91b60b836f0075ab718c17271dd3f9c
+Copying blob sha256:7b303595d9b321a9020d0ddbf1dea4c83237e2367117606a8d5466c446714ba1
+Copying blob sha256:83ca482c84ae83b4e39c6cad8519cde7b2cb5b8f1d181b5be11271d91c01b583
+Copying blob sha256:6046dc19e2b25f9181d9e5e9347fff916012d426f1de82aaaba5f0d29b647aeb
+Copying blob sha256:ed3a653d2e7952b3187ab9cfc7be8cde4651e994d1085a1102a621e952530d9e
+Copying blob sha256:111255bd9d45300e28c8a7727ad43f2979d66d6ac94d472699fe40fb079945a8
+Copying blob sha256:f9510faa489c34c75dd8d92128e890d135ddd7aeb64c293306563abee64eb53b
+Copying config sha256:b23cdc375e4c59d8a9c321b7b308116e0e3c2329c45f9be18d35dc95398565dc
 Writing manifest to image destination
 Storing signatures
-2021/07/30 15:08:56  info unpack layer: sha256:420047682034904224708ffcbc863130ba6bce56f9d642605dccd2d375af6969
-2021/07/30 15:09:00  info unpack layer: sha256:e603e00f9478df8f9435c78d26e7ae28f5af4bdcb4132435141c8b515c6c8e18
-2021/07/30 15:09:00  info unpack layer: sha256:c6ea85836d4d314e5a036814df370488276d0cf327b6ceb9a0af6fe6a4bf6166
-2021/07/30 15:09:01  info unpack layer: sha256:d585e1cbeb2fd3ecc65c3200c0de6af1f3124b4a5679e08477d262919e880bc7
-2021/07/30 15:09:01  info unpack layer: sha256:5ac5c0d19fbb6c61f4e7d5b08f66fc659d3530ae2f01c874e154268a7648776c
-2021/07/30 15:09:01  info unpack layer: sha256:f833cf076231770cf7616d55ce466dd3e303eefff0185007978aff5a11709ac7
-2021/07/30 15:09:01  info unpack layer: sha256:52321ce7fbaf0726407f41ec0d8240bf3db1730a7d8b257e7ee66b311e168bc8
+2022/03/29 18:43:54  info unpack layer: sha256:7b303595d9b321a9020d0ddbf1dea4c83237e2367117606a8d5466c446714ba1
+2022/03/29 18:43:57  info unpack layer: sha256:83ca482c84ae83b4e39c6cad8519cde7b2cb5b8f1d181b5be11271d91c01b583
+2022/03/29 18:43:57  info unpack layer: sha256:6046dc19e2b25f9181d9e5e9347fff916012d426f1de82aaaba5f0d29b647aeb
+2022/03/29 18:43:58  info unpack layer: sha256:ed3a653d2e7952b3187ab9cfc7be8cde4651e994d1085a1102a621e952530d9e
+2022/03/29 18:43:59  info unpack layer: sha256:111255bd9d45300e28c8a7727ad43f2979d66d6ac94d472699fe40fb079945a8
+2022/03/29 18:43:59  info unpack layer: sha256:f9510faa489c34c75dd8d92128e890d135ddd7aeb64c293306563abee64eb53b
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.sif
 [alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.sif
--rwxr-xr-x. 1 alice boblab 308523008 Jul 30 15:09 rocker_r-base.sif
+-rwxr-xr-x. 1 alice boblab 318054400 Mar 29 18:44 rocker_r-base.sif
 ```
 
 The above may take a minute or two to complete.
@@ -87,8 +85,8 @@ After this, we can run R within this container using:
 ```sh
 [alice@{{ site.devel.name }} lxc]$ singularity run rocker_r-base.sif
 
-R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
-Copyright (C) 2021 The R Foundation for Statistical Computing
+R version 4.1.3 (2022-03-10) -- "One Push-Up"
+Copyright (C) 2022 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -129,8 +127,8 @@ Note that, the Singularity image is marked as an _executable_, which means you c
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.sif
 
-R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
-Copyright (C) 2021 The R Foundation for Statistical Computing
+R version 4.1.3 (2022-03-10) -- "One Push-Up"
+Copyright (C) 2022 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -163,7 +161,8 @@ PRETTY_NAME="Debian GNU/Linux buster/sid"
 NAME="Debian GNU/Linux"
 ID=debian
 Singularity> Rscript --version
-R scripting front-end version 4.1.0 (2021-05-18)
+R scripting front-end version 4.1.3 (2022-03-10)
+Copyright (C) 2022 The R Foundation for Statistical Computing
 Singularity> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
