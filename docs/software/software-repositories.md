@@ -420,8 +420,8 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;, &quot;man1&quo
 <strong class="module-help">bats: Bash Automated Testing System</strong><br>
 <span class="module-description">Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.</span><br>
 Example: <span class="module-example"><code>bats --version</code>, <code>bats --help</code>, <code>man bats</code>, <code>man 7 bats</code>, and <code>bats tests/</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/bats-core/bats-core">https://github.com/bats-core/bats-core</a>, <a href="https://github.com/bats-core/bats-core#version-history">https://github.com/bats-core/bats-core#version-history</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/">https://bats-core.readthedocs.io/en/stable/</a> (documentation)</span><br>
-Versions: <span class="module-version"><em>1.5.0</em></span><br>
+URL: <span class="module-url"><a href="https://github.com/bats-core/bats-core">https://github.com/bats-core/bats-core</a>, <a href="https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md">https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/">https://bats-core.readthedocs.io/en/stable/</a> (documentation)</span><br>
+Versions: <span class="module-version">1.5.0, <em>1.6.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -432,10 +432,10 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: bash, shell, testing&quot;)
-whatis(&quot;URL: https://github.com/bats-core/bats-core, https://github.com/bats-core/bats-core#version-history (changelog), https://bats-core.readthedocs.io/en/stable/ (documentation)&quot;)
+whatis(&quot;URL: https://github.com/bats-core/bats-core, https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md (changelog), https://bats-core.readthedocs.io/en/stable/ (documentation)&quot;)
 whatis([[
 Description: Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.
-Example: `bats --version`, `bats --help`, `man bats`, `man 7 bats`, and `bats tests/`.
+Examples: `bats --version`, `bats --help`, `man bats`, `man 7 bats`, and `bats tests/`.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2467,9 +2467,9 @@ end
 <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
 <span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/10">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/10</a></span><br>
+URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11</a></span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
-Versions: <span class="module-version">4, 7, 8, 9, <em>10</em></span><br>
+Versions: <span class="module-version">4, 7, 8, 9, 10, <em>11</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2483,32 +2483,27 @@ local scl_name = &quot;devtoolset&quot; .. &quot;-&quot; .. version
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming, gcc&quot;)
 whatis(&quot;URL: https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/&quot; .. version)
-whatis(&quot;Description: These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) `devtoolset-&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable devtoolset-&lt;version&gt;`, which is an approach that is not officially supported by RedHat/CentOS.  Example: `gcc --version`.  Warning: Older versions may be removed in the future.&quot;)
+whatis([[
+Description: These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) `devtoolset-&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable devtoolset-&lt;version&gt;`, which is an approach that is not officially supported by RedHat/CentOS.
+Examples: `gcc --version`.  Warning: Older versions may be removed in the future.
+]])
 
-
-require &quot;posix&quot;
-function isdir(fn)
-  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
-end
 
 local home = pathJoin(&quot;/opt&quot;, &quot;rh&quot;, scl_name)
 
-if not isdir(home) then
+if not isDir(home) then
   LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
 end
 
 
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/devtoolset-10/enable
-prepend_path(&quot;INFOPATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/share/info&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib/dyninst&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib64/dyninst&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib64&quot;)
-prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/share/man&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/bin&quot;)
-setenv(&quot;PCP_DIR&quot;,&quot;/opt/rh/devtoolset-10/root&quot;)
-prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-10/root/usr/lib64/pkgconfig&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/devtoolset-11/enable
+prepend_path(&quot;INFOPATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/share/info&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64:/opt/rh/devtoolset-11/root/usr/lib:/opt/rh/devtoolset-11/root/usr/lib64/dyninst:/opt/rh/devtoolset-11/root/usr/lib/dyninst&quot;)
+prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/share/man&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/bin&quot;)
+setenv(&quot;PCP_DIR&quot;,&quot;/opt/rh/devtoolset-11/root&quot;)
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pkgconfig&quot;)
 </code></pre>
 
 </details>
@@ -4672,7 +4667,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
-Versions: <span class="module-version">0.15, <em>0.27</em></span><br>
+Versions: <span class="module-version">0.15, 0.27, <em>0.28</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4681,7 +4676,7 @@ module-whatis &quot;Description: Python package for handling IHM mmCIF files&quo
 module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.27/lib64/python3.6/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.28/lib64/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -4836,7 +4831,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/s
   <dd class="module-details">
 <span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
-Versions: <span class="module-version"><em>0.2</em></span><br>
+Versions: <span class="module-version">0.2, <em>0.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4845,7 +4840,7 @@ module-whatis &quot;Description: Python package for handling ModelCIF mmCIF file
 module-whatis &quot;URL: https://github.com/ihmwg/python-modelcif&quot;
 conflict python2
 module load python3/ihm
-prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.2/lib/python3.6/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.3/lib/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -5566,7 +5561,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-03-17 09:13:04 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-03-29 18:25:04 from querying `module avail` and `module spider`._
 
 
 <style>
