@@ -17,6 +17,52 @@ as_html <- function(x) {
   x
 }
 
+
+#' @importFrom utils file_test
+find_spider <- local({
+  spider <- NULL
+
+  function() {
+    if (is.null(spider)) {
+      lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
+      stopifnot(nzchar(lmod_dir))
+      bin <- file.path(lmod_dir, "spider")
+      message(" - spider binary: ", sQuote(bin))
+      stopifnot(utils::file_test("-x", bin))
+      spider <<- bin
+    }
+    spider
+  }
+})
+
+
+#' @importFrom utils file_test
+spider <- function(module_path, force = FALSE) {
+  message(sprintf("spider('%s') ...", module_path))
+  
+  ## Already on file?
+  pathname <- file.path("lmod_data", sprintf("%s.json", module_path))
+  message("- pathname: ", pathname)
+  if (force || !utils::file_test("-f", pathname)) {
+    stopifnot(utils::file_test("-d", module_path))
+    path <- dirname(pathname)
+    dir.create(path, recursive = TRUE)
+    stopifnot(utils::file_test("-d", path))
+    spider <- find_spider()
+    args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
+    message(" - spider arguments: ", paste(args, collapse = " "))
+    res <- system2(spider, args = args, stdout = pathname)
+    message(" - spider result: ", res)
+    stopifnot(utils::file_test("-f", pathname))
+  }
+  json <- readChar(pathname, nchars = file.size(pathname))
+#  message(" - spider json result: ", json)
+  
+  message(sprintf("spider('%s') ... done", module_path))
+  json
+}
+
+
 #' @importFrom utils file_test
 #' @importFrom R.utils mstr
 #' @importFrom jsonlite fromJSON
@@ -25,7 +71,7 @@ module_avail <- local({
   ## Memoization
   .cache <- list()
   
-  function(info, onMissingPath = getOption("onMissingPath", c("error", "warning", "ignore"))) {
+  function(info, onMissingPath = getOption("onMissingPath", c("okay", "error", "warning", "ignore"))) {
     message("module_avail() ...", appendLF = FALSE)
     onMissingPath <- match.arg(onMissingPath)
     
@@ -42,21 +88,18 @@ module_avail <- local({
     if (all(!nzchar(module_path))) {
       stop("Specified empty folder(s): ", paste(sQuote(module_path), collapse = ", "))
     }
-    unknown <- module_path[!utils::file_test("-x", module_path)]
-    if (length(unknown) > 0) {
-      msg <- sprintf("No such folder(s): %s", paste(sQuote(unknown), collapse = ", "))
-      if (onMissingPath == "error") stop(msg)
-      if (onMissingPath == "warning") warning(msg)
-      return(NULL)
+    
+    if (onMissingPath != "okay") {
+      unknown <- module_path[!utils::file_test("-x", module_path)]
+      if (length(unknown) > 0) {
+        msg <- sprintf("No such folder(s): %s", paste(sQuote(unknown), collapse = ", "))
+        if (onMissingPath == "error") stop(msg)
+        if (onMissingPath == "warning") warning(msg)
+        return(NULL)
+      }
     }
-    lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
-    stopifnot(nzchar(lmod_dir))
-    spider <- file.path(lmod_dir, "spider")
-    message(" - spider binary: ", sQuote(spider))
-    stopifnot(utils::file_test("-x", spider))
-    args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
-    message(" - spider arguments: ", paste(args, collapse = " "))
-    json <- system2(spider, args = args, stdout = TRUE)
+
+    json <- spider(module_path)
     x <- jsonlite::fromJSON(json)
     o <- order(x$package)
     x <- x[o,]

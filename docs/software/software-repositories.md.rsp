@@ -16,7 +16,6 @@ source("R/lmod.R")
 source("R/html_widgets.R")
 
 
-options(onMissingPath = "warning")
 style <- R.utils::cmdArg(style = FALSE)
 
 modules_sets <- get_modules_sets(module_repositories)
@@ -171,7 +170,7 @@ Enable repository: <em>this software repository is always enabled</em><br>
 Enable repository: <code>module load <%= name %></code><br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+Please note that this software stack is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 <% } %>
 
