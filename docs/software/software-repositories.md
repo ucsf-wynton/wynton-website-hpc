@@ -284,7 +284,7 @@ Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Bi
 Enable repository: <code>module load CBI</code><br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+Please note that this software stack is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
 <h3 id="module_cbi_apache-ant" class="module-name">apache-ant</h3>
@@ -325,7 +325,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <strong class="module-help">ASCIIGenome: Text Only Genome Viewer</strong><br>
 <span class="module-description">ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.</span><br>
 Example: <span class="module-example"><code>ASCIIGenome --help</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/dariober/ASCIIGenome">https://github.com/dariober/ASCIIGenome</a></span><br>
+URL: <span class="module-url"><a href="https://github.com/dariober/ASCIIGenome">https://github.com/dariober/ASCIIGenome</a>, <a href="https://github.com/dariober/ASCIIGenome/blob/master/CHANGELOG.md">https://github.com/dariober/ASCIIGenome/blob/master/CHANGELOG.md</a> (changelog), <a href="https://asciigenome.readthedocs.io/en/latest/">https://asciigenome.readthedocs.io/en/latest/</a> (documentation)</span><br>
 Versions: <span class="module-version">1.15.0, <em>1.16.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -337,8 +337,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing, viewer&quot;)
-whatis(&quot;URL: https://github.com/dariober/ASCIIGenome&quot;)
-whatis(&quot;Description: ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.  Example: `ASCIIGenome --help`.&quot;)
+whatis(&quot;URL: https://github.com/dariober/ASCIIGenome, https://github.com/dariober/ASCIIGenome/blob/master/CHANGELOG.md (changelog), https://asciigenome.readthedocs.io/en/latest/ (documentation)&quot;)
+whatis([[
+Description: ASCIIGenome is a genome browser based on command line interface and designed for running from console terminals. Since ASCIIGenome does not require a graphical interface it is particularly useful for quickly visualizing genomic data on remote servers while offering flexibility similar to popular GUI viewers like IGV.
+Examples: `ASCIIGenome --help`.
+]])
 -- too long for small screens: `ASCIIGenome http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/supporting/functional_annotation/filtered/ALL.chr21.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf.gz`
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -387,9 +390,9 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">bat: A cat(1) Clone with Syntax Highlighting and Git Integration</strong><br>
 <span class="module-description">A cat(1) clone with syntax highlighting and Git integration.</span><br>
 Example: <span class="module-example"><code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a></span><br>
+URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a>, <a href="https://github.com/sharkdp/bat/blob/master/CHANGELOG.md">https://github.com/sharkdp/bat/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.18.3</em></span><br>
+Versions: <span class="module-version">0.18.3, <em>0.20.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -400,8 +403,12 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: utility, file viewer&quot;)
-whatis(&quot;URL: https://github.com/sharkdp/bat&quot;)
-whatis(&quot;Description: A cat(1) clone with syntax highlighting and Git integration.  Examples: `bat README.md`, `bat scripts/*.sh`, and `bat src/*.c`.  Warning: Only the most recent version of this software will be kept.&quot;)
+whatis(&quot;URL: https://github.com/sharkdp/bat, https://github.com/sharkdp/bat/blob/master/CHANGELOG.md (changelog)&quot;)
+whatis([[
+Description: A cat(1) clone with syntax highlighting and Git integration.
+Examples: `bat README.md`, `bat scripts/*.sh`, and `bat src/*.c`.
+Warning: Only the most recent version of this software will be kept.
+]])
 
 -- Local variables
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -623,8 +630,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <strong class="module-help">BLAT: Fast Sequence Search Command Line Tool</strong><br>
 <span class="module-description">BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting.</span><br>
 Example: <span class="module-example"><code>blat</code></span><br>
-URL: <span class="module-url"><a href="https://genome.ucsc.edu/goldenPath/help/blatSpec.html">https://genome.ucsc.edu/goldenPath/help/blatSpec.html</a></span><br>
-Versions: <span class="module-version"><em>36x4</em></span><br>
+URL: <span class="module-url"><a href="https://genome.ucsc.edu/goldenPath/help/blatSpec.html">https://genome.ucsc.edu/goldenPath/help/blatSpec.html</a> (docs), <a href="https://genome.ucsc.edu/FAQ/FAQblat.html">https://genome.ucsc.edu/FAQ/FAQblat.html</a> (faq), <a href="https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/">https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/</a> (download)</span><br>
+Versions: <span class="module-version">36x4, <em>37x1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -635,8 +642,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing, alignment&quot;)
-whatis(&quot;URL: https://genome.ucsc.edu/goldenPath/help/blatSpec.html&quot;)
-whatis(&quot;Description: BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting. Example: `blat`&quot;)
+whatis(&quot;URL: https://genome.ucsc.edu/goldenPath/help/blatSpec.html (docs), https://genome.ucsc.edu/FAQ/FAQblat.html (faq), https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/ (download)&quot;)
+whatis([[
+Description: BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting.
+Examples: `blat`
+]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -3067,7 +3077,7 @@ Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Reposi
 Enable repository: <code>module load Sali</code><br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Please note that this software stacks is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
+Please note that this software stack is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
 <h3 id="module_sali_allosmod" class="module-name">allosmod</h3>
@@ -5561,7 +5571,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-03-29 18:25:04 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-03-31 16:54:23 from querying `module avail` and `module spider`._
 
 
 <style>
