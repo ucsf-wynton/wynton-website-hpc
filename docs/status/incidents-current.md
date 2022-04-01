@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Major BeeGFS issues</span>
 
+**Update**: After a few rounds, we now have a patch that we have confirmed work on our test BeeGFS system. The plan is to do additional high-load testing today and over the weekend.
+<br><span class="timestamp">April 1, 10:30 PDT</span>
+
 **Update**: The BeeGFS vendors will send us a patch by tomorrow Tuesday, which we will test on our separate BeeGFS test system. After being validated there, will will deploy it to the main system. We hope to have a patch deploy by the end of the week.
 <br><span class="timestamp">March 28, 11:30 PDT</span>
 
