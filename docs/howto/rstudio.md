@@ -6,7 +6,7 @@ R is available on {{ site.cluster.name }} via a [contributed environment module]
 
 2. The **RStudio Desktop** over X11 Forwarding
 
-Running desktop applications over X11 forwarding works, but depending on your network connection, you will experience more or less lag. For instance, you might see a small delay between a key is pressed and it is echoed at the R prompt. Similarly, plotted graphics might take some time to render. This is also try for the RStudio Desktop. Because of this, we recommend running a personal RStudio Server instance, because that is designed to run remotely.
+Running desktop applications over X11 forwarding works, but depending on your network connection, you will experience more or less lag. For instance, you might see a small delay between a key is pressed and it is echoed at the R prompt. Similarly, plotted graphics might take some time to render. This is also true for the RStudio Desktop. Because of this, we recommend running a personal RStudio Server instance, because that is designed to run remotely.
 
 Regardless which one you use, you will be running the same version of R as you would when running from the terminal and all your installed packages will be available in either.
 
