@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Major BeeGFS issues</span>
 
+**Update**: Our load tests over the weekend went well. Next, we will do discrepancy validation tests between our current version and the patch versions. When those pass, we will do a final confirmation with the BeeGFS vendor. We hope to deploy the patch to Wynton in a few days.
+<br><span class="timestamp">April 4, 10:30 PDT</span>
+
 **Update**: After a few rounds, we now have a patch that we have confirmed work on our test BeeGFS system. The plan is to do additional high-load testing today and over the weekend.
 <br><span class="timestamp">April 1, 10:30 PDT</span>
 
