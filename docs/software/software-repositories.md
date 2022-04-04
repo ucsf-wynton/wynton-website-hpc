@@ -293,7 +293,7 @@ Please note that this software stack is maintained and contributed by a research
 <strong class="module-help">Apache Ant: A Java Library and Command-Line Tool to Build Software</strong><br>
 <span class="module-description">Apache Ant is a Java library and command-line tool that help building software.</span><br>
 Example: <span class="module-example"><code>ant -h</code></span><br>
-URL: <span class="module-url"><a href="https://ant.apache.org/bindownload.cgi">https://ant.apache.org/bindownload.cgi</a></span><br>
+URL: <span class="module-url"><a href="https://ant.apache.org/bindownload.cgi">https://ant.apache.org/bindownload.cgi</a>, <a href="https://ant.apache.org/antnews.html">https://ant.apache.org/antnews.html</a> (changelog)</span><br>
 Versions: <span class="module-version"><em>1.10.12</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -305,8 +305,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming&quot;)
-whatis(&quot;URL: https://ant.apache.org/bindownload.cgi&quot;)
-whatis(&quot;Description: Apache Ant is a Java library and command-line tool that help building software.  Example: `ant -h`&quot;)
+whatis(&quot;URL: https://ant.apache.org/bindownload.cgi, https://ant.apache.org/antnews.html (changelog)&quot;)
+whatis([[
+Description: Apache Ant is a Java library and command-line tool that help building software.
+Examples: `ant -h`
+]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -2394,7 +2397,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>rsc --help</code>, and <code>rsc start</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version"><em>0.8.2</em></span><br>
+Versions: <span class="module-version"><em>0.8.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2414,13 +2417,20 @@ Warning: This is work under construction!
 
 depends_on(&quot;r&quot;)
 depends_on(&quot;rstudio-server&quot;)
-try_load(&quot;expect&quot;)
+
+-- Authenticate via one-time random password by default?
+if isDir(&quot;/wynton&quot;) then
+  -- Update default to: rsc start --auth=auth-via-env --random-password
+  pushenv(&quot;RSC_AUTH&quot;, &quot;auth-via-env&quot;)
+  pushenv(&quot;RSC_PASSWORD&quot;, &quot;random&quot;)
+else
+  try_load(&quot;expect&quot;)
+end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-
 </code></pre>
 
 </details>
@@ -5610,7 +5620,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-03-31 19:09:45 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-04-04 11:57:56 from querying `module avail` and `module spider`._
 
 
 <style>
