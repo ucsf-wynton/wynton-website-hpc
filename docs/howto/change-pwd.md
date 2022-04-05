@@ -15,7 +15,7 @@ context:
 </div>
 
 <div class="alert alert-warning" role="alert">
-<strong>We strongly recommend using a password vault application like the UCSF campus provided "Keeper Password Vault" to store and keep track of your passwords.
+<strong>We strongly recommend using a password vault application or website like the UCSF campus provided "Keeper Password Vault" to generate and store your passwords.
 
 [Keeper Password Vault](https://it.ucsf.edu/service/keeper-password-vault?check_logged_in=1)
 
