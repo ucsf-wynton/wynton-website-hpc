@@ -17,8 +17,9 @@ context:
 <div class="alert alert-warning" role="alert">
 <strong>We strongly recommend using a password vault application or website like the UCSF campus provided "Keeper Password Vault" to generate and store your passwords.
   </strong>
-[UCSF Keeper Information]
 </div>
+
+[UCSF Keeper Information]
 
 You can change your password either via our web interface, or from the {{ site.cluster.name }} command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
 
