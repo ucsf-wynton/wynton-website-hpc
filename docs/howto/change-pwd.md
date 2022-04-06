@@ -17,7 +17,7 @@ context:
 <div class="alert alert-warning" role="alert">
 <strong>We strongly recommend using a password vault application or website like the UCSF campus provided "Keeper Password Vault" to generate and store your passwords.
   </strong>
-[Keeper Password Vault](https://it.ucsf.edu/service/keeper-password-vault?check_logged_in=1)
+[UCSF Keeper Information]
 </div>
 
 You can change your password either via our web interface, or from the {{ site.cluster.name }} command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
@@ -63,6 +63,6 @@ To reset your _{{ site.cluster.nickname }}_ password, contact the support staff 
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
-
+[UCSF Keeper Information]: https://it.ucsf.edu/service/keeper-password-vault?check_logged_in=1
 [RBVI Kerberos web interface]: https://www.cgl.ucsf.edu/admin/chpass.py
 [UCSF Enterprise Password Standard]: https://wiki.library.ucsf.edu/pages/viewpage.action?spaceKey=ITSI&title=Unified+UCSF+Enterprise+Password+Standard
