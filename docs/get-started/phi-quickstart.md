@@ -46,7 +46,7 @@ Instead, PHI users must use pdt1 and pdt2 for sftp/scp data transfers.
 
 Likewise, the globus endpoint associated with pdt1 and pdt2, "UCSF Wynton HPC", is not compatible with UCSF campus requirements for PHI Data. No transfer of PHI Data should take place utilizing the "UCSF Wynton HPC" endpoint.
 
-Instead, PHI users must use the Globus "Wynton PDT Globus Share" for any Globus file transfers.
+Instead, PHI users must use the Globus "UCSF Wynton PDT" for any Globus file transfers.
 
 More information here regarding globus file transfers for PHI Users:
 
