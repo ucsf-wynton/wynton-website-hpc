@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Major BeeGFS issues</span>
 
+**Update**: The BeeGFS servers will be updated tomorrow April 6 at 14:00. The cluster should work as usual during the update.
+<br><span class="timestamp">April 5, 17:00 PDT</span>
+
 **Update**: Our load tests over the weekend went well. Next, we will do discrepancy validation tests between our current version and the patch versions. When those pass, we will do a final confirmation with the BeeGFS vendor. We hope to deploy the patch to Wynton in a few days.
 <br><span class="timestamp">April 4, 10:30 PDT</span>
 
