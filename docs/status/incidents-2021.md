@@ -55,7 +55,7 @@
 
 #### Accounts
 
-* Number of user account: 1,275 (change: +410 during the year)
+* Number of user account: 1,274 (change: +410 during the year)
 
 
 ### December 8-December 23, 2021

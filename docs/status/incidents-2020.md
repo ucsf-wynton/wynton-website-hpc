@@ -61,7 +61,7 @@
 
 #### Accounts
 
-* Number of user account: 865 (change: +386 during the year)
+* Number of user account: 864 (change: +386 during the year)
 
 
 ### December 8-17, 2020

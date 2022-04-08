@@ -45,7 +45,7 @@
 
 #### Accounts
 
-* Number of user account: 199 (change: +103 during the year)
+* Number of user account: 198 (change: +103 during the year)
 
 
 
