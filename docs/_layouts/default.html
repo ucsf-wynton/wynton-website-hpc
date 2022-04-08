@@ -248,7 +248,7 @@
         
 {% unless page.context contains "login" or page.context contains "xfer" %}
 {% if content contains "language-sh" %}
-{% assign tmp_text = "Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks." %}
+{% assign tmp_text = "1. Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks.\n\n2. If you have a PHI account, make sure to use the PHI-approved machines, e.g. log1 -> plog1, dev1 -> pdev1, etc." %}
 <div align="right">
 <span style="font-size: smaller; font-style: italic; text-decoration: underline;" title="{{ tmp_text }}" onclick="alert(&quot;{{ tmp_text }}&quot;)"/>Examples not working?</span>
 </div>
