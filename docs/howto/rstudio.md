@@ -24,11 +24,11 @@ Assuming you are already logged on to a development node, launch your personal R
 [alice@{{ site.devel.name }} ~]$ rsc start
 Your one-time random password for RStudio Server is y+IWo7rfl7Z7MRCPI3Z4
 alice, your personal RStudio Server is available on
-<http://{{ site.devel.name }}.wynton.ucsf.edu:47454>. If you are running from a
-remote machine without direct access to {{ site.devel.name }}.wynton.ucsf.edu,
+<http://{{ site.devel.hostname }}:47454>. If you are running from a
+remote machine without direct access to {{ site.devel.hostname }},
 you can use SSH port forwarding to access the RStudio Server at
 <http://127.0.0.1:8787> by running
-'ssh -L 8787:{{ site.devel.name }}.wynton.ucsf.edu:47454 alice@{{ site.login.hostname }}'
+'ssh -L 8787:{{ site.devel.hostname }}:47454 alice@{{ site.login.hostname }}'
 in a second terminal.
 Any R session started times out after being idle for 120 minutes.
 WARNING: You now have 10 minutes, until 2022-04-04 12:11:27-07:00,
@@ -54,7 +54,7 @@ and make sure to use the port number (e.g. `47454`) that
 was assigned to you.
 
 ```sh
-{local}$ ssh -L 8787:{{ site.devel.name}}.wynton.ucsf.edu:47454 alice@{{ site.login.hostname }}
+{local}$ ssh -L 8787:{{ site.devel.hostname}}:47454 alice@{{ site.login.hostname }}
 alice1@{{site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{site.login.name }} ~]$
 ```
@@ -91,7 +91,7 @@ To run the RStudio Desktop client, you must be logged via [SSH with X11 forwardi
 [alice@{{ site.devel.name }} ~]$ rstudio
 TTY detected. Printing informational message about logging configuration.
 Logging configuration loaded from '/etc/rstudio/logging.conf'. Logging to
-'/wynton/home/boblab/alice/.local/share/rstudio/log/rdesktop.log'.
+'{{ site.user.home }}/.local/share/rstudio/log/rdesktop.log'.
 ```
 
 You should see the RStudio Desktop interface appear after a few seconds.
