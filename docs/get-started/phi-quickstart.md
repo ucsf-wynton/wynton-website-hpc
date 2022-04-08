@@ -38,6 +38,20 @@
 - Data containing PHI must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected` location
 - If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office](https://hipaa.ucsf.edu/)
 
+## Data Transfer and Wynton Globus Use for PHI Users
+
+The dt1 and dt2 data transfer nodes are not compliant with UCSF Campus requirements for PHI data.
+
+Instead, PHI users must use pdt1 and pdt2 for sftp/scp data transfers.
+
+Likewise, the globus endpoint associated with pdt1 and pdt2, "UCSF Wynton HPC", is not compatible with UCSF campus requirements for PHI Data. No transfer of PHI Data should take place utilizing the "UCSF Wynton HPC" endpoint.
+
+Instead, PHI users must use the Globus "UCSF Wynton PDT" for any Globus file transfers.
+
+More information here regarding globus file transfers for PHI Users:
+
+[Using Globus on Wynton](https://wynton.ucsf.edu/hpc/transfers/globus.html)
+
 ## Frequently Asked Questions (FAQ)
 
 **Q.** Is data on Wynton backed up?
