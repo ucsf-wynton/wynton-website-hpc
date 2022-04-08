@@ -53,6 +53,9 @@
   1. 2021-04-28 (210 hours) - GPU taken down due to server room cooling issues
 * Total downtime: 0 hours
 
+#### Accounts
+
+* Number of user account: 1,275 (change: +410 during the year)
 
 
 ### December 8-December 23, 2021

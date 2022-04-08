@@ -59,6 +59,11 @@
 * Total downtime: 28.5 hours of which 26.5 hours were due to external factors
 
 
+#### Accounts
+
+* Number of user account: 865 (change: +386 during the year)
+
+
 ### December 8-17, 2020
 
 #### <span style="color: orange;">Limited accessibility of Login node log1</span>

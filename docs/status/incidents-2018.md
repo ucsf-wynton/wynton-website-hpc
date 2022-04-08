@@ -43,6 +43,11 @@
 * Total downtime: 0.0 hours
 
 
+#### Accounts
+
+* Number of user account: 199 (change: +103 during the year)
+
+
 
 ### December 21, 2018
 

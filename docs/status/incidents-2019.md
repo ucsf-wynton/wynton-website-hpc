@@ -55,6 +55,11 @@
   1. 2019-12-22 (5.5 hours) - BeeGFS server non-responsive
 * Total downtime: 58.5 hours of which 0 hours were due to external factors
 
+#### Accounts
+
+* Number of user account: 479 (change: +280 during the year)
+
+
 
 ### December 20, 2019 - January 4, 2020
 
