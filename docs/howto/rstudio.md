@@ -36,7 +36,7 @@ to connect and log in to the RStudio Server before everything
 times out.
 ```
 
-There are two things you should pay attention to here:
+There are two things you should pay extra attention to here:
 
 1. The one-time random password that was generated
 
@@ -95,7 +95,7 @@ Logging configuration loaded from '/etc/rstudio/logging.conf'. Logging to
 ```
 
 You should see the RStudio Desktop interface appear after a few seconds.
-If you get a blank window, which some macOS users have report, retry with:
+If you get a blank window, which some macOS users have reported, retry with:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ QMLSCENE_DEVICE=softwarecontext rstudio
