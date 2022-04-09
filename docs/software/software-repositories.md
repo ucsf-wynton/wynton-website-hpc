@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(77)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(80)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
@@ -278,7 +278,7 @@ prepend_path(&quot;MODULEPATH&quot;, &quot;/salilab/diva1/home/modules&quot;)
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (77)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (80)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -424,6 +424,41 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;, &quot;man1&quo
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_bats-assert" class="module-name">bats-assert</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">bats-assert: Assertion Library for Bats (Bash Automated Testing System)</strong><br>
+<span class="module-description">This is a helper library providing common assertions for Bats.</span><br>
+Example: <span class="module-example">In Bats <code>startup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_ARRAY_HOME}/load.bash&quot;</code></span><br>
+URL: <span class="module-url"><a href="https://github.com/bats-core/bats-assert">https://github.com/bats-core/bats-assert</a>, <a href="https://github.com/bats-core/bats-assert/releases">https://github.com/bats-core/bats-assert/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
+Versions: <span class="module-version"><em>2.0.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+bats-assert: Assertion Library for Bats (Bash Automated Testing System)
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: bash, shell, testing&quot;)
+whatis(&quot;URL: https://github.com/bats-core/bats-assert, https://github.com/bats-core/bats-assert/releases (changelog), https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert (documentation)&quot;)
+whatis([[
+Description: This is a helper library providing common assertions for Bats.
+Examples: In Bats `startup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_ARRAY_HOME}/load.bash&quot;`
+]])
+
+depends_on(&quot;bats-support&quot;)
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;BATS_ARRAY_HOME&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_bats-core" class="module-name">bats-core</h3>
 <dl>
   <dd class="module-details">
@@ -454,6 +489,74 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_bats-file" class="module-name">bats-file</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">bats-file: File-System Assertion Library for Bats (Bash Automated Testing System)</strong><br>
+<span class="module-description">This is a helper library providing common filesystem related assertions and helpers foor Bats.</span><br>
+Example: <span class="module-example">In Bats <code>startup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_FILE_HOME}/load.bash&quot;</code></span><br>
+URL: <span class="module-url"><a href="https://github.com/bats-core/bats-assert">https://github.com/bats-core/bats-assert</a>, <a href="https://github.com/bats-core/bats-assert/releases">https://github.com/bats-core/bats-assert/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
+Versions: <span class="module-version"><em>0.3.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+bats-file: File-System Assertion Library for Bats (Bash Automated Testing System)
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: bash, shell, testing&quot;)
+whatis(&quot;URL: https://github.com/bats-core/bats-assert, https://github.com/bats-core/bats-assert/releases (changelog), https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert (documentation)&quot;)
+whatis([[
+Description: This is a helper library providing common filesystem related assertions and helpers foor Bats.
+Examples: In Bats `startup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_FILE_HOME}/load.bash&quot;`
+]])
+
+depends_on(&quot;bats-support&quot;)
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;BATS_FILE_HOME&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_bats-support" class="module-name">bats-support</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">bats-support: Supporting Library for Bats (Bash Automated Testing System)</strong><br>
+<span class="module-description">This is a supporting library providing common functions to test helper libraries written for Bats.</span><br>
+Example: <span class="module-example">In Bats <code>startup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code></span><br>
+URL: <span class="module-url"><a href="https://github.com/bats-core/bats-support">https://github.com/bats-core/bats-support</a>, <a href="https://github.com/bats-core/bats-support/releases">https://github.com/bats-core/bats-support/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
+Versions: <span class="module-version"><em>0.3.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+bats-support: Supporting Library for Bats (Bash Automated Testing System)
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: bash, shell, testing&quot;)
+whatis(&quot;URL: https://github.com/bats-core/bats-support, https://github.com/bats-core/bats-support/releases (changelog), https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert (documentation)&quot;)
+whatis([[
+Description: This is a supporting library providing common functions to test helper libraries written for Bats.
+Examples: In Bats `startup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;`
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;BATS_SUPPORT_HOME&quot;, home)
 </code></pre>
 
 </details>
@@ -2394,7 +2497,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
   <dd class="module-details">
 <strong class="module-help">RSC: An RStudio Server Controller</strong><br>
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
-Example: <span class="module-example"><code>rsc --help</code>, and <code>rsc start</code>.</span><br>
+Example: <span class="module-example"><code>rsc --help</code>, <code>rsc start</code>, and <code>rsc stop</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work under construction!</span><br>
 Versions: <span class="module-version"><em>0.8.3</em></span><br>
@@ -2411,7 +2514,7 @@ whatis(&quot;Keywords: programming, R, RStudio Server, GUI&quot;)
 whatis(&quot;URL: https://github.com/UCSF-CBI/rstudio-server-controller, https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md (changelog)&quot;)
 whatis([[
 Description: The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.
-Examples: `rsc --help`, and `rsc start`.
+Examples: `rsc --help`, `rsc start`, and `rsc stop`.
 Warning: This is work under construction!
 ]])
 
@@ -5616,11 +5719,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(77)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(80)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-04-04 11:57:56 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-04-08 22:13:43 from querying `module avail` and `module spider`._
 
 
 <style>

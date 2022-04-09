@@ -63,7 +63,7 @@ Instructions". You may be able to use a version of the software
 compiled for "pre-Haswell" CPUs.)  Alternatively, if you want to use
 the newer software, you will need to make sure your SBGrid job ends up
 a on a node with a modern CPU. To do this, specify SGE option
-<code>"-l hostname="qb3-id*|cc-id*|qb3-as*|qb3-at*"</code>, a group of
+<code>"-l hostname="qb3-id*|qb3-as*|qb3-at*"</code>, a group of
 more modern nodes. (The pipe sign, <code>|</code> is used to indicate
 the <code>OR</code> operator in resource requests, telling your job to
 run on any node whose hostname value matches the patterns given.)
