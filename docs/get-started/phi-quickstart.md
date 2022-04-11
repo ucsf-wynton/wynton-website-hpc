@@ -42,7 +42,7 @@
 
 The dt1 and dt2 data transfer nodes are not compliant with UCSF Campus requirements for PHI data.
 
-Instead, PHI users must use pdt1 and pdt2 for sftp/scp data transfers.
+Instead, PHI users must use pdt1 and pdt2 for data transfers.
 
 Likewise, the globus endpoint associated with pdt1 and pdt2, "UCSF Wynton HPC", is not compatible with UCSF campus requirements for PHI Data. No transfer of PHI Data should take place utilizing the "UCSF Wynton HPC" endpoint.
 
