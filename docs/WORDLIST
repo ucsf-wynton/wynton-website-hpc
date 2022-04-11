@@ -296,6 +296,7 @@ passwd
 pbdMPI
 pbdPROF
 pdev
+pdt
 pe
 performant
 pgpudev
@@ -335,9 +336,11 @@ sbgrid
 scalable
 scancel
 scl
+scp
 scontrol
 se
 sexualized
+sftp
 sge
 sif
 signup
