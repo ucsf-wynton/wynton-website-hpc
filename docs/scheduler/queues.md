@@ -38,7 +38,7 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Maximum runtime: 2 weeks (336 hours)
   - Process priority: 0 (highest)
   - Availability: Institutionally purchased nodes only
-  - Quota: Available upon application and approval by the [steering committee]
+  - Quota: Available upon application and approval by the Wynton Steering Committee
   - Purpose: Intended for scheduled, high-priority computing needs and / or temporary paid priority access
 
 
@@ -53,7 +53,6 @@ Only in rare cases there should be a need to specify through what queue your job
 
 
 
-[steering committee]: http://wynton.ucsf.edu/
 [specify the resources]: {{ '/scheduler/submit-jobs.html' | relative_url }}
 
 <!--
