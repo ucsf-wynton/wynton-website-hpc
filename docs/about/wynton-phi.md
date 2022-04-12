@@ -1,4 +1,4 @@
-# Protected Health Information (PHI) on Wynton
+# Protected Health Information (PHI) Compliance
 
 Wynton PHI environment, which is subset of the Wynton HPC environment, is approved for storing and working with Protected Health Information (PHI) data as long as the specific PHI-data usage is covered by the institutional review board (IRB) approval for the principal investigator (PI). This way, PIs can be confident that they are conducting their research computing with PHI in a compliant environment.
 
