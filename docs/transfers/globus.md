@@ -47,13 +47,9 @@ To transfer files via the Globus network:
 
 ## Globus for PHI Users
 
-### Important! To use the PHI Compatible Globus Endpoint, you MUST be signed up for Wynton 2Factor Authentication
+To use the PHI Compatible Globus endpoint 'UCSF Wynton PDT', you _must_ be signed up for [Wynton Two-Factor Authentication](https://wynton.ucsf.edu/hpc/get-started/duo-signup.html).
 
-For more information on signing up for Wynton 2Factor Authentication see this page:
-
-[Wynton 2Factor Authentication Signup](https://wynton.ucsf.edu/hpc/get-started/duo-signup.html)
-
-Instead of using the endpoint associated with the dt1 and dt2 servers, "UCSF Wynton HPC", you must use the endpoint associated with the pdt1 and pdt2 servers. This endpoint is called, "UCSF Wynton PDT". Login to globus with your UCSF Campus ID. On the next screen, you will be notified "Authentication Required". Select your identity. This will take you to a screen where you are prompted to enter your Wynton Username and Password. Enter these. Your default 2Factor Authentication will be notified. Approve and Globus will continue to a screen representing the Wynton file system.
+Instead of using the non-PHI-compliant endpoint 'UCSF Wynton HPC', all PHI data must use the PHI-approved Globus endpoint 'UCSF Wynton PDT', which is associated with the pdt1 and pdt2 data-transfer nodes.  Log in to Globus with your UCSF Campus ID. On the next screen, you will be notified 'Authentication Required'. Select your identity. This will take you to a screen where you are prompted to enter your Wynton Username and Password. Enter these. Your default Two-Factor Authentication will be notified.  Approve, and Globus will continue to a screen representing the Wynton file system.
 
 
 ## Endpoints of interest
