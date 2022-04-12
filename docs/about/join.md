@@ -65,7 +65,7 @@ _Note: The form linked above is only available to UCSF staff, students, postdocs
 
 1. Provide any additional comments in the text field.
 
-2. Check the box consenting to, **"If the individual(s)for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."**
+2. Check the box consenting to, **"If the individual(s) for whom I am requesting access leaves their appointment with UCSF or transitions to a new role that does not necessitate this access, then I will inform the Wynton Team immediately that this access should be revoked for this individual."**
 
 3. Click the **"Submit"** button on the right.
 
