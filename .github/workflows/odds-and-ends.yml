@@ -20,3 +20,7 @@ jobs:
       run: |
         make check-here-links
 
+    - name: absolute-links
+      run: |
+        make check-absolute-links
+

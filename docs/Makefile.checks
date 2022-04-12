@@ -97,6 +97,35 @@ markdown-link-check:
 	  exit 1
 	fi
 
+check-absolute-links:
+	@stdout=$(TMPDIR)/stdout
+	rm -f "$$stdout"
+
+	ok_count=0
+	error_count=0
+
+	pattern="(http|https)://wynton.ucsf.edu"
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
+	for file in $$files; do
+	   $(TPUT) && printf "[    ] checking %s" "$$file"
+	   if ! grep -H -i -E "$${pattern}" "$${file}" &>> "$$stdout" ; then
+	     ok_count=$$((ok_count+1))
+	     $(TPUT) && printf "\r"
+	     printf "[$(OK)] checking %s\\n" "$$file"
+	   else
+	     error_count=$$((error_count+1))
+	     $(TPUT) && printf "\r"
+	     printf "[$(FAIL)] checking %s\\n" "$$file"
+	   fi
+	done
+
+	echo "RESULT: $$ok_count OK, $$error_count ERROR"
+	if (( error_count > 0 )); then
+	  grep --color=always -i -E "${pattern}" "$$stdout"
+#	  cat "$$stdout"
+	  exit 1
+	fi
+
 check-here-links:
 	@stdout=$(TMPDIR)/stdout
 	rm -f "$$stdout"
@@ -223,4 +252,4 @@ markin-shellcheck:
 
 check-markdown: markdownlint markdown-link-check
 
-check: check-here-links check-usernames spell check-markdown check-leftovers-from-C4
+check: check-absolute-links check-here-links check-usernames spell check-markdown check-leftovers-from-C4
