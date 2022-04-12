@@ -26,3 +26,6 @@ check-usernames:
 
 check-here-links:
 	cd docs; $(MAKE) $@
+
+check-absolute-links:
+	cd docs; $(MAKE) $@

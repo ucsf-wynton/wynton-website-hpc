@@ -122,7 +122,8 @@ check-absolute-links:
 	echo "RESULT: $$ok_count OK, $$error_count ERROR"
 	if (( error_count > 0 )); then
 	  grep --color=always -i -E "${pattern}" "$$stdout"
-#	  cat "$$stdout"
+	  echo
+	  echo "HINT: Use {{ 'path/file.html' | relative_url }} instead of https://wynton.ucsf.edu/path/file.html"
 	  exit 1
 	fi
 
