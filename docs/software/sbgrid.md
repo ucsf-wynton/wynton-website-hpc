@@ -15,9 +15,9 @@ SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/)
 for structural biology.  It is kept up to date by the [SBGrid] team
 without needing intervention by the {{ site.cluster.nickname }} admins.
 Each lab using SBGrid must pay a yearly fee. This covers usage by anyone
-in the lab, both on {{ site.cluster.name }} and any other Linux or Mac
+in the lab, both on {{ site.cluster.name }} and any other Linux or macOS
 computer they own. The annual price depends on how many other labs from
-UCSF join. There are approximately 12 UCSF labs currently enrolled.
+UCSF join. Many UCSF labs are already members.
 See the [SBGrid] website for information on how to join.
 
 
