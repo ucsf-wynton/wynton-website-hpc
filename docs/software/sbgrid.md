@@ -89,7 +89,7 @@ enabled.  To enable the SBGrid, in the shell or in a job script, do:
  Software used in the project was installed and configured by SBGrid.           
  cite: eLife 2013;2:e01456, Collaboration gets the most out of software.
 ********************************************************************************
- SBGrid installation last updated: 2021-11-04
+ SBGrid installation last updated: 2022-04-12
  Please submit bug reports and help requests to:       <bugs@sbgrid.org>  or
                                                        <http://sbgrid.org/bugs>
             For additional information visit https://sbgrid.org/wiki
