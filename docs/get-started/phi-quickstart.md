@@ -1,4 +1,4 @@
-# PHI Quickstart
+# Protected Health Information (PHI) Quickstart
 
 ## UCSF Data Classification Standard & Restricted Data Types
 
@@ -11,7 +11,7 @@
 
 ## First step: Wynton accounts
 
-* If you either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI:
+* If you don't either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI:
 
   - link to [learn more about the Wynton cluster]({{ '/about/join.html' | relative_url }})
   
@@ -21,9 +21,10 @@
 
   - **Important**: The email address associated with a new Statement of Responsibility must exactly match the user's original email address.
 
-## Wynton PHI PI responsibilities
 
-* The PI is responsible for all PHI data
+## Principal Investigator responsibilities for PHI
+
+* The Principal Investigator (PI) is responsible for all PHI data
 
 * Additionally, the following rules apply to PIs using PHI on Wynton or approving users that use PHI on Wynton:
 
@@ -40,38 +41,29 @@
   - The PI must notify Wynton of any change in security requirements in research agreements to Wynton admins
 
 
-## Wynton PHI user responsibilities
+## User responsibilities for PHI
 
 * Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ '/about/governance.html' | relative_url }})
 
 * Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ '/about/governance.html' | relative_url }})
 
-* User end points (laptops/desktops) connecting to Wynton must meet [UCSF minimum security standards](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information)
+* User end points (e.g. laptops and desktops) connecting to Wynton must meet [UCSF Minimum Security Standards for Electronic Information Resources](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information)
 
-* PHI users must use PHI-specific nodes to connect to Wynton
+* PHI users must use PHI-specific nodes on Wynton;
 
-  - login/data transfer: `plog1`
+  - login nodes: `plog1`
   
-  - dev: `pdev1`, `pgpudev1`
-  
+  - development nodes: `pdev1`, `pgpudev1`
+
+  - data-transfer nodes: `pdt1` and `pdt2`
+
+* PHI users must _not_ use any of the non-PHI-compliant nodes on Wynton, including log1, log2, dev1, dev2, dev3, dt1, and dt2.
+
 * Data containing PHI must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected` location
 
+* PHI users must use data-transfer nodes pdt1 and pdt2 for all file transfers to and from the cluster, including when using [Globus]({{ '/transfers/globus.html#globus-for-phi-users' | relative_url }})
+
 * If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office](https://hipaa.ucsf.edu/)
-
-
-## Data Transfer and Wynton Globus Use for PHI Users
-
-The dt1 and dt2 data transfer nodes are not compliant with UCSF Campus requirements for PHI data.
-
-Instead, PHI users must use pdt1 and pdt2 for data transfers.
-
-Likewise, the globus endpoint associated with pdt1 and pdt2, "UCSF Wynton HPC", is not compatible with UCSF campus requirements for PHI Data. No transfer of PHI Data should take place utilizing the "UCSF Wynton HPC" endpoint.
-
-Instead, PHI users must use the Globus "UCSF Wynton PDT" for any Globus file transfers.
-
-More information here regarding globus file transfers for PHI Users:
-
-[Using Globus on Wynton](https://wynton.ucsf.edu/hpc/transfers/globus.html)
 
 
 ## Frequently Asked Questions (FAQ)
@@ -80,6 +72,6 @@ More information here regarding globus file transfers for PHI Users:
 
 **A.** Data on Wynton is not backed up, users and labs are responsible to back up their own data outside of Wynton HPC.
 
-**Q.** What is I want to share data between `/wynton/protected/group` (PHI) and `/wynton/group` (non-PHI) directories?
+**Q.** What if I want to share data between `/wynton/protected/group` (PHI) and `/wynton/group` (non-PHI) directories?
 
 **A.** Users with PHI access still have access to `/wynton/group`, as do Wynton non-PHI users. However, PHI data should never be stored under `/wynton/group` and PHI data should never be shared with a user who does not have PHI access.
