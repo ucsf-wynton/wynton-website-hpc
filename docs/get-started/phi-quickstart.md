@@ -68,10 +68,6 @@
 
 ## Frequently Asked Questions (FAQ)
 
-**Q.** Is data on Wynton backed up?
-
-**A.** Data on Wynton is not backed up, users and labs are responsible to back up their own data outside of Wynton HPC.
-
 **Q.** What if I want to share data between `/wynton/protected/group` (PHI) and `/wynton/group` (non-PHI) directories?
 
 **A.** Users with PHI access still have access to `/wynton/group`, as do Wynton non-PHI users. However, PHI data should never be stored under `/wynton/group` and PHI data should never be shared with a user who does not have PHI access.

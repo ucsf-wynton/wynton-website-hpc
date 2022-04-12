@@ -122,6 +122,10 @@ $
 
 ## Files and folders
 
+**Q.** Is data on Wynton backed up?
+
+**A.** Data on Wynton is not backed up, users and labs are responsible to back up their own data outside of {{ site.cluster.name }}.
+
 **Q**. _Is it possible to have a common folder where our lab group members can share files and software?_
 
 **A1**. If you belong to a specific group, we can set up a `/wynton/home/your_group/shared/` folder that group members (part of the same Unix group) have write access to. Any such files will count toward the disk quota of the user who owns the files. The typical use case is then that one or more members maintain subdirectories therein.  If you need this, please drop us an email.  Note, if the `groups` command reports `lsd` for you, then you do not belong to a specific group and can unfortunately not get a group-specific folder.
