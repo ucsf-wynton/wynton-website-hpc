@@ -20,7 +20,7 @@ If you are an non-UCSF affiliate, you will need to have the UCSF staff, student,
 The {{ site.cluster.name }} staff will make every effort to process your account request and create the account within five business days of confirmation of your affiliation and contact information.
 
 
-## Request an account
+## Request or update an account
 
 To apply for an account on the {{ site.cluster.name }} cluster, please follow the link below and fill out the ServiceNow Web Form for a Wynton Account:
 

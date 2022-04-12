@@ -16,7 +16,7 @@ Please note that Wynton PHI employs a shared risk model that relies on **individ
 2021-12-17: Contrary to Wynton HPC, we can currently onboard only UCSF staff and UCSF affiliates who have a UCSF ID on Wynton PHI. We are working on allowing also non-UCSF research collaborators to get a Wynton PHI account with approval from the PHI project's PI.
 </div>
 
-Please submit [Apply for Wynton PHI] on ServiceNow to request an account on Wynton PHI. This will initiate an automated onboarding process to check that you meet the following prerequisites:
+To apply for a new Wynton HPC account with PHI access, or to update an existing account for PHI access, please follow the [instructions for requesting or updating an account]({{ '/about/join.html' | relative_url }}). This will initiate an automated onboarding process to check that you meet the following prerequisites:
 
 * Valid email address
 
