@@ -31,8 +31,8 @@ Once these are completed, you will be notified of your account credentials to ac
 
 Depending on your project, Wynton PHI may or may not be the best fit for your project. We encourage you to also evaluate the following alternatives at UCSF that are approved for PHI data:
 
-* [RAE](https://it.ucsf.edu/service/rae)
-* [Data Center Services](https://it.ucsf.edu/service/data-center-services)
-* [UCSF Secure Cloud](https://cloudservices.ucsf.edu/)
+* [UCSF Research Analysis Environment (RAE)](https://it.ucsf.edu/service/rae)
+* [UCSF Data Center Services](https://it.ucsf.edu/service/data-center-services)
+* [UCSF Central IT Cloud Services](https://cloudservices.ucsf.edu/)
 
 [Apply for Wynton PHI]: https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f
