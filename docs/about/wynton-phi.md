@@ -1,6 +1,6 @@
 # Wynton PHI
 
-Wynton PHI environment is available to all UCSF researchers and affiliates as of December 17, 2021. This means Wynton users can now use the entire Wynton HPC environment (449 compute nodes with 12,572 physical cores + 148 GPUs on 42 GPU nodes, and counting) to process research computing jobs involving Protected Health Information (PHI) and/or sensitive data. Please submit [Apply for Wynton PHI] on ServiceNow to request an account and use <a href="https://wynton.ucsf.edu/hpc/support/index.html">these support channels</a> for any help you need. Allowing for the time for onboarding new accounts and set up new PHI projects, we expect to start enabling new PHI users January 5, 2022 onward.
+Wynton PHI environment is available to all UCSF researchers and affiliates as of December 17, 2021. This means Wynton users can now use the entire Wynton HPC environment (449 compute nodes with 12,572 physical cores + 148 GPUs on 42 GPU nodes, and counting) to process research computing jobs involving Protected Health Information (PHI) and/or sensitive data. Please submit [Apply for Wynton PHI] on ServiceNow to request an account and use [these support channels]({{ '/support/index.html' | relative_url }}) for any help you need. Allowing for the time for onboarding new accounts and set up new PHI projects, we expect to start enabling new PHI users January 5, 2022 onward.
 
 ## Background
 
@@ -16,7 +16,7 @@ Wynton PHI environment is approved for storing and working with PHI data as long
 
 Wynton team worked closely with UCSF IT Security and the Privacy, Legal, and Risk (PLR) group to follow the best practices in addressing security and privacy related risks. We obtained the services of an outside security consulting firm to put together a System Security Plan (SSP) based on the <a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-4/archive/2015-01-22">NIST 800-53 revision 4 framework</a> from US federal government. The SSP lists 12 security domains with a total of 156 risk control categories. The SSP then describes how Wynton PHI addresses each risk control, and clearly identifies the owner of each risk control. The Wynton team reviewed this SSP with IT Security and PLR for their support of the plan and also went through a security risk assessment with IT Security which assigned an overall risk level of "Low".  
 
-Please note that Wynton PHI employs a shared risk model that relies on individual PIs and their research team members to own certain risks and follow the guidelines set in <a href="https://wynton.ucsf.edu/hpc/about/user-agreement.html">Wynton User Agreement</a> as well as <a href="https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information">UCSF Minimum Security Standards for Electronic Information Resources</a>.
+Please note that Wynton PHI employs a shared risk model that relies on individual PIs and their research team members to own certain risks and follow the guidelines set in [Wynton User Agreement]({{ '/about/user-agreement.html' | relative_url }}) as well as <a href="https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information">UCSF Minimum Security Standards for Electronic Information Resources</a>.
 
 ### Lots of computing power (including GPUs) and Storage
 
@@ -37,8 +37,8 @@ With Wynton PHI, researchers have access to Wynton HPC's entire computing power 
 
 The Wynton HPC environment is available for free to all UCSF researchers and their collaborators. This means every user has access to 500 GiB of space in their home directory plus the entire scratch space, and they can run their jobs at basic priority levels. There is also a paid model for users to schedule jobs at a higher priority and also to purchase additional dedicated storage. Here is more information:
 
-* [Compute Node Pricing](https://wynton.ucsf.edu/hpc/about/pricing-compute.html)
-* [Dedicated Storage Pricing](https://wynton.ucsf.edu/hpc/about/pricing-storage.html)
+* [Compute Node Pricing]({{ '/about/pricing-compute.html' | relative_url }})
+* [Dedicated Storage Pricing]({{ '/about/pricing-storage.html' | relative_url }})
 
 ### Professional Support
 
@@ -66,7 +66,7 @@ Here is a list of the currently known issues that our team is working on resolvi
 * Wynton PHI does not support data transfers using Globus yet since the configuration of 2-factor authentication in Globus is still in progress. 
 * Currently we can only onboard UCSF staff and UCSF affiliates who have a UCSF ID. We are updating our ServiceNow onboarding process to allow creating Wynton PHI accounts for non-UCSF research collaborators with approval from the PHI project's PI. 
 
-Also - as with any new system in place, we are sure there will be other things to be fine-tuned. So, please reach out to us using <a href="https://wynton.ucsf.edu/hpc/support/index.html">these support channels</a> for any help you need, or any feedback you have to improve our service. 
+Also - as with any new system in place, we are sure there will be other things to be fine-tuned. So, please reach out to us using [these support channels]({{ '/support/index.html' | relative_url }}) for any help you need, or any feedback you have to improve our service. 
 
 ## Other options at UCSF to work with PHI data
 
