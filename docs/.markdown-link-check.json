@@ -1,10 +1,16 @@
 {
 	"ignorePatterns": [
 		{
+			"pattern": "^http://127.0.0.1:"
+		},
+		{
 			"pattern": "^https://www.cgl.ucsf.edu/admin/"
 		},
 		{
 			"pattern": "^https://mon.wynton.ucsf.edu/"
+		},
+		{
+			"pattern": "^https://it.ucsf.edu/service/keeper-password-vault"
 		},
 		{
 			"pattern": "^https://support.box.com/hc/en-us/articles/360043697414-Using-Box-with-FTP-or-FTPS"

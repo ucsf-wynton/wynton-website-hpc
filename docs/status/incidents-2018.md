@@ -120,7 +120,7 @@ reason: internal
 
 * Wednesday November 28-December 19 (21 days): **To all users, please refrain from using `/wynton/scratch` - use local, node-specific `/scratch` if possible (see below).  The sooner we can take it down, the higher the chance is that we can get everything in place before December 19.**
 
-* Wednesday December 12-19 (8 days): **`/wynton/scratch` will be unavailable and completely wiped**.  For computational scratch space, please [use local `/scratch` unique to each compute node](https://ucsf-hpc.github.io/wynton/scheduler/using-local-scratch.html).  For _global_ scratch needs, the old and much slower `/scrapp` and `/scrapp2` may also be used.
+* Wednesday December 12-19 (8 days): **`/wynton/scratch` will be unavailable and completely wiped**.  For computational scratch space, please [use local `/scratch` unique to each compute node]({{ '/scheduler/using-local-scratch.html' | relative_url }}).  For _global_ scratch needs, the old and much slower `/scrapp` and `/scrapp2` may also be used.
 
 * ~~Wednesday December 19, 2018 (1/2 day): The {{ site.cluster.name }} scheduler (SGE) will be taken offline.  No jobs will be able to be submitted until it is restarted.~~
 
