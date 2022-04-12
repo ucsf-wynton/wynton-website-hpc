@@ -24,8 +24,8 @@
 
 The {{ site.cluster.name }} environment keeps growing as more users discover it and more groups buy into the co-op model.  <a href="{{ '/about/shares.html' | relative_url }}">Each contributing member brings more resources and compute power for everyone based on a fair-share model where contributors get higher access priority than non-contributing members</a>.  **Contributions to the {{ site.cluster.name }} environment are non-expiring and valid for life!** Several UCSF centers have already joined contributing a large amount of compute power to the cluster, e.g. Memory and Aging Center and QB3.  Additional centers are lined up to merge their existing hardware into the {{ site.cluster.name }}.  For more details on where we are heading, please see the [{{ site.cluster.name }} Roadmap]({{ '/about/roadmap.html' | relative_url }}).
 
-**Please note**: The current {{ site.cluster.name }} environment is *not* certified for use with Protected Health Information (PHI) unless you have a Wynton PHI account.  Data containing PHI must not be transferred to, mounted on, or processed with any {{ site.cluster.name }} cluster resources other than in the Wynton PHI environment.  If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office]. If you want to request access to Wynton PHI, please submit [Apply for Wynton PHI] on ServiceNow.
+**Please note**: The {{ site.cluster.name }} environment is *not* certified for use with Protected Health Information (PHI) _unless you have a Wynton PHI account_.  Data containing PHI must not be transferred to, mounted on, or processed with any {{ site.cluster.name }} cluster resources other than in the Wynton PHI environment.  For more information or to apply for a PHI account, see [Protected Health Information (PHI) on Wynton].
 
 
 [UCSF Privacy Office]: https://hipaa.ucsf.edu/
-[Apply for Wynton PHI]: https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f
+[Protected Health Information (PHI) on Wynton]: {{ '/about/wynton-phi.html' | relative_url }}
