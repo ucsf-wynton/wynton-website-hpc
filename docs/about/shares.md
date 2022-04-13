@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert" markdown="1">
-<strong>Contributions to the {{ site.cluster.name }} environment are non-expiring, e.g. contribute once and keep it for life!</strong>
+**Contributions to the {{ site.cluster.name }} environment are non-expiring, e.g. contribute once and keep it for life!**
 </div>
 
 # Contributing Member Shares
@@ -37,7 +37,7 @@ Currently, the {{ site.cluster.name }} cluster has in total _member.q<sub>total<
 The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.data.specs.pu_total }} _contributed_ processing units on {{ site.cluster.name }}.
 
 <div class="alert alert-info" role="alert" markdown="1">
-<strong>A lab's contributed processing units (<em>PU<sub>lab</sub></em>) will never expire - it will remain the same until the lab makes additional contributions to the cluster.</strong>
+**A lab's contributed processing units (_PU<sub>lab</sub>_) will never expire - it will remain the same until the lab makes additional contributions to the cluster.**
 </div>
 
 As other labs contribute to the cluster, the total computer power (_PU<sub>total</sub>_) and the total number of member.q slots (_member.q<sub>total</sub>_) will increase over time.   This will result in the lab's _relative_ compute share (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) to decrease over time while their number of member.q slots (_member.q<sub>lab</sub>_) will stay approximately(**) the same.
