@@ -20,7 +20,7 @@ In summary, the steps are:
 Expected time: < 10 minutes.
 
 <div class="alert alert-info" role="alert" markdown="1">
-These instructions are primarily written for Linux, macOS, and Windows 10 users.  If you are on a pre-Windows 10, using the <a href="http://www.putty.org/">PuTTY</a> SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
+These instructions are primarily written for Linux, macOS, and Windows 10 users.  If you are on a pre-Windows 10, using the [PuTTY] SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
 </div>
 
 
@@ -177,3 +177,4 @@ With all of the above, you should now be able to log in to the cluster using:
 ```
 
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
+[PuTTY]: https://www.putty.org/

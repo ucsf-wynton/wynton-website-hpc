@@ -6,7 +6,7 @@ Access to SBGrid software on {{ site.cluster.name }} is limited to paying member
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 For bug reports related to SBGrid software, please use the
-[SBGrid's Report Software Bug form](<a href="https://sbgrid.org/help/?tab=bug">).
+[SBGrid's Report Software Bug form](https://sbgrid.org/help/?tab=bug).
 The {{ site.cluster.nickname }} sysadmins do not fix problems in SBGrid software.
 </div>
 

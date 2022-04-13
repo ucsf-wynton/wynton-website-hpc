@@ -49,7 +49,7 @@ For example,
          alice| 99002||   88.71 GiB| 1000.00 GiB||   645266|unlimited
 ```
 
-tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your <a href="{{ '/about/specs.html' | relative_url }}">500-GiB home storage space</a> is reported as 1000 GiB by the `beegfs-ctl` tool.
+tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your [500-GiB home storage space]({{ '/about/specs.html' | relative_url }}) is reported as 1000 GiB by the `beegfs-ctl` tool.
 
 ## User disk usage on /wynton/scratch/
 

@@ -3,7 +3,7 @@
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-**NEWS**: (_For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page_)
+**NEWS**: (_For upcoming and current incidents, see the [Status]({{ '/status/index.html' | relative_url }}) page_)
 
 2021-12-17: [Wynton PHI]({{ '/about/wynton-phi.html' | relative_url }}) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
 
@@ -14,6 +14,8 @@
 2021-05-28: GPU development node gpudev1 has been upgraded to a machine with 32 CPU cores, 128 GiB RAM, and Nvidia Tesla K80 (was 12 cores, 48 GiB RAM, and GeForce GTX 980 Ti)
 
 2021-05-28: Development node dev1 has been upgraded to a machine with 72 CPU cores and 384 GiB RAM (was 8 cores and 16 GiB RAM)
+
+[More ...]({{ '/about/news.html' | relative_url }})
 </div>
 
 
@@ -23,7 +25,7 @@
 
 **The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers**.  To join, please follow the [instructions for requesting an account]({{ '/about/join.html' | relative_url }}).
 
-The {{ site.cluster.name }} environment keeps growing as more users discover it and more groups buy into the co-op model.  <a href="{{ '/about/shares.html' | relative_url }}">Each contributing member brings more resources and compute power for everyone based on a fair-share model where contributors get higher access priority than non-contributing members</a>.  **Contributions to the {{ site.cluster.name }} environment are non-expiring and valid for life!**  In addition, several UCSF centers have joined by contributing a large amount of their compute hardware to the cluster, e.g. Memory and Aging Center and QB3.  For more details on where we are heading, please see the [{{ site.cluster.name }} Roadmap]({{ '/about/roadmap.html' | relative_url }}).
+The {{ site.cluster.name }} environment keeps growing as more users discover it and more groups buy into the co-op model.  [Each contributing member brings more resources and compute power for everyone based on a fair-share model where contributors get higher access priority than non-contributing members]({{ '/about/shares.html' | relative_url }}).  **Contributions to the {{ site.cluster.name }} environment are non-expiring and valid for life!**  In addition, several UCSF centers have joined by contributing a large amount of their compute hardware to the cluster, e.g. Memory and Aging Center and QB3.  For more details on where we are heading, please see the [{{ site.cluster.name }} Roadmap]({{ '/about/roadmap.html' | relative_url }}).
 
 **Please note**: The {{ site.cluster.name }} environment is *not* certified for use with Protected Health Information (PHI) _unless you have a Wynton PHI account_.  Data containing PHI must not be transferred to, mounted on, or processed with any {{ site.cluster.name }} cluster resources other than in the Wynton PHI environment.  For more information or to apply for a PHI account, see [Protected Health Information (PHI) on Wynton].
 
