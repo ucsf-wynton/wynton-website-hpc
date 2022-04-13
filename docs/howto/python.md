@@ -1,7 +1,7 @@
 # Work with Python
 
 <div class="alert alert-warning" role="alert" markdown="1">
-If possible, we recommend to be explicit about which version to use by specifying either <code>python2</code> and <code>python3</code> in your scripts.
+If possible, we recommend to be explicit about which version to use by specifying either `python2` and `python3` in your scripts.
 </div>
 
 Python 2 and Python 3 are both available via `python2` and `python3`.  The command `python` is an alias for `python2`.  We recommend to be explicit about which version you want to use, also when using the default Python 2, i.e. use `python2` when you know your script requires Python 2 and `python3` when you know it requires Python 3.
@@ -111,7 +111,7 @@ created virtual environment CPython3.6.8.final.0-64 in 5978ms
 ```
 
 <div class="alert alert-warning" role="alert" markdown="1">
-Always remember to specify option <code>-p python3</code> or <code>-p python2</code> when you call <code>virtualenv</code>.  It makes sure that the intended version of Python is used in the virtual environment when <code>python</code> is called.
+Always remember to specify option `-p python3` or `-p python2` when you call `virtualenv`.  It makes sure that the intended version of Python is used in the virtual environment when `python` is called.
 </div>
 
 

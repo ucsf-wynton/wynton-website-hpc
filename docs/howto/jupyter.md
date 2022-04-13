@@ -95,7 +95,7 @@ An alternative method to run a Jupyter Notebook on one of the development nodes 
 See the ['Graphical User Interfaces (GUI)']({{ '/howto/gui-x11fwd.html' | relative_url }}) for how to setup and use X2Go via one of the {{ site.cluster.name }} development nodes.
 
 <div class="alert alert-info" role="alert" markdown="1">
-If you use Python via your own <em>Anaconda</em> installation, instead of the Python version provided by Wynton, you can launch a Jupyter Notebook using the <code>jupyter notebook</code> command from the terminal connected by X2Go, which will also launch the web browser.
+If you use Python via your own Anaconda installation, instead of the Python version provided by Wynton, you can launch a Jupyter Notebook using the `jupyter notebook` command from the terminal connected by X2Go, which will also launch the web browser.
 </div>
 
 

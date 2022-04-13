@@ -1,14 +1,13 @@
 # SBGrid Software Collection
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-Access to SBGrid software on {{ site.cluster.name }} is limited to
-paying members of the SBGrid Consortium.  </div>
+Access to SBGrid software on {{ site.cluster.name }} is limited to paying members of the SBGrid Consortium.
+</div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-For bug reports related to SBGrid software, please use
-<a href="https://sbgrid.org/help/?tab=bug">SBGrid's Report Software Bug
-form</a>.
-The {{ site.cluster.nickname }} sysadmins do not fix SBGrid problems.
+For bug reports related to SBGrid software, please use the
+[SBGrid's Report Software Bug form](<a href="https://sbgrid.org/help/?tab=bug">).
+The {{ site.cluster.nickname }} sysadmins do not fix problems in SBGrid software.
 </div>
 
 SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/)
@@ -61,9 +60,9 @@ Instructions". You may be able to use a version of the software
 compiled for "pre-Haswell" CPUs.)  Alternatively, if you want to use
 the newer software, you will need to make sure your SBGrid job ends up
 a on a node with a modern CPU. To do this, specify SGE option
-<code>"-l hostname="qb3-id*|qb3-as*|qb3-at*"</code>, a group of
-more modern nodes. (The pipe sign, <code>|</code> is used to indicate
-the <code>OR</code> operator in resource requests, telling your job to
+`"-l hostname="qb3-id*|qb3-as*|qb3-at*"`, a group of
+more modern nodes. (The pipe sign, `|`, is used to indicate
+the `OR` operator in resource requests, telling your job to
 run on any node whose hostname value matches the patterns given.)
 </div>
 

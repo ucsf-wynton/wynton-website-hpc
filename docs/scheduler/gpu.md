@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert" markdown="1">
-{{ site.cluster.name }} has {{ site.data.specs.gpu_nodes }} GPU nodes with a total of {{ site.data.specs.gpus }} GPUs available to all users. Among these, {{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} GPUs, were contributed by different research groups. On these nodes, GPU jobs from Wynton users not in the contributing lab are limited to 2 hours.  In contrast, <a href="{{ '/scheduler/queues.html' | relative_url }}">contributors are <em>not</em> limited to 2-hour GPU jobs on nodes they contributed</a>.  On the institutional GPU nodes (i.e. those not contribued by any particular research group), the standard Wynton job length limit of 2 weeks applies for all users.  There is also one GPU development node that is available to all users.
+{{ site.cluster.name }} has {{ site.data.specs.gpu_nodes }} GPU nodes with a total of {{ site.data.specs.gpus }} GPUs available to all users. Among these, {{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} GPUs, were contributed by different research groups. On these nodes, GPU jobs from Wynton users not in the contributing lab are limited to 2 hours.  In contrast, [contributors are _not_ limited to 2-hour GPU jobs on nodes they contributed]({{ '/scheduler/queues.html' | relative_url }}).  On the institutional GPU nodes (i.e. those not contribued by any particular research group), the standard Wynton job length limit of 2 weeks applies for all users.  There is also one GPU development node that is available to all users.
 </div>
 
 
@@ -62,7 +62,7 @@ export CUDA_VISIBLE_DEVICES=$SGE_GPU
 ```
 
 <div class="alert alert-warning" role="alert" markdown="1">
-To avoid overloading GPUs, it is important that each job use only the GPUs it was assigned, which is given by environment variable <code>SGE_GPU</code>.
+To avoid overloading GPUs, it is important that each job use only the GPUs it was assigned, which is given by environment variable `SGE_GPU`.
 </div>
 
 

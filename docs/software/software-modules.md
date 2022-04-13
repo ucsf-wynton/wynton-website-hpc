@@ -55,7 +55,7 @@ R scripting front-end version 4.0.3 (2020-10-10)
 ```
 
 <div class="alert alert-warning" role="alert" markdown="1">
-<strong>For jobs, software modules need to be loaded in the submitted job script - </strong> it is <em>not</em> enough to load them in the terminal before submitting the job to the scheduler.
+**For jobs, software modules need to be loaded in the submitted job script** - it is _not_ enough to load them in the terminal before submitting the job to the scheduler.
 </div>
 
 To disable ("unload") R, that is, remove it from the search path, do:
@@ -65,7 +65,7 @@ module unload r
 
 <br>
 <div class="alert alert-warning" role="alert" markdown="1">
-If you unload a <em>repository</em>, any of its software modules that are loaded will be <em>deactivated</em> - they remain listed but act as they never have been loaded.  If you then reload the repository, such software modules will be activated again.
+If you unload a _repository_, any of its software modules that are loaded will be _deactivated_ - they remain listed but act as they never have been loaded.  If you then reload the repository, such software modules will be activated again.
 </div>
 
 To see what software modules you have currently loaded, use:
@@ -108,7 +108,7 @@ fi
 
 <br>
 <div class="alert alert-info" role="alert" markdown="1">
-The names of software repositories are always capitilized (e.g. <code>CBI</code> and <code>Sali</code>) whereas the names of the software themselves are typically in all lower case (e.g. <code>r</code> and <code>bwa</code>).  This makes it easier to distiguish between repositories and software.
+The names of software repositories are always capitilized (e.g. `CBI` and `Sali`) whereas the names of the software themselves are typically in all lower case (e.g. `r` and `bwa`).  This makes it easier to distiguish between repositories and software.
 </div>
 
 

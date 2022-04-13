@@ -11,12 +11,12 @@ context:
 ## Change password
 
 <div class="alert alert-warning" role="alert" markdown="1">
-<strong>Please wait 5-10 minutes before attempting to login with your new password.</strong>  This is because it takes up to 10 minutes before your new password has propagated to all machines on the cluster.
+**Please wait 5-10 minutes before attempting to login with your new password.**  This is because it takes up to 10 minutes before your new password has propagated to all machines on the cluster.
 </div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
-<strong>We strongly recommend using a password vault application or website like the UCSF campus provided "Keeper Password Vault" to generate and store your passwords.
-  </strong>
+**We strongly recommend using a password vault application or website like the UCSF campus provided "Keeper Password Vault" to generate and store your passwords.
+  **
 </div>
 
 [UCSF Keeper Password Vault]
@@ -61,7 +61,7 @@ To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.c
 To reset your _{{ site.cluster.nickname }}_ password, contact the support staff at [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}).
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-<strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
+**Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
 [UCSF Keeper Password Vault]: https://it.ucsf.edu/service/keeper-password-vault

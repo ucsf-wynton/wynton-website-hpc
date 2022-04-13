@@ -81,7 +81,7 @@ To terminate the RStudio Server, start by exiting R by typing `quit()` at the R 
 ## RStudio Desktop over X11 Forwarding
 
 <div class="alert alert-warning" role="alert" markdown="1">
-It is <em>not</em> possible to run RStudio Desktop via X2Go, because X2Go does not support the modern graphical protocols that RStudio Desktop requires.
+It is _not_ possible to run RStudio Desktop via X2Go, because X2Go does not support the modern graphical protocols that RStudio Desktop requires.
 </div>
 
 To run the RStudio Desktop client, you must be logged via [SSH with X11 forwarding enabled]. Then load the `rstudio` (Desktop) module from the CBI stack and launch `rstudio`:

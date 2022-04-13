@@ -54,7 +54,7 @@ With the above setup, the following instructions opens a remote desktop window o
 
 
 <div class="alert alert-warning" role="alert" markdown="1">
-If you get a dialog saying '<strong>Error: Connection failed. bash: x2golistsessions: command not found</strong>', then you have missed configuring a 'Proxy server' in Steps 7-8 of Section 'Setup of the X2Go Client (once)'.
+If you get a dialog saying '**Error: Connection failed. bash: x2golistsessions: command not found**', then you have missed configuring a 'Proxy server' in Steps 7-8 of Section 'Setup of the X2Go Client (once)'.
 </div>
 
 
@@ -116,7 +116,7 @@ DISPLAY='localhost:20.0'
 By checking that `DISPLAY` is set, we know that X11 forwarding is in place.  If `DISPLAY` is empty, then make sure you have specified `-X` (or `-Y`).
 
 <div class="alert alert-warning" role="alert" markdown="1">
-If you are on macOS, you need to use <code>ssh -Y ...</code> instead of <code>ssh -X ...</code>. This is because macOS does not trust remote X servers by default.
+If you are on macOS, you need to use `ssh -Y ...` instead of `ssh -X ...`. This is because macOS does not trust remote X servers by default.
 </div>
 
 

@@ -80,7 +80,7 @@ A job that consumes more memory than requested may be terminated by the administ
 </div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
-Note that <code>-l mem_free=size</code> specifies <em>memory per slot</em>, not per job.
+Note that `-l mem_free=size` specifies _memory per slot_, not per job.
 </div>
 
 
@@ -112,11 +112,11 @@ qsub -cwd -l scratch=200G script.sh
 Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes]({{ '/using-local-scratch.html' | relative_url }}).
 
 <div class="alert alert-warning" role="alert" markdown="1">
-Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
+Please specify `-l scratch=size` when using local `/scratch` and please [cleanup afterward](using-local-scratch.html). This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
 </div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
-Note that <code>-l scratch=size</code> specifies <em>space per job</em>, not per slot.
+Note that `-l scratch=size` specifies _space per job_, not per slot.
 </div>
 
 
@@ -147,7 +147,7 @@ bwa aln -t "${NSLOTS:-1}" ...
 By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.
 
 <div class="alert alert-danger" role="alert" markdown="1">
-<strong>Do not use more cores than requested!</strong> - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using <code>NSLOTS</code> avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.  One such environment variable is OMP_NUM_THREADS.  For bash scripts, use <code>export OMP_NUM_THREADS=${NSLOTS:-1}</code>.
+**Do not use more cores than requested!** - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using `NSLOTS` avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.  One such environment variable is OMP_NUM_THREADS.  For bash scripts, use `export OMP_NUM_THREADS=${NSLOTS:-1}`.
 </div>
 
 
@@ -190,7 +190,7 @@ qsub -pe mpi_onehost 40 hybrid_mpi.sh
 _Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.
 
 <div class="alert alert-warning" role="alert" markdown="1">
-Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <code>NSLOTS</code> is not a multiple of eight, then the job will be stuck in the queue forever and never run.
+Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If `NSLOTS` is not a multiple of eight, then the job will be stuck in the queue forever and never run.
 </div>
 
 
