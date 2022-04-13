@@ -18,7 +18,7 @@ TO DO.
 ```
 
 
-## Install select software to conda environment
+## Install select software to Conda environment
 
 In this example, we install Jupyter Notebook to a new Conda environment that we call `myjupyter`.  We start by create the environment:
 
@@ -110,9 +110,9 @@ This can be useful when software tools have been updated this last time, or when
 
 ## Appendix
 
-### Benchmark staged conda environment
+### Benchmark staged Conda environment
 
-To illustrate the benefit of staging a conda environment to local disk, we will benchmark how long it takes for `jupyter --version` to complete.
+To illustrate the benefit of staging a Conda environment to local disk, we will benchmark how long it takes for `jupyter --version` to complete.
 
 Without staging to local disk, the call takes a whopping 24 seconds to return:
 
@@ -140,7 +140,7 @@ sys 0.09
 ```
 
 
-### Proof that a staged conda environment lives on local disk
+### Proof that a staged Conda environment lives on local disk
 
 If we run `jupyter --version` through `strace` to log _all_ files accessed;
 
@@ -198,7 +198,7 @@ and only _one_ toward the BeeGFS file system (`{{ site.path.global_root }}`):
 stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) = -1 ENOENT (No such file or directory)
 ```
 
-In other words, by staging the conda environment to local disk, we saved ourselves, and the system, 4,021 queries to the BeeGFS file system. And, this only for the very simple `jupyter --version` call.
+In other words, by staging the Conda environment to local disk, we saved ourselves, and the system, 4,021 queries to the BeeGFS file system. And, this only for the very simple `jupyter --version` call.
 
 
 [conda-state]: https://github.com/HenrikBengtsson/conda-stage/
