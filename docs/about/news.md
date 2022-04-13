@@ -1,8 +1,8 @@
 # News
 
-2021-12-17: <a href="{{ '/about/wynton-phi.html' | relative_url }}">Wynton PHI</a> is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
+2021-12-17: [Wynton PHI]({{ '/about/wynton-phi.html' | relative_url }}) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
 
-2021-10-01: Added four <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes</a> each with four Nvidia A40 GPUs (48 GiB GPU RAM) and a 32-core CPU and 512 GB RAM
+2021-10-01: Added four [communal GPU nodes]({{ '/about/specs.html' | relative_url }}) each with four Nvidia A40 GPUs (48 GiB GPU RAM) and a 32-core CPU and 512 GB RAM
 
 2021-09-22: Added 2,048 cores (+20%) via 16 huge-memory nodes (128 cores and 1 TiB of RAM)
 
@@ -10,13 +10,13 @@
 
 2021-05-28: Development node dev1 has been upgraded to a machine with 72 CPU cores and 384 GiB RAM (was 8 cores and 16 GiB RAM)
 
-2021-04-05: We have improved the purchasing and accounting workflow for <a href="{{ '/support/pricing-storage.html' | relative_url }}">lab storage orders</a> resulting in shorter waiting times.
+2021-04-05: We have improved the purchasing and accounting workflow for [lab storage orders]({{ '/support/pricing-storage.html' | relative_url }}) resulting in shorter waiting times.
 
 2021-03-12: Zsh is now also available in addition to the officially supported Bash, our default shell, Csh, and Tcsh.
 
-2021-01-25: We now offer weekly <a href="{{ '/support/index.html' | relative_url }}">Office Hours</a>.
+2021-01-25: We now offer weekly [Office Hours]({{ '/support/index.html' | relative_url }}).
 
-2020-10-29: Access to Wynton's login and data-transfer nodes <a href="{{ '/get-started/duo-signup.html' | relative_url }}">requires 2FA authentication</a>.
+2020-10-29: Access to Wynton's login and data-transfer nodes [requires 2FA authentication]({{ '/get-started/duo-signup.html' | relative_url }}).
 
 2020-08-21: Deployed four BeeGFS storage bricks for the group storage `/wynton/group` to 5.6 PB (was 3.8 PB).  Groups who purchased storage have had their new group quotas updated.
 
@@ -26,37 +26,37 @@
 
 2020-05-22: Added 2,016 cores (+27%) via 48 standard nodes (36 cores and 384 GiB of RAM), 4 high-memory nodes (36 cores and 756 GiB of RAM), and 4 huge-memory nodes (36 cores and 1.5 TiB of RAM).
 
-2020-04-14: Progress until the next round of storage purchase can be found on <a href="{{ '/about/pricing-storage.html' | relative_url }}">About -> Storage Pricing</a>.
+2020-04-14: Progress until the next round of storage purchase can be found on [About -> Storage Pricing]({{ '/about/pricing-storage.html' | relative_url }}).
 
-2020-04-03: Added support for <a href="{{ '/transfers/globus.html' | relative_url }}">file transfers via the Globus service</a>.
+2020-04-03: Added support for [file transfers via the Globus service]({{ '/transfers/globus.html' | relative_url }}).
 
 2020-02-26: Website moved to <{{ site.organization.url }}/hpc/>.
 
 2020-02-05: The QB3-legacy NetApp storage (`/netapp/`), deprecated with a deadline on December 2019, crashed on 2020-02-05 and was declared non-recoverable without further resource/funding.
 
-2019-12-13: Status page now include <a href="{{ '/status/index.html' | relative_url }}">GPU queue metrics</a>.
+2019-12-13: Status page now include [GPU queue metrics]({{ '/status/index.html' | relative_url }}).
 
-2019-11-12: Added support for <a href="{{ '/scheduler/email-notifications.html' | relative_url }}">email notifications</a> when a job starts running or ends.
+2019-11-12: Added support for [email notifications]({{ '/scheduler/email-notifications.html' | relative_url }}) when a job starts running or ends.
 
-2019-09-20: New <a href="{{ '/scheduler/queues.html' | relative_url }}">GPU policy</a> in place. All GPU nodes, communal and contributed, are now available to all users. Run time is two weeks, unless for jobs running on a contributed nodes that was not contributed by you in which case the run time is limited to 2 hours.
+2019-09-20: New [GPU policy]({{ '/scheduler/queues.html' | relative_url }}) in place. All GPU nodes, communal and contributed, are now available to all users. Run time is two weeks, unless for jobs running on a contributed nodes that was not contributed by you in which case the run time is limited to 2 hours.
 
-2019-09-13: Added another three <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes with a total of 12 GPUs</a>.
+2019-09-13: Added another three [communal GPU nodes with a total of 12 GPUs]({{ '/about/specs.html' | relative_url }}).
 
-2019-09-12 Added a second <a href="{{ '/about/specs.html' | relative_url }}">data transfer node</a>.
+2019-09-12 Added a second [data transfer node]({{ '/about/specs.html' | relative_url }}).
 
 2019-08-15 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch have been removed - use `/wynton/scratch` instead.
 
 2019-07-27 Legacy NetApp storage locations `/scrapp` and `/scrapp2` used for global scratch are now deprecated - use `/wynton/scratch` instead.  The deprecated mounts will become read-only on 2019-08-01 and removed on 2019-08-09.
 
-2019-06-13: <a href="{{ '/software/software-repositories.html' | relative_url }}">Contributed Software Repositories</a> are now available and documented.
+2019-06-13: [Contributed Software Repositories]({{ '/software/software-repositories.html' | relative_url }}) are now available and documented.
 
-2019-04-30: <a href="{{ '/about/shares.html' | relative_url }}">Contributing Member Shares</a> are now explained and listed online.
+2019-04-30: [Contributing Member Shares]({{ '/about/shares.html' | relative_url }}) are now explained and listed online.
 
 2019-04-15: Added a dedicated GPU development node (after having been in beta testing for several months).
 
 2019-04-12: Added another two communal GPU nodes available to all users.  There are now four communal GPU nodes with a total of 12 GPUs.
 
-2019-04-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">24 nodes (396 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-04-12: Migrated another [24 nodes (396 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
 2019-04-09: Added the first two communal GPU nodes available to all users.
 
@@ -64,35 +64,35 @@
 
 2019-03-17: The majority (136 nodes; 3680 cores) of the QB3 nodes has now been migrated to {{ site.cluster.name }}.
 
-2019-03-15: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">8 nodes (224 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-03-15: Migrated another [8 nodes (224 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
-2019-03-12: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">19 nodes (532 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-03-12: Migrated another [19 nodes (532 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
-2019-03-08: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">10 nodes (264 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-03-08: Migrated another [10 nodes (264 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
-2019-03-07: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">11 nodes (292 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-03-07: Migrated another [11 nodes (292 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
-2019-03-06: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-03-06: Migrated another [15 nodes (392 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
-2019-03-05: Migrated another <a href="{{ '/about/specs.html' | relative_url }}">15 nodes (392 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-03-05: Migrated another [15 nodes (392 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
-2019-03-01: Migrated <a href="{{ '/about/specs.html' | relative_url }}">48 nodes (1344 cores)</a> from QB3 to {{ site.cluster.name }}.
+2019-03-01: Migrated [48 nodes (1344 cores)]({{ '/about/specs.html' | relative_url }}) from QB3 to {{ site.cluster.name }}.
 
-2019-02-14: Added <a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">SGE resource `eth_speed`</a> for requesting minimum network speeds.
+2019-02-14: Added [SGE resource `eth_speed`]({{ '/scheduler/submit-jobs.html' | relative_url }}) for requesting minimum network speeds.
 
-2019-01-31: Added two more <a href="{{ '/about/specs.html' | relative_url }}">development nodes</a>.
+2019-01-31: Added two more [development nodes]({{ '/about/specs.html' | relative_url }}).
 
-2019-01-18: It is now possible to <a href="{{ '/about/pricing-storage.html' | relative_url }}">purchase additional storage</a>.
+2019-01-18: It is now possible to [purchase additional storage]({{ '/about/pricing-storage.html' | relative_url }}).
 
-2018-11-05: Nightly cleanup of <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">scratch spaces</a> now respects also when files were "added" - not just when they were last modified.  This fixes the problem where files with old timestamps were extracted from an archive just to be wiped by the next nightly cleanup.
+2018-11-05: Nightly cleanup of [scratch spaces]({{ '/about/specs.html#scratch-storage' | relative_url }}) now respects also when files were "added" - not just when they were last modified.  This fixes the problem where files with old timestamps were extracted from an archive just to be wiped by the next nightly cleanup.
 
-2018-10-02: Added a <a href="{{ '/about/roadmap.html' | relative_url }}">Roadmap</a>.
+2018-10-02: Added a [Roadmap].
 
-2018-08-20: <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">Global scratch storage</a> on BeeGFS Parallel File System is live - validation and testing completed.
+2018-08-20: [Global scratch storage]({{ '/about/specs.html#scratch-storage' | relative_url }}) on BeeGFS Parallel File System is live - validation and testing completed.
 
-2018-08-02: Added a dedicate <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">10 Gbps transfer node</a> for faster file transfers in to and out from {{ site.cluster.nickname }}.
+2018-08-02: Added a dedicate [10 Gbps transfer node]({{ '/about/specs.html#data-transfer-nodes' | relative_url }}) for faster file transfers in to and out from {{ site.cluster.nickname }}.
 
-2018-07-25: <a href="{{ '/about/specs.html#scratch-storage' | relative_url }}">BeeGFS Parallel File System/Storage</a>: Validation completed - user beta testing started.
+2018-07-25: [BeeGFS Parallel File System/Storage]({{ '/about/specs.html#scratch-storage' | relative_url }}): Validation completed - user beta testing started.
 
 2017-09-07: {{ site.cluster.name }} is live.
 
