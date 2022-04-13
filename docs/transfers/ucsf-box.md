@@ -5,11 +5,11 @@ context:
 
 # Accessing UCSF Box
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 Although there is no hard quota in place on UCSF Box, the <strong>storage is limited</strong> and not really meant to store large data sets. There are reports that the UCSF Box maintainers have started to reach out to users who misuse it to store huge amounts of data. Please use it responsibly.
 </div>
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 <strong>Below instructions work on <emph>data transfer nodes</emph> only.</strong> Attempts to use them on <emph>development nodes</emph> will result in "Access failed: 401 Unauthorized" errors.
 </div>
 
@@ -45,7 +45,7 @@ lftp {{ site.user.email }}@ftp.box.com:~> exit
 [alice@{{ site.transfer.name }} ~]$ 
 ```
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 <span>🛑</span> <strong>Never specify your password via a command-line argument!  If you do, it will be visible to all other users via commands such as <code>ps</code> and <code>htop</code>.</strong>
 </div>
 
@@ -60,7 +60,7 @@ machine ftp.box.com
         password AliceSecretPwd2017
 ```
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 <span>🛑</span> <strong>The <code>~/.netrc</code> file must be kept private, otherwise its content could be readable to other users.</strong>
 </div>
 

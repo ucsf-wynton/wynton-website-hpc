@@ -20,7 +20,7 @@ The most common way of running compute tasks on the {{ site.cluster.name }} clus
 The {{ site.cluster.name }} cluster uses [Son of Grid Engine] (SGE) as its scheduler.  SGE provides command `qsub` to submit a script ("job") and command `qstat` to check the status of a job.
 
 
-<div class="alert alert-info" role="alert" style="margin-top: 3ex">
+<div class="alert alert-info" role="alert" style="margin-top: 3ex" markdown="1">
 Further information with detailed examples on job submissions can be found on separate pages under the 'Scheduler' menu.
 </div>
 

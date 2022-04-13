@@ -1,4 +1,4 @@
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-danger" role="alert" markdown="1">
 2018-10-06: This is a mockup page with mockup information.
 </div>
 

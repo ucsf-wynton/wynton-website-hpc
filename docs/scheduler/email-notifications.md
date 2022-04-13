@@ -1,4 +1,4 @@
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 <strong>Do not request email notifications for array jobs!</strong>  If done, there will be email messages sent for <em>every single task</em> in the job array.
 </div>
 
@@ -43,7 +43,7 @@ To avoid having to specify the email address in each `qsub` call, or as an SGE d
 
 The advantage of specifying the recipient in `~/.sge_request`, instead of in the job script, is that the job script does not carry your personal email address.  If the job script has your email address, then it will be you that get email notifications if someone else copy your script as-is and runs it on the cluster (or on other SGE clusters).
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 <strong>Please do not specify <code>-m bea</code> in <code>~/.sge_request</code></strong> to make it the default for <em>all</em> of your jobs. If done, you might end up producing thousands of email messages when you submit array jobs.
 </div>
 

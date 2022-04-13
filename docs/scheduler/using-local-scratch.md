@@ -4,7 +4,7 @@ All nodes (compute and development) have their own locally storage mounted as `/
 
 ## Instructions
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 2019-09-09: Currently <code>TMPDIR</code> is only set automatically for job scripts running on the compute nodes.  On development nodes, <code>TMPDIR</code> is <em>not</em> set - <strike>This is likely to change, but in the meanwhile,</strike> you need to set <code>TMPDIR</code> in your script in those cases when it is not set. See below for an example.
 </div>
 

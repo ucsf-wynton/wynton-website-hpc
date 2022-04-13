@@ -75,11 +75,11 @@ The scheduler will launch this jobs on the first available compute node with tha
 
 _TIPS_: Add `qstat -j $JOB_ID` to the end of your script to find out how much memory and CPU time your job needed.  See [Job Summary] page for more details.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 A job that consumes more memory than requested may be terminated by the administrators and in the future possibly automatically by the scheduler.  Because of this, you may request a bit more memory in order to give your job some leeway.
 </div>
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 Note that <code>-l mem_free=size</code> specifies <em>memory per slot</em>, not per job.
 </div>
 
@@ -87,7 +87,7 @@ Note that <code>-l mem_free=size</code> specifies <em>memory per slot</em>, not 
 
 ## Specifying (maximum) run time
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 Specifying the run time will shorten the queuing time - significantly so for short running jobs.
 </div>
 
@@ -96,7 +96,7 @@ By specifying the how long each job will take, the better the scheduler can mana
 qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
 ```
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 If not specified, the default run time is 10 minutes.  A job that runs longer than the requested run time will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
 </div>
 
@@ -111,11 +111,11 @@ qsub -cwd -l scratch=200G script.sh
 
 Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes]({{ '/using-local-scratch.html' | relative_url }}).
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 Please specify <code>-l scratch=size</code> when using local <code>/scratch</code> and please <a href="using-local-scratch.html">cleanup afterward</a>.  This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
 </div>
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 Note that <code>-l scratch=size</code> specifies <em>space per job</em>, not per slot.
 </div>
 
@@ -146,7 +146,7 @@ bwa aln -t "${NSLOTS:-1}" ...
 ```
 By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-danger" role="alert" markdown="1">
 <strong>Do not use more cores than requested!</strong> - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using <code>NSLOTS</code> avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.  One such environment variable is OMP_NUM_THREADS.  For bash scripts, use <code>export OMP_NUM_THREADS=${NSLOTS:-1}</code>.
 </div>
 
@@ -189,7 +189,7 @@ qsub -pe mpi_onehost 40 hybrid_mpi.sh
 
 _Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If <code>NSLOTS</code> is not a multiple of eight, then the job will be stuck in the queue forever and never run.
 </div>
 

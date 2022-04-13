@@ -42,6 +42,6 @@ This Bash statement (i) checks if the file `/etc/bashrc` exists, and (ii) if it 
 
 If we would look at the `/etc/bashrc` file, we would find a lot of things but lets not go into the details.  The only thing we need to know is that `. /etc/bashrc` will bring in all of the essential, central configuration that the system administrators have setup for us.
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 It is critical that your <code>~/.bashrc</code> sources the <code>/etc/bashrc</code> file. Do <em>not</em> remove the if-then statement that sources that file!
 </div>

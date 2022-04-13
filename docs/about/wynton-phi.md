@@ -12,7 +12,7 @@ Please note that Wynton PHI employs a shared risk model that relies on **individ
 
 ## Getting a Wynton PHI account
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
 2021-12-17: Contrary to Wynton HPC, we can currently onboard only UCSF staff and UCSF affiliates who have a UCSF ID on Wynton PHI. We are working on allowing also non-UCSF research collaborators to get a Wynton PHI account with approval from the PHI project's PI.
 </div>
 

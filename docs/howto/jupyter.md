@@ -19,7 +19,7 @@ If using an Anaconda/Miniconda environment, using the `conda` package manager to
 
 ```
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 Note: During startup Python does a lot of small file operations locating all the required files. 
 
 The system version Python is installed on the local filesystem on Wynton nodes and should have a faster startup time. 
@@ -94,7 +94,7 @@ An alternative method to run a Jupyter Notebook on one of the development nodes 
 
 See the ['Graphical User Interfaces (GUI)']({{ '/howto/gui-x11fwd.html' | relative_url }}) for how to setup and use X2Go via one of the {{ site.cluster.name }} development nodes.
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 If you use Python via your own <em>Anaconda</em> installation, instead of the Python version provided by Wynton, you can launch a Jupyter Notebook using the <code>jupyter notebook</code> command from the terminal connected by X2Go, which will also launch the web browser.
 </div>
 

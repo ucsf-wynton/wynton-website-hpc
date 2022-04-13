@@ -1,4 +1,4 @@
-<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;">
+<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
 2021-04-05: We have improved the purchasing and accounting workflow for lab storage orders.  This means that we can allocate lab storage much sooner than what was possible in the past.
 </div>
 

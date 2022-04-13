@@ -64,7 +64,7 @@ In order to authenticate via 2FA, you will first have to register your Duo 2FA s
 _Comment_: If you are asked to 'Please contact your help or support desk' during the Duo 2FA registration, please contact the [{{ site.cluster.name }} support staff] (do _not_ contact the UCSF IT Service Desk).
 
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 We recommend that you read through the below instructions before starting the registration. <strong>You can only register once and you cannot reconfigure your 2FA setup afterwards</strong>.  The only way to update the settings is to contact the {{ site.cluster.name }} support staff to reset your 2FA setup.
 </div>
 

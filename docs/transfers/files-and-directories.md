@@ -3,7 +3,7 @@ context:
   - xfer
 ---
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 To set up password-free file transfers, see <a href="{{ '/howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.  Then there is also no need to specify your cluster username.
 </div>
 
@@ -14,12 +14,12 @@ For _storage_ mounted _directly_ on the {{ site.cluster.name }} cluster, files c
 For _non-mounted storage_, files may be transferred to and from the cluster via secure copying, e.g. `scp` and `sftp`, which can be utilized via `rsync`.
 For _file downloads_ from online resources, tools such as `curl`, `wget`, and `rsync` may be used.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 <a href="{{ '/about/specs.html#compute-nodes' | relative_url }}">Compute nodes</a> have no internet access, i.e. they cannot be used for file transfers other than between mount points.  Although file transfers can also be done via the login nodes, it is recommended to use one of the <a href="{{ '/about/specs.html#data-transfer-nodes' | relative_url }}">dedicated data transfer nodes</a>, which provides ten times faster transfer rates.
 </div>
 
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 TIPS: Try to use <code>scp -c aes128-gcm@openssh.com ...</code> to speed up the transfer rates.  There can be a fair bit of CPU overhead when SCP encrypts the data before transferring it - this option makes it use a faster encryption cipher.
 </div>
 
@@ -86,7 +86,7 @@ _Note_: Don't forget that period (`.`) at the end - it indicates copy [the folde
 
 In addition to using command-line file transfer clients, some users might use graphical desktop clients to perform file transfers. 
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 Wynton requires multifactor authentication so there are a couple additional configuration steps that might be necessary.
 </div>
 

@@ -1,6 +1,6 @@
 # Work with Python
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 If possible, we recommend to be explicit about which version to use by specifying either <code>python2</code> and <code>python3</code> in your scripts.
 </div>
 
@@ -52,7 +52,7 @@ To see all Python packages that you have installed globally, use `python3 -m pip
 
 ### 2. Installing to a virtual environment (aka "virtualenv")
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 Virtual environment are not used just on computer clusters - many Python users and developers choose to use virtual environment on their local computers whenever they work in Python.
 </div>
 
@@ -110,7 +110,7 @@ created virtual environment CPython3.6.8.final.0-64 in 5978ms
   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
 ```
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 Always remember to specify option <code>-p python3</code> or <code>-p python2</code> when you call <code>virtualenv</code>.  It makes sure that the intended version of Python is used in the virtual environment when <code>python</code> is called.
 </div>
 
@@ -216,7 +216,7 @@ Required-by:
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 When submitting a job to the scheduler, make sure the job script loads all required modules and activates the virtual environment.
 </div>
 

@@ -1,4 +1,4 @@
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-danger" role="alert" markdown="1">
 <strong>This is a mockup page!</strong>
 </div>
 

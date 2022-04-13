@@ -53,7 +53,7 @@ With the above setup, the following instructions opens a remote desktop window o
 9. Wait! It will take a long time before the MATE window to appear, looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would do on your regular desktop.
 
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 If you get a dialog saying '<strong>Error: Connection failed. bash: x2golistsessions: command not found</strong>', then you have missed configuring a 'Proxy server' in Steps 7-8 of Section 'Setup of the X2Go Client (once)'.
 </div>
 
@@ -115,7 +115,7 @@ DISPLAY='localhost:20.0'
 
 By checking that `DISPLAY` is set, we know that X11 forwarding is in place.  If `DISPLAY` is empty, then make sure you have specified `-X` (or `-Y`).
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 If you are on macOS, you need to use <code>ssh -Y ...</code> instead of <code>ssh -X ...</code>. This is because macOS does not trust remote X servers by default.
 </div>
 

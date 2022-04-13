@@ -1,10 +1,10 @@
 # SBGrid Software Collection
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 Access to SBGrid software on {{ site.cluster.name }} is limited to
 paying members of the SBGrid Consortium.  </div>
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 For bug reports related to SBGrid software, please use
 <a href="https://sbgrid.org/help/?tab=bug">SBGrid's Report Software Bug
 form</a>.
@@ -43,12 +43,12 @@ think this is a mistake, please [contact us] so we can add you.
 
 ## Enable SBGrid
 
-<div class="alert alert-info" role="alert" style="margin-top: 3ex">
+<div class="alert alert-info" role="alert" style="margin-top: 3ex" markdown="1">
 2021-05-28: All our development nodes, including the GPU one, have
 CPUs that are compatible with the SBGrid software tools.
 </div>
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 <span>⚠️</span> If you are running SBGrid software and receive an error
 message regarding "Illegal Instructions", this means that the version
 of the software you are trying to run requires a CPU feature that some

@@ -4,11 +4,11 @@ context:
   - login
 ---
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 <strong>Access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).</strong>
 If you are on the UCSF VPN, you have already authenticated and no further 2FA is required.
 In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See <a href="{{ '/get-started/duo-signup.html' | relative_url }}">Two-Factor Authentication for SSH</a> for instructions.
@@ -37,7 +37,7 @@ Another alternative, which some might find easier, is to connect to the cluster 
 
 ## Instructions
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 <strong>If this is the first time you access {{ site.cluster.name }} and you are outside of the UCSF network, we recommend that you first log onto the UCSF VPN before continuing below.</strong>  This avoids having to deal with {{ site.cluster.nickname }}'s two-factor authentication that is otherwise required when accessing the cluster from outside of the UCSF.  Note that this advice is just to get you started.  In the long run, you do not want to be on the very bandwidth-limited UCSF VPN if you are transferring large amounts of files to and from Wynton to your local machine.
 </div>
 
@@ -65,7 +65,7 @@ alice1@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 
 If you get `Permission denied, please try again.` when you enter your password, make sure you use the correct {{ site.cluster.name }} username (case sensitive) and the correct password.
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert" markdown="1">
 It is possible to set up password-less authentication via a public-private SSH key pair.  For details, see the how-to page <a href="{{ 'howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.
 </div>
 
@@ -87,7 +87,7 @@ Connection to {{ site.login.hostname }} closed.
 
 An alternative is to press <kbd>Ctrl-D</kbd> (sends "End-Of-File" [EOF]) at the command-line prompt.
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 Any shell session that has been idle for more than eight hours will timeout and exit automatically.
 </div>
 

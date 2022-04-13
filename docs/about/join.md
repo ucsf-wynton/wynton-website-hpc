@@ -28,7 +28,7 @@ To apply for an account on the {{ site.cluster.name }} cluster, please follow th
 
 _Note: The form linked above is only available to UCSF staff, students, postdocs, and faculty. If you are an non-UCSF affiliate who does not have a UCSF Guest Account, ([Request a UCSF Guest Account](https://wiki.library.ucsf.edu/display/IAM/Guest+Accounts)), you will need to have the UCSF staff, student, postdoc, or PI you are associated with request the account for you._
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 <strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to [contact us] if you don't know how to do this - we're here to help.
 </div>
 
