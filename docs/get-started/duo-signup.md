@@ -65,7 +65,7 @@ _Comment_: If you are asked to 'Please contact your help or support desk' during
 
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-We recommend that you read through the below instructions before starting the registration. <strong>You can only register once and you cannot reconfigure your 2FA setup afterwards</strong>.  The only way to update the settings is to contact the {{ site.cluster.name }} support staff to reset your 2FA setup.
+We recommend that you read through the below instructions before starting the registration. **You can only register once and you cannot reconfigure your 2FA setup afterwards**.  The only way to update the settings is to contact the {{ site.cluster.name }} support staff to reset your 2FA setup.
 </div>
 
 

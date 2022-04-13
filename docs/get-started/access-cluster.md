@@ -5,13 +5,13 @@ context:
 ---
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-<strong>Account are personal and login credentials must not be shared with others</strong>. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
+**Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-<strong>Access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).</strong>
+**Access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).**
 If you are on the UCSF VPN, you have already authenticated and no further 2FA is required.
-In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See <a href="{{ '/get-started/duo-signup.html' | relative_url }}">Two-Factor Authentication for SSH</a> for instructions.
+In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See [Two-Factor Authentication for SSH]({{ '/get-started/duo-signup.html' | relative_url }}) for instructions.
 </div>
 
 <!-- markdownlint-disable-file MD025 -->
@@ -31,14 +31,14 @@ The instructions below requires:
 
 Users on Linux and macOS have an SSH client built-in, which is available from the terminal as `ssh`.  Users on Microsoft Windows 10 or newer also have a built-in SSH client, which is available from the command line as `ssh`.
 
-_Microsoft Windows 8 or older:_ If you are on Windows 8 or older, you do _not_ have a built-in SSH client.  If so, we recommend to install the <a href="http://www.putty.org/">PuTTY</a> SSH client, which has slightly different command-line interface but it has full SSH support.  Please consult the PuTTY documentation and user forums for further instructions.
-Another alternative, which some might find easier, is to connect to the cluster using the <a href="{{ 'howto/gui-x11fwd.html' | relative_url }}">X2Go</a> software.
+_Microsoft Windows 8 or older:_ If you are on Windows 8 or older, you do _not_ have a built-in SSH client.  If so, we recommend to install the [PuTTY] SSH client, which has slightly different command-line interface but it has full SSH support.  Please consult the PuTTY documentation and user forums for further instructions.
+Another alternative, which some might find easier, is to connect to the cluster using the [X2Go] software.
 
 
 ## Instructions
 
 <div class="alert alert-info" role="alert" markdown="1">
-<strong>If this is the first time you access {{ site.cluster.name }} and you are outside of the UCSF network, we recommend that you first log onto the UCSF VPN before continuing below.</strong>  This avoids having to deal with {{ site.cluster.nickname }}'s two-factor authentication that is otherwise required when accessing the cluster from outside of the UCSF.  Note that this advice is just to get you started.  In the long run, you do not want to be on the very bandwidth-limited UCSF VPN if you are transferring large amounts of files to and from Wynton to your local machine.
+**If this is the first time you access {{ site.cluster.name }} and you are outside of the UCSF network, we recommend that you first log onto the UCSF VPN before continuing below.**  This avoids having to deal with {{ site.cluster.nickname }}'s two-factor authentication that is otherwise required when accessing the cluster from outside of the UCSF.  Note that this advice is just to get you started.  In the long run, you do not want to be on the very bandwidth-limited UCSF VPN if you are transferring large amounts of files to and from Wynton to your local machine.
 </div>
 
 To log into the cluster, assuming your user name on {{ site.cluster.name }} is `alice` (case sensitive), do the following:
@@ -66,7 +66,7 @@ alice1@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 If you get `Permission denied, please try again.` when you enter your password, make sure you use the correct {{ site.cluster.name }} username (case sensitive) and the correct password.
 
 <div class="alert alert-info" role="alert" markdown="1">
-It is possible to set up password-less authentication via a public-private SSH key pair.  For details, see the how-to page <a href="{{ 'howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a>.
+It is possible to set up password-less authentication via a public-private SSH key pair.  For details, see the how-to page [Log in without Password].
 </div>
 
 
@@ -92,4 +92,7 @@ Any shell session that has been idle for more than eight hours will timeout and 
 </div>
 
 
+[PuTTY]: https://www.putty.org/
 [development node]: {{ '/get-started/development-prototyping.html' | relative_url }}
+[X2Go]: {{ 'howto/gui-x11fwd.html' | relative_url }}
+[Log in without Password]: {{ 'howto/log-in-without-pwd.html' | relative_url }}
