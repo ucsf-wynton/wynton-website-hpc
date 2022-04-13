@@ -16,15 +16,12 @@ If using an Anaconda/Miniconda environment, using the `conda` package manager to
 
 ```sh
 [alice@dev3 ~]$ conda install -c conda-forge notebook
-
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-Note: During startup Python does a lot of small file operations locating all the required files. 
+Note: During startup, Python does a lot of small file operations locating all the required files. The system version Python is installed on the local filesystem on Wynton nodes and should have a faster startup time. 
 
-The system version Python is installed on the local filesystem on Wynton nodes and should have a faster startup time. 
-
-For Anaconda and conda environments installed in a home directory both the Python interpreter and all of it's modules reside on the shared parallel file system.  The operations to look up the needed files are metadata heavy and can strain the parallel file system resulting in slower startup performance for the script. In particular if the script is a batch job executing on many compute nodes, the performance impact has the potential to slow operations down for all users. 
+In contrast, for Anaconda and conda environments installed in a home directory, both the Python interpreter and all of it's modules reside on the shared parallel file system.  The operations to look up the needed files are metadata heavy and can strain the parallel file system, resulting in slower startup performance for the script. In particular, if the script is a batch job executing on many compute nodes, the performance impact has the potential to slow operations down for all users. 
 </div>
 
 ## Connect to Jupyter Notebook - using SSH port forwarding 

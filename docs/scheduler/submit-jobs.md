@@ -147,7 +147,7 @@ bwa aln -t "${NSLOTS:-1}" ...
 By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.
 
 <div class="alert alert-danger" role="alert" markdown="1">
-**Do not use more cores than requested!** - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using `NSLOTS` avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.  One such environment variable is OMP_NUM_THREADS.  For bash scripts, use `export OMP_NUM_THREADS=${NSLOTS:-1}`.
+**Do not use more cores than requested!** - a common reason for compute nodes being clogged up and jobs running slowly.  A typically mistake is to hard-code the number of cores in the script and then request a different number when submitting the job - using `NSLOTS` avoids this problem.  Another problem is software that by default use all of the machine's cores - make sure to control for this, e.g. use dedicated command-line option or environment variable for that software.  One such environment variable is `OMP_NUM_THREADS`.  For bash scripts, use `export OMP_NUM_THREADS=${NSLOTS:-1}`.
 </div>
 
 
