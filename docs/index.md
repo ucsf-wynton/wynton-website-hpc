@@ -1,15 +1,19 @@
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" role="alert" markdown="1">
 2020-03-16: We will do our best to keep the {{ site.cluster.name }} environment up and running within the restrictions imposed by UCSF and local governments. Minor issues (like node crashes) will be dealt with at a later date.  Major issues will be dealt with on a best-effort basis and may result in longer than normal outages (especially if they require someone to be on site). Email response times are likely to be slower, as well, as we all struggle to adapt to the impacts of COVID-19.
 </div>
 
-<div class="alert alert-info" role="alert">
-<strong>NEWS</strong>: (<em>For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page</em>)<br/>
-2021-12-17: <a href="{{ '/about/wynton-phi.html' | relative_url }}">Wynton PHI is now available to all UCSF researchers and affiliates to process computing jobs involving PHI</a><br/>
-2021-10-01: Added four <a href="{{ '/about/specs.html' | relative_url }}">communal GPU nodes</a> each with four Nvidia A40 GPUs (48 GiB GPU RAM) and a 32-core CPU and 512 GB RAM<br/>
-2021-09-22: Added 2,048 cores (+20%) via 16 huge-memory nodes (128 cores and 1 TiB of RAM)<br/>
-2021-05-28: GPU development node gpudev1 has been upgraded to a machine with 32 CPU cores, 128 GiB RAM, and NVIDIA Tesla K80 (was 12 cores, 48 GiB RAM, and GeForce GTX 980 Ti)<br/>
-2021-05-28: Development node dev1 has been upgraded to a machine with 72 CPU cores and 384 GiB RAM (was 8 cores and 16 GiB RAM).<br/>
-<a href="{{ '/about/news.html' | relative_url }}">More ...</a>
+<div class="alert alert-info" role="alert" markdown="1">
+**NEWS**: (_For upcoming and current incidents, see the <a href="{{ '/status/index.html' | relative_url }}">Status</a> page_)
+
+2021-12-17: [Wynton PHI]({{ '/about/wynton-phi.html' | relative_url }}) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
+
+2021-10-01: Added four [communal GPU nodes]({{ '/about/specs.html' | relative_url }}) each with four Nvidia A40 GPUs (48 GiB GPU RAM) and a 32-core CPU and 512 GB RAM
+
+2021-09-22: Added 2,048 cores (+20%) via 16 huge-memory nodes (128 cores and 1 TiB of RAM)
+
+2021-05-28: GPU development node gpudev1 has been upgraded to a machine with 32 CPU cores, 128 GiB RAM, and Nvidia Tesla K80 (was 12 cores, 48 GiB RAM, and GeForce GTX 980 Ti)
+
+2021-05-28: Development node dev1 has been upgraded to a machine with 72 CPU cores and 384 GiB RAM (was 8 cores and 16 GiB RAM)
 </div>
 
 
