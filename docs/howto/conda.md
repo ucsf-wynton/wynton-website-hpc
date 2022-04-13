@@ -156,6 +156,7 @@ Packing environment at '{{ site.user.home }}/.conda/envs/myproject' to 'myprojec
 [alice@{{ site.devel.name }} ~]$ conda-unpack
 ```
 
+TODO: Can we safely do `chmod -R u-w "$target"` at this point? That would prevent any attempts to install additional software to this temporary, transient conda environment.
 
 TODO: Write a small tool that does all of the above in one step, e.g.
 
