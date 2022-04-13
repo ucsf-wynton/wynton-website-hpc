@@ -2,269 +2,152 @@
 2022-04-13: This is just a draft! The below instructions are currently _not_ ready for users to try out. Stay tuned!
 </div>
 
+<div class="alert alert-warning" role="alert" markdown="1">
+Please, **always stage your Conda environment to local disk!** Your software and job scripts will run much faster this way, and it will significantly decrease the load on the BeeGFS file system. It is a win-win for everyone. See Appendix below for some benchmark results.
+</div>
+
 
 # Work with Conda
 
-We will use [conda-pack] to deploy our conda environments to local `/scratch` for maximum performance by minimizing the need for the conda software to use the BeeGFS parallel file system. This approach is a win-win for everyone on the cluster, because the overall load on the shared parallel file system is kept low.
+TO DO.
 
-
-## Set up a conda environment with select software
-
-### Step 1. Create a core environment
+## Do not activate Conda by default (recommended)
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
-[alice@{{ site.devel.name }} ~]$ conda create --name=myproject
-...
-[alice@{{ site.devel.name }} ~]$ conda activate myproject
-[alice@{{ site.devel.name }} ~]$ conda install conda-forge::conda-pack
-...
+[alice@dev2 ~]$ conda config --set auto_activate_base false
 ```
 
-### Step 2. Install select software tools
 
-In this example, we install Jupyter Notebook to our conda `myproject` environment:
+## Install select software to conda environment
 
-```r
+In this example, we install Jupyter Notebook to a new Conda environment that we call `myjupyter`.  We start by create the environment:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda create --name=myjupyter
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ command -v python
+{{ site.user.home }}/miniconda3/envs/myjupyter/bin/python
+```
+
+Next, we install Jupyter Notebook to this environment:
+
+```sh
 [alice@{{ site.devel.name }} ~]$ conda install conda-forge::notebook
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
 
-### Step 3. Inspect content
-
-```sh
-[alice@{{ site.devel.name }} ~]$ conda list
-# packages in environment at {{ site.user.home }}/.conda/envs/myproject:
-#
-# Name                    Version                   Build  Channel
-_libgcc_mutex             0.1                        main  
-_openmp_mutex             4.5                       1_gnu  
-argon2-cffi               21.3.0             pyhd3eb1b0_0  
-argon2-cffi-bindings      21.2.0           py39h7f8727e_0  
-asttokens                 2.0.5              pyhd3eb1b0_0  
-attrs                     21.4.0             pyhd3eb1b0_0  
-backcall                  0.2.0              pyhd3eb1b0_0  
-beautifulsoup4            4.10.0             pyh06a4308_0  
-bleach                    4.1.0              pyhd3eb1b0_0  
-ca-certificates           2022.3.29            h06a4308_0  
-certifi                   2021.10.8        py39h06a4308_2  
-cffi                      1.15.0           py39hd667e15_1  
-conda-pack                0.7.0              pyh6c4a22f_0    conda-forge
-debugpy                   1.5.1            py39h295c915_0  
-decorator                 5.1.1              pyhd3eb1b0_0  
-defusedxml                0.7.1              pyhd3eb1b0_0  
-entrypoints               0.3              py39h06a4308_0  
-executing                 0.8.3              pyhd3eb1b0_0  
-importlib-metadata        4.11.3           py39h06a4308_0  
-importlib_metadata        4.11.3               hd3eb1b0_0  
-ipykernel                 6.9.1            py39h06a4308_0  
-ipython                   8.2.0            py39h06a4308_0  
-ipython_genutils          0.2.0              pyhd3eb1b0_1  
-jedi                      0.18.1           py39h06a4308_1  
-jinja2                    3.0.3              pyhd3eb1b0_0  
-jsonschema                3.2.0              pyhd3eb1b0_2  
-jupyter_client            7.1.2              pyhd3eb1b0_0  
-jupyter_core              4.9.2            py39h06a4308_0  
-jupyterlab_pygments       0.1.2                      py_0  
-ld_impl_linux-64          2.35.1               h7274673_9  
-libffi                    3.3                  he6710b0_2  
-libgcc-ng                 9.3.0               h5101ec6_17  
-libgomp                   9.3.0               h5101ec6_17  
-libsodium                 1.0.18               h7b6447c_0  
-libstdcxx-ng              9.3.0               hd4cf53a_17  
-markupsafe                2.0.1            py39h27cfd23_0  
-matplotlib-inline         0.1.2              pyhd3eb1b0_2  
-mistune                   0.8.4           py39h27cfd23_1000  
-nbclient                  0.5.11             pyhd3eb1b0_0  
-nbconvert                 6.4.4            py39h06a4308_0  
-nbformat                  5.1.3              pyhd3eb1b0_0  
-ncurses                   6.3                  h7f8727e_2  
-nest-asyncio              1.5.1              pyhd3eb1b0_0  
-notebook                  6.4.10             pyha770c72_0    conda-forge
-openssl                   1.1.1n               h7f8727e_0  
-packaging                 21.3               pyhd3eb1b0_0  
-pandocfilters             1.5.0              pyhd3eb1b0_0  
-parso                     0.8.3              pyhd3eb1b0_0  
-pexpect                   4.8.0              pyhd3eb1b0_3  
-pickleshare               0.7.5           pyhd3eb1b0_1003  
-pip                       21.2.4           py39h06a4308_0  
-prometheus_client         0.13.1             pyhd3eb1b0_0  
-prompt-toolkit            3.0.20             pyhd3eb1b0_0  
-ptyprocess                0.7.0              pyhd3eb1b0_2  
-pure_eval                 0.2.2              pyhd3eb1b0_0  
-pycparser                 2.21               pyhd3eb1b0_0  
-pygments                  2.11.2             pyhd3eb1b0_0  
-pyparsing                 3.0.4              pyhd3eb1b0_0  
-pyrsistent                0.18.0           py39heee7806_0  
-python                    3.9.12               h12debd9_0  
-python-dateutil           2.8.2              pyhd3eb1b0_0  
-pyzmq                     22.3.0           py39h295c915_2  
-readline                  8.1.2                h7f8727e_1  
-send2trash                1.8.0              pyhd3eb1b0_1  
-setuptools                61.2.0           py39h06a4308_0  
-six                       1.16.0             pyhd3eb1b0_1  
-soupsieve                 2.3.1              pyhd3eb1b0_0  
-sqlite                    3.38.2               hc218d9a_0  
-stack_data                0.2.0              pyhd3eb1b0_0  
-terminado                 0.13.1           py39h06a4308_0  
-testpath                  0.5.0              pyhd3eb1b0_0  
-tk                        8.6.11               h1ccaba5_0  
-tornado                   6.1              py39h27cfd23_0  
-traitlets                 5.1.1              pyhd3eb1b0_0  
-typing-extensions         4.1.1                hd3eb1b0_0  
-typing_extensions         4.1.1              pyh06a4308_0  
-tzdata                    2022a                hda174b7_0  
-wcwidth                   0.2.5              pyhd3eb1b0_0  
-webencodings              0.5.1            py39h06a4308_1  
-wheel                     0.37.1             pyhd3eb1b0_0  
-xz                        5.2.5                h7b6447c_0  
-zeromq                    4.3.4                h2531618_0  
-zipp                      3.7.0              pyhd3eb1b0_0  
-zlib                      1.2.11               h7f8727e_4 
-```
-
-### Step 4. Pack up our conda environment
-
-```sh
-[alice@{{ site.devel.name }} ~]$ conda pack
-Collecting packages...
-Packing environment at '{{ site.user.home }}/.conda/envs/myproject' to 'myproject.tar.gz'
-[########################################] | 100% Completed | 15.3s
-      Regenerating: 1 file(s) changed at 2022-04-12 23:48:33
-                    myproject.tar.gz
-
-[alice@{{ site.devel.name }} ~]$ ls -l myproject.tar.gz
--rw------- 1 alice boblab 83729565 Apr 12 23:48 myproject.tar.gz
-```
-
-### Step 5. Exit
+To deactivate a Conda environment, call:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda deactivate
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 
+## Use software in a Conda environment
 
-## Deploy packed-up conda environment to local disk
-
-### Step 1. Unpack to local disk
+To access software previous installed to a Conda environment, all you need to do is activate the environment by its name;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ target=$(mktemp -d)
-[alice@{{ site.devel.name }} ~]$ tar -xf myproject.tar.gz -C "$target"
-[alice@{{ site.devel.name }} ~]$ source "$target/bin/activate"
-[alice@{{ site.devel.name }} ~]$ chmod -R u+w "$target"
-[alice@{{ site.devel.name }} ~]$ conda-unpack
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
 
-TODO: Can we safely do `chmod -R u-w "$target"` at this point? That would prevent any attempts to install additional software to this temporary, transient conda environment.
-
-TODO: Write a small tool that does all of the above in one step, e.g.
+This shows that the software tool is available. For example, to launch our personal Jupyter Notebook, we call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda-deploy myproject.tar.gz
+[alice@{{ site.devel.name }} ~]$ jupyter notebook --port 8890
 ```
 
+Follow the displayed instruction to ...
 
-### Step 2. Inspect content
+
+
+## Stage Conda environment on local disk (recommended and important)
+
+Working with a Conda environment on local disk greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
+
+Staging an active Conda environment to local disk is straightforward using the **[conda-state]** tool.  For example, assume we have an existing Conda environment named `myjupyter`.  After having loaded the `conda-state` module, all we need to do is activate it and call `conda-state`;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda list
-# packages in environment at /scratch/alice/tmp.tPFYG91qKs:
-#
-# Name                    Version                   Build  Channel
-_libgcc_mutex             0.1                        main  
-_openmp_mutex             4.5                       1_gnu  
-argon2-cffi               21.3.0             pyhd3eb1b0_0  
-argon2-cffi-bindings      21.2.0           py39h7f8727e_0  
-asttokens                 2.0.5              pyhd3eb1b0_0  
-attrs                     21.4.0             pyhd3eb1b0_0  
-backcall                  0.2.0              pyhd3eb1b0_0  
-beautifulsoup4            4.10.0             pyh06a4308_0  
-bleach                    4.1.0              pyhd3eb1b0_0  
-ca-certificates           2022.3.29            h06a4308_0  
-certifi                   2021.10.8        py39h06a4308_2  
-cffi                      1.15.0           py39hd667e15_1  
-conda-pack                0.7.0              pyh6c4a22f_0    conda-forge
-debugpy                   1.5.1            py39h295c915_0  
-decorator                 5.1.1              pyhd3eb1b0_0  
-defusedxml                0.7.1              pyhd3eb1b0_0  
-entrypoints               0.3              py39h06a4308_0  
-executing                 0.8.3              pyhd3eb1b0_0  
-importlib-metadata        4.11.3           py39h06a4308_0  
-importlib_metadata        4.11.3               hd3eb1b0_0  
-ipykernel                 6.9.1            py39h06a4308_0  
-ipython                   8.2.0            py39h06a4308_0  
-ipython_genutils          0.2.0              pyhd3eb1b0_1  
-jedi                      0.18.1           py39h06a4308_1  
-jinja2                    3.0.3              pyhd3eb1b0_0  
-jsonschema                3.2.0              pyhd3eb1b0_2  
-jupyter_client            7.1.2              pyhd3eb1b0_0  
-jupyter_core              4.9.2            py39h06a4308_0  
-jupyterlab_pygments       0.1.2                      py_0  
-ld_impl_linux-64          2.35.1               h7274673_9  
-libffi                    3.3                  he6710b0_2  
-libgcc-ng                 9.3.0               h5101ec6_17  
-libgomp                   9.3.0               h5101ec6_17  
-libsodium                 1.0.18               h7b6447c_0  
-libstdcxx-ng              9.3.0               hd4cf53a_17  
-markupsafe                2.0.1            py39h27cfd23_0  
-matplotlib-inline         0.1.2              pyhd3eb1b0_2  
-mistune                   0.8.4           py39h27cfd23_1000  
-nbclient                  0.5.11             pyhd3eb1b0_0  
-nbconvert                 6.4.4            py39h06a4308_0  
-nbformat                  5.1.3              pyhd3eb1b0_0  
-ncurses                   6.3                  h7f8727e_2  
-nest-asyncio              1.5.1              pyhd3eb1b0_0  
-notebook                  6.4.10             pyha770c72_0    conda-forge
-openssl                   1.1.1n               h7f8727e_0  
-packaging                 21.3               pyhd3eb1b0_0  
-pandocfilters             1.5.0              pyhd3eb1b0_0  
-parso                     0.8.3              pyhd3eb1b0_0  
-pexpect                   4.8.0              pyhd3eb1b0_3  
-pickleshare               0.7.5           pyhd3eb1b0_1003  
-pip                       21.2.4           py39h06a4308_0  
-prometheus_client         0.13.1             pyhd3eb1b0_0  
-prompt-toolkit            3.0.20             pyhd3eb1b0_0  
-ptyprocess                0.7.0              pyhd3eb1b0_2  
-pure_eval                 0.2.2              pyhd3eb1b0_0  
-pycparser                 2.21               pyhd3eb1b0_0  
-pygments                  2.11.2             pyhd3eb1b0_0  
-pyparsing                 3.0.4              pyhd3eb1b0_0  
-pyrsistent                0.18.0           py39heee7806_0  
-python                    3.9.12               h12debd9_0  
-python-dateutil           2.8.2              pyhd3eb1b0_0  
-pyzmq                     22.3.0           py39h295c915_2  
-readline                  8.1.2                h7f8727e_1  
-send2trash                1.8.0              pyhd3eb1b0_1  
-setuptools                61.2.0           py39h06a4308_0  
-six                       1.16.0             pyhd3eb1b0_1  
-soupsieve                 2.3.1              pyhd3eb1b0_0  
-sqlite                    3.38.2               hc218d9a_0  
-stack_data                0.2.0              pyhd3eb1b0_0  
-terminado                 0.13.1           py39h06a4308_0  
-testpath                  0.5.0              pyhd3eb1b0_0  
-tk                        8.6.11               h1ccaba5_0  
-tornado                   6.1              py39h27cfd23_0  
-traitlets                 5.1.1              pyhd3eb1b0_0  
-typing-extensions         4.1.1                hd3eb1b0_0  
-typing_extensions         4.1.1              pyh06a4308_0  
-tzdata                    2022a                hda174b7_0  
-wcwidth                   0.2.5              pyhd3eb1b0_0  
-webencodings              0.5.1            py39h06a4308_1  
-wheel                     0.37.1             pyhd3eb1b0_0  
-xz                        5.2.5                h7b6447c_0  
-zeromq                    4.3.4                h2531618_0  
-zipp                      3.7.0              pyhd3eb1b0_0  
-zlib                      1.2.11               h7f8727e_4
+[alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ conda-stage
+```
+
+**Please, be patient**. The `conda-stage` command takes some time the first time you call it. The very first time this is done to an environment, the **[conda-pack]** package tool has to be downloaded and installed, unless it is already installed. After this, the Conda environment will be packed up into a "tarball" and saved to cache.  Both these steps will be automatically skipped in any future calls to `conda-stage` for the same environment.  In the last part, `conda-stage` will extract this tarball to a temporary folder on local disk and re-activate the Conda environment there.
+
+When staging is done, all software tools now lives on the local disk, e.g.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+/scratch/alice/conda-stage_wFWYe07Hyu/bin/jupyter
+```
+
+To unstage the staged environment and re-activate the original Conda environment, call:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda-stage --unstage
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
+```
+
+Note how the software tools are now found in the original location, which is left as-is through out the staging.
+
+
+If a packaged tarball already exists, you can rebuild it by pass `--force`;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ conda-stage --force
+```
+
+This can be useful when software tools have been updated this last time, or when additional software have been installed to the environment.
+
+
+## Appendix
+
+### Benchmark staged conda environment
+
+To illustrate the benefit of staging a conda environment to local disk, we will benchmark how long it takes for `jupyter --version` to complete.
+
+Without staging to local disk, the call takes a whopping 24 seconds to return:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
+[alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
+real 24.48
+user 1.27
+sys 0.57
+```
+
+This was test was done on 2022-04-13T15:50:18-07:00 and the cluster did indeed experience heavy load on the BeeGFS file system at the time.  **When staging to local disk, we can avoid being affected by this load.**  When running from the local disk, the same call takes only one seconds;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ conda-stage
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+/scratch/alice/conda-stage_wFWYe07Hyu/bin/jupyter
+[alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
+real 1.04
+user 0.94
+sys 0.09
 ```
 
 
-### Step 3. Proof that all of the stack lives on local disk
+### Proof that a staged conda environment lives on local disk
 
 If we run `jupyter --version` through `strace` to log _all_ files accessed;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ strace -e trace=stat --output=jupyter.strace jupyter --version
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ conda-stage
+[alice@{{ site.devel.name }} ~]$ strace -e trace=stat -o jupyter.strace jupyter --version
 
 Selected Jupyter core packages...
 IPython          : 8.2.0
@@ -282,29 +165,41 @@ qtconsole        : not installed
 traitlets        : 5.1.1
 ```
 
-we see that all but two of the 4,043 file accesses were done toward the local disk (=`$target`) instead of the parallel file system (=`{{ site.user.home }}/.conda/envs/myproject`):
+If we inspect the `jupyter.strace` log file, we find that most file access calls go to the local disk:
 
 ```sh
-$ grep -c -F "stat(\"$target" jupyter.strace 
-4041
-$ grep -c -F "stat(" jupyter.strace 
-4043
+[alice@{{ site.devel.name }} ~]$ head -6 jupyter.strace 
+stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
+stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
+stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
+stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}) = 0
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffc9a9eaf10) = -1 ENOENT (No such file or directory)
+stat("/scratch/alice/conda-stage_b721EnZLRs/bin/python", {st_mode=S_IFREG|0755, st_size=15880080, ...}) = 0
 ```
 
-Thus, almost none of those hits our parallel filesystem.
-
-
-### Step 4. Run software
+Exactly, how many of them?  In this simple example where we only query the version of Jupyter Notebook and its dependencies, there are 4,027 queries to the file system;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ jupyter notebook --port 8890
+[alice@{{ site.devel.name }} ~]$ grep -c stat jupyter.strace 
+4027
 ```
 
-### Step 5. Exit
+Out of these, 4,021 are done toward the local disk (`/scratch`);
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda deactivate
+[alice@{{ site.devel.name }} ~]$ grep -c 'stat("/scratch' jupyter.strace 
+4021
 ```
 
+and only _one_ toward the BeeGFS file system (`{{ site.path.global_root }}`):
 
-[conda-pack]: https://github.com/conda/conda-pack
+```sh
+[alice@{{ site.devel.name }} ~]$ grep 'stat("/wynton' jupyter.strace 
+stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) = -1 ENOENT (No such file or directory)
+```
+
+In other words, by staging the conda environment to local disk, we saved ourselves, and the system, 4,021 queries to the BeeGFS file system. And, this only for the very simple `jupyter --version` call.
+
+
+[conda-state]: https://github.com/HenrikBengtsson/conda-stage/
+[conda-pack]: https://conda.github.io/conda-pack/
