@@ -211,7 +211,7 @@ qtconsole        : not installed
 traitlets        : 5.1.1
 ```
 
-If we inspect the `jupyter.strace` log file, we find that most file access calls go to the local disk:
+If we inspect the `jupyter.strace` log file, we find that most file-access calls go to the local disk:
 
 ```sh
 (myjupyter*) [alice@{{ site.devel.name }} ~]$ head -6 jupyter.strace 
