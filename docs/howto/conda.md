@@ -89,8 +89,8 @@ Please update conda by running
 
 
 INFO: Packaging conda environment ...
-NFO: Extracting /wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter.tar.gz /wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter.tar.gz (83685342 bytes; 2022-04-13 16:58:23.000000000 -0700) to /tmp/conda-stage_6ywe2cT6HC
-INFO: Activating staged conda environment: /tmp/conda-stage_6ywe2cT6HC
+INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz {{ site.user.home }} (83685342 bytes; 2022-04-13 16:58:23.000000000 -0700) to /scratch/alice/conda-stage_wFWYe07Hyu
+INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWYe07Hyu
 (/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$
 ```
 
@@ -107,6 +107,10 @@ To unstage the staged environment and re-activate the original Conda environment
 
 ```sh
 (/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ conda-stage --unstage
+INFO: Unstaging and reverting to original conda environment  ...
+INFO: Original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
+INFO: Removing all staged files: /scratch/alice/conda-stage_wFWYe07Hyu
+INFO: Activating original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
@@ -121,7 +125,7 @@ If a packaged tarball already exists, you can rebuild it by pass `--force`;
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --force
 ```
 
-This can be useful when software tools have been updated this last time, or when additional software have been installed to the environment.
+This can used when software tools have been updated since last time, or when additional software have been installed to the environment.
 
 
 ## Appendix
