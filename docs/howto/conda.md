@@ -128,6 +128,30 @@ If a packaged tarball already exists, you can rebuild it by pass `--force`;
 This can used when software tools have been updated since last time, or when additional software have been installed to the environment.
 
 
+### Use Conda staging in job scripts
+
+To work with staged conda environments in your job scripts, just call `conda-stage` after activating the conda environment of interest.  That is, if your script used to do:
+
+```sh
+#! /usr/bin/env bash
+
+conda activate myenv
+...
+```
+
+all you need to do is to update it to:
+
+```sh
+#! /usr/bin/env bash
+
+module load CBI conda-stage
+conda activate myenv
+conda-stage
+...
+```
+
+
+
 ## Appendix
 
 ### Benchmark staged Conda environment
