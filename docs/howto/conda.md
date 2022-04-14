@@ -80,34 +80,69 @@ traitlets        : 5.1.1
 
 Working with a Conda environment on local disk greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
 
-Staging an active Conda environment to local disk is straightforward using the **[conda-stage]** tool.  For example, assume we have an existing Conda environment named `myjupyter`.  After having loaded the `conda-stage` module, all we need to do is activate it and call `conda-state`;
+Staging an active Conda environment to local disk is straightforward using the **[conda-stage]** tool.  For example, assume we have an existing Conda environment named `myjupyter`.  After having loaded the `conda-stage` module, all we need to do is activate it and call `conda-stage`;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
-INFO: Staging current conda ({{ site.user.home }}/miniconda3/envs/myjupyter) environment to local disk ...
+INFO: Staging current conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to local disk ...
 INFO: Installing conda-pack ...
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: {{ site.user.home }}/miniconda3/envs/myjupyter
+
+  added / updated specs:
+    - conda-pack
 
 
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.11.0
-  latest version: 4.12.0
+The following NEW packages will be INSTALLED:
 
-Please update conda by running
+  conda-pack         conda-forge/noarch::conda-pack-0.7.0-pyh6c4a22f_0
+  python_abi         conda-forge/linux-64::python_abi-3.9-2_cp39
 
-    $ conda update -n base -c defaults conda
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  ca-certificates    pkgs/main::ca-certificates-2022.3.29-~ --> conda-forge::ca-certificates-2021.10.8-ha878542_0
+  certifi            pkgs/main::certifi-2021.10.8-py39h06a~ --> conda-forge::certifi-2021.10.8-py39hf3d152e_2
 
 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+INFO: Total installation time: 45 seconds
 INFO: Packaging conda environment ...
-INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz {{ site.user.home }} (83685342 bytes; 2022-04-13 16:58:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY/myjupyter
-INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY/myjupyter
+Collecting packages...
+Packing environment at '{{ site.user.home }}/miniconda3/envs/myjupyter' to '{{ site.user.home }}/miniconda3/envs/.tmp.myjupyter.tar.gz'
+[########################################] | 100% Completed |  5min 42.1s
+INFO: Total 'conda-pack' time: 363 seconds
+INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 2022-04-14 15:10:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY
+INFO: Total extract time: 4 seconds
+INFO: Unpacking
+INFO: Total 'conda-unpack' time: 0 seconds
+INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY
 (myjupyter*) [alice@{{ site.devel.name }} ~]$
 ```
 
-**Please, be patient**. The `conda-stage` command takes some time the first time you call it. The very first time this is done to an environment, the **[conda-pack]** package tool has to be downloaded and installed, unless it is already installed. After this, the Conda environment will be packed up into a "tarball" and saved to cache.  Both these steps will be automatically skipped in any future calls to `conda-stage` for the same environment.  In the last part, `conda-stage` will extract this tarball to a temporary folder on local disk and re-activate the Conda environment there.
+**Please, be patient**. The first time you use `conda-stage` on a Conda environment, it also has to install dependency **[conda-pack]** and package up the environment into a "tarball" that is saved to cache.  Both these steps are automatically skipped when `conda-stage` is used in the future and the staging to local disk is much quicker, e.g.
 
-When staging is done, all software tools now lives on the local disk, e.g.
+```sh
+(myjupyter) [hb-test@dev2 ~]$ conda-stage
+INFO: Staging current conda environment (/wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter) to
+ local disk ...
+INFO: Extracting /wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 202
+2-04-14 15:10:23.000000000 -0700) to /tmp/conda-stage-0TXT/myjupyter
+INFO: Total extract time: 3 seconds
+INFO: Unpacking
+INFO: Total 'conda-unpack' time: 0 seconds
+INFO: Activating staged conda environment: /tmp/conda-stage-0TXT/myjupyter
+(myjupyter*) [hb-test@dev2 ~]$ 
+```
+
+Continuing, when staging is done, all software tools now lives on the local disk, e.g.
 
 ```sh
 (myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
@@ -120,8 +155,9 @@ To unstage the staged environment and re-activate the original Conda environment
 (myjupyter*) [alice@{{ site.devel.name }} ~]$ conda-stage --unstage
 INFO: Unstaging and reverting to original conda environment  ...
 INFO: Original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
-INFO: Removing all staged files: /scratch/alice/conda-stage_wFWY/myjupyter
+INFO: Removing all staged files: /scratch/alice/conda-stage_wFWY
 INFO: Activating original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
+INFO: Total unstage time: 0 seconds
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
@@ -129,11 +165,11 @@ INFO: Activating original conda environment: {{ site.user.home }}/miniconda3/env
 Note how the software tools are now found in the original location, which is left as-is through out the staging.
 
 
-If a packaged tarball already exists, you can rebuild it by passing `--force`;
+If a packaged tarball already exists, you can rebuild it using:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --force
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --pack --force
 ```
 
 This can used when software tools have been updated since last time, or when additional software have been installed to the environment.
@@ -251,7 +287,7 @@ Out of these, 4,021 are done toward the local disk (`/scratch`);
 and only _one_ toward the BeeGFS file system (`{{ site.path.global_root }}`):
 
 ```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -v 'stat("/wynton' jupyter.strace 
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -v 'stat("{{ site.path.global_root }}' jupyter.strace 
 stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) = -1 ENOENT (No such file or directory)
 ```
 
