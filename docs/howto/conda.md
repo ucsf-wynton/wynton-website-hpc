@@ -216,7 +216,7 @@ Out of these, 4,021 are done toward the local disk (`/scratch`);
 and only _one_ toward the BeeGFS file system (`{{ site.path.global_root }}`):
 
 ```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep 'stat("/wynton' jupyter.strace 
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -v 'stat("/wynton' jupyter.strace 
 stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) = -1 ENOENT (No such file or directory)
 ```
 
