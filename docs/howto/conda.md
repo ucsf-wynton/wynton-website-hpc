@@ -132,21 +132,23 @@ This can used when software tools have been updated since last time, or when add
 
 ### Benchmark staged Conda environment
 
+<!-- These benchmarks where collected on 2022-04-13 at 18:50 -->
+
 To illustrate the benefit of staging a Conda environment to local disk, we will benchmark how long it takes for `jupyter --version` to complete.
 
-Without staging to local disk, the call takes a whopping 24 seconds to return:
+Without staging to local disk, the call takes a whopping 32 seconds to return:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
-real 24.48
-user 1.27
-sys 0.57
+real 32.06
+user 1.42
+sys 0.76
 ```
 
-This was test was done on 2022-04-13T15:50:18-07:00 and the cluster did indeed experience heavy load on the BeeGFS file system at the time.  **When staging to local disk, we can avoid being affected by this load.**  When running from the local disk, the same call takes only one seconds;
+This was test was done during a time when the cluster did indeed experience heavy load on the BeeGFS file system at the time.  The fact that `real` is much greater than `user + sys` suggests our process spends a lot of time just waiting.  **When staging to local disk, we can avoid being affected by this load.**  When running from the local disk, the same call takes less than a second;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
@@ -154,9 +156,9 @@ This was test was done on 2022-04-13T15:50:18-07:00 and the cluster did indeed e
 (myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 /scratch/alice/conda-stage_wFWY/myjupyter/bin/jupyter
 (myjupyter*) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
-real 1.04
-user 0.94
-sys 0.09
+real 0.75
+user 0.67
+sys 0.07
 ```
 
 
