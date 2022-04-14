@@ -89,9 +89,9 @@ Please update conda by running
 
 
 INFO: Packaging conda environment ...
-INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz {{ site.user.home }} (83685342 bytes; 2022-04-13 16:58:23.000000000 -0700) to /scratch/alice/conda-stage_wFWYe07Hyu
-INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWYe07Hyu
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$
+INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz {{ site.user.home }} (83685342 bytes; 2022-04-13 16:58:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY/myjupyter
+INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY/myjupyter
+(myjupyter*) [alice@{{ site.devel.name }} ~]$
 ```
 
 **Please, be patient**. The `conda-stage` command takes some time the first time you call it. The very first time this is done to an environment, the **[conda-pack]** package tool has to be downloaded and installed, unless it is already installed. After this, the Conda environment will be packed up into a "tarball" and saved to cache.  Both these steps will be automatically skipped in any future calls to `conda-stage` for the same environment.  In the last part, `conda-stage` will extract this tarball to a temporary folder on local disk and re-activate the Conda environment there.
@@ -99,17 +99,17 @@ INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWYe07Hyu
 When staging is done, all software tools now lives on the local disk, e.g.
 
 ```sh
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-/scratch/alice/conda-stage_wFWYe07Hyu/bin/jupyter
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
+/scratch/alice/conda-stage_wFWY/myjupyter/bin/jupyter
 ```
 
 To unstage the staged environment and re-activate the original Conda environment, call:
 
 ```sh
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ conda-stage --unstage
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ conda-stage --unstage
 INFO: Unstaging and reverting to original conda environment  ...
 INFO: Original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
-INFO: Removing all staged files: /scratch/alice/conda-stage_wFWYe07Hyu
+INFO: Removing all staged files: /scratch/alice/conda-stage_wFWY/myjupyter
 INFO: Activating original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
@@ -151,9 +151,9 @@ This was test was done on 2022-04-13T15:50:18-07:00 and the cluster did indeed e
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-/scratch/alice/conda-stage_wFWYe07Hyu/bin/jupyter
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
+/scratch/alice/conda-stage_wFWY/myjupyter/bin/jupyter
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
 real 1.04
 user 0.94
 sys 0.09
@@ -167,7 +167,7 @@ If we run `jupyter --version` through `strace` to log _all_ files accessed;
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ strace -e trace=stat -o jupyter.strace jupyter --version
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ strace -e trace=stat -o jupyter.strace jupyter --version
 
 Selected Jupyter core packages...
 IPython          : 8.2.0
@@ -188,7 +188,7 @@ traitlets        : 5.1.1
 If we inspect the `jupyter.strace` log file, we find that most file access calls go to the local disk:
 
 ```sh
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ head -6 jupyter.strace 
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ head -6 jupyter.strace 
 stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
 stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
 stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
@@ -200,21 +200,21 @@ stat("/scratch/alice/conda-stage_b721EnZLRs/bin/python", {st_mode=S_IFREG|0755, 
 Exactly, how many of them?  In this simple example where we only query the version of Jupyter Notebook and its dependencies, there are 4,027 queries to the file system;
 
 ```sh
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ grep -c stat jupyter.strace 
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -c stat jupyter.strace 
 4027
 ```
 
 Out of these, 4,021 are done toward the local disk (`/scratch`);
 
 ```sh
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ grep -c 'stat("/scratch' jupyter.strace 
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -c 'stat("/scratch' jupyter.strace 
 4021
 ```
 
 and only _one_ toward the BeeGFS file system (`{{ site.path.global_root }}`):
 
 ```sh
-(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ grep 'stat("/wynton' jupyter.strace 
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep 'stat("/wynton' jupyter.strace 
 stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) = -1 ENOENT (No such file or directory)
 ```
 
