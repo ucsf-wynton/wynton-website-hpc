@@ -69,7 +69,7 @@ Follow the displayed instruction to ...
 
 Working with a Conda environment on local disk greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
 
-Staging an active Conda environment to local disk is straightforward using the **[conda-state]** tool.  For example, assume we have an existing Conda environment named `myjupyter`.  After having loaded the `conda-state` module, all we need to do is activate it and call `conda-state`;
+Staging an active Conda environment to local disk is straightforward using the **[conda-stage]** tool.  For example, assume we have an existing Conda environment named `myjupyter`.  After having loaded the `conda-stage` module, all we need to do is activate it and call `conda-state`;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
@@ -247,5 +247,5 @@ stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) 
 In other words, by staging the Conda environment to local disk, we saved ourselves, and the system, 4,021 queries to the BeeGFS file system. And, this only for the very simple `jupyter --version` call.
 
 
-[conda-state]: https://github.com/HenrikBengtsson/conda-stage/
+[conda-stage]: https://github.com/HenrikBengtsson/conda-stage/
 [conda-pack]: https://conda.github.io/conda-pack/
