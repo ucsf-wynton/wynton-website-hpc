@@ -55,17 +55,28 @@ To access software previous installed to a Conda environment, all you need to do
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
 
-This shows that the software tool is available. For example, to launch our personal Jupyter Notebook, we call:
+This shows that the software tool is available. For example,
 
 ```sh
-(myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --port 8890
+(myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter --version
+Selected Jupyter core packages...
+IPython          : 8.2.0
+ipykernel        : 6.9.1
+ipywidgets       : not installed
+jupyter_client   : 7.1.2
+jupyter_core     : 4.9.2
+jupyter_server   : not installed
+jupyterlab       : not installed
+nbclient         : 0.5.11
+nbconvert        : 6.4.4
+nbformat         : 5.1.3
+notebook         : 6.4.10
+qtconsole        : not installed
+traitlets        : 5.1.1
 ```
 
-Follow the displayed instruction to ...
 
-
-
-## Stage Conda environment on local disk (recommended and important)
+## Stage Conda environment on local disk (required)
 
 Working with a Conda environment on local disk greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
 
@@ -118,7 +129,7 @@ INFO: Activating original conda environment: {{ site.user.home }}/miniconda3/env
 Note how the software tools are now found in the original location, which is left as-is through out the staging.
 
 
-If a packaged tarball already exists, you can rebuild it by pass `--force`;
+If a packaged tarball already exists, you can rebuild it by passing `--force`;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
