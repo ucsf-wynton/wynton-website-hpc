@@ -25,22 +25,21 @@ In this example, we install Jupyter Notebook to a new Conda environment that we 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda create --name=myjupyter
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-[alice@{{ site.devel.name }} ~]$ command -v python
-{{ site.user.home }}/miniconda3/envs/myjupyter/bin/python
+(myjupyter) [alice@{{ site.devel.name }} ~]$
 ```
 
-Next, we install Jupyter Notebook to this environment:
+At this point, the Conda environment is empty. Next, we install Jupyter Notebook to this environment:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda install conda-forge::notebook
-[alice@{{ site.devel.name }} ~]$ command -v jupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda install conda-forge::notebook
+(myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
 
 To deactivate a Conda environment, call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda deactivate
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
 [alice@{{ site.devel.name }} ~]$ command -v jupyter
 [alice@{{ site.devel.name }} ~]$ 
 ```
@@ -52,14 +51,14 @@ To access software previous installed to a Conda environment, all you need to do
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-[alice@{{ site.devel.name }} ~]$ command -v jupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
 
 This shows that the software tool is available. For example, to launch our personal Jupyter Notebook, we call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ jupyter notebook --port 8890
+(myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --port 8890
 ```
 
 Follow the displayed instruction to ...
@@ -75,7 +74,24 @@ Staging an active Conda environment to local disk is straightforward using the *
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-[alice@{{ site.devel.name }} ~]$ conda-stage
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
+INFO: Staging current conda ({{ site.user.home }}/miniconda3/envs/myjupyter) environment to local disk ...
+INFO: Installing conda-pack ...
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.11.0
+  latest version: 4.12.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+INFO: Packaging conda environment ...
+NFO: Extracting /wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter.tar.gz /wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter.tar.gz (83685342 bytes; 2022-04-13 16:58:23.000000000 -0700) to /tmp/conda-stage_6ywe2cT6HC
+INFO: Activating staged conda environment: /tmp/conda-stage_6ywe2cT6HC
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$
 ```
 
 **Please, be patient**. The `conda-stage` command takes some time the first time you call it. The very first time this is done to an environment, the **[conda-pack]** package tool has to be downloaded and installed, unless it is already installed. After this, the Conda environment will be packed up into a "tarball" and saved to cache.  Both these steps will be automatically skipped in any future calls to `conda-stage` for the same environment.  In the last part, `conda-stage` will extract this tarball to a temporary folder on local disk and re-activate the Conda environment there.
@@ -83,15 +99,15 @@ Staging an active Conda environment to local disk is straightforward using the *
 When staging is done, all software tools now lives on the local disk, e.g.
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ command -v jupyter
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 /scratch/alice/conda-stage_wFWYe07Hyu/bin/jupyter
 ```
 
 To unstage the staged environment and re-activate the original Conda environment, call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda-stage --unstage
-[alice@{{ site.devel.name }} ~]$ command -v jupyter
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ conda-stage --unstage
+(myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 ```
 
@@ -102,7 +118,7 @@ If a packaged tarball already exists, you can rebuild it by pass `--force`;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-[alice@{{ site.devel.name }} ~]$ conda-stage --force
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --force
 ```
 
 This can be useful when software tools have been updated this last time, or when additional software have been installed to the environment.
@@ -118,9 +134,9 @@ Without staging to local disk, the call takes a whopping 24 seconds to return:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-[alice@{{ site.devel.name }} ~]$ command -v jupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
-[alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
+(myjupyter) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
 real 24.48
 user 1.27
 sys 0.57
@@ -130,10 +146,10 @@ This was test was done on 2022-04-13T15:50:18-07:00 and the cluster did indeed e
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-[alice@{{ site.devel.name }} ~]$ conda-stage
-[alice@{{ site.devel.name }} ~]$ command -v jupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 /scratch/alice/conda-stage_wFWYe07Hyu/bin/jupyter
-[alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
 real 1.04
 user 0.94
 sys 0.09
@@ -146,8 +162,8 @@ If we run `jupyter --version` through `strace` to log _all_ files accessed;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-[alice@{{ site.devel.name }} ~]$ conda-stage
-[alice@{{ site.devel.name }} ~]$ strace -e trace=stat -o jupyter.strace jupyter --version
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ strace -e trace=stat -o jupyter.strace jupyter --version
 
 Selected Jupyter core packages...
 IPython          : 8.2.0
@@ -168,7 +184,7 @@ traitlets        : 5.1.1
 If we inspect the `jupyter.strace` log file, we find that most file access calls go to the local disk:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ head -6 jupyter.strace 
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ head -6 jupyter.strace 
 stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
 stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
 stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
@@ -180,21 +196,21 @@ stat("/scratch/alice/conda-stage_b721EnZLRs/bin/python", {st_mode=S_IFREG|0755, 
 Exactly, how many of them?  In this simple example where we only query the version of Jupyter Notebook and its dependencies, there are 4,027 queries to the file system;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ grep -c stat jupyter.strace 
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ grep -c stat jupyter.strace 
 4027
 ```
 
 Out of these, 4,021 are done toward the local disk (`/scratch`);
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ grep -c 'stat("/scratch' jupyter.strace 
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ grep -c 'stat("/scratch' jupyter.strace 
 4021
 ```
 
 and only _one_ toward the BeeGFS file system (`{{ site.path.global_root }}`):
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ grep 'stat("/wynton' jupyter.strace 
+(/scratch/alice/conda-stage_wFWYe07Hyu) [alice@{{ site.devel.name }} ~]$ grep 'stat("/wynton' jupyter.strace 
 stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) = -1 ENOENT (No such file or directory)
 ```
 
