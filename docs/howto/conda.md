@@ -130,16 +130,16 @@ INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY
 **Please, be patient**. The first time you use `conda-stage` on a Conda environment, it also has to install dependency **[conda-pack]** and package up the environment into a "tarball" that is saved to cache.  Both these steps are automatically skipped when `conda-stage` is used in the future and the staging to local disk is much quicker, e.g.
 
 ```sh
-(myjupyter) [hb-test@dev2 ~]$ conda-stage
-INFO: Staging current conda environment (/wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter) to
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
+INFO: Staging current conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to
  local disk ...
-INFO: Extracting /wynton/home/bengtsson/hb-test/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 202
-2-04-14 15:10:23.000000000 -0700) to /tmp/conda-stage-0TXT/myjupyter
+INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 202
+2-04-14 15:10:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY
 INFO: Total extract time: 3 seconds
 INFO: Unpacking
 INFO: Total 'conda-unpack' time: 0 seconds
-INFO: Activating staged conda environment: /tmp/conda-stage-0TXT/myjupyter
-(myjupyter*) [hb-test@dev2 ~]$ 
+INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ 
 ```
 
 Continuing, when staging is done, all software tools now lives on the local disk, e.g.
@@ -197,6 +197,45 @@ conda-stage
 ...
 ```
 
+
+### Automatically stage Conda environment when activated
+
+If you think calling `conda-stage` is too much to remember and you wish it could be done automatically, then your in luck.  You can configure the environment to call `conda-stage` whenever it is activated.  Here is how to do it:
+
+```sh
+(myjupyter) [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --read-only --auto-stage=enable
+INFO: Configuring automatic staging of original conda environment  ...
+INFO: Enabled auto staging
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+From now on, this Conda environment will be automatically staged when activated;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+Auto staging conda environment 'myjupyter'. To disable, call 'conda-stage --auto-stage=disable'
+INFO: Staging current conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to local disk ...
+INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 2022-04-14 15:10:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY
+INFO: Total extract time: 4 seconds
+INFO: Unpacking
+INFO: Total 'conda-unpack' time: 0 seconds
+INFO: Make staged environment read-only
+INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY
+(myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
+/scratch/alice/conda-stage_wFWY
+```
+
+To disable automatic staging, just call:
+
+```sh
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=disable
+(myjupyter) [alice@{{ site.devel.name }} ~]$ 
+```
+
+Note also how we in the above example configured the auto-staging with `--read-only`. This will make the staged environment to be read-only, that is, we cannot install additional software to it, or update the existing ones. To do that, you need to unstage it first, install or update the original environment, and the call `conda-stage --pack --force`.
 
 
 ## Appendix
