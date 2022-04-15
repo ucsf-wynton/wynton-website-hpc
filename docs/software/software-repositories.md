@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(80)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(81)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
@@ -278,12 +278,12 @@ prepend_path(&quot;MODULEPATH&quot;, &quot;/salilab/diva1/home/modules&quot;)
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (80)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (81)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 Please note that this software stack is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
@@ -1002,6 +1002,47 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_conda-stage" class="module-name">conda-stage</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">conda-stage: Stage Conda Environment on Local Disk</strong><br>
+<span class="module-description">The 'conda-stage' tool takes the active conda environment and stage it to local disk. Working with a conda environment on local disk can greatly improve the performance as local disk is often much faster than a global, network-based file system, including multi-tenant parallel file systems such as BeeGFS and Lustre often found in high-performance compute (HPC) environments.</span><br>
+Example: <span class="module-example"><code>conda-stage</code>, <code>conda-stage --unstage</code>, <code>conda-stage --version</code>, <code>conda-stage --help</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/conda-stage">https://github.com/HenrikBengtsson/conda-stage</a>, <a href="https://github.com/HenrikBengtsson/conda-stage/tags">https://github.com/HenrikBengtsson/conda-stage/tags</a> (changelog)</span><br>
+Warning: <span class="module-warning">This is work under construction. It may be removed at any time! /HB 2022-04-13</span><br>
+Versions: <span class="module-version">0.1.0, 0.1.1, 0.2.0, <em>0.3.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+conda-stage: Stage Conda Environment on Local Disk
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: cli, shell&quot;)
+whatis(&quot;URL: https://github.com/HenrikBengtsson/conda-stage, https://github.com/HenrikBengtsson/conda-stage/tags (changelog)&quot;)
+whatis([[
+Description: The 'conda-stage' tool takes the active conda environment and stage it to local disk. Working with a conda environment on local disk can greatly improve the performance as local disk is often much faster than a global, network-based file system, including multi-tenant parallel file systems such as BeeGFS and Lustre often found in high-performance compute (HPC) environments.
+Examples: `conda-stage`, `conda-stage --unstage`, `conda-stage --version`, `conda-stage --help`.
+Warning: This is work under construction. It may be removed at any time! /HB 2022-04-13
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+-- Create conda-stage() function, which will overwrite itself after the
+-- first invocation
+local body = 'source &quot;' .. pathJoin(home, &quot;bin&quot;, &quot;conda-stage.sh&quot;) .. '&quot;; '
+body = body .. 'conda-stage &quot;$@&quot;'
+set_shell_function(&quot;conda-stage&quot;, body, '')
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_control-freec" class="module-name">control-freec</h3>
 <dl>
   <dd class="module-details">
@@ -1625,9 +1666,9 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">htop: An Interactive Process Viewer for Unix</strong><br>
 <span class="module-description"><code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.</span><br>
 Example: <span class="module-example"><code>htop</code>.</span><br>
-URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a></span><br>
+URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>3.1.2</em></span><br>
+Versions: <span class="module-version">3.1.0, 3.1.2, <em>3.0.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1638,8 +1679,12 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: system, utility&quot;)
-whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop&quot;)
-whatis(&quot;Description: `htop` is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses. Example: `htop`. Warning: Only the most recent version of this software will be kept.&quot;)
+whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop (source code)&quot;)
+whatis([[
+Description: `htop` is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.
+Examples: `htop`.
+Warning: Only the most recent version of this software will be kept.
+]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -3228,7 +3273,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
 Please note that this software stack is maintained and contributed by a research group on a voluntary basis. It is <em>not</em> maintained by the {{ site.cluster.name }} admins. Please reach out to the corresponding maintainer for bug reports, feedback, or questions.
 </div>
 
@@ -4829,7 +4874,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
-Versions: <span class="module-version">0.15, 0.27, <em>0.28</em></span><br>
+Versions: <span class="module-version">0.15, 0.27, 0.28, <em>0.31</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4838,7 +4883,7 @@ module-whatis &quot;Description: Python package for handling IHM mmCIF files&quo
 module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.28/lib64/python3.6/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.31/lib64/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -4993,7 +5038,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/s
   <dd class="module-details">
 <span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
-Versions: <span class="module-version">0.2, <em>0.3</em></span><br>
+Versions: <span class="module-version">0.2, 0.3, <em>0.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5002,7 +5047,7 @@ module-whatis &quot;Description: Python package for handling ModelCIF mmCIF file
 module-whatis &quot;URL: https://github.com/ihmwg/python-modelcif&quot;
 conflict python2
 module load python3/ihm
-prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.3/lib/python3.6/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.4/lib/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -5719,11 +5764,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(80)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(81)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-04-11 19:31:24 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-04-14 15:59:34 from querying `module avail` and `module spider`._
 
 
 <style>
