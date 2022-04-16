@@ -1,79 +1,16 @@
 <div class="alert alert-warning" role="alert" markdown="1">
-2022-04-13: This is just a draft! The below instructions are currently _not_ ready for users to try out. Stay tuned!
+2022-04-15: This is just a draft! The below instructions are currently _not_ 100% ready for use. Please stay stay tuned!
 </div>
+
 
 <div class="alert alert-warning" role="alert" markdown="1">
-Please, **always stage your Conda environment to local disk!** Your software and job scripts will run much faster this way, and it will significantly decrease the load on the BeeGFS file system. It is a win-win for everyone. See Appendix below for some benchmark results.
+2022-04-15: This page presents a beta feature. Although it's well tested, there might be hiccups. Please reach out to [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}), if you run into issues.
+
 </div>
 
-
-# Work with Conda
-
-TO DO.
-
-## Do not activate Conda by default (recommended)
-
-```sh
-[alice@dev2 ~]$ conda config --set auto_activate_base false
-```
-
-
-## Install select software to Conda environment
-
-In this example, we install Jupyter Notebook to a new Conda environment that we call `myjupyter`.  We start by create the environment:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ conda create --name=myjupyter
-[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$
-```
-
-At this point, the Conda environment is empty. Next, we install Jupyter Notebook to this environment:
-
-```sh
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda install conda-forge::notebook
-(myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
-```
-
-To deactivate a Conda environment, call:
-
-```sh
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
-[alice@{{ site.devel.name }} ~]$ command -v jupyter
-[alice@{{ site.devel.name }} ~]$ 
-```
-
-
-## Use software in a Conda environment
-
-To access software previous installed to a Conda environment, all you need to do is activate the environment by its name;
-
-```sh
-[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
-```
-
-This shows that the software tool is available. For example,
-
-```sh
-(myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter --version
-Selected Jupyter core packages...
-IPython          : 8.2.0
-ipykernel        : 6.9.1
-ipywidgets       : not installed
-jupyter_client   : 7.1.2
-jupyter_core     : 4.9.2
-jupyter_server   : not installed
-jupyterlab       : not installed
-nbclient         : 0.5.11
-nbconvert        : 6.4.4
-nbformat         : 5.1.3
-notebook         : 6.4.10
-qtconsole        : not installed
-traitlets        : 5.1.1
-```
+<div class="alert alert-info" role="alert" markdown="1">
+Please, **stage your Conda environment to local disk!** [Your software and job scripts will run _much_ faster]({{ '/howto/conda-stage.html#benchmark-staged-conda-environment' | relative_url }}), and it will _significantly decrease the load on our global filesystem_ (BeeGFS). **It is a win-win for everyone!**
+</div>
 
 
 ## Stage Conda environment on local disk (highly recommended)
@@ -82,7 +19,7 @@ Working with a Conda environment on local disk greatly improves the performance.
 
 Staging a Conda environment to local disk is straightforward using the **[conda-stage]** tool.  All we have to do is configure the environment once, and from then on we can work with `conda activate ...` and `conda deactivate` as normal.  The only thing we have to remember is to call `module load CBI conda-stage`.
 
-Below is an example that illustrates the process for an existing Conda environment named `myjupyter`.
+Below is a walk-through that illustrates the process. It assumes we have already create a Conda environment named `myjupyter` with some software installed.
 
 
 ### Configure Conda environment for automatic staging (once)
@@ -100,12 +37,14 @@ INFO: Enabled auto-unstaging
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-This configuration step needs to be done only once per Conda environment.
+This configuration step is quick and needs to be done only once per environment.
+
+**That's basically it!** From now on, you can do what you have always done with Conda environments, as illustrated next.
 
 
 ### Activating and deactivating Conda environment
 
-From now on, you can do what you have always done with Conda environments.  Each time you activate the environment, it is automatically staged to local disk. All you have to remember is to load the `conda-stage` module;
+Each time you activate the environment, it is automatically staged to local disk. All you have to remember is to load the `conda-stage` module;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
@@ -128,9 +67,9 @@ INFO: Activating staged Conda environment: /scratch/alice/conda-stage-grWA/myjup
 (/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
 
-**Please, be patient the first you do this**, because _all_ of the environment has to be packaged up into a "tarball" that is saved to cache, which is a step that only has to be done once per environment.  If you don't have dependency **[conda-pack]** already installed, it is also automatically installed the first time.  Next time, both of these steps are skipped an only the much quicker "extracting" and "unpacking" steps take place.
+**Please, be patient the first you do this.**  This is, because _all_ of the environment has to be packaged up into a "tarball" that is saved to cache, which is a step that only has to be done once per environment.  If you don't have dependency **[conda-pack]** already installed, it is also automatically installed the first time.  Next time, both of these steps are skipped an only the much quicker "extracting" and "unpacking" steps take place.
 
-To convince ourselves that everything now run off the local disk, try this:
+To convince ourselves that, at this point, everything runs off the local disk, try this:
 
 ```sh
 (/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ command -v python
@@ -139,7 +78,7 @@ To convince ourselves that everything now run off the local disk, try this:
 /scratch/alice/conda-stage-grWA/myjupyter/bin/jupyter
 ```
 
-**Success!** This means that these **software tools run much faster**, because they no longer rely on the much slower BeeGFS filesystem. Another advantage is that your Conda software stack **adds much less load to BeeGFS**, which otherwise can be quite significant when using Conda. This is a **win-win for everyone**. See Appendix below for some benchmark results.
+**Success!** This means that these **software tools run much faster**, because they no longer rely on the much slower BeeGFS filesystem. Another advantage is that your Conda software stack **adds much less load to BeeGFS**, which otherwise can be quite significant when using Conda. This is a **win-win for everyone**. See '[Benchmark staged Conda environment]' below for some benchmark results.
 
 
 When deactivated, the staged environment is automatically unstaged and all of the temporary, staged files are automatically removed. No surprises here either;
@@ -169,7 +108,7 @@ module load CBI conda-stage
 conda activate myenv
 trap 'conda deactivate' EXIT
 
-< ... >
+…
 ```
 
 In this example, we have also added a shell "trap" that deactivates the environment when the script exits. This makes sure the staged environment is unstaged, i.e. all of its temporary files are removed.
@@ -177,7 +116,7 @@ In this example, we have also added a shell "trap" that deactivates the environm
 
 ### Update an automatically-staged Conda environment
 
-If we install Conda packages to a staged environment, they will all be lost when unstaged.  For installation to be persistent, we need to install to the original Conda environment.  Because of this, we need to temporarily disable the automatic staging.  This can be done by set environment `CONDA_STAGE` to `false` before activation.  Here is an example how to update all packages in the `myjupyter` environment:
+If we update or install new Conda packages to a staged environment, they will all be lost when unstaged.  For installation to be persistent, we need to install to the original Conda environment.  Because of this, we need to temporarily disable the automatic staging.  This can be done by set environment `CONDA_STAGE` to `false` before activation.  Here is an example how to update all packages in the `myjupyter` environment:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ export CONDA_STAGE=false
@@ -191,7 +130,7 @@ If we install Conda packages to a staged environment, they will all be lost when
 
 ### Disable automatic staging
 
-Just like we have to disable automatic staging when we want to update or install new software to a Conda environment, we also have to do it when we want to remove automatic staging from an environment;
+Just like we have to disable automatic staging when we want to update or install new software to a Conda environment, we also have to disable it when we want to remove automatic staging from an environment;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
@@ -203,6 +142,7 @@ Just like we have to disable automatic staging when we want to update or install
 
 
 ## Appendix
+
 
 ### Benchmark staged Conda environment
 
@@ -297,3 +237,4 @@ In other words, by staging the Conda environment to local disk, we saved ourselv
 
 [conda-stage]: https://github.com/HenrikBengtsson/conda-stage/
 [conda-pack]: https://conda.github.io/conda-pack/
+[Benchmark staged Conda environment]: {{ '/howto/conda-stage.html#benchmark-staged-conda-environment' | relative_url }}
