@@ -122,7 +122,7 @@ If we update or install new Conda packages to a staged environment, they will al
 [alice@{{ site.devel.name }} ~]$ export CONDA_STAGE=false
 [alice@{{ site.devel.name }} ~]$ conda enable myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda update --all
-...
+…
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
 [alice@{{ site.devel.name }} ~]$ unset CONDA_STAGE
 ```
