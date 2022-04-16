@@ -67,7 +67,7 @@ INFO: Activating staged Conda environment: /scratch/alice/conda-stage-grWA/myjup
 (/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
 
-**Please, be patient the first you do this.**  This is, because _all_ of the environment has to be packaged up into a "tarball" that is saved to cache, which is a step that only has to be done once per environment.  If you don't have dependency **[conda-pack]** already installed, it is also automatically installed the first time.  Next time, both of these steps are skipped an only the much quicker "extracting" and "unpacking" steps take place.
+**Please, be patient the first time you do this.**  This is, because _all_ of the software in the environment has to be packaged up into a "tarball" that is saved to cache.  This is a step that has to be done only once per environment.  Also, if you don't have dependency **[conda-pack]** already installed, it is also automatically installed at this stage.  But don't worry.  From now on, when we activate the environment, both of these steps can be skipped, and only the much quicker "extracting" and "unpacking" steps take place.
 
 To convince ourselves that, at this point, everything runs off the local disk, try this:
 
@@ -111,7 +111,7 @@ trap 'conda deactivate' EXIT
 …
 ```
 
-In this example, we have also added a shell "trap" that deactivates the environment when the script exits. This makes sure the staged environment is unstaged, i.e. all of its temporary files are removed.
+In this example, we have also added a shell "trap" that deactivates the environment when the script exits. This makes sure the staged environment is unstaged, including all of its temporary files are removed.
 
 
 ### Update an automatically-staged Conda environment
@@ -177,7 +177,7 @@ sys 0.07
 
 ### Proof that a staged Conda environment lives on local disk
 
-If we run `jupyter --version` through `strace` to log _all_ files accessed;
+If we run `jupyter --version` through `strace` to log _all_ files accessed,
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
@@ -199,7 +199,7 @@ qtconsole        : not installed
 traitlets        : 5.1.1
 ```
 
-If we inspect the `jupyter.strace` log file, we find that most file-access calls go to the local disk:
+and inspect the `jupyter.strace` log file, we find that most file-access calls go to the local disk:
 
 ```sh
 $ head -6 jupyter.strace 
