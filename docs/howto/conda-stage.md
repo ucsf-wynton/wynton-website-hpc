@@ -15,7 +15,7 @@ Please, **stage your Conda environment to local disk!** [Your software and job s
 
 ## Stage Conda environment on local disk (highly recommended)
 
-Working with a Conda environment on local disk greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
+Working with a Conda environment that lives on _local disk_ greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
 
 Staging a Conda environment to local disk is straightforward using the **[conda-stage]** tool.  All we have to do is configure the environment once, and from then on we can work with `conda activate ...` and `conda deactivate` as normal.  The only thing we have to remember is to call `module load CBI conda-stage`.
 
