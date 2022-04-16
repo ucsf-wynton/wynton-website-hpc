@@ -1006,11 +1006,11 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 <dl>
   <dd class="module-details">
 <strong class="module-help">conda-stage: Stage Conda Environment on Local Disk</strong><br>
-<span class="module-description">The 'conda-stage' tool takes the active conda environment and stage it to local disk. Working with a conda environment on local disk can greatly improve the performance as local disk is often much faster than a global, network-based file system, including multi-tenant parallel file systems such as BeeGFS and Lustre often found in high-performance compute (HPC) environments.</span><br>
-Example: <span class="module-example"><code>conda-stage</code>, <code>conda-stage --unstage</code>, <code>conda-stage --version</code>, <code>conda-stage --help</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/conda-stage">https://github.com/HenrikBengtsson/conda-stage</a>, <a href="https://github.com/HenrikBengtsson/conda-stage/tags">https://github.com/HenrikBengtsson/conda-stage/tags</a> (changelog)</span><br>
-Warning: <span class="module-warning">This is work under construction. It may be removed at any time! /HB 2022-04-13</span><br>
-Versions: <span class="module-version">0.1.0, 0.1.1, 0.2.0, <em>0.3.0</em></span><br>
+<span class="module-description">The 'conda-stage' tool stages a Conda environment to local disk. Working with a Conda environment on local disk can greatly improve the performance as local disk is often much faster than a global, network-based file system, including multi-tenant parallel file systems such as BeeGFS and Lustre often found in high-performance compute (HPC) environments.</span><br>
+Example: <span class="module-example"><code>conda-stage --auto-stage=enable</code>, and <code>conda-stage --help</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/conda-stage">https://github.com/HenrikBengtsson/conda-stage</a>, <a href="https://github.com/HenrikBengtsson/conda-stage/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/conda-stage/blob/develop/NEWS.md</a> (changelog), <a href="https://github.com/HenrikBengtsson/conda-stage/tags">https://github.com/HenrikBengtsson/conda-stage/tags</a> (releases)</span><br>
+Warning: <span class="module-warning">This is work under construction. Your milage may vary! /HB 2022-04-13</span><br>
+Versions: <span class="module-version">0.4.1, <em>0.5.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1021,11 +1021,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: cli, shell&quot;)
-whatis(&quot;URL: https://github.com/HenrikBengtsson/conda-stage, https://github.com/HenrikBengtsson/conda-stage/tags (changelog)&quot;)
+whatis(&quot;URL: https://github.com/HenrikBengtsson/conda-stage, https://github.com/HenrikBengtsson/conda-stage/blob/develop/NEWS.md (changelog), https://github.com/HenrikBengtsson/conda-stage/tags (releases)&quot;)
 whatis([[
-Description: The 'conda-stage' tool takes the active conda environment and stage it to local disk. Working with a conda environment on local disk can greatly improve the performance as local disk is often much faster than a global, network-based file system, including multi-tenant parallel file systems such as BeeGFS and Lustre often found in high-performance compute (HPC) environments.
-Examples: `conda-stage`, `conda-stage --unstage`, `conda-stage --version`, `conda-stage --help`.
-Warning: This is work under construction. It may be removed at any time! /HB 2022-04-13
+Description: The 'conda-stage' tool stages a Conda environment to local disk. Working with a Conda environment on local disk can greatly improve the performance as local disk is often much faster than a global, network-based file system, including multi-tenant parallel file systems such as BeeGFS and Lustre often found in high-performance compute (HPC) environments.
+Examples: `conda-stage --auto-stage=enable`, and `conda-stage --help`.
+Warning: This is work under construction. Your milage may vary! /HB 2022-04-13
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -5768,7 +5768,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-04-14 15:59:34 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-04-15 19:34:46 from querying `module avail` and `module spider`._
 
 
 <style>
