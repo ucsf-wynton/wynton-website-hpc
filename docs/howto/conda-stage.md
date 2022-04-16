@@ -122,7 +122,7 @@ If we update or install new Conda packages to a staged environment, they will al
 [alice@{{ site.devel.name }} ~]$ export CONDA_STAGE=false
 [alice@{{ site.devel.name }} ~]$ conda enable myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda update --all
-...
+…
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
 [alice@{{ site.devel.name }} ~]$ unset CONDA_STAGE
 ```
@@ -162,7 +162,7 @@ user 1.42
 sys 0.76
 ```
 
-This was test was done during a time when the cluster did indeed experience heavy load on the BeeGFS file system at the time.  The fact that `real` is much greater than `user + sys` suggests our process spends a lot of time just waiting.  **When staging to local disk, we can avoid being affected by this load.**  When running from the local disk, the same call takes less than a second;
+This test was conducted during a time when the cluster did indeed experience heavy load on the BeeGFS file system at the time.  The fact that `real` is much greater than `user + sys` suggests our process spends a lot of time just waiting.  **When staging to local disk, we can avoid being affected by this load.**  When running from the local disk, the same call takes less than a second;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
