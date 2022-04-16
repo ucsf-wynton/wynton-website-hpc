@@ -76,166 +76,130 @@ traitlets        : 5.1.1
 ```
 
 
-## Stage Conda environment on local disk (required)
+## Stage Conda environment on local disk (highly recommended)
 
 Working with a Conda environment on local disk greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
 
-Staging an active Conda environment to local disk is straightforward using the **[conda-stage]** tool.  For example, assume we have an existing Conda environment named `myjupyter`.  After having loaded the `conda-stage` module, all we need to do is activate it and call `conda-stage`;
+Staging a Conda environment to local disk is straightforward using the **[conda-stage]** tool.  All we have to do is configure the environment once, and from then on we can work with `conda activate ...` and `conda deactivate` as normal.  The only thing we have to remember is to call `module load CBI conda-stage`.
+
+Below is an example that illustrates the process for an existing Conda environment named `myjupyter`.
+
+
+### Configure Conda environment for automatic staging (once)
+
+To configure Conda environment `myjupyter` for automatic staging, activate it first and then call `conda-stage --auto-stage=enable`;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
-INFO: Staging current conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to local disk ...
-INFO: Installing conda-pack ...
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable
+INFO: Configuring automatic staging and unstaging of original Conda environment  ...
+INFO: Enabled auto-staging
+INFO: Enabled auto-unstaging
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
+[alice@{{ site.devel.name }} ~]$ 
+```
 
-## Package Plan ##
-
-  environment location: {{ site.user.home }}/miniconda3/envs/myjupyter
-
-  added / updated specs:
-    - conda-pack
+This configuration step needs to be done only once per Conda environment.
 
 
-The following NEW packages will be INSTALLED:
+### Activating and deactivating Conda environment
 
-  conda-pack         conda-forge/noarch::conda-pack-0.7.0-pyh6c4a22f_0
-  python_abi         conda-forge/linux-64::python_abi-3.9-2_cp39
+From now on, you can do what you have always done with Conda environments.  Each time you activate the environment, it is automatically staged to local disk. All you have to remember is to load the `conda-stage` module;
 
-The following packages will be SUPERSEDED by a higher-priority channel:
-
-  ca-certificates    pkgs/main::ca-certificates-2022.3.29-~ --> conda-forge::ca-certificates-2021.10.8-ha878542_0
-  certifi            pkgs/main::certifi-2021.10.8-py39h06a~ --> conda-forge::certifi-2021.10.8-py39hf3d152e_2
-
-
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-INFO: Total installation time: 45 seconds
-INFO: Packaging conda environment ...
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+INFO: Staging current Conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to local disk ...
+INFO: [ONCE] Packaging Conda environment, because it hasn't been done before ...
 Collecting packages...
 Packing environment at '{{ site.user.home }}/miniconda3/envs/myjupyter' to '{{ site.user.home }}/miniconda3/envs/.tmp.myjupyter.tar.gz'
-[########################################] | 100% Completed |  5min 42.1s
-INFO: Total 'conda-pack' time: 363 seconds
-INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 2022-04-14 15:10:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY
+[########################################] | 100% Completed |  4min  5.6s
+INFO: Total 'conda-pack' time: 274 seconds
+INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (86965746 byte
+s; 2022-04-15 16:53:50.000000000 -0700) to /scratch/alice/conda-stage-grWA/myjupyter
 INFO: Total extract time: 4 seconds
-INFO: Unpacking
+INFO: Disable any /scratch/alice/conda-stage-grWA/myjupyter/etc/conda/activate.d/*.cond
+a-stage-auto.sh scripts
+INFO: Activating staged environment
+INFO: Unpacking (relocating)
 INFO: Total 'conda-unpack' time: 0 seconds
-INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY
-(myjupyter*) [alice@{{ site.devel.name }} ~]$
+INFO: Activating staged Conda environment: /scratch/alice/conda-stage-grWA/myjupyter
+(/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
 
-**Please, be patient**. The first time you use `conda-stage` on a Conda environment, it also has to install dependency **[conda-pack]** and package up the environment into a "tarball" that is saved to cache.  Both these steps are automatically skipped when `conda-stage` is used in the future and the staging to local disk is much quicker, e.g.
+**Please, be patient the first you do this**, because _all_ of the environment has to be packaged up into a "tarball" that is saved to cache, which is a step that only has to be done once per environment.  If you don't have dependency **[conda-pack]** already installed, it is also automatically installed the first time.  Next time, both of these steps are skipped an only the much quicker "extracting" and "unpacking" steps take place.
+
+To convince ourselves that everything now run off the local disk, try this:
 
 ```sh
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
-INFO: Staging current conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to
- local disk ...
-INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 202
-2-04-14 15:10:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY
-INFO: Total extract time: 3 seconds
-INFO: Unpacking
-INFO: Total 'conda-unpack' time: 0 seconds
-INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ 
+(/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ command -v python
+/scratch/alice/conda-stage-grWA/myjupyter/bin/python
+(/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
+/scratch/alice/conda-stage-grWA/myjupyter/bin/jupyter
 ```
 
-Continuing, when staging is done, all software tools now lives on the local disk, e.g.
+**Success!** This means that these **software tools run much faster**, because they no longer rely on the much slower BeeGFS filesystem. Another advantage is that your Conda software stack **adds much less load to BeeGFS**, which otherwise can be quite significant when using Conda. This is a **win-win for everyone**. See Appendix below for some benchmark results.
+
+
+When deactivated, the staged environment is automatically unstaged and all of the temporary, staged files are automatically removed. No surprises here either;
 
 ```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-/scratch/alice/conda-stage_wFWY/myjupyter/bin/jupyter
-```
-
-To unstage the staged environment and re-activate the original Conda environment, call:
-
-```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ conda-stage --unstage
-INFO: Unstaging and reverting to original conda environment  ...
-INFO: Original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
-INFO: Removing all staged files: /scratch/alice/conda-stage_wFWY
-INFO: Activating original conda environment: {{ site.user.home }}/miniconda3/envs/myjupyter
+(/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
+INFO: Unstaging and reverting to original Conda environment  ...
+INFO: Preparing removal of staged files: /scratch/alice/conda-stage-grWA/myjupyter
+INFO: Deactivating and removing staged Conda environment: /scratch/alice/conda-stage-gr
+WA/myjupyter
 INFO: Total unstage time: 0 seconds
-(myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
+[alice@{{ site.devel.name }} ~]$ command -v jupyter
+[alice@{{ site.devel.name }} ~]$ command -v python
+/usr/bin/python
 ```
 
-Note how the software tools are now found in the original location, which is left as-is through out the staging.
 
 
-If a packaged tarball already exists, you can rebuild it using:
+### Using Conda staging in job scripts
 
-```sh
-[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --pack --force
-```
-
-This can used when software tools have been updated since last time, or when additional software have been installed to the environment.
-
-
-### Use Conda staging in job scripts
-
-To work with staged conda environments in your job scripts, just call `conda-stage` after activating the conda environment of interest.  That is, if your script used to do:
-
-```sh
-#! /usr/bin/env bash
-
-conda activate myenv
-...
-```
-
-all you need to do is to update it to:
+To work with staged conda environments in your job scripts, make sure to first configure it to do automatic staging interactively from a development node.  After this, all you have to do is to update your existing script to load the `conda-stage` module before activating the Conda environment, e.g.
 
 ```sh
 #! /usr/bin/env bash
 
 module load CBI conda-stage
 conda activate myenv
-conda-stage
+trap 'conda deactivate' EXIT
+
+< ... >
+```
+
+In this example, we have also added a shell "trap" that deactivates the environment when the script exits. This makes sure the staged environment is unstaged, i.e. all of its temporary files are removed.
+
+
+### Update an automatically-staged Conda environment
+
+If we install Conda packages to a staged environment, they will all be lost when unstaged.  For installation to be persistent, we need to install to the original Conda environment.  Because of this, we need to temporarily disable the automatic staging.  This can be done by set environment `CONDA_STAGE` to `false` before activation.  Here is an example how to update all packages in the `myjupyter` environment:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ export CONDA_STAGE=false
+[alice@{{ site.devel.name }} ~]$ conda enable myjupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda update --all
 ...
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
+[alice@{{ site.devel.name }} ~]$ unset CONDA_STAGE
 ```
 
 
-### Automatically stage Conda environment when activated
+### Disable automatic staging
 
-If you think calling `conda-stage` is too much to remember and you wish it could be done automatically, then your in luck.  You can configure the environment to call `conda-stage` whenever it is activated.  Here is how to do it:
+Just like we have to disable automatic staging when we want to update or install new software to a Conda environment, we also have to do it when we want to remove automatic staging from an environment;
 
 ```sh
-(myjupyter) [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --read-only --auto-stage=enable
-INFO: Configuring automatic staging of original conda environment  ...
-INFO: Enabled auto staging
+[alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
+[alice@{{ site.devel.name }} ~]$ CONDA_STAGE=false conda enable myjupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=disable
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
 [alice@{{ site.devel.name }} ~]$ 
 ```
-
-From now on, this Conda environment will be automatically staged when activated;
-
-```sh
-[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-Auto staging conda environment 'myjupyter'. To disable, call 'conda-stage --auto-stage=disable'
-INFO: Staging current conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to local disk ...
-INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (83710719 bytes; 2022-04-14 15:10:23.000000000 -0700) to /scratch/alice/conda-stage_wFWY
-INFO: Total extract time: 4 seconds
-INFO: Unpacking
-INFO: Total 'conda-unpack' time: 0 seconds
-INFO: Make staged environment read-only
-INFO: Activating staged conda environment: /scratch/alice/conda-stage_wFWY
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-/scratch/alice/conda-stage_wFWY
-```
-
-To disable automatic staging, just call:
-
-```sh
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=disable
-(myjupyter) [alice@{{ site.devel.name }} ~]$ 
-```
-
-Note also how we in the above example configured the auto-staging with `--read-only`. This will make the staged environment to be read-only, that is, we cannot install additional software to it, or update the existing ones. To do that, you need to unstage it first, install or update the original environment, and the call `conda-stage --pack --force`.
 
 
 ## Appendix
@@ -249,7 +213,7 @@ To illustrate the benefit of staging a Conda environment to local disk, we will 
 Without staging to local disk, the call takes a whopping 32 seconds to return:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+[alice@{{ site.devel.name }} ~]$ CONDA_STAGE=false conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 {{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
@@ -262,10 +226,9 @@ This was test was done during a time when the cluster did indeed experience heav
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ command -v jupyter
+(/scratch/alice/conda-stage_wFWY/myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
 /scratch/alice/conda-stage_wFWY/myjupyter/bin/jupyter
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
+(/scratch/alice/conda-stage_wFWY/myjupyter) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
 real 0.75
 user 0.67
 sys 0.07
@@ -278,8 +241,7 @@ If we run `jupyter --version` through `strace` to log _all_ files accessed;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ strace -e trace=stat -o jupyter.strace jupyter --version
+(/scratch/alice/conda-stage_wFWY/myjupyter) [alice@{{ site.devel.name }} ~]$ strace -e trace=stat -o jupyter.strace jupyter --version
 
 Selected Jupyter core packages...
 IPython          : 8.2.0
@@ -300,33 +262,33 @@ traitlets        : 5.1.1
 If we inspect the `jupyter.strace` log file, we find that most file-access calls go to the local disk:
 
 ```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ head -6 jupyter.strace 
-stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
-stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/tls", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
-stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
-stat("/scratch/alice/conda-stage_b721EnZLRs/bin/../lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}) = 0
+$ head -6 jupyter.strace 
+stat("/scratch/alice/conda-stage_wFWY/myjupyter/bin/../lib/tls/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
+stat("/scratch/alice/conda-stage_wFWY/myjupyter/bin/../lib/tls", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
+stat("/scratch/alice/conda-stage_wFWY/myjupyter/bin/../lib/x86_64", 0x7ffc9a9ea980) = -1 ENOENT (No such file or directory)
+stat("/scratch/alice/conda-stage_wFWY/myjupyter/bin/../lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}) = 0
 stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffc9a9eaf10) = -1 ENOENT (No such file or directory)
-stat("/scratch/alice/conda-stage_b721EnZLRs/bin/python", {st_mode=S_IFREG|0755, st_size=15880080, ...}) = 0
+stat("/scratch/alice/conda-stage_wFWY/myjupyter/bin/python", {st_mode=S_IFREG|0755, st_size=15880080, ...}) = 0
 ```
 
 Exactly, how many of them?  In this simple example where we only query the version of Jupyter Notebook and its dependencies, there are 4,027 queries to the file system;
 
 ```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -c stat jupyter.strace 
+$ grep -c stat jupyter.strace 
 4027
 ```
 
 Out of these, 4,021 are done toward the local disk (`/scratch`);
 
 ```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -c 'stat("/scratch' jupyter.strace 
+$ grep -c 'stat("/scratch' jupyter.strace 
 4021
 ```
 
 and only _one_ toward the BeeGFS file system (`{{ site.path.global_root }}`):
 
 ```sh
-(myjupyter*) [alice@{{ site.devel.name }} ~]$ grep -v 'stat("{{ site.path.global_root }}' jupyter.strace 
+$ grep -v 'stat("{{ site.path.global_root }}' jupyter.strace 
 stat("{{ site.user.home }}/.local/lib/python3.9/site-packages", 0x7ffc9a9ea820) = -1 ENOENT (No such file or directory)
 ```
 
