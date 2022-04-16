@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert" markdown="1">
-2022-04-15: This is just a draft! The below instructions are currently _not_ 100% ready for use. Please stay stay tuned!
+2022-04-15: This is just a draft! The below instructions are currently _not_ 100% ready for use. Please stay tuned!
 </div>
 
 
