@@ -317,9 +317,59 @@ Then the finished container image can be transferred to Wynton for use.
 
 If you do not have a Linux workstation, a Linux virtual machine is easy to install on Windows and macOS.
 
-### Create a Docker image on your own workstation and transfer the image to Wynton
+From the Linux workstation (or virtual machine) where Singularity is installed and you have root access:
 
-Similarity to installing Singularity on a Linux workstation, you can install Docker on a workstation you have access to and upload the Docker image to a registry such as [Docker Hub](https://hub.docker.com/) or [quay.io](https://quay.io/search). Docker images can be converted to a Singularity container.
+- Create a definition file using a text editor on the Linux workstation containing
+
+```sh
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%post
+  /opt/conda/bin/conda config --add channels bioconda
+  /opt/conda/bin/conda install isoseq3
+
+%runscript
+  /opt/conda/bin/isoseq3
+```
+
+- From the Linux workstation use the `sudo singularity build` command
+
+```sh
+[alice@workstation]$ sudo singularity build isoseq3 isoseq3.def
+...
+INFO:    Adding runscript
+INFO:    Creating SIF file...
+INFO:    Build complete: /tmp/image-4018701584
+WARNING: Skipping container verification
+148.5MiB / 148.5MiB [======================================] 100 % 68.0 MiB/s 0s
+...
+INFO:    Build complete: isoseq3
+```
+
+- a Singularity container image file named `isoseq3` should now exist along with the definition file
+
+```sh
+[alice@workstation]$ ls -1
+isoseq3
+isoseq3.def
+```
+
+```sh
+[alice@workstation]$ isoseq3 --version
+isoseq3 3.4.0 (commit v3.4.0)
+```
+
+- Transfer the Singularity image file to Wynton
+
+
+
+### Create a Singularity or Docker image on your own workstation and transfer the image to Wynton
+
+Similarly to installing Singularity on a Linux workstation, you can install Docker on a workstation you have access to and upload the Docker image to a registry such as [Docker Hub](https://hub.docker.com/) or [quay.io](https://quay.io/search). Docker images can be converted to a Singularity container.
+
+
+
 
 
 ## FAQ
