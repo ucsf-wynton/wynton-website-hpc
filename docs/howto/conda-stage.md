@@ -58,6 +58,7 @@ a-stage-auto.sh scripts
 INFO: Activating staged environment
 INFO: Unpacking (relocating)
 INFO: Total 'conda-unpack' time: 0 seconds
+INFO: Making staged environment read-only (use --writable to disable)
 INFO: Activating staged Conda environment: /scratch/alice/conda-stage-grWA/myjupyter
 (/scratch/alice/conda-stage-grWA/myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
