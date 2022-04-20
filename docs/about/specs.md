@@ -20,6 +20,7 @@
 
 | Feature     | Login Nodes | Transfer Nodes          | Development Nodes | Compute Nodes |
 | ---- | ---------- | ----------------------- | ------------ | ---- |
+| Hostname | `log[1-2].wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu` | `dev[1-3]`, `gpudev1` | … |
 | Accessible via SSH from outside of cluster | ✓ (2FA if outside of UCSF) | ✓ (2FA if outside of UCSF) | no                                                          | no |
 | Accessible via SSH from within cluster | ✓ | ✓ | ✓ | no |
 | Outbound access | Within UCSF only: SSH and SFTP | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, Globus | Via proxy: FTP, HTTP/HTTPS, GIT+SSH(\*) | no |
@@ -65,10 +66,10 @@ The cluster has development nodes for the purpose of validating scripts, prototy
 
 Node                        | Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
 ----------------------------|---------------:|---------:|-----------------:|------------------------------:|-------------------:|
-{{ site.dev1.hostname }}    |             72 |  384 GiB |         0.93 TiB | Intel Gold 6240 2.60GHz       |                    |
-{{ site.dev2.hostname }}    |             48 |  512 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
-{{ site.dev3.hostname }}    |             48 |  256 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
-{{ site.gpudev1.hostname }} |             32 |  128 GiB |         0.82 TiB | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
+`{{ site.dev1.hostname }}`    |             72 |  384 GiB |         0.93 TiB | Intel Gold 6240 2.60GHz       |                    |
+`{{ site.dev2.hostname }}`    |             48 |  512 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.dev3.hostname }}`    |             48 |  256 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.gpudev1.hostname }}` |             32 |  128 GiB |         0.82 TiB | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
 
 _Comment:_ Please use the GPU development node only if you need to build or prototype GPU software.
 <!--
