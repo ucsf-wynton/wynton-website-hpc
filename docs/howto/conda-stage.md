@@ -116,7 +116,7 @@ In this example, we have also added a shell "trap" that deactivates the environm
 
 ### Update an automatically-staged Conda environment
 
-If we update or install new Conda packages to a staged environment, they will all be lost when unstaged.  For installation to be persistent, we need to install to the original Conda environment.  Because of this, we need to temporarily disable the automatic staging.  This can be done by set environment `CONDA_STAGE` to `false` before activation.  Here is an example how to update all packages in the `myjupyter` environment:
+If we would update or install new Conda packages to a staged environment, they will all be lost when unstaged.  Because of this staged environments are by default read-only (**conda-stage** option `--writable` overrides this).  Instead, for installation to be persistent, we need to install to the original Conda environment before it is staged.  To do this, we need to temporarily disable the automatic staging, otherwise it will be staged before we get to install.  This can be done by set environment `CONDA_STAGE` to `false` before activation.  Here is an example how to update all packages in the `myjupyter` environment:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ export CONDA_STAGE=false
@@ -148,7 +148,7 @@ Just like we have to disable automatic staging when we want to update or install
 
 <!-- These benchmarks where collected on 2022-04-13 at 18:50 -->
 
-To illustrate the benefit of staging a Conda environment to local disk, we will benchmark how long it takes for `jupyter --version` to complete.
+To illustrate the benefit of staging a Conda environment to local disk, we will benchmark how long it takes for `jupyter --version` to complete without staging and with staging.
 
 Without staging to local disk, the call takes a whopping 32 seconds to return:
 
