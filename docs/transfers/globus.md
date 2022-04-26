@@ -58,8 +58,6 @@ Instead of using the non-PHI-compliant endpoint 'UCSF Wynton HPC', all PHI data 
 5. Your default Two-Factor Authentication will be notified.  
 6. Approve, and Globus will continue to a screen representing the Wynton file system.
 
-<B>NOTE:</B> Globus v.5 does not currently support putting you by default in your home directory, instead you will land in /wynton/. You will need to navigate from there to your home directory in /wynton/protected/home (or wherever you want to transfer your files).
-
 
 ## Endpoints of interest
 
