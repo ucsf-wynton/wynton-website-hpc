@@ -1,1 +1,1 @@
-x2go is currently broken on gpudev1 and pgpudev1. Symptom is the session disconnects after successful authentication. We are working with diagnosing the problem with the vendor. In the meantime, please instead use port forwarding for GUI/Jupyter use of gpudev1 and pgpudev1.
+x2go is currently broken on gpudev1 and pgpudev1. Symptom is the session disconnects after successful authentication. We are working on diagnosing the problem with the vendor. In the meantime, please instead use port forwarding for GUI/Jupyter use of gpudev1 and pgpudev1.
