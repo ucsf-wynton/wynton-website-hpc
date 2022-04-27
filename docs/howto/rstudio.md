@@ -76,7 +76,65 @@ After clicking 'Sign In', you should be redirected to the RStudio interface.
 To terminate the RStudio Server, start by exiting R by typing `quit()` at the R prompt. Then press <kbd>Ctrl-C</kbd> in the terminal where you called `rsc start`.  Alternatively, run `rsc stop` in another terminal, e.g. the second one used in Step 2.
 
 
+## Streamlining Authenticating to Personal RStudio Server
 
+If you find it tedious to copy and paste the SSH port forwarding string and the
+one-time password each time you start RStudio Server, there's some optional
+setup you can do to skip the former and specifiy a password for the latter.
+
+### One-Time Setup
+1. Find the random port number generated from your UID by running `rsc start`.
+   The port number is the number between 1024 and 65535 after wynton.ucsf.edu.
+   In the example below, the port number is <kbd>39312</kbd>:
+```
+❱ rsc start
+alice, your personal RStudio Server is available on
+<http://pdev1.wynton.ucsf.edu:39312>. If you are running from a remote machine
+without direct access to pdev1.wynton.ucsf.edu, you can use SSH port forwarding
+to access the RStudio Server at <http://127.0.0.1:8787> by running 'ssh -L
+8787:pdev1.wynton.ucsf.edu:39312 alice@plog1.wynton.ucsf.edu' in a second
+terminal.
+```
+2. Log out of Wynton and set up SSH port forwarding in your SSH config
+   (`~/.ssh/config`) on your local machine.  We'll set up a login node as a
+   jumphost and specify the port you identified in step 1 on the line starting
+   with `LocalForward` when connecting to the dev node:
+```
+Host wynton-login
+    Hostname plog1.wynton.ucsf.edu      # Login node
+    User alice                          # Your username
+Host wynton
+    Hostname pdev1                      # Dev node of choice
+    User alice                          # Your username
+    ProxyJump wynton-login              # Log in to the login node before connecting to dev node
+    LocalForward 8787 127.0.0.1:39312   # Forward port 39312 on login node to local port 8787
+```
+
+### Authenticating
+Now, whenever you want to start RStudio server, from your local machine run `ssh
+wynton` to connect to the dev node and invoke the `rsc start` command exporting
+the `RSC_PASSWORD` env variable with a non-random password:
+```
+env RSC_PASSWORD='correct.horse.battery.staple' rsc start --port=39312
+```
+
+You can navigate to `localhost:8787` in a browser on your local machine and use
+your Wynton username and the password you specified (in this case,
+`correct.horse.battery.staple`) to sign in to RStudio Server.  While you will
+still see the prompt suggesting you run the jumphost command (`ssh -L 8787...`)
+you don't need to do this, nor do you need to copy and paste a temporary
+password!
+```
+❱ env RSC_PASSWORD='correct.horse.battery.staple' rsc start --port=39312
+alice, your personal RStudio Server is available on
+<http://pdev1.wynton.ucsf.edu:39312>. If you are running from a remote machine
+without direct access to pdev1.wynton.ucsf.edu, you can use SSH port forwarding
+to access the RStudio Server at <http://127.0.0.1:8787> by running 'ssh -L
+8787:pdev1.wynton.ucsf.edu:39312 alice@plog1.wynton.ucsf.edu' in a second
+terminal.
+
+Any R session started times out after being idle for 120 minutes.
+```
 
 ## RStudio Desktop over X11 Forwarding
 
