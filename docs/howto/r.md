@@ -315,8 +315,7 @@ ERROR: configuration failed for package 'hdf5r'
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) mpi/openmpi-x86_64   3) scl-devtoolset/8   5) gdal/2.4.4
-  2) CBI                  4) r/4.1.3            6) hdf5/1.12.1
+  1) CBI   2) scl-devtoolset/8   3) r/4.1.3   4) hdf5/1.12.1
 
  
 
@@ -359,8 +358,7 @@ ERROR: configuration failed for package 'sf'
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) mpi/openmpi-x86_64   3) scl-devtoolset/8   5) gdal/2.4.4
-  2) CBI                  4) r/4.1.3
+  1) CBI   2) scl-devtoolset/8   3) r/4.1.3   4) gdal/2.4.4
 
  
 

@@ -91,10 +91,3 @@ gcc --version
 EOF
 module purge
 module load CBI r
-
-mdi_code_block --label=r-cmake <<EOF
-module load CBI cmake
-cmake --version
-EOF
-module purge
-module load CBI r
