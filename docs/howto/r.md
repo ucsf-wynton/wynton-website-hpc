@@ -645,22 +645,14 @@ make: *** [{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib64/R/share/make/shlib.mk
 ERROR: compilation failed for package 'nloptr'
 ```
 
-The solution is to load CMake v3 before launching R, as:
+The solution is to set environment variable `CMAKE_BIN` to point to `cmake3` before installing **nloptr**.  We can do this in R as:
 
-<!-- code-block label="r-cmake" -->
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI cmake
-
-The following have been reloaded with a version change:
-  1) scl-devtoolset/9 => scl-devtoolset/8
-
-[alice@{{ site.devel.name }} ~]$ cmake --version
-cmake version 3.22.2
-
-CMake suite maintained and supported by Kitware (kitware.com/cmake).
+```r
+> Sys.setenv(CMAKE_BIN = "cmake3")
+> install.packages("nloptr")
 ```
 
-After this, **nloptr** installs out of the box.  There is _no_ need to load the `cmake` module when using the **nloptr** package.
+This makes **nloptr** install out of the box.  There is _no_ need to load the `cmake` module when using the **nloptr** package.
 
 
 
