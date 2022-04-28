@@ -4,6 +4,6 @@ The following have been reloaded with a version change:
   1) scl-devtoolset/9 => scl-devtoolset/8
 
 [alice@{{ site.devel.name }} ~]$ cmake --version
-cmake version 3.22.2
+cmake version 3.23.0
 
 CMake suite maintained and supported by Kitware (kitware.com/cmake).
