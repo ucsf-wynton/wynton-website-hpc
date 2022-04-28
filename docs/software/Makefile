@@ -4,6 +4,9 @@ PAGE=software-repositories
 
 all: $(PAGE).md
 
+clean:
+	rm -rf lmod_data/
+
 build:
 	touch $(PAGE).md.rsp
 	make all
@@ -28,5 +31,4 @@ scl:
 singularity:
 	markin build $@.sh
 	markin inject $@.md
-
 
