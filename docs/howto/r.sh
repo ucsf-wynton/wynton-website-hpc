@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-#' @usage: mdi build python.sh
+#' @usage: markin build r.sh
 
 TMPDIR="${TMPDIR:-/scratch/$USER}"
 [[ -z "${TMPDIR}" ]] && { 2>&1 echo "ERROR: TMPDIR is empty"; exit 1; }

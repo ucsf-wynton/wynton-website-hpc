@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+#' @usage: markin build matlab.sh
 
 export TMPDIR=${TMPDIR:-/scratch/$USER/mdi}
 mkdir -p "${TMPDIR}"
