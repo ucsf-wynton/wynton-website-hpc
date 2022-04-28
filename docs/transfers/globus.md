@@ -71,4 +71,4 @@ Instead of using the non-PHI-compliant endpoint 'UCSF Wynton HPC', all PHI data 
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
 ['{{ site.globus.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus.uuid }}/overview
-['UCSF Wynton PDT' endpoint]: https://app.globus.org/file-manager/collections/0f245a07-0f24-4732-a2d3-18fe9bb5c8ed/overview
+['UCSF Wynton PDT' endpoint]: https://app.globus.org/file-manager/collections/ef126934-6f8a-4af8-81cd-d5b0b7afe51f/overview
