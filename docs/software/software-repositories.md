@@ -158,13 +158,13 @@ prepend-path  MANPATH   /usr/local/julia-1.6.0/share/man
 <h3 id="module_built-in_matlab" class="module-name">matlab</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">9.5.0.944444, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, <em>2021b</em></span><br>
+Versions: <span class="module-version">9.5.0.944444, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Language for technical computing&quot;
-prepend-path  PATH                /usr/local/matlab/R2021b/bin
+prepend-path  PATH                /usr/local/matlab/R2022a/bin
 setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton.ucsf.edu
 </code></pre>
 
@@ -174,13 +174,13 @@ setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton
 <h3 id="module_built-in_matlab-runtime" class="module-name">matlab-runtime</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2020a, 2020b, 2021a, <em>2021b</em></span><br>
+Versions: <span class="module-version">2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;MATLAB Runtime for making use of MATLAB Compiler applications&quot;
-prepend-path  LD_LIBRARY_PATH     /usr/local/matlab/R2021b/runtime/glnxa64:/usr/local/matlab/R2021b/bin/glnxa64:/usr/local/matlab/R2021b/sys/os/glnxa64:/usr/local/matlab/R2021b/extern/bin/glnxa64
+prepend-path  LD_LIBRARY_PATH     /usr/local/matlab/R2022a/runtime/glnxa64:/usr/local/matlab/R2022a/bin/glnxa64:/usr/local/matlab/R2021a/sys/os/glnxa64:/usr/local/matlab/R2022a/extern/bin/glnxa64
 </code></pre>
 
 </details>
@@ -5822,7 +5822,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-04-22 08:17:14 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-04-29 14:48:24 from querying `module avail` and `module spider`._
 
 
 <style>
