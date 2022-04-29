@@ -44,8 +44,7 @@ The problem is that Unix-like systems gets confused by that extra `r` (CR) at th
 We can use `cat` with option `-A` to see if a file uses CR symbols;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ source script.sh
-$ cat -A script.sh
+[alice@{{ site.devel.name }} ~]$ cat -A script.sh
 #! /usr/bin/env bash^M$
 ^M$
 hostname^M$
