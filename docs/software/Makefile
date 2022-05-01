@@ -13,7 +13,7 @@ build:
 	git diff
 
 $(PAGE).md: $(PAGE).md.rsp
-	module purge; \\
+	module purge; \
 	module load CBI r && \
 	Rscript -e R.rsp::rfile $< --postprocess=FALSE
 
