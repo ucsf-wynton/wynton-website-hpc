@@ -1,19 +1,19 @@
 > BiocManager::install("limma")
-Bioconductor version 3.14 (BiocManager 1.30.16), R 4.1.3 (2022-03-10)
+Bioconductor version 3.15 (BiocManager 1.30.17), R 4.2.0 (2022-04-22)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.14/bioc/src/contrib/limma_3.50.0.tar.gz'
-Content type 'application/x-gzip' length 1555883 bytes (1.5 MB)
+trying URL 'https://bioconductor.org/packages/3.15/bioc/src/contrib/limma_3.52.0.tar.gz'
+Content type 'application/x-gzip' length 1513449 bytes (1.4 MB)
 ==================================================
-downloaded 1.5 MB
+downloaded 1.4 MB
 
 * installing *source* package 'limma' ...
 ** using staged installation
 ** libs
-gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/R-4.1.3-gcc8/lib/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.1-custom/00LOCK-limma/00new/limma/libs
+gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -lR
+installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.2-gcc10/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
