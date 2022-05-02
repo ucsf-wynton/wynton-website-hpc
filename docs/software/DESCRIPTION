@@ -1,0 +1,16 @@
+Package: lmodweb
+Version: 0.0.0-9000
+Imports:
+    gtools,
+    utils,
+    R.utils,
+    jsonlite,
+    commonmark
+Title: Lmod Environment Modules Web Utils
+Authors@R: c(person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"),
+                                          email = "henrikb@braju.com"))
+Description: Parses Lmod environment modules and compiles them into HTML.
+License: GPL-3
+LazyLoad: TRUE
+RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)

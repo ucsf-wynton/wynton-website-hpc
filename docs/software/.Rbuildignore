@@ -1,0 +1,7 @@
+.mdi/
+.Rdump/
+lmod_data/
+Makefile
+.md$
+.sh$
+.rsp$

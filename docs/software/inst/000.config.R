@@ -1,3 +1,4 @@
+#' @export
 module_repositories <- list(
   "built-in" = list(
     name        = "built-in",

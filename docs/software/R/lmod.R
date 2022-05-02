@@ -1,8 +1,4 @@
-library(utils)
-library(R.utils)
-library(jsonlite)
-library(commonmark)
-
+#' @export
 trim <- function(x) {
   if (!is.character(x)) return(x)
   x <- sub("^[\t\n\f\r ]*", "", x)
@@ -10,15 +6,33 @@ trim <- function(x) {
 }
 
 #' @importFrom commonmark markdown_html
+#' @export
 as_html <- function(x) {
   if (!is.character(x)) return(x)
-  x <- commonmark::markdown_html(x, extensions = TRUE)
+  x <- markdown_html(x, extensions = TRUE)
   x <- gsub("(^<p>|</p>\n$)", "", x)
   x
 }
 
+#' Get the module path
+#'
+#' @return
+#' A character vector of environment module folders.
+#'
+#' @export
+module_path <- function() {
+  path <- Sys.getenv("MODULEPATH", NA_character_)
+  if (is.na(path)) return(path)
+  strsplit(path, split = .Platform[["path.sep"]], fixed = TRUE)[[1]]
+}
 
+#' Locate the 'spider' executable
+#'
+#' @return
+#' The pathname of the `spider` executable
+#'
 #' @importFrom utils file_test
+#' @export
 find_spider <- local({
   spider <- NULL
 
@@ -27,38 +41,48 @@ find_spider <- local({
       lmod_dir <- file.path(Sys.getenv("LMOD_DIR"))
       stopifnot(nzchar(lmod_dir))
       bin <- file.path(lmod_dir, "spider")
-      message(" - spider binary: ", sQuote(bin))
-      stopifnot(utils::file_test("-x", bin))
+      debug <- getOption("lmodweb.debug", FALSE)
+      if (debug) message(" - spider binary: ", sQuote(bin))
+      stopifnot(file_test("-x", bin))
       spider <<- bin
     }
     spider
   }
 })
 
-
+#' @param module_path A folder with environment modules.
+#'
+#' @param force If FALSE, and results are already cached, then the
+#' cached results are returned.
+#'
+#' @return
+#' A non-parsed, JSON string.
+#'
 #' @importFrom utils file_test
+#' @export
 spider <- function(module_path, force = FALSE) {
-  message(sprintf("spider('%s') ...", module_path))
+  debug <- getOption("lmodweb.debug", FALSE)
+  if (debug) message(sprintf("spider('%s') ...", module_path))
   
   ## Already on file?
   pathname <- file.path("lmod_data", sprintf("%s.json", module_path))
-  message("- pathname: ", pathname)
-  if (force || !utils::file_test("-f", pathname)) {
-    stopifnot(utils::file_test("-d", module_path))
+  if (debug) message("- pathname: ", pathname)
+  if (force || !file_test("-f", pathname)) {
+    stopifnot(file_test("-d", module_path))
     path <- dirname(pathname)
     dir.create(path, recursive = TRUE)
-    stopifnot(utils::file_test("-d", path))
+    stopifnot(file_test("-d", path))
     spider <- find_spider()
     args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
-    message(" - spider arguments: ", paste(args, collapse = " "))
+    if (debug) message(" - spider arguments: ", paste(args, collapse = " "))
     res <- system2(spider, args = args, stdout = pathname)
-    message(" - spider result: ", res)
-    stopifnot(utils::file_test("-f", pathname))
+    if (debug) message(" - spider result: ", res)
+    stopifnot(file_test("-f", pathname))
   }
   json <- readChar(pathname, nchars = file.size(pathname))
-#  message(" - spider json result: ", json)
+#  if (debug) message(" - spider json result: ", json)
   
-  message(sprintf("spider('%s') ... done", module_path))
+  if (debug) message(sprintf("spider('%s') ... done", module_path))
   json
 }
 
@@ -67,6 +91,7 @@ spider <- function(module_path, force = FALSE) {
 #' @importFrom R.utils mstr
 #' @importFrom jsonlite fromJSON
 #' @importFrom utils file_test
+#' @export
 module_avail <- local({
   ## Memoization
   .cache <- list()
@@ -84,13 +109,13 @@ module_avail <- local({
       return(res)
     }
 
-    message(""); R.utils::mstr(list(info = info))
+    message(""); mstr(list(info = info))
     if (all(!nzchar(module_path))) {
       stop("Specified empty folder(s): ", paste(sQuote(module_path), collapse = ", "))
     }
     
     if (onMissingPath != "okay") {
-      unknown <- module_path[!utils::file_test("-x", module_path)]
+      unknown <- module_path[!file_test("-x", module_path)]
       if (length(unknown) > 0) {
         msg <- sprintf("No such folder(s): %s", paste(sQuote(unknown), collapse = ", "))
         if (onMissingPath == "error") stop(msg)
@@ -100,7 +125,7 @@ module_avail <- local({
     }
 
     json <- spider(module_path)
-    x <- jsonlite::fromJSON(json)
+    x <- fromJSON(json)
     o <- order(x$package)
     x <- x[o,]
     keep <- !grepl("^[.]", x$package)
@@ -138,6 +163,7 @@ module_avail <- local({
   }
 })
 
+#' @export
 get_modules_sets <- function(module_repositories) {
   modules_sets <- lapply(names(module_repositories), FUN = function(name) {
     info <- module_repositories[[name]]
@@ -154,6 +180,9 @@ get_modules_sets <- function(module_repositories) {
 }
 
 
+#' @importFrom gtools mixedsort
+#' @importFrom R.utils cstr
+#' @export
 parse_module <- function(m) {
   m <- lapply(m, FUN = trim)
 
@@ -186,7 +215,7 @@ parse_module <- function(m) {
     vers <- unique(versions$versionName)
     names(vers) <- rep("", times = length(vers))
     if (length(vers) > 1L || vers != "default") {
-#      vers <- gtools::mixedsort(vers)
+#      vers <- mixedsort(vers)
       idx <- match(m$defaultVersionName, table = vers)
       if (length(idx) == 1) {
         ## FIXME: spider seems to set 'defaultVersionName' randomly /HB 2017-06-30
@@ -220,12 +249,12 @@ parse_module <- function(m) {
   if (length(idx) == 0L && length(names) == 1L) idx <- 1L
   if (length(idx) == 1L && is.finite(idx)) {
     path <- m$versions[[1]][idx,"path"]
-    if (!is.na(path) && utils::file_test("-f", path)) {
+    if (!is.na(path) && file_test("-f", path)) {
       m$code <- readLines(path, warn = FALSE)
     }
   } else {
     ## The module does not have versions
-    R.utils::cstr(list(idx = idx, names = names, default = m[["version"]][idx], versions = m$versions[[1]], default = m$versions[[1]][idx, ], path=m$versions[[1]][idx,"path"]))
+    cstr(list(idx = idx, names = names, default = m[["version"]][idx], versions = m$versions[[1]], default = m$versions[[1]][idx, ], path=m$versions[[1]][idx,"path"]))
     stop("INTERNAL ERROR: Should not happen")
   }
 
@@ -237,4 +266,3 @@ parse_module <- function(m) {
 
   m
 } ## parse_module()
-
