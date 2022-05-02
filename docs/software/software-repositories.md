@@ -2351,7 +2351,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 <span class="module-description">The R programming language.</span><br>
 Example: <span class="module-example"><code>R</code>, <code>R --version</code>, and <code>Rscript --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.r-project.org/">https://www.r-project.org/</a>, <a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.html">https://cran.r-project.org/doc/manuals/r-release/NEWS.html</a> (changelog)</span><br>
-Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.5, 4.1.0-gcc8, 4.1.1-gcc8, 4.1.2-gcc8, <em>4.1.3-gcc8</em>, 4.2.0-gcc10</span><br>
+Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.5, 4.1.0-gcc8, 4.1.1-gcc8, 4.1.2-gcc8, 4.1.3-gcc8, <em>4.2.0-gcc10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2359,7 +2359,7 @@ R: The R Programming Language
 ]])
 
 local name = myModuleName()
-local version = &quot;4.1.1-gcc8&quot;
+local version = &quot;4.1.2-gcc8&quot;
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: Programming, Statistics&quot;)
 whatis(&quot;URL: https://www.r-project.org/&quot;)
@@ -5861,7 +5861,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-05-02 14:03:11 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-05-02 15:06:39 from querying `module avail` and `module spider`._
 
 
 <style>
