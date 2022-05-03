@@ -34,6 +34,14 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Quota: Unlimited (all users).
   - Purpose: For software that utilize Graphics Processing Units (GPUs)
 
+* **4gpu_q**:
+  - Maximum runtime on contributed MSG 4 GPU nodes: 2 weeks (336 hours) if you are the an MSG member, otherwise 2 hours
+  - Process priority: 0 (highest)
+  - Availability: {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }}  4-GPU MSG nodes are contributed by MSG)
+  - Number of GPU slots: {{ site.data.specs.msg_4gpu_nodes }}
+  - Quota: Unlimited (all users)
+  - Purpose: For software that utilize Graphics Processing Units (GPUs)
+
 * **ondemand.q**:
   - Maximum runtime: 2 weeks (336 hours)
   - Process priority: 0 (highest)
