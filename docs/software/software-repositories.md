@@ -1710,9 +1710,9 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">htop: An Interactive Process Viewer for Unix</strong><br>
 <span class="module-description"><code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.</span><br>
 Example: <span class="module-example"><code>htop</code>.</span><br>
-URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/milestones?state=closed">https://github.com/htop-dev/htop/milestones?state=closed</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.2.0, <em>3.0.5</em></span><br>
+Versions: <span class="module-version">3.0.5, <em>3.2.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1721,9 +1721,10 @@ htop: An Interactive Process Viewer for Unix
 
 local name = myModuleName()
 local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: system, utility&quot;)
-whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop (source code)&quot;)
+whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop/milestones?state=closed (changelog), https://github.com/htop-dev/htop (source code)&quot;)
 whatis([[
 Description: `htop` is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.
 Examples: `htop`.
@@ -5866,7 +5867,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-05-03 16:37:36 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-05-03 16:38:21 from querying `module avail` and `module spider`._
 
 
 <style>
