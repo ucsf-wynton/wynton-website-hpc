@@ -4,8 +4,8 @@ gpu_nodes: 42
 gpus: 148
 communal_gpu_nodes: 11
 communal_gpus: 48
-msg_4_gpu_nodes: 7
-msg_4_gpus: 28
+msg_4gpu_nodes: 7
+msg_4gpus: 28
 
 ## RAM [GiB]:
 ram_min: 48
