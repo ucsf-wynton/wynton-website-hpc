@@ -34,6 +34,16 @@ where N is the number of GPUs your job will use and M is the number of MPI proce
 
 NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This allows for proper scheduling of GPU jobs on member and institutional nodes.  If your job does not include a runtime request, it may be removed from the queue.  Runtime requests are hard limits, so your job will be killed by SGE when it hits this limit.  Be sure to request enough time for you job to finish.  
 
+## Submitting GPU jobs to the MSG 4-GPU nodes
+
+The 4gpu_q has {{ site.data.specs.4gpus }} GPUs on {{ site.data.specs.4gpu_nodes }}. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue. 
+
+To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
+```sh
+qsub -q 4gpu.q ...
+```
+No need for "-smp 4" as you would for standard gpu.q.  The environment variable SGE_GPU will be set just as for gpu.q jobs, with all 4 GPUs.
+
 ## GPU relevant resource requests
 
 The GPU nodes in {{ site.cluster.name }} contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
