@@ -55,7 +55,7 @@ _Comment_: Here "runtime" means "walltime", i.e. the runtime of a job is how lon
 
 ## Usage
 
-Except for [the gpu.q queue]({{ '/scheduler/gpu.html' | relative_url }}), there is often _no need_ to explicitly specify what queue your job should be submitted to.  Instead, it is sufficient to [specify the resources] that your jobs need, e.g. the maximum processing time (e.g. `-l h_rt=00:10:00` for ten minutes), the maximum memory usage (e.g. `-l mem_free=1G` for 1 GiB of RAM), and the number of cores (e.g. `-pe smp 2` for two cores).  When the scheduler knows about your job's resource need, it will allocate your job to a compute node that better fits your needs and your job is likely to finish sooner.
+Except for [the gpu.q queue]({{ '/scheduler/gpu.html' | relative_url }}) and the 4gpu_q, there is often _no need_ to explicitly specify what queue your job should be submitted to.  Instead, it is sufficient to [specify the resources] that your jobs need, e.g. the maximum processing time (e.g. `-l h_rt=00:10:00` for ten minutes), the maximum memory usage (e.g. `-l mem_free=1G` for 1 GiB of RAM), and the number of cores (e.g. `-pe smp 2` for two cores).  When the scheduler knows about your job's resource need, it will allocate your job to a compute node that better fits your needs and your job is likely to finish sooner.
 
 Only in rare cases there should be a need to specify through what queue your job should run.  To do this, you can use the `-q <name>` option of `qsub`, e.g. `qsub -q long.q my_script`.
 
