@@ -40,9 +40,8 @@ The 4gpu_q has {{ site.data.specs.4gpus }} GPUs on {{ site.data.specs.4gpu_nodes
 
 To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
 ```sh
-qsub -q 4gpu.q ...
+qsub -q 4gpu.q -pe smp 4 ...
 ```
-No need for "-smp 4" as you would for standard gpu.q.  The environment variable SGE_GPU will be set just as for gpu.q jobs, with all 4 GPUs.
 
 ## GPU relevant resource requests
 
