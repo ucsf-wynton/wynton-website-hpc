@@ -36,7 +36,7 @@ NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This
 
 ## Submitting GPU jobs to the MSG 4-GPU nodes
 
-The 4gpu_q has {{ site.data.specs.4gpus }} GPUs on {{ site.data.specs.4gpu_nodes }}. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue. 
+The 4gpu_q has {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }}. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue. 
 
 To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
 ```sh
