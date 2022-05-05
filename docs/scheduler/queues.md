@@ -37,7 +37,7 @@ The cluster provides different queues ("running areas") that each is optimized f
 * **4gpu.q**:
   - Maximum runtime on contributed "4-GPU" nodes: 2 weeks (336 hours) if you are the contributor, otherwise 2 hours
   - Process priority: 0 (highest)
-  - Availability: {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }} (all are contributed nodes)
+  - Availability: {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }} GPU nodes (all are contributed nodes)
   - Number of GPU slots: {{ site.data.specs.msg_4gpu_nodes }}
   - Quota: Unlimited (all users)
   - Purpose: For software that need to exclusively, utilize all four Graphics Processing Units (GPUs) on the node
