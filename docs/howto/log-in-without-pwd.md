@@ -184,7 +184,7 @@ The `stat` output consists of four parts: `d` tells us it is a directory, `rw-` 
 
 If the reported permission for group and others are anything but `---`, then `scp` and `ssh` don't trust the folder and will silently ignore your SSH key pair.  To secure the folder, do:
 
-```r
+```sh
 {local}$ chmod u=rwx,go= ~/.ssh
 {local}$ stat --format=%A ~/.ssh
 drwx------
