@@ -26,28 +26,16 @@ These instructions are primarily written for Linux, macOS, and Windows 10 users.
 
 ### Step 1: Generate private-public SSH key pair (on local machine)
 
-_On your local machine_, open a terminal.  If missing, create a private `~/.ssh/` folder:
+Here, we will generate a private-public SSH key pair (stored in two files) that is unique for accessing the cluster:
 
 ```sh
-{local}$ mkdir ~/.ssh
-{local}$ chmod u=rwx,go= ~/.ssh
-{local}$ stat --format=%A ~/.ssh
-drwx------
-```
-
-_Explanation:_ The above `chmod` settings specify that you as a user (`u`) have read (`r`) and write (`w`) permissions for this directory.  In addition, you have executable (`x`) permission, which also means you can set it as your working directory.  Continuing, the settings also specify that other users in your group (`g`) as well as all other (`o`) users on the system have no access at all (empty permission).  The `stat` output, which confirms this, consists of four parts: `d` tells us it is a directory, `rw-` specifies the permission for the user (`u`), and the following `---` and `---` specifies the permissions for the group (`g`), and all others (`o`), respectively.
-
-
-Next, we will generate a private-public SSH key pair (stored in two files) that is unique for accessing the cluster:
-
-```sh
-{local}$ cd ~/.ssh   ## <== IMPORTANT
-{local}$ ssh-keygen -f laptop_to_{{ site.cluster.nickname | downcase }}
+{local}$ ssh-keygen -f ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
 Generating public/private rsa key pair.
+Created directory '/home/alice/.ssh'.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in laptop_to_{{ site.cluster.nickname | downcase }}
-Your public key has been saved in laptop_to_{{ site.cluster.nickname | downcase }}.pub.
+Your identification has been saved in /home/alice/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
+Your public key has been saved in /home/alice/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}.pub.
 he key fingerprint is:
 SHA256:2MpJL+I6rQbfhvLZAyC6fa6Y40yZhwG+FYOiHCQ94Fw alice@my_laptop
 The key\'s randomart image is:
@@ -114,7 +102,7 @@ alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} .ssh]$ cat laptop_to_{{ site.cluster.nickname | downcase }}.pub >> authorized_keys
 ```
 
-Finally, make sure that `~/.ssh/authorized_keys` is only accessible to you (otherwise that file will be completely ignored);
+Finally, make sure that `~/.ssh/authorized_keys` on {{ site.cluster.nickname }} is only accessible to you (otherwise that file will be completely ignored by SSH);
 
 ```sh
 [alice@{{ site.login.name }} .ssh]$ chmod u=rw,go= ~/.ssh/authorized_keys
@@ -149,7 +137,7 @@ If you get
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic,keyboard-interactive,password).
 ```
 
-then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your local machine (see Step 1).  If it still does not work, check the `~/.ssh` permissions on the cluster (analogously to Step 1).
+then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your _local_ machine.  See Appendix Section '[Fix in-secure file permission on ~/.ssh/]' for instructions.  If it still does not work, check the `~/.ssh` permissions on the cluster too.
 
 The reason why we use `-o PreferredAuthentications=publickey,keyboard-interactive -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, these options can be dropped and you can now use:
 
@@ -176,5 +164,37 @@ With all of the above, you should now be able to log in to the cluster using:
 [alice@{{ site.login.name }} ~]$ 
 ```
 
+
+# Appendix
+
+## Fix in-secure file permission on ~/.ssh/
+
+<div class="alert alert-info" role="alert" markdown="1">
+These instructions are only for Linux and macOS.
+</div>
+
+_On your local machine_, open a terminal, and run
+
+```sh
+{local}$ stat --format=%A ~/.ssh
+drwx------
+```
+
+The `stat` output consists of four parts: `d` tells us it is a directory, `rw-` specifies the permission for the user (`u`), and the following `---` and `---` specifies the permissions for the group (`g`), and all others (`o`), respectively.
+
+If the reported permission for group and others are anything but `---`, then `scp` and `ssh` don't trust the folder and will silently ignore your SSH key pair.  To secure the folder, do:
+
+```r
+{local}$ chmod u=rwx,go= ~/.ssh
+{local}$ stat --format=%A ~/.ssh
+drwx------
+```
+
+_Explanation:_ The above `chmod` settings specify that you as a user (`u`) have read (`r`) and write (`w`) permissions for this directory.  In addition, you have executable (`x`) permission, which also means you can set it as your working directory.  Continuing, the settings also specify that other users in your group (`g`) as well as all other (`o`) users on the system have no access at all (empty permission).
+
+
+
+
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
 [PuTTY]: https://www.putty.org/
+[Fix in-secure file permission on ~/.ssh/]: #fix-in-secure-file-permission-on-ssh
