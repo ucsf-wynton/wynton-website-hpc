@@ -43,6 +43,10 @@ To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
 qsub -q 4gpu.q -pe smp 4 ...
 ```
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+**Do not use: `-smp 4` as you would for gpu.q.**  The environment variable SGE_GPU will be set just as for gpu.q jobs, with all 4 GPUs.
+</div>
+
 ## GPU relevant resource requests
 
 The GPU nodes in {{ site.cluster.name }} contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
