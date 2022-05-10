@@ -165,9 +165,9 @@ With all of the above, you should now be able to log in to the cluster using:
 ```
 
 
-# Appendix
+## Appendix
 
-## Fix in-secure file permission on ~/.ssh/
+### Fix in-secure file permission on ~/.ssh/
 
 <div class="alert alert-info" role="alert" markdown="1">
 These instructions are only for Linux and macOS.
