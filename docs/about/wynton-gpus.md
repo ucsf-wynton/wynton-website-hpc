@@ -1,7 +1,7 @@
 
 The tables below contain the list of the Wynton GPU nodes and which lab contributed the node or whether it is an institutional GPU node.
 
-If you are a lab interested in contributing a GPU node to Wynton, please see the [Pricing for Extra Compute](https://wynton.ucsf.edu/hpc/about/pricing-compute.html) page and contact Wynton support via email.
+If you are a lab interested in contributing a GPU node to Wynton, please see the [Pricing for Extra Compute]({{ '/about/pricing-compute.html' | relative_url }})
 
 ---
 
