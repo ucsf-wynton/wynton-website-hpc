@@ -44,7 +44,7 @@ qsub -q 4gpu.q ...
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-**Do not use: `-pe smp 4` as you would for gpu.q.**  The environment variable SGE_GPU will be set just as for gpu.q jobs, with all 4 GPUs. If you do use `-pe smp 4` when submitting a job to the 4gpu.q the job will never start.
+**Do not use: `-pe smp 4` for 4gpu.q.** as you would for qpu.q  If you do the job will never start.
 </div>
 
 ## GPU relevant resource requests
