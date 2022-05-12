@@ -51,7 +51,7 @@ If you are a lab interested in contributing a GPU node to Wynton, please see the
 | qb3-idgpu11 | RTX 2080 Ti |     11 GB  |         8 |     768 GB |                msg |           y  |
 | qb3-idgpu12 | RTX 2080 Ti |     11 GB  |         8 |     768 GB |                msg |           y  |
 | qb3-idgpu13 | RTX 2080 Ti |     11 GB  |         8 |      96 GB |           grabelab |           n  |
-| qb3-idgpu14 | RTX 2080 Ti |     11 GB  |           |      96 GB |           grabelab |           n  |
+| qb3-idgpu14 | RTX 2080 Ti |     11 GB  |         8 |      96 GB |           grabelab |           n  |
 | qb3-idgpu15 | RTX 2080 Ti |     11 GB  |         8 |      96 GB |           grabelab |           n  |
 | qb3-idgpu16 | RTX 2080 Ti |     11 GB  |         8 |      96 GB |           grabelab |           n  |
 | qb3-idgpu17 |    RTX 2080 |      8 GB  |         2 |     384 GB |           huanglab |           n  |
