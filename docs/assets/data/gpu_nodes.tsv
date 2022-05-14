@@ -1,0 +1,59 @@
+# Created by: hb, mu, jbl
+# Created on: 2022-05-13 18:15:00-07:00
+Node	GPU	GPU RAM	#GPUs	RAM	Contributor	NVME /scratch
+msg-ihgpu1	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
+msg-ihgpu2	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
+msg-ihgpu3	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
+msg-ihgpu4	TITAN Xp	12 GiB	2	48 GiB	msg	false	
+msg-ihgpu5	TITAN Xp	12 GiB	2	48 GiB	rosenberglab	false
+msg-iogpu1	GTX 1080 Ti	11 GiB	2	128 GiB	msg	true
+msg-iogpu2	GTX 1080	8 GiB	2	128 GiB	msg	true	
+msg-iogpu3	GTX 1080	8 GiB	2	128 GiB	msg	false
+msg-iogpu4	GTX 1080	8 GiB	2	128 GiB	msg	true
+msg-iogpu5	GTX 1080	8 GiB	2	128 GiB	msg	true
+msg-iogpu6	GTX TITAN X	12 GiB	2	128 GiB	msg	true
+msg-iogpu7	GTX 1080	8 GiB	2	128 GiB	msg	?
+msg-iogpu8	GTX 1080	8 GiB	2	128 GiB	msg	false
+msg-iogpu9	GTX 1080 Ti	11 GiB	2	128 GiB	msg	false
+msg-iogpu11	GTX 1080	8 GiB	4	256 GiB	msg	false
+msg-iogpu12	GTX 1080	8 GiB	4	256 GiB	msg	false
+msg-iogpu13	GTX 1080	8 GiB	4	256 GiB	msg	false
+qb3-idgpu1	GTX 1080	8 GiB	4	256 GiB	communal	false
+qb3-idgpu2	GTX 1080	8 GiB	4	256 GiB	communal	false
+qb3-idgpu3	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
+qb3-idgpu4	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
+qb3-idgpu5	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false	
+qb3-idgpu6	TITAN RTX	24 GiB	5	384 GiB	jacobson,amaoutlab	true
+qb3-idgpu7	TITAN RTX	24 GiB	4	384 GiB	communal	true
+qb3-idgpu8	RTX 2080 Ti	11 GiB	4	384 GiB	communal	true
+qb3-idgpu9	RTX 2080 Ti	11 GiB	4	384 GiB	communal	true
+qb3-idgpu10	TITAN RTX	24 GiB	4	384 GiB	gladstone	true	
+qb3-idgpu11	RTX 2080 Ti	11 GiB	8	768 GiB	msg	true
+qb3-idgpu12	RTX 2080 Ti	11 GiB	8	768 GiB	msg	true
+qb3-idgpu13	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
+qb3-idgpu14	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
+qb3-idgpu15	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
+qb3-idgpu16	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
+qb3-idgpu17	RTX 2080	8 GiB	2	384 GiB	huanglab	false
+qb3-iogpu1	TITAN Xp	12 GiB	2	96 GiB	genetics,amaoutlab	false
+qb3-iogpu4	A100	40 GiB	4	512 GiB	i4h	true
+qb3-iogpu5	GTX 1080	8 GiB	4	256 GiB	msg	true
+qb3-atgpu1	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu2	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu3	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu4	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu5	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu6	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu7	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu8	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu9	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu10	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu11	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu12	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu13	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu14	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu15	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu16	A40	48 GiB	4	512 GiB	keiser	true
+qb3-atgpu17	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu18	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu19	A40	48 GiB	4	512 GiB	ichs	true

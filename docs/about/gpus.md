@@ -10,62 +10,77 @@ Several of {{ site.cluster.name}} compute nodes have Graphics Processing Units (
 The tables below contain the list of the {{ site.cluster.nickname}} GPU compute nodes and whether the node is contributed by a lab or a communal node contributed by the institution.  Members of groups with contributed GPUs have [extra privileges]({{ '/scheduler/queues.html' | relative_url }}) on the job scheduler for jobs running on their GPU nodes.  If you are a lab interested in contributing a GPU node, please see the [Pricing for Extra Compute]({{ '/about/pricing-compute.html' | relative_url }}) page.
 
 
+<script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"><!-- ~80 kB --></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"><!-- 2 kB --></script>
 
-| Node        | GPU         | GPU RAM | #GPUs | RAM     | Node Ownership      | NVME `/scratch` | 
-|:------------|:------------|--------:|------:|--------:|:--------------------|:---------------:|
-| msg-ihgpu1  | GTX 1080 Ti |  11 GiB |     2 |  48 GiB | msg                 | no              |
-| msg-ihgpu2  | GTX 1080 Ti |  11 GiB |     2 |  48 GiB | msg                 | no              |
-| msg-ihgpu3  | GTX 1080 Ti |  11 GiB |     2 |  48 GiB | msg                 | no              |
-| msg-ihgpu4  | TITAN Xp    |  12 GiB |     2 |  48 GiB | msg                 | no              |   
-| msg-ihgpu5  | TITAN Xp    |  12 GiB |     2 |  48 GiB | rosenberglab        | no              |
-| msg-iogpu1  | GTX 1080 Ti |  11 GiB |     2 | 128 GiB | msg                 | ✓               |
-| msg-iogpu2  | GTX 1080    |   8 GiB |     2 | 128 GiB | msg                 | ✓               |  
-| msg-iogpu3  | GTX 1080    |   8 GiB |     2 | 128 GiB | msg                 | no              |
-| msg-iogpu4  | GTX 1080    |   8 GiB |     2 | 128 GiB | msg                 | ✓               |
-| msg-iogpu5  | GTX 1080    |   8 GiB |     2 | 128 GiB | msg                 | ✓               |
-| msg-iogpu6  | GTX TITAN X |  12 GiB |     2 | 128 GiB | msg                 | ✓               |
-| msg-iogpu7  | GTX 1080    |   8 GiB |     2 | 128 GiB | msg                 |                 | 
-| msg-iogpu8  | GTX 1080    |   8 GiB |     2 | 128 GiB | msg                 | no              |
-| msg-iogpu9  | GTX 1080 Ti |  11 GiB |     2 | 128 GiB | msg                 | no              |
-| msg-iogpu11 | GTX 1080    |   8 GiB |     4 | 256 GiB | msg                 | no              |
-| msg-iogpu12 | GTX 1080    |   8 GiB |     4 | 256 GiB | msg                 | no              |
-| msg-iogpu13 | GTX 1080    |   8 GiB |     4 | 256 GiB | msg                 | no              |
-| qb3-idgpu1  | GTX 1080    |   8 GiB |     4 | 256 GiB | (communal)          | no              |
-| qb3-idgpu2  | GTX 1080    |   8 GiB |     4 | 256 GiB | (communal)          | no              |
-| qb3-idgpu3  | RTX 2080 Ti |  11 GiB |     4 | 384 GiB | msg                 | no              |
-| qb3-idgpu4  | RTX 2080 Ti |  11 GiB |     4 | 384 GiB | msg                 | no              |
-| qb3-idgpu5  | RTX 2080 Ti |  11 GiB |     4 | 384 GiB | msg                 | no              | 
-| qb3-idgpu6  | TITAN RTX   |  24 GiB |     5 | 384 GiB | jacobson, amaoutlab | ✓               |
-| qb3-idgpu7  | TITAN RTX   |  24 GiB |     4 | 384 GiB | (communal)          | ✓               |
-| qb3-idgpu8  | RTX 2080 Ti |  11 GiB |     4 | 384 GiB | (communal)          | ✓               |
-| qb3-idgpu9  | RTX 2080 Ti |  11 GiB |     4 | 384 GiB | (communal)          | ✓               |
-| qb3-idgpu10 | TITAN RTX   |  24 GiB |     4 | 384 GiB | gladstone           | ✓               | 
-| qb3-idgpu11 | RTX 2080 Ti |  11 GiB |     8 | 768 GiB | msg                 | ✓               |
-| qb3-idgpu12 | RTX 2080 Ti |  11 GiB |     8 | 768 GiB | msg                 | ✓               |
-| qb3-idgpu13 | RTX 2080 Ti |  11 GiB |     8 |  96 GiB | grabelab            | no              |
-| qb3-idgpu14 | RTX 2080 Ti |  11 GiB |     8 |  96 GiB | grabelab            | no              |
-| qb3-idgpu15 | RTX 2080 Ti |  11 GiB |     8 |  96 GiB | grabelab            | no              |
-| qb3-idgpu16 | RTX 2080 Ti |  11 GiB |     8 |  96 GiB | grabelab            | no              |
-| qb3-idgpu17 | RTX 2080    |   8 GiB |     2 | 384 GiB | huanglab            | no              |
-| qb3-iogpu1  | TITAN Xp    |  12 GiB |     2 |  96 GiB | genetics, amaoutlab | no              |
-| qb3-iogpu4  | A100        |  40 GiB |     4 | 512 GiB | i4h                 | ✓               |
-| qb3-iogpu5  | GTX 1080    |   8 GiB |     4 | 256 GiB | msg                 | ✓               |
-| qb3-atgpu1  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu2  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu3  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu4  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu5  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu6  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu7  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu8  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu9  | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu10 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu11 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu12 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu13 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu14 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu15 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu16 | A40         |  48 GiB |     4 | 512 GiB | keiser              | ✓               |
-| qb3-atgpu17 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu18 | A40         |  48 GiB |     4 | 512 GiB | (communal)          | ✓               |
-| qb3-atgpu19 | A40         |  48 GiB |     4 | 512 GiB | ichs                | ✓               |
+<table id="hosttable">
+</table>
+
+<!-- markdownlint-disable-file MD011 -->
+<script type="text/javascript" charset="utf-8">
+d3.text("{{ '/assets/data/gpu_nodes.tsv' | relative_url }}", "text/csv", function(host_table) {
+  // extract date from header comments
+  var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
+  timestamp = timestamp.replace(/^[#] Created on: /g, '');
+  timestamp = timestamp.replace(/ [^ ]+/g, ''); // keep only the date
+  timestamp = timestamp.trim();
+  d3.select("#compute-shares-timestamp").text(timestamp);
+  
+  // drop header comments
+  host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
+  host_table = d3.tsv.parse(host_table);
+
+  var table = d3.select("#hosttable");
+  var thead, tbody, tfoot, tr, td, td_status;
+  var value, value2;
+  var gpus_total = 0;
+  
+  /* For each row */
+  var nentries = 0;
+  host_table.forEach(function(row0) {
+    var nvme = row0["NVME /scratch"];
+    nvme = nvme.replace("true", "✓");
+    nvme = nvme.replace("false", "no");
+    var contributor = row0["Contributor"];
+    contributor = contributor.replace("communal", "(communal)");
+    var row = [row0["Node"], row0["GPU"], row0["GPU RAM"], row0["#GPUs"], row0["RAM"], contributor, nvme];
+
+    if (nentries == 0) {
+      tr = table.append("thead").append("tr");
+      tr.append("th").text("Node");
+      tr.append("th").text("GPU");
+      tr.append("th").text("GPU RAM");
+      tr.append("th").text("#GPUs");
+      tr.append("th").text("RAM");
+      tr.append("th").text("Ownership");
+      tr.append("th").text("NVME /scratch");
+      tbody = table.append("tbody");
+    }
+
+    tr = tbody.append("tr");
+    for (key in row) td = tr.append("td").text(row[key]);
+    gpus_total += parseInt(row[3]);
+
+    nentries += 1;
+  });
+
+  tr = table.append("tfoot").append("tr");
+  tr.append("td").text("Total");
+  tr.append("td");
+  tr.append("td");
+  tr.append("td").text(gpus_total + " GPUs");
+  tr.append("td");
+  tr.append("td");
+  tr.append("td");
+
+  $(document).ready(function() {
+    $('#hosttable').DataTable({
+      "pageLength": 50,
+      "order": [[ 0, "desc" ]]
+    });
+  });
+});
+</script>
+
+Source: [gpu_nodes.tsv]({{ '/assets/data/gpu_nodes.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data are manually updated.
