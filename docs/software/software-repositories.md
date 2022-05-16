@@ -57,15 +57,15 @@ module load CBI r bwa bowtie2/2.4.2
 Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(83)</a></li>
+<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(81)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="button_repository_built-in" class="tab-pane fadein active">
 
-<h2 id="repository_built-in">Module Software Repository: built-in (9)</h2>
+<h2 id="repository_built-in">Module Software Repository: built-in (7)</h2>
 
 Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
@@ -73,46 +73,17 @@ Enable repository: <em>this software repository is always enabled</em><br>
 <h3 id="module_built-in_amber" class="module-name">amber</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Amber11, for 64-bit</span><br>
-URL: <span class="module-url"><a href="http://ambermd.org/">http://ambermd.org/</a></span><br>
-Versions: <span class="module-version">20, <em>11</em></span><br>
+Versions: <span class="module-version"><em>20</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Amber11, for 64-bit&quot;
-module-whatis &quot;URL: http://ambermd.org/&quot;
-setenv        AMBERHOME       /wynton/group/sali/AMBER/amber11/
-prepend-path  PATH            /wynton/group/sali/AMBER/amber11/bin
-prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
-</code></pre>
-
-</details>
-  </dd>
-</dl>
-<h3 id="module_built-in_cbi" class="module-name">CBI</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">Module Repository by UCSF Computational Biology and Informatics (CBI)</strong><br>
-<span class="module-description">Repository of modules shared by UCSF Computational Biology and Informatics. When loading this module, you will get access to a large number of software modules.  When unloading the module, any software modules from this CBI software repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.</span><br>
-Example: <span class="module-example"><code>module load CBI</code> and then <code>module avail</code>.</span><br>
-URL: <span class="module-url"><a href="https://cbi.ucsf.edu/">https://cbi.ucsf.edu/</a></span><br>
-Maintainer: <span class="module-maintainer">Henrik Bengtsson, CBI</span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help(&quot;Module Repository by UCSF Computational Biology and Informatics (CBI)&quot;)
-
-whatis(&quot;Keywords: UCSF, CBI&quot;)
-whatis(&quot;URL: https://cbi.ucsf.edu/&quot;)
-whatis([[
-Description: Repository of modules shared by UCSF Computational Biology and Informatics. When loading this module, you will get access to a large number of software modules.  When unloading the module, any software modules from this CBI software repository still loaded when you unload this repository module, will remain in your list of loaded modules but will be inactivate (i.e. behave as they never were loaded) until you reload this repository module again.
-Example: `module load CBI` and then `module avail`.
-Maintainer: Henrik Bengtsson, CBI
-]])
-
-pushenv(&quot;SOFTWARE_ROOT_CBI&quot;, &quot;/wynton/home/cbi/shared/software/CBI&quot;)
-pushenv(&quot;MODULE_ROOT_CBI&quot;, &quot;/wynton/home/cbi/shared/modulefiles/CBI&quot;)
-prepend_path(&quot;MODULEPATH&quot;, &quot;/wynton/home/cbi/shared/modulefiles/CBI&quot;)
+module-whatis &quot;Amber: Tools for Molecular Simulations&quot;
+setenv        AMBERHOME       /opt/amber20
+prepend-path  PATH            /opt/amber20/bin
+prepend-path  LD_LIBRARY_PATH /opt/amber20/lib
+prepend-path  PERL5LIB        /opt/amber20/lib/perl
+prepend-path  PYTHONPATH      /opt/amber20/lib/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -121,19 +92,15 @@ prepend_path(&quot;MODULEPATH&quot;, &quot;/wynton/home/cbi/shared/modulefiles/C
 <h3 id="module_built-in_cuda" class="module-name">cuda</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">6.0.37, 7.5, 7.5.18, 8.0, 8.0.61, 9.0.176, 9.1, 9.2, 10.0.130, 10.1, 11.0, <em>11.5.0</em></span><br>
+Versions: <span class="module-version">7.5, 8.0, 9.1, 9.2, 10.1, <em>11.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;NVIDIA CUDA Toolkit libraries&quot;
-if ![file exists /usr/bin/g++] {
-  module load gcc
-}
-prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/bin
-prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
-prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/pkgconfig
-setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
+prepend-path  PATH               /usr/local/cuda-11.0.3/bin
+prepend-path  LD_LIBRARY_PATH    /usr/local/cuda-11.0.3/lib64
+setenv        CUDA_LIB_PATH      /usr/local/cuda-11.0.3/lib64
 </code></pre>
 
 </details>
@@ -158,7 +125,7 @@ prepend-path  MANPATH   /usr/local/julia-1.6.0/share/man
 <h3 id="module_built-in_matlab" class="module-name">matlab</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">9.5.0.944444, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
+Versions: <span class="module-version">2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -261,24 +228,11 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 </details>
   </dd>
 </dl>
-<h3 id="module_built-in_sali" class="module-name">Sali</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">Sali lab software repository</strong><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help(&quot;Sali lab software repository&quot;)
-prepend_path(&quot;MODULEPATH&quot;, &quot;/salilab/diva1/home/modules&quot;)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 </div> 
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (83)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (81)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -925,38 +879,6 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 prepend_path(&quot;PATH&quot;,  pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 
-</code></pre>
-
-</details>
-  </dd>
-</dl>
-<h3 id="module_cbi_cbi-testing" class="module-name">CBI-testing</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!</strong><br>
-<span class="module-description">This repository provides prototypical environment modules that can change at any time. They will live in this CBI-testing repository until they have proven to work and be stable - only then they will be considered for the main CBI repository.  WARNING: Use at your own risk.</span><br>
-URL: <span class="module-url"><a href="http://cbi.ucsf.edu/">http://cbi.ucsf.edu/</a></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!
-]])
-
-local name = myModuleName()
-whatis(&quot;Title: The Computational Biology and Informatics (CBI) Software Repository - TESTING ONLY!&quot;)
-whatis(&quot;Description: This repository provides prototypical environment modules that can change at any time. They will live in this CBI-testing repository until they have proven to work and be stable - only then they will be considered for the main CBI repository.  WARNING: Use at your own risk.&quot;)
-whatis(&quot;URL: http://cbi.ucsf.edu/&quot;)
-whatis(&quot;BugReports: Please contact the maintainer of this repository&quot;)
-whatis(&quot;Maintainer: Henrik Bengtsson, Computational Biology and Informatics (http://cbi.ucsf.edu)&quot;)
-whatis(&quot;Keywords: UCSF, CBI, repository, testing&quot;)
-
-local root = &quot;/wynton/home/cbi/shared&quot;
-local software_home = pathJoin(root, &quot;software&quot;, name)
-local modules_home = pathJoin(root, &quot;modulefiles&quot;, name)
-
-setenv(&quot;SOFTWARE_ROOT_CBI_TESTING&quot;, software_home)
-setenv(&quot;MODULE_ROOT_CBI_TESTING&quot;, modules_home)
-prepend_path(&quot;MODULEPATH&quot;, modules_home)
 </code></pre>
 
 </details>
@@ -3026,7 +2948,12 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 -- '--threads 2' [4]. As soon as we have verified that in a safe
 -- environment, we'll drop it
 -- [4] https://github.com/ncbi/sra-tools/issues/463#issuecomment-942410725
-set_shell_function(&quot;fasterq-dump&quot;, 'command fasterq-dump --threads 2 --temp &quot;$(mktemp -d)&quot; &quot;$@&quot;', '')
+
+-- Workaround only works in shells that support function, i.e. not in csh and tcsh
+if myShellType() == &quot;sh&quot; then
+  set_shell_function(&quot;fasterq-dump&quot;, 'command fasterq-dump --threads 2 --temp &quot;$(mktemp -d)&quot; &quot;$@&quot;', '')
+end
+
 </code></pre>
 
 </details>
@@ -3327,37 +3254,6 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot;))
 
 
-</code></pre>
-
-</details>
-  </dd>
-</dl>
-<h3 id="module_cbi_wynton-tools" class="module-name">wynton-tools</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">Wynton Tools: Tools for the Wynton HPC Environment</strong><br>
-<span class="module-description">A command-line tool for common Wynton HPC queries.</span><br>
-Example: <span class="module-example"><code>wynton --help</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/UCSF-HPC/wynton-tools/">https://github.com/UCSF-HPC/wynton-tools/</a></span><br>
-Versions: <span class="module-version"><em>latest</em></span><br>
-    Note: <em>To use this module, call <code>module load CBI CBI-testing</code> first.</em>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-Wynton Tools: Tools for the Wynton HPC Environment
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: HPC&quot;)
-whatis(&quot;URL: https://github.com/UCSF-HPC/wynton-tools/&quot;)
-whatis(&quot;Description: A command-line tool for common Wynton HPC queries. Examples: `wynton --help`.&quot;)
-
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;) .. &quot;-testing&quot;
-local home = pathJoin(root, name)
-
-prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 </code></pre>
 
 </details>
@@ -5137,7 +5033,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/s
   <dd class="module-details">
 <span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
-Versions: <span class="module-version">0.2, 0.3, <em>0.4</em></span><br>
+Versions: <span class="module-version">0.2, 0.3, 0.4, <em>0.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5146,7 +5042,7 @@ module-whatis &quot;Description: Python package for handling ModelCIF mmCIF file
 module-whatis &quot;URL: https://github.com/ihmwg/python-modelcif&quot;
 conflict python2
 module load python3/ihm
-prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.4/lib/python3.6/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.5/lib/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -5862,12 +5758,12 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 </div> 
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(9)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(83)</a></li>
+<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(81)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-05-03 16:38:21 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-05-16 12:52:41 from querying `module avail` and `module spider`._
 
 
 <style>
