@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert" markdown="1">
-{{ site.cluster.name }} has {{ site.data.specs.gpu_nodes }} GPU nodes with a total of {{ site.data.specs.gpus }} GPUs available to all users. Among these, {{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} GPUs, were contributed by different research groups. On these nodes, GPU jobs from Wynton users not in the contributing lab are limited to 2 hours.  In contrast, [contributors are _not_ limited to 2-hour GPU jobs on nodes they contributed]({{ '/scheduler/queues.html' | relative_url }}).  On the institutional GPU nodes (i.e. those not contribued by any particular research group), the standard Wynton job length limit of 2 weeks applies for all users.  There is also one GPU development node that is available to all users.
+{{ site.cluster.name }} has {{ site.data.specs.gpu_nodes }} GPU nodes with a total of {{ site.data.specs.gpus }} GPUs available to all users. Among these, {{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} GPUs, were contributed by different research groups. On these nodes, GPU jobs from Wynton users not in the contributing lab are limited to 2 hours.  In contrast, [contributors are _not_ limited to 2-hour GPU jobs on nodes they contributed]({{ '/scheduler/queues.html' | relative_url }}).  On the institutional GPU nodes (i.e. those not contributed by any particular research group), the standard Wynton job length limit of 2 weeks applies for all users.  There is also one GPU development node that is available to all users.
 </div>
 
 
@@ -33,6 +33,19 @@ mpirun -np M --oversubscribe ...
 where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).  Please note that, at the moment, each GPU job must limit itself to a single host.
 
 NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This allows for proper scheduling of GPU jobs on member and institutional nodes.  If your job does not include a runtime request, it may be removed from the queue.  Runtime requests are hard limits, so your job will be killed by SGE when it hits this limit.  Be sure to request enough time for you job to finish.  
+
+## Submitting GPU jobs to the MSG 4-GPU nodes
+
+The 4gpu.q has {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }} nodes. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue. 
+
+To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
+```sh
+qsub -q 4gpu.q ...
+```
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+**Do not use: `-pe smp 4` for 4gpu.q.** as you would for qpu.q  If you do the job will never start.
+</div>
 
 ## GPU relevant resource requests
 

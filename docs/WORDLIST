@@ -1,8 +1,10 @@
 ## 01 Dictionary of WhiteListed Words
 Agard
 alice
+amaoutlab
 Andrej
 Approver
+atgpu
 autopopulated
 Baranzini
 barcode
@@ -77,12 +79,15 @@ gitea
 github
 gitlab
 GitLab
+gladstone
+Gladstone
 globus
 goclient
 gpu
 gpudev
 gpus
 GPUs
+grabelab
 Grafana
 GTX
 gui
@@ -98,15 +103,22 @@ hpc
 HTSeq
 http
 https
+huanglab
+ichs
+idgpu
+ihgpu
 ImageMagick
 ing
 io
+iogpu
 IRB
 isoseq
 IsoSeq
+jacobson
 json
 Jupyter
 kadmin
+keiser
 Keiser
 Kerberos
 kerbtest
@@ -195,9 +207,11 @@ RITM
 Rmarkdown
 Rmpi
 roadmap
+rosenberglab
 Rq
 RSA
 RStudio
+RTX
 runscript
 Sali
 samtools
@@ -219,6 +233,7 @@ SIF
 SIGKILL
 signup
 Slurm
+smp
 SMP
 SMS
 Sochat
@@ -260,6 +275,7 @@ wynlog
 wynton
 Wynton's
 Xeon
+Xp
 XQuartz
 XTerm
 yml

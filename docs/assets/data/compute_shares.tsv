@@ -1,8 +1,8 @@
 # Created by: hb
-# Created on: 2022-05-03 03:00:04-07:00
-# Total fshares: 20210
-# Total queue_slots: 10268
-# Number of projects: 53
+# Created on: 2022-05-16 03:00:03-07:00
+# Total fshares: 20198
+# Total queue_slots: 10362
+# Number of projects: 51
 fshares	queue_slots	project
 5506	3305	salilab
 4104	1403	agardlab,chenglab,frostlab
@@ -40,11 +40,8 @@ fshares	queue_slots	project
 17	6	maleylab
 15	36	kroganlab
 12	4	sysbiocenter
-6	choulab	
-6	choulab	
 3	1	voigtlab
 3	1	cohenlab
-1	6	choulab
 1	6	choulab
 1	5	medinalab
 1	35	brainardlab
@@ -56,4 +53,5 @@ fshares	queue_slots	project
 1	1	chuanglab
 1	10	mcmanuslab
 1	101	lynchlab
+1	100	corceslab
 1	100	capralab
