@@ -1,6 +1,6 @@
-.mdi/
-.Rdump/
-lmod_data/
+.mdi
+.Rdump
+lmod_data
 Makefile
 .md$
 .sh$

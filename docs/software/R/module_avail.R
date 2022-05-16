@@ -1,3 +1,11 @@
+#' @param info ...
+#'
+#' @param onMissingPath ...
+#'
+#' @param force If TRUE, cached results are ignored.
+#'
+#' @return ...
+#'
 #' @importFrom utils file_test
 #' @importFrom R.utils mstr
 #' @importFrom jsonlite fromJSON
@@ -7,23 +15,25 @@ module_avail <- local({
   ## Memoization
   .cache <- list()
   
-  function(info, onMissingPath = getOption("onMissingPath", c("okay", "error", "warning", "ignore"))) {
-    message("module_avail() ...", appendLF = FALSE)
-    onMissingPath <- match.arg(onMissingPath)
-    
+  function(info, onMissingPath = getOption("onMissingPath", c("okay", "error", "warning", "ignore")), force = FALSE) {
     stopifnot(is.list(info), "module_path" %in% names(info))
+    onMissingPath <- match.arg(onMissingPath)
+    stopifnot(length(force) == 1L, is.logical(force), !is.na(force))
+
     module_path <- info$module_path
+    if (all(!nzchar(module_path))) {
+      stop("Specified empty folder(s): ", paste(sQuote(module_path), collapse = ", "))
+    }
+
+    message("module_avail() ...", appendLF = FALSE)
+    
     key <- paste(module_path, collapse = ", ")
-    res <- .cache[[key]]
-    if (!is.null(res)) {
+    if (!force && !is.null(res <- .cache[[key]])) {
       message("already cached")
       return(res)
     }
 
     message(""); mstr(list(info = info))
-    if (all(!nzchar(module_path))) {
-      stop("Specified empty folder(s): ", paste(sQuote(module_path), collapse = ", "))
-    }
     
     if (onMissingPath != "okay") {
       unknown <- module_path[!file_test("-x", module_path)]
@@ -35,7 +45,7 @@ module_avail <- local({
       }
     }
 
-    json <- spider(module_path)
+    json <- spider(module_path, force = force)
     x <- fromJSON(json)
     o <- order(x$package)
     x <- x[o,]

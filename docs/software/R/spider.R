@@ -21,7 +21,16 @@ spider <- function(module_path, force = FALSE) {
     dir.create(path, recursive = TRUE)
     stopifnot(file_test("-d", path))
     spider <- find_spider()
-    args <- c("--no_recursion", "-o jsonSoftwarePage", module_path)
+
+    ## Locate potential module subfolders
+    ## Note, this way we can exclude any *.lua files in the 'module_path'
+    ## folder, e.g. repository modules such as CBI.lua and Sali.lua,
+    ## which we don't want to recursively parse.
+    dirs <- dir(module_path, all.files = TRUE, full.names = TRUE, no.. = TRUE)
+    dirs <- dirs[file_test("-d", dirs)]
+    print(dirs)
+    
+    args <- c("--no_recursion", "-o jsonSoftwarePage", dirs)
     if (debug) message(" - spider arguments: ", paste(args, collapse = " "))
     res <- system2(spider, args = args, stdout = pathname)
     if (debug) message(" - spider result: ", res)
