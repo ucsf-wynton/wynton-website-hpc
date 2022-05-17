@@ -918,7 +918,7 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 Example: <span class="module-example"><code>cellranger</code>.</span><br>
 URL: <span class="module-url"><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a>, <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/release-notes">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/release-notes</a> (changelog), <a href="https://github.com/10XGenomics/cellranger">https://github.com/10XGenomics/cellranger</a> (source code)</span><br>
 Warning: <span class="module-warning">To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.</span><br>
-Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, <em>6.1.2</em></span><br>
+Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, <em>7.0.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1822,7 +1822,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv</code>.</span><br>
 Note: <span class="module-note">IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
-Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, <em>2.12.3</em></span><br>
+Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, <em>2.13.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2516,7 +2516,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.57.0, <em>1.58.0</em></span><br>
+Versions: <span class="module-version">1.57.0, 1.58.0, <em>1.58.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -5893,7 +5893,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-05-17 11:34:21 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-05-17 12:00:46 from querying `module avail` and `module spider`._
 
 
 <style>
