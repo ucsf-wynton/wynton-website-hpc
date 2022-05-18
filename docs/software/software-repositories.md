@@ -1407,7 +1407,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
 Example: <span class="module-example"><code>gdalinfo --version</code></span><br>
 URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
-Versions: <span class="module-version">2.4.3, 2.4.4, <em>3.0.0</em></span><br>
+Versions: <span class="module-version">2.4.3, <em>2.4.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;GDAL: Geospatial Data Abstraction Library&quot;)
@@ -5893,7 +5893,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-05-17 12:03:07 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-05-18 12:04:05 from querying `module avail` and `module spider`._
 
 
 <style>
