@@ -45,7 +45,13 @@ passwd: all authentication tokens updated successfully.
 
 ## Verify credentials
 
-To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.cluster.name }} via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  Alternatively, verify them from your browser:
+To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.cluster.name }} via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  If you have SSH keys set up, you can force SSH to ignore those and only accept password entries by using:
+
+```r
+{local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}
+```
+
+Alternatively, you can verify your credentials from your browser:
 
 1. Go to <https://www.cgl.ucsf.edu/admin/kerbtest.py> in your browser.  A popup panel titled 'Sign in https<span>://www.cgl.ucsf.edu</span>' is opened by the browser.
 
