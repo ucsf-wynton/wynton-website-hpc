@@ -33,6 +33,20 @@ If you want to transfer files from or to your local machine, you need to set up 
 
 6. [local] In the Globus Connect Personal software, make sure to disconnect when no longer needed.
 
+## Transfer to UCSF Box using UCSF Wynton HPC Box Connector
+
+### Prerequisites
+
+1. You must have a UCSF Associated Globus Account
+2. You must have a UCSF Account which includes access to UCSF Box
+
+1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials.
+
+2. In the "Collection" search field enter "UCSF Wynton HPC Box Connector".
+
+3. Select the "UCSF Wynton HPC Box Connector" collection.
+
+4. 
 
 ## Transferring files
 
