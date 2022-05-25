@@ -123,7 +123,7 @@ check-absolute-links:
 	if (( error_count > 0 )); then
 	  grep --color=always -i -E "${pattern}" "$$stdout"
 	  echo
-	  echo "HINT: Use {{ 'path/file.html' | relative_url }} instead of https://wynton.ucsf.edu/path/file.html"
+	  echo "HINT: Use {{ 'path/file.html' | relative_url }} instead of https://wynton.ucsf.edu/hpc/path/file.html"
 	  exit 1
 	fi
 
