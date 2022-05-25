@@ -33,7 +33,7 @@ If you want to transfer files from or to your local machine, you need to set up 
 
 6. [local] In the Globus Connect Personal software, make sure to disconnect when no longer needed.
 
-## Transfer between Wynton and UCSF Box using UCSF Wynton HPC Box Globus Connector
+## Transfer between Wynton (or other Globus Collections) and UCSF Box using UCSF Wynton HPC Box Globus Connector
 
 ### Prerequisites
 
