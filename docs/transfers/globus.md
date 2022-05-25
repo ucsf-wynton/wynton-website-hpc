@@ -33,7 +33,7 @@ If you want to transfer files from or to your local machine, you need to set up 
 
 6. [local] In the Globus Connect Personal software, make sure to disconnect when no longer needed.
 
-## Transfer from Wynton to UCSF Box using UCSF Wynton HPC Box Globus Connector
+## Transfer between Wynton and UCSF Box using UCSF Wynton HPC Box Globus Connector
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ You must have:
 
 7. A representation of your UCSF Box files will appear in the Globus panel.
 
-8. Log in to another Globus Collection to transfer files from your UCSF Box file repository to another collection.
+8. Log in to another Globus Collection to transfer files to or from your UCSF Box file repository to another collection.
 
 ## Transferring files
 
