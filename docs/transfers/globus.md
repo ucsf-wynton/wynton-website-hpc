@@ -37,16 +37,22 @@ If you want to transfer files from or to your local machine, you need to set up 
 
 ### Prerequisites
 
-1. You must have a UCSF Associated Globus Account
-2. You must have a UCSF Account which includes access to UCSF Box
-
+<b>1. You must have a UCSF Associated Globus Account</b>
+<b>2. You must have a UCSF Account which includes access to UCSF Box</b>
+---
 1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials.
 
 2. In the "Collection" search field enter "UCSF Wynton HPC Box Connector".
 
 3. Select the "UCSF Wynton HPC Box Connector" collection.
 
-4. 
+5. You will see a dialog "Identity Required". Select your UCSF associated identity, (it will be something like "123456@ucsf.edu").
+
+6. Authenticate with MyAccess.
+
+7. A representation of your UCSF Box files will appear in the globus panel.
+
+8. Log in to another Globus Collection to transfer files from your UCSF Box file repository to another collection.
 
 ## Transferring files
 
