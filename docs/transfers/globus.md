@@ -38,6 +38,7 @@ If you want to transfer files from or to your local machine, you need to set up 
 ### Prerequisites
 
 <b>1. You must have a UCSF Associated Globus Account</b>
+
 <b>2. You must have a UCSF Account which includes access to UCSF Box</b>
 ---
 1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials.
