@@ -42,6 +42,7 @@ If you want to transfer files from or to your local machine, you need to set up 
 <b>You must have a UCSF Account which includes access to UCSF Box</b>
 
 ---
+
 1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials.
 
 2. In the "Collection" search field enter "UCSF Wynton HPC Box Connector".
