@@ -55,7 +55,7 @@ You must have:
 
 6. Authenticate with MyAccess.
 
-7. A representation of your UCSF Box files will appear in the globus panel.
+7. A representation of your UCSF Box files will appear in the Globus panel.
 
 8. Log in to another Globus Collection to transfer files from your UCSF Box file repository to another collection.
 
