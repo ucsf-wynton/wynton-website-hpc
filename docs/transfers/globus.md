@@ -51,7 +51,9 @@ You must have:
 
 3. Select the "UCSF Wynton HPC Box Connector" collection.
 
-5. You will see a dialog "Identity Required". Select your UCSF associated identity, (it will be something like "123456@ucsf.edu").
+4. You will see a dialog "Authentication Required", click "continue". 
+
+5. Next you will see a dialog "Identity Required". Select your UCSF associated identity, (it will be something like "123456@ucsf.edu").
 
 6. Authenticate with MyAccess.
 
