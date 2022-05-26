@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert" markdown="1">
-2022-04-22: This page presents a **beta feature**. Although basic use-case testing has been done, **conda-stage** still hasn't been thoroughly validated by end users. If you run into issues or got feature requests, please report them to the [conda-stage issue tracker](https://github.com/HenrikBengtsson/conda-stage/issues), or reach out to [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
+2022-04-22: This page presents a **beta feature**. Although basic use-case testing has been done, **conda-stage** still hasn't been thoroughly validated by end users. If you run into issues or have feature requests, please report them to the [conda-stage issue tracker](https://github.com/HenrikBengtsson/conda-stage/issues), or reach out to [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 </div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
