@@ -45,7 +45,7 @@ You must have:
 
 ### Set up
 
-1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials.
+1. Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials.
 
 2. In the "Collection" search field enter "UCSF Wynton HPC Box Connector".
 
