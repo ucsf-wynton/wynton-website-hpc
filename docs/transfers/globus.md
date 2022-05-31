@@ -67,7 +67,7 @@ You must have:
 
 Troubleshooting:
 
-* **If you receive a message similar to "Identity set contains identity from an allowed domain but it does not map to a valid username for this connector." contact [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).**
+* **If step 4/5 above fails and you receive a message similar to "Identity set contains identity from an allowed domain but it does not map to a valid username for this connector." contact [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).**
 
 ## Transferring files
 
