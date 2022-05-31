@@ -65,6 +65,10 @@ You must have:
 
 8. Log in to another Globus Collection to transfer files to or from your UCSF Box file repository to another collection.
 
+Troubleshooting:
+
+* **If you receive a message similar to "Identity set contains identity from an allowed domain but it does not map to a valid username for this connector." contact [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}.**
+
 ## Transferring files
 
 To transfer files via the Globus network:
