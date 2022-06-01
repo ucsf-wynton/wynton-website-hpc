@@ -103,6 +103,10 @@ To work with staged conda environments in your job scripts, make sure to first c
 
 ```sh
 #! /usr/bin/env bash
+#$ -S /bin/bash   # Run in bash
+#$ -R yes         # SGE host reservation, highly recommended
+#$ -cwd           # Current working directory
+#$ -j y           # Join STDERR and STDOUT
 
 module load CBI conda-stage
 conda activate myenv
@@ -112,6 +116,11 @@ trap 'conda deactivate' EXIT
 ```
 
 In this example, we have also added a shell "trap" that deactivates the environment when the script exits. This makes sure the staged environment is unstaged, including all of its temporary files are removed.
+
+
+<div class="alert alert-warning" role="alert" markdown="1">
+If you get an error on `/usr/share/lmod/lmod/init/sh: line 14: 'conda-stage': not a valid identifier`, make sure to declare the shell (`#$ -S /bin/bash`) to use in your job script.
+</div>
 
 
 ### Update an automatically-staged Conda environment
