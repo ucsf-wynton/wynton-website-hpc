@@ -421,7 +421,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;, &quot;man1&quo
   <dd class="module-details">
 <strong class="module-help">bats-assert: Assertion Library for Bats (Bash Automated Testing System)</strong><br>
 <span class="module-description">This is a helper library providing common assertions for Bats.</span><br>
-Example: <span class="module-example">In Bats <code>startup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_ARRAY_HOME}/load.bash&quot;</code></span><br>
+Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_ASSERT_HOME}/load.bash&quot;</code></span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-assert">https://github.com/bats-core/bats-assert</a>, <a href="https://github.com/bats-core/bats-assert/releases">https://github.com/bats-core/bats-assert/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
 Versions: <span class="module-version"><em>2.0.0</em></span><br>
 <details>
@@ -437,7 +437,7 @@ whatis(&quot;Keywords: bash, shell, testing&quot;)
 whatis(&quot;URL: https://github.com/bats-core/bats-assert, https://github.com/bats-core/bats-assert/releases (changelog), https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert (documentation)&quot;)
 whatis([[
 Description: This is a helper library providing common assertions for Bats.
-Examples: In Bats `startup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_ARRAY_HOME}/load.bash&quot;`
+Examples: In Bats `setup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_ASSERT_HOME}/load.bash&quot;`
 ]])
 
 depends_on(&quot;bats-support&quot;)
@@ -445,7 +445,7 @@ depends_on(&quot;bats-support&quot;)
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path(&quot;BATS_ARRAY_HOME&quot;, home)
+prepend_path(&quot;BATS_ASSERT_HOME&quot;, home)
 </code></pre>
 
 </details>
@@ -491,7 +491,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
   <dd class="module-details">
 <strong class="module-help">bats-file: File-System Assertion Library for Bats (Bash Automated Testing System)</strong><br>
 <span class="module-description">This is a helper library providing common filesystem related assertions and helpers foor Bats.</span><br>
-Example: <span class="module-example">In Bats <code>startup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_FILE_HOME}/load.bash&quot;</code></span><br>
+Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_FILE_HOME}/load.bash&quot;</code></span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-assert">https://github.com/bats-core/bats-assert</a>, <a href="https://github.com/bats-core/bats-assert/releases">https://github.com/bats-core/bats-assert/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
 Versions: <span class="module-version"><em>0.3.0</em></span><br>
 <details>
@@ -507,7 +507,7 @@ whatis(&quot;Keywords: bash, shell, testing&quot;)
 whatis(&quot;URL: https://github.com/bats-core/bats-assert, https://github.com/bats-core/bats-assert/releases (changelog), https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert (documentation)&quot;)
 whatis([[
 Description: This is a helper library providing common filesystem related assertions and helpers foor Bats.
-Examples: In Bats `startup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_FILE_HOME}/load.bash&quot;`
+Examples: In Bats `setup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_FILE_HOME}/load.bash&quot;`
 ]])
 
 depends_on(&quot;bats-support&quot;)
@@ -526,7 +526,7 @@ prepend_path(&quot;BATS_FILE_HOME&quot;, home)
   <dd class="module-details">
 <strong class="module-help">bats-support: Supporting Library for Bats (Bash Automated Testing System)</strong><br>
 <span class="module-description">This is a supporting library providing common functions to test helper libraries written for Bats.</span><br>
-Example: <span class="module-example">In Bats <code>startup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code></span><br>
+Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code></span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-support">https://github.com/bats-core/bats-support</a>, <a href="https://github.com/bats-core/bats-support/releases">https://github.com/bats-core/bats-support/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
 Versions: <span class="module-version"><em>0.3.0</em></span><br>
 <details>
@@ -542,7 +542,7 @@ whatis(&quot;Keywords: bash, shell, testing&quot;)
 whatis(&quot;URL: https://github.com/bats-core/bats-support, https://github.com/bats-core/bats-support/releases (changelog), https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert (documentation)&quot;)
 whatis([[
 Description: This is a supporting library providing common functions to test helper libraries written for Bats.
-Examples: In Bats `startup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;`
+Examples: In Bats `setup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;`
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -3509,7 +3509,7 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 
 module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
 module-whatis &quot;URL: https://www.boost.org/&quot;
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
   prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
   prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
@@ -3535,7 +3535,7 @@ Versions: <span class="module-version">4.12.1, <em>5.1</em></span><br>
 
 module-whatis &quot;Description: Computational Geometry Algorithms Library&quot;
 module-whatis &quot;URL: https://www.cgal.org/&quot;
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   module load boost/1.73.0 cmake/3.18.3
   setenv CGAL_DIR /salilab/diva1/programs/x86_64linux/cgal-5.1/share/cmake/CGAL
 } else {
@@ -3784,12 +3784,12 @@ module-whatis &quot;URL: https://gcc.gnu.org/&quot;
 prepend-path  MODULEPATH      /salilab/diva1/home/modules-gcc10
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/gcc-10.2.1/bin
 prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/gcc-10.2.1/lib64
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/gcc-10.2.1/lib64/centos
 }
 
 if [ module-info mode load ] {
-  if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+  if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
     puts stderr &quot;WARNING: gcc 10 has a different C++ ABI to the default compiler&quot;
     puts stderr &quot;         (gcc 4) on CentOS. This means that if you try to link&quot;
     puts stderr &quot;         code compiled with gcc 10 against C++ libraries compiled&quot;
@@ -3928,7 +3928,7 @@ prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64
 prepend-path  PYTHONPATH      ${topdir}/lib/release64
 
 # Find IMP.mpi linked against the right version of OpenMPI
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   if {[info exists ::env(MPI_SUFFIX) ] &amp;&amp; [string compare $::env(MPI_SUFFIX) &quot;_openmpi3&quot;] == 0} {
     # CentOS 7 with mpi/openmpi3 module loaded
     prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
@@ -3968,7 +3968,7 @@ prepend-path  LD_LIBRARY_PATH ${topdir}/lib/fast64
 prepend-path  PYTHONPATH      ${topdir}/lib/fast64
 
 # Find IMP.mpi linked against the right version of OpenMPI
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   if {[info exists ::env(MPI_SUFFIX) ] &amp;&amp; [string compare $::env(MPI_SUFFIX) &quot;_openmpi3&quot;] == 0} {
     # CentOS 7 with mpi/openmpi3 module loaded
     prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
@@ -4198,7 +4198,7 @@ Versions: <span class="module-version">3.4.3, <em>4.3.0</em></span><br>
 
 module-whatis &quot;Description: Collection of algorithms for computer vision&quot;
 module-whatis &quot;URL: https://opencv.org/&quot;
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   module load hdf5/1.10.6
   prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/bin
   prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib64
@@ -5712,8 +5712,8 @@ if [file exists /etc/modulefiles/mpi/openmpi-x86_64] {
 } elseif [file exists /usr/share/modulefiles/mpi/openmpi-x86_64] {    
   module load mpi/openmpi-x86_64
 }
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
-  if [file exists /etc/dnf/dnf.conf] {  # CentOS 8
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
+  if [file exists /etc/dnf/dnf.conf] {  # CentOS/Rocky/Alma 8 or 9
     prepend-path  PATH            /salilab/diva1/programs/x86_64linux/relion-3.0.git9a02562/bin-mpi40
   } else {  # CentOS 7
     prepend-path  PATH            /salilab/diva1/programs/x86_64linux/relion-3.0.git9a02562/bin
@@ -5761,7 +5761,7 @@ setenv        ROSETTA3_DB     /salilab/diva1/programs/x86_64linux/rosetta-3.10/d
 
 module-whatis &quot;Description: Makes available libraries usually only present on the Sali interactive nodes&quot;
 prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] } {
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release]} {
   if [file exists /etc/dnf/dnf.conf] {
     prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64/centos8
   } elseif [file exists /etc/systemd/system.conf] {
@@ -5893,7 +5893,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(121)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-05-18 12:04:05 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-06-06 14:27:35 from querying `module avail` and `module spider`._
 
 
 <style>
