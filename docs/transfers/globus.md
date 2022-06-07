@@ -16,6 +16,19 @@ If you want to transfer files from or to your {{ site.cluster.nickname }} accoun
 
 3. [online] When no longer needed, make sure to 'Deactivate Credentials' for your '{{ site.globus.name }}' endpoint.
 
+## Globus v5 for PHI Users
+
+To use the PHI Compatible Globus ['UCSF Wynton PDT' endpoint], you _must_ be signed up for [Wynton Two-Factor Authentication]({{ '/get-started/duo-signup.html' | relative_url }}).
+
+Instead of using the non-PHI-compliant endpoint 'UCSF Wynton HPC', all PHI data must use the PHI-approved Globus endpoint 'UCSF Wynton PDT', which is associated with the pdt1 and pdt2 data-transfer nodes.  
+
+1. Log in to Globus with your UCSF Campus ID. 
+2. On the next screen, you will be notified 'Authentication Required'. 
+3. Select your identity. 
+4. This will take you to a screen where you are prompted to enter your Wynton Username and Password. Enter these. 
+5. Your default Two-Factor Authentication will be notified.  
+6. Approve, and Globus will continue to a screen representing the Wynton file system.
+
 
 ### Set up a Globus endpoint for your local machine
 
@@ -78,20 +91,6 @@ To transfer files via the Globus network:
 2. Specify the two endpoints you wish to transfer files from and to.
 
 3. Select the files and folders to be transferred and click 'Start'.
-
-
-## Globus for PHI Users
-
-To use the PHI Compatible Globus ['UCSF Wynton PDT' endpoint], you _must_ be signed up for [Wynton Two-Factor Authentication]({{ '/get-started/duo-signup.html' | relative_url }}).
-
-Instead of using the non-PHI-compliant endpoint 'UCSF Wynton HPC', all PHI data must use the PHI-approved Globus endpoint 'UCSF Wynton PDT', which is associated with the pdt1 and pdt2 data-transfer nodes.  
-
-1. Log in to Globus with your UCSF Campus ID. 
-2. On the next screen, you will be notified 'Authentication Required'. 
-3. Select your identity. 
-4. This will take you to a screen where you are prompted to enter your Wynton Username and Password. Enter these. 
-5. Your default Two-Factor Authentication will be notified.  
-6. Approve, and Globus will continue to a screen representing the Wynton file system.
 
 
 ## Endpoints of interest
