@@ -1,6 +1,6 @@
 # File Sizes and Disk Quotas
 
-## File sizes on /wynton/
+## File sizes on `/wynton/`
 
 The `/wynton/` storage is on a [ZFS] file system on top of our BeeGFS parallel storage system. This is **automatically compressed** (using [lz4] compression in ZFS) before anything is written to the physical drives.  Because of this, a 1.0 MiB file is likely to occupy less that 1.0 MiB of drive space.  Exactly, how much a file is compressed varies greatly with file format but as a rule of thumb plain text files can be compressed more than files in a binary format.  Already compressed files such as GZ or ZIP files are unlikely to be compressed further.
 
@@ -31,9 +31,9 @@ _Comment_: It is the _compressed_ size that counts towards your disk quota.
 
 
 
-## User disk quota on /wynton/home/
+## User disk quota on `/wynton/home/` or `/wynton/protected/home`
 
-To check how much storage space you have consumed on `/wynton/home/`, and the total amount available to you, call:
+To check how much storage space you have consumed on `/wynton/home/` or `/wynton/protected/home`, and the total amount available to you, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"
@@ -51,7 +51,7 @@ For example,
 
 tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your [500-GiB home storage space]({{ '/about/specs.html' | relative_url }}) is reported as 1000 GiB by the `beegfs-ctl` tool.
 
-## User disk usage on /wynton/scratch/
+## User disk usage on `/wynton/scratch/`
 
 To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 
@@ -62,7 +62,7 @@ beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 _Comment_: There are no user or group quotas on `/wynton/scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
 
 
-## Group disk quota on /wynton/group/
+## Group disk quota on `/wynton/group/`
 
 If your group (lab) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/`.  To check how much storage space your group/lab has consumed on `/wynton/group/`, and the total amount available to you, call:
 
@@ -80,7 +80,15 @@ For example,
         boblab| 34001||      0 Byte|   40.00 TiB||        0|unlimited
 ```
 
-Note that this storage is shared among all group members and does _not_ count toward your personal disk quota under `/wynton/home/`.
+Note that this storage is shared among all group members and does _not_ count toward your personal disk quota under `/wynton/home/` or `/wynton/protected/home`.
+
+
+## Group disk quota on `wynton/protected/project`
+
+Generally, single labs/groups should be group quota. 
+
+PHI/Projects are for IRBs that are either subgroups of the lab/group or supergroups that encompass more than one group.
+
 
 
 
