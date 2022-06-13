@@ -83,7 +83,7 @@ For example,
 Note that this storage is shared among all group members and does _not_ count toward your personal disk quota under `/wynton/home/` or `/wynton/protected/home`.
 
 
-## Group disk quota on `wynton/protected/project`
+## Group disk quota on `/wynton/protected/project/`
 
 Generally, single labs/groups should be group quota. 
 
