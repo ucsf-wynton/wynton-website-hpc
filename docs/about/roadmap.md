@@ -16,8 +16,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Support: A User Issue Tracker
 
-* Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }}
-
 
 ## Postponed
 
@@ -69,6 +67,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Compute: QB3 hardware migration to {{ site.cluster.name }} considered complete (approximately 5,500 out of 7,000 physical cores migrated) (2021-09-27)
 
 * Compliance: Add support for restricted data analysis ("Wynton PHI") (2021-12-17)
+
+* Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }} (2022-06-01)
 
 
 See also [News].

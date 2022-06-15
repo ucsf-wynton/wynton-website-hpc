@@ -5,6 +5,8 @@
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the [Status]({{ '/status/index.html' | relative_url }}) page_)
 
+2022-06-01: Added support for transfering files between Wynton and UCSF Box via [Globus]({{ '/transfers/globus.html' | relative_url }}).
+
 2021-12-17: [Wynton PHI]({{ '/about/wynton-phi.html' | relative_url }}) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
 
 2021-10-01: Added four [communal GPU nodes]({{ '/about/specs.html' | relative_url }}) each with four Nvidia A40 GPUs (48 GiB GPU RAM) and a 32-core CPU and 512 GB RAM
