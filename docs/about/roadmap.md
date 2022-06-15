@@ -68,6 +68,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Compliance: Add support for restricted data analysis ("Wynton PHI") (2021-12-17)
 
+* Network: Add a PHI-approved Globus endpoint (2022-05-02)
+
 * Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }} (2022-06-01)
 
 

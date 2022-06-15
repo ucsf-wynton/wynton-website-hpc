@@ -1,6 +1,8 @@
 # News
 
-2022-06-01: Added support for transfering files between Wynton and UCSF Box via [Globus]({{ '/transfers/globus.html' | relative_url }}).
+2022-06-01: Added support for transferring files between Wynton and UCSF Box via [Globus]({{ '/transfers/globus.html' | relative_url }}).
+
+2022-05-02: Added a PHI-compliant endpoint to [Globus]({{ '/transfers/globus.html' | relative_url }}).
 
 [Wynton PHI]({{ '/about/wynton-phi.html' | relative_url }}) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
 
