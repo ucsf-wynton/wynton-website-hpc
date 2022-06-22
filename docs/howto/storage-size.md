@@ -89,7 +89,7 @@ Generally, single labs/groups should be group quota.
 
 PHI/Projects are for IRBs that are either subgroups of the lab/group or supergroups that encompass more than one group.
 
-
+Please note: Purchased storage that is under `/wynton/group` and under `/wynton/protected/project` count towards a lab's storage quota total.
 
 
 [lz4]: https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)
