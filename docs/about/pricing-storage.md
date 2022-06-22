@@ -55,5 +55,5 @@ We have an immediate need to provide for {{ site.cluster.name }} storage expansi
 * The current storage hardware increment is ~$160,000, which may result in some delay between the first contributions and an actual purchase, although there is already pent-up demand and hence we are trying to proceed with the purchase as quickly as possible.
 
 
-_Last updated: June 13, 2022_
+_Last updated: June 22, 2022_
 
