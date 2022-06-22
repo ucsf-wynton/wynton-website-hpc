@@ -12,7 +12,7 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 * Global `/wynton/scratch` may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically]({{'/about/specs.html#scratch-storage' | relative_url }})
 
-* Additional, long-term storage can be purchased in `/wynton/group` or for specific PHI projects to `/wynton/protected/project` at $160/TB (one-time fee)
+* Additional, long-term storage can be purchased in `/wynton/group` or for specific PHI projects to `/wynton/protected/project` at $160/TB (one-time fee).  Both will count toward's a lab's storage quota total.
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
@@ -24,6 +24,8 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 ## Lab-Specific HPC Storage Pricing Model
 
 We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group` (or `/wynton/protected/project`) and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (`/wynton/scratch` and `/wynton/home` or `/wynton/protected/home`).
+
+Please note, storage in `/wynton/group/` and `/wynton/protected/project` both will count towards a lab's storage quota total.
 
 Given prices of hard drives, the stated rate might seem high, but there are three mitigating factors. First, we have enabled ZFS compression, so the actual available space might be significantly more. Second, the price includes the cost of the networking, metadata servers, storage server, maintenance, and administration. Third, we have proven that the performance of our BeeGFS infrastructure is much higher than the typical NFS server (in some respects, the performance is more than an order of magnitude faster). In the future, if absolutely necessary, we may also charge a “maintenance fee” for storage after the initial 5-year hardware warranty expires, but nothing has been decided as of yet. Similarly, any future storage purchases may be priced differently than that described here, to reflect the situation present at that time.
 
