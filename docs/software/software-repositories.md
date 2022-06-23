@@ -545,6 +545,8 @@ Description: This is a supporting library providing common functions to test hel
 Examples: In Bats `setup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;`
 ]])
 
+depends_on(&quot;bats-core&quot;)
+
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
@@ -2380,7 +2382,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 <span class="module-description">The R programming language.</span><br>
 Example: <span class="module-example"><code>R</code>, <code>R --version</code>, and <code>Rscript --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.r-project.org/">https://www.r-project.org/</a>, <a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.html">https://cran.r-project.org/doc/manuals/r-release/NEWS.html</a> (changelog)</span><br>
-Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.5, 4.1.0-gcc8, 4.1.1-gcc8, 4.1.2-gcc8, 4.1.3-gcc8, <em>4.2.0-gcc10</em></span><br>
+Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 4.0.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.5, 4.1.0-gcc8, 4.1.1-gcc8, 4.1.2-gcc8, 4.1.3-gcc8, 4.2.0-gcc10, <em>4.2.1-gcc10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3910,17 +3912,17 @@ prepend-path  PERL5LIB        /salilab/diva1/programs/x86_64linux/ImageMagick-6.
 <h3 id="module_sali_imp" class="module-name">imp</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Integrative Modeling Platform (version 2.16.0, with only usage checks turned on)</span><br>
+<span class="module-description">Integrative Modeling Platform (version 2.17.0, with only usage checks turned on)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, <em>2.16.0</em></span><br>
+Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, <em>2.17.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Integrative Modeling Platform (version 2.16.0, with only usage checks turned on)&quot;
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.17.0, with only usage checks turned on)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load sali-libraries
-set topdir /salilab/diva1/home/imp/main/2.16.0
+set topdir /salilab/diva1/home/imp/main/2.17.0
 prepend-path  PATH            ${topdir}/bin/release64
 prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64
 prepend-path  PYTHONPATH      ${topdir}/lib/release64
@@ -3950,17 +3952,17 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
 <h3 id="module_sali_imp-fast" class="module-name">imp-fast</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Integrative Modeling Platform (version 2.16.0, fast build)</span><br>
+<span class="module-description">Integrative Modeling Platform (version 2.17.0, fast build)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, <em>2.16.0</em></span><br>
+Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, <em>2.17.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Integrative Modeling Platform (version 2.16.0, fast build)&quot;
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.17.0, fast build)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load sali-libraries
-set topdir /salilab/diva1/home/imp/main/2.16.0
+set topdir /salilab/diva1/home/imp/main/2.17.0
 prepend-path  PATH            ${topdir}/bin/fast64
 prepend-path  LD_LIBRARY_PATH ${topdir}/lib/fast64
 prepend-path  PYTHONPATH      ${topdir}/lib/fast64
@@ -5911,7 +5913,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-06-14 13:30:33 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-06-23 08:35:47 from querying `module avail` and `module spider`._
 
 
 <style>
