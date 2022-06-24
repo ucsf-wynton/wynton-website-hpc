@@ -1,8 +1,8 @@
 # Created by: hb
-# Created on: 2022-06-23 03:00:03-07:00
+# Created on: 2022-06-24 03:00:03-07:00
 # Total fshares: 20198
 # Total queue_slots: 10362
-# Number of projects: 51
+# Number of projects: 50
 fshares	queue_slots	project
 5506	3305	salilab
 4104	1403	agardlab,chenglab,frostlab
@@ -15,9 +15,9 @@ fshares	queue_slots	project
 645	215	hernandezlab
 589	196	genetics
 517	172	babbittlab
+491	174	surbecklab
 400	133	grabelab
 380	171	fraserlab
-344	115	surbecklab
 290	97	ferrinlab
 288	96	elsamadlab
 226	75	dilllab
@@ -25,7 +25,6 @@ fshares	queue_slots	project
 182	61	ichs
 161	54	fischbachlab
 160	53	tanglab
-147	59	nagarajanmukherjeelab
 123	41	lilab
 109	36	huanglab
 108	138	stroudlab
