@@ -30,8 +30,25 @@ and
 _Comment_: It is the _compressed_ size that counts towards your disk quota.
 
 
+## Disk quota
 
-## User disk quota on `/wynton/home/` or `/wynton/protected/home`
+The BeeGFS file system keeps track on how much disk each of us currently consumes in different storage locations, specifically:
+
+1. User home folder (`$HOME`, i.e. `/wynton/home/` or `/wynton/protected/home`)
+2. Group folder under (i.e. `/wynton/group/` and `/wynton/protected/project/`)
+3. User files and folders under `/wynton/scratch/` (unlimited quota)
+
+These different type of locations are formally referred to as _storage pools_ by BeeGFS.
+
+If we ever run out of quota in one storage pool, BeeGFS detects this and prevent us from writing additional data. The symptoms of a full quota may vary.  You might get a clear "disk full" error, or you might experience obscure issues such as having problems logging in.
+You can use the BeeGFS tool `beegfs-ctl --getquota ...` to check how much disk quota you have and how much you currently consume.  Below sections give instructions how to check this for the different storage locations available.
+
+<div class="alert alert-warning" role="alert" markdown="1">
+**Please, be patient!**  If you remove files to clean up your quota, it might take up to ten minutes before these changes are seen with `beegfs-ctl --getquota ...`.  This is because BeeGFS updates the quota information only once every ten minutes.
+</div>
+
+
+### User disk quota on `/wynton/home/` or `/wynton/protected/home`
 
 To check how much storage space you have consumed on `/wynton/home/` or `/wynton/protected/home`, and the total amount available to you, call:
 
@@ -51,20 +68,9 @@ For example,
 
 tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your [500-GiB home storage space]({{ '/about/specs.html' | relative_url }}) is reported as 1000 GiB by the `beegfs-ctl` tool.
 
-## User disk usage on `/wynton/scratch/`
+### Group disk quota on `/wynton/group/` and `/wynton/protected/project/`
 
-To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
-
-```sh
-beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
-```
-
-_Comment_: There are no user or group quotas on `/wynton/scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
-
-
-## Group disk quota on `/wynton/group/`
-
-If your group (lab) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/`.  To check how much storage space your group/lab has consumed on `/wynton/group/`, and the total amount available to you, call:
+If your group (lab) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/`, and possibly also under `/wynton/protected/project/` (PHI).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=12 --gid "$(id --group)"
@@ -80,16 +86,25 @@ For example,
         boblab| 34001||      0 Byte|   40.00 TiB||        0|unlimited
 ```
 
-Note that this storage is shared among all group members and does _not_ count toward your personal disk quota under `/wynton/home/` or `/wynton/protected/home`.
+The group storage is shared among all group members and does _not_ count toward your personal disk quota under `$HOME`.
 
-
-## Group disk quota on `/wynton/protected/project/`
+Please note that if your lab has space under both `/wynton/group` and `/wynton/protected/project`, then they both count towards the groups total storage quota.  It is not possible to get a separate quota for each.
 
 Generally, single labs/groups should be group quota. 
 
 PHI/Projects are for IRBs that are either subgroups of the lab/group or supergroups that encompass more than one group.
 
-Please note: Purchased storage that is under `/wynton/group` and under `/wynton/protected/project` count towards a lab's storage quota total.
+
+### User disk usage on `/wynton/scratch/`
+
+To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
+
+```sh
+beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
+```
+
+_Comment_: There are no user or group quotas on `/wynton/scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
+
 
 
 [lz4]: https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)
