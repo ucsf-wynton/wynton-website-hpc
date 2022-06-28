@@ -97,8 +97,8 @@ To transfer files via the Globus network:
 
 * [Your personal GCP endpoint](https://app.globus.org/endpoints?scope=administered-by-me)
 * ['{{ site.globus.name }}' endpoint] (UUID `{{ site.globus.uuid }}`)
-* ['UCSF Wynton PDT' endpoint] (UUID `{{ site.globus-phi.uuid }}`)
-
+* ['{{ site.globus-phi.name }} endpoint] (UUID `{{ site.globus-phi.uuid }}`)
+* ['{{ site.globus-box.name }} endpoint] (UUID `{{ site.globus-box.uuid }}`)
 
 
 [Globus]: https://www.globus.org/
@@ -106,3 +106,4 @@ To transfer files via the Globus network:
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
 ['{{ site.globus.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus.uuid }}/overview
 ['{{ site.globus-phi.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus-phi.uuid }}/overview
+['{{ site.globus-box.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus-box.uuid }}/overview
