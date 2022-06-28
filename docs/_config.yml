@@ -75,7 +75,8 @@ globus:
   uuid: 68f06816-cd00-4bf3-ae1f-0597a07ed118
 globus-phi:
   name: "UCSF Wynton PDT"
-  uuid: 0f245a07-0f24-4732-a2d3-18fe9bb5c8ed
+  uuid: ef126934-6f8a-4af8-81cd-d5b0b7afe51f
+  
 
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
