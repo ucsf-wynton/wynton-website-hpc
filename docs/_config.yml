@@ -72,7 +72,7 @@ transfer2:
 
 globus:
   name: "UCSF Wynton HPC"
-  uuid: 1dd9beaa-14b7-11eb-abe2-0213fe609573
+  uuid: 68f06816-cd00-4bf3-ae1f-0597a07ed118
 
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
