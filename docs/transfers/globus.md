@@ -97,7 +97,7 @@ To transfer files via the Globus network:
 
 * [Your personal GCP endpoint](https://app.globus.org/endpoints?scope=administered-by-me)
 * ['{{ site.globus.name }}' endpoint] (UUID `{{ site.globus.uuid }}`)
-* ['UCSF Wynton PDT' endpoint] (UUID `0f245a07-0f24-4732-a2d3-18fe9bb5c8ed`)
+* ['UCSF Wynton PDT' endpoint] (UUID `{{ site.globus-phi.uuid }}`)
 
 
 
