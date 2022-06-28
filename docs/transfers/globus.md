@@ -105,4 +105,4 @@ To transfer files via the Globus network:
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
 ['{{ site.globus.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus.uuid }}/overview
-['UCSF Wynton PDT' endpoint]: https://app.globus.org/file-manager/collections/ef126934-6f8a-4af8-81cd-d5b0b7afe51f/overview
+['{{ site.globus-phi.name }}' endpoint]: https://app.globus.org/file-manager/collections/{{ site.globus-phi.uuid }}/overview
