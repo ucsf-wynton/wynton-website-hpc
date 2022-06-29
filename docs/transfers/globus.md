@@ -16,7 +16,7 @@ If you want to transfer files from or to your {{ site.cluster.nickname }} accoun
 
 3. [online] When no longer needed, make sure to 'Deactivate Credentials' for your '{{ site.globus.name }}' Collection.
 
-### Globus v5 for PHI Users
+### Globus for PHI Users
 
 To use the PHI Compatible Globus ['UCSF Wynton PDT' Collection], you _must_ be signed up for [Wynton Two-Factor Authentication]({{ '/get-started/duo-signup.html' | relative_url }}).
 
