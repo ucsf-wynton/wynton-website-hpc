@@ -3,14 +3,14 @@
 Below are instructions on how to share a specific folder on {{ site.cluster.nickname }} with specific Globus users.  These users do _neither_ have to have a {{ site.cluster.nickname }} account or have to be UCSF employees - you can share with anyone who has a Globus account.  When sharing, you can specify whether the person you share with should have read-only access or write access.  Typically, if you want to make large data files available for download, you will share with read-only permission.  If you want to receive data from a collaborator, you can give them write permission. 
 
 
-## Creating a Shared Globus Endpoint
+## Creating a Shared Globus Collection
 
 1. Make sure you have a working setup of [Globus for {{ site.cluster.nickname }}]
 
 2. Email [support@wynton.ucsf.edu] with the directory you want to share.
    The admins will send back the path the Globus share will appear as, e.g. `/wynton/globus/share/alice`
 
-3. Go to ['UCSF {{ site.cluster.nickname }}' endpoint], click the 'Activate' button to get to 'Please authenticate to access UCSF Wynton HPC':
+3. Go to ['UCSF {{ site.cluster.nickname }}' Collection], click the 'Activate' button to get to 'Please authenticate to access UCSF Wynton HPC':
    * Enter your {{ site.cluster.nickname }} credential, i.e. your {{ site.cluster.nickname }} username and password
 
 3. On the ['UCSF {{ site.cluster.nickname }}' endpoint] page, click the ['Collections'] tab to get to 'Guest Collections':
@@ -31,17 +31,17 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 At that point you should be all set.  Globus will send an email to the person you are sharing the folder with, and you can let them know the share is active.
 
 
-## Removing a Shared Globus Endpoint
+## Removing a Shared Globus Collection
 
-When you’re done, log into Globus, go to 'Endpoints' and then 'Administered by You'. Click on the shared endpoint and then 'Delete endpoint'.  Email [support@wynton.ucsf.edu] to let us know you've deleted the endpoint.
+When you’re done, log into Globus, go to 'Collections' and then 'Administered by You'. Click on the shared Collection and then 'Delete Collection'.  Email [support@wynton.ucsf.edu] to let us know you've deleted the Collection.
 
 
 [support@wynton.ucsf.edu]: mailto:support@wynton.ucsf.edu
 
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
-[Globus Connect Personal (GCP) endpoint]: https://app.globus.org/file-manager/gcp
-['UCSF {{ site.cluster.nickname }}' endpoint]: https://app.globus.org/file-manager/collections/1dd9beaa-14b7-11eb-abe2-0213fe609573/overview
-['Collections']: https://app.globus.org/file-manager/collections/1dd9beaa-14b7-11eb-abe2-0213fe609573/shares
+[Globus Connect Personal (GCP) Collection]: https://app.globus.org/file-manager/gcp
+['UCSF {{ site.cluster.nickname }}' Collection]: https://app.globus.org/file-manager/collections/68f06816-cd00-4bf3-ae1f-0597a07ed118/overview
+['Collections']: https://app.globus.org/file-manager/collections/68f06816-cd00-4bf3-ae1f-0597a07ed118/shares
 
 [Globus for {{ site.cluster.nickname }}]: {{ '/transfers/globus.html' | relative_url }}
