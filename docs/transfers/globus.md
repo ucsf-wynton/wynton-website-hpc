@@ -97,8 +97,8 @@ To transfer files via the Globus network:
 
 * [Your personal GCP Collection](https://app.globus.org/collections?scope=administered-by-me)
 * ['{{ site.globus.name }}' Collection] (UUID `{{ site.globus.uuid }}`)
-* ['{{ site.globus-phi.name }} Collection] (UUID `{{ site.globus-phi.uuid }}`)
-* ['{{ site.globus-box.name }} Collection] (UUID `{{ site.globus-box.uuid }}`)
+* ['{{ site.globus-phi.name }}' Collection] (UUID `{{ site.globus-phi.uuid }}`)
+* ['{{ site.globus-box.name }}' Collection] (UUID `{{ site.globus-box.uuid }}`)
 
 
 [Globus]: https://www.globus.org/
