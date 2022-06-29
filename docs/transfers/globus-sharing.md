@@ -41,7 +41,7 @@ When you’re done, log into Globus, go to 'Collections' and then 'Administered 
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) Collection]: https://app.globus.org/file-manager/gcp
-['UCSF {{ site.cluster.nickname }}' Collection]: https://app.globus.org/file-manager/collections/1dd9beaa-14b7-11eb-abe2-0213fe609573/overview
-['Collections']: https://app.globus.org/file-manager/collections/1dd9beaa-14b7-11eb-abe2-0213fe609573/shares
+['UCSF {{ site.cluster.nickname }}' Collection]: https://app.globus.org/file-manager/collections/68f06816-cd00-4bf3-ae1f-0597a07ed118/overview
+['Collections']: https://app.globus.org/file-manager/collections/68f06816-cd00-4bf3-ae1f-0597a07ed118/shares
 
 [Globus for {{ site.cluster.nickname }}]: {{ '/transfers/globus.html' | relative_url }}
