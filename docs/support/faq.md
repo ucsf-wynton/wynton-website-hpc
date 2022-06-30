@@ -11,7 +11,7 @@
   3. You might have asked for compute resources that cannot be met, e.g. more memory or more cores than available on any compute node, e.g. `-l mem=4048gb` or `-pe smp 256`.  If so, your job will never run.  Either lower the job's resource needs using `qdel`, or, alternatively,  remove the job (`qdel`) and submit (`qsub`) a new one with adjusted resources.
   4. `qstat -j <job_id>` will provide details on why a particular job is not running.  `qstat -u '*'` will show all jobs and their priority scores in the queue.
 
-**A**: **[For QB3 migrants]** If you are coming from the QB3 cluster, please make sure that your job script does _not_ specify any of the below [QB3-specific SGE resources](https://salilab.org/qb3cluster/Cluster_Topology).  **A job submitted with one or more of these will sit in the queue forever.**
+**A**: **[For QB3 migrants]** If you are coming from the QB3 cluster, please make sure that your job script does _not_ specify any of the below QB3-specific SGE resources.  **A job submitted with one or more of these will sit in the queue forever.**
 
   - `-l arch=linux-x64`: this architecture does not exist on {{ site.cluster.name }}. This specification can safely be dropped on {{ site.cluster.name }}. (You could specify, `-l arch=lx-amd64` but that is not needed as all compute nodes now have the same architecture.)
 
