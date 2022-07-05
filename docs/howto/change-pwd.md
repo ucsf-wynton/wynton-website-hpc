@@ -45,11 +45,22 @@ passwd: all authentication tokens updated successfully.
 
 ## Verify credentials
 
+You can verify your {{ site.cluster.nickname }} username and password using either of the below alternatives.  If neither works for you, you might have to reset your password.  If so, see below for instructions.
+
+
+### Alt 1. Verify from command line using SSH
+
 To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.cluster.name }} via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  If you have SSH keys set up, you can force SSH to ignore those and only accept password entries by using:
 
 ```r
 {local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}
 ```
+
+by replacing `alice` with your username.
+
+
+
+### Alt 2. Verify via online service
 
 Alternatively, you can verify your credentials from your browser:
 
