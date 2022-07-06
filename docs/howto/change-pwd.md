@@ -15,7 +15,7 @@ context:
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-We **strongly recommend** using a **password vault** application or website like the UCSF provided [Keeper Password Vault] to generate and store your passwords.
+We **strongly recommend** using a **password vault** application or website like the UCSF-provided [Keeper Password Vault] to generate and store your passwords.
 </div>
 
 
