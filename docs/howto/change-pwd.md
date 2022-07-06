@@ -23,12 +23,12 @@ You can change your password either via our web interface, or from the {{ site.c
 
 
 
-### From the web browser
+### Alt 1. From the web browser
 
 You can change your password using the [RBVI Kerberos Web Interface].
 
 
-### From the {{ site.cluster.nickname }} command line
+### Alt 2. From the {{ site.cluster.nickname }} command line
 
 If you can log in to {{ site.cluster.name }}, then you can change your credentials by calling `passwd` from one of the _login_ nodes, e.g.
 
@@ -48,7 +48,7 @@ passwd: all authentication tokens updated successfully.
 You can verify your {{ site.cluster.nickname }} username and password using either of the below alternatives.  If neither works for you, you might have to reset your password.  If so, see below for instructions.
 
 
-### Alt 1. Verify from command line using SSH
+### Alt 1. Verify from your local command line using SSH
 
 To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.cluster.name }} via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  If you have SSH keys set up, you can force SSH to ignore those and only accept password entries by using:
 
