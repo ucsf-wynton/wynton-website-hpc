@@ -52,13 +52,12 @@ To establish the "tunnel" using SSH port forwarding:
 Then launch a new Jupyter Notebook running on the development node:
 
 ```sh
-[alice@{{ site.devel.name }}]$ jupyter notebook --port 8890
+[alice@{{ site.devel.name }}]$ jupyter notebook --no-browser --port 8890
 [I 10:50:23.319 NotebookApp] Serving notebooks from local directory: {{ site.user.home }}
-[I 10:50:23.319 NotebookApp] Jupyter Notebook 6.4.3 is running at:
+[I 10:50:23.319 NotebookApp] Jupyter Notebook 6.4.10 is running at:
 [I 10:50:23.319 NotebookApp] http://localhost:8890/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
 [I 10:50:23.319 NotebookApp]  or http://127.0.0.1:8890/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
 [I 10:50:23.319 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[W 10:50:23.580 NotebookApp] No web browser found: could not locate runnable browser.
 [C 10:50:23.581 NotebookApp]
 
     To access the notebook, open this file in a browser:
