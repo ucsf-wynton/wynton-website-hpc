@@ -19,14 +19,17 @@ If using an Anaconda/Miniconda environment, using the `conda` package manager to
 ```
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-Note: During startup, Python does a lot of small file operations locating all the required files. The system version Python is installed on the local filesystem on Wynton nodes and should have a faster startup time. 
+Note: During startup, Python does a lot of small file operations locating all the required files. The system version Python is installed on the local filesystem on {{ site.cluster.name }} nodes and should have a faster startup time. 
 
 In contrast, for Anaconda and conda environments installed in a home directory, both the Python interpreter and all of it's modules reside on the shared parallel file system.  The operations to look up the needed files are metadata heavy and can strain the parallel file system, resulting in slower startup performance for the script. In particular, if the script is a batch job executing on many compute nodes, the performance impact has the potential to slow operations down for all users. 
 </div>
 
+
 ## Connect to Jupyter Notebook - using SSH port forwarding 
 
-In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter Notebook is running on the development node is 8890.  These ports are configured when you establish the SSH tunnel:
+In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter Notebook is running on the development node is 8890.  You can choose any port in [1024,65535] of your choice to use on your local computer as long as it is not already used by another software.  In this example, we assume port 8157 is free on your local computer.  Similarly, the port used for Jupypter Notebook must be free on the development node.  Since there are other users on machine too, there is always a risk that the port is already occupied by another user already.  If so, there is a risk that port 8890 used in this example will not work.  If so, try another port in [1024,65535].
+
+These ports are configured when you establish the SSH tunnel:
 
 ```sh
  local                                  remote
@@ -81,7 +84,7 @@ An alternative method to run a Jupyter Notebook on one of the development nodes 
 See the ['Graphical User Interfaces (GUI)']({{ '/howto/gui-x11fwd.html' | relative_url }}) for how to setup and use X2Go via one of the {{ site.cluster.name }} development nodes.
 
 <div class="alert alert-info" role="alert" markdown="1">
-If you use Python via your own Anaconda installation, instead of the Python version provided by Wynton, you can launch a Jupyter Notebook using the `jupyter notebook` command from the terminal connected by X2Go, which will also launch the web browser.
+If you use Python via your own Anaconda installation, instead of the Python version provided by {{ site.cluster.name }}, you can launch a Jupyter Notebook using the `jupyter notebook` command from the terminal connected by X2Go, which will also launch the web browser.
 </div>
 
 
