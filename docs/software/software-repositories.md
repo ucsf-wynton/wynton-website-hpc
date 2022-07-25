@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(81)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(82)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
@@ -232,7 +232,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (81)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (82)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2285,6 +2285,41 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_port4me" class="module-name">port4me</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">port4me:  Get the Same, Personal, Free TCP Port over and over</strong><br>
+<span class="module-description">'port4me' attempts, with high probability, to provide the user with the same, free port each time, even when used on different days.</span><br>
+Example: <span class="module-example"><code>port4me --help</code>, <code>port4me</code>, <code>port4me --tool=jupyter</code>).</span><br>
+URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/port4me">https://github.com/HenrikBengtsson/port4me</a>, <a href="https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md</a> (change log)</span><br>
+Warning: <span class="module-warning">This tool is under development.</span><br>
+Versions: <span class="module-version"><em>0.2.1</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+port4me:  Get the Same, Personal, Free TCP Port over and over
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, cli&quot;)
+whatis(&quot;URL: https://github.com/HenrikBengtsson/port4me, https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md (change log)&quot;)
+whatis([[
+Description: 'port4me' attempts, with high probability, to provide the user with the same, free port each time, even when used on different days.
+Examples: `port4me --help`, `port4me`, `port4me --tool=jupyter`).
+Warning: This tool is under development.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_proj" class="module-name">proj</h3>
 <dl>
   <dd class="module-details">
@@ -4110,7 +4145,7 @@ prepend-path  PATH            ${topdir}/bin
   <dd class="module-details">
 <span class="module-description">MODELLER comparative modeling</span><br>
 URL: <span class="module-url"><a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a></span><br>
-Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, 10.2, <em>SVN</em></span><br>
+Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, 10.2, 10.3, <em>SVN</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5909,11 +5944,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(81)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(82)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-06-29 09:31:12 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-07-25 04:20:13 from querying `module avail` and `module spider`._
 
 
 <style>
