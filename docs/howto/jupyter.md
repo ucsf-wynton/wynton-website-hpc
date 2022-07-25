@@ -29,13 +29,13 @@ In contrast, for Anaconda and conda environments installed in a home directory, 
 In this example the local port your web browser would connect to is 8157 and the remote port the Jupyter Notebook is running on the development node is 8890.  These ports are configured when you establish the SSH tunnel:
 
 ```sh
-   local                                  remote 
-   port 8157 ◀──────────────────────────▶ port 8890                            
+ local                                  remote
+ port 8157 ◀──────────────────────────▶ port 8890
                                                                                                
-┌────────┐          ┌────────┐            ┌────────┐                                        
-│  home  │          │ login  │            │  dev   │  
-│ laptop │────────▶ │  node  │──────────▶ │  node  │                       
-└────────┘          └────────┘            └────────┘ 
+┌────────┐          ┌────────┐          ┌────────┐
+│  home  │          │ login  │          │  dev   │
+│ laptop │────────▶ │  node  │────────▶ │  node  │
+└────────┘          └────────┘          └────────┘
 ```
 
 To establish the "tunnel" using SSH port forwarding:
@@ -83,7 +83,6 @@ See the ['Graphical User Interfaces (GUI)']({{ '/howto/gui-x11fwd.html' | relati
 <div class="alert alert-info" role="alert" markdown="1">
 If you use Python via your own Anaconda installation, instead of the Python version provided by Wynton, you can launch a Jupyter Notebook using the `jupyter notebook` command from the terminal connected by X2Go, which will also launch the web browser.
 </div>
-
 
 
 
