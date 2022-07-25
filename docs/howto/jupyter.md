@@ -42,18 +42,7 @@ To establish the "tunnel" using SSH port forwarding:
 
 ```sh
 [alice@local ~]$ ssh alice@{{ site.devel.name }}.wynton.ucsf.edu -J alice@log2.wynton.ucsf.edu -L 8157:localhost:8890
-
-Duo two-factor login for alice
-Enter a passcode or select one of the following options:
-
- 1. Duo Push to XXX-XXX-9999
- 2. Phone call to XXX-XXX-9999
- 3. SMS passcodes to XXX-XXX-9999
-
-Passcode or option (1-3): 1
-Success. Logging you in...
-Remember connection authentication from c-73-70-233-129 for 12 hours? [y/N] n  
-
+...
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
