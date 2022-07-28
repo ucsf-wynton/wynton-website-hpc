@@ -8,7 +8,10 @@ echo "Wynton HPC website: Update Software Repository page ..."
 SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 ## Setup shell, including Lmod
+#shellcheck disable=SC1091
 [[ -f /etc/bashrc ]] && . /etc/bashrc
+
+## Assert module is defined
 type module
 
 ## Required software
