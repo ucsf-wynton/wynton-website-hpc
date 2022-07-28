@@ -5646,7 +5646,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2019.3/lib/python3
   <dd class="module-details">
 <span class="module-description">A set of python modules for machine learning and data mining</span><br>
 URL: <span class="module-url"><a href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a></span><br>
-Versions: <span class="module-version"><em>0.21.3</em></span><br>
+Versions: <span class="module-version">0.14.1, <em>0.21.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5983,7 +5983,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-07-28 09:30:10 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-07-28 12:30:11 from querying `module avail` and `module spider`._
 
 
 <style>
