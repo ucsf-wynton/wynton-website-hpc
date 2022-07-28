@@ -3675,8 +3675,8 @@ module load patch_dock
 module load imp
 module load blast+
 module load usearch
-module load python2/scikit/0.12
-module load python2/biopython
+module load python3/scikit/0.14.1
+module load python3/biopython
 set topdir /salilab/diva1/programs/linux/cryptosite
 prepend-path  PATH            ${topdir}/bin
 prepend-path  PYTHONPATH      ${topdir}/python
@@ -4914,7 +4914,7 @@ Versions: <span class="module-version"><em>1.75</em></span><br>
 module-whatis &quot;Description: Python tools for computational molecular biology&quot;
 module-whatis &quot;URL: https://biopython.org/&quot;
 conflict python2
-module load python3/numpy/1.17.4
+module load python3/numpy/1.19.5
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py36-1.75/lib64/python3.6/site-packages
 </code></pre>
 
@@ -5983,7 +5983,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-07-28 12:30:11 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-07-28 15:30:12 from querying `module avail` and `module spider`._
 
 
 <style>
