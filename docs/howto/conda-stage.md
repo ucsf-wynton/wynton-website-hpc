@@ -43,10 +43,9 @@ This configuration step is quick and needs to be done only once per environment.
 
 ### Activating and deactivating Conda environment
 
-Each time you activate the environment, it is automatically staged to local disk. All you have to remember is to load the `conda-stage` module;
+Each time you activate the environment, it is automatically staged to local disk;
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 INFO: Staging current Conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to local disk ...
 INFO: [ONCE] Packaging Conda environment, because it hasn't been done before ...
@@ -99,7 +98,7 @@ INFO: Total unstage time: 0 seconds
 
 ### Using Conda staging in job scripts
 
-To work with staged conda environments in your job scripts, make sure to first configure it to do automatic staging interactively from a development node.  After this, all you have to do is to update your existing script to load the `conda-stage` module before activating the Conda environment, e.g.
+To work with staged conda environments in your job scripts, make sure to first configure it to do automatic staging interactively from a development node, e.g.
 
 ```sh
 #! /usr/bin/env bash
