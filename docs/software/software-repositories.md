@@ -999,7 +999,7 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 Example: <span class="module-example"><code>conda-stage --auto-stage=enable</code>, and <code>conda-stage --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/conda-stage">https://github.com/HenrikBengtsson/conda-stage</a>, <a href="https://github.com/HenrikBengtsson/conda-stage/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/conda-stage/blob/develop/NEWS.md</a> (changelog), <a href="https://github.com/HenrikBengtsson/conda-stage/tags">https://github.com/HenrikBengtsson/conda-stage/tags</a> (releases)</span><br>
 Warning: <span class="module-warning">This is work under construction. Your milage may vary! /HB 2022-04-13</span><br>
-Versions: <span class="module-version"><em>0.6.2</em></span><br>
+Versions: <span class="module-version">0.6.2, 0.7.0, <em>0.7.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1021,6 +1021,8 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+pushenv(&quot;CONDA_STAGE_PROLOGUE&quot;, &quot;module load CBI &quot; .. name)
 
 local script = pathJoin(home, &quot;bin&quot;, &quot;conda-stage.&quot; .. myShellType())
 if not isFile(script) then
@@ -3580,9 +3582,9 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
 module-whatis &quot;URL: https://www.boost.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/include
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -4414,7 +4416,7 @@ setenv        PSIPRED_LIB     /salilab/diva1/programs/x86_64linux/psipred-4.0/li
 <h3 id="module_sali_python2-biopython" class="module-name">python2/biopython</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">1.68, 1.69, <em>1.70</em></span><br>
+Versions: <span class="module-version"><em>1.70</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4431,7 +4433,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py27-1.
 <h3 id="module_sali_python2-bottleneck" class="module-name">python2/bottleneck</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">1.2.0, <em>1.2.1</em></span><br>
+Versions: <span class="module-version"><em>1.2.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4465,7 +4467,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/cycler-0.10.0/lib
 <h3 id="module_sali_python2-dateutil" class="module-name">python2/dateutil</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">1.5, <em>2.6.1</em></span><br>
+Versions: <span class="module-version"><em>2.6.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4482,7 +4484,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/dateutil-2.6.1/lib/pyth
 <h3 id="module_sali_python2-decorator" class="module-name">python2/decorator</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">4.0.11, <em>4.2.1</em></span><br>
+Versions: <span class="module-version"><em>4.2.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4514,7 +4516,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/functools32-3.2.3
 <h3 id="module_sali_python2-h5py" class="module-name">python2/h5py</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2.6.0, 2.7.0, <em>2.7.1</em></span><br>
+Versions: <span class="module-version"><em>2.7.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4564,7 +4566,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/lru_cache-1.5/lib
 <h3 id="module_sali_python2-matplotlib" class="module-name">python2/matplotlib</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2.0.0, 2.0.2, <em>2.1.2</em></span><br>
+Versions: <span class="module-version"><em>2.1.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4605,14 +4607,14 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-2.6
 <h3 id="module_sali_python2-msgpack" class="module-name">python2/msgpack</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">0.5.6, <em>0.6.2</em></span><br>
+Versions: <span class="module-version"><em>0.5.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;A Python MessagePack (de)serializer&quot;
 conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.6.2/lib64/python2.7/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.5.6/lib64/python2.7/site-packages
 </code></pre>
 
 </details>
@@ -4657,7 +4659,7 @@ prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/bin
 <h3 id="module_sali_python2-numexpr" class="module-name">python2/numexpr</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2.6.2, <em>2.6.4</em></span><br>
+Versions: <span class="module-version"><em>2.6.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4692,7 +4694,7 @@ prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py27-1.14
 <h3 id="module_sali_python2-pandas" class="module-name">python2/pandas</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">0.19.2, 0.20.2, <em>0.22.0</em></span><br>
+Versions: <span class="module-version"><em>0.22.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4728,7 +4730,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pkgconfig-1.2.2/l
 <h3 id="module_sali_python2-protobuf" class="module-name">python2/protobuf</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2.3.0, <em>2.5.0</em></span><br>
+Versions: <span class="module-version"><em>2.5.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4813,7 +4815,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2016.10/lib/python
 <h3 id="module_sali_python2-scikit" class="module-name">python2/scikit</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">0.12, 0.18.1, <em>0.19.1</em></span><br>
+Versions: <span class="module-version">0.12, <em>0.19.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4864,7 +4866,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/six-1.10.0/lib/py
 <h3 id="module_sali_python2-tables" class="module-name">python2/tables</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">3.3.0, 3.4.2, <em>3.5.2</em></span><br>
+Versions: <span class="module-version"><em>3.5.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5983,7 +5985,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-07-28 15:30:12 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-07-29 08:22:23 from querying `module avail` and `module spider`._
 
 
 <style>
