@@ -24,6 +24,6 @@ module_repositories <- list(
     group       = "Sali Lab Software Repository",
     url         = "https://salilab.org/",
     contributed = TRUE,
-    module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules-py27")
+    module_path = Sys.getenv("MODULE_ROOT_Sali", "/salilab/diva1/home/modules")
   )
 )
