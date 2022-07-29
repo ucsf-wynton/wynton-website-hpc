@@ -123,7 +123,7 @@ If you get an error on `/usr/share/lmod/lmod/init/sh: line 14: 'conda-stage': no
 
 ### Update an automatically-staged Conda environment
 
-If we would update or install new Conda packages to a staged environment, they will all be lost when unstaged.  Because of this staged environments are by default read-only (**conda-stage** option `--writable` overrides this).  Instead, for installation to be persistent, we need to install to the original Conda environment before it is staged.  To do this, we need to temporarily disable the automatic staging, otherwise it will be staged before we get to install.  This can be done by set environment `CONDA_STAGE` to `false` before activation.  Here is an example how to update all packages in the `myjupyter` environment:
+If we would update or install new Conda packages to a staged environment, they will all be lost when unstaged.  Because of this staged environments are by default read-only (**conda-stage** option `--writable` overrides this).  Instead, for installation to be persistent, we need to install to the original Conda environment before it is staged.  To do this, we need to temporarily disable the automatic staging, otherwise it will be staged before we get to install.  This can be done by setting environment variable `CONDA_STAGE` to `false` before activation.  Here is an example how to update all packages in the `myjupyter` environment:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ export CONDA_STAGE=false
