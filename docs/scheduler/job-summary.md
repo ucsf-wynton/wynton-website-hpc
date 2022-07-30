@@ -8,8 +8,9 @@ If you don't know how much resources your job consumes, you can add `qstat -j $J
 
 ```sh
 #!/bin/env bash
-#$ -cwd    ## use current working directory
-#$ -j yes  ## merge stdout and stderr
+#$ -S /bin/bash  # the shell language when run via the job scheduler [IMPORTANT]
+#$ -cwd          # use current working directory
+#$ -j yes        # merge stdout and stderr
 
 ## Summarize 100 million random numbers in R, which occupies
 ## 100e6 * 8 bytes = 0.80 GB of RAM.
