@@ -8,6 +8,7 @@ qsub -cwd -pe smp 4 -l mem_free=2G -l scratch=50G -l h_rt=00:20:00 script.sh
 
 This job submission will submit `script.sh` to the job scheduler which will eventually launch the job on one the compute nodes that can meet the resource needs of the job.  Exactly, what these options are is explained below sections, but in summary, the above will result in:
 
+* `-S /bin/bash`: the job scheduler will run the script via Bash (important not to forget)
 * `-cwd`: the working directory will be set to the same directory as from where the submission was done
 * `-pe smp 4`: the job will be allotted four slots ("cores") on a single machine
 * `-l mem_free=2G`: the job will be allotted 2 GiB of RAM per slot, i.e. 8 GiB in total
@@ -21,38 +22,35 @@ Before you can submit jobs to the compute nodes, you should prepare a script lik
 
 
 ```sh
-#!/bin/bash                        #-- what is the language of this shell
-#                                  #-- Any line that starts with #$ is an instruction to SGE
-#$ -S /bin/bash                    #-- the shell for the job
-#$ -o [dir]                        #-- output directory (fill in)
-#$ -e [dir]                        #-- error directory (fill in)
-#$ -cwd                            #-- tell the job that it should start in your working directory
-#$ -r y                            #-- tell the system that if a job crashes, it should be restarted
-#$ -j y                            #-- tell the system that the STDERR and STDOUT should be joined
-#$ -l mem_free=1G                  #-- submits on nodes with enough free memory (required)
-#$ -l scratch=1G                   #-- SGE resources (home and scratch disks)
-#$ -l h_rt=24:00:00                #-- runtime limit (see above; this requests 24 hours)
-##$ -t 1-10                        #-- remove first '#' to specify the number of
-                                   #-- tasks if desired (see Tips section on this page)
+#!/bin/bash           # the shell language when run outside of the job scheduler
+#                     # lines starting with #$ is an instruction to the job scheduler
+#$ -S /bin/bash       # the shell language when run via the job scheduler [IMPORTANT]
+#$ -cwd               # job should run in the current working directory
+#$ -j y               # STDERR and STDOUT should be joined
+#$ -l mem_free=1G     # job requires up to 1 GiB of RAM per slot
+#$ -l scratch=2G      # job requires up to 2 GiB of local /scratch space
+#$ -l h_rt=24:00:00   # job requires up to 24 hours of runtime
+##$ -t 1-10           # array job with 10 tasks (remove first '#' to enable)
+#$ -r y               # if job crashes, it should be restarted
 
-# Anything under here can be a bash script
+## If you array jobs (option -t), this script will run T times, once per task.
+## For each run, $SGE_TASK_ID is set to the corresponding task index (here 1-10).
+## To configure different parameters for each task index, one can use a Bash 
+## array to map from the task index to a parameter string.
 
-# If you used the -t option above, this same script will be run for each task,
-# but with $SGE_TASK_ID set to a different value each time (1-10 in this case).
-# The commands below are one way to select a different input (PDB codes in
-# this example) for each task.  Note that the bash arrays are indexed from 0,
-# while task IDs start at 1, so the first entry in the tasks array variable
-# is simply a placeholder
+## All possible parameters
+# params=(1bac 2xyz 3ijk 4abc 5def 6ghi 7jkl 8mno 9pqr 10stu)
 
-#tasks=(0 1bac 2xyz 3ijk 4abc 5def 6ghi 7jkl 8mno 9pqr 1stu )
-#input="${tasks[$SGE_TASK_ID]}"
+## Select the parameter for the current task index
+## Arrays are indexed from 0, so we subtract one from the task index
+# param="${params[$((SGE_TASK_ID - 1))]}"
 
 date
 hostname
 
 ## End-of-job summary, if running as a job
-[[ -n "$JOB_ID" ]] && qstat -j "$JOB_ID"          # This is useful for debugging and usage purposes,
-                                                  # e.g. "did my job exceed its memory request?"
+[[ -n "$JOB_ID" ]] && qstat -j "$JOB_ID"  # This is useful for debugging and usage purposes,
+                                          # e.g. "did my job exceed its memory request?"
 ```
 
 
@@ -172,7 +170,8 @@ and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8`
 
 ```sh
 #! /usr/bin/env bash
-#$ -cwd   ## SGE directive to run in the current working directory
+#$ -S /bin/bash       # the shell language when run via the job scheduler [IMPORTANT]
+#$ -cwd               # job should run in the current working directory
 
 module load mpi/openmpi-x86_64
 export OMP_NUM_THREADS=8
