@@ -4755,7 +4755,7 @@ module-whatis &quot;Markov Chain Monte Carlo sampling toolkit&quot;
 conflict python3
 module load python2/numpy/1.14.1
 module load python2/scipy/1.0.0
-module load python2/tables/3.4.2
+module load python2/tables/3.5.2
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib64/python2.7/site-packages
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib
 </code></pre>
@@ -5985,7 +5985,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-07-29 08:22:23 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-07-30 00:30:11 from querying `module avail` and `module spider`._
 
 
 <style>
