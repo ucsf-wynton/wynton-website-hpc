@@ -30,10 +30,15 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 
 At that point you should be all set.  Globus will send an email to the person you are sharing the folder with, and you can let them know the share is active.
 
+<div class="alert alert-warning" role="alert" markdown="1">
+It is only possible to have one Globus share at any time. If privacy allows, one workaround is to use multiple subfolders in a single Globus share.
+</div>
+
 
 ## Removing a Shared Globus Collection
 
 When you’re done, log into Globus, go to 'Collections' and then 'Administered by You'. Click on the shared Collection and then 'Delete Collection'.  Email [support@wynton.ucsf.edu] to let us know you've deleted the Collection.
+
 
 
 [support@wynton.ucsf.edu]: mailto:support@wynton.ucsf.edu
