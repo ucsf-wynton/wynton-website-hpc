@@ -17,12 +17,13 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
    * Click the 'Add a Guest Collection' button
 
 6. Fill out the 'Create New Guest Collection' form:
-   * Path: Enter the path you received from the admins, e.g. `/wynton/globus/share/alice`
-   * Share Display Name: Enter a descriptive name, e.g. 'Alice Wynton Share with Bob'
-   * Click 'Create Share'
+   * Directory: Enter the path you received from the admins, e.g. `/wynton/globus/share/alice`
+   * Display Name: Enter a descriptive name, e.g. 'Alice Wynton Share with Bob'
+   * Optionally add a "Description" or "Keywords".
+   * Click 'Create Collection'
    
 7. On the 'Permission' tab, click 'Add Permissions - Share With' and Enter:
-   * Path: `/`
+   * Directory: `/`
    * Share with: 'user' (the default)
    * Username of Email: the Globus ID email address of the user you'll be sharing with.  If they don't have a Globus ID email address, use their regular email -- they'll be prompted to create a Globus ID.
    * Permissions: 'read' (user can download) or 'write' (user can also upload)
