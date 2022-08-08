@@ -1,6 +1,7 @@
 ## 01 Dictionary of WhiteListed Words
 Agard
 alice
+allocatedStorage
 amaoutlab
 Andrej
 Approver
@@ -40,6 +41,7 @@ Ctrl
 CUDA
 cxx
 Cyberduck
+Dask
 DavidAnson
 decrypt
 dev
@@ -111,12 +113,15 @@ ImageMagick
 ing
 io
 iogpu
+ipykernel
 IRB
 isoseq
 IsoSeq
 jacobson
 json
+JHUB
 Jupyter
+JupyterHub
 kadmin
 keiser
 Keiser
@@ -148,6 +153,7 @@ msg
 multithreaded
 MyAccess
 narkive
+natively
 nds
 NetApp
 NFS
@@ -185,12 +191,14 @@ prebuilt
 priorly
 Programmatically
 pu
+purchasedStorage
 PUs
 PuTTY
 pwd
 py
 qb
 qmaster
+qstat
 queueing
 quickstart
 RBVI
@@ -245,6 +253,7 @@ stdout
 subfolder
 subtask
 sudo
+supergroups
 Sylabs
 sysadms
 TBs
