@@ -6,7 +6,7 @@ JHUB login is confined only to non-PHI Wynton user accounts. If you requested us
 
 Please setup your own environment before getting started. The base environment on JupyterHub is installed locally on the server and won't be accessible from the cluster. 
 
-There are several ways one can setup an environment, we recommend using virtualenv. See [Installing packages to a virtual environment](https://wynton.ucsf.edu/hpc/howto/python.html#2-installing-to-a-virtual-environment-aka-virtualenv) for instructions.
+There are several ways one can setup an environment, we recommend using `virtualenv`. See [Installing packages to a virtual environment](https://wynton.ucsf.edu/hpc/howto/python.html#2-installing-to-a-virtual-environment-aka-virtualenv) for instructions.
 
 ## Creating a kernel for virtual environment:
 
