@@ -21,7 +21,7 @@ Activate the virtual environment:
 
 Install "**ipykernel**" package
 
-```
+```bash
 (my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<env_name>
 ```
 
