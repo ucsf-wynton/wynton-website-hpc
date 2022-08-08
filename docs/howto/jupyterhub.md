@@ -11,14 +11,14 @@ There are several ways one can setup an environment, we recommend using virtuale
 To create a kernel that you can access from JHUB follow the steps below
 Activate the virtual environment:
 ```python
-[alice@dev2 ~]$ cd my_project
-[alice@dev2 my_project]$ . bin/activate
-(my_project) [alice@dev2 my_project]$ 
+[alice@{{ site.login.name }} ~]$ cd my_project
+[alice@{{ site.login.name }} my_project]$ . bin/activate
+(my_project) [alice@{{ site.login.name }} my_project]$ 
 ```
 
 Install "**ipykernel**" package:
 ```
-(my_project) [alice@dev2 my_project]$ python -m ipykernel install --user --name=<env_name>
+(my_project) [alice@{{ site.login.name }} my_project]$ python -m ipykernel install --user --name=<env_name>
 ```
 
 Refresh JHUB page and you should see a new Python Kernel. 
