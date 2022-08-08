@@ -14,15 +14,15 @@ To create a kernel that you can access from JHUB follow the steps below
 Activate the virtual environment:
 
 ```python
-[alice@{{ site.login.name }} ~]$ cd my_project
-[alice@{{ site.login.name }} my_project]$ . bin/activate
-(my_project) [alice@{{ site.login.name }} my_project]$ 
+[alice@{{ site.devel.name }} ~]$ cd my_project
+[alice@{{ site.devel.name }} my_project]$ . bin/activate
+(my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
 Install "**ipykernel**" package:
 
 ```
-(my_project) [alice@{{ site.login.name }} my_project]$ python -m ipykernel install --user --name=<env_name>
+(my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<env_name>
 ```
 
 Refresh JHUB page and you should see a new Python Kernel. 
@@ -30,7 +30,7 @@ Refresh JHUB page and you should see a new Python Kernel.
 
 ## Interactive Data Science on SGE with Dask
 
-Dask can scale Python natively by distributing the job to compute nodes. You would have to use Dask specific libraries to be able to leverage this. 
+[Dask](https://www.dask.org) can scale Python natively by distributing the job to compute nodes. You would have to use Dask specific libraries to be able to leverage this. 
 
 ```python
 from dask_jobqueue import SGECluster
