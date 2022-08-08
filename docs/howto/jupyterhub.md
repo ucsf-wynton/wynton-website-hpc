@@ -1,4 +1,4 @@
-## Log in to Wynton JupyterHub (JHUB):
+## Log in to Wynton JupyterHub (JHUB)
 
 As of now JHUB can be accessed either by connecting to VPN or from campus network using [JupyterHub Login](https://jhub.wynton.ucsf.edu/hub/login).
 
@@ -8,7 +8,7 @@ Please setup your own environment before getting started. The base environment o
 
 There are several ways one can setup an environment, we recommend using `virtualenv`. See [Installing packages to a virtual environment](https://wynton.ucsf.edu/hpc/howto/python.html#2-installing-to-a-virtual-environment-aka-virtualenv) for instructions.
 
-## Creating a kernel for virtual environment:
+## Creating a kernel for virtual environment
 
 To create a kernel that you can access from JHUB follow the steps below
 Activate the virtual environment:
@@ -19,7 +19,7 @@ Activate the virtual environment:
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
-Install "**ipykernel**" package:
+Install "**ipykernel**" package
 
 ```
 (my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<env_name>
