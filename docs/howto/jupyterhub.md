@@ -16,12 +16,12 @@ Activate the virtual environment:
 (my_project) [alice@dev2 my_project]$ 
 ```
 
-Install "ipykernel" package:
+Install "**ipykernel**" package:
 ```
 (my_project) [alice@dev2 my_project]$ python -m ipykernel install --user --name=<env_name>
 ```
 
-Refresh JHUB page and you should see a new Python Kerenl. 
+Refresh JHUB page and you should see a new Python Kernel. 
 
 
 ## Interactive Data Science on SGE with Dask
