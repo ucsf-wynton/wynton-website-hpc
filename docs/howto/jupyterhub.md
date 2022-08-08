@@ -29,7 +29,8 @@ Refresh JHUB page and you should see a new Python Kernel.
 
 
 ## Interactive Data Science on SGE with Dask
-# Dask can scale Python natively by distributing the job to compute nodes. You would have to use Dask specific libraries to be able to leverage this. 
+
+Dask can scale Python natively by distributing the job to compute nodes. You would have to use Dask specific libraries to be able to leverage this. 
 
 ```python
 from dask_jobqueue import SGECluster
