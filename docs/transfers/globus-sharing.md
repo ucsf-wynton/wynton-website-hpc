@@ -29,7 +29,7 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 At that point you should be all set.  Globus will send an email to the person you are sharing the folder with, and you can let them know the share is active.
 
 <div class="alert alert-warning" role="alert" markdown="1">
-It is only possible to have one Globus share at any time. If privacy allows, one workaround is to use multiple subfolders in a single Globus share.
+It is only possible to have one Globus Guest Collection per Wynton user. However, you can add multiple permissions to your Guest Collection, giving different people access to different subdirectories. If you have questions, send mail to [support@wynton.ucsf.edu].
 </div>
 
 
