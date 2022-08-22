@@ -5985,7 +5985,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
-_The above information was automatically generated on 2022-08-22 12:30:18 from querying `module avail` and `module spider`._
+_The above information was automatically generated on 2022-08-22 15:30:14 from querying `module avail` and `module spider`._
 
 
 <style>
