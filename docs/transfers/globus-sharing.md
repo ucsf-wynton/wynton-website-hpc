@@ -10,19 +10,16 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 2. Email [support@wynton.ucsf.edu] with the directory you want to share.
    The admins will send back the path the Globus share will appear as, e.g. `/wynton/globus/share/alice`
 
-3. Go to ['UCSF {{ site.cluster.nickname }}' Collection], click the 'Activate' button to get to 'Please authenticate to access UCSF Wynton HPC':
-   * Enter your {{ site.cluster.nickname }} credential, i.e. your {{ site.cluster.nickname }} username and password
-
-3. On the ['UCSF {{ site.cluster.nickname }}' endpoint] page, click the ['Collections'] tab to get to 'Guest Collections':
+3. On the ['UCSF {{ site.cluster.nickname }}' Collection] page, click the ['Collections'] tab to get to 'Guest Collections':
    * Click the 'Add a Guest Collection' button
 
-6. Fill out the 'Create New Guest Collection' form:
+4. Fill out the 'Create New Guest Collection' form:
    * Directory: Enter the path you received from the admins, e.g. `/wynton/globus/share/alice`
    * Display Name: Enter a descriptive name, e.g. 'Alice Wynton Share with Bob'
    * Optionally add a "Description" or "Keywords".
    * Click 'Create Collection'
    
-7. On the 'Permission' tab, click 'Add Permissions - Share With' and Enter:
+5. On the 'Permission' tab, click 'Add Permissions - Share With' and Enter:
    * Directory: `/`
    * Share with: 'user' (the default)
    * Username of Email: the Globus ID email address of the user you'll be sharing with.  If they don't have a Globus ID email address, use their regular email -- they'll be prompted to create a Globus ID.
