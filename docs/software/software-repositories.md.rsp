@@ -182,7 +182,7 @@ Please note that this software stack is maintained and contributed by a research
 
 <% repos_buttons(modules_sets) %>
 
-_The above information was automatically generated on <%= Sys.time() %> from querying `module avail` and `module spider`._
+_The above information is updated automatically every three hours by querying `module avail` and `module spider`._
 
 
 <style>
