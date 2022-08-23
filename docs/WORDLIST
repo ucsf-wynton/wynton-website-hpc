@@ -37,6 +37,7 @@ cron
 cronjob
 crontab
 Csh
+ctocore
 Ctrl
 CUDA
 cxx
@@ -156,9 +157,11 @@ NIST
 nloptr
 nonresponsive
 NSF's
+ntel
 Nvidia
 NVMe
 NX
+odecacore
 officio
 onboarding
 ondemand
@@ -205,6 +208,7 @@ Requestor
 requeue
 resynced
 resynchronization
+riginticore
 RITM
 Rmarkdown
 Rmpi
