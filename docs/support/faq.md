@@ -30,6 +30,12 @@
 qdel -f $JOB_ID [-t $SGE_TASK_ID]
 ```
 
+**Q**. What is the difference between idgpu, iogpu, and atgpus? Labels more for book keeping or do they denote architecture?
+
+**A**. It denotes CPU architecture.  "io" is for "*I*ntel *o*ctocore" (i.e. Intel CPUs with 8 cores per CPU).  "id" was originall for "*I*ntel *d*odecacore" 
+(12 cores per CPU), but now encompasses 12+ core Intel CPU nodes.  And "at" is for "*A*MD *t*riginticore" (32 cores).
+
+
 ## Errors
 
 **Q**. _I just started to get SSL-related errors when using `qsub` and `qstat` that I have never seen before;_
