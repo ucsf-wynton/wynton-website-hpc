@@ -189,8 +189,7 @@ setenv	 		MPI_HOME	/usr/lib64/openmpi3
 <dl>
   <dd class="module-details">
 <strong class="module-help">openjdk: Open Java Development Kit</strong><br>
-<span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun M<br />
-icrosystems began in 2006.</span><br>
+<span class="module-description">OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.</span><br>
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code> (SDK only).</span><br>
 Note: <span class="module-note">This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).</span><br>
 URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a>, <a href="https://openjdk.java.net/projects/jdk/">https://openjdk.java.net/projects/jdk/</a> (changelog), <a href="https://github.com/openjdk/jdk">https://github.com/openjdk/jdk</a> (source code)</span><br>
@@ -205,8 +204,7 @@ whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming, java&quot;)
 whatis(&quot;URL: https://openjdk.java.net/, https://openjdk.java.net/projects/jdk/ (changelog), https://github.com/openjdk/jdk (source code)&quot;)
 whatis([[
-Description: OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun M\
-icrosystems began in 2006.
+Description: OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition. It is the result of an effort Sun Microsystems began in 2006.
 Examples: `java -version` and `javac -version` (SDK only).
 Note: This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).
 ]])
