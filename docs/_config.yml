@@ -1,7 +1,7 @@
 title: 'UCSF Wynton HPC Cluster'
 theme: jekyll-theme-minimal
 
-baseurl: "/hpc"
+baseurl: /hpc
 
 organization:
   name: "Wynton"
