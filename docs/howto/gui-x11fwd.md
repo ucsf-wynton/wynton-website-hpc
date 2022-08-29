@@ -57,27 +57,6 @@ With the above setup, the following instructions opens a remote desktop window o
 If you get a dialog saying '**Error: Connection failed. bash: x2golistsessions: command not found**', then you have missed configuring a 'Proxy server' in Steps 7-8 of Section 'Setup of the X2Go Client (once)'.
 </div>
 
-
-### 3D Graphics with X2Go (in alpha testing)
-
-The X2Go Client provides basic support for 3D applications with a software implementation of an ancient version of OpenGL.  On the GPU development nodes (i.e., `gpudev1`), [VirtualGL] is installed so you can use hardware accelerated 3D graphics.  All you need to do is:
-
- 1. Opt-in by sending email to [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}?subject=vglusers) with the subject `vglusers`
- 2. Wait for confirmation that you have added to the `vglusers` group
- 3. Use the `vglrun` program to run your program on a development node, either
-    - by starting the application from a terminal (example below), or
-    - by using a {{ site.cluster.name }} desktop shortcut, after editing it in your {{ site.cluster.name }} `~/Desktop` to have `vglrun` inserted before the program name on the **Exec=** line
-
-For example:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ vglrun your-program
-```
-
-You have to opt-in because there is a slight security risk.  See <https://virtualgl-users.narkive.com/KHab71sF/security-issues-for-virtualgl> case (2) for details.  Case (1) does not apply because all of the development nodes are headless.
-
-
-
 ## X11 Forwarding over SSH
 
 You can also use X11 forwarding over the SSH connection used to connect to {{ site.cluster.name }}.
