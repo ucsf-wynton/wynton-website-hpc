@@ -10,6 +10,9 @@
 			"pattern": "^https://mon.wynton.ucsf.edu/"
 		},
 		{
+			"pattern": "^https://jhub.wynton.ucsf.edu/"
+		},
+		{
 			"pattern": "^https://it.ucsf.edu/service/keeper-password-vault"
 		},
 		{
