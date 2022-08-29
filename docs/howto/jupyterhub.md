@@ -1,6 +1,6 @@
 ## Log in to Wynton JupyterHub (JHub)
 
-As of now JHub can be accessed either by connecting to VPN or from campus network using [JupyterHub Login](https://JHub.wynton.ucsf.edu/hub/login).
+As of now JHub can be accessed either by connecting to VPN or from campus network using [JupyterHub Login](https://jhub.wynton.ucsf.edu/hub/login).
 
 JHub login is confined only to non-PHI Wynton user accounts. If you requested us to convert your account to a PHI account or set up your account as a PHI account, then you won't be able to login into JHub.
 
