@@ -1,8 +1,8 @@
-## Log in to Wynton JupyterHub (JHUB)
+## Log in to Wynton JupyterHub (JHub)
 
-As of now JHUB can be accessed either by connecting to VPN or from campus network using [JupyterHub Login](https://jhub.wynton.ucsf.edu/hub/login).
+As of now JHub can be accessed either by connecting to VPN or from campus network using [JupyterHub Login](https://JHub.wynton.ucsf.edu/hub/login).
 
-JHUB login is confined only to non-PHI Wynton user accounts. If you requested us to convert your account to a PHI account or set up your account as a PHI account, then you won't be able to login into JHUB.
+JHub login is confined only to non-PHI Wynton user accounts. If you requested us to convert your account to a PHI account or set up your account as a PHI account, then you won't be able to login into JHub.
 
 Please set up your own environment before getting started. The base environment on JupyterHub is installed locally on the server and won't be accessible from the cluster. 
 
@@ -10,7 +10,7 @@ There are several ways one can set up an environment, we recommend using `virtua
 
 ## Creating a kernel for virtual environment
 
-To create a kernel that you can access from JHUB follow the steps below
+To create a kernel that you can access from JHub follow the steps below
 Activate the virtual environment:
 
 ```python
@@ -26,7 +26,7 @@ Install "**ipykernel**" package
 (my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<my_project>
 ```
 
-Refresh JHUB page and you should see a new Python Kernel. 
+Refresh JHub page and you should see a new Python Kernel. 
 
 
 ## Interactive Data Science on SGE with Dask
