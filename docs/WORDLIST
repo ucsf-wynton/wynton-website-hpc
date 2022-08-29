@@ -42,6 +42,7 @@ Ctrl
 CUDA
 cxx
 Cyberduck
+Dask
 DavidAnson
 decrypt
 dev
@@ -113,12 +114,16 @@ ImageMagick
 ing
 io
 iogpu
+ipykernel
 IRB
 isoseq
 IsoSeq
 jacobson
 json
+JHUB
+JHub
 Jupyter
+JupyterHub
 kadmin
 keiser
 Keiser
@@ -150,6 +155,7 @@ msg
 multithreaded
 MyAccess
 narkive
+natively
 nds
 NetApp
 NFS
@@ -196,6 +202,7 @@ pwd
 py
 qb
 qmaster
+qstat
 queueing
 quickstart
 RBVI
