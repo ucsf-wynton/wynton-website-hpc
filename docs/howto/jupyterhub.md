@@ -2,11 +2,11 @@
 
 As of now JHUB can be accessed either by connecting to VPN or from campus network using [JupyterHub Login](https://jhub.wynton.ucsf.edu/hub/login).
 
-JHUB login is confined only to non-PHI Wynton user accounts. If you requested us to convert your account to a PHI account or setup your account as a PHI account, then you won't be able to login into JHUB.
+JHUB login is confined only to non-PHI Wynton user accounts. If you requested us to convert your account to a PHI account or set up your account as a PHI account, then you won't be able to login into JHUB.
 
-Please setup your own environment before getting started. The base environment on JupyterHub is installed locally on the server and won't be accessible from the cluster. 
+Please set up your own environment before getting started. The base environment on JupyterHub is installed locally on the server and won't be accessible from the cluster. 
 
-There are several ways one can setup an environment, we recommend using `virtualenv`. See [Installing packages to a virtual environment](https://wynton.ucsf.edu/hpc/howto/python.html#2-installing-to-a-virtual-environment-aka-virtualenv) for instructions.
+There are several ways one can set up an environment, we recommend using `virtualenv`. See [Installing packages to a virtual environment]({{ 'howto/python.html#2-installing-to-a-virtual-environment-aka-virtualenv' | relative_url }}) for instructions.
 
 ## Creating a kernel for virtual environment
 
@@ -22,7 +22,8 @@ Activate the virtual environment:
 Install "**ipykernel**" package
 
 ```bash
-(my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<env_name>
+(my_project) [alice@{{ site.devel.name }} my_project]$ python -m pip install ipykernel
+(my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<my_project>
 ```
 
 Refresh JHUB page and you should see a new Python Kernel. 
@@ -62,7 +63,7 @@ client = Client(cluster)
 client
 ```
 
-Check if the workers are assigned by running qstat command 
+Check if the workers are assigned by running `qstat` command 
 
 ```python
 !qstat
