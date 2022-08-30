@@ -561,7 +561,7 @@ prepend_path(&quot;BATS_SUPPORT_HOME&quot;, home)
 <span class="module-description">BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.</span><br>
 Example: <span class="module-example"><code>bcftools --version</code></span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/bcftools/blob/develop/NEWS">https://github.com/samtools/bcftools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/bcftools">https://github.com/samtools/bcftools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, <em>1.15.1</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, <em>1.16</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -636,7 +636,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.</span><br>
 Example: <span class="module-example"><code>bedops --version</code></span><br>
 URL: <span class="module-url"><a href="https://bedops.readthedocs.io/">https://bedops.readthedocs.io/</a>, <a href="https://bedops.readthedocs.io/en/latest/content/revision-history.html">https://bedops.readthedocs.io/en/latest/content/revision-history.html</a> (changelog), <a href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a> (source code)</span><br>
-Versions: <span class="module-version">2.4.36, 2.4.37, 2.4.38, 2.4.39, <em>2.4.40</em></span><br>
+Versions: <span class="module-version">2.4.36, 2.4.37, 2.4.38, 2.4.39, 2.4.40, <em>2.4.41</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -918,7 +918,7 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 Example: <span class="module-example"><code>cellranger --help</code> and <code>cellranger --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a>, <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/release-notes">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/release-notes</a> (changelog), <a href="https://github.com/10XGenomics/cellranger">https://github.com/10XGenomics/cellranger</a> (source code)</span><br>
 Warning: <span class="module-warning">To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.</span><br>
-Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, <em>7.0.0</em></span><br>
+Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, 7.0.0, <em>7.0.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1111,7 +1111,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
-Versions: <span class="module-version"><em>3.7</em></span><br>
+Versions: <span class="module-version">3.7, <em>4.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1290,7 +1290,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.30.0</em></span><br>
+Versions: <span class="module-version">0.30.0, <em>0.33.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1300,7 +1300,7 @@ fzf: A Command-Line Fuzzy Finder
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: cli, shell&quot;)
+whatis(&quot;Keywords: , cli, tui, shell&quot;)
 whatis(&quot;URL: https://github.com/junegunn/fzf, https://github.com/junegunn/fzf/wiki (documentation), https://github.com/junegunn/fzf/blob/master/CHANGELOG.md (changelog), https://github.com/junegunn/fzf/releases (download)&quot;)
 whatis([[
 Description: fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
@@ -1456,7 +1456,7 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It aims to contain the complete functionality of JTS in C++. This includes all the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced functions. GEOS provides spatial functionality to many other projects and products.</span><br>
 Example: <span class="module-example"><code>geos-config --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://libgeos.org/">https://libgeos.org/</a>, <a href="https://libgeos.org/usage/download/">https://libgeos.org/usage/download/</a> (changelog), <a href="https://github.com/libgeos/geos/issues">https://github.com/libgeos/geos/issues</a> (bug reports)</span><br>
-Versions: <span class="module-version">3.5.2, 3.7.3, 3.8.1, 3.9.1, <em>3.9.2</em></span><br>
+Versions: <span class="module-version">3.5.2, 3.7.3, 3.8.1, 3.9.1, 3.9.2, <em>3.9.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1636,8 +1636,8 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 <strong class="module-help">hdf5: A General Purpose Library and File Format for Storing Scientific Data</strong><br>
 <span class="module-description">Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications.</span><br>
 Example: <span class="module-example"><code>h5stat --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.hdfgroup.org/downloads/hdf5/">https://www.hdfgroup.org/downloads/hdf5/</a>, <a href="https://www.hdfgroup.org/downloads/hdf5/source-code/">https://www.hdfgroup.org/downloads/hdf5/source-code/</a> (source code)</span><br>
-Versions: <span class="module-version">1.10.6, 1.12.0, <em>1.12.1</em></span><br>
+URL: <span class="module-url"><a href="https://www.hdfgroup.org/downloads/hdf5/">https://www.hdfgroup.org/downloads/hdf5/</a>, <a href="https://portal.hdfgroup.org/display/support/Downloads">https://portal.hdfgroup.org/display/support/Downloads</a> (changelog), <a href="https://www.hdfgroup.org/downloads/hdf5/source-code/">https://www.hdfgroup.org/downloads/hdf5/source-code/</a> (source code)</span><br>
+Versions: <span class="module-version">1.10.6, 1.12.0, 1.12.1, <em>1.12.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1648,7 +1648,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: library&quot;)
-whatis(&quot;URL: https://www.hdfgroup.org/downloads/hdf5/, https://www.hdfgroup.org/downloads/hdf5/source-code/ (source code)&quot;)
+whatis(&quot;URL: https://www.hdfgroup.org/downloads/hdf5/, https://portal.hdfgroup.org/display/support/Downloads (changelog), https://www.hdfgroup.org/downloads/hdf5/source-code/ (source code)&quot;)
 whatis([[
 Description: Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications.
 Examples: `h5stat --version`.
@@ -1708,9 +1708,9 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">htop: An Interactive Process Viewer for Unix</strong><br>
 <span class="module-description"><code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.</span><br>
 Example: <span class="module-example"><code>htop</code>.</span><br>
-URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/milestones?state=closed">https://github.com/htop-dev/htop/milestones?state=closed</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.0.5, <em>3.2.0</em></span><br>
+Versions: <span class="module-version">3.0.5, 3.2.0, <em>3.2.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1721,8 +1721,8 @@ local name = myModuleName()
 local version = myModuleVersion()
 version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: system, utility&quot;)
-whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop/milestones?state=closed (changelog), https://github.com/htop-dev/htop (source code)&quot;)
+whatis(&quot;Keywords: system, utility, cli, tui&quot;)
+whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop/blob/main/ChangeLog (changelog), https://github.com/htop-dev/htop (source code)&quot;)
 whatis([[
 Description: `htop` is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.
 Examples: `htop`.
@@ -1746,7 +1746,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
 Example: <span class="module-example"><code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/htslib/blob/develop/NEWS">https://github.com/samtools/htslib/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, <em>1.15.1</em></span><br>
+Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, <em>1.16</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1824,7 +1824,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv</code>.</span><br>
 Note: <span class="module-note">IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
-Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, <em>2.13.0</em></span><br>
+Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, 2.13.0, <em>2.14.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1984,8 +1984,8 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
   <dd class="module-details">
 <strong class="module-help">kallisto: Near-optimal RNA-Seq Quantification</strong><br>
 <span class="module-description">kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.</span><br>
-Example: <span class="module-example"><code>kallisto version</code>.</span><br>
-URL: <span class="module-url"><a href="https://pachterlab.github.io/kallisto/about.html">https://pachterlab.github.io/kallisto/about.html</a>, <a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a></span><br>
+Example: <span class="module-example"><code>kallisto version</code></span><br>
+URL: <span class="module-url"><a href="https://pachterlab.github.io/kallisto/about.html">https://pachterlab.github.io/kallisto/about.html</a>, <a href="https://github.com/pachterlab/kallisto/releases">https://github.com/pachterlab/kallisto/releases</a> (changelog), <a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a> (source code)</span><br>
 Versions: <span class="module-version">0.45.0, 0.45.1, 0.46.0, 0.46.1, <em>0.46.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -1997,14 +1997,16 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: https://pachterlab.github.io/kallisto/about.html, https://github.com/pachterlab/kallisto&quot;)
-whatis(&quot;Description: kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.  Example: `kallisto version`.&quot;)
+whatis(&quot;URL: https://pachterlab.github.io/kallisto/about.html, https://github.com/pachterlab/kallisto/releases (changelog), https://github.com/pachterlab/kallisto (source code)&quot;)
+whatis([[
+Description: kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.
+Examples: `kallisto version`
+]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
-
 </code></pre>
 
 </details>
@@ -2139,7 +2141,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc/blob/master/changelog.md">https://github.com/jgm/pandoc/blob/master/changelog.md</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>2.18</em></span><br>
+Versions: <span class="module-version">2.18, <em>2.19.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2172,9 +2174,10 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
   <dd class="module-details">
 <strong class="module-help">Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats</strong><br>
 <span class="module-description">Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</span><br>
-Example: <span class="module-example"><code>picard -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code></span><br>
-URL: <span class="module-url"><a href="http://broadinstitute.github.io/picard/">http://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard/releases">https://github.com/broadinstitute/picard/releases</a> (changelog), <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a> (source code)</span><br>
-Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2.26.2, 2.26.10, <em>2.27.1</em></span><br>
+Example: <span class="module-example"><code>PicardCommandLine -h</code>, which is an alias for <code>java -jar $PICARD_HOME/picard.jar -h</code>.</span><br>
+URL: <span class="module-url"><a href="https://broadinstitute.github.io/picard/">https://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard/releases">https://github.com/broadinstitute/picard/releases</a> (changelog), <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a> (source code)</span><br>
+Warning: <span class="module-warning">The old <code>picard</code> alias is deprecated. Use <code>PicardCommandLine</code> instead.</span><br>
+Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2.26.2, 2.26.10, 2.27.1, <em>2.27.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2185,10 +2188,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: http://broadinstitute.github.io/picard/, https://github.com/broadinstitute/picard/releases (changelog), https://github.com/broadinstitute/picard (source code)&quot;)
+whatis(&quot;URL: https://broadinstitute.github.io/picard/, https://github.com/broadinstitute/picard/releases (changelog), https://github.com/broadinstitute/picard (source code)&quot;)
 whatis([[
 Description: Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.
-Examples: `picard -h`, which is an alias for `java -jar $PICARD_HOME/picard.jar -h`
+Examples: `PicardCommandLine -h`, which is an alias for `java -jar $PICARD_HOME/picard.jar -h`.
+Warning: The old `picard` alias is deprecated. Use `PicardCommandLine` instead.
 ]])
 
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
@@ -2203,6 +2207,10 @@ end
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 pushenv(&quot;PICARD_HOME&quot;, home)
+
+-- Aliases
+set_alias(&quot;PicardCommandLine&quot;, &quot;java -jar \&quot;$PICARD_HOME/picard.jar\&quot;&quot;)
+-- Deprecated
 set_alias(&quot;picard&quot;, &quot;java -jar \&quot;$PICARD_HOME/picard.jar\&quot;&quot;)
 
 -- Tweak Java for the current environment
@@ -2586,7 +2594,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.59.0</em></span><br>
+Versions: <span class="module-version">1.59.0, <em>1.59.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -2778,7 +2786,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.</span><br>
 Example: <span class="module-example"><code>salmon --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://github.com/COMBINE-lab/salmon/releases">https://github.com/COMBINE-lab/salmon/releases</a> (changelog), <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a> (source code)</span><br>
-Versions: <span class="module-version">1.3.0, 1.4.0, 1.5.2, 1.6.0, <em>1.8.0</em></span><br>
+Versions: <span class="module-version">1.3.0, 1.4.0, 1.5.2, 1.6.0, 1.8.0, <em>1.9.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2812,7 +2820,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
 Example: <span class="module-example"><code>samtools --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS">https://github.com/samtools/samtools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, <em>1.15.1</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, <em>1.16</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3250,7 +3258,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>tree --help</code>.</span><br>
 URL: <span class="module-url"><a href="http://mama.indstate.edu/users/ice/tree/">http://mama.indstate.edu/users/ice/tree/</a>, <a href="http://mama.indstate.edu/users/ice/tree/changes.html">http://mama.indstate.edu/users/ice/tree/changes.html</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>2.0.2</em></span><br>
+Versions: <span class="module-version">2.0.2, <em>2.0.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3260,7 +3268,7 @@ tree: List Content of Directories in a Tree-like Format
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: files, utility&quot;)
+whatis(&quot;Keywords: files, utility, cli&quot;)
 whatis(&quot;URL: http://mama.indstate.edu/users/ice/tree/, http://mama.indstate.edu/users/ice/tree/changes.html (changelog)&quot;)
 whatis([[
 Description: Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the `LS_COLORS` environment variable is set and output is to tty.
