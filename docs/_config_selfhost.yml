@@ -3,5 +3,5 @@ organization:
   url: "/"
 
 assets:
-  status_root_path: "/hpc/assets"
+  status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
 
