@@ -42,6 +42,10 @@ Every night, a script will run which reads that data and uses the allocatedStora
 
 Delegated responsible parties are able to adjust the memberships of their delegated groups.
 
+<div class="alert alert-warning" role="alert" markdown="1">
+Important note: There are two ways a user can be a member of a Unix group. By their default Unix Group and by explicit group membership. In most cases, on Wynton, group membership is a function of default Unix Group. This property can only be configured by the Wynton Sysadmins, it cannot be changed from the CGL Unix Group Maintenance page. Usually users are only explicitly added to groups when they have secondary group memberships in addition to their primary group membership.
+</div>
+
 Request the delegation of group ownership from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 
 Once you are the delegated "owner" of the group, you will be able to adjust the group membership of your delegated group.
