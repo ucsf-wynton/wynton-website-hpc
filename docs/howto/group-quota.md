@@ -40,8 +40,6 @@ Request the creation and delegation of a subgroup from [{{ site.cluster.email_su
 
 Once you are the delegated "owner" of the subgroup, you will be able to allocate quota from your group's parent quota to the subgroup.
 
-To add quota to a subgroup:
-
  1) Go to [CGL Unix Group Maintenance](https://www.cgl.ucsf.edu/admin/unixGroupMaint.py)
  2. Get the subgroup
  3. Update the allocatedStorage field
