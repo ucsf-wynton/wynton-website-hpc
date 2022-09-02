@@ -26,7 +26,7 @@ Request the delegation of group ownership from [{{ site.cluster.email_support }}
 
 Once you are the delegated "owner", you will be able to adjust group membership of your delegated group.
 
-### To be able to adjust the quota of a subgroup:
+### To be able to adjust the quota of a subgroup
 
 Request the creation of a subgroup from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 
