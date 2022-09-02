@@ -12,7 +12,7 @@ context:
 
 Any group with purchased storage can have a group folder in both /wynton/group and /wynton/protected/group.
 
-In that case, the group quota would include rsl group owned files in /wynton/group/group_name and /wynton/protected/group/group_name.
+In that case, the group quota would include group owned files in /wynton/group/group_name and /wynton/protected/group/group_name.
 
 Of course, only members with Wynton PHI/Protected access would have access to the data in /wynton/protected/group/group_name.
 
