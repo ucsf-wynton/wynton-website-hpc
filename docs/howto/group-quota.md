@@ -36,7 +36,9 @@ Once you are the delegated "owner" of the group, you will be able to adjust the 
 
 ## To adjust the quota of a delegated subgroup
 
-Request the creation of a subgroup from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
+Request the creation and delegation of a subgroup from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
+
+Once you are the delegated "owner" of the subgroup, you will be able to allocate quota from your group's parent quota to the subgroup.
 
 To add quota to a subgroup:
 
