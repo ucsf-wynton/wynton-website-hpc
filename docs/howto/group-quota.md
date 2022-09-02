@@ -18,13 +18,13 @@ Of course, only members with Wynton PHI/Protected access would have access to th
 
 You can also request to create a subgroup to manage the quota for phi only data storage, group_name-phi for example, and it could be allocated as part of the parent quota.
 
-## Adjust membership of groups and subgroups
+### To adjust the membership of a delegated group
 
-Delegated responsible parties are able to adjust the memberships of groups.
+Delegated responsible parties are able to adjust the memberships of their delegated groups.
 
 Request the delegation of group ownership from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 
-Once you are the delegated "owner", you will be able to adjust group membership of your delegated group.
+Once you are the delegated "owner" of the group, you will be able to adjust the group membership of your delegated group.
 
 1. Go to [CGL Unix Group Maintenance](https://www.cgl.ucsf.edu/admin/unixGroupMaint.py)
 2. Get the group
@@ -34,7 +34,7 @@ Once you are the delegated "owner", you will be able to adjust group membership 
 6. Select "Submit Changes"
 7. Notification: "Success! Group unix_group has been successfully updated!"
 
-### To be able to adjust the quota of a subgroup
+### To adjust the quota of a delegated subgroup
 
 Request the creation of a subgroup from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 
