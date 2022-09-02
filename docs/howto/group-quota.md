@@ -20,7 +20,7 @@ You can also request to create a subgroup to manage the quota for phi only data 
 
 ## Adjust group disk quota of subgroups and membership of groups and subgroups
 
-Lab admins are able to adjust the quotas of subgroups and membership of groups and subgroups
+Delegated responsible parties are able to adjust the quotas of subgroups and memberships of groups and subgroups.
 
 Request the delegation of group ownership from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 
