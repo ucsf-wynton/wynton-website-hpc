@@ -21,6 +21,7 @@
 * Impact: Fewer compute nodes than usual until rebooted
 * Damage: None
 * Occurrences:
+  1. 2022-08-05 (up to 14 days)
 
 #### Unscheduled downtimes due to power outage
 
@@ -47,6 +48,17 @@
 * Occurrences:
   - 2022-03-26 (48 hours): Data-center cooling issues
 * Total downtime: 48 hours of which 48 hours were due to external factors
+
+
+### August 5-9, 2022
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Resolved**: All compute nodes have been rebooted.
+<br><span class="timestamp">Aug 9, 12:00 PDT</span>
+
+**Notice**: New operating-system kernels are deployed. Login, data-transfer, and development nodes will be rebooted on Monday August 8 at 14:00.  Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues. To follow the progress, see the green 'Available CPU cores' curve (target ~14,500 cores) in the graph above.
+<br><span class="timestamp">Aug 5, 10:30 PDT</span>
 
 
 
