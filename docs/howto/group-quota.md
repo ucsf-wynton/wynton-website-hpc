@@ -25,7 +25,7 @@ Lab admins are able to adjust the quotas of subgroups and membership of groups a
 To add quota to the subgroup:
 
 1. go to https://www.cgl.ucsf.edu/admin/unixGroupMaint.py
-2. Get the group
+2. Get the subgroup
 3. Update the allocatedStorage field
 4. Submit
 
