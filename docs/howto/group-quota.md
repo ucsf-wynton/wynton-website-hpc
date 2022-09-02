@@ -3,7 +3,7 @@ context:
   - login
 ---
 
-# Delegated Subroup Quota Management and Delegated Group User Management
+# Delegated Subgroup Quota Management and Delegated Group User Management
 
 
 <div class="alert alert-warning" role="alert" markdown="1">
