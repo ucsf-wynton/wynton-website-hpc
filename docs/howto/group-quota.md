@@ -46,6 +46,6 @@ Once you are the delegated "owner" of the subgroup, you will be able to allocate
  4. Select "Submit Changes"
  5. Notification: "Success! Group unix_group has been successfully updated!"
 
-This *should* decrease the allocatedStorage in the parent group by the amount added to the subgroup.  When the nightly script runs the quotas of both the parent group and subgroup will get updated.
+This will decrease the allocatedStorage in the parent group by the amount added to the subgroup.  When the nightly script runs the quotas of both the parent group and subgroup will get updated.
 
 Every night, a script will run which reads that data and uses the allocatedStorage field to actually set the quota for the group.
