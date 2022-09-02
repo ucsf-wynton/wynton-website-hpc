@@ -22,7 +22,13 @@ You can also request to create a subgroup to manage the quota for phi only data 
 
 Lab admins are able to adjust the quotas of subgroups and membership of groups and subgroups
 
-First, request the creation of a subgroup from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
+Request the delegation of group ownership from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
+
+Once you are the delegated "owner", you will be able to adjust group membership of your delegated group.
+
+### To be able to adjust the quota of a subgroup:
+
+Request the creation of a subgroup from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 
 To add quota to a subgroup:
 
@@ -34,4 +40,3 @@ To add quota to a subgroup:
 This *should* decrease the allocatedStorage in the parent group by the amount added to the subgroup.  When the nightly script runs the quotas of both the parent group and subgroup will get updated.
 
 Every night, a script will run which reads that data and uses the allocatedStorage field to actually set the quota for the group.
-
