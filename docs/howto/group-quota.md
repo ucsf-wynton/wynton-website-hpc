@@ -16,13 +16,15 @@ In that case, the group quota would include rsl group owned files in /wynton/gro
 
 Of course, only members with Wynton PHI/Protected access would have access to the data in /wynton/protected/group/group_name.
 
-You can also request to create a sub-group to manage the quota for phi only data storage, group_name-phi for example, and it could be allocated as part of the parent quota.
+You can also request to create a subgroup to manage the quota for phi only data storage, group_name-phi for example, and it could be allocated as part of the parent quota.
 
 ## Adjust group disk quota of subgroups and membership of groups and subgroups
 
-Lab admins are able to adjust the quotas of subgroups and membership of groups and subgroups 
+Lab admins are able to adjust the quotas of subgroups and membership of groups and subgroups
 
-To add quota to the subgroup:
+First, request the creation of a subgroup from [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
+
+To add quota to a subgroup:
 
 1. go to https://www.cgl.ucsf.edu/admin/unixGroupMaint.py
 2. Get the subgroup
