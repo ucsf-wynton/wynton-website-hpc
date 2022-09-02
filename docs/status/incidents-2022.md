@@ -61,6 +61,17 @@
 <br><span class="timestamp">Aug 5, 10:30 PDT</span>
 
 
+### August 4, 2022
+
+#### <span style="color: orange;">Software repository maintenance</span>
+
+**Resolved**: The Sali lab software module repository is back.
+<br><span class="timestamp">Aug 4, 12:00 PDT</span>
+
+**Notice**: The Sali lab software module repository is back will be unavailable from around 10:30-11:30 today August 4 for maintenance.
+<br><span class="timestamp">Aug 4, 03:30 PDT</span>
+
+
 
 ### March 28-April 6, 2022
 
