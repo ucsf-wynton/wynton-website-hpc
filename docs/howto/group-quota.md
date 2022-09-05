@@ -10,11 +10,11 @@ context:
 2022-09-02: The Quota Management Tool is still being developed. If you run into any problems, please email: [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 </div>
 
-Any group with purchased storage can have a group folder in both /wynton/group and /wynton/protected/group.
+Any group with purchased storage can have a group folder in both `/wynton/group/` and `/wynton/protected/group/`.
 
-In that case, the group quota usage would include group owned files in BOTH /wynton/group/group_name AND /wynton/protected/group/group_name.
+In that case, the group quota usage would include group owned files in BOTH `/wynton/group/group_name/` AND `/wynton/protected/group/group_name/`.
 
-Of course, only members with Wynton PHI/Protected access would have access to the data in /wynton/protected/group/group_name.
+Of course, only members with Wynton PHI/Protected access would have access to the data in `/wynton/protected/group/group_name/`.
 
 You can also request to create a subgroup to self-manage the quota for phi only data storage, group_name-phi for example, and it could be allocated as part of the parent quota.
 
