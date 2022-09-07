@@ -86,6 +86,8 @@
 
 ### November 9, 2021
 
+#### <span style="color: orange;">Partial outage due to power glitch</span>
+
 **Resolved**: All hosts have been rebooted and are now up and running.
 <br><span class="timestamp">November 9, 11:00 PST</span>
 
@@ -242,6 +244,8 @@ reason: scheduled
 
 
 ### June 1-2, 2021
+
+#### <span style="color: orange;">Password management outage</span>
 
 **Resolved**: Password updates works again.
 <br>
