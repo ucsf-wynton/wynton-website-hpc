@@ -29,6 +29,10 @@ condition: is operational
 #condition: experiences partial problems
 #message: BeeGFS might hang at times until a BeeGFS bug fix is available
 
+level: danger
+condition: experiences significant issues
+message: Cluster access has been disabled and all running jobs have been terminated to minimize risk for file-system corruption
+
 
 # ----------------------------------------------------------------------------
 # Common status content
