@@ -86,7 +86,7 @@
 
 ### November 9, 2021
 
-#### <span style="color: orange;">Partial outage due to power glitch</span>
+#### <span style="color: orange;">Partial outage due to campus power glitch</span>
 
 **Resolved**: All hosts have been rebooted and are now up and running.
 <br><span class="timestamp">November 9, 11:00 PST</span>
