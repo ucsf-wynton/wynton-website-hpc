@@ -25,8 +25,8 @@ condition: is operational
 #message: The SGE scheduler and all compute nodes are offline due to major cooling issues
 
 # Actual status
-level: warning
-condition: partial outage
+level: info
+condition: is operational
 message: Available CPU cores may be limited as we deal with any casualties from the power outage
 
 #level: danger
