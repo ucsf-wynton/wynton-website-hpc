@@ -3,9 +3,9 @@
 * Full downtime:
 
   - Scheduled: 53.5 hours (= 2.3 days)
-  - Unscheduled: 154 hours (= 6.4 days)
-  - Total: 207.5 hours (= 8.6 days)
-  - External factors: 23% of the above downtime, corresponding to 48 hours (=2.0 days), were due to external factors
+  - Unscheduled: 220 hours (= 9.2 days)
+  - Total: 273.5 hours (= 11.4 days)
+  - External factors: 42% of the above downtime, corresponding to 114 hours (=4.8 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -28,8 +28,8 @@
 * Impact: No file access, no compute resources available
 * Damage: Running jobs (<= 14 days) failed, file-transfers failed, possible file corruptions
 * Occurrences:
-  - N/A
-* Total downtime: 0 hours of which 0 hours were due to external factors
+  - 2022-09-06 (66 hours)
+* Total downtime: 66 hours of which 66 hours were due to external factors
   
 #### Unscheduled downtimes due to file-system failures
 
@@ -48,6 +48,29 @@
 * Occurrences:
   - 2022-03-26 (48 hours): Data-center cooling issues
 * Total downtime: 48 hours of which 48 hours were due to external factors
+
+
+### September 6-9, 2022
+
+#### <span style="color: orange;">Outage following campus power glitch</span>
+
+**Resolved**: As of 09:20 on 2022-09-09, the cluster is back in full operation. The queues are enabled, jobs are running, and the development nodes are accepting logins.
+<br><span class="timestamp">September 9, 09:35 PDT</span>
+
+**Update**: Login and data-transfer nodes are disabled to minimize the risk for file corruption.
+<br><span class="timestamp">September 7, 12:45 PDT</span>
+
+**Notice**: The Wynton system experiencing system-wide issues, including the file system, due to a campus power glitch.  To minimize the risk of corrupting the file system, it was decided to shut down the job scheduler and terminate all running jobs.  The power outage at Mission Bay campus happened at 15:13.  Despite diesel-generated backup power started up momentarily, it was enough to affect some of our servers.  The job scheduler will be offline until the impact on Wynton is fully investigated.
+<br><span class="timestamp">September 6, 16:20 PDT</span>
+
+<!--
+start: 2022-09-06T15:20:00
+stop: 2022-09-09T09:20:00
+length: 66 hours
+severity: major-outage
+affected: jobs, beegfs, compute
+reason: power outage
+ -->
 
 
 ### August 5-9, 2022
@@ -212,4 +235,3 @@ severity: under-maintenance
 affected: jobs, beegfs, compute, *
 reason: scheduled
  -->
-
