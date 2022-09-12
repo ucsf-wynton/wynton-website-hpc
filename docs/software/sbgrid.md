@@ -66,6 +66,8 @@ the `OR` operator in resource requests, telling your job to
 run on any node whose hostname value matches the patterns given.)
 </div>
 
+SBGrid is available for interactive use on the development nodes and for use in job scripts on compute nodes. It is NOT available on the login nodes.
+
 In order to use SBGrid software, the SBGrid environment must be
 enabled.  To enable the SBGrid, in the shell or in a job script, do:
 
