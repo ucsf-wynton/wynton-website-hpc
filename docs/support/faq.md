@@ -138,6 +138,19 @@ $
 
 **A2**. Labs who [purchase additional storage]({{ '/about/pricing-storage.html' | relative_url }}) will get a `/wynton/group/your_group/` folder.  Files written in that folder will not count toward users disk quota.
 
+
+## Miscellaneous
+
+**Q**. _I might have corrupted by Bash startup file. How do I reset it?_
+
+**A**. To get a fresh `~/.bashrc` file, make a backup of your old one and copy the default one by:
+
+```sh
+$ cp ~/.bashrc ~/.bashrc.20220912
+$ cp /etc/skel/bashrc ~/.bashrc
+```
+
+
 ## Contributing to {{ site.cluster.nickname }}
 
 **Q**. _Our lab would contribute to {{ site.cluster.name }} in order to increase our priority.  How can we do this?_
