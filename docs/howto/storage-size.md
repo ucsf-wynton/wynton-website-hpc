@@ -88,12 +88,11 @@ For example,
 
 The group storage is shared among all group members and does _not_ count toward your personal disk quota under `$HOME`.
 
-Please note that if your lab has space under both `/wynton/group` and `/wynton/protected/project`, then they both count towards the groups total storage quota.  It is not possible to get a separate quota for each.
+Any group with purchased storage can have a group folder in both the non-PHI /wynton/group/ area and the PHI /wynton/protected/group/ area, e.g. /wynton/group/boblab/ and /wynton/protected/group/boblab/. In that case, the group quota usage would include group-owned files in both areas. Of course, only members with Wynton PHI access would have access to the data under /wynton/protected/group/.
 
-Generally, single labs/groups should be group quota. 
+You can also request to create a subgroup to self-manage the quota for PHI-only data storage (e.g. boblab-phi), and it could be allocated as part of the parent quota.
 
-PHI/Projects are for IRBs that are either subgroups of the lab/group or supergroups that encompass more than one group.
-
+PHI Projects in /wynton/protected/projects are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in /wynton/protected/projects could either be a separate group quota purchase or a portion of a purchased quota dedicated to the project (subgroup).
 
 ### User disk usage on `/wynton/scratch/`
 
