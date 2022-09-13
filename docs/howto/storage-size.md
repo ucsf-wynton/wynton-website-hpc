@@ -70,7 +70,7 @@ tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used')
 
 ### Group disk quota on `/wynton/group/` and `/wynton/protected/project/`
 
-If your group/lab (boblab, for example) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/boblab/`, (and possibly also under `/wynton/protected/group/boblab/` (PHI), or `/wynton/protected/project/boblab/` (PHI)).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
+If your group/lab (boblab, for example) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/`, (and possibly also under `/wynton/protected/group/` (PHI), or `/wynton/protected/project/` (PHI)).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=12 --gid "$(id --group)"
