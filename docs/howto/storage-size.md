@@ -34,7 +34,7 @@ _Comment_: It is the _compressed_ size that counts towards your disk quota.
 
 The BeeGFS file system keeps track on how much disk each of us currently consumes in different storage locations, specifically:
 
-1. User home folder (`$HOME`, i.e. `/wynton/home/` or `/wynton/protected/home`)
+1. User home folder (`$HOME`, i.e. `/wynton/home/` or `/wynton/protected/home/`)
 2. Group folder under (i.e. `/wynton/group/` and `/wynton/protected/project/`)
 3. User files and folders under `/wynton/scratch/` (unlimited quota)
 
@@ -48,9 +48,9 @@ You can use the BeeGFS tool `beegfs-ctl --getquota ...` to check how much disk q
 </div>
 
 
-### User disk quota on `/wynton/home/` or `/wynton/protected/home`
+### User disk quota on `/wynton/home/` or `/wynton/protected/home/`
 
-To check how much storage space you have consumed on `/wynton/home/` or `/wynton/protected/home`, and the total amount available to you, call:
+To check how much storage space you have consumed on `/wynton/home/` or `/wynton/protected/home/`, and the total amount available to you, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"
@@ -92,7 +92,7 @@ Any group with purchased storage can have a group folder in both the non-PHI `/w
 
 You can also request to create a subgroup to self-manage the quota for PHI-only data storage (e.g. `boblab-phi`), and it could be allocated as part of the parent quota.
 
-PHI Projects in `/wynton/protected/projects` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects` could either be a separate group quota purchase or a portion of a purchased quota dedicated to the project (subgroup).
+PHI Projects in `/wynton/protected/projects/` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects/` could either be a separate group quota purchase or a portion of a purchased quota dedicated to the project (subgroup).
 
 ### User disk usage on `/wynton/scratch/`
 
@@ -102,7 +102,7 @@ To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: There are no user or group quotas on `/wynton/scratch`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
+_Comment_: There are no user or group quotas on `/wynton/scratch/`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ '/about/specs.html' | relative_url }}).
 
 
 
