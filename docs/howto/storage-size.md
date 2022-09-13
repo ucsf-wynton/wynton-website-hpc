@@ -88,7 +88,7 @@ For example,
 
 The group storage is shared among all group members and does _not_ count toward your personal disk quota under `$HOME`.
 
-Any group with purchased storage can have a group folder in both the non-PHI /wynton/group/ area and the PHI `/wynton/protected/group/` area, e.g. `/wynton/group/boblab/` and `/wynton/protected/group/boblab/`. In that case, the group quota usage would include group-owned files in both areas. Of course, only members with Wynton PHI access would have access to the data under `/wynton/protected/group/`.
+Any group with purchased storage can have a group folder in both the non-PHI `/wynton/group/` area and the PHI `/wynton/protected/group/` area, e.g. `/wynton/group/boblab/` and `/wynton/protected/group/boblab/`. In that case, the group quota usage would include group-owned files in both areas. Of course, only members with Wynton PHI access would have access to the data under `/wynton/protected/group/`.
 
 You can also request to create a subgroup to self-manage the quota for PHI-only data storage (e.g. `boblab-phi`), and it could be allocated as part of the parent quota.
 
