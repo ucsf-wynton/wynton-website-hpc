@@ -70,7 +70,7 @@ tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used')
 
 ### Group disk quota on `/wynton/group/` and `/wynton/protected/project/`
 
-If your group (lab) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/`, and possibly also under `/wynton/protected/project/` (PHI).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
+If your group/lab (boblab, for example) has [purchased additional storage]({{ '/about/pricing-storage.html' | relative_url }}), it is available under `/wynton/group/boblab/`, (and possibly also under `/wynton/protected/group/boblab/` (PHI), or `/wynton/protected/project/boblab/` (PHI)).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=12 --gid "$(id --group)"
@@ -90,9 +90,11 @@ The group storage is shared among all group members and does _not_ count toward 
 
 Any group with purchased storage can have a group folder in both the non-PHI `/wynton/group/` area and the PHI `/wynton/protected/group/` area, e.g. `/wynton/group/boblab/` and `/wynton/protected/group/boblab/`. In that case, the group quota usage would include group-owned files in both areas. Of course, only members with Wynton PHI access would have access to the data under `/wynton/protected/group/`.
 
-You can also request to create a subgroup to self-manage the quota for PHI-only data storage (e.g. `boblab-phi`), and it could be allocated as part of the parent quota.
+Protected (UCSF P3/P4 classified) data should only be stored in file systems under `/wynton/protected/`.
 
-PHI Projects in `/wynton/protected/projects/` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects/` could either be a separate group quota purchase or a portion of a purchased quota dedicated to the project (subgroup).
+Your lab can also request to create a subgroup to self-manage the quota for PHI-only data storage (e.g. `/wynton/protected/boblab-phi/`), and it could be allocated as part of the parent quota.
+
+PHI Projects in `/wynton/protected/projects/` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects/` could either be a separate group quota purchase or a portion of a purchased group quota dedicated to the project (subgroup).
 
 ### User disk usage on `/wynton/scratch/`
 
