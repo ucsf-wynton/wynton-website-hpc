@@ -1,3 +1,11 @@
+all: check
+
+start:
+	cd docs; $(MAKE) $@
+
+stop:
+	cd docs; $(MAKE) $@
+
 check: spell shellcheck yaml-check markdownlint markdown-link-check check-usernames check-here-links
 
 cron-shellcheck:
