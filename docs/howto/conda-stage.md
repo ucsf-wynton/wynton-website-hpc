@@ -103,9 +103,9 @@ To work with staged conda environments in your job scripts, make sure to first c
 ```sh
 #! /usr/bin/env bash
 #$ -S /bin/bash   # Run in bash
-#$ -R yes         # SGE host reservation, highly recommended
 #$ -cwd           # Current working directory
 #$ -j y           # Join STDERR and STDOUT
+#$ -R yes         # SGE host reservation, highly recommended
 
 conda activate myenv
 trap 'conda deactivate' EXIT
