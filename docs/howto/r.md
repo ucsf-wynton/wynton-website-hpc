@@ -62,6 +62,7 @@ In order to run R in jobs, the above R environment module needs to be loaded jus
 
 ```sh
 #! /usr/bin/env bash
+#$ -S /bin/bash
 
 module load CBI
 module load r
