@@ -51,7 +51,7 @@ This, in combination with the so called "she-bang" (`#! ...`) on the first line,
 Hello world, I am running on node {{ site.devel.name }}.
 Mon Aug 28 16:31:29 PDT 2017
 ```
-Note how it takes ten seconds between the `Hello world` message and the time stamp.  We have now confirm that the shell script does what we expect it to do, and we are ready to submit it to the job queue of the scheduler.  To do this, do:
+Note how it takes ten seconds between the `Hello world` message and the time stamp.  We have now confirmed that the shell script does what we expect it to do, and we are ready to submit it to the job queue of the scheduler.  To do this, do:
 ```sh
 [alice@{{ site.devel.name }} tests]$ qsub -cwd -j yes hello_world
 Your job 201 ("hello_world") has been submitted
