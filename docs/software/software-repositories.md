@@ -385,7 +385,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 Example: <span class="module-example"><code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a>, <a href="https://github.com/sharkdp/bat/blob/master/CHANGELOG.md">https://github.com/sharkdp/bat/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.21.0</em></span><br>
+Versions: <span class="module-version">0.21.0, <em>0.22.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -395,7 +395,7 @@ bat: A cat(1) Clone with Syntax Highlighting and Git Integration
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: utility, file viewer&quot;)
+whatis(&quot;Keywords: utility, file viewer, cli, tui&quot;)
 whatis(&quot;URL: https://github.com/sharkdp/bat, https://github.com/sharkdp/bat/blob/master/CHANGELOG.md (changelog)&quot;)
 whatis([[
 Description: A cat(1) clone with syntax highlighting and Git integration.
@@ -1024,7 +1024,7 @@ pushenv(&quot;CONDA_STAGE_PROLOGUE&quot;, &quot;module load CBI &quot; .. name)
 
 local script = pathJoin(home, &quot;bin&quot;, &quot;conda-stage.&quot; .. myShellType())
 if not isFile(script) then
-  LmodError(&quot;The &quot; .. name .. &quot; module is not supported for your shell (&quot; .. myShellType() .. &quot;). No such file: &quot; .. script)
+  LmodError(&quot;The &quot; .. name .. &quot; module is not supported for your shell (&quot; .. myShellType() .. &quot;; SHELL=&quot; .. os.getenv(&quot;SHELL&quot;) .. &quot;). No such file: &quot; .. script)
 end
 
 -- Create conda-stage() function, which will overwrite itself after the
@@ -1183,7 +1183,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>emacs --version</code> and <code>emacs -nw</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a>, <a href="https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases">https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>28.1</em></span><br>
+Versions: <span class="module-version">28.1, <em>28.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1193,7 +1193,7 @@ GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: editor, text&quot;)
+whatis(&quot;Keywords: editor, text, cli, tui&quot;)
 whatis(&quot;URL: https://www.gnu.org/software/emacs/, https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases (changelog)&quot;)
 whatis([[
 Description: At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.
@@ -1821,10 +1821,10 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">IGV: The Integrative Genomics Viewer</strong><br>
 <span class="module-description">The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.</span><br>
-Example: <span class="module-example"><code>igv</code>.</span><br>
-Note: <span class="module-note">IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, <code>igvtools</code> is integrated with IGV (&gt;= 2.5.0).</span><br>
+Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
-Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, 2.13.0, <em>2.14.0</em></span><br>
+Warning: <span class="module-warning">IGV (&gt;= 2.5.0) requires Java 11.</span><br>
+Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, 2.13.0, 2.14.0, <em>2.14.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1839,10 +1839,11 @@ whatis(&quot;Keywords: sequencing&quot;)
 whatis(&quot;URL: https://software.broadinstitute.org/software/igv/, https://github.com/igvteam/igv/tags (changelog), https://github.com/igvteam/igv/ (source code)&quot;)
 whatis([[
 Description: The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.
-Examples: `igv`.  Note: IGV (&gt;= 2.5.0) requires Java 11. Coincidentally, `igvtools` is integrated with IGV (&gt;= 2.5.0).
+Examples: `igv --help`, `igv --version`, and `igv`.
+Warning: IGV (&gt;= 2.5.0) requires Java 11.
 ]])
 
--- depends_on(&quot;jdk&quot;)
+--depends_on(&quot;openjdk/11&quot;)
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -2594,7 +2595,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.59.0, <em>1.59.1</em></span><br>
+Versions: <span class="module-version">1.59.0, 1.59.1, <em>1.59.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
