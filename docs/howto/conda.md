@@ -223,9 +223,9 @@ INFO: Total 'conda-unpack' time: 0 seconds
 INFO: Making staged environment read-only (use --writable to disable)
 INFO: Activating staged Conda environment: /scratch/alice/conda-stage-gleN/myjupyter
 
-(/scratch/hb-test/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version               
+(/scratch/alice/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version               
 6.4.12
-(/scratch/hb-test/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ 
+(/scratch/alice/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
 
 Note that the slow packing step will one have to be done this first time. A following calls to `conda activate myjupyter` will be quick.  For more details, see the instructions and benchmarks on the [conda-stage] page.
