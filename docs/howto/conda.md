@@ -1,17 +1,15 @@
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ **This is page is under development. The instructions provided are currently non-functions. Please stay tuned. /2022-07-28**
+⚠️ **This is page is under development.** Until finalized, you have use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-09-17
 </div>
 
 # Work with Conda
 
 [Conda] is a package-manager and an environment management system.  It's popular, because it simplifies installation of several scientific software tools.  There are two main distributions of Conda:
 
-1. Anaconda - comes with more than 1,500 scientific packages (~3 GiB of disk space)
-2. [Miniconda] - a small subset of the much larger Anaconda distribution (~0.5 GiB of disk space) (**recommended**)
+1. Anaconda - comes with more than 1,500 scientific packages (~3 GiB of disk space) [_not_ preinstalled on  {{ site.cluster.nickname }}]
+2. [Miniconda] - a small subset of the much larger Anaconda distribution (~0.5 GiB of disk space) [**recommended**; preinstalled on {{ site.cluster.nickname }}]
 
-Both comes with Python and `conda` commands.
-
-We recommend to work with the smaller Miniconda distribution, and install additional scientific packages as needed.  You will still be able to install and run everything that comes with Anaconda using the `conda install ...` command.
+Both comes with Python and `conda` commands.  We _recommend_ to work with the smaller Miniconda distribution, especially since it is preinstalled on {{ site.cluster.nickname }}].  Using Miniconda, you can install additional scientific packages as needed using the `conda install ...` command.
 
 
 ## Loading Miniconda
@@ -19,7 +17,7 @@ We recommend to work with the smaller Miniconda distribution, and install additi
 On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3 with Python 3.9, call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
 ```
 
 This gives access to:
@@ -85,7 +83,7 @@ zlib                      1.2.12               h7f8727e_1
 
 ## Create a Conda environment (required)
 
-Working with Conda environments is convenient mechanism for installing specific software tools and versions in a controlled manner.  ...
+Working with Conda _environments_ is a mechanism for installing specific software tools and versions in a controlled manner.  It is required to use Conda environments, when using the **miniconda3-py39** module.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda create -n myjupyter notebook
@@ -105,22 +103,20 @@ The following packages will be downloaded:
     package                    |            build
     ---------------------------|-----------------
     _openmp_mutex-5.1          |            1_gnu          21 KB
-    argon2-cffi-bindings-21.2.0|  py310h7f8727e_0          72 KB
-    beautifulsoup4-4.11.1      |  py310h06a4308_0         188 KB
+    argon2-cffi-21.3.0         |     pyhd3eb1b0_0          15 KB
     ...
-    tornado-6.1                |  py310h7f8727e_0         613 KB
-    webencodings-0.5.1         |  py310h06a4308_1          20 KB
+    zeromq-4.3.4               |       h2531618_0         331 KB
+    zlib-1.2.12                |       h5eee18b_3         103 KB
     ------------------------------------------------------------
-                                           Total:        58.2 MB
+                                           Total:        62.4 MB
 
 The following NEW packages will be INSTALLED:
 
   _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
   _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
-  argon2-cffi        pkgs/main/noarch::argon2-cffi-21.3.0-pyhd3eb1b0_0
   ...
   zeromq             pkgs/main/linux-64::zeromq-4.3.4-h2531618_0
-  zlib               pkgs/main/linux-64::zlib-1.2.12-h7f8727e_2
+  zlib               pkgs/main/linux-64::zlib-1.2.12-h5eee18b_3
 
 
 Proceed ([y]/n)? y
@@ -128,9 +124,9 @@ Proceed ([y]/n)? y
 
 Downloading and Extracting Packages
 ...
-debugpy-1.5.1        | 1.7 MB    | ################################### | 100%
-nbformat-5.3.0       | 129 KB    | #################################### | 100% 
-Preparing transaction: done
+jupyterlab_pygments- | 8 KB      | #################################### | 100% 
+jupyter_client-7.3.5 | 194 KB    | #################################### | 100% 
+nbformat-5.3.0       | 129 KB    | #################################Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
 #
@@ -148,20 +144,22 @@ Executing transaction: done
 
 ## Activating a Conda environment (required)
 
+Next time you log in to a development node, you can activate the `myjupyter`, or any other Conda environment you've created by:
+
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version
-6.4.11
+6.4.12
 
 (myjupyter) [alice@{{ site.devel.name }} ~]$
 ```
 
-Note how the command-line prompt is prefixed with `(myjupyter)`; it highlights that conda environment `myjupyter` is activated.  To deactivate, call:
+Note how the command-line prompt is prefixed with `(myjupyter)`; it highlights that Conda environment `myjupyter` is activated.  To deactivate, call:
 
 ```sh
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
-[alice@{{ site.devel.name }} ~]$ jupyter --version
+[alice@{{ site.devel.name }} ~]$ jupyter notebook --version
 jupyter: command not found
 
 [alice@{{ site.devel.name }} ~]$ 
@@ -172,10 +170,10 @@ jupyter: command not found
 
 ## Configure auto-staging of a Conda environment (recommended)
 
-We highly recommend configuring conda environment to be automatically staged only local disk whenever activated.  This results in the software to run significantly faster.  Auto-staging is straightforward to configure using the [conda-stage] tool, e.g.
+We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in the software to run significantly faster.  Auto-staging is straightforward to configure using the [conda-stage] tool, e.g.
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable
@@ -186,7 +184,7 @@ INFO: Enabled auto-unstaging
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-Next time you activate the conda environment, it'll be automatically staged onto the local disk, and therefore run much faster there:
+Next time you activate the Conda environment, it'll be automatically packaged and then staged onto the local disk, and therefore run much faster there:
 
 ```sh
 INFO: Staging current Conda environment ({{ site.user.home }}/.conda/envs/myjupyter) to local disk ...
@@ -205,24 +203,18 @@ Solving environment: done
 The following NEW packages will be INSTALLED:
 
   conda-pack         conda-forge/noarch::conda-pack-0.7.0-pyh6c4a22f_0
-  python_abi         conda-forge/linux-64::python_abi-3.10-2_cp310
 
-The following packages will be SUPERSEDED by a higher-priority channel:
-
-  ca-certificates    pkgs/main::ca-certificates-2022.07.19~ --> conda-forge::ca-certificates-2022.6.15-ha878542_0
-  certifi            pkgs/main::certifi-2022.6.15-py310h06~ --> conda-forge::certifi-2022.6.15-py310hff52083_0
-
-
+...
 Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
-INFO: Total installation time: 27 seconds
+INFO: Total installation time: 30 seconds
 INFO: [ONCE] Packaging Conda environment, because it hasn't been done before ...
 Collecting packages...
 Packing environment at '{{ site.user.home }}/.conda/envs/myjupyter' to '{{ site.user.home }}/.conda/envs/.tmp.myjupyter.tar.gz'
-[########################################] | 100% Completed | 16.6s
-INFO: Total 'conda-pack' time: 19 seconds
-INFO: Extracting {{ site.user.home }}/.conda/envs/myjupyter.tar.gz (90639765 bytes; 2022-07-28 11:42:52.707736967 +0200) to /scratch/alice/conda-stage-gleN/myjupyter
+[########################################] | 100% Completed | 42.6s
+INFO: Total 'conda-pack' time: 51 seconds
+INFO: Extracting {{ site.user.home }}/.conda/envs/myjupyter.tar.gz (91500087 bytes; 2022-09-17 09:00:19.000000000 -0700) to /scratch/alice/conda-stage-gleN/myjupyter
 INFO: Total extract time: 4 seconds
 INFO: Disable any /scratch/alice/conda-stage-gleN/myjupyter/etc/conda/activate.d/*.conda-stage-auto.sh scripts
 INFO: Activating staged environment
@@ -230,7 +222,13 @@ INFO: Unpacking (relocating)
 INFO: Total 'conda-unpack' time: 0 seconds
 INFO: Making staged environment read-only (use --writable to disable)
 INFO: Activating staged Conda environment: /scratch/alice/conda-stage-gleN/myjupyter
+
+(/scratch/hb-test/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version               
+6.4.12
+(/scratch/hb-test/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
+
+Note that the slow packing step will one have to be done this first time. A following calls to `conda activate myjupyter` will be quick.  For more details, see the instructions and benchmarks on the [conda-stage] page.
 
 
 [Conda]: https://conda.io
