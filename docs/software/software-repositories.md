@@ -1016,6 +1016,18 @@ Warning: This is work under construction. Your milage may vary! /HB 2022-04-13
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- WORKAROUND: For some reasons, this is required in order for
+-- the 'root' part to be included in the 'home' path below in
+-- *some* cases. For example, if we do 'conda activate base',
+-- 'conda deactivate', and then 'module load conda-stage' we
+-- would, for unknown reasons, end up with an empty 'root'.
+-- The below seems to force the correct value of 'root'.
+-- /HB 2022-09-22
+if not isDir(root) then
+  LmodError(&quot;Environment variable 'SOFTWARE_ROOT_CBI' does not specify an existing folder: &quot; .. os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;))
+end
+
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
