@@ -126,7 +126,7 @@ Downloading and Extracting Packages
 ...
 jupyterlab_pygments- | 8 KB      | #################################### | 100% 
 jupyter_client-7.3.5 | 194 KB    | #################################### | 100% 
-nbformat-5.3.0       | 129 KB    | #################################Preparing transaction: done
+Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
 #

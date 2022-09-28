@@ -18,7 +18,7 @@ Similar problems may occur when you try to run Matlab, Python, and R scripts.
 
 ## The reason for the problem
 
-When you hit <kbd>ENTER</kbd> in text editor, the editor will add so called _invisible_ [newline](https://en.wikipedia.org/wiki/Newline).  When you edit on Linux or macOS, the newline comprise the `\n` symbol, which is also referred to as the LF (line-feed) symbol.  However, if you edit on MS Windows, the newline sequence comprise two symbols - `\r\n`, referred to as CR (carriage-return) followed by LF (line-feed).
+When you hit <kbd>ENTER</kbd> in text editor, the editor will add a so-called _invisible_ [newline](https://en.wikipedia.org/wiki/Newline).  When you edit on Linux or macOS, the newline comprise the `\n` symbol, which is also referred to as the LF (line-feed) symbol.  However, if you edit on MS Windows, the newline sequence comprise two symbols - `\r\n`, referred to as CR (carriage-return) followed by LF (line-feed).
 
 Now, most software tools on Linux and macOS assumes LF line endings and will not handle CR+LF line endings.  So, say we create the following shell script file `script.sh` on an MS Windows machine:
 
