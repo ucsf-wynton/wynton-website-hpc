@@ -77,3 +77,7 @@ message: Available CPU cores may be limited as we deal with any casualties from 
 level: warning
 condition: is operational
 message: The cluster will be shut down for maintenance during September 27-29, 2022. Starting September 14, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time
+
+level: danger
+condition: is not operational
+message: The cluster is down for maintenance during September 27-29, 2022.
