@@ -70,7 +70,7 @@ Below table shows the current amount of contributions in terms of Processing Uni
 
 <!-- markdownlint-disable-file MD011 -->
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/compute_shares.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -122,7 +122,7 @@ d3.text("{{ '/assets/data/compute_shares.tsv' | relative_url }}", "text/csv", fu
 });
 </script>
 
-Source: [compute_shares.tsv]({{ '/assets/data/compute_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds to a _functional share_ ("fshare").
+Source: [compute_shares.tsv](/hpc/assets/data/compute_shares.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds to a _functional share_ ("fshare").
 
 
 

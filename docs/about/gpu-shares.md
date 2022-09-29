@@ -17,7 +17,7 @@ Below table shows which labs have access to dedicated Graphical Processing Unit 
 
 <!-- markdownlint-disable-file MD011 -->
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/gpu_shares.tsv' | relative_url }}", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -68,7 +68,7 @@ d3.text("{{ '/assets/data/gpu_shares.tsv' | relative_url }}", "text/csv", functi
 });
 </script>
 
-Source: [gpu_shares.tsv]({{ '/assets/data/gpu_shares.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs shared_gpu_limits` and `qconf -shgrp <project>`).
+Source: [gpu_shares.tsv](/hpc/assets/data/gpu_shares.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs shared_gpu_limits` and `qconf -shgrp <project>`).
 
 <style>
 table {

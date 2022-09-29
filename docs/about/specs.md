@@ -134,7 +134,7 @@ The cluster itself connects to NSF's [Pacific Research Platform] at a speed of 1
 
 
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/host_table.tsv' | relative_url }}", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -266,4 +266,4 @@ ttr:last-child { border-top: 2px solid #000; }
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
 [wyntonquery]: https://github.com/UCSF-HPC/wyntonquery
-[host_table.tsv]: {{ '/assets/data/host_table.tsv' | relative_url }}
+[host_table.tsv]: /hpc/assets/data/host_table.tsv

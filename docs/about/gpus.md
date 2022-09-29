@@ -19,7 +19,7 @@ The tables below contain the list of the {{ site.cluster.nickname}} GPU compute 
 
 <!-- markdownlint-disable-file MD011 -->
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ '/assets/data/gpu_nodes.tsv' | relative_url }}", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -83,4 +83,4 @@ d3.text("{{ '/assets/data/gpu_nodes.tsv' | relative_url }}", "text/csv", functio
 });
 </script>
 
-Source: [gpu_nodes.tsv]({{ '/assets/data/gpu_nodes.tsv' | relative_url }}) produced on <span id="compute-shares-timestamp"></span>.  These data are manually updated.
+Source: [gpu_nodes.tsv](/hpc/assets/data/gpu_nodes.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data are manually updated.

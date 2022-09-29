@@ -106,4 +106,4 @@ To exit the RStudio Desktop, type `quit()` at the R prompt, or press <kbd>Ctrl-C
 
 [CBI software stack]: /hpc/software/software-repositories.html
 [Work with R]: /hpc/howto/r.html
-[SSH with X11 forwarding enabled]: {{ '/howto/gui-x11fwd.html#x11-forwarding-over-ssh' | relative_url }}
+[SSH with X11 forwarding enabled]: /hpc/howto/gui-x11fwd.html#x11-forwarding-over-ssh

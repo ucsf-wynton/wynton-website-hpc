@@ -90,15 +90,15 @@
 
 2019-01-18: It is now possible to [purchase additional storage](/hpc/about/pricing-storage.html).
 
-2018-11-05: Nightly cleanup of [scratch spaces]({{ '/about/specs.html#scratch-storage' | relative_url }}) now respects also when files were "added" - not just when they were last modified.  This fixes the problem where files with old timestamps were extracted from an archive just to be wiped by the next nightly cleanup.
+2018-11-05: Nightly cleanup of [scratch spaces](/hpc/about/specs.html#scratch-storage) now respects also when files were "added" - not just when they were last modified.  This fixes the problem where files with old timestamps were extracted from an archive just to be wiped by the next nightly cleanup.
 
 2018-10-02: Added a [Roadmap].
 
-2018-08-20: [Global scratch storage]({{ '/about/specs.html#scratch-storage' | relative_url }}) on BeeGFS Parallel File System is live - validation and testing completed.
+2018-08-20: [Global scratch storage](/hpc/about/specs.html#scratch-storage) on BeeGFS Parallel File System is live - validation and testing completed.
 
-2018-08-02: Added a dedicate [10 Gbps transfer node]({{ '/about/specs.html#data-transfer-nodes' | relative_url }}) for faster file transfers in to and out from {{ site.cluster.nickname }}.
+2018-08-02: Added a dedicate [10 Gbps transfer node](/hpc/about/specs.html#data-transfer-nodes) for faster file transfers in to and out from {{ site.cluster.nickname }}.
 
-2018-07-25: [BeeGFS Parallel File System/Storage]({{ '/about/specs.html#scratch-storage' | relative_url }}): Validation completed - user beta testing started.
+2018-07-25: [BeeGFS Parallel File System/Storage](/hpc/about/specs.html#scratch-storage): Validation completed - user beta testing started.
 
 2017-09-07: {{ site.cluster.name }} is live.
 
