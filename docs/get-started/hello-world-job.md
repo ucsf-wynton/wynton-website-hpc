@@ -88,6 +88,6 @@ There is of course nothing preventing us from submitting the same script multipl
 
 
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
-[compute nodes]: {{ '/about/specs.html' | relative_url }}
-[Submit Jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
+[compute nodes]: /hpc/about/specs.html
+[Submit Jobs]: /hpc/scheduler/submit-jobs.html
 

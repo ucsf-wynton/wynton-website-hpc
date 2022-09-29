@@ -40,6 +40,6 @@ alice1@{{ site.devel.name }}:s password: XXXXXXXXXXXXXXXXXXX
 As from the login nodes, it is possible to submit jobs also from the development nodes.
 </div>
 
-[logged in to the cluster]: {{ '/get-started/access-cluster.html' | relative_url }}
-[Submit Job to Cluster]: {{ '/get-started/hello-world-job.html' | relative_url }}
+[logged in to the cluster]: /hpc/get-started/access-cluster.html
+[Submit Job to Cluster]: /hpc/get-started/hello-world-job.html
 

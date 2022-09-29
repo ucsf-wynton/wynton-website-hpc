@@ -23,13 +23,13 @@ _Footnote_:
 <sup>1</sup> GPUs are currently only available to groups who have contributed with their own GPU-equipped compute nodes but there is [a plan] to provide baseline GPUs for all users.
 <sup>2</sup> There is [a plan] to increase the included amount of storage for all users.
 <sup>3</sup> Non-modified files older than two weeks are automatically removed from the global scratch storage.
-<sup>4</sup> We are currently [in the process]({{ '/about/roadmap.html' | relative_url }}) of defining the _storage_ pricing model.
+<sup>4</sup> We are currently [in the process](/hpc/about/roadmap.html) of defining the _storage_ pricing model.
 </small>
 
 
 ## Compute pricing
 
-Free members, and other members who have not contributed toward compute, will be limited by the number of concurrent cores and will have lower priority on the job queue.  Participating co-op **members that contribute compute** to the cluster will get priority on the job queue and will be able to utilize a large number of concurrent cores (proportionate to their contribution).  For further details on scheduling and compute priorities, see [Available queues]({{ '/scheduler/queues.html' | relative_url }}).
+Free members, and other members who have not contributed toward compute, will be limited by the number of concurrent cores and will have lower priority on the job queue.  Participating co-op **members that contribute compute** to the cluster will get priority on the job queue and will be able to utilize a large number of concurrent cores (proportionate to their contribution).  For further details on scheduling and compute priorities, see [Available queues](/hpc/scheduler/queues.html).
 
 Contributions toward compute can be done either in cash ("buy in") or by integrating existing hardware ("bring your own").
 
@@ -44,7 +44,7 @@ As of October 2018, the **minimal requirement for hardware contributions is 8 co
 
 ## Storage pricing
 
-We are currently [in the process]({{ '/about/roadmap.html' | relative_url }}) of defining the _storage_ pricing model, which will be available as soon as we have identified all the costs involved.
+We are currently [in the process](/hpc/about/roadmap.html) of defining the _storage_ pricing model, which will be available as soon as we have identified all the costs involved.
 
 
 
@@ -56,9 +56,9 @@ table {
 }
 </style>
 
-[200 GiB]: {{ '/about/specs.html' | relative_url }}
-[unlimited]: {{ '/about/specs.html' | relative_url }}
-[a plan]: {{ '/about/roadmap.html' | relative_url }}
-[short.q & long.q]: {{ '/scheduler/queues.html' | relative_url }}
-[member.q]: {{ '/scheduler/queues.html' | relative_url }}
-[gpu.q]: {{ '/scheduler/queues.html' | relative_url }}
+[200 GiB]: /hpc/about/specs.html
+[unlimited]: /hpc/about/specs.html
+[a plan]: /hpc/about/roadmap.html
+[short.q & long.q]: /hpc/scheduler/queues.html
+[member.q]: /hpc/scheduler/queues.html
+[gpu.q]: /hpc/scheduler/queues.html

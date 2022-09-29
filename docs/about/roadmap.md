@@ -78,4 +78,4 @@ See also [News].
 [QB3]: https://salilab.org/qb3cluster/
 [BeeGFS]: https://www.beegfs.io/
 [Globus]: https://www.globus.org/
-[News]: {{ '/about/news.html' | relative_url }}
+[News]: /hpc/about/news.html

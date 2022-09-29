@@ -4,7 +4,7 @@
 
 {% assign r_libs_user = "4.2-CBI-gcc10" %}
 
-R is available on {{ site.cluster.name }} via a [contributed environment module]({{ '/software/software-repositories.html' | relative_url }}).
+R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).
 
 
 ## Accessing R
@@ -524,4 +524,4 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [udunits2]: https://cran.r-project.org/package=udunits2
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: http://bioconductor.org/packages/limma/
-[CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
+[CBI software stack]: /hpc/software/software-repositories.html

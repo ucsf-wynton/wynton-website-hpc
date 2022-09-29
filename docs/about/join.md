@@ -44,7 +44,7 @@ _Note: The form linked above is only available to UCSF staff, students, postdocs
 
 1. Select "Yes" or "No" from the **"Does this user already have an existing account on Wynton?"** pull down.
 
-2. Select "Yes" or "No" from the **"Do you Require Access to PHI Data"** pull down. More information here regarding using PHI Data on Wynton: [PHI Quickstart]({{ '/get-started/phi-quickstart.html' | relative_url }})
+2. Select "Yes" or "No" from the **"Do you Require Access to PHI Data"** pull down. More information here regarding using PHI Data on Wynton: [PHI Quickstart](/hpc/get-started/phi-quickstart.html)
 
 3. If you are filling the form out for yourself, the **"Requested For"** field will be autopopulated with your name.  If you are requesting an account for another user, enter their name and select it from the pull down.  If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
 
@@ -80,4 +80,4 @@ _Note: The form linked above is only available to UCSF staff, students, postdocs
 
 If you have any problems with the form or questions about filling it out, please don't hesitate to [contact us].
 
-[contact us]: {{ '/about/contact.html' | relative_url }}
+[contact us]: /hpc/about/contact.html

@@ -1,6 +1,6 @@
 # Work with MATLAB
 
-MATLAB is available on {{ site.cluster.name }} via a [built-in environment module]({{ '/software/software-repositories.html' | relative_url }}) and is supported by a UCSF-wide MATLAB license.
+MATLAB is available on {{ site.cluster.name }} via a [built-in environment module](/hpc/software/software-repositories.html) and is supported by a UCSF-wide MATLAB license.
 
 ## Accessing MATLAB
 
@@ -60,7 +60,7 @@ The `-batch` option tells MATLAB to run the `my_script.m` script in batch mode, 
 
 ### Parallel processing in MATLAB
 
-If your MATLAB code supports parallel processing, make sure to [specify the number of CPU cores](({{ '/scheduler/submit-jobs.html' | relative_url }})) when submitting your job submit, e.g. `-pe smp 4` will request four cores on one machine, which in turn will set environment variable `NSLOTS` to `4`.  To make your MATLAB script respect this, add the following at the top of your script:
+If your MATLAB code supports parallel processing, make sure to [specify the number of CPU cores]((/hpc/scheduler/submit-jobs.html)) when submitting your job submit, e.g. `-pe smp 4` will request four cores on one machine, which in turn will set environment variable `NSLOTS` to `4`.  To make your MATLAB script respect this, add the following at the top of your script:
 
 ```matlab
 %% Make MATLAB respect the number of cores that the SGE scheduler

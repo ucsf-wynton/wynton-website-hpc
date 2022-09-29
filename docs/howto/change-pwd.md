@@ -50,7 +50,7 @@ You can verify your {{ site.cluster.nickname }} username and password using eith
 
 ### Alt 1. Verify from your local command line using SSH
 
-To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.cluster.name }} via SSH]({{ '/get-started/access-cluster.html' | relative_url }}).  If you have SSH keys set up, you can force SSH to ignore those and only accept password entries by using:
+To test your {{ site.cluster.nickname }} credentials, try to [login to {{ site.cluster.name }} via SSH](/hpc/get-started/access-cluster.html).  If you have SSH keys set up, you can force SSH to ignore those and only accept password entries by using:
 
 ```r
 {local}$ ssh -o PreferredAuthentications=password alice@{{ site.login.hostname }}

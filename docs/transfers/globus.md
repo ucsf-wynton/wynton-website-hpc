@@ -18,7 +18,7 @@ If you want to transfer files from or to your {{ site.cluster.nickname }} accoun
 
 ### Globus for PHI Users
 
-To use the PHI Compatible Globus ['UCSF Wynton PDT' Collection], you _must_ be signed up for [Wynton Two-Factor Authentication]({{ '/get-started/duo-signup.html' | relative_url }}).
+To use the PHI Compatible Globus ['UCSF Wynton PDT' Collection], you _must_ be signed up for [Wynton Two-Factor Authentication](/hpc/get-started/duo-signup.html).
 
 Instead of using the non-PHI-compliant Collection 'UCSF Wynton HPC', all PHI data must use the PHI-approved Globus Collection 'UCSF Wynton PDT', which is associated with the pdt1 and pdt2 data-transfer nodes.  
 

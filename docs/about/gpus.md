@@ -7,7 +7,7 @@ Several of {{ site.cluster.name}} compute nodes have Graphics Processing Units (
   <dt>GPUs</dt><dd>{{ site.data.specs.gpus }} GPUs ({{ site.data.specs.communal_gpus }} communal and {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} contributed GPUs)</dd>
 </dl>
 
-The tables below contain the list of the {{ site.cluster.nickname}} GPU compute nodes and whether the node is contributed by a lab or a communal node contributed by the institution.  Members of groups with contributed GPUs have [extra privileges]({{ '/scheduler/queues.html' | relative_url }}) on the job scheduler for jobs running on their GPU nodes.  If you are a lab interested in contributing a GPU node, please see the [Pricing for Extra Compute]({{ '/about/pricing-compute.html' | relative_url }}) page.
+The tables below contain the list of the {{ site.cluster.nickname}} GPU compute nodes and whether the node is contributed by a lab or a communal node contributed by the institution.  Members of groups with contributed GPUs have [extra privileges](/hpc/scheduler/queues.html) on the job scheduler for jobs running on their GPU nodes.  If you are a lab interested in contributing a GPU node, please see the [Pricing for Extra Compute](/hpc/about/pricing-compute.html) page.
 
 
 <script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>

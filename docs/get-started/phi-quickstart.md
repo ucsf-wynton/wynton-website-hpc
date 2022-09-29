@@ -13,7 +13,7 @@
 
 * If you don't either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI:
 
-  - link to [learn more about the Wynton cluster]({{ '/about/join.html' | relative_url }})
+  - link to [learn more about the Wynton cluster](/hpc/about/join.html)
   
   - link to actually [request a Wynton PHI account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)
 
@@ -43,9 +43,9 @@
 
 ## User responsibilities for PHI
 
-* Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ '/about/governance.html' | relative_url }})
+* Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer](/hpc/about/governance.html)
 
-* Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ '/about/governance.html' | relative_url }})
+* Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance](/hpc/about/governance.html)
 
 * User end points (e.g. laptops and desktops) connecting to Wynton must meet [UCSF Minimum Security Standards for Electronic Information Resources](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information)
 

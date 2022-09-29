@@ -110,4 +110,4 @@ When using [FileZilla], do:
 
 [Cyberduck]: https://cyberduck.io/
 [FileZilla]: https://filezilla-project.org/
-[Log in without Password]: {{ '/howto/log-in-without-pwd.html' | relative_url }}
+[Log in without Password]: /hpc/howto/log-in-without-pwd.html

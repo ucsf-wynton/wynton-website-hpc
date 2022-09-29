@@ -70,4 +70,4 @@ dt {
 
 [Extras]: https://centos.pkgs.org/7/centos-extras-x86_64/
 [EPEL]: https://centos.pkgs.org/7/epel-x86_64/
-[Software Repositories]: {{ '/software/software-repositories.html' | relative_url }}
+[Software Repositories]: /hpc/software/software-repositories.html
