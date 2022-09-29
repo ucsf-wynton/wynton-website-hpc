@@ -10,7 +10,7 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 * All user accounts come with a quota of non-expandable 500 GiB of storage in `/wynton/home` or `/wynton/protected/home`, which is free of charge
 
-* Global `/wynton/scratch` may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically]({{ '/about/specs.html#scratch-storage' | relative_url }})
+* Global `/wynton/scratch` may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
 
 * Additional, long-term storage can be purchased in `/wynton/group` or for specific PHI projects to `/wynton/protected/project` at $160/TB (one-time fee).  Both will count towards a lab's storage quota total.
 
