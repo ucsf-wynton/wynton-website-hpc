@@ -2,10 +2,10 @@
 
 * Full downtime:
 
-  - Scheduled: 53.5 hours (= 2.3 days)
-  - Unscheduled: 220 hours (= 9.2 days)
-  - Total: 273.5 hours (= 11.4 days)
-  - External factors: 42% of the above downtime, corresponding to 114 hours (=4.8 days), were due to external factors
+  - Scheduled: 94.0 hours (= 3.9 days)
+  - Unscheduled: 220.0 hours (= 9.2 days)
+  - Total: 314.0 hours (= 13.1 days)
+  - External factors: 36% of the above downtime, corresponding to 114 hours (= 4.8 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -14,7 +14,8 @@
 * Damage: None
 * Occurrences:
   - 2022-02-08 (53.5 hours)
-* Total downtime: 53.5 hours
+  - 2022-09-27 (40.5 hours)
+* Total downtime: 94.0 hours
 
 #### Scheduled kernel maintenance
 
@@ -48,6 +49,30 @@
 * Occurrences:
   - 2022-03-26 (48 hours): Data-center cooling issues
 * Total downtime: 48 hours of which 48 hours were due to external factors
+
+
+### September 27-29, 2022
+
+#### <span style="color: orange;">Full downtime</span>
+
+**Resolved**: The cluster maintenance has completed and the cluster is now fully operational again.
+<br><span class="timestamp">September 29, 13:30 PDT</span>
+
+**Update**: The cluster has been shutdown for maintenance.
+<br><span class="timestamp">September 27, 21:00 PDT</span>
+
+**Notice**: Wynton will be shut down on Tuesday September 27, 2022 at 21:00. We expect the cluster to be back up by the end of the workday on Thursday September 29. This is done to avoid file-system and hardware failures that otherwise may occur when the UCSF Facilities performs maintenance to the power system in Byers Hall.  We will take the opportunity to perform cluster maintenance after the completion of the power-system maintenance.
+<br><span class="timestamp">September 14, 17:00 PDT</span>
+
+<!--
+start: 2022-09-27T21:00:00
+stop: 2022-09-29T13:30:00
+length: 40.5 hours
+severity: under-maintenance
+affected: jobs, beegfs, compute, *
+reason: scheduled
+ -->
+
 
 
 ### September 6-9, 2022
