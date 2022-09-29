@@ -193,7 +193,7 @@ setenv	 		MPI_HOME	/usr/lib64/openmpi3
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code> (SDK only).</span><br>
 Note: <span class="module-note">This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).</span><br>
 URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a>, <a href="https://openjdk.java.net/projects/jdk/">https://openjdk.java.net/projects/jdk/</a> (changelog), <a href="https://github.com/openjdk/jdk">https://github.com/openjdk/jdk</a> (source code)</span><br>
-Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
+Versions: <span class="module-version">1.8.0, 11, <em>18</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;openjdk: Open Java Development Kit&quot;)
@@ -215,6 +215,12 @@ local root = &quot;/usr/lib/jvm&quot;
 local home = pathJoin(root, &quot;java&quot; .. &quot;-&quot; .. version)
 if not isDir(home) then -- isDir() supports symlinked folders
     home = pathJoin(root, &quot;jre&quot; .. &quot;-&quot; .. version)
+end
+
+-- Assert that OpenJDK version still exists, because
+-- it happens at times that older versions are removed
+if not isDir(home) then
+  LmodError(&quot;INTERNAL ERROR: Module &quot; .. name .. &quot;/&quot; .. version .. &quot; is broken, because folder &quot; .. home .. &quot; no longer exists. Please report this to the sysadms.&quot;)
 end
 
 setenv(&quot;JAVA_HOME&quot;, home)
