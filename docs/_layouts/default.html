@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title | default: site.github.repository_name }}{% endif %}</title>
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link href="{{ '/assets/css/ucsf-banners.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ '/assets/css/this_site.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ '/assets/css/broadcast.css' | relative_url }}" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/ico/favicon.ico?' | relative_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link href="{{ site.baseurl }}/assets/css/ucsf-banners.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/this_site.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/broadcast.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/ico/favicon.ico?">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><!-- ~90 kB --></script>
   {% if site.docsearch.api_key %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
-    <link rel="stylesheet" href="{{ '/assets/css/docsearch.css' | relative_url }}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docsearch.css" rel="stylesheet"/>
   {% endif %}
   </head>
   <body>
@@ -47,8 +47,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} {{ site.cluster.version }}</a>
-      <div class="navbar-brand"><a class="broadcast" href="{{ '/status/index.html' | relative_url }}"><span class="glyphicon glyphicon-flag"></span></a></div>
+      <a class="navbar-brand" href="{{ site.baseurl }}/index.html" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} {{ site.cluster.version }}</a>
+      <div class="navbar-brand"><a class="broadcast" href="{{ site.baseurl }}/status/index.html"><span class="glyphicon glyphicon-flag"></span></a></div>
     </div>
     
     <div class="navbar-collapse collapse">
@@ -74,67 +74,67 @@
 
       <ul class="nav navbar-nav" id="menunavbar">
         <li>
-          <a href="{{ '/status/index.html' | relative_url }}">Status</a>
+          <a href="{{ site.baseurl }}/status/index.html">Status</a>
         </li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/get-started/access-cluster.html' | relative_url }}">1. Login &amp; Logout</a></li>
-            <li><a href="{{ '/get-started/development-prototyping.html' | relative_url }}">2. Development / Prototyping</a></li>
-            <li><a href="{{ '/get-started/hello-world-job.html' | relative_url }}">3. 'Hello World' Job</a></li>
-            <li><a href="{{ '/get-started/good-practices.html' | relative_url }}">4. Good Practices</a></li>
-            <li><a href="{{ '/get-started/duo-signup.html' | relative_url }}">5. 2FA Registration</a></li>
-            <li><a href="{{ '/get-started/phi-quickstart.html' | relative_url }}">6. PHI Quickstart</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/access-cluster.html">1. Login &amp; Logout</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/development-prototyping.html">2. Development / Prototyping</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/hello-world-job.html">3. 'Hello World' Job</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/good-practices.html">4. Good Practices</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/duo-signup.html">5. 2FA Registration</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/phi-quickstart.html">6. PHI Quickstart</a></li>
     </ul>
         </li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/software/core-software.html' | relative_url }}">CentOS Core Software</a></li>
-            <li><a href="{{ '/software/scl.html' | relative_url }}">CentOS Software Collections (SCL)</a></li>
-            <li><a href="{{ '/software/software-modules.html' | relative_url }}">Software Modules</a></li>
-            <li><a href="{{ '/software/software-repositories.html' | relative_url }}">Software Repositories</a></li>
-            <li><a href="{{ '/software/singularity.html' | relative_url }}">Singularity - Linux Containers</a></li>
-            <li><a href="{{ '/software/sbgrid.html' | relative_url }}">SBGrid Software (restricted access)</a></li>
-            <li><a href="{{ '/software/missing-software.html' | relative_url }}">Missing Software?</a></li>
+            <li><a href="{{ site.baseurl }}/software/core-software.html">CentOS Core Software</a></li>
+            <li><a href="{{ site.baseurl }}/software/scl.html">CentOS Software Collections (SCL)</a></li>
+            <li><a href="{{ site.baseurl }}/software/software-modules.html">Software Modules</a></li>
+            <li><a href="{{ site.baseurl }}/software/software-repositories.html">Software Repositories</a></li>
+            <li><a href="{{ site.baseurl }}/software/singularity.html">Singularity - Linux Containers</a></li>
+            <li><a href="{{ site.baseurl }}/software/sbgrid.html">SBGrid Software (restricted access)</a></li>
+            <li><a href="{{ site.baseurl }}/software/missing-software.html">Missing Software?</a></li>
           </ul>
         </li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SGE<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/scheduler/submit-jobs.html' | relative_url }}">Submit Jobs</a></li>
-            <li><a href="{{ '/scheduler/list-jobs.html' | relative_url }}">List Jobs</a></li>
-            <li><a href="{{ '/scheduler/kill-jobs.html' | relative_url }}">Kill Jobs</a></li>
-            <li><a href="{{ '/scheduler/job-summary.html' | relative_url }}">Job Summary</a></li>
-            <li><a href="{{ '/scheduler/envvars.html' | relative_url }}">Useful Env. Variables</a></li>
-            <li><a href="{{ '/scheduler/using-local-scratch.html' | relative_url }}">Use Local Scratch</a></li>
-            <li><a href="{{ '/scheduler/queues.html' | relative_url }}">Available Queues</a></li>
-            <li><a href="{{ '/scheduler/email-notifications.html' | relative_url }}">Job Email Notifications</a></li>
-            <li><a href="{{ '/scheduler/gpu.html' | relative_url }}">GPU Scheduling</a></li>
-            <li><a href="{{ '/scheduler/advanced-usage.html' | relative_url }}">Advanced Usage</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/submit-jobs.html">Submit Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/list-jobs.html">List Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/kill-jobs.html">Kill Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/job-summary.html">Job Summary</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/envvars.html">Useful Env. Variables</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/using-local-scratch.html">Use Local Scratch</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/queues.html">Available Queues</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/email-notifications.html">Job Email Notifications</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/gpu.html">GPU Scheduling</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/advanced-usage.html">Advanced Usage</a></li>
           </ul>
         </li>
 <!---
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Slurm Pilot<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/slurm/about-slurm.html' | relative_url }}">About Slurm</a></li>
-            <li><a href="{{ '/slurm/sge-slurm.html' | relative_url }}">SGE to Slurm</a></li>
-            <li><a href="{{ '/slurm/slurm-hello-world-job.html' | relative_url }}">Slurm 'Hello World' Job</a></li>
-            <li><a href="{{ '/slurm/submit-jobs.html' | relative_url }}">Submit Slurm Jobs</a></li>
-            <li><a href="{{ '/slurm/featuresandconstraints.html' | relative_url }}">Slurm Features and Constraints</a></li>
-            <li><a href="{{ '/slurm/list-jobs.html' | relative_url }}">List Slurm Jobs</a></li>
-            <li><a href="{{ '/slurm/cancel-jobs.html' | relative_url }}">Cancel Slurm Jobs</a></li>
-            <li><a href="{{ '/slurm/job-summary.html' | relative_url }}">Slurm Job Summary</a></li>
-            <li><a href="{{ '/slurm/slurm-envvars.html' | relative_url }}">Useful Slurm Environment Variables</a></li>
-            <li><a href="{{ '/slurm/using-local-scratch.html' | relative_url }}">Use Slurm Local Scratch</a></li>
-            <li><a href="{{ '/slurm/queues.html' | relative_url }}">Available Slurm Partitions</a></li>
-            <li><a href="{{ '/slurm/email-notifications.html' | relative_url }}">Slurm Job Email Notifications</a></li>
-            <li><a href="{{ '/slurm/gpu.html' | relative_url }}">Slurm GPU Scheduling</a></li>
-            <li><a href="{{ '/slurm/advanced-usage.html' | relative_url }}">Slurm Advanced Usage</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/about-slurm.html">About Slurm</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/sge-slurm.html">SGE to Slurm</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/slurm-hello-world-job.html">Slurm 'Hello World' Job</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/submit-jobs.html">Submit Slurm Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/featuresandconstraints.html">Slurm Features and Constraints</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/list-jobs.html">List Slurm Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/cancel-jobs.html">Cancel Slurm Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/job-summary.html">Slurm Job Summary</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/slurm-envvars.html">Useful Slurm Environment Variables</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/using-local-scratch.html">Use Slurm Local Scratch</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/queues.html">Available Slurm Partitions</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/email-notifications.html">Slurm Job Email Notifications</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/gpu.html">Slurm GPU Scheduling</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/advanced-usage.html">Slurm Advanced Usage</a></li>
           </ul>
         </li>
 --->
@@ -142,11 +142,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">File Transfers <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/transfers/files-and-directories.html' | relative_url }}">Secure Copy File Transfers</a></li>
-            <li><a href="{{ '/transfers/globus.html' | relative_url }}">Globus File Transfers</a></li>
-            <li><a href="{{ '/transfers/globus-sharing.html' | relative_url }}">Globus File Sharing</a></li>
-            <li><a href="{{ '/transfers/ucsf-box.html' | relative_url }}">UCSF Box</a></li>
-            <li><a href="{{ '/transfers/dos2unix.html' | relative_url }}">Windows-Unix File Transfers</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/files-and-directories.html">Secure Copy File Transfers</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/globus.html">Globus File Transfers</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/globus-sharing.html">Globus File Sharing</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/ucsf-box.html">UCSF Box</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/dos2unix.html">Windows-Unix File Transfers</a></li>
           </ul>
         </li>
 
@@ -154,7 +154,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Good Practices <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/good-practices/using-local-scratch.html' | relative_url }}">Use local scratch</a></li>
+            <li><a href="{{ site.baseurl }}/good-practices/using-local-scratch.html">Use local scratch</a></li>
           </ul>
         </li>
 -->
@@ -162,21 +162,21 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How To <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/howto/matlab.html' | relative_url }}">Work with MATLAB</a></li>
-            <li><a href="{{ '/howto/python.html' | relative_url }}">Work with Python</a></li>
-            <li><a href="{{ '/howto/jupyter.html' | relative_url }}">Work with Jupyter Notebooks</a></li>
-            <li><a href="{{ '/howto/r.html' | relative_url }}">Work with R</a></li>
-            <li><a href="{{ '/howto/rstudio.html' | relative_url }}">Work with RStudio</a></li>
-            <li><a href="{{ '/howto/conda-stage.html' | relative_url }}">Stage Conda Environment to Local Disk</a></li>
-            <li><a href="{{ '/howto/install-from-source.html' | relative_url }}">Install Software from Source</a></li>
-            <li><a href="{{ '/howto/storage-size.html' | relative_url }}">File Sizes and Disk Quotas</a></li>
-            <li><a href="{{ '/howto/group-quota.html' | relative_url }}">Adjust Group Disk Quota</a></li>
-            <li><a href="{{ '/howto/find-files.html' | relative_url }}">Find Files</a></li>
-            <li><a href="{{ '/howto/log-in-without-pwd.html' | relative_url }}">Log in without Password</a></li>
-<!--            <li><a href="{{ '/howto/compress-files-(as-a-job).html' | relative_url }}">Compress Files (via Job Queue)</a></li> -->
-            <li><a href="{{ '/howto/change-pwd.html' | relative_url }}">Change & Verify Password</a></li>
-            <li><a href="{{ '/howto/gui-x11fwd.html' | relative_url }}">GUIs (X2Go & X11)</a></li>
-            <li><a href="{{ '/howto/jupyterhub.html' | relative_url }}">JupyterHub Server</a></li>  
+            <li><a href="{{ site.baseurl }}/howto/matlab.html">Work with MATLAB</a></li>
+            <li><a href="{{ site.baseurl }}/howto/python.html">Work with Python</a></li>
+            <li><a href="{{ site.baseurl }}/howto/jupyter.html">Work with Jupyter Notebooks</a></li>
+            <li><a href="{{ site.baseurl }}/howto/r.html">Work with R</a></li>
+            <li><a href="{{ site.baseurl }}/howto/rstudio.html">Work with RStudio</a></li>
+            <li><a href="{{ site.baseurl }}/howto/conda-stage.html">Stage Conda Environment to Local Disk</a></li>
+            <li><a href="{{ site.baseurl }}/howto/install-from-source.html">Install Software from Source</a></li>
+            <li><a href="{{ site.baseurl }}/howto/storage-size.html">File Sizes and Disk Quotas</a></li>
+            <li><a href="{{ site.baseurl }}/howto/group-quota.html">Adjust Group Disk Quota</a></li>
+            <li><a href="{{ site.baseurl }}/howto/find-files.html">Find Files</a></li>
+            <li><a href="{{ site.baseurl }}/howto/log-in-without-pwd.html">Log in without Password</a></li>
+<!--            <li><a href="{{ site.baseurl }}/howto/compress-files-(as-a-job).html">Compress Files (via Job Queue)</a></li> -->
+            <li><a href="{{ site.baseurl }}/howto/change-pwd.html">Change & Verify Password</a></li>
+            <li><a href="{{ site.baseurl }}/howto/gui-x11fwd.html">GUIs (X2Go & X11)</a></li>
+            <li><a href="{{ site.baseurl }}/howto/jupyterhub.html">JupyterHub Server</a></li>  
           </ul>
         </li>
 
@@ -184,7 +184,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Troubleshooting <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/troubleshoot/ssh-n6-gives-permission-denied-(publickey).html' | relative_url }}">SSH Permission Denied?</a></li>
+            <li><a href="{{ site.baseurl }}/troubleshoot/ssh-n6-gives-permission-denied-(publickey).html">SSH Permission Denied?</a></li>
           </ul>
         </li>
 -->
@@ -192,8 +192,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/support/index.html' | relative_url }}">Support Channels</a></li>
-            <li><a href="{{ '/support/faq.html' | relative_url }}">Frequently Asked Questions</a></li>
+            <li><a href="{{ site.baseurl }}/support/index.html">Support Channels</a></li>
+            <li><a href="{{ site.baseurl }}/support/faq.html">Frequently Asked Questions</a></li>
           </ul>
         </li>
 
@@ -201,25 +201,25 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ '/about/specs.html' | relative_url }}">Specifications</a></li>
-            <li><a href="{{ '/about/gpus.html' | relative_url }}">Available GPUs</a></li>
-            <li><a href="{{ '/about/news.html' | relative_url }}">News</a></li>
-            <li><a href="{{ '/about/roadmap.html' | relative_url }}">Roadmap</a></li>
-            <li><a href="{{ '/about/pricing-storage.html' | relative_url }}">Pricing: Extra Storage</a></li>
-            <li><a href="{{ '/about/pricing-compute.html' | relative_url }}">Pricing: Extra Compute (CPU & GPU)</a></li>
+            <li><a href="{{ site.baseurl }}/about/specs.html">Specifications</a></li>
+            <li><a href="{{ site.baseurl }}/about/gpus.html">Available GPUs</a></li>
+            <li><a href="{{ site.baseurl }}/about/news.html">News</a></li>
+            <li><a href="{{ site.baseurl }}/about/roadmap.html">Roadmap</a></li>
+            <li><a href="{{ site.baseurl }}/about/pricing-storage.html">Pricing: Extra Storage</a></li>
+            <li><a href="{{ site.baseurl }}/about/pricing-compute.html">Pricing: Extra Compute (CPU & GPU)</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ '/about/wynton-phi.html' | relative_url }}">PHI Compliance</a></li> 
-            <li><a href="{{ '/about/join.html' | relative_url }}">Join <span class="glyphicon glyphicon-heart-empty"></span></a></li>
-            <li><a href="{{ '/about/shares.html' | relative_url }}">Contributing Member Shares</a></li>
+            <li><a href="{{ site.baseurl }}/about/wynton-phi.html">PHI Compliance</a></li> 
+            <li><a href="{{ site.baseurl }}/about/join.html">Join <span class="glyphicon glyphicon-heart-empty"></span></a></li>
+            <li><a href="{{ site.baseurl }}/about/shares.html">Contributing Member Shares</a></li>
 <!--
-            <li><a href="{{ '/about/code-of-conduct.html' | relative_url }}">Code of conduct</a></li>
+            <li><a href="{{ site.baseurl }}/about/code-of-conduct.html">Code of conduct</a></li>
 -->
             <li role="separator" class="divider"></li>
-            <li><a href="{{ '/about/governance.html' | relative_url }}">Governance</a></li>
-            <li><a href="{{ '/about/user-agreement.html' | relative_url }}">User Agreement</a></li>
-            <li><a href="{{ '/about/citation.html' | relative_url }}">How to Cite</a></li>
+            <li><a href="{{ site.baseurl }}/about/governance.html">Governance</a></li>
+            <li><a href="{{ site.baseurl }}/about/user-agreement.html">User Agreement</a></li>
+            <li><a href="{{ site.baseurl }}/about/citation.html">How to Cite</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ '/about/contact.html' | relative_url }}">Contact</a></li>
+            <li><a href="{{ site.baseurl }}/about/contact.html">Contact</a></li>
           </ul>
         </li>
       </ul>      
@@ -239,7 +239,7 @@
 <a href="#current-incidents">More details ...</a>
 {% endif %}
 {% else %}
-<a href="{{ '/status/index.html' | relative_url }}#current-incidents">More details ...</a>
+<a href="{{ site.baseurl }}/status/index.html#current-incidents">More details ...</a>
 {% endif %}
 </div>
 {% endif %}
@@ -280,13 +280,13 @@ Source: https://github.com/allejo/jekyll-anchor-headings
 <p class="muted credit" style="font-size: inherits;">
 <a href="https://www.ucsf.edu/">UCSF</a> ::
 <a href="{{ site.organization.url }}">{{ site.organization.name }}</a> :: 
-<a href="{{ '/' | relative_url }}">{{ site.cluster.name }}</a>
+<a href="{{ site.baseurl }}/">{{ site.cluster.name }}</a>
 </p>
       </footer>
     </div>
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <script src="{{ site.baseurl }}/assets/js/scale.fix.js"></script>
     
-    <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script><!-- 38.8 kB -->
+    <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script><!-- 38.8 kB -->
 
 <script>
   $(document).ready(function(){
