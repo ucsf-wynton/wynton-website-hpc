@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title | default: site.github.repository_name }}{% endif %}</title>
 
-    <link rel="stylesheet" href="{{ '/hpc/assets/css/style.css?v=' | append: site.github.build_revision }}">
-    <link href="/hpc/assets/css/ucsf-banners.css" rel="stylesheet">
-    <link href="/hpc/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/hpc/assets/css/this_site.css" rel="stylesheet">
-    <link href="/hpc/assets/css/broadcast.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="/hpc/assets/ico/favicon.ico?' }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link href="{{ '/assets/css/ucsf-banners.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/this_site.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/broadcast.css' | relative_url }}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/ico/favicon.ico?' | relative_url }}">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><!-- ~90 kB --></script>
   {% if site.docsearch.api_key %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
-    <link rel="stylesheet" href="/hpc/assets/css/docsearch.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ '/assets/css/docsearch.css' | relative_url }}" rel="stylesheet"/>
   {% endif %}
   </head>
   <body>
@@ -284,9 +284,9 @@ Source: https://github.com/allejo/jekyll-anchor-headings
 </p>
       </footer>
     </div>
-    <script src="/hpc/assets/js/scale.fix.js"></script>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     
-    <script src="/hpc/assets/js/bootstrap.min.js"></script><!-- 38.8 kB -->
+    <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script><!-- 38.8 kB -->
 
 <script>
   $(document).ready(function(){
