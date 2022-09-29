@@ -11,7 +11,7 @@ Currently, the **conda-stage** tool has only been tested with the Bash shell, an
 ## Stage Conda environment on local disk (highly recommended)
 
 <div class="alert alert-info" role="alert" markdown="1">
-Please, **stage your Conda environment to local disk!** [Your software and job scripts will run _much_ faster](/hpc/howto/conda-stage.html#benchmark-staged-conda-environment), and it will _significantly decrease the load on our global filesystem_ (BeeGFS). **It is a win-win for everyone!**
+Please, **stage your Conda environment to local disk!** [Your software and job scripts will run _much_ faster]({{ site.baseurl }}/howto/conda-stage.html#benchmark-staged-conda-environment), and it will _significantly decrease the load on our global filesystem_ (BeeGFS). **It is a win-win for everyone!**
 </div>
 
 Working with a Conda environment that lives on _local disk_ greatly improves the performance.  This is because the local disk (`/scratch`) on the current machine is much faster than any network-based file system, including BeeGFS (`{{ site.path.global_root }}`) used on {{ site.cluster.nickname }}.  This is particularly beneficial when running many instances of a software tool, e.g. in job scripts.
@@ -244,4 +244,4 @@ In other words, by staging the Conda environment to local disk, we saved ourselv
 
 [conda-stage]: https://github.com/HenrikBengtsson/conda-stage/
 [conda-pack]: https://conda.github.io/conda-pack/
-[Benchmark staged Conda environment]: /hpc/howto/conda-stage.html#benchmark-staged-conda-environment
+[Benchmark staged Conda environment]: {{ site.baseurl }}/howto/conda-stage.html#benchmark-staged-conda-environment

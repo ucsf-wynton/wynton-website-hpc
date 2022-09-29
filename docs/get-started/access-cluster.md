@@ -11,14 +11,14 @@ context:
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 **Access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).**
 If you are on the UCSF VPN, you have already authenticated and no further 2FA is required.
-In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See [Two-Factor Authentication for SSH](/hpc/get-started/duo-signup.html) for instructions.
+In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.  See [Two-Factor Authentication for SSH]({{ site.baseurl }}/get-started/duo-signup.html) for instructions.
 </div>
 
 <!-- markdownlint-disable-file MD025 -->
 
 # Login
 
-To access the {{ site.cluster.name }} cluster you need an account - any UCSF affiliate can get an [account](/hpc/about/join.html).  Anyone with a {{ site.cluster.name }} account, can access the cluster via _Secure Shell (SSH)_.
+To access the {{ site.cluster.name }} cluster you need an account - any UCSF affiliate can get an [account]({{ site.baseurl }}/about/join.html).  Anyone with a {{ site.cluster.name }} account, can access the cluster via _Secure Shell (SSH)_.
 
 
 ## Prerequisites
@@ -93,6 +93,6 @@ Any shell session that has been idle for more than eight hours will timeout and 
 
 
 [PuTTY]: https://www.putty.org/
-[development node]: /hpc/get-started/development-prototyping.html
-[X2Go]: /hpc/howto/gui-x11fwd.html
-[Log in without Password]: /hpc/howto/log-in-without-pwd.html
+[development node]: {{ site.baseurl }}/get-started/development-prototyping.html
+[X2Go]: {{ site.baseurl }}/howto/gui-x11fwd.html
+[Log in without Password]: {{ site.baseurl }}/howto/log-in-without-pwd.html

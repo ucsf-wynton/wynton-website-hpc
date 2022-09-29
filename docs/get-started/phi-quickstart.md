@@ -13,7 +13,7 @@
 
 * If you don't either don't have a {{ site.cluster.name }} account or if you already have a Wynton account, but it is not authorized to use PHI:
 
-  - link to [learn more about the Wynton cluster](/hpc/about/join.html)
+  - link to [learn more about the Wynton cluster]({{ site.baseurl }}/about/join.html)
   
   - link to actually [request a Wynton PHI account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)
 
@@ -43,9 +43,9 @@
 
 ## User responsibilities for PHI
 
-* Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer](/hpc/about/governance.html)
+* Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ site.baseurl }}/about/governance.html)
 
-* Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance](/hpc/about/governance.html)
+* Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ site.baseurl }}/about/governance.html)
 
 * User end points (e.g. laptops and desktops) connecting to Wynton must meet [UCSF Minimum Security Standards for Electronic Information Resources](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information)
 
@@ -61,7 +61,7 @@
 
 * Data containing PHI must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected` location
 
-* PHI users must use data-transfer nodes pdt1 and pdt2 for all file transfers to and from the cluster, including when using [Globus](/hpc/transfers/globus.html#globus-for-phi-users)
+* PHI users must use data-transfer nodes pdt1 and pdt2 for all file transfers to and from the cluster, including when using [Globus]({{ site.baseurl }}/transfers/globus.html#globus-for-phi-users)
 
 * If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office](https://hipaa.ucsf.edu/)
 

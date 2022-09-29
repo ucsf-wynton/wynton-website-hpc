@@ -18,7 +18,7 @@ Here is how to use `/scratch`:
 
 * The **job-specific TMPDIR folder (e.g. `/scratch/8327141.1.long.q`) will be deleted automatically when the job terminates**.
 
-* **Specify how much local scratch (TMPDIR) storage your job will need**.  Local storage is limited to [{{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB/node](/hpc/about/specs.html).  If your job will use up to 200 GiB of disk space, you can specify this resource as `-l scratch=200G` (in units of GiB) when submitting the job.  A node with 800 GiB of scratch space can support up to four `-l scratch=200G` jobs running at the same time.
+* **Specify how much local scratch (TMPDIR) storage your job will need**.  Local storage is limited to [{{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB/node]({{ site.baseurl }}/about/specs.html).  If your job will use up to 200 GiB of disk space, you can specify this resource as `-l scratch=200G` (in units of GiB) when submitting the job.  A node with 800 GiB of scratch space can support up to four `-l scratch=200G` jobs running at the same time.
 
 
 ### Example
@@ -62,4 +62,4 @@ $ qsub -l scratch=100G -l mem_free=4G -pe smp 2 ex-scratch.sh
 ```
 
 
-To understand the purpose of `qstat -j` at the end, see the [Job Summary](/hpc/scheduler/job-summary.html) page.
+To understand the purpose of `qstat -j` at the end, see the [Job Summary]({{ site.baseurl }}/scheduler/job-summary.html) page.

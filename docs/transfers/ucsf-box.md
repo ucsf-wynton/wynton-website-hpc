@@ -15,7 +15,7 @@ Although there is no hard quota in place on UCSF Box, the **storage is limited**
 
 It is possible to access [UCSF Box](https://ucsf.app.box.com/) using FTP over a _secure_ SSL connection ([FTPS](https://en.wikipedia.org/wiki/FTPS)).  The below instructions works from the {{ site.cluster.name }} data-transfer nodes as well as your local computer.
 
-It is also possible for UCSF Users to access [UCSF Box](https://ucsf.app.box.com/) via the [UCSF Wynton HPC Box Connector](https://app.globus.org/file-manager?destination_id=98d778c4-75a9-4d8d-8baa-68f71d6568c0). For details on how to utilize the UCSF Wynton HPC Box Connector see the [Globus File Transfers]( /hpc/transfers/globus.html ) page on our website.
+It is also possible for UCSF Users to access [UCSF Box](https://ucsf.app.box.com/) via the [UCSF Wynton HPC Box Connector](https://app.globus.org/file-manager?destination_id=98d778c4-75a9-4d8d-8baa-68f71d6568c0). For details on how to utilize the UCSF Wynton HPC Box Connector see the [Globus File Transfers]( {{ site.baseurl }}/transfers/globus.html ) page on our website.
 
 
 ## Prerequisites

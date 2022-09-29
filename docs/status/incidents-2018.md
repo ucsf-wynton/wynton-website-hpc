@@ -104,7 +104,7 @@ reason: internal
 **Resolved**: `/wynton/scratch` is now back online and ready to be used.
 <br><span class="timestamp">Dec 19, 14:20 PST</span>
 
-**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and {{ site.cluster.name }} will _not_ be able to migrate until the QB3 cluster has been incorporated into {{ site.cluster.name }} (see [Roadmap](/hpc/about/roadmap.html)) or they giving up their QB3 account.
+**Update**: The plan is to bring `/wynton/scratch` back online before the end of the day tomorrow (Wednesday December 19).  The planned SGE downtime has been rescheduled to Wednesday January 9.  Moreover, we will start providing the new 500-GiB `/wynton/home/` storage to users who explicitly request it (before Friday December 21) and who also promise to **move** the content under their current `/netapp/home/` to the new location.  Sorry, users on both QB3 and {{ site.cluster.name }} will _not_ be able to migrate until the QB3 cluster has been incorporated into {{ site.cluster.name }} (see [Roadmap]({{ site.baseurl }}/about/roadmap.html)) or they giving up their QB3 account.
 <br><span class="timestamp">Dec 18, 16:45 PST</span>
 
 **Update**: The installation and migration to the new BeeGFS parallel file servers is on track and we expect to go live as planned on Wednesday December 19. We are working on fine tuning the configuration, running performance tests, and resilience tests.
@@ -120,7 +120,7 @@ reason: internal
 
 * Wednesday November 28-December 19 (21 days): **To all users, please refrain from using `/wynton/scratch` - use local, node-specific `/scratch` if possible (see below).  The sooner we can take it down, the higher the chance is that we can get everything in place before December 19.**
 
-* Wednesday December 12-19 (8 days): **`/wynton/scratch` will be unavailable and completely wiped**.  For computational scratch space, please [use local `/scratch` unique to each compute node](/hpc/scheduler/using-local-scratch.html).  For _global_ scratch needs, the old and much slower `/scrapp` and `/scrapp2` may also be used.
+* Wednesday December 12-19 (8 days): **`/wynton/scratch` will be unavailable and completely wiped**.  For computational scratch space, please [use local `/scratch` unique to each compute node]({{ site.baseurl }}/scheduler/using-local-scratch.html).  For _global_ scratch needs, the old and much slower `/scrapp` and `/scrapp2` may also be used.
 
 * ~~Wednesday December 19, 2018 (1/2 day): The {{ site.cluster.name }} scheduler (SGE) will be taken offline.  No jobs will be able to be submitted until it is restarted.~~
 

@@ -67,7 +67,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <h2 id="repository_built-in">Module Software Repository: built-in (7)</h2>
 
-Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="/hpc/about/contact.html">{{ site.cluster.name }}</a><br>
+Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ site.baseurl }}/about/contact.html">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
 
 <h3 id="module_built-in_amber" class="module-name">amber</h3>
@@ -6065,4 +6065,4 @@ $(document).ready(function() {
 })
 </script>
 
-[core software]: /hpc/software/core-software.html
+[core software]: {{ site.baseurl }}/software/core-software.html

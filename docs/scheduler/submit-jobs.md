@@ -102,12 +102,12 @@ If not specified, the default run time is 10 minutes.  A job that runs longer th
 
 ## Using local scratch storage
 
-Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage](/hpc/about/specs.html#scratch-storage) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
+Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage]({{ site.baseurl }}/about/specs.html#scratch-storage) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
 ```sh
 qsub -cwd -l scratch=200G script.sh
 ```
 
-Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes](/hpc/using-local-scratch.html).
+Your job is only guaranteed the amount of available scratch space that you request _when it is launched_.  For more information and best practices, see [Using Local /scratch on Compute Nodes]({{ site.baseurl }}/using-local-scratch.html).
 
 <div class="alert alert-warning" role="alert" markdown="1">
 Please specify `-l scratch=size` when using local `/scratch` and please [cleanup afterward](using-local-scratch.html). This maximizes the chance for compute nodes having enough available space, reduces the queuing times, and minimizes the risk for running out of local scratch.
@@ -118,7 +118,7 @@ Note that `-l scratch=size` specifies _space per job_, not per slot.
 </div>
 
 
-If your job would benefit from extra-fast [local scratch storage](/hpc/about/specs.html#scratch-storage), then you can request a node with either a SSD or NVMe scratch drive via the following flag:
+If your job would benefit from extra-fast [local scratch storage]({{ site.baseurl }}/about/specs.html#scratch-storage), then you can request a node with either a SSD or NVMe scratch drive via the following flag:
 ```sh
 qsub -l ssd_scratch=1
 ```
@@ -239,8 +239,8 @@ _Comment_: MPI stands for ['Message Passing Interface'](https://en.wikipedia.org
 
 ## See also
 
-For further options and advanced usage, see [Advanced Usage](/hpc/scheduler/advanced-usage.html) of the scheduler.
+For further options and advanced usage, see [Advanced Usage]({{ site.baseurl }}/scheduler/advanced-usage.html) of the scheduler.
 
-[SGE environment variable]: /hpc/scheduler/sge-envvars.html
-[Job Summary]: /hpc/scheduler/job-summary.html
-[development nodes]: /hpc/get-started/development-prototyping.html
+[SGE environment variable]: {{ site.baseurl }}/scheduler/sge-envvars.html
+[Job Summary]: {{ site.baseurl }}/scheduler/job-summary.html
+[development nodes]: {{ site.baseurl }}/get-started/development-prototyping.html

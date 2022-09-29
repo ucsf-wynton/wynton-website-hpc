@@ -233,4 +233,4 @@ Note that the slow packing step will one have to be done this first time. A foll
 
 [Conda]: https://conda.io
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
-[conda-stage]: /hpc/howto/conda-stage.html
+[conda-stage]: {{ site.baseurl }}/howto/conda-stage.html

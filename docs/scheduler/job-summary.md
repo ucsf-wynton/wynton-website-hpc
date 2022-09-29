@@ -2,7 +2,7 @@
 
 ## Output job details at end of job
 
-The more accurately you can specify the required resources (memory, running time, local scratch needs, ...) of your jobs, the better the job scheduler can serve your needs and often your jobs will be processed sooner.  For instance, if you have a good sense of the amount of memory and run time your job needs, then you can specify these via [SGE resource options](/hpc/scheduler/submit-jobs.html) `mem_free` and `h_rt`.  If you don't specify them, your job will use the default settings.
+The more accurately you can specify the required resources (memory, running time, local scratch needs, ...) of your jobs, the better the job scheduler can serve your needs and often your jobs will be processed sooner.  For instance, if you have a good sense of the amount of memory and run time your job needs, then you can specify these via [SGE resource options]({{ site.baseurl }}/scheduler/submit-jobs.html) `mem_free` and `h_rt`.  If you don't specify them, your job will use the default settings.
 
 If you don't know how much resources your job consumes, you can add `qstat -j $JOB_ID` to the end of your job script.  This will output a summary of your job to the job output log.  Here is an example of a job that runs R, draws 100 million random numbers and calculates their summary statistics. We also call the garbage collector 1,000 times to emulate some CPU processing to give the scheduler enough time to snapshot the job.  At the end, we output the job summary.
 

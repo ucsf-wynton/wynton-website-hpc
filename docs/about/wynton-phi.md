@@ -7,7 +7,7 @@ Wynton PHI environment, which is subset of the Wynton HPC environment, is approv
 
 Wynton team has worked closely with UCSF IT Security and the UCSF Privacy, Legal, and Risk (PLR) group to follow the best practices in addressing security and privacy related risks. We obtained the services of an outside security consulting firm to put together a System Security Plan (SSP) based on the [NIST 800-53 revision 4 framework](https://csrc.nist.gov/publications/detail/sp/800-53/rev-4/archive/2015-01-22) from the US federal government. The SSP lists twelve security domains with a total of 156 risk control categories. The SSP then describes how Wynton PHI addresses each risk control, and clearly identifies the owner of each risk control. The Wynton team reviewed this SSP with IT Security and PLR for their support of the plan and also went through a security risk assessment with IT Security which assigned an overall risk level of "Low".
 
-Please note that Wynton PHI employs a shared risk model that relies on **individual PIs and their research team members to own certain risks** and follow the guidelines set in [Wynton User Agreement](/hpc/about/user-agreement.html) as well as [UCSF Minimum Security Standards for Electronic Information Resources](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information).
+Please note that Wynton PHI employs a shared risk model that relies on **individual PIs and their research team members to own certain risks** and follow the guidelines set in [Wynton User Agreement]({{ site.baseurl }}/about/user-agreement.html) as well as [UCSF Minimum Security Standards for Electronic Information Resources](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information).
 
 
 ## Getting a Wynton PHI account
@@ -16,7 +16,7 @@ Please note that Wynton PHI employs a shared risk model that relies on **individ
 2021-12-17: Contrary to Wynton HPC, we can currently onboard only UCSF staff and UCSF affiliates who have a UCSF ID on Wynton PHI. We are working on allowing also non-UCSF research collaborators to get a Wynton PHI account with approval from the PHI project's PI.
 </div>
 
-To apply for a new Wynton HPC account with PHI access, or to update an existing account for PHI access, please follow the [instructions for requesting or updating an account](/hpc/about/join.html). This will initiate an automated onboarding process to check that you meet the following prerequisites:
+To apply for a new Wynton HPC account with PHI access, or to update an existing account for PHI access, please follow the [instructions for requesting or updating an account]({{ site.baseurl }}/about/join.html). This will initiate an automated onboarding process to check that you meet the following prerequisites:
 
 * Valid email address
 
