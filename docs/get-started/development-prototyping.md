@@ -41,5 +41,5 @@ As from the login nodes, it is possible to submit jobs also from the development
 </div>
 
 [logged in to the cluster]: {{ '/get-started/access-cluster.html' | relative_url }}
-[Submit Job to Cluster]: {{ 'get-started/hello-world-job.html' | relative_url }}
+[Submit Job to Cluster]: {{ '/get-started/hello-world-job.html' | relative_url }}
 

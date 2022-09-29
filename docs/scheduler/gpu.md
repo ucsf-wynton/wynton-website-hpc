@@ -142,4 +142,4 @@ The above shows that host `msg-iogpu3` has 2 GeForce GTX 1080 GPUs.  Each GPU is
 [GeForce GTX 1080]: https://en.wikipedia.org/wiki/GeForce_10_series
 [submit jobs]: {{ '/scheduler/submit-jobs.html' | relative_url }}
 [list jobs]: {{ '/scheduler/list-jobs.html' | relative_url }}
-[development nodes]: {{ 'get-started/development-prototyping.html' | relative_url }}
+[development nodes]: {{ '/get-started/development-prototyping.html' | relative_url }}

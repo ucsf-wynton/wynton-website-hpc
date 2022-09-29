@@ -94,5 +94,5 @@ Any shell session that has been idle for more than eight hours will timeout and 
 
 [PuTTY]: https://www.putty.org/
 [development node]: {{ '/get-started/development-prototyping.html' | relative_url }}
-[X2Go]: {{ 'howto/gui-x11fwd.html' | relative_url }}
-[Log in without Password]: {{ 'howto/log-in-without-pwd.html' | relative_url }}
+[X2Go]: {{ '/howto/gui-x11fwd.html' | relative_url }}
+[Log in without Password]: {{ '/howto/log-in-without-pwd.html' | relative_url }}
