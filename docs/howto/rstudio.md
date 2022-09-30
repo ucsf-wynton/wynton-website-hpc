@@ -24,11 +24,11 @@ Assuming you are already logged on to a development node, launch your personal R
 [alice@{{ site.devel.name }} ~]$ rsc start
 Your one-time random password for RStudio Server is y+IWo7rfl7Z7MRCPI3Z4
 alice, your personal RStudio Server is available on
-<http://{{ site.devel.hostname }}:47454>. If you are running from a
+<http://{{ site.devel.hostname }}:20612>. If you are running from a
 remote machine without direct access to {{ site.devel.hostname }},
 you can use SSH port forwarding to access the RStudio Server at
 <http://127.0.0.1:8787> by running
-'ssh -L 8787:{{ site.devel.hostname }}:47454 alice@{{ site.login.hostname }}'
+'ssh -L 8787:{{ site.devel.hostname }}:20612 alice@{{ site.login.hostname }}'
 in a second terminal.
 Any R session started times out after being idle for 120 minutes.
 WARNING: You now have 10 minutes, until 2022-04-04 12:11:27-07:00,
@@ -50,11 +50,11 @@ You will need both below.
 
 On your local computer, log into the cluster in a second terminal
 following the instruction above.  Make sure to use your own username
-and make sure to use the port number (e.g. `47454`) that
+and make sure to use the port number (e.g. `20612`) that
 was assigned to you.
 
 ```sh
-{local}$ ssh -L 8787:{{ site.devel.hostname}}:47454 alice@{{ site.login.hostname }}
+{local}$ ssh -L 8787:{{ site.devel.hostname}}:20612 alice@{{ site.login.hostname }}
 alice1@{{site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{site.login.name }} ~]$
 ```
