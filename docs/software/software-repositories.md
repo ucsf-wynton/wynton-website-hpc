@@ -141,7 +141,7 @@ setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton
 <h3 id="module_built-in_matlab-runtime" class="module-name">matlab-runtime</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
+Versions: <span class="module-version">2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
