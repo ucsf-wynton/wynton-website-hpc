@@ -2720,8 +2720,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.</span><br>
 Example: <span class="module-example"><code>rserver</code>.</span><br>
 URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-server">https://rstudio.com/products/rstudio/#rstudio-server</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
-Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version">2022.02.4-500, <em>2021.09.2-382</em></span><br>
+Versions: <span class="module-version">2021.09.2-382, <em>2022.02.4-500</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2735,8 +2734,7 @@ whatis(&quot;Keywords: programming, R, GUI&quot;)
 whatis(&quot;URL: https://rstudio.com/products/rstudio/#rstudio-server, https://www.rstudio.com/products/rstudio/release-notes/ (changelog), https://github.com/rstudio/rstudio/ (source code)&quot;)
 whatis([[
 Description: The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.
-Example: `rserver`.
-Warning: This is work under construction!
+Examples: `rserver`.
 ]])
 
 depends_on(&quot;r&quot;)
