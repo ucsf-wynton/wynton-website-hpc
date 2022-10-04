@@ -2720,7 +2720,6 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.</span><br>
 Example: <span class="module-example"><code>rserver</code>.</span><br>
 URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-server">https://rstudio.com/products/rstudio/#rstudio-server</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
-Warning: <span class="module-warning">This is work under construction!</span><br>
 Versions: <span class="module-version">2021.09.2-382, <em>2022.07.2-576</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2736,7 +2735,6 @@ whatis(&quot;URL: https://rstudio.com/products/rstudio/#rstudio-server, https://
 whatis([[
 Description: The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.
 Examples: `rserver`.
-Warning: This is work under construction!
 ]])
 
 depends_on(&quot;r&quot;)
@@ -2758,7 +2756,6 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
 Example: <span class="module-example"><code>rsc --help</code>, <code>rsc start</code>, and <code>rsc stop</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
-Warning: <span class="module-warning">This is work under construction!</span><br>
 Versions: <span class="module-version">0.9.1, <em>0.10.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2774,7 +2771,6 @@ whatis(&quot;URL: https://github.com/UCSF-CBI/rstudio-server-controller, https:/
 whatis([[
 Description: The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.
 Examples: `rsc --help`, `rsc start`, and `rsc stop`.
-Warning: This is work under construction!
 ]])
 
 depends_on(&quot;r&quot;)
