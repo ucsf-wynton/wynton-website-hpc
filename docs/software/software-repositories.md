@@ -5896,14 +5896,14 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
 <dl>
   <dd class="module-details">
 <span class="module-description">Protein side-chain conformation prediction program</span><br>
-URL: <span class="module-url"><a href="http://dunbrack.fccc.edu/SCWRL4.php">http://dunbrack.fccc.edu/SCWRL4.php</a></span><br>
+URL: <span class="module-url"><a href="http://dunbrack.fccc.edu/lab/scwrl">http://dunbrack.fccc.edu/lab/scwrl</a></span><br>
 Versions: <span class="module-version"><em>4.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Description: Protein side-chain conformation prediction program&quot;
-module-whatis &quot;URL: http://dunbrack.fccc.edu/SCWRL4.php&quot;
+module-whatis &quot;URL: http://dunbrack.fccc.edu/lab/scwrl&quot;
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/scwrl-4.0/bin
 </code></pre>
 
