@@ -31,7 +31,7 @@ dn: uid=alice,ou=Accounts,dc=cgl,dc=ucsf,dc=edu
 mail: alice.bobson@ucsf.edu
 ```
 
-If you wish to sent to another address that your Wynton-associated email address, you an set a new default in the `~/.sge_request` file (create if missing) as:
+If you wish to send to another address that your Wynton-associated email address, you can set a new default in the `~/.sge_request` file (create if missing) as:
 
 ```sh
 ## Default recipient of job notifications
