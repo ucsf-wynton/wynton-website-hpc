@@ -4,19 +4,45 @@
 
 ## Job Email Notifications
 
-Instead of polling `qstat` to check whether submitted jobs are queued, running, or finished, one can tell the job scheduler to send email notifications as jobs are started or completed.  This is done by specifying `qsub` option `-m <when>` and option `-M <recipients>`, where `<when>` specifies under what circumstances an email message should be sent to `<recipients>`.
+Instead of polling `qstat` to check whether submitted jobs are queued, running, or finished, one can tell the job scheduler to send email notifications as jobs are started or completed.  This is done by specifying `qsub` option `-m <when>`, where `<when>` specifies under what circumstances an email notification should be sent.
 
 To send an email when the job (b)egins, (e)nds, or (a)borts, submit the job as:
 
 ```sh
-$ qsub -m bea -M alice.bobson@ucsf.edu myscript.sh
+$ qsub -m bea myscript.sh
 ```
 
 To send an email only when the job completed, successfully or not, skip (b)egin notifications by using only:
 
 ```sh
-$ qsub -m ea -M alice.bobson@ucsf.edu myscript.sh
+$ qsub -m ea myscript.sh
 ```
+
+See below for examples what these email notifications look like.
+
+
+### Configure the default email address
+
+The email notifications are by default sent to the email address you have associated with your {{ site.cluster.nickname }} account.  To find out which address this is, call:
+
+```sh
+$ ldapsearch -LLL -x -H ldap://m1,ldap://m2 uidNumber="$(id -u)" mail
+dn: uid=alice,ou=Accounts,dc=cgl,dc=ucsf,dc=edu
+mail: alice.bobson@ucsf.edu
+```
+
+If you wish to sent to another address that your Wynton-associated email address, you an set a new default in the `~/.sge_request` file (create if missing) as:
+
+```sh
+## Default recipient of job notifications
+-M alice@bobson.org
+```
+
+Technically, you could also specify the `-M <email address>` as a command-line option to `qsub`, or as an SGE directive comment in the job script, but we recommend using `~/.sge_request` for this.  The advantage is that your job scripts won't carry your email address, making them more generic.  In contrast, if a job script has your email address, then it will be you that get email notifications if someone else copies your script as-is and runs it on the cluster (or on other SGE clusters).
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
+**Please do not specify `-m bea` in `~/.sge_request`** to make it the default for _all_ of your jobs. If done, you might end up producing thousands of email messages when you submit array jobs.
+</div>
 
 
 ### Email notifications for array jobs
@@ -29,23 +55,6 @@ $ echo 'date' | qsub -N "Array_job_${job_id}_done" -m b  -l h_rt=00:00:05 -hold_
 ```
 
 This will send an email with 'Array_job_9156754_done' in the subject line as soon as the dummy job launches.
-
-
-
-### Configure a default recipient
-
-To avoid having to specify the email address in each `qsub` call, or as an SGE directive in the job script, one can set the default in the `~/.sge_request` (create if missing) by adding:
-
-```sh
-## Default recipient of job notifications
--M alice.bobson@ucsf.edu
-```
-
-The advantage of specifying the recipient in `~/.sge_request`, instead of in the job script, is that the job script does not carry your personal email address.  If the job script has your email address, then it will be you that get email notifications if someone else copy your script as-is and runs it on the cluster (or on other SGE clusters).
-
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-**Please do not specify `-m bea` in `~/.sge_request`** to make it the default for _all_ of your jobs. If done, you might end up producing thousands of email messages when you submit array jobs.
-</div>
 
 
 ### Example messages
