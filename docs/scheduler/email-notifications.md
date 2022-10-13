@@ -63,7 +63,7 @@ The email message sent when a job starts (`-m b`), will look like:
 
 ```lang-none
 From: root <root@wynton.ucsf.edu>
-To: alice.bobson@ucsf.edu
+To: alice@log1.wynton.ucsf.edu
 Subject: Job 8968283 (myscript.sh) Started
 
 Job 8968283 (myscript.sh) Started
@@ -77,7 +77,7 @@ and the one sent when a job ends successfully (`-m e`), will look like:
 
 ```lang-none
 From: root <root@wynton.ucsf.edu>
-To: alice.bobson@ucsf.edu
+To: alice@log1.wynton.ucsf.edu
 Subject: Job 8968283 (myscript.sh) Complete
 
 Job 8968283 (myscript.sh) Complete
@@ -98,7 +98,7 @@ The message sent when a job is aborted (`-m a`),  for instance via `qdel`, will 
 
 ```lang-none
 From: root <root@wynton.ucsf.edu>
-To: alice.bobson@ucsf.edu
+To: alice@log1.wynton.ucsf.edu
 Subject: Job 8974017 (myscript.sh) Aborted
 
 Job 8974017 (myscript.sh) Aborted
@@ -115,4 +115,4 @@ failed assumedly after job because:
 job 8974017.1 died through signal KILL (9)
 ```
 
-
+The _displayed_ `To:` address in these notifications will be `<username>@<hostname>`, which is an email address for you that only exists on the {{ site.cluster.nickname }} cluster. Any messages sent to this address will then be redirected to your Wynton-associated email address.  The `<hostname>` part is the name of the node from which the job script was submitted.  For instance, in the above example, the job script was submitted from the `log1.wynton.ucsf.edu` login node.  If you configure SGE to use another email address (e.g. `-M alice@bobson.org`), then that will be the `To:` address shown.
