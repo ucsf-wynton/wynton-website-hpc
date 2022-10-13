@@ -35,10 +35,10 @@ If you wish to sent to another address that your Wynton-associated email address
 
 ```sh
 ## Default recipient of job notifications
--M alice@bobson.org
+-M alice2@bobson.org
 ```
 
-Technically, you could also specify the `-M <email address>` as a command-line option to `qsub`, or as an SGE directive comment in the job script, but we recommend using `~/.sge_request` for this.  The advantage is that your job scripts won't carry your email address, making them more generic.  In contrast, if a job script has your email address, then it will be you that get email notifications if someone else copies your script as-is and runs it on the cluster (or on other SGE clusters).
+Technically, you could also specify the `-M <email-address>` as a command-line option to `qsub`, or as an SGE directive comment in the job script, but we recommend using `~/.sge_request` for this.  The advantage is that your job scripts won't carry your email address, making them more generic.  In contrast, if a job script has your email address, then it will be you that get email notifications if someone else copies your script as-is and runs it on the cluster (or on other SGE clusters).
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 **Please do not specify `-m bea` in `~/.sge_request`** to make it the default for _all_ of your jobs. If done, you might end up producing thousands of email messages when you submit array jobs.
@@ -115,4 +115,4 @@ failed assumedly after job because:
 job 8974017.1 died through signal KILL (9)
 ```
 
-The _displayed_ `To:` address in these notifications will be `<username>@<hostname>`, which is an email address for you that only exists on the {{ site.cluster.nickname }} cluster. Any messages sent to this address will then be redirected to your Wynton-associated email address.  The `<hostname>` part is the name of the node from which the job script was submitted.  For instance, in the above example, the job script was submitted from the `log1.wynton.ucsf.edu` login node.  If you configure SGE to use another email address (e.g. `-M alice@bobson.org`), then that will be the `To:` address shown.
+The _displayed_ `To:` address in these notifications will be `<username>@<hostname>`, which is an email address for you that only exists on the {{ site.cluster.nickname }} cluster. Any messages sent to this address will then be redirected to your Wynton-associated email address.  The `<hostname>` part is the name of the node from which the job script was submitted.  For instance, in the above example, the job script was submitted from the `log1.wynton.ucsf.edu` login node.  If you configure SGE to use another email address (e.g. `-M alice2@bobson.org`), then that will be the `To:` address shown.
