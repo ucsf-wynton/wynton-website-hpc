@@ -47,8 +47,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ site.baseurl }}/hpc/index.html" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} {{ site.cluster.version }}</a>
-      <div class="navbar-brand"><a class="broadcast" href="{{ site.baseurl }}/hpc/status/index.html"><span class="glyphicon glyphicon-flag"></span></a></div>
+      <a class="navbar-brand" href="{{ site.baseurl }}/index.html" title="{{ site.cluster.name }} - UCSF Research Computing at Scale">{{ site.cluster.name }} {{ site.cluster.version }}</a>
+      <div class="navbar-brand"><a class="broadcast" href="{{ site.baseurl }}/status/index.html"><span class="glyphicon glyphicon-flag"></span></a></div>
     </div>
     
     <div class="navbar-collapse collapse">
@@ -74,67 +74,67 @@
 
       <ul class="nav navbar-nav" id="menunavbar">
         <li>
-          <a href="{{ site.baseurl }}/hpc/status/index.html">Status</a>
+          <a href="{{ site.baseurl }}/status/index.html">Status</a>
         </li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/get-started/access-cluster.html">1. Login &amp; Logout</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/get-started/development-prototyping.html">2. Development / Prototyping</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/get-started/hello-world-job.html">3. 'Hello World' Job</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/get-started/good-practices.html">4. Good Practices</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/get-started/duo-signup.html">5. 2FA Registration</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/get-started/phi-quickstart.html">6. PHI Quickstart</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/access-cluster.html">1. Login &amp; Logout</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/development-prototyping.html">2. Development / Prototyping</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/hello-world-job.html">3. 'Hello World' Job</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/good-practices.html">4. Good Practices</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/duo-signup.html">5. 2FA Registration</a></li>
+            <li><a href="{{ site.baseurl }}/get-started/phi-quickstart.html">6. PHI Quickstart</a></li>
     </ul>
         </li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/software/core-software.html">CentOS Core Software</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/software/scl.html">CentOS Software Collections (SCL)</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/software/software-modules.html">Software Modules</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/software/software-repositories.html">Software Repositories</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/software/singularity.html">Singularity - Linux Containers</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/software/sbgrid.html">SBGrid Software (restricted access)</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/software/missing-software.html">Missing Software?</a></li>
+            <li><a href="{{ site.baseurl }}/software/core-software.html">CentOS Core Software</a></li>
+            <li><a href="{{ site.baseurl }}/software/scl.html">CentOS Software Collections (SCL)</a></li>
+            <li><a href="{{ site.baseurl }}/software/software-modules.html">Software Modules</a></li>
+            <li><a href="{{ site.baseurl }}/software/software-repositories.html">Software Repositories</a></li>
+            <li><a href="{{ site.baseurl }}/software/singularity.html">Singularity - Linux Containers</a></li>
+            <li><a href="{{ site.baseurl }}/software/sbgrid.html">SBGrid Software (restricted access)</a></li>
+            <li><a href="{{ site.baseurl }}/software/missing-software.html">Missing Software?</a></li>
           </ul>
         </li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SGE<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/submit-jobs.html">Submit Jobs</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/list-jobs.html">List Jobs</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/kill-jobs.html">Kill Jobs</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/job-summary.html">Job Summary</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/envvars.html">Useful Env. Variables</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/using-local-scratch.html">Use Local Scratch</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/queues.html">Available Queues</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/email-notifications.html">Job Email Notifications</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/gpu.html">GPU Scheduling</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/scheduler/advanced-usage.html">Advanced Usage</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/submit-jobs.html">Submit Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/list-jobs.html">List Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/kill-jobs.html">Kill Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/job-summary.html">Job Summary</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/envvars.html">Useful Env. Variables</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/using-local-scratch.html">Use Local Scratch</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/queues.html">Available Queues</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/email-notifications.html">Job Email Notifications</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/gpu.html">GPU Scheduling</a></li>
+            <li><a href="{{ site.baseurl }}/scheduler/advanced-usage.html">Advanced Usage</a></li>
           </ul>
         </li>
 <!---
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Slurm Pilot<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/slurm/about-slurm.html">About Slurm</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/sge-slurm.html">SGE to Slurm</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/slurm-hello-world-job.html">Slurm 'Hello World' Job</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/submit-jobs.html">Submit Slurm Jobs</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/featuresandconstraints.html">Slurm Features and Constraints</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/list-jobs.html">List Slurm Jobs</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/cancel-jobs.html">Cancel Slurm Jobs</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/job-summary.html">Slurm Job Summary</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/slurm-envvars.html">Useful Slurm Environment Variables</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/using-local-scratch.html">Use Slurm Local Scratch</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/queues.html">Available Slurm Partitions</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/email-notifications.html">Slurm Job Email Notifications</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/gpu.html">Slurm GPU Scheduling</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/slurm/advanced-usage.html">Slurm Advanced Usage</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/about-slurm.html">About Slurm</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/sge-slurm.html">SGE to Slurm</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/slurm-hello-world-job.html">Slurm 'Hello World' Job</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/submit-jobs.html">Submit Slurm Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/featuresandconstraints.html">Slurm Features and Constraints</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/list-jobs.html">List Slurm Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/cancel-jobs.html">Cancel Slurm Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/job-summary.html">Slurm Job Summary</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/slurm-envvars.html">Useful Slurm Environment Variables</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/using-local-scratch.html">Use Slurm Local Scratch</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/queues.html">Available Slurm Partitions</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/email-notifications.html">Slurm Job Email Notifications</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/gpu.html">Slurm GPU Scheduling</a></li>
+            <li><a href="{{ site.baseurl }}/slurm/advanced-usage.html">Slurm Advanced Usage</a></li>
           </ul>
         </li>
 --->
@@ -142,11 +142,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">File Transfers <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/transfers/files-and-directories.html">Secure Copy File Transfers</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/transfers/globus.html">Globus File Transfers</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/transfers/globus-sharing.html">Globus File Sharing</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/transfers/ucsf-box.html">UCSF Box</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/transfers/dos2unix.html">Windows-Unix File Transfers</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/files-and-directories.html">Secure Copy File Transfers</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/globus.html">Globus File Transfers</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/globus-sharing.html">Globus File Sharing</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/ucsf-box.html">UCSF Box</a></li>
+            <li><a href="{{ site.baseurl }}/transfers/dos2unix.html">Windows-Unix File Transfers</a></li>
           </ul>
         </li>
 
@@ -154,7 +154,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Good Practices <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/good-practices/using-local-scratch.html">Use local scratch</a></li>
+            <li><a href="{{ site.baseurl }}/good-practices/using-local-scratch.html">Use local scratch</a></li>
           </ul>
         </li>
 -->
@@ -162,21 +162,21 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How To <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/howto/matlab.html">Work with MATLAB</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/python.html">Work with Python</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/jupyter.html">Work with Jupyter Notebooks</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/r.html">Work with R</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/rstudio.html">Work with RStudio</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/conda-stage.html">Stage Conda Environment to Local Disk</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/install-from-source.html">Install Software from Source</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/storage-size.html">File Sizes and Disk Quotas</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/group-quota.html">Adjust Group Disk Quota</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/find-files.html">Find Files</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/log-in-without-pwd.html">Log in without Password</a></li>
-<!--            <li><a href="{{ site.baseurl }}/hpc/howto/compress-files-(as-a-job).html">Compress Files (via Job Queue)</a></li> -->
-            <li><a href="{{ site.baseurl }}/hpc/howto/change-pwd.html">Change & Verify Password</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/gui-x11fwd.html">GUIs (X2Go & X11)</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/howto/jupyterhub.html">JupyterHub Server</a></li>  
+            <li><a href="{{ site.baseurl }}/howto/matlab.html">Work with MATLAB</a></li>
+            <li><a href="{{ site.baseurl }}/howto/python.html">Work with Python</a></li>
+            <li><a href="{{ site.baseurl }}/howto/jupyter.html">Work with Jupyter Notebooks</a></li>
+            <li><a href="{{ site.baseurl }}/howto/r.html">Work with R</a></li>
+            <li><a href="{{ site.baseurl }}/howto/rstudio.html">Work with RStudio</a></li>
+            <li><a href="{{ site.baseurl }}/howto/conda-stage.html">Stage Conda Environment to Local Disk</a></li>
+            <li><a href="{{ site.baseurl }}/howto/install-from-source.html">Install Software from Source</a></li>
+            <li><a href="{{ site.baseurl }}/howto/storage-size.html">File Sizes and Disk Quotas</a></li>
+            <li><a href="{{ site.baseurl }}/howto/group-quota.html">Adjust Group Disk Quota</a></li>
+            <li><a href="{{ site.baseurl }}/howto/find-files.html">Find Files</a></li>
+            <li><a href="{{ site.baseurl }}/howto/log-in-without-pwd.html">Log in without Password</a></li>
+<!--            <li><a href="{{ site.baseurl }}/howto/compress-files-(as-a-job).html">Compress Files (via Job Queue)</a></li> -->
+            <li><a href="{{ site.baseurl }}/howto/change-pwd.html">Change & Verify Password</a></li>
+            <li><a href="{{ site.baseurl }}/howto/gui-x11fwd.html">GUIs (X2Go & X11)</a></li>
+            <li><a href="{{ site.baseurl }}/howto/jupyterhub.html">JupyterHub Server</a></li>  
           </ul>
         </li>
 
@@ -184,7 +184,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Troubleshooting <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/troubleshoot/ssh-n6-gives-permission-denied-(publickey).html">SSH Permission Denied?</a></li>
+            <li><a href="{{ site.baseurl }}/troubleshoot/ssh-n6-gives-permission-denied-(publickey).html">SSH Permission Denied?</a></li>
           </ul>
         </li>
 -->
@@ -192,8 +192,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/support/index.html">Support Channels</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/support/faq.html">Frequently Asked Questions</a></li>
+            <li><a href="{{ site.baseurl }}/support/index.html">Support Channels</a></li>
+            <li><a href="{{ site.baseurl }}/support/faq.html">Frequently Asked Questions</a></li>
           </ul>
         </li>
 
@@ -201,25 +201,25 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/hpc/about/specs.html">Specifications</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/gpus.html">Available GPUs</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/news.html">News</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/roadmap.html">Roadmap</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/pricing-storage.html">Pricing: Extra Storage</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/pricing-compute.html">Pricing: Extra Compute (CPU & GPU)</a></li>
+            <li><a href="{{ site.baseurl }}/about/specs.html">Specifications</a></li>
+            <li><a href="{{ site.baseurl }}/about/gpus.html">Available GPUs</a></li>
+            <li><a href="{{ site.baseurl }}/about/news.html">News</a></li>
+            <li><a href="{{ site.baseurl }}/about/roadmap.html">Roadmap</a></li>
+            <li><a href="{{ site.baseurl }}/about/pricing-storage.html">Pricing: Extra Storage</a></li>
+            <li><a href="{{ site.baseurl }}/about/pricing-compute.html">Pricing: Extra Compute (CPU & GPU)</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/wynton-phi.html">PHI Compliance</a></li> 
-            <li><a href="{{ site.baseurl }}/hpc/about/join.html">Join <span class="glyphicon glyphicon-heart-empty"></span></a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/shares.html">Contributing Member Shares</a></li>
+            <li><a href="{{ site.baseurl }}/about/wynton-phi.html">PHI Compliance</a></li> 
+            <li><a href="{{ site.baseurl }}/about/join.html">Join <span class="glyphicon glyphicon-heart-empty"></span></a></li>
+            <li><a href="{{ site.baseurl }}/about/shares.html">Contributing Member Shares</a></li>
 <!--
-            <li><a href="{{ site.baseurl }}/hpc/about/code-of-conduct.html">Code of conduct</a></li>
+            <li><a href="{{ site.baseurl }}/about/code-of-conduct.html">Code of conduct</a></li>
 -->
             <li role="separator" class="divider"></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/governance.html">Governance</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/user-agreement.html">User Agreement</a></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/citation.html">How to Cite</a></li>
+            <li><a href="{{ site.baseurl }}/about/governance.html">Governance</a></li>
+            <li><a href="{{ site.baseurl }}/about/user-agreement.html">User Agreement</a></li>
+            <li><a href="{{ site.baseurl }}/about/citation.html">How to Cite</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ site.baseurl }}/hpc/about/contact.html">Contact</a></li>
+            <li><a href="{{ site.baseurl }}/about/contact.html">Contact</a></li>
           </ul>
         </li>
       </ul>      
@@ -239,7 +239,7 @@
 <a href="#current-incidents">More details ...</a>
 {% endif %}
 {% else %}
-<a href="{{ site.baseurl }}/hpc/status/index.html#current-incidents">More details ...</a>
+<a href="{{ site.baseurl }}/status/index.html#current-incidents">More details ...</a>
 {% endif %}
 </div>
 {% endif %}
@@ -280,7 +280,7 @@ Source: https://github.com/allejo/jekyll-anchor-headings
 <p class="muted credit" style="font-size: inherits;">
 <a href="https://www.ucsf.edu/">UCSF</a> ::
 <a href="{{ site.organization.url }}">{{ site.organization.name }}</a> :: 
-<a href="{{ site.baseurl }}/hpc/">{{ site.cluster.name }}</a>
+<a href="{{ site.baseurl }}/">{{ site.cluster.name }}</a>
 </p>
       </footer>
     </div>
