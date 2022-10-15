@@ -67,7 +67,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <h2 id="repository_built-in">Module Software Repository: built-in (7)</h2>
 
-Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ site.baseurl }}/about/contact.html">{{ site.cluster.name }}</a><br>
+Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
 
 <h3 id="module_built-in_amber" class="module-name">amber</h3>
@@ -462,7 +462,7 @@ prepend_path(&quot;BATS_ASSERT_HOME&quot;, home)
 <span class="module-description">Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.</span><br>
 Example: <span class="module-example"><code>bats --version</code>, <code>bats --help</code>, <code>man bats</code>, <code>man 7 bats</code>, and <code>bats tests/</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-core">https://github.com/bats-core/bats-core</a>, <a href="https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md">https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/">https://bats-core.readthedocs.io/en/stable/</a> (documentation)</span><br>
-Versions: <span class="module-version">1.7.0, <em>1.8.0</em></span><br>
+Versions: <span class="module-version"><em>1.8.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -6067,4 +6067,4 @@ $(document).ready(function() {
 })
 </script>
 
-[core software]: {{ site.baseurl }}/software/core-software.html
+[core software]: {{ '/software/core-software.html' | relative_url }}
