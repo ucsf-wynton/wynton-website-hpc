@@ -16,8 +16,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Support: A User Issue Tracker
 
-* Website: Host website on GitHub Pages
-
 
 ## Postponed
 
