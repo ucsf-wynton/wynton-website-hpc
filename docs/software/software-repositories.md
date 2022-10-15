@@ -141,7 +141,7 @@ setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton
 <h3 id="module_built-in_matlab-runtime" class="module-name">matlab-runtime</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
+Versions: <span class="module-version">2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, <em>2022a</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -193,7 +193,7 @@ setenv	 		MPI_HOME	/usr/lib64/openmpi3
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code> (SDK only).</span><br>
 Note: <span class="module-note">This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).</span><br>
 URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a>, <a href="https://openjdk.java.net/projects/jdk/">https://openjdk.java.net/projects/jdk/</a> (changelog), <a href="https://github.com/openjdk/jdk">https://github.com/openjdk/jdk</a> (source code)</span><br>
-Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
+Versions: <span class="module-version">1.8.0, 11, <em>18</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;openjdk: Open Java Development Kit&quot;)
@@ -215,6 +215,12 @@ local root = &quot;/usr/lib/jvm&quot;
 local home = pathJoin(root, &quot;java&quot; .. &quot;-&quot; .. version)
 if not isDir(home) then -- isDir() supports symlinked folders
     home = pathJoin(root, &quot;jre&quot; .. &quot;-&quot; .. version)
+end
+
+-- Assert that OpenJDK version still exists, because
+-- it happens at times that older versions are removed
+if not isDir(home) then
+  LmodError(&quot;INTERNAL ERROR: Module &quot; .. name .. &quot;/&quot; .. version .. &quot; is broken, because folder &quot; .. home .. &quot; no longer exists. Please report this to the sysadms.&quot;)
 end
 
 setenv(&quot;JAVA_HOME&quot;, home)
@@ -961,7 +967,7 @@ pushenv(&quot;MROFLAGS&quot;, &quot;--localcores=1 --localmem=8 --limit-loadavg&
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog) <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version">3.18.2, 3.19.2, 3.22.2, 3.23.0, <em>3.23.1</em></span><br>
+Versions: <span class="module-version">3.18.2, 3.19.2, 3.22.2, 3.23.0, 3.23.1, <em>3.24.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2677,7 +2683,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>rstudio</code>.  If you get a blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
 URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-desktop">https://rstudio.com/products/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
 Warning: <span class="module-warning">This software works only on the development nodes. It requires an SSH connection with X11 Forwarding enabled. It does <em>not</em> work with X2Go (gives error &quot;GLX 1.3 or later is required&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
-Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, 2021.09.2-382, <em>2022.02.1-461</em></span><br>
+Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, 2021.09.2-382, 2022.02.1-461, <em>2022.07.2-576</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2714,8 +2720,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.</span><br>
 Example: <span class="module-example"><code>rserver</code>.</span><br>
 URL: <span class="module-url"><a href="https://rstudio.com/products/rstudio/#rstudio-server">https://rstudio.com/products/rstudio/#rstudio-server</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
-Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version"><em>2021.09.2-382</em></span><br>
+Versions: <span class="module-version">2021.09.2-382, <em>2022.02.4-500</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2729,8 +2734,7 @@ whatis(&quot;Keywords: programming, R, GUI&quot;)
 whatis(&quot;URL: https://rstudio.com/products/rstudio/#rstudio-server, https://www.rstudio.com/products/rstudio/release-notes/ (changelog), https://github.com/rstudio/rstudio/ (source code)&quot;)
 whatis([[
 Description: The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.
-Example: `rserver`.
-Warning: This is work under construction!
+Examples: `rserver`.
 ]])
 
 depends_on(&quot;r&quot;)
@@ -2752,8 +2756,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
 Example: <span class="module-example"><code>rsc --help</code>, <code>rsc start</code>, and <code>rsc stop</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
-Warning: <span class="module-warning">This is work under construction!</span><br>
-Versions: <span class="module-version"><em>0.9.1</em></span><br>
+Versions: <span class="module-version">0.10.0, <em>0.11.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2768,7 +2771,6 @@ whatis(&quot;URL: https://github.com/UCSF-CBI/rstudio-server-controller, https:/
 whatis([[
 Description: The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.
 Examples: `rsc --help`, `rsc start`, and `rsc stop`.
-Warning: This is work under construction!
 ]])
 
 depends_on(&quot;r&quot;)
@@ -5890,14 +5892,14 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
 <dl>
   <dd class="module-details">
 <span class="module-description">Protein side-chain conformation prediction program</span><br>
-URL: <span class="module-url"><a href="http://dunbrack.fccc.edu/SCWRL4.php">http://dunbrack.fccc.edu/SCWRL4.php</a></span><br>
+URL: <span class="module-url"><a href="http://dunbrack.fccc.edu/lab/scwrl">http://dunbrack.fccc.edu/lab/scwrl</a></span><br>
 Versions: <span class="module-version"><em>4.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Description: Protein side-chain conformation prediction program&quot;
-module-whatis &quot;URL: http://dunbrack.fccc.edu/SCWRL4.php&quot;
+module-whatis &quot;URL: http://dunbrack.fccc.edu/lab/scwrl&quot;
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/scwrl-4.0/bin
 </code></pre>
 
