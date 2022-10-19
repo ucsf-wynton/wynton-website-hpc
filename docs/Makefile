@@ -22,10 +22,10 @@ endif
 ##   - RubyGems ('bundle', e.g. sudo apt install ruby-bundler)
 ##   - Jekyll (e.g. gem install bundler jekyll github-pages)
 dynamic:
-	cd software; $(MAKE)
+	cd hpc/software; $(MAKE)
 
 dynamic-force:
-	cd software; $(MAKE) force
+	cd hpc/software; $(MAKE) force
 
 init: .git/hooks/pre-commit
 
@@ -47,15 +47,15 @@ wynton:
 	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help
 
 broadcast-off:
-	cd assets/css/ && ln -fs broadcast-off.css broadcast.css
+	cd hpc/assets/css/ && ln -fs broadcast-off.css broadcast.css
 
 broadcast-on:
-	cd assets/css/ && ln -fs broadcast-on.css broadcast.css
+	cd hpc/assets/css/ && ln -fs broadcast-on.css broadcast.css
 
 status-ok: broadcast-off
 	sed -i -E 's/^([[:space:]]*status:)[[:space:]]+(.*)/\1 ok/' _config.yml
 
-_data/users.yml: FORCE
+hpc/_data/users.yml: FORCE
 	echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE | grep -c ^uid:)" > $@.tmp
 	echo "nbr_of_projects: $$(qconf -sprjl | wc -l | grep -vE '^[[:space:]]*0*[[:space:]]*$$')" >> $@.tmp
 	echo "nbr_of_phi_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x '(&(wyntonAccess=TRUE)(ProtectedAccess=TRUE))' | grep -c -E ^ucsfIDNumber:)">> $@.tmp
@@ -65,16 +65,19 @@ _data/users.yml: FORCE
 	  >&2 echo "WARNING: Empty 'nbr_of_project'. Ignoring. Keeping old."; \
 	fi
 
-_data: _data/users.yml
+hpc/_data: hpc/_data/users.yml
 
-assets/data/compute_shares.tsv: FORCE
+_data: hpc/_data
+	cp -p $</* $@/
+
+hpc/assets/data/compute_shares.tsv: FORCE
 	wynton shares tsv > $@.tmp
 	grep -q -E "^# Total queue_slots:[[:space:]]*0$$" $@.tmp || mv $@.tmp $@
 
-assets/data/gpu_shares.tsv: FORCE
+hpc/assets/data/gpu_shares.tsv: FORCE
 	wynton gpushares tsv > $@
 
-assets: assets/data/compute_shares.tsv assets/data/gpu_shares.tsv
+assets: hpc/assets/data/compute_shares.tsv hpc/assets/data/gpu_shares.tsv
 
 deploy:
 	git pull
