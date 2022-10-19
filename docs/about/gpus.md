@@ -35,6 +35,7 @@ d3.text("{{ site.baseurl }}/assets/data/gpu_nodes.tsv", "text/csv", function(hos
   var thead, tbody, tfoot, tr, td, td_status;
   var value, value2;
   var gpus_total = 0;
+  var communal_total = 0;
   
   /* For each row */
   var nentries = 0;
@@ -61,6 +62,10 @@ d3.text("{{ site.baseurl }}/assets/data/gpu_nodes.tsv", "text/csv", function(hos
     tr = tbody.append("tr");
     for (key in row) td = tr.append("td").text(row[key]);
     gpus_total += parseInt(row[3]);
+    
+    if (row[5] == "(communal)") {
+      communal_total += 1;
+    }
 
     nentries += 1;
   });
@@ -71,7 +76,7 @@ d3.text("{{ site.baseurl }}/assets/data/gpu_nodes.tsv", "text/csv", function(hos
   tr.append("td");
   tr.append("td").text(gpus_total + " GPUs");
   tr.append("td");
-  tr.append("td");
+  tr.append("td").text(communal_total + " communal nodes");
   tr.append("td");
 
   $(document).ready(function() {
