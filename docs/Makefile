@@ -11,7 +11,8 @@ JEKYLL_HOST:=${JEKYLL_HOST}
 
 JEKYLL_OPTS=
 ifeq ($(JEKYLL_HOST),selfhost)
-JEKYLL_OPTS=--safe --baseurl '/hpc' --config _config.yml,_config_selfhost.yml
+#JEKYLL_OPTS=--safe --baseurl '/hpc' --config _config.yml,_config_selfhost.yml
+JEKYLL_OPTS=--safe --config _config.yml,_config_selfhost.yml
 endif
 
 
