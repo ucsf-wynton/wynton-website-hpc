@@ -26,7 +26,7 @@ export R_LIBS_USER=/wynton/home/cbi/hb/R/x86_64-pc-linux-gnu-library/4.2-CBI-gcc
 Rscript --version
 Rscript -e ".libPaths()"
 
-cd "$SCRIPT_PATH/../docs/software"
+cd "$SCRIPT_PATH/../docs/hpc/software"
 git pull -X theirs
 make clean
 make build

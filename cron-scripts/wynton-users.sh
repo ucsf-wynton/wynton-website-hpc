@@ -11,6 +11,6 @@ date --rfc-3339=seconds
 
 (
     cd "$WORKDIR" || exit 1;
-    make _data/users.yml;
+    make hpc/_data/users.yml;
     make deploy;
 )

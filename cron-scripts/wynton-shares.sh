@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-TARGET=${TARGET:-$HOME/repositories/UCSF-HPC/wynton/docs/assets/data}
+TARGET=${TARGET:-$HOME/repositories/UCSF-HPC/wynton/docs/hpc/assets/data}
 
 ## wynton shares
 PATH="/wynton/home/cbi/shared/software/CBI-testing/wynton-tools/bin:$PATH"
