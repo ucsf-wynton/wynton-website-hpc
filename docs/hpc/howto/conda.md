@@ -225,6 +225,36 @@ This will install the exact same software versions as when we made the backup.
 
 _Warning_: This is _not_ a fool-proof backup method, because it depends on packages to be available from the package repositories also when you try to restore the Conda environment.  To lower the risk for failure, keep your environments up to date with the latest packages and test frequently that your `myjupyter.yml` file can be restored.
 
+
+## Conda revisions
+
+If you update or installed new packages in your Conda environment and need to rollback to a previous version, it is possible to do this using Conda's revision utility.  To list available revisions in the current Conda environment, use:
+
+```sh
+(myjupyter) [alice@dev2  ~]$ conda list --revisions
+2022-07-28 11:33:35  (rev 0)
+    +_libgcc_mutex-0.1 (defaults/linux-64)
+    +_openmp_mutex-5.1 (defaults/linux-64)
+    +argon2-cffi-21.3.0 (defaults/noarch)
+    +argon2-cffi-bindings-21.2.0 (defaults/linux-64)
+    ...
+
+2022-07-28 11:42:32  (rev 1)
+     ca-certificates  {2022.07.19 (defaults/linux-64) -> 2022.6.15 (conda-forge/linux-64)}
+     certifi  {2022.6.15 (defaults/linux-64) -> 2022.6.15 (conda-forge/linux-64)}
+    +conda-pack-0.7.0 (conda-forge/noarch)
+    +python_abi-3.10 (conda-forge/linux-64)
+```
+
+To rollback to a specific revision, say revision zero, use:
+
+```sh
+(sandbox) [alice@dev2  ~]$ conda install --revision 0
+```
+
+_Warning_: This only works with packages installed using `conda install`.  Packages installed via `python3 -m pip` will _not_ be recorded by the revision system.  In such cases, one has to backup each "revision" manually (see above section).
+
+
 [Conda]: https://conda.io
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [conda-stage]: {{ site.baseurl }}/hpc/howto/conda-stage.html
