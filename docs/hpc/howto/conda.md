@@ -171,8 +171,7 @@ jupyter: command not found
 We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool.  For quick, easy-to-follow instructions, see the [conda-stage] page.
 
 
-
-## Back up and restore Conda environments
+## Back up and restore Conda environments (recommended)
 
 Once you have your Conda environment built, we recommend that you back up its core configuration.  The process is quick and straightforward.  
 
