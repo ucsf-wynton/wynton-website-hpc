@@ -2,11 +2,11 @@
 
 ## UCSF Data Classification Standard & Restricted Data Types
 
-* Please see [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information regarding UCSF's data classification standard:
+* Please see [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard] for more information regarding UCSF's data classification standard:
 
-  - [Personally Identifiable Information (PII)](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard#PII)
+  - [Personally Identifiable Information (PII)]
 
-  - [Protected Health Information (PHI)](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard#phi)
+  - [Protected Health Information (PHI)]
 
 
 ## First step: Wynton accounts
@@ -15,7 +15,7 @@
 
   - link to [learn more about the Wynton cluster]({{ site.baseurl }}/hpc/about/join.html)
   
-  - link to actually [request a Wynton PHI account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)
+  - link to actually [request a Wynton PHI account]
 
 * A link will be emailed to a Statement of Responsibility form that all users applying for PHI access must sign agreeing to the responsibilities of handling PII and/or PHI data, take the training in the handling of PII/PHI data, and keep the training up to date.
 
@@ -47,7 +47,7 @@
 
 * Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ site.baseurl }}/hpc/about/governance.html)
 
-* User end points (e.g. laptops and desktops) connecting to Wynton must meet [UCSF Minimum Security Standards for Electronic Information Resources](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information)
+* User end points (e.g. laptops and desktops) connecting to Wynton must meet [UCSF Minimum Security Standards for Electronic Information Resources]
 
 * PHI users must use PHI-specific nodes on Wynton;
 
@@ -71,3 +71,10 @@
 **Q.** What if I want to share data between `/wynton/protected/group` (PHI) and `/wynton/group` (non-PHI) directories?
 
 **A.** Users with PHI access still have access to `/wynton/group`, as do Wynton non-PHI users. However, PHI data should never be stored under `/wynton/group` and PHI data should never be shared with a user who does not have PHI access.
+
+
+[UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard]: https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard
+[Personally Identifiable Information (PII)]: https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard#PII
+[Protected Health Information (PHI)]: https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard#phi
+[request a Wynton PHI account]: https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f
+[UCSF Minimum Security Standards for Electronic Information Resources]: https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information
