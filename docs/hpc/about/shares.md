@@ -33,7 +33,7 @@ HB 2019-04-29: This works but is a bit tedious to write and read; maybe this
 {% assign slots_1 = pu_1_share | times: slots_total_0 %}
 
 
-Currently, the {{ site.cluster.name }} cluster has in total _member.q<sub>total</sub>_ = {{ site.data.specs.member_q_total }} slots available on the member.q queue.  Jobs on the _member.q_ queue will launch and finish sooner than jobs on the communal, lower-priority _long.q_ queue.  A member.q job will have higher-priority on the CPU than a long.q job in case they run on the same compute node.   It is only contributing members who have access to the member.q queue - non-contributing members will only have access to [queues]({{ site.baseurl }}/hpc/scheduler/queues.html) such as the long.q queue.  **Contributors get _non-expiring, lifetime access_ to a  number of these member.q slots in proportion to their hardware contribution to the cluster.**  The number of member.q slots a particular hardware contribution, which can be monetary(\*) or physical(\*), adds, is based on how much compute power the contribution adds to the cluster.
+Currently, the {{ site.cluster.name }} cluster has in total _member.q<sub>total</sub>_ = {{ site.data.specs.member_q_total }} slots available on the member.q queue.  Jobs on the _member.q_ queue will launch and finish sooner than jobs on the communal, lower-priority _long.q_ queue.  A member.q job will have higher-priority on the CPU than a long.q job in case they run on the same compute node.   It is only contributing members who have access to the member.q queue - non-contributing members will only have access to [queues](/hpc/scheduler/queues.html) such as the long.q queue.  **Contributors get _non-expiring, lifetime access_ to a  number of these member.q slots in proportion to their hardware contribution to the cluster.**  The number of member.q slots a particular hardware contribution, which can be monetary(\*) or physical(\*), adds, is based on how much compute power the contribution adds to the cluster.
 The amount of compute power that contributed hardware adds is based on benchmarking(\*), which result in a _processing-unit score_ (PU) for the contribution.  Currently, there are in total _PU<sub>total</sub>_ = {{ site.data.specs.pu_total }} _contributed_ processing units on {{ site.cluster.name }}.
 
 <div class="alert alert-info" role="alert" markdown="1">
@@ -70,7 +70,7 @@ Below table shows the current amount of contributions in terms of Processing Uni
 
 <!-- markdownlint-disable-file MD011 -->
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ site.baseurl }}/hpc/assets/data/compute_shares.tsv", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/compute_shares.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -122,7 +122,7 @@ d3.text("{{ site.baseurl }}/hpc/assets/data/compute_shares.tsv", "text/csv", fun
 });
 </script>
 
-Source: [compute_shares.tsv]({{ site.baseurl }}/hpc/assets/data/compute_shares.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds to a _functional share_ ("fshare").
+Source: [compute_shares.tsv](/hpc/assets/data/compute_shares.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs member_queue_limits` and `qconf -sprj <project>`).  In SGE terms, a processing unit (PU) corresponds to a _functional share_ ("fshare").
 
 
 

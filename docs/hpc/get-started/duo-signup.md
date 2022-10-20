@@ -278,4 +278,4 @@ Success. Logging you in...
 ```
 
 [Duo Mobile App]: https://duo.com/product/multi-factor-authentication-mfa/duo-mobile-app
-[{{ site.cluster.name }} support staff]: {{ site.baseurl }}/hpc/support/index.html
+[{{ site.cluster.name }} support staff]: /hpc/support/index.html

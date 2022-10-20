@@ -58,11 +58,11 @@ Info: Waiting the cleanup timeout to complete.
 Session: Session terminated at 'Tue Mar  2 13:01:07 2021'.
 ```
 
-**A**. This appears to be a communication problem between x2go and XQuartz. The only way we've found to resolve this issue is to **Completely** remove XQuartz from the macOS computer and then re-install XQuartz. Please follow recommendations for completely removing the XQuartz application and all related files. (Search for any files or folders with the program’s name or developer’s name in the ~/Library/Preferences/, ~/Library/Application Support/ and ~/Library/Caches/ folders.) After re-installation of XQuartz, x2go should work again. If not, please contact [the {{ site.cluster.nickname }} team]({{ site.baseurl }}/hpc/about/contact.html).
+**A**. This appears to be a communication problem between x2go and XQuartz. The only way we've found to resolve this issue is to **Completely** remove XQuartz from the macOS computer and then re-install XQuartz. Please follow recommendations for completely removing the XQuartz application and all related files. (Search for any files or folders with the program’s name or developer’s name in the ~/Library/Preferences/, ~/Library/Application Support/ and ~/Library/Caches/ folders.) After re-installation of XQuartz, x2go should work again. If not, please contact [the {{ site.cluster.nickname }} team](/hpc/about/contact.html).
 
 **Q**. _I tried to change my shell using the unix command `chsh` and I got an error telling me, "chsh: user "alice" does not exist"._
 
-**A**. First, let me assure you, your account does exist! You ARE logged in, after all. However, {{ site.cluster.nickname}} account attributes are managed via a remote directory system which is not manipulable via local tools like `chsh`. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team]({{ site.baseurl }}/hpc/about/contact.html), let us know your preferred shell, and we will change it for you. Note: The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell than these may result in reduced functionality or errors which may be beyond the scope of our support.
+**A**. First, let me assure you, your account does exist! You ARE logged in, after all. However, {{ site.cluster.nickname}} account attributes are managed via a remote directory system which is not manipulable via local tools like `chsh`. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team](/hpc/about/contact.html), let us know your preferred shell, and we will change it for you. Note: The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell than these may result in reduced functionality or errors which may be beyond the scope of our support.
 
 **Q**. _I cannot SSH into the development nodes - I get 'IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!' and 'Host key verification failed.'  What is going on?_
 
@@ -136,7 +136,7 @@ $
 
 **A1**. If you belong to a specific group, we can set up a `/wynton/home/your_group/shared/` folder that group members (part of the same Unix group) have write access to. Any such files will count toward the disk quota of the user who owns the files. The typical use case is then that one or more members maintain subdirectories therein.  If you need this, please drop us an email.  Note, if the `groups` command reports `lsd` for you, then you do not belong to a specific group and can unfortunately not get a group-specific folder.
 
-**A2**. Labs who [purchase additional storage]({{ site.baseurl }}/hpc/about/pricing-storage.html) will get a `/wynton/group/your_group/` folder.  Files written in that folder will not count toward users disk quota.
+**A2**. Labs who [purchase additional storage](/hpc/about/pricing-storage.html) will get a `/wynton/group/your_group/` folder.  Files written in that folder will not count toward users disk quota.
 
 
 ## Miscellaneous
@@ -159,4 +159,4 @@ $ cp /etc/skel/bashrc ~/.bashrc
 
 **Q**. _Our lab has some old nodes we'd like to contribute to {{ site.cluster.name }} in return for priority. Will you take them?_
 
-**A**. Please [get in touch with the {{ site.cluster.nickname }} team]({{ site.baseurl }}/hpc/about/contact.html).
+**A**. Please [get in touch with the {{ site.cluster.nickname }} team](/hpc/about/contact.html).

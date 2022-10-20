@@ -134,6 +134,6 @@ _Tips:_ You can login into a development node in a single call by "jumping" (`-J
 
 [VirtualGL]: https://virtualgl.org
 [XQuartz]: https://www.xquartz.org
-[development node]: {{ site.baseurl }}/hpc/about/specs.html#development-nodes
-[login node]: {{ site.baseurl }}/hpc/about/specs.html#login-nodes
-[SSH key pair]: {{ site.baseurl }}/hpc/howto/log-in-without-pwd.html
+[development node]: /hpc/about/specs.html#development-nodes
+[login node]: /hpc/about/specs.html#login-nodes
+[SSH key pair]: /hpc/howto/log-in-without-pwd.html

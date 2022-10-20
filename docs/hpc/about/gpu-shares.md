@@ -1,5 +1,5 @@
 <div class="alert alert-info" role="alert" markdown="1">
-{{ site.cluster.name }} has {{ site.data.specs.gpu_nodes }} GPU nodes with a total of {{ site.data.specs.gpus }} GPUs available to all users. Among these, {{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} GPUs, were contributed by different research groups. GPU jobs are limited to 2 hours in length when run on GPUs not contributed by the running user's lab.  In contrast, [contributors are _not_ limited to 2-hour GPU jobs on nodes they contributed]({{ site.baseurl }}/hpc/scheduler/queues.html).
+{{ site.cluster.name }} has {{ site.data.specs.gpu_nodes }} GPU nodes with a total of {{ site.data.specs.gpus }} GPUs available to all users. Among these, {{ site.data.specs.gpu_nodes | minus: site.data.specs.communal_gpu_nodes }} GPU nodes, with a total of {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} GPUs, were contributed by different research groups. GPU jobs are limited to 2 hours in length when run on GPUs not contributed by the running user's lab.  In contrast, [contributors are _not_ limited to 2-hour GPU jobs on nodes they contributed](/hpc/scheduler/queues.html).
 There is also one GPU development node that is available to all users.
 </div>
 
@@ -17,7 +17,7 @@ Below table shows which labs have access to dedicated Graphical Processing Unit 
 
 <!-- markdownlint-disable-file MD011 -->
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ site.baseurl }}/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -68,7 +68,7 @@ d3.text("{{ site.baseurl }}/hpc/assets/data/gpu_shares.tsv", "text/csv", functio
 });
 </script>
 
-Source: [gpu_shares.tsv]({{ site.baseurl }}/hpc/assets/data/gpu_shares.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs shared_gpu_limits` and `qconf -shgrp <project>`).
+Source: [gpu_shares.tsv](/hpc/assets/data/gpu_shares.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs shared_gpu_limits` and `qconf -shgrp <project>`).
 
 <style>
 table {

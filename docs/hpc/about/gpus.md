@@ -7,7 +7,7 @@ Several of {{ site.cluster.name}} compute nodes have Graphics Processing Units (
   <dt>GPUs</dt><dd>{{ site.data.specs.gpus }} GPUs ({{ site.data.specs.communal_gpus }} communal and {{ site.data.specs.gpus | minus: site.data.specs.communal_gpus }} contributed GPUs)</dd>
 </dl>
 
-The tables below contain the list of the {{ site.cluster.nickname}} GPU compute nodes and whether the node is contributed by a lab or a communal node contributed by the institution.  Members of groups with contributed GPUs have [extra privileges]({{ site.baseurl }}/hpc/scheduler/queues.html) on the job scheduler for jobs running on their GPU nodes.  If you are a lab interested in contributing a GPU node, please see the [Pricing for Extra Compute]({{ site.baseurl }}/hpc/about/pricing-compute.html) page.
+The tables below contain the list of the {{ site.cluster.nickname}} GPU compute nodes and whether the node is contributed by a lab or a communal node contributed by the institution.  Members of groups with contributed GPUs have [extra privileges](/hpc/scheduler/queues.html) on the job scheduler for jobs running on their GPU nodes.  If you are a lab interested in contributing a GPU node, please see the [Pricing for Extra Compute](/hpc/about/pricing-compute.html) page.
 
 
 <script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
@@ -19,7 +19,7 @@ The tables below contain the list of the {{ site.cluster.nickname}} GPU compute 
 
 <!-- markdownlint-disable-file MD011 -->
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ site.baseurl }}/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -88,4 +88,4 @@ d3.text("{{ site.baseurl }}/hpc/assets/data/gpu_nodes.tsv", "text/csv", function
 });
 </script>
 
-Source: [gpu_nodes.tsv]({{ site.baseurl }}/hpc/assets/data/gpu_nodes.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data are manually updated.
+Source: [gpu_nodes.tsv](/hpc/assets/data/gpu_nodes.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data are manually updated.

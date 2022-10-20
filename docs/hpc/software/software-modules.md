@@ -127,5 +127,5 @@ When loading a _software repository_ (`module load <repos>`), it will append its
 [R]: https://www.r-project.org
 [Lmod]: https://github.com/TACC/Lmod
 [Lmod documentation]: https://lmod.readthedocs.io/en/latest/
-[core software]: {{ site.baseurl }}/hpc/software/core-software.html
-[Software Repositories]: {{ site.baseurl }}/hpc/software/software-repositories.html
+[core software]: /hpc/software/core-software.html
+[Software Repositories]: /hpc/software/software-repositories.html

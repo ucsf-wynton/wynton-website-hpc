@@ -138,4 +138,4 @@ irb 1.3.5 (2021-04-03)
 * [Product Documentation for Red Hat Developer Toolset](https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/)
 
 
-[core-software]: {{ site.baseurl }}/hpc/software/core-software.html
+[core-software]: /hpc/software/core-software.html

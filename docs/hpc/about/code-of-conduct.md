@@ -76,5 +76,5 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
-[contacting the project team]: {{ site.baseurl }}/hpc/about/contact.html
+[contacting the project team]: /hpc/about/contact.html
 

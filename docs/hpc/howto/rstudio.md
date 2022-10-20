@@ -1,6 +1,6 @@
 # Work with RStudio
 
-R is available on {{ site.cluster.name }} via a [contributed environment module]({{ site.baseurl }}/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio IDE, there are two options:
+R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio IDE, there are two options:
 
 1. The **RStudio Server** via the web browser (recommended)
 
@@ -104,6 +104,6 @@ If you get a blank window, which some macOS users have reported, retry with:
 To exit the RStudio Desktop, type `quit()` at the R prompt, or press <kbd>Ctrl-C</kbd> in the above terminal.
 
 
-[CBI software stack]: {{ site.baseurl }}/hpc/software/software-repositories.html
-[Work with R]: {{ site.baseurl }}/hpc/howto/r.html
-[SSH with X11 forwarding enabled]: {{ site.baseurl }}/hpc/howto/gui-x11fwd.html#x11-forwarding-over-ssh
+[CBI software stack]: /hpc/software/software-repositories.html
+[Work with R]: /hpc/howto/r.html
+[SSH with X11 forwarding enabled]: /hpc/howto/gui-x11fwd.html#x11-forwarding-over-ssh

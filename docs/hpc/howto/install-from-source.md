@@ -269,7 +269,7 @@ You only need to load these compiler tools prior to installing the software.  Wi
 
 
 
-[CentOS Software Collections (SCLs)]: {{ site.baseurl }}/hpc/software/scl.html#development-nodes
-[CBI software repository]: {{ site.baseurl }}/hpc/software/software-repositories.html
-[Support Channels]: {{ site.baseurl }}/hpc/support/index.html
+[CentOS Software Collections (SCLs)]: /hpc/software/scl.html#development-nodes
+[CBI software repository]: /hpc/software/software-repositories.html
+[Support Channels]: /hpc/support/index.html
 [samtools]: https://github.com/samtools/samtools

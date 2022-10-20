@@ -89,7 +89,7 @@ enabled.  To enable the SBGrid, in the shell or in a job script, do:
 
 [SBGrid]: https://sbgrid.org/
 [SBGrid Member Labs]: https://sbgrid.org/members/order/-institutions/
-[contact us]: {{ site.baseurl }}/hpc/about/contact.html
+[contact us]: /hpc/about/contact.html
 
 <style>
 dt {

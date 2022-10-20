@@ -51,4 +51,4 @@ When you’re done, log into Globus, go to 'Collections' and then 'Administered 
 ['UCSF {{ site.cluster.nickname }}' Collection]: https://app.globus.org/file-manager/collections/68f06816-cd00-4bf3-ae1f-0597a07ed118/overview
 ['Collections']: https://app.globus.org/file-manager/collections/68f06816-cd00-4bf3-ae1f-0597a07ed118/shares
 
-[Globus for {{ site.cluster.nickname }}]: {{ site.baseurl }}/hpc/transfers/globus.html
+[Globus for {{ site.cluster.nickname }}]: /hpc/transfers/globus.html

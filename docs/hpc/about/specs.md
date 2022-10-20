@@ -34,7 +34,7 @@
 (\*) GIT+SSH access on development nodes is restricted to git.bioconductor.org, bitbucket.org, gitea.com, github.com / gist.github.com, gitlab.com, cci.lbl.gov, and git.ucsf.edu.
 
 All nodes on the cluster runs [CentOS] 7 which is updated on a regular basis.
-The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{ site.baseurl }}/hpc/scheduler/queues.html) for both communal and lab-priority tasks.
+The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues](/hpc/scheduler/queues.html) for both communal and lab-priority tasks.
 
 
 
@@ -42,7 +42,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues]({{
 
 ### Login Nodes
 
-The [cluster can be accessed]({{ site.baseurl }}/hpc/get-started/access-cluster.html) via SSH to one of two login nodes:
+The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to one of two login nodes:
 
 1. `{{ site.login1.hostname }}`
 2. `{{ site.login2.hostname }}`
@@ -62,7 +62,7 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 
 ### Development Nodes
 
-The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes]({{ site.baseurl }}/hpc/get-started/development-prototyping.html).
+The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes](/hpc/get-started/development-prototyping.html).
 
 Node                        | Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
 ----------------------------|---------------:|---------:|-----------------:|------------------------------:|-------------------:|
@@ -81,7 +81,7 @@ Source: `nproc --all`, `free -ht`, `df -B /scratch`, `lscpu`, and `lspci | grep 
 
 The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
 
-The compute nodes can only be utilized by [submitting jobs via the scheduler]({{ site.baseurl }}/hpc/scheduler/submit-jobs.html) - it is _not_ possible to explicitly log in to compute nodes.
+The compute nodes can only be utilized by [submitting jobs via the scheduler](/hpc/scheduler/submit-jobs.html) - it is _not_ possible to explicitly log in to compute nodes.
 
 
 ## File System
@@ -101,7 +101,7 @@ There are no per-user quotas in these scratch spaces.  **Files not added or modi
  * `/wynton/home`: {{ site.data.specs.home_size_total }} TiB storage space
  * `/wynton/group`: {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
-Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group` by either mounting their existing storage or [purchase new]({{ site.baseurl }}/hpc/about/pricing-storage.html).
+Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group` by either mounting their existing storage or [purchase new](/hpc/about/pricing-storage.html).
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
 While waiting to receive purchased storage, users may use the global scratch space, which is "unlimited" in size with the important limitation that files older than two weeks will be deleted automatically.
@@ -134,7 +134,7 @@ The cluster itself connects to NSF's [Pacific Research Platform] at a speed of 1
 
 
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ site.baseurl }}/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
   // extract date from header comments
   var timestamp = host_table.match(/^[#] Created on: [^\r\n]*[\r\n]+/mg, '')[0];
   timestamp = timestamp.replace(/^[#] Created on: /g, '');
@@ -266,4 +266,4 @@ ttr:last-child { border-top: 2px solid #000; }
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
 [wyntonquery]: https://github.com/UCSF-HPC/wyntonquery
-[host_table.tsv]: {{ site.baseurl }}/hpc/assets/data/host_table.tsv
+[host_table.tsv]: /hpc/assets/data/host_table.tsv

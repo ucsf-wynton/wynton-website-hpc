@@ -82,7 +82,7 @@ nslots = str2num(nslots);               % coerce to 'double'
 fprintf('Number of slots available: %d\n', nslots);
 ```
 
-See also the how-to page on ['Work with MATLAB']({{ site.baseurl }}/hpc/howto/matlab.html).
+See also the how-to page on ['Work with MATLAB'](/hpc/howto/matlab.html).
 
 
 
@@ -103,7 +103,7 @@ nslots <- as.integer(nslots)         # coerce to an 'integer'
 message("Number of slots available: ", nslots)
 ```
 
-See also the how-to page on ['Work with R']({{ site.baseurl }}/hpc/howto/r.html).
+See also the how-to page on ['Work with R'](/hpc/howto/r.html).
 
 
 ### Ruby

@@ -66,11 +66,11 @@ For example,
          alice| 99002||   88.71 GiB| 1000.00 GiB||   645266|unlimited
 ```
 
-tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your [500-GiB home storage space]({{ site.baseurl }}/hpc/about/specs.html) is reported as 1000 GiB by the `beegfs-ctl` tool.
+tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your [500-GiB home storage space](/hpc/about/specs.html) is reported as 1000 GiB by the `beegfs-ctl` tool.
 
 ### Group disk quota on `/wynton/group/` and `/wynton/protected/project/`
 
-If your group/lab (e.g. `boblab`) has [purchased additional storage]({{ site.baseurl }}/hpc/about/pricing-storage.html), it is available under `/wynton/group/`, (and possibly also under `/wynton/protected/group/` (PHI), or `/wynton/protected/project/` (PHI)).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
+If your group/lab (e.g. `boblab`) has [purchased additional storage](/hpc/about/pricing-storage.html), it is available under `/wynton/group/`, (and possibly also under `/wynton/protected/group/` (PHI), or `/wynton/protected/project/` (PHI)).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=12 --gid "$(id --group)"
@@ -104,7 +104,7 @@ To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: There are no user or group quotas on `/wynton/scratch/`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically]({{ site.baseurl }}/hpc/about/specs.html).
+_Comment_: There are no user or group quotas on `/wynton/scratch/`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically](/hpc/about/specs.html).
 
 
 

@@ -22,7 +22,7 @@ The cluster provides different queues ("running areas") that each is optimized f
   - Availability: all compute nodes except GPU and institutionally purchased nodes
   - Compute power: {{ site.data.specs.pu_total }} processing units
   - Number of slots: {{ site.data.specs.member_q_total }}
-  - Quota: Proportional to [your lab's contributed share]({{ site.baseurl }}/hpc/about/shares.html) on the cluster.  When a lab has exhausted all its available member.q slots, additional jobs scheduled by lab members will spill over to the long.q queue
+  - Quota: Proportional to [your lab's contributed share](/hpc/about/shares.html) on the cluster.  When a lab has exhausted all its available member.q slots, additional jobs scheduled by lab members will spill over to the long.q queue
   - Purpose: Research groups who need more computational resources than the above communal queues can contribute resources to the {{ site.cluster.name }} cluster and gain priority access corresponding to the contribution
 
 * **gpu.q**:
@@ -56,13 +56,13 @@ _Comment_: Here "runtime" means "walltime", i.e. the runtime of a job is how lon
 
 ## Usage
 
-Except for [the gpu.q and 4gpu.q queues]({{ site.baseurl }}/hpc/scheduler/gpu.html), there is often _no need_ to explicitly specify what queue your job should be submitted to.  Instead, it is sufficient to [specify the resources] that your jobs need, e.g. the maximum processing time (e.g. `-l h_rt=00:10:00` for ten minutes), the maximum memory usage (e.g. `-l mem_free=1G` for 1 GiB of RAM), and the number of cores (e.g. `-pe smp 2` for two cores).  When the scheduler knows about your job's resource need, it will allocate your job to a compute node that better fits your needs and your job is likely to finish sooner.
+Except for [the gpu.q and 4gpu.q queues](/hpc/scheduler/gpu.html), there is often _no need_ to explicitly specify what queue your job should be submitted to.  Instead, it is sufficient to [specify the resources] that your jobs need, e.g. the maximum processing time (e.g. `-l h_rt=00:10:00` for ten minutes), the maximum memory usage (e.g. `-l mem_free=1G` for 1 GiB of RAM), and the number of cores (e.g. `-pe smp 2` for two cores).  When the scheduler knows about your job's resource need, it will allocate your job to a compute node that better fits your needs and your job is likely to finish sooner.
 
 Only in rare cases there should be a need to specify through what queue your job should run.  To do this, you can use the `-q <name>` option of `qsub`, e.g. `qsub -q long.q my_script`.
 
 
 
-[specify the resources]: {{ site.baseurl }}/hpc/scheduler/submit-jobs.html
+[specify the resources]: /hpc/scheduler/submit-jobs.html
 
 <!--
 NOTES:

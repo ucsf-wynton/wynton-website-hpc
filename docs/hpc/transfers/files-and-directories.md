@@ -15,7 +15,7 @@ For _non-mounted storage_, files may be transferred to and from the cluster via 
 For _file downloads_ from online resources, tools such as `curl`, `wget`, and `rsync` may be used.
 
 <div class="alert alert-warning" role="alert" markdown="1">
-[Compute nodes]({{ site.baseurl }}/hpc/about/specs.html#compute-nodes) have no internet access, i.e. they cannot be used for file transfers other than between mount points.  Although file transfers can also be done via the login nodes, it is recommended to use one of the [dedicated data transfer nodes]({{ site.baseurl }}/hpc/about/specs.html#data-transfer-nodes), which provides ten times faster transfer rates.
+[Compute nodes](/hpc/about/specs.html#compute-nodes) have no internet access, i.e. they cannot be used for file transfers other than between mount points.  Although file transfers can also be done via the login nodes, it is recommended to use one of the [dedicated data transfer nodes](/hpc/about/specs.html#data-transfer-nodes), which provides ten times faster transfer rates.
 </div>
 
 
@@ -110,4 +110,4 @@ When using [FileZilla], do:
 
 [Cyberduck]: https://cyberduck.io/
 [FileZilla]: https://filezilla-project.org/
-[Log in without Password]: {{ site.baseurl }}/hpc/howto/log-in-without-pwd.html
+[Log in without Password]: /hpc/howto/log-in-without-pwd.html

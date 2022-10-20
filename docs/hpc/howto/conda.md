@@ -268,4 +268,4 @@ _Warning_: This only works with packages installed using `conda install`.  Packa
 
 [Conda]: https://conda.io
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
-[conda-stage]: {{ site.baseurl }}/hpc/howto/conda-stage.html
+[conda-stage]: /hpc/howto/conda-stage.html

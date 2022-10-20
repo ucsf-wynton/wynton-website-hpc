@@ -8,7 +8,7 @@ As of now JHub can be accessed either by connecting to VPN or from campus networ
 
 Please set up your own environment before getting started. The base environment on JupyterHub is installed locally on the server and won't be accessible from the cluster. 
 
-There are several ways one can set up an environment, we recommend using `virtualenv`. See [Installing packages to a virtual environment]({{ site.baseurl }}/hpc/howto/python.html#2-installing-to-a-virtual-environment-aka-virtualenv) for instructions.
+There are several ways one can set up an environment, we recommend using `virtualenv`. See [Installing packages to a virtual environment](/hpc/howto/python.html#2-installing-to-a-virtual-environment-aka-virtualenv) for instructions.
 
 
 ## Creating an IPython kernel for virtual environment

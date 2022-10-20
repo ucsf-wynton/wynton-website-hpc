@@ -79,7 +79,7 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"><!-- 2 kB --></script>
 
 <script type="text/javascript" charset="utf-8">
-d3.text("{{ site.baseurl }}/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
+d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
   // drop header comments
   host_table = host_table.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
   host_table = d3.tsv.parse(host_table);
