@@ -53,7 +53,7 @@
 
   - login nodes: `plog1`
   
-  - development nodes: `pdev1`, `pgpudev1`
+  - development nodes: `pdev1` and `pgpudev1`
 
   - data-transfer nodes: `pdt1` and `pdt2`
 
