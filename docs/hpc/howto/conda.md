@@ -166,69 +166,9 @@ jupyter: command not found
 ```
 
 
+## Speed up software by auto-staging Conda environment (recommended)
 
-
-## Configure auto-staging of a Conda environment (recommended)
-
-We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in the software to run significantly faster.  Auto-staging is straightforward to configure using the [conda-stage] tool, e.g.
-
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
-[alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
-[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable
-INFO: Configuring automatic staging and unstaging of original Conda environment  ...
-INFO: Enabled auto-staging
-INFO: Enabled auto-unstaging
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
-[alice@{{ site.devel.name }} ~]$ 
-```
-
-Next time you activate the Conda environment, it'll be automatically packaged and then staged onto the local disk, and therefore run much faster there:
-
-```sh
-INFO: Staging current Conda environment ({{ site.user.home }}/.conda/envs/myjupyter) to local disk ...
-INFO: [ONCE] Installing conda-pack, because it was missing ...
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
-
-## Package Plan ##
-
-  environment location: {{ site.user.home }}/.conda/envs/myjupyter
-
-  added / updated specs:
-    - conda-pack
-
-
-The following NEW packages will be INSTALLED:
-
-  conda-pack         conda-forge/noarch::conda-pack-0.7.0-pyh6c4a22f_0
-
-...
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-INFO: Total installation time: 30 seconds
-INFO: [ONCE] Packaging Conda environment, because it hasn't been done before ...
-Collecting packages...
-Packing environment at '{{ site.user.home }}/.conda/envs/myjupyter' to '{{ site.user.home }}/.conda/envs/.tmp.myjupyter.tar.gz'
-[########################################] | 100% Completed | 42.6s
-INFO: Total 'conda-pack' time: 51 seconds
-INFO: Extracting {{ site.user.home }}/.conda/envs/myjupyter.tar.gz (91500087 bytes; 2022-09-17 09:00:19.000000000 -0700) to /scratch/alice/conda-stage-gleN/myjupyter
-INFO: Total extract time: 4 seconds
-INFO: Disable any /scratch/alice/conda-stage-gleN/myjupyter/etc/conda/activate.d/*.conda-stage-auto.sh scripts
-INFO: Activating staged environment
-INFO: Unpacking (relocating)
-INFO: Total 'conda-unpack' time: 0 seconds
-INFO: Making staged environment read-only (use --writable to disable)
-INFO: Activating staged Conda environment: /scratch/alice/conda-stage-gleN/myjupyter
-
-(/scratch/alice/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version               
-6.4.12
-(/scratch/alice/conda-stage-2Umb/myjupyter) [alice@{{ site.devel.name }} ~]$ 
-```
-
-Note that the slow packing step will one have to be done this first time. A following calls to `conda activate myjupyter` will be quick.  For more details, see the instructions and benchmarks on the [conda-stage] page.
+We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool.  For quick, easy-to-follow instructions, see the [conda-stage] page.
 
 
 [Conda]: https://conda.io
