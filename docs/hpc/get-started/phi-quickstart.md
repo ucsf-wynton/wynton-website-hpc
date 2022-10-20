@@ -43,7 +43,7 @@
 
 ## User responsibilities for PHI
 
-* Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ site.baseurl }}/hpc/about/governance.html)
+* Read and comply with the {{ site.cluster.name }} [User Agreement and Disclaimer]({{ site.baseurl }}/hpc/about/user-agreement.html)
 
 * Abide by the statement of {{ site.cluster.name }} [Purpose, Principles and Governance]({{ site.baseurl }}/hpc/about/governance.html)
 
