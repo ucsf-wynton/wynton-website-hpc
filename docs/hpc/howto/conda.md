@@ -171,6 +171,61 @@ jupyter: command not found
 We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool.  For quick, easy-to-follow instructions, see the [conda-stage] page.
 
 
+
+## Back up and restore Conda environments
+
+Once you have your Conda environment built, we recommend that you back up its core configuration.  The process is quick and straightforward.  
+
+For example, to back up the above `myjupyter` environment, call:
+
+```sh
+[alice@dev2  ~]$ conda env export --name myjupyter | grep -v "^prefix: " > myjupyter.yml
+```
+
+This is useful:
+
+* when migrating the environment from {{ site.cluster.nickname }}] to another Conda versions, another computer, or another HPC environment
+
+* for sharing the environment with collaborators
+
+* for making a snapshot of the software stack used in a project
+
+* for disaster recovery, e.g. if you remove the Conda environment by mistake
+Backup
+
+
+To restore a backed up Conda environment from a yaml file, _on the target machine_:
+
+1. download the yaml file, e.g. `myjupyter.yml`
+
+2. make sure there is no existing environment with the same name, i.e. check `conda env list`
+
+3. create a new Conda environment from the yaml file
+
+
+For example, assume we have downloaded `myjupyter.yml` to our local machine.  Then we start by getting the name of the backed up Conda environment and making sure it does not already exist;
+
+```sh
+{local}$ grep "name:" myjupyter.yml
+name: myjupyter
+
+{local}$ conda env list
+# conda environments:
+#
+sandbox  /home/aliceb/.conda/envs/sandbox
+base     /path/to/anaconda3
+```
+
+When have confirmed that there is no name clash, we can restore the backed up environment on our local machine using:
+
+```sh
+{local}$ conda env create -f myjupyter.yml 
+```
+
+This will install the exact same software versions as when we made the backup.
+
+_Warning_: This is _not_ a fool-proof backup method, because it depends on packages to be available from the package repositories also when you try to restore the Conda environment.  To lower the risk for failure, keep your environments up to date with the latest packages and test frequently that your `myjupyter.yml` file can be restored.
+
 [Conda]: https://conda.io
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [conda-stage]: {{ site.baseurl }}/hpc/howto/conda-stage.html
