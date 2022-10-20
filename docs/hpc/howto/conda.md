@@ -1,5 +1,5 @@
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ **This is page is under development.** Until finalized, you have use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-09-17
+⚠️ **This is page is under development.** Until finalized, you have use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-20
 </div>
 
 # Work with Conda
@@ -168,29 +168,39 @@ jupyter: command not found
 
 ## Speed up software by auto-staging Conda environment (recommended)
 
-We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool.  For quick, easy-to-follow instructions, see the [conda-stage] page.
-
-
-## Back up and restore Conda environments (recommended)
-
-Once you have your Conda environment built, we recommend that you back up its core configuration.  The process is quick and straightforward.  
-
-For example, to back up the above `myjupyter` environment, call:
+We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool, e.g.
 
 ```sh
-[alice@dev2  ~]$ conda env export --name myjupyter | grep -v "^prefix: " > myjupyter.yml
+[alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
+[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable
+INFO: Configuring automatic staging and unstaging of original Conda environment  ...
+INFO: Enabled auto-staging
+INFO: Enabled auto-unstaging
+```
+
+For the complete, easy-to-follow instructions, see the [conda-stage] documentation.
+
+
+## Back up, migrate, and restore Conda environments (recommended)
+
+Once you have your Conda environment built, we recommend that you back up its core configuration.  The process is quick and straightforward.  For example, to back up the above `myjupyter` environment, call:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda env export --name myjupyter | grep -v "^prefix: " > myjupyter.yml
+[alice@{{ site.devel.name }} ~]$ ls -l myjupyter.yml
+-rw-rw-r-- 1 alice boblab 2966 Oct 19 18:21 myjupyter.yml
 ```
 
 This is useful:
 
-* when migrating the environment from {{ site.cluster.nickname }}] to another Conda versions, another computer, or another HPC environment
+* when migrating the environment from {{ site.cluster.nickname }} to another Conda versions, another computer, or another HPC environment
 
 * for sharing the environment with collaborators
 
 * for making a snapshot of the software stack used in a project
 
 * for disaster recovery, e.g. if you remove the Conda environment by mistake
-Backup
 
 
 To restore a backed up Conda environment from a yaml file, _on the target machine_:
@@ -228,10 +238,11 @@ _Warning_: This is _not_ a fool-proof backup method, because it depends on packa
 
 ## Conda revisions
 
-If you update or installed new packages in your Conda environment and need to rollback to a previous version, it is possible to do this using Conda's revision utility.  To list available revisions in the current Conda environment, use:
+If you updated or installed new packages in your Conda environment and need to roll back to a previous version, it is possible to do this using Conda's revision utility.  To list available revisions in the current Conda environment, use:
 
 ```sh
-(myjupyter) [alice@dev2  ~]$ conda list --revisions
+[alice@{{ site.devel.name }} ~]$ CONDA_STAGE=false conda activate myjupyter
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda list --revisions
 2022-07-28 11:33:35  (rev 0)
     +_libgcc_mutex-0.1 (defaults/linux-64)
     +_openmp_mutex-5.1 (defaults/linux-64)
@@ -246,13 +257,13 @@ If you update or installed new packages in your Conda environment and need to ro
     +python_abi-3.10 (conda-forge/linux-64)
 ```
 
-To rollback to a specific revision, say revision zero, use:
+To roll back to a specific revision, say revision zero, use:
 
 ```sh
-(sandbox) [alice@dev2  ~]$ conda install --revision 0
+(myjupyter) [alice@{{ site.devel.name }} ~]$ conda install --revision 0
 ```
 
-_Warning_: This only works with packages installed using `conda install`.  Packages installed via `python3 -m pip` will _not_ be recorded by the revision system.  In such cases, one has to backup each "revision" manually (see above section).
+_Warning_: This only works with packages installed using `conda install`.  Packages installed via `python3 -m pip install` will _not_ be recorded by the revision system.  In such cases, we have to do manual backup snapshots (as explained above).
 
 
 [Conda]: https://conda.io
