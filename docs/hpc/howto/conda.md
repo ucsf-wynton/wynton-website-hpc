@@ -1,5 +1,5 @@
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ **This is page is under development.** Until finalized, you must use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-20
+⚠️ **This is page is under development.** Until finalized, you must use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-21
 </div>
 
 # Working with Conda
@@ -287,16 +287,18 @@ conda info | grep active
     active env location : {{ site.user.home }}/miniconda3
 ```
 
-This might sound convenient, but we _strongly recommend_ against doing so.  The reason is that Conda software stacks have a great chance of causing conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  _Note_, if you never installed Conda yourself, and only used `module load CBI miniconda3-py39`, then you should not have this problem.
+This auto-activation might sound convenient, but we _strongly recommend_ against using it, because Conda software stacks have a great chance to cause conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless, hard-to-understand problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  To clarify, if you never installed Conda yourself, and only used `module load CBI miniconda3-py39`, then you should not have this problem.
 
 To reconfigure Conda to no longer activate the 'base' Conda environment by default, call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda config --set auto_activate_base false
-[alice@{{ site.devel.name }} ~]$ 
+(base) [alice@{{ site.devel.name }} ~]$ conda config --set auto_activate_base false
+(base) [alice@{{ site.devel.name }} ~]$ 
 ```
 
-If you want to retire you personal Conda installation and move to only using `module load CBI miniconda3-py39`, we recommend to also uninstall the Conda set up that was injected to your `~/.bashrc` file by calling:
+Next time you log in, the 'base' environment should no longer be activated by default.
+
+If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniconda3-py39`, you can uninstall your personal Conda installation that was injected to your `~/.bashrc` file by calling:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda init --reverse
