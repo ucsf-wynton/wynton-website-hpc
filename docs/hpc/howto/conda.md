@@ -6,10 +6,10 @@
 
 [Conda] is a package manager and an environment management system.  It's popular, because it simplifies installation of many scientific software tools.  There are two main distributions of Conda:
 
-1. Anaconda - comes with more than 1,500 scientific packages (~3 GiB of disk space) [_not_ preinstalled on  {{ site.cluster.nickname }}]
+1. Anaconda - comes with more than 1,500 scientific packages (~3 GiB of disk space) [_not_ preinstalled on {{ site.cluster.nickname }}]
 2. [Miniconda] - a small subset of the much larger Anaconda distribution (~0.5 GiB of disk space) [**recommended**; preinstalled on {{ site.cluster.nickname }}]
 
-Both come with Python and `conda` commands.  We _recommend_ working with the smaller Miniconda distribution, especially since it is preinstalled on {{ site.cluster.nickname }}].  Using Miniconda, you can install additional scientific packages as needed using the `conda install ...` command.
+Both come with Python and `conda` commands.  We _recommend_ working with the smaller Miniconda distribution, especially since it is preinstalled on {{ site.cluster.nickname }}.  Using Miniconda, you can install additional scientific packages as needed using the `conda install ...` command.
 
 
 ## Loading Miniconda
@@ -264,6 +264,59 @@ To roll back to a specific revision, say revision zero, use:
 ```
 
 _Warning_: This only works with packages installed using `conda install`.  Packages installed via `python3 -m pip install` will _not_ be recorded by the revision system.  In such cases, we have to do manual backup snapshots (as explained above).
+
+
+## Appendix
+
+### Disable automatic activation of the 'base' environment (once)
+
+If you previously have _installed_ Conda yourself, there is a risk that it installed itself into your `~/.bashrc` file such that it automatically activates the 'base' environment whenever you start a new shell, e.g.
+
+```sh
+{local}$ ssh alice@{{ site.login.hostname }}
+alice1@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
+(base) [alice@{{ site.login.name }} ~]$ 
+```
+
+If you see a `(base)` prefix in your prompt, then you have this set up and the Conda 'base' environment is active.  You can verify this by querying `conda info` as:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda info | grep active
+conda info | grep active
+     active environment : base
+    active env location : {{ site.user.home }}/miniconda3
+```
+
+This might sound convenient, but we _strongly recommend_ against doing so.  The reason is that Conda software stacks have a great chance of causing conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  _Note_, if you never installed Conda yourself, and only used `module load CBI miniconda3-py39`, then you should not have this problem.
+
+To reconfigure Conda to no longer activate the 'base' Conda environment by default, call:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda config --set auto_activate_base false
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+If you want to retire you personal Conda installation and move to only using `module load CBI miniconda3-py39`, we recommend to also uninstall the Conda set up that was injected to your `~/.bashrc` file by calling:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ conda init --reverse
+no change     {{ site.user.home }}/miniconda3/condabin/conda
+no change     {{ site.user.home }}/miniconda3/bin/conda
+no change     {{ site.user.home }}/miniconda3/bin/conda-env
+no change     {{ site.user.home }}/miniconda3/bin/activate
+no change     {{ site.user.home }}/miniconda3/bin/deactivate
+no change     {{ site.user.home }}/miniconda3/etc/profile.d/conda.sh
+no change     {{ site.user.home }}/miniconda3/etc/fish/conf.d/conda.fish
+no change     {{ site.user.home }}/miniconda3/shell/condabin/Conda.psm1
+no change     {{ site.user.home }}/miniconda3/shell/condabin/conda-hook.ps1
+no change     {{ site.user.home }}/miniconda3/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     {{ site.user.home }}/miniconda3/etc/profile.d/conda.csh
+modified      {{ site.user.home }}/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+[alice@{{ site.devel.name }} ~]$ conda init --reverse
+```
 
 
 [Conda]: https://conda.io
