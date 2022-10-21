@@ -144,7 +144,7 @@ Executing transaction: done
 
 ## Activating a Conda environment (required)
 
-After an enviroment is created, the next time you log in to a development node, you can set `myjupyter` (or any other Conda environment you've created) as your active environment by calling:
+After an environment is created, the next time you log in to a development node, you can set `myjupyter` (or any other Conda environment you've created) as your active environment by calling:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
