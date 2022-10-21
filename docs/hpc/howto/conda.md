@@ -268,7 +268,7 @@ _Warning_: This only works with packages installed using `conda install`.  Packa
 
 ## Appendix
 
-### Disable automatic activation of the 'base' environment (once)
+### Disable automatic activation of the 'base' environment (highly recommended)
 
 If you previously have _installed_ Conda yourself, there is a risk that it installed itself into your `~/.bashrc` file such that it automatically activates the 'base' environment whenever you start a new shell, e.g.
 
