@@ -1,15 +1,15 @@
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ **This is page is under development.** Until finalized, you have use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-20
+⚠️ **This is page is under development.** Until finalized, you must use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-20
 </div>
 
-# Work with Conda
+# Working with Conda
 
-[Conda] is a package-manager and an environment management system.  It's popular, because it simplifies installation of several scientific software tools.  There are two main distributions of Conda:
+[Conda] is a package manager and an environment management system.  It's popular, because it simplifies installation of many scientific software tools.  There are two main distributions of Conda:
 
 1. Anaconda - comes with more than 1,500 scientific packages (~3 GiB of disk space) [_not_ preinstalled on  {{ site.cluster.nickname }}]
 2. [Miniconda] - a small subset of the much larger Anaconda distribution (~0.5 GiB of disk space) [**recommended**; preinstalled on {{ site.cluster.nickname }}]
 
-Both comes with Python and `conda` commands.  We _recommend_ to work with the smaller Miniconda distribution, especially since it is preinstalled on {{ site.cluster.nickname }}].  Using Miniconda, you can install additional scientific packages as needed using the `conda install ...` command.
+Both come with Python and `conda` commands.  We _recommend_ working with the smaller Miniconda distribution, especially since it is preinstalled on {{ site.cluster.nickname }}].  Using Miniconda, you can install additional scientific packages as needed using the `conda install ...` command.
 
 
 ## Loading Miniconda
@@ -31,7 +31,7 @@ conda 4.12.0
 Python 3.9.12
 ```
 
-To see what software packages comes with this Miniconda distribution, call:
+To see what software packages come with this Miniconda distribution, call:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda list
@@ -81,9 +81,9 @@ zlib                      1.2.12               h7f8727e_1
 ```
 
 
-## Create a Conda environment (required)
+## Creating a Conda environment (required)
 
-Working with Conda _environments_ is a mechanism for installing specific software tools and versions in a controlled manner.  It is required to use Conda environments, when using the **miniconda3-py39** module.
+A Conda _environment_ is a mechanism for installing extra software tools and versions beyond the base Miniconda distribution in a controlled manner.  When using the **miniconda3-py39** module, a Conda environment must be used to install extra software. The following command creates a new `myjupyter` environment:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda create -n myjupyter notebook
@@ -144,7 +144,7 @@ Executing transaction: done
 
 ## Activating a Conda environment (required)
 
-Next time you log in to a development node, you can activate the `myjupyter`, or any other Conda environment you've created by:
+After an enviroment is created, the next time you log in to a development node, you can set `myjupyter` (or any other Conda environment you've created) as your active environment by calling:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
@@ -155,7 +155,7 @@ Next time you log in to a development node, you can activate the `myjupyter`, or
 (myjupyter) [alice@{{ site.devel.name }} ~]$
 ```
 
-Note how the command-line prompt is prefixed with `(myjupyter)`; it highlights that Conda environment `myjupyter` is activated.  To deactivate, call:
+Note how the command-line prompt is prefixed with `(myjupyter)`; it highlights that the Conda environment `myjupyter` is activated.  To deactivate an environment and return to the base environment, call:
 
 ```sh
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda deactivate
@@ -168,7 +168,7 @@ jupyter: command not found
 
 ## Speed up software by auto-staging Conda environment (recommended)
 
-We highly recommend configuring Conda environment to be automatically staged only local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool, e.g.
+We highly recommend configuring Conda environment to be automatically staged only on the local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
@@ -192,9 +192,9 @@ Once you have your Conda environment built, we recommend that you back up its co
 -rw-rw-r-- 1 alice boblab 2966 Oct 19 18:21 myjupyter.yml
 ```
 
-This is useful:
+This configuration file is useful:
 
-* when migrating the environment from {{ site.cluster.nickname }} to another Conda versions, another computer, or another HPC environment
+* when migrating the environment from {{ site.cluster.nickname }} to another Conda version, another computer, or another HPC environment
 
 * for sharing the environment with collaborators
 
@@ -212,7 +212,7 @@ To restore a backed up Conda environment from a yaml file, _on the target machin
 3. create a new Conda environment from the yaml file
 
 
-For example, assume we have downloaded `myjupyter.yml` to our local machine.  Then we start by getting the name of the backed up Conda environment and making sure it does not already exist;
+For example, assume we have downloaded `myjupyter.yml` to our local machine.  Then we start by getting the name of the backed-up Conda environment and making sure it does not already exist;
 
 ```sh
 {local}$ grep "name:" myjupyter.yml
