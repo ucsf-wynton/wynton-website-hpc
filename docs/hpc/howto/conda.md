@@ -298,7 +298,7 @@ To reconfigure Conda to no longer activate the 'base' Conda environment by defau
 
 Next time you log in, the 'base' environment should no longer be activated by default.
 
-If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniconda3-py39`, you can uninstall your personal Conda installation that was injected to your `~/.bashrc` file by calling:
+If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniconda3-py39`, you can uninstall the Conda setup code that were injected to your `~/.bashrc` file by calling:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda init --reverse
@@ -317,7 +317,7 @@ modified      {{ site.user.home }}/.bashrc
 
 ==> For changes to take effect, close and re-open your current shell. <==
 
-[alice@{{ site.devel.name }} ~]$ conda init --reverse
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 
