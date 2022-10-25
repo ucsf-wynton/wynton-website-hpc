@@ -143,7 +143,7 @@ Executing transaction: done
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-By default, the environment is created in your home directory under `~/.conda/`.  To create the environment at a specific location, see [Managing environments] part of the official Conda documentation.
+By default, the environment is created in your home directory under `~/.conda/`.  To create the environment at a specific location, see [Managing environments] part of the official Conda documentation.  That section covers also how to remove a Conda environment.
 
 
 ## Activating a Conda environment (required)
