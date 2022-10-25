@@ -206,6 +206,8 @@ This configuration file is useful:
 
 * for disaster recovery, e.g. if you remove the Conda environment by mistake
 
+* for updating the dependencies in a Conda environment
+
 
 To restore a backed up Conda environment from a yaml file, _on the target machine_:
 
@@ -238,6 +240,10 @@ When have confirmed that there is no name clash, we can restore the backed up en
 This will install the exact same software versions as when we made the backup.
 
 _Warning_: This is _not_ a fool-proof backup method, because it depends on packages to be available from the package repositories also when you try to restore the Conda environment.  To lower the risk for failure, keep your environments up to date with the latest packages and test frequently that your `myjupyter.yml` file can be restored.
+
+
+We can also use `myjupyter.yml` to update an existing environment.  The gist is to edit the file to reflect what we want to be updated, and then run `conda env update ...`.  See [Managing environments] part of the official Conda documentation for exact instructions.
+
 
 
 ## Conda revisions
