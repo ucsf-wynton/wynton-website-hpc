@@ -56,7 +56,7 @@ was assigned to you.
 ```sh
 {local}$ ssh -L 8787:{{ site.devel.hostname}}:20612 alice@{{ site.login.hostname }}
 alice1@{{site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
-[alice@{{site.login.name }} ~]$
+[alice@{{site.login.name }} ~]$ 
 ```
 
 ### Step 3. Open RStudio Server in your local web browser

@@ -107,7 +107,7 @@ Type 'q()' to quit R.
 [1] 55
 > q()
 Save workspace image? [y/n/c]: n
-[alice@{{ site.devel.name }} lxc]$
+[alice@{{ site.devel.name }} lxc]$ 
 ```
 
 Exactly what is "run" is defined by the so called "runscript" of the Singularity container, or the ["CMD"](https://hub.docker.com/r/rocker/r-base/~/dockerfile/) if imported from a Docker container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
@@ -148,7 +148,7 @@ Type 'q()' to quit R.
 > sum(1:10)
 [1] 55
 > q("no")
-[alice@{{ site.devel.name }} lxc]$
+[alice@{{ site.devel.name }} lxc]$ 
 ```
 
 To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the {{ site.cluster.name }} host system), do:

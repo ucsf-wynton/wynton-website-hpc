@@ -152,7 +152,7 @@ After an environment is created, the next time you log in to a development node,
 (myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version
 6.4.12
 
-(myjupyter) [alice@{{ site.devel.name }} ~]$
+(myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
 
 Note how the command-line prompt is prefixed with `(myjupyter)`; it highlights that the Conda environment `myjupyter` is activated.  To deactivate an environment and return to the base environment, call:

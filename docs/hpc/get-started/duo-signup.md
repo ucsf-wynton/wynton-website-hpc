@@ -51,7 +51,7 @@ Remember connection authentication from 24.5.83.75 for 12 hours? [y/N] n
 Last login: Tue Oct 13 11:56:19 2020 from 24.5.83.75
 Welcome to the Wynton login nodes. [...]
 
-[alice@{{ site.login.name }}]$
+[alice@{{ site.login.name }}]$ 
 ```
 
 For examples on what it looks like when you authenticate via other options, see the examples below.
@@ -223,7 +223,7 @@ There was 2 failed login attempts since the last successful login.
 
 Welcome to the Wynton login nodes. [...]
 
-[alice@{{ site.login.name }}]$
+[alice@{{ site.login.name }}]$ 
 ```
 
 

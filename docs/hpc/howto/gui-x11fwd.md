@@ -89,7 +89,7 @@ To setup the X11 forwarding when connecting to the cluster, add option `-X`, or 
 alice1@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.login.name }} ~]$ echo "DISPLAY='$DISPLAY'"
 DISPLAY='localhost:20.0'
-[alice@{{ site.login.name }} ~]$
+[alice@{{ site.login.name }} ~]$ 
 ```
 
 By checking that `DISPLAY` is set, we know that X11 forwarding is in place.  If `DISPLAY` is empty, then make sure you have specified `-X` (or `-Y`).
@@ -108,7 +108,7 @@ Now, since we should not run anything on the login nodes, the next step is to he
 alice1@{{ site.devel.name }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{ site.devel.name }} ~]$ echo "DISPLAY='$DISPLAY'"
 DISPLAY='localhost:14.0'
-[alice@{{ site.devel.name }} ~]$
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 _Comment:_ There is no need to use SSH compression in this second step.  If used, it might even have a negative effect on the X11 latency.
@@ -127,7 +127,7 @@ _Tips:_ You can login into a development node in a single call by "jumping" (`-J
 
 ```sh
 {local}$ ssh -X -C -J alice@{{ site.login.hostname }} {{ site.devel.hostname }}
-[alice@{{ site.devel.name }} ~]$
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 
