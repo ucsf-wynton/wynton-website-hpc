@@ -11,6 +11,8 @@
 
 Both come with Python and `conda` commands.  We _recommend_ working with the smaller Miniconda distribution, especially since it is preinstalled on {{ site.cluster.nickname }}.  Using Miniconda, you can install additional scientific packages as needed using the `conda install ...` command.
 
+**Note**: The aim of this document is to give the essential best-practices for working with Conda on {{ site.cluster.nickname }}. It is not meant to be a complete introduction on how to work with Conda in general. A good complement to this document, is the official Conda documentation on [Managing environments].
+
 
 ## Loading Miniconda
 
@@ -184,7 +186,7 @@ For the complete, easy-to-follow instructions, see the [conda-stage] documentati
 
 ## Back up, migrate, and restore Conda environments (recommended)
 
-Once you have your Conda environment built, we recommend that you back up its core configuration.  The process is quick and straightforward.  For example, to back up the above `myjupyter` environment, call:
+Once you have your Conda environment built, we recommend that you back up its core configuration.  The process is quick and straightforward, and fully documented in the official Conda [Managing environments] documentation.  For example, to back up the above `myjupyter` environment, call:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda env export --name myjupyter | grep -v "^prefix: " > myjupyter.yml
@@ -324,3 +326,4 @@ modified      {{ site.user.home }}/.bashrc
 [Conda]: https://conda.io
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [conda-stage]: /hpc/howto/conda-stage.html
+[Managing environments]: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
