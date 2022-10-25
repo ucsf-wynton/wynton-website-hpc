@@ -1,5 +1,5 @@
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ **This is page is under development.** Until finalized, you must use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-21
+⚠️ **This is page is under development.** Until finalized, you must use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-25
 </div>
 
 # Working with Conda
