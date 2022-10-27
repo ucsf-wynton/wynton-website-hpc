@@ -29,6 +29,8 @@ These instructions are primarily written for Linux, macOS, and Windows 10 users.
 Here, we will generate a private-public SSH key pair (stored in two files) that is unique for accessing the cluster:
 
 ```sh
+{local}$ mkdir ~/.ssh
+{local}$ chmod u=rwx,go= ~/.ssh
 {local}$ ssh-keygen -f ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
 Generating public/private rsa key pair.
 Created directory '/home/alice/.ssh'.
