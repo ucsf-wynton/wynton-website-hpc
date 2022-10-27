@@ -89,7 +89,7 @@ Done.
 **Alternative 2**: If you don't have `ssh-copy-id`, you will have to copy the _public_ key file over to the cluster, log in, append it to the target file, and validate file permissions.  Assuming you already have a `~/.ssh` folder on the cluster, first copy the public key file to `~/.ssh` on the cluster:
 
 ```sh
-{local}$ scp ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}.pub alice@{{ site.login.name }}:.ssh/
+{local}$ scp ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}.pub alice@{{ site.login.hostname }}:.ssh/
 laptop_to_{{ site.cluster.nickname | downcase }}.pub           100%  390     0.4KB/s   00:00
 ```
 
