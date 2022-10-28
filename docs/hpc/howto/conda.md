@@ -1,5 +1,5 @@
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ **This is page is under development.** Until finalized, you must use `module load CBI miniconda3-py39/.4.12.0` (sic!) to load Miniconda, because it is currently a _hidden_ module. Please give it a spin. Feedback is appreciated. /2022-10-25
+⚠️ 2022-10-28: **Beta version!** The instructions on this page are fresh and might be updated soon. That said, they have been validated and approved by a group of experienced Conda users. If you run into issues, please let us know.
 </div>
 
 # Working with Conda
@@ -19,7 +19,7 @@ Both come with Python and `conda` commands.  We _recommend_ working with the sma
 On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3 with Python 3.9, call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
 ```
 
 This gives access to:
@@ -151,7 +151,7 @@ By default, the environment is created in your home directory under `~/.conda/`.
 After an environment is created, the next time you log in to a development node, you can set `myjupyter` (or any other Conda environment you've created) as your active environment by calling:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39/.4.12.0
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version
 6.4.12
