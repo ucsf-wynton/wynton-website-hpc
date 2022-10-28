@@ -2107,8 +2107,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.</span><br>
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://docs.conda.io/en/latest/">https://docs.conda.io/en/latest/</a>, <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> (docs), <a href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a> (releases), <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
-Warning: <span class="module-warning">For now, this module only work in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do by mistake, please undo by <code>conda init --reverse</code>.</p>
-<p>WARNING: Use at your own peril! Software tools installed via Conda are known to cause conflicts with other software on the system, including core software provided by the operating system as well as other software from the CBI stack. For example, do not install R packages running R from the CBI stack, while conda is activated.</span><br>
+Warning: <span class="module-warning">For now, this module only work in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do by mistake, please undo by <code>conda init --reverse</code>.</span><br>
 Versions: <span class="module-version"><em>4.12.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2128,9 +2127,8 @@ whatis([[
 Description: Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
 Examples: `conda --version`, `conda create --name=myenv`, `conda env list`, `conda activate myenv`, `conda info`, and `conda deactive`.
 Warning: For now, this module only work in Bash. Also, do _not_ do `conda init`. If you do by mistake, please undo by `conda init --reverse`.
+]])
 
-]] .. &quot;WARNING: &quot; .. warning .. &quot;\n&quot;
-)
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
