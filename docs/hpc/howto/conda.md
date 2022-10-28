@@ -1,4 +1,4 @@
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 ⚠️ 2022-10-28: **Beta version!** The instructions on this page are fresh and might be updated soon. That said, they have been validated and approved by a group of experienced Conda users. If you run into issues, please let us know.
 </div>
 
