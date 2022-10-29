@@ -4406,7 +4406,7 @@ prepend-path  PATH            ${topdir}/bin
   <dd class="module-details">
 <span class="module-description">MODELLER comparative modeling</span><br>
 URL: <span class="module-url"><a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a></span><br>
-Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, 10.2, 10.3, <em>SVN</em></span><br>
+Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, 10.2, 10.3, 10.4, <em>SVN</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
