@@ -16,7 +16,7 @@ There are several ways one can set up an environment, we recommend using `virtua
 To create an IPython kernel that you can access from JHub follow the steps below.
 First, activate the virtual environment, i.e.
 
-```python
+```sh
 [alice@{{ site.devel.name }} ~]$ cd my_project
 [alice@{{ site.devel.name }} my_project]$ . bin/activate
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
@@ -24,7 +24,7 @@ First, activate the virtual environment, i.e.
 
 Second, install the **ipykernel** package and create an IPython kernel:
 
-```bash
+```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python -m pip install ipykernel
 (my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<my_project>
 ```
@@ -55,7 +55,7 @@ cluster = SGECluster(queue = "short.q",
                      # Needed for the Dask workers to communicate back
                      # to the scheduler on the app server
                      scheduler_options = {
-                         "host": "172.26.28.50:40000"
+                         "host": "jhub.wynton.ucsf.edu:40000"
                      })
 ```
 
