@@ -7,7 +7,7 @@
 
 # The Wynton HPC Website
 
-This repository contains the  Wynton HPC website <https://wynton.ucsf.edu/hpc/>.  Updates to the 'master' branch will be published and go live within minutes.  There is also a near-live GitHub Pages mirror at <https://ucsf-wynton.github.io/wynton-website-hpc/>.
+This repository contains the  Wynton HPC website <https://wynton.ucsf.edu/hpc/>.  Updates to the 'master' branch will be published and go live within minutes.  
 
 
 ## Dynamically generated data
@@ -23,6 +23,19 @@ The website provides dynamic summaries of data that are produced on regular basi
   - used by: JavaScript to generated table on https://wynton.ucsf.edu/hpc/about/shares.html
   - generate manual: `(cd docs; make assets/data/compute_shares.tsv)`
   - generate via cronjob: [cron-scripts/wynton-shares.sh](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/cron-scripts/wynton-shares.sh)
+
+
+## Technical details
+
+This website is built upon [Jekyll](https://jekyllrb.com/), where content is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and rendered by Jekyll into HTML.  The user interface and its style is handled mainly by JavaScript and CSS.
+
+* <https://github.com/ucsf-wynton/wynton-website-hpc/>:
+  - The source Git repository for the website
+  
+* <https://wynton.ucsf.edu/hpc/>:
+  - The official, public website
+  - Hosted on GitHub Pages
+  - Takes about one minute for a push to go live
 
 
 ## Prototype the website locally
@@ -113,25 +126,6 @@ RESULT: 50 OK, 0 ERROR
 To run these tests locally, install [markdown-link-check](https://github.com/tcort/markdown-link-check).
 
 
-
-
-## Technical details
-
-This website is built upon [Jekyll](https://jekyllrb.com/), where content is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and rendered by Jekyll into HTML.  The user interface and its style is handled mainly by JavaScript and CSS.
-
-* <https://github.com/ucsf-wynton/wynton-website-hpc/>:
-  - The source Git repository for the website
-  
-* <https://ucsf-wynton.github.io/wynton-website-hpc/>:
-  - The legacy website rendered by GitHub Pages (near instant)
-  - Only kept up until everyone has moved to the official site
-
-* <https://wynton.ucsf.edu/hpc/>:
-  - The official, public website
-  - This is updated ones per minute via a local cronjob using a simple `git pull`
-  - This web server runs its own local instance of Jekyll
-
-
 ## Installing Jekyll
 
 _Warning_: It turns out that [the most recent version of Jekyll is not compatible with the recent version of GitHub Pages](https://github.com/github/pages-gem/issues/577).  Specifically, GitHub Pages requires Jekyll version >= 3.7.3 and < 4.0.0 - the latest version verified to work is Jekyll 3.8.7.  So we need to make sure to install specific version of a few packages below.
@@ -163,17 +157,6 @@ $ which bundle
 Set that PATH in your `~/.bashrc` startup file to make it apply automatically.
 
 That's it.  You can now launch the website locally as above.
-
-
-## Wynton maintenance tasks
-
-The website is hosted on an web server called `wynton-web`. Whenever that server is rebooted, one has to _manually_ log in to account `www-jekyll` and run:
-
-```sh
-[www-jekyll@wynton-web ~]$ make restart
-```
-
-This will launch two proxy Jekyll servers that hosts the status graphs, etc.
 
 
 
