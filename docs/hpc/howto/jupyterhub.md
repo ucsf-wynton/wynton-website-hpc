@@ -55,7 +55,7 @@ cluster = SGECluster(queue = "short.q",
                      # Needed for the Dask workers to communicate back
                      # to the scheduler on the app server
                      scheduler_options = {
-                         "host": "172.26.28.50:40000"
+                         "host": "jhub.wynton.ucsf.edu:40000"
                      })
 ```
 
