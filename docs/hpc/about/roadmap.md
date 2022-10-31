@@ -16,8 +16,6 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Support: A User Issue Tracker
 
-* Website: Host website on GitHub Pages
-
 
 ## Postponed
 
@@ -73,6 +71,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Network: Add a PHI-approved Globus endpoint (2022-05-02)
 
 * Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }} (2022-06-01)
+
+* Website: Host website on GitHub Pages (2022-10-31)
 
 
 See also [News].
