@@ -19,36 +19,36 @@
 level: info
 condition: is operational
 
-# Actual status
-#level: danger
-#condition: does not run jobs
-#message: The SGE scheduler and all compute nodes are offline due to major cooling issues
+# Actual status:
+level: warning
+condition: does not accept new jobs
+message: The SGE scheduler is offline
 
 # Actual status
 # level: info
 # condition: is operational
 # message: Available CPU cores may be limited as we deal with any casualties from the power outage
 
-#level: danger
-#condition: experiences significant issues
-#message: Cluster access has been disabled and all running jobs have been terminated to minimize risk for file-system corruption
+# level: danger
+# condition: experiences significant issues
+# message: Cluster access has been disabled and all running jobs have been terminated to minimize risk for file-system corruption
 
 
 # ----------------------------------------------------------------------------
 # Common status content
 # ----------------------------------------------------------------------------
 # Actual status
-#level: danger
-#condition: experiences partial problems
-#message: The SGE scheduler is offline until BeeGFS issues have been resolved
+# level: danger
+# condition: experiences partial problems
+# message: The SGE scheduler is offline until BeeGFS issues have been resolved
 
-#level: danger
-#condition: experiences significant issues
-#message: Cluster is not accessible because of BeeGFS issues
+# level: danger
+# condition: experiences significant issues
+# message: Cluster is not accessible because of BeeGFS issues
 
-#level: warning
-#condition: is operational
-#message: There will be a brief, 15-minute network outage sometimes between 21:00 on Monday 2022-03-14 and 05:00 on Tuesday 2022-03-15
+# level: warning
+# condition: is operational
+# message: There will be a brief, 15-minute network outage sometimes between 21:00 on Monday 2022-03-14 and 05:00 on Tuesday 2022-03-15
 
 # level: danger
 # condition: is non-operational
