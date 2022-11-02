@@ -71,6 +71,31 @@ reason: beegfs
  -->
 
 
+### November 1, 2022
+
+#### <span style="color: orange;">Scheduler not available</span>
+
+**Resolved**: The job scheduler is responsive again, but we are not
+certain what caused the problem. We will keep monitoring the issue.
+<br><span class="timestamp">November 1, 16:30 PDT</span>
+
+**Notice**: The job scheduler, SGE, does not respond to user requests,
+e.g. `qstat` and `qsub`.  No new jobs can be submitted at this time.
+The first reports on problems came in around 09:00 this morning.  We
+are troubleshooting the problem.
+<br><span class="timestamp">November 1, 10:25 PDT</span>
+
+<!--
+start: 2022-11-01T07:16:30
+stop: 2022-11-01T09:09:00
+length: 7.5 hours
+severity: partial-outage
+affected: jobs, compute
+reason: scheduler
+ -->
+
+
+
 ### September 27-29, 2022
 
 #### <span style="color: orange;">Full downtime</span>

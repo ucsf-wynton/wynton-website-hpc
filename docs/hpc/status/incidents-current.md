@@ -1,18 +1,3 @@
-### November 1, 2022
-
-#### <span style="color: orange;">Scheduler not available</span>
-
-**Update**: The job scheduler is responsive again, but we are not
-certain what caused the problem. We will keep monitoring the issue.
-<br><span class="timestamp">November 1, 16:30 PDT</span>
-
-**Notice**: The job scheduler, SGE, does not respond to user requests,
-e.g. `qstat` and `qsub`.  No new jobs can be submitted at this time.
-The first reports on problems came in around 09:00 this morning.  We
-are troubleshooting the problem.
-<br><span class="timestamp">November 1, 10:25 PDT</span>
-
-
 ### April 26, 2022
 
 #### <span style="color: orange;">X2Go not working on GPU development nodes</span>
