@@ -51,6 +51,26 @@
 * Total downtime: 48 hours of which 48 hours were due to external factors
 
 
+### November 2, 2022
+
+#### <span style="color: orange;">Major BeeGFS issues</span>
+
+**Resolved**: The BeeGFS issues have been resolved.
+<br><span class="timestamp">November 2, 09:30 PDT</span>
+
+**Notice**: The BeeGFS file system started to experience issues early morning on Tuesday 2022-11-02.  The symptoms are missing files and folders.
+<br><span class="timestamp">November 2, 08:15 PDT</span>
+
+<!--
+start: 2022-11-02T07:45:00
+stop: 2022-11-02T09:15:00
+length: 1.5 hours
+severity: partial-outage
+affected: jobs, beegfs, compute
+reason: beegfs
+ -->
+
+
 ### September 27-29, 2022
 
 #### <span style="color: orange;">Full downtime</span>
@@ -72,7 +92,6 @@ severity: under-maintenance
 affected: jobs, beegfs, compute, *
 reason: scheduled
  -->
-
 
 
 ### September 6-9, 2022

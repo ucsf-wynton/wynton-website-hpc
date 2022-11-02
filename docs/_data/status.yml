@@ -29,9 +29,9 @@ condition: is operational
 # condition: is operational
 # message: Available CPU cores may be limited as we deal with any casualties from the power outage
 
-level: danger
-condition: experiences significant issues
-message: Several folders are missing or corrupt because of BeeGFS issues
+# level: danger
+# condition: experiences significant issues
+# message: Several files and folders are missing because of BeeGFS issues
 
 # ----------------------------------------------------------------------------
 # Common status content
