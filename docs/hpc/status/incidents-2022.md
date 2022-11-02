@@ -55,16 +55,16 @@
 
 #### <span style="color: orange;">Major BeeGFS issues</span>
 
-**Resolved**: The BeeGFS issues have been resolved.
+**Resolved**: The BeeGFS issues have been resolved. At 05:29 this morning, a local file system hosting one of our 12 BeeGFS meta daemons crashed. Normally, BeeGFS detects this and redirects processing to a secondary, backup daemon. In this incident, this failback did not get activated and a manual intervention was needed.
 <br><span class="timestamp">November 2, 09:30 PDT</span>
 
 **Notice**: The BeeGFS file system started to experience issues early morning on Tuesday 2022-11-02. The symptoms are missing files and folders.
 <br><span class="timestamp">November 2, 08:15 PDT</span>
 
 <!--
-start: 2022-11-02T06:45:00
+start: 2022-11-02T05:30:00
 stop: 2022-11-02T09:15:00
-length: 2.5 hours
+length: 3.75 hours
 severity: partial-outage
 affected: jobs, beegfs, compute
 reason: beegfs
