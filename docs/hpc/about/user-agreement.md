@@ -66,6 +66,6 @@ with others.
 
 - Wynton operations maintains (including patches) of systemwide software on Wynton nodes. Software managed using the yum package management tool is the responsibility of Wynton operations.  
 
-- Software not managed by Wynton admins, and is the user's responsibility, include software installed in Wynton user and group directories. This includes but is not limited to: software in user Singularity containers, software installed using the conda package manager. Additionally Lmod modules that are not maintained by the Wynton admins themselves is the responsibility of the individual labs and users that maintain the module repositories (e.g. the CBI and Sali repositories.
+- Software not managed by Wynton admins, and is the user's responsibility, include software installed in Wynton user and group directories. This includes but is not limited to: software in user Singularity containers and software installed using the conda package manager. Additionally, Lmod modules that are not maintained by the Wynton admins themselves is the responsibility of the individual labs and users that maintain the module repositories (e.g. the CBI and Sali repositories.
 
 [Authorized and Acceptable Use of Electronic Information Resources]: https://policies.ucsf.edu/policy/650-18
