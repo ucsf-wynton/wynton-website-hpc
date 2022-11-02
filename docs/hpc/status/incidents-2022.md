@@ -58,13 +58,13 @@
 **Resolved**: The BeeGFS issues have been resolved.
 <br><span class="timestamp">November 2, 09:30 PDT</span>
 
-**Notice**: The BeeGFS file system started to experience issues early morning on Tuesday 2022-11-02.  The symptoms are missing files and folders.
+**Notice**: The BeeGFS file system started to experience issues early morning on Tuesday 2022-11-02. The symptoms are missing files and folders.
 <br><span class="timestamp">November 2, 08:15 PDT</span>
 
 <!--
-start: 2022-11-02T07:45:00
+start: 2022-11-02T06:45:00
 stop: 2022-11-02T09:15:00
-length: 1.5 hours
+length: 2.5 hours
 severity: partial-outage
 affected: jobs, beegfs, compute
 reason: beegfs
