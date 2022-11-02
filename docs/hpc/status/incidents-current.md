@@ -1,3 +1,20 @@
+### November 2, 2022
+
+#### <span style="color: orange;">Major BeeGFS issues</span>
+
+**Notice**: The BeeGFS file system started to experience issues early morning on Tuesday 2022-11-02.  The symptoms are missing files and folders.
+<br><span class="timestamp">November 2, 08:15 PDT</span>
+
+<!--
+start: 2022-11-02T10:00:00
+stop: 2022-11-02T11:00:00
+length: 1.0 hours
+severity: major-outage
+affected: jobs, beegfs, compute
+reason: beegfs
+ -->
+
+
 ### November 1, 2022
 
 #### <span style="color: orange;">Scheduler not available</span>
