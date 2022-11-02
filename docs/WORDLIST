@@ -301,3 +301,4 @@ Zsh
 libs
 baseurl
 yaml
+failback
