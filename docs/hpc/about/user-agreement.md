@@ -5,7 +5,7 @@
 Wynton user responsibilities and/or requirements in support of this Agreement include:
 
 - By using the Wynton HPC environment, you agree to abide by the
-statement of its [Purpose, Principles and Governance]({{site.baseurl}}/hpc/about/governance.html).
+statement of its [Purpose, Principles and Governance](/hpc/about/governance.html).
 
 - Users who wish to access protected data such as Protected Health
 Information (PHI) are required to log into node(s) that implement
@@ -25,8 +25,8 @@ future. For example, it is possible that future requirements imposed
 by the University of California Office of the President (UCOP) or the
 UCSF concerning PHI data would in turn negatively impact on the
 ability of the cluster to serve its founding purpose, as defined in
-the [Governance document]({{ site.baseurl
-}}/hpc/about/governance.html). In such a case, the Steering Committee
+the [Governance document](/hpc/about/governance.html). 
+In such a case, the Steering Committee
 may roll back configurational changes or otherwise re-configure the
 cluster, so that the founding needs are still satisfied, even if that
 occurs at the expense of some applications. Therefore, while every
