@@ -231,7 +231,7 @@ check-legacy:
 	config=.markdown-link-check.json
 
 	echo "*** $@:"
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./hpc/status/incidents-20??.md" \) )
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./hpc/status/incidents-201?.md" \) )
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   pattern="(wynlog|wyndt|qb3-dev)"
