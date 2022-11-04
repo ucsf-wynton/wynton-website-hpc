@@ -24,3 +24,7 @@ jobs:
       run: |
         make check-absolute-links
 
+    - name: legacy
+      run: |
+        make check-legacy
+
