@@ -1,6 +1,6 @@
 # User Agreement and Disclaimer
 
-## Customer Responsibilites
+## Customer Responsibilities
 
 Wynton user responsibilities and/or requirements in support of this Agreement include:
 
@@ -62,7 +62,7 @@ Wynton Operations team.
 - Under no circumstances are users to share their account and password
 with others.
 
-- Users are prohibited from changing systemwide configurations on Wynton nodes.
+- Users are prohibited from changing system-wide configurations on Wynton nodes.
 
 - Wynton operations maintains (including patches) of systemwide software on Wynton nodes. Software managed using the yum package management tool is the responsibility of Wynton operations.  
 
