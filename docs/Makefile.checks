@@ -222,6 +222,39 @@ check-leftovers-from-C4:
 	  exit 1
 	fi
 
+check-legacy:
+	@stdout=$(TMPDIR)/stdout
+	rm -f "$$stdout"
+
+	ok_count=0
+	error_count=0
+	config=.markdown-link-check.json
+
+	echo "*** $@:"
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./hpc/status/incidents-20??.md" \) )
+	for file in $$files; do
+	   $(TPUT) && printf "[    ] checking %s" "$$file"
+	   pattern="(wynlog|wyndt|qb3-dev)"
+	   if ! grep -H -n -E "($$pattern)" "$$file" &>> "$$stdout" ; then
+	     ok_count=$$((ok_count+1))
+	     $(TPUT) && printf "\r"
+	     printf "[$(OK)] checking %s\\n" "$$file"
+	   else
+	     error_count=$$((error_count+1))
+	     $(TPUT) && printf "\r"
+	     printf "[$(FAIL)] checking %s\\n" "$$file"
+	   fi
+	done
+
+	echo "RESULT: $$ok_count OK, $$error_count ERROR"
+	if (( error_count > 0 )); then
+	  grep -B 1 -E "(^ERROR:|^\[(✖|x)\]|Status: [0-9]+$$)" "$$stdout"
+	  echo "$$stdout"
+	  cat "$$stdout"
+	  exit 1
+	fi
+
+
 markin-shellcheck:
 	@stdout=$(TMPDIR)/stdout
 
@@ -253,4 +286,5 @@ markin-shellcheck:
 
 check-markdown: markdownlint markdown-link-check
 
-check: check-absolute-links check-here-links check-usernames spell check-markdown check-leftovers-from-C4
+check: check-absolute-links check-here-links check-usernames check-legacy check-leftovers-from-C4 spell markdownlint markdown-link-check
+
