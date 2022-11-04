@@ -37,3 +37,6 @@ check-here-links:
 
 check-absolute-links:
 	cd docs; $(MAKE) $@
+
+check-legacy:
+	cd docs; $(MAKE) $@
