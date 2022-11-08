@@ -165,7 +165,7 @@ _Importantly, make sure there are no errors reported.  If there are, they need t
 
 ### Step 2 - Building
 
-If the configuration steps completes without errors, it is often straightforward to build ("compile") the software my calling `make`.  The `make` command will use formal build instruction in the `Makefile`, but we don't have to know about those details.  Just call `make` as in:
+If the configuration steps complete without errors, it is often straightforward to build ("compile") the software my calling `make`.  The `make` command will use formal build instruction in the `Makefile`, but we don't have to know about those details.  Just call `make` as in:
 
 ```sh
 [alice@{{ site.devel.name }} samtools-1.14]$ make
