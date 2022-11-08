@@ -40,7 +40,7 @@ drwxr-xr-x 9 alice boblab    4096 Oct 22 04:48 samtools-1.14
 -rw-r--r-- 1 alice boblab 7744794 Dec  7 14:41 samtools-1.14.tar.bz2
 ```
 
-As the we see, the content of the tarball was extracted into a subfolder `samtools-1.14`.  The tarball file is no longer needed after this stage.  Let's enter that new folder and look at its content:
+As we see, the content of the tarball was extracted into a subfolder `samtools-1.14`.  The tarball file is no longer needed after this stage.  Let's enter that new folder and look at its content:
 
 ```sh
 [alice@{{ site.devel.name }} alice]$ cd samtools-1.14
