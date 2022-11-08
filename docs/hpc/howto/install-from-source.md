@@ -185,7 +185,7 @@ gcc  -L./lz4  -o test/vcf-miniview test/vcf-miniview.o htslib-1.14/libhts.a -lpt
 [alice@{{ site.devel.name }} samtools-1.14]$ 
 ```
 
-Make sure there are no compilation error.  If you get errors at this stage, it could be because the `gcc` compiler is too old.  If that happens, try to use a newer compiler version following the instructions in Section 'Too old compiler?' below.
+Make sure there are no compilation errors.  If you get errors at this stage, it could be because the `gcc` compiler is too old.  If that happens, try to use a newer compiler version following the instructions in Section 'Too old compiler?' below.
 
 
 ### Step 3 - Installation
