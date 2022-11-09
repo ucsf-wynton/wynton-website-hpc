@@ -28,10 +28,11 @@ running?_
      is not running.  `qstat -u '*'` will show all jobs and their
      priority scores in the queue.
 
-**A**: **[For QB3 migrants]** If you are coming from the QB3 cluster,
-please make sure that your job script does _not_ specify any of the
-below QB3-specific SGE resources.  **A job submitted with one or more
-of these will sit in the queue forever.**
+**A**: **[For QB3 migrants]** If you are coming from the legacy QB3
+cluster (defunct since 2020), please make sure that your job script
+does _not_ specify any of the below QB3-specific SGE resources.  **A
+job submitted with one or more of these will sit in the queue
+forever.**
 
   - `-l arch=linux-x64`: this architecture does not exist on {{
     site.cluster.name }}. This specification can safely be dropped on
