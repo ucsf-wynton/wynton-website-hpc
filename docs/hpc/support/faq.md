@@ -213,10 +213,10 @@ would be able to install or update software that other users use.
 
 Now, if you do call `sudo`, **the system administrators will be
 notified automatically, and you will most likely get a follow-up email
-from them.  Please respond to such email messages, if you get one.**
-That said, if you end up using `sudo`, press <kbd>Ctrl-C</kbd> when
-you are prompted for your password to terminate the attempt to
-interrupt the command call, e.g.
+from them.  Please respond to such a message, if you get one.**  That
+said, if you end up using `sudo`, press <kbd>Ctrl-C</kbd> when you are
+prompted for your password to terminate the attempt to interrupt the
+command call, e.g.
 
 ```sh
 $ sudo make install
