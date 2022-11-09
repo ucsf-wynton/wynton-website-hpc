@@ -204,13 +204,18 @@ despite entering my password correctly?_
 
 **A**. The `sudo` command is only available to system administrators.
 It is a command used to run a specific software as root, that is, with
-administrator privileges, e.g. when installing a software tool
-centrally on the current machine.  For security reasons, but also
-because installing software centrally impacts all other users and
-might break the existing setup, individual users do _not_ have the
-rights to use `sudo`.  If you end up calling `sudo` by mistake, just
-press <kbd>Ctrl-C</kbd> when you are prompted for your password to
-terminate the attempt, e.g.
+administrator privileges.  First of all, for security reasons, users
+do _not_ have the rights to use `sudo`.  Second, `sudo` is often used
+to install a software tool _centrally_ on the current machine for
+_all_ users.  If you think about it, it would wreak havoc if any user
+would be able to install or update software that other users use.
+
+Now, if you do call `sudo`, **the system administrators will be
+notified automatically, and you will most likely get a follow-up email
+from them.  Please respond to such email messages, if you get one.**
+That said, if you end up using `sudo`, press <kbd>Ctrl-C</kbd> when
+you are prompted for your password to terminate the attempt to
+interrupt the command call, e.g.
 
 ```sh
 $ sudo make install
@@ -224,7 +229,7 @@ Administrator. It usually boils down to these three things:
 
 [sudo] password for alice: <Ctrl-C>
 
-$
+$ 
 ```
 
 
