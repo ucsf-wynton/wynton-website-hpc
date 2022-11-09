@@ -214,7 +214,7 @@ would be able to install or update software that other users use.
 By the way, **if you ever get prompted for your {{ site.cluster.name
 }} password, please stop and think!**  Except for when you access the
 cluster, or one of the development nodes, no software should ever need
-to know you password. So, if you get asked for you {{
+to know you password. So, if you get asked for your {{
 site.cluster.name }} password, do not enter it.
 
 Now, if you do call `sudo`, **the system administrators will be
