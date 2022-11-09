@@ -215,8 +215,8 @@ Now, if you do call `sudo`, **the system administrators will be
 notified automatically, and you will most likely get a follow-up email
 from them.  Please respond to such a message, if you get one.**  That
 said, if you end up using `sudo`, press <kbd>Ctrl-C</kbd> when you are
-prompted for your password to terminate the attempt to interrupt the
-command call, e.g.
+prompted for your password.  This will prevent the command from
+completing, e.g.
 
 ```sh
 $ sudo make install
