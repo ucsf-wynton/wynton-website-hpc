@@ -198,7 +198,7 @@ $ sed -i '18d' ~/.ssh/known_hosts
 Then retry.
 
 
-### Using sudo
+### Don't use sudo
 
 **Q**. _Why do I get "incorrect password attempts" when using `sudo`
 despite entering my password correctly?_
