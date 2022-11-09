@@ -124,7 +124,7 @@ any files or folders with the program’s name or developer’s name in
 the ~/Library/Preferences/, ~/Library/Application Support/ and
 ~/Library/Caches/ folders.) After re-installing XQuartz, x2go should
 work again. If not, please contact the [{{ site.cluster.nickname }}
-team]
+team].
 
 
 ### chsh: user 'alice' does not exist
@@ -231,12 +231,13 @@ $
 
 ## Files and folders
 
-### Backup?
+### Are my files backed up?
 
 **Q.** _Is data on Wynton backed up?_
 
-**A.** Data on Wynton is not backed up, users and labs are responsible
-to back up their own data outside of {{ site.cluster.name }}.
+**A.** Data on Wynton is not backed up! Users and labs are responsible
+to back up their own data outside of the {{ site.cluster.name }}
+environment.
 
 
 ### Share folder with group members?
@@ -260,7 +261,7 @@ not count toward users disk quota.
 
 ## Miscellaneous
 
-### Corrupted shell startup file
+### Reset my shell startup file
 
 **Q**. _I might have corrupted by Bash startup file. How do I reset
 it?_
