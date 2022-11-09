@@ -2,6 +2,8 @@
 
 ## Jobs
 
+### Waiting in job queue
+
 **Q**. _My submitted job is still in the queue - why is it not running?_
 
 **A**. There could be several reason why your job is not running:
@@ -23,6 +25,9 @@
 
   - `-l scrapp2=<size>`: this storage resource does not exist on {{ site.cluster.name }}.
 
+
+### Cannot delete jobs from queue
+
 **Q**. _I tried to delete some jobs, and now they're stuck in the state "dr". How can I get rid of them?_
 
 **A**. The most likely cause of this is that node (or nodes) running your jobs crashed.  Since the node(s) can't report back to SGE and confirm the job deletion, the state of the jobs doesn't change.  To force the issue:
@@ -30,13 +35,17 @@
 qdel -f $JOB_ID [-t $SGE_TASK_ID]
 ```
 
-**Q**. What is the difference between idgpu, iogpu, and atgpus? Labels more for book keeping or do they denote architecture?
+### What does the different hostname prefixes stand for?
 
-**A**. It denotes CPU architecture.  "io" is for "*I*ntel *o*ctocore" (i.e. Intel CPUs with 8 cores per CPU).  "id" was originally for "*I*ntel *d*odecacore" 
-(12 cores per CPU), but now encompasses 12+ core Intel CPU nodes.  And "at" is for "*A*MD *t*riginticore" (32 cores).
+**Q**. What is the difference between the `idgpu`, `iogpu`, and `atgpu` parts used for GPU compute node names?
+
+**A**. They denotes _CPU_ architecture: `io` is for "**I**ntel **O**cto-core" (i.e. Intel CPUs with 8 cores per CPU), `id` is for "**I**ntel **D**odeca-core" (12 cores per CPU, but now encompasses all Intel nodes with more 12+ nodes), and `at` is for "**A**MD **T**riginti-core" (32 cores).
+
 
 
 ## Errors
+
+### Cannot submit jobs
 
 **Q**. _I just started to get SSL-related errors when using `qsub` and `qstat` that I have never seen before;_
 ```sh
@@ -46,6 +55,9 @@ unable to contact qmaster using port 6444 on host "q"
 ```
 
 **A**. Your {{ site.cluster.name }} account has expired.  If so, you should already have received an email from us with instructions on how to request the renewal.  If you have responded to that email, then it's a mistake on our end (sorry) - please drop us another email.
+
+
+### X2Go does not connect
 
 **Q**. _I am getting timeout errors when trying to connect via x2go from a macOS computer, the x2go status hangs on "connecting"; In the x2go logs you will see:_
 
@@ -60,9 +72,15 @@ Session: Session terminated at 'Tue Mar  2 13:01:07 2021'.
 
 **A**. This appears to be a communication problem between x2go and XQuartz. The only way we've found to resolve this issue is to **Completely** remove XQuartz from the macOS computer and then re-install XQuartz. Please follow recommendations for completely removing the XQuartz application and all related files. (Search for any files or folders with the program’s name or developer’s name in the ~/Library/Preferences/, ~/Library/Application Support/ and ~/Library/Caches/ folders.) After re-installation of XQuartz, x2go should work again. If not, please contact [the {{ site.cluster.nickname }} team](/hpc/about/contact.html).
 
-**Q**. _I tried to change my shell using the unix command `chsh` and I got an error telling me, "chsh: user "alice" does not exist"._
 
-**A**. First, let me assure you, your account does exist! You ARE logged in, after all. However, {{ site.cluster.nickname}} account attributes are managed via a remote directory system which is not manipulable via local tools like `chsh`. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team](/hpc/about/contact.html), let us know your preferred shell, and we will change it for you. Note: The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell than these may result in reduced functionality or errors which may be beyond the scope of our support.
+### chsh: user 'alice' does not exist
+
+**Q**. _I tried to change my shell using the unix command `chsh` and I got an error telling me, "chsh: user 'alice' does not exist"._
+
+**A**. First, let me assure you, your account does exist! You _are_ logged in, after all. However, {{ site.cluster.nickname}} account attributes are managed via a remote directory system which is not manipulable via local tools like `chsh`. If you would like to change your shell, Please [get in touch with the {{ site.cluster.nickname }} team](/hpc/about/contact.html), let us know your preferred shell, and we will change it for you. Note: The {{ site.cluster.nickname}} team supports `csh/tcsh` and `sh/bash` login shells. Any other shell than these may result in reduced functionality or errors which may be beyond the scope of our support.
+
+
+### Scary error when trying to log in to a development node
 
 **Q**. _I cannot SSH into the development nodes - I get 'IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!' and 'Host key verification failed.'  What is going on?_
 
@@ -105,6 +123,8 @@ $ sed -i '18d' ~/.ssh/known_hosts
 Then retry.
 
 
+### Using sudo
+
 **Q**. _Why do I get "incorrect password attempts" when using `sudo` despite entering my password correctly?_
 
 **A**. The `sudo` command is only available to system administrators.  It is a command used to run a specific software as root, that is, with administrator privileges, e.g. when installing a software tool centrally on the current machine.  For security reasons, but also because installing software centrally impacts all other users and might break the existing setup, individual users do _not_ have the rights to use `sudo`.  If you end up calling `sudo` by mistake, just press <kbd>Ctrl-C</kbd> when you are prompted for your password to terminate the attempt, e.g.
@@ -128,9 +148,14 @@ $
 
 ## Files and folders
 
+### Backup?
+
 **Q.** Is data on Wynton backed up?
 
 **A.** Data on Wynton is not backed up, users and labs are responsible to back up their own data outside of {{ site.cluster.name }}.
+
+
+### Share folder with group members?
 
 **Q**. _Is it possible to have a common folder where our lab group members can share files and software?_
 
@@ -140,6 +165,8 @@ $
 
 
 ## Miscellaneous
+
+### Corrupted shell startup file
 
 **Q**. _I might have corrupted by Bash startup file. How do I reset it?_
 
@@ -153,9 +180,13 @@ $ cp /etc/skel/bashrc ~/.bashrc
 
 ## Contributing to {{ site.cluster.nickname }}
 
+### Purchase compute slots
+
 **Q**. _Our lab would contribute to {{ site.cluster.name }} in order to increase our priority.  How can we do this?_
 
 **A**. We welcome donations of any size.  In return, your lab will receive a number of slots in member.q equivalent to the number of cores in a current Standard Node that your contribution would purchase.  As of May 2020, that cost is $170 per slot.
+
+### Contribute hardware
 
 **Q**. _Our lab has some old nodes we'd like to contribute to {{ site.cluster.name }} in return for priority. Will you take them?_
 
