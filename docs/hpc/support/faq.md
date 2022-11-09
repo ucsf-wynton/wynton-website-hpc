@@ -68,7 +68,7 @@ qdel -f $JOB_ID [-t $SGE_TASK_ID]
 ```
 
 
-### What does the different hostname prefixes stand for?
+### What do the different hostname prefixes stand for?
 
 **Q**. _What is the difference between the `idgpu`, `iogpu`, and
 `atgpu` parts used for GPU compute node names?_
