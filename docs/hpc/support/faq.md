@@ -211,12 +211,18 @@ to install a software tool _centrally_ on the current machine for
 _all_ users.  If you think about it, it would wreak havoc if any user
 would be able to install or update software that other users use.
 
+By the way, **if you ever get prompted for your {{ site.cluster.name
+}} password, please stop and think!**  Except from when you access the
+cluster or one of the development nodes, no software should ever need
+to know you password. So, if you get asked for you {{
+site.cluster.name }} password, do not enter it.
+
 Now, if you do call `sudo`, **the system administrators will be
 notified automatically, and you will most likely get a follow-up email
 from them.  Please respond to such a message, if you get one.**  That
 said, if you end up using `sudo`, press <kbd>Ctrl-C</kbd> when you are
-prompted for your password.  This will prevent the command from
-completing, e.g.
+prompted for your password.  This will prevent the command from being
+completed, e.g.
 
 ```sh
 $ sudo make install
