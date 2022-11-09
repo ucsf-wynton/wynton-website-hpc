@@ -212,8 +212,8 @@ _all_ users.  If you think about it, it would wreak havoc if any user
 would be able to install or update software that other users use.
 
 By the way, **if you ever get prompted for your {{ site.cluster.name
-}} password, please stop and think!**  Except from when you access the
-cluster or one of the development nodes, no software should ever need
+}} password, please stop and think!**  Except for when you access the
+cluster, or one of the development nodes, no software should ever need
 to know you password. So, if you get asked for you {{
 site.cluster.name }} password, do not enter it.
 
