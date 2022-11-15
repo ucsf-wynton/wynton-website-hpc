@@ -263,6 +263,12 @@ You are using pip version 21.3.1, however version 22.0.4 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
 
+_Note_, if you're using a virtual environment, drop `--user`, i.e.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --upgrade pip
+```
+
 To check the installed version of the 'pip' module, use:
 
 <!-- code-block label="pip-version-2" -->
