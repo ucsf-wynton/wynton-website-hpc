@@ -37,7 +37,7 @@ To see what software packages come with this Miniconda distribution, call:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda list
-# packages in environment at /wynton/home/cbi/shared/software/CBI/miniconda3-py39-4.12.0:
+# packages in environment at {{ site.path.cbi_software }}/CBI/miniconda3-py39-4.12.0:
 #
 # Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                        main  
@@ -334,5 +334,5 @@ modified      {{ site.user.home }}/.bashrc
 
 [Conda]: https://conda.io
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
-[conda-stage]: /hpc/howto/conda-stage.html
+[conda-stage]: conda-stage.html
 [Managing environments]: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
