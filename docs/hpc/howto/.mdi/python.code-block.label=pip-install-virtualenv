@@ -3,10 +3,10 @@ Collecting virtualenv
   Downloading https://files.pythonhosted.org/packages/fd/76/c99d37939e17e3c53f1c1b7e4f5365a9160b1cd0b37700657eed9a2a6775/virtualenv-20.16.7-py3-none-any.whl (8.8MB)
 Collecting importlib-resources>=5.4; python_version < "3.7" (from virtualenv)
   Downloading https://files.pythonhosted.org/packages/24/1b/33e489669a94da3ef4562938cd306e8fa915e13939d7b8277cb5569cb405/importlib_resources-5.4.0-py3-none-any.whl
-Collecting distlib<1,>=0.3.6 (from virtualenv)
-  Downloading https://files.pythonhosted.org/packages/76/cb/6bbd2b10170ed991cf64e8c8b85e01f2fb38f95d1bc77617569e0b0b26ac/distlib-0.3.6-py2.py3-none-any.whl (468kB)
 Collecting platformdirs<3,>=2.4 (from virtualenv)
   Downloading https://files.pythonhosted.org/packages/b1/78/dcfd84d3aabd46a9c77260fb47ea5d244806e4daef83aa6fe5d83adb182c/platformdirs-2.4.0-py3-none-any.whl
+Collecting distlib<1,>=0.3.6 (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/76/cb/6bbd2b10170ed991cf64e8c8b85e01f2fb38f95d1bc77617569e0b0b26ac/distlib-0.3.6-py2.py3-none-any.whl (468kB)
 Collecting importlib-metadata>=4.8.3; python_version < "3.8" (from virtualenv)
   Downloading https://files.pythonhosted.org/packages/a0/a1/b153a0a4caf7a7e3f15c2cd56c7702e2cf3d89b1b359d1f1c5e59d68f4ce/importlib_metadata-4.8.3-py3-none-any.whl
 Collecting filelock<4,>=3.4.1 (from virtualenv)
@@ -15,7 +15,7 @@ Collecting zipp>=3.1.0; python_version < "3.10" (from importlib-resources>=5.4; 
   Downloading https://files.pythonhosted.org/packages/bd/df/d4a4974a3e3957fd1c1fa3082366d7fff6e428ddb55f074bf64876f8e8ad/zipp-3.6.0-py3-none-any.whl
 Collecting typing-extensions>=3.6.4; python_version < "3.8" (from importlib-metadata>=4.8.3; python_version < "3.8"->virtualenv)
   Downloading https://files.pythonhosted.org/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl
-Installing collected packages: zipp, importlib-resources, distlib, platformdirs, typing-extensions, importlib-metadata, filelock, virtualenv
+Installing collected packages: zipp, importlib-resources, platformdirs, distlib, typing-extensions, importlib-metadata, filelock, virtualenv
 Successfully installed distlib-0.3.6 filelock-3.4.1 importlib-metadata-4.8.3 importlib-resources-5.4.0 platformdirs-2.4.0 typing-extensions-4.1.1 virtualenv-20.16.7 zipp-3.6.0
 [alice@{{ site.devel.name }} ~]$ which virtualenv
 ~/.local/bin/virtualenv

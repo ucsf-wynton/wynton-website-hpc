@@ -1,12 +1,6 @@
 (my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install pandas
-Collecting pandas
-  Using cached pandas-1.1.5-cp36-cp36m-manylinux1_x86_64.whl (9.5 MB)
+Requirement already satisfied: pandas in ./my_project/lib64/python3.6/site-packages (1.1.5)
+Requirement already satisfied: pytz>=2017.2 in ./my_project/lib/python3.6/site-packages (from pandas) (2022.6)
 Requirement already satisfied: numpy>=1.15.4 in ./my_project/lib64/python3.6/site-packages (from pandas) (1.19.5)
-Collecting python-dateutil>=2.7.3
-  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
-Collecting pytz>=2017.2
-  Using cached pytz-2022.6-py2.py3-none-any.whl (498 kB)
-Collecting six>=1.5
-  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
-Installing collected packages: six, pytz, python-dateutil, pandas
-Successfully installed pandas-1.1.5 python-dateutil-2.8.2 pytz-2022.6 six-1.16.0
+Requirement already satisfied: python-dateutil>=2.7.3 in ./my_project/lib/python3.6/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: six>=1.5 in ./my_project/lib/python3.6/site-packages (from python-dateutil>=2.7.3->pandas) (1.16.0)
