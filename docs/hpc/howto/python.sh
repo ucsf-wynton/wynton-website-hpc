@@ -30,25 +30,25 @@ mdi_adjust_output() {
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Use an empty user Python module folder and pip cache
-if true; then
-    PYTHONUSERBASE=$(mktemp -d)
-    PYTHONUSERBASE="${TMPDIR}/.local"
-    export PYTHONUSERBASE
+# Use an empty pip cache
+export XDG_CACHE_HOME=$(mktemp -d)
+echo "XDG_CACHE_HOME=${XDG_CACHE_HOME}"
 
-    XDG_CACHE_HOME=$(mktemp -d)
-    export XDG_CACHE_HOME
+PATH_ORG=$PATH
 
-    echo "PYTHONUSERBASE=${PYTHONUSERBASE}"
-    echo "XDG_CACHE_HOME=${XDG_CACHE_HOME}"
-    
-    export PATH="${PYTHONUSERBASE}/bin:${PATH}"
-fi
+# Use fresh, empty Python setup
+export PYTHONUSERBASE=$(mktemp -d)
+echo "PYTHONUSERBASE=${PYTHONUSERBASE}"
+export PATH="${PYTHONUSERBASE}/bin:${PATH_ORG}"
 
 mdi_code_block --label=pip-install-ex <<EOF
 python3 -m pip install --user pandas
 EOF
 
+# Use fresh, empty Python setup
+export PYTHONUSERBASE=$(mktemp -d)
+echo "PYTHONUSERBASE=${PYTHONUSERBASE}"
+export PATH="${PYTHONUSERBASE}/bin:${PATH_ORG}"
 
 mdi_code_block --label=pip-install-virtualenv <<EOF
 python3 -m pip install --user virtualenv
