@@ -1,4 +1,20 @@
+SHELL=bash
+
 all:
+
+install:
+	module purge; \
+	module load CBI r; \
+	Rscript --version; \
+	Rscript -e "if (!requireNamespace('remotes')) { chooseCRANmirror(ind = 1); install.packages('remotes') }"; \
+	Rscript -e "remotes::install_github('HenrikBengtsson/markin')"; \
+	Rscript -e "packageVersion('markin')"
+
+debug:
+	module purge; \
+	module load CBI r; \
+	Rscript --version; \
+	Rscript -e "packageVersion('markin')"
 
 %.md: FORCE
 	markin inject "$@"
@@ -20,7 +36,7 @@ r: FORCE
 	sed -i 's|/R-4.1.2-gcc8|/R-4.1.3-gcc8|g' "$@".md
 
 python: FORCE
-	markin build "$@".sh
-	markin inject "$@".md
+	module purge;      markin build "$@".sh
+	module load CBI r; markin inject "$@".md
 
 FORCE:
