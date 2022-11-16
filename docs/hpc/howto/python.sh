@@ -30,12 +30,18 @@ mdi_adjust_output() {
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Use an empty user Python module folder
+# Use an empty user Python module folder and pip cache
 if true; then
     PYTHONUSERBASE=$(mktemp -d)
     PYTHONUSERBASE="${TMPDIR}/.local"
     export PYTHONUSERBASE
+
+    XDG_CACHE_HOME=$(mktemp -d)
+    export XDG_CACHE_HOME
+
     echo "PYTHONUSERBASE=${PYTHONUSERBASE}"
+    echo "XDG_CACHE_HOME=${XDG_CACHE_HOME}"
+    
     export PATH="${PYTHONUSERBASE}/bin:${PATH}"
 fi
 
