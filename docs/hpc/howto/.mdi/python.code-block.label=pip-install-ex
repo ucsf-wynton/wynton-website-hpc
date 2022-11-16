@@ -1,0 +1,10 @@
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user panda
+Collecting panda
+  Downloading https://files.pythonhosted.org/packages/79/03/74996420528fe488ce17c42b6400531c8067d7eb661c304fa3aa8fdad17c/panda-0.3.1.tar.gz
+Requirement already satisfied: setuptools in /usr/lib/python3.6/site-packages (from panda)
+Requirement already satisfied: requests in /usr/lib/python3.6/site-packages (from panda)
+Requirement already satisfied: urllib3>=1.21.1 in /usr/lib/python3.6/site-packages (from requests->panda)
+Installing collected packages: panda
+  Running setup.py install for panda: started
+    Running setup.py install for panda: finished with status 'done'
+Successfully installed panda-0.3.1

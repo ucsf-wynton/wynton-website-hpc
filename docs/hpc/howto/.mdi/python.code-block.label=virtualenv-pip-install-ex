@@ -1,0 +1,8 @@
+(my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install panda
+Requirement already satisfied: panda in ./my_project/lib/python3.6/site-packages (0.3.1)
+Requirement already satisfied: setuptools in ./my_project/lib/python3.6/site-packages (from panda) (59.6.0)
+Requirement already satisfied: requests in ./my_project/lib/python3.6/site-packages (from panda) (2.27.1)
+Requirement already satisfied: idna<4,>=2.5 in ./my_project/lib/python3.6/site-packages (from requests->panda) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in ./my_project/lib/python3.6/site-packages (from requests->panda) (1.26.12)
+Requirement already satisfied: certifi>=2017.4.17 in ./my_project/lib/python3.6/site-packages (from requests->panda) (2022.9.24)
+Requirement already satisfied: charset-normalizer~=2.0.0 in ./my_project/lib/python3.6/site-packages (from requests->panda) (2.0.12)

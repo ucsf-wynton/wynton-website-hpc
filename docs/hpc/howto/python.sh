@@ -45,8 +45,8 @@ if true; then
     export PATH="${PYTHONUSERBASE}/bin:${PATH}"
 fi
 
-mdi_code_block --label=pip-install-htseq <<EOF
-python3 -m pip install --user HTSeq
+mdi_code_block --label=pip-install-ex <<EOF
+python3 -m pip install --user panda
 EOF
 
 
@@ -88,8 +88,8 @@ EOF
 
 # shellcheck disable=1091
 . my_project/bin/activate
-mdi_code_block --label=virtualenv-pip-install-htseq <<EOF
-python3 -m pip install HTSeq
+mdi_code_block --label=virtualenv-pip-install-ex <<EOF
+python3 -m pip install panda
 EOF
 
 # shellcheck disable=1091
@@ -105,7 +105,7 @@ deactivate
 mdi_code_block --label=virtualenv-activate-2 <<EOF
 cd my_project 
 . bin/activate   ## ACTIVATE
-pip3 show HTSeq
+pip3 show panda
 
 EOF
 

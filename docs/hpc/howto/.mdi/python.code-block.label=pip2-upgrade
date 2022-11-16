@@ -1,7 +1,7 @@
 [alice@{{ site.devel.name }} ~]$ python2 -m pip install --user --upgrade "pip<21"
 DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
 Collecting pip<21
-  Using cached pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
+  Downloading pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 20.3

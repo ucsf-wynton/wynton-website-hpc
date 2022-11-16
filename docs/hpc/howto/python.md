@@ -33,17 +33,18 @@ Installing globally is the easiest, because you don't have to remember to _activ
 
 First of all, if an online installation instructions says `pip install ...`, replace that with `python3 -m pip install ...`.  Second, to install globally to your home directory, remember to always specify the `--user` option.  For example,
 
-<!-- code-block label="pip-install-htseq" -->
+<!-- code-block label="pip-install-ex" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user HTSeq
-Collecting HTSeq
-  Using cached https://files.pythonhosted.org/packages/e4/23/aca490d5cf3265dc4b97907231ebb7a4c5b666b4df8eeb815328bef5178b/HTSeq-1.99.2.tar.gz
-    Complete output from command python setup.py egg_info:
-    Error in setup script for HTSeq:
-    HTSeq requires Python 3.7+.
-    
-    ----------------------------------------
-Command "python setup.py egg_info" failed with error code 1 in ~/pip-build-jq6o3xw2/HTSeq/
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user panda
+Collecting panda
+  Downloading https://files.pythonhosted.org/packages/79/03/74996420528fe488ce17c42b6400531c8067d7eb661c304fa3aa8fdad17c/panda-0.3.1.tar.gz
+Requirement already satisfied: setuptools in /usr/lib/python3.6/site-packages (from panda)
+Requirement already satisfied: requests in /usr/lib/python3.6/site-packages (from panda)
+Requirement already satisfied: urllib3>=1.21.1 in /usr/lib/python3.6/site-packages (from requests->panda)
+Installing collected packages: panda
+  Running setup.py install for panda: started
+    Running setup.py install for panda: finished with status 'done'
+Successfully installed panda-0.3.1
 ```
 
 To see all Python packages that you have installed globally, use `python3 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python3 -m pip list`.  Packages installed with `python3 -m pip list --user` are typically installed to your `~/.local/lib/python3.6/site-packages/` folder.  If CLI executables are installed with one of those packages, they are often installed to `~/.local/bin/`.
@@ -70,29 +71,27 @@ In order to use virtual environments, we need the `virtualenv` tool.  Following 
 ```sh
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user virtualenv
 Collecting virtualenv
-  Using cached https://files.pythonhosted.org/packages/9b/f8/f0d32db111db20d82fd5ac94de1c0250f322237cfa6499031a81cf6b9379/virtualenv-20.13.4-py2.py3-none-any.whl
-Collecting six<2,>=1.9.0 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl
-Collecting importlib-metadata>=0.12; python_version < "3.8" (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/a0/a1/b153a0a4caf7a7e3f15c2cd56c7702e2cf3d89b1b359d1f1c5e59d68f4ce/importlib_metadata-4.8.3-py3-none-any.whl
-Collecting filelock<4,>=3.2 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/84/ce/8916d10ef537f3f3b046843255f9799504aa41862bfa87844b9bdc5361cd/filelock-3.4.1-py3-none-any.whl
-Collecting importlib-resources>=1.0; python_version < "3.7" (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/24/1b/33e489669a94da3ef4562938cd306e8fa915e13939d7b8277cb5569cb405/importlib_resources-5.4.0-py3-none-any.whl
-Collecting distlib<1,>=0.3.1 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/ac/a3/8ee4f54d5f12e16eeeda6b7df3dfdbda24e6cc572c86ff959a4ce110391b/distlib-0.3.4-py2.py3-none-any.whl
-Collecting platformdirs<3,>=2 (from virtualenv)
-  Using cached https://files.pythonhosted.org/packages/b1/78/dcfd84d3aabd46a9c77260fb47ea5d244806e4daef83aa6fe5d83adb182c/platformdirs-2.4.0-py3-none-any.whl
-Collecting typing-extensions>=3.6.4; python_version < "3.8" (from importlib-metadata>=0.12; python_version < "3.8"->virtualenv)
-  Using cached https://files.pythonhosted.org/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl
-Collecting zipp>=0.5 (from importlib-metadata>=0.12; python_version < "3.8"->virtualenv)
-  Using cached https://files.pythonhosted.org/packages/bd/df/d4a4974a3e3957fd1c1fa3082366d7fff6e428ddb55f074bf64876f8e8ad/zipp-3.6.0-py3-none-any.whl
-Installing collected packages: six, typing-extensions, zipp, importlib-metadata, filelock, importlib-resources, distlib, platformdirs, virtualenv
-Successfully installed distlib-0.3.4 filelock-3.4.1 importlib-metadata-4.8.3 importlib-resources-5.4.0 platformdirs-2.4.0 six-1.16.0 typing-extensions-4.1.1 virtualenv-20.13.4 zipp-3.6.0
+  Downloading https://files.pythonhosted.org/packages/fd/76/c99d37939e17e3c53f1c1b7e4f5365a9160b1cd0b37700657eed9a2a6775/virtualenv-20.16.7-py3-none-any.whl (8.8MB)
+Collecting importlib-resources>=5.4; python_version < "3.7" (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/24/1b/33e489669a94da3ef4562938cd306e8fa915e13939d7b8277cb5569cb405/importlib_resources-5.4.0-py3-none-any.whl
+Collecting filelock<4,>=3.4.1 (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/84/ce/8916d10ef537f3f3b046843255f9799504aa41862bfa87844b9bdc5361cd/filelock-3.4.1-py3-none-any.whl
+Collecting distlib<1,>=0.3.6 (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/76/cb/6bbd2b10170ed991cf64e8c8b85e01f2fb38f95d1bc77617569e0b0b26ac/distlib-0.3.6-py2.py3-none-any.whl (468kB)
+Collecting platformdirs<3,>=2.4 (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/b1/78/dcfd84d3aabd46a9c77260fb47ea5d244806e4daef83aa6fe5d83adb182c/platformdirs-2.4.0-py3-none-any.whl
+Collecting importlib-metadata>=4.8.3; python_version < "3.8" (from virtualenv)
+  Downloading https://files.pythonhosted.org/packages/a0/a1/b153a0a4caf7a7e3f15c2cd56c7702e2cf3d89b1b359d1f1c5e59d68f4ce/importlib_metadata-4.8.3-py3-none-any.whl
+Collecting zipp>=3.1.0; python_version < "3.10" (from importlib-resources>=5.4; python_version < "3.7"->virtualenv)
+  Downloading https://files.pythonhosted.org/packages/bd/df/d4a4974a3e3957fd1c1fa3082366d7fff6e428ddb55f074bf64876f8e8ad/zipp-3.6.0-py3-none-any.whl
+Collecting typing-extensions>=3.6.4; python_version < "3.8" (from importlib-metadata>=4.8.3; python_version < "3.8"->virtualenv)
+  Downloading https://files.pythonhosted.org/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl
+Installing collected packages: zipp, importlib-resources, filelock, distlib, platformdirs, typing-extensions, importlib-metadata, virtualenv
+Successfully installed distlib-0.3.6 filelock-3.4.1 importlib-metadata-4.8.3 importlib-resources-5.4.0 platformdirs-2.4.0 typing-extensions-4.1.1 virtualenv-20.16.7 zipp-3.6.0
 [alice@{{ site.devel.name }} ~]$ which virtualenv
 ~/.local/bin/virtualenv
 [alice@{{ site.devel.name }} ~]$ virtualenv --version
-virtualenv 20.13.4 from ~/.local/lib/python3.6/site-packages/virtualenv/__init__.py
+virtualenv 20.16.7 from ~/.local/lib/python3.6/site-packages/virtualenv/__init__.py
 ```
 
 
@@ -103,10 +102,10 @@ Start by creating a folder specific to the project you are currently working on.
 <!-- code-block label="virtualenv-init" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ virtualenv -p python3 my_project
-created virtual environment CPython3.6.8.final.0-64 in 5978ms
+created virtual environment CPython3.6.8.final.0-64 in 3097ms
   creator CPython3Posix(dest=~/my_project, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
-    added seed packages: pip==21.3.1, setuptools==59.6.0, wheel==0.37.1
+    added seed packages: certifi==2022.9.24, charset_normalizer==2.0.12, idna==3.4, panda==0.3.1, pip==21.3.1, requests==2.27.1, setuptools==59.6.0, urllib3==1.26.12, wheel==0.37.1
   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
 ```
 
@@ -151,15 +150,18 @@ To see what Python packages are installed _in the virtual environment_, use:
 <!-- code-block label="virtualenv-pip-list" -->
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
-Package    Version
----------- -------
-HTSeq      0.13.5
-mpi4py     1.3.1
-numpy      1.19.5
-pip        21.3.1
-pysam      0.18.0
-setuptools 59.6.0
-wheel      0.37.1
+Package            Version
+------------------ ---------
+certifi            2022.9.24
+charset-normalizer 2.0.12
+idna               3.4
+numpy              1.19.5
+panda              0.3.1
+pip                21.3.1
+requests           2.27.1
+setuptools         59.6.0
+urllib3            1.26.12
+wheel              0.37.1
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
@@ -168,12 +170,16 @@ wheel      0.37.1
 
 With a virtual environment enabled, you can install Python packages to the project folder using `python3 -m pip install ...` without specifying `--user`.  For instance,
 
-<!-- code-block label="virtualenv-pip-install-htseq" -->
+<!-- code-block label="virtualenv-pip-install-ex" -->
 ```sh
-(my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install HTSeq
-Requirement already satisfied: HTSeq in ./my_project/lib64/python3.6/site-packages (0.13.5)
-Requirement already satisfied: pysam in ./my_project/lib64/python3.6/site-packages (from HTSeq) (0.18.0)
-Requirement already satisfied: numpy in ./my_project/lib64/python3.6/site-packages (from HTSeq) (1.19.5)
+(my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install panda
+Requirement already satisfied: panda in ./my_project/lib/python3.6/site-packages (0.3.1)
+Requirement already satisfied: setuptools in ./my_project/lib/python3.6/site-packages (from panda) (59.6.0)
+Requirement already satisfied: requests in ./my_project/lib/python3.6/site-packages (from panda) (2.27.1)
+Requirement already satisfied: idna<4,>=2.5 in ./my_project/lib/python3.6/site-packages (from requests->panda) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in ./my_project/lib/python3.6/site-packages (from requests->panda) (1.26.12)
+Requirement already satisfied: certifi>=2017.4.17 in ./my_project/lib/python3.6/site-packages (from requests->panda) (2022.9.24)
+Requirement already satisfied: charset-normalizer~=2.0.0 in ./my_project/lib/python3.6/site-packages (from requests->panda) (2.0.12)
 ```
 
 To see which packages are now installed _in the virtual environment_ (the "project folder") and what their versions are, do:
@@ -181,15 +187,18 @@ To see which packages are now installed _in the virtual environment_ (the "proje
 <!-- code-block label="virtualenv-pip-list-2" -->
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
-Package    Version
----------- -------
-HTSeq      0.13.5
-mpi4py     1.3.1
-numpy      1.19.5
-pip        21.3.1
-pysam      0.18.0
-setuptools 59.6.0
-wheel      0.37.1
+Package            Version
+------------------ ---------
+certifi            2022.9.24
+charset-normalizer 2.0.12
+idna               3.4
+numpy              1.19.5
+panda              0.3.1
+pip                21.3.1
+requests           2.27.1
+setuptools         59.6.0
+urllib3            1.26.12
+wheel              0.37.1
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
@@ -202,16 +211,16 @@ Whenever you open a new terminal, make sure to _activate_ the virtual environmen
 ```sh
 [alice@{{ site.devel.name }} ~]$ cd my_project 
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## ACTIVATE
-(my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show HTSeq
-Name: HTSeq
-Version: 0.13.5
-Summary: A framework to process and analyze data from high-throughput sequencing (HTS) assays
-Home-page: https://github.com/htseq
-Author: Simon Anders, Fabio Zanini
-Author-email: fabio.zanini@unsw.edu.au
-License: GPL3
-Location: ~/my_project/lib64/python3.6/site-packages
-Requires: numpy, pysam
+(my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show panda
+Name: panda
+Version: 0.3.1
+Summary: A Python implementation of the Panda REST interface
+Home-page: http://www.pandastream.com
+Author: pandastream.com
+Author-email: support@pandastream.com
+License: MIT
+Location: ~/my_project/lib/python3.6/site-packages
+Requires: requests, setuptools
 Required-by: 
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
@@ -256,10 +265,10 @@ Don't use the suggested command call in that message.  Instead, use:
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user --upgrade pip
 Cache entry deserialization failed, entry ignored
 Collecting pip
-  Using cached https://files.pythonhosted.org/packages/a4/6d/6463d49a933f547439d6b5b98b46af8742cc03ae83543e4d7688c2420f8b/pip-21.3.1-py3-none-any.whl
+  Downloading https://files.pythonhosted.org/packages/a4/6d/6463d49a933f547439d6b5b98b46af8742cc03ae83543e4d7688c2420f8b/pip-21.3.1-py3-none-any.whl (1.7MB)
 Installing collected packages: pip
 Successfully installed pip-21.3.1
-You are using pip version 21.3.1, however version 22.0.4 is available.
+You are using pip version 21.3.1, however version 22.3.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
 
@@ -287,7 +296,7 @@ Python 2 reached the end of its life on 2020-01-01 in favor of Python 3. At this
 [alice@{{ site.devel.name }} ~]$ python2 -m pip install --user --upgrade "pip<21"
 DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
 Collecting pip<21
-  Using cached pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
+  Downloading pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 20.3

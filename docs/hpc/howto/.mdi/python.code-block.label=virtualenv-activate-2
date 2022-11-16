@@ -1,14 +1,14 @@
 [alice@{{ site.devel.name }} ~]$ cd my_project 
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## ACTIVATE
-(my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show HTSeq
-Name: HTSeq
-Version: 0.13.5
-Summary: A framework to process and analyze data from high-throughput sequencing (HTS) assays
-Home-page: https://github.com/htseq
-Author: Simon Anders, Fabio Zanini
-Author-email: fabio.zanini@unsw.edu.au
-License: GPL3
-Location: ~/my_project/lib64/python3.6/site-packages
-Requires: numpy, pysam
+(my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show panda
+Name: panda
+Version: 0.3.1
+Summary: A Python implementation of the Panda REST interface
+Home-page: http://www.pandastream.com
+Author: pandastream.com
+Author-email: support@pandastream.com
+License: MIT
+Location: ~/my_project/lib/python3.6/site-packages
+Requires: requests, setuptools
 Required-by: 
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
