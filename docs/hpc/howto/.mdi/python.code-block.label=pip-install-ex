@@ -1,10 +1,12 @@
-[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user panda
-Collecting panda
-  Downloading https://files.pythonhosted.org/packages/79/03/74996420528fe488ce17c42b6400531c8067d7eb661c304fa3aa8fdad17c/panda-0.3.1.tar.gz
-Requirement already satisfied: setuptools in /usr/lib/python3.6/site-packages (from panda)
-Requirement already satisfied: requests in /usr/lib/python3.6/site-packages (from panda)
-Requirement already satisfied: urllib3>=1.21.1 in /usr/lib/python3.6/site-packages (from requests->panda)
-Installing collected packages: panda
-  Running setup.py install for panda: started
-    Running setup.py install for panda: finished with status 'done'
-Successfully installed panda-0.3.1
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user pandas
+Collecting pandas
+  Downloading https://files.pythonhosted.org/packages/c3/e2/00cacecafbab071c787019f00ad84ca3185952f6bb9bca9550ed83870d4d/pandas-1.1.5-cp36-cp36m-manylinux1_x86_64.whl (9.5MB)
+Collecting numpy>=1.15.4 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/45/b2/6c7545bb7a38754d63048c7696804a0d947328125d81bf12beaa692c3ae3/numpy-1.19.5-cp36-cp36m-manylinux1_x86_64.whl (13.4MB)
+Collecting pytz>=2017.2 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/85/ac/92f998fc52a70afd7f6b788142632afb27cd60c8c782d1452b7466603332/pytz-2022.6-py2.py3-none-any.whl (498kB)
+Collecting python-dateutil>=2.7.3 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl (247kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3.6/site-packages (from python-dateutil>=2.7.3->pandas)
+Installing collected packages: numpy, pytz, python-dateutil, pandas
+Successfully installed numpy-1.19.5 pandas-1.1.5 python-dateutil-2.8.2 pytz-2022.6

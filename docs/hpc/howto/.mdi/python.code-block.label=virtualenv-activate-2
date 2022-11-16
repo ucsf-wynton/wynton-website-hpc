@@ -1,14 +1,14 @@
 [alice@{{ site.devel.name }} ~]$ cd my_project 
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## ACTIVATE
-(my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show panda
-Name: panda
-Version: 0.3.1
-Summary: A Python implementation of the Panda REST interface
-Home-page: http://www.pandastream.com
-Author: pandastream.com
-Author-email: support@pandastream.com
-License: MIT
-Location: ~/my_project/lib/python3.6/site-packages
-Requires: requests, setuptools
+(my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show pandas
+Name: pandas
+Version: 1.1.5
+Summary: Powerful data structures for data analysis, time series, and statistics
+Home-page: https://pandas.pydata.org
+Author: 
+Author-email: 
+License: BSD
+Location: ~/my_project/lib64/python3.6/site-packages
+Requires: numpy, python-dateutil, pytz
 Required-by: 
 (my_project) [alice@{{ site.devel.name }} my_project]$ 

@@ -1,5 +1,5 @@
 [alice@{{ site.devel.name }} ~]$ virtualenv -p python3 my_project
-created virtual environment CPython3.6.8.final.0-64 in 3097ms
+created virtual environment CPython3.6.8.final.0-64 in 3630ms
   creator CPython3Posix(dest=~/my_project, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
     added seed packages: certifi==2022.9.24, charset_normalizer==2.0.12, idna==3.4, panda==0.3.1, pip==21.3.1, requests==2.27.1, setuptools==59.6.0, urllib3==1.26.12, wheel==0.37.1

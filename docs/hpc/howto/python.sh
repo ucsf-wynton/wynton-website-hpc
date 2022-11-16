@@ -46,7 +46,7 @@ if true; then
 fi
 
 mdi_code_block --label=pip-install-ex <<EOF
-python3 -m pip install --user panda
+python3 -m pip install --user pandas
 EOF
 
 
@@ -89,7 +89,7 @@ EOF
 # shellcheck disable=1091
 . my_project/bin/activate
 mdi_code_block --label=virtualenv-pip-install-ex <<EOF
-python3 -m pip install panda
+python3 -m pip install pandas
 EOF
 
 # shellcheck disable=1091
@@ -105,7 +105,7 @@ deactivate
 mdi_code_block --label=virtualenv-activate-2 <<EOF
 cd my_project 
 . bin/activate   ## ACTIVATE
-pip3 show panda
+pip3 show pandas
 
 EOF
 
