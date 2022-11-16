@@ -31,13 +31,15 @@ mdi_adjust_output() {
 # Setup
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Use an empty pip cache
-export XDG_CACHE_HOME=$(mktemp -d)
+XDG_CACHE_HOME=$(mktemp -d)
+export XDG_CACHE_HOME
 echo "XDG_CACHE_HOME=${XDG_CACHE_HOME}"
 
 PATH_ORG=$PATH
 
 # Use fresh, empty Python setup
-export PYTHONUSERBASE=$(mktemp -d)
+PYTHONUSERBASE=$(mktemp -d)
+export PYTHONUSERBASE
 echo "PYTHONUSERBASE=${PYTHONUSERBASE}"
 export PATH="${PYTHONUSERBASE}/bin:${PATH_ORG}"
 
@@ -46,7 +48,8 @@ python3 -m pip install --user pandas
 EOF
 
 # Use fresh, empty Python setup
-export PYTHONUSERBASE=$(mktemp -d)
+PYTHONUSERBASE=$(mktemp -d)
+export PYTHONUSERBASE
 echo "PYTHONUSERBASE=${PYTHONUSERBASE}"
 export PATH="${PYTHONUSERBASE}/bin:${PATH_ORG}"
 
