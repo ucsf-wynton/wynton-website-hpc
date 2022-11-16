@@ -23,19 +23,19 @@ mdi_adjust_output() {
     tmpdir=${TMPDIR/$USER/$MDI_USER}
     ## Our PYTHON examples run in ${TMPDIR} but should look like ${HOME}
     tmpdir="~"
-    mdi_replace_pwd | sed "s|${HOME}|${tilde}|g" | sed "s|${TMPDIR}|${tmpdir}|g" | sed "s|\b${USER}\b|${MDI_USER}|g" | sed "s|\b${group}\b|${MDI_GROUP}|g"
+    mdi_replace_pwd | sed "s|${PYTHONUSERBASE}|${HOME}/.local|g" | sed "s|${HOME}|${tilde}|g" | sed "s|${TMPDIR}|${tmpdir}|g" | sed "s|\b${USER}\b|${MDI_USER}|g" | sed "s|\b${group}\b|${MDI_GROUP}|g"
 }
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PATH_ORG=$PATH
+
 # Use an empty pip cache
 XDG_CACHE_HOME=$(mktemp -d)
 export XDG_CACHE_HOME
 echo "XDG_CACHE_HOME=${XDG_CACHE_HOME}"
-
-PATH_ORG=$PATH
 
 # Use fresh, empty Python setup
 PYTHONUSERBASE=$(mktemp -d)
@@ -46,6 +46,11 @@ export PATH="${PYTHONUSERBASE}/bin:${PATH_ORG}"
 mdi_code_block --label=pip-install-ex <<EOF
 python3 -m pip install --user pandas
 EOF
+
+# Use an empty pip cache
+XDG_CACHE_HOME=$(mktemp -d)
+export XDG_CACHE_HOME
+echo "XDG_CACHE_HOME=${XDG_CACHE_HOME}"
 
 # Use fresh, empty Python setup
 PYTHONUSERBASE=$(mktemp -d)
