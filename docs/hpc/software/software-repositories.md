@@ -3973,15 +3973,15 @@ setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0
   <dd class="module-details">
 <span class="module-description">A language for writing Python extension modules</span><br>
 URL: <span class="module-url"><a href="https://cython.org/">https://cython.org/</a></span><br>
-Versions: <span class="module-version">0.25.2, 0.29.14, <em>0.29.24</em></span><br>
+Versions: <span class="module-version">0.25.2, 0.29.14, 0.29.24, <em>0.29.32</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Description: A language for writing Python extension modules&quot;
 module-whatis &quot;URL: https://cython.org/&quot;
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.24/bin
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.24/lib64/python2.7/site-packages
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.32/bin
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.32/lib64/python2.7/site-packages
 </code></pre>
 
 </details>
