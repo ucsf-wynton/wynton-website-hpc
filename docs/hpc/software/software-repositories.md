@@ -5744,7 +5744,7 @@ prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py3
   <dd class="module-details">
 <span class="module-description">Cross-python path, ini-parsing, io, code, log facilities</span><br>
 URL: <span class="module-url"><a href="https://py.readthedocs.io/en/latest/">https://py.readthedocs.io/en/latest/</a></span><br>
-Versions: <span class="module-version"><em>1.10.0</em></span><br>
+Versions: <span class="module-version">1.10.0, <em>1.11.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5752,7 +5752,7 @@ Versions: <span class="module-version"><em>1.10.0</em></span><br>
 module-whatis &quot;Description: Cross-python path, ini-parsing, io, code, log facilities&quot;
 module-whatis &quot;URL: https://py.readthedocs.io/en/latest/&quot;
 conflict python2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/py-1.10.0/lib/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/py-1.11.0/lib/python3.6/site-packages
 </code></pre>
 
 </details>
