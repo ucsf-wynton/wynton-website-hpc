@@ -145,3 +145,15 @@ python2 -m pip install --user --upgrade "pip==20.3" &> /dev/null
 mdi_code_block --label=pip2-upgrade <<EOF
 python2 -m pip install --user --upgrade "pip<21"
 EOF
+
+mdi_code_block --label=python-version <<EOF
+python3 --version
+EOF
+
+mdi_code_block --label=python-scl-version <<EOF
+python --version
+module load CBI scl-rh-python
+python --version
+EOF
+module purge
+

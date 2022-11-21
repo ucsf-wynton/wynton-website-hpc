@@ -257,6 +257,31 @@ Note how prefix `(my_project)` was dropped from the shell prompt and `python3` n
 
 ## Appendix
 
+### Using a more modern Python 3 version
+
+The version of Python 3 that comes built-in with CentOS is a bit dated. Specifically, it provides:
+
+<!-- code-block label="python-version" -->
+```sh
+[alice@{{ site.devel.name }} ~]$ python --version
+Python 3.6.8
+```
+
+Newer version of Python 3 are available via [SCL]:s. The easiest way to use them is to load the SCL as a module, e.g.
+
+<!-- code-block label="python-scl-version" -->
+```sh
+[alice@{{ site.devel.name }} ~]$ python --version
+Python 3.6.8
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-rh-python
+[alice@{{ site.devel.name }} ~]$ python --version
+Python 3.8.13
+```
+
+_Note_: You need to load this module _before_ you create a virtual environment.
+
+
+
 ### Upgrading pip
 
 You will at times get warnings that you are running an old version of 'pip':
@@ -312,3 +337,6 @@ Installing collected packages: pip
       Successfully uninstalled pip-20.3
 Successfully installed pip-20.3.4
 ```
+
+
+[SCL]: ../software/scl.html
