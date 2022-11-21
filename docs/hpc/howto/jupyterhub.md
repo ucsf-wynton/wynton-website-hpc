@@ -25,8 +25,8 @@ First, activate the virtual environment, i.e.
 Second, install the **ipykernel** package and create an IPython kernel:
 
 ```sh
-(my_project) [alice@{{ site.devel.name }} my_project]$ python -m pip install ipykernel
-(my_project) [alice@{{ site.devel.name }} my_project]$ python -m ipykernel install --user --name=<my_project>
+(my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip install ipykernel
+(my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m ipykernel install --user --name=<my_project>
 ```
 
 Refresh JHub page and you should see the new IPython kernel. 
