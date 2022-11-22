@@ -27,13 +27,13 @@ In contrast, for Anaconda and conda environments installed in a home directory, 
 
 ## Connect to Jupyter Notebook - using SSH port forwarding 
 
-In this example, the local port your web browser would connect to is 8157 and the remote port on the development node that the Jupyter Notebook is available is 47467.  You can choose any port in [1024,65535] of your choice to use on your local computer as long as it is not already used by another software.  In this example, we assume port 8157 is free on your local computer.  Similarly, the port used for Jupyter Notebook must be free on the development node.  Since there are other users on machine too, there is always a risk that the port is already occupied by another user already.  If so, there is a risk that port 47467 used in this example will not work.  If so, try another port in [1024,65535].
+In this example, the local port your web browser would connect to is 8888 and the remote port on the development node that the Jupyter Notebook is available is 47467.  You can choose any port in [1024,65535] of your choice to use on your local computer as long as it is not already used by another software.  In this example, we assume port 8888 is free on your local computer.  Similarly, the port used for Jupyter Notebook must be free on the development node.  Since there are other users on machine too, there is always a risk that the port is already occupied by another user already.  If so, there is a risk that port 47467 used in this example will not work.  If so, try another port in [1024,65535].
 
 These ports are configured when you establish the SSH tunnel:
 
 ```sh
  local                                  remote
- port 8157 ◀──────────────────────────▶ port 47467
+ port 8888 ◀──────────────────────────▶ port 47467
                                                                                                
 ┌────────┐          ┌────────┐          ┌────────┐
 │  home  │          │ login  │          │  dev   │
@@ -44,7 +44,7 @@ These ports are configured when you establish the SSH tunnel:
 To establish the "tunnel" using SSH port forwarding:
 
 ```sh
-[alice@local ~]$ ssh alice@{{ site.devel.name }}.wynton.ucsf.edu -J alice@log2.wynton.ucsf.edu -L 8157:localhost:47467
+[alice@local ~]$ ssh alice@{{ site.devel.name }}.wynton.ucsf.edu -J alice@log2.wynton.ucsf.edu -L 8888:localhost:47467
 ...
 [alice@{{ site.devel.name }} ~]$ 
 ```
@@ -67,11 +67,11 @@ Then launch a new Jupyter Notebook running on the development node:
      or http://127.0.0.1:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
 ```
 
-From a web browser on your local system, enter localhost in the address bar followed by the local port (8157 in this example) that was assigned to map to the remote port on the development node (47467 in this example), followed by the access token listed in the terminal.
+From a web browser on your local system, enter localhost in the address bar followed by the local port (8888 in this example) that was assigned to map to the remote port on the development node (47467 in this example), followed by the access token listed in the terminal.
 
 The address bar in the web browser in this case should resemble:
   
-`http://localhost:8157/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98`
+`http://localhost:8888/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98`
 
 Note: the port assigned on the local machine is used in the web browser, rather than the port specified as running on the development node.
 
