@@ -1,3 +1,8 @@
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+⚠️ 2022-11-21: **Beta version!** The Jupyter Hub server is under development. If you find any issues, please reach out to us.
+</div>
+
+
 <div class="alert alert-warning" role="alert" markdown="1">
 JHub login is restricted to non-PHI Wynton user accounts. If you have a Wynton PHI account, you will not be able to access JHub.
 </div>
