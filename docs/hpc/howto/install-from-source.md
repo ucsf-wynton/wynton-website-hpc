@@ -15,7 +15,7 @@ Compiling software from source often involves three steps:
 
 3. Installation - install the compiled binaries to its final destination
 
-Lets use the HTSeq software [samtools] as a real-world example to illustrate these steps.
+Lets use the [samtools] software as a real-world example to illustrate these steps.
 
 
 ### Download and extract source code
@@ -269,7 +269,7 @@ You only need to load these compiler tools prior to installing the software.  Wi
 
 
 
-[CentOS Software Collections (SCLs)]: /hpc/software/scl.html#development-nodes
-[CBI software repository]: /hpc/software/software-repositories.html
-[Support Channels]: /hpc/support/index.html
+[CentOS Software Collections (SCLs)]: ../software/scl.html#development-nodes
+[CBI software repository]: ../software/software-repositories.html
+[Support Channels]: ../support/index.html
 [samtools]: https://github.com/samtools/samtools
