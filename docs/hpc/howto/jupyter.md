@@ -44,7 +44,7 @@ These ports are configured when you establish the SSH tunnel:
 To establish the "tunnel" using SSH port forwarding:
 
 ```sh
-{local}$ ssh -J alice@log2.wynton.ucsf.edu -L 8888:localhost:47467 {{ site.devel.name }}.wynton.ucsf.edu
+{local}$ ssh -J alice@{{ site.login.hostname }} -L 8888:localhost:47467 {{ site.devel.name }}
 ...
 [alice@{{ site.devel.name }} ~]$ 
 ```
