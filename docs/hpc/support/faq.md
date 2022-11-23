@@ -103,9 +103,9 @@ it's a mistake on our end (sorry) - please drop us another email.
 
 ### X2Go does not connect
 
-**Q**. _I am getting timeout errors when trying to connect via x2go
-from a macOS computer, the x2go status hangs on "connecting"; In the
-x2go logs you will see:_
+**Q**. _I am getting timeout errors when trying to connect via X2Go
+from a macOS computer, the X2Go status hangs on "connecting"; In the
+X2Go logs you will see:_
 
 ```sh
 Info: Forwarding X11 connections to display '/private/tmp/com.apple.launchd.C24DSqSnIF/org.xquartz:0'.
@@ -116,14 +116,14 @@ Info: Waiting the cleanup timeout to complete.
 Session: Session terminated at 'Tue Mar  2 13:01:07 2021'.
 ```
 
-**A**. This appears to be a communication problem between x2go and
+**A**. This appears to be a communication problem between X2Go and
 XQuartz. The only way we've found to resolve this issue is to
 **Completely** remove XQuartz from the macOS computer and then
 re-install XQuartz. Please follow recommendations for completely
 removing the XQuartz application and all related files. (Search for
 any files or folders with the program’s name or developer’s name in
 the ~/Library/Preferences/, ~/Library/Application Support/ and
-~/Library/Caches/ folders.) After re-installing XQuartz, x2go should
+~/Library/Caches/ folders.) After re-installing XQuartz, X2Go should
 work again. If not, please contact the [{{ site.cluster.nickname }}
 team].
 
