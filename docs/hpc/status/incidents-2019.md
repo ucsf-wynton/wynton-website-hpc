@@ -191,7 +191,7 @@ reason: external
 **Resolved**: The {{ site.cluster.name }} environment is up and running again.
 <br><span class="timestamp">September 24, 20:25 PDT</span>
 
-**Notice**: The {{ site.cluster.name }} environment is nonresponsive.  Problem is being investigated.
+**Notice**: The {{ site.cluster.name }} environment is unresponsive.  Problem is being investigated.
 <br><span class="timestamp">September 24, 17:30 PDT</span>
 
 <!--
@@ -208,10 +208,10 @@ reason: internal
 
 #### <span style="color: orange;">BeeGFS failure</span>
 
-**Resolved**: The {{ site.cluster.name }} environment is up and running again. The reason for this downtime was the BeeGFS file server became nonresponsive.
+**Resolved**: The {{ site.cluster.name }} environment is up and running again. The reason for this downtime was the BeeGFS file server became unresponsive.
 <br><span class="timestamp">August 23, 20:45 PDT</span>
 
-**Notice**: The {{ site.cluster.name }} environment is nonresponsive.
+**Notice**: The {{ site.cluster.name }} environment is unresponsive.
 <br><span class="timestamp">August 23, 16:45 PDT</span>
 
 <!--
