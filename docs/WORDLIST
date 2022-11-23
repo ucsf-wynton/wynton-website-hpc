@@ -1,4 +1,4 @@
-## 01 Dictionary of WhiteListed Words
+## 01 Dictionary of Accepted Words
 Agard
 alice
 allocatedStorage
@@ -9,6 +9,7 @@ atgpu
 autopopulated
 Baranzini
 barcode
+baseurl
 bashrc
 BeeGFS
 benchmarking
@@ -39,6 +40,7 @@ cron
 cronjob
 crontab
 Csh
+cto
 ctocore
 Ctrl
 CUDA
@@ -63,6 +65,7 @@ envvars
 EOF
 EPEL
 EPYC
+failback
 failover
 FASTQ
 favicon
@@ -84,8 +87,6 @@ gitea
 github
 gitlab
 GitLab
-gladstone
-Gladstone
 globus
 goclient
 gpu
@@ -122,13 +123,12 @@ IRB
 isoseq
 IsoSeq
 jacobson
-json
 JHub
+json
 Jupyter
 JupyterHub
 kadmin
 keiser
-Keiser
 Kerberos
 kerbtest
 keypair
@@ -137,6 +137,7 @@ KiB
 lbl
 LDAP
 LF
+libs
 limma
 Lmod
 Lua
@@ -163,12 +164,12 @@ NetApp
 NFS
 NIST
 nloptr
-nonresponsive
 NSF's
 ntel
 Nvidia
 NVMe
 NX
+odeca
 odecacore
 officio
 onboarding
@@ -217,8 +218,10 @@ Requestor
 requeue
 resynced
 resynchronization
+riginti
 riginticore
 RITM
+rjags
 Rmarkdown
 Rmpi
 roadmap
@@ -294,15 +297,8 @@ Xeon
 Xp
 XQuartz
 XTerm
+yaml
 yml
 YubiKey
 ZFS
 Zsh
-libs
-baseurl
-yaml
-failback
-cto
-odeca
-riginti
-rjags
