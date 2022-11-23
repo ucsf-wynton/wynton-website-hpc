@@ -1,3 +1,7 @@
+<div class="alert alert-warning" role="alert" markdown="1">
+2022-11-23: The Singularity software was renamed to Apptainer in November 2021. This change has now trickled all the way down to the CentOS software repositories and is now deployed on {{ site.cluster.name }}.  We will soon suggest you to use the `apptainer` command, but the alias `singularity` will continue to work for the time being.
+</div>
+
 # Singularity - Linux Containers
 
 The {{ site.cluster.name }} cluster supports [Linux containers] via the [Singularity] software.  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
