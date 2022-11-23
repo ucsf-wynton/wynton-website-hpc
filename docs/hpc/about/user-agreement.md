@@ -77,7 +77,7 @@ Agreement include:
    package manager. Additionally, Lmod modules that are not maintained
    by the Wynton admins themselves is the responsibility of the
    individual labs and users that maintain the module repositories
-   (e.g. the CBI and Sali repositories.
+   (e.g. the CBI and Sali repositories).
 
 
 [Purpose, Principles and Governance]: /hpc/about/governance.html
