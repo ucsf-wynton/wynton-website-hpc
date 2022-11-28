@@ -33,10 +33,9 @@ Agreement include:
    applications. Therefore, while every effort will continue to be
    made to maximize the number of applications, it is impossible to
    guarantee that once supported applications will always remain
-   supported. If a rollback is required the {{ site.organization.name
-   }} OPS team and Shared Compute governance will make it a priority
-   to stand up a separate cluster supporting the required
-   functionality.
+   supported. If a rollback is required the Wynton OPS team and Shared
+   Compute governance will make it a priority to stand up a separate
+   cluster supporting the required functionality.
 
  * Use of the Wynton HPC cluster is subject to UCSF's policy on
    [Authorized and Acceptable Use of Electronic Information
