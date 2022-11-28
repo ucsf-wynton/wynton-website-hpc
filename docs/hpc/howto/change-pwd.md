@@ -25,7 +25,18 @@ You can change your password either via our web interface, or from the {{ site.c
 
 ### Alt 1. From the web browser
 
-You can change your password using the [RBVI Kerberos Web Interface].
+You can change your password before it expired using the 'RBVI Kerberos Web Interface' site;
+
+1. Go to <https://www.cgl.ucsf.edu/admin/chpass.py>
+
+2. To access the page, enter your current {{ site.cluster.name }}
+   'Username' and 'Password' (must not be expired) in the browser
+   pop-up panel
+
+3. Upon successful login, you will reach the 'Resource for
+   Biocomputing, Visualization, and Informatics' page, which allows
+   you to set a new password
+   
 
 
 ### Alt 2. From the {{ site.cluster.nickname }} command line
