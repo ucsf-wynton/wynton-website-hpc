@@ -51,11 +51,11 @@
 
 * PHI users must use PHI-specific nodes on Wynton;
 
-  - login nodes: `plog1`
+  - login nodes: `plog1.wynton.ucsf.edu`
   
   - development nodes: `pdev1` and `pgpudev1`
 
-  - data-transfer nodes: `pdt1` and `pdt2`
+  - data-transfer nodes: `pdt1.wynton.ucsf.edu` and `pdt2.wynton.ucsf.edu`
 
 * PHI users must _not_ use any of the non-PHI-compliant nodes on Wynton, including log1, log2, dev1, dev2, dev3, dt1, and dt2.
 
