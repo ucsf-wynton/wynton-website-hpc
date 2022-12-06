@@ -43,26 +43,29 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
     if (nentries == 0) {
       tr = table.append("thead").append("tr");
       tr.append("th").text("Lab Group");
-      tr.append("th").text("Number of GPU Nodes");
+      tr.append("th").text("GPU Slots");
       tr.append("th").text("GPU Nodes");
       tbody = table.append("tbody");
     }
 
     tr = tbody.append("tr");
+    row[2] = row[2].replace(/[, ]+/g, ", ");
     for (key in row) td = tr.append("td").text(row[key]);
     nodes_total += parseInt(row[1]);
-    hosts = hosts.concat(row[2]);
+    hosts = hosts.concat(" ").concat(row[2]);
 
     nentries += 1;
   });
 
   hosts = hosts.replace(/[, ]+/g, " ");
-  const count = new Set(hosts.split(' ')).size;
+  hosts = hosts.replace(/(^ | $)/g, "");
+  hosts = hosts.split(" ");
+  const count = new Set(hosts).size;
 
   tr = table.append("tfoot").append("tr");
   tr.append("td").text("Total");
-  tr.append("td").text(nodes_total + " nodes");
-  tr.append("td").text(count + " nodes");
+  tr.append("td").text(nodes_total + " slots");
+  tr.append("td").text(count + " unique GPU nodes");
 
   $(document).ready(function() {
     $('#hosttable').DataTable({
