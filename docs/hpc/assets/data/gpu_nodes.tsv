@@ -55,7 +55,7 @@ qb3-atgpu14	A40	48 GiB	4	512 GiB	communal	true
 qb3-atgpu15	A40	48 GiB	4	512 GiB	communal	true
 qb3-atgpu16	A40	48 GiB	4	512 GiB	keiser	true
 qb3-atgpu17	A40	48 GiB	4	512 GiB	communal	true
-qb3-atgpu18	A40	48 GiB	4	512 GiB	communal	true
+qb3-atgpu18	A40	48 GiB	4	512 GiB	msg	true
 qb3-atgpu19	A40	48 GiB	4	512 GiB	ichs	true
 qb3-atgpu20	A100	80 GiB	4	1024 GiB	theodorislab	true
 qb3-atgpu21	A100	80 GiB	4	1024 GiB	neuroppg	true
