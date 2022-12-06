@@ -1,5 +1,5 @@
 # Created by: hb, mu, jbl
-# Created on: 2022-05-13 18:15:00-07:00
+# Created on: 2022-12-12 9:35:00
 Node	GPU	GPU RAM	#GPUs	RAM	Contributor	NVME /scratch
 msg-ihgpu1	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
 msg-ihgpu2	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
