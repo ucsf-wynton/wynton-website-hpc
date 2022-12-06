@@ -65,7 +65,13 @@ hpc/_data/users.yml: FORCE
 	  >&2 echo "WARNING: Empty 'nbr_of_project'. Ignoring. Keeping old."; \
 	fi
 
-hpc/_data: hpc/_data/users.yml
+hpc/_data/specs.yml: hpc/assets/data/gpu_nodes.tsv
+	module try-load CBI sqlite; \
+	read -r -a count < <(grep -vE "^#" "$<" | sqlite3 ':memory:' '.mode tabs' '.import /dev/stdin data' 'select count("#GPUs"),sum("#GPUs") from data' 'select count("#GPUs"),sum("#GPUs") from data where Contributor == "communal"' | tr $$'\n' '\t'); \
+	sed -i -E "s/^(gpu_nodes:) +[[:digit:]]+/\1 $${count[0]}/; s/^(gpus:) +[[:digit:]]+/\1 $${count[1]}/; s/^(communal_gpu_nodes:) +[[:digit:]]+/\1 $${count[2]}/; s/^(communal_gpus:) +[[:digit:]]+/\1 $${count[3]}/" "$@"
+
+
+hpc/_data: hpc/_data/users.yml hpc/_data/specs.yml
 
 _data: hpc/_data
 	cp -p $</* $@/
