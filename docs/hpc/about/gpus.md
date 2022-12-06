@@ -34,8 +34,10 @@ d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
   var table = d3.select("#hosttable");
   var thead, tbody, tfoot, tr, td, td_status;
   var value, value2;
+  var gpus;
   var gpus_total = 0;
-  var communal_total = 0;
+  var communal_nodes_total = 0;
+  var communal_gpus_total = 0;
   
   /* For each row */
   var nentries = 0;
@@ -61,22 +63,24 @@ d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
 
     tr = tbody.append("tr");
     for (key in row) td = tr.append("td").text(row[key]);
-    gpus_total += parseInt(row[3]);
+    gpus = parseInt(row[3]);
+    gpus_total += gpus;
     
     if (row[5] == "(communal)") {
-      communal_total += 1;
+      communal_nodes_total += 1;
+      communal_gpus_total += gpus;
     }
 
     nentries += 1;
   });
 
   tr = table.append("tfoot").append("tr");
-  tr.append("td").text("Total");
+  tr.append("td").append("em").text("Total");
   tr.append("td");
   tr.append("td");
-  tr.append("td").text(gpus_total + " GPUs");
+  tr.append("td").append("em").text(gpus_total + " GPUs");
   tr.append("td");
-  tr.append("td").text(communal_total + " communal nodes");
+  tr.append("td").append("em").text(communal_nodes_total + " communal nodes (" + communal_gpus_total + " GPUs)");
   tr.append("td");
 
   $(document).ready(function() {
