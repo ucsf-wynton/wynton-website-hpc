@@ -20,9 +20,9 @@ level: info
 condition: is operational
 
 # Actual status:
-level: danger
-condition: does not accept new jobs
-message: The SGE scheduler is offline
+# level: danger
+# condition: does not accept new jobs
+# message: The SGE scheduler is offline
 
 # Actual status
 # level: info
