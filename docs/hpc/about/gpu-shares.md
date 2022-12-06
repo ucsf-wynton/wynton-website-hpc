@@ -33,6 +33,7 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
   var thead, tbody, tfoot, tr, td, td_status;
   var value, value2;
   var nodes_total = 0;
+  var hosts = "";
   
   /* For each row */
   var nentries = 0;
@@ -50,14 +51,18 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
     tr = tbody.append("tr");
     for (key in row) td = tr.append("td").text(row[key]);
     nodes_total += parseInt(row[1]);
+    hosts = hosts.concat(row[2]);
 
     nentries += 1;
   });
 
+  hosts = hosts.replace(/[, ]+/g, " ");
+  const count = new Set(hosts.split(' ')).size;
+
   tr = table.append("tfoot").append("tr");
   tr.append("td").text("Total");
   tr.append("td").text(nodes_total + " nodes");
-  tr.append("td");
+  tr.append("td").text(count + " nodes");
 
   $(document).ready(function() {
     $('#hosttable').DataTable({
