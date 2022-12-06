@@ -54,7 +54,7 @@ top
 
 <dt>Linux Containers</dt>
 <dd>
-singularity
+apptainer (formerly singularity)
 </dd>
 </dl>
 
