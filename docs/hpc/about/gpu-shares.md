@@ -38,7 +38,7 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
   /* For each row */
   var nentries = 0;
   host_table.forEach(function(row0) {
-    var row = [row0["project"], "gpu.q", row0["nbr_of_hosts"], row0["hosts"]];
+    var row = [row0["project"], row0["queue"], row0["nbr_of_hosts"], row0["hosts"]];
 
     if (nentries == 0) {
       tr = table.append("thead").append("tr");
@@ -50,7 +50,6 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
     }
 
     tr = tbody.append("tr");
-    row[3] = row[3].replace(/[, ]+/g, ", ");
     for (key in row) td = tr.append("td").text(row[key]);
     nodes_total += parseInt(row[2]);
     hosts = hosts.concat(" ").concat(row[3]);
