@@ -3,6 +3,9 @@ all: check
 start:
 	cd docs; $(MAKE) $@
 
+restart:
+	cd docs; $(MAKE) $@
+
 stop:
 	cd docs; $(MAKE) $@
 
