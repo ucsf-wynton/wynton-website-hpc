@@ -38,21 +38,22 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
   /* For each row */
   var nentries = 0;
   host_table.forEach(function(row0) {
-    var row = [row0["project"], row0["nbr_of_hosts"], row0["hosts"]];
+    var row = [row0["project"], "gpu.q", row0["nbr_of_hosts"], row0["hosts"]];
 
     if (nentries == 0) {
       tr = table.append("thead").append("tr");
       tr.append("th").text("Lab Group");
+      tr.append("th").text("Queue");
       tr.append("th").text("#GPU Nodes");
       tr.append("th").text("GPU Nodes");
       tbody = table.append("tbody");
     }
 
     tr = tbody.append("tr");
-    row[2] = row[2].replace(/[, ]+/g, ", ");
+    row[3] = row[3].replace(/[, ]+/g, ", ");
     for (key in row) td = tr.append("td").text(row[key]);
-    nodes_total += parseInt(row[1]);
-    hosts = hosts.concat(" ").concat(row[2]);
+    nodes_total += parseInt(row[2]);
+    hosts = hosts.concat(" ").concat(row[3]);
 
     nentries += 1;
   });
@@ -64,6 +65,7 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
 
   tr = table.append("tfoot").append("tr");
   tr.append("td").text("Total");
+  tr.append("td");
   tr.append("td").text(nodes_total + " GPU nodes");
   tr.append("td").text(count + " unique GPU nodes");
 
