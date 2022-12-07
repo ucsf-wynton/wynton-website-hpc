@@ -79,15 +79,3 @@ d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
 </script>
 
 Source: [gpu_shares.tsv](/hpc/assets/data/gpu_shares.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data were compiled from the current SGE configuration (`qconf -srqs shared_gpu_limits` and `qconf -shgrp <project>`).
-
-<style>
-table {
-  margin-top: 2ex;
-  margin-bottom: 2ex;
-}
-tfoot {
-  border-top: 2px solid #000;
-  font-weight: bold;
-}
-ttr:last-child { border-top: 2px solid #000; }
-</style>

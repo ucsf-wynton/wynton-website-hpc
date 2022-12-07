@@ -93,15 +93,3 @@ d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
 </script>
 
 Source: [gpu_nodes.tsv](/hpc/assets/data/gpu_nodes.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data are manually updated.
-
-<style>
-table {
-  margin-top: 2ex;
-  margin-bottom: 2ex;
-}
-tfoot {
-  border-top: 2px solid #000;
-  font-weight: bold;
-}
-ttr:last-child { border-top: 2px solid #000; }
-</style>

@@ -47,15 +47,6 @@ As of October 2018, the **minimal requirement for hardware contributions is 8 co
 We are currently [in the process](/hpc/about/roadmap.html) of defining the _storage_ pricing model, which will be available as soon as we have identified all the costs involved.
 
 
-
-<style>
-table {
-  width: auto;
-  margin-top: 1.5ex;
-  margin-bottom: 1.5ex;
-}
-</style>
-
 [200 GiB]: /hpc/about/specs.html
 [unlimited]: /hpc/about/specs.html
 [a plan]: /hpc/about/roadmap.html

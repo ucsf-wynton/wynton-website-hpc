@@ -94,33 +94,52 @@ body {
  * Tables
  *--------------------------------------------------------------*/
 table {
-    margin: auto;
+  margin: auto;
+  margin-top: 2ex;
+  margin-bottom: 2ex;
 /*
     min-width: 60%;
     max-width: 100%;
 */
 }
+
 tr {
     vertical-align: top;
-}    
+}
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 th {
 /*    background-color: #5bc0de; */
     color: #000;
     border-bottom: 2px solid #000;
 }
+
 th, td {
     padding: 0.5ex;
 }
+
 dt {
   margin-left: 0.5ex;
 }
+
 dt:after { content: ":" }
+
 dd {
   margin-left: 2.5ex;
 }
+
+tfoot {
+  border-top: 2px solid #000;
+  font-weight: bold;
+}
+
+/*
+ttr:last-child { border-top: 2px solid #f00; }
+*/
+
 
 
 /*--------------------------------------------------------------*

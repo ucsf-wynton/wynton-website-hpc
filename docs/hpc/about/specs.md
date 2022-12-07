@@ -250,18 +250,6 @@ Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> usin
 
 -->
 
-<style>
-table {
-  margin-top: 2ex;
-  margin-bottom: 2ex;
-}
-tfoot {
-  border-top: 2px solid #000;
-  font-weight: bold;
-}
-ttr:last-child { border-top: 2px solid #000; }
-</style>
-
 [CentOS]: https://www.centos.org/
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
