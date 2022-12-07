@@ -75,12 +75,12 @@ d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
   });
 
   tr = table.append("tfoot").append("tr");
-  tr.append("td").append("em").text("Total");
+  tr.append("td").text("Total");
   tr.append("td");
   tr.append("td");
-  tr.append("td").append("em").text(gpus_total + " GPUs");
+  tr.append("td").text(gpus_total + " GPUs");
   tr.append("td");
-  tr.append("td").append("em").text(communal_nodes_total + " communal nodes (" + communal_gpus_total + " GPUs)");
+  tr.append("td").text(communal_nodes_total + " communal nodes (" + communal_gpus_total + " GPUs)");
   tr.append("td");
 
   $(document).ready(function() {
@@ -93,3 +93,15 @@ d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
 </script>
 
 Source: [gpu_nodes.tsv](/hpc/assets/data/gpu_nodes.tsv) produced on <span id="compute-shares-timestamp"></span>.  These data are manually updated.
+
+<style>
+table {
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+}
+tfoot {
+  border-top: 2px solid #000;
+  font-weight: bold;
+}
+ttr:last-child { border-top: 2px solid #000; }
+</style>
