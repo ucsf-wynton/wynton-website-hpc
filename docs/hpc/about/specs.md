@@ -64,14 +64,16 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes](/hpc/get-started/development-prototyping.html).
 
-Node                        | Physical Cores |      RAM | Local `/scratch` |                           CPU |                GPU |
-----------------------------|---------------:|---------:|-----------------:|------------------------------:|-------------------:|
-`{{ site.dev1.hostname }}`    |             72 |  384 GiB |         0.93 TiB | Intel Gold 6240 2.60GHz       |                    |
-`{{ site.dev2.hostname }}`    |             48 |  512 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.dev3.hostname }}`    |             48 |  256 GiB |         0.73 TiB | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.gpudev1.hostname }}` |             32 |  128 GiB |         0.82 TiB | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
+Node                          | Physical Cores |      RAM | Local `/scratch` | CPU x86-64 level |                          CPU  |                GPU |
+------------------------------|---------------:|---------:|-----------------:|-----------------:|------------------------------:|-------------------:|
+`{{ site.dev1.hostname }}`    |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
+`{{ site.dev2.hostname }}`    |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.dev3.hostname }}`    |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.gpudev1.hostname }}` |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
 
-_Comment:_ Please use the GPU development node only if you need to build or prototype GPU software.
+_Comment:_
+Please use the GPU development node only if you need to build or prototype GPU software.
+The CPU x86-64 level is the [x86-64 microarchitecture levels] supported by the nodes CPU.
 <!--
 Source: `nproc --all`, `free -ht`, `df -B /scratch`, `lscpu`, and `lspci | grep 3D`
 -->
@@ -253,5 +255,6 @@ Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> usin
 [CentOS]: https://www.centos.org/
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
+[x86-64 microarchitecture levels]: https://www.wikipedia.org/wiki/X86-64#Microarchitecture_levels
 [wyntonquery]: https://ucsf-wynton.github.io/wyntonquery/
 [host_table.tsv]: /hpc/assets/data/host_table.tsv
