@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(87)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(88)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
@@ -236,7 +236,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (87)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (88)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -3721,6 +3721,45 @@ pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_wynton-tools" class="module-name">wynton-tools</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">wynton-tools: UCSF Wynton HPC Tools</strong><br>
+<span class="module-description">The UCSF Wynton HPC Tools is a set of command-line tools that queries different aspects of the UCSF Wynton HPC environment.  These tools may be useful for systems administrators as well as end-users.</span><br>
+Example: <span class="module-example"><code>wynton --help</code>, <code>trash --help</code>, and <code>x86-64-level --help</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/ucsf-wynton/wynton-tools">https://github.com/ucsf-wynton/wynton-tools</a>, <a href="https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md">https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md</a> (changelog)</span><br>
+Warning: <span class="module-warning">This is work in development, which means that these tools may change, or even be removed, at anytime without notice.</span><br>
+Versions: <span class="module-version"><em>0.2.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+wynton-tools: UCSF Wynton HPC Tools
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utilities&quot;)
+whatis(&quot;URL: https://github.com/ucsf-wynton/wynton-tools, https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md (changelog)&quot;)
+whatis([[
+Description: The UCSF Wynton HPC Tools is a set of command-line tools that queries different aspects of the UCSF Wynton HPC environment.  These tools may be useful for systems administrators as well as end-users.
+Warning: This is work in development, which means that these tools may change, or even be removed, at anytime without notice.
+Examples: `wynton --help`, `trash --help`, and `x86-64-level --help`.
+]])
+
+if not isDir(&quot;/wynton&quot;) then
+  LmodMessage(&quot;NOTE: The '&quot; .. name .. &quot;' module is designed for the UCSF Wynton HPC environment; not all tools may work on your system&quot;)
+end
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 </div> 
 
 <div id="button_repository_sali" class="tab-pane fade">
@@ -6241,7 +6280,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(87)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(88)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
