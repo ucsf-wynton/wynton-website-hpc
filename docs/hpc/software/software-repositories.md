@@ -967,7 +967,7 @@ pushenv(&quot;MROFLAGS&quot;, &quot;--localcores=1 --localmem=8 --limit-loadavg&
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog) <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version">3.18.2, 3.19.2, 3.22.2, 3.23.0, 3.23.1, <em>3.24.2</em></span><br>
+Versions: <span class="module-version">3.18.2, 3.19.2, 3.22.2, 3.23.0, 3.23.1, 3.24.2, <em>3.25.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3265,7 +3265,7 @@ setenv(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/share:/o
 Example: <span class="module-example"><code>shellcheck --version</code> and <code>shellcheck -x ~/.bashrc</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.shellcheck.net/">https://www.shellcheck.net/</a>, <a href="https://github.com/koalaman/shellcheck/blob/master/CHANGELOG.md">https://github.com/koalaman/shellcheck/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/koalaman/shellcheck/">https://github.com/koalaman/shellcheck/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.8.0</em></span><br>
+Versions: <span class="module-version">0.8.0, <em>0.9.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
