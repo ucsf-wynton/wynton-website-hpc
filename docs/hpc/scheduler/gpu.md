@@ -53,7 +53,7 @@ Do not use a parallel environment (i.e. `-pe smp 4` or `-pe mpi_onehost 4`) for 
 2022-12-20: We are still testing this feature. Although basic use-case testing has been done, Multi-Node Multi-GPU jobs still haven’t been thoroughly validated by end users. If you run into issues or have suggestions to make the documentation clearer, please reach out to [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 </div>
 
-We have setup a trial of multi-node GPU jobs on Wynton.  To run a multi-node GPU, job, you must do the following:
+We have setup a trial of multi-node GPU jobs on Wynton. This enables you to run jobs on all the GPUs of more than one server.  To run a multi-node GPU, job, you must do the following:
 
 1) Submit to the MPI PE and request a number of slots equal to the number
     of GPUs you want to use.  Assuming you want to use all A40s, the number
@@ -71,6 +71,7 @@ Suggestions:
 
 - Some applications are finicky about the version of cuda, load the correct cuda module.
 - Make sure you are using the version of openmpi which your application has been compiled for.
+- You'll want to be sure you use servers with matching models of GPUs and matching numbers of GPUs.
 
 In addition, a discussion group has been started on the Wynton Slack by the Wynton Users who are currently testing the feature:
 
