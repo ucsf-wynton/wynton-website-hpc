@@ -74,7 +74,7 @@ In addition, a discussion group has been started on the Wynton Slack by the Wynt
 
 #multinode-multigpu
 
-https://ucsf-wynton.slack.com/archives/C04B3U9S5S5
+[multinode-multigpu](https://ucsf-wynton.slack.com/archives/C04B3U9S5S5)
 
 
 ## GPU relevant resource requests
