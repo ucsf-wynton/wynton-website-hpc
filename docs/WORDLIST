@@ -156,7 +156,11 @@ miniconda
 misconfiguration
 mortem
 MOTD
+mpi
+mpirun
 msg
+multigpu
+multinode
 multithreaded
 MyAccess
 narkive
@@ -187,6 +191,7 @@ pbdMPI
 pbdPROF
 pdbMPI
 pdev
+pe
 pdt
 Pegg
 performant
@@ -208,6 +213,7 @@ py
 qb
 qmaster
 qstat
+qsub
 queueing
 quickstart
 RBVI
