@@ -47,6 +47,29 @@ qsub -q 4gpu.q ...
 Do not use a parallel environment (i.e. `-pe smp 4` or `-pe mpi_onehost 4`) for 4gpu.q as you would for gpu.q.  If you do, the job will never start.
 </div>
 
+## Submitting Multi-Node Multi-GPU jobs
+
+2022-12-20: We are still testing this feature. Although basic use-case testing has been done, Multi-Node Multi-GPU jobs still haven’t been thoroughly validated by end users. If you run into issues or have suggestions to make the documentation clearer, please reach out to support@wynton.ucsf.edu.
+
+We have setup a trial of multi-node GPU jobs on Wynton.  To run a multi-node GPU, job, you must do the following:
+
+1) Submit to the MPI PE and request a number of slots equal to the number
+    of GPUs you want to use.  Assuming you want to use all A40s, the number
+    should be a multiple of 4.  Example: "-pe mpi 8".
+
+2) Request the "exclusive" resource: "-l excl=true"
+
+And that's all that's required.  You'll need to use 'mpirun' to launch your applications on the hosts assigned to the job.  And you'll likely want to tailor the rest of your qsub flags to make sure you run on hosts with the same GPU types.  Also, you'll *really* want to set "-R y" to turn on reservations.  As with all parallel jobs, keep in mind that the more resources you request, the longer your wait time will be.
+
+Please let us know how your testing goes.  We've done limited testing of our own (only the scheduling piece), but some things are sure to come up that we didn't see there.  We'll be happy to tweak as we go along.
+
+In addition, a discussion group has been started on the Wynton Slack by the Wynton Users who are currently testing the feature:
+
+#multinode-multigpu
+
+https://ucsf-wynton.slack.com/archives/C04B3U9S5S5
+
+
 ## GPU relevant resource requests
 
 The GPU nodes in {{ site.cluster.name }} contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
