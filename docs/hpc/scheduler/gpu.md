@@ -57,11 +57,13 @@ We have setup a trial of multi-node GPU jobs on Wynton.  To run a multi-node GPU
 
 1) Submit to the MPI PE and request a number of slots equal to the number
     of GPUs you want to use.  Assuming you want to use all A40s, the number
-    should be a multiple of 4.  Example: "-pe mpi 8".
+    should be a multiple of 4.  Example: `"-pe mpi 8"`.
 
-2) Request the "exclusive" resource: "-l excl=true"
+2) Request the "exclusive" resource: `"-l excl=true"`
 
 And that's all that's required.  You'll need to use 'mpirun' to launch your applications on the hosts assigned to the job.  And you'll likely want to tailor the rest of your qsub flags to make sure you run on hosts with the same GPU types.  Also, you'll *really* want to set "-R y" to turn on reservations.  As with all parallel jobs, keep in mind that the more resources you request, the longer your wait time will be.
+
+More information about using openmpi is on our website here: [Using MPI on Wynton](https://wynton.ucsf.edu/hpc/scheduler/submit-jobs.html#mpi)
 
 Please let us know how your testing goes.  We've done limited testing of our own (only the scheduling piece), but some things are sure to come up that we didn't see there.  We'll be happy to tweak as we go along.
 
