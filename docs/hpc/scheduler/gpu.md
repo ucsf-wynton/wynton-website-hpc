@@ -69,8 +69,8 @@ Please let us know how your testing goes.  We've done limited testing of our own
 
 Suggestions:
 
-- Some applications are finicky about the version of cuda, load the correct cuda module.
-- Make sure you are using the version of openmpi which your application has been compiled for.
+- Some applications are finicky about the version of cuda, load the correct cuda module your program has been compiled against.
+- Make sure you are using the version of openmpi which your application has been compiled against.
 - You'll want to be sure you use servers with matching models of GPUs and matching numbers of GPUs.
 
 In addition, a discussion group has been started on the Wynton Slack by the Wynton Users who are currently testing the feature:
