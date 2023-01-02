@@ -52,7 +52,7 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 
 ## Past Incidents
 
-{% assign years = "2022,2021,2020,2019,2018" | split: ',' %}
+{% assign years = "2023,2022,2021,2020,2019,2018" | split: ',' %}
 
 <ul class="nav nav-pills">
 {% for year in years %}
