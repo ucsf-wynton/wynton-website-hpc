@@ -63,7 +63,7 @@ We have setup a trial of multi-node GPU jobs on Wynton. This enables you to run 
 
 And that's all that's required.  You'll need to use 'mpirun' to launch your applications on the hosts assigned to the job.  And you'll likely want to tailor the rest of your qsub flags to make sure you run on hosts with the same GPU types.  Also, you'll *really* want to set "-R y" to turn on reservations.  As with all parallel jobs, keep in mind that the more resources you request, the longer your wait time will be.
 
-More information about using OpenMPI is on our website here: [Using OpenMPI on Wynton](https://wynton.ucsf.edu/hpc/scheduler/submit-jobs.html#mpi)
+More information about using OpenMPI is on our website here: [Using OpenMPI on Wynton](/hpc/scheduler/submit-jobs.html#mpi)
 
 Please let us know how your testing goes.  We've done limited testing of our own (only the scheduling piece), but some things are sure to come up that we didn't see there.  We'll be happy to tweak as we go along.
 
