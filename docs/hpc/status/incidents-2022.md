@@ -1,10 +1,10 @@
-### Operational Summary for 2022 (this far)
+### Operational Summary for 2022
 
 * Full downtime:
 
-  - Scheduled: 94.0 hours (= 3.9 days)
-  - Unscheduled: 220.0 hours (= 9.2 days)
-  - Total: 314.0 hours (= 13.1 days)
+  - Scheduled: 94.0 hours = 3.9 days = 1.1%
+  - Unscheduled: 220.0 hours = 9.2 days = 2.5%
+  - Total: 314.0 hours = 13.1 days = 1.4%
   - External factors: 36% of the above downtime, corresponding to 114 hours (= 4.8 days), were due to external factors
 
 
@@ -49,6 +49,10 @@
 * Occurrences:
   - 2022-03-26 (48 hours): Data-center cooling issues
 * Total downtime: 48 hours of which 48 hours were due to external factors
+
+#### Accounts
+
+* Number of user account: 1,643 (change: +369 during the year)
 
 
 ### November 2, 2022
