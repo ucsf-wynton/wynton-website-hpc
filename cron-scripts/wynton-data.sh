@@ -11,6 +11,6 @@ date --rfc-3339=seconds
 
 (
     cd "$WORKDIR" || exit 1;
-    make _data/;
+    make _data;
     make deploy;
 )
