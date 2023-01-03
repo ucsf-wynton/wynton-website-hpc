@@ -58,7 +58,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(88)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(89)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
@@ -236,7 +236,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (88)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (89)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -782,7 +782,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Bowtie is an ultrafast, memory-efficient short read aligner.</span><br>
 Example: <span class="module-example"><code>bowtie --version</code> and <code>ls $BOWTIE_HOME/{genomes,indexes}</code></span><br>
 Note: <span class="module-note">This is Bowtie v1 - <em>not v2</em>.</span><br>
-URL: <span class="module-url"><a href="http://bowtie-bio.sourceforge.net/index.shtml">http://bowtie-bio.sourceforge.net/index.shtml</a>, <a href="http://bowtie-bio.sourceforge.net/index.shtml">http://bowtie-bio.sourceforge.net/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie">https://github.com/BenLangmead/bowtie</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://bowtie-bio.sourceforge.net/index.shtml">https://bowtie-bio.sourceforge.net/index.shtml</a>, <a href="https://bowtie-bio.sourceforge.net/index.shtml">https://bowtie-bio.sourceforge.net/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie">https://github.com/BenLangmead/bowtie</a> (source code)</span><br>
 Versions: <span class="module-version">1.2.3, 1.3.0, <em>1.3.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -794,7 +794,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: http://bowtie-bio.sourceforge.net/index.shtml, http://bowtie-bio.sourceforge.net/index.shtml (changelog), https://github.com/BenLangmead/bowtie (source code)&quot;)
+whatis(&quot;URL: https://bowtie-bio.sourceforge.net/index.shtml, https://bowtie-bio.sourceforge.net/index.shtml (changelog), https://github.com/BenLangmead/bowtie (source code)&quot;)
 whatis([[
 Description: Bowtie is an ultrafast, memory-efficient short read aligner.
 Examples: `bowtie --version` and `ls $BOWTIE_HOME/{genomes,indexes}`
@@ -816,7 +816,7 @@ pushenv(&quot;BOWTIE_HOME&quot;, home)
 <strong class="module-help">Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
 <span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
 Example: <span class="module-example"><code>bowtie2 --version</code></span><br>
-URL: <span class="module-url"><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>, <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie2">https://github.com/BenLangmead/bowtie2</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>, <a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie2">https://github.com/BenLangmead/bowtie2</a> (source code)</span><br>
 Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, 2.4.5, <em>2.5.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -828,7 +828,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml, http://bowtie-bio.sourceforge.net/bowtie2/index.shtml (changelog), https://github.com/BenLangmead/bowtie2 (source code)&quot;)
+whatis(&quot;URL: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml, https://bowtie-bio.sourceforge.net/bowtie2/index.shtml (changelog), https://github.com/BenLangmead/bowtie2 (source code)&quot;)
 whatis([[
 Description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.
 Examples: `bowtie2 --version`
@@ -924,7 +924,7 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 Example: <span class="module-example"><code>cellranger --help</code> and <code>cellranger --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a>, <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/release-notes">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/release-notes</a> (changelog), <a href="https://github.com/10XGenomics/cellranger">https://github.com/10XGenomics/cellranger</a> (source code)</span><br>
 Warning: <span class="module-warning">To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.</span><br>
-Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, 7.0.0, <em>7.0.1</em></span><br>
+Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, 7.0.0, 7.0.1, <em>7.1.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1842,7 +1842,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
 Warning: <span class="module-warning">IGV (&gt;= 2.5.0) requires Java 11.</span><br>
-Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, 2.13.0, 2.14.0, 2.14.1, <em>2.15.1</em></span><br>
+Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, 2.13.0, 2.14.0, 2.14.1, 2.15.1, <em>2.15.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2095,6 +2095,117 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_miniconda3-py310" class="module-name">miniconda3-py310</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">Miniconda: A Free Minimal Installer for Conda</strong><br>
+<span class="module-description">Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.</span><br>
+Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
+URL: <span class="module-url"><a href="https://docs.conda.io/en/latest/">https://docs.conda.io/en/latest/</a>, <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> (documentation), <a href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a> (releases), <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
+Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
+Versions: <span class="module-version"><em>22.11.1</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+Miniconda: A Free Minimal Installer for Conda
+]])
+
+local warning = &quot;Use at your own peril! Software tools installed via Conda are known to cause conflicts with other software on the system, including core software provided by the operating system as well as other software from the CBI stack. For example, do not install R packages running R from the CBI stack, while conda is activated.&quot;
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: files, utility&quot;)
+whatis(&quot;URL: https://docs.conda.io/en/latest/, https://docs.conda.io/en/latest/miniconda.html (documentation), https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links (releases), https://github.com/conda/conda/blob/master/CHANGELOG.md (changelog), https://github.com/conda/conda (source code)&quot;)
+whatis([[
+Description: Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
+Examples: `conda --version`, `conda create --name=myenv`, `conda env list`, `conda activate myenv`, `conda info`, and `conda deactive`.
+Warning: For now, this module works only in Bash. Also, do _not_ do `conda init`. If you do this by mistake, please undo by `conda init --reverse`.
+]])
+
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
+
+if mode() == &quot;load&quot; then
+  -- ASSERT: Make sure there is no other active conda environment
+  if os.getenv(&quot;CONDA_EXE&quot;) then
+    LmodError(&quot;Cannot load &quot; .. name .. &quot; module, because another conda installation is already enabled (detected environment variable CONDA_EXE='&quot; .. os.getenv(&quot;CONDA_EXE&quot;) .. &quot;'). Have you installed conda on your own? If so, run 'conda config --set auto_activate_base false' and then log out and log back in again.  If that is not sufficient, please run 'conda init --reverse' and log out and back in again.&quot;)
+  end
+
+  pushenv(&quot;CONDA_EXE&quot;, pathJoin(home, &quot;bin&quot;, &quot;conda&quot;))
+  pushenv(&quot;CONDA_PYTHON_EXE&quot;, pathJoin(home, &quot;bin&quot;, &quot;python&quot;))
+  pushenv(&quot;_CE_M&quot;, &quot;&quot;)
+  pushenv(&quot;_CE_CONDA&quot;, &quot;&quot;)
+elseif mode() == &quot;unload&quot; then
+  pushenv(&quot;CONDA_EXE&quot;, false)
+  pushenv(&quot;CONDA_PYTHON_EXE&quot;, false)
+  pushenv(&quot;_CE_M&quot;, false)
+  pushenv(&quot;_CE_CONDA&quot;, false)
+end
+-- Don't edit! Created using: 
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniconda3-py310-22.11.1/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-py310-22.11.1/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-py310-22.11.1/bin/python&quot;)
+pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-py310-22.11.1/condabin&quot;)
+pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
+pushenv(&quot;_CE_M&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_activate&quot;,&quot; \
+    if [ -n \&quot;${CONDA_PS1_BACKUP:+x}\&quot; ]; then\
+        PS1=\&quot;$CONDA_PS1_BACKUP\&quot;;\
+        \\unset CONDA_PS1_BACKUP;\
+    fi;\
+    \\local ask_conda;\
+    ask_conda=\&quot;$(PS1=\&quot;${PS1:-}\&quot; __conda_exe shell.posix \&quot;$@\&quot;)\&quot; || \\return;\
+    \\eval \&quot;$ask_conda\&quot;;\
+    __conda_hashr\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_exe&quot;,&quot; \
+    ( \&quot;$CONDA_EXE\&quot; $_CE_M $_CE_CONDA \&quot;$@\&quot; )\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_hashr&quot;,&quot; \
+    if [ -n \&quot;${ZSH_VERSION:+x}\&quot; ]; then\
+        \\rehash;\
+    else\
+        if [ -n \&quot;${POSH_VERSION:+x}\&quot; ]; then\
+            :;\
+        else\
+            \\hash -r;\
+        fi;\
+    fi\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_reactivate&quot;,&quot; \
+    \\local ask_conda;\
+    ask_conda=\&quot;$(PS1=\&quot;${PS1:-}\&quot; __conda_exe shell.posix reactivate)\&quot; || \\return;\
+    \\eval \&quot;$ask_conda\&quot;;\
+    __conda_hashr\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;conda&quot;,&quot; \
+    \\local cmd=\&quot;${1-__missing__}\&quot;;\
+    case \&quot;$cmd\&quot; in \
+        activate | deactivate)\
+            __conda_activate \&quot;$@\&quot;\
+        ;;\
+        install | update | upgrade | remove | uninstall)\
+            __conda_exe \&quot;$@\&quot; || \\return;\
+            __conda_reactivate\
+        ;;\
+        *)\
+            __conda_exe \&quot;$@\&quot;\
+        ;;\
+    esac\
+&quot;,&quot;&quot;)
 </code></pre>
 
 </details>
@@ -2852,7 +2963,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.59.2, <em>1.60.0</em></span><br>
+Versions: <span class="module-version">1.59.2, 1.60.0, <em>1.61.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -3512,7 +3623,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>tree --help</code>.</span><br>
 URL: <span class="module-url"><a href="http://mama.indstate.edu/users/ice/tree/">http://mama.indstate.edu/users/ice/tree/</a>, <a href="http://mama.indstate.edu/users/ice/tree/changes.html">http://mama.indstate.edu/users/ice/tree/changes.html</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.0.3, <em>2.0.4</em></span><br>
+Versions: <span class="module-version">2.0.3, 2.0.4, <em>2.1.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -6280,7 +6391,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(88)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(89)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
 </ul>
 
