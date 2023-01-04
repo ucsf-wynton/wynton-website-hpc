@@ -775,40 +775,6 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
-<h3 id="module_cbi_bowtie2" class="module-name">bowtie2</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
-<span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
-Example: <span class="module-example"><code>bowtie2 --version</code></span><br>
-URL: <span class="module-url"><a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>, <a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie2">https://github.com/BenLangmead/bowtie2</a> (source code)</span><br>
-Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, 2.4.5, <em>2.5.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-Bowtie 2: A Fast and Sensitive Gapped Read Aligner
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml, https://bowtie-bio.sourceforge.net/bowtie2/index.shtml (changelog), https://github.com/BenLangmead/bowtie2 (source code)&quot;)
-whatis([[
-Description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.
-Examples: `bowtie2 --version`
-]])
-
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-prepend_path(&quot;PATH&quot;, home)
-
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_cbi_bowtie" class="module-name">bowtie</h3>
 <dl>
   <dd class="module-details">
@@ -839,6 +805,40 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 prepend_path(&quot;PATH&quot;, home)
 pushenv(&quot;BOWTIE_HOME&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_bowtie2" class="module-name">bowtie2</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">Bowtie 2: A Fast and Sensitive Gapped Read Aligner</strong><br>
+<span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
+Example: <span class="module-example"><code>bowtie2 --version</code></span><br>
+URL: <span class="module-url"><a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>, <a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie2">https://github.com/BenLangmead/bowtie2</a> (source code)</span><br>
+Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, 2.4.5, <em>2.5.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+Bowtie 2: A Fast and Sensitive Gapped Read Aligner
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: sequencing&quot;)
+whatis(&quot;URL: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml, https://bowtie-bio.sourceforge.net/bowtie2/index.shtml (changelog), https://github.com/BenLangmead/bowtie2 (source code)&quot;)
+whatis([[
+Description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.
+Examples: `bowtie2 --version`
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, home)
+
 </code></pre>
 
 </details>
@@ -2586,40 +2586,6 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
-<h3 id="module_cbi_plink2" class="module-name">plink2</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">PLINK2: Whole Genome Association Analysis Toolset</strong><br>
-<span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
-Example: <span class="module-example"><code>plink2 --help</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
-Versions: <span class="module-version">2.00a2LM, 2.00a2.3, <em>2.00a3LM</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-PLINK2: Whole Genome Association Analysis Toolset
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: genomics&quot;)
-whatis(&quot;URL: https://www.cog-genomics.org/plink/2.0/, https://www.cog-genomics.org/plink/2.0/#recent (changelog), https://github.com/chrchang/plink-ng (source code)&quot;)
-whatis([[
-Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).
-Examples: `plink2 --help`.
-]])
-
--- Local variables
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-prepend_path(&quot;PATH&quot;, home)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_cbi_plink" class="module-name">plink</h3>
 <dl>
   <dd class="module-details">
@@ -2642,6 +2608,40 @@ whatis(&quot;URL: https://www.cog-genomics.org/plink/&quot;)
 whatis([[
 Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).
 Examples: `plink --help`.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_plink2" class="module-name">plink2</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">PLINK2: Whole Genome Association Analysis Toolset</strong><br>
+<span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
+Example: <span class="module-example"><code>plink2 --help</code>.</span><br>
+URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
+Versions: <span class="module-version">2.00a2LM, 2.00a2.3, <em>2.00a3LM</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+PLINK2: Whole Genome Association Analysis Toolset
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: genomics&quot;)
+whatis(&quot;URL: https://www.cog-genomics.org/plink/2.0/, https://www.cog-genomics.org/plink/2.0/#recent (changelog), https://github.com/chrchang/plink-ng (source code)&quot;)
+whatis([[
+Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).
+Examples: `plink2 --help`.
 ]])
 
 -- Local variables
