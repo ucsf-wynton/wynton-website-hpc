@@ -1,11 +1,15 @@
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ 2022-11-21: **Beta version!** The Jupyter Hub server is under development. If you find any issues, please reach out to us.
+<div class="alert alert-info" role="alert" style="margin-top: 3ex" markdown="1">
+2022-11-21: **Beta version!** The Jupyter Hub server is under development. If you find any issues, please reach out to us.
 </div>
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+⚠️ 2023-01-09: The Jupyter Hub server can only be accessed from the UCSF network. eWynton 2FA is currently not supported.  If you're outside, please use the UCSF VPN, if you have the option.
+</div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
 JHub login is restricted to non-PHI Wynton user accounts. If you have a Wynton PHI account, you will not be able to access JHub.
 </div>
+
 
 ## Log in to Wynton JupyterHub (JHub)
 
