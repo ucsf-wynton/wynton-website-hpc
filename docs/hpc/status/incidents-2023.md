@@ -54,4 +54,26 @@
   factors
 
 
-_No incidents thus far :)_
+### January 11, 2023
+
+#### <span style="color: orange;">No internet access on development nodes</span>
+
+**Workarounds**: Until this issue has been resolved, and depending on
+needs, you might try to use a data-transfer node.Some of the software
+tools on the development nodes are also available on the data-transfer
+nodes, e.g. `curl`, `wget`, and `git`.
+<br><span class="timestamp">January 11, 09:50 PST</span>
+
+**Notice**: The development nodes have no internet access, because the
+network used by out proxy servers is down for unknown reasons.
+<br><span class="timestamp">January 11, 09:00 PST</span>
+
+<!--
+start: 2023-01-11T??:00:00
+stop: 2023-01-11T??:00:00
+length: ?? hours
+severity: partial-outage
+affected: develop
+reason: network
+ -->
+
