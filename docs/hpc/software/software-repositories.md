@@ -5970,18 +5970,15 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyparsing-py36-2.
 <h3 id="module_sali_python3-pyrmsd" class="module-name">python3/pyrmsd</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Way of performing RMSD calculations of large sets of structures</span><br>
-URL: <span class="module-url"><a href="https://github.com/salilab/pyRMSD">https://github.com/salilab/pyRMSD</a></span><br>
-Versions: <span class="module-version"><em>4.1.gita558b8a</em></span><br>
+Versions: <span class="module-version">4.1.gita558b8a, <em>4.3.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Way of performing RMSD calculations of large sets of structures&quot;
-module-whatis &quot;URL: https://github.com/salilab/pyRMSD&quot;
+module-whatis &quot;Way of performing RMSD calculations of large sets of structures&quot;
 conflict python2
-module load cuda/7.5.18 python3/numpy/1.17.4 python3/scipy/1.3.2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py36-4.1.gita558b8a
+module load cuda/7.5.18 python3/numpy/1.19.5 python3/scipy/1.3.2
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py36-4.3.2
 </code></pre>
 
 </details>
