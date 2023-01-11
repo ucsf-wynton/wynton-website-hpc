@@ -45,7 +45,7 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 {% include_relative incidents-current.md %}
 
 
-## Upcoming incidents
+## Upcoming Incidents
 
 {% include_relative incidents-upcoming.md %}
 
