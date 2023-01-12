@@ -58,6 +58,10 @@
 
 #### <span style="color: orange;">No internet access on development nodes</span>
 
+**Resolved**: The network issue for the proxy servers has been fixed.
+All development nodes now have working internet access.
+<br><span class="timestamp">January 11, 16:00 PST</span>
+
 **Workarounds**: Until this issue has been resolved, and depending on
 needs, you might try to use a data-transfer node.Some of the software
 tools on the development nodes are also available on the data-transfer
@@ -66,12 +70,13 @@ nodes, e.g. `curl`, `wget`, and `git`.
 
 **Notice**: The development nodes have no internet access, because the
 network used by out proxy servers is down for unknown reasons.
+The problem most likely started on January 10 around 15:45.
 <br><span class="timestamp">January 11, 09:00 PST</span>
 
 <!--
-start: 2023-01-11T??:00:00
-stop: 2023-01-11T??:00:00
-length: ?? hours
+start: 2023-01-10T15:45:00
+stop: 2023-01-11T15:45:00
+length: 24 hours
 severity: partial-outage
 affected: develop
 reason: network
