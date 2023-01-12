@@ -20,7 +20,7 @@ In summary, the steps are:
 Expected time: < 10 minutes.
 
 <div class="alert alert-info" role="alert" markdown="1">
-These instructions are primarily written for Linux, macOS, and Windows 10 users.  If you are on a pre-Windows 10, using the [PuTTY] SSH client, the overall idea is similar.  Please consult the PuTTY user forums for further instructions.
+These instructions are for the `ssh` client available on Linux, macOS, and MS Windows.  If you use the [PuTTY] SSH client, the overall idea is similar. Please consult the PuTTY user forums for further instructions.
 </div>
 
 
@@ -55,7 +55,7 @@ The key\'s randomart image is:
 ```
 
 <div class="alert alert-info" role="alert" markdown="1">
-If you specify a passphrase, your local operating system will ask for the passphrase _the first time_ you try to log in to the cluster.  All other login attempts will be passphrase (and password) free (until you reboot the machine).  This should work out of the box on macOS and most Linux distributions - on Windows you need to set up your SSH agent manually (or use an empty passphrase).  If you choose to use an empty passphrase, make sure that your machine is safe and uses a highly secure local login password.
+If you specify a passphrase, your local operating system will ask for the passphrase _the first time_ you try to log in to the cluster.  All other login attempts will be passphrase (and password) free (until you reboot the machine).  This should work out of the box on macOS and most Linux distributions - on MS Windows you need to set up your SSH agent manually (or use an empty passphrase).  If you choose to use an empty passphrase, make sure that your machine is safe and uses a highly secure local login password.
 </div>
 
 <div class="alert alert-danger" role="alert" markdown="1">

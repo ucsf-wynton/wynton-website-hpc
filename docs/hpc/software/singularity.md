@@ -319,7 +319,7 @@ You can install Singularity on a Linux host where you have root access and build
 
 Then the finished container image can be transferred to Wynton for use.
 
-If you do not have a Linux workstation, a Linux virtual machine is easy to install on Windows and macOS.
+If you do not have a Linux workstation, a Linux virtual machine is easy to install on MS Windows and macOS.
 
 From the Linux workstation (or virtual machine) where Singularity is installed and you have root access:
 
