@@ -91,3 +91,7 @@ docsearch:
   index_name: hpc
 
 google_analytics: UA-128646955-1
+
+phi_toggle: hidden
+
+
