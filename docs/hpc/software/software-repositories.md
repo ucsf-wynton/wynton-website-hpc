@@ -2783,11 +2783,11 @@ append_path(&quot;PYTHONPATH&quot;, home)
 <dl>
   <dd class="module-details">
 <strong class="module-help">quarto-cli: Open-Source Scientific and Technical Publishing System Built on Pandoc</strong><br>
-<span class="module-description">Quarto is an open-source scientific and technical publishing system built on Pandoc. Quarto documents are authored using markdown, an easy to write plain text format.</span><br>
+<span class="module-description">Quarto is an open-source scientific and technical publishing system built on Pandoc; (i) Create dynamic content with Python, R, Julia, and Observable, (ii) Author documents as plain text markdown or Jupyter notebooks, (iii) Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more, (iv) Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.</span><br>
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases/latest">https://github.com/quarto-dev/quarto-cli/releases/latest</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.1.251, 1.2.269, <em>1.2.280</em></span><br>
+Versions: <span class="module-version">1.1.251, 1.2.269, 1.2.280, <em>1.2.313</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2800,7 +2800,7 @@ whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: markdown&quot;)
 whatis(&quot;URL: https://quarto.org/, https://quarto.org/docs/guide/ (documentation), https://github.com/quarto-dev/quarto-cli/releases/latest (changelog), https://github.com/quarto-dev/quarto-cli/ (source code)&quot;)
 whatis([[
-Description: Quarto is an open-source scientific and technical publishing system built on Pandoc. Quarto documents are authored using markdown, an easy to write plain text format.
+Description: Quarto is an open-source scientific and technical publishing system built on Pandoc; (i) Create dynamic content with Python, R, Julia, and Observable, (ii) Author documents as plain text markdown or Jupyter notebooks, (iii) Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more, (iv) Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
 Examples: `quarto --version` and `quarto --help`.
 Warning: Only the most recent version of this software will be kept.
 ]])
