@@ -57,9 +57,9 @@
 
   - data-transfer nodes: `pdt1.wynton.ucsf.edu` and `pdt2.wynton.ucsf.edu`
 
-* PHI users must _not_ use any of the non-PHI-compliant nodes on Wynton, including log1, log2, dev1, dev2, dev3, dt1, and dt2.
+* PHI users must _not_ use any of the non-PHI-compliant nodes on Wynton, including log1, log2, dev1, dev2, dev3, gpudev1, dt1, and dt2.
 
-* Data containing PHI must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected` location
+* Data containing PHI must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected/` location
 
 * PHI users must use data-transfer nodes pdt1 and pdt2 for all file transfers to and from the cluster, including when using [Globus](/hpc/transfers/globus.html#globus-for-phi-users)
 
@@ -68,9 +68,9 @@
 
 ## Frequently Asked Questions (FAQ)
 
-**Q.** What if I want to share data between `/wynton/protected/group` (PHI) and `/wynton/group` (non-PHI) directories?
+**Q.** What if I want to share data between `/wynton/protected/group/` (PHI) and `/wynton/group/` (non-PHI) directories?
 
-**A.** Users with PHI access still have access to `/wynton/group`, as do Wynton non-PHI users. However, PHI data should never be stored under `/wynton/group` and PHI data should never be shared with a user who does not have PHI access.
+**A.** Users with PHI access still have access to `/wynton/group/`, as do Wynton non-PHI users. However, PHI data should never be stored under `/wynton/group/` and PHI data should never be shared with a user who does not have PHI access.
 
 
 [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard]: https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard

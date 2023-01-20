@@ -166,8 +166,8 @@ It is also possible that a host key has just been changed.
 The fingerprint for the ECDSA key sent by the remote host is
 SHA256:FaARLbkE3sHP2a33Zgqa/sNXTqqWzZAeu6T43wST4ok.
 Please contact your system administrator.
-Add correct host key in /wynton/home/bobson/alice/.ssh/known_hosts to get rid of this message.
-Offending ECDSA key in /wynton/home/bobson/alice/.ssh/known_hosts:18
+Add correct host key in {{ site.user.home }}/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in {{ site.user.home }}/.ssh/known_hosts:18
 ECDSA host key for {{ site.devel.name }} has changed and you have requested strict checking.
 Host key verification failed.
 ```
@@ -185,7 +185,7 @@ to remove all SSH keys associated with that machine.  Alternatively,
 you can manually remove the problematic key by looking at:
 
 ```lang-none
-Offending ECDSA key in /wynton/home/bobson/alice/.ssh/known_hosts:18
+Offending ECDSA key in {{ site.user.home }}/.ssh/known_hosts:18
 ```
 
 to identify that we want to remove the key on line 18.  To remove that

@@ -12,10 +12,19 @@ Any shell session that has been idle for more than eight hours will timeout and 
 
 ## List of Development Nodes
 
+<div class="non-phi" markdown="1">
  * {{ site.dev1.hostname }}
  * {{ site.dev2.hostname }}
  * {{ site.dev3.hostname }}
  * {{ site.gpudev1.hostname }}
+</div>
+<div class="phi" markdown="1">
+The following development nodes are available to PHI users:
+
+ * p{{ site.dev1.hostname }}
+ * p{{ site.dev2.hostname }}
+ * p{{ site.gpudev1.hostname }}
+</div>
 
 ## Instructions
 
