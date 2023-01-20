@@ -286,21 +286,6 @@ $ cp ~/.bashrc ~/.bashrc.20220912
 $ cp /etc/skel/bashrc ~/.bashrc
 ```
 
-## Does {{ site.cluster.nickname }} Provide Server Hosting, Data Storage, or Application Hosting Services?
-
-Wynton HPC provides High Performance Computing resources to the UCSF Research community.
-
-We are not able to provide server hosting, application hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.
-
-For these, and related services, we suggest you contact UCSF IT regarding their offerings.
-
-For example:
-
-[UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting)
-
-[UCSF IT Physical Server Hosting](https://it.ucsf.edu/service/physical-server-hosting)
-
-[UCSF IT Cloud Services](https://cloudservices.ucsf.edu/)
 
 ## Contributing to {{ site.cluster.nickname }}
 
@@ -321,6 +306,13 @@ site.cluster.name }} in return for priority. Will you take them?_
 
 **A**. Please get in touch with the [{{ site.cluster.nickname }}
 team].
+
+
+### What {{ site.cluster.nickname }} offers
+
+**Q**. Does {{ site.cluster.nickname }} Provide Server Hosting, Data Storage, or Application Hosting Services?
+
+**A**. Wynton HPC provides High Performance Computing resources to the UCSF Research community.  We are _not_ able to provide server hosting, application hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.  For these, and related services, we suggest you contact UCSF IT regarding their offerings, e.g. [UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting), [UCSF IT Physical Server Hosting](https://it.ucsf.edu/service/physical-server-hosting), and [UCSF IT Cloud Services](https://cloudservices.ucsf.edu/).
 
 
 [{{ site.cluster.nickname }} team]: /hpc/about/contact.html
