@@ -286,6 +286,19 @@ $ cp ~/.bashrc ~/.bashrc.20220912
 $ cp /etc/skel/bashrc ~/.bashrc
 ```
 
+## Does {{ site.cluster.nickname }} Provide Server Hosting, Data Storage, or Application Hosting Services?
+
+Wynton HPC provides High Performance Computing resources to the UCSF Research community.
+
+We are not able to provide server hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.
+
+I would suggest you contact UCSF IT regarding their offerings in these categories.
+
+[UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting)
+
+[UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/physical-server-hosting)
+
+[UCSF IT Cloud Services](https://cloudservices.ucsf.edu/)
 
 ## Contributing to {{ site.cluster.nickname }}
 
