@@ -298,7 +298,7 @@ For example:
 
 [UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting)
 
-[UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/physical-server-hosting)
+[UCSF IT Physical Server Hosting](https://it.ucsf.edu/service/physical-server-hosting)
 
 [UCSF IT Cloud Services](https://cloudservices.ucsf.edu/)
 
