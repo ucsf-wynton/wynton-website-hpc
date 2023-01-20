@@ -309,14 +309,20 @@ Source: https://github.com/allejo/jekyll-anchor-headings
       const phi = (localStorage.getItem("phi-mode") == "true");
       // Replace all log[1-2],dt[1-2],dev[1-3],gpudev[1] with plog[1-2], etc.?
       if (phi) {
-          var html = document.body.innerHTML;
-          html = html.replace(/\b((log|dev|dt|gpudev)[1-9[])/gi, "p$1");
-          html = html.replace("plog[1-2]", "plog1");
-          html = html.replace("pdev[1-3]", "pdev[1-2]");
-          // FIXME: AD HOC dropping of non-existing PHI hosts
-          html = html.replace("pdev3", "");
-          html = html.replace("plog2.wynton.ucsf.edu", "");
-          document.body.innerHTML = html;
+          // Skip page completely?
+          var href = window.location.href;
+          var skip = false;
+          skip = /\b(status|phi-quickstart|news|roadmap)\b/.test(href);
+          if (!skip) {
+              var html = document.body.innerHTML;
+              html = html.replace(/\b((log|dev|dt|gpudev)[1-9[])/gi, "p$1");
+              html = html.replace("plog[1-2]", "plog1");
+              html = html.replace("pdev[1-3]", "pdev[1-2]");
+              // FIXME: AD HOC dropping of non-existing PHI hosts
+              html = html.replace("pdev3", "");
+              html = html.replace("plog2.wynton.ucsf.edu", "");
+              document.body.innerHTML = html;
+          }
       }
 
       const togglePhi = document.getElementById("toggle-phi");
