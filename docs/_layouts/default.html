@@ -333,8 +333,7 @@ Source: https://github.com/allejo/jekyll-anchor-headings
               var html = document.body.innerHTML;
               html = html.replace(/\b((log|dev|dt|gpudev)[1-9[])/gi, "p$1");
               html = html.replace(/172[.]26[.]44[.]11/g, "172.26.44.16");
-              html = html.replace(/[/]wynton[/]home[/](boblab|your_group)/gi, "/wynton/protected/home/$1");
-              html = html.replace(/[/]wynton[/]group[/](boblab|your_group)/gi, "/wynton/protected/group/$1");
+              html = html.replace(/[/]wynton[/](home|group)[/](boblab|your_group)/gi, "/wynton/protected/$1/$2");
               document.body.innerHTML = html;
           }
       }
