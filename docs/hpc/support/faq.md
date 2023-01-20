@@ -290,9 +290,11 @@ $ cp /etc/skel/bashrc ~/.bashrc
 
 Wynton HPC provides High Performance Computing resources to the UCSF Research community.
 
-We are not able to provide server hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.
+We are not able to provide server hosting, application hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.
 
-For these, and related services, we suggest you contact UCSF IT regarding their offerings in these categories.
+For these, and related services, we suggest you contact UCSF IT regarding their offerings.
+
+For example:
 
 [UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting)
 
