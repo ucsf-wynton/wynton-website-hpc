@@ -67,10 +67,11 @@ machine ftp.box.com
 </div>
 
 **Since the password is fully visible in plain text, make sure to keep this file private at all times**, otherwise users on the system can see all your credentials, i.e.
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ chmod 600 ~/.netrc
 [alice@{{ site.transfer.name }} ~]$ ls -l ~/.netrc
--rw------- 1 alice alice 72 Jul  3 15:10 /home/alice/.netrc
+-rw------- 1 alice alice 72 Jul  3 15:10 {{ site.user.home }}/.netrc
 ```
 
 To verify that the automatic authentication works, try to log in again. You should no longer be prompted for your password - instead `lftp` gets it automatically from `~/.netrc`.  For example:
