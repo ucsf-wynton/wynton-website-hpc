@@ -280,6 +280,7 @@ Source: https://github.com/allejo/jekyll-anchor-headings
            <span class="slider round"></span>
          </label> PHI
        </span>
+       
        <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/commits/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank" rel="noopener noreferrer"><span class="glyphicon glyphicon-time" title="Change log for this page"></span></a>
        :
      <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/tree/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank" rel="noopener noreferrer"><span class="glyphicon glyphicon-edit" title="Contribute to this page"></span></a>
@@ -294,11 +295,40 @@ Source: https://github.com/allejo/jekyll-anchor-headings
     <script src="{{ site.baseurl }}/assets/js/scale.fix.js"></script>
     
     <script src="/hpc/assets/js/bootstrap.min.js"></script><!-- 38.8 kB -->
-    <script src="/hpc/assets/js/wynton.js"></script>
 
 <script>
   $(document).ready(function(){
+      /***********************************************************
+        View as: Non-PHI/PHI
+
+        IMPORTANTLY:
+        Updating the innerHTML destroys the click event listeners,
+        so it has to be added *after* updating innerHTML.
+        FIXME: Does this destroy other event listeners to? /HB 2023-01-19
+       ***********************************************************/
+      const phi = (localStorage.getItem("phi-mode") == "true");
+      // Replace all log[1-2],dt[1-2],dev[1-3] with plog[1-2], etc.?
+      if (phi) {
+          var html = document.body.innerHTML;
+          html = html.replace("Univ", "UNIV");
+          html = html.replace(/\b((log|dev|dt)[1-9[])/gi, "p$1");
+          html = html.replace("plog[1-2]", "plog1");
+          html = html.replace("pdev[1-3]", "pdev[1-2]");
+          // FIXME: AD HOC dropping of non-existing PHI hosts
+          html = html.replace("pdev3", "");
+          html = html.replace("plog2.wynton.ucsf.edu", "");
+          document.body.innerHTML = html;
+      }
+
+      const togglePhi = document.getElementById("toggle-phi");
+      togglePhi.checked = phi;
+      togglePhi.addEventListener("click", function(e) {
+          localStorage.setItem("phi-mode", togglePhi.checked);
+          location.reload();
+      });
+
       $(document.body).css('padding-top', $('#topnavbar').height() + 10);
+      
       $(window).resize(function(){
           $(document.body).css('padding-top', $('#topnavbar').height() + 10);
       });
