@@ -20,7 +20,7 @@
 
 | Feature     | Login Nodes | Transfer Nodes          | Development Nodes | Compute Nodes |
 | ---- | ---------- | ----------------------- | ------------ | ---- |
-| Hostname | `log[1-2].wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu` | `dev[1-3]`, `gpudev1` | … |
+| Hostname | `log[1-2].wynton.ucsf.edu`, `plog1.wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu`, `pdt[1-2].wynton.ucsf.edu` | `dev[1-3]`, `gpudev1`, `pdev[1-2]`, `pgpudev1` | … |
 | Accessible via SSH from outside of cluster | ✓ (2FA if outside of UCSF) | ✓ (2FA if outside of UCSF) | no                                                          | no |
 | Accessible via SSH from within cluster | ✓ | ✓ | ✓ | no |
 | Outbound access | Within UCSF only: SSH and SFTP | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, Globus | Via proxy: FTP, HTTP/HTTPS, GIT+SSH(\*) | no |
@@ -42,10 +42,11 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues](/h
 
 ### Login Nodes
 
-The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to one of two login nodes:
+The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to one of the login nodes:
 
 1. `{{ site.login1.hostname }}`
 2. `{{ site.login2.hostname }}`
+1. `p{{ site.login1.hostname }}` (for PHI users)
 
 
 ### Data Transfer Nodes
@@ -54,8 +55,10 @@ For transferring large data files, it is recommended to use one of the dedicate 
 
 1. `{{ site.transfer1.hostname }}`
 2. `{{ site.transfer2.hostname }}`
+1. `p{{ site.transfer1.hostname }}` (for PHI users)
+2. `p{{ site.transfer2.hostname }}` (for PHI users)
 
-which both has a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As for the login nodes, the transfer nodes can be accessed via SSH.
+which have a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As for the login nodes, the transfer nodes can be accessed via SSH.
 
 _Comment_: You can also transfer data via the login nodes, but since those only have 1 Gbps connections, you will see much lower transfer rates.
 
@@ -64,12 +67,15 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes](/hpc/get-started/development-prototyping.html).
 
-Node                          | Physical Cores |      RAM | Local `/scratch` | CPU x86-64 level |                          CPU  |                GPU |
-------------------------------|---------------:|---------:|-----------------:|-----------------:|------------------------------:|-------------------:|
-`{{ site.dev1.hostname }}`    |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
-`{{ site.dev2.hostname }}`    |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.dev3.hostname }}`    |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.gpudev1.hostname }}` |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
+Node                               | Physical Cores |      RAM | Local `/scratch` | CPU x86-64 level |                          CPU  |                GPU |
+-----------------------------------|---------------:|---------:|-----------------:|-----------------:|------------------------------:|-------------------:|
+`{{ site.dev1.hostname }}`     |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
+`{{ site.dev2.hostname }}`     |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.dev3.hostname }}`     |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.gpudev1.hostname }}`  |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
+`p{{ site.dev1.hostname }}` (for PHI users)    |              ?  |    ? GiB |              TiB | x86-64-v?        | Intel ? |                    |
+`p{{ site.dev2.hostname }}` (for PHI users)    |              ?  |    ? GiB |              TiB | x86-64-v?        | Intel ? |                    |
+`p{{ site.gpudev1.hostname }}` (for PHI users) |             ?  |    ? GiB |               TiB | x86-64-v?        | Intel ? | ?   |
 
 _Comment:_
 Please use the GPU development node only if you need to build or prototype GPU software.
@@ -93,17 +99,17 @@ The compute nodes can only be utilized by [submitting jobs via the scheduler](/h
 The {{ site.cluster.name }} cluster provides two types of scratch storage:
 
  * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
- * Global `/wynton/scratch/` and `/wynton/protected/scratch/` - {{ site.data.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+ * Global `/wynton/scratch/` and `/wynton/protected/scratch/` (for PHI users) - {{ site.data.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from a tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
 ### User and Lab Storage
 
- * `/wynton/home/` and `/wynton/protected/home/`: {{ site.data.specs.home_size_total }} TiB storage space
- * `/wynton/group/` and `/wynton/protected/group/`: {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
+ * `/wynton/home/` and `/wynton/protected/home/` (for PHI users): {{ site.data.specs.home_size_total }} TiB storage space
+ * `/wynton/group/` and `/wynton/protected/group/` (for PHI users): {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
-Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group/` and `/wynton/protected/group/` by either mounting their existing storage or [purchase new](/hpc/about/pricing-storage.html).
+Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group/` and `/wynton/protected/group/` (for PHI users) by either mounting their existing storage or [purchase new](/hpc/about/pricing-storage.html).
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
 While waiting to receive purchased storage, users may use the global scratch space, which is "unlimited" in size with the important limitation that files older than two weeks will be deleted automatically.
