@@ -64,8 +64,8 @@ We can also "visualize" odd symbols, including the CR and LF symbols, by using `
 [alice@{{ site.devel.name }} ~]$ source script.sh
 $ cat -A script.sh
 #! /usr/bin/env bash^M$
-^M$
-hostname^M$
+^M$ 
+hostname^M$ 
 ```
 
 The problematic CR symbols are displayed as `^M` and the LF symbols as `$`.  
@@ -99,8 +99,8 @@ Finally, we can use `cat -A` to visually confirm this:
 ```sh
 [alice@{{ site.devel.name }} ~]$ cat -A script.sh
 #! /usr/bin/env bash$
-$
-hostname$
+$ 
+hostname$ 
 ```
 
 There are no `^M` displayed.  The `$` symbols are LF, which is what we want for line endings on Unix. If we try to run this script again, it'll now work:
