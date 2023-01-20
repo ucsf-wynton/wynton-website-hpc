@@ -96,15 +96,15 @@ Your lab can also request to create a subgroup to self-manage the quota for PHI-
 
 PHI Projects in `/wynton/protected/projects/` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects/` could either be a separate group quota purchase or a portion of a purchased group quota dedicated to the project (subgroup).
 
-### User disk usage on `/wynton/scratch/`
+### User disk usage on `/wynton/scratch/` and `/wynton/protected/scratch/`
 
-To check your disk consumption on `/wynton/scratch/` ("global scratch"), use:
+To check your disk consumption on `/wynton/scratch/` and `/wynton/protected/scratch/` ("global scratch"), use:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: There are no user or group quotas on `/wynton/scratch/`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically](/hpc/about/specs.html).
+_Comment_: There are no user or group quotas on `/wynton/scratch/` and `/wynton/protected/scratch/`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically](/hpc/about/specs.html).
 
 
 
