@@ -158,15 +158,16 @@ There are two versions of MPI on Wynton:
 
 To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script.  MPI jobs running on multiple hosts communicate over the network.  For certain types of applications (known as tightly coupled), this can slow a job down more than the multiple cores can speed it up.  Run these types of jobs in the `mpi_onehost` PE to keep the job on a single compute node.
 
+
 ### MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
 
-{{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node _across one or more compute nodes_.  For instance, to request a Hybrid MPI job with in total forty slots (`NSLOTS=40`), submit it as:
+{{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node _across one or more compute nodes_.  For instance, to request a Hybrid MPI job with in total forty slots (40), submit it as:
 
 ```sh
 qsub -pe mpi-8 40 hybrid_mpi.sh
 ```
 
-and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8` (the eight slots per node) and then launches the MPI application using `mpirun -np $NHOSTS /path/to/the_app` where `NHOSTS` is automatically set by SGE (here `NHOSTS=5`):
+and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8` (the eight slots per node) and then launches the MPI application using `mpirun -np $(wc -l < "$PE_HOSTFILE") /path/to/the_app`:
 
 ```sh
 #! /usr/bin/env bash
@@ -175,7 +176,9 @@ and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8`
 
 module load mpi/openmpi-x86_64
 export OMP_NUM_THREADS=8
-mpirun -np $NHOSTS /path/to/the_app
+
+## Important: Don't use -np $NSLOTS here
+mpirun -np $(wc -l < "$PE_HOSTFILE") /path/to/the_app
 ```
 
 <!--
@@ -190,6 +193,10 @@ _Note_: When working with MPI, it is important to use the exact same version as 
 
 <div class="alert alert-warning" role="alert" markdown="1">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If `NSLOTS` is not a multiple of eight, then the job will be stuck in the queue forever and never run.
+</div>
+
+<div class="alert alert-warning" role="alert" markdown="1">
+2023-01-23: Due to an SGE issue, you _must not_ use `NSLOTS` as in `mpirun -np $NSLOTS ...`. If done, you might overuse one node and underuse another, when requesting 16 or more slots. Until resolved, please use the `mpirun -np $(wc -l < "$PE_HOSTFILE") ...` solution instead.
 </div>
 
 
