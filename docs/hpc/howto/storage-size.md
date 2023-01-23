@@ -89,13 +89,9 @@ For example,
 
 The group storage is shared among all group members and does _not_ count toward your personal disk quota under `$HOME`.
 
-Any group with purchased storage can have a group folder in both the non-PHI `/wynton/group/` area and the PHI `/wynton/protected/group/` area, e.g. `/wynton/group/boblab/` and `/wynton/protected/group/boblab/`. In that case, the group quota usage would include group-owned files in both areas. Of course, only members with Wynton PHI access would have access to the data under `/wynton/protected/group/`.
+Any group with purchased storage can have a group folder in both the non-PHI `/wynton/group/` area and the PHI `/wynton/protected/group/` area at the same time, e.g. `/wynton/group/boblab/` and `/wynton/protected/group/boblab/`. In that case, the group quota usage would include group-owned files in both areas. Your lab can also request to create a subgroup (e.g. `boblab-phi`) to [self-manage the quota](/hpc/howto/group-quota.html) for PHI-only data storage (e.g. `/wynton/protected/group/boblab-phi/`), and it could be allocated as part of the parent quota.
 
-Protected (UCSF P3/P4 classified) data should only be stored in file systems under `/wynton/protected/`.
-
-Your lab can also request to create a subgroup to self-manage the quota for PHI-only data storage (e.g. `/wynton/protected/boblab-phi/`), and it could be allocated as part of the parent quota.
-
-PHI Projects in `/wynton/protected/projects/` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects/` could either be a separate group quota purchase or a portion of a purchased group quota dedicated to the project (subgroup).
+PHI projects under `/wynton/protected/projects/` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects/` could either be a separate group quota purchase or a portion of a purchased group quota dedicated to the project (subgroup).
 
 
 ### User disk usage on `/wynton/scratch/` and `/wynton/protected/scratch/`
