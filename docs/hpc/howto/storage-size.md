@@ -100,13 +100,13 @@ PHI Projects in `/wynton/protected/projects/` are for controlling access to IRB 
 
 ### User disk usage on `/wynton/scratch/` and `/wynton/protected/scratch/`
 
-To check your disk consumption on `/wynton/scratch/` and `/wynton/protected/scratch/` ("global scratch"), use:
+To check your disk consumption on the _global_ scratch space (`/wynton/scratch/` and `/wynton/protected/scratch/`), use:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: There are no user or group quotas on `/wynton/scratch/` and `/wynton/protected/scratch/`, but [files on `/wynton/scratch/` that are older than two weeks are deleted automatically](/hpc/about/specs.html).
+_Comment_: There are no user or group quotas on `/wynton/scratch/` and `/wynton/protected/scratch/`, but [files on the global scratch that are older than two weeks are deleted automatically](/hpc/about/specs.html).
 
 
 
