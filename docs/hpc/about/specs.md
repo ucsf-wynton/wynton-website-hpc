@@ -107,9 +107,9 @@ There are no per-user quotas in these scratch spaces.  **Files not added or modi
 ### User and Lab Storage
 
  * `/wynton/home/` and `/wynton/protected/home/` (for PHI users): {{ site.data.specs.home_size_total }} TiB storage space
- * `/wynton/group/` and `/wynton/protected/group/` (for PHI users): {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
+ * `/wynton/group/`, `/wynton/protected/group/` (for PHI users), and `/wynton/protected/projects/` (for PHI users): {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
-Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group/` and `/wynton/protected/group/` (for PHI users) by either mounting their existing storage or [purchase new](/hpc/about/pricing-storage.html).
+Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group/`, `/wynton/protected/group/`, and `/wynton/protected/projects/` by either mounting their existing storage or [purchase new](/hpc/about/pricing-storage.html).
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
 While waiting to receive purchased storage, users may use the global scratch space, which is "unlimited" in size with the important limitation that files older than two weeks will be deleted automatically.

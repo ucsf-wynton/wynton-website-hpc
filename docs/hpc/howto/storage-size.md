@@ -35,8 +35,8 @@ _Comment_: It is the _compressed_ size that counts towards your disk quota.
 The BeeGFS file system keeps track on how much disk each of us currently consumes in different storage locations, specifically:
 
 1. User home folder (`$HOME`, i.e. `/wynton/home/` or `/wynton/protected/home/`)
-2. Group folder under (i.e. `/wynton/group/` and `/wynton/protected/project/`)
-3. User files and folders under `/wynton/scratch/` (unlimited quota)
+2. Group folder under (i.e. `/wynton/group/`, `/wynton/protected/group/`, and `/wynton/protected/project/`)
+3. User files and folders under `/wynton/scratch/` and `/wynton/protected/scratch/` (unlimited quota)
 
 These different type of locations are formally referred to as _storage pools_ by BeeGFS.
 
@@ -68,7 +68,8 @@ For example,
 
 tells us that user `alice` has 645,266 files that occupy 88.71 GiB ('size used') on the BeeGFS file system out of their 1000.00 GiB ('size hard').  **Importantly**, because the `/wynton/home/` storage is **mirrored**, the disk usage ('size used') and the available quota ('size hard') are **reported at twice the size** of what you would expect for a non-mirrored storage.  This is why your [500-GiB home storage space](/hpc/about/specs.html) is reported as 1000 GiB by the `beegfs-ctl` tool.
 
-### Group disk quota on `/wynton/group/` and `/wynton/protected/project/`
+
+### Group disk quota on `/wynton/group/`, `/wynton/protected/group/` and `/wynton/protected/project/`
 
 If your group/lab (e.g. `boblab`) has [purchased additional storage](/hpc/about/pricing-storage.html), it is available under `/wynton/group/`, (and possibly also under `/wynton/protected/group/` (PHI), or `/wynton/protected/project/` (PHI)).  To check how much storage space your group/lab has consumed of the total amount available to it, call:
 
@@ -95,6 +96,7 @@ Protected (UCSF P3/P4 classified) data should only be stored in file systems und
 Your lab can also request to create a subgroup to self-manage the quota for PHI-only data storage (e.g. `/wynton/protected/boblab-phi/`), and it could be allocated as part of the parent quota.
 
 PHI Projects in `/wynton/protected/projects/` are for controlling access to IRB related data, where the IRB access group does not encompass the whole PI group or where the access group encompasses selected members of more than one PI group. The quota for the directory in `/wynton/protected/projects/` could either be a separate group quota purchase or a portion of a purchased group quota dedicated to the project (subgroup).
+
 
 ### User disk usage on `/wynton/scratch/` and `/wynton/protected/scratch/`
 

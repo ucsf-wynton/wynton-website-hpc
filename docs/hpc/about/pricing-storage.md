@@ -10,9 +10,9 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 * All user accounts come with a quota of non-expandable 500 GiB of storage in `/wynton/home` or `/wynton/protected/home`, which is free of charge
 
-* Global `/wynton/scratch` may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
+* Global `/wynton/scratch` and `/wynton/protected/scratch` (for PHI users) may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
 
-* Additional, long-term storage can be purchased in `/wynton/group` or for specific PHI projects to `/wynton/protected/project` at $160/TB (one-time fee).  Both will count towards a lab's storage quota total.
+* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/group` (for PHI users), or in `/wynton/protected/project` (for specific PHI projects) at $160/TB (one-time fee).  Both will count towards a lab's storage quota total.
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
@@ -23,9 +23,9 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 ## Lab-Specific HPC Storage Pricing Model
 
-We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group` (or `/wynton/protected/project`) and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (`/wynton/scratch` and `/wynton/home` or `/wynton/protected/home`).
+We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group`, `/wynton/protected/group`, or `/wynton/protected/project` and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (e.g. `/wynton/scratch`, `/wynton/protected/scratch`, `/wynton/home`, and `/wynton/protected/home`).
 
-Please note, storage in `/wynton/group/` and `/wynton/protected/project` both will count towards a lab's storage quota total.
+Please note, storage in `/wynton/group/`, `/wynton/protected/group/`, and `/wynton/protected/project` count towards a lab's storage quota total.
 
 Given prices of hard drives, the stated rate might seem high, but there are three mitigating factors. First, we have enabled ZFS compression, so the actual available space might be significantly more. Second, the price includes the cost of the networking, metadata servers, storage server, maintenance, and administration. Third, we have proven that the performance of our BeeGFS infrastructure is much higher than the typical NFS server (in some respects, the performance is more than an order of magnitude faster). In the future, if absolutely necessary, we may also charge a “maintenance fee” for storage after the initial 5-year hardware warranty expires, but nothing has been decided as of yet. Similarly, any future storage purchases may be priced differently than that described here, to reflect the situation present at that time.
 
@@ -55,5 +55,4 @@ We have an immediate need to provide for {{ site.cluster.name }} storage expansi
 * The current storage hardware increment is ~$160,000, which may result in some delay between the first contributions and an actual purchase, although there is already pent-up demand and hence we are trying to proceed with the purchase as quickly as possible.
 
 
-_Last updated: June 22, 2022_
-
+_Last updated: January 23, 2023_

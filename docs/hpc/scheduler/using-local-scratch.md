@@ -1,6 +1,6 @@
 # Using Local /scratch (TMPDIR) on Compute Nodes
 
-All nodes (compute and development) have their own locally storage mounted as `/scratch`.  The `/scratch` storage is fast - faster than system-wide storage such as home folders but also `/wynton/scratch` - which make it ideal for holding intermediate data files.  This will also lower the load on the system-wide storage and the local network.  Using local `/scratch` is a win-win for everyone.
+All nodes (compute and development) have their own locally storage mounted as `/scratch`.  The `/scratch` storage is fast - faster than system-wide storage such as home folders but also <span class="non-phi">`/wynton/scratch`</span><span class="phi">`/wynton/protected/scratch`</span> - which make it ideal for holding intermediate data files.  This will also lower the load on the system-wide storage and the local network.  Using local `/scratch` is a win-win for everyone.
 
 ## Instructions
 
