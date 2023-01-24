@@ -1,0 +1,5 @@
+[alice@{{ site.devel.name }} lxc]$ apptainer exec rocker_r-base.sif R --quiet
+> sum(1:10)
+[1] 55
+> q("no")
+[alice@{{ site.devel.name }} lxc]$ 

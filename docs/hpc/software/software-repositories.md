@@ -73,17 +73,17 @@ Enable repository: <em>this software repository is always enabled</em><br>
 <h3 id="module_built-in_amber" class="module-name">amber</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version"><em>20</em></span><br>
+Versions: <span class="module-version">20-cuda11, <em>20</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Amber: Tools for Molecular Simulations&quot;
-setenv        AMBERHOME       /opt/amber20
-prepend-path  PATH            /opt/amber20/bin
-prepend-path  LD_LIBRARY_PATH /opt/amber20/lib
-prepend-path  PERL5LIB        /opt/amber20/lib/perl
-prepend-path  PYTHONPATH      /opt/amber20/lib/python3.6/site-packages
+setenv        AMBERHOME       /usr/local/amber20
+prepend-path  PATH            /usr/local/amber20/bin
+prepend-path  LD_LIBRARY_PATH /usr/local/amber20/lib
+prepend-path  PERL5LIB        /usr/local/amber20/lib/perl
+prepend-path  PYTHONPATH      /usr/local/amber20/lib/python3.6/site-packages
 </code></pre>
 
 </details>
