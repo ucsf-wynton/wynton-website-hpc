@@ -4,27 +4,27 @@
 
 The `/wynton/` storage is on a [ZFS] file system on top of our BeeGFS parallel storage system. This is **automatically compressed** (using [lz4] compression in ZFS) before anything is written to the physical drives.  Because of this, a 1.0 MiB file is likely to occupy less that 1.0 MiB of drive space.  Exactly, how much a file is compressed varies greatly with file format but as a rule of thumb plain text files can be compressed more than files in a binary format.  Already compressed files such as GZ or ZIP files are unlikely to be compressed further.
 
-Because of this underlying disk compression, command-line tools such as `ls` and `du` may not report what you expect it to report.  For example, consider the Singularity image file `rocker_r-base.img` of size 274,538,527 bytes (= 274,538,527/1024^2 = 261.8 MiB);
+Because of this underlying disk compression, command-line tools such as `ls` and `du` may not report what you expect it to report.  For example, consider an Apptainer image file `rocker_r-base.sif` of size 274,538,527 bytes (= 274,538,527/1024^2 = 261.8 MiB);
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ ls -l rocker_r-base.img
--rwxr-xr-x. 1 alice boblab 274538527 May  8  2018 rocker_r-base.img
+[alice@{{ site.devel.name }} ~]$ ls -l rocker_r-base.sif
+-rwxr-xr-x. 1 alice boblab 274538527 May  8  2018 rocker_r-base.sif
 ```
 The actual space consumed on disk by this file is 256,136,704 bytes (93.3%):
 ```sh
-[alice@{{ site.devel.name }} ~]$ ls -s --block-size 1 rocker_r-base.img
-256136704 rocker_r-base.img
+[alice@{{ site.devel.name }} ~]$ ls -s --block-size 1 rocker_r-base.sif
+256136704 rocker_r-base.sif
 ```
 
 Using the disk-usage tool `du`, we can see the same if we do:
 ```sh
-[alice@{{ site.devel.name }} ~]$ du --apparent-size --block-size=1 rocker_r-base.img
-274538527       rocker_r-base.img
+[alice@{{ site.devel.name }} ~]$ du --apparent-size --block-size=1 rocker_r-base.sif
+274538527       rocker_r-base.sif
 ```
 and
 ```sh
-[alice@{{ site.devel.name }} ~]$ du --block-size=1 rocker_r-base.img
-256136704       rocker_r-base.img
+[alice@{{ site.devel.name }} ~]$ du --block-size=1 rocker_r-base.sif
+256136704       rocker_r-base.sif
 ```
 
 _Comment_: It is the _compressed_ size that counts towards your disk quota.
