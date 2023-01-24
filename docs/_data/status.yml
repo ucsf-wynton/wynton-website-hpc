@@ -33,9 +33,9 @@ message: The development nodes have no internet access due to a network issue
 # condition: is operational
 # message: Available CPU cores may be limited as we deal with any casualties from the power outage
 
-# level: danger
-# condition: experiences significant issues
-# message: Cluster access has been disabled and all running jobs have been terminated to minimize risk for file-system corruption
+level: warning
+condition: experiences network issues
+message: Access to login and data-transfer nodes is currently down
 
 
 # ----------------------------------------------------------------------------

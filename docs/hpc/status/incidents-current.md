@@ -1,3 +1,14 @@
+### January 24, 2023
+
+#### <span style="color: orange;">No access to login and data-transfer hosts</span>
+
+**Notice**: There is no access to non-PHI login and data-transfer
+hosts (log[1-2], dt[1-2]).  We suspect a physical issue (e.g. somebody
+kicked a cable), which means we need to send someone onsite to fix the
+problem.
+<br><span class="timestamp">January 24, 14:45 PST</span>
+
+
 ### April 26, 2022
 
 #### <span style="color: orange;">X2Go not working on GPU development nodes</span>
