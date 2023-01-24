@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert" markdown="1">
-2022-11-23: The Singularity software was renamed to Apptainer in November 2021. This change has now trickled all the way down to the CentOS software repositories and is now deployed on {{ site.cluster.name }}.  We will soon suggest you to use the `apptainer` command, but the alias `singularity` will continue to work for the time being.
+The Singularity software was renamed to Apptainer in November 2021. This change has now trickled all the way down to the CentOS software repositories and is now deployed on {{ site.cluster.name }}.  Although alias `singularity` continues to work for the time being, we recommend to use the `apptainer` command.
 </div>
 
 # Singularity - Linux Containers

@@ -17,6 +17,7 @@ benchmarking
 bigGP
 BiocManager
 Biocomputing
+bioconda
 bioconductor
 Bioconductor's
 Biocontainers
@@ -39,6 +40,7 @@ conda
 Conda's
 config
 configurational
+continuumio
 cron
 cronjob
 crontab
