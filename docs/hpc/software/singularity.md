@@ -382,7 +382,7 @@ Q. _Why not Docker?_
 A. Docker is one of the most popular and well-known software solutions for using Linux Containers. However, contrary to Singularity, it turns out that it is hard to get Docker to play well with multi-tenant HPC environments.
 
 Q. _What's the filename extension `*.sif`?_  
-A. First of all, the filename extension is optional, and some prefer to drop them, e.g. `rocker_r-base` instead of `rocker_r-base.sif`.  SIF, which is short for the [Singularity Container Image Format](https://github.com/hpcng/sif), is a file format that can hold a Linux container environments in a single file.  You might also see Singularity images named `*.img` and `*.simg`, which are legacy file formats that Singularity used in the past, where `*.img` indicates a _writable_ (ext3) images whereas `*.simg` indicates a read-only (squashfs) image.](https://groups.google.com/a/lbl.gov/d/msg/singularity/Cq7kIbN_L68/2mOdkwx2BAAJ)
+A. First of all, the filename extension is optional, and some prefer to drop them, e.g. `rocker_r-base` instead of `rocker_r-base.sif`.  SIF, which is short for the [Singularity Container Image Format](https://github.com/hpcng/sif), is a file format that can hold a Linux container environments in a single file.  You might also see Singularity images named `*.img` and `*.simg`, which are legacy file formats that Singularity used in the past, where [`*.img` indicates a _writable_ (ext3) images whereas `*.simg` indicates a read-only (squashfs) image.](https://groups.google.com/a/lbl.gov/d/msg/singularity/Cq7kIbN_L68/2mOdkwx2BAAJ)
 
 
 [Linux containers]: https://www.wikipedia.org/wiki/Linux_containers
