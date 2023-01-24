@@ -1,0 +1,7 @@
+[alice@{{ site.devel.name }} lxc]$ apptainer shell --bind /scratch,{{ site.path.global_scratch }},{{ site.user.labfolder }} rocker_r-base.sif
+Apptainer> ls /scratch
+alice
+Apptainer> ls {{ site.path.global_scratch }}
+alice
+Apptainer> ls {{ site.user.labfolder }}
+data1  data2

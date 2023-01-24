@@ -1,0 +1,3 @@
+[alice@{{ site.devel.name }} lxc]$ apptainer exec rocker_r-base.sif Rscript -e "sum(1:10)"
+/wynton/home/boblab/alice/bin/markin: line 302: apptainer: command not found
+[alice@{{ site.devel.name }} lxc]$ 

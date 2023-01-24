@@ -1,0 +1,13 @@
+[alice@{{ site.devel.name }} lxc]$ apptainer shell rocker_r-base.sif
+Apptainer> head -3 /etc/os-release
+PRETTY_NAME="Debian GNU/Linux bookworm/sid"
+NAME="Debian GNU/Linux"
+VERSION_CODENAME=bookworm
+Apptainer> Rscript --version
+Rscript (R) version 4.2.2 (2022-10-31)
+Apptainer> exit
+
+[alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
