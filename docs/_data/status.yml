@@ -16,12 +16,12 @@
 # Technical details: This information is used in _layouts/default.html.
 
 # Default:
-#level: info
-#condition: is operational
-
-level: warning
+level: info
 condition: is operational
-message: The development nodes have no internet access due to a network issue
+
+#level: warning
+#condition: is operational
+#message: The development nodes have no internet access due to a network issue
 
 # Actual status:
 # level: danger
@@ -33,9 +33,9 @@ message: The development nodes have no internet access due to a network issue
 # condition: is operational
 # message: Available CPU cores may be limited as we deal with any casualties from the power outage
 
-level: warning
-condition: experiences network issues
-message: Access to login and data-transfer nodes is currently down
+#level: warning
+#condition: experiences network issues
+#message: Access to login and data-transfer nodes is currently down
 
 
 # ----------------------------------------------------------------------------
