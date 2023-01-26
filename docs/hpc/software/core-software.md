@@ -7,16 +7,22 @@ Additional software can be found in the [Software Repositories].
 
 
 <dl>
-<dt>Editors</dt>
+<dt>File Editing</dt>
 <dd>
 emacs, nano, vim
 </dd>
 
-<dt>File transfers</dt>
+<dt>File Transferring</dt>
 <dd>
 ftp, lftp, scp, sftp, rsync<br>
 curl, wget<br>
 dos2unix<br>
+</dd>
+
+<dt>File Compression and Archiving</dt>
+<dd>
+7z, bzip2, gzip, lz4, zip, xz<br>
+ar, cpio, tar<br>
 </dd>
 
 <dt>Communication</dt>
