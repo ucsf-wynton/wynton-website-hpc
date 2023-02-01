@@ -127,21 +127,30 @@ qsub -l ssd_scratch=1
 
 By default, the scheduler will allocate a single core for your job.  To allow the job to use multiple CPU cores, you must run your job in a SGE parallel environment (PE) and tell SGE how many cores the job will use.  Please note that jobs using multiple cores running outside of a parallel environment are subject to termination without warning by the Wynton admins.  There are four parallel environments on Wynton:
 
-* `smp`: for multithreaded jobs using ['Symmetric multiprocessing (SMP)'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing)
-* `mpi`: for parallel jobs using MPI
-* `mpi_onehost`: for tightly coupled parallel jobs using MPI which run best on a single host
-* `mpi-8`: for Hybrid MPI (multi-threaded multi-node MPI jobs)
+* `smp`: for single-host parallel jobs using ['Symmetric multiprocessing (SMP)'](https://en.wikipedia.org/wiki/Symmetric_multiprocessing)
+* `mpi`:  for multiple-host parallel jobs based on MPI parallelization
+* `mpi_onehost`: for single-host parallel jobs based on MPI parallelization
+* `mpi-8`: for multi-threaded multi-host jobs based on MPI parallelization
 
-For any of the above environments, you must request the number of slots needed when you submit the job.  For instance, to request four slots (`NSLOTS=4`) in the SMP PE _each with 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
+For any of the above environments, you must request the number of slots needed when you submit the job, e.g. `-pe smp 4`, `-pe mpi_onehost 14`, `-pe mpi 38`, and `-pe mpi-8 40`.
+
+
+### Single-host parallel processing
+
+To request four slots (`NSLOTS=4`) on a single host, where _each slot gets 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
+
 ```sh
 qsub -pe smp 4 -l mem_free=2G script.sh
 ```
+
 The scheduler will make sure your job is launched on a node with at least four slots available.
 
 Note, when writing your script, use SGE environment variable `NSLOTS`, which is set to the number of cores that your job was allocated.  This way you don't have to update your script if you request a different number of cores.  For instance, if your script runs the BWA alignment, have it specify the number of parallel threads as:
+
 ```sh
 bwa aln -t "${NSLOTS:-1}" ...
 ```
+
 By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back to use a single thread if `NSLOTS` is not set, e.g. when running the script on your local computer.
 
 <div class="alert alert-danger" role="alert" markdown="1">
@@ -149,19 +158,36 @@ By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back
 </div>
 
 
-### MPI
+### MPI single-host parallel processing
+
+Similarly to the SMP parallel environment, we can request slots on a single host for the main purpose of using MPI to orchestrate the parallel processing.  For example, to request ten such slots, use:
+
+```sh
+qsub -pe mpi_onehost 10 -l mem_free=2G script.sh
+```
 
 There are two versions of MPI on Wynton:
 
  * OpenMPI 3.1.3, available via `module load mpi` or `module load mpi/openmpi3-x86_64`
  * OpenMPI 1.10.7, available via `module laod mpi/openmpi-x86_64`
 
-To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script.  MPI jobs running on multiple hosts communicate over the network.  For certain types of applications (known as tightly coupled), this can slow a job down more than the multiple cores can speed it up.  Run these types of jobs in the `mpi_onehost` PE to keep the job on a single compute node.
+To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script `script.sh`.
 
 
-### MPI: Parallel processing via Hybrid MPI (multi-threaded multi-node MPI jobs)
+### MPI multi-host parallel processing
 
-{{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node _across one or more compute nodes_.  For instance, to request a Hybrid MPI job with in total forty slots (40), submit it as:
+MPI supports parallelization across multiple hosts where the different parallel processes communicating over the network.  To request a, possible, multi-host job, use `-pi mpi <slots>`.  For example,
+
+```sh
+qsub -pe mpi 24 -l mem_free=2G script.sh
+```
+
+requests 24 slots, each allotted 2 GiB RAM, with a total of 48 GiB RAM.
+
+
+### MPI multi-threaded multi-host parallel processing
+
+In addition to `-pe mpi_onehost <nslots>` and `-pe mpi <nslots>`, {{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node _across one or more compute nodes_.  For instance, to request a Hybrid MPI job with in total forty slots (40), submit it as:
 
 ```sh
 qsub -pe mpi-8 40 hybrid_mpi.sh
