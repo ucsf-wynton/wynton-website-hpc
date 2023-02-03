@@ -305,7 +305,7 @@ Host *dev?
 
 This will work for all development nodes, e.g. dev1 and gpudev1, and any other ones added in the future.
 
-Then, for VS Code, click on the SSH extension, "new remote", and type in `ssh pdev1`.
+Then, for VS Code, click on the SSH extension, "new remote", and type in `ssh dev1`.
 
 Credits: Thanks to Wynton user Pierre Nedelec for this example.
 
