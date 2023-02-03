@@ -300,7 +300,7 @@ For VS Code, you just need to set up your command line environment with a `Proxy
 
 Here is an example to work from for your `~/.ssh/config`:
 
-```
+```sh
 Host *dev?
   ForwardX11 yes
   ForwardX11Trusted yes
