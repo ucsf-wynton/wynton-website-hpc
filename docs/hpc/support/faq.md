@@ -312,7 +312,7 @@ This will work for all dev nodes (pdev1, pgpudev1 and others if they get added).
 
 Then for VS Code, click on the SSH extension, “new remote”, and type in `ssh pdev1`.
 
-Thanks to Pierre Nedelec for this example.
+Thanks to Wynton user `Pierre Nedelec` for this example.
 
 ## Contributing to {{ site.cluster.nickname }}
 
