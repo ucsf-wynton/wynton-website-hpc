@@ -285,6 +285,7 @@ and copy the default one by:
 $ cp ~/.bashrc ~/.bashrc.20220912
 $ cp /etc/skel/bashrc ~/.bashrc
 ```
+
 ### Can I Use Microsoft VS Code With {{ site.cluster.nickname }}
 
 First, do NOT use Microsoft VS Code on the login nodes. 
