@@ -288,11 +288,9 @@ $ cp /etc/skel/bashrc ~/.bashrc
 
 ### Can I Use Microsoft VS Code With {{ site.cluster.nickname }}
 
-First, do _not_ use Microsoft Visual Studio Code (VS Code) on the login nodes.
+First, do _not_ use Microsoft Visual Studio Code (VS Code) on the login nodes.  The login nodes primary purpose is to ensure that all {{ site.cluster.nickname }} users are able to login to {{ site.cluster.nickname }}.  If you overwhelm the resources of the login nodes, you will affect other users' ability to login to {{ site.cluster.nickname }}.
 
-The login nodes primary purpose is to ensure that all {{ site.cluster.nickname }} users are able to login to {{ site.cluster.nickname }}.  If you overwhelm the resources of the login nodes, you will affect other users' ability to login to {{ site.cluster.nickname }}.
-
-Consult VS Code's Documentation regarding using an SSH "Jump Host" or "Ssh Proxy". For VS Code, you just need to set up your command line environment with a "ProxyJump" to the development nodes in your `~/.ssh/config` _on your local machine_.  Here is an example to work from for your `~/.ssh/config`:
+Consult VS Code's Documentation regarding using an SSH "Jump Host" or "Ssh Proxy". For VS Code, you just need to configure your local SSH environment with a `ProxyJump` to the development nodes in your `~/.ssh/config` _on your local machine_.  Here is an example to work from for your `~/.ssh/config`:
 
 ```sh
 Host *dev?
@@ -303,9 +301,15 @@ Host *dev?
   User your_user_name
 ```
 
-This will work for all development nodes, e.g. dev1 and gpudev1, and any other ones added in the future.
+This will work for all development nodes, e.g. dev1 and gpudev1, and any other ones added in the future.  Then, verify that you can SSH directly from your local machine to a development nodes in one call using:
 
-Then, for VS Code, click on the SSH extension, "new remote", and type in `ssh dev1`.
+```sh
+{local}$ ssh dev1
+...
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+When you know that works, configure VS Code by clicking on the SSH extension, "new remote", and type in `ssh dev1`.
 
 Credits: Thanks to Wynton user Pierre Nedelec for this example.
 
