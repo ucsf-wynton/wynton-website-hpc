@@ -286,6 +286,29 @@ $ cp ~/.bashrc ~/.bashrc.20220912
 $ cp /etc/skel/bashrc ~/.bashrc
 ```
 
+### Can I Use Microsoft VS Code With {{ site.cluster.nickname }}
+
+First, do _not_ use Microsoft Visual Studio Code (VS Code) on the login nodes.
+
+The login nodes primary purpose is to ensure that all {{ site.cluster.nickname }} users are able to login to {{ site.cluster.nickname }}.  If you overwhelm the resources of the login nodes, you will affect other users' ability to login to {{ site.cluster.nickname }}.
+
+Consult VS Code's Documentation regarding using an SSH "Jump Host" or "Ssh Proxy". For VS Code, you just need to set up your command line environment with a "ProxyJump" to the development nodes in your `~/.ssh/config` _on your local machine_.  Here is an example to work from for your `~/.ssh/config`:
+
+```sh
+Host *dev?
+  ForwardX11 yes
+  ForwardX11Trusted yes
+  ProxyJump log1.wynton.ucsf.edu
+  IdentityFile ~/.ssh/wynton_private_key_name
+  User your_user_name
+```
+
+This will work for all development nodes, e.g. dev1 and gpudev1, and any other ones added in the future.
+
+Then, for VS Code, click on the SSH extension, "new remote", and type in `ssh dev1`.
+
+Credits: Thanks to Wynton user Pierre Nedelec for this example.
+
 
 ## Contributing to {{ site.cluster.nickname }}
 

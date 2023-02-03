@@ -3,7 +3,7 @@
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ 2023-01-09: The Jupyter Hub server can only be accessed from the UCSF network. eWynton 2FA is currently not supported.  If you're outside, please use the UCSF VPN, if you have the option.
+⚠️ 2023-01-09: The Jupyter Hub server can only be accessed from the UCSF network. Wynton 2FA is currently not supported.  If you're outside, please use the UCSF VPN, if you have the option.
 </div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
@@ -73,6 +73,9 @@ import os
 
 # Set environment variables
 os.environ["SGE_ROOT"] = "/opt/sge"
+os.environ["SGE_CLUSTER_NAME"]="wynton_cluster"
+os.environ["SGE_CELL"]="wynton"
+os.environ["SGE_ARCH"]="lx-amd64"
 ```
 
 ```python
