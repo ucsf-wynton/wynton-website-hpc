@@ -285,13 +285,13 @@ and copy the default one by:
 $ cp ~/.bashrc ~/.bashrc.20220912
 $ cp /etc/skel/bashrc ~/.bashrc
 ```
-### Can I Use Microsoft VS Code With Wynton
+### Can I Use Microsoft VS Code With {{ site.cluster.nickname }}
 
 First, do NOT use Microsoft VS Code on the login nodes. 
 
-The login nodes primary purpose is to insure ALL Wynton users are able to login to Wynton.
+The login nodes primary purpose is to insure ALL {{ site.cluster.nickname }} users are able to login to {{ site.cluster.nickname }}.
 
-If you overwhelm the resources of the login nodes, you will affect other users' ability to login to Wynton.
+If you overwhelm the resources of the login nodes, you will affect other users' ability to login to {{ site.cluster.nickname }}.
 
 Consult VS Code's Documentation regarding using an ssh `Jump Host` or `Ssh Proxy`.
 
@@ -310,6 +310,8 @@ Host *dev?
 This will work for all dev nodes (pdev1, pgpudev1 and others if they get added).
 
 Then for VS Code, click on the SSH extension, “new remote”, and type in `ssh pdev1`.
+
+Thanks to Pierre Nedelec for this example.
 
 ## Contributing to {{ site.cluster.nickname }}
 
