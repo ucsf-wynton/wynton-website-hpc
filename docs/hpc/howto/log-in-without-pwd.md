@@ -227,7 +227,7 @@ We also add `Compression yes`, which corresponds to `ssh -C`, to
 If you use `ssh -Y`, which you might have to do if you are on macOS,
 then add also `ForwardX11Trusted yes`:
 
-```sh
+```lang-none
   ForwardX11 yes
   ForwardX11Trusted yes
   Compression yes
