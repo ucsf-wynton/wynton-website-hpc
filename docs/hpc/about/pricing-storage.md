@@ -12,7 +12,7 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 * Global `/wynton/scratch` and `/wynton/protected/scratch` (for PHI users) may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
 
-* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/group` (for PHI users), or in `/wynton/protected/project` (for specific PHI projects) at $160/TB (one-time fee).  Both will count towards a lab's storage quota total.
+* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/protected/group` (for PHI users), or in `/wynton/protected/project` (for specific PHI projects) at $160/TB (one-time fee).  Both will count towards a lab's storage quota total.
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
