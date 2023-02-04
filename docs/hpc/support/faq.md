@@ -290,32 +290,7 @@ $ cp /etc/skel/bashrc ~/.bashrc
 
 **Q**. _Can I use Microsoft VS Code with {{ site.cluster.nickname }}?_
 
-**A**. Importantly, do _not_ use Microsoft Visual Studio Code (VS Code) on the login nodes.  The login nodes primary purpose is to ensure that all {{ site.cluster.nickname }} users are able to log in to {{ site.cluster.nickname }}.  If you overwhelm the resources of the login nodes, you will affect other users' ability to log in to {{ site.cluster.nickname }}.  Because of this, we have to make sure that VS Code running on your local machine connects directly to a development node.  To achieve this, you need to (i) configure your local SSH environment to connect directly to a development node, and (ii) configure your local MS Code client to use this SSH connection.
-
-(i) Configure your local SSH environment with a `ProxyJump` to the development nodes in your `~/.ssh/config` _on your local machine_.  Here is an example to work from for your `~/.ssh/config`:
-
-```sh
-Host *dev?
-  ForwardX11 yes
-  ForwardX11Trusted yes
-  ProxyJump log1.wynton.ucsf.edu
-  IdentityFile ~/.ssh/wynton_private_key_name
-  User alice  ## your {{ site.cluster.nickname }} user name
-```
-
-Then, verify that you can SSH directly from your local machine to a development nodes in one call using:
-
-```sh
-{local}$ ssh dev1
-...
-[alice@{{ site.devel.name }} ~]$ 
-```
-
-This will work for any of the development nodes, e.g. dev1 and gpudev1, because we used globbing to specified the `Host`.
-
-(ii) When you know that works, consult VS Code's documentation regarding using an SSH "Jump Host" or "Ssh Proxy". In short, configure VS Code by clicking on the SSH extension, "new remote", and type in `ssh dev1`.  This should allow VS Code to connect directly to `dev1`.
-
-Credits: Thanks to Wynton user Pierre Nedelec for this example.
+**A**. Yes, but, importantly, do _not_ use Microsoft Visual Studio Code (VS Code) on the login nodes.  Because of this, you need to configure VS Code on your local machine to connect directly to a development nodes instead.  To achieve this, start by configuring your local SSH environment to connect directly to a development node via a "jump host" as described in ['Connect directly to a development node'](/hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node). When you know that works, consult VS Code's documentation regarding using an SSH "Jump Host" or "Ssh Proxy". In short, configure VS Code by clicking on the SSH extension, "new remote", and then enter `ssh dev1`.  This should allow VS Code to connect directly to `dev1`.
 
 
 ## Contributing to {{ site.cluster.nickname }}
