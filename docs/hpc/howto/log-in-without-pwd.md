@@ -222,7 +222,7 @@ Host *.{{ site.cluster.domain }}
 ```
 
 We also add `Compression yes`, which corresponds to `ssh -C`, to
-[improve the X11 Forwarding performance](https://wynton.ucsf.edu/hpc/howto/gui-x11fwd.html#log-into-the-cluster-with-x11-forwarding).
+[improve the X11 Forwarding performance].
 
 If you use `ssh -Y`, which you might have to do if you are on macOS,
 then add also `ForwardX11Trusted yes`:
@@ -273,3 +273,4 @@ have called `ssh -J {{ site.login.hostname }} {{ site.devel.name }}.{{ site.clus
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
 [PuTTY]: https://www.putty.org/
 [Fix in-secure file permission on ~/.ssh/]: #fix-in-secure-file-permission-on-ssh
+[improve the X11 Forwarding performance]: /hpc/howto/gui-x11fwd.html#log-into-the-cluster-with-x11-forwarding
