@@ -290,7 +290,17 @@ $ cp /etc/skel/bashrc ~/.bashrc
 
 **Q**. _Can I use Microsoft VS Code with {{ site.cluster.nickname }}?_
 
-**A**. Yes, but, importantly, do _not_ use Microsoft Visual Studio Code (VS Code) on the login nodes.  Because of this, you need to configure VS Code on your local machine to connect directly to a development nodes instead.  To achieve this, start by configuring your local SSH environment to connect directly to a development node via a "jump host" as described in ['Connect directly to a development node'](/hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node). When you know that works, consult VS Code's documentation regarding using an SSH "Jump Host" or "Ssh Proxy". In short, configure VS Code by clicking on the SSH extension, "new remote", and then enter `ssh dev1`.  This should allow VS Code to connect directly to `dev1`.
+**A**. Yes, but, importantly, do _not_ use Microsoft Visual Studio
+Code (VS Code) on the login nodes.  Because of this, you need to
+configure VS Code on your local machine to connect directly to a
+development nodes instead.  To achieve this, start by configuring your
+local SSH environment to connect directly to a development node via a
+"jump host" directive as described in ['Connect directly to a
+development node'].  When you know that works, consult VS Code's
+documentation regarding using an SSH "Jump Host" or "Ssh Proxy". In
+short, configure VS Code by clicking on the SSH extension, "new
+remote", and then enter `ssh dev1`.  This should allow VS Code to
+connect directly to `dev1`.
 
 
 ## Contributing to {{ site.cluster.nickname }}
@@ -323,3 +333,4 @@ team].
 
 [{{ site.cluster.nickname }} team]: /hpc/about/contact.html
 [purchase additional storage]: /hpc/about/pricing-storage.html
+['Connect directly to a development node']: /hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node

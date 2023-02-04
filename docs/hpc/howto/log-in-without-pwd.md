@@ -155,7 +155,7 @@ It is rather tedious having to specify what private key file to use
 (`-i ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}`) each
 time you use SSH.  As a last step, we will set the default options for
 `alice@{{ site.login.hostname }}`.  On your local machine, add the
-following entry to `~/.ssh/config` (if you don't have the file, create
+following directive to `~/.ssh/config` (if you don't have the file, create
 it):
 
 ```lang-none
@@ -172,7 +172,7 @@ using:
 [alice@{{ site.login.name }} ~]$ 
 ```
 
-Because we use globbing for `Host` in the above SSH config entry, it
+Because we use globbing for `Host` in the above SSH config directive, it
 applies to SSH connections for _all_ {{ site.cluster.nickname }}
 connections.
 
@@ -242,19 +242,19 @@ doing basic file manipulations.  We should do all other type of tasks
 on development nodes, do avoid risk clogging up the login nodes.  To
 avoid having to do two manual SSH steps, one to a login node followed
 immediately by one to the development, we can set up another SSH
-configuration entry that does both in one SSH call.
+configuration directive that does both in one SSH call.
 
 First, make sure you have created the above 
-`Host: *.{{ site.cluster.domain }}` entry in `~/.ssh/config`
+`Host: *.{{ site.cluster.domain }}` directive in `~/.ssh/config`
 on your local computer and verified that it  works.  Then, append
-another entry with:
+another directive with:
 
 ```lang-none
 Host *dev?.{{ site.cluster.domain }}
   ProxyJump {{ site.login.hostname }}
 ```
 
-These two entries together will allow you to connect directly to a
+These two directives together will allow you to connect directly to a
 development host from your local machine, e.g.
 
 ```sh
@@ -265,7 +265,7 @@ development host from your local machine, e.g.
 This works, because the `ProxyJump` specification makes the SSH
 connection use `{{ site.login.hostname }}` as a "jump host" and from
 there automatically continue to the requested development host.  The
-result of this latter SSH configuration entry is the same as if you would
+result of this latter SSH configuration directive is the same as if you would
 have called `ssh -J {{ site.login.hostname }} {{ site.devel.name }}.{{ site.cluster.domain }}`.
 
 
