@@ -205,6 +205,40 @@ drwx------
 _Explanation:_ The above `chmod` settings specify that you as a user (`u`) have read (`r`) and write (`w`) permissions for this directory.  In addition, you have executable (`x`) permission, which also means you can set it as your working directory.  Continuing, the settings also specify that other users in your group (`g`) as well as all other (`o`) users on the system have no access at all (empty permission).
 
 
+### Connect directly to a development node
+
+The login nodes should only be used for light-weight tasks such as
+submitting job scripts, checking that the status of existing jobs, and
+doing basic file manipulations.  We should do all other type of tasks
+on development nodes, do avoid risk clogging up the login nodes.  To
+avoid having to do two manual SSH steps, one to a login node followed
+immediately by one to the development, we can set up another SSH
+configuration entry that does both in one SSH call.
+
+First, make sure you have created the above 
+`Host: *.{{ site.cluster.domain }}` entry in `~/.ssh/config`
+on your local computer and verified that it  works.  Then, append
+another entry with:
+
+```lang-none
+Host *dev?.{{ site.cluster.domain }}
+  ProxyJump {{ site.login.hostname }}
+```
+
+These two entries together will allow you to connect directly to a
+development host from your local machine, e.g.
+
+```sh
+{local}$ ssh {{ site.devel.name }}.{{ site.cluster.domain }}
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+This works, because the `ProxyJump` specification makes the SSH
+connection use `{{ site.login.hostname }}` as a "jump host" and from
+there automatically continue to the requested development host.  The
+result of this latter SSH configuration entry is the same as if you would
+have called `ssh -J {{ site.login.hostname }} {{ site.devel.name }}.{{ site.cluster.domain }}`.
+
 
 
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
