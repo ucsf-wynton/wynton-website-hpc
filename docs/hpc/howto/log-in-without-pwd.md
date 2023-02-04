@@ -205,6 +205,29 @@ drwx------
 _Explanation:_ The above `chmod` settings specify that you as a user (`u`) have read (`r`) and write (`w`) permissions for this directory.  In addition, you have executable (`x`) permission, which also means you can set it as your working directory.  Continuing, the settings also specify that other users in your group (`g`) as well as all other (`o`) users on the system have no access at all (empty permission).
 
 
+### Automatically connect with X11 Forwarding
+
+If you use `ssh -X`, when you connect to the cluster, that is, you use
+X11 Forwarding for remote graphics etc., then you make this the
+default by adding `ForwardX11 yes` to the above `Host *.{{
+site.cluster.domain }}` in `~/.ssh/config` on your local computer:
+
+```lang-none
+Host *.{{ site.cluster.domain }}
+  User alice
+  IdentityFile ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
+  ForwardX11 yes
+```
+
+If you use `ssh -Y`, which you might have to do if you are on macOS,
+then add also `ForwardX11Trusted yes`:
+
+```sh
+  ForwardX11 yes
+  ForwardX11Trusted yes
+```
+
+
 ### Connect directly to a development node
 
 The login nodes should only be used for light-weight tasks such as
