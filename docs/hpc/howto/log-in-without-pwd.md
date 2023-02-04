@@ -218,7 +218,11 @@ Host *.{{ site.cluster.domain }}
   User alice
   IdentityFile ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
   ForwardX11 yes
+  Compression yes
 ```
+
+We also add `Compression yes`, which corresponds to `ssh -C`, to
+[improve the X11 Forwarding performance](https://wynton.ucsf.edu/hpc/howto/gui-x11fwd.html#log-into-the-cluster-with-x11-forwarding).
 
 If you use `ssh -Y`, which you might have to do if you are on macOS,
 then add also `ForwardX11Trusted yes`:
@@ -226,6 +230,7 @@ then add also `ForwardX11Trusted yes`:
 ```sh
   ForwardX11 yes
   ForwardX11Trusted yes
+  Compression yes
 ```
 
 
