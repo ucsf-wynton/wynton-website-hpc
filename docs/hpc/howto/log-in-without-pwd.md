@@ -151,20 +151,30 @@ The reason why we use `-o PreferredAuthentications=publickey,keyboard-interactiv
 
 ## Step 4: Avoid having to specify SSH option `-i` (on local machine)
 
-It is rather tedious having to specify what private key file to use (`-i ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}`) each time you use SSH.  As a last step, we will set the default options for `alice@{{ site.login.hostname }}`.  On your local machine, add the following entry to `~/.ssh/config` (if you don't have the file, create it):
+It is rather tedious having to specify what private key file to use
+(`-i ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}`) each
+time you use SSH.  As a last step, we will set the default options for
+`alice@{{ site.login.hostname }}`.  On your local machine, add the
+following entry to `~/.ssh/config` (if you don't have the file, create
+it):
 
 ```lang-none
-Host {{ site.login.hostname }}
+Host *.{{ site.cluster.domain }}
   User alice
   IdentityFile ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
 ```
 
-With all of the above, you should now be able to log in to the cluster using:
+With all of the above, you should now be able to log in to the cluster
+using:
 
 ```sh
 {local}$ ssh {{ site.login.hostname }}
 [alice@{{ site.login.name }} ~]$ 
 ```
+
+Because we use globbing for `Host` in the above SSH config entry, it
+applies to SSH connections for _all_ {{ site.cluster.nickname }}
+connections.
 
 
 ## Appendix
