@@ -208,7 +208,7 @@ _Explanation:_ The above `chmod` settings specify that you as a user (`u`) have 
 ### Automatically connect with X11 Forwarding
 
 If you often use `ssh -X` when connecting to the cluster, that is, you
-use often X11 Forwarding for remote graphics etc., then you can make
+often use X11 Forwarding for remote graphics etc., then you can make
 this the default by adding `ForwardX11 yes` to the above 
 `Host *.{{ site.cluster.domain }}` in `~/.ssh/config` on your 
 local computer:
