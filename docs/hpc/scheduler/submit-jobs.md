@@ -203,7 +203,7 @@ and make sure that the script (here `hybrid_mpi.sh`) exports `OMP_NUM_THREADS=8`
 module load mpi/openmpi-x86_64
 export OMP_NUM_THREADS=8
 
-## Important: Don't use -np $NSLOTS here
+## Important: Don't use -np $NHOSTS here
 mpirun -np $(wc -l < "$PE_HOSTFILE") /path/to/the_app
 ```
 
@@ -222,7 +222,7 @@ Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If `NS
 </div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
-2023-01-23: Due to an SGE issue, you _must not_ use `NSLOTS` as in `mpirun -np $NSLOTS ...`. If done, you might overuse one node and underuse another, when requesting 16 or more slots. Until resolved, please use the `mpirun -np $(wc -l < "$PE_HOSTFILE") ...` solution instead.
+2023-01-23: Due to an SGE issue, you _must not_ use `NHOSTS` as in `mpirun -np $NHOSTS ...`. If done, you might overuse one node and underuse another, when requesting 16 or more slots. Until resolved, please use the `mpirun -np $(wc -l < "$PE_HOSTFILE") ...` solution instead.
 </div>
 
 
