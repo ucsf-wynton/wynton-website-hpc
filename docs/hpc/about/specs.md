@@ -69,12 +69,12 @@ The cluster has development nodes for the purpose of validating scripts, prototy
 
 Node                               | Physical Cores |      RAM | Local `/scratch` | CPU x86-64 level |                          CPU  |                GPU |
 -----------------------------------|---------------:|---------:|-----------------:|-----------------:|------------------------------:|-------------------:|
-`{{ site.dev1.hostname }}`     |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
-`{{ site.dev2.hostname }}`     |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.dev3.hostname }}`     |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.gpudev1.hostname }}`  |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
-`p{{ site.dev1.hostname }}` (for PHI users)    |              32  |    256 GiB |            1.1  TiB | x86-64-v3        | Intel E5-2640 v3 |                    |
-`p{{ site.gpudev1.hostname }}` (for PHI users) |             32  |    128 GiB |              .87 TiB | x86-64-v3        | Intel E5-2640 v3 | NVIDIA Tesla K80   |
+`{{ site.dev1.hostname }}`         |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
+`{{ site.dev2.hostname }}`         |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.dev3.hostname }}`         |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.gpudev1.hostname }}`      |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
+`p{{ site.dev1.hostname }}` (for PHI users)    |  32 | 256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                    |
+`p{{ site.gpudev1.hostname }}` (for PHI users) |  32 | 128 GiB |         0.87 TiB | x86-64-v3        | Intel E5-2640 v3              | NVIDIA Tesla K80   |
 
 _Comment:_
 Please use the GPU development node only if you need to build or prototype GPU software.
