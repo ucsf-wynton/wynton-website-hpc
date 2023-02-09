@@ -43,19 +43,51 @@ think this is a mistake, please [contact us] so we can add you.
 ## Enable SBGrid
 
 <div class="alert alert-info" role="alert" style="margin-top: 3ex" markdown="1">
+
 2021-05-28: All our development nodes, including the GPU one, have
-CPUs that are compatible with the SBGrid software tools.
+x86-64-v3 or newer CPUs, which are compatible with the SBGrid software
+tools.
+
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-<span>⚠️</span> If you are running SBGrid software and receive an error message regarding *"Illegal Instructions"*, this means that the version of the software you are trying to run requires a CPU feature that one or more of the compute nodes which your job ran on does not support. Many of the default versions of programs included with SBGrid work best on "modern" compute nodes with newer CPU architectures/features. For SBGrid this means Intel "Haswell+" CPUs/Motherboards. (Though read the documentation for the SBGrid software you are trying to use, if you encounter an error that references "Illegal Instructions". You may be able to specify a version of the software compiled for "pre-Haswell" CPUs.)  Alternatively, if you want to use the newer version of the software, you will need to make sure your SBGrid job ends up a on a node with a modern CPU. To do this, specify SGE option `-l hostname="qb3-id*|qb3-as*|qb3-at*`, a group of more modern nodes. (The pipe sign, `|`, is used to indicate the `OR` operator in resource requests, telling your job to run on any node whose hostname value matches the patterns given.)
+<span>⚠️</span>
+If you are running SBGrid software and receive an error message
+regarding `Illegal Instructions`, this means that the version of the
+software you are trying to run requires a CPU feature that one or more
+of the compute nodes which your job ran on does not support. Many of
+the default versions of SBGrid software work best on "modern" compute
+nodes with newer CPUs. For SBGrid this means Intel "Haswell+"
+CPUs. Though read the documentation for the SBGrid software you are
+trying to use, if you encounter an error that references "Illegal
+Instructions". You may be able to specify a version of the software
+compiled for "pre-Haswell" CPUs.  Alternatively, if you want to use
+the newer version of the software, you will need to make sure your
+SBGrid job ends up a on a node with a modern CPU. To do this, specify
+SGE option `-l hostname="qb3-id*|qb3-as*|qb3-at*` to submit to modern
+nodes. (The pipe sign, `|`, is used to indicate the `OR` operator in
+resource requests, telling your job to run on any node whose hostname
+value matches the patterns given.)
+
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-<span>⚠️</span>If you are using SBGrid programs with GPU support, please note that SBGrid programs are compiled for *specific* versions of cuda. Also note the newest Nvidia A40 GPUs on the `qb3-atgpu*` nodes *require* the use of programs compiled against cuda-11.0.2 or greater. As of 2022-09-16, most default versions of GPU compatible versions of SBGrid programs *are not* compiled against cuda-11.0.2 or greater. You may need to specify a beta version of the SBGrid programs or avoid the `qb3-atgpu*` nodes. See the SBGrid documentation for your specific program.
+<span>⚠️</span>
+If you are using SBGrid programs with GPU support, please note that
+SBGrid programs are compiled for _specific_ versions of CUDA.
+Note the newest NVIDIA A40 GPUs on the `qb3-atgpu*` nodes *require*
+the use of programs compiled against CUDA 11.0.2, or greater.
+As of 2022-09-16, most default versions of GPU-compatible versions of
+SBGrid programs _are not_ compiled against CUDA 11.0.2, or
+greater. You may need to specify a beta version of the SBGrid programs
+or avoid the `qb3-atgpu*` nodes. See the SBGrid documentation for your
+specific program.
+
 </div>
 
-SBGrid is available for interactive use on the development nodes and for use in job scripts on compute nodes. It is NOT available on the login nodes.
+SBGrid is available for interactive use on the development nodes and
+for use in job scripts on compute nodes. It is _not_ available on the
+login nodes.
 
 In order to use SBGrid software, the SBGrid environment must be
 enabled.  To enable the SBGrid, in the shell or in a job script, do:
