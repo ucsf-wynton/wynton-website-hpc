@@ -249,7 +249,7 @@ address 0x2b3a8b234ccd, cause 'illegal operand'
 
 or
 
-```
+```plain
 Illegal instruction (core dumped)
 ```
 
