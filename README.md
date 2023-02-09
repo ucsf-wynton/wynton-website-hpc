@@ -126,42 +126,11 @@ RESULT: 50 OK, 0 ERROR
 To run these tests locally, install [markdown-link-check](https://github.com/tcort/markdown-link-check).
 
 
-## Installing Jekyll
+## Installation
 
-_Warning_: It turns out that [the most recent version of Jekyll is not compatible with the recent version of GitHub Pages](https://github.com/github/pages-gem/issues/577).  Specifically, GitHub Pages requires Jekyll version >= 3.7.3 and < 4.0.0 - the latest version verified to work is Jekyll 3.8.7.  So we need to make sure to install specific version of a few packages below.
-
-The below instructions assumes that Ruby and its `gem` command is available on the machine.  Other than that, making sure to use option `--user-install` when installing, you should be able install Jekyll to your personal account without admin rights.
+To preview this website on your local computer, install Jekyll following the instructions in `INSTALL.md`. Then run:
 
 ```sh
-$ gem install --user-install bundler jekyll:3.8.7 listen:3.1.5 liquid:4.0.0 github-pages:204
-Fetching: bundler-2.1.4.gem (100%)
-WARNING:  You don't have /home/alice/.gem/ruby/2.5.0/bin in your PATH,
-          gem executables will not run.
-Successfully installed bundler-2.1.4
-Parsing documentation for bundler-2.1.4
-Installing ri documentation for bundler-2.1.4
-...
-Installing ri documentation for liquid-4.0.0
-Done installing documentation for liquid after 1 seconds
-48 gems installed
+$ export PATH=$HOME/.gem/ruby/3.0.0/bin
+$ make start
 ```
-
-That's it.
-
-You then need to prepend `$HOME/.gem/ruby/2.5.0/bin` to your PATH such that the `bundler` command in that folder is automatically found;
-```sh
-$ export PATH="$HOME/.gem/ruby/2.5.0/bin:$PATH"
-$ which bundle
-/home/alice/.gem/ruby/2.5.0/bin/bundle
-```
-Set that PATH in your `~/.bashrc` startup file to make it apply automatically.
-
-That's it.  You can now launch the website locally as above.
-
-
-
-## Licenses
-
-* The _content_ of the Wynton HPC is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> (CC BY-SA 4.0).
-
-* In addition to _content_, there are JavaScript frameworks and CSS files controlling the rendering of the webpage.  See the corresponding folders for their licenses.
