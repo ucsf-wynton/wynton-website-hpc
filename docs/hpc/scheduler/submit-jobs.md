@@ -63,7 +63,7 @@ qsub -cwd script.sh
 The scheduler will assign your job a unique (numeric) job ID.
 
 
-## Specifying (maximum) memory usage
+## Specifying (maximum) memory usage [`-l mem_free=<amount>`]
 
 Unless specified, the maximum amount of memory used at any time is 1 GiB per slot (`-l mem_free=1G`).  A job that need to use more memory, need to request that when submitted.  For example, a job that needs (at most) 10 GiB of memory should be submitted as:
 
@@ -85,7 +85,7 @@ Note that `-l mem_free=size` specifies _memory per slot_, not per job.
 
 
 
-## Specifying (maximum) run time
+## Specifying (maximum) run time [`-l h_rt=<time>`]
 
 <div class="alert alert-info" role="alert" markdown="1">
 Specifying the run time will shorten the queuing time - significantly so for short running jobs.
@@ -101,7 +101,7 @@ If not specified, the default run time is 10 minutes.  A job that runs longer th
 </div>
 
 
-## Using local scratch storage
+## Using local scratch storage [`-l scratch=<amount>`]
 
 Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage](/hpc/about/specs.html#scratch-storage) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
 ```sh
@@ -124,7 +124,7 @@ If your job would benefit from extra-fast [local scratch storage](/hpc/about/spe
 qsub -l ssd_scratch=1
 ```
 
-## Parallel processing 
+## Parallel processing [`-pe <type> <slots>`]
 
 By default, the scheduler will allocate a single core for your job.  To allow the job to use multiple CPU cores, you must run your job in a SGE parallel environment (PE) and tell SGE how many cores the job will use.  Please note that jobs using multiple cores running outside of a parallel environment are subject to termination without warning by the Wynton admins.  There are four parallel environments on Wynton:
 
@@ -136,7 +136,7 @@ By default, the scheduler will allocate a single core for your job.  To allow th
 For any of the above environments, you must request the number of slots needed when you submit the job, e.g. `-pe smp 4`, `-pe mpi_onehost 14`, `-pe mpi 38`, and `-pe mpi-8 40`.
 
 
-### Single-host parallel processing
+### Single-host parallel processing [`-pe smp <slots>`]
 
 To request four slots (`NSLOTS=4`) on a single host, where _each slot gets 2 GiB of RAM_, for a _total_ of 8 GiB RAM, use:
 
@@ -159,7 +159,7 @@ By using `${NSLOTS:-1}`, instead of just `${NSLOTS}`, this script will fall back
 </div>
 
 
-### MPI single-host parallel processing
+### MPI single-host parallel processing [`-pe mpi_onehost <slots>`]
 
 Similarly to the SMP parallel environment, we can request slots on a single host for the main purpose of using MPI to orchestrate the parallel processing.  For example, to request ten such slots, use:
 
@@ -175,7 +175,7 @@ There are two versions of MPI on Wynton:
 To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script `script.sh`.
 
 
-### MPI multi-host parallel processing
+### MPI multi-host parallel processing [`-pe mpi <slots>`]
 
 MPI supports parallelization across multiple hosts where the different parallel processes communicating over the network.  To request a, possible, multi-host job, use `-pi mpi <slots>`.  For example,
 
@@ -186,7 +186,7 @@ qsub -pe mpi 24 -l mem_free=2G script.sh
 requests 24 slots, each allotted 2 GiB RAM, with a total of 48 GiB RAM.
 
 
-### MPI multi-threaded multi-host parallel processing
+### MPI multi-threaded multi-host parallel processing [`-pe mpi_8 <slots>`]
 
 In addition to `-pe mpi_onehost <nslots>` and `-pe mpi <nslots>`, {{ site.cluster.name }} provides a special MPI parallel environment (PE) called `mpi-8` that allocates exactly eight (8) slots per node _across one or more compute nodes_.  For instance, to request a Hybrid MPI job with in total forty slots (40), submit it as:
 
@@ -228,7 +228,7 @@ Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If `NS
 
 
 
-## CPU architecture generation
+## CPU architecture generation [`-l x86-64-v=<level>`]
 
 All {{ site.cluster.name }} compute nodes have x86-64-compliant CPUs,
 but they differ in generation.  There are four major generations of
@@ -257,7 +257,7 @@ qsub -cwd -l x86-64-v=3 script.sh
 will launch the job on a compute node with x86-64-v3 CPUs or newer.
 
 
-## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps)
+## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps) [`-l eth_speed <bandwidth>`]
 
 The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
 ```sh
