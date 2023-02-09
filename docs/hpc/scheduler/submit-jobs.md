@@ -66,9 +66,11 @@ The scheduler will assign your job a unique (numeric) job ID.
 ## Specifying (maximum) memory usage
 
 Unless specified, the maximum amount of memory used at any time is 1 GiB per slot (`-l mem_free=1G`).  A job that need to use more memory, need to request that when submitted.  For example, a job that needs (at most) 10 GiB of memory should be submitted as:
+
 ```sh
 qsub -cwd -l mem_free=10G script.sh
 ```
+
 The scheduler will launch this jobs on the first available compute node with that amount of memory available.
 
 _TIPS_: Add `qstat -j $JOB_ID` to the end of your script to find out how much memory and CPU time your job needed.  See [Job Summary] page for more details.
@@ -97,7 +99,6 @@ qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
 <div class="alert alert-warning" role="alert" markdown="1">
 If not specified, the default run time is 10 minutes.  A job that runs longer than the requested run time will be terminated by the scheduler.  Because of this, you may add a little bit of extra time to give your job some leeway.
 </div>
-
 
 
 ## Using local scratch storage
@@ -226,6 +227,36 @@ Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If `NS
 </div>
 
 
+
+## CPU architecture generation
+
+All {{ site.cluster.name }} compute nodes have x86-64-compliant CPUs,
+but they differ in generation.  There are four major generations of
+CPUs - x86-64-v1, x86-64-v2, x86-64-v3, and x86-64-v4 - formally
+referred to as [CPU microarchitecture levels]. Most software tools are
+compiled such they can run on any of these generations, that is, they
+only require a CPU supporting x86-64-v1.  However, some are compiled
+to take advantage of more modern CPU instructions, and thereby become
+more performant.  Such software tools cannot run on an older
+generation of CPUs.  For example, if a tool uses x86-64-v4 CPU
+instructions, but is launched on a x86-64-v3 machine, it will
+terminate, often with an obscure error, e.g.
+
+```plain
+ *** caught illegal operation ***
+address 0x2b3a8b234ccd, cause 'illegal operand'
+```
+
+If you have a software tool that requires a specific x86-64 level,
+specify it via the `x86-64-v=<level>` resource.  For example,
+
+```sh
+qsub -cwd -l x86-64-v=3 script.sh
+```
+
+will launch the job on a compute node with x86-64-v3 CPUs or newer.
+
+
 ## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps)
 
 The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
@@ -277,3 +308,4 @@ For further options and advanced usage, see [Advanced Usage](/hpc/scheduler/adva
 [SGE environment variable]: /hpc/scheduler/sge-envvars.html
 [Job Summary]: /hpc/scheduler/job-summary.html
 [development nodes]: /hpc/get-started/development-prototyping.html
+[CPU microarchitecture levels]: https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels
