@@ -247,6 +247,12 @@ terminate, often with an obscure error, e.g.
 address 0x2b3a8b234ccd, cause 'illegal operand'
 ```
 
+or
+
+```
+Illegal instruction (core dumped)
+```
+
 If you have a software tool that requires a specific x86-64 level,
 specify it via the `x86-64-v=<level>` resource.  For example,
 
