@@ -65,20 +65,23 @@ hpc/_data/users.yml: FORCE
 	  >&2 echo "WARNING: Empty 'nbr_of_project'. Ignoring. Keeping old."; \
 	fi
 
-hpc/_data/specs.yml-misc: FORCE
+hpc/_data/specs.yml/misc: FORCE
 	## Node and core counts
 	tf=$$(mktemp); \
 	qstat -F | grep -E "(hf:x86-64-v=|qf:hostname=|hl:m_core=|-----)" | sed -E 's/^ *.*=//' | tr $$'\n' , | sed -E 's/--+/\n/g' | sed -E 's/(^,|,$$)//g' | sort -u > "$$tf"; \
-	sed -i -E "s/^(nodes:) +[[:digit:]]+/\1 $$(wc --lines "$$tf" | sed 's/ .*//')/" "$@"
+	sed -i -E "s/^(nodes:) +[[:digit:]]*/\1 $$(wc --lines "$$tf" | sed 's/ .*//')/" "$(@D)"; \
+	sed -i -E "s/^(physical_cores:) +[[:digit:]]*/\1 $$(grep -E '^[[:digit:]]+,' "$$tf" | sed 's/,.*//' | paste -sd+ - | bc)/" "$(@D)"
 
-hpc/_data/specs.yml-gpu: hpc/assets/data/gpu_nodes.tsv
+hpc/_data/specs.yml/gpu: hpc/assets/data/gpu_nodes.tsv
 	## GPU counts
 	module try-load CBI sqlite; \
-	read -r -a count < <(grep -vE "^#" "$<" | sqlite3 ':memory:' '.mode tabs' '.import /dev/stdin data' 'select count("#GPUs"),sum("#GPUs") from data' 'select count("#GPUs"),sum("#GPUs") from data where Contributor == "communal"' | tr $$'\n' '\t'); \
-	sed -i -E "s/^(gpu_nodes:) +[[:digit:]]+/\1 $${count[0]}/; s/^(gpus:) +[[:digit:]]+/\1 $${count[1]}/; s/^(communal_gpu_nodes:) +[[:digit:]]+/\1 $${count[2]}/; s/^(communal_gpus:) +[[:digit:]]+/\1 $${count[3]}/" "$@"
+	read -r -a count < <(grep -vE "^#" "$<" | sqlite3 ':memory:' '.mode tabs' '.import /dev/stdin data' 'select count("#GPUs"),sum("#GPUs") from data' 'select count("#GPUs"),sum("#GPUs") from data where Contributor == "communal"' | tr $$'\n' '\t') && \
+	sed -i -E "s/^(gpu_nodes:) +[[:digit:]]*/\1 $${count[0]}/; s/^(gpus:) +[[:digit:]]*/\1 $${count[1]}/; s/^(communal_gpu_nodes:) +[[:digit:]]*/\1 $${count[2]}/; s/^(communal_gpus:) +[[:digit:]]*/\1 $${count[3]}/" "$(@D)"
 
 
-hpc/_data: hpc/_data/users.yml hpc/_data/specs.yml-gpu hpc/_data/specs.yml-misc
+hpc/_data/specs.yml: hpc/_data/specs.yml/gpu hpc/_data/specs.yml/misc
+
+hpc/_data: hpc/_data/users.yml hpc/_data/specs.yml
 
 _data: hpc/_data
 	cp -p $</* $@/
