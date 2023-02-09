@@ -52,7 +52,7 @@ CPUs that are compatible with the SBGrid software tools.
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-<span>⚠️</span>If you are using SBGrid programs with GPU support, please note that SBGrid programs are compiled for *specific* versions of cuda. Also note the newest Nvidia A40 GPUs on the `qb3-atgpu*` nodes *require* the use of programs compiled against cuda-11.0.2 or greater. As of 09/16/2022, most default versions of GPU compatible versions of SBGrid programs *are not* compiled against cuda-11.0.2 or greater. You may need to specify a beta version of the SBGrid programs or avoid the `qb3-atgpu*` nodes. See the SBGrid documentation for your specific program.
+<span>⚠️</span>If you are using SBGrid programs with GPU support, please note that SBGrid programs are compiled for *specific* versions of cuda. Also note the newest Nvidia A40 GPUs on the `qb3-atgpu*` nodes *require* the use of programs compiled against cuda-11.0.2 or greater. As of 2022-09-16, most default versions of GPU compatible versions of SBGrid programs *are not* compiled against cuda-11.0.2 or greater. You may need to specify a beta version of the SBGrid programs or avoid the `qb3-atgpu*` nodes. See the SBGrid documentation for your specific program.
 </div>
 
 SBGrid is available for interactive use on the development nodes and for use in job scripts on compute nodes. It is NOT available on the login nodes.
