@@ -1,13 +1,14 @@
 # SBGrid Software Collection
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-Access to SBGrid software on {{ site.cluster.name }} is limited to paying members of the SBGrid Consortium.
+Access to SBGrid software on {{ site.cluster.name }} is limited to
+paying members of the SBGrid Consortium.
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-For bug reports related to SBGrid software, please use the
-[SBGrid's Report Software Bug form](https://sbgrid.org/help/?tab=bug).
-The {{ site.cluster.nickname }} sysadmins do not fix problems in SBGrid software.
+For bug reports related to SBGrid software, please use the [SBGrid's
+Report Software Bug form] The {{ site.cluster.nickname }} sysadmins do
+not fix problems in SBGrid software.
 </div>
 
 SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/)
@@ -42,55 +43,13 @@ think this is a mistake, please [contact us] so we can add you.
 
 ## Enable SBGrid
 
-<div class="alert alert-info" role="alert" style="margin-top: 3ex" markdown="1">
-
-2021-05-28: All our development nodes, including the GPU one, have
-x86-64-v3 or newer CPUs, which are compatible with the SBGrid software
-tools.
-
-</div>
-
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-<span>⚠️</span>
-If you are running SBGrid software and receive an error message
-regarding `Illegal Instructions`, this means that the version of the
-software you are trying to run requires a CPU feature that one or more
-of the compute nodes which your job ran on does not support. Many of
-the default versions of SBGrid software work best on "modern" compute
-nodes with newer CPUs. For SBGrid this means Intel "Haswell+"
-CPUs. Though read the documentation for the SBGrid software you are
-trying to use, if you encounter an error that references "Illegal
-Instructions". You may be able to specify a version of the software
-compiled for "pre-Haswell" CPUs.  Alternatively, if you want to use
-the newer version of the software, you will need to make sure your
-SBGrid job ends up a on a node with a modern CPU. To do this, specify
-SGE option `-l hostname="qb3-id*|qb3-as*|qb3-at*` to submit to modern
-nodes. (The pipe sign, `|`, is used to indicate the `OR` operator in
-resource requests, telling your job to run on any node whose hostname
-value matches the patterns given.)
-
-</div>
-
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-<span>⚠️</span>
-If you are using SBGrid programs with GPU support, please note that
-SBGrid programs are compiled for _specific_ versions of CUDA.
-Note the newest NVIDIA A40 GPUs on the `qb3-atgpu*` nodes *require*
-the use of programs compiled against CUDA 11.0.2, or greater.
-As of 2022-09-16, most default versions of GPU-compatible versions of
-SBGrid programs _are not_ compiled against CUDA 11.0.2, or
-greater. You may need to specify a beta version of the SBGrid programs
-or avoid the `qb3-atgpu*` nodes. See the SBGrid documentation for your
-specific program.
-
-</div>
-
 SBGrid is available for interactive use on the development nodes and
 for use in job scripts on compute nodes. It is _not_ available on the
-login nodes.
+login or data-transfer nodes.
 
 In order to use SBGrid software, the SBGrid environment must be
-enabled.  To enable the SBGrid, in the shell or in a job script, do:
+enabled.  To enable the SBGrid, in the shell or in a job script, call
+`source /programs/sbgrid.shrc`, e.g.
 
 <!-- code-block label="sbgrid" -->
 ```sh
@@ -119,10 +78,72 @@ enabled.  To enable the SBGrid, in the shell or in a job script, do:
 ```
 
 
+## Some SBGrid programs do not run on older compute nodes
+
+Many SBGrid programs run only on "modern" CPUs.  Broadly speaking,
+there are four generations of CPUs, on the cluster - x86-64-v1,
+x86-64-v2, x86-64-v3, and x86-64-v4 - and SBGrid often requires
+x86-64-v3 compute nodes or newer.  If your job fails with an obscure
+error such as:
+
+```plain
+Illegal instruction (core dumped)
+```
+
+or
+
+```plain
+ *** caught illegal operation ***
+address 0x2b3a8b234ccd, cause 'illegal operand'
+```
+
+it most likely ended up on a x86-64-v1 or x86-64-v2 compute node,
+while the program required something newer.  To avoid this from
+happening, specify the [`x86-64-v=<level>` resource] to request a
+compute node with x86-64-v3 or newer.  Either specify command-line
+option `-l x86-64-v=3` when you submit the job, or add it is as an SGE
+declaration in your script:
+
+```sh
+#$ -l x86-64-v=3  ## Script requires a CPU compliant with x86-64-v3 or newer
+```
+
+In the unlikely case that the SBGrid documentation says a program is
+compatible with pre-Haswell CPUs, it can run on also x86-64-v2 CPUs,
+and in some cases even x86-64-v1. If so, you can relax the x86-64
+level requirement.
+
+All our [development nodes](/hpc/about/specs.html#development-nodes),
+including the GPU one, have x86-64-v3 or newer CPUs.
+
+
+## SBGrid programs with GPU support
+
+If you are using SBGrid programs with GPU support, please note that
+SBGrid programs are compiled for _specific_ versions of
+CUDA. Sometimes SBGrid provide different builds for multiple CUDA
+versions.  For example, the same [RELION] version is available for
+different CUDA versions.  Because of this, you have to make sure you
+[load a corresponding CUDA environment
+module](/hpc/scheduler/gpu.html#running-gpu-applications),
+e.g. `module load cuda/10.1`.
+
+As of 2022-09-16, most default versions of GPU-compatible SBGrid
+programs _are not_ compiled against CUDA 11.0.2, or greater.  However,
+note the newest NVIDIA A40 GPUs on the `qb3-atgpu*` compute nodes
+_require_ the use of programs compiled against CUDA 11.0.2, or
+greater, which means those compute nodes may not be compatible with
+the SBGrid program you want to run.  You may need to specify a beta
+version of the SBGrid programs, or avoid the `qb3-atgpu*` nodes. See
+the SBGrid documentation for your specific program.
+
+
 [SBGrid]: https://sbgrid.org/
 [SBGrid Member Labs]: https://sbgrid.org/members/order/-institutions/
+[SBGrid's Report Software Bug form]: https://sbgrid.org/help/?tab=bug
+[RELION]: https://www.sbgrid.org/software/titles/relion/
 [contact us]: /hpc/about/contact.html
-
+[`x86-64-v=<level>` resource]: /hpc/scheduler/submit-jobs.html#cpu-architecture-generation--l-x86-64-vlevel
 <style>
 dt {
   margin-top: 1ex;
