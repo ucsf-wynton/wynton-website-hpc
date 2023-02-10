@@ -104,7 +104,7 @@ compute node with x86-64-v3 or newer.  Either specify command-line
 option `-l x86-64-v=3` when you submit the job, or add it is as an SGE
 declaration in your script:
 
-```sh
+```plain
 #$ -l x86-64-v=3  ## Script requires a CPU compliant with x86-64-v3 or newer
 ```
 
