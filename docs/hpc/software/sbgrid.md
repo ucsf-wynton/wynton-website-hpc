@@ -114,7 +114,7 @@ and in some cases even x86-64-v1. If so, you can relax the x86-64
 level requirement.
 
 All our [development nodes](/hpc/about/specs.html#development-nodes),
-including the GPU one, have x86-64-v3 or newer CPUs.
+including the GPU ones, have x86-64-v3 or newer CPUs.
 
 
 ## SBGrid programs with GPU support
