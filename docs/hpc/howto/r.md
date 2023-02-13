@@ -551,12 +551,22 @@ The **[udunits2]** package does not install out of the box.  It seems to be due 
 install.packages("udunits2", configure.args="--with-udunits2-include=/usr/include/udunits2")   
 ```
 
+#### The **igraph** package (temporary workaround 2023W07)
+
+The **[igraph]** v1.4.0 release from 2023-02-10 is broken and does not install on CentOS. They plan on releasing a fix by 2023-02-19.  Until then, install the development version of **igraph** where this has been fixed by:
+
+```r
+install.packages("igraph", repos = c("https://igraph.r-universe.dev", getOption("repos")))
+```
+
+
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: http://bioconductor.org/
 [bigGP]: https://cran.r-project.org/package=bigGP
 [BiocManager]: https://cran.r-project.org/package=BiocManager
 [parallelly]: https://cran.r-project.org/package=parallelly
 [hdf5r]: https://cran.r-project.org/package=hdf5r
+[igraph]: https://cran.r-project.org/package=igraph
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
 [rjags]: https://cran.r-project.org/package=rjags
