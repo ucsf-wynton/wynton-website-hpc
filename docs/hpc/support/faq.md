@@ -23,8 +23,12 @@ running?_
      will never run.  Either lower the job's resource needs using
      `qdel`, or, alternatively, remove the job (`qdel`) and submit
      (`qsub`) a new one with adjusted resources.
-     
-  4. `qstat -j <job_id>` will provide details on why a particular job
+
+  4. If there is a [downtime scheduled](/hpc/status/), you might have
+     asked for a run-time that goes into the downtime period. If so,
+     your job _cannot_ be started until after the downtime.
+  
+  5. `qstat -j <job_id>` will provide details on why a particular job
      is not running.  `qstat -u '*'` will show all jobs and their
      priority scores in the queue.
 
