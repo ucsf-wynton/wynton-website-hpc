@@ -31,7 +31,7 @@ Here, we will generate a private-public SSH key pair (stored in two files) that 
 ```sh
 {local}$ mkdir ~/.ssh
 {local}$ chmod u=rwx,go= ~/.ssh
-{local}$ ssh-keygen -f ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
+{local}$ ssh-keygen -m PEM -f ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}
 Generating public/private rsa key pair.
 Created directory '/home/alice/.ssh'.
 Enter passphrase (empty for no passphrase):
