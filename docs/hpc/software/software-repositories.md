@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(90)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(123)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -3912,7 +3912,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (122)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (123)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -4037,6 +4037,24 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
   break
 }
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_cereal" class="module-name">cereal</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">A header-only C++11 serialization library</span><br>
+URL: <span class="module-url"><a href="http://uscilab.github.io/cereal/">http://uscilab.github.io/cereal/</a></span><br>
+Versions: <span class="module-version"><em>1.3.2</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: A header-only C++11 serialization library&quot;
+module-whatis &quot;URL: http://uscilab.github.io/cereal/&quot;
+prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/cereal-1.3.2/include
 </code></pre>
 
 </details>
@@ -6426,7 +6444,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(90)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(122)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(123)</a></li>
 </ul>
 
 _The above information is updated automatically every three hours by querying `module avail` and `module spider`._
