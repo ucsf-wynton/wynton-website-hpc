@@ -22,17 +22,19 @@ Assuming you are already logged on to a development node, launch your personal R
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI rstudio-server-controller
 [alice@{{ site.devel.name }} ~]$ rsc start
-alice, your personal RStudio Server is available on
-<http://{{ site.devel.hostname }}:20612>. If you are running from a
-remote machine without direct access to {{ site.devel.hostname }},
-you can use SSH port forwarding to access the RStudio Server at
-<http://127.0.0.1:8787> by running
-'ssh -L 8787:{{ site.devel.hostname }}:20612 alice@{{ site.login.hostname }}'
-in a second terminal.
+alice, your personal RStudio Server is available on <http://127.0.0.1:20612>.
+
+Importantly, if you are running from a remote machine without direct access
+to {{ site.devel.hostname }}, you need to set up SSH port forwarding first, which you can do by
+running:
+
+  ssh -L 20612:{{ site.devel.hostname }}:20612 alice@{{ site.login.hostname }}
+
+in a second terminal from you local computer.
+
 Any R session started times out after being idle for 120 minutes.
-WARNING: You now have 10 minutes, until 2022-11-22 16:51:57-08:00,
-to connect and log in to the RStudio Server before everything
-times out.
+WARNING: You now have 10 minutes, until 2023-02-20 14:24:37-08:00, to
+connect and log in to the RStudio Server before everything times out.
 Your one-time random password for RStudio Server is: y+IWo7rfl7Z7MRCPI3Z4
 ```
 
@@ -54,7 +56,7 @@ and make sure to use the port number (e.g. `20612`) that
 was assigned to you.
 
 ```sh
-{local}$ ssh -L 8787:{{ site.devel.hostname}}:20612 alice@{{ site.login.hostname }}
+{local}$ ssh -L 20612:{{ site.devel.hostname}}:20612 alice@{{ site.login.hostname }}
 alice1@{{site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{site.login.name }} ~]$ 
 ```
@@ -63,7 +65,7 @@ alice1@{{site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 
 If you successfully completed the above two steps, and you made sure to use the correct port, then you should be able to open your personal RStudio Server in your local web browser by going to:
 
-* <http://127.0.0.1:8787/>
+* <http://127.0.0.1:20612/> (note, your port is different)
 
 You will be presented with a 'Sign in to RStudio' web page where you need to enter:
 
