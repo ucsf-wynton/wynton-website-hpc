@@ -1,9 +1,9 @@
 ### Operational Summary for 2023 (this far)
 
 * Full downtime:
-  - Scheduled: 0.0 hours (= 0.0 days)
+  - Scheduled: 17.0 hours (= 0.6 days)
   - Unscheduled: 0.0 hours (= 0.0 days)
-  - Total: 0.0 hours (= 0.0 days)
+  - Total: 17.0 hours (= 0.6 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -13,8 +13,8 @@
 * Impact: No file access, no compute resources available
 * Damage: None
 * Occurrences:
-  - N/A
-* Total downtime: 0.0 hours
+  - 2023-02-22 (17.0 hours)
+* Total downtime: 17.0 hours
 
 #### Scheduled kernel maintenance
 
@@ -52,6 +52,29 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### February 22-23, 2023
+
+#### <span style="color: orange;">Full downtime</span>
+
+**Resolved**: The cluster maintenance has completed and the cluster is now fully operational again.
+<br><span class="timestamp">February 23, 14:00 PST</span>
+
+**Update**: The cluster has been shut down for maintenance.
+<br><span class="timestamp">February 22, 21:00 PST</span>
+
+**Notice**: The cluster will be shut down for maintenance from 9 pm on Wednesday February 22 until 5:00 pm on Thursday February 23, 2023.  This is done to avoid possible file-system and hardware failures when the UCSF Facilities performs power-system maintenance.  During this downtime, we will perform cluster maintenance.  Starting February 8, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintainance window, will be started after the downtime.
+<br><span class="timestamp">February 9, 09:00 PST</span>
+
+<!--
+start: 2023-02-22T21:00:00
+stop: 2023-02-23T14:00:00
+length: 17 hours
+severity: under-maintenance
+affected: jobs, beegfs, compute, *
+reason: scheduled
+ -->
 
 
 ### January 24, 2023
