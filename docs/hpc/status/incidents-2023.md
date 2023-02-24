@@ -64,7 +64,7 @@
 **Update**: The cluster has been shut down for maintenance.
 <br><span class="timestamp">February 22, 21:00 PST</span>
 
-**Notice**: The cluster will be shut down for maintenance from 9 pm on Wednesday February 22 until 5:00 pm on Thursday February 23, 2023.  This is done to avoid possible file-system and hardware failures when the UCSF Facilities performs power-system maintenance.  During this downtime, we will perform cluster maintenance.  Starting February 8, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintainance window, will be started after the downtime.
+**Notice**: The cluster will be shut down for maintenance from 9 pm on Wednesday February 22 until 5:00 pm on Thursday February 23, 2023.  This is done to avoid possible file-system and hardware failures when the UCSF Facilities performs power-system maintenance.  During this downtime, we will perform cluster maintenance.  Starting February 8, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will be started after the downtime.
 <br><span class="timestamp">February 9, 09:00 PST</span>
 
 <!--
