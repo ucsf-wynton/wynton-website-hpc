@@ -45,5 +45,7 @@
     
     "commands-show-output": false,
 
+    "link-image-reference-definitions": false,
+    
     "seealso": "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
 }
