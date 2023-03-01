@@ -30,6 +30,8 @@ markdownlint:
 	@stdout=$(TMPDIR)/stdout
 	rm -f "$$stdout"
 
+	markdownlint --version /dev/null || exit 2
+
 	ok_count=0
 	error_count=0
 	config=.markdownlint.json
@@ -64,6 +66,8 @@ markdownlint:
 markdown-link-check:
 	@stdout=$(TMPDIR)/stdout
 	rm -f "$$stdout"
+
+	markdown-link-check --version /dev/null || exit 2
 
 	ok_count=0
 	error_count=0
