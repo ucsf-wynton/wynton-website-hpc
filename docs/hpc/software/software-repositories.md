@@ -7,6 +7,7 @@ WARNING: Do _not_ update this file; it is automatically generated from software-
 <!-- markdownlint-disable-file MD012 -->
 <!-- markdownlint-disable-file MD022 -->
 <!-- markdownlint-disable-file MD023 -->
+<!-- markdownlint-disable-file MD049 -->
 
 
 
