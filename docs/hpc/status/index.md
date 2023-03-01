@@ -78,6 +78,7 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"><!-- ~80 kB --></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"><!-- 2 kB --></script>
 
+<!-- markdownlint-disable-file MD052 -->
 <script type="text/javascript" charset="utf-8">
 d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
   // drop header comments

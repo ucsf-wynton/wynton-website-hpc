@@ -15,7 +15,7 @@ Below table shows which labs have access to dedicated Graphical Processing Unit 
 <table id="hosttable">
 </table>
 
-<!-- markdownlint-disable-file MD011 -->
+<!-- markdownlint-disable-file MD011 MD052 -->
 <script type="text/javascript" charset="utf-8">
 d3.text("/hpc/assets/data/gpu_shares.tsv", "text/csv", function(host_table) {
   // extract date from header comments

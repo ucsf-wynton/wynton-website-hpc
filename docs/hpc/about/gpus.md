@@ -17,7 +17,7 @@ The tables below contain the list of the {{ site.cluster.nickname}} GPU compute 
 <table id="hosttable">
 </table>
 
-<!-- markdownlint-disable-file MD011 -->
+<!-- markdownlint-disable-file MD011 MD052 -->
 <script type="text/javascript" charset="utf-8">
 d3.text("/hpc/assets/data/gpu_nodes.tsv", "text/csv", function(host_table) {
   // extract date from header comments
