@@ -107,7 +107,7 @@ it's a mistake on our end (sorry) - please drop us another email.
 
 ### X2Go Troubleshooting
 
-**Q**. How do I terminate a saved x2go session if it seems "stuck" or "unresponsive"?
+**Q**. _How do I terminate a saved x2go session if it seems "stuck" or "unresponsive"?_
 
 **A**. Log in to the destination server you were connecting to (not the proxy/jump host) via ssh, type `x2golistsessions`. 
  
