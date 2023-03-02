@@ -111,7 +111,7 @@ it's a mistake on our end (sorry) - please drop us another email.
 
 **A**. Log in to the destination server you were connecting to (not the proxy/jump host) via ssh, type `x2golistsessions`. 
  
-If something comes up, run `x2goterminate-session $SESSION`, replacing $SESSION by the second field in the output of x2golistsessions. 
+If something comes up, run `x2goterminate-session $SESSION`, replacing $SESSION by the second field in the output of `x2golistsessions`. 
  
 Then try connecting again with your x2go client.
 
