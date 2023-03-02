@@ -105,7 +105,15 @@ to request the renewal.  If you have responded to that email, then
 it's a mistake on our end (sorry) - please drop us another email.
 
 
-### X2Go does not connect
+### X2Go Troubleshooting
+
+**Q**. How do I terminate a saved x2go session if it seems "stuck" or "unresponsive"?
+
+**A**. Log in to the destination server you were connecting to (not the proxy/jump host) via ssh, type `x2golistsessions`. 
+ 
+If something comes up, run `x2goterminate-session $SESSION`, replacing $SESSION by the second field in the output of x2golistsessions. 
+ 
+Then try connecting again with your x2go client.
 
 **Q**. _I am getting timeout errors when trying to connect via X2Go
 from a macOS computer, the X2Go status hangs on "connecting"; In the
