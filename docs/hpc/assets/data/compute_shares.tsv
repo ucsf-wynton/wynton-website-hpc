@@ -1,7 +1,7 @@
 # Created by: hb
-# Created on: 2023-03-03 03:00:03-08:00
+# Created on: 2023-03-04 03:00:03-08:00
 # Total fshares: 20198
-# Total queue_slots: 10362
+# Total queue_slots: 11514
 # Number of projects: 50
 fshares	queue_slots	project
 5506	3305	salilab
@@ -10,7 +10,7 @@ fshares	queue_slots	project
 874	292	mac-users
 852	284	kortemmelab
 807	269	jacobsonlab
-712	1049	shoichetlab
+712	2201	shoichetlab
 675	225	limlab
 645	215	hernandezlab
 589	196	genetics
