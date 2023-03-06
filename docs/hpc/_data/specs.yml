@@ -24,16 +24,16 @@ local_scratch_size_min: 0.1
 local_scratch_size_max: 1.8
 
 ## Global /wynton/scratch [TiB]:
-global_scratch_size_total: 615
+global_scratch_size_total: 703
 
 ## NetApp home [TiB]:
 netapp_home_size_total: 20
 
 ## User home [TiB]:
-home_size_total: 383
+home_size_total: 770
 
 ## Group home [TiB]:
-group_size_total: 5600
+group_size_total: 6500
 
 ## Job queues
 pu_total: 20186
