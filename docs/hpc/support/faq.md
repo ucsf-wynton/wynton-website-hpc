@@ -107,6 +107,10 @@ it's a mistake on our end (sorry) - please drop us another email.
 
 ### X2Go Troubleshooting
 
+**Q**. _x2go authenticates, but then immediately disconnects without launching._
+
+**A**. The first thing to check is your beegfs home directory quota. x2go creates a number of temporary files related to your sessions, if it cannot create those files, it will authenticate and then disconnect. Short version: `beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"`. For more information on quotas and file systems, see the page on [File Sizes and Disk Quotas]:hpc/howto/storage-size.html
+
 **Q**. _How do I terminate a saved x2go session if it seems "stuck" or "unresponsive"?_
 
 **A**. Log in to the destination server you were connecting to (not the proxy/jump host) via ssh, type `x2golistsessions`. 
