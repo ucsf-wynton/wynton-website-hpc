@@ -109,7 +109,7 @@ it's a mistake on our end (sorry) - please drop us another email.
 
 **Q**. _x2go authenticates, but then immediately disconnects without launching._
 
-**A**. The first thing to check is your beegfs home directory quota. x2go creates a number of temporary files related to your sessions, if it cannot create those files, it will authenticate and then disconnect. Short version: `beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"`. For more information on quotas and file systems, see the page on [File Sizes and Disk Quotas]:hpc/howto/storage-size.html
+**A**. The first thing to check is your beegfs home directory quota. x2go creates a number of temporary files related to your sessions, if it cannot create those files, it will authenticate and then disconnect. Short version: `beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"`. For more information on quotas and file systems, see the page on [File Sizes and Disk Quotas]
 
 **Q**. _How do I terminate a saved x2go session if it seems "stuck" or "unresponsive"?_
 
@@ -349,4 +349,5 @@ team].
 
 [{{ site.cluster.nickname }} team]: /hpc/about/contact.html
 [purchase additional storage]: /hpc/about/pricing-storage.html
+[File Sized and Disk Quotas]: hpc/howto/storage-size.html
 ['Connect directly to a development node']: /hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node
