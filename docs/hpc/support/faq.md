@@ -349,5 +349,5 @@ team].
 
 [{{ site.cluster.nickname }} team]: /hpc/about/contact.html
 [purchase additional storage]: /hpc/about/pricing-storage.html
-[File Sized and Disk Quotas]: /hpc/howto/storage-size.html
+[File Sizes and Disk Quotas]: /hpc/howto/storage-size.html
 ['Connect directly to a development node']: /hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node
