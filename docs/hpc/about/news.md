@@ -4,7 +4,7 @@
 
 2022-05-02: Added a PHI-compliant endpoint to [Globus](/hpc/transfers/globus.html).
 
-[Wynton PHI](/hpc/about/wynton-phi.html) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
+2021-12-17: [Wynton PHI](/hpc/about/wynton-phi.html) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
 
 2021-12-17: [Wynton PHI](/hpc/about/wynton-phi.html) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
 
