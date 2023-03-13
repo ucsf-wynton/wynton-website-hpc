@@ -84,6 +84,7 @@ hpc/_data/specs.yml: hpc/_data/specs.yml/gpu hpc/_data/specs.yml/misc
 hpc/_data: hpc/_data/users.yml hpc/_data/specs.yml
 
 _data: hpc/_data
+	cp "$</users.yml" "$@/users.yml"
 	cp -p $</* $@/
 
 hpc/assets/data/compute_shares.tsv: FORCE
