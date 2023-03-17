@@ -165,7 +165,7 @@ failed       37  : qmaster enforced h_rt, h_cpu, or h_vmem limit
 exit_status  137                  (Killed)
 ```
 
-First of all, the `exit_status` line is not zero (`0`); any software with an exit code other than zero indicates that something went wrong.  It could be due to an error (typically `exit_status = 1`), or as here `137` with suggests that the job was "killed".  If we look at `failed`, we se that some rules were enforced, which in our case suggests that the rule for resource `h_rt` was enforced.
+First of all, the `exit_status` line is not zero (`0`); any software with an exit code other than zero indicates that something went wrong.  It could be due to an error (typically `exit_status = 1`), or as here `137` with suggests that the job was "killed".  If we look at `failed`, we see that some rules were enforced, which in our case suggests that the rule for resource `h_rt` was enforced.
 
 Next, if we look at: 
 ```sh
