@@ -16,12 +16,12 @@
 # Technical details: This information is used in _layouts/default.html.
 
 # Default:
-level: info
-condition: is operational
-
-#level: warning
+#level: info
 #condition: is operational
-#message: The development nodes have no internet access due to a network issue
+
+level: warning
+condition: is operational
+message: The development nodes have no internet access due to a network issue
 
 # Actual status:
 # level: danger
@@ -36,18 +36,6 @@ condition: is operational
 # level: danger
 # condition: experiences significant issues
 # message: Cluster access has been disabled and all running jobs have been terminated to minimize risk for file-system corruption
-
-
-# ----------------------------------------------------------------------------
-# Scheduled downtime
-# ----------------------------------------------------------------------------
-#level: warning
-#condition: is operational
-#message: The cluster will be shut down for maintenance from 9 pm on February 22 until 5:00 pm on February 23, 2023. Starting February 8, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintainance window, will be started after the downtime
-
-#level: danger
-#condition: is non-operational
-#message: The cluster is shut down for maintenance from 9 pm on February 22 until 5:00 pm on February 23, 2023.
 
 
 # ----------------------------------------------------------------------------
@@ -66,6 +54,9 @@ condition: is operational
 # condition: is operational
 # message: There will be a brief, 15-minute network outage sometimes between 21:00 on Monday 2022-03-14 and 05:00 on Tuesday 2022-03-15
 
+# level: danger
+# condition: is non-operational
+# message: Complete outage due to scheduled maintenance during February 28-March 2, 2022
 
 # level: danger
 # condition: experiences significant issues
@@ -86,6 +77,10 @@ condition: is operational
 # level: warning
 # condition: experiences partial problems
 # message: 
+
+# level: warning
+# condition: is operational
+# message: The cluster will be shut down for maintenance during September 27-29, 2022. Starting September 14, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time
 
 # level: danger
 # condition: is not operational

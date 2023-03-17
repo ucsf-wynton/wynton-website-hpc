@@ -74,9 +74,9 @@ hpc/_data/specs.yml/misc: FORCE
 
 hpc/_data/specs.yml/gpu: hpc/assets/data/gpu_nodes.tsv
 	## GPU counts
-	module try-load CBI sqlite; \
-	read -r -a count < <(grep -vE "^#" "$<" | sqlite3 ':memory:' '.mode tabs' '.import /dev/stdin data' 'select count("#GPUs"),sum("#GPUs") from data' 'select count("#GPUs"),sum("#GPUs") from data where Contributor == "communal"' | tr $$'\n' '\t') && \
-	sed -i -E "s/^(gpu_nodes:) +[[:digit:]]*/\1 $${count[0]}/; s/^(gpus:) +[[:digit:]]*/\1 $${count[1]}/; s/^(communal_gpu_nodes:) +[[:digit:]]*/\1 $${count[2]}/; s/^(communal_gpus:) +[[:digit:]]*/\1 $${count[3]}/" "$(@D)"
+	read -r -a count < <(module try-load CBI sqlite; grep -vE "^#" "$<" | sqlite3 ':memory:' '.mode tabs' '.import /dev/stdin data' 'select count("#GPUs"),sum("#GPUs") from data' 'select count("#GPUs"),sum("#GPUs") from data where Contributor == "communal"');# | tr '\n' 'b');
+#&& echo "$${count[@]}"; 
+#	sed -i -E "s/^(gpu_nodes:) +[[:digit:]]*/\1 $${count[0]}/; s/^(gpus:) +[[:digit:]]*/\1 $${count[1]}/; s/^(communal_gpu_nodes:) +[[:digit:]]*/\1 $${count[2]}/; s/^(communal_gpus:) +[[:digit:]]*/\1 $${count[3]}/" "$(@D)"; }
 
 
 hpc/_data/specs.yml: hpc/_data/specs.yml/gpu hpc/_data/specs.yml/misc
