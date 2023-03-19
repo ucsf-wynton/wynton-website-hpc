@@ -122,7 +122,7 @@ using SSH port forward. To do this, _open a terminal on your local
 machine_, and run:
 
 ```sh
-{local}$ ssh -J {{ site.login.hostname }} -L 13583:localhost:13583 alice@{{ site.devel.name }}
+{local}$ ssh -J alice@{{ site.login.hostname }} -L 13583:localhost:13583 alice@{{ site.devel.name }}
 ...
 [alice@{{ site.devel.name }} ~]$ 
 ```

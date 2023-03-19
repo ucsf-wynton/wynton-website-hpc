@@ -126,7 +126,7 @@ If you get an error here, make sure that `DISPLAY` is set and non-empty.
 _Tips:_ You can login into a development node in a single call by "jumping" (`-J`) via the login node, e.g.
 
 ```sh
-{local}$ ssh -X -C -J alice@{{ site.login.hostname }} {{ site.devel.hostname }}
+{local}$ ssh -X -C -J alice@{{ site.login.hostname }} alice@{{ site.devel.hostname }}
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
