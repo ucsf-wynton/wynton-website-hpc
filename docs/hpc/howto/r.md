@@ -379,16 +379,6 @@ After this, the **sf** package will install out of the box, i.e. by calling:
 Note that you also need to load the `gdal` module every time you use the **gdal** package in R.
 
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ 2023-03-17: There's a [known bug in **sf** 1.0-11](https://github.com/r-spatial/sf/issues/2121) [released on 2023-03-15] that prevents us from installing it on CentOS 7 among other platforms. This has been fixed in the development version.  Until that is available on CRAN, install it as:
-
-```r
-> remotes::install_github("r-spatial/sf")
-```
-</div>
-
-
-
 ### Packages relying on MPI
 
 Several R packages that rely on the Message Passing Interface (MPI) do not install out-of-the-box like other R packages.  At a minimum, they require that the built-in `mpi` module is loaded;
