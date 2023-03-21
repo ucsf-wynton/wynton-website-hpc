@@ -11,12 +11,13 @@
  SBGrid was developed with support from its members, Harvard Medical School,    
  HHMI, and NSF. If use of SBGrid compiled software was an important element     
  in your publication, please include the following reference in your work:      
-                                                                                
- Software used in the project was installed and configured by SBGrid.           
- cite: eLife 2013;2:e01456, Collaboration gets the most out of software.
+                                                                                      
+ Software used in the project was installed and configured by SBGrid.                   
+ cite: eLife 2013;2:e01456, Collaboration gets the most out of software.                
 ********************************************************************************
- SBGrid installation last updated: 2022-04-12
+ SBGrid installation last updated: 2023-03-20
  Please submit bug reports and help requests to:       <bugs@sbgrid.org>  or
-                                                       <http://sbgrid.org/bugs>
+                                                       <https://sbgrid.org/bugs>
             For additional information visit https://sbgrid.org/wiki
+********************************************************************************
 ********************************************************************************
