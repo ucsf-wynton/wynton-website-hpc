@@ -319,6 +319,23 @@ remote", and then enter `ssh dev1`.  This should allow VS Code to
 connect directly to `dev1`.
 
 
+### Avoid screenshots when asking for help
+
+**Q**. _Why don't you like screenshots of output and error messages?_
+
+**A**. We, and others, strongly prefer that you cut-and-paste textual
+       output from your SSH terminal in your email, Slack,
+       ... messages.  There are several reason for this.  First, and
+       most importantly, screenshots are _not_ accessible, which means
+       they are useless to a person using a screen reader.  For
+       others, text in screenshots might be very hard to read and
+       require zooming in on the image.  Second, it is not possible to
+       cut-and-paste from a screenshot, which adds unnecessary
+       friction to anyone trying to reproduce your problem and help
+       you.  Third, contrary to plain text, screenshots are not
+       searchable in email clients and on Slack.
+
+
 ## Contributing to {{ site.cluster.nickname }}
 
 ### Purchase compute slots
