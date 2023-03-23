@@ -8,7 +8,7 @@ If so, you have a few options:
 
 1. Install it yourself to your own account
    - Download a pre-built binary
-   - Build software from source (traditional, e.g. `./configure --prefix ~/software`, `make`, and `make install`)
+   - [Build software from source](/hpc/howto/install-from-source.html) (traditional, e.g. `./configure --prefix ~/software`, `make`, and `make install`)
 <!-- - Build software from source (using Spack, e.g. `spack list` and `spack install pango`) -->
    <br><br>
 
