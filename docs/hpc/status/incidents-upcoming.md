@@ -2,7 +2,7 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
-**Update**: The updated plan is is to have the downtime during the week of May 15, 2023 (2023W20). This is aligned with a planned PG&E power-outage maintainence during the same week.
+**Update**: The updated plan is is to have the downtime during the week of May 15, 2023 (2023W20). This is aligned with a planned PG&E power-outage maintenance during the same week.
 <br><span class="timestamp">March 27, 11:00 PST</span>
 
 **Notice**: We will performing a full-week major update to the cluster during late Spring 2023. Current plan is to do this during either the week of May 8, 2023 (2023W19) or the week of May 15, 2023 (2023W20).
