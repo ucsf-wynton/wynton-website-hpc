@@ -818,7 +818,7 @@ pushenv(&quot;BOWTIE_HOME&quot;, home)
 <span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
 Example: <span class="module-example"><code>bowtie2 --version</code></span><br>
 URL: <span class="module-url"><a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>, <a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie2">https://github.com/BenLangmead/bowtie2</a> (source code)</span><br>
-Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, 2.4.5, <em>2.5.0</em></span><br>
+Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, 2.4.5, 2.5.0, <em>2.5.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -968,7 +968,7 @@ pushenv(&quot;MROFLAGS&quot;, &quot;--localcores=1 --localmem=8 --limit-loadavg&
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog) <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version">3.18.2, 3.19.2, 3.22.2, 3.23.0, 3.23.1, 3.24.2, <em>3.25.1</em></span><br>
+Versions: <span class="module-version">3.18.2, 3.19.2, 3.22.2, 3.23.0, 3.23.1, 3.24.2, 3.25.1, <em>3.26.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1130,7 +1130,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
-Versions: <span class="module-version">3.7, <em>4.1</em></span><br>
+Versions: <span class="module-version">3.7, 4.1, <em>4.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1273,7 +1273,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">FastQC is a program designed to spot potential problems in high throughput sequencing datasets. It runs a set of analyses on one or more raw sequence files in fastq or bam format and produces a report which summarises the results.</span><br>
 Example: <span class="module-example"><code>fastqc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">https://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a>, <a href="https://raw.githubusercontent.com/s-andrews/FastQC/master/RELEASE_NOTES.txt">https://raw.githubusercontent.com/s-andrews/FastQC/master/RELEASE_NOTES.txt</a> (changelog), <a href="https://github.com/s-andrews/FastQC/">https://github.com/s-andrews/FastQC/</a> (source code)</span><br>
-Versions: <span class="module-version">0.11.8, <em>0.11.9</em></span><br>
+Versions: <span class="module-version">0.11.8, 0.11.9, <em>0.12.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1309,7 +1309,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.33.0, 0.35.0, <em>0.36.0</em></span><br>
+Versions: <span class="module-version">0.33.0, 0.35.0, 0.36.0, <em>0.38.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1585,7 +1585,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>glow README.md</code>, <code>glow --pager README.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/charmbracelet/glow">https://github.com/charmbracelet/glow</a>, <a href="https://github.com/charmbracelet/glow/releases">https://github.com/charmbracelet/glow/releases</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.4.1</em></span><br>
+Versions: <span class="module-version">1.4.1, <em>1.5.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1595,7 +1595,7 @@ glow: Render Markdown on the CLI, with Pizzazz!
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: utility, file viewer, pager, markdown&quot;)
+whatis(&quot;Keywords: utility, file viewer, pager, markdown, cli, tui&quot;)
 whatis(&quot;URL: https://github.com/charmbracelet/glow, https://github.com/charmbracelet/glow/releases (changelog)&quot;)
 whatis([[
 Description: Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI.  Use it to discover markdown files, read documentation directly on the command line and stash markdown files to your own private collection so you can read them anywhere. Glow will find local markdown files in subdirectories or a local Git repository.
@@ -1729,7 +1729,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.0.5, 3.2.0, <em>3.2.1</em></span><br>
+Versions: <span class="module-version">3.0.5, 3.2.0, 3.2.1, <em>3.2.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1843,7 +1843,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
 Warning: <span class="module-warning">IGV (&gt;= 2.5.0) requires Java 11.</span><br>
-Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, 2.13.0, 2.14.0, 2.14.1, 2.15.1, <em>2.15.4</em></span><br>
+Versions: <span class="module-version">2.4.19, 2.7.0, 2.7.2, 2.8.2, 2.8.6, 2.8.13, 2.9.1, 2.11.0, 2.11.9, 2.12.3, 2.13.0, 2.14.0, 2.14.1, 2.15.1, 2.15.4, <em>2.16.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2073,7 +2073,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;.b
 Example: <span class="module-example"><code>mc</code> and <code>mc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://midnight-commander.org/">https://midnight-commander.org/</a>, <a href="https://github.com/MidnightCommander/mc/blob/master/doc/NEWS">https://github.com/MidnightCommander/mc/blob/master/doc/NEWS</a> (changelog), <a href="https://github.com/MidnightCommander/mc">https://github.com/MidnightCommander/mc</a> (source code), <a href="https://github.com/MidnightCommander/mc/tags">https://github.com/MidnightCommander/mc/tags</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>4.8.28</em></span><br>
+Versions: <span class="module-version">4.8.28, <em>4.8.29</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2083,7 +2083,7 @@ mc: Midnight Commander
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: Programming, Statistics&quot;)
+whatis(&quot;Keywords: utility, files, cli, tui&quot;)
 whatis(&quot;URL: https://midnight-commander.org/, https://github.com/MidnightCommander/mc/blob/master/doc/NEWS (changelog), https://github.com/MidnightCommander/mc (source code), https://github.com/MidnightCommander/mc/tags (download)&quot;)
 whatis([[
 Description: GNU Midnight Commander is a visual file manager. It's a feature rich full-screen text mode application that allows you to copy, move and delete files and whole directory trees, search for files and run commands in the subshell. Internal viewer and editor are included.
@@ -2788,7 +2788,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases/latest">https://github.com/quarto-dev/quarto-cli/releases/latest</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.1.251, 1.2.269, 1.2.280, <em>1.2.313</em></span><br>
+Versions: <span class="module-version">1.1.251, 1.2.269, 1.2.280, 1.2.313, <em>1.2.475</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2964,7 +2964,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.59.2, 1.60.0, <em>1.61.1</em></span><br>
+Versions: <span class="module-version">1.59.2, 1.60.0, 1.61.1, <em>1.62.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -3447,9 +3447,9 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">SnpEff: Genetic Variant Annotation and Effect Prediction Toolbox</strong><br>
 <span class="module-description">SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).</span><br>
-Example: <span class="module-example"><code>snpEff -help</code>, <code>SnpSift -help</code>,  and <code>ClinEff -help</code>, which are aliases for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code>, <code>java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help</code>, and <code>java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help</code>.</span><br>
+Example: <span class="module-example"><code>snpEff -help</code> and <code>SnpSift -help</code>, which are aliases for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code> and <code>java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help</code>.  In SnpEff (&lt; 5.0), there is also <code>ClinEff -help</code>, which is an alias for <code>java -jar $SNPEFF_HOME/ClinEff/ClinEff.jar -help</code>.</span><br>
 URL: <span class="module-url"><a href="https://pcingola.github.io/SnpEff/">https://pcingola.github.io/SnpEff/</a>, <a href="https://github.com/pcingola/SnpEff/tags">https://github.com/pcingola/SnpEff/tags</a> (changelog), <a href="https://github.com/pcingola/SnpEff">https://github.com/pcingola/SnpEff</a> (source code)</span><br>
-Versions: <span class="module-version">4.3t, 5.0c, 5.0e, <em>5.1</em></span><br>
+Versions: <span class="module-version">4.3t, 5.0c, 5.0e, 5.1e, <em>5.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3463,7 +3463,7 @@ whatis(&quot;Keywords: high-throughput sequencing&quot;)
 whatis(&quot;URL: https://pcingola.github.io/SnpEff/, https://github.com/pcingola/SnpEff/tags (changelog), https://github.com/pcingola/SnpEff (source code)&quot;)
 whatis([[
 Description: SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).
-Examples: `snpEff -help`, `SnpSift -help`,  and `ClinEff -help`, which are aliases for `java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help`, `java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help`, and `java -jar $SNPEFF_HOME/clinEff/ClinEff.jar -help`.
+Examples: `snpEff -help` and `SnpSift -help`, which are aliases for `java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help` and `java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help`.  In SnpEff (&lt; 5.0), there is also `ClinEff -help`, which is an alias for `java -jar $SNPEFF_HOME/ClinEff/ClinEff.jar -help`.
 ]])
 
 local name = &quot;snpEff&quot;
@@ -3471,22 +3471,25 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 if (version &gt;= &quot;5.1&quot;) then
-  depends_on(&quot;openjdk/17&quot;)
+  try_load(&quot;openjdk/17&quot;)
+  try_load(&quot;openjdk/18&quot;)
 end
 
 pushenv(&quot;SNPEFF_HOME&quot;, home)
 
 local jarfile = pathJoin(home, &quot;snpEff&quot;, &quot;snpEff.jar&quot;)
 pushenv(&quot;SNPEFF&quot;, jarfile)
-set_alias(&quot;snpEff&quot;, &quot;java -jar &quot; .. jarfile)
+set_alias(&quot;snpEff&quot;, &quot;java -jar \&quot;$SNPEFF_HOME/snpEff/snpEff.jar\&quot;&quot;)
 
 local jarfile = pathJoin(home, &quot;snpEff&quot;, &quot;SnpSift.jar&quot;)
 pushenv(&quot;SNPSIFT&quot;, jarfile)
-set_alias(&quot;SnpSift&quot;, &quot;java -jar &quot; .. jarfile)
+set_alias(&quot;SnpSift&quot;, &quot;java -jar \&quot;$SNPEFF_HOME/snpEff/SnpSift.jar\&quot;&quot;)
 
 local jarfile = pathJoin(home, &quot;clinEff&quot;, &quot;ClinEff.jar&quot;)
-pushenv(&quot;CLINEFF&quot;, jarfile)
-set_alias(&quot;ClinEff&quot;, &quot;java -jar &quot; .. jarfile)
+if isFile(jarfile) then
+  pushenv(&quot;CLINEFF&quot;, jarfile)
+  set_alias(&quot;ClinEff&quot;, &quot;java -jar \&quot;$SNPEFF_HOME/ClinEff/ClinEff.jar\&quot;&quot;)
+end
 
 -- Tweak Java for the current environment
 depends_on(&quot;java-tweaks&quot;)
@@ -3806,7 +3809,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments.</span><br>
 Example: <span class="module-example"><code>varscan</code>, which is an alias to <code>java -jar $VARSCAN_HOME/VarScan.jar</code>.</span><br>
 URL: <span class="module-url"><a href="https://dkoboldt.github.io/varscan/">https://dkoboldt.github.io/varscan/</a>, <a href="https://github.com/dkoboldt/varscan/releases">https://github.com/dkoboldt/varscan/releases</a> (changelog), <a href="https://github.com/dkoboldt/varscan">https://github.com/dkoboldt/varscan</a> (source code)</span><br>
-Versions: <span class="module-version"><em>2.4.2</em></span><br>
+Versions: <span class="module-version">2.4.2, <em>2.4.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
