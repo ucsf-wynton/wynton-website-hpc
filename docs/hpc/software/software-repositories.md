@@ -2661,9 +2661,9 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">port4me:  Get the Same, Personal, Free TCP Port over and over</strong><br>
 <span class="module-description">'port4me' attempts, with high probability, to provide the user with the same, free port each time, even when used on different days.</span><br>
 Example: <span class="module-example"><code>port4me --help</code>, <code>port4me</code>, <code>port4me --tool=jupyter</code>).</span><br>
-URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/port4me">https://github.com/HenrikBengtsson/port4me</a>, <a href="https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md</a> (change log)</span><br>
+URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/port4me">https://github.com/HenrikBengtsson/port4me</a>, <a href="https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This tool is under development.</span><br>
-Versions: <span class="module-version">0.4.0, <em>0.5.0</em></span><br>
+Versions: <span class="module-version">0.4.0, 0.5.0, <em>0.5.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2674,7 +2674,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: utility, cli&quot;)
-whatis(&quot;URL: https://github.com/HenrikBengtsson/port4me, https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md (change log)&quot;)
+whatis(&quot;URL: https://github.com/HenrikBengtsson/port4me, https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md (changelog)&quot;)
 whatis([[
 Description: 'port4me' attempts, with high probability, to provide the user with the same, free port each time, even when used on different days.
 Examples: `port4me --help`, `port4me`, `port4me --tool=jupyter`).
