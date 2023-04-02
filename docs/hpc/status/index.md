@@ -93,18 +93,28 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
 
     var tbody, tr, td, td_status;
     var value;
-    var cores = 0, cores_node;
+    var nodes = 0, gpu_nodes = 0;
+    var cores = 0, gpu_cores = 0;
     var nodes_with_issues = 0, cores_with_issues = 0;
-  
+    var gpu_nodes_with_issues = 0, gpu_cores_with_issues = 0;
+    var cores_node;
+    var hostname;
+    
     /* For each row */
-    var nodes = 0;
     host_table.forEach(function(row) {
+      hostname = row["Node"];
+      
       nodes += 1;
       cores_node = parseInt(row["Physical Cores"]);
       cores += cores_node;
 
+      if (hostname.includes("gpu")) {
+        gpu_nodes += 1;
+        gpu_cores += cores_node;
+      }
+      
       // No issues?
-      if (host_status.filter(function(d) { return d.queuename == row["Node"] }).length == 0) return;
+      if (host_status.filter(function(d) { return d.queuename == hostname }).length == 0) return;
 
       /* Ignore column on /tmp size, iff it exists */
       delete row["Local `/tmp`"];
@@ -120,6 +130,10 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
 
       nodes_with_issues += 1;      
       cores_with_issues += cores_node;
+      if (hostname.includes("gpu")) {
+        gpu_nodes_with_issues += 1;      
+        gpu_cores_with_issues += cores_node;
+      }
   
       tr = tbody.append("tr");
       td_status = tr.append("td").text("⚠");  // "⚠" or "✖"
@@ -130,10 +144,11 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
     /* WORKAROUND: The host table is not updates; instead pull in the static information. /HB 2020-12-16 */
     nodes = {{ site.data.specs.nodes }};
     cores = {{ site.data.specs.physical_cores }};
+    gpu_nodes = {{ site.data.specs.gpu_nodes }};
     
     var p = d3.select("#hosttablemessage");
     if (nodes_with_issues > 0) {
-      p.text("Currently, " + (100*nodes_with_issues/nodes).toFixed(1) + "% (" + nodes_with_issues + " of " + nodes + ") of the nodes, corresponding to " + (100*cores_with_issues/cores).toFixed(1) + "% (" + cores_with_issues + " of " + cores + ") of the cores, are reported to have a queuing state 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes), which means they will not take on any new jobs.");
+      p.text("Currently, " + nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) " +  " of " + nodes + " compute nodes, corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) " + " of " + cores + " CPU cores, are unavailable. Out of these, " + gpu_nodes_with_issues + " (" + (100*gpu_cores_with_issues/gpu_cores).toFixed(1) + "%) of " + gpu_nodes + " GPU compute nodes are unavailable. A compute node is considered unavailable when itsqueuing state is 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes), which means they will not take on any new jobs.");
     } else {
       p.text("All " + nodes + " nodes, with a total of " + cores + " cores, are functional.");
     }
