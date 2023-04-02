@@ -31,7 +31,7 @@ title: Wynton HPC Status
 ## Compute Nodes
 
 <div id="hosttablediv">
-<p id="hosttablemessage">All compute nodes are functional.</p>
+<div id="hosttablemessage">All compute nodes are functional.</div>
 </div>
 
 
@@ -146,11 +146,20 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
     cores = {{ site.data.specs.physical_cores }};
     gpu_nodes = {{ site.data.specs.gpu_nodes }};
     
-    var p = d3.select("#hosttablemessage");
+    var div = document.getElementById("hosttablemessage");
     if (nodes_with_issues > 0) {
-      p.text("Currently, " + nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) " +  " of " + nodes + " compute nodes, corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) " + " of " + cores + " CPU cores, are unavailable. Out of these, " + gpu_nodes_with_issues + " (" + (100*gpu_cores_with_issues/gpu_cores).toFixed(1) + "%) of " + gpu_nodes + " GPU compute nodes are unavailable. A compute node is considered unavailable when itsqueuing state is 'unheard/unreachable' or 'error' (according to \'qstat -f -qs uE\' queried every five minutes), which means they will not take on any new jobs.");
+      var text = document.createTextNode("Currently, " + nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) " +  " of " + nodes + " compute nodes, corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) " + " of " + cores + " CPU cores, are unavailable. Out of these, " + gpu_nodes_with_issues + " (" + (100*gpu_cores_with_issues/gpu_cores).toFixed(1) + "%) of " + gpu_nodes + " GPU compute nodes are unavailable.");
+      div.appendChild(text);
+      text = document.createTextNode(" A compute node is considered unavailable when its queuing state is \"unheard/unreachable\" or \"error\" (according to ");
+      div.appendChild(text);
+      var code = document.createElement("code");
+      code.innerText = "qstat -f -qs uE";
+      div.appendChild(code);
+      text = document.createTextNode(" queried every five minutes), which means they will not take on any new jobs.");
+      div.appendChild(text);
     } else {
-      p.text("All " + nodes + " nodes, with a total of " + cores + " cores, are functional.");
+      var text = document.createTextNode("All " + nodes + " nodes, with a total of " + cores + " cores, are functional.");
+      div.appendChild(text);
     }
     
     $(document).ready(function() {
