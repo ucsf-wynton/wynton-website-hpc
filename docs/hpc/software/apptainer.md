@@ -232,7 +232,7 @@ To run this as a batch job, we need to create a job script.
 #$ -l h_rt=00:05:00
 #$ -j y
 
-./rocker_r-base.sif Rscript -e "sum(1:10)"
+apptainer exec rocker_r-base.sif Rscript -e "sum(1:10)"
 ```
 
 And now submit with `qsub`:
