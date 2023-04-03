@@ -1,5 +1,5 @@
 <div class="alert alert-warning" role="alert" markdown="1">
-2022-11-23: The Singularity software was migrated to Apptainer in November 2021. This change has now trickled all the way down to the CentOS software repositories and is now deployed on {{ site.cluster.name }}.  We will soon suggest you to use the `apptainer` command, but the alias `singularity` will continue to work for the time being.
+2023-04-02: The Singularity software was migrated to Apptainer in November 2021. We will suggest using the `apptainer` command, but the alias `singularity` will continue to work for the time being.
 </div>
 
 # Apptainer - Linux Containers
@@ -335,6 +335,9 @@ Using:
 
 Q. _Why not Docker?_  
 A. Docker is one of the most popular and well-known software solutions for using Linux Containers. However, contrary to Apptainer, it turns out that it is hard to get Docker to play well with multi-tenant HPC environments.
+
+Q. _What happened to Singularity?_   
+A. The Apptainer software is a fork of the Singularity software from 2021. For backward compatibility, the `singularity` command is an alias to the `apptainer` command.  We suggest that you update your script to use `apptainer`.
 
 Q. _What's the filename extension `*.sif`?_  
 A. First of all, the filename extension is optional, and some prefer to drop them, e.g. `rocker_r-base` instead of `rocker_r-base.sif`.  SIF, which is short for the [Singularity Container Image Format], is a file format that can hold a Linux container environments in a single file.  You might also run into old Singularity images named `*.img` and `*.simg`, which are legacy file formats that Singularity used in the past, where [`*.img` indicates a _writable_ (ext3) images whereas `*.simg` indicates a read-only (squashfs) image.](https://groups.google.com/a/lbl.gov/d/msg/singularity/Cq7kIbN_L68/2mOdkwx2BAAJ)
