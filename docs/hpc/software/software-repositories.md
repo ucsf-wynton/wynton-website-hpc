@@ -2696,8 +2696,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <strong class="module-help">PROJ: PROJ Coordinate Transformation Software Library</strong><br>
 <span class="module-description">PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves.</span><br>
 Example: <span class="module-example"><code>geod</code>, <code>proj</code> and <code>man proj</code>.</span><br>
-URL: <span class="module-url"><a href="https://proj.org/">https://proj.org/</a>, <a href="https://proj.org/news.html">https://proj.org/news.html</a> (changelog), <a href="https://github.com/OSGeo/PROJ">https://github.com/OSGeo/PROJ</a> (source code)</span><br>
-Versions: <span class="module-version">4.9.3, <em>6.0.0</em></span><br>
+URL: <span class="module-url"><a href="https://proj.org/">https://proj.org/</a></span><br>
+Versions: <span class="module-version"><em>4.9.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2706,14 +2706,10 @@ PROJ: PROJ Coordinate Transformation Software Library
 
 local name = myModuleName()
 local version = myModuleVersion()
-version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;)
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: statistics, spatial&quot;)
-whatis(&quot;URL: https://proj.org/, https://proj.org/news.html (changelog), https://github.com/OSGeo/PROJ (source code)&quot;)
-whatis([[
-Description: PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves.
-Examples: `geod`, `proj` and `man proj`.
-]])
+whatis(&quot;URL: https://proj.org/&quot;)
+whatis(&quot;Description: PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves. Example: `geod`, `proj` and `man proj`.&quot;)
 
 if (version &gt;= &quot;7.2.0&quot;) then
   depends_on(&quot;sqlite&quot;)
@@ -2826,7 +2822,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The R programming language.</span><br>
 Example: <span class="module-example"><code>R</code>, <code>R --version</code>, and <code>Rscript --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.r-project.org/">https://www.r-project.org/</a>, <a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.html">https://cran.r-project.org/doc/manuals/r-release/NEWS.html</a> (changelog)</span><br>
-Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0-gcc8, 4.1.1-gcc8, 4.1.2-gcc8, 4.1.3-gcc8, 4.2.0-gcc10, 4.2.1-gcc10, <em>4.2.2-gcc10</em></span><br>
+Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0-gcc8, 4.1.1-gcc8, 4.1.2-gcc8, 4.1.3-gcc8, 4.2.0-gcc10, 4.2.1-gcc10, 4.2.2-gcc10, <em>4.2.3-gcc10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
