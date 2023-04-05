@@ -1,3 +1,7 @@
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+⚠️ 2023-04-04: If you get an error "**It looks like the RStudio Server failed during launch ...**" when you run `rsc start`, please [see below for a workaround](#known-issue-under-investigation-since-2023-03-30). It's a problem that affects several users, but not everyone.
+</div>
+
 # Work with RStudio
 
 R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio IDE, there are two options:
@@ -47,6 +51,37 @@ There are two things you should pay extra attention to here:
 2. The instructions how to log in to the cluster with SSH port forwarding
 
 You will need both below.
+
+
+#### Known issue under investigation (since 2023-03-30)
+
+Some users report they have problems when they use latest RStudio
+Server 2023.03.0+386 (default) that was installed 2023-03-29.  If you
+get something like:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ rsc start
+...
+ERROR Unexpected exception: File name too long [system:36]; LOGGED FROM: int main(int, char* const*) src/cpp/server/ServerMain.cpp:941
+ERROR: It looks like the RStudio Server failed during launch ['rserver' process (PID 29050 on {{ site.devel.name }}) no longer exists]
+Traceback:
+1: assert_rserver_running() on line #804 in /wynton/home/cbi/shared/software/CBI/rstudio-server-controller-devel/bin/rsc
+2: main() on line #1653 in /wynton/home/cbi/shared/software/CBI/rstudio-server-controller-devel/bin/rsc
+Exiting (exit 1)
+Shutting down RStudio Server ...
+Shutting down RStudio Server ... done
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+then you are also affected by this bug.  We are investigating why this
+happens. Until resolved, please use the RStudio Server version from
+February 2022, i.e.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI rstudio-server-controller
+[alice@{{ site.devel.name }} ~]$ module load rstudio-server/2022.02.4-500
+[alice@{{ site.devel.name }} ~]$ rsc start
+```
 
 
 
