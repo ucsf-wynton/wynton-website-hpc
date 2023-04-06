@@ -4,7 +4,7 @@ name: Odds and Ends
 
 jobs:
   ShellCheck:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     name: Odds and Ends
     if: "! contains(github.event.head_commit.message, '[ci skip]')"
 
