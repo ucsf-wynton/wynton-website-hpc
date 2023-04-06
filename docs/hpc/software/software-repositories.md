@@ -322,8 +322,8 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">bamUtil: Programs for Working on SAM/BAM Files</strong><br>
 <span class="module-description">bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, <code>bam</code>.</span><br>
 Example: <span class="module-example"><code>bam help</code>.</span><br>
-URL: <span class="module-url"><a href="https://genome.sph.umich.edu/wiki/BamUtil">https://genome.sph.umich.edu/wiki/BamUtil</a>, <a href="https://genome.sph.umich.edu/wiki/BamUtil#Releases">https://genome.sph.umich.edu/wiki/BamUtil#Releases</a> (changelog), <a href="https://github.com/statgen/bamUtil">https://github.com/statgen/bamUtil</a> (source code)</span><br>
-Versions: <span class="module-version">1.0.14, <em>1.0.15</em></span><br>
+URL: <span class="module-url"><a href="https://genome.sph.umich.edu/wiki/BamUtil">https://genome.sph.umich.edu/wiki/BamUtil</a>, <a href="https://github.com/statgen/bamUtil">https://github.com/statgen/bamUtil</a></span><br>
+Versions: <span class="module-version"><em>1.0.14</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -334,11 +334,8 @@ local name = &quot;bamUtil&quot;
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: version control&quot;)
-whatis(&quot;URL: https://genome.sph.umich.edu/wiki/BamUtil, https://genome.sph.umich.edu/wiki/BamUtil#Releases (changelog), https://github.com/statgen/bamUtil (source code)&quot;)
-whatis([[
-Description: bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, `bam`.
-Examples: `bam help`.
-]])
+whatis(&quot;URL: https://genome.sph.umich.edu/wiki/BamUtil, https://github.com/statgen/bamUtil&quot;)
+whatis(&quot;Description: bamUtil is a repository that contains several programs that perform operations on SAM/BAM files. All of these programs are built into a single executable, `bam`. Example: `bam help`.&quot;)
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -354,8 +351,8 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">bashdb: Bash Debugger Script</strong><br>
 <span class="module-description">The Bash Debugger Project is a source-code debugger for bash that follows the gdb command syntax.</span><br>
-Example: <span class="module-example"><code>bashdb --help</code>, <code>bash --version</code>.</span><br>
-URL: <span class="module-url"><a href="http://bashdb.sourceforge.net/">http://bashdb.sourceforge.net/</a>, <a href="https://sourceforge.net/p/bashdb/code/ci/master/tree/">https://sourceforge.net/p/bashdb/code/ci/master/tree/</a>, <a href="https://sourceforge.net/p/bashdb/bugs/">https://sourceforge.net/p/bashdb/bugs/</a>, <a href="https://sourceforge.net/projects/bashdb/files/bashdb/">https://sourceforge.net/projects/bashdb/files/bashdb/</a></span><br>
+Example: <span class="module-example"><code>bashdb --help</code>, <code>bashdb --version</code>.</span><br>
+URL: <span class="module-url"><a href="https://bashdb.sourceforge.net/">https://bashdb.sourceforge.net/</a>, <a href="https://bashdb.sourceforge.net/bashdb.html">https://bashdb.sourceforge.net/bashdb.html</a> (documentation), <a href="https://sourceforge.net/projects/bashdb/files/bashdb/">https://sourceforge.net/projects/bashdb/files/bashdb/</a> (changelog), <a href="https://sourceforge.net/p/bashdb/code/ci/master/tree/">https://sourceforge.net/p/bashdb/code/ci/master/tree/</a> (source code), <a href="https://sourceforge.net/p/bashdb/bugs/">https://sourceforge.net/p/bashdb/bugs/</a> (issue tracker)</span><br>
 Versions: <span class="module-version"><em>4.4-1.0.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -367,16 +364,16 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: bash, shell, debug&quot;)
-whatis(&quot;URL: http://bashdb.sourceforge.net/, https://sourceforge.net/p/bashdb/code/ci/master/tree/, https://sourceforge.net/p/bashdb/bugs/, https://sourceforge.net/projects/bashdb/files/bashdb/&quot;)
+whatis(&quot;URL: https://bashdb.sourceforge.net/, https://bashdb.sourceforge.net/bashdb.html (documentation), https://sourceforge.net/projects/bashdb/files/bashdb/ (changelog), https://sourceforge.net/p/bashdb/code/ci/master/tree/ (source code), https://sourceforge.net/p/bashdb/bugs/ (issue tracker)&quot;)
 whatis([[
 Description: The Bash Debugger Project is a source-code debugger for bash that follows the gdb command syntax.
-Examples: `bashdb --help`, `bash --version`.
+Examples: `bashdb --help`, `bashdb --version`.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;PATH&quot;, home)
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 </code></pre>
@@ -1805,7 +1802,7 @@ end
   <dd class="module-details">
 <strong class="module-help">htstools: Tools to Process BAM Files for Downstream Copy-Number Analysis</strong><br>
 <span class="module-description">Contains three tools (dnafrags, ppflag-fixer, snp-pileup) written by Alex Studer to process bam files for downstream copy number analysis.</span><br>
-Example: <span class="module-example"><code>snp-pileup --help</code>.</span><br>
+Example: <span class="module-example"><code>snp-pileup --help</code>, <code>dnafrags --help</code>, <code>ppflag-fixer --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mskcc/htstools">https://github.com/mskcc/htstools</a>, <a href="https://github.com/mskcc/htstools/releases">https://github.com/mskcc/htstools/releases</a> (changelog)</span><br>
 Versions: <span class="module-version"><em>0.1.1</em></span><br>
 <details>
@@ -1821,7 +1818,7 @@ whatis(&quot;Keywords: sequencing&quot;)
 whatis(&quot;URL: https://github.com/mskcc/htstools, https://github.com/mskcc/htstools/releases (changelog)&quot;)
 whatis([[
 Description: Contains three tools (dnafrags, ppflag-fixer, snp-pileup) written by Alex Studer to process bam files for downstream copy number analysis.
-Examples: `snp-pileup --help`.
+Examples: `snp-pileup --help`, `dnafrags --help`, `ppflag-fixer --help`.
 ]])
 
 depends_on(&quot;htslib&quot;)
@@ -2552,7 +2549,7 @@ depends_on(&quot;java-tweaks&quot;)
   <dd class="module-details">
 <strong class="module-help">pindel: Detection of Indels and Structural Variations</strong><br>
 <span class="module-description">Pindel can detect breakpoints of large deletions, medium sized insertions, inversions, tandem duplications and other structural variants at single-based resolution from next-gen sequence data. It uses a pattern growth approach to identify the breakpoints of these variants from paired-end short reads.</span><br>
-Example: <span class="module-example"><code>pindel</code>.</span><br>
+Example: <span class="module-example"><code>pindel</code> and <code>pindel --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.sanger.ac.uk/science/tools/pindel">https://www.sanger.ac.uk/science/tools/pindel</a>, <a href="https://github.com/genome/pindel/tags">https://github.com/genome/pindel/tags</a> (changelog), <a href="https://github.com/genome/pindel">https://github.com/genome/pindel</a> (source code)</span><br>
 Versions: <span class="module-version"><em>0.2.5b8</em></span><br>
 <details>
@@ -2568,7 +2565,7 @@ whatis(&quot;Keywords: sequencing&quot;)
 whatis(&quot;URL: https://www.sanger.ac.uk/science/tools/pindel, https://github.com/genome/pindel/tags (changelog), https://github.com/genome/pindel (source code)&quot;)
 whatis([[
 Description: Pindel can detect breakpoints of large deletions, medium sized insertions, inversions, tandem duplications and other structural variants at single-based resolution from next-gen sequence data. It uses a pattern growth approach to identify the breakpoints of these variants from paired-end short reads.
-Examples: `pindel`.
+Examples: `pindel` and `pindel --help`.
 ]])
 
 if (version == &quot;0.2.4t&quot;) then
@@ -2592,7 +2589,7 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">PLINK: Whole Genome Association Analysis Toolset</strong><br>
 <span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
-Example: <span class="module-example"><code>plink --help</code>.</span><br>
+Example: <span class="module-example"><code>plink --help</code> and <code>plink --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a></span><br>
 Versions: <span class="module-version">1.07, 1.90b6.10, 1.90b6.16, 1.90b6.18, 1.90b6.21, 1.90b6.24, 1.90b6.25, <em>1.90b6.26</em></span><br>
 <details>
@@ -2608,7 +2605,7 @@ whatis(&quot;Keywords: genomics&quot;)
 whatis(&quot;URL: https://www.cog-genomics.org/plink/&quot;)
 whatis([[
 Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).
-Examples: `plink --help`.
+Examples: `plink --help` and `plink --version`.
 ]])
 
 -- Local variables
@@ -2626,7 +2623,7 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">PLINK2: Whole Genome Association Analysis Toolset</strong><br>
 <span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
-Example: <span class="module-example"><code>plink2 --help</code>.</span><br>
+Example: <span class="module-example"><code>plink2 --help</code> and <code>plink2 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
 Versions: <span class="module-version">2.00a2LM, 2.00a2.3, <em>2.00a3LM</em></span><br>
 <details>
@@ -2642,7 +2639,7 @@ whatis(&quot;Keywords: genomics&quot;)
 whatis(&quot;URL: https://www.cog-genomics.org/plink/2.0/, https://www.cog-genomics.org/plink/2.0/#recent (changelog), https://github.com/chrchang/plink-ng (source code)&quot;)
 whatis([[
 Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).
-Examples: `plink2 --help`.
+Examples: `plink2 --help` and `plink2 --version`.
 ]])
 
 -- Local variables
@@ -2745,7 +2742,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
   <dd class="module-details">
 <strong class="module-help">qtop: Monitor the State of Queueing Systems, Along with Related Information Relevant on HPC &amp; Grid Clusters</strong><br>
 <span class="module-description"><code>qtop</code> (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC &amp; grid clusters. At present it supports PBS, SGE &amp; OAR families. Please help to increase that list in the Python version of the tool, qtop.py!</span><br>
-Example: <span class="module-example"><code>qtop</code> and <code>qtop -FGW</code>.</span><br>
+Example: <span class="module-example"><code>qtop</code>, <code>qtop --help</code>, <code>qtop --version</code>, and <code>qtop -FGW</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/qtop/qtop">https://github.com/qtop/qtop</a>, <a href="https://github.com/qtop/qtop/blob/master/CHANGELOG.rst">https://github.com/qtop/qtop/blob/master/CHANGELOG.rst</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
 Versions: <span class="module-version"><em>0.9.20161222</em></span><br>
@@ -2758,11 +2755,11 @@ qtop: Monitor the State of Queueing Systems, Along with Related Information Rele
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: system, utility&quot;)
+whatis(&quot;Keywords: system, utility, cli, tui&quot;)
 whatis(&quot;URL: https://github.com/qtop/qtop, https://github.com/qtop/qtop/blob/master/CHANGELOG.rst (changelog)&quot;)
 whatis([[
 Description: `qtop` (pronounced queue-top) is a tool written in order to monitor the state of Queueing Systems, along with related information relevant on HPC &amp; grid clusters. At present it supports PBS, SGE &amp; OAR families. Please help to increase that list in the Python version of the tool, qtop.py!
-Examples: `qtop` and `qtop -FGW`.
+Examples: `qtop`, `qtop --help`, `qtop --version`, and `qtop -FGW`.
 Warning: Only the most recent version of this software will be kept.
 ]])
 
@@ -3466,7 +3463,9 @@ local name = &quot;snpEff&quot;
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-if (version &gt;= &quot;5.1&quot;) then
+if (version &lt; &quot;5.1&quot;) then
+  try_load(&quot;openjdk/11&quot;)
+elseif (version &gt;= &quot;5.1&quot;) then
   try_load(&quot;openjdk/17&quot;)
   try_load(&quot;openjdk/18&quot;)
 end
