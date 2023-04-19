@@ -24,6 +24,4 @@ _Last updated: April 18, 2023_
 
 
 [UCSF Careers job post 72164BR]: https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=6495&siteid=5861&PageType=JobDetails&jobid=3402582#jobDetails=3402582_5861
-[high-performance-compute (HPC) cluster]: https://wynton.ucsf.edu/
-
-
+[high-performance-compute (HPC) cluster]: /hpc/index.html
