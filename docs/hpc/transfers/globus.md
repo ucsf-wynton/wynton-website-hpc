@@ -20,7 +20,7 @@ If you want to transfer files from or to your {{ site.cluster.nickname }} accoun
 8. Enter your {{ site.cluster.nickname }} credential, i.e. your {{ site.cluster.nickname }} username and password. 
 9. Your Wynton Home Directory should display in File Manager.
 
-NOTE: You can only use Wynton Globus Collections to share data from Wynton Servers and the Wynton File systems. You cannot use the Wynton Globus Collections to share data mounted on Wynton servers via automounts of remote servers.
+NOTE: You can only use Wynton Globus Collections to share data from Wynton Servers and the Wynton File systems. You cannot use the Wynton Globus Collections to share data mounted on Wynton servers via NFS mounts of remote servers.
 
 ### Globus for PHI Users
 
