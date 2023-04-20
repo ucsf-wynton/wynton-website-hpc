@@ -10,11 +10,7 @@
 
 If you want to transfer files from or to your {{ site.cluster.nickname }} account, you need to set up the '{{ site.globus.name }}' Collection.  Below is an outline on how to do this.
 
-1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials. Then find the Collections menu on the left and click it. Then locate the ['{{ site.globus.name }}' collection] and click 'Activate'.  This will ask you to enter your {{ site.cluster.nickname }} credential, i.e. your {{ site.cluster.nickname }} username and password.  Optionally, limit the lifetime of this Collection by clicking 'Advanced' and select the number of hours you want it to be valid, e.g. `2` hours.
-
-2. [online] Go to [Collections](https://app.globus.org/collections), go to the recently activated '{{ site.globus.name }}' Collection, and click on 'Open in File Manager'.  This will display the files and folders on your {{ site.cluster.nickname }} account.  If you don't see anything, make sure to enter `~/` as the 'Path'.
-
-3. [online] When no longer needed, make sure to 'Deactivate Credentials' for your '{{ site.globus.name }}' Collection.
+1. [online] Go to [Globus.org](https://www.globus.org) and log in with your UCSF MyAccess credentials. Then find the Collections menu on the left and click it. Then locate the ['{{ site.globus.name }}' collection]. This will bring up the "Overview" of the ['{{ site.globus.name }}' collection]. Click "Open in File Manager". There should be a new pane which says, "Authentication Required". Click "Continue". Select your Globus Wynton Identity. Enter your {{ site.cluster.nickname }} credential, i.e. your {{ site.cluster.nickname }} username and password. Your Wynton Home Directory should display in File Manager.
 
 ### Globus for PHI Users
 
