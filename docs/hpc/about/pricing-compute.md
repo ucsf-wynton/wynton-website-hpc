@@ -12,7 +12,7 @@ Cluster compute nodes are purchased by Wynton in units which contain 4 Compute N
 
 **Price per 4 compute node unit: 33,405 USD (for 4 nodes in a 2U chassis)**
 
-
+Based on the above pricing, the pricing for CPU contributions is about $173 per CPU/Slot/Share.
 
 ## Pricing for Graphics Processing Unit (GPU)
 
