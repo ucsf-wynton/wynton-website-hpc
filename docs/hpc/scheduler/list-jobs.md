@@ -53,6 +53,28 @@ job-ID  prior   name       user state submit/start at     queue           slots 
 
 
 
+## Explanation of the job state
+
+In the output of `qstat`, there is a `state` column, which shows the
+current state of each job.  Commonly seen states are:
+
+ * `q` - the job is queued
+
+ * `w` - the job is waiting to be launched
+
+ * `h` - the job is held on the queue, e.g. waiting for another job
+         dependency to finish
+ 
+ * `r` - the job is currently running on a compute node
+ 
+ * `E` - there was an error launching the job. See `qstat -j <job_id>`
+   for the reason why the job failed
+ 
+ * `d` - the job is being deleted (from calling `qdel`)
+
+For more details, see `man qstat`.
+
+
 ## When will queued jobs start?
 
 When your jobs will be launched depends on your jobs' _current priority_ on the queue.  _If_ one of your jobs is on the top of the priority queue _and_ the resources (CPU, memory, ...) you have requested are available, _then_ that job will be launched next.  If sufficient resources are not available, then a lower-priority jobs with lower resource may be launched in the meantime.
