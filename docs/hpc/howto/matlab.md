@@ -72,4 +72,4 @@ nslots = str2num(nslots);               % coerce to 'double'
 maxNumCompThreads(nslots);              % number of cores MATLAB may use
 ```
 
-and then launch your MATLAB script _without_ option `-singleCompThread`, e.g. `matlab -batch my_script.m`.
+and then launch your MATLAB script _without_ option `-singleCompThread`, e.g. `matlab -batch "my_script"`.
