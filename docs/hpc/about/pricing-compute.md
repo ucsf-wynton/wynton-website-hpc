@@ -28,22 +28,22 @@ Based on the above pricing, the pricing for CPU contributions is about $173 per 
 
 Single GPU cards cannot be purchased - only a full GPU node. However, just like partial compute nodes can be purchased, GPU purchase requests can also be pooled towards a full system. 
 
-**All options include the following Mercury GPU208 2U Server:** 
+**All options include the following Mercury GPU208 2U Server. Pricing is in USD and includes warranty. Taxes are calculated and added once hardware is received.** 
 CPU: (1) EPYC 7543P 2.8GHz Thirty-Two-Core Procs 
 Memory: 512GB DDR4-3200 (8x 64GB)  
 OS Drive: (1) 512GB SATA SSD  
 Storage: (1) 960GB U.2 NVMe SSD  
 
-**Price per A40 GPU node: ~$25k USD (including warranty, excluding partial tax)**
+**Price per A40 GPU node: ~$25k**
 GPU: (4) A40 48GB GDDR6
 
-**Price per L40 GPU node: ~$33k USD (including warranty, excluding partial tax)**
+**Price per L40 GPU node: ~$33k**
 GPU: (4) L40 48GB GDDR6 PCIe
 
-**Price per A100 GPU node: ~$58k USD (including warranty, excluding partial tax)**
+**Price per A100 GPU node: ~$58k**
 GPU: (4) A100 80GB GDDR6 PCIe 
 
-**As of May 2023, lead times for GPUs are 4-5 months from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects.  
+**As of May 2023, lead times for GPUs are 4-5 months from order to delivery.**Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects.  
 
 ## How to purchase
 
