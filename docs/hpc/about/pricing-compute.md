@@ -35,10 +35,13 @@ There are three common configurations of GPU compute nodes available, which all 
 
 ### Configuration: Mercury GPU208 2U Server
 
-* CPU: 1 × AMD EPYC 7543P 2.8GHz 32-core processor  
-* RAM: 512GB DDR4-3200 (8 × 64GB)  
-* Operating-system storage: 1 × 512GB SATA SSD  
-* Storage: 1 × 960GB U.2 NVMe SSD  
+* CPU: 1 × AMD EPYC 7543P 2.8GHz 32-core processor
+
+* RAM: 512GiB DDR4-3200 (8 × 64GiB)
+
+* Operating-system storage: 1 × 512GB SATA SSD
+
+* Storage: 1 × 960GB U.2 NVMe SSD
 
 Then choose one of:
 
