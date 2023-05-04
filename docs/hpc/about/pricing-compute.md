@@ -6,19 +6,21 @@ Please note: You cannot be charged for the hardware until it has been received a
 
 ## Pricing for prioritized compute ("CPU")
 
-Cluster compute nodes are purchased by Wynton in units that have 4 Compute Nodes in a single chassis. If partial nodes are requested, contributions will be pooled with other requests towards a full system. Another option is to pay $170/per member.q slot/share. 
+Cluster compute nodes are purchased by Wynton in modules that have 4 "2U" compute nodes in a single chassis. If partial nodes are requested, contributions will be pooled with other requests towards a full system. **Another option is to pay $170/member.q slot.**
 
-**Price per 4 compute node unit: ~$33k USD excluding tax (for 4 nodes in a 2U chassis)**
+### Configuration: SMC RM224Q 2U Quad-Node Server
 
-SMC RM224Q 2U Quad-Node Server 
-Four Hot-Pluggable Compute Modules, each Node Includes:  
-CPU: (2) Xeon Gold 6336Y 2.4GHz Twenty-Four-core  
-Memory: 256GB DDR4-3200 ECC (16x 16GB)  
-OS: (1) 1.92TB SATA SSD, 3DWPD 
+This configuration comes with four compute modules, where each node includes:
 
-Based on the above pricing, the pricing for CPU contributions is about $173 per CPU/Slot/Share.
+* CPU/node: 2 × Intel Xeon Gold 6336Y 2.4GHz 32-core processor
 
-**As of May 2023, lead times for compute nodes are 6 weeks from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a 4-compute node unit, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
+* RAM/node: 256GiB DDR4-3200 ECC (16 × 16 GiB)
+
+* Storage/node: 1 × 1.92TB SATA SSD, 3DWPD 
+
+Total price for a module with four (4) node: **~33,000 USD** excluding taxes.
+
+As of May 2023, **lead times for compute nodes are six (6) weeks from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a four-compute-node module, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
 
 ## Pricing for Graphics Processing Unit (GPU)
 
@@ -28,26 +30,29 @@ Based on the above pricing, the pricing for CPU contributions is about $173 per 
 
 Single GPU cards cannot be purchased - only a full GPU node. However, just like partial compute nodes can be purchased, GPU purchase requests can also be pooled towards a full system. 
 
-**All options include the following Mercury GPU208 2U Server. Pricing is in USD and includes warranty. Taxes are calculated and added once hardware is received.** 
+There are three common configurations of GPU compute nodes available, which all share the same base setup, and differs only by type of GPU.
 
-CPU: (1) EPYC 7543P 2.8GHz Thirty-Two-Core Procs 
-Memory: 512GB DDR4-3200 (8x 64GB)  
-OS Drive: (1) 512GB SATA SSD  
-Storage: (1) 960GB U.2 NVMe SSD  
+### Configuration: Mercury GPU208 2U Server
 
-**Price per A40 GPU node: ~$25k**
-GPU: (4) A40 48GB GDDR6
+* CPU: 1 × AMD EPYC 7543P 2.8GHz 32-core processor  
+* RAM: 512GB DDR4-3200 (8 × 64GB)  
+* Operating-system storage: 1 × 512GB SATA SSD  
+* Storage: 1 × 960GB U.2 NVMe SSD  
 
-**Price per L40 GPU node: ~$33k**
-GPU: (4) L40 48GB GDDR6 PCIe
+Then choose one of:
 
-**Price per A100 GPU node: ~$58k**
-GPU: (4) A100 80GB GDDR6 PCIe 
+1. GPU: 4 × Nvidia A40 48GB with GDDR6 (**~25,000 USD**) 
 
-**As of May 2023, lead times for GPUs are 4-5 months from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects.  
+2. GPU: 4 × Nvidia L40 48GB with GDDR6 PCIe (**~33,000 USD**)
+
+3. GPU: 4 × Nvidia A100 80GB with GDDR6 PCIe (**~58,000 USD**)
+
+The prices listed are total prices in USD excluding taxes.  Each price includes the base setup and the corresponding GPU configuration. Warranty is included.  Taxes are calculated and added once hardware is received.
+
+As of May 2023, **lead times for GPUs are four-to-five months from order to delivery.**  Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects.  
 
 ## How to purchase
 
 To purchase compute nodes or GPUs, please contact [{{ site.cluster.email_compute }}](mailto:{{ site.cluster.email_compute }}?subject=Request%20to%20purchase%20compute). Please include what you are considering contributing and your speedtype or COA/chartstring for billing, along with any questions.
 
-If you are not ready to purchase but have technical questions while you explore options, please contact support@wynton.ucsf.edu. 
+If you are not ready to purchase but have technical questions while you explore options, please contact {{ site.cluster.email_support }}. 
