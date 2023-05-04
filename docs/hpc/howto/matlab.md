@@ -55,7 +55,7 @@ module load matlab
 matlab -singleCompThread -batch "my_script"
 ```
 
-The `-batch` option tells MATLAB to call the command `my_script`, and since that is not a built in command, it will look for a MATLAB script file called `my_script.m`, and execute that.  The `-singleCompThread` option tells MATLAB to run in sequential mode; this prevents your job for overusing the compute nodes by mistake.
+The `-batch` option tells MATLAB to call the command `my_script`, and since that is not a built-in command, it will look for a MATLAB script file called `my_script.m`, and execute that.  The `-singleCompThread` option tells MATLAB to run in sequential mode; this prevents your job for overusing the compute nodes by mistake.
 
 
 ### Parallel processing in MATLAB
