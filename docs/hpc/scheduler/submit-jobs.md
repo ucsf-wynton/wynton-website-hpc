@@ -97,7 +97,7 @@ qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
 ```
 
 <div class="alert alert-warning" role="alert" markdown="1">
-If not specified, the default run time is 2 weeks.  If your job will run more quickly than that, a more accurate estimate will help the scheduler plan better.  Note, though, that jobs are killed if they hit the run time request, so be sure to leave some leeway in your request.
+If not specified, the default run time is 14 days, i.e. the maximum allowed.  If your job will run more quickly than that, a more accurate estimate will help the scheduler plan better.  Note, though, that jobs are killed if they hit the run time request, so be sure to leave some leeway in your request.
 </div>
 
 
