@@ -52,7 +52,7 @@ In order to run MATLAB in jobs, the MATLAB environment module needs to be loaded
 #$ -cwd          # run job in the current working directory
 
 module load matlab
-matlab -singleCompThread -batch my_script.m
+matlab -singleCompThread -batch my_script
 ```
 
 The `-batch` option tells MATLAB to run the `my_script.m` script in batch mode, in contrast to interactive mode.  The `-singleCompThread` option tells MATLAB to run in sequential mode; this prevents your job for overusing the compute nodes by mistake.
