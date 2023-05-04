@@ -17,7 +17,7 @@ This configuration comes with four compute modules, where each node includes:
 
 * RAM/node: 256GiB DDR4-3200 ECC (16 × 16 GiB)
 
-* Storage/node: 1 × 1.92TB SATA SSD, 3DWPD 
+* Storage/node: 1 × 1.92TB SATA SSD
 
 Total price for a module with four (4) node: **~33,000 USD** excluding taxes.
 
@@ -42,11 +42,11 @@ There are three common configurations of GPU compute nodes available, which all 
 
 Then choose one of:
 
-1. GPU: 4 × Nvidia A40 48GB with GDDR6 (**~25,000 USD**) 
+1. GPU: 4 × Nvidia A40 with 48GB GDDR6 GPU memory (**~25,000 USD**) 
 
-2. GPU: 4 × Nvidia L40 48GB with GDDR6 PCIe (**~33,000 USD**)
+2. GPU: 4 × Nvidia L40 with 48GB GDDR6 GPU memory (**~33,000 USD**)
 
-3. GPU: 4 × Nvidia A100 80GB with GDDR6 PCIe (**~58,000 USD**)
+3. GPU: 4 × Nvidia A100 with 80GB GDDR6 GPU memory (**~58,000 USD**)
 
 The prices listed are total prices in USD excluding taxes.  Each price includes the base setup and the corresponding GPU configuration. Warranty is included.  Taxes are calculated and added once hardware is received.
 
