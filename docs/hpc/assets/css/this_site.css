@@ -227,6 +227,20 @@ code {
   visibility: hidden;
 }
 
+/* NOTE: Control visibility in dynamics.css */
+.status-led {
+    position: relative;
+    left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    border: #000000 solid 1px;
+    border-radius: 50%;
+    background: red;      /* level = danger         */
+    background: orange;   /* level = warning        */
+    background: #22d828;  /* level = info (default) */
+}
+
 .timestamp {
   color: #666666;
 }
