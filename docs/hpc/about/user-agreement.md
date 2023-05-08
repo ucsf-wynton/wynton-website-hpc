@@ -1,3 +1,9 @@
+<!--
+ WARNING: If you update this page, beyond fixing typos, you must create a
+ GitHub issue on <https://github.com/ucsf-wynton/wynton-website-hpc/issues>
+ to make sure the same information is updated in UCSF ServiceNow.
+ -->
+
 # User Agreement and Disclaimer
 
 ## Customer Responsibilities
