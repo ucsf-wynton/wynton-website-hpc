@@ -26,7 +26,9 @@ running?_
 
   4. If there is a [downtime scheduled](/hpc/status/), you might have
      asked for a run-time that goes into the downtime period. If so,
-     your job _cannot_ be started until after the downtime.
+     your job _cannot_ be started until after the downtime.  If you
+     don't specify the run-time when you submit your job, the default
+     is 14 days.
   
   5. `qstat -j <job_id>` will provide details on why a particular job
      is not running.  `qstat -u '*'` will show all jobs and their
