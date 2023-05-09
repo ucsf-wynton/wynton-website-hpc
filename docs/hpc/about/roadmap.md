@@ -5,6 +5,10 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Near future
 
+* Storage: Archival backup of the BeeGFS file system.
+
+* Operating system: Upgrade from CentOS 7 to Rocky 8.
+
 * Pricing model: Contributors to {{ site.cluster.name }} get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
 
 * Storage: Requirements for mounting lab-owned storage into {{ site.cluster.name }}
