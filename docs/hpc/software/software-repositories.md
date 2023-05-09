@@ -1472,7 +1472,7 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It aims to contain the complete functionality of JTS in C++. This includes all the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced functions. GEOS provides spatial functionality to many other projects and products.</span><br>
 Example: <span class="module-example"><code>geos-config --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://libgeos.org/">https://libgeos.org/</a>, <a href="https://libgeos.org/usage/download/">https://libgeos.org/usage/download/</a> (changelog), <a href="https://github.com/libgeos/geos/issues">https://github.com/libgeos/geos/issues</a> (bug reports)</span><br>
-Versions: <span class="module-version">3.5.2, 3.7.3, 3.8.1, 3.9.1, 3.9.2, <em>3.9.3</em></span><br>
+Versions: <span class="module-version">3.5.2, 3.7.3, 3.8.1, 3.9.1, 3.9.2, 3.9.3, <em>3.9.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3539,7 +3539,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</span><br>
 Example: <span class="module-example"><code>sqlite3 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://sqlite.org/">https://sqlite.org/</a>, <a href="https://sqlite.org/docs.html">https://sqlite.org/docs.html</a> (docs), <a href="https://github.com/sqlite/sqlite/tags">https://github.com/sqlite/sqlite/tags</a> (changelog), <a href="https://github.com/sqlite/sqlite">https://github.com/sqlite/sqlite</a> (source code)</span><br>
-Versions: <span class="module-version">3.41.1, <em>3.41.2</em></span><br>
+Versions: <span class="module-version">3.32.3, 3.41.1, <em>3.41.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
