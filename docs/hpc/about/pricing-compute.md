@@ -45,11 +45,11 @@ There are three common configurations of GPU compute nodes available, which all 
 
 Then choose one of:
 
-1. GPU: 4 × Nvidia A40 with 48GB GDDR6 GPU memory (**~25,000 USD**) 
+1. GPU: 4 × Nvidia A40 with 48GB GPU memory (**~25,000 USD**) 
 
-2. GPU: 4 × Nvidia L40 with 48GB GDDR6 GPU memory (**~33,000 USD**)
+2. GPU: 4 × Nvidia L40 with 48GB GPU memory (**~33,000 USD**)
 
-3. GPU: 4 × Nvidia A100 with 80GB GDDR6 GPU memory (**~58,000 USD**)
+3. GPU: 4 × Nvidia A100 with 80GB GPU memory (**~58,000 USD**)
 
 The prices listed are total prices in USD excluding taxes.  Each price includes the base setup and the corresponding GPU configuration. Warranty is included.  Taxes are calculated and added once hardware is received.
 
