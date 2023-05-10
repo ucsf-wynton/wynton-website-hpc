@@ -1424,28 +1424,20 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
 <span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
 Example: <span class="module-example"><code>gdalinfo --version</code></span><br>
-URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
-Versions: <span class="module-version">2.4.3, <em>2.4.4</em></span><br>
+URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a></span><br>
+Versions: <span class="module-version"><em>2.4.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help(&quot;GDAL: Geospatial Data Abstraction Library&quot;)
+<pre><code class="language-lua">help([[
+GDAL: Geospatial Data Abstraction Library
+]])
 
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: spatial, library&quot;)
-whatis(&quot;URL: https://gdal.org/, https://github.com/OSGeo/gdal/blob/master/NEWS.md (changelog), https://github.com/OSGeo/gdal (source code)&quot;)
-whatis([[
-Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.
-Examples: `gdalinfo --version`
-]])
-
--- GDAL (&gt;= 3.0.0), requires PROJ (&gt;= 6.0.0)
-local v = version
-v = string.gsub(v, &quot;[.].*&quot;, &quot;&quot;)
-if v &gt;= &quot;3&quot; then
-  depends_on(&quot;proj&quot;)
-end
+whatis(&quot;URL: https://gdal.org/, https://github.com/OSGeo/gdal&quot;)
+whatis(&quot;Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats. Example: `gdalinfo --version`&quot;)
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
