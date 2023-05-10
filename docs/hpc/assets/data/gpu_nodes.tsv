@@ -12,7 +12,7 @@ msg-iogpu3	GTX 1080	8 GiB	2	128 GiB	msg	false
 msg-iogpu4	GTX 1080	8 GiB	2	128 GiB	msg	true
 msg-iogpu5	GTX 1080	8 GiB	2	128 GiB	msg	true
 msg-iogpu6	GTX TITAN X	12 GiB	2	128 GiB	msg	true
-msg-iogpu7	GTX 1080	8 GiB	2	128 GiB	msg	?
+msg-iogpu7	GTX 1080	8 GiB	2	128 GiB	msg	false
 msg-iogpu8	GTX 1080	8 GiB	2	128 GiB	msg	false
 msg-iogpu9	GTX 1080 Ti	11 GiB	2	128 GiB	msg	false
 msg-iogpu11	GTX 1080	8 GiB	4	256 GiB	msg	false
@@ -23,7 +23,7 @@ qb3-idgpu2	GTX 1080	8 GiB	4	256 GiB	communal	false
 qb3-idgpu3	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
 qb3-idgpu4	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
 qb3-idgpu5	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
-qb3-idgpu6	TITAN RTX	24 GiB	5	384 GiB	jacobson,amaoutlab	true
+qb3-idgpu6	TITAN RTX	24 GiB	5	384 GiB	jacobsonlab,amaoutlab	true
 qb3-idgpu7	TITAN RTX	24 GiB	4	384 GiB	communal	true
 qb3-idgpu8	RTX 2080 Ti	11 GiB	4	384 GiB	communal	true
 qb3-idgpu9	RTX 2080 Ti	11 GiB	4	384 GiB	communal	true
