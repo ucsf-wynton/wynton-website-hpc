@@ -381,15 +381,22 @@ Note that you also need to load the `gdal` module every time you use the **gdal*
 
 ### Packages relying on MPI
 
+<div class="alert alert-warning" role="alert" markdown="1">
+The **Rmpi** requires OpenMPI v3 (module `mpi/openmpi3-x86_64`) or
+newer, when running on {{ site.cluster.nickname }}. It does _not_ work
+with ancient OpenMPI v1 (module `mpi/openmpi-x86_64`).
+</div>
+
+
 Several R packages that rely on the Message Passing Interface (MPI) do not install out-of-the-box like other R packages.  At a minimum, they require that the built-in `mpi` module is loaded;
 
 <!-- code-block label="r-openmpi" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi3-x86_64
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-devtoolset/10   3) r/4.2.0   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-devtoolset/10   3) r/4.2.0   4) mpi/openmpi3-x86_64
 
  
 

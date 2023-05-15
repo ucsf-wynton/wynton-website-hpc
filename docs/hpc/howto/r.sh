@@ -65,7 +65,7 @@ EOF
 
 
 mdi_code_block --label=r-openmpi <<EOF
-module load mpi/openmpi-x86_64
+module load mpi/openmpi3-x86_64
 module list
 EOF
 module purge
