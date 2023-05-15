@@ -446,6 +446,27 @@ The downloaded source packages are in
 >
 ```
 
+
+Note, you need to load the identical module and version each time you want to use the **Rmpi** package.  After installing **Rmpi**, verify that it works:
+
+```r
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI r
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
+[alice@{{ site.devel.name }} ~]$ R
+...
+> library(Rmpi)
+...
+
+> mpi.spawn.Rslaves()              ## launch MPI parallel workers
+...
+
+> mpi.remote.exec(Sys.getpid())    ## get the process ID for one of them
+     out
+1 144967
+```
+
+
 #### The pbdMPI, pbdPROF, and bigGP packages
 
 Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbdMPI]**, **[pbdPROF]**, and **[bigGP]** require special install instructions.  For example, after having loaded the `mpi` module, we can install **pdbMPI** in R as:
