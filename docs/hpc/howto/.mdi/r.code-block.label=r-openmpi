@@ -1,8 +1,8 @@
-[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi3-x86_64
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-devtoolset/10   3) r/4.2.0   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-devtoolset/10   3) r/4.2.0   4) mpi/openmpi3-x86_64
 
  
 
