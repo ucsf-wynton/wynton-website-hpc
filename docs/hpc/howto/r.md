@@ -472,21 +472,36 @@ The downloaded source packages are in
 
 Note, you need to load the identical module and version each time you want to use the **Rmpi** package.  After installing **Rmpi**, verify that it works:
 
+<!-- code-block label="test-Rmpi" -->
 ```r
-```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI r
-[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi3-x86_64
 [alice@{{ site.devel.name }} ~]$ R
 ...
 > library(Rmpi)
-...
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
 
-> mpi.spawn.Rslaves()              ## launch MPI parallel workers
-...
+  Local host:           {{ site.devel.name}}
+  Local device:         mlx5_0
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[1684166567.056542] [{{ site.devel.name}}:179552:0]       ib_iface.c:700  UCX  ERROR ibv_create_cq(cqe=4096) failed: Cannot allocate memory
+[{{ site.devel.hostname}}:179552] pml_ucx.c:208 Error: Failed to create UCP worker
+
+> mpi.spawn.Rslaves()              ## launch one or more MPI parallel workers
+[{{ site.devel.hostname}}:180960] 1 more process has sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+[{{ site.devel.hostname}}:180960] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+        1 slaves are spawned successfully. 0 failed.
+master (rank 0, comm 1) of size 2 is running on: {{ site.devel.name}} 
+slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 
 > mpi.remote.exec(Sys.getpid())    ## get the process ID for one of them
      out
-1 144967
+1 189114
 ```
 
 
