@@ -505,7 +505,7 @@ slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 ```
 
 
-#### The pbdMPI, pbdPROF, and bigGP packages
+#### The pbdMPI and bigGP packages
 
 Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbdMPI]** and **[bigGP]** require special install instructions.  For example, after having loaded the `mpi` module, we can install **pdbMPI** in R as:
 
