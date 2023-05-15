@@ -507,7 +507,7 @@ slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 
 #### The pbdMPI, pbdPROF, and bigGP packages
 
-Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbdMPI]**, **[pbdPROF]**, and **[bigGP]** require special install instructions.  For example, after having loaded the `mpi` module, we can install **pdbMPI** in R as:
+Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbdMPI]** and **[bigGP]** require special install instructions.  For example, after having loaded the `mpi` module, we can install **pdbMPI** in R as:
 
 ```r
 > install.packages("pbdMPI", configure.args="--with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
@@ -618,7 +618,6 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [hdf5r]: https://cran.r-project.org/package=hdf5r
 [igraph]: https://cran.r-project.org/package=igraph
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
-[pbdPROF]: https://cran.r-project.org/package=pbdPROF
 [rjags]: https://cran.r-project.org/package=rjags
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [sf]: https://cran.r-project.org/package=sf
