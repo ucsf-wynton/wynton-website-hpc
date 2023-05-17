@@ -46,15 +46,6 @@ serve: start
 wynton:
 	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help
 
-broadcast-off:
-	cd hpc/assets/css/ && ln -fs broadcast-off.css broadcast.css
-
-broadcast-on:
-	cd hpc/assets/css/ && ln -fs broadcast-on.css broadcast.css
-
-status-ok: broadcast-off
-	sed -i -E 's/^([[:space:]]*status:)[[:space:]]+(.*)/\1 ok/' _config.yml
-
 hpc/_data/users.yml: FORCE
 	echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE | grep -c ^uid:)" > $@.tmp
 	echo "nbr_of_projects: $$(qconf -sprjl | wc -l | grep -vE '^[[:space:]]*0*[[:space:]]*$$')" >> $@.tmp
