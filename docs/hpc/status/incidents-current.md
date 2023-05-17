@@ -2,7 +2,7 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
-**Update**: The cluster is down and unavailable because of maintainence.
+**Update**: The cluster is down and unavailable because of maintenance.
 <br><span class="timestamp">May 16, 21:00 PDT</span>
 
 **Update**: There will be a one-day downtime starting at 21:00 on Tuesday May 16 and ending at 17:00 on Wednesday May 17. This is aligned with a planned PG&E power-outage maintenance on May 17.  Starting May 2, the maximum job runtime will be decreased on a daily basis from the maximum 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime. The default run time is 14 days, so make sure to specify `qsub -l h_rt=<run-time> ...` if you want something shorter.
