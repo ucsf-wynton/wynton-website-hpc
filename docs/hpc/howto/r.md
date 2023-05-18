@@ -303,7 +303,7 @@ If you have an R scripts, and it involves setting up a number of parallel worker
 
 ### Packages requiring newer dependencies
 
-#### The hdf5r package
+#### Package **hdf5r**
 
 The **[hdf5r]** package requires [hdf5 1.8.13 or newer](https://github.com/hhoeflin/hdf5r/issues/115) but the version that comes with CentOS 7/EPEL is only 1.8.12. This will result in the following installation error in R:
 
@@ -336,7 +336,7 @@ After this, the **hdf5r** package will install out of the box, i.e. by calling:
 ```
 
 
-#### The sf package
+#### Package **sf**
 
 The **[sf]** package requires GDAL 2.0.1 or newer but the version that comes with CentOS 7/EPEL is only 1.11.4;
 
@@ -407,7 +407,7 @@ _Importantly_, make sure to specify the exact version of the `mpi` module as wel
 In addition to making OpenMPI available by loading the `mpi` module, several MPI-based R packages requires additional special care in order to install.  Below sections, show how to install them.
 
 
-#### The Rmpi package
+#### Package **Rmpi**
 
 The **[Rmpi]** package does not install out-of-the-box like other R packages.  To install **Rmpi** on the cluster, we have to load the `mpi` module (see above) before starting R.  Then, to install **Rmpi**, we launch R and call the following:
 
@@ -505,7 +505,7 @@ slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 ```
 
 
-#### The pbdMPI and bigGP packages
+#### Packages **pbdMPI** and **bigGP**
 
 Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbdMPI]** and **[bigGP]** require special install instructions.  For example, after having loaded the `mpi` module, we can install **pbdMPI** in R as:
 
@@ -629,7 +629,7 @@ The downloaded source packages are in
 
 ### Packages relying on JAGS
 
-#### The rjags package
+#### Package **rjags**
 
 If we try to install the **[rjags]** package, we'll get the following
 installation error in R:
@@ -669,7 +669,7 @@ where the **rjags** R package needs to be loaded.
 
 ### Packages requiring extra care
 
-#### The **udunits2** package
+#### Package **udunits2**
 
 The **[udunits2]** package does not install out of the box.  It seems to be due to a problem with the package itself, and the suggested instructions that the package gives on setting environment variable `UDUNITS2_INCLUDE` do not work.  A workaround to install the package is to do:
 
