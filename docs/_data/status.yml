@@ -84,5 +84,4 @@ message: The cluster will be shut down for maintenance during May 16-17, 2023. S
 
 level: danger
 condition: is not operational
-message: The cluster is down for maintenance during May 16-17, 2023.
-
+message: The cluster is down attempting to recover from partial storage and networking failures that occured during the maintenance on May 16-17, 2023.
