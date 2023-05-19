@@ -2,7 +2,7 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
-**Update**: The BeeGFS file system experienced serious failures during the scheduled maintenance window. There is a very high risk of partial data loss, but we will do everything possible to minimize the loss.  In addition, the Wynton core network switch failed and needs to be replaced. The UCSF IT Infrastructure Network Services Team works with the vendor to get a rapid replacement.
+**Update**: Several ZFS storage targets that are used by BeeGFS experienced failures during the scheduled maintenance window. There is a very high risk of partial data loss, but we will do everything possible to minimize the loss.  In addition, the Wynton core network switch failed and needs to be replaced. The UCSF IT Infrastructure Network Services Team works with the vendor to get a rapid replacement.
 <br><span class="timestamp">May 17, 16:30 PDT</span>
 
 **Update**: The cluster is down and unavailable because of maintenance.
