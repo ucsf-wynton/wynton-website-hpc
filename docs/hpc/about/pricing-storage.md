@@ -41,15 +41,15 @@ There are some additional parameters:
 
 ## Frequently Asked Questions
 
-### Q: If I already have purchased group storage, can I also use that storage for PHI Data in `/wynton/protected`?
+### Q: If I already have purchased group storage, can I also use that storage quota for PHI Data in `/wynton/protected`?
 
 A: PHI Data should not be stored in /wynton/group. However, we can create separate storage for you under /wynton/protected. If you choose to have your current storage allocation updated to include PHI storage you have several options.
 
 We can either:
 
-1)	Create a group folder in both `/wynton/group` and `/wynton/protected/group`. In this case both folders will share the same quota. In this case, it can be tricky to figure out where the group’s quota usage is, phi or non-phi.
-2)	Create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/, for example`, `/wynton/protected/group/groupname-phi`. This makes it easier to separate PHI and non-PHI group usage.
-3)	If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a group in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
+1)  Create a group folder in both `/wynton/group` and `/wynton/protected/group`. In this case both folders will share the same quota. In this case, it can be tricky to figure out where the group’s quota usage is, phi or non-phi.
+2)  Create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/, for example`, `/wynton/protected/group/groupname-phi`. This makes it easier to separate PHI and non-PHI group usage.
+3)  If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a group in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
 
 Only members of the lab group with Wynton PHI access will be able to access files stored under `/wynton/protected`.
 
