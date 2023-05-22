@@ -1,7 +1,3 @@
-<div class="alert alert-info" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
-2021-04-05: We have improved the purchasing and accounting workflow for lab storage orders.  This means that we can allocate lab storage much sooner than what was possible in the past.
-</div>
-
 # Pricing for Extra Storage
 
 Research groups can purchase additional storage on {{ site.cluster.nickname }} beyond the user-specific storage that is free to all.
