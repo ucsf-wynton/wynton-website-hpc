@@ -41,7 +41,7 @@ There are some additional parameters:
 
 ## Frequently Asked Questions
 
-#### Q: If I already have purchased group storage, can I also use that storage for PHI Data in `/wynton/protected`?
+### Q: If I already have purchased group storage, can I also use that storage for PHI Data in `/wynton/protected`?
 
 A: PHI Data should not be stored in /wynton/group. However, we can create separate storage for you under /wynton/protected. If you choose to have your current storage allocation updated to include PHI storage you have several options.
 
@@ -53,7 +53,7 @@ We can either:
 
 Only members of the lab group with Wynton PHI access will be able to access files stored under `/wynton/protected`.
 
-#### Q: Does purchasing additional group storage increase the quotas available to lab users in `/wynton/home` or `/wynton/protected/home`?
+### Q: Does purchasing additional group storage increase the quotas available to lab users in `/wynton/home` or `/wynton/protected/home`?
 
 A: No, the home directory quotas are managed separately from group quotas and additional purchased group space cannot be applied to home directories.
 
