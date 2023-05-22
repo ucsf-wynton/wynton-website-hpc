@@ -48,8 +48,8 @@ A: PHI Data should not be stored in /wynton/group. However, we can create separa
 We can either:
 
 1)	Create a group folder in both `/wynton/group` and `/wynton/protected/group`. In this case both folders will share the same quota. In this case, it can be tricky to figure out where the group’s quota usage is, phi or non-phi.
-2)	Create a group folder in `/wynton/group` and a folder with a separate subquota subtracted from the group quota in `/wynton/protected/group/, for example`, `/wynton/protected/group/groupname-phi`. This makes it easier to separate PHI and non-PHI group usage.
-3)	If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a group in `/wynton/protected/project` can be created and the child quota subtracked from the parent group.
+2)	Create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/, for example`, `/wynton/protected/group/groupname-phi`. This makes it easier to separate PHI and non-PHI group usage.
+3)	If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a group in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
 
 Only members of the lab group with Wynton PHI access will be able to access files stored under `/wynton/protected`.
 
