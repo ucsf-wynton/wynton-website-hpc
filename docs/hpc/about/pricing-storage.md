@@ -55,7 +55,7 @@ Only members of the group with PHI access will be able to access files stored un
 
 #### Q: Does purchasing additional group storage increase the quotas available to Wynton users in `/wynton/home` or `/wynton/protected/home`?
 
-A: No, the home directory quotas are managed separately from group quotas and purchasing additional group space cannot be applied to home directories.
+A: No, the home directory quotas are managed separately from group quotas and additional purchased group space cannot be applied to home directories.
 
 ## Background
 
