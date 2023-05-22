@@ -45,7 +45,7 @@ We can either:
 
 1) Create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to 2 folders, so it can be tricky to track where the group’s quota usage is, phi or non-phi.
 
-2) Create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/`, for example, `/wynton/protected/group/groupname-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
+2) Create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
 
 3) If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a group in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
 
