@@ -53,7 +53,7 @@ We can either:
 
 Only members of the lab group with Wynton PHI access will be able to access files stored under `/wynton/protected`.
 
-#### Q: Does purchasing additional group storage increase the quotas available to Wynton users in `/wynton/home` or `/wynton/protected/home`?
+#### Q: Does purchasing additional group storage increase the quotas available to lab users in `/wynton/home` or `/wynton/protected/home`?
 
 A: No, the home directory quotas are managed separately from group quotas and additional purchased group space cannot be applied to home directories.
 
