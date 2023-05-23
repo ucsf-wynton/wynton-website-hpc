@@ -40,7 +40,7 @@ There are some additional parameters:
 
 ### Q: If I already have purchased group storage, can I also use that storage quota for PHI data in `/wynton/protected/group`?
 
-A: PHI data should not be stored in `/wynton/group`. However, we can create group folders for you under `/wynton/protected` for PHI data storage and collaboration. If you choose to have your current storage allocation updated to include PHI storage you have three options:
+A: Yes, but PHI data must not be stored in `/wynton/group`.  We can create group folders for you under `/wynton/protected` for PHI data storage and collaboration. If you choose to have your current storage allocation updated to include PHI storage, you have three options:
 
 1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to two folders, so it can be tricky to track where the group’s quota usage is, PHI or non-PHI.
 
