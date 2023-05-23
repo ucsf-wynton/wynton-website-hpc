@@ -35,25 +35,26 @@ There are some additional parameters:
 
 * The storage is not backed up.
 
+
 ## Frequently Asked Questions
 
 ### Q: If I already have purchased group storage, can I also use that storage quota for PHI Data in `/wynton/protected/group`?
 
-A: PHI Data should not be stored in `/wynton/group`. However, we can create group folders for you under `/wynton/protected` for PHI data storage and collaboration. If you choose to have your current storage allocation updated to include PHI storage you have several options.
+A: PHI Data should not be stored in `/wynton/group`. However, we can create group folders for you under `/wynton/protected` for PHI data storage and collaboration. If you choose to have your current storage allocation updated to include PHI storage you have three options:
 
-We can either:
+1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to 2 folders, so it can be tricky to track where the group’s quota usage is, PHI or non-PHI.
 
-1) Create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to 2 folders, so it can be tricky to track where the group’s quota usage is, phi or non-phi.
+2. We can create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
 
-2) Create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
-
-3) If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a folder in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
+3. If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a folder in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
 
 Only members of the lab group with Wynton PHI access will be able to access files stored under `/wynton/protected`.
+
 
 ### Q: Does purchasing additional group storage increase the quotas available to lab users in `/wynton/home` or `/wynton/protected/home`?
 
 A: No, the home directory quotas are managed separately from group quotas and additional purchased group space cannot be applied to home directories.
+
 
 ## Background
 
