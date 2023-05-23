@@ -21,7 +21,7 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group`, `/wynton/protected/group`, or `/wynton/protected/project` and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (e.g. `/wynton/scratch`, `/wynton/protected/scratch`, `/wynton/home`, and `/wynton/protected/home`).
 
-Please note, storage in `/wynton/group/`, `/wynton/protected/group/`, and `/wynton/protected/project` count towards a lab's storage quota total.
+Please note, storage in `/wynton/group/`, `/wynton/protected/group`, and `/wynton/protected/project` count towards a lab's storage quota total.
 
 Given prices of hard drives, the stated rate might seem high, but there are three mitigating factors. First, we have enabled ZFS compression, so the actual available space might be significantly more. Second, the price includes the cost of the networking, metadata servers, storage server, maintenance, and administration. Third, we have proven that the performance of our BeeGFS infrastructure is much higher than the typical NFS server (in some respects, the performance is more than an order of magnitude faster). In the future, if absolutely necessary, we may also charge a “maintenance fee” for storage after the initial 5-year hardware warranty expires, but nothing has been decided as of yet. Similarly, any future storage purchases may be priced differently than that described here, to reflect the situation present at that time.
 
@@ -44,7 +44,7 @@ A: PHI Data should not be stored in `/wynton/group`. However, we can create grou
 
 1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to 2 folders, so it can be tricky to track where the group’s quota usage is, PHI or non-PHI.
 
-2. We can create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group/`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
+2. We can create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
 
 3. If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a folder in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
 
