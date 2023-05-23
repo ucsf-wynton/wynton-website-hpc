@@ -42,7 +42,7 @@ There are some additional parameters:
 
 A: PHI data should not be stored in `/wynton/group`. However, we can create group folders for you under `/wynton/protected` for PHI data storage and collaboration. If you choose to have your current storage allocation updated to include PHI storage you have three options:
 
-1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to 2 folders, so it can be tricky to track where the group’s quota usage is, PHI or non-PHI.
+1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to two folders, so it can be tricky to track where the group’s quota usage is, PHI or non-PHI.
 
 2. We can create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
 
