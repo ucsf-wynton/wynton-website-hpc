@@ -1,6 +1,11 @@
-### May 16-25 (end date uncertain), 2023
+### May 16-30 (end date uncertain), 2023
 
 #### <span style="color: orange;">Full downtime</span>
+
+<!--
+**Update**: It turned out that the remaining ZFS storage targets are complicated to recover and only one target was recovered today. We have now recovered in total 18 (75%) out of 24 failed targets. The consultant will continue their work tomorrow Friday. Because the recovery of remaining targets are so complicated, it is almost certain that this work will not complete during the Friday, meaning it will have to continue on Tuesday next week (Monday is a holiday).
+<br><span class="timestamp">May 25, 17:00 PDT</span>
+-->
 
 **Update**: 8 more ZFS storage targets were recovered today. We have now recovered in total 17 (71%) out of 24 failed targets. The content of the recovered targets is now being verified. We will continue working with the consultant tomorrow on the remaining 7 storage targets.
 <br><span class="timestamp">May 24, 17:00 PDT</span>
