@@ -8,7 +8,6 @@ context:
 
 # {{ site.cluster.name }} Credentials
 
-## Change password
 
 <div class="alert alert-warning" role="alert" markdown="1">
 **Please wait 5-10 minutes before attempting to login with your new password.**  This is because it takes up to 10 minutes before your new password has propagated to all machines on the cluster.
@@ -19,13 +18,15 @@ We **strongly recommend** using a **password vault** application or website like
 </div>
 
 
-You can change your password either via our web interface, or from the {{ site.cluster.name }} command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
+## Change non-expired password
+
+As long as your password has not yet expired, you can change your password either via our web interface, or from the {{ site.cluster.name }} command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
 
 
 
 ### Alt 1. From the web browser
 
-You can change your password before it expired using the 'RBVI Kerberos Web Interface' site;
+You can change your password before it expires using the 'RBVI Kerberos Web Interface' site;
 
 1. Go to <https://www.cgl.ucsf.edu/admin/chpass.py>
 
@@ -82,9 +83,9 @@ Alternatively, you can verify your credentials from your browser:
 3. If you entered correct credentials, you will get to a confirmation page saying so.  If you entered incorrect credentials, there will be no error message and the popup will appear again.
 
 
-## Reset password
+## Reset expired password
 
-To reset your _{{ site.cluster.nickname }}_ password, contact the support staff at [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}).
+If your _{{ site.cluster.nickname }}_ password has expired, then reach out to the support staff at [{{ site.cluster.email_support }}](mailto:{{ site.cluster.email_support }}) to have reset.
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 **Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
