@@ -2493,8 +2493,8 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <strong class="module-help">PDFCrop: Crop and Rescale PDFs</strong><br>
 <span class="module-description">PDFCrop crops the white margins of PDF pages and rescales them to fit a standard size sheet of paper. It makes printed pages much easier to read. PDFCrop is particularly useful for resizing journal articles and converting between letter-size and A4 paper.</span><br>
 Example: <span class="module-example"><code>pdfcrop --help</code> and <code>pdfcrop A4 input.pdf</code>.</span><br>
-URL: <span class="module-url"><a href="https://pdfcrop.sourceforge.net/">https://pdfcrop.sourceforge.net/</a> (documentation), <a href="https://sourceforge.net/projects/pdfcrop/files/pdfcrop/">https://sourceforge.net/projects/pdfcrop/files/pdfcrop/</a> (changelog)</span><br>
-Versions: <span class="module-version"><em>0.4b</em></span><br>
+URL: <span class="module-url"><a href="https://www.ctan.org/tex-archive/support/pdfcrop">https://www.ctan.org/tex-archive/support/pdfcrop</a>, <a href="https://github.com/ho-tex/pdfcrop">https://github.com/ho-tex/pdfcrop</a> (source code), <a href="https://github.com/ho-tex/pdfcrop/tags/">https://github.com/ho-tex/pdfcrop/tags/</a> (changelog)</span><br>
+Versions: <span class="module-version">0.4b, <em>1.42</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2505,7 +2505,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: utility, tool&quot;)
-whatis(&quot;URL: https://pdfcrop.sourceforge.net/ (documentation), https://sourceforge.net/projects/pdfcrop/files/pdfcrop/ (changelog)&quot;)
+whatis(&quot;URL: https://www.ctan.org/tex-archive/support/pdfcrop, https://github.com/ho-tex/pdfcrop (source code), https://github.com/ho-tex/pdfcrop/tags/ (changelog)&quot;)
 whatis([[
 Description: PDFCrop crops the white margins of PDF pages and rescales them to fit a standard size sheet of paper. It makes printed pages much easier to read. PDFCrop is particularly useful for resizing journal articles and converting between letter-size and A4 paper.
 Examples: `pdfcrop --help` and `pdfcrop A4 input.pdf`.
