@@ -1,56 +1,7 @@
 # Created by: hb
-# Created on: 2023-05-16 03:00:05-07:00
-# Total fshares: 20198
-# Total queue_slots: 11514
-# Number of projects: 50
+# Created on: 2023-05-27 03:00:02-07:00
+# Total fshares: 0
+# Total queue_slots: 0
+# Number of projects: 1
 fshares	queue_slots	project
-5506	3305	salilab
-4104	1403	agardlab,chenglab,frostlab
-1224	408	pollardlab
-874	292	mac-users
-852	284	kortemmelab
-807	269	jacobsonlab
-712	2201	shoichetlab
-675	225	limlab
-645	215	hernandezlab
-589	196	genetics
-517	172	babbittlab
-491	174	surbecklab
-400	133	grabelab
-380	171	fraserlab
-290	97	ferrinlab
-288	96	elsamadlab
-226	75	dilllab
-205	92	degradolab
-182	61	ichs
-161	54	fischbachlab
-160	53	tanglab
-123	41	lilab
-109	36	huanglab
-108	138	stroudlab
-89	176	baranzinilab
-87	29	turnbaughlab
-73	24	chiulab
-65	249	saviclab
-65	22	zaitlenlab
-49	16	jameslab
-43	14	weissmanlab
-36	12	schreinerlab
-17	6	maleylab
-15	36	kroganlab
-12	4	sysbiocenter
-3	1	voigtlab
-3	1	cohenlab
-1	6	choulab
-1	5	medinalab
-1	35	brainardlab
-1	31	criswelllab
-1	30	wilsonlab
-1	288	gladstone
-1	25	EPPIcenter
-1	1	krausslab
-1	1	chuanglab
-1	10	mcmanuslab
-1	101	lynchlab
-1	100	corceslab
-1	100	capralab
+
