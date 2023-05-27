@@ -31,7 +31,7 @@ title: Wynton HPC Status
 ## Compute Nodes
 
 <div id="hosttablediv">
-<div id="hosttablemessage">All compute nodes are functional.</div>
+<div id="hosttablemessage">Status on compute nodes unknown, which happens when for instance the job scheduler is down.</div>
 </div>
 
 
