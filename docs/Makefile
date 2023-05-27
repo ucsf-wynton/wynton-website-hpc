@@ -75,6 +75,7 @@ hpc/_data/specs.yml: hpc/_data/specs.yml/gpu hpc/_data/specs.yml/misc
 hpc/_data: hpc/_data/users.yml hpc/_data/specs.yml
 
 _data: hpc/_data
+	cp -p "$@/status.yml" "$</"
 	cp "$</users.yml" "$@/users.yml"
 	cp -p $</* $@/
 
