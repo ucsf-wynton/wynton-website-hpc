@@ -85,3 +85,7 @@ message: The cluster will be shut down for maintenance during May 16-17, 2023. S
 # level: danger
 # condition: is not operational
 # message: The cluster is down for maintenance during September 27-29, 2022.
+
+level: danger
+condition: is online with limited functionality
+message: The cluster only supports basic tasks and ongoing file storage recovery prevents access to group-storage folders.
