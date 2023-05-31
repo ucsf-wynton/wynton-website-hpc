@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
+**Update**: In total 22 (92%) out of 24 failed storage targets has been recovered. The remaining two targets are unlikely to be fully recovered. We're hoping to restore the bulk of the files from them, but there is a risk that we will get none back. Then plan is to bring back `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project`, and re-enable the job queue, on Thursday.
+<br><span class="timestamp">May 31, 01:00 PDT</span>
+
 **Update**: The login, data-transfer, and development nodes (except `gpudev1`) are now online an available for use. The job scheduler and compute nodes are kept offline, to allow for continued recovery of the failed ZFS storage pools. For the same reason, folders under `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` are locked down, except for groups who have mirrored storage. `/wynton/home` and `/wynton/scratch` are fully available.  We have suspended the automatic cleanup of old files under `/wynton/scratch` and `/wynton/protected/scratch`. The ZFS consultant recovered 3 of the 6 remaining storage targets. We have now recovered in total 21 (88%) out of 24 failed targets. The recovery work will continue on Monday (sic!).
 <br><span class="timestamp">May 26, 17:00 PDT</span>
 
