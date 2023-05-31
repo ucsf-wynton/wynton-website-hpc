@@ -1,4 +1,4 @@
-### May 16-30 (end date uncertain), 2023
+### May 16-June 1 (estimated), 2023
 
 #### <span style="color: orange;">Full downtime</span>
 
