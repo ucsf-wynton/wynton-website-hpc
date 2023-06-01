@@ -1,8 +1,12 @@
 ### May 16-June 1 (estimated), 2023
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span style="color: orange;">Full downtime followed by network and file-system recovery</span>
 
-**Update**: Wynton will be fully available later today, meaning the job scheduler and access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` will be re-enabled. Note, two ZFS storage targets are still faulty and offline, but the work of trying to recover them will continue while we go live. This means that any files on the above re-opened `/wynton` subfolders that are stored, in part or in full, on those two offline storage targets will be inaccessible. Any attempt to read such files will result in a "Communication error on send" error and stall. To exit, press <kbd>Ctrl-C</kbd>. **Importantly, do _not_ attempt to remove, move, or update such files! That will make it impossible to recover them!**.  
+**Update**: The job scheduler is now available. Access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` has been restored.
+**If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
+<br><span class="timestamp">June 1, 16:00 PDT</span>
+
+**Update**: Wynton will be fully available later today, meaning the job scheduler and access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` will be re-enabled. Note, two ZFS storage targets are still faulty and offline, but the work of trying to recover them will continue while we go live. This means that any files on the above re-opened `/wynton` subfolders that are stored, in part or in full, on those two offline storage targets will be inaccessible. Any attempt to read such files will result in a "Communication error on send" error and stall. To exit, press <kbd>Ctrl-C</kbd>. **Importantly, do _not_ attempt to remove, move, or update such files! That will make it impossible to recover them!**
 <br><span class="timestamp">June 1, 12:15 PDT</span>
 
 **Update**: In total 22 (92%) out of 24 failed storage targets has been recovered. The consultant hopes to recover the bulk of the data from one of the two remaining damaged targets. The final damage target is heavily damaged, work on it will continue a few more days, but it is likely it cannot be recovered. The plan is to open up `/wynton/group` tomorrow Thursday with instructions what to expect for files on the damaged targets. The compute nodes and the job scheduler will also be enabled during the day tomorrow.
@@ -49,6 +53,15 @@
 
 **Notice**: We will performing a full-week major update to the cluster during late Spring 2023. Current plan is to do this during either the week of May 8, 2023 (2023W19) or the week of May 15, 2023 (2023W20).
 <br><span class="timestamp">February 27, 11:00 PST</span>
+
+<!--
+start: 2023-05-17T17:00:00
+stop: 2023-06-01T16:00:00
+length: 359 hours
+severity: filesystem-failure
+affected: jobs, beegfs, compute, storage, *
+reason: unscheduled
+ -->
 
 <!--
 start: 2023-05-16T21:00:00
