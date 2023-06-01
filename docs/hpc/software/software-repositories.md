@@ -3982,7 +3982,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>x86-64-level</code> and <code>x86-64-level --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/x86-64-level/">https://github.com/HenrikBengtsson/x86-64-level/</a>, <a href="https://github.com/HenrikBengtsson/x86-64-level/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/x86-64-level/blob/develop/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.2.1</em></span><br>
+Versions: <span class="module-version">0.2.1, <em>0.2.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
