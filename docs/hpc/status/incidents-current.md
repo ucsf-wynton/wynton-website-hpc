@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
+**Update**: Wynton will be fully available later today, meaning the job scheduler and access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` will be re-enabled. Note, two ZFS storage targets are still faulty and offline, but the work of trying to recover them will continue while we go live. This means that any files on the above re-opened `/wynton` subfolders that are stored, in part or in full, on those two offline storage targets will be inaccessible. Any attempt to read such files will result in a "Communication error on send" error and stall. To exit, press <kbd>Ctrl-C</kbd>. **Importantly, do _not_ attempt to remove, move, or update such files! That will make it impossible to recover them!**.  
+<br><span class="timestamp">June 1, 12:15 PDT</span>
+
 **Update**: In total 22 (92%) out of 24 failed storage targets has been recovered. The consultant hopes to recover the bulk of the data from one of the two remaining damaged targets. The final damage target is heavily damaged, work on it will continue a few more days, but it is likely it cannot be recovered. The plan is to open up `/wynton/group` tomorrow Thursday with instructions what to expect for files on the damaged targets. The compute nodes and the job scheduler will also be enabled during the day tomorrow.
 <br><span class="timestamp">May 31, 22:45 PDT</span>
 
