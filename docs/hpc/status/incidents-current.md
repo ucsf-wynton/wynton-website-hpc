@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
+**Update**: In total 22 (92%) out of 24 failed storage targets has been recovered. The consultant hopes to recover the bulk of the data from one of the two remaining damaged targets. The final damage target is heavily damaged, work on it will continue a few more days, but it is likely it cannot be recovered. The plan is to open up `/wynton/group` tomorrow Thursday with instructions what to expect for files on the damaged targets. The compute nodes and the job scheduler will also be enabled during the day tomorrow.
+<br><span class="timestamp">May 31, 22:45 PDT</span>
+
 **Update**: In total 22 (92%) out of 24 failed storage targets has been recovered. The remaining two targets are unlikely to be fully recovered. We're hoping to restore the bulk of the files from them, but there is a risk that we will get none back. Then plan is to bring back `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project`, and re-enable the job queue, on Thursday.
 <br><span class="timestamp">May 31, 01:00 PDT</span>
 
