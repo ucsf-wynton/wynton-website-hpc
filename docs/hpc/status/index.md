@@ -147,6 +147,7 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
     gpu_nodes = {{ site.data.specs.gpu_nodes }};
     
     var div = document.getElementById("hosttablemessage");
+    div.innerText = "";
     if (nodes_with_issues > 0) {
       var text = document.createTextNode("Currently, " + nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) " +  " of " + nodes + " compute nodes, corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) " + " of " + cores + " CPU cores, are unavailable. Out of these, " + gpu_nodes_with_issues + " (" + (100*gpu_cores_with_issues/gpu_cores).toFixed(1) + "%) of " + gpu_nodes + " GPU compute nodes are unavailable.");
       div.appendChild(text);
