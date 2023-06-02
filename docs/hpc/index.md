@@ -19,10 +19,6 @@ Wynton](/hpc/openings/index.html).
 
 2021-12-17: [Wynton PHI](/hpc/about/wynton-phi.html) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
 
-2021-10-01: Added four [communal GPU nodes](/hpc/about/specs.html) each with four Nvidia A40 GPUs (48 GiB GPU RAM) and a 32-core CPU and 512 GB RAM
-
-2021-09-22: Added 2,048 cores (+20%) via 16 huge-memory nodes (128 cores and 1 TiB of RAM)
-
 [More ...](/hpc/about/news.html)
 </div>
 
