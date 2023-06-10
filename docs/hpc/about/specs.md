@@ -86,7 +86,7 @@ Source: `nproc --all`, `free -ht`, `df -B /scratch`, `lscpu`, and `lspci | grep 
 
 ### Compute Nodes
 
-The majority of the compute nodes have Intel processors, while a few have AMD processes.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
+The majority of the compute nodes have Intel processors, while a few have AMD processors.  Each compute node has a local `/scratch` drive (see above for size), which is either a hard disk drive (HDD), a solid state drive (SSD), or even a Non-Volatile Memory Express (NVMe) drive. Each node has a tiny `/tmp` drive ({{ site.data.specs.local_tmp_size_min }}-{{ site.data.specs.local_tmp_size_max }} GiB).
 
 The compute nodes can only be utilized by [submitting jobs via the scheduler](/hpc/scheduler/submit-jobs.html) - it is _not_ possible to explicitly log in to compute nodes.
 
