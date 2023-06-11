@@ -3,7 +3,7 @@
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ 2023-06-11: If you've used `module load CBI module3-py39` in the past, please update to use `module load CBI module3/4.12.0-py39` instead. It loads the same Conda version - it's just the module name structure that has been tidied up.
+⚠️ 2023-06-11: If you've used `module load CBI miniconda3-py39/4.12.0` in the past, please update to use `module load CBI miniconda3/4.12.0-py39` instead. It loads the same Conda version - it's just the module name structure that has been tidied up.
 </div>
 
 
@@ -24,7 +24,7 @@ Both come with Python and `conda` commands.  We _recommend_ working with the sma
 On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3 with Python 3.9, call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/4.12.0-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/23.3.1-0-py39
 ```
 
 This gives access to:
@@ -32,65 +32,72 @@ This gives access to:
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda --version
 
-conda 4.12.0
+conda 23.3.1
 
 [alice@{{ site.devel.name }} ~]$ python --version
-Python 3.9.12
+Python 3.9.16
 ```
 
 To see what software packages come with this Miniconda distribution, call:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda list
-# packages in environment at {{ site.path.cbi_software }}/CBI/miniconda3-4.12.0-py39:
+# packages in environment at {{ site.path.cbi_software }}/CBI/miniconda3-23.3.1-0-py39:
 #
 # Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                        main  
-_openmp_mutex             4.5                       1_gnu  
+_openmp_mutex             5.1                       1_gnu  
+boltons                   23.0.0           py39h06a4308_0  
 brotlipy                  0.7.0           py39h27cfd23_1003  
-ca-certificates           2022.3.29            h06a4308_1  
-certifi                   2021.10.8        py39h06a4308_2  
-cffi                      1.15.0           py39hd667e15_1  
+ca-certificates           2023.01.10           h06a4308_0  
+certifi                   2022.12.7        py39h06a4308_0  
+cffi                      1.15.1           py39h5eee18b_3  
 charset-normalizer        2.0.4              pyhd3eb1b0_0  
-colorama                  0.4.4              pyhd3eb1b0_0  
-conda                     4.12.0           py39h06a4308_0  
-conda-content-trust       0.1.1              pyhd3eb1b0_0  
-conda-package-handling    1.8.1            py39h7f8727e_0  
-cryptography              36.0.0           py39h9ce1e76_0  
-idna                      3.3                pyhd3eb1b0_0  
-ld_impl_linux-64          2.35.1               h7274673_9  
-libffi                    3.3                  he6710b0_2  
-libgcc-ng                 9.3.0               h5101ec6_17  
-libgomp                   9.3.0               h5101ec6_17  
-libstdcxx-ng              9.3.0               hd4cf53a_17  
-ncurses                   6.3                  h7f8727e_2  
-openssl                   1.1.1n               h7f8727e_0  
-pip                       21.2.4           py39h06a4308_0  
-pycosat                   0.6.3            py39h27cfd23_0  
+conda                     23.3.1           py39h06a4308_0  
+conda-content-trust       0.1.3            py39h06a4308_0  
+conda-package-handling    2.0.2            py39h06a4308_0  
+conda-package-streaming   0.7.0            py39h06a4308_0  
+cryptography              39.0.1           py39h9ce1e76_0  
+idna                      3.4              py39h06a4308_0  
+jsonpatch                 1.32               pyhd3eb1b0_0  
+jsonpointer               2.1                pyhd3eb1b0_0  
+ld_impl_linux-64          2.38                 h1181459_1  
+libffi                    3.4.2                h6a678d5_6  
+libgcc-ng                 11.2.0               h1234567_1  
+libgomp                   11.2.0               h1234567_1  
+libstdcxx-ng              11.2.0               h1234567_1  
+ncurses                   6.4                  h6a678d5_0  
+openssl                   1.1.1t               h7f8727e_0  
+packaging                 23.0             py39h06a4308_0  
+pip                       23.0.1           py39h06a4308_0  
+pluggy                    1.0.0            py39h06a4308_1  
+pycosat                   0.6.4            py39h5eee18b_0  
 pycparser                 2.21               pyhd3eb1b0_0  
-pyopenssl                 22.0.0             pyhd3eb1b0_0  
+pyopenssl                 23.0.0           py39h06a4308_0  
 pysocks                   1.7.1            py39h06a4308_0  
-python                    3.9.12               h12debd9_0  
-readline                  8.1.2                h7f8727e_1  
-requests                  2.27.1             pyhd3eb1b0_0  
-ruamel_yaml               0.15.100         py39h27cfd23_0  
-setuptools                61.2.0           py39h06a4308_0  
+python                    3.9.16               h7a1cb2a_2  
+readline                  8.2                  h5eee18b_0  
+requests                  2.28.1           py39h06a4308_1  
+ruamel.yaml               0.17.21          py39h5eee18b_0  
+ruamel.yaml.clib          0.2.6            py39h5eee18b_1  
+setuptools                65.6.3           py39h06a4308_0  
 six                       1.16.0             pyhd3eb1b0_1  
-sqlite                    3.38.2               hc218d9a_0  
-tk                        8.6.11               h1ccaba5_0  
-tqdm                      4.63.0             pyhd3eb1b0_0  
-tzdata                    2022a                hda174b7_0  
-urllib3                   1.26.8             pyhd3eb1b0_0  
-wheel                     0.37.1             pyhd3eb1b0_0  
-xz                        5.2.5                h7b6447c_0  
-yaml                      0.2.5                h7b6447c_0  
-zlib                      1.2.12               h7f8727e_1
+sqlite                    3.41.1               h5eee18b_0  
+tk                        8.6.12               h1ccaba5_0  
+toolz                     0.12.0           py39h06a4308_0  
+tqdm                      4.65.0           py39hb070fc8_0  
+tzdata                    2023c                h04d1e81_0  
+urllib3                   1.26.15          py39h06a4308_0  
+wheel                     0.38.4           py39h06a4308_0  
+xz                        5.2.10               h5eee18b_1  
+zlib                      1.2.13               h5eee18b_0  
+zstandard                 0.19.0           py39h5eee18b_0  
 ```
 
 
 ## Creating a Conda environment (required)
 
-A Conda _environment_ is a mechanism for installing extra software tools and versions beyond the base Miniconda distribution in a controlled manner.  When using the **miniconda3/4.12.0-py39** module, a Conda environment must be used to install extra software. The following command creates a new `myjupyter` environment:
+A Conda _environment_ is a mechanism for installing extra software tools and versions beyond the base Miniconda distribution in a controlled manner.  When using the **miniconda3** module, a Conda environment must be used to install extra software. The following command creates a new `myjupyter` environment:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda create -n myjupyter notebook
@@ -109,22 +116,21 @@ The following packages will be downloaded:
 
     package                    |            build
     ---------------------------|-----------------
-    _openmp_mutex-5.1          |            1_gnu          21 KB
-    argon2-cffi-21.3.0         |     pyhd3eb1b0_0          15 KB
+    anyio-3.5.0                |  py311h06a4308_0         214 KB
+    argon2-cffi-bindings-21.2.0|  py311h5eee18b_0          33 KB
     ...
-    zeromq-4.3.4               |       h2531618_0         331 KB
-    zlib-1.2.12                |       h5eee18b_3         103 KB
+    xz-5.4.2                   |       h5eee18b_0         642 KB
+    yaml-0.2.5                 |       h7b6447c_0          75 KB
     ------------------------------------------------------------
-                                           Total:        62.4 MB
+                                           Total:        67.6 MB
 
 The following NEW packages will be INSTALLED:
 
-  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
-  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
   ...
-  zeromq             pkgs/main/linux-64::zeromq-4.3.4-h2531618_0
-  zlib               pkgs/main/linux-64::zlib-1.2.12-h5eee18b_3
-
+  zeromq             pkgs/main/linux-64::zeromq-4.3.4-h2531618_0 
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0 
 
 Proceed ([y]/n)? y
 
@@ -156,10 +162,10 @@ By default, the environment is created in your home directory under `~/.conda/`.
 After an environment is created, the next time you log in to a development node, you can set `myjupyter` (or any other Conda environment you've created) as your active environment by calling:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/4.12.0-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version
-6.4.12
+6.5.4
 
 (myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
@@ -180,7 +186,7 @@ jupyter: command not found
 We highly recommend configuring Conda environment to be automatically staged only on the local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool, e.g.
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/4.12.0-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable
@@ -199,7 +205,7 @@ Once you have your Conda environment built, we recommend that you back up its co
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda env export --name myjupyter | grep -v "^prefix: " > myjupyter.yml
 [alice@{{ site.devel.name }} ~]$ ls -l myjupyter.yml
--rw-rw-r-- 1 alice boblab 2966 Oct 19 18:21 myjupyter.yml
+-rw-rw-r-- 1 alice boblab 3597 Jun 11 03:48 myjupyter.yml
 ```
 
 This configuration file is useful:
@@ -233,7 +239,7 @@ name: myjupyter
 {local}$ conda env list
 # conda environments:
 #
-sandbox  /home/aliceb/.conda/envs/sandbox
+sandbox  {{ site.user.home }}/.conda/envs/sandbox
 base     /path/to/anaconda3
 ```
 
@@ -259,18 +265,16 @@ If you updated or installed new packages in your Conda environment and need to r
 ```sh
 [alice@{{ site.devel.name }} ~]$ CONDA_STAGE=false conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda list --revisions
-2022-07-28 11:33:35  (rev 0)
+2023-06-11 03:46:03  (rev 0)
     +_libgcc_mutex-0.1 (defaults/linux-64)
     +_openmp_mutex-5.1 (defaults/linux-64)
+    +anyio-3.5.0 (defaults/linux-64)
     +argon2-cffi-21.3.0 (defaults/noarch)
-    +argon2-cffi-bindings-21.2.0 (defaults/linux-64)
     ...
 
-2022-07-28 11:42:32  (rev 1)
-     ca-certificates  {2022.07.19 (defaults/linux-64) -> 2022.6.15 (conda-forge/linux-64)}
-     certifi  {2022.6.15 (defaults/linux-64) -> 2022.6.15 (conda-forge/linux-64)}
+2023-06-11 03:52:03  (rev 1)
     +conda-pack-0.7.0 (conda-forge/noarch)
-    +python_abi-3.10 (conda-forge/linux-64)
+    +python_abi-3.11 (conda-forge/linux-64)
 ```
 
 To roll back to a specific revision, say revision zero, use:
@@ -303,7 +307,7 @@ conda info | grep active
     active env location : {{ site.user.home }}/miniconda3
 ```
 
-This auto-activation might sound convenient, but we _strongly recommend_ against using it, because Conda software stacks have a great chance to cause conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless, hard-to-understand problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  To clarify, if you never installed Conda yourself, and only used `module load CBI miniconda3/4.12.0-py39`, then you should not have this problem.
+This auto-activation might sound convenient, but we _strongly recommend_ against using it, because Conda software stacks have a great chance to cause conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless, hard-to-understand problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  To clarify, if you never installed Conda yourself, and only used `module load CBI miniconda3-py39/23.3.1-0-py39`, then you should not have this problem.
 
 To reconfigure Conda to no longer activate the 'base' Conda environment by default, call:
 
@@ -314,10 +318,7 @@ To reconfigure Conda to no longer activate the 'base' Conda environment by defau
 
 Next time you log in, the 'base' environment should no longer be activated by default.
 
-
-### Retire personal Conda installation in favor of miniconda3 module
-
-If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniconda3/4.12.0-py39`, you can uninstall the Conda setup code that were injected to your `~/.bashrc` file by calling:
+If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniconda3`, you can uninstall the Conda setup code that were injected to your `~/.bashrc` file by calling:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda init --reverse
