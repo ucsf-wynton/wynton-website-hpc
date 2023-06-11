@@ -2,6 +2,11 @@
 ⚠️ 2022-10-28: **Beta version!** The instructions on this page are fresh and might be updated soon. That said, they have been validated and approved by a group of experienced Conda users. If you run into issues, please let us know.
 </div>
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+⚠️ 2023-06-11: If you've used `module load CBI module3-py39` in the past, please update to use `module load CBI module3/4.12.0-py39` instead. It loads the same Conda version - it's just the module name structure that has been tidied up.
+</div>
+
+
 # Work with Conda
 
 [Conda] is a package manager and an environment management system.  It's popular, because it simplifies installation of many scientific software tools.  There are two main distributions of Conda:
@@ -19,7 +24,7 @@ Both come with Python and `conda` commands.  We _recommend_ working with the sma
 On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3 with Python 3.9, call:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/4.12.0-py39
 ```
 
 This gives access to:
@@ -37,7 +42,7 @@ To see what software packages come with this Miniconda distribution, call:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda list
-# packages in environment at {{ site.path.cbi_software }}/CBI/miniconda3-py39-4.12.0:
+# packages in environment at {{ site.path.cbi_software }}/CBI/miniconda3-4.12.0-py39:
 #
 # Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                        main  
@@ -85,7 +90,7 @@ zlib                      1.2.12               h7f8727e_1
 
 ## Creating a Conda environment (required)
 
-A Conda _environment_ is a mechanism for installing extra software tools and versions beyond the base Miniconda distribution in a controlled manner.  When using the **miniconda3-py39** module, a Conda environment must be used to install extra software. The following command creates a new `myjupyter` environment:
+A Conda _environment_ is a mechanism for installing extra software tools and versions beyond the base Miniconda distribution in a controlled manner.  When using the **miniconda3/4.12.0-py39** module, a Conda environment must be used to install extra software. The following command creates a new `myjupyter` environment:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda create -n myjupyter notebook
@@ -151,7 +156,7 @@ By default, the environment is created in your home directory under `~/.conda/`.
 After an environment is created, the next time you log in to a development node, you can set `myjupyter` (or any other Conda environment you've created) as your active environment by calling:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/4.12.0-py39
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version
 6.4.12
@@ -175,7 +180,7 @@ jupyter: command not found
 We highly recommend configuring Conda environment to be automatically staged only on the local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool, e.g.
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3-py39
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/4.12.0-py39
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable
@@ -298,7 +303,7 @@ conda info | grep active
     active env location : {{ site.user.home }}/miniconda3
 ```
 
-This auto-activation might sound convenient, but we _strongly recommend_ against using it, because Conda software stacks have a great chance to cause conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless, hard-to-understand problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  To clarify, if you never installed Conda yourself, and only used `module load CBI miniconda3-py39`, then you should not have this problem.
+This auto-activation might sound convenient, but we _strongly recommend_ against using it, because Conda software stacks have a great chance to cause conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless, hard-to-understand problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  To clarify, if you never installed Conda yourself, and only used `module load CBI miniconda3/4.12.0-py39`, then you should not have this problem.
 
 To reconfigure Conda to no longer activate the 'base' Conda environment by default, call:
 
@@ -310,9 +315,9 @@ To reconfigure Conda to no longer activate the 'base' Conda environment by defau
 Next time you log in, the 'base' environment should no longer be activated by default.
 
 
-### Retire personal Conda installation in favor of miniconda3-py39
+### Retire personal Conda installation in favor of miniconda3 module
 
-If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniconda3-py39`, you can uninstall the Conda setup code that were injected to your `~/.bashrc` file by calling:
+If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniconda3/4.12.0-py39`, you can uninstall the Conda setup code that were injected to your `~/.bashrc` file by calling:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda init --reverse
