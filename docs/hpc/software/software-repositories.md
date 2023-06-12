@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(94)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(124)</a></li>
 </ul>
 
@@ -237,7 +237,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (94)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (95)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -953,6 +953,46 @@ prepend_path(&quot;PATH&quot;, home)
 -- REFERENCES:
 -- * https://martian-lang.org/advanced-features/#job-management
 pushenv(&quot;MROFLAGS&quot;, &quot;--localcores=1 --localmem=8 --limit-loadavg&quot;)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_cluster-utils" class="module-name">cluster-utils</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">cluster-utils: Collection of Utilities / Helper Scripts to Make Life Easier on HPC Clusters</strong><br>
+<span class="module-description">Collection of utilities / helper scripts to make life easier on HPC clusters.</span><br>
+Example: <span class="module-example"><code>ctop</code> and <code>ctopx</code> (silence 'Invalid user id' output).</span><br>
+URL: <span class="module-url"><a href="https://github.com/molgenis/cluster-utils/">https://github.com/molgenis/cluster-utils/</a>, <a href="https://github.com/molgenis/cluster-utils/releases">https://github.com/molgenis/cluster-utils/releases</a> (changelog)</span><br>
+Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Versions: <span class="module-version"><em>23.03.1</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+cluster-utils: Collection of Utilities / Helper Scripts to Make Life Easier on HPC Clusters
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: slurm, scheduler, utility&quot;)
+whatis(&quot;URL: https://github.com/molgenis/cluster-utils/, https://github.com/molgenis/cluster-utils/releases (changelog)&quot;)
+whatis([[
+Description: Collection of utilities / helper scripts to make life easier on HPC clusters.
+Examples: `ctop` and `ctopx` (silence 'Invalid user id' output).
+Warning: Only the most recent version of this software will be kept.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+
+local bash = 'ctop 2&gt; &gt;(grep -vF &quot;Invalid user id&quot;)'
+-- FIXME: Redirect to stderr might not work this way in csh /HB 2023-06-11
+local csh  = 'ctop 2&gt; &gt;(grep -vF &quot;Invalid user id&quot;)'
+set_shell_function(&quot;ctopx&quot;, bash, csh)
 </code></pre>
 
 </details>
@@ -1718,7 +1758,7 @@ prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
   <dd class="module-details">
 <strong class="module-help">HISAT2: Graph-based Alignment of Next Generation Sequencing Reads to a Population of Genomes</strong><br>
 <span class="module-description">HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). Based on an extension of BWT for graphs [Sirén et al. 2014], we designed and implemented a graph FM index (GFM), an original approach and its first implementation to the best of our knowledge. In addition to using one global GFM index that represents a population of human genomes, HISAT2 uses a large set of small GFM indexes that collectively cover the whole genome (each index representing a genomic region of 56 Kbp, with 55,000 indexes needed to cover the human population). These small indexes (called local indexes), combined with several alignment strategies, enable rapid and accurate alignment of sequencing reads. This new indexing scheme is called a Hierarchical Graph FM index (HGFM).</span><br>
-Example: <span class="module-example"><code>hisat2 --version</code>.</span><br>
+Example: <span class="module-example"><code>hisat2 --version</code> and <code>hisat2 --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://daehwankimlab.github.io/hisat2/">https://daehwankimlab.github.io/hisat2/</a>, <a href="https://github.com/DaehwanKimLab/hisat2/releases">https://github.com/DaehwanKimLab/hisat2/releases</a> (changelog), <a href="https://github.com/DaehwanKimLab/hisat2/">https://github.com/DaehwanKimLab/hisat2/</a> (source code)</span><br>
 Versions: <span class="module-version">2.1.0, <em>2.2.0</em></span><br>
 <details>
@@ -1734,7 +1774,7 @@ whatis(&quot;Keywords: Programming, Statistics&quot;)
 whatis(&quot;URL: https://daehwankimlab.github.io/hisat2/, https://github.com/DaehwanKimLab/hisat2/releases (changelog), https://github.com/DaehwanKimLab/hisat2/ (source code)&quot;)
 whatis([[
 Description: HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). Based on an extension of BWT for graphs [Sirén et al. 2014], we designed and implemented a graph FM index (GFM), an original approach and its first implementation to the best of our knowledge. In addition to using one global GFM index that represents a population of human genomes, HISAT2 uses a large set of small GFM indexes that collectively cover the whole genome (each index representing a genomic region of 56 Kbp, with 55,000 indexes needed to cover the human population). These small indexes (called local indexes), combined with several alignment strategies, enable rapid and accurate alignment of sequencing reads. This new indexing scheme is called a Hierarchical Graph FM index (HGFM).
-Examples: `hisat2 --version`.
+Examples: `hisat2 --version` and `hisat2 --help`.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -1893,7 +1933,9 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 prepend_path(&quot;PATH&quot;, home)
 
-set_alias(&quot;igv&quot;, home .. &quot;/igv.sh&quot;)
+local bash = home .. '/igv.sh &quot;$@&quot;'
+local csh  = home .. '/igv.sh $*'
+set_shell_function(&quot;igv&quot;, bash, csh)
 
 -- Tweak Java for the current environment
 depends_on(&quot;java-tweaks&quot;)
@@ -2512,7 +2554,7 @@ if (version == &quot;1.0.27783&quot;) then
   if (cluster == &quot;tipcc&quot;) then
     load(&quot;jdk/1.7.0&quot;)
   else
-    depends_on(&quot;openjdk/1.6.0&quot;)
+--    depends_on(&quot;openjdk/1.6.0&quot;)
   end
 end
 
@@ -2520,7 +2562,10 @@ name = &quot;muTect&quot;
 pushenv(&quot;MUTECT_HOME&quot;, home)
 local jarfile = name .. &quot;-&quot; .. version .. &quot;.jar&quot;
 pushenv(&quot;MUTECT_JAR&quot;, pathJoin(home, jarfile))
-set_alias(&quot;mutect&quot;, &quot;java -Xmx2g -jar \&quot;$MUTECT_HOME/&quot; .. jarfile .. &quot;\&quot;&quot;)
+
+local bash = 'java -Xmx2g -jar &quot;$MUTECT_HOME/' .. jarfile .. '&quot; &quot;$@&quot;'
+local csh  = 'java -Xmx2g -jar &quot;$MUTECT_HOME/' .. jarfile .. '&quot; $*'
+set_shell_function(&quot;mutect&quot;, bash, csh)
 
 -- Tweak Java for the current environment
 depends_on(&quot;java-tweaks&quot;)
@@ -2637,9 +2682,9 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">Picard: Command-line tools for Manipulating High-throughput Sequencing Data and Formats</strong><br>
 <span class="module-description">Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</span><br>
-Example: <span class="module-example"><code>PicardCommandLine -h</code>, which is an alias for <code>java -jar &quot;$PICARD_HOME/picard.jar&quot; -h</code>.</span><br>
+Example: <span class="module-example"><code>PicardCommandLine -h</code>, which is short for <code>java -jar &quot;$PICARD_HOME/picard.jar&quot; -h</code>.</span><br>
 URL: <span class="module-url"><a href="https://broadinstitute.github.io/picard/">https://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard/releases">https://github.com/broadinstitute/picard/releases</a> (changelog), <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a> (source code)</span><br>
-Warning: <span class="module-warning">The old <code>picard</code> alias is deprecated. Use <code>PicardCommandLine</code> instead.</span><br>
+Warning: <span class="module-warning">The old <code>picard</code> alias is deprecated. Use function <code>PicardCommandLine</code> instead.</span><br>
 Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2.26.2, 2.26.10, 2.27.1, 2.27.4, <em>2.27.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2654,8 +2699,8 @@ whatis(&quot;Keywords: sequencing&quot;)
 whatis(&quot;URL: https://broadinstitute.github.io/picard/, https://github.com/broadinstitute/picard/releases (changelog), https://github.com/broadinstitute/picard (source code)&quot;)
 whatis([[
 Description: Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.
-Examples: `PicardCommandLine -h`, which is an alias for `java -jar &quot;$PICARD_HOME/picard.jar&quot; -h`.
-Warning: The old `picard` alias is deprecated. Use `PicardCommandLine` instead.
+Examples: `PicardCommandLine -h`, which is short for `java -jar &quot;$PICARD_HOME/picard.jar&quot; -h`.
+Warning: The old `picard` alias is deprecated. Use function `PicardCommandLine` instead.
 ]])
 
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
@@ -2671,9 +2716,12 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 pushenv(&quot;PICARD_HOME&quot;, home)
 
--- Aliases
-set_alias(&quot;PicardCommandLine&quot;, &quot;java -jar \&quot;$PICARD_HOME/picard.jar\&quot;&quot;)
--- Deprecated
+-- Functions
+local bash = 'java -jar &quot;$PICARD_HOME/picard.jar&quot; &quot;$@&quot;'
+local csh  = 'java -jar &quot;$PICARD_HOME/picard.jar&quot; $*'
+set_shell_function(&quot;PicardCommandLine&quot;, bash, csh)
+
+-- Aliases (deprecated)
 set_alias(&quot;picard&quot;, &quot;java -jar \&quot;$PICARD_HOME/picard.jar\&quot;&quot;)
 
 -- Tweak Java for the current environment
@@ -3968,7 +4016,9 @@ name = &quot;VarScan&quot;
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 pushenv(&quot;VARSCAN_HOME&quot;, home)
 
-set_alias(&quot;varscan&quot;, &quot;java -jar \&quot;$VARSCAN_HOME/VarScan.jar\&quot;&quot;)
+local bash = 'java -jar &quot;$VARSCAN_HOME/VarScan.jar&quot; &quot;$@&quot;'
+local csh  = 'java -jar &quot;$VARSCAN_HOME/VarScan.jar&quot; $*'
+set_shell_function(&quot;varscan&quot;, bash, csh)
 
 -- Tweak Java for the current environment
 depends_on(&quot;java-tweaks&quot;)
@@ -6688,7 +6738,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(94)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(124)</a></li>
 </ul>
 
