@@ -1,15 +1,3 @@
-<div class="alert alert-warning" role="alert" markdown="1">
-
-2023-04-18: We, the UCSF Wynton group, are **looking for a skilled and
-talented person to join our team** for maintaining and developing our
-HPC environment.  It's a fun and challenging environment to work in
-with great colleagues and a vibrant user community of scientists and
-researchers. Interested? Go to [Job Openings at
-Wynton](/hpc/openings/index.html).
-
-</div>
-
-
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the [Status](/hpc/status/index.html) page_)
 
