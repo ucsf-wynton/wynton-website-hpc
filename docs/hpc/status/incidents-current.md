@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Full downtime followed by network and file-system recovery</span>
 
+**Update**: There are two ZFS storage targets that are still failing and offline. We have hopes to be able to recover files from one of them. As of June 9, about 12 TB of low-level, raw file data (out of ~15 TB) was recovered. When that is completed, we will start the tedious work on reconstructing the actual files lost.  The consultants are less optimistic about recovering data from second storage target, because it was much more damaged. They will give us the final verdict by the end of the week.  **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
+<br><span class="timestamp">June 12, 16:00 PDT</span>
+
 **Update**: The job scheduler is now available. Access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` has been restored.
 **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
 <br><span class="timestamp">June 1, 16:00 PDT</span>
