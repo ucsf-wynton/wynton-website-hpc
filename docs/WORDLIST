@@ -334,3 +334,11 @@ COA
 SpeedType
 chartstring
 javascript
+GEOS
+gsl
+lwgeom
+PROJ
+rgdal
+rgeos
+sqlite
+terra
