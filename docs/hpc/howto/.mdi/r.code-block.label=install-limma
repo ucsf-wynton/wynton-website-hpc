@@ -1,19 +1,20 @@
 > BiocManager::install("limma")
-Bioconductor version 3.15 (BiocManager 1.30.17), R 4.2.0 (2022-04-22)
+Bioconductor version 3.17 (BiocManager 1.30.21), R 4.3.1 (2023-06-16)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.15/bioc/src/contrib/limma_3.52.0.tar.gz'
-Content type 'application/x-gzip' length 1513449 bytes (1.4 MB)
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/limma_3.56.2.tar.gz'
+Content type 'application/x-gzip' length 1515291 bytes (1.4 MB)
 ==================================================
 downloaded 1.4 MB
 
-* installing *source* package 'limma' ...
+* installing *source* package ‘limma’ ...
 ** using staged installation
 ** libs
+using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
 gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
 gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
 gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
 gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.2-gcc10/00LOCK-limma/00new/limma/libs
+installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading

@@ -2,7 +2,8 @@
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) r/4.2.0   2) CBI   3) scl-devtoolset/10   4) gdal/2.4.4
+  1) CBI                 3) r/4.3.1         5) proj/8.2.1    7) gdal/3.6.4
+  2) scl-devtoolset/10   4) sqlite/3.42.0   6) hdf5/1.12.2
 
  
 

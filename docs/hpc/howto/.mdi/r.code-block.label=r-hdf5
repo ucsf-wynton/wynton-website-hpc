@@ -2,7 +2,7 @@
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) r/4.2.0   2) CBI   3) scl-devtoolset/10   4) hdf5/1.12.1
+  1) CBI   2) scl-devtoolset/10   3) r/4.3.1   4) hdf5/1.12.2
 
  
 

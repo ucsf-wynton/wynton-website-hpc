@@ -1,20 +1,21 @@
 Would you like to create a personal library
 '~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
-trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-10.tar.gz'
-Content type 'application/x-gzip' length 808943 bytes (789 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-12.tar.gz'
+Content type 'application/x-gzip' length 782344 bytes (764 KB)
 ==================================================
-downloaded 789 KB
+downloaded 764 KB
 
-* installing *source* package 'zoo' ...
-** package 'zoo' successfully unpacked and MD5 sums checked
+* installing *source* package ‘zoo’ ...
+** package ‘zoo’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
+using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
 gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
 gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
 gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
 gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/4.2-gcc10/00LOCK-zoo/00new/zoo/libs
+installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst
