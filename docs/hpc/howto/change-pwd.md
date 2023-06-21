@@ -20,16 +20,15 @@ We **strongly recommend** using a **password vault** application or website like
 
 ## Change non-expired password
 
-As long as your password has not yet expired, you can change your password either via ~~our web interface~~ (_temporarily broken 2023-05-26_), or from the {{ site.cluster.name }} command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
+As long as your password has not yet expired, you can change your password either via our web interface, or from the {{ site.cluster.name }} command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
 
 
 
-<div markdown=1>
 ### Alt 1. From the web browser
 
 You can change your password before it expires using the 'RBVI Kerberos Web Interface' site;
 
-1. Go to [https://www.cgl.ucsf.edu/admin/chpass.py](javascript:alert("The Wynton web interface for changing passwords is temporarily broken. Please use the &#39;passwd&#39; command on a Wynton login node. /2023-05-26")) (_temporarily broken 2023-05-26_)
+1. Go to <https://www.cgl.ucsf.edu/admin/chpass.py>
 
 2. To access the page, enter your current {{ site.cluster.name }}
    'Username' and 'Password' (must not be expired) in the browser
@@ -77,7 +76,7 @@ by replacing `alice` with your username.
 
 Alternatively, you can verify your credentials from your browser:
 
-1. Go to [https://www.cgl.ucsf.edu/admin/kerbtest.py](javascript:alert("The Wynton web interface for password tests is temporarily broken. /2023-05-26")) (_temporarily broken 2023-05-26_) in your browser.  A popup panel titled 'Sign in https<span>://www.cgl.ucsf.edu</span>' is opened by the browser.
+1. Go to <https://www.cgl.ucsf.edu/admin/kerbtest.py> in your browser.  A popup panel titled 'Sign in https<span>://www.cgl.ucsf.edu</span>' is opened by the browser.
 
 2. Enter your {{ site.cluster.nickname }} login credentials in the two fields 'Username' and 'Password' and click 'Sign in'.
 
