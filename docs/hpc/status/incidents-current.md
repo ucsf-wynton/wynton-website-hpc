@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Full downtime followed by network and file-system recovery</span>
 
+**Update**: There are two broken ZFS storage targets (22004 and 21002). We expect to recover most files on target 22004 (approximately 14 TB). The reason it takes this long to recover that storage target is that the file chunks are there, but we have to puzzle them together to reconstruct the original files, which is a slow process. We estimate this process to complete by the end of the week. The files on the other target, target 21002, are unfortunately not recoverable. **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
+<br><span class="timestamp">June 21, 23:30 PDT</span>
+
 **Update**: There are two ZFS storage targets that are still failing and offline. We have hopes to be able to recover files from one of them. As of June 9, about 12 TB of low-level, raw file data (out of ~15 TB) was recovered. When that is completed, we will start the tedious work on reconstructing the actual files lost.  The consultants are less optimistic about recovering data from second storage target, because it was much more damaged. They will give us the final verdict by the end of the week.  **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
 <br><span class="timestamp">June 12, 16:00 PDT</span>
 
