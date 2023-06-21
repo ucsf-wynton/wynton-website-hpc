@@ -70,7 +70,12 @@ hpc/_data/specs.yml/gpu: hpc/assets/data/gpu_nodes.tsv
 #	sed -i -E "s/^(gpu_nodes:) +[[:digit:]]*/\1 $${count[0]}/; s/^(gpus:) +[[:digit:]]*/\1 $${count[1]}/; s/^(communal_gpu_nodes:) +[[:digit:]]*/\1 $${count[2]}/; s/^(communal_gpus:) +[[:digit:]]*/\1 $${count[3]}/" "$(@D)"; }
 
 
-hpc/_data/specs.yml: hpc/_data/specs.yml/gpu hpc/_data/specs.yml/misc
+## Not yet implemented /HB 2023-06-21
+hpc/_data/specs.yml/storage: FORCE
+	bytes=$$(df -P /wynton/home 2> /dev/null | grep -E "beegfs_nodev" | sed -E 's/^[^[:space:]]+[[:space:]]+//' | sed 's/ .*//'); \
+#	sed -i -E "s/^(home_size_total:) +[[:digit:]]*/\1 $$((bytes / 1000 / 1000 / 1000 / 2))/" "$(@D)";
+
+hpc/_data/specs.yml: hpc/_data/specs.yml/gpu hpc/_data/specs.yml/misc hpc/_data/specs.yml/storage
 
 hpc/_data: hpc/_data/users.yml hpc/_data/specs.yml
 
