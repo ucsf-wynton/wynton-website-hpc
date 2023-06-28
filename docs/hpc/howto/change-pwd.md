@@ -38,7 +38,7 @@ You can change your password before it expires using the 'RBVI Kerberos Web Inte
    Biocomputing, Visualization, and Informatics' page, which allows
    you to set a new password
 
-
+4. Wait 10 minutes for your new password to propagate before using it
 
 ### Alt 2. From the {{ site.cluster.nickname }} command line
 
@@ -53,11 +53,11 @@ Retype new password:
 passwd: all authentication tokens updated successfully.
 [alice@{{ site.login.name }} ~]$ 
 ```
-
+Wait 10 minutes for your new password to propagate before using it.
 
 ## Verify credentials
 
-You can verify your {{ site.cluster.nickname }} username and password using either of the below alternatives.  If neither works for you, you might have to reset your password.  If so, see below for instructions.
+After waiting for 10 minutes for your new password to propagate, you can verify your {{ site.cluster.nickname }} username and password using either of the below alternatives.  If neither works for you, you might have to reset your password.  If so, see below for instructions.
 
 
 ### Alt 1. Verify from your local command line using SSH
