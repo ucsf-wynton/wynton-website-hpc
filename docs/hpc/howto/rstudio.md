@@ -53,36 +53,6 @@ There are two things you should pay extra attention to here:
 You will need both below.
 
 
-#### Known issue under investigation (since 2023-03-30)
-
-Some users report they have problems when they use latest RStudio
-Server 2023.03.0+386 (default) that was installed 2023-03-29.  If you
-get something like:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ rsc start
-...
-ERROR Unexpected exception: File name too long [system:36]; LOGGED FROM: int main(int, char* const*) src/cpp/server/ServerMain.cpp:941
-ERROR: It looks like the RStudio Server failed during launch ['rserver' process (PID 29050 on {{ site.devel.name }}) no longer exists]. This happened with rsc 0.13.4, RStudio Server 2023.03.0+386 (Cherry Blossom) for Linux [/wynton/home/cbi/shared/software/CBI/rstudio-server-2023.03.0-386/bin/rstudio-server], and R 4.2.3 (2023-03-15) -- "Shortstop Beagle" [/wynton/home/cbi/shared/software/CBI/R-4.2.3-gcc10/bin/R]. Post-mortem analysis: The RStudio Server Controller configuration folder (/wynton/protected/home/boblab/alice/.config/rsc) has 48 characters. A configuration folder with more than 40 characters will likely not work with RStudio Server version after 2022.02.4-500. Here we are using version 2023.03.0+386. Try setting 'export _RSC_RSERVER_DATA_DIR_="$(mktemp -d)"' before calling 'rsc start' as a workaround.
-Traceback:
-1: assert_rserver_running() on line #804 in /wynton/home/cbi/shared/software/CBI/rstudio-server-controller-devel/bin/rsc
-2: main() on line #1653 in /wynton/home/cbi/shared/software/CBI/rstudio-server-controller-devel/bin/rsc
-Exiting (exit 1)
-Shutting down RStudio Server ...
-Shutting down RStudio Server ... done
-[alice@{{ site.devel.name }} ~]$ 
-```
-
-then you are also affected by this bug.  A _workaround_ is to set environment variable `_RSC_RSERVER_DATA_DIR_` (note the leading and trailing underscores) as follows before calling `rsc start`:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI rstudio-server-controller
-[alice@{{ site.devel.name }} ~]$ export _RSC_RSERVER_DATA_DIR_="$(mktemp -d)"
-[alice@{{ site.devel.name }} ~]$ rsc start
-```
-
-_Last updated: 2023-04-18_
-
 
 ### Step 2. Connect to your personal RStudio Server instance
 
