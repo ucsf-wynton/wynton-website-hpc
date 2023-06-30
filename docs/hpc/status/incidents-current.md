@@ -1,6 +1,12 @@
-### May 16-June 1 (estimated), 2023
+### May 16-June 30 (estimated), 2023
 
 #### <span style="color: orange;">Full downtime followed by network and file-system recovery</span>
+
+**Update**: We will be reintroducing the final two ZFS storage targets back into the BeeGFS file system (`/wynton`) on Friday June 30.  The work will start at 10 am and should take an hour or so.  During that time, there will be a couple of brief "blips" as we reconfigure the storage.
+<br><span class="timestamp">June 29, 23:55 PDT</span>
+
+**Update**: Organizing the data recovered from ZFS storage target 22004 into a form suitable for BeeGFS is taking long than expected. Thus far, we've properly replaced 10,354,873 of the 11,351,926 recovered files. Approximately one million files remain. We now hope to complete the work this week. The automatic clean up of old files on `/wynton/scratch` and `/wynton/protected/scratch` have been resumed.
+<br><span class="timestamp">June 27, 17:00 PDT</span>
 
 **Update**: There are two broken ZFS storage targets (22004 and 21002). We expect to recover most files on target 22004 (approximately 14 TB). The reason it takes this long to recover that storage target is that the file chunks are there, but we have to puzzle them together to reconstruct the original files, which is a slow process. We estimate this process to complete by the end of the week. The files on the other target, target 21002, are unfortunately not recoverable. **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
 <br><span class="timestamp">June 21, 23:30 PDT</span>
