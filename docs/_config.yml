@@ -19,6 +19,7 @@ cluster:
   email_support: support@wynton.ucsf.edu
   email_storage: storage@wynton.ucsf.edu
   email_compute: compute@wynton.ucsf.edu
+  email_password: support@wynton.ucsf.edu
 
 path:
   global_root: /wynton
