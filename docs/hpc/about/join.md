@@ -80,4 +80,4 @@ _Note: The form linked above is only available to UCSF staff, students, postdocs
 
 If you have any problems with the form or questions about filling it out, please don't hesitate to [contact us].
 
-[contact us]: /hpc/about/contact.html
+[contact us]: /hpc/support/index.html
