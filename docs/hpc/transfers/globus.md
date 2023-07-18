@@ -87,6 +87,7 @@ You must have:
 Troubleshooting:
 
 * **If step 4/5 above fails and you receive a message similar to "Identity set contains identity from an allowed domain but it does not map to a valid username for this connector." contact [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).**
+* **If you receive a message similar to `Missing Identity Information. Unable to complete the authentication process. Your identity Provider did not release the attributes(s): {{email}}` please follow the following steps, "“This error is the result of email address privacy settings in the directory.  Please ask them to go to [UCSF Directory](https://directory.ucsf.edu) and click the “Edit My Record” button at the top right of the page. They’ll be asked to login via MyAccess (if they haven’t already done so).  To the right of the “Email” field on the Edit Your UCSF Directory Entry page that appears, click the pop-up menu (which probably shows “Private” currently) and select either “UCSF Only” or “Public” then click the “Save Changes” button at the bottom of the page.  This will tell the SSO system that it’s okay to release the email address to CILogon and other InCommon Federation registered applications.”**
 
 ## Transferring files
 
