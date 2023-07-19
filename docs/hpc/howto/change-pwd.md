@@ -85,7 +85,7 @@ Alternatively, you can verify your credentials from your browser:
 
 ## Reset expired password
 
-If your _{{ site.cluster.nickname }}_ password has expired, please email [{{ site.cluster.email_password }}](mailto:{{ site.cluster.email_password }}) to have reset.
+If your _{{ site.cluster.nickname }}_ password has expired, please email [{{ site.cluster.email_password }}](mailto:{{ site.cluster.email_password }}) to have it reset.
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 **Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
