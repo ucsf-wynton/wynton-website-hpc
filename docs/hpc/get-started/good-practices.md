@@ -5,7 +5,7 @@ The {{ site.cluster.name }} cluster is high-performance compute resource used by
 In order to maximize the efficiency of the cluster and **decrease your** (and others) **queuing and processing times**, please try make yourself familiar with the following guidelines:
 
 * Identify and [specify](/hpc/scheduler/submit-jobs.html) the amount of resources your jobs need (&rArr; better utilization and load balancing)
-* Make your script agile to [SGE resources allocated to your job](/hpc/scheduler/sge-envvars.html) (&rArr; scalable and lower risk of using resources not requested)
+* Make your script agile to [SGE resources allocated to your job](/hpc/scheduler/envvars.html) (&rArr; scalable and lower risk of using resources not requested)
 
 * [Work toward local scratch](/hpc/scheduler/using-local-scratch.html) on the compute nodes (&rArr; faster processing and less load on shared disk I/O)
 
