@@ -5266,6 +5266,12 @@ module-whatis &quot;Python tools for computational molecular biology&quot;
 conflict python3
 module load python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py27-1.70/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5283,6 +5289,12 @@ module-whatis &quot;Collection of fast NumPy array functions written in Cython&q
 conflict python3
 module load python2/numpy/1.14.1 python2/scipy/1.0.0
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py27-1.2.1/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5300,6 +5312,12 @@ module-whatis &quot;Composable style cycles&quot;
 conflict python3
 module load python2/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/cycler-0.10.0/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5317,6 +5335,12 @@ module-whatis &quot;Powerful extensions to the standard datetime module&quot;
 conflict python3
 module load python2/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/dateutil-2.6.1/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5333,6 +5357,12 @@ Versions: <span class="module-version"><em>4.2.1</em></span><br>
 module-whatis &quot;Module to simplify usage of decorators&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/decorator-4.2.1/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5349,6 +5379,12 @@ Versions: <span class="module-version"><em>3.2.3</em></span><br>
 module-whatis &quot;Backport of the functools module from Python 3.2.3.&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/functools32-3.2.3/lib/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5366,6 +5402,12 @@ module-whatis &quot;Python interface to the Hierarchical Data Format library&quo
 conflict python3
 module load python2/numpy/1.13.0 hdf5/1.10.1 python2/six
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py27-2.7.1/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5383,6 +5425,12 @@ module-whatis &quot;Python package for handling IHM mmCIF files&quot;
 conflict python3
 module load python2/msgpack
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/ihm/python2.7/python-ihm
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5399,6 +5447,12 @@ Versions: <span class="module-version"><em>1.5</em></span><br>
 module-whatis &quot;Backport of functools.lru_cache from Python 3.3&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/lru_cache-1.5/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5423,6 +5477,12 @@ module load python2/functools32
 module load python2/lru_cache
 prepend-path PYTHONPATH   /salilab/diva1/programs/x86_64linux/matplotlib-py27-2.1.2/lib64/python2.7/site-packages
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-py27-2.1.2/lib
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5440,6 +5500,12 @@ module-whatis &quot;Modular toolkit for Data Processing&quot;
 conflict python3
 module load python2/scipy
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-2.6
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5456,6 +5522,12 @@ Versions: <span class="module-version"><em>0.5.6</em></span><br>
 module-whatis &quot;A Python MessagePack (de)serializer&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.5.6/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5475,6 +5547,12 @@ module load python2/scipy/0.18.1
 module load python2/pyparsing
 module load python2/decorator
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/networkx-1.11/lib/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5492,6 +5570,12 @@ module-whatis &quot;Discovery-based unittest extension for Python&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/nose-1.3.7/lib/python2.7/site-packages
 prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/bin
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5509,6 +5593,12 @@ module-whatis &quot;Fast numerical array expression evaluator for Python and Num
 conflict python3
 module load python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py27-2.6.4/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5527,6 +5617,12 @@ conflict python3
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/lib64/python2.7/site-packages
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/bin
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/lib
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5547,6 +5643,12 @@ module load python2/dateutil
 module load python2/matplotlib
 module load python2/pytz
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-py27-0.22.0/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5563,6 +5665,12 @@ Versions: <span class="module-version"><em>1.2.2</em></span><br>
 module-whatis &quot;A Python interface to the pkg-config command line tool&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pkgconfig-1.2.2/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5579,6 +5687,12 @@ Versions: <span class="module-version"><em>2.5.0</em></span><br>
 module-whatis &quot;Python bindings for Google Protocol Buffers&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/protobuf-2.5.0/lib/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5599,6 +5713,12 @@ module load python2/scipy/1.0.0
 module load python2/tables/3.5.2
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib64/python2.7/site-packages
 prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5615,6 +5735,12 @@ Versions: <span class="module-version"><em>2.1.10</em></span><br>
 module-whatis &quot;An object-oriented approach to text processing&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pyparsing-2.1.10/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5632,6 +5758,12 @@ module-whatis &quot;Way of performing RMSD calculations of large sets of structu
 conflict python3
 module load cuda/7.5.18 python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py27-4.1.git48ab119
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5648,6 +5780,12 @@ Versions: <span class="module-version"><em>2016.10</em></span><br>
 module-whatis &quot;World Timezone Definitions for Python&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2016.10/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5666,6 +5804,12 @@ conflict python3
 module load sali-libraries
 module load python2/numpy/1.14.1 python2/scipy/1.0.0
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-py27-0.19.1/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5683,6 +5827,12 @@ module-whatis &quot;Scipy: Scientific Tools for Python&quot;
 conflict python3
 module load python2/numpy/1.14.1
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py27-1.0.0/lib64/python2.7/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5699,6 +5849,12 @@ Versions: <span class="module-version"><em>1.10.0</em></span><br>
 module-whatis &quot;Python 2 and 3 compatibility utilities&quot;
 conflict python3
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/six-1.10.0/lib/python2.6/site-packages
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
@@ -5720,6 +5876,12 @@ module load hdf5/1.10.1
 module load python2/six
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tables-py27-3.5.2/lib64/python2.7/site-packages
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py27-3.5.2/bin
+
+if [ module-info mode load ] {
+  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
+  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
+  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
+}
 </code></pre>
 
 </details>
