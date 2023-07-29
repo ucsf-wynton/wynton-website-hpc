@@ -20,11 +20,12 @@ Agreement include:
    relevant HIPAA compliance measures.
 
  * It is the responsibility of the Principal Investigator (PI) to
-   ensure users that they have approved are on the IRB with the PI.
+   ensure users that they have approved are on the Institutional
+   Review Board (IRB) approval letter with the PI.
 
  * The PI is responsible for ensuring that any user they approve that
    is added to Wynton that accesses data that requires IRB approval,
-   is listed on the IRB.
+   is listed on the IRB approval letter.
 
  * Because IT security requirements, operating systems, and hardware
    are continually evolving, difficult situations may arise in the
