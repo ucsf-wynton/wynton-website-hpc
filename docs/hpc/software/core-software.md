@@ -1,10 +1,10 @@
 # CentOS Core Software
 
-A large number of common Linux software tools are available on the cluster (compute nodes and development nodes) as part of the core setup.  Below follows a small excerpt of what tools are available.
-<!--
-Additional software can be found in the [Software Repositories].
--->
-
+A large number of common Linux software tools are available on the
+cluster as part of the core setup.  Below follows a small excerpt of
+what tools are available development nodes and compute nodes. The
+login and data-transfer nodes have a much smaller selection of
+software.
 
 <dl>
 <dt>File Editing</dt>
@@ -65,7 +65,16 @@ apptainer (formerly singularity)
 </dl>
 
 <br>
-_Note:_ These core tools will be updated without notice as the operating system is updated on a regular basis via the CentOS package mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the tools originate from the (stable) CentOS 7 [Extras] and [EPEL] repositories.  To see what software and system libraries that are installed, run `yum list installed`.  Please note that, compared to compute nodes, the development nodes have additional software installed (typically named `-devel`) needed to build and compile from source.
+
+_Note:_ These core tools will be updated without notice as the
+operating system is updated on a regular basis via the CentOS package
+mangager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the
+tools originate from the (stable) CentOS 7 [Extras] and [EPEL]
+repositories.  To see what software and system libraries that are
+installed, run `yum list installed`.  Please note that, compared to
+compute nodes, the development nodes have additional software
+installed (typically named `-devel`) needed to build and compile from
+source.
 
 
 <style>
