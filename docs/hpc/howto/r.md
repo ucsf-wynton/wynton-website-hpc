@@ -534,7 +534,7 @@ After this, the **hdf5r** package will install out of the box, i.e. by calling:
 There are R packages for spatial analyses that depend on external
 libraries GDAL, GEOS, PROJ, and sqlite3. For example:
 
-* **[rgdal]**  requires GDAL (>= 3),                      PROJ (>= 6)
+* **[rgdal]**  requires either (i) GDAL (< 3) & PROJ (< 6), or (ii) GDAL (>= 3) & PROJ (>= 6)
 * **[rgeos]**  requires                  GEOS (>= 3.2.0)
 * **[sf]**     requires GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0), sqlite3
 * **[lwgeom]** requires                  GEOS (>= 3.5.0), PROJ (>= 4.8.0), sqlite3
@@ -551,8 +551,8 @@ $ module load CBI r
 $ module load CBI gdal geos proj sqlite
 $ module list
 Currently Loaded Modules:
-  1) CBI                 3) r/4.2.0       5) gdal/3.6.4     7) proj/8.2.1
-  2) scl-devtoolset/10   4) hdf5/1.12.2   6) geos/3.11.2    8) sqlite/3.41.2
+  1) CBI                3) r/4.2.0     5) goes/3.9.4    7) sqlite/3.42.0
+  2) scl-devtoolset/10  4) gdal/2.4.3  6) proj/4.9.3
 ```
 
 After loading _all_ these dependencies, above R packages will install
@@ -581,49 +581,53 @@ After this, we can load each of them to verify everything works;
 ```r
 > library(rgdal)
 Loading required package: sp
-Please note that rgdal will be retired during 2023,
+The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,
+which was just loaded, will retire in October 2023.
+Please refer to R-spatial evolution reports for details, especially
+https://r-spatial.org/r/2023/05/15/evolution4.html.
+It may be desirable to make the sf package available;
+package maintainers should consider adding sf to Suggests:.
+The sp package is now running under evolution status 2
+     (status 2 uses the sf package in place of rgdal)
+Please note that rgdal will be retired during October 2023,
 plan transition to sf/stars/terra functions using GDAL and PROJ
 at your earliest convenience.
-See https://r-spatial.org/r/2022/04/12/evolution.html and https://github.com/r-spatial/evolution
-rgdal: version: 1.6-6, (SVN revision 1201)
+See https://r-spatial.org/r/2023/05/15/evolution4.html and https://github.com/r-spatial/evolution
+rgdal: version: 1.6-7, (SVN revision 1203)
 Geospatial Data Abstraction Library extensions to R successfully loaded
-Loaded GDAL runtime: GDAL 3.6.4, released 2023/04/17
-Path to GDAL shared files: {{ site.path.cbi_software }}/gdal-3.6.4/share/gdal
- GDAL does not use iconv for recoding strings.
+Loaded GDAL runtime: GDAL 2.4.3, released 2019/10/28
+Path to GDAL shared files: /wynton/home/cbi/shared/software/CBI/gdal-2.4.3/share/gdal
 GDAL binary built with GEOS: TRUE 
-Loaded PROJ runtime: Rel. 8.2.1, January 1st, 2022, [PJ_VERSION: 821]
-Path to PROJ shared files: {{ site.user.home }}/.local/share/proj:{{ site.path.cbi_software }}/proj-8.2.1/share/proj:{{ site.path.cbi_software }}/proj-8.2.1/share/proj
-PROJ CDN enabled: FALSE
-Linking to sp version:1.6-0
-To mute warnings of possible GDAL/OSR exportToProj4() degradation,
-use options("rgdal_show_exportToProj4_warnings"="none") before loading sp or rgdal.
+Loaded PROJ runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]
+Path to PROJ shared files: (autodetected)
+Linking to sp version:2.0-0
 ```
 
 ```r
 > library(rgeos)
-Loading required package: sp
-rgeos version: 0.6-2, (SVN revision 693)
- GEOS runtime version: 3.11.2-CAPI-1.17.2 
- Please note that rgeos will be retired during 2023,
-plan transition to sf functions using GEOS at your earliest convenience.
+rgeos version: 0.6-4, (SVN revision 699)
+ GEOS runtime version: 3.9.4-CAPI-1.14.4 
+ Please note that rgeos will be retired during October 2023,
+plan transition to sf or terra functions using GEOS at your earliest convenience.
+See https://r-spatial.org/r/2023/05/15/evolution4.html for details.
  GEOS using OverlayNG
- Linking to sp version: 1.6-0 
+ Linking to sp version: 2.0-0 
  Polygon checking: TRUE 
 ```
 
 ```r
 > library(sf)
-Linking to GEOS 3.11.2, GDAL 3.6.4, PROJ 8.2.1; sf_use_s2() is TRUE
+Linking to GEOS 3.9.4, GDAL 2.4.3, PROJ 4.9.3; sf_use_s2() is TRUE
 ```
 
 ```r
 > library(lwgeom)
-Linking to liblwgeom 3.0.0beta1 r16016, GEOS 3.11.2, PROJ 8.2.1
+Linking to liblwgeom 3.0.0beta1 r16016, GEOS 3.9.4, PROJ 4.9.3
 ```
 
 ```r
 > library(terra)
-terra 1.7.29
+terra 1.7.39
 ```
 
 Note that you need to load all of those extra CBI modules whenever you
