@@ -139,7 +139,7 @@ If you get
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic,keyboard-interactive,password).
 ```
 
-then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your _local_ machine.  See Appendix Section '[Fix in-secure file permission on ~/.ssh/]' for instructions.  If it still does not work, check the `~/.ssh` permissions on the cluster too.
+then make sure you use the correct user name and that the file permissions on `~/.ssh` are correct on your _local_ machine.  See Appendix Section '[Fix non-secure file permission on ~/.ssh/]' for instructions.  If it still does not work, check the `~/.ssh` permissions on the cluster too.
 
 The reason why we use `-o PreferredAuthentications=publickey,keyboard-interactive -o IdentitiesOnly=yes` in the above test, is so that we can make sure no alternative login mechanisms than our SSH keypair are in play.  After having validated the above, these options can be dropped and you can now use:
 
@@ -179,7 +179,7 @@ connections.
 
 ## Appendix
 
-### Fix in-secure file permission on ~/.ssh/
+### Fix non-secure file permission on ~/.ssh/
 
 <div class="alert alert-info" role="alert" markdown="1">
 These instructions are only for Linux and macOS.
