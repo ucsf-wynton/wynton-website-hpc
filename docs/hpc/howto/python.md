@@ -267,7 +267,7 @@ The version of Python 3 that comes built-in with CentOS is a bit dated. Specific
 Python 3.6.8
 ```
 
-Newer version of Python 3 are available via [SCL]:s. The easiest way to use them is to load the SCL as a module, e.g.
+Newer versions of Python 3 are available via [SCL]:s. The easiest way to use them is to load the SCL as a module, e.g.
 
 <!-- code-block label="python-scl-version" -->
 ```sh
