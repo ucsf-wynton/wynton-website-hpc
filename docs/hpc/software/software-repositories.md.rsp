@@ -67,7 +67,7 @@ header_id <- gsub("[^[:alnum:]_]+", "-", header_id)
 <dl>
   <dd class="module-details">
 <%
-  fields <- c("help", "description", Example="example", Note="note", URL="url", Maintainer="maintainer", Warning="warning", Versions="version")
+  fields <- c("help", "description", Example="example", Note="note", URL="url", Maintainer="maintainer", Warning="warning", Requirement="requirement", Versions="version")
   fields <- fields[fields %in% names(m)]
   for (kk in seq_along(fields)) {
     label <- names(fields)[kk]
