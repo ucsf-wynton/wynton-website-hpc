@@ -3290,8 +3290,9 @@ end
 <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
 <span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11</a></span><br>
+URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11</a>, <a href="https://gcc.gnu.org/develop.html#timeline">https://gcc.gnu.org/develop.html#timeline</a> (GCC release schedule)</span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">4, 7, 8, 9, 10, <em>11</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -3305,11 +3306,18 @@ local scl_name = &quot;devtoolset&quot; .. &quot;-&quot; .. version
 
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming, gcc&quot;)
-whatis(&quot;URL: https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/&quot; .. version)
+whatis(&quot;URL: https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/&quot; .. version .. &quot;, https://gcc.gnu.org/develop.html#timeline (GCC release schedule)&quot;)
 whatis([[
 Description: These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) `devtoolset-&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable devtoolset-&lt;version&gt;`, which is an approach that is not officially supported by RedHat/CentOS.
 Examples: `gcc --version`.  Warning: Older versions may be removed in the future.
+Requirement: CentOS 7.
 ]])
+
+-- This module is only available on CentOS 7
+if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; ..
+ os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
+end
 
 
 local home = pathJoin(&quot;/opt&quot;, &quot;rh&quot;, scl_name)
@@ -3321,12 +3329,14 @@ end
 
 -- Don't edit! Created using: 
 -- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/devtoolset-11/enable
-prepend_path(&quot;INFOPATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/share/info&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64:/opt/rh/devtoolset-11/root/usr/lib:/opt/rh/devtoolset-11/root/usr/lib64/dyninst:/opt/rh/devtoolset-11/root/usr/lib/dyninst&quot;)
+setenv(&quot;INFOPATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/share/info&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/dyninst&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64&quot;)
 prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/share/man&quot;)
 prepend_path(&quot;PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/bin&quot;)
 setenv(&quot;PCP_DIR&quot;,&quot;/opt/rh/devtoolset-11/root&quot;)
-prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pkgconfig&quot;)
+setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pkgconfig&quot;)
 </code></pre>
 
 </details>
@@ -3340,6 +3350,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/li
 Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">36, <em>38</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -3356,9 +3367,16 @@ whatis(&quot;Keywords: programming, Python&quot;)
 whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
 whatis([[
 Description: Enables the CentOS Software Collection (SCL) `rh-python&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable rh-python&lt;version&gt;`, which is not officially supported by RedHat/CentOS.
-Example: `python --version`, and `pip --version`.
+Examples: `python --version`, and `pip --version`.
 Warning: Older versions may be removed in the future.
+Requirement: CentOS 7.
 ]])
+
+-- This module is only available on CentOS 7
+if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; ..
+ os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
+end
 
 local home = &quot;/opt/rh/rh-python&quot; .. version
 if not isDir(home) then
@@ -3384,9 +3402,9 @@ prepend_path(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-python38/root/usr/share&
   <dd class="module-details">
 <strong class="module-help">SCL Ruby: Ruby</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>&quot; .. scl_name .. &quot;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable &quot; .. scl_name .. &quot;</code>, which is an approach that is not of ficially supported by RedHat/CentOS.</span><br>
-Example: <span class="module-example"><code>irb --help</code>, <code>ruby --help</code>, <code>ruby script.rb</code>.
-Requirement: This module is only available on CentOS 7.</span><br>
+Example: <span class="module-example"><code>irb --help</code>, <code>ruby --help</code>, <code>ruby script.rb</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/">https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/</a></span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">25, 26, 27, <em>30</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -3404,13 +3422,13 @@ whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. sc
 whatis([[
 Description: Enables the CentOS Software Collection (SCL) `&quot; .. scl_name .. &quot;` in the current environment.  This is an alternative to calling `source scl_source enable &quot; .. scl_name .. &quot;`, which is an approach that is not of ficially supported by RedHat/CentOS.
 Examples: `irb --help`, `ruby --help`, `ruby script.rb`.
-Requirement: This module is only available on CentOS 7.
+Requirement: CentOS 7.
 ]])
 
 -- This module is only available on CentOS 7
--- if os.getenv(&quot;CBI_LINUX&quot;) ~= nil and os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
---   LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machine, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
--- end
+if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
+end
 
 local home = &quot;/opt/rh/&quot; .. scl_name
 
