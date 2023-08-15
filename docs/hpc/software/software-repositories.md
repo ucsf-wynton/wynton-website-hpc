@@ -3383,8 +3383,9 @@ prepend_path(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-python38/root/usr/share&
 <dl>
   <dd class="module-details">
 <strong class="module-help">SCL Ruby: Ruby</strong><br>
-<span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-ruby30</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-ruby30</code>, which is an approach that is not of ficially supported by RedHat/CentOS.</span><br>
-Example: <span class="module-example"><code>irb --help</code>, <code>ruby --help</code>, <code>ruby script.rb</code>.</span><br>
+<span class="module-description">Enables the CentOS Software Collection (SCL) <code>&quot; .. scl_name .. &quot;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable &quot; .. scl_name .. &quot;</code>, which is an approach that is not of ficially supported by RedHat/CentOS.</span><br>
+Example: <span class="module-example"><code>irb --help</code>, <code>ruby --help</code>, <code>ruby script.rb</code>.
+Requirement: This module is only available on CentOS 7.</span><br>
 URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/">https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/</a></span><br>
 Versions: <span class="module-version">25, 26, 27, <em>30</em></span><br>
 <details>
@@ -3400,17 +3401,25 @@ local scl_name = &quot;rh-ruby&quot; .. version
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming, Ruby&quot;)
 whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
-whatis(&quot;Description: Enables the CentOS Software Collection (SCL) `&quot; .. scl_name .. &quot;` in the current environment.  This is an alternative to calling `source scl_source enable &quot; .. scl_name .. &quot;`, which is an approach that is not of ficially supported by RedHat/CentOS.  Example: `irb --help`, `ruby --help`, `ruby script.rb`.&quot;)
+whatis([[
+Description: Enables the CentOS Software Collection (SCL) `&quot; .. scl_name .. &quot;` in the current environment.  This is an alternative to calling `source scl_source enable &quot; .. scl_name .. &quot;`, which is an approach that is not of ficially supported by RedHat/CentOS.
+Examples: `irb --help`, `ruby --help`, `ruby script.rb`.
+Requirement: This module is only available on CentOS 7.
+]])
 
+-- This module is only available on CentOS 7
+LmodWarning(&quot;CBI_LINUX='&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
 
-require &quot;posix&quot;
-function isdir(fn)
-  return (posix.stat(fn, &quot;type&quot;) == &quot;directory&quot;)
+if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machine, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
+end
+if os.getenv(&quot;CBI_LINUX&quot;) ~= nil and os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machine, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
 end
 
 local home = &quot;/opt/rh/&quot; .. scl_name
 
-if not isdir(home) then
+if not isDir(home) then
   LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
 end
 -- Don't edit! Created using: 
