@@ -3408,14 +3408,9 @@ Requirement: This module is only available on CentOS 7.
 ]])
 
 -- This module is only available on CentOS 7
-LmodWarning(&quot;CBI_LINUX='&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
-
-if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machine, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
-end
-if os.getenv(&quot;CBI_LINUX&quot;) ~= nil and os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machine, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
-end
+-- if os.getenv(&quot;CBI_LINUX&quot;) ~= nil and os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
+--   LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machine, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
+-- end
 
 local home = &quot;/opt/rh/&quot; .. scl_name
 
