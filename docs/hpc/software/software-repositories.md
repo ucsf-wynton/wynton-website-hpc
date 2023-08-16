@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(124)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -4044,7 +4044,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (124)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (125)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -4232,6 +4232,24 @@ Versions: <span class="module-version">3.12.2, <em>3.18.3</em></span><br>
 module-whatis &quot;Description: Cross-platform make system&quot;
 module-whatis &quot;URL: https://cmake.org/&quot;
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/cmake-3.18.3/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_colabfold" class="module-name">colabfold</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">AlphaFold2 using MMseqs2</span><br>
+URL: <span class="module-url"><a href="https://github.com/sokrypton/ColabFold">https://github.com/sokrypton/ColabFold</a></span><br>
+Versions: <span class="module-version"><em>20230808.git79d8c6e</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: AlphaFold2 using MMseqs2&quot;
+module-whatis &quot;URL: https://github.com/sokrypton/ColabFold&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/colabfold-20230808.git79d8c6e/localcolabfold/colabfold-conda/bin/
 </code></pre>
 
 </details>
@@ -6759,7 +6777,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(124)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
 _The above information is updated automatically every three hours by querying `module avail` and `module spider`._
