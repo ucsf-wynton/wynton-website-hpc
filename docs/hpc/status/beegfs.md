@@ -63,8 +63,8 @@ drives.forEach(function(drive) {
     var data = [beegfs_load];
   
     var layout = {
-      height: 250,
-      margin: { l: 50, r: 30, b: 30, t: 30, pad: 4 },
+      height: 200,
+      margin: { l: 50, r: 30, b: 30, t: 60, pad: 4 },
       xaxis: {
         autorange: true,
         rangeselector: {buttons: [
