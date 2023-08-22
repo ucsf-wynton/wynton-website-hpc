@@ -2,7 +2,7 @@
 title: Wynton HPC Status Dashboard
 ---
 
-# {{ site.cluster.name }} Dashboard
+## {{ site.cluster.name }} Dashboard
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -11,7 +11,7 @@ title: Wynton HPC Status Dashboard
 </p>
 
 <div class="collapse in multi-collapse" id="beegfs-metrics">
-  <h2>BeeGFS Metrics</h2>
+  <h3>BeeGFS Metrics</h3>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
