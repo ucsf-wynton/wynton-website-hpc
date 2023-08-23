@@ -15,25 +15,30 @@ title: Wynton HPC Status Dashboard
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>BeeGFS profiling of dev1:/wynton/scratch/ (seconds)</span><span style="float: right;"></span>
+    <span>/wynton/scratch/ lagginess (seconds)</span><span style="float: right;"></span>
    </div>
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_scratch_hb"></div>
   </div>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>BeeGFS profiling of dev1:/wynton/home/ (seconds)</span><span style="float: right;"></span>
+    <span>/wynton/home/ lagginess (seconds)</span><span style="float: right;"></span>
    </div>
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_home_cbi_hb"></div>
   </div>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>BeeGFS profiling of dev1:/wynton/group/ (seconds)</span><span style="float: right;"></span>
+    <span>/wynton/group/ lagginess (seconds)</span><span style="float: right;"></span>
    </div>
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_group_cbi_hb"></div>
   </div>
 </div>
+
+_Figure: Total time (in seconds) for one benchmarking run to complete over time. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
+
+Details: These metrics are based on a [set commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench]** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  As a reference, when benchmarking local `/scratch`, the total processing time is about three seconds.
+
 
 <script>
 host = "dev1.wynton.ucsf.edu"
@@ -100,7 +105,7 @@ drives.forEach(function(drive) {
       },
       yaxis: {
         autorange: false,
-        range: [0, 500],
+        range: [0, 800],
         type: 'linear'
       }
     };
@@ -109,3 +114,6 @@ drives.forEach(function(drive) {
   })
 });
 </script>
+
+
+[wynton-bench]: https://github.com/ucsf-wynton/wynton-bench
