@@ -1,8 +1,8 @@
 # Created by: hb
-# Created on: 2023-08-25 03:00:18-07:00
-# Total fshares: 20199
-# Total queue_slots: 11614
-# Number of projects: 51
+# Created on: 2023-08-26 03:00:03-07:00
+# Total fshares: 20200
+# Total queue_slots: 11634
+# Number of projects: 52
 fshares	queue_slots	project
 5506	3305	salilab
 4104	1403	agardlab,chenglab,frostlab
@@ -48,6 +48,7 @@ fshares	queue_slots	project
 1	30	wilsonlab
 1	288	gladstone
 1	25	EPPIcenter
+1	20	ofarrelllab
 1	1	krausslab
 1	1	chuanglab
 1	10	mcmanuslab
