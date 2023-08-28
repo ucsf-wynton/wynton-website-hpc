@@ -10,15 +10,13 @@ However, because Rocky 8 is a different distribution and contains many updated p
 
 To get ahead of the upgrade, we have installed Rocky 8 on a few interactive and compute nodes to enable you to test and to update your jobs and self-compiled software and scripts so they work with Rocky 8.
 
-```
 dev nodes:
-non-PHI: devr8
-PHI: pdevr8
+- non-PHI: `devr8`
+- PHI: `pdevr8`
 
 GPU dev nodes:
-non-PHI: gpudevr8
-PHI: pgpudevr8
-```
+- non-PHI: `gpudevr8`
+- PHI: `pgpudevr8`
 
 Jobs can be submitted to the Rocky 8 compute nodes by using `#$ -l rocky8=true` SGE job resource limitation in the job submission script.
 
