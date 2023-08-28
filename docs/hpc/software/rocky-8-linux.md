@@ -6,7 +6,7 @@ CentOS 7 will be reaching end of life June 30, 2024.
 
 Both to keep up with Linux security patches and to enable more modern software packages, the Wynton HPC Cluster will be moving all interactive and compute nodes to the "Rocky 8" Linux Distribution during a scheduled downtime: October 30, 2023.
 
-However, because Rocky 8 is a different distribution and contains many updated packages, many things which currently work on Wynton will are expected to need to be changed to work on Rocky 8.
+However, because Rocky 8 is a different distribution and contains many updated packages, many things which currently work on Wynton are expected to need to be changed to work on Rocky 8.
 
 To get ahead of the upgrade, we have installed Rocky 8 on a few interactive and compute nodes to enable you to test and to update your jobs and self-compiled software and scripts so they work with Rocky 8.
 
