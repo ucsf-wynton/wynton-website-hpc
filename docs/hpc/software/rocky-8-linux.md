@@ -30,7 +30,8 @@ Notes:
 
 - Software Collections are organized differently in Rocky 8, only the gcc-toolset Software Collections are available. Python and Ruby versions are no longer included in the Software Collections.
 
-- The default system Python on Rocky 8 is now Python-3.6 and must be called using: `python3` (which is the version located at `/usr/bin/python3`).  Python-2.7 is still available as `python2`, but is deprecated. We recommend any jobs/scripts/programs be updated to use `python3`.
+- The default system Python on Rocky 8 is now Python-3.6 and must be called using: `python3` (which is the version located at `/usr/bin/python3`) and not just `python`.
+- Python-2.7 is still available as `python2`, but is deprecated. We recommend any jobs/scripts/programs be updated to use `python3`.
 
 As noted above, please provide any feedback to: support@wynton.ucsf.edu
 
