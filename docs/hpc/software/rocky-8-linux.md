@@ -32,8 +32,8 @@ Jobs can be submitted to the Rocky 8 compute nodes by using `#$ -l
 rocky8=true` SGE job resource limitation in the job submission script.
 
 Note, at this time (2023-08-31) there are only six available Rocky 8
-compute nodes in the cluster, so *please do not send large arrays to
-the Rocky 8 nodes*.
+compute nodes in the cluster, so _please do not send large arrays to
+the Rocky 8 nodes_.
 
 Notes:
 
