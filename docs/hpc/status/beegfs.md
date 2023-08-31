@@ -2,15 +2,46 @@
 title: Wynton HPC Status Dashboard
 ---
 
-## {{ site.cluster.name }} Dashboard
+<ul class="nav nav-pills">
+  <li class="active"><a data-toggle="pill" href="#by-day"><span style="font-weight: bold;">day</span></a></li>
+  <li><a data-toggle="pill" href="#by-week"><span style="font-weight: bold;">week</span></a></li>
+</ul>
+<div class="tab-content" style="margin-top: 1ex;">
+  <div id="by-day" class="tab-pane fade in active">
+    <img src="{{ site.assets.status_root_path }}/status/figures/queues-day.png" alt="queues usage during the last day"/><br>
+  </div>
+  <div id="by-week" class="tab-pane fade in">
+    <img src="{{ site.assets.status_root_path }}/status/figures/queues-week.png" alt="queues usage during the last week"/><br>
+  </div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+## Foo
+
+<ul class="nav nav-pills">
+  <li class="active"><a data-toggle="pill" href="#by-queue-metrics" ><span style="font-weight: bold;">Queue Metrics</span> </a></li>
+  <li               ><a data-toggle="pill" href="#by-beegfs-metrics"><span style="font-weight: bold;">BeeGFS Metrics</span></a></li>
+</ul>
+
+<div class="tab-content" style="margin-top: 1ex;">
+
+<div id="by-queue-metrics" class="tab-pane fade in active">
+<h2>Queue Metrics</h2>
+</div>
+
+<div id="by-beegfs-metrics" class="tab-pane fade in">
+<h2>BeeGFS Metrics</h2>
+</div>
+
+</div>
+
+## {{ site.cluster.name }} Dashboard
 
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#beegfs-metrics" role="button" aria-expanded="false" aria-controls="beegfs-metrics">BeeGFS Metrics</a>
 </p>
 
-<div class="collapse in multi-collapse" id="beegfs-metrics" markdown="1">
+<div class="collapse in multi-collapse" id="beegfs-metrics2" markdown="1">
 ### BeeGFS Metrics
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
@@ -38,6 +69,8 @@ _Figure: Total time (in seconds) for one benchmarking run to complete over time.
 
 Details: These metrics are based on a [set commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench]** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  As a reference, when benchmarking local `/scratch`, the total processing time is about three seconds.
 </div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <script>
 host = "dev1.wynton.ucsf.edu"
