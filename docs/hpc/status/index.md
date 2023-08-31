@@ -6,6 +6,11 @@ title: Wynton HPC Status
 
 # UCSF {{ site.cluster.name }} Status
 
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#queue-metrics" role="button" aria-expanded="false" aria-controls="queue-metrics">Queue Metrics</a>
+</p>
+
+<div class="collapse in multi-collapse" id="queue-metrics" markdown="1">
 ## Queue Metrics
 
 {% assign periods = "day,week,month,year" | split: ',' %}
@@ -25,6 +30,7 @@ title: Wynton HPC Status
 -->
   </div>
 {% endfor %}
+</div>
 </div>
 
 

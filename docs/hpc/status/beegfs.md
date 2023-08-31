@@ -10,8 +10,8 @@ title: Wynton HPC Status Dashboard
   <a class="btn btn-primary" data-toggle="collapse" href="#beegfs-metrics" role="button" aria-expanded="false" aria-controls="beegfs-metrics">BeeGFS Metrics</a>
 </p>
 
-<div class="collapse in multi-collapse" id="beegfs-metrics">
-  <h3>BeeGFS Metrics</h3>
+<div class="collapse in multi-collapse" id="beegfs-metrics" markdown="1">
+### BeeGFS Metrics
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
@@ -33,12 +33,11 @@ title: Wynton HPC Status Dashboard
    </div>
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_group_cbi_hb"></div>
   </div>
-</div>
 
 _Figure: Total time (in seconds) for one benchmarking run to complete over time. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
 
 Details: These metrics are based on a [set commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench]** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  As a reference, when benchmarking local `/scratch`, the total processing time is about three seconds.
-
+</div>
 
 <script>
 host = "dev1.wynton.ucsf.edu"
