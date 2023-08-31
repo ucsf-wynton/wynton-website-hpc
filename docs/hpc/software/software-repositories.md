@@ -221,7 +221,7 @@ end
 -- Assert that OpenJDK version still exists, because
 -- it happens at times that older versions are removed
 if not isDir(home) then
-  LmodError(&quot;INTERNAL ERROR: Module &quot; .. name .. &quot;/&quot; .. version .. &quot; is broken, because folder &quot; .. home .. &quot; no longer exists. Please report this to the sysadms.&quot;)
+  LmodError(&quot;INTERNAL ERROR: Module &quot; .. name .. &quot;/&quot; .. version .. &quot; is broken, because folder &quot; .. home .. &quot; does not exist on host &quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;. Please report this to the sysadms.&quot;)
 end
 
 setenv(&quot;JAVA_HOME&quot;, home)
