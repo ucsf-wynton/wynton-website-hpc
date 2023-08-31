@@ -1,4 +1,4 @@
-# Migration from Centos 7 Linux to Rocky 8 Linux
+# Migration from CentOS 7 Linux to Rocky 8 Linux
 
 Wynton currently runs on CentOS 7 Linux.
 
@@ -28,10 +28,10 @@ Notes:
 
 - If you run across one that doesn't function as you expect, please email us the details at: support@wynton.ucsf.edu
 
-- Software Collections are organized differently in Rocky 8, only the gcc-toolset Software Collections are available. Python and Ruby versions are no longer included in the Software Collections.
+- Software Collections (SCL) are organized differently in Rocky 8; only the `gcc-toolset` SCLs are available. Python and Ruby SCLs are not available.
 
 - The default system Python on Rocky 8 is now Python-3.6 and must be called using: `python3` (which is the version located at `/usr/bin/python3`) and not just `python`.
-- Python-2.7 is still available as `python2`, but is deprecated. We recommend any jobs/scripts/programs be updated to use `python3`. [Python 2 EOL was January 1, 2020](https://www.python.org/doc/sunset-python-2/).
+- Python-2.7 is still available as `python2`, but is deprecated. We recommend any jobs/scripts/programs be updated to use `python3`. [Python 2 End of Life (EOL) was January 1, 2020](https://www.python.org/doc/sunset-python-2/).
 
 As noted above, please provide any feedback to: support@wynton.ucsf.edu
 
