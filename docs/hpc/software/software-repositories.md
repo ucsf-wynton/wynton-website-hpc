@@ -194,7 +194,7 @@ setenv	 		MPI_HOME	/usr/lib64/openmpi3
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code> (SDK only).</span><br>
 Note: <span class="module-note">This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).</span><br>
 URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a>, <a href="https://openjdk.java.net/projects/jdk/">https://openjdk.java.net/projects/jdk/</a> (changelog), <a href="https://github.com/openjdk/jdk">https://github.com/openjdk/jdk</a> (source code)</span><br>
-Versions: <span class="module-version">1.8.0, 11, <em>18</em></span><br>
+Versions: <span class="module-version">1.8.0, <em>11</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;openjdk: Open Java Development Kit&quot;)
