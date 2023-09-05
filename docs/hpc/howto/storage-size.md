@@ -161,7 +161,7 @@ group quota purchase or a portion of a purchased group quota dedicated
 to the project (subgroup).
 
 
-### Additional group storage via other groups
+#### Additional group storage via other groups
 
 It could be that you are part of another lab or institute that have
 purchased their own storage.  This is common for users affiliated with
