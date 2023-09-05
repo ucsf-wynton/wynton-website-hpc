@@ -160,6 +160,51 @@ directory in `/wynton/protected/projects/` could either be a separate
 group quota purchase or a portion of a purchased group quota dedicated
 to the project (subgroup).
 
+
+### Additional group storage via other groups
+
+It could be that you are part of another lab or institute that have
+purchased their own storage.  This is common for users affiliated with
+Gladstone Institutes. For example, above, user `alice` is part of the
+`boblab` group;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ id --group
+boblab
+```
+
+but they are also part of the `carol_inst` group;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ id --groups
+boblab carol_inst
+```
+
+To see the disk quota for all groups, we can call:
+
+```sh
+for group in $(id --groups); do beegfs-ctl --getquota --storagepoolid=12 --gid "$group"; done
+```
+
+For example,
+
+```sh
+[alice@{{ site.devel.name }} ~]$ for group in $(id --groups); do beegfs-ctl --getquota --storagepoolid=12 --gid "$group"; done
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+        boblab| 34001||   13.43 TiB|   40.00 TiB||        0|unlimited
+      user/group     ||           size          ||    chunk files    
+     name     |  id  ||    used    |    hard    ||  used   |  hard   
+--------------|------||------------|------------||---------|---------
+    carol_inst| 35000||   75.16 TiB|  100.00 TiB|| 14957560|unlimited
+```
+
+which shows that `alice` has access to 40 TiB via the `boblab` group
+and another 100 TiB via the `carol_inst` group.
+
+
+
 ### User disk usage on `/wynton/scratch/` and `/wynton/protected/scratch/`
 
 To check your disk consumption on the _global_ scratch space
