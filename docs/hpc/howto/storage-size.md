@@ -115,8 +115,8 @@ storage space](/hpc/about/specs.html) is reported as 1000 GiB by the
 
 If your group/lab (e.g. `boblab`) has [purchased additional
 storage](/hpc/about/pricing-storage.html), it is available under
-`/wynton/group/`, (and possibly also under `/wynton/protected/group/`
-(PHI), or `/wynton/protected/project/` (PHI)).  To check how much
+`/wynton/group/`, and possibly also under `/wynton/protected/group/`
+(PHI), or `/wynton/protected/project/` (PHI).  To check how much
 storage space your group/lab has consumed of the total amount
 available to it, call:
 
