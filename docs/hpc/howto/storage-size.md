@@ -131,8 +131,13 @@ For example,
       user/group     ||           size          ||    chunk files
      name     |  id  ||    used    |    hard    ||  used   |  hard
 --------------|------||------------|------------||---------|---------
-        boblab| 34001||      0 Byte|   40.00 TiB||        0|unlimited
+        boblab| 34001||   13.43 TiB|   40.00 TiB||        0|unlimited
 ```
+
+says that the `boblab` group is using 13.43 TiB out of the 40.00 TiB
+group storage they have acquired.  If the `hard` limit is `1 Byte`
+(sic!), that is a placeholder that the group does not have purchased
+any group storage.
 
 The group storage is shared among all group members and does _not_
 count toward your personal disk quota under `$HOME`.
@@ -154,7 +159,6 @@ selected members of more than one PI group. The quota for the
 directory in `/wynton/protected/projects/` could either be a separate
 group quota purchase or a portion of a purchased group quota dedicated
 to the project (subgroup).
-
 
 ### User disk usage on `/wynton/scratch/` and `/wynton/protected/scratch/`
 
