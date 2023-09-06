@@ -1,5 +1,5 @@
 # Created by: hb
-# Created on: 2023-09-05 03:00:03-07:00
+# Created on: 2023-09-06 03:00:03-07:00
 project	queue	nbr_of_hosts	hosts
 rosenberglab	gpu.q	1	msg-ihgpu5
 agardlab, chenglab, frostlab, stroudlab, gpu-collab	gpu.q	22	msg-iogpu1, msg-iogpu2, msg-iogpu3, msg-iogpu4, msg-iogpu5, msg-iogpu6, msg-iogpu7, msg-iogpu8, msg-iogpu9, msg-iogpu11, msg-iogpu12, msg-iogpu13, msg-ihgpu1, msg-ihgpu2, msg-ihgpu3, msg-ihgpu4, msg-ihgpu5, qb3-idgpu3, qb3-idgpu4, qb3-idgpu5, qb3-idgpu11, qb3-idgpu12
