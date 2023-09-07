@@ -1754,7 +1754,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.2.0, 3.2.1, <em>3.2.2</em></span><br>
+Versions: <span class="module-version">3.2.0, <em>3.2.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2704,6 +2704,11 @@ Description: `qtop` (pronounced queue-top) is a tool written in order to monitor
 Examples: `qtop`, `qtop --help`, `qtop --version`, and `qtop -FGW`.
 Warning: Only the most recent version of this software will be kept.
 ]])
+
+-- This module is only available on CentOS 7
+if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
+end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
