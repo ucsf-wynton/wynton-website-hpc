@@ -1435,35 +1435,51 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
 <span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
-Example: <span class="module-example"><code>gdalinfo --version</code></span><br>
-URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a></span><br>
-Versions: <span class="module-version"><em>2.4.3</em></span><br>
+Example: <span class="module-example"><code>gdalinfo --version</code> and <code>man gdalinfo</code>.</span><br>
+URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
+Versions: <span class="module-version">2.4.3</span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-GDAL: Geospatial Data Abstraction Library
-]])
+<pre><code class="language-lua">help(&quot;GDAL: Geospatial Data Abstraction Library&quot;)
 
 local name = myModuleName()
 local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: spatial, library&quot;)
-whatis(&quot;URL: https://gdal.org/, https://github.com/OSGeo/gdal&quot;)
-whatis(&quot;Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats. Example: `gdalinfo --version`&quot;)
+whatis(&quot;URL: https://gdal.org/, https://github.com/OSGeo/gdal/blob/master/NEWS.md (changelog), https://github.com/OSGeo/gdal (source code)&quot;)
+whatis([[
+Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.
+Examples: `gdalinfo --version` and `man gdalinfo`.
+]])
+
+-- GDAL (&gt;= 3.0.0), requires PROJ (&gt;= 6.0.0)
+local libdir = &quot;lib&quot;
+local v = version
+v = string.gsub(v, &quot;[.].*&quot;, &quot;&quot;)
+if v &gt;= &quot;3&quot; then
+  depends_on(&quot;proj&quot;)
+  -- ... and a modern SQLite3 and HDF5 (&gt;= 1.8.13)
+  depends_on(&quot;sqlite&quot;)
+  depends_on(&quot;hdf5&quot;)
+  libdir = &quot;lib64&quot;
+end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, libdir))
+
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;, &quot;man1&quot;))
 
 -- linking
-prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, libdir))
 
 -- building
 prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
 prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
-prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
+prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, libdir), &quot; &quot;)
 </code></pre>
 
 </details>
@@ -2100,11 +2116,6 @@ Description:
 Examples: `markdownlint --version`, `markdownlint --help`, `markdownlint -- *.md`.
 ]]
 )
-
--- This module is not supported on Rocky 8
-if os.getenv(&quot;CBI_LINUX&quot;) == &quot;rocky8&quot; then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not available on Rocky 8, which has too old versions of npm and node&quot;)
-end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
