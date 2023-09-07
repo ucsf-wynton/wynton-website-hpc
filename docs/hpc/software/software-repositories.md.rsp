@@ -18,7 +18,8 @@ source("lmodweb.config.R")
 
 style <- R.utils::cmdArg(style = FALSE)
 
-modules_sets <- get_modules_sets(module_repositories, distros = c("centos7"))
+distro <- c("centos7", "rocky8")[1]
+modules_sets <- get_modules_sets(module_repositories, distros = distro)
 %>
 
 
