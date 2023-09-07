@@ -1,3 +1,6 @@
 *~
 docs/_site/*
 *.lock
+.Rhistory
+**/software/lmod_data/
+**/software/lxc/
