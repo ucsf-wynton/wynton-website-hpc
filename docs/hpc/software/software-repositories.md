@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(94)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
@@ -237,7 +237,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (94)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (95)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -1199,7 +1199,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>emacs --version</code> and <code>emacs -nw</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a>, <a href="https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases">https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>28.1</em></span><br>
+Versions: <span class="module-version">28.1, <em>29.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1209,7 +1209,7 @@ GNU Emacs: An Extensible, Customizable, Free/Libre Text Editor
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: editor, text&quot;)
+whatis(&quot;Keywords: editor, text, cli, tui&quot;)
 whatis(&quot;URL: https://www.gnu.org/software/emacs/, https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases (changelog)&quot;)
 whatis([[
 Description: At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.
@@ -1218,10 +1218,58 @@ Warning: Only the most recent version of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_expect" class="module-name">expect</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">expect: Programmed Dialogue with Interactive Programs</strong><br>
+<span class="module-description">Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.</span><br>
+Example: <span class="module-example"><code>expect -version</code>, and <code>man expect</code>.</span><br>
+URL: <span class="module-url"><a href="https://core.tcl-lang.org/expect/index">https://core.tcl-lang.org/expect/index</a>, <a href="https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip">https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip</a> (changelog), <a href="https://core.tcl-lang.org/expect/dir?ci=tip">https://core.tcl-lang.org/expect/dir?ci=tip</a> (source code), <a href="https://sourceforge.net/projects/expect/files/Expect/">https://sourceforge.net/projects/expect/files/Expect/</a> (download)</span><br>
+Versions: <span class="module-version"><em>5.45.4</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+expect: Programmed Dialogue with Interactive Programs
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: scripting, programming&quot;)
+whatis(&quot;URL: https://core.tcl-lang.org/expect/index, https://core.tcl-lang.org/expect/file?name=ChangeLog&amp;ci=tip (changelog), https://core.tcl-lang.org/expect/dir?ci=tip (source code), https://sourceforge.net/projects/expect/files/Expect/ (download)&quot;)
+whatis([[
+Description: Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.
+Examples: `expect -version`, and `man expect`.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;libs&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+
 </code></pre>
 
 </details>
@@ -1718,7 +1766,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.2.0, <em>3.2.1</em></span><br>
+Versions: <span class="module-version">3.2.0, 3.2.1, <em>3.2.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1738,6 +1786,12 @@ Warning: Only the most recent version of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
@@ -2064,7 +2118,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;.b
 Example: <span class="module-example"><code>mc</code> and <code>mc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://midnight-commander.org/">https://midnight-commander.org/</a>, <a href="https://github.com/MidnightCommander/mc/blob/master/doc/NEWS">https://github.com/MidnightCommander/mc/blob/master/doc/NEWS</a> (changelog), <a href="https://github.com/MidnightCommander/mc">https://github.com/MidnightCommander/mc</a> (source code), <a href="https://github.com/MidnightCommander/mc/tags">https://github.com/MidnightCommander/mc/tags</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.8.28, <em>4.8.29</em></span><br>
+Versions: <span class="module-version">4.8.28, <em>4.8.29</em>, 4.8.30</span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3174,7 +3228,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
 Example: <span class="module-example"><code>samtools --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS">https://github.com/samtools/samtools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, <em>1.17</em></span><br>
+Versions: <span class="module-version">1.10, 1.11, 1.13, 1.14, 1.15.1, 1.15, 1.16.1, 1.16, 1.17, <em>1.18</em>, 1.9</span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3192,6 +3246,12 @@ Examples: `samtools --version`.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
@@ -3480,7 +3540,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</span><br>
 Example: <span class="module-example"><code>sqlite3 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://sqlite.org/">https://sqlite.org/</a>, <a href="https://sqlite.org/docs.html">https://sqlite.org/docs.html</a> (docs), <a href="https://github.com/sqlite/sqlite/tags">https://github.com/sqlite/sqlite/tags</a> (changelog), <a href="https://github.com/sqlite/sqlite">https://github.com/sqlite/sqlite</a> (source code)</span><br>
-Versions: <span class="module-version">3.32.3, 3.41.1, 3.41.2, <em>3.42.0</em></span><br>
+Versions: <span class="module-version">3.32.3, 3.41.1, 3.41.2, 3.42.0, <em>3.43.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3498,6 +3558,12 @@ Example: `sqlite3 --version`.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
@@ -6745,7 +6811,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(94)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
