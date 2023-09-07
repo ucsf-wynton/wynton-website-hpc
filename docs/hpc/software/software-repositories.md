@@ -1220,7 +1220,7 @@ Warning: Only the most recent version of this software will be kept.
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
   root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
@@ -1804,7 +1804,7 @@ Warning: Only the most recent version of this software will be kept.
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
   root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
@@ -2155,7 +2155,7 @@ Warning: Only the most recent version of this software will be kept.
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
   root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
