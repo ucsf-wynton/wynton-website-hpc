@@ -1221,7 +1221,7 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
 if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -1260,8 +1260,8 @@ Examples: `expect -version`, and `man expect`.
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -1466,6 +1466,12 @@ if v &gt;= &quot;3&quot; then
 end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
@@ -1805,7 +1811,7 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
 if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -2156,7 +2162,7 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
 if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -3265,8 +3271,8 @@ Examples: `samtools --version`.
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -3577,8 +3583,8 @@ Example: `sqlite3 --version`.
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
 -- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/[.]&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;.&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
 end
 
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
