@@ -2734,11 +2734,6 @@ Examples: `qtop`, `qtop --help`, `qtop --version`, and `qtop -FGW`.
 Warning: Only the most recent version of this software will be kept.
 ]])
 
--- This module is only available on CentOS 7
-if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
-end
-
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
