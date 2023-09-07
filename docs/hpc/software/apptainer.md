@@ -252,12 +252,12 @@ Check results:
 
 ### Building a container from scratch
 
-Sometimes you need to build custom Linux container from a definition
-file, e.g. a `Dockerfile` or a `*.def` file.  In the past, when
-Singularity was used, this required administrative ("sudo")
-privileges. However, with the introduction of Apptainer, any user can
-now build container images also from scratch from one of the
-{{ site.cluster.name }} development nodes.
+Sometimes you need to build custom Linux container from a `*.def`
+definition file.  In the past, when Singularity was used, this
+required administrative ("sudo") privileges. However, with the
+introduction of Apptainer, any user can now build container images
+also from scratch from one of the {{ site.cluster.name }} development
+nodes.
 
 For example, consider the following `isoseq3.def` file, which builds
 upon a Docker Miniconda3 image (available at
