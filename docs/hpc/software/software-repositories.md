@@ -3360,7 +3360,7 @@ setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pk
 <strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
+URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/</a></span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">36, <em>38</em></span><br>
