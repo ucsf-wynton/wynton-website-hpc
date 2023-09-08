@@ -4,7 +4,7 @@
 
 # Apptainer - Linux Containers
 
-The {{ site.cluster.name }} cluster supports [Linux containers] via the [Apptainer] software (formerly known as [Singularity]).  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including CentOS used by our cluster.
+The {{ site.cluster.name }} cluster supports [Linux containers] via the [Apptainer] software (formerly known as [Singularity]).  A Linux container is an efficient and powerful virtualization method for running isolated Linux systems ("containers") on any Linux system including the one used by our cluster.
 
 Apptainer, and Linux containers in general, provides solutions to common problems and hurdles that HPC users often face, e.g.
 

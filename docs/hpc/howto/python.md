@@ -259,7 +259,7 @@ Note how prefix `(my_project)` was dropped from the shell prompt and `python3` n
 
 ### Using a more modern Python 3 version
 
-The version of Python 3 that comes built-in with CentOS is a bit dated. Specifically, it provides:
+The version of Python 3 that comes built-in with CentOS 7 is a bit dated. Specifically, it provides:
 
 <!-- code-block label="python-version" -->
 ```sh

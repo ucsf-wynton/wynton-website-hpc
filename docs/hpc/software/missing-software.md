@@ -23,4 +23,4 @@ If so, you have a few options:
    <br><br>
 
 4. Missing core software or missing SCL?
-   - If a [CentOS core software](/hpc/software/core-software.html) or a [CentOS Software Collection (SCL)](/hpc/software/scl.html) is missing, it is likely that the [the system administrators](/hpc/about/contact.html) are willing to add it - please let us know
+   - If a [core software](/hpc/software/core-software.html) or a [Software Collection (SCL)](/hpc/software/scl.html) is missing, it is likely that the [the system administrators](/hpc/about/contact.html) are willing to add it - please let us know

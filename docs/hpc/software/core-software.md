@@ -1,4 +1,4 @@
-# CentOS Core Software
+# Core Software
 
 A large number of common Linux software tools are available on the
 cluster as part of the core setup.  Below follows a small excerpt of

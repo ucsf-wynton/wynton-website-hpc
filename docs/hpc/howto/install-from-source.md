@@ -254,7 +254,7 @@ This GCC 4.8.5 compiler supports older C++ standards such as C++11, but none of 
 g++: error: unrecognized command line option '-std=gnu++17'
 ```
 
-From this error message (`-std=c++17`), we can see that we need a compiler that requires C++17, From <https://gcc.gnu.org/projects/cxx-status.html#cxx17>, we see that we need at least GCC 7, or possibly even GCC 8.  Newer version of compilers are available via the 'devtoolset' [CentOS Software Collections (SCLs)].  The easiest way to access these is via the `scl-devtoolset` modules in the [CBI software repository], e.g.
+From this error message (`-std=c++17`), we can see that we need a compiler that requires C++17, From <https://gcc.gnu.org/projects/cxx-status.html#cxx17>, we see that we need at least GCC 7, or possibly even GCC 8.  Newer version of compilers are available via the 'devtoolset' [Software Collections (SCLs)].  The easiest way to access these is via the `scl-devtoolset` modules in the [CBI software repository], e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset/8
@@ -269,7 +269,7 @@ You only need to load these compiler tools prior to installing the software.  Wi
 
 
 
-[CentOS Software Collections (SCLs)]: ../software/scl.html#development-nodes
+[Software Collections (SCLs)]: ../software/scl.html#development-nodes
 [CBI software repository]: ../software/software-repositories.html
 [Support Channels]: ../support/index.html
 [samtools]: https://github.com/samtools/samtools
