@@ -2329,6 +2329,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
 <span class="module-description">MuTect is a method developed at the Broad Institute for the reliable and accurate identification of somatic point mutations in next generation sequencing data of cancer genomes.</span><br>
 Example: <span class="module-example"><code>mutect</code>, which is short for <code>java -Xmx2g -jar &quot;$MUTECT_JAR&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/cancer/cga/mutect">https://software.broadinstitute.org/cancer/cga/mutect</a>, <a href="https://github.com/broadinstitute/mutect">https://github.com/broadinstitute/mutect</a> (source code)</span><br>
+Requirement: <span class="module-requirement">MuTect (&lt;= 1.1) requires Java v1.7 and will not work with any other Java versions.</span><br>
 Versions: <span class="module-version">1.1.1, 1.1.4, <em>1.1.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2344,6 +2345,7 @@ whatis(&quot;URL: https://software.broadinstitute.org/cancer/cga/mutect, https:/
 whatis([[
 Description: MuTect is a method developed at the Broad Institute for the reliable and accurate identification of somatic point mutations in next generation sequencing data of cancer genomes.
 Examples: `mutect`, which is short for `java -Xmx2g -jar &quot;$MUTECT_JAR&quot;`.
+Requirements: MuTect (&lt;= 1.1) requires Java v1.7 and will not work with any other Java versions.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2358,6 +2360,19 @@ if (version == &quot;1.0.27783&quot;) then
 --    depends_on(&quot;openjdk/1.6.0&quot;)
   end
 end
+
+-- Validate proper Java version for older versions of MuTect
+if string.match(version, &quot;^1[.][01]&quot;) then
+  local bfr = capture(&quot;java -version 2&gt;&amp;1&quot;)
+  for line in string.gmatch(bfr, &quot;[^\n]+&quot;) do
+    if string.match(line, &quot;version&quot;) then
+      if not string.match(line, &quot;1[.]7&quot;) then
+        LmodWarning(myModuleFullName() .. &quot; requires Java v1.7, but you are running &quot; .. line)
+      end
+    end
+  end
+end
+
 
 name = &quot;muTect&quot;
 pushenv(&quot;MUTECT_HOME&quot;, home)
