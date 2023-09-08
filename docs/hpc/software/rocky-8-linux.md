@@ -1,73 +1,86 @@
 # Migration to Rocky 8 Linux from CentOS 7
 
-{{ site.cluster.nickname }} currently runs on CentOS 7 Linux.
+## Wynton will switch to Rocky 8 on October 30
 
-CentOS 7 will be reaching end of life June 30, 2024. 
+{{ site.cluster.nickname }} currently runs on CentOS 7 Linux. CentOS 7
+will reach the [end of life (EOL) on June 30, 2024], which means it will
+receive neither regular not security updates after that date.  To keep
+up with Linux security patches and to enable more modern software
+packages, we will move the {{ site.cluster.name }} to the [Rocky 8
+Linux](https://rockylinux.org/) distribution;
 
-Both to keep up with Linux security patches and to enable more modern
-software packages, the {{ site.cluster.name }} Cluster will be moving
-all interactive and compute nodes to the "Rocky 8" Linux Distribution
-during a scheduled downtime: October 30, 2023.
+* _We will migrate all of the cluster from CentOS 7 to Rocky 8 during
+    a complete downtime on **Monday October 30, 2023**_
 
-However, because Rocky 8 is a different distribution and contains many
-updated packages, many things which currently work on {{
-site.cluster.nickname }} are expected to need to be changed to work on
-Rocky 8.
+* You can already now test your existing pipelines on our Rocky 8 test
+  cluster.
+
+
+
+## What to expect?
+
+Rocky 8 is a modern Linux distribution that is similar and supersedes
+CentOS 7. It comes with newer versions of software tools and system
+libraries, which means that more software will install out of the box
+without having to go an extra mile to get them installed.  We expect a
+lot of things to keep working as before, but some software tools may
+require you to tweak your scripts and to re-install for instance R and
+Python packages.
+
+Here are some of the hurdles you may run into:
+
+* [Software Repositories] : It is expected that some of the software
+  tools available via environment modules (built-in, CBI, and Sali)
+  may no longer work or Rocky 8.  The few that were specific to CentOS
+  7, will no longer be available.  If you run across a module that
+  does not work, please email us the details at [{{
+  site.cluster.email_support }}](mailto:{{ site.cluster.email_support
+  }})
+
+* [Software Collections (SCL)] : Compared to CentOS 7, Rocky 8 will
+  only provide SCLs for using modern GCC development tools, e.g. C and
+  C++ compilers.  These SCLs, called `gcc-toolset`, corresponds
+  somewhat to the `devtoolset` SCLs that are available on CentOS 7.
+  Python and Ruby SCLs will no longer be available.
+
+* [Python] : There will no longer be a `python` command; Python 3 has
+  to be called as `python3` and legacy Python 2 is available as
+  `python2`. On CentOS 7, `python` corresponded to `python2`.  Note
+  that Python 2 reached it's EOL on 2020-01-01.
+
+
+## Try Rocky 8 already now
 
 To get ahead of the upgrade, we have installed Rocky 8 on a few
 interactive and compute nodes to enable you to test and to update your
 jobs and self-compiled software and scripts so they work with Rocky 8.
 
-Development nodes:
+If you are a non-PHI users, please use:
 
-* non-PHI: `devr8`
-* PHI: `pdevr8`
+ * Development node: `devr8`
+ * GPU development node: `gpudevr8`
+ * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
-GPU development nodes:
+If you are a PHI users, please use:
 
-* non-PHI: `gpudevr8`
-* PHI: `pgpudevr8`
-
-Jobs can be submitted to the Rocky 8 compute nodes by using `#$ -l
-rocky8=true` SGE job resource limitation in the job submission script.
+ * Development node: `pdevr8`
+ * GPU development node: `pgpudevr8`
+ * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
 Note, at this time (2023-08-31) there are only six available Rocky 8
 compute nodes in the cluster, so _please do not send large arrays to
 the Rocky 8 nodes_.
 
-Notes:
 
-* It is expected that many of the built-in and CBI modules may be
-  broken when run in Rocky 8.
+## Rocky 8 support and feedback
 
-* If you run across a module that doesn't function as you expect,
-  please email us the details at [{{ site.cluster.email_support
-  }}](mailto:{{ site.cluster.email_support }})
-
-* Software Collections (SCL) are organized differently in Rocky 8;
-  only the `gcc-toolset` SCLs are available. Python and Ruby SCLs are
-  not available.
-
-* The default system Python on Rocky 8 is now Python v3.6 and must be
-  called using: `python3` (which is the version located at
-  `/usr/bin/python3`) and not just `python`.
-
-* Python-2.7 is still available as `python2`, but is deprecated. We
-  recommend any jobs/scripts/programs be updated to use
-  `python3`. [Python 2 End of Life (EOL) was January 1,
-  2020](https://www.python.org/doc/sunset-python-2/).
-
-Please provide any feedback to [{{ site.cluster.email_support
-}}](mailto:{{ site.cluster.email_support }}).
-
-If you prefer to communicate via Slack, we have also created a #rocky8
-channel in the UCSF Wynton Slack instance for Rocky 8-specific tips
-and troubleshooting.
+Please provide any feedback either via email to [{{
+site.cluster.email_support }}](mailto:{{ site.cluster.email_support
+}}) or via Slack (feel free to use the `#rocky8` channel before the
+migration).
 
 
-## See Also
-
-* [Rocky Linux](https://rockylinux.org/)
-
-* [Red Hat: What to know about CentOS Linux
-  EOL](https://www.redhat.com/en/topics/linux/centos-linux-eol)
+[end of life (EOL) on June 30, 2024]: https://www.redhat.com/en/topics/linux/centos-linux-eol
+[Software Repositories]: software-repositories.html
+[Software Collections (SCL)]: scl.html
+[Python]: ../howto/python.html
