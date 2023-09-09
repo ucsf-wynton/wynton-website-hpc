@@ -46,7 +46,7 @@ Here are some of the hurdles you may run into:
 * [Python] : There will no longer be a `python` command; Python 3 has
   to be called as `python3` and legacy Python 2 is available as
   `python2`. On CentOS 7, `python` corresponded to `python2`.  Note
-  that Python 2 reached it's EOL on 2020-01-01.
+  that Python 2 reached its EOL on 2020-01-01.
 
 
 ## Try Rocky 8 already now
