@@ -1796,7 +1796,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.2.0, 3.2.1, <em>3.2.2</em></span><br>
+Versions: <span class="module-version"><em>3.2.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2148,7 +2148,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;.b
 Example: <span class="module-example"><code>mc</code> and <code>mc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://midnight-commander.org/">https://midnight-commander.org/</a>, <a href="https://github.com/MidnightCommander/mc/blob/master/doc/NEWS">https://github.com/MidnightCommander/mc/blob/master/doc/NEWS</a> (changelog), <a href="https://github.com/MidnightCommander/mc">https://github.com/MidnightCommander/mc</a> (source code), <a href="https://github.com/MidnightCommander/mc/tags">https://github.com/MidnightCommander/mc/tags</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.8.28, 4.8.29, <em>4.8.30</em></span><br>
+Versions: <span class="module-version"><em>4.8.30</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2439,7 +2439,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc/blob/master/changelog.md">https://github.com/jgm/pandoc/blob/master/changelog.md</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.0.1, 3.1.2, 3.1.3, 3.1.4, <em>3.1.6.1</em></span><br>
+Versions: <span class="module-version">3.0.1, 3.1.2, 3.1.3, 3.1.4, 3.1.6.1, <em>3.1.8</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
