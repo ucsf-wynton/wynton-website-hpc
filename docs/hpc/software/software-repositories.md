@@ -1388,17 +1388,17 @@ if version_x == &quot;1&quot; then
   pushenv(&quot;GATK_HOME&quot;, home)
 elseif version_x == &quot;4&quot; then
   local success=false
-  for version = 17,23 do
+  for version = 17,30 do
     module=&quot;openjdk/&quot; .. version
-    try_load(module)
-    if isloaded(module) then
+    if isAvail(module) then
+      load(module)
       success=true
       break
     end
   end
   if mode() == &quot;load&quot; then
     if not success then
-      LmodError(name .. &quot; requires Java (&gt;= 17), which could not be found&quot;)
+      LmodError(name .. &quot; requires openjdk/17 or newer, but that is not available on &quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot; machine &quot; .. os.getenv(&quot;HOSTNAME&quot;))
     end
   end
   prepend_path(&quot;PATH&quot;, home)
