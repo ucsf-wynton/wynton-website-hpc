@@ -1377,7 +1377,7 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
-if (version_x == &quot;1&quot;) then
+if version_x == &quot;1&quot; then
   -- GATK v1.* requires Java (&lt;= 1.7)
   local cluster = os.getenv(&quot;CLUSTER&quot;) or &quot;&quot;
   if (cluster == &quot;tipcc&quot;) then
@@ -1386,6 +1386,22 @@ if (version_x == &quot;1&quot;) then
     depends_on(&quot;openjdk/1.6.0&quot;)
   end
   pushenv(&quot;GATK_HOME&quot;, home)
+elseif version_x == &quot;4&quot; then
+  local success=false
+  for version = 17,23 do
+    module=&quot;openjdk/&quot; .. version
+    try_load(module)
+    if isloaded(module) then
+      success=true
+      break
+    end
+  end
+  if mode() == &quot;load&quot; then
+    if not success then
+      LmodError(name .. &quot; requires Java (&gt;= 17), which could not be found&quot;)
+    end
+  end
+  prepend_path(&quot;PATH&quot;, home)
 else
   prepend_path(&quot;PATH&quot;, home)
 end
