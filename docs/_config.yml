@@ -30,10 +30,12 @@ login:
   name: "log1"
   hostname: "log1.wynton.ucsf.edu"
   ip: "169.230.126.77"
+
 devel:
-  name: "dev2"
-  hostname: "dev2"
-  ip: "172.26.32.7"
+  name: "dev1"
+  hostname: "dev1"
+  ip: "172.26.32.2"
+
 transfer:
   name: "dt2"
   hostname: "dt2.wynton.ucsf.edu"
