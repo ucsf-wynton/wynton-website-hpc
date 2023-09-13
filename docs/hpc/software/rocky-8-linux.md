@@ -67,7 +67,7 @@ If you are a PHI users, please use:
  * GPU development node: `pgpudevr8`
  * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
-Note, at this time (2023-08-31) there are only six available Rocky 8
+Note, at this time (2023-08-31) there is a limited number of Rocky 8
 compute nodes in the cluster, so _please do not send large arrays to
 the Rocky 8 nodes_.
 
