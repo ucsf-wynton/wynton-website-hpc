@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
@@ -237,7 +237,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (95)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (96)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -1391,6 +1391,8 @@ if version_x == &quot;1&quot; then
 elseif version_x == &quot;4&quot; then
   if mode() == &quot;load&quot; then
     local success=false
+
+    -- try all possible openjdk/(&gt;= 17) versions
     for version = 17,30 do
       module=&quot;openjdk/&quot; .. version
       if isAvail(module) then
@@ -1399,12 +1401,21 @@ elseif version_x == &quot;4&quot; then
         break
       end
     end
+    
+    -- try oraclejdk/(&gt;= 17) versions
     if not success then
-      msg = name .. &quot; requires openjdk/17 or newer, but that is not available on &quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot; machine &quot; .. os.getenv(&quot;HOSTNAME&quot;)
-      if os.getenv(&quot;SGE_CLUSTER_NAME&quot;) == &quot;wynton_cluster&quot; then
-        msg = msg .. &quot;. Wynton HPC is moving to Rocky 8 on 2023-10-30, which has Java (&gt;= 17). Until then, you can run GATK on the dedicated Rocky 8 test cluster, cf. https://wynton.ucsf.edu/hpc/software/rocky-8-linux.html&quot;
+      for version = 17,30 do
+        module=&quot;oraclejdk/&quot; .. version
+        if isAvail(module) then
+          load(module)
+          success=true
+          break
+        end
       end
-      LmodError(msg)
+    end
+    
+    if not success then
+      LmodError(name .. &quot; requires openjdk/17 or newer, but that is not available on &quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot; machine &quot; .. os.getenv(&quot;HOSTNAME&quot;))
     end
   end
   prepend_path(&quot;PATH&quot;, home)
@@ -2448,6 +2459,52 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_oraclejdk" class="module-name">oraclejdk</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">oraclejdk: Oracle Java Development Kit</strong><br>
+<span class="module-description">Oracle's implementation of Java and the Java Development Kit.  This is an alternative to the OpenJDK Java version.</span><br>
+Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
+URL: <span class="module-url"><a href="https://www.oracle.com/java/">https://www.oracle.com/java/</a>, <a href="https://www.oracle.com/java/technologies/downloads/">https://www.oracle.com/java/technologies/downloads/</a> (downloads)</span><br>
+Versions: <span class="module-version"><em>17.0.8</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+oraclejdk: Oracle Java Development Kit
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming&quot;)
+whatis(&quot;URL: https://www.oracle.com/java/, https://www.oracle.com/java/technologies/downloads/ (downloads)&quot;)
+whatis([[
+Description: Oracle's implementation of Java and the Java Development Kit.  This is an alternative to the OpenJDK Java version.
+Examples: `java -version` and `javac -version`.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+setenv(&quot;JAVA_HOME&quot;, home)
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
+
+conflict(&quot;openjdk&quot;)
 </code></pre>
 
 </details>
@@ -6880,7 +6937,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
