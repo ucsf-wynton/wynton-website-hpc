@@ -1356,6 +1356,7 @@ pushenv(&quot;FZF_HOME&quot;, home)
 <span class="module-description">Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.</span><br>
 Example: <span class="module-example"><code>gatk --help</code> and <code>gatk --list</code>.</span><br>
 URL: <span class="module-url"><a href="https://gatk.broadinstitute.org/hc/en-us">https://gatk.broadinstitute.org/hc/en-us</a>, <a href="https://github.com/broadinstitute/gatk">https://github.com/broadinstitute/gatk</a> (source code), <a href="https://github.com/broadinstitute/gatk/releases">https://github.com/broadinstitute/gatk/releases</a> (changelog), <a href="https://github.com/broadgsa/gatk">https://github.com/broadgsa/gatk</a> (legacy), <a href="https://console.cloud.google.com/storage/browser/gatk-software/package-archive">https://console.cloud.google.com/storage/browser/gatk-software/package-archive</a> (legacy), <a href="ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/">ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/</a> (legacy)</span><br>
+Requirement: <span class="module-requirement">Modern GATK versions require Java (&gt;= 17).</span><br>
 Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, 4.2.2.0, 4.2.4.1, 4.2.5.0, 4.2.6.0, 4.2.6.1, 4.3.0.0, <em>4.4.0.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -1370,6 +1371,7 @@ whatis(&quot;Keywords: sequencing, genome&quot;)
 whatis(&quot;URL: https://gatk.broadinstitute.org/hc/en-us, https://github.com/broadinstitute/gatk (source code), https://github.com/broadinstitute/gatk/releases (changelog), https://github.com/broadgsa/gatk (legacy), https://console.cloud.google.com/storage/browser/gatk-software/package-archive (legacy), ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/ (legacy)&quot;)
 whatis([[
 Description: Developed in the Data Sciences Platform at the Broad Institute, the toolkit offers a wide variety of tools with a primary focus on variant discovery and genotyping. Its powerful processing engine and high-performance computing features make it capable of taking on projects of any size.
+Requirements: Modern GATK versions require Java (&gt;= 17).
 Examples: `gatk --help` and `gatk --list`.
 ]])
 
@@ -1387,18 +1389,22 @@ if version_x == &quot;1&quot; then
   end
   pushenv(&quot;GATK_HOME&quot;, home)
 elseif version_x == &quot;4&quot; then
-  local success=false
-  for version = 17,30 do
-    module=&quot;openjdk/&quot; .. version
-    if isAvail(module) then
-      load(module)
-      success=true
-      break
-    end
-  end
   if mode() == &quot;load&quot; then
+    local success=false
+    for version = 17,30 do
+      module=&quot;openjdk/&quot; .. version
+      if isAvail(module) then
+        load(module)
+        success=true
+        break
+      end
+    end
     if not success then
-      LmodError(name .. &quot; requires openjdk/17 or newer, but that is not available on &quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot; machine &quot; .. os.getenv(&quot;HOSTNAME&quot;))
+      msg = name .. &quot; requires openjdk/17 or newer, but that is not available on &quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot; machine &quot; .. os.getenv(&quot;HOSTNAME&quot;)
+      if os.getenv(&quot;SGE_CLUSTER_NAME&quot;) == &quot;wynton_cluster&quot; then
+        msg = msg .. &quot;. Wynton HPC is moving to Rocky 8 on 2023-10-30, which has Java (&gt;= 17). Until then, you can run GATK on the dedicated Rocky 8 test cluster, cf. https://wynton.ucsf.edu/hpc/software/rocky-8-linux.html&quot;
+      end
+      LmodError(msg)
     end
   end
   prepend_path(&quot;PATH&quot;, home)
