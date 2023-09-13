@@ -68,7 +68,7 @@ If you are a PHI users, please use:
  * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
 Note, at this time (2023-08-31) there is a limited number of Rocky 8
-compute nodes in the cluster, so _please do not send large arrays to
+compute nodes in the cluster, so _please do not send large arrays or time consuming jobs to
 the Rocky 8 nodes_.
 
 
