@@ -58,6 +58,7 @@ jobs and self-compiled software and scripts so they work with Rocky 8.
 If you are a non-PHI users, please use:
 
  * Development node: `devr8`
+ * Development node: `dev3`
  * GPU development node: `gpudevr8`
  * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
