@@ -1850,11 +1850,6 @@ Warning: Only the most recent version of this software will be kept.
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
--- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
-end
-
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
@@ -3462,7 +3457,7 @@ setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pk
 <strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
+URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/</a></span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">36, <em>38</em></span><br>
@@ -3518,7 +3513,7 @@ prepend_path(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-python38/root/usr/share&
 <strong class="module-help">SCL Ruby: Ruby</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>&quot; .. scl_name .. &quot;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable &quot; .. scl_name .. &quot;</code>, which is an approach that is not of ficially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>irb --help</code>, <code>ruby --help</code>, <code>ruby script.rb</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-ruby.30/">https://www.softwarecollections.org/en/scls/rhscl/rh-ruby.30/</a></span><br>
+URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/">https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/</a></span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">25, 26, 27, <em>30</em></span><br>
 <details>
