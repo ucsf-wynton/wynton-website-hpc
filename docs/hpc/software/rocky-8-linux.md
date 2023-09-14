@@ -34,8 +34,8 @@ Here are some of the hurdles you may run into:
   using ANY software modules, first check to see if the software is installed on the system. If the software is available without loading a module, use the installed version rather than 
   the module.
   It is expected that some of the software tools available via environment modules (built-in, CBI, and Sali)
-  may no longer work or Rocky 8.  The few that were specific to CentOS
-  7, will no longer be available.  If you run across a module that
+  may not work or Rocky 8 due to library dependencies and other issues.  The few that were specific to CentOS
+  7, will be removed as they are discovered.  If you run across a module that
   does not work, please email us the details at [{{
   site.cluster.email_support }}](mailto:{{ site.cluster.email_support
   }})
