@@ -51,10 +51,10 @@ Here are some of the hurdles you may run into:
   `python2`. On CentOS 7, `python` corresponded to `python2`.  Note
   that Python 2 reached its EOL on 2020-01-01.
 
-* Self Compiled Software : If you have compiled software to run from your home directory, depending on how the libraries are linked, it may need to be recompiled to function in Rocky 8.
+* Self Compiled Software : If you have compiled software to run from your home directory, depending on how the libraries are linked, it may need to be recompiled to function in Rocky 8. In addition, software compiled on Rocky 8 nodes may NOT function on CentOS 7 nodes (and vice versa).
 
 
-## Try Rocky 8 already now
+## Try Rocky 8
 
 To get ahead of the upgrade, we have installed Rocky 8 on a few
 interactive and compute nodes to enable you to test and to update your
