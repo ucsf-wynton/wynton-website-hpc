@@ -34,12 +34,12 @@ Here are some of the hurdles you may run into:
   were available in CentOS 7 Linux. As Rocky 8 is a newer software
   distribution, many of those modules created with CentOS 7 Linux in
   mind now provide _older_ versions of software than packages that are
-  installed in Rocky 8. Before using ANY software modules, first check
-  to see if the software is installed on the system. If the software
-  is available without loading a module, use the installed version
-  rather than the module.  It is expected that some of the software
-  tools available via environment modules (built-in, CBI, and Sali)
-  may not work or Rocky 8 due to library dependencies and other
+  installed in Rocky 8. Before using _any_ software modules, first
+  check to see if the software is installed on the system. If the
+  software is available without loading a module, use the installed
+  version rather than the module.  It is expected that some of the
+  software tools available via environment modules (built-in, CBI, and
+  Sali) may not work or Rocky 8 due to library dependencies and other
   issues.  The few that were specific to CentOS 7, will be removed as
   they are discovered.  If you run across a module that does not work,
   please email us the details at [{{ site.cluster.email_support
