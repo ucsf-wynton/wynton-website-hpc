@@ -48,7 +48,7 @@ title: Wynton HPC Status
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_group_cbi_hb"></div>
   </div>
 
-_Figure: Total relative time for one benchmarking run to complete over time relateive to when there is no load. The minimum is 1.0. The larger, the more lag there is on file system. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
+_Figure: The total, relative processing time for one benchmarking run to complete over time. The values presented are relative to the best case scenario when there is no load, in case the value is 1.0. The larger the relative time is, the more lag there is on file system. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
 
 Details: These metrics are based on a [set commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench](https://github.com/ucsf-wynton/wynton-bench)** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  When there's minimal load on `/wynton`, the processing time is ~19 seconds. In contrast, when benchmarking local `/scratch`, the total processing time is about three seconds.
 
