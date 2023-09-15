@@ -29,16 +29,21 @@ Python packages.
 
 Here are some of the hurdles you may run into:
 
-* [Software Repositories] : Historically, many Wynton software modules were created to provide NEWER versions of software than those that were available in CentOS 7 Linux. As Rocky 8 is 
-  a newer software distribution, many of those modules created with CentOS 7 Linux in mind now provide OLDER versions of software than packages that are installed in Rocky 8. Before 
-  using ANY software modules, first check to see if the software is installed on the system. If the software is available without loading a module, use the installed version rather than 
-  the module.
-  It is expected that some of the software tools available via environment modules (built-in, CBI, and Sali)
-  may not work or Rocky 8 due to library dependencies and other issues.  The few that were specific to CentOS
-  7, will be removed as they are discovered.  If you run across a module that
-  does not work, please email us the details at [{{
-  site.cluster.email_support }}](mailto:{{ site.cluster.email_support
-  }})
+* [Software Repositories] : Historically, many Wynton software modules
+  were created to provide _newer_ versions of software than those that
+  were available in CentOS 7 Linux. As Rocky 8 is a newer software
+  distribution, many of those modules created with CentOS 7 Linux in
+  mind now provide _older_ versions of software than packages that are
+  installed in Rocky 8. Before using ANY software modules, first check
+  to see if the software is installed on the system. If the software
+  is available without loading a module, use the installed version
+  rather than the module.  It is expected that some of the software
+  tools available via environment modules (built-in, CBI, and Sali)
+  may not work or Rocky 8 due to library dependencies and other
+  issues.  The few that were specific to CentOS 7, will be removed as
+  they are discovered.  If you run across a module that does not work,
+  please email us the details at [{{ site.cluster.email_support
+  }}](mailto:{{ site.cluster.email_support }})
 
 * [Software Collections (SCL)] : Compared to CentOS 7, Rocky 8 will
   only provide SCLs for using modern GCC development tools, e.g. C and
@@ -51,7 +56,13 @@ Here are some of the hurdles you may run into:
   `python2`. On CentOS 7, `python` corresponded to `python2`.  Note
   that Python 2 reached its EOL on 2020-01-01.
 
-* Self Compiled Software : If you have compiled software to run from your home directory, depending on how the libraries are linked, it may need to be recompiled to function in Rocky 8. In addition, **software compiled on Rocky 8 nodes may NOT function on CentOS 7 nodes**. If you do compile or recompile software on the Rocky 8 dev nodes, be sure to send jobs which include that software ONLY to Rocky 8 nodes using the `-l rocky8=TRUE` flag. 
+* Self Compiled Software : If you have compiled software to run from
+  your home directory, depending on how the libraries are linked, it
+  may need to be recompiled to function in Rocky 8. In addition,
+  **software compiled on Rocky 8 nodes may _not_ function on CentOS 7
+  nodes**. If you do compile or recompile software on the Rocky 8 dev
+  nodes, be sure to send jobs which include that software _only_ to
+  Rocky 8 nodes using the `-l rocky8=true` flag.
 
 
 ## Try Rocky 8
@@ -62,8 +73,7 @@ jobs and self-compiled software and scripts so they work with Rocky 8.
 
 If you are a non-PHI users, please use:
 
- * Development node: `devr8`
- * Development node: `dev3`
+ * Development nodes: `dev3` and `devr8`
  * GPU development node: `gpudevr8`
  * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
@@ -74,8 +84,8 @@ If you are a PHI users, please use:
  * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
 Note, at this time (2023-08-31) there is a limited number of Rocky 8
-compute nodes in the cluster, so _please do not send large arrays or time consuming jobs to
-the Rocky 8 nodes_.
+compute nodes in the cluster, so _please do not send large arrays or
+time consuming jobs to the Rocky 8 nodes_.
 
 
 ## Rocky 8 support and feedback
