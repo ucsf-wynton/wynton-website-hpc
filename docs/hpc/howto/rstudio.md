@@ -1,7 +1,3 @@
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ 2023-04-04: If you get an error "**It looks like the RStudio Server failed during launch ...**" when you run `rsc start`, please [see below for a workaround](#known-issue-under-investigation-since-2023-03-30). It's a problem that affects several users, but not everyone.
-</div>
-
 # Work with RStudio
 
 R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio IDE, there are two options:
