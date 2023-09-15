@@ -67,8 +67,7 @@ apptainer (formerly singularity)
 <br>
 
 _Note:_ These core tools will be updated without notice as the
-operating system is updated on a regular basis via the CentOS package
-manager [yum](https://en.wikipedia.org/wiki/Yum_(.rpm)).  Many of the
+operating system is updated on a regular basis.  Many of the
 tools originate from the (stable) CentOS 7 [Extras] and [EPEL]
 repositories.  To see what software and system libraries that are
 installed, run `yum list installed`.  Please note that, compared to
