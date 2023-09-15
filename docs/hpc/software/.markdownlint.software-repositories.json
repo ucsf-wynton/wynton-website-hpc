@@ -1,0 +1,53 @@
+{
+    "line_length": false,
+    
+    "no-inline-html": false,
+
+    "no-multiple-blanks": { "maximum": 5 },
+
+    "blanks-around-fences": false,
+
+    "blanks-around-headers": true,
+
+    "blanks-around-lists": true,
+
+    "no-duplicate-header": false,
+    
+    "no-trailing-spaces": false,
+
+    "no-space-in-emphasis": false,
+
+    "no-space-in-code": true,
+
+    "no-emphasis-as-header": false,
+
+    "header-increment": true,
+    
+    "code-block-style": false,
+
+    "fenced-code-language": true,
+    
+    "ul-indent": false,
+
+    "ul-style": false,
+
+    "ul-start-left": false,
+    
+    "no-hard-tabs": true,
+
+    "no-trailing-punctuation": { "punctuation": ".,;:!" },
+    
+    "no-bare-urls": false,
+    
+    "ol-prefix": false,
+    
+    "first-line-h1": false,
+    
+    "commands-show-output": false,
+
+    "link-image-reference-definitions": false,
+    
+    "reference-links-images": false,
+
+    "seealso": "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+}
