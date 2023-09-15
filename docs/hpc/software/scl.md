@@ -97,6 +97,9 @@ gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)
 
 [alice@{{ site.devel.name }} ~]$ scl enable devtoolset-10 "gcc --version | head -1"
 gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)
+
+[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-11 "gcc --version | head -1"
+gcc (GCC) 11.2.1 20220127 (Red Hat 11.2.1-9)
 ```
 
 
@@ -109,7 +112,7 @@ The `rh-pythonNN` SCLs each include a specific version of Python.  Here are the 
 Python 3.6.12
 
 [alice@{{ site.devel.name }} ~]$ scl enable rh-python38 "python --version"
-Python 3.8.11
+Python 3.8.13
 ```
 
 
