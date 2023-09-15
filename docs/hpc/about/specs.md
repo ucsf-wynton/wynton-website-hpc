@@ -20,7 +20,7 @@
 
 | Feature     | Login Nodes | Transfer Nodes          | Development Nodes | Compute Nodes |
 | ---- | ---------- | ----------------------- | ------------ | ---- |
-| Hostname | `log[1-2].wynton.ucsf.edu`, `plog1.wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu`, `pdt[1-2].wynton.ucsf.edu` | `dev[1-3]`, `gpudev1`, `pdev1`, `pgpudev1` | … |
+| Hostname | `log[1-2].wynton.ucsf.edu`, `plog1.wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu`, `pdt[1-2].wynton.ucsf.edu` | `dev[1-2]`, `gpudev1`, `pdev1`, `pgpudev1` | … |
 | Accessible via SSH from outside of cluster | ✓ (2FA if outside of UCSF) | ✓ (2FA if outside of UCSF) | no                                                          | no |
 | Accessible via SSH from within cluster | ✓ | ✓ | ✓ | no |
 | Outbound access | Within UCSF only: SSH and SFTP | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, Globus | Via proxy: HTTP/HTTPS, GIT+SSH(\*) | no |
@@ -71,10 +71,13 @@ Node                               | Physical Cores |      RAM | Local `/scratch
 -----------------------------------|---------------:|---------:|-----------------:|-----------------:|------------------------------:|-------------------:|
 `{{ site.dev1.hostname }}`         |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
 `{{ site.dev2.hostname }}`         |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.dev3.hostname }}`         |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
 `{{ site.gpudev1.hostname }}`      |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
 `p{{ site.dev1.hostname }}` (for PHI users)    |  32 | 256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                    |
 `p{{ site.gpudev1.hostname }}` (for PHI users) |  32 | 128 GiB |         0.87 TiB | x86-64-v3        | Intel E5-2640 v3              | NVIDIA Tesla K80   |
+
+<!--
+`{{ site.dev3.hostname }}`         |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+-->
 
 _Comment:_
 Please use the GPU development node only if you need to build or prototype GPU software.
