@@ -18,9 +18,8 @@ jobs:
           files: docs/hpc/software/software-repositories.md
           config_file: docs/hpc/software/.markdownlint.software-repositories.json
 
-      - name: remove special files
-        run: |
-          rm docs/hpc/software/software-repositories.md
+      - name: Remove special files
+        run: rm docs/hpc/software/software-repositories.md
 	  
       - name: markdownlint-cli (remaining files)
         uses: nosborn/github-action-markdown-cli@v3.0.1
