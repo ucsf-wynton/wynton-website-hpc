@@ -2195,12 +2195,6 @@ Warning: Only the most recent version of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-
--- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
-end
-
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
@@ -3367,11 +3361,6 @@ Examples: `samtools --version`.
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 
--- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
-end
-
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
@@ -3457,7 +3446,7 @@ setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pk
 <strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/</a></span><br>
+URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">36, <em>38</em></span><br>
