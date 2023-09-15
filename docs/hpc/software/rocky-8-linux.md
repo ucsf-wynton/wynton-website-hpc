@@ -60,7 +60,10 @@ Here are some of the hurdles you may run into:
   8, the default, and only available version is OpenMPI 4.1, which you
   get via module `mpi/openmpi-x86_64` (sic!). Note that, on CentOS 7,
   `mpi/openmpi-x86_64` provided legacy OpenMPI 1.10. On CentOS 7,
-  there was also `mpi/openmpi3-x86_64` for OpenMPI 3.1.
+  there was also `mpi/openmpi3-x86_64` for OpenMPI 3.1.  Because Rocky
+  8 and CentOS 7 have no versions of OpenMPI in common, it is likely
+  that software tools that were _compiled_ with OpenMPI as a dependency
+  have to be rebuilt for Rocky 8.
 
 * Self-compiled software: If you have compiled software to run from
   your home directory, depending on how the libraries are linked, it
