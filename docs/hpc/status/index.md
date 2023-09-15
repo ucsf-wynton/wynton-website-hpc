@@ -29,28 +29,28 @@ title: Wynton HPC Status
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>/wynton/scratch/ lagginess (seconds)</span><span style="float: right;"></span>
+    <span>/wynton/scratch/ lagginess</span><span style="float: right;"></span>
    </div>
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_scratch_hb"></div>
   </div>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>/wynton/home/ lagginess (seconds)</span><span style="float: right;"></span>
+    <span>/wynton/home/ lagginess</span><span style="float: right;"></span>
    </div>
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_home_cbi_hb"></div>
   </div>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
-    <span>/wynton/group/ lagginess (seconds)</span><span style="float: right;"></span>
+    <span>/wynton/group/ lagginess</span><span style="float: right;"></span>
    </div>
    <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_group_cbi_hb"></div>
   </div>
 
-_Figure: Total time (in seconds) for one benchmarking run to complete over time. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
+_Figure: Total relative time for one benchmarking run to complete over time relateive to when there is no load. The minimum is 1.0. The larger, the more lag there is on file system. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
 
-Details: These metrics are based on a [set commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench](https://github.com/ucsf-wynton/wynton-bench)** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  When there's minimal load on `/wynton`, the processing time is ~20 seconds. In contrast, when benchmarking local `/scratch`, the total processing time is about three seconds.
+Details: These metrics are based on a [set commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench](https://github.com/ucsf-wynton/wynton-bench)** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  When there's minimal load on `/wynton`, the processing time is ~19 seconds. In contrast, when benchmarking local `/scratch`, the total processing time is about three seconds.
 
 
 ## Miscellaneous Metrics
@@ -200,9 +200,11 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <script>
-host = "dev1.wynton.ucsf.edu"
+url_path = "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench";
+host = "dev1.wynton.ucsf.edu";
 drives = ["wynton_scratch_hb", "wynton_home_cbi_hb", "wynton_group_cbi_hb"];
-url_path = "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench"
+// Baseline is when there is no load on the file system (rough estimate)
+baseline = 19.0;
 
 drives.forEach(function(drive) {
   var name = host + "__" + drive;
@@ -212,7 +214,17 @@ drives.forEach(function(drive) {
 
   Plotly.d3.tsv(url, function(err, rows) {
     function unpack(rows, key) {
-      return rows.map(function(row) { return row[key]; });
+      return rows.map(function(row) { 
+        var value = row[key];
+        if (key == "duration") {
+          value = parseFloat(value);
+          value = value / baseline;
+          if (value < 1.0) {
+            value = 1.0;
+          }
+        }
+        return value;
+      });
     }
 
     var beegfs_load = {
@@ -264,7 +276,7 @@ drives.forEach(function(drive) {
       },
       yaxis: {
         autorange: false,
-        range: [0, 800],
+        range: [0, 40],
         type: 'linear'
       }
     };
