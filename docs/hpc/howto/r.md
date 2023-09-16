@@ -324,6 +324,10 @@ In addition to making OpenMPI available by loading the `mpi` module, several MPI
 
 #### Package **Rmpi**
 
+<!--
+Rocky 8: install.packages("Rmpi") works out of the box /HB 2023-09-16
+-->
+
 The **[Rmpi]** package does not install out-of-the-box like other R packages.  To install **Rmpi** on the cluster, we have to load the `mpi` module (see above) before starting R.  Then, to install **Rmpi**, we launch R and call the following:
 
 <!-- code-block label="install-Rmpi" -->
@@ -393,6 +397,10 @@ slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 
 
 #### Packages **pbdMPI** and **bigGP**
+
+<!--
+Rocky 8: pbdMPI, bigGP still need to be installed this way /HB 2023-09-16
+-->
 
 Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbdMPI]** and **[bigGP]** require special install instructions.  For example, after having loaded the `mpi` module, we can install **pbdMPI** in R as:
 
@@ -497,6 +505,10 @@ The downloaded source packages are in
 
 #### Package **hdf5r**
 
+<!--
+Rocky 8: hdf5r installs out of the box; remove section /HB 2023-09-16
+-->
+
 The **[hdf5r]** package requires [hdf5 1.8.13 or newer](https://github.com/hhoeflin/hdf5r/issues/115) but the version that comes with CentOS 7/EPEL is only 1.8.12. This will result in the following installation error in R:
 
 ```r
@@ -530,6 +542,10 @@ After this, the **hdf5r** package will install out of the box, i.e. by calling:
 
 
 ### Packages relying on GDAL, GEOS, PROJ, and sqlite3
+
+<!--
+Rocky 8: rgdal,rgeos,sf,lwgeom,terra installs out of the box; remove section /HB 2023-09-16
+-->
 
 There are R packages for spatial analyses that depend on external
 libraries GDAL, GEOS, PROJ, and sqlite3. For example:
@@ -639,6 +655,10 @@ use these R packages.
 
 #### Package **rjags**
 
+<!--
+Rocky 8: rjags still requires JAGS; keep /HB 2023-09-16
+-->
+
 If we try to install the **[rjags]** package, we'll get the following
 installation error in R:
 
@@ -681,6 +701,10 @@ The GNU Scientific Library (GSL) is a numerical library for C and C++ that provi
 
 #### Package **gsl**
 
+<!--
+Rocky 8: gsl installs out of the box; remove section /HB 2023-09-16
+-->
+
 If we try to install the **[gsl]** package, we'll get the following
 compilation:
 
@@ -716,10 +740,14 @@ where the **gsl** R package needs to be loaded.
 
 #### Package **udunits2**
 
+<!--
+Rocky 8: udunits2 still requires special care; keep as-is /HB 2023-09-16
+-->
+
 The **[udunits2]** package does not install out of the box.  It seems to be due to a problem with the package itself, and the suggested instructions that the package gives on setting environment variable `UDUNITS2_INCLUDE` do not work.  A workaround to install the package is to do:
 
 ```sh
-install.packages("udunits2", configure.args="--with-udunits2-include=/usr/include/udunits2")   
+install.packages("udunits2", configure.args="--with-udunits2-include=/usr/include/udunits2")
 ```
 
 
