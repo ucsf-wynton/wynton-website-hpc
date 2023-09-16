@@ -656,7 +656,7 @@ use these R packages.
 #### Package **rjags**
 
 <!--
-Rocky 8: rjags still requires JAGS; keep /HB 2023-09-16
+Rocky 8: rjags still requires JAGS; keep. ALSO: Troubleshoot why rjags fails to load on Rocky 8 although the compile goes well /HB 2023-09-16
 -->
 
 If we try to install the **[rjags]** package, we'll get the following
