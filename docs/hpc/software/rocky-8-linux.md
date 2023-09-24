@@ -1,5 +1,8 @@
 # Migration to Rocky 8 Linux from CentOS 7
 
+_Last updated: 2023-09-24_
+
+
 ## Wynton will switch to Rocky 8 on October 30
 
 {{ site.cluster.nickname }} currently runs on CentOS 7 Linux. CentOS 7
@@ -13,7 +16,7 @@ Linux](https://rockylinux.org/) distribution;
     a complete downtime on **Monday October 30, 2023**_
 
 * You can already now test your existing pipelines on our Rocky 8 test
-  cluster.
+  cluster
 
 
 
