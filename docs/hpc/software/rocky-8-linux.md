@@ -29,21 +29,17 @@ Python packages.
 
 Here are some of the hurdles you may run into:
 
-* [Software Repositories] : Historically, many Wynton software modules
-  were created to provide _newer_ versions of software than those that
-  were available in CentOS 7 Linux. As Rocky 8 is a newer software
-  distribution, many of those modules created with CentOS 7 Linux in
-  mind now provide _older_ versions of software than packages that are
-  installed in Rocky 8. Before using _any_ software modules, first
-  check to see if the software is installed on the system. If the
-  software is available without loading a module, use the installed
-  version rather than the module.  It is expected that some of the
-  software tools available via environment modules (built-in, CBI, and
-  Sali) may not work or Rocky 8 due to library dependencies and other
-  issues.  The few that were specific to CentOS 7, will be removed as
-  they are discovered.  If you run across a module that does not work,
-  please email us the details at [{{ site.cluster.email_support
-  }}](mailto:{{ site.cluster.email_support }})
+* [Software Repositories] : Not all, but the majority of the existing
+  built-in, CBI, and Sali environment modules work also on Rocky 8.  A
+  small number of modules specific to CentOS 7 have been removed from
+  Rocky 8.  Many of the modules are no longer necessary to use on
+  Rocky 8, because they provided software and libraries that were
+  otherwise outdated on CentOS 7.  In contrast, Rocky 8 comes with
+  newer versions making the need for loading newer versions via
+  modules less necessary - when in doubt, try first without loading
+  the module.  If you run across a module that does not work, please
+  email us the details at [{{ site.cluster.email_support }}](mailto:{{
+  site.cluster.email_support }})
 
 * [Software Collections (SCL)] : Compared to CentOS 7, Rocky 8 will
   only provide SCLs for using modern GCC development tools, e.g. C and
