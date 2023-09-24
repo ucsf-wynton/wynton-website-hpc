@@ -23,11 +23,21 @@ To access the {{ site.cluster.name }} cluster you need an account - any UCSF aff
 
 ## Prerequisites
 
-The instructions below requires:
+The instructions below requires that you:
 
-* An SSH client available on your local computer
+* have an SSH client available on your local computer
 
-* A {{ site.cluster.name }} account with valid authentication credentials
+* have a {{ site.cluster.name }} account _(not the same as your UCSF
+  account)_
+
+* know your {{ site.cluster.name }} username _(not the same as your
+  UCSF password)_
+
+* know your {{ site.cluster.name }} password _(not the same as your
+  UCSF password)_
+
+* know whether you have a PHI or non-PHI {{ site.cluster.name }}
+  account _(you only have a PHI account if you requested it)_
 
 Users on Linux, macOS, and MS Windows have an SSH client built-in, which is available from the terminal as `ssh`. We will use that one in all our examples. You can also use other SSH clients if you prefer, include [PuTTY] on MS Windows. If you choose to use another SSH client, consult that program's documentation for further instructions. Another alternative, which some might find easier, is to connect to the cluster using the [X2Go] software.
 
