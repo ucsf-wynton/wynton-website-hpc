@@ -77,7 +77,7 @@ Here are some of the hurdles you may run into:
 ## Try Rocky 8
 
 To get ahead of the upgrade, we have installed Rocky 8 on a few
-interactive and compute nodes to enable you to test and to update your
+development and compute nodes to enable you to test and to update your
 jobs and self-compiled software and scripts so they work with Rocky 8.
 
 If you are a non-PHI users, please use:
