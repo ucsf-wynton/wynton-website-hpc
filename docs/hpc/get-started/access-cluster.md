@@ -42,6 +42,24 @@ The instructions below requires that you:
 Users on Linux, macOS, and MS Windows have an SSH client built-in, which is available from the terminal as `ssh`. We will use that one in all our examples. You can also use other SSH clients if you prefer, include [PuTTY] on MS Windows. If you choose to use another SSH client, consult that program's documentation for further instructions. Another alternative, which some might find easier, is to connect to the cluster using the [X2Go] software.
 
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 150%;" markdown="1">
+  
+  **Problem logging in?**  It might be that you have a PHI account,
+  but you try to log into a non-PHI login node.  Set the following
+  switch to tailor the instructions on the website to PHI users:
+  
+  <div style="padding: 0.1ex">
+    <span style="font-size: 200%; vertical-align: middle; padding-right: 1ex;">👉</span>
+    <span style="vertical-align: middle">
+      Non-PHI <label class="switch" title="View site as a Non-PHI or PHI user">
+        <input type="checkbox" id="toggle-phi-2">
+        <span class="slider round"></span>
+      </label> PHI
+    </span>
+  </div>
+</div>
+
+
 ## Instructions
 
 <div class="alert alert-info" role="alert" markdown="1">

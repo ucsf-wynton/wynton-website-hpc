@@ -338,13 +338,33 @@ Source: https://github.com/allejo/jekyll-anchor-headings
           }
       }
 
+      // Main PHI toggle switch
       const togglePhi = document.getElementById("toggle-phi");
       togglePhi.checked = phi;
-      togglePhi.addEventListener("click", function(e) {
-          localStorage.setItem("phi-mode", togglePhi.checked);
-          location.reload();
-      });
 
+      // Support for an optional, second PHI toggle switch
+      const togglePhi2 = document.getElementById("toggle-phi-2");
+      if (togglePhi2) {
+          togglePhi2.checked = phi;
+          
+          togglePhi.addEventListener("click", function(e) {
+//              togglePhi2.checked = togglePhi.checked;
+              localStorage.setItem("phi-mode", togglePhi.checked);
+              location.reload();
+          });
+          
+          togglePhi2.addEventListener("click", function(e) {
+//              togglePhi.checked = togglePhi2.checked;
+              localStorage.setItem("phi-mode", togglePhi2.checked);
+              location.reload();
+          });
+      } else {
+          togglePhi.addEventListener("click", function(e) {
+              localStorage.setItem("phi-mode", togglePhi.checked);
+              location.reload();
+          });
+      }
+      
       $(document.body).css('padding-top', $('#topnavbar').height() + 10);
       
       $(window).resize(function(){
