@@ -1,5 +1,21 @@
 # Protected Health Information (PHI) Quickstart
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 150%;" markdown="1">
+  
+  **Did you just get a Wynton PHI account?**  If so, set the following
+  switch to tailor the instructions on the website to PHI users:
+  
+  <div style="padding: 0.1ex">
+    <span style="font-size: 200%; vertical-align: middle; padding-right: 1ex;">👉</span>
+    <span style="vertical-align: middle">
+      Non-PHI <label class="switch" title="View site as a Non-PHI or PHI user">
+        <input type="checkbox" id="toggle-phi-2">
+        <span class="slider round"></span>
+      </label> PHI
+    </span>
+  </div>
+</div>
+
 ## UCSF Data Classification Standard & Restricted Data Types
 
 * Please see [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard] for more information regarding UCSF's data classification standard:
