@@ -4,7 +4,7 @@
 
   - Scheduled: 94.0 hours = 3.9 days = 1.1%
   - Unscheduled: 220.0 hours = 9.2 days = 2.5%
-  - Total: 314.0 hours = 13.1 days = 1.4%
+  - Total: 314.0 hours = 13.1 days = 3.6%
   - External factors: 36% of the above downtime, corresponding to 114 hours (= 4.8 days), were due to external factors
 
 
