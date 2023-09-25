@@ -54,13 +54,24 @@
   factors
 
 
+### June 1 - ongoing, 2023
 
-### May 16-June 1, 2023
+#### <span style="color: orange;">Post file-system failure incidents</span>
 
-#### <span style="color: orange;">Full downtime followed by network and file-system recovery</span>
+**Update**: Reading files whose data was lost on the unrecovered storage targets back in May no longer results in an error message.  Instead, the portion of the file that was lost will be replaced by null bytes.  Obviously, this results in a file with corrupt content.  The admins will be going through and deleting all the corrupted files as soon as possible.  It's a big task and will take some time.
+<br><span class="timestamp">July 13, 14:15 PDT</span>
 
-**Resolved**: All group directories (`/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project`) are open and SGE is running jobs. **If you encounter a "Communication error on send" error, please do not delete or move the affected file.** Details: The final two ZFS storage targets, which content could not be recovered, are still offline.  Affected users and labs will get a "Communication error on send" error whenever attempting to access a file, or parts of a file, that are residing on the two corrupted ZFS storage targets. If you need a list of affected files specific to your lab on those two targets, please contact the Wynton support team.
-<br><span class="timestamp">June 30, 15:50 PDT</span>
+**Update**: The remaining two ZFS storage targets (22004 and 22006) are back online again.
+<br><span class="timestamp">July 11, 10:30 PDT</span>
+
+**Update**: Four out of the six ZFS storage targets have been brought back online. Two targets (22004 and 22006) remain offline. **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
+<br><span class="timestamp">July 6, 17:00 PDT</span>
+
+**Update**: Six ZFS storage targets (22001-22006) are down, because one of the recovered storage targets encountered latent damage that had gone undetected since the recovery in May.  This locked up the server and thus all six targets on that server.
+<br><span class="timestamp">July 6, 08:30 PDT</span>
+
+**Update**: The final two ZFS storage targets are now serving the BeeGFS file system (`/wynton`) again.
+<br><span class="timestamp">June 30, 11:00 PDT</span>
 
 **Update**: We will be reintroducing the final two ZFS storage targets back into the BeeGFS file system (`/wynton`) on Friday June 30.  The work will start at 10 am and should take an hour or so.  During that time, there will be a couple of brief "blips" as we reconfigure the storage.
 <br><span class="timestamp">June 29, 23:55 PDT</span>
@@ -71,11 +82,15 @@
 **Update**: There are two broken ZFS storage targets (22004 and 21002). We expect to recover most files on target 22004 (approximately 14 TB). The reason it takes this long to recover that storage target is that the file chunks are there, but we have to puzzle them together to reconstruct the original files, which is a slow process. We estimate this process to complete by the end of the week. The files on the other target, target 21002, are unfortunately not recoverable. **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
 <br><span class="timestamp">June 21, 23:30 PDT</span>
 
-**Update**: There are two ZFS storage targets that are still failing and offline. We have hopes to be able to recover files from one of them. As of June 9, about 12 TB of low-level, raw file data (out of ~15 TB) was recovered. When that is completed, we will start the tedious work on reconstructing the actual files lost.  The consultants are less optimistic about recovering data from second storage target, because it was much more damaged. They will give us the final verdict by the end of the week.  **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
+**Notice**: There are two ZFS storage targets that are still failing and offline. We have hopes to be able to recover files from one of them. As of June 9, about 12 TB of low-level, raw file data (out of ~15 TB) was recovered. When that is completed, we will start the tedious work on reconstructing the actual files lost.  The consultants are less optimistic about recovering data from second storage target, because it was much more damaged. They will give us the final verdict by the end of the week.  **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
 <br><span class="timestamp">June 12, 16:00 PDT</span>
 
-**Update**: The job scheduler is now available. Access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` has been restored.
-**If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
+
+### May 16-June 1, 2023
+
+#### <span style="color: orange;">Full downtime followed by network and file-system recovery</span>
+
+**Resolved**: The job scheduler is now available. Access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` has been restored.  **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
 <br><span class="timestamp">June 1, 16:00 PDT</span>
 
 **Update**: Wynton will be fully available later today, meaning the job scheduler and access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` will be re-enabled. Note, two ZFS storage targets are still faulty and offline, but the work of trying to recover them will continue while we go live. This means that any files on the above re-opened `/wynton` subfolders that are stored, in part or in full, on those two offline storage targets will be inaccessible. Any attempt to read such files will result in a "Communication error on send" error and stall. To exit, press <kbd>Ctrl-C</kbd>. **Importantly, do _not_ attempt to remove, move, or update such files! That will make it impossible to recover them!**
