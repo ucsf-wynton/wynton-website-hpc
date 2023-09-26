@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
@@ -237,7 +237,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (96)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (95)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -341,41 +341,6 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
-<h3 id="module_cbi_bashdb" class="module-name">bashdb</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">bashdb: Bash Debugger Script</strong><br>
-<span class="module-description">The Bash Debugger Project is a source-code debugger for bash that follows the gdb command syntax.</span><br>
-Example: <span class="module-example"><code>bashdb --help</code>, <code>bashdb --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://bashdb.sourceforge.net/">https://bashdb.sourceforge.net/</a>, <a href="https://bashdb.sourceforge.net/bashdb.html">https://bashdb.sourceforge.net/bashdb.html</a> (documentation), <a href="https://sourceforge.net/projects/bashdb/files/bashdb/">https://sourceforge.net/projects/bashdb/files/bashdb/</a> (changelog), <a href="https://sourceforge.net/p/bashdb/code/ci/master/tree/">https://sourceforge.net/p/bashdb/code/ci/master/tree/</a> (source code), <a href="https://sourceforge.net/p/bashdb/bugs/">https://sourceforge.net/p/bashdb/bugs/</a> (issue tracker)</span><br>
-Versions: <span class="module-version"><em>4.4-1.0.1</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-bashdb: Bash Debugger Script
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: bash, shell, debug&quot;)
-whatis(&quot;URL: https://bashdb.sourceforge.net/, https://bashdb.sourceforge.net/bashdb.html (documentation), https://sourceforge.net/projects/bashdb/files/bashdb/ (changelog), https://sourceforge.net/p/bashdb/code/ci/master/tree/ (source code), https://sourceforge.net/p/bashdb/bugs/ (issue tracker)&quot;)
-whatis([[
-Description: The Bash Debugger Project is a source-code debugger for bash that follows the gdb command syntax.
-Examples: `bashdb --help`, `bashdb --version`.
-]])
-
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-prepend_path(&quot;PATH&quot;, home)
-prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
-prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 </code></pre>
 
 </details>
@@ -6921,7 +6886,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
