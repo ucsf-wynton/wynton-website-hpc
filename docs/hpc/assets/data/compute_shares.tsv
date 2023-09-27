@@ -1,8 +1,8 @@
 # Created by: hb
-# Created on: 2023-09-26 03:00:03-07:00
-# Total fshares: 20200
-# Total queue_slots: 11634
-# Number of projects: 52
+# Created on: 2023-09-27 03:00:03-07:00
+# Total fshares: 20201
+# Total queue_slots: 11730
+# Number of projects: 53
 fshares	queue_slots	project
 5506	3305	salilab
 4104	1403	agardlab,chenglab,frostlab
@@ -41,6 +41,7 @@ fshares	queue_slots	project
 12	4	sysbiocenter
 3	1	voigtlab
 3	1	cohenlab
+1	96	nayaklab
 1	6	choulab
 1	5	medinalab
 1	35	brainardlab
