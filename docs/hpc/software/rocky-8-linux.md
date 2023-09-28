@@ -1,6 +1,6 @@
 # Migration to Rocky 8 Linux from CentOS 7
 
-_Last updated: 2023-09-24_
+_Last updated: 2023-09-28_
 
 
 ## Wynton will switch to Rocky 8 on October 30
@@ -91,9 +91,11 @@ If you are a PHI users, please use:
  * GPU development node: `pgpudevr8`
  * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
 
-Note, at this time (2023-08-31) there is a limited number of Rocky 8
-compute nodes in the cluster, so _please do not send large arrays or
-time consuming jobs to the Rocky 8 nodes_.
+<!--
+qhost -l rocky8=true | wc -l
+qhost -l rocky8=true | awk '{ print $3 }' | grep -E "^[[:digit:]]+$" | paste -sd+ | bc
+-->
+As of 2023-09-28, 33 of the compute nodes runs Rocky 8 with a total of 1,760 CPU slots.  Because there is a limited number of Rocky-8 compute nodes, _please do not send large arrays or time consuming jobs to the Rocky 8 nodes_.
 
 
 ## Rocky 8 support and feedback
