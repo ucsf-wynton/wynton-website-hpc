@@ -13,7 +13,7 @@ packages, we will move the {{ site.cluster.name }} to the [Rocky 8
 Linux](https://rockylinux.org/) distribution;
 
 * _We will migrate all of the cluster from CentOS 7 to Rocky 8 during
-    a complete downtime on **Monday October 30, 2023**_
+    a complete downtime starting on **Monday October 30, 2023**_
 
 * You can already now test your existing pipelines on our Rocky 8 test
   cluster
