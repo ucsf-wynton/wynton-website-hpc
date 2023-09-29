@@ -1,11 +1,11 @@
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the [Status](/hpc/status/index.html) page_)
 
-2022-06-01: Added support for transferring files between Wynton and UCSF Box via [Globus](/hpc/transfers/globus.html).
+2023-09-28: [Rocky 8](/hpc/software/rocky-8-linux.html): 10% of Wynton compute slots are now running on Rocky 8 compute nodes. 33 compute nodes with a total of 1,760 CPU slots run Rocky 8.
 
-2022-05-02: Added a PHI-compliant endpoint to [Globus](/hpc/transfers/globus.html).
+2023-09-13: [Rocky 8](/hpc/software/rocky-8-linux.html): Development node `dev3` is now running Rocky 8.
 
-2021-12-17: [Wynton PHI](/hpc/about/wynton-phi.html) is now available to all UCSF researchers and affiliates to process computing jobs involving PHI.
+2023-07-21: [Rocky 8](/hpc/software/rocky-8-linux.html): Wynton will migrate from CentOS 7 to Rocky 8 at the end of October 2023. To prepare for this, we have made one non-PHI and one PHI development node available for all users, together with six compute nodes. 
 
 [More ...](/hpc/about/news.html)
 </div>
