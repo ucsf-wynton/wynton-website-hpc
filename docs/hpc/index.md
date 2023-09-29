@@ -1,7 +1,7 @@
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the [Status](/hpc/status/index.html) page_)
 
-2023-09-28: [Rocky 8](/hpc/software/rocky-8-linux.html): 10% of Wynton compute slots are now running on Rocky 8 compute nodes. 33 compute nodes with a total of 1,760 CPU slots run Rocky 8.
+2023-09-28: [Rocky 8](/hpc/software/rocky-8-linux.html): 5% of Wynton compute slots are now running on Rocky 8 compute nodes. 33 compute nodes with a total of 880 CPU slots run Rocky 8.
 
 2023-09-13: [Rocky 8](/hpc/software/rocky-8-linux.html): Development node `dev3` is now running Rocky 8.
 

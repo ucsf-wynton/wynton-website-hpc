@@ -93,9 +93,9 @@ If you are a PHI users, please use:
 
 <!--
 qhost -l rocky8=true | wc -l
-qhost -l rocky8=true | awk '{ print $3 }' | grep -E "^[[:digit:]]+$" | paste -sd+ | bc
+qhost -l rocky8=true | awk '{ print $5 }' | grep -E "^[[:digit:]]+$" | paste -sd+ | bc
 -->
-As of 2023-09-28, 33 of the compute nodes runs Rocky 8 with a total of 1,760 CPU slots.  Because there is a limited number of Rocky-8 compute nodes, _please do not send large arrays or time consuming jobs to the Rocky 8 nodes_.
+As of 2023-09-28, 33 of the compute nodes runs Rocky 8 with a total of 880 CPU slots.  Because there is a limited number of Rocky-8 compute nodes, _please do not send large arrays or time consuming jobs to the Rocky 8 nodes_.
 
 
 ## Rocky 8 support and feedback
