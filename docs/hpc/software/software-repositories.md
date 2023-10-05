@@ -1433,7 +1433,7 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
 <span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
-Example: <span class="module-example"><code>gdalinfo --version</code> and <code>man gdalinfo</code>.</span><br>
+Example: <span class="module-example"><code>gdalinfo --version</code></span><br>
 URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
 Versions: <span class="module-version"><em>2.4.3</em></span><br>
 <details>
@@ -3353,7 +3353,7 @@ end
 <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
 <span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/.11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/.11</a>, <a href="https://gcc.gnu.org/develop.html#timeline">https://gcc.gnu.org/develop.html#timeline</a> (GCC release schedule)</span><br>
+URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11</a>, <a href="https://gcc.gnu.org/develop.html#timeline">https://gcc.gnu.org/develop.html#timeline</a> (GCC release schedule)</span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">4, 7, 8, 9, 10, <em>11</em></span><br>
