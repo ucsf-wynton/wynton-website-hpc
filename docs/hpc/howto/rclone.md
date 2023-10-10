@@ -14,7 +14,7 @@
 
 To create a new remote: run `rclone config`, in this example named `log1` and select `sftp` as the "Type of Storage":
 
-```
+```plain
 name> log1
 storage> sftp
 host> log1.wynton.ucsf.edu
@@ -39,13 +39,13 @@ or have authenticated to Duo already that day and selected "Remember me for 12hr
 rclone mount by default runs in the foreground (there's a background option). But using the default in foreground, in one terminal window 
 on laptop (log1 is the name of the "remote" in this example):
 
-```
+```sh
 laptop ~ $ ./rclone mount log1:/ ./wynton
 ```
 
 - in a separate terminal, now that Wynton's `/` directory is mounted:
 
-```
+```sh
 $ ls -l wynton
 drwxr-xr-x.   3 root root         1 Oct 22  2020 globus
 drwxr-xr-x. 130 root root       130 Sep 20 14:05 group
