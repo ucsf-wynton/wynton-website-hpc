@@ -1433,7 +1433,7 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
 <span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
-Example: <span class="module-example"><code>gdalinfo --version</code></span><br>
+Example: <span class="module-example"><code>gdalinfo --version</code> and <code>man gdalinfo</code>.</span><br>
 URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
 Versions: <span class="module-version"><em>2.4.3</em></span><br>
 <details>
@@ -3192,7 +3192,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.</span><br>
 Example: <span class="module-example"><code>rserver</code>.</span><br>
 URL: <span class="module-url"><a href="https://posit.co/products/open-source/rstudio/#rstudio-server">https://posit.co/products/open-source/rstudio/#rstudio-server</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
-Versions: <span class="module-version">2021.09.2-382, 2022.02.4-500, 2022.12.0-353, 2023.03.0-386, 2023.06.1-524, <em>2023.06.2-561</em></span><br>
+Versions: <span class="module-version">2021.09.2-382, 2022.02.4-500, 2022.12.0-353, 2023.03.0-386, 2023.06.1-524, 2023.06.2-561, <em>2023.09.0-463</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3228,7 +3228,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
 Example: <span class="module-example"><code>rsc --help</code>, <code>rsc start</code>, and <code>rsc stop</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
-Versions: <span class="module-version">0.13.6, <em>0.13.7</em></span><br>
+Versions: <span class="module-version">0.13.6, 0.13.7, <em>0.13.10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3353,7 +3353,7 @@ end
 <strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
 <span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11</a>, <a href="https://gcc.gnu.org/develop.html#timeline">https://gcc.gnu.org/develop.html#timeline</a> (GCC release schedule)</span><br>
+URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/.11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/.11</a>, <a href="https://gcc.gnu.org/develop.html#timeline">https://gcc.gnu.org/develop.html#timeline</a> (GCC release schedule)</span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">4, 7, 8, 9, 10, <em>11</em></span><br>
@@ -3615,7 +3615,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</span><br>
 Example: <span class="module-example"><code>sqlite3 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://sqlite.org/">https://sqlite.org/</a>, <a href="https://sqlite.org/docs.html">https://sqlite.org/docs.html</a> (docs), <a href="https://github.com/sqlite/sqlite/tags">https://github.com/sqlite/sqlite/tags</a> (changelog), <a href="https://github.com/sqlite/sqlite">https://github.com/sqlite/sqlite</a> (source code)</span><br>
-Versions: <span class="module-version">3.32.3, 3.41.1, 3.41.2, 3.42.0, 3.43.0, <em>3.43.1</em></span><br>
+Versions: <span class="module-version">3.32.3, 3.41.1, 3.41.2, 3.42.0, 3.43.0, 3.43.1, <em>3.43.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4121,7 +4121,7 @@ end
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>4.35.1</em></span><br>
+Versions: <span class="module-version">4.35.1, <em>4.35.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
