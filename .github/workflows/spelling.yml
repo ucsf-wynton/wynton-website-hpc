@@ -45,4 +45,4 @@ jobs:
 
       - name: Spell check README and Markdown files
         run: |
-          make spell
+          make spelling

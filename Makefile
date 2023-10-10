@@ -20,7 +20,7 @@ shellcheck: cron-shellcheck
 markin-shellcheck:
 	cd docs; $(MAKE) $@
 
-spell:
+spelling:
 	cd docs; $(MAKE) $@
 
 yaml-check:
