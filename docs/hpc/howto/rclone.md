@@ -9,7 +9,7 @@
     - `rclone_to_wynton`
     - `rclone_to_wynton.pub`   
   - store the new key `rclone_to_wynton` in `~/.ssh/` on laptop/workstation
-  - push the `.pub` file to wynton using: `$ ssh-copy-id -i ~/.ssh/rclone_to_wynton.pub alice@{{ site.login.hostname }`
+  - push the `.pub` file to wynton using: `$ ssh-copy-id -i ~/.ssh/rclone_to_wynton.pub alice@{{ site.login.hostname }}`
     - note: replace `alice` with *your* Wynton username 
 
 To create a new remote: run `rclone config`, in this example named `log1` and select `sftp` as the "Type of Storage":
