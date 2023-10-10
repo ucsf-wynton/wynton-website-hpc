@@ -1,6 +1,6 @@
 # Using rclone to mount `/wynton` filesystem
 
-- install [MacFUSE](https://osxfuse.github.io/)
+- install [macFUSE](https://osxfuse.github.io/)
 - install rclone from the [Downloads](https://rclone.org/downloads/) page
 - set up a new "remote" with: `rclone config`
 - set up a new ssh key
