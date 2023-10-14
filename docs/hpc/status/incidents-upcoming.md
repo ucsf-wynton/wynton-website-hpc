@@ -5,7 +5,7 @@ and `pdt2` will be disabled from Monday-Friday October 16-20, 2023 to
 upgrade the operating system to Rocky 8 Linux.  They might return
 sooner.  The alternative login node `log2`, data-transfer nodes `dt2`,
 and `pdt1` are unaffected, so are the Wynton HPC Globus endpoints.
-class="timestamp">October 13, 11:20 PST</span>
+<br><span class="timestamp">October 13, 11:20 PST</span>
 
 
 ### October 30-November 3, 2023
@@ -33,9 +33,9 @@ disks (including `/scratch` and `/tmp`) wiped. Anything under
 unaffected, but please note that Wynton does not back anything up, so
 we recommend you to to back up critical data. For more information
 about the Rocky 8 Linux migration project and how you can prepare for
-it is available at
-<https://wynton.ucsf.edu/hpc/software/rocky-8-linux.html>.  <br><span
-class="timestamp">October 13, 11:15 PST</span>
+it is available at on the [Migration to Rocky 8 Linux from CentOS
+7](/hpc/software/rocky-8-linux.html) page.
+<br><span class="timestamp">October 13, 11:15 PST</span>
 
 <!--
 start: 2023-10-30T09:00:00
