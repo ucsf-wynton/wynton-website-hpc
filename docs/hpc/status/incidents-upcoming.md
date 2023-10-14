@@ -31,9 +31,9 @@ any machine running CentOS 7.9.  All machines will have their _local_
 disks (including `/scratch` and `/tmp`) wiped. Anything under
 `/wynton` (including `/wynton/scratch`, `/wynton/home`, ...) should be
 unaffected, but please note that Wynton does not back anything up, so
-we recommend you to to back up critical data. For more information
-about the Rocky 8 Linux migration project and how you can prepare for
-it is available at on the [Migration to Rocky 8 Linux from CentOS
+we recommend you to back up critical data. For more information about
+the Rocky 8 Linux migration project and how you can prepare for it is
+available at on the [Migration to Rocky 8 Linux from CentOS
 7](/hpc/software/rocky-8-linux.html) page.
 <br><span class="timestamp">October 13, 11:15 PST</span>
 
