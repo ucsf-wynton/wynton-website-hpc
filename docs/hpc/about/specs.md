@@ -55,7 +55,7 @@ For transferring large data files, it is recommended to use one of the dedicate 
 
 1. `{{ site.transfer1.hostname }}`
 2. `{{ site.transfer2.hostname }}`
-1. `p{{ site.transfer1.hostname }}` (for PHI users)
+1. `p{{ site.transfer1.hostname }}` (for PHI users) (Rocky 8 Linux)
 2. `p{{ site.transfer2.hostname }}` (for PHI users)
 
 which have a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As for the login nodes, the transfer nodes can be accessed via SSH.
