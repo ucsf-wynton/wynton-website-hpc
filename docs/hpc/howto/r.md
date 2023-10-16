@@ -544,13 +544,12 @@ After this, the **hdf5r** package will install out of the box, i.e. by calling:
 ### Packages relying on GDAL, GEOS, PROJ, and sqlite3
 
 <!--
-Rocky 8: rgdal,rgeos,sf,lwgeom,terra installs out of the box; remove section /HB 2023-09-16
+Rocky 8: rgeos,sf,lwgeom,terra installs out of the box; remove section /HB 2023-09-16
 -->
 
 There are R packages for spatial analyses that depend on external
 libraries GDAL, GEOS, PROJ, and sqlite3. For example:
 
-* **[rgdal]**  requires either (i) GDAL (< 3) & PROJ (< 6), or (ii) GDAL (>= 3) & PROJ (>= 6)
 * **[rgeos]**  requires                  GEOS (>= 3.2.0)
 * **[sf]**     requires GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0), sqlite3
 * **[lwgeom]** requires                  GEOS (>= 3.5.0), PROJ (>= 4.8.0), sqlite3
@@ -589,35 +588,10 @@ Here is how to install the above R packages all at once:
 $ module load CBI r
 $ module load CBI gdal geos proj sqlite
 $ R --quiet
-> install.packages(c("rgdal", "rgeos", "sf", "lwgeom", "terra"))
+> install.packages(c("rgeos", "sf", "lwgeom", "terra"))
 ```
 
 After this, we can load each of them to verify everything works;
-
-```r
-> library(rgdal)
-Loading required package: sp
-The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,
-which was just loaded, will retire in October 2023.
-Please refer to R-spatial evolution reports for details, especially
-https://r-spatial.org/r/2023/05/15/evolution4.html.
-It may be desirable to make the sf package available;
-package maintainers should consider adding sf to Suggests:.
-The sp package is now running under evolution status 2
-     (status 2 uses the sf package in place of rgdal)
-Please note that rgdal will be retired during October 2023,
-plan transition to sf/stars/terra functions using GDAL and PROJ
-at your earliest convenience.
-See https://r-spatial.org/r/2023/05/15/evolution4.html and https://github.com/r-spatial/evolution
-rgdal: version: 1.6-7, (SVN revision 1203)
-Geospatial Data Abstraction Library extensions to R successfully loaded
-Loaded GDAL runtime: GDAL 2.4.3, released 2019/10/28
-Path to GDAL shared files: /wynton/home/cbi/shared/software/CBI/gdal-2.4.3/share/gdal
-GDAL binary built with GEOS: TRUE 
-Loaded PROJ runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]
-Path to PROJ shared files: (autodetected)
-Linking to sp version:2.0-0
-```
 
 ```r
 > library(rgeos)
@@ -762,7 +736,6 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [lwgeom]: https://cran.r-project.org/package=lwgeom
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
-[rgdal]: https://cran.r-project.org/package=rgdal
 [rgeos]: https://cran.r-project.org/package=rgeos
 [rjags]: https://cran.r-project.org/package=rjags
 [Rmpi]: https://cran.r-project.org/package=Rmpi
