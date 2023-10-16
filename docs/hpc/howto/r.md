@@ -544,13 +544,12 @@ After this, the **hdf5r** package will install out of the box, i.e. by calling:
 ### Packages relying on GDAL, GEOS, PROJ, and sqlite3
 
 <!--
-Rocky 8: rgeos,sf,lwgeom,terra installs out of the box; remove section /HB 2023-09-16
+Rocky 8: sf,lwgeom,terra installs out of the box; remove section /HB 2023-09-16
 -->
 
 There are R packages for spatial analyses that depend on external
 libraries GDAL, GEOS, PROJ, and sqlite3. For example:
 
-* **[rgeos]**  requires                  GEOS (>= 3.2.0)
 * **[sf]**     requires GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0), sqlite3
 * **[lwgeom]** requires                  GEOS (>= 3.5.0), PROJ (>= 4.8.0), sqlite3
 * **[terra]**  requires GDAL (>= 2.2.3), GEOS (>= 3.4.0), PROJ (>= 4.9.3), sqlite3
@@ -588,22 +587,10 @@ Here is how to install the above R packages all at once:
 $ module load CBI r
 $ module load CBI gdal geos proj sqlite
 $ R --quiet
-> install.packages(c("rgeos", "sf", "lwgeom", "terra"))
+> install.packages(c("sf", "lwgeom", "terra"))
 ```
 
 After this, we can load each of them to verify everything works;
-
-```r
-> library(rgeos)
-rgeos version: 0.6-4, (SVN revision 699)
- GEOS runtime version: 3.9.4-CAPI-1.14.4 
- Please note that rgeos will be retired during October 2023,
-plan transition to sf or terra functions using GEOS at your earliest convenience.
-See https://r-spatial.org/r/2023/05/15/evolution4.html for details.
- GEOS using OverlayNG
- Linking to sp version: 2.0-0 
- Polygon checking: TRUE 
-```
 
 ```r
 > library(sf)
@@ -736,7 +723,6 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [lwgeom]: https://cran.r-project.org/package=lwgeom
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
-[rgeos]: https://cran.r-project.org/package=rgeos
 [rjags]: https://cran.r-project.org/package=rjags
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [sf]: https://cran.r-project.org/package=sf
