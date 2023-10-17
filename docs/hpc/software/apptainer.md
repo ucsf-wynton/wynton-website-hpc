@@ -208,6 +208,21 @@ Apptainer> ls {{ site.user.labfolder }}
 data1  data2
 ```
 
+One can also use `--bind` to bind a folder inside the container to a folder at another location with a different name outside the container.  For example, if a tool writes to `/var/log`, you can access those log files outside of the container afterward by using:
+
+```sh
+[alice@{{ site.devel.name }} lxc]$ mkdir -p extra/logs
+[alice@{{ site.devel.name }} lxc]$ echo "Hello world" > extra/logs/hello.txt
+[alice@{{ site.devel.name }} lxc]$ apptainer shell --bind extra/logs:/var/log rocker_r-base.sif
+Apptainer> date > /var/log/timestamp
+Apptainer> ls /var/log
+hello.txt  timestamp
+Apptainer> exit
+exit
+[alice@{{ site.devel.name }} lxc]$ ls extra/logs
+hello.txt  timestamp
+```
+
 See `apptainer help instance start` for more details and other ways to mount and rename folders within the container.
 
 
