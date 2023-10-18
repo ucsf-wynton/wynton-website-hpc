@@ -77,7 +77,7 @@ job 8974017.1 died through signal KILL (9)
 
 ### Configure the default email address
 
-The email notifications are by default sent to the email address you have associated with your {{ site.cluster.nickname }} account.  To find out which address this is, call:
+Normally, you would not set the email address for where SGE notifications are sent to.  By default, the email notifications are sent to the email address you have associated with your {{ site.cluster.nickname }} account.  To find out which address this is, run:
 
 ```sh
 $ ldapsearch -LLL -x -H ldap://m1,ldap://m2 uidNumber="$(id -u)" mail
@@ -85,7 +85,7 @@ dn: uid=alice,ou=Accounts,dc=cgl,dc=ucsf,dc=edu
 mail: alice.bobson@ucsf.edu
 ```
 
-If you wish to send to another address that your Wynton-associated email address, you can set a new default in the `~/.sge_request` file (create if missing) as:
+But, if you have to send to email another address than your Wynton-associated email address, you can set a new default in the `~/.sge_request` file (create if missing) as:
 
 ```sh
 ## Default recipient of job notifications
