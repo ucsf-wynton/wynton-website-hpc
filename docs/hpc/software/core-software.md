@@ -48,6 +48,7 @@ make, cmake<br>
 gcc / g++ (C, C++, and Fortran)<br>
 java, javac<br>
 lua<br>
+node, npm<br>
 perl<br>
 python<br>
 rustc (Rust)<br>
