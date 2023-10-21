@@ -322,8 +322,8 @@ Source: https://github.com/allejo/jekyll-anchor-headings
           $(".non-phi").css("display", "inline");
           $(".phi").css("display", "none");
       }
-      
-      // Replace all log[1-2],dt[1-2],dev[1-3],gpudev[1] with plog[1-2], etc.?
+
+      // View as PHI?
       if (phi) {
           // Skip page completely?
           var href = window.location.href;
@@ -331,8 +331,17 @@ Source: https://github.com/allejo/jekyll-anchor-headings
           skip = /\b(status|phi-quickstart|rocky-8-linux|news|roadmap|specs)\b/.test(href);
           if (!skip) {
               var html = document.body.innerHTML;
+
+              // Add 'p'-prefix to all log[1-2],dt[1-2],dev[1-3],gpudev[1]?
               html = html.replace(/\b((log|dev|dt|gpudev)[1-9[])/gi, "p$1");
+
+              // plog2 doesn't exist, so use plog1
+              html = html.replace(/\bplog2/gi, "plog1");
+              
+              // Tweak IP-numbers
               html = html.replace(/172[.]26[.]44[.]11/g, "172.26.44.16");
+              
+              // Tweak paths
               html = html.replace(/[/]wynton[/](home|group)[/](boblab|your_group)/gi, "/wynton/protected/$1/$2");
               document.body.innerHTML = html;
           }
