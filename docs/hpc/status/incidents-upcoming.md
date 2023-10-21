@@ -1,17 +1,3 @@
-### October 16-October 20, 2023
-
-**Notice**: Data-transfer nodes `dt2` will be disabled this week
-instead of `dt1` as previously announced.
-<br><span class="timestamp">October 16, 14:30 PST</span>
-
-**Notice**: Access to login node `log1`, data-transfer nodes `dt1`,
-and `pdt2` will be disabled from Monday-Friday October 16-20, 2023 to
-upgrade the operating system to Rocky 8 Linux.  They might return
-sooner.  The alternative login node `log2`, data-transfer nodes `dt2`,
-and `pdt1` are unaffected, so are the Wynton HPC Globus endpoints.
-<br><span class="timestamp">October 13, 11:20 PST</span>
-
-
 ### October 30-November 3, 2023
 
 #### <span style="color: orange;">Full downtime</span>
