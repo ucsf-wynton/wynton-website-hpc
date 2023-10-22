@@ -320,6 +320,8 @@ Source: https://github.com/allejo/jekyll-anchor-headings
       phi = params.get("phi");
       if (phi == null) {
           phi = localStorage.getItem("phi-mode");
+      } else {
+        localStorage.setItem("phi-mode", phi);
       }
       phi = (phi == "true");
 
