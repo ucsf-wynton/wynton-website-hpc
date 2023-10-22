@@ -312,7 +312,16 @@ Source: https://github.com/allejo/jekyll-anchor-headings
         so it has to be added *after* updating innerHTML.
         FIXME: Does this destroy other event listeners to? /HB 2023-01-19
        ***********************************************************/
-      const phi = (localStorage.getItem("phi-mode") == "true");
+      var href = window.location.href;
+      var params = new URL(href).searchParams;
+      var phi;
+
+      /* Get 'phi' via URL parameter, otherwise via local storage */
+      phi = params.get("phi");
+      if (phi == null) {
+          phi = localStorage.getItem("phi-mode");
+      }
+      phi = (phi == "true");
 
       // Toggle HTML elements of class 'phi'/'non-phi' on and off
       if (phi) {
@@ -326,7 +335,6 @@ Source: https://github.com/allejo/jekyll-anchor-headings
       // View as PHI?
       if (phi) {
           // Skip page completely?
-          var href = window.location.href;
           var skip = false;
           skip = /\b(status|phi-quickstart|rocky-8-linux|news|roadmap|specs)\b/.test(href);
           if (!skip) {
