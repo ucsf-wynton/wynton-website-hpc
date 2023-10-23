@@ -1,6 +1,6 @@
 # Pricing for Extra Compute
 
-_Example specifications and pricing as of May 2023_
+_Example specifications and pricing as of October 2023_
 
 Please note: You cannot be charged for the hardware until it has been received and invoiced. Since lead times can be extensive, please plan as far ahead as you can. 
 
@@ -13,7 +13,7 @@ Cluster compute nodes are purchased by Wynton in modules that have 4 "2U" comput
 
 This configuration comes with four compute modules, where each node includes:
 
-* CPU/node: 2 × Intel Xeon Gold 6336Y 2.4GHz 32-core processor
+* CPU/node: 2 × Intel Xeon Gold 6336Y 2.4GHz 24-core processor
 
 * RAM/node: 256GiB DDR4-3200 ECC (16 × 16 GiB)
 
@@ -21,7 +21,7 @@ This configuration comes with four compute modules, where each node includes:
 
 Total price for a module with four (4) node: **~33,000 USD** excluding taxes.
 
-As of May 2023, **lead times for compute nodes are six (6) weeks from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a four-compute-node module, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
+As of October 2023, **lead time for compute nodes is approximate three months from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a four-compute-node module, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
 
 ## Pricing for prioritized Graphics Processing Unit (GPU) processing
 
@@ -49,11 +49,11 @@ Then choose one of:
 
 2. GPU: 4 × Nvidia L40 with 48GB GPU memory (**~33,000 USD**)
 
-3. GPU: 4 × Nvidia A100 with 80GB GPU memory (**~58,000 USD**)
+Note: A100s are no longer available
 
 The prices listed are total prices in USD excluding taxes.  Each price includes the base setup and the corresponding GPU configuration. Warranty is included.  Taxes are calculated and added once hardware is received.
 
-As of May 2023, **lead times for GPUs are four-to-five months from order to delivery.**  Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects.  
+As of October 2023, **lead time for GPUs is approximately 3 months from order to delivery.**  Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects.  
 
 
 ## How to purchase
