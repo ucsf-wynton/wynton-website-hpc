@@ -125,7 +125,7 @@ DISPLAY='localhost:14.0'
 
 _Comment:_ There is no need to use SSH compression in this second step.  If used, it might even have a negative effect on the X11 latency.
 
-Now, we have an X11 forward setup that runs all the way back to our local computer.  This will allow us to open, for instance, an XTerm window that runs on {{ site.devel.hostname }} but can be interacted with on the local computer;
+Now we have an X11 forward setup that runs all the way back to our local computer.  This will allow us to open, for instance, an XTerm window that runs on {{ site.devel.hostname }} but can be interacted with on the local computer;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ xterm
