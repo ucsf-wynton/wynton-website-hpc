@@ -44,8 +44,8 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues](/h
 
 The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to one of the login nodes:
 
-1. `{{ site.login1.hostname }}`
-2. `{{ site.login2.hostname }}`
+1. `{{ site.login1.hostname }}` (Rocky 8 Linux)
+2. `{{ site.login2.hostname }}` (Rocky 8 Linux)
 1. `p{{ site.login1.hostname }}` (for PHI users)
 
 
@@ -54,9 +54,9 @@ The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to o
 For transferring large data files, it is recommended to use one of the dedicate data transfer nodes:
 
 1. `{{ site.transfer1.hostname }}`
-2. `{{ site.transfer2.hostname }}`
+2. `{{ site.transfer2.hostname }}` (Rocky 8 Linux)
 1. `p{{ site.transfer1.hostname }}` (for PHI users) (Rocky 8 Linux)
-2. `p{{ site.transfer2.hostname }}` (for PHI users)
+2. `p{{ site.transfer2.hostname }}` (for PHI users) (Rocky 8 Linux)
 
 which have a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As for the login nodes, the transfer nodes can be accessed via SSH.
 
@@ -71,13 +71,10 @@ Node                               | Physical Cores |      RAM | Local `/scratch
 -----------------------------------|---------------:|---------:|-----------------:|-----------------:|------------------------------:|-------------------:|
 `{{ site.dev1.hostname }}`         |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
 `{{ site.dev2.hostname }}`         |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
+`{{ site.dev3.hostname }}` (Rocky 8 Linux) |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
 `{{ site.gpudev1.hostname }}`      |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2640 v3 2.60GHz | NVIDIA Tesla K80   |
 `p{{ site.dev1.hostname }}` (for PHI users)    |  32 | 256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                    |
 `p{{ site.gpudev1.hostname }}` (for PHI users) |  32 | 128 GiB |         0.87 TiB | x86-64-v3        | Intel E5-2640 v3              | NVIDIA Tesla K80   |
-
-<!--
-`{{ site.dev3.hostname }}`         |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
--->
 
 _Comment:_
 Please use the GPU development node only if you need to build or prototype GPU software.
