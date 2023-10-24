@@ -16,6 +16,7 @@ emacs, nano, vim
 <dd>
 ftp, lftp, scp, sftp, rsync<br>
 curl, wget<br>
+rclone<br>
 dos2unix<br>
 </dd>
 
@@ -56,7 +57,8 @@ rustc (Rust)<br>
   
 <dt>System Utilities</dt>
 <dd>
-top
+top<br>
+screen, tmux<br>
 </dd>
 
 <dt>Linux Containers</dt>
