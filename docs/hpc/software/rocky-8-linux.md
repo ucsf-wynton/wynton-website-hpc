@@ -1,6 +1,6 @@
 # Migration to Rocky 8 Linux from CentOS 7
 
-_Last updated: 2023-10-24_
+_Last updated: 2023-10-25_
 
 
 ## Wynton will switch to Rocky 8 on October 30
@@ -81,9 +81,9 @@ jobs and self-compiled software and scripts so they work with Rocky 8.
 
 If you are a non-PHI users, please use:
 
- * Login nodes: `log1` and `log2`
+ * Login nodes: `log1`
  * Data transfer nodes: `dt2`
- * Development nodes: `dev3` and `devr8`
+ * Development nodes: `dev2`, and `dev3` (temporarily also `devr8`)
  * GPU development node: `gpudevr8`
  * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
   

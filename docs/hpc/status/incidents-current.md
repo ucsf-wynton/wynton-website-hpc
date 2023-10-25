@@ -1,6 +1,6 @@
 ### October 23-October 27, 2023
 
-**Update**: Login node `log2` is available again.
+**Update**: Development node `dev2` is available again.
 <br><span class="timestamp">October 24, 12:45 PST</span>
 
 **Notice**: Access to login node `log2`, data-transfer nodes `dt1`,
