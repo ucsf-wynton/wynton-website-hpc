@@ -88,4 +88,4 @@ message: The cluster is operational with some file-system issues. If you encount
 
 level: warning
 condition: is operational
-message: (1) The cluster will be shut down for major upgrades during October 30-November 3, 2023 (2023W44). Starting October 15, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime. (2) Some of the login, data-transfer, and development nodes will be unavailable during October 23-27, 2023.
+message: (1) The cluster will be shut down for major upgrades during October 30-November 3, 2023 (2023W44). Starting October 15, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime. (2) Some of the data-transfer and development nodes will be unavailable during October 23-27, 2023.
