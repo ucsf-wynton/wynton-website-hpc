@@ -72,8 +72,8 @@ will find a free port, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI port4me
-[alice@{{ site.devel.name }} ~]$ port4me --tool=jupypter
-13583
+[alice@{{ site.devel.name }} ~]$ port4me --tool=jupyter
+47467
 ```
 
 _Make a note of the port number you get - you will need it next._
@@ -89,19 +89,19 @@ will be using the same one over time.
 Next, we launch Jupyter Notebook on the same development node:
 
 ```sh
-[alice@{{ site.devel.name }}]$ jupyter notebook --no-browser --port 13583
+[alice@{{ site.devel.name }}]$ jupyter notebook --no-browser --port 47467
 [I 10:50:23.319 NotebookApp] Serving notebooks from local directory: {{ site.user.home }}
 [I 10:50:23.319 NotebookApp] Jupyter Notebook 6.4.10 is running at:
-[I 10:50:23.319 NotebookApp] http://localhost:13583/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
-[I 10:50:23.319 NotebookApp]  or http://127.0.0.1:13583/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
+[I 10:50:23.319 NotebookApp] http://localhost:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
+[I 10:50:23.319 NotebookApp]  or http://127.0.0.1:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
 [I 10:50:23.319 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 [C 10:50:23.581 NotebookApp]
 
     To access the notebook, open this file in a browser:
         file://{{ site.user.home }}/.local/share/jupyter/runtime/nbserver-27971-open.html
     Or copy and paste one of these URLs:
-        http://localhost:13583/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
-     or http://127.0.0.1:13583/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
+        http://localhost:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
+     or http://127.0.0.1:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
 ```
 
 However, these instructions do _not_ work out of the box, because they
@@ -122,12 +122,12 @@ using SSH port forward. To do this, _open a terminal on your local
 machine_, and run:
 
 ```sh
-{local}$ ssh -J alice@{{ site.login.hostname }} -L 13583:localhost:13583 alice@{{ site.devel.name }}
+{local}$ ssh -J alice@{{ site.login.hostname }} -L 47467:localhost:47467 alice@{{ site.devel.name }}
 ...
 [alice@{{ site.devel.name }} ~]$ 
 ```
 _Importantly_, in your case, you will need to replace both instance of
-`13583` with the port number that you used in Step 2.
+`47467` with the port number that you used in Step 2.
 
 
 Now your personal Jupyter Notebook instance running on
@@ -135,7 +135,7 @@ Now your personal Jupyter Notebook instance running on
 browser running on your local computer.  To do this, open one of the
 HTTP links outputted by Jupyter in Step 2, e.g.
   
- * <http://localhost:13583/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98> (your port and token will be different)
+ * <http://localhost:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98> (your port and token will be different)
 
 
 ## Alternative: Run Jupyter Notebook via X2Go
