@@ -1,5 +1,8 @@
 # News
 
+2023-10-26: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log2`, data-transfer nodes `dt1`, and development node `dev2` are now running Rocky 8.
+
+ (Rocky 8 Linux)
 2023-10-20: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log1` and data-transfer nodes `dt2` and `ptd2` are now running Rocky 8.
 
 2023-10-13: [Rocky 8](/hpc/software/rocky-8-linux.html): 6% of Wynton compute slots are now running on Rocky 8 compute nodes. 41 compute nodes with a total of 1,104 CPU slots run Rocky 8.

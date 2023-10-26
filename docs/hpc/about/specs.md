@@ -45,7 +45,7 @@ The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues](/h
 The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to one of the login nodes:
 
 1. `{{ site.login1.hostname }}` (Rocky 8 Linux)
-2. `{{ site.login2.hostname }}`
+2. `{{ site.login2.hostname }}` (Rocky 8 Linux)
 1. `p{{ site.login1.hostname }}` (for PHI users)
 
 
@@ -53,7 +53,7 @@ The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to o
 
 For transferring large data files, it is recommended to use one of the dedicate data transfer nodes:
 
-1. `{{ site.transfer1.hostname }}`
+1. `{{ site.transfer1.hostname }}` (Rocky 8 Linux)
 2. `{{ site.transfer2.hostname }}` (Rocky 8 Linux)
 1. `p{{ site.transfer1.hostname }}` (for PHI users) (Rocky 8 Linux)
 2. `p{{ site.transfer2.hostname }}` (for PHI users) (Rocky 8 Linux)

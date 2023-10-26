@@ -1,13 +1,13 @@
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the [Status](/hpc/status/index.html) page_)
 
+2023-10-26: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log2`, data-transfer nodes `dt1`, and development node `dev2` are now running Rocky 8.
+
+2023-10-26: [Rocky 8](/hpc/software/rocky-8-linux.html): 8% of Wynton compute slots are now running on Rocky 8 compute nodes. 51 compute nodes with a total of 1,376 CPU slots run Rocky 8.
+
 2023-10-20: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log1` and data-transfer nodes `dt2` and `ptd2` are now running Rocky 8.
 
-2023-10-13: [Rocky 8](/hpc/software/rocky-8-linux.html): 6% of Wynton compute slots are now running on Rocky 8 compute nodes. 41 compute nodes with a total of 1,104 CPU slots run Rocky 8.
-
-2023-09-28: [Rocky 8](/hpc/software/rocky-8-linux.html): 5% of Wynton compute slots are now running on Rocky 8 compute nodes. 33 compute nodes with a total of 880 CPU slots run Rocky 8.
-
-2023-09-13: [Rocky 8](/hpc/software/rocky-8-linux.html): Development node `dev3` is now running Rocky 8.
+...
 
 2023-07-21: [Rocky 8](/hpc/software/rocky-8-linux.html): Wynton will migrate from CentOS 7 to Rocky 8 at the end of October 2023. To prepare for this, we have made one non-PHI and one PHI development node available for all users, together with six compute nodes. 
 
