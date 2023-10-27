@@ -91,5 +91,5 @@ condition: is operational
 
 level: danger
 condition: is not operational
-message: (1) The BeeGFS file system, which hosts '/wynton', experiences major issues. Users are getting 'Communication error on send error'.  (2) The cluster will be shut down for major upgrades during October 30-November 3, 2023 (2023W44). Starting October 15, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime.
+message: (1) The cluster has been promptly shut down to mitigate the risk of data loss within the /wynton file system. This emergency action was necessary due to unforeseen problems with our BeeGFS metadata servers.  (2) The cluster will be shut down for major upgrades during October 30-November 3, 2023 (2023W44). Starting October 15, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime.
 
