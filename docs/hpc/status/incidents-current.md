@@ -3,7 +3,7 @@
 #### <span style="color: orange;">File-system failures</span>
 
 **Notice**: The BeeGFS file system, which hosts `/wynton`, is
-experiences unexpected major issues.  Some or all files on `/wynton`
+experiencing unexpected, major issues.  Some or all files on `/wynton`
 cannot be accessed, and when attempted, an `Communication error on
 send` error is seen.
 <br><span class="timestamp">October 27, 13:50 PST</span>
