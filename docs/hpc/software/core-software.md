@@ -71,9 +71,9 @@ apptainer (formerly singularity)
 
 _Note:_ These core tools will be updated without notice as the
 operating system is updated on a regular basis.  Many of the
-tools originate from the (stable) CentOS 7 [Extras] and [EPEL]
+tools originate from the (stable) Rocky 8
 repositories.  To see what software and system libraries that are
-installed, run `yum list installed`.  Please note that, compared to
+installed, run `dnf --cached-only list`.  Please note that, compared to
 compute nodes, the development nodes have additional software
 installed (typically named `-devel`) needed to build and compile from
 source.
@@ -85,6 +85,4 @@ dt {
 }
 </style>  
 
-[Extras]: https://centos.pkgs.org/7/centos-extras-x86_64/
-[EPEL]: https://centos.pkgs.org/7/epel-x86_64/
 [Software Repositories]: /hpc/software/software-repositories.html

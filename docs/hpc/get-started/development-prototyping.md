@@ -15,7 +15,7 @@ Any shell session that has been idle for more than eight hours will timeout and 
 <div class="non-phi" markdown="1">
  * {{ site.dev1.hostname }}
  * {{ site.dev2.hostname }}
-<!-- * {{ site.dev3.hostname }} -->
+ * {{ site.dev3.hostname }}
  * {{ site.gpudev1.hostname }}
 </div>
 <div class="phi" markdown="1">

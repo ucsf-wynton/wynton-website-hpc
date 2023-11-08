@@ -4,9 +4,7 @@
 If possible, we recommend to be explicit about which version to use by specifying either `python2` and `python3` in your scripts.
 </div>
 
-Python 2 and Python 3 are both available via `python2` and `python3`.  The command `python` is an alias for `python2`.  We recommend to be explicit about which version you want to use, also when using the default Python 2, i.e. use `python2` when you know your script requires Python 2 and `python3` when you know it requires Python 3.
-
-The below examples uses Python 3, but it works analogously in Python 2, i.e. just replace `python3` with `python2`.
+Python 2 and Python 3 are both available via `python2` and `python3`.  There is no command `python` on Rocky 8; you have to specify either `python2` or `python3`.
 
 
 ## Installing Python packages
@@ -257,34 +255,10 @@ Note how prefix `(my_project)` was dropped from the shell prompt and `python3` n
 
 ## Appendix
 
-### Using a more modern Python 3 version
-
-The version of Python 3 that comes built-in with CentOS 7 is a bit dated. Specifically, it provides:
-
-<!-- code-block label="python-version" -->
-```sh
-[alice@{{ site.devel.name }} ~]$ python --version
-Python 3.6.8
-```
-
-Newer versions of Python 3 are available via [SCL]:s. The easiest way to use them is to load the SCL as a module, e.g.
-
-<!-- code-block label="python-scl-version" -->
-```sh
-[alice@{{ site.devel.name }} ~]$ python --version
-Python 3.6.8
-[alice@{{ site.devel.name }} ~]$ module load CBI scl-rh-python
-[alice@{{ site.devel.name }} ~]$ python --version
-Python 3.8.13
-```
-
-_Note_: You need to load this module _before_ you create a virtual environment.
-
-
 
 ### Upgrading pip
 
-You will at times get warnings that you are running an old version of 'pip':
+You will at times get a warning that you are running an old version of 'pip':
 
 ```sh
 You are using pip version 8.1.2, however version 20.3.3 is available.

@@ -1,5 +1,7 @@
 # News
 
+2023-11-06: Wynton has been upgrade to [Rocky 8](/hpc/software/rocky-8-linux.html) Linux from CentOS 7.
+
 2023-10-26: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log2`, data-transfer nodes `dt1`, and development node `dev2` are now running Rocky 8.
 
  (Rocky 8 Linux)

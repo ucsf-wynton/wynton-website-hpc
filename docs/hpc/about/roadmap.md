@@ -2,10 +2,6 @@
 
 _The below "timeline" is a rough outline on when we can expect different milestones to be accomplished - the order does not reflect their relative priorities or the amount of effort spent_.
 
-## Imminent
-
-* Operating system: Upgrade from CentOS 7 to Rocky 8.
-
 
 ## Near future
 
@@ -79,6 +75,8 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 * Network: Support for using Globus transfers to and from UCSF Box via {{ site.cluster.nickname }} (2022-06-01)
 
 * Website: Host website on GitHub Pages (2022-10-31)
+
+* Operating system: Upgrade from CentOS 7 to Rocky 8 (2022-11-06).
 
 
 See also [News].

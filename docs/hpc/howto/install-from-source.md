@@ -238,14 +238,11 @@ to your `~/.bashrc` file.
 
 ## Too old compiler?
 
-The GCC development tools that come built-in on our CentOS 7 system are quite old.  For example, the default `gcc` version is from 2015;
+The GCC development tools that come built-in on our Rocky 8 system is sufficient the most r.  For example, the default `gcc` version is from 2015;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ gcc --version
-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)
-Copyright (C) 2015 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+...
 ```
 
 This GCC 4.8.5 compiler supports older C++ standards such as C++11, but none of the newer standards, including C++14 and C++17, cf. <https://gcc.gnu.org/projects/cxx-status.html>.  Most software are configured to validate that we have a sufficient compiler version when built, and if a too old version is used, there is often an informative error message.  Examples might be:

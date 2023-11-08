@@ -10,41 +10,23 @@ To list all Software Collections installed on the _development nodes_, use:
 <!-- code-block label="list" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl --list
-devtoolset-10
-devtoolset-11
-devtoolset-7
-devtoolset-8
-devtoolset-9
-llvm-toolset-7
-rh-python36
-rh-python38
-rh-ruby25
-rh-ruby26
-rh-ruby27
-rh-ruby30
+gcc-toolset-7
+gcc-toolset-8
+gcc-toolset-9
+gcc-toolset-10
+gcc-toolset-11
 ```
 
-_Importantly_, only a subset of the above SCLs are available also on the _compute nodes_.
+_Importantly_, the above SCLs are available only on the _development
+nodes_.
 
 
 To list all the packages that are part of one or more of these SCLs, use:
 
 <!-- code-block label="list-one" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl --list rh-ruby25
-rh-ruby25-rubygem-io-console-0.4.6-9.el7.x86_64
-rh-ruby25-rubygem-json-2.1.0-9.el7.x86_64
-rh-ruby25-rubygems-2.7.6.3-9.el7.noarch
-rh-ruby25-runtime-2.5-2.el7.x86_64
-rh-ruby25-rubygem-openssl-2.1.2-9.el7.x86_64
-rh-ruby25-2.5-2.el7.x86_64
-rh-ruby25-ruby-irb-2.5.9-9.el7.noarch
-rh-ruby25-rubygem-did_you_mean-1.2.0-9.el7.noarch
-rh-ruby25-rubygem-bigdecimal-1.3.4-9.el7.x86_64
-rh-ruby25-ruby-2.5.9-9.el7.x86_64
-rh-ruby25-ruby-libs-2.5.9-9.el7.x86_64
-rh-ruby25-rubygem-psych-3.0.2-9.el7.x86_64
-rh-ruby25-rubygem-rdoc-6.0.1.1-9.el7.noarch
+[alice@{{ site.devel.name }} ~]$ scl --list gcc-toolset-11
+...
 ```
 
 
@@ -54,8 +36,8 @@ Ruby's interactive shell can be launched via the `irb` command.  However, becaus
 
 <!-- code-block label="ruby-ex-1" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby25 "irb --version"
-irb 0.9.6(09/06/30)
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-10 "gcc --version"
+...
 ```
 
 _Importantly_, this approach of prefixing the original command call works also in job scripts.
@@ -65,9 +47,9 @@ If you work interactively on one of the development nodes, you can also launch a
 
 <!-- code-block label="ruby-ex-2" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby25 $SHELL
-[alice@{{ site.devel.name }} ~]$ irb --version
-irb 0.9.6(09/06/30)
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-devtoolset-11 $SHELL
+[alice@{{ site.devel.name }} ~]$ gcc --version
+...
 ```
 
 To "unload" an SCLs, just return to the previous shell by exiting new SCL-enabled shell, i.e.
@@ -83,55 +65,23 @@ To "unload" an SCLs, just return to the previous shell by exiting new SCL-enable
 
 ### Developer Toolset SCLs
 
-The `devtoolset-NN` SCLs each include a specific version of the GNU Compiler Collection (GCC), which provides the `gcc` compiler among other tools.  Here are the `gcc` versions provided by these SCLs:
+The `gcc-toolset-NN` SCLs each include a specific version of the GNU Compiler Collection (GCC), which provides the `gcc` compiler among other tools.  Here are the `gcc` versions provided by these SCLs:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-7 "gcc --version | head -1"
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-7 "gcc --version | head -1"
 gcc (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 
-[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-8 "gcc --version | head -1"
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-8 "gcc --version | head -1"
 gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 
-[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-9 "gcc --version | head -1"
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-9 "gcc --version | head -1"
 gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)
 
-[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-10 "gcc --version | head -1"
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-10 "gcc --version | head -1"
 gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)
 
-[alice@{{ site.devel.name }} ~]$ scl enable devtoolset-11 "gcc --version | head -1"
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-11 "gcc --version | head -1"
 gcc (GCC) 11.2.1 20220127 (Red Hat 11.2.1-9)
-```
-
-
-### Python SCLs
-
-The `rh-pythonNN` SCLs each include a specific version of Python.  Here are the `python` versions provided by these SCLs:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ scl enable rh-python36 "python --version"
-Python 3.6.12
-
-[alice@{{ site.devel.name }} ~]$ scl enable rh-python38 "python --version"
-Python 3.8.13
-```
-
-
-### Ruby SCLs
-
-The `rh-rubyNN` SCLs each include a specific version of Ruby.  Here are the `irb` versions provided by these SCLs:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby25 "irb --version"
-irb 0.9.6(09/06/30)
-
-[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby26 "irb --version"
-irb 1.0.0 (2018-12-18)
-
-[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby27 "irb --version"
-irb 1.2.6 (2020-09-14)
-
-[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby30 "irb --version"
-irb 1.3.5 (2021-04-03)
 ```
 
 
