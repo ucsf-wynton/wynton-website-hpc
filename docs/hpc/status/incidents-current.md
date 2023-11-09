@@ -1,6 +1,14 @@
-### October 30-November 9, 2023
+### October 30-November 10(?), 2023
 
 #### <span style="color: orange;">Full downtime</span>
+
+**Update**: Unfortunately, we will not bring up Wynton to run jobs
+today. We are evaluating what, if anything, may be possible to bring
+up before the long weekend. The reason being that the required
+metadata resynchronization failed late yesterday. The vendor has
+provided us with a script to fix the failure. That script is running,
+and once it's done, we'll reattempt to resynchronize.
+<br><span class="timestamp">November 9, 10:30 PT</span>
 
 **Update**: We estimate to bring Wynton back up by the end of day
 Thursday November 9, 2023. At that time, we expect all login, all
@@ -39,9 +47,16 @@ reason: scheduled
  -->
 
 
-### October 27-November 9, 2023
+### October 27-November 10(?), 2023
 
 #### <span style="color: orange;">File-system failures</span>
+
+**Update**: The BeeGFS metadata resynchronization that had been
+running for several hours, failed late yesterday. The vendor has
+provided us with a script tailored to fix the issue we ran into. That
+script is running, and once it's done, we'll start the
+resynchronization again.
+<br><span class="timestamp">November 9, 10:30 PT</span>
 
 **Update**: The recovery from the BeeGFS incident goes as planned. We
 estimate to have resolved this issue by the end of November 9, 2023,
