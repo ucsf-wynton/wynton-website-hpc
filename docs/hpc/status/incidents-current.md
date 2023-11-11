@@ -1,6 +1,12 @@
-### October 30-November 10(?), 2023
+### October 30-November 13(?), 2023
 
 #### <span style="color: orange;">Full downtime</span>
+
+**Update**: Login and development nodes are available. Write access to
+the BeeGFS file system has been re-enabled. Due to continued issues in
+getting BeeGFS back in stable state, we are still not ready for
+opening up the scheduler and compute nodes. 
+<br><span class="timestamp">November 11, 00:30 PT</span>
 
 **Update**: Unfortunately, we will not bring up Wynton to run jobs
 today. We are evaluating what, if anything, may be possible to bring
@@ -47,9 +53,15 @@ reason: scheduled
  -->
 
 
-### October 27-November 10(?), 2023
+### October 27-November 13(?), 2023
 
 #### <span style="color: orange;">File-system failures</span>
+
+**Update**: After resynchronization of the BeeGFS metadata kept
+failing, we identified a possible culprit. We suspect BeeGFS cannot
+handle the folders with many millions of files, causing the
+resynchronization to fail. We keep working on stabilizing BeeGFS.
+<br><span class="timestamp">November 11, 00:45 PT</span>
 
 **Update**: The BeeGFS metadata resynchronization that had been
 running for several hours, failed late yesterday. The vendor has
