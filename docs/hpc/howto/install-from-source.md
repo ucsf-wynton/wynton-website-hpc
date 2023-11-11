@@ -1,26 +1,39 @@
 # Install Software from Source Code
 
-A lot of scientific software is developed using C, C++, and Fortran. Sometimes the maintainers provide prebuilt software binaries from Linux, but more often you have to compile their software from source code.  Building from source might sound daunting, especially if it's your first time - there is new terminology to understand, new tools to use, and sometimes hard-to-understand error messages.
+A lot of scientific software is developed using C, C++, and
+Fortran. Sometimes the maintainers provide prebuilt software binaries
+from Linux, but more often you have to compile their software from
+source code.  Building from source might sound daunting, especially if
+it's your first time - there is new terminology to understand, new
+tools to use, and sometimes hard-to-understand error messages.
 
-This document gives the gist of one of to the most common way to build software from source code, namely the "configure -> make -> make install" approach.  Please be aware that not all software tools use this approach, so it's not universal, but it is by far the most common approach.
+This document gives the gist of one of to the most common way to build
+software from source code, namely the "configure -> make -> make
+install" approach.  Please be aware that not all software tools use
+this approach, so it's not universal, but it is by far the most common
+approach.
 
 
 ## configure -> make -> make install
 
 Compiling software from source often involves three steps:
 
-1. Configuration - configure the following build step to work with your current set of tools and libraries
+ 1. Configuration - configure the following build step to work with
+    your current set of tools and libraries
 
-2. Building - compiling the source code into binary executables
+ 2. Building - compiling the source code into binary executables
 
-3. Installation - install the compiled binaries to its final destination
+ 3. Installation - install the compiled binaries to its final destination
 
-Lets use the [samtools] software as a real-world example to illustrate these steps.
+Lets use the [samtools] software as a real-world example to illustrate
+these steps.
 
 
 ### Download and extract source code
 
-We start by downloading the latest software "tarball" from <https://github.com/samtools/samtools/releases> to a temporary working location:
+We start by downloading the latest software "tarball" from
+<https://github.com/samtools/samtools/releases> to a temporary working
+location:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ mkdir -p "/scratch/$USER"
@@ -30,7 +43,8 @@ We start by downloading the latest software "tarball" from <https://github.com/s
 -rw-r--r-- 1 alice boblab 7744794 Dec  7 14:41 samtools-1.14.tar.bz2
 ```
 
-The next step is to extract the content of this tarball, which we can do using `tar -x -f` ("extract file"):
+The next step is to extract the content of this tarball, which we can
+do using `tar -x -f` ("extract file"):
 
 ```sh
 [alice@{{ site.devel.name }} alice]$ tar -x -f samtools-1.14.tar.bz2
@@ -40,7 +54,9 @@ drwxr-xr-x 9 alice boblab    4096 Oct 22 04:48 samtools-1.14
 -rw-r--r-- 1 alice boblab 7744794 Dec  7 14:41 samtools-1.14.tar.bz2
 ```
 
-As we see, the content of the tarball was extracted into a subfolder `samtools-1.14`.  The tarball file is no longer needed after this stage.  Let's enter that new folder and look at its content:
+As we see, the content of the tarball was extracted into a subfolder
+`samtools-1.14`.  The tarball file is no longer needed after this
+stage.  Let's enter that new folder and look at its content:
 
 ```sh
 [alice@{{ site.devel.name }} alice]$ cd samtools-1.14
@@ -61,7 +77,15 @@ bam_lpileup.c       bam_tview.h         lz4            tmp_file.h
 bam_lpileup.h       bam_tview_html.c    m4             version.sh
 ```
 
-We see that there are lots of files, but a few standard files stand out: `configure`, `INSTALL`, `Makefile`, `NEWS`, and `README`.  The files `README`, `NEWS` and `INSTALL` are standard file names for human-readable text files.  These are often useful to read when trying to understand what the software is about and how to install it.  If there is an `INSTALL` file, as here, it most likely contain instructions on how to install the software.  In our case, [`INSTALL`](https://github.com/samtools/samtools/blob/84dfab2520661ee09f96fcbdc62f31f33be70478/INSTALL#L66) contains a section:
+We see that there are lots of files, but a few standard files stand
+out: `configure`, `INSTALL`, `Makefile`, `NEWS`, and `README`.  The
+files `README`, `NEWS` and `INSTALL` are standard file names for
+human-readable text files.  These are often useful to read when trying
+to understand what the software is about and how to install it.  If
+there is an `INSTALL` file, as here, it most likely contain
+instructions on how to install the software.  In our case,
+[`INSTALL`](https://github.com/samtools/samtools/blob/84dfab2520661ee09f96fcbdc62f31f33be70478/INSTALL#L66)
+contains a section:
 
 ```plain
 Basic Installation
@@ -81,9 +105,17 @@ Familiar, eh?
 
 ### Step 1 - Configuration
 
-Default installation instructions, like the ones above, often assume we will install the software as an administrator to a central location available to all users on the system.  That is not possible to individual users on the cluster.  Instead, we need to install it to a location where we have permission to create and write files and folders.
+Default installation instructions, like the ones above, often assume
+we will install the software as an administrator to a central location
+available to all users on the system.  That is not possible to
+individual users on the cluster.  Instead, we need to install it to a
+location where we have permission to create and write files and
+folders.
 
-A common pattern is to install into a subfolder in our home folder that reflects the name of the software and its version. This way we can have multiple versions of the same software installed at the same time.  Lets install samtools to the following folder:
+A common pattern is to install into a subfolder in our home folder
+that reflects the name of the software and its version. This way we
+can have multiple versions of the same software installed at the same
+time.  Lets install samtools to the following folder:
 
 ```sh
 [alice@{{ site.devel.name }} samtools-1.14]$ mkdir -p $HOME/software/samtools-1.14
@@ -160,12 +192,19 @@ config.status: linking htscodecs_bundled.mk to htscodecs.mk
 [alice@{{ site.devel.name }} samtools-1.14]$  
 ```
 
-_Importantly, make sure there are no errors reported.  If there are, they need to be resolved before continuing._  This document does not explain how to resolve configuration errors.  If you cannot figure it out yourself, please reach out on one of our [Support Channels].
+_Importantly, make sure there are no errors reported.  If there are,
+they need to be resolved before continuing._  This document does not
+explain how to resolve configuration errors.  If you cannot figure it
+out yourself, please reach out on one of our [Support Channels].
 
 
 ### Step 2 - Building
 
-If the configuration steps complete without errors, it is often straightforward to build ("compile") the software my calling `make`.  The `make` command will use formal build instruction in the `Makefile`, but we don't have to know about those details.  Just call `make` as in:
+If the configuration steps complete without errors, it is often
+straightforward to build ("compile") the software my calling `make`.
+The `make` command will use formal build instruction in the
+`Makefile`, but we don't have to know about those details.  Just call
+`make` as in:
 
 ```sh
 [alice@{{ site.devel.name }} samtools-1.14]$ make
@@ -185,12 +224,18 @@ gcc  -L./lz4  -o test/vcf-miniview test/vcf-miniview.o htslib-1.14/libhts.a -lpt
 [alice@{{ site.devel.name }} samtools-1.14]$ 
 ```
 
-Make sure there are no compilation errors.  If you get errors at this stage, it could be because the `gcc` compiler is too old.  If that happens, try to use a newer compiler version following the instructions in Section 'Too old compiler?' below.
+Make sure there are no compilation errors.  If you get errors at this
+stage, it could be because the `gcc` compiler is too old.  If that
+happens, try to use a newer compiler version following the
+instructions in Section 'Too old compiler?' below.
 
 
 ### Step 3 - Installation
 
-If we got this far, all we have to do is to install the software, we just configured and built, to its final destination, which was specified and recorded in the configure step.  All we have to do now is:
+If we got this far, all we have to do is to install the software, we
+just configured and built, to its final destination, which was
+specified and recorded in the configure step.  All we have to do now
+is:
 
 ```sh
 [alice@{{ site.devel.name }} samtools-1.14]$ make install
@@ -205,7 +250,11 @@ install -p -m 644 doc/samtools*.1 misc/wgsim.1 {{ site.user.home }}/software/sam
 
 ### Testing
 
-If we pay attention to the `make install` output, we see that the `samtools` executable was installed in the `bin/` subfolder of our installation directory `~/software/samtools-1.14/`.  Since this is not yet on the search path, we have to specify the full path for our initial test:
+If we pay attention to the `make install` output, we see that the
+`samtools` executable was installed in the `bin/` subfolder of our
+installation directory `~/software/samtools-1.14/`.  Since this is not
+yet on the search path, we have to specify the full path for our
+initial test:
 
 ```sh
 [alice@{{ site.devel.name }} samtools-1.14]$ $HOME/software/samtools-1.14/bin/samtools --version | head -3
@@ -214,7 +263,9 @@ Using htslib 1.14
 Copyright (C) 2021 Genome Research Ltd.
 ```
 
-In order to call this `samtools` executable without having to specify the full path each time, prepend its path to the `PATH` environment variable, e.g.
+In order to call this `samtools` executable without having to specify
+the full path each time, prepend its path to the `PATH` environment
+variable, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ export PATH=~/software/samtools-1.14/bin:$PATH
@@ -238,31 +289,49 @@ to your `~/.bashrc` file.
 
 ## Too old compiler?
 
-The GCC development tools that come built-in on our Rocky 8 system is sufficient the most r.  For example, the default `gcc` version is from 2015;
+The GCC development tools that come built-in on our Rocky 8 system is
+sufficient for most needs.  For example, the default `gcc` version is:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ gcc --version
-...
-```
-
-This GCC 4.8.5 compiler supports older C++ standards such as C++11, but none of the newer standards, including C++14 and C++17, cf. <https://gcc.gnu.org/projects/cxx-status.html>.  Most software are configured to validate that we have a sufficient compiler version when built, and if a too old version is used, there is often an informative error message.  Examples might be:
-
-```plain
-g++: error: unrecognized command line option '-std=gnu++17'
-```
-
-From this error message (`-std=c++17`), we can see that we need a compiler that requires C++17, From <https://gcc.gnu.org/projects/cxx-status.html#cxx17>, we see that we need at least GCC 7, or possibly even GCC 8.  Newer version of compilers are available via the 'devtoolset' [Software Collections (SCLs)].  The easiest way to access these is via the `scl-devtoolset` modules in the [CBI software repository], e.g.
-
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI scl-devtoolset/8
-[alice@{{ site.devel.name }} ~]$ gcc --version
-gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
+gcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18)
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
-You only need to load these compiler tools prior to installing the software.  With very few exception, they are not needed for running the installed software later on.
+This GCC 8.5.0 compiler supports older C++ standards such as C++17,
+but none of the newer standards, including C++20 and C++23,
+cf. <https://gcc.gnu.org/projects/cxx-status.html>.  Most software are
+configured to validate that we have a sufficient compiler version when
+built, and if a too old version is used, there is often an informative
+error message.  Examples might be:
+
+```plain
+g++: error: unrecognized command line option '-std=gnu++20'
+```
+
+From this error message (`-std=c++20`), we can see that we need a
+compiler that requires C++20. From
+<https://gcc.gnu.org/projects/cxx-status.html#cxx20>, we see that we
+need at least GCC 8, but possibly even GCC 11 or GCC 12.  Newer
+version of compilers are available via the 'gcc-toolset' [Software
+Collections (SCLs)].  The easiest way to access these is via the
+`scl-gcctoolset` modules in the [CBI software repository], e.g.
+
+
+```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-gcctoolset/120
+[alice@{{ site.devel.name }} ~]$ gcc --version
+gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-7)
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+You only need to load these compiler tools prior to installing the
+software.  With very few exception, they are not needed for running
+the installed software later on.
 
 
 
