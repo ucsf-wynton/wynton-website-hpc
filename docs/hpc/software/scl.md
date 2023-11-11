@@ -1,6 +1,8 @@
 # Software Collections (SCL)
 
-> [Software Collections (SCL)](https://en.wikipedia.org/wiki/CentOS#Add-ons_releases) is a CentOS repository that provides a set of dynamic programming languages, database servers, and various related packages. Provided software versions are [...] more recent than their equivalent versions included in the base CentOS distribution [...]  Packages available from the SCL [...] can be optionally enabled per application by using supplied `scl` utility.
+[Software Collections (SCL)] provides software versions that are [...]
+more recent > than their equivalent versions included in the base
+Rocky 8 distribution.
 
 
 ## Available SCLs and their Packages
@@ -10,49 +12,91 @@ To list all Software Collections installed on the _development nodes_, use:
 <!-- code-block label="list" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ scl --list
-gcc-toolset-7
-gcc-toolset-8
-gcc-toolset-9
 gcc-toolset-10
 gcc-toolset-11
+gcc-toolset-12
+gcc-toolset-9
 ```
 
 _Importantly_, the above SCLs are available only on the _development
 nodes_.
 
 
-To list all the packages that are part of one or more of these SCLs, use:
+To list all the packages that are part of one or more of these SCLs,
+use:
 
 <!-- code-block label="list-one" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl --list gcc-toolset-11
+[alice@{{ site.devel.name }} ~]$ scl list-packages gcc-toolset-11
+gcc-toolset-11-11.1-1.el8.x86_64
+gcc-toolset-11-libquadmath-devel-11.2.1-9.1.el8.x86_64
+gcc-toolset-11-elfutils-debuginfod-client-0.185-5.el8.x86_64
+gcc-toolset-11-annobin-docs-10.23-1.el8.noarch
+gcc-toolset-11-gcc-c++-11.2.1-9.1.el8.x86_64
+gcc-toolset-11-systemtap-4.5-6.el8.x86_64
+gcc-toolset-11-toolchain-11.1-1.el8.x86_64
+gcc-toolset-11-elfutils-0.185-5.el8.x86_64
+gcc-toolset-11-libstdc++-devel-11.2.1-9.1.el8.x86_64
+gcc-toolset-11-gdb-10.2-5.el8.x86_64
+gcc-toolset-11-elfutils-libs-0.185-5.el8.x86_64
+gcc-toolset-11-dwz-0.14-2.el8.x86_64
+gcc-toolset-11-perftools-11.1-1.el8.x86_64
+gcc-toolset-11-systemtap-client-4.5-6.el8.x86_64
+gcc-toolset-11-make-1:4.3-2.el8.x86_64
+gcc-toolset-11-gcc-gfortran-11.2.1-9.1.el8.x86_64
+gcc-toolset-11-binutils-2.36.1-2.el8.x86_64
+gcc-toolset-11-systemtap-runtime-4.5-6.el8.x86_64
+gcc-toolset-11-ltrace-0.7.91-1.el8.x86_64
+gcc-toolset-11-gcc-gdb-plugin-11.2.1-9.1.el8.x86_64
+gcc-toolset-11-systemtap-devel-4.5-6.el8.x86_64
+gcc-toolset-11-elfutils-libelf-0.185-5.el8.x86_64
+gcc-toolset-11-strace-5.13-7.el8.x86_64
+gcc-toolset-11-runtime-11.1-1.el8.x86_64
+gcc-toolset-11-valgrind-1:3.17.0-6.el8.x86_64
+gcc-toolset-11-gcc-11.2.1-9.1.el8.x86_64
 ...
 ```
 
 
 ## Using SCLs
 
-Ruby's interactive shell can be launched via the `irb` command.  However, because it is available as a core software, we need to access it via the Ruby SCL.  Here is an example how to check the version of the Ruby shell:
+Rocky 8 comes with GCC 8.5.0 (2021-05-14).  Never versions are
+available via the `gcc-toolset-NN` SCLs.  Here is an example how to
+check the version of one of the newer version:
 
-<!-- code-block label="ruby-ex-1" -->
+<!-- code-block label="gcc-toolset-ex-1" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-10 "gcc --version"
-...
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-12 "gcc --version"
+gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-7)
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
-_Importantly_, this approach of prefixing the original command call works also in job scripts.
+_Importantly_, this approach of prefixing the original command call
+works also in job scripts.
 
 
-If you work interactively on one of the development nodes, you can also launch a new shell (typically Bash) with one or more SCLs enabled:
+### Using SCLs in interactive mode
+
+#### Using `scl enable` (traditional)
+
+If you work interactively on one of the development nodes, you can
+also launch a new shell (typically Bash) with one or more SCLs
+enabled:
 
 <!-- code-block label="ruby-ex-2" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl enable gcc-devtoolset-11 $SHELL
+[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-12 "$SHELL"
 [alice@{{ site.devel.name }} ~]$ gcc --version
-...
+gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-7)
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
-To "unload" an SCLs, just return to the previous shell by exiting new SCL-enabled shell, i.e.
+To "unload" an SCLs, just return to the previous shell by exiting new
+SCL-enabled shell, i.e.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ exit
@@ -61,33 +105,34 @@ To "unload" an SCLs, just return to the previous shell by exiting new SCL-enable
 ```
 
 
-## Version details on the different SCLs
+#### Using `module load CBI scl-gcc-toolset` (recommended)
 
-### Developer Toolset SCLs
-
-The `gcc-toolset-NN` SCLs each include a specific version of the GNU Compiler Collection (GCC), which provides the `gcc` compiler among other tools.  Here are the `gcc` versions provided by these SCLs:
+An alternative approach to using `scl enable` for activating an SCL,
+is to `module load` to achieve the same, e.g.
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-7 "gcc --version | head -1"
-gcc (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-gcc-toolset/12
+[alice@{{ site.devel.name }} ~]$ gcc --version
+gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-7)
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
 
-[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-8 "gcc --version | head -1"
-gcc (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
+To go back to the built-in version of GCC, unload the module, i.e.
 
-[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-9 "gcc --version | head -1"
-gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)
-
-[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-10 "gcc --version | head -1"
-gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)
-
-[alice@{{ site.devel.name }} ~]$ scl enable gcc-toolset-11 "gcc --version | head -1"
-gcc (GCC) 11.2.1 20220127 (Red Hat 11.2.1-9)
+```sh
+[alice@{{ site.devel.name }} ~]$ module unload scl-gcc-toolset
+[alice@{{ site.devel.name }} ~]$ gcc --version
+gcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18)
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 
 ## See Also
 
-* [Product Documentation for Red Hat Software Collections](https://access.redhat.com/documentation/en-us/red_hat_software_collections/)
 * [Product Documentation for Red Hat Developer Toolset](https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/)
 
 
