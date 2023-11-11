@@ -1,9 +1,5 @@
 # Work with Python
 
-<div class="alert alert-warning" role="alert" markdown="1">
-If possible, we recommend to be explicit about which version to use by specifying either `python2` and `python3` in your scripts.
-</div>
-
 Python 2 and Python 3 are both available via `python2` and `python3`.  There is no command `python` on Rocky 8; you have to specify either `python2` or `python3`.
 
 
