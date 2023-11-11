@@ -92,11 +92,11 @@ Here is what the above steps will look like:
 
 ```sh
 {local}$ ssh alice@{{ site.login.hostname }}
-The authenticity of host {{ site.login.hostname }} (172.26.44.11) can not be established.
+The authenticity of host {{ site.login.hostname }} ({{ site.login.ip }}) can not be established.
 ECDSA key fingerprint is SHA256:DrCbFJouT3pRHoPO6rzGNJxX4OOIBuLy/ZdxjIQrx3M.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added {{ site.login.hostname }},172.26.44.11 (ECDSA) to the list of known hosts.
-Connection closed by 172.26.44.11 port 22
+Warning: Permanently added {{ site.login.hostname }},{{ site.login.ip }} (ECDSA) to the list of known hosts.
+Connection closed by {{ site.login.ip }} port 22
 
 {local}$ ssh alice@{{ site.login.hostname }}
 alice@{{ site.login.hostname }} password:
