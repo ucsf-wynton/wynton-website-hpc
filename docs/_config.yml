@@ -27,52 +27,52 @@ path:
   cbi_software: /wynton/home/cbi/shared/software
   
 login:
-  name: "log2"
-  hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.134.15"
+  name: "log1"
+  hostname: "log1.wynton.ucsf.edu"
+  ip: "169.230.79.44"
 
 devel:
   name: "dev1"
   hostname: "dev1"
-  ip: "172.26.32.2"
+  ip: "172.26.44.131"
 
 transfer:
   name: "dt1"
   hostname: "dt1.wynton.ucsf.edu"
-  ip: "169.230.126.58"
+  ip: "169.230.79.35"
 
 login1:
   name: "log1"
   hostname: "log1.wynton.ucsf.edu"
-  ip: "169.230.126.77"
+  ip: "169.230.79.44"
 login2:
   name: "log2"
   hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.134.15"
+  ip: "169.230.79.47"
 dev1:
   name: "dev1"
   hostname: "dev1"
-  ip: "172.26.32.2"
+  ip: "172.26.44.131"
 dev2:
   name: "dev2"
   hostname: "dev2"
-  ip: "172.26.32.7"
+  ip: "172.26.44.132"
 dev3:
   name: "dev3"
   hostname: "dev3"
-  ip: "172.26.32.8"
+  ip: "172.26.44.133"
 gpudev1:
   name: "gpudev1"
   hostname: "gpudev1"
-  ip: "172.26.32.3"
+  ip: "172.26.44.141"
 transfer1:
   name: "dt1"
   hostname: "dt1.wynton.ucsf.edu"
-  ip: "169.230.126.58"
+  ip: "169.230.79.35"
 transfer2:
   name: "dt2"
   hostname: "dt2.wynton.ucsf.edu"
-  ip: "172.26.1.17"
+  ip: "169.230.79.16"
 
 globus:
   name: "UCSF Wynton HPC"
