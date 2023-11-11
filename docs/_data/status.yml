@@ -92,6 +92,3 @@ condition: is operational
 level: danger
 condition: is partially operational
 message: (1) Only login and development nodes are available. (2) The compute nodes and the scheduler are unavailable. (3) It is not possible to change or reset passwords.
-</div>
-
-
