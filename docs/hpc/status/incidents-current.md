@@ -119,3 +119,12 @@ affected: jobs, beegfs, compute, storage, *
 reason: unscheduled
  -->
 
+
+### November 5-13(?), 2023
+
+#### <span style="color: orange;">Passwords cannot be reset</span>
+
+**Notice**: It is not possible to change or reset passwords since
+2023-11-05. This problem was introduced while doing cluster-wide
+upgrades to Rocky 8.
+<br><span class="timestamp">November 11, 09:00 PT</span>
