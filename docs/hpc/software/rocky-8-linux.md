@@ -1,23 +1,10 @@
-# Migration to Rocky 8 Linux from CentOS 7
+# Wynton runs Rocky 8 Linux as of November 2023
 
-_Last updated: 2023-10-26_
+_Last updated: 2023-11-11_
 
-
-## Wynton will switch to Rocky 8 on October 30
-
-{{ site.cluster.nickname }} currently runs on CentOS 7 Linux. CentOS 7
-will reach the [end of life (EOL) on June 30, 2024], which means it will
-receive neither regular not security updates after that date.  To keep
-up with Linux security patches and to enable more modern software
-packages, we will move the {{ site.cluster.name }} to the [Rocky 8
-Linux](https://rockylinux.org/) distribution;
-
-* _We will migrate all of the cluster from CentOS 7 to Rocky 8 during
-    a complete downtime starting on **Monday October 30, 2023**_
-
-* You can already now test your existing pipelines on our Rocky 8 test
-  cluster
-
+{{ site.cluster.nickname }} now runs [Rocky 8] Linux.  Previously, we
+were running CentOS 7 Linux, which will reach the [end of life (EOL)
+on June 30, 2024].
 
 
 ## What to expect?
@@ -40,20 +27,21 @@ Here are some of the hurdles you may run into:
   otherwise outdated on CentOS 7.  In contrast, Rocky 8 comes with
   newer versions making the need for loading newer versions via
   modules less necessary - when in doubt, try first without loading
-  the module.  If you run across a module that does not work, please
-  email us the details at [{{ site.cluster.email_support }}](mailto:{{
-  site.cluster.email_support }})
+  the module.
 
-* [Software Collections (SCL)] : Compared to CentOS 7, Rocky 8 will
-  only provide SCLs for using modern GCC development tools, e.g. C and
-  C++ compilers.  These SCLs, called `gcc-toolset`, corresponds
+* [Software Collections (SCL)] : Compared to CentOS 7, Rocky 8
+  provides only SCLs for using modern GCC development tools, e.g. C
+  and C++ compilers.  These SCLs, called `gcc-toolset`, corresponds
   somewhat to the `devtoolset` SCLs that are available on CentOS 7.
-  Python and Ruby SCLs will no longer be available.
+  The built-in GCC version is now 8.5.0 (2021-05-14), whereas on
+  CentOS 7 it was 4.8.5 (2015-06-23).  Python and Ruby SCLs are no
+  longer available.
 
-* [Python] : There will no longer be a `python` command; Python 3 has
-  to be called as `python3` and legacy Python 2 is available as
-  `python2`. On CentOS 7, `python` corresponded to `python2`.  Note
-  that Python 2 reached its EOL on 2020-01-01.
+* [Python] : There is no longer a `python` command; Python 3 has to be
+  called as `python3` and legacy Python 2 is available as
+  `python2`. On CentOS 7, `python` corresponded to `python2`.  Python
+  3.6 is available via `python3.6`, Python 3.8 via `python3.8`, and
+  Python 3.11 via `python3.11`.
 
 * [MPI] : OpenMPI is available via the built-in module `mpi`. On Rocky
   8, the default, and only available version is OpenMPI 4.1, which you
@@ -66,50 +54,10 @@ Here are some of the hurdles you may run into:
 
 * Self-compiled software: If you have compiled software to run from
   your home directory, depending on how the libraries are linked, it
-  may need to be recompiled to function in Rocky 8. In addition,
-  **software compiled on Rocky 8 nodes may _not_ function on CentOS 7
-  nodes**. If you do compile or recompile software on the Rocky 8 dev
-  nodes, be sure to send jobs which include that software _only_ to
-  Rocky 8 nodes using the `-l rocky8=true` flag.
+  may need to be recompiled to function in Rocky 8.
 
 
-## Try Rocky 8
-
-To get ahead of the upgrade, we have installed Rocky 8 on a few
-development and compute nodes to enable you to test and to update your
-jobs and self-compiled software and scripts so they work with Rocky 8.
-
-If you are a non-PHI users, please use:
-
- * Login nodes: `log1` and `log2`
- * Data transfer nodes: `dt1` and `dt2`
- * Development nodes: `dev2`, and `dev3` (temporarily also `devr8`)
- * GPU development node: `gpudevr8`
- * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
-  
-If you are a PHI users, please use:
-
- * Login nodes: `plog1` (still CentOS 7)
- * Data transfer nodes: `pdt1` and `pdt2`
- * Development node: `pdevr8`
- * GPU development node: `pgpudevr8`
- * Compute nodes: Add `-l rocky8=true` to `qsub` or to your script
-
-<!--
-qhost -l rocky8=true | wc -l
-qhost -l rocky8=true | awk '{ print $5 }' | grep -E "^[[:digit:]]+$" | paste -sd+ | bc
--->
-As of 2023-10-26, 51 of the compute nodes runs Rocky 8 with a total of 1,376 CPU slots (8% of all compute nodes).  Because there is a limited number of Rocky-8 compute nodes, _please do not send large arrays or time consuming jobs to the Rocky 8 nodes_.
-
-
-## Rocky 8 support and feedback
-
-Please provide any feedback either via email to [{{
-site.cluster.email_support }}](mailto:{{ site.cluster.email_support
-}}) or via Slack (feel free to use the `#rocky8` channel before the
-migration).
-
-
+[Rocky 8]: https://rockylinux.org/
 [end of life (EOL) on June 30, 2024]: https://www.redhat.com/en/topics/linux/centos-linux-eol
 [Software Repositories]: software-repositories.html
 [Software Collections (SCL)]: scl.html
