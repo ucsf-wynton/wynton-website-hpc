@@ -155,7 +155,7 @@ Type 'q()' to quit R.
 [alice@{{ site.devel.name }} lxc]$ 
 ```
 
-To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not CentOS as on the {{ site.cluster.name }} host system), do:
+To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not Rocky 8 as on the {{ site.cluster.name }} host system), do:
 
 <!-- code-block label="shell" -->
 ```sh
@@ -170,9 +170,9 @@ Copyright (C) 2022 The R Foundation for Statistical Computing
 Apptainer> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
-NAME="CentOS Linux"
-VERSION="7 (Core)"
-ID="centos"
+NAME="Rocky Linux"
+VERSION="8.8 (Green Obsidian)"
+ID="rocky"
 ```
 
 
