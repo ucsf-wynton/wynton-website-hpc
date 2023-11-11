@@ -58,7 +58,7 @@ module load CBI r bwa bowtie2/2.4.2
 Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
+<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
@@ -66,7 +66,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <div class="tab-content" style="margin-top: 1ex;">
 <div id="button_repository_built-in" class="tab-pane fadein active">
 
-<h2 id="repository_built-in">Module Software Repository: built-in (7)</h2>
+<h2 id="repository_built-in">Module Software Repository: built-in (6)</h2>
 
 Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
@@ -154,38 +154,6 @@ prepend-path  LD_LIBRARY_PATH     /usr/local/matlab/R2022b/runtime/glnxa64:/usr/
 </details>
   </dd>
 </dl>
-<h3 id="module_built-in_mpi" class="module-name">mpi</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version">openmpi-x86_64, <em>openmpi3-x86_64</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-#
-#  OpenMPI module for use with 'environment-modules' package:
-#
-conflict		mpi
-prepend-path 		PATH 		/usr/lib64/openmpi3/bin
-prepend-path 		LD_LIBRARY_PATH /usr/lib64/openmpi3/lib
-prepend-path 		PKG_CONFIG_PATH	/usr/lib64/openmpi3/lib/pkgconfig
-prepend-path		PYTHONPATH	/usr/lib64/python2.7/site-packages/openmpi3
-prepend-path		MANPATH		/usr/share/man/openmpi3-x86_64
-setenv 			MPI_BIN		/usr/lib64/openmpi3/bin
-setenv			MPI_SYSCONFIG	/etc/openmpi3-x86_64
-setenv			MPI_FORTRAN_MOD_DIR	/usr/lib64/gfortran/modules/openmpi3
-setenv			MPI_INCLUDE	/usr/include/openmpi3-x86_64
-setenv	 		MPI_LIB		/usr/lib64/openmpi3/lib
-setenv			MPI_MAN		/usr/share/man/openmpi3-x86_64
-setenv			MPI_PYTHON_SITEARCH	/usr/lib64/python2.7/site-packages/openmpi3
-setenv			MPI_PYTHON2_SITEARCH	/usr/lib64/python2.7/site-packages/openmpi3
-setenv			MPI_COMPILER	openmpi3-x86_64
-setenv			MPI_SUFFIX	_openmpi3
-setenv	 		MPI_HOME	/usr/lib64/openmpi3
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_built-in_openjdk" class="module-name">openjdk</h3>
 <dl>
   <dd class="module-details">
@@ -194,7 +162,7 @@ setenv	 		MPI_HOME	/usr/lib64/openmpi3
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code> (SDK only).</span><br>
 Note: <span class="module-note">This module loads the Software Development Kit (SDK) version, if available, otherwise the Run-Time Environment (JRE).</span><br>
 URL: <span class="module-url"><a href="https://openjdk.java.net/">https://openjdk.java.net/</a>, <a href="https://openjdk.java.net/projects/jdk/">https://openjdk.java.net/projects/jdk/</a> (changelog), <a href="https://github.com/openjdk/jdk">https://github.com/openjdk/jdk</a> (source code)</span><br>
-Versions: <span class="module-version">1.8.0, <em>11</em></span><br>
+Versions: <span class="module-version">1.8.0, 11, <em>17</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;openjdk: Open Java Development Kit&quot;)
@@ -1433,7 +1401,7 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
 <span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
-Example: <span class="module-example"><code>gdalinfo --version</code></span><br>
+Example: <span class="module-example"><code>gdalinfo --version</code> and <code>man gdalinfo</code>.</span><br>
 URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
 Versions: <span class="module-version"><em>2.4.3</em></span><br>
 <details>
@@ -3416,7 +3384,7 @@ setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pk
 <strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections</strong><br>
 <span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
 Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python.38/</a></span><br>
+URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version">36, <em>38</em></span><br>
@@ -4278,9 +4246,9 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
 module-whatis &quot;URL: https://www.boost.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/include
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -4464,15 +4432,15 @@ setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0
   <dd class="module-details">
 <span class="module-description">A language for writing Python extension modules</span><br>
 URL: <span class="module-url"><a href="https://cython.org/">https://cython.org/</a></span><br>
-Versions: <span class="module-version">0.25.2, 0.29.14, 0.29.24, <em>0.29.32</em></span><br>
+Versions: <span class="module-version">0.25.2, 0.29.14, 0.29.24, 0.29.32, <em>3.0.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Description: A language for writing Python extension modules&quot;
 module-whatis &quot;URL: https://cython.org/&quot;
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.32/bin
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-py27-0.29.32/lib64/python2.7/site-packages
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/Cython-py27-3.0.5/bin
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-py27-3.0.5/lib64/python2.7/site-packages
 </code></pre>
 
 </details>
@@ -5023,11 +4991,11 @@ module-whatis &quot;Description: Collection of algorithms for computer vision&qu
 module-whatis &quot;URL: https://opencv.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   module load hdf5/1.10.6
-  prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/bin
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/include/opencv4
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib64
-  prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib/python2.7/site-packages
+  prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0/bin
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/include/opencv4
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
+  prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib/python2.7/site-packages
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -6890,7 +6858,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 </div> 
 
 <ul class="nav nav-pills">
-<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(7)</a></li>
+<li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
