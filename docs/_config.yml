@@ -14,7 +14,7 @@ user:
 cluster:
   name: "Wynton HPC"
   nickname: "Wynton"
-  version: "1.0"
+  version: "1.1"
   domain: wynton.ucsf.edu
   email_support: support@wynton.ucsf.edu
   email_storage: storage@wynton.ucsf.edu
