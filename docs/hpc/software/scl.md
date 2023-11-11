@@ -11,7 +11,7 @@ To list all Software Collections installed on the _development nodes_, use:
 
 <!-- code-block label="list" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ scl --list
+[alice@{{ site.devel.name }} ~]$ scl list-collections
 gcc-toolset-10
 gcc-toolset-11
 gcc-toolset-12
