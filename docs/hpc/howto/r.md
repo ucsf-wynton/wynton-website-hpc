@@ -2,6 +2,8 @@
 
 {% assign r_basename = "R-4.3.1-gcc10" %}
 
+{% assign linux_distro = "_rocky8" %}
+
 {% assign r_libs_user = "4.3-CBI-gcc10" %}
 
 R is available on {{ site.cluster.name }} via a [contributed environment module]({{ '/software/software-repositories.html' | relative_url }}).
@@ -75,11 +77,11 @@ The majority of R packages are available from [CRAN] (Comprehensive R Archive Ne
 
 Before continuing, it is useful to understand where R packages looks for locally installed R packages.  There are three locations that R considers:
 
-1. Your personal R package library. This is located under `~/R/`, e.g. `~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/`
+1. Your personal R package library. This is located under `~/R/`, e.g. `~/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/`
 
 2. (optional) A site-wide R package library (not used on {{ site.cluster.name }})
 
-3. The system-wide R package library part of the R installed, e.g. `{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/library`
+3. The system-wide R package library part of the R installed, e.g. `{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/library`
 
 
 
@@ -110,7 +112,7 @@ Now, in order to install, for instance, the **[zoo]** package available on CRAN,
 ```r
 > install.packages("zoo")
 Warning in install.packages("zoo") :
-  'lib = "{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/library"' is not writable
+  'lib = "{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
 ```
 
@@ -119,7 +121,7 @@ We notice two things.  First there is a warning mentioning that a "lib" folder w
 ```r
 Would you like to use a personal library instead? (yes/No/cancel) yes
 Would you like to create a personal library
-'~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+'~/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel)
 ```
 
@@ -128,7 +130,7 @@ R wants to make sure you are aware what is done, so it will, conservatively, als
 <!-- code-block label="install-zoo" -->
 ```r
 Would you like to create a personal library
-'~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+'~/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-12.tar.gz'
 Content type 'application/x-gzip' length 782344 bytes (764 KB)
@@ -140,11 +142,11 @@ downloaded 764 KB
 ** using staged installation
 ** libs
 using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-zoo/00new/zoo/libs
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -shared -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/lib -lR
+installing to {{ site.user.home }}R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst
@@ -203,7 +205,7 @@ If you already have **[BiocManager]** installed, you can skip this section.  Whe
 <!-- code-block label="install-BiocManager" -->
 ```r
 > install.packages("BiocManager")
-Installing package into '{{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '{{ site.user.home }}R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.21.tar.gz'
 Content type 'application/x-gzip' length 582625 bytes (568 KB)
@@ -251,11 +253,11 @@ downloaded 1.4 MB
 ** using staged installation
 ** libs
 using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-limma/00new/limma/libs
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib/R/lib -lR
+installing to {{ site.user.home }}R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -333,7 +335,7 @@ The **[Rmpi]** package does not install out-of-the-box like other R packages.  T
 <!-- code-block label="install-Rmpi" -->
 ```r
 > install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
-Installing package into '{{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '{{ site.user.home }}R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.7-1.tar.gz'
 Content type 'application/x-gzip' length 106286 bytes (103 KB)
@@ -347,14 +349,14 @@ configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
 using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-Rmpi/00new/Rmpi/libs
+gcc -shared -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -lR
+installing to {{ site.user.home }}R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo
 ** inst
@@ -406,7 +408,7 @@ Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbd
 
 ```r
 > install.packages("pbdMPI", configure.args="--with-mpi-include=$MPI_INCLUDE --with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
-Installing package into '{{ site.user.home }}/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '{{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 (as 'lib' is unspecified)
 * installing *source* package 'pbdMPI' ...
 ** package 'pbdMPI' successfully unpacked and MD5 sums checked
@@ -471,12 +473,12 @@ echo "PKG_CPPFLAGS = -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI" >> Makeco
 echo "PKG_LIBS = -L/usr/lib64/openmpi3/lib -lmpi  -lutil -lpthread" >> Makeconf
 echo "PROF_LDFLAGS = " >> Makeconf
 echo "ENABLE_LD_LIBRARY_PATH = no" >> Makeconf
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
 ...
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c zzz.c -o zzz.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi3/lib -lmpi -lutil -lpthread -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -lR
-installing via 'install.libs.R' to {{ site.user.home }}/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-pbdMPI/00new/pbdMPI
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c zzz.c -o zzz.o
+gcc -shared -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi3/lib -lmpi -lutil -lpthread -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -lR
+installing via 'install.libs.R' to {{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-pbdMPI/00new/pbdMPI
 ** R
 ** demo
 ** inst
@@ -525,9 +527,9 @@ configure: Attempting legacy configuration of rjags
 checking for jags... no
 configure: error: "automatic detection of JAGS failed. Please use pkg-config to locate the JAGS library. See the INSTALL file for details."
 ERROR: configuration failed for package 'rjags'
-* removing '{{ site.user.home }}/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/rjags'
+* removing '{{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/rjags'
 ERROR: dependency 'rjags' is not available for package 'infercnv'
-* removing '{{ site.user.home }}/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/infercnv'
+* removing '{{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/infercnv'
 ```
 
 The error says that the "JAGS library" is missing.  It's available via
