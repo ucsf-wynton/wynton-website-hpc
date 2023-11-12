@@ -6,7 +6,7 @@ module_repositories <- list(
     group       = "{{ site.cluster.name }}",
     url         = "{{ '/about/contact.html' | relative_url }}",
     contributed = FALSE,
-    module_path = c("/wynton/home/opt/modules", "/etc/modulefiles")[2]
+    module_path = c("/etc/modulefiles", "/usr/share/modulefiles")[1] ## FIXME
   ),
 
   CBI = list(
