@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(91)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
@@ -205,7 +205,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (95)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (91)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -1132,7 +1132,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>emacs --version</code> and <code>emacs -nw</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a>, <a href="https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases">https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">28.1, <em>29.1</em></span><br>
+Versions: <span class="module-version"><em>29.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1391,67 +1391,6 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
-<h3 id="module_cbi_gdal" class="module-name">gdal</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
-<span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
-Example: <span class="module-example"><code>gdalinfo --version</code> and <code>man gdalinfo</code>.</span><br>
-URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
-Versions: <span class="module-version"><em>2.4.3</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help(&quot;GDAL: Geospatial Data Abstraction Library&quot;)
-
-local name = myModuleName()
-local version = myModuleVersion()
-version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: spatial, library&quot;)
-whatis(&quot;URL: https://gdal.org/, https://github.com/OSGeo/gdal/blob/master/NEWS.md (changelog), https://github.com/OSGeo/gdal (source code)&quot;)
-whatis([[
-Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.
-Examples: `gdalinfo --version` and `man gdalinfo`.
-]])
-
--- GDAL (&gt;= 3.0.0), requires PROJ (&gt;= 6.0.0)
-local libdir = &quot;lib&quot;
-local v = version
-v = string.gsub(v, &quot;[.].*&quot;, &quot;&quot;)
-if v &gt;= &quot;3&quot; then
-  depends_on(&quot;proj&quot;)
-  -- ... and a modern SQLite3 and HDF5 (&gt;= 1.8.13)
-  depends_on(&quot;sqlite&quot;)
-  depends_on(&quot;hdf5&quot;)
-  libdir = &quot;lib64&quot;
-end
-
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-
--- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
-end
-
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, libdir))
-
-prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
-
--- linking
-prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, libdir))
-
--- building
-prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
-prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
-prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, libdir), &quot; &quot;)
 </code></pre>
 
 </details>
@@ -2391,52 +2330,6 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
-<h3 id="module_cbi_oraclejdk" class="module-name">oraclejdk</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">oraclejdk: Oracle Java Development Kit</strong><br>
-<span class="module-description">Oracle's implementation of Java and the Java Development Kit.  This is an alternative to the OpenJDK Java version.</span><br>
-Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.oracle.com/java/">https://www.oracle.com/java/</a>, <a href="https://www.oracle.com/java/technologies/downloads/">https://www.oracle.com/java/technologies/downloads/</a> (downloads)</span><br>
-Versions: <span class="module-version"><em>17.0.8</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-oraclejdk: Oracle Java Development Kit
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: programming&quot;)
-whatis(&quot;URL: https://www.oracle.com/java/, https://www.oracle.com/java/technologies/downloads/ (downloads)&quot;)
-whatis([[
-Description: Oracle's implementation of Java and the Java Development Kit.  This is an alternative to the OpenJDK Java version.
-Examples: `java -version` and `javac -version`.
-]])
-
--- Local variables
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-
--- Specific to the Linux distribution?
-if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
-  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
-end
-
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-setenv(&quot;JAVA_HOME&quot;, home)
-prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
-prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
-prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
-
-conflict(&quot;openjdk&quot;)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_cbi_pandoc" class="module-name">pandoc</h3>
 <dl>
   <dd class="module-details">
@@ -2836,7 +2729,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The R programming language.</span><br>
 Example: <span class="module-example"><code>R</code>, <code>R --version</code>, and <code>Rscript --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.r-project.org/">https://www.r-project.org/</a>, <a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.html">https://cran.r-project.org/doc/manuals/r-release/NEWS.html</a> (changelog)</span><br>
-Versions: <span class="module-version">2.12.2, 2.13.0, 2.14.0, 2.15.0, 3.0.0, 3.1.0, 3.2.0, 3.3.0, 3.4.0, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0-gcc8, 4.1.1-gcc8, 4.1.2-gcc8, 4.1.3-gcc8, 4.2.0-gcc10, 4.2.1-gcc10, 4.2.2-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, <em>4.3.1-gcc10</em></span><br>
+Versions: <span class="module-version">3.5.3, 3.6.3, 4.0.0-gcc10, 4.0.5-gcc10, 4.1.3-gcc8, 4.2.0-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, <em>4.3.1-gcc10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2844,7 +2737,7 @@ R: The R Programming Language
 ]])
 
 local name = myModuleName()
-local version = &quot;4.2.1-gcc10&quot;
+local version = &quot;4.2.0-gcc10&quot;
 version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: Programming, Statistics&quot;)
@@ -2859,12 +2752,28 @@ has_devtoolset = function(version)
   return(isDir(path))
 end
 
+has_gcc_toolset = function(version)
+  local path = pathJoin(&quot;/opt&quot;, &quot;rh&quot;, &quot;gcc-toolset-&quot; .. version)
+  return(isDir(path))
+end
+
 local name = &quot;R&quot;
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;R&quot;, &quot;lib&quot;))
+
+local path = pathJoin(home, &quot;lib&quot;)
+if not isDir(path) then
+  path = pathJoin(home, &quot;lib64&quot;)
+end
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(path, &quot;R&quot;, &quot;lib&quot;))
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 
 local v = version
@@ -2877,7 +2786,12 @@ else
   pushenv(&quot;R_INSTALL_STAGED&quot;, &quot;true&quot;)
 end
 
-local r_libs_user=&quot;~/R/%p-library/%v-CBI&quot;
+local r_libs_user
+if os.getenv(&quot;CBI_LINUX&quot;) == &quot;centos7&quot; then
+  r_libs_user=&quot;~/R/%p-library/%v-CBI&quot;
+else
+  r_libs_user=&quot;~/R/&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;-&quot; .. &quot;%p-library/%v-CBI&quot;
+end
 
 if (v &gt;= &quot;4.1.0&quot;) then
   local gv = string.gsub(version, v, &quot;&quot;)
@@ -2890,6 +2804,8 @@ if (v &gt;= &quot;4.1.0&quot;) then
     r_libs_user = r_libs_user .. &quot;-gcc&quot; .. gv
     if has_devtoolset(gv) then
       depends_on(&quot;scl-devtoolset/&quot; .. gv)
+    elseif has_gcc_toolset(gv) then
+      depends_on(&quot;scl-gcc-toolset/&quot; .. gv)
     end
   end
 end
@@ -2941,6 +2857,28 @@ end
 -- WORKAROUND: nloptr 2.0.0 requires CMake (&gt;= 3.15)
 -- See https://github.com/astamm/nloptr/issues/104#issuecomment-1111498876
 pushenv(&quot;CMAKE_BIN&quot;, &quot;cmake3&quot;)
+
+
+
+-- Assert that there is no active Conda environment
+assert_no_conda_environment = function()  
+  local conda_env = os.getenv(&quot;CONDA_DEFAULT_ENV&quot;)
+  if conda_env ~= nil then
+    local action = os.getenv(&quot;CBI_ON_CONDA&quot;) or &quot;warning&quot;
+    local msg = &quot;Using the &quot; .. &quot;'&quot; .. myModuleName() .. &quot;'&quot; .. &quot; module when a Conda environment is active risks resulting in hard-to-troubleshoot errors due to library conflicts. Make sure to deactivate the currently active Conda &quot; .. &quot;'&quot; .. conda_env .. &quot;'&quot; .. &quot; environment before loading this module, e.g. 'conda deactivate'.&quot;
+    if action == &quot;error&quot; then
+      LmodError(msg)
+    elseif action == &quot;warning&quot; then
+      LmodWarning(msg)
+    end
+  end
+end
+
+
+-- Protect against a conflicting Conda stack
+if (mode() == &quot;load&quot;) then
+  assert_no_conda_environment()
+end
 </code></pre>
 
 </details>
@@ -3320,39 +3258,38 @@ end
 </details>
   </dd>
 </dl>
-<h3 id="module_cbi_scl-devtoolset" class="module-name">scl-devtoolset</h3>
+<h3 id="module_cbi_scl-gcc-toolset" class="module-name">scl-gcc-toolset</h3>
 <dl>
   <dd class="module-details">
-<strong class="module-help">SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
-<span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) <code>devtoolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable devtoolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat/CentOS.</span><br>
+<strong class="module-help">SCL GCC Toolset: GNU Compiler Collection, GNU Debugger, etc.</strong><br>
+<span class="module-description">These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding RedHat Software Collection (SCL) <code>gcc-toolset-&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable gcc-toolset-&lt;version&gt;</code>, which is an approach that is not officially supported by RedHat.</span><br>
 Example: <span class="module-example"><code>gcc --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11">https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/11</a>, <a href="https://gcc.gnu.org/develop.html#timeline">https://gcc.gnu.org/develop.html#timeline</a> (GCC release schedule)</span><br>
+URL: <span class="module-url"><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/developing_c_and_cpp_applications_in_rhel_8/additional-toolsets-for-development_developing-applications#gcc-toolset_assembly_additional-toolsets-for-development">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/developing_c_and_cpp_applications_in_rhel_8/additional-toolsets-for-development_developing-applications#gcc-toolset_assembly_additional-toolsets-for-development</a>, <a href="https://gcc.gnu.org/develop.html#timeline">https://gcc.gnu.org/develop.html#timeline</a> (GCC release schedule)</span><br>
 Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
-Versions: <span class="module-version">4, 7, 8, 9, 10, <em>11</em></span><br>
+Requirement: <span class="module-requirement">Rocky 8.</span><br>
+Versions: <span class="module-version">9, 10, 11, <em>12</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
-SCL Developer Toolset: GNU Compiler Collection, GNU Debugger, etc.
+SCL GCC Toolset: GNU Compiler Collection, GNU Debugger, etc.
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
-local scl_name = &quot;devtoolset&quot; .. &quot;-&quot; .. version
+local scl_name = &quot;gcc-toolset&quot; .. &quot;-&quot; .. version
 
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming, gcc&quot;)
-whatis(&quot;URL: https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/&quot; .. version .. &quot;, https://gcc.gnu.org/develop.html#timeline (GCC release schedule)&quot;)
+whatis(&quot;URL: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/developing_c_and_cpp_applications_in_rhel_8/additional-toolsets-for-development_developing-applications#gcc-toolset_assembly_additional-toolsets-for-development, https://gcc.gnu.org/develop.html#timeline (GCC release schedule)&quot;)
 whatis([[
-Description: These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding CentOS Software Collection (SCL) `devtoolset-&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable devtoolset-&lt;version&gt;`, which is an approach that is not officially supported by RedHat/CentOS.
+Description: These Developer Toolset provides modern versions of the GNU Compiler Collection, GNU Debugger, and other development, debugging, and performance monitoring tools. Loading these modules enables the corresponding RedHat Software Collection (SCL) `gcc-toolset-&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable gcc-toolset-&lt;version&gt;`, which is an approach that is not officially supported by RedHat.
 Examples: `gcc --version`.  Warning: Older versions may be removed in the future.
-Requirement: CentOS 7.
+Requirement: Rocky 8.
 ]])
 
--- This module is only available on CentOS 7
-if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; ..
- os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
+-- This module is only available on Rocky 8
+if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;rocky8&quot; then
+  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on Rocky 8 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
 end
 
 
@@ -3364,124 +3301,13 @@ end
 
 
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/devtoolset-11/enable
-setenv(&quot;INFOPATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/share/info&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/dyninst&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib&quot;)
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64&quot;)
-prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/share/man&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/bin&quot;)
-setenv(&quot;PCP_DIR&quot;,&quot;/opt/rh/devtoolset-11/root&quot;)
-setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/devtoolset-11/root/usr/lib64/pkgconfig&quot;)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
-<h3 id="module_cbi_scl-rh-python" class="module-name">scl-rh-python</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">SCL Python: Python with Additional Utilities via CentOS Software Collections</strong><br>
-<span class="module-description">Enables the CentOS Software Collection (SCL) <code>rh-python&lt;version&gt;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable rh-python&lt;version&gt;</code>, which is not officially supported by RedHat/CentOS.</span><br>
-Example: <span class="module-example"><code>python --version</code>, and <code>pip --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-python38/">https://www.softwarecollections.org/en/scls/rhscl/rh-python38/</a></span><br>
-Warning: <span class="module-warning">Older versions may be removed in the future.</span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
-Versions: <span class="module-version">36, <em>38</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-SCL Python: Python with Additional Utilities via CentOS Software Collections
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
-local scl_name = &quot;rh-python&quot; .. version
-
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: programming, Python&quot;)
-whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
-whatis([[
-Description: Enables the CentOS Software Collection (SCL) `rh-python&lt;version&gt;` in the current environment.  This is an alternative to calling `source scl_source enable rh-python&lt;version&gt;`, which is not officially supported by RedHat/CentOS.
-Examples: `python --version`, and `pip --version`.
-Warning: Older versions may be removed in the future.
-Requirement: CentOS 7.
-]])
-
--- This module is only available on CentOS 7
-if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; ..
- os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
-end
-
-local home = &quot;/opt/rh/rh-python&quot; .. version
-if not isDir(home) then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) ..
- &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
-end
-
--- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/rh-python38/enable
-prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/lib64&quot;)
-prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/rh-python38/root/usr/share/man&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/bin&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/local/bin&quot;)
-prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/rh-python38/root/usr/lib64/pkgconfig&quot;)
-prepend_path(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-python38/root/usr/share&quot;)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
-<h3 id="module_cbi_scl-rh-ruby" class="module-name">scl-rh-ruby</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">SCL Ruby: Ruby</strong><br>
-<span class="module-description">Enables the CentOS Software Collection (SCL) <code>&quot; .. scl_name .. &quot;</code> in the current environment.  This is an alternative to calling <code>source scl_source enable &quot; .. scl_name .. &quot;</code>, which is an approach that is not of ficially supported by RedHat/CentOS.</span><br>
-Example: <span class="module-example"><code>irb --help</code>, <code>ruby --help</code>, <code>ruby script.rb</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/">https://www.softwarecollections.org/en/scls/rhscl/rh-ruby30/</a></span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
-Versions: <span class="module-version">25, 26, 27, <em>30</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-SCL Ruby: Ruby
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-local scl_name = &quot;rh-ruby&quot; .. version
-
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: programming, Ruby&quot;)
-whatis(&quot;URL: https://www.softwarecollections.org/en/scls/rhscl/&quot; .. scl_name .. &quot;/&quot;)
-whatis([[
-Description: Enables the CentOS Software Collection (SCL) `&quot; .. scl_name .. &quot;` in the current environment.  This is an alternative to calling `source scl_source enable &quot; .. scl_name .. &quot;`, which is an approach that is not of ficially supported by RedHat/CentOS.
-Examples: `irb --help`, `ruby --help`, `ruby script.rb`.
-Requirement: CentOS 7.
-]])
-
--- This module is only available on CentOS 7
-if os.getenv(&quot;CBI_LINUX&quot;) ~= &quot;centos7&quot; then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is only available on CentOS 7 machines, but not on host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;', which runs '&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;'&quot;)
-end
-
-local home = &quot;/opt/rh/&quot; .. scl_name
-
-if not isDir(home) then
-  LmodError(&quot;Module '&quot; .. myModuleFullName() .. &quot;' is not supported because this host '&quot; .. os.getenv(&quot;HOSTNAME&quot;) .. &quot;' does not have path '&quot; .. home .. &quot;'&quot;)
-end
--- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/rh-ruby30/enable
-setenv(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/lib64:/opt/rh/rh-ruby30/root/usr/lib64&quot;)
-prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/share/man&quot;)
-prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/share/man&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/bin&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/bin&quot;)
-prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/lib64/pkgconfig&quot;)
-prepend_path(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/lib64/pkgconfig&quot;)
-setenv(&quot;XDG_DATA_DIRS&quot;,&quot;/opt/rh/rh-ruby30/root/usr/local/share:/opt/rh/rh-ruby30/root/usr/share:/usr/local/share:/usr/share&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /opt/rh/gcc-toolset-12/enable
+setenv(&quot;INFOPATH&quot;,&quot;/opt/rh/gcc-toolset-12/root/usr/share/info&quot;)
+prepend_path(&quot;LD_LIBRARY_PATH&quot;,&quot;/opt/rh/gcc-toolset-12/root/usr/lib64&quot;)
+prepend_path(&quot;MANPATH&quot;,&quot;/opt/rh/gcc-toolset-12/root/usr/share/man&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/opt/rh/gcc-toolset-12/root/usr/bin&quot;)
+setenv(&quot;PCP_DIR&quot;,&quot;/opt/rh/gcc-toolset-12/root&quot;)
+setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig&quot;)
 </code></pre>
 
 </details>
@@ -3588,7 +3414,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</span><br>
 Example: <span class="module-example"><code>sqlite3 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://sqlite.org/">https://sqlite.org/</a>, <a href="https://sqlite.org/docs.html">https://sqlite.org/docs.html</a> (docs), <a href="https://github.com/sqlite/sqlite/tags">https://github.com/sqlite/sqlite/tags</a> (changelog), <a href="https://github.com/sqlite/sqlite">https://github.com/sqlite/sqlite</a> (source code)</span><br>
-Versions: <span class="module-version">3.32.3, 3.41.1, 3.41.2, 3.42.0, 3.43.0, 3.43.1, <em>3.43.2</em></span><br>
+Versions: <span class="module-version">3.43.0, <em>3.43.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4197,24 +4023,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py310-2023.03/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4233,6 +4041,24 @@ prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/b
 </details>
   </dd>
 </dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_sali_boost" class="module-name">boost</h3>
 <dl>
   <dd class="module-details">
@@ -4246,9 +4072,9 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
 module-whatis &quot;URL: https://www.boost.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/include
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -4991,11 +4817,11 @@ module-whatis &quot;Description: Collection of algorithms for computer vision&qu
 module-whatis &quot;URL: https://opencv.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   module load hdf5/1.10.6
-  prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0/bin
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/include/opencv4
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
-  prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib/python2.7/site-packages
+  prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/bin
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/include/opencv4
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib64
+  prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib/python2.7/site-packages
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -6567,7 +6393,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py36-1.3.2/
   <dd class="module-details">
 <span class="module-description">Python 2 and 3 compatibility utilities</span><br>
 URL: <span class="module-url"><a href="https://github.com/benjaminp/six">https://github.com/benjaminp/six</a></span><br>
-Versions: <span class="module-version"><em>1.13.0</em></span><br>
+Versions: <span class="module-version">1.13.0, <em>1.16.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -6575,7 +6401,7 @@ Versions: <span class="module-version"><em>1.13.0</em></span><br>
 module-whatis &quot;Description: Python 2 and 3 compatibility utilities&quot;
 module-whatis &quot;URL: https://github.com/benjaminp/six&quot;
 conflict python2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/six-1.13.0/lib/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/six-1.16.0/lib/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -6859,7 +6685,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(91)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
 </ul>
 
