@@ -309,11 +309,11 @@ Several R packages that rely on the Message Passing Interface (MPI) do not insta
 
 <!-- code-block label="r-openmpi" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi3-x86_64
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-devtoolset/10   3) r/4.3.1   4) mpi/openmpi3-x86_64
+  1) CBI   2) scl-gcc-toolset/10   3) r/4.3.1   4) mpi/openmpi-x86_64
 
  
 
@@ -380,7 +380,7 @@ Note, you need to load the identical module and version each time you want to us
 
 ```r
 [alice@{{ site.devel.name }} ~]$ module load CBI r
-[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi3-x86_64
+[alice@{{ site.devel.name }} ~]$ module load mpi/openmpi-x86_64
 [alice@{{ site.devel.name }} ~]$ R
 ...
 > library(Rmpi)
@@ -424,24 +424,24 @@ checking for main in -lpthread... yes
  
 ******************* Results of pbdMPI package configure *****************
  
->> MPIRUN = /usr/lib64/openmpi3/bin/mpirun
->> MPIEXEC = /usr/lib64/openmpi3/bin/mpiexec
->> ORTERUN = /usr/lib64/openmpi3/bin/orterun
+>> MPIRUN = /usr/lib64/openmpi/bin/mpirun
+>> MPIEXEC = /usr/lib64/openmpi/bin/mpiexec
+>> ORTERUN = /usr/lib64/openmpi/bin/orterun
 >> TMP_INC = 
 >> TMP_LIB = 
 >> TMP_LIBNAME = 
 >> TMP_FOUND = Nothing found from mpicc --show & sed nor pkg-config ...
 >> MPI_ROOT = 
 >> MPITYPE = OPENMPI
->> MPI_INCLUDE_PATH = /usr/include/openmpi3-x86_64
->> MPI_LIBPATH = /usr/lib64/openmpi3/lib
+>> MPI_INCLUDE_PATH = /usr/include/openmpi-x86_64
+>> MPI_LIBPATH = /usr/lib64/openmpi/lib
 >> MPI_LIBNAME = 
 >> MPI_LIBS =  -lutil -lpthread
 >> MPI_DEFS = -DMPI2
 >> MPI_INCL2 = 
 >> MPI_LDFLAGS = 
->> PKG_CPPFLAGS = -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI
->> PKG_LIBS = -L/usr/lib64/openmpi3/lib -lmpi  -lutil -lpthread
+>> PKG_CPPFLAGS = -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI
+>> PKG_LIBS = -L/usr/lib64/openmpi/lib -lmpi  -lutil -lpthread
 >> PROF_LDFLAGS = 
 >> ENABLE_LD_LIBRARY_PATH = no
  
@@ -453,31 +453,31 @@ configure: creating ./config.status
 config.status: creating src/Makevars
 config.status: creating R/zzz.r
 ** libs
-echo "MPIRUN = /usr/lib64/openmpi3/bin/mpirun" > Makeconf
-echo "MPIEXEC = /usr/lib64/openmpi3/bin/mpiexec" >> Makeconf
-echo "ORTERUN = /usr/lib64/openmpi3/bin/orterun" >> Makeconf
+echo "MPIRUN = /usr/lib64/openmpi/bin/mpirun" > Makeconf
+echo "MPIEXEC = /usr/lib64/openmpi/bin/mpiexec" >> Makeconf
+echo "ORTERUN = /usr/lib64/openmpi/bin/orterun" >> Makeconf
 echo "TMP_INC = " >> Makeconf
 echo "TMP_LIB = " >> Makeconf
 echo "TMP_LIBNAME = " >> Makeconf
 echo "TMP_FOUND = Nothing found from mpicc --show & sed nor pkg-config ..." >> Makeconf
 echo "MPI_ROOT = " >> Makeconf
 echo "MPITYPE = OPENMPI" >> Makeconf
-echo "MPI_INCLUDE_PATH = /usr/include/openmpi3-x86_64" >> Makeconf
-echo "MPI_LIBPATH = /usr/lib64/openmpi3/lib" >> Makeconf
+echo "MPI_INCLUDE_PATH = /usr/include/openmpi-x86_64" >> Makeconf
+echo "MPI_LIBPATH = /usr/lib64/openmpi/lib" >> Makeconf
 echo "MPI_LIBNAME = " >> Makeconf
 echo "MPI_LIBS =  -lutil -lpthread" >> Makeconf
 echo "MPI_DEFS = -DMPI2" >> Makeconf
 echo "MPI_INCL2 = " >> Makeconf
 echo "MPI_LDFLAGS = " >> Makeconf
-echo "PKG_CPPFLAGS = -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI" >> Makeconf
-echo "PKG_LIBS = -L/usr/lib64/openmpi3/lib -lmpi  -lutil -lpthread" >> Makeconf
+echo "PKG_CPPFLAGS = -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI" >> Makeconf
+echo "PKG_LIBS = -L/usr/lib64/openmpi/lib -lmpi  -lutil -lpthread" >> Makeconf
 echo "PROF_LDFLAGS = " >> Makeconf
 echo "ENABLE_LD_LIBRARY_PATH = no" >> Makeconf
-gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
-gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
 ...
-gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi3-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c zzz.c -o zzz.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi3/lib -lmpi -lutil -lpthread -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -lR
+gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c zzz.c -o zzz.o
+gcc -shared -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi/lib -lmpi -lutil -lpthread -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -lR
 installing via 'install.libs.R' to {{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-pbdMPI/00new/pbdMPI
 ** R
 ** demo
