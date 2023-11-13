@@ -1460,7 +1460,6 @@ whatis(&quot;URL: https://software.broadinstitute.org/cancer/cga/gistic, https:/
 whatis([[
 Description: GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.
 Examples: `gistic2`.
-Requirements: CentOS 7.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2019,30 +2018,6 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Examples: <code>markdownlint --version</code>, <code>markdownlint --help</code>, <code>markdownlint -- *.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (documentation), <a href="https://github.com/igorshubovych/markdownlint-cli/releases/">https://github.com/igorshubovych/markdownlint-cli/releases/</a> (releases), <a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (source code)</span><br>
 Versions: <span class="module-version">0.32.2, <em>0.35.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-markdownlint-cli: MarkdownLint Command Line Interface 
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: cli, utility&quot;)
-whatis(&quot;URL: https://github.com/igorshubovych/markdownlint-cli (documentation), https://github.com/igorshubovych/markdownlint-cli/releases/ (releases), https://github.com/igorshubovych/markdownlint-cli (source code)&quot;)
-whatis([[
-Description: 
-Examples: `markdownlint --version`, `markdownlint --help`, `markdownlint -- *.md`.
-]]
-)
-
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;.bin&quot;))
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_cbi_mc" class="module-name">mc</h3>
@@ -3370,7 +3345,7 @@ whatis(&quot;Keywords: high-throughput sequencing&quot;)
 whatis(&quot;URL: https://pcingola.github.io/SnpEff/, https://github.com/pcingola/SnpEff/tags (changelog), https://github.com/pcingola/SnpEff (source code)&quot;)
 whatis([[
 Description: SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).
-Examples: `snpEff -help` and `SnpSift -help`, which are aliases for `java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help` and `java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help`.  In SnpEff (&lt; 5.0), there is also `ClinEff -help`, which is an alias for `java -jar $SNPEFF_HOME/ClinEff/ClinEff.jar -help`.
+Examples: `snpEff -help` and `SnpSift -help`, which are short for `java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help` and `java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help`.  In SnpEff (&lt; 5.0), there is also `ClinEff -help`, which is short for `java -jar $SNPEFF_HOME/ClinEff/ClinEff.jar -help`.
 ]])
 
 local name = &quot;snpEff&quot;
@@ -3381,23 +3356,28 @@ if (version &lt; &quot;5.1&quot;) then
   try_load(&quot;openjdk/11&quot;)
 elseif (version &gt;= &quot;5.1&quot;) then
   try_load(&quot;openjdk/17&quot;)
-  try_load(&quot;openjdk/18&quot;)
 end
 
 pushenv(&quot;SNPEFF_HOME&quot;, home)
 
 local jarfile = pathJoin(home, &quot;snpEff&quot;, &quot;snpEff.jar&quot;)
 pushenv(&quot;SNPEFF&quot;, jarfile)
-set_alias(&quot;snpEff&quot;, &quot;java -jar \&quot;$SNPEFF_HOME/snpEff/snpEff.jar\&quot;&quot;)
+local bash = 'java -jar &quot;$SNPEFF_HOME/snpEff/snpEff.jar&quot; &quot;$@&quot;'
+local csh  = 'java -jar &quot;$SNPEFF_HOME/snpEff/snpEff.jar&quot; $*'
+set_shell_function(&quot;snpEff&quot;, bash, csh)
 
 local jarfile = pathJoin(home, &quot;snpEff&quot;, &quot;SnpSift.jar&quot;)
 pushenv(&quot;SNPSIFT&quot;, jarfile)
-set_alias(&quot;SnpSift&quot;, &quot;java -jar \&quot;$SNPEFF_HOME/snpEff/SnpSift.jar\&quot;&quot;)
+local bash = 'java -jar &quot;$SNPEFF_HOME/snpEff/SnpSift.jar&quot; &quot;$@&quot;'
+local csh  = 'java -jar &quot;$SNPEFF_HOME/snpEff/SnpSift.jar&quot; $*'
+set_shell_function(&quot;SnpSift&quot;, bash, csh)
 
 local jarfile = pathJoin(home, &quot;clinEff&quot;, &quot;ClinEff.jar&quot;)
 if isFile(jarfile) then
   pushenv(&quot;CLINEFF&quot;, jarfile)
-  set_alias(&quot;ClinEff&quot;, &quot;java -jar \&quot;$SNPEFF_HOME/ClinEff/ClinEff.jar\&quot;&quot;)
+  local bash = 'java -jar &quot;$SNPEFF_HOME/ClinEff/ClinEff.jar&quot; &quot;$@&quot;'
+  local csh  = 'java -jar &quot;$SNPEFF_HOME/ClinEff/ClinEff.jar&quot; $*'
+  set_shell_function(&quot;ClinEff&quot;, bash, csh)
 end
 
 -- Tweak Java for the current environment
@@ -3626,7 +3606,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: files, utility, cli&quot;)
-whatis(&quot;URL: http://mama.indstate.edu/users/ice/tree/, http://mama.indstate.edu/users/ice/tree/changes.html (changelog)&quot;)
+whatis(&quot;URL: https://mama.indstate.edu/users/ice/tree/, https://mama.indstate.edu/users/ice/tree/changes.html (changelog)&quot;)
 whatis([[
 Description: Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the `LS_COLORS` environment variable is set and output is to tty.
 Examples: `tree --help`.
