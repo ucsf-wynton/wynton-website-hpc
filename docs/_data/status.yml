@@ -91,4 +91,4 @@ condition: is operational
 
 level: danger
 condition: is partially operational
-message: (1) Wynton now runs Rocky 8 Linux. (2) Only login and development nodes are available. (3) The compute nodes and the scheduler are unavailable. (4) It is not possible to change or reset passwords.
+message: (1) Wynton now runs Rocky 8 Linux. (2) Only login and development nodes are available. (3) The compute nodes and the scheduler are unavailable.

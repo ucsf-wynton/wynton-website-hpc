@@ -20,7 +20,7 @@ We **strongly recommend** using a **password vault** application or website like
 
 ## Change non-expired password
 
-As long as your password has not yet expired, you can change your password either via our web interface, or from the {{ site.cluster.name }} command line.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
+As long as your password has not yet expired, you can change your password ~~either~~ via our web interface~~, or from the {{ site.cluster.name }} command line~~.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
 
 
 
@@ -40,7 +40,13 @@ You can change your password before it expires using the 'RBVI Kerberos Web Inte
 
 4. Wait 10 minutes for your new password to propagate before using it
 
+
+
 ### Alt 2. From the {{ site.cluster.nickname }} command line
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
+2023-11-13: Changing password via the command line is currently not working.
+</div>
 
 If you can log in to {{ site.cluster.name }}, then you can change your credentials by calling `passwd` from one of the _login_ nodes, e.g.
 
@@ -54,6 +60,8 @@ passwd: all authentication tokens updated successfully.
 [alice@{{ site.login.name }} ~]$ 
 ```
 Wait 10 minutes for your new password to propagate before using it.
+
+
 
 ## Verify credentials
 

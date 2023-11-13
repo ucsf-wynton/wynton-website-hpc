@@ -1,4 +1,4 @@
-### October 30-November 13(?), 2023
+### October 30-November 17(?), 2023
 
 #### <span style="color: orange;">Full downtime</span>
 
@@ -53,7 +53,7 @@ reason: scheduled
  -->
 
 
-### October 27-November 13(?), 2023
+### October 27-November 17(?), 2023
 
 #### <span style="color: orange;">File-system failures</span>
 
@@ -120,9 +120,14 @@ reason: unscheduled
  -->
 
 
-### November 5-13(?), 2023
+### November 5-17(?), 2023
 
 #### <span style="color: orange;">Passwords cannot be reset</span>
+
+**Notice**: Passwords can be changed via the web interface. It is
+still not possible to change it via the command-line while logged in
+to Wynton.
+<br><span class="timestamp">November 13, 11:00 PT</span>
 
 **Notice**: It is not possible to change or reset passwords since
 2023-11-05. This problem was introduced while doing cluster-wide
