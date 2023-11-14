@@ -2,6 +2,11 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
+**Update**: Still status quo; the BeeGFS issue holds us back from
+bringing the scheduler back up.  We're rather certain that we will not
+be able to resolve it today or tomorrow.
+<br><span class="timestamp">November 13, 13:45 PT</span>
+
 **Update**: Login and development nodes are available. Write access to
 the BeeGFS file system has been re-enabled. Due to continued issues in
 getting BeeGFS back in stable state, we are still not ready for
@@ -56,6 +61,12 @@ reason: scheduled
 ### October 27-November 17(?), 2023
 
 #### <span style="color: orange;">File-system failures</span>
+
+**Update**: The BeeGFS metadata resynchronization is still
+unresolved. We are looking into other strategies, which we are
+currently testing. If those tests are successful, we will attempt to
+deploy the fix in the production.
+<br><span class="timestamp">November 13, 13:45 PT</span>
 
 **Update**: After resynchronization of the BeeGFS metadata kept
 failing, we identified a possible culprit. We suspect BeeGFS cannot
