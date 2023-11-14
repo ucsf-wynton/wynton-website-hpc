@@ -4001,6 +4001,18 @@ Versions: <span class="module-version"><em>11</em></span><br>
 
 module-whatis &quot;Description: Amber11, for 64-bit&quot;
 module-whatis &quot;URL: http://ambermd.org/&quot;
+
+if [ module-info mode load ] {
+  if { ! [file exists /wynton/group ] } {
+    puts stderr &quot;Sorry, this module only works on the Wynton cluster (or other machine that has /wynton/group mounted)&quot;
+    break
+  }
+
+  if { ! [file exists /wynton/group/sali/AMBER ] } {
+    puts stderr &quot;Sorry, this module is only available to members of the Sali lab.&quot;
+    break
+  }
+}
 setenv        AMBERHOME       /wynton/group/sali/AMBER/amber11/
 prepend-path  PATH            /wynton/group/sali/AMBER/amber11/bin
 prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
@@ -4742,9 +4754,9 @@ module-whatis &quot;URL: https://salilab.org/modeller/&quot;
 set topdir /salilab/diva1/home/modeller/SVN
 prepend-path  PATH            ${topdir}/bin
 prepend-path  LD_LIBRARY_PATH ${topdir}/lib/x86_64-intel8
-prepend-path  PKG_CONFIG_PATH ${topdir}/lib/x86_64-intel8/pkgconfig
 prepend-path  PYTHONPATH      ${topdir}/lib/x86_64-intel8
 prepend-path  PYTHONPATH      ${topdir}/modlib
+prepend-path  PKG_CONFIG_PATH ${topdir}/lib/x86_64-intel8/pkgconfig
 </code></pre>
 
 </details>
@@ -4849,11 +4861,19 @@ Versions: <span class="module-version"><em>2012</em></span><br>
 module-whatis &quot;Description: OpenEye products (work on any 64-bit node)&quot;
 module-whatis &quot;URL: https://www.eyesopen.com/&quot;
 if [file exists /wynton/group] {
+
+  if [ module-info mode load ] {
+    if { ! [file exists /wynton/group/sali/openeye ] } {
+      puts stderr &quot;Sorry, this module is only available to members of the Sali lab.&quot;
+      break
+    }
+  }
+
   prepend-path		PATH		/wynton/group/sali/openeye/bin
   prepend-path		PYTHONPATH	/wynton/group/sali/openeye/wrappers/v2012.Oct.1/python
   setenv			OE_LICENSE	/wynton/group/sali/openeye/oe_license.txt
 } else {
-  puts stderr &quot;Sorry, this module only works on the cluster (or other machine that has /wynton/group mounted)&quot;
+  puts stderr &quot;Sorry, this module only works on the Wynton cluster (or other machine that has /wynton/group mounted)&quot;
   break
 }
 </code></pre>
@@ -4967,633 +4987,162 @@ setenv        PSIPRED_LIB     /salilab/diva1/programs/x86_64linux/psipred-4.0/li
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.70</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Python tools for computational molecular biology&quot;
-conflict python3
-module load python2/numpy/1.14.1
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py27-1.70/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-bottleneck" class="module-name">python2/bottleneck</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.2.1</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Collection of fast NumPy array functions written in Cython&quot;
-conflict python3
-module load python2/numpy/1.14.1 python2/scipy/1.0.0
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py27-1.2.1/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-cycler" class="module-name">python2/cycler</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>0.10.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Composable style cycles&quot;
-conflict python3
-module load python2/six
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/cycler-0.10.0/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-dateutil" class="module-name">python2/dateutil</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.6.1</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Powerful extensions to the standard datetime module&quot;
-conflict python3
-module load python2/six
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/dateutil-2.6.1/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-decorator" class="module-name">python2/decorator</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>4.2.1</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Module to simplify usage of decorators&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/decorator-4.2.1/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-functools32" class="module-name">python2/functools32</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>3.2.3</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Backport of the functools module from Python 3.2.3.&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/functools32-3.2.3/lib/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-h5py" class="module-name">python2/h5py</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.7.1</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Python interface to the Hierarchical Data Format library&quot;
-conflict python3
-module load python2/numpy/1.13.0 hdf5/1.10.1 python2/six
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py27-2.7.1/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-ihm" class="module-name">python2/ihm</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>0.11</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Python package for handling IHM mmCIF files&quot;
-conflict python3
-module load python2/msgpack
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/ihm/python2.7/python-ihm
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-lru_cache" class="module-name">python2/lru_cache</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.5</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Backport of functools.lru_cache from Python 3.3&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/lru_cache-1.5/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-matplotlib" class="module-name">python2/matplotlib</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.1.2</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Python 2D plotting library&quot;
-conflict python3
-module load python2/cycler
-module load python2/numpy/1.14.1
-module load python2/pyparsing
-module load python2/dateutil
-module load python2/pytz
-module load python2/functools32
-module load python2/lru_cache
-prepend-path PYTHONPATH   /salilab/diva1/programs/x86_64linux/matplotlib-py27-2.1.2/lib64/python2.7/site-packages
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-py27-2.1.2/lib
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-mdp" class="module-name">python2/mdp</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.6</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Modular toolkit for Data Processing&quot;
-conflict python3
-module load python2/scipy
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-2.6
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-msgpack" class="module-name">python2/msgpack</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>0.5.6</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;A Python MessagePack (de)serializer&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.5.6/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-networkx" class="module-name">python2/networkx</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.11</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Creates and Manipulates Graphs and Networks&quot;
-conflict python3
-module load python2/scipy/0.18.1
-module load python2/pyparsing
-module load python2/decorator
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/networkx-1.11/lib/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-nose" class="module-name">python2/nose</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.3.7</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Discovery-based unittest extension for Python&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/nose-1.3.7/lib/python2.7/site-packages
-prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/bin
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-numexpr" class="module-name">python2/numexpr</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.6.4</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Fast numerical array expression evaluator for Python and NumPy&quot;
-conflict python3
-module load python2/numpy/1.14.1
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py27-2.6.4/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-numpy" class="module-name">python2/numpy</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version">1.12.0, 1.13.0, <em>1.14.1</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;A fast multidimensional array facility for Python&quot;
-conflict python3
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/lib64/python2.7/site-packages
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/bin
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py27-1.14.1/lib
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-pandas" class="module-name">python2/pandas</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>0.22.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Python Data Analysis Library&quot;
-conflict python3
-module load python2/numpy/1.14.1
-module load python2/dateutil
-module load python2/matplotlib
-module load python2/pytz
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-py27-0.22.0/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-pkgconfig" class="module-name">python2/pkgconfig</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.2.2</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;A Python interface to the pkg-config command line tool&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pkgconfig-1.2.2/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-protobuf" class="module-name">python2/protobuf</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.5.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Python bindings for Google Protocol Buffers&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/protobuf-2.5.0/lib/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-pymc" class="module-name">python2/pymc</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.3.6</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Markov Chain Monte Carlo sampling toolkit&quot;
-conflict python3
-module load python2/numpy/1.14.1
-module load python2/scipy/1.0.0
-module load python2/tables/3.5.2
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib64/python2.7/site-packages
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/pymc-py27-2.3.6/lib
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-pyparsing" class="module-name">python2/pyparsing</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2.1.10</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;An object-oriented approach to text processing&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pyparsing-2.1.10/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-pyrmsd" class="module-name">python2/pyrmsd</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>4.1.git48ab119</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Way of performing RMSD calculations of large sets of structures&quot;
-conflict python3
-module load cuda/7.5.18 python2/numpy/1.14.1
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py27-4.1.git48ab119
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-pytz" class="module-name">python2/pytz</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>2016.10</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;World Timezone Definitions for Python&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2016.10/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-scikit" class="module-name">python2/scikit</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version">0.12, <em>0.19.1</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;A set of python modules for machine learning and data mining&quot;
-conflict python3
-module load sali-libraries
-module load python2/numpy/1.14.1 python2/scipy/1.0.0
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-py27-0.19.1/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-scipy" class="module-name">python2/scipy</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version">0.18.1, 0.19.0, <em>1.0.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Scipy: Scientific Tools for Python&quot;
-conflict python3
-module load python2/numpy/1.14.1
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py27-1.0.0/lib64/python2.7/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-six" class="module-name">python2/six</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>1.10.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Python 2 and 3 compatibility utilities&quot;
-conflict python3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/six-1.10.0/lib/python2.6/site-packages
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python2-tables" class="module-name">python2/tables</h3>
 <dl>
   <dd class="module-details">
 Versions: <span class="module-version"><em>3.5.2</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Hierarchical datasets in Python&quot;
-conflict python3
-module load python2/numpy/1.14.1
-module load python2/numexpr/2.6.4
-module load hdf5/1.10.1
-module load python2/six
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tables-py27-3.5.2/lib64/python2.7/site-packages
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py27-3.5.2/bin
-
-if [ module-info mode load ] {
-  puts stderr &quot;WARNING: python2 reached end of life on January 1st, 2020.&quot;
-  puts stderr &quot;         These modules are no longer maintained and will be removed on&quot;
-  puts stderr &quot;         Nov 1st, 2023. Please migrate your workflows to Python 3.&quot;
-}
-</code></pre>
-
-</details>
   </dd>
 </dl>
 <h3 id="module_sali_python3-attrs" class="module-name">python3/attrs</h3>
