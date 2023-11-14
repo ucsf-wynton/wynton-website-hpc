@@ -2,6 +2,11 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
+**Update**: The BeeGFS issue has been resolved, which allows us to
+move forward on the remaining Rocky-8 updates. We hope to start
+bringing compute nodes online as soon as tomorrow (2023-11-15).
+<br><span class="timestamp">November 14, 13:15 PT</span>
+
 **Update**: Still status quo; the BeeGFS issue holds us back from
 bringing the scheduler back up.  We're rather certain that we will not
 be able to resolve it today or tomorrow.
@@ -57,78 +62,6 @@ affected: jobs, beegfs, compute, *
 reason: scheduled
  -->
 
-
-### October 27-November 17(?), 2023
-
-#### <span style="color: orange;">File-system failures</span>
-
-**Update**: The BeeGFS metadata resynchronization is still
-unresolved. We are looking into other strategies, which we are
-currently testing. If those tests are successful, we will attempt to
-deploy the fix in the production.
-<br><span class="timestamp">November 13, 13:45 PT</span>
-
-**Update**: After resynchronization of the BeeGFS metadata kept
-failing, we identified a possible culprit. We suspect BeeGFS cannot
-handle the folders with many millions of files, causing the
-resynchronization to fail. We keep working on stabilizing BeeGFS.
-<br><span class="timestamp">November 11, 00:45 PT</span>
-
-**Update**: The BeeGFS metadata resynchronization that had been
-running for several hours, failed late yesterday. The vendor has
-provided us with a script tailored to fix the issue we ran into. That
-script is running, and once it's done, we'll start the
-resynchronization again.
-<br><span class="timestamp">November 9, 10:30 PT</span>
-
-**Update**: The recovery from the BeeGFS incident goes as planned. We
-estimate to have resolved this issue by the end of November 9, 2023,
-when full read-write access to `/wynton` will be available again.
-<br><span class="timestamp">November 8, 10:30 PT</span>
-
-**Update**: The Wynton team works on fixing and stabilizing the BeeGFS
-incident. We estimate to have resolved this issue by the end of
-November 9, 2023.
-<br><span class="timestamp">November 7, 11:20 PT</span>
-
-**Update**: Read-only access to Wynton has been enabled for users to
-retrieve their files. Login nodes `log1` and `plog1` are available for
-this.  If going through the Wynton 2FA, make sure to answer "no"
-(default) when prompted for "Remember connection authentication from
-98.153.103.186 for 12 hours? [y/N]"; answering "yes" causes the SSH
-connection to fail.
-<br><span class="timestamp">November 5, 00:30 PT</span>
-
-**Update**: Wynton admins can retrieve user files under `/wynton/`
-upon requests until 18:00 today, when the UCSF network will go
-down. We are not able to share the PHI data under
-`/wynton/protected/`. Please contact support with all details
-including full path of the data to be retrieved.
-<br><span class="timestamp">October 30, 15:30 PT</span>
-
-**Update**: The BeeGFS issue is related to a CentOS 7-kernel bug in
-one of our BeeGFS metadata servers. To minimize the risk of data loss
-on the `/wynton` file system, we took the decision to shut down Wynton
-immediately. At the moment, we do not have an estimate on how long it
-will take to resolve this problem.  It has to be resolved before we
-can begin the major upgrade scheduled for 2023W44.
-<br><span class="timestamp">October 27, 16:30 PT</span>
-
-**Notice**: The BeeGFS file system, which hosts `/wynton`, is
-experiencing unexpected, major issues.  Some or all files on `/wynton`
-cannot be accessed, and when attempted, an `Communication error on
-send` error is seen.  The problem started around 13:45 on Friday
-2023-10-27.
-<br><span class="timestamp">October 27, 15:10 PT</span>
-
-<!--
-start: 2023-10-27T13:45:00
-stop: 
-length: 
-severity: filesystem-failure
-affected: jobs, beegfs, compute, storage, *
-reason: unscheduled
- -->
 
 
 ### November 5-17(?), 2023
