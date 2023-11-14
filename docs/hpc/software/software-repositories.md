@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(91)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(98)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -3958,7 +3958,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (125)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (98)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -4983,168 +4983,6 @@ setenv        PSIPRED_LIB     /salilab/diva1/programs/x86_64linux/psipred-4.0/li
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_python2-biopython" class="module-name">python2/biopython</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>1.70</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-bottleneck" class="module-name">python2/bottleneck</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>1.2.1</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-cycler" class="module-name">python2/cycler</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>0.10.0</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-dateutil" class="module-name">python2/dateutil</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.6.1</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-decorator" class="module-name">python2/decorator</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>4.2.1</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-functools32" class="module-name">python2/functools32</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>3.2.3</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-h5py" class="module-name">python2/h5py</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.7.1</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-ihm" class="module-name">python2/ihm</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>0.11</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-lru_cache" class="module-name">python2/lru_cache</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>1.5</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-matplotlib" class="module-name">python2/matplotlib</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.1.2</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-mdp" class="module-name">python2/mdp</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.6</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-msgpack" class="module-name">python2/msgpack</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>0.5.6</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-networkx" class="module-name">python2/networkx</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>1.11</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-nose" class="module-name">python2/nose</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>1.3.7</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-numexpr" class="module-name">python2/numexpr</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.6.4</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-numpy" class="module-name">python2/numpy</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version">1.12.0, 1.13.0, <em>1.14.1</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-pandas" class="module-name">python2/pandas</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>0.22.0</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-pkgconfig" class="module-name">python2/pkgconfig</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>1.2.2</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-protobuf" class="module-name">python2/protobuf</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.5.0</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-pymc" class="module-name">python2/pymc</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.3.6</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-pyparsing" class="module-name">python2/pyparsing</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2.1.10</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-pyrmsd" class="module-name">python2/pyrmsd</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>4.1.git48ab119</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-pytz" class="module-name">python2/pytz</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>2016.10</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-scikit" class="module-name">python2/scikit</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version">0.12, <em>0.19.1</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-scipy" class="module-name">python2/scipy</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version">0.18.1, 0.19.0, <em>1.0.0</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-six" class="module-name">python2/six</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>1.10.0</em></span><br>
-  </dd>
-</dl>
-<h3 id="module_sali_python2-tables" class="module-name">python2/tables</h3>
-<dl>
-  <dd class="module-details">
-Versions: <span class="module-version"><em>3.5.2</em></span><br>
-  </dd>
-</dl>
 <h3 id="module_sali_python3-attrs" class="module-name">python3/attrs</h3>
 <dl>
   <dd class="module-details">
@@ -5332,7 +5170,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/
   <dd class="module-details">
 <span class="module-description">A high performance implementation of HDBSCAN clustering</span><br>
 URL: <span class="module-url"><a href="https://github.com/scikit-learn-contrib/hdbscan">https://github.com/scikit-learn-contrib/hdbscan</a></span><br>
-Versions: <span class="module-version"><em>0.8.28</em></span><br>
+Versions: <span class="module-version">0.8.28, <em>0.8.33</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5341,7 +5179,7 @@ module-whatis &quot;Description: A high performance implementation of HDBSCAN cl
 module-whatis &quot;URL: https://github.com/scikit-learn-contrib/hdbscan&quot;
 conflict python2
 module load python3/numpy/1.19.5 python3/scipy/1.3.2 python3/scikit/0.21.3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.28/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.33/lib64/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -5597,7 +5435,7 @@ prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/py3/bin
   <dd class="module-details">
 <span class="module-description">Fast numerical array expression evaluator for Python and NumPy</span><br>
 URL: <span class="module-url"><a href="https://github.com/pydata/numexpr">https://github.com/pydata/numexpr</a></span><br>
-Versions: <span class="module-version"><em>2.7.0</em></span><br>
+Versions: <span class="module-version">2.7.0, <em>2.8.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5606,7 +5444,7 @@ module-whatis &quot;Description: Fast numerical array expression evaluator for P
 module-whatis &quot;URL: https://github.com/pydata/numexpr&quot;
 conflict python2
 module load python3/numpy/1.19.5
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py36-2.7.0/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py36-2.8.1/lib64/python3.6/site-packages
 </code></pre>
 
 </details>
@@ -5729,12 +5567,12 @@ module-whatis &quot;Description: Protocol Buffers - Google's data interchange fo
 module-whatis &quot;URL: https://developers.google.com/protocol-buffers/&quot;
 conflict python2
 module load python3/six
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64/python3.6/site-packages
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/bin
-prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/share/emacs/site-lisp
-prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/include
-prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64/python3.6/site-packages
+prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/bin
+prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/share/emacs/site-lisp
+prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/include
+prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
 </code></pre>
 
 </details>
@@ -6240,7 +6078,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(91)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(125)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(98)</a></li>
 </ul>
 
 _The above information is updated automatically every three hours by querying `module avail` and `module spider`._
