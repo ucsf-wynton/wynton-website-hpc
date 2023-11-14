@@ -42,6 +42,9 @@ Here are some of the hurdles you may run into:
   `python2`. On CentOS 7, `python` corresponded to `python2`.  Python
   3.6 is available via `python3.6`, Python 3.8 via `python3.8`, and
   Python 3.11 via `python3.11`.
+  - If you get errors like `/opt/rh/rh-python38/root/usr/bin/python3:
+    bad interpreter: No such file or directory` when you run a Python
+    based software, then you need to reinstall that software tool.
 
 * [MPI] : OpenMPI is available via the built-in module `mpi`. On Rocky
   8, the default, and only available version is OpenMPI 4.1, which you

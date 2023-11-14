@@ -280,6 +280,20 @@ members can share files and software?_
 not count toward users disk quota.
 
 
+## Things that used to work before we migrated to Rocky 8
+
+### Sudden Python errors
+
+**Q**. When I run Jupyter, I now get an error saying
+`/opt/rh/rh-python38/root/usr/bin/python3: bad interpreter: No such
+file or directory`. How can I fix it.
+
+**A**. This is because the Python software, here Jupyter, was
+installed using the `rh-python38` SCL, which was only available on
+CentOS 7.  To fix this, you need to reinstall the broken software,
+which in this example means reinstall Jupyter.
+
+
 ## Miscellaneous
 
 ### Reset my shell startup file
