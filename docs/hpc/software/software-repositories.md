@@ -2101,11 +2101,11 @@ local new = &quot;miniconda3/&quot; .. version .. &quot;-py39&quot;
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: deprecated, defunct&quot;)
 whatis([[
-Warning: This module is defunct and has been superseeded by module ' .. new .. '. Please use that module instead.
+Warning: This module is defunct and has been superseeded by module 'miniconda3'. Please use that module instead.
 ]])
 
 depends_on(new)
-LmodError(&quot;[DEFUNCT ERROR] The CBI 'miniconda3-py39/4.12.0' module has been renamed to '&quot; .. new .. &quot;'; please use that module instead&quot;)
+LmodError(&quot;[DEFUNCT ERROR] The CBI '&quot; .. name .. &quot;/&quot; .. version .. &quot;' module has been renamed to '&quot; .. new .. &quot;'; please use that module instead&quot;)
 </code></pre>
 
 </details>
@@ -3997,24 +3997,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py310-2023.03/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4028,6 +4010,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
