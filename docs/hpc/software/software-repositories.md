@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(91)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(90)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(97)</a></li>
 </ul>
 
@@ -205,7 +205,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (91)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (90)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -257,7 +257,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>ASCIIGenome --help</code>, and <code>ASCIIGenome bigWigExample.bw</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/dariober/ASCIIGenome">https://github.com/dariober/ASCIIGenome</a>, <a href="https://github.com/dariober/ASCIIGenome/blob/master/CHANGELOG.md">https://github.com/dariober/ASCIIGenome/blob/master/CHANGELOG.md</a> (changelog), <a href="https://asciigenome.readthedocs.io/en/latest/">https://asciigenome.readthedocs.io/en/latest/</a> (documentation)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.17.0, <em>1.18.0</em></span><br>
+Versions: <span class="module-version"><em>1.18.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1253,7 +1253,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.43.0, <em>0.44.0</em></span><br>
+Versions: <span class="module-version"><em>0.44.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1558,7 +1558,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>gping --version</code>, <code>gping --help</code>, <code>gping 8.8.8.8 9.9.9.9</code>, and <code>gping --cmd &quot;curl -o /dev/null https://www.github.com&quot; &quot;wget -O /dev/null https://github.com&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/orf/gping">https://github.com/orf/gping</a>, <a href="https://github.com/orf/gping/releases">https://github.com/orf/gping/releases</a> (changelog), <a href="https://github.com/orf/gping">https://github.com/orf/gping</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.14.0, <em>1.15.1</em></span><br>
+Versions: <span class="module-version"><em>1.15.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2339,7 +2339,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc/blob/master/changelog.md">https://github.com/jgm/pandoc/blob/master/changelog.md</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.1.8, <em>3.1.9</em></span><br>
+Versions: <span class="module-version"><em>3.1.9</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2692,7 +2692,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases/latest">https://github.com/quarto-dev/quarto-cli/releases/latest</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.3.433, <em>1.3.450</em></span><br>
+Versions: <span class="module-version"><em>1.3.450</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2926,7 +2926,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.63.0, 1.64.0, <em>1.64.2</em></span><br>
+Versions: <span class="module-version"><em>1.64.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -2996,7 +2996,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">restic is a backup program that is fast, efficient and secure. It supports the three major operating systems (Linux, macOS, Windows) and a few smaller ones (FreeBSD, OpenBSD).</span><br>
 Example: <span class="module-example"><code>restic --help</code> and <code>restic version</code>.</span><br>
 URL: <span class="module-url"><a href="https://restic.net">https://restic.net</a>, <a href="https://restic.readthedocs.io/en/latest/">https://restic.readthedocs.io/en/latest/</a> (documentation), <a href="https://github.com/restic/restic/releases">https://github.com/restic/restic/releases</a> (change log), <a href="https://github.com/restic/restic">https://github.com/restic/restic</a> (source code)</span><br>
-Versions: <span class="module-version">0.16.1, <em>0.16.2</em></span><br>
+Versions: <span class="module-version"><em>0.16.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3140,7 +3140,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
 Example: <span class="module-example"><code>rsc --help</code>, <code>rsc start</code>, and <code>rsc stop</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
-Versions: <span class="module-version">0.13.6, 0.13.7, 0.13.10, 0.14.0, 0.14.1, <em>0.14.2</em></span><br>
+Versions: <span class="module-version"><em>0.14.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3687,42 +3687,6 @@ pushenv(&quot;TRIMGALORE_HOME&quot;, home)
 </details>
   </dd>
 </dl>
-<h3 id="module_cbi_up" class="module-name">up</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">up: The Ultimate Plumber</strong><br>
-<span class="module-description">A tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results. Interactively and incrementally explore textual data in Linux using text-processing utils such as grep, sort, cut, paste, awk, wc, perl, etc.  When done, press Ctrl-C to view final pipe commands, or Ctrl-X to save it to file.</span><br>
-Example: <span class="module-example"><code>up --help</code>, <code>ls | up</code> (exit with Ctrl-C).</span><br>
-URL: <span class="module-url"><a href="https://github.com/akavel/up">https://github.com/akavel/up</a>, <a href="https://github.com/akavel/up/releases">https://github.com/akavel/up/releases</a> (changelog)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.4</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-up: The Ultimate Plumber
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: utility, cli&quot;)
-whatis(&quot;URL: https://github.com/akavel/up, https://github.com/akavel/up/releases (changelog)&quot;)
-whatis([[
-Description: A tool for writing Linux pipes in a terminal-based UI interactively, with instant live preview of command results. Interactively and incrementally explore textual data in Linux using text-processing utils such as grep, sort, cut, paste, awk, wc, perl, etc.  When done, press Ctrl-C to view final pipe commands, or Ctrl-X to save it to file.
-Examples: `up --help`, `ls | up` (exit with Ctrl-C).
-Warning: Only the most recent version of this software will be kept.
-]])
-
--- Local variables
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-prepend_path(&quot;PATH&quot;, home)
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_cbi_varscan" class="module-name">varscan</h3>
 <dl>
   <dd class="module-details">
@@ -4090,9 +4054,9 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
 module-whatis &quot;URL: https://www.boost.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/include
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -4812,11 +4776,11 @@ module-whatis &quot;Description: Collection of algorithms for computer vision&qu
 module-whatis &quot;URL: https://opencv.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
   module load hdf5/1.10.6
-  prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0/bin
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/include/opencv4
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
-  prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib/python2.7/site-packages
+  prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/bin
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/include/opencv4
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib64
+  prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0-gcc10/lib/python2.7/site-packages
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -5545,12 +5509,12 @@ module-whatis &quot;Description: Protocol Buffers - Google's data interchange fo
 module-whatis &quot;URL: https://developers.google.com/protocol-buffers/&quot;
 conflict python2
 module load python3/six
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64/python3.6/site-packages
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/bin
-prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/share/emacs/site-lisp
-prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/include
-prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64/python3.6/site-packages
+prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/bin
+prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/share/emacs/site-lisp
+prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/include
+prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
 </code></pre>
 
 </details>
@@ -6055,11 +6019,11 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(91)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(90)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(97)</a></li>
 </ul>
 
-_The above information is updated automatically every three hours by querying `module avail` and `module spider`._
+_The above information is updated automatically once an hour by querying `module avail` and `module spider`._
 
 
 <style>
