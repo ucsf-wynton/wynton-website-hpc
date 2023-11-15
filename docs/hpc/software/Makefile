@@ -18,7 +18,7 @@ $(PAGE).md: $(PAGE).md.rsp
 	Rscript -e R.rsp::rfile $< --postprocess=FALSE
 
 deploy: $(PAGE).md
-	git commit $< -m "SOFTWARE: Rebuilt set of available modules" &> /dev/null; true
+	git commit $< -m "SOFTWARE: Rebuilt set of available modules [${HOSTNAME}]" &> /dev/null; true
 	git push &> /dev/null; true
 
 sbgrid:
