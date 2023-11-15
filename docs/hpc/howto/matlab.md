@@ -28,7 +28,7 @@ ans =
      3
 
 >> quit
-[alice@{{ site.devel.name }} ~]$
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 
