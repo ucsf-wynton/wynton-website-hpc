@@ -1,15 +1,13 @@
 <div class="alert alert-info" role="alert" markdown="1">
-**NEWS**: (_For upcoming and current incidents, see the [Status](/hpc/status/index.html) page_)
+**NEWS**: (_For upcoming and current incidents, see the
+[Status](/hpc/status/index.html) page_)
 
-2023-10-26: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log2`, data-transfer nodes `dt1`, and development node `dev2` are now running Rocky 8.
+2023-11-15: Wynton is now running [Rocky 8] Linux.
 
-2023-10-26: [Rocky 8](/hpc/software/rocky-8-linux.html): 8% of Wynton compute slots are now running on Rocky 8 compute nodes. 51 compute nodes with a total of 1,376 CPU slots run Rocky 8.
-
-2023-10-20: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log1` and data-transfer nodes `dt2` and `ptd2` are now running Rocky 8.
-
-...
-
-2023-07-21: [Rocky 8](/hpc/software/rocky-8-linux.html): Wynton will migrate from CentOS 7 to Rocky 8 at the end of October 2023. To prepare for this, we have made one non-PHI and one PHI development node available for all users, together with six compute nodes. 
+2023-07-21: [Rocky 8]: Wynton will migrate from CentOS 7 to Rocky 8 at
+the end of October 2023. To prepare for this, we have made one non-PHI
+and one PHI development node available for all users, together with
+six compute nodes.
 
 [More ...](/hpc/about/news.html)
 </div>
@@ -28,3 +26,4 @@ The {{ site.cluster.name }} environment keeps growing as more users discover it 
 
 [UCSF Privacy Office]: https://hipaa.ucsf.edu/
 [Protected Health Information (PHI) on Wynton]: /hpc/about/wynton-phi.html
+[Rocky 8]: /hpc/software/rocky-8-linux.html

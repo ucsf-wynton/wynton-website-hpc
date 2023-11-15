@@ -76,7 +76,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 * Website: Host website on GitHub Pages (2022-10-31)
 
-* Operating system: Upgrade from CentOS 7 to Rocky 8 (2022-11-06).
+* Operating system: Upgrade from CentOS 7 to Rocky 8 (2022-11-15).
 
 
 See also [News].

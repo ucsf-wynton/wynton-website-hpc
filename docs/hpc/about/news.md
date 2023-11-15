@@ -1,19 +1,21 @@
 # News
 
-2023-11-06: Wynton has been upgrade to [Rocky 8](/hpc/software/rocky-8-linux.html) Linux from CentOS 7.
+2023-11-15: Wynton is now running [Rocky 8] Linux.
 
-2023-10-26: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log2`, data-transfer nodes `dt1`, and development node `dev2` are now running Rocky 8.
+2023-11-06: Wynton has been upgrade to [Rocky 8] Linux from CentOS 7.
+
+2023-10-26: [Rocky 8]: Login node `log2`, data-transfer nodes `dt1`, and development node `dev2` are now running Rocky 8.
 
  (Rocky 8 Linux)
-2023-10-20: [Rocky 8](/hpc/software/rocky-8-linux.html): Login node `log1` and data-transfer nodes `dt2` and `ptd2` are now running Rocky 8.
+2023-10-20: [Rocky 8]: Login node `log1` and data-transfer nodes `dt2` and `ptd2` are now running Rocky 8.
 
-2023-10-13: [Rocky 8](/hpc/software/rocky-8-linux.html): 6% of Wynton compute slots are now running on Rocky 8 compute nodes. 41 compute nodes with a total of 1,104 CPU slots run Rocky 8.
+2023-10-13: [Rocky 8]: 6% of Wynton compute slots are now running on Rocky 8 compute nodes. 41 compute nodes with a total of 1,104 CPU slots run Rocky 8.
 
-2023-09-28: [Rocky 8](/hpc/software/rocky-8-linux.html): 5% of Wynton compute slots are now running on Rocky 8 compute nodes. 33 compute nodes with a total of 880 CPU slots run Rocky 8.
+2023-09-28: [Rocky 8]: 5% of Wynton compute slots are now running on Rocky 8 compute nodes. 33 compute nodes with a total of 880 CPU slots run Rocky 8.
 
-2023-09-13: [Rocky 8](/hpc/software/rocky-8-linux.html): Development node `dev3` is now running Rocky 8.
+2023-09-13: [Rocky 8]: Development node `dev3` is now running Rocky 8.
 
-2023-07-21: [Rocky 8](/hpc/software/rocky-8-linux.html): Wynton will migrate from CentOS 7 to Rocky 8 at the end of October 2023. To prepare for this, we have made one non-PHI and one PHI development node available for all users, together with six compute nodes. 
+2023-07-21: [Rocky 8]: Wynton will migrate from CentOS 7 to Rocky 8 at the end of October 2023. To prepare for this, we have made one non-PHI and one PHI development node available for all users, together with six compute nodes. 
 
 2022-06-01: Added support for transferring files between Wynton and UCSF Box via [Globus](/hpc/transfers/globus.html).
 
@@ -120,3 +122,4 @@ For upcoming features and improvements, please see the [Roadmap].
 
 
 [Roadmap]: /hpc/about/roadmap.html
+[Rocky 8]: /hpc/software/rocky-8-linux.html
