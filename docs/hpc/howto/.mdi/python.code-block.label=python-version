@@ -1,0 +1,2 @@
+[alice@{{ site.devel.name }} ~]$ python3 --version
+Python 3.11.2
