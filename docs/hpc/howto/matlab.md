@@ -6,22 +6,21 @@ MATLAB is available on {{ site.cluster.name }} via a [built-in environment modul
 
 To load the MATLAB module, do:
 
+<!-- code-block label="module-load-matlab" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load matlab
 [alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
 MATLAB is selecting SOFTWARE OPENGL rendering.
 
+                                                        < M A T L A B (R) >
+                                              Copyright 1984-2022 The MathWorks, Inc.
+                                              R2022b (9.13.0.2049777) 64-bit (glnxa64)
+                                                          August 24, 2022
 
-                          < M A T L A B (R) >
-                Copyright 1984-2021 The MathWorks, Inc.
-                R2021a (9.10.0.1602886) 64-bit (glnxa64)
-                           February 17, 2021
-
-
+ 
 To get started, type doc.
 For product information, visit www.mathworks.com.
  
-
 >> 1+2
 
 ans =
@@ -29,8 +28,7 @@ ans =
      3
 
 >> quit
-
-[alice@{{ site.devel.name }} ~]$ 
+[alice@{{ site.devel.name }} ~]$
 ```
 
 

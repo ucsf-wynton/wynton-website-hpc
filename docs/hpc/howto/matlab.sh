@@ -29,9 +29,14 @@ module unload matlab
 #
 #EOF
 
+1>&2 echo "WARNING: .mdi/matlab.code-block.label=module-load-matlab needs to be updated manually"                                                  
+
 
 module unload matlab
 ## FIXME: https://github.com/HenrikBengtsson/mdi/issues/8
 #mdi_code_block --label=matlab-not-found <<EOF
 #matlab
 #EOF
+
+1>&2 echo "WARNING: .mdi/apptainer.code-block.label=matlab-not-found needs to be updated manually"                                                  
+
