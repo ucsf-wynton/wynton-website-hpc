@@ -305,9 +305,18 @@ it?_
 and copy the default one by:
 
 ```sh
-$ cp ~/.bashrc ~/.bashrc.20220912
-$ cp /etc/skel/bashrc ~/.bashrc
+$ cp ~/.bashrc ~/.bashrc.20231115
+$ cp /etc/skel/.bashrc ~/
 ```
+
+**A**. To get a fresh `~/.bash_profile` file, make a backup of your
+old one and copy the default one by:
+
+```sh
+$ cp ~/.bash_profile ~/.bash_profile.20231115
+$ cp /etc/skel/.bash_profile ~/
+```
+
 
 ### Using Microsoft VS Code
 
