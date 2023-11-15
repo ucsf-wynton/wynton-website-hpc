@@ -2,6 +2,12 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
+**Update**: The job scheduler is available and jobs are running.  The
+data-transfer nodes are available. At this time, 36 out of 490 compute
+nodes have been re-enabled.  Work has begun booting up the remaining
+ones.
+<br><span class="timestamp">November 15, 14:15 PT</span>
+
 **Update**: We plan to re-enable the job scheduler and start
 processing jobs by the end of today. It is possible to submit jobs
 already now, but they will remain queued until we re-enable the

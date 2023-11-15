@@ -89,6 +89,6 @@ message: The cluster is operational with some file-system issues. If you encount
 level: warning
 condition: is operational
 
-level: danger
-condition: is partially operational
-message: (1) Wynton now runs Rocky 8 Linux. (2) Only login and development nodes are available. (3) The data-transfer nodes are not available. (4) The compute nodes and the scheduler are unavailable.
+level: warning
+condition: is operational
+message: (1) Wynton now runs Rocky 8 Linux. (2) Expect longer waiting times on the queue until more compute nodes have been re-enabled.
