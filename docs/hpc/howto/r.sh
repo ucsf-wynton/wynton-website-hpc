@@ -65,28 +65,28 @@ EOF
 
 
 mdi_code_block --label=r-openmpi <<EOF
-module load mpi/openmpi3-x86_64
+module load mpi/openmpi-x86_64
 module list
 EOF
 module purge
 module load CBI r
 
-mdi_code_block --label=r-gdal <<EOF
-module load CBI gdal
-module list
-EOF
-module purge
-module load CBI r
+#mdi_code_block --label=r-gdal <<EOF
+#module load CBI gdal
+#module list
+#EOF
+#module purge
+#module load CBI r
 
-mdi_code_block --label=r-hdf5 <<EOF
-module load CBI hdf5
-module list
-EOF
-module purge
-module load CBI r
+#mdi_code_block --label=r-hdf5 <<EOF
+#module load CBI hdf5
+#module list
+#EOF
+#module purge
+#module load CBI r
 
-mdi_code_block --label=r-devtoolset9 <<EOF
-module load CBI scl-devtoolset/9
+mdi_code_block --label=r-scl-gcc-toolset <<EOF
+module load CBI scl-gcc-toolset/12
 gcc --version
 EOF
 module purge
