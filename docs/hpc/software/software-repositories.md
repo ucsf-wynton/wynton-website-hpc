@@ -5500,12 +5500,12 @@ module-whatis &quot;Description: Protocol Buffers - Google's data interchange fo
 module-whatis &quot;URL: https://developers.google.com/protocol-buffers/&quot;
 conflict python2
 module load python3/six
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64/python3.6/site-packages
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/bin
-prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/share/emacs/site-lisp
-prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/include
-prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64/python3.6/site-packages
+prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/bin
+prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/share/emacs/site-lisp
+prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/include
+prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
 </code></pre>
 
 </details>
