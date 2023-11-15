@@ -28,5 +28,3 @@ EOF
 mdi_code_block --label="sbgrid" <<EOF
 source /programs/sbgrid.shrc
 EOF
-
-rm -rf lxc/
