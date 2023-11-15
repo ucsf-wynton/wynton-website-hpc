@@ -1,6 +1,12 @@
-### October 30-November 17(?), 2023
+### October 30-November 15(?), 2023
 
 #### <span style="color: orange;">Full downtime</span>
+
+**Update**: We plan to re-enable the job scheduler and start
+processing jobs by the end of today. It is possible to submit jobs
+already now, but they will remain queued until we re-enable the
+scheduler.
+<br><span class="timestamp">November 15, 10:30 PT</span>
 
 **Update**: The BeeGFS issue has been resolved, which allows us to
 move forward on the remaining Rocky-8 updates. We hope to start
