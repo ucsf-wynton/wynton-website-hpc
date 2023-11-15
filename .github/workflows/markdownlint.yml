@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: markdownlint-cli (special files)
-        uses: nosborn/github-action-markdown-cli@v3.0.1
+        uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
           files: docs/hpc/software/software-repositories.md
           config_file: docs/hpc/software/.markdownlint.software-repositories.json
@@ -22,7 +22,7 @@ jobs:
         run: rm docs/hpc/software/software-repositories.md
   
       - name: markdownlint-cli (remaining files)
-        uses: nosborn/github-action-markdown-cli@v3.0.1
+        uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
           files: .
           config_file: docs/.markdownlint.json
