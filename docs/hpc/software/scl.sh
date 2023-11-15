@@ -1,13 +1,13 @@
 #! /usr/bin/env bash
 # Usage: markin build scl.sh
 
-module purge
-
 # shellcheck disable=SC2034
 MDI_USER="alice"
 MDI_GROUP="boblab"
 MDI_HOSTNAME="{{ site.devel.name }}"
 PS1="[\u@\h \W]\$ "
+
+module purge
 
 mdi_code_block --label="list" <<EOF
 scl list-collections
