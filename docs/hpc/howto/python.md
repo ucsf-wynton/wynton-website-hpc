@@ -15,7 +15,7 @@ It will _not_ work. If you attempt to run this as-is on the cluster, you get lot
 
 There are **two ways for non-privileged users to install Python packages using the 'pip' module**:
 
- 1. Install globally to your home directory (typically `~/.local/lib/python3.6/site-packages/`) using `python3 -m pip install --user ...`
+ 1. Install globally to your home directory (typically `~/.local/lib/python3.11/site-packages/`) using `python3 -m pip install --user ...`
 
  2. Install locally to a project-specific folder (e.g. `~/my_project/`) using `python3 -m pip install ...` in a self-contained Python virtual environment
 
@@ -51,7 +51,7 @@ Installing collected packages: pytz, tzdata, six, numpy, python-dateutil, pandas
 Successfully installed numpy-1.26.2 pandas-2.1.3 python-dateutil-2.8.2 pytz-2023.3.post1 six-1.16.0 tzdata-2023.3
 ```
 
-To see all Python packages that you have installed globally, use `python3 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python3 -m pip list`.  Packages installed with `python3 -m pip list --user` are typically installed to your `~/.local/lib/python3.6/site-packages/` folder.  If CLI executables are installed with one of those packages, they are often installed to `~/.local/bin/`.
+To see all Python packages that you have installed globally, use `python3 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python3 -m pip list`.  Packages installed with `python3 -m pip list --user` are typically installed to your `~/.local/lib/python3.11/site-packages/` folder.  If CLI executables are installed with one of those packages, they are often installed to `~/.local/bin/`.
 
 
 
