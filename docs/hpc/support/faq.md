@@ -298,8 +298,8 @@ which in this example means reinstall Jupyter.
 
 ### Reset my shell startup file
 
-**Q**. _I might have corrupted by Bash startup file. How do I reset
-it?_
+**Q**. _I might have corrupted my Bash startup files. How do I reset
+them?_
 
 **A**. To get a fresh `~/.bashrc` file, make a backup of your old one
 and copy the default one by:
