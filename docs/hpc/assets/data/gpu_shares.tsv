@@ -1,4 +1,22 @@
 # Created by: hb
-# Created on: 2023-11-14 03:00:01-08:00
+# Created on: 2023-11-15 03:00:03-08:00
 project	queue	nbr_of_hosts	hosts
-		0	
+rosenberglab	gpu.q	1	msg-ihgpu5
+agardlab, chenglab, frostlab, stroudlab, gpu-collab	gpu.q	22	msg-iogpu1, msg-iogpu2, msg-iogpu3, msg-iogpu4, msg-iogpu5, msg-iogpu6, msg-iogpu7, msg-iogpu8, msg-iogpu9, msg-iogpu11, msg-iogpu12, msg-iogpu13, msg-ihgpu1, msg-ihgpu2, msg-ihgpu3, msg-ihgpu4, msg-ihgpu5, qb3-idgpu3, qb3-idgpu4, qb3-idgpu5, qb3-idgpu11, qb3-idgpu12
+agardlab, chenglab, frostlab, stroudlab, gpu-collab	4gpu.q	9	qb3-iogpu5, msg-iogpu11, msg-iogpu12, msg-iogpu13, qb3-idgpu3, qb3-idgpu4, qb3-idgpu5, qb3-atgpu18, qb3-atgpu29
+grabelab	gpu.q	4	qb3-idgpu13, qb3-idgpu14, qb3-idgpu15, qb3-idgpu16
+genetics, arnaoutlab	gpu.q	1	qb3-iogpu1
+huanglab	gpu.q	1	qb3-idgpu17
+jacobsonlab, arnaoutlab	gpu.q	1	qb3-idgpu6
+gladstone, pollardlab	gpu.q	1	qb3-idgpu10
+i4h	gpu.q	1	qb3-iogpu4
+keiserlab	gpu.q	1	qb3-atgpu16
+ichs	gpu.q	1	qb3-atgpu19
+theodorislab	gpu.q	1	qb3-atgpu20
+neuroppg	gpu.q	1	qb3-atgpu21
+gidb	gpu.q	1	qb3-atgpu22
+rsl	gpu.q	1	qb3-atgpu23
+yalalab	gpu.q	3	qb3-atgpu26, qb3-atgpu27, qb3-atgpu28
+kortemmelab	gpu.q	4	qb3-atgpu31, qb3-atgpu32, qb3-atgpu33, qb3-atgpu34
+ferrinlab	gpu.q	1	qb3-atgpu30
+ibrahimlab	gpu.q	2	qb3-atgpu35, qb3-atgpu36
