@@ -374,7 +374,7 @@ The results is a container image file named `isoseq3.sif`:
 [alice@{{ site.devel.name }} lxc]$ 
 ```
 
-Because the definition file has an [`%runscript`] entry, we can call this image directly as-is, e.g.
+Because the definition file has a [`%runscript`] entry, we can call this image directly as-is, e.g.
 
 <!-- code-block label="isoseq3-version" -->
 ```sh
