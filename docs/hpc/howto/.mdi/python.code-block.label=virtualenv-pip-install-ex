@@ -1,6 +1,7 @@
 (my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install pandas
-Requirement already satisfied: pandas in ./my_project/lib64/python3.6/site-packages (1.1.5)
-Requirement already satisfied: pytz>=2017.2 in ./my_project/lib/python3.6/site-packages (from pandas) (2022.6)
-Requirement already satisfied: python-dateutil>=2.7.3 in ./my_project/lib/python3.6/site-packages (from pandas) (2.8.2)
-Requirement already satisfied: numpy>=1.15.4 in ./my_project/lib64/python3.6/site-packages (from pandas) (1.19.5)
-Requirement already satisfied: six>=1.5 in ./my_project/lib/python3.6/site-packages (from python-dateutil>=2.7.3->pandas) (1.16.0)
+Requirement already satisfied: pandas in ./my_project/lib/python3.11/site-packages (2.1.3)
+Requirement already satisfied: numpy<2,>=1.23.2 in ./my_project/lib/python3.11/site-packages (from pandas) (1.26.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./my_project/lib/python3.11/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in ./my_project/lib/python3.11/site-packages (from pandas) (2023.3.post1)
+Requirement already satisfied: tzdata>=2022.1 in ./my_project/lib/python3.11/site-packages (from pandas) (2023.3)
+Requirement already satisfied: six>=1.5 in ./my_project/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)

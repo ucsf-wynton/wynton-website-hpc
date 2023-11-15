@@ -1,19 +1,20 @@
 #! /usr/bin/env bash
 #' @usage: markin build python.sh
 
+# shellcheck disable=SC2034
+MDI_USER="alice"
+MDI_GROUP="boblab"
+MDI_HOSTNAME="{{ site.devel.name }}"
+PS1="[\u@\h \W]\$ "
+
+module purge
+
 TMPDIR="${TMPDIR:-/scratch/$USER}"
 [[ -z "${TMPDIR}" ]] && { 2>&1 echo "ERROR: TMPDIR is empty"; exit 1; }
 
 export TMPDIR="${TMPDIR}/mdi"
 [[ -d "${TMPDIR}" ]] && rm -rf "${TMPDIR}"
 mkdir -p "${TMPDIR}"
-
-# shellcheck disable=SC2034
-MDI_USER="alice"
-MDI_GROUP="boblab"
-# shellcheck disable=SC2034
-MDI_HOSTNAME="{{ site.devel.name }}"
-PS1="[\u@\h \W]\$ "
 
 mdi_adjust_output() {
     local group tilde tmpdir
@@ -150,10 +151,5 @@ mdi_code_block --label=python-version <<EOF
 python3 --version
 EOF
 
-mdi_code_block --label=python-scl-version <<EOF
-python --version
-module load CBI scl-rh-python
-python --version
-EOF
 module purge
 

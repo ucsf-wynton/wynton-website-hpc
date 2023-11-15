@@ -1,4 +1,4 @@
 (my_project) [alice@{{ site.devel.name }} my_project]$ which python
 ~/my_project/bin/python
 (my_project) [alice@{{ site.devel.name }} my_project]$ python --version
-Python 3.6.8
+Python 3.11.2
