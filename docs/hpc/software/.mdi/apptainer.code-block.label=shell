@@ -4,10 +4,11 @@ PRETTY_NAME="Debian GNU/Linux bookworm/sid"
 NAME="Debian GNU/Linux"
 VERSION_CODENAME=bookworm
 Apptainer> Rscript --version
-Rscript (R) version 4.2.2 (2022-10-31)
+Rscript (R) version 4.3.1 (2023-06-16)
 Apptainer> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
-NAME="CentOS Linux"
-VERSION="7 (Core)"
-ID="centos"
+NAME="Rocky Linux"
+VERSION="8.8 (Green Obsidian)"
+ID="rocky"
+

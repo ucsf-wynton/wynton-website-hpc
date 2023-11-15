@@ -53,29 +53,30 @@ To use this rocker/r-base container, we first pull it down to a Apptainer image 
 <!-- code-block label="build" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ mkdir lxc
+mkdir: cannot create directory ‘lxc’: File exists
 [alice@{{ site.devel.name }} ~]$ cd lxc/
 [alice@{{ site.devel.name }} lxc]$ apptainer build rocker_r-base.sif docker://rocker/r-base
 INFO:    Starting build...
 Getting image source signatures
-Copying blob sha256:7b303595d9b321a9020d0ddbf1dea4c83237e2367117606a8d5466c446714ba1
-Copying blob sha256:83ca482c84ae83b4e39c6cad8519cde7b2cb5b8f1d181b5be11271d91c01b583
-Copying blob sha256:6046dc19e2b25f9181d9e5e9347fff916012d426f1de82aaaba5f0d29b647aeb
-Copying blob sha256:ed3a653d2e7952b3187ab9cfc7be8cde4651e994d1085a1102a621e952530d9e
-Copying blob sha256:111255bd9d45300e28c8a7727ad43f2979d66d6ac94d472699fe40fb079945a8
-Copying blob sha256:f9510faa489c34c75dd8d92128e890d135ddd7aeb64c293306563abee64eb53b
-Copying config sha256:b23cdc375e4c59d8a9c321b7b308116e0e3c2329c45f9be18d35dc95398565dc
+Copying blob sha256:bd556fe2886dac2a22b5e02cf43558766730e3423978522b24f2457ff2d489d0
+Copying blob sha256:4ade4cbe0c7e776cd60102751e29ec82271b08f5a086da6ccfef0574f6a040db
+Copying blob sha256:5fe7cbdf1a7c13b846f5fa6e716cf72a115b877f48d2693b9a1fbe7788d36b1d
+Copying blob sha256:ebbe46658ae1eddd748e3222cbc9dd7109f9fd7f279a4b2f9d6a32d0a58b4c16
+Copying blob sha256:4be550b6d67c5ef8b2ae801804eabe3acefc327f4abfa62a3e364f311a1e25b4
+Copying blob sha256:5790fe4db759efadbc15af34fc7b9ae6f5ebadf8ce05baec4309b73b79cec810
+Copying config sha256:6de003fbdce5b64853257f2e3d540251123c25006977d544680b6c38c21942b9
 Writing manifest to image destination
 Storing signatures
-2022/03/29 18:43:54  info unpack layer: sha256:7b303595d9b321a9020d0ddbf1dea4c83237e2367117606a8d5466c446714ba1
-2022/03/29 18:43:57  info unpack layer: sha256:83ca482c84ae83b4e39c6cad8519cde7b2cb5b8f1d181b5be11271d91c01b583
-2022/03/29 18:43:57  info unpack layer: sha256:6046dc19e2b25f9181d9e5e9347fff916012d426f1de82aaaba5f0d29b647aeb
-2022/03/29 18:43:58  info unpack layer: sha256:ed3a653d2e7952b3187ab9cfc7be8cde4651e994d1085a1102a621e952530d9e
-2022/03/29 18:43:59  info unpack layer: sha256:111255bd9d45300e28c8a7727ad43f2979d66d6ac94d472699fe40fb079945a8
-2022/03/29 18:43:59  info unpack layer: sha256:f9510faa489c34c75dd8d92128e890d135ddd7aeb64c293306563abee64eb53b
+2023/11/15 12:34:02  info unpack layer: sha256:ebbe46658ae1eddd748e3222cbc9dd7109f9fd7f279a4b2f9d6a32d0a58b4c16
+2023/11/15 12:34:04  info unpack layer: sha256:4ade4cbe0c7e776cd60102751e29ec82271b08f5a086da6ccfef0574f6a040db
+2023/11/15 12:34:04  info unpack layer: sha256:4be550b6d67c5ef8b2ae801804eabe3acefc327f4abfa62a3e364f311a1e25b4
+2023/11/15 12:34:05  info unpack layer: sha256:5fe7cbdf1a7c13b846f5fa6e716cf72a115b877f48d2693b9a1fbe7788d36b1d
+2023/11/15 12:34:05  info unpack layer: sha256:5790fe4db759efadbc15af34fc7b9ae6f5ebadf8ce05baec4309b73b79cec810
+2023/11/15 12:34:05  info unpack layer: sha256:bd556fe2886dac2a22b5e02cf43558766730e3423978522b24f2457ff2d489d0
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.sif
 [alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.sif
--rwxr-xr-x. 1 alice boblab 318054400 Mar 29 18:44 rocker_r-base.sif
+-rwxr-xr-x. 1 alice boblab 325574656 Nov 15 12:34 rocker_r-base.sif
 ```
 
 The above may take a minute or two to complete.
@@ -89,8 +90,8 @@ After this, we can run R within this container using:
 ```sh
 [alice@{{ site.devel.name }} lxc]$ apptainer run rocker_r-base.sif
 
-R version 4.1.3 (2022-03-10) -- "One Push-Up"
-Copyright (C) 2022 The R Foundation for Statistical Computing
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -111,7 +112,7 @@ Type 'q()' to quit R.
 [1] 55
 > q()
 Save workspace image? [y/n/c]: n
-[alice@{{ site.devel.name }} lxc]$ 
+[alice@{{ site.devel.name }} lxc]$
 ```
 
 Exactly what is "run" is defined by the so called [`%runscript`] of the Apptainer container, or the [`CMD`] entry if imported from a Docker container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
@@ -131,8 +132,8 @@ Note that, the Apptainer image is marked as an _executable_, which means you can
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.sif
 
-R version 4.1.3 (2022-03-10) -- "One Push-Up"
-Copyright (C) 2022 The R Foundation for Statistical Computing
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -152,7 +153,7 @@ Type 'q()' to quit R.
 > sum(1:10)
 [1] 55
 > q("no")
-[alice@{{ site.devel.name }} lxc]$ 
+[alice@{{ site.devel.name }} lxc]$
 ```
 
 To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not Rocky 8 as on the {{ site.cluster.name }} host system), do:
@@ -161,18 +162,18 @@ To launch a shell within this container, and to also convince yourselves that th
 ```sh
 [alice@{{ site.devel.name }} lxc]$ apptainer shell rocker_r-base.sif
 Apptainer> head -3 /etc/os-release
-PRETTY_NAME="Debian GNU/Linux buster/sid"
+PRETTY_NAME="Debian GNU/Linux bookworm/sid"
 NAME="Debian GNU/Linux"
-ID=debian
+VERSION_CODENAME=bookworm
 Apptainer> Rscript --version
-R scripting front-end version 4.1.3 (2022-03-10)
-Copyright (C) 2022 The R Foundation for Statistical Computing
+Rscript (R) version 4.3.1 (2023-06-16)
 Apptainer> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
 NAME="Rocky Linux"
 VERSION="8.8 (Green Obsidian)"
 ID="rocky"
+
 ```
 
 
@@ -232,7 +233,7 @@ When it comes to the scheduler, there is nothing special about Apptainer per se 
 
 <!-- code-block label="rscript-sum" -->
 ```sh
-[alice@{{ site.devel.name }} lxc]$ apptainer exec rocker_r-base.sif Rscript -e "sum(1:10)"
+[alice@{{ site.devel.name }} lxc]$ apptainer exec "rocker_r-base.sif" Rscript -e "sum(1:10)"
 [1] 55
 [alice@{{ site.devel.name }} lxc]$ 
 ```

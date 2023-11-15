@@ -12,16 +12,20 @@ MDI_GROUP='boblab'
 MDI_HOSTNAME='{{ site.devel.name }}'
 PS1="[\u@\h \W]\$ "
 
-[[ -d "lxc" ]] && { 1>&2 echo "WARNING: Delete lxc/ to re-generated"; }
+path=lxc
+file=rocker_r-base.sif
+[[ -f "${path}/${file}" ]] && { >&2 echo "WARNING: Delete ${path}/${file} to re-generated"; }
 
 ## Skip if already exists
-if [[ ! -d "lxc" ]]; then
+if [[ ! -f "${path}/${file}" ]]; then
+>&2 echo "Building ${path}/${file} ..."
 mdi_code_block --label="build" <<EOF
-mkdir lxc
-cd lxc/
-apptainer build rocker_r-base.sif docker://rocker/r-base
-ls -l rocker_r-base.sif
+mkdir ${path}
+cd ${path}/
+apptainer build ${file} docker://rocker/r-base
+ls -l ${file}
 EOF
+>&2 ls -l "${path}/${file}"
 fi
 
 1>&2 echo "WARNING: .mdi/apptainer.code-block.label=run needs to be updated manually"
@@ -30,7 +34,7 @@ fi
 
 
 mdi_code_block --label="rscript-sum" --workdir=lxc <<EOF
-apptainer exec rocker_r-base.sif Rscript -e "sum(1:10)"
+apptainer exec "${file}" Rscript -e "sum(1:10)"
 
 EOF
 
