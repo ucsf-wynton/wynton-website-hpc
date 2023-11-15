@@ -28,3 +28,11 @@ EOF
 mdi_code_block --label="sbgrid" <<EOF
 source /programs/sbgrid.shrc
 EOF
+
+mdi_code_block --label="sbgrid-info-relion" <<EOF
+sbgrid-info -l relion
+EOF
+
+mdi_code_block --label="sbgrid-relion-version" <<EOF
+relion --version
+EOF

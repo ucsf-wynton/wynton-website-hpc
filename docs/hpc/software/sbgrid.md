@@ -70,13 +70,44 @@ enabled.  To enable the SBGrid, in the shell or in a job script, call
  Software used in the project was installed and configured by SBGrid.                   
  cite: eLife 2013;2:e01456, Collaboration gets the most out of software.                
 ********************************************************************************
- SBGrid installation last updated: 2023-04-06
+ SBGrid installation last updated: 2023-11-14
  Please submit bug reports and help requests to:       <bugs@sbgrid.org>  or
                                                        <https://sbgrid.org/bugs>
             For additional information visit https://sbgrid.org/wiki
 ********************************************************************************
 ********************************************************************************
 ```
+
+
+## Example running an SBGrid software
+
+After having enabled SBGrid, as explained above, SBGrid software tools
+work like regular tools.  For example, the SBGrid version of `relion`,
+
+<!-- code-block label="sbgrid-info-relion" -->
+```sh
+[alice@{{ site.devel.name }} ~]$ sbgrid-info -l relion
+  Version information for: /programs/x86_64-linux/relion
+
+Default version:                    4.0.1_cu11.6
+In-use version:                     4.0.1_cu11.6
+
+Installed versions:                 4.0.1_cu11.6 5.0-beta_cu12.2 5.0-beta_cu11.6 5.0-beta_cu10.1 4.0.1_cu12.2 4.0.1_cu12.1 4.0.1_cu10.1_legacy 4.0.0_cu11.6 4.0.0_cu10.1_legacy 4.0.0_cu10.1 4.0-beta2_cu11.5 4.0-beta2_cu11.4.1 4.0-beta2_cu10.2 4.0-beta_cu9.2 3.1.4_cu11.8 3.1.4_cu11.6 3.1.4_cu10.1_legacy 3.1.4_cu10.1 3.1.3_cu10.2 3.1.1_cu9.2 3.0.8_cu10.1 2.1_cu8.0 1.4-randomphase3d 1.4b 1.4 1.3
+Other available versions:           5.0-beta_cu12.2 5.0-beta_cu11.6 5.0-beta_cu10.1 4.0.1_cu12.2 4.0.1_cu12.1 4.0.1_cu10.1_legacy 4.0.0_cu11.6 4.0.0_cu10.1_legacy 4.0.0_cu10.1 4.0-beta2_cu11.5 4.0-beta2_cu11.4.1 4.0-beta2_cu10.2 4.0-beta_cu9.2 3.1.4_cu11.8 3.1.4_cu11.6 3.1.4_cu10.1_legacy 3.1.4_cu10.1 3.1.3_cu10.2 3.1.1_cu9.2 3.0.8_cu10.1 2.1_cu8.0 1.4-randomphase3d 1.4b 1.4 1.3 
+Overrides use this shell variable:  RELION_X
+
+```
+
+can be launched as:
+
+<!-- code-block label="sbgrid-relion-version" -->
+```sh
+[alice@{{ site.devel.name }} ~]$ relion --version
+RELION version: 4.0.1 
+Precision: BASE=double
+
+```
+
 
 
 ## Some SBGrid programs do not run on older compute nodes
