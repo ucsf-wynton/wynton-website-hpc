@@ -1,3 +1,0 @@
-[alice@{{ site.devel.name }} ~]$ scl enable rh-ruby25 $SHELL
-[alice@{{ site.devel.name }} ~]$ irb --version
-irb 0.9.6(09/06/30)

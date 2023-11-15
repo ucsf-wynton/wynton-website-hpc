@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
 # Usage: markin build scl.sh
 
+module purge
+
 # shellcheck disable=SC2034
 MDI_USER="alice"
 MDI_GROUP="boblab"
@@ -8,16 +10,27 @@ MDI_HOSTNAME="{{ site.devel.name }}"
 PS1="[\u@\h \W]\$ "
 
 mdi_code_block --label="list" <<EOF
-scl --list
+scl list-collections
 EOF
 
 mdi_code_block --label="list-one" <<EOF
-scl --list rh-ruby25
+scl list-packages gcc-toolset-11
 EOF
 
-mdi_code_block --label="ruby-ex-1" <<EOF
-scl enable rh-ruby25 "irb --version"
+mdi_code_block --label="gcc-toolset-version" <<EOF
+scl enable gcc-toolset-12 "gcc --version"
 EOF
 
-1>&2 echo "WARNING: .mdi/scl.code-block.label=ruby-ex-2 needs to be updated manually"
+mdi_code_block --label="module-load-scl-gcc-toolset" <<EOF
+module load CBI scl-gcc-toolset/12
+gcc --version
+EOF
+
+module load CBI scl-gcc-toolset/12
+mdi_code_block --label="module-unload-scl-gcc-toolset" <<EOF
+module unload CBI scl-gcc-toolset/12
+gcc --version
+EOF
+
+1>&2 echo "WARNING: .mdi/scl.code-block.label=gcc-toolset-version-2 needs to be updated manually"
 

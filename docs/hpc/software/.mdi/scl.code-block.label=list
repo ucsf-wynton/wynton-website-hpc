@@ -1,13 +1,5 @@
-[alice@{{ site.devel.name }} ~]$ scl --list
-devtoolset-10
-devtoolset-11
-devtoolset-7
-devtoolset-8
-devtoolset-9
-llvm-toolset-7
-rh-python36
-rh-python38
-rh-ruby25
-rh-ruby26
-rh-ruby27
-rh-ruby30
+[alice@{{ site.devel.name }} ~]$ scl list-collections
+gcc-toolset-10
+gcc-toolset-11
+gcc-toolset-12
+gcc-toolset-9
