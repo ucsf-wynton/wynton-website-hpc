@@ -283,11 +283,13 @@ upon a Docker Miniconda3 image (available at
 installing `isoseq3` from the Bioconda channel (available at
 <https://anaconda.org/bioconda/isoseq3>):
 
+<!-- code-block label="isoseq3-def" -->
 ```sh
 Bootstrap: docker
 From: continuumio/miniconda3
 
 %post
+  /opt/conda/bin/conda config --set notify_outdated_conda false
   /opt/conda/bin/conda config --add channels bioconda
   /opt/conda/bin/conda install isoseq3
 
@@ -298,54 +300,99 @@ From: continuumio/miniconda3
 To build a container image from this definition file, use `apptainer
 build` as in:
 
+<!-- code-block label="isoseq3-build" -->
 ```sh
+[alice@{{ site.devel.name }} ~]$ mkdir lxc
+mkdir: cannot create directory ‘lxc’: File exists
+[alice@{{ site.devel.name }} ~]$ cd lxc/
 [alice@{{ site.devel.name }} lxc]$ apptainer build isoseq3.sif isoseq3.def
+INFO:    User not listed in /etc/subuid, trying root-mapped namespace
+INFO:    The %post section will be run under fakeroot
 INFO:    Starting build...
 Getting image source signatures
-Copying blob 7b4354700ca4 done
-Copying blob 3f4ca61aafcd done
-Copying blob 69a5d9e1ecd6 done
-Copying config 8c73281886 done
+Copying blob sha256:129bc9a4304fe3a6ef0435e6698ab6bc2728b6f92078718fb28cb4b54ac59e96
+Copying blob sha256:62aa66a9c405da603a06d242539b8f0dd178ae4179bf52584bbcce7a0471795f
+Copying blob sha256:e67fdae3559346105027c63e7fb032bba57e62b1fe9f2da23e6fdfb56384e00b
+Copying config sha256:6fbaadd54391b461351b02c0ddaf2bf284a2dcc9817f5685e07b2602e30f2b5c
 Writing manifest to image destination
 Storing signatures
-2023/01/24 13:50:37  info unpack layer: sha256:3f4ca61aafcd4fc07267a105067db35c0f0ac630e1970f3cd0c7bf552780e985
-2023/01/24 13:50:39  info unpack layer: sha256:69a5d9e1ecd6566da53d0978004bdf37dddfaba1d8a6117966f397b41cbbc529
-2023/01/24 13:50:42  info unpack layer: sha256:7b4354700ca480732ead22a553cc45916dc5466709ca64d964c4647b5b9343e9
+2023/11/15 13:07:50  info unpack layer: sha256:e67fdae3559346105027c63e7fb032bba57e62b1fe9f2da23e6fdfb56384e00b
+2023/11/15 13:07:51  info unpack layer: sha256:62aa66a9c405da603a06d242539b8f0dd178ae4179bf52584bbcce7a0471795f
+2023/11/15 13:07:53  info unpack layer: sha256:129bc9a4304fe3a6ef0435e6698ab6bc2728b6f92078718fb28cb4b54ac59e96
 INFO:    Running post scriptlet
++ /opt/conda/bin/conda config --set notify_outdated_conda false
 + /opt/conda/bin/conda config --add channels bioconda
 + /opt/conda/bin/conda install isoseq3
-Collecting package metadata (current_repodata.json): done
-…
-done
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /opt/conda
+
+  added / updated specs:
+    - isoseq3
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    isoseq-4.0.0               |       h9ee0642_0         2.9 MB  bioconda
+    isoseq3-4.0.0              |       h9ee0642_0           7 KB  bioconda
+    openssl-3.0.12             |       h7f8727e_0         5.2 MB
+    ------------------------------------------------------------
+                                           Total:         8.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  isoseq             bioconda/linux-64::isoseq-4.0.0-h9ee0642_0 
+  isoseq3            bioconda/linux-64::isoseq3-4.0.0-h9ee0642_0 
+
+The following packages will be UPDATED:
+
+  openssl                                 3.0.11-h7f8727e_2 --> 3.0.12-h7f8727e_0 
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
 INFO:    Adding runscript
 INFO:    Creating SIF file...
 INFO:    Build complete: isoseq3.sif
-[alice@{{ site.devel.name }} lxc]$ 
+[alice@{{ site.devel.name }} lxc]$ ls -l isoseq3.sif
+-rwxr-xr-x. 1 alice boblab 214814720 Nov 15 13:08 isoseq3.sif
 ```
 
 The results is a container image file named `isoseq3.sif`:
 
+<!-- code-block label="isoseq3-ls" -->
 ```sh
-[alice@{{ site.devel.name }}]$ ls -l isoseq3.sif
--rwxr-xr-x. 1 alice boblab 164265984 Jan 24 13:51 isoseq3.sif
+[alice@{{ site.devel.name }} lxc]$ ls -l isoseq3.sif
+-rwxr-xr-x. 1 alice boblab 214814720 Nov 15 13:08 isoseq3.sif
+[alice@{{ site.devel.name }} lxc]$ 
 ```
 
 Because the definition file has an [`%runscript`] entry, we can call this image directly as-is, e.g.
 
+<!-- code-block label="isoseq3-version" -->
 ```sh
-[alice@{{ site.devel.name }}]$ ./isoseq3.sif --version
-isoseq3 3.8.2 (commit v3.8.2)
+[alice@{{ site.devel.name }} lxc]$ ./isoseq3.sif --version
+isoseq 4.0.0 (commit v4.0.0)
 
 Using:
-  pbbam     : 2.2.0 (commit v2.2.0-1-g8c081f6)
-  pbcopper  : 2.1.0 (commit v2.1.0)
-  pbmm2     : 1.9.0 (commit v1.9.0-2-gbec8e28)
+  pbbam     : 2.4.99 (commit v2.4.0-16-g5cc6e4b)
+  pbcopper  : 2.3.99 (commit v2.3.0-14-g5ac5693)
+  pbmm2     : 1.11.99 (commit v1.11.0-1-g1b5a417)
   minimap2  : 2.15
   parasail  : 2.1.3
   boost     : 1.77
-  htslib    : 1.14
-  zlib      : 1.2.11
-[alice@{{ site.devel.name }}]$ 
+  htslib    : 1.17
+  zlib      : 1.2.13
+[alice@{{ site.devel.name }} lxc]$ 
 ```
 
 
