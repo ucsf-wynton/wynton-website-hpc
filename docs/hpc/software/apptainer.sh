@@ -64,20 +64,19 @@ mdi_code_block --label="isoseq3-build" <<EOF
 mkdir ${path}
 cd ${path}/
 apptainer build ${file} isoseq3.def
-ls -l ${file}
 EOF
 >&2 ls -l "${path}/${file}"
 fi
 
 
 mdi_code_block --label="isoseq3-ls" --workdir=lxc <<EOF
-ls -l isoseq3.sif
+ls -l ${file}
 
 EOF
 
 
 mdi_code_block --label="isoseq3-version" --workdir=lxc <<EOF
-./isoseq3.sif --version
+./${file} --version
 
 EOF
 

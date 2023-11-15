@@ -1,3 +1,3 @@
 [alice@{{ site.devel.name }} lxc]$ ls -l isoseq3.sif
--rwxr-xr-x. 1 alice boblab 214814720 Nov 15 13:08 isoseq3.sif
+-rwxr-xr-x. 1 alice boblab 214814720 Nov 15 13:19 isoseq3.sif
 [alice@{{ site.devel.name }} lxc]$ 
