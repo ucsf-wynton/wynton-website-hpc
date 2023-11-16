@@ -141,12 +141,12 @@ downloaded 764 KB
 ** package ‘zoo’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-zoo/00new/zoo/libs
+using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
+gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -shared -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/lib -lR
+installing to {{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst
@@ -162,7 +162,7 @@ installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }
 * DONE (zoo)
 
 The downloaded source packages are in
-        '/tmp/RtmpVm3e6t/downloaded_packages'
+        '/scratch/alice/RtmpVm3e6t/downloaded_packages'
 >
 ```
 
@@ -205,15 +205,15 @@ If you already have **[BiocManager]** installed, you can skip this section.  Whe
 <!-- code-block label="install-BiocManager" -->
 ```r
 > install.packages("BiocManager")
-Installing package into '{{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '/wynton/home/cbi/hb/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.21.tar.gz'
-Content type 'application/x-gzip' length 582625 bytes (568 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.22.tar.gz'
+Content type 'application/x-gzip' length 582690 bytes (569 KB)
 ==================================================
-downloaded 568 KB
+downloaded 569 KB
 
-* installing *source* package 'BiocManager' ...
-** package 'BiocManager' successfully unpacked and MD5 sums checked
+* installing *source* package ‘BiocManager’ ...
+** package ‘BiocManager’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** R
 ** inst
@@ -228,7 +228,7 @@ downloaded 568 KB
 * DONE (BiocManager)
 
 The downloaded source packages are in
-        '/tmp/RtmpohfP1g/downloaded_packages'
+        '/scratch/alice/RtmpSRgaB4/downloaded_packages'
 > 
 ```
 
@@ -242,22 +242,22 @@ With **BiocManager** installed, we can now install any Bioconductor package.  Fo
 <!-- code-block label="install-limma" -->
 ```r
 > BiocManager::install("limma")
-Bioconductor version 3.17 (BiocManager 1.30.21), R 4.3.1 (2023-06-16)
+Bioconductor version 3.18 (BiocManager 1.30.22), R 4.3.2 (2023-10-31)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/limma_3.56.2.tar.gz'
-Content type 'application/x-gzip' length 1515291 bytes (1.4 MB)
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/limma_3.58.1.tar.gz'
+Content type 'application/x-gzip' length 2804950 bytes (2.7 MB)
 ==================================================
-downloaded 1.4 MB
+downloaded 2.7 MB
 
 * installing *source* package ‘limma’ ...
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/{{ r_basename }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-limma/00new/limma/libs
+using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
+gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -lR          
+installing to {{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -272,7 +272,7 @@ installing to {{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }
 * DONE (limma)
 
 The downloaded source packages are in
-        '/scratch/alice/Rtmpz9uHdz/downloaded_packages'
+        ‘/scratch/alice/Rtmp4dISqw/downloaded_packages’
 >
 ```
 
@@ -348,7 +348,7 @@ downloaded 103 KB
 configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
-using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
+using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
 gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
 gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
