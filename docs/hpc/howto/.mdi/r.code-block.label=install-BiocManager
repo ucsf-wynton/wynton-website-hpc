@@ -1,13 +1,13 @@
 > install.packages("BiocManager")
-Installing package into '{{ site.user.home }}R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '/wynton/home/cbi/hb/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.21.tar.gz'
-Content type 'application/x-gzip' length 582625 bytes (568 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.22.tar.gz'
+Content type 'application/x-gzip' length 582690 bytes (569 KB)
 ==================================================
-downloaded 568 KB
+downloaded 569 KB
 
-* installing *source* package 'BiocManager' ...
-** package 'BiocManager' successfully unpacked and MD5 sums checked
+* installing *source* package ‘BiocManager’ ...
+** package ‘BiocManager’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** R
 ** inst
@@ -22,5 +22,5 @@ downloaded 568 KB
 * DONE (BiocManager)
 
 The downloaded source packages are in
-        '/tmp/RtmpohfP1g/downloaded_packages'
+        '/scratch/alice/RtmpSRgaB4/downloaded_packages'
 > 
