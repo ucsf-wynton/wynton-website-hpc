@@ -88,11 +88,11 @@ The majority of R packages are available from [CRAN] (Comprehensive R Archive Ne
 
 Before continuing, it is useful to understand where R packages looks for locally installed R packages.  There are three locations that R considers:
 
-1. Your personal R package library. This is located under `~/R/`, e.g. `~/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/`
+1. Your personal R package library. This is located under `~/R/`, e.g. `~/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/`
 
 2. (optional) A site-wide R package library (not used on {{ site.cluster.name }})
 
-3. The system-wide R package library part of the R installed, e.g. `{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/library`
+3. The system-wide R package library part of the R installed, e.g. `{{ r_path }}/lib64/R/library`
 
 
 
@@ -123,7 +123,7 @@ Now, in order to install, for instance, the **[zoo]** package available on CRAN,
 ```r
 > install.packages("zoo")
 Warning in install.packages("zoo") :
-  'lib = "{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/library"' is not writable
+  'lib = "{{ r_path }}/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
 ```
 
@@ -141,7 +141,7 @@ R wants to make sure you are aware what is done, so it will, conservatively, als
 <!-- code-block label="install-zoo" -->
 ```r
 Would you like to create a personal library
-'~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+'~/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-12.tar.gz'
 Content type 'application/x-gzip' length 782344 bytes (764 KB)
@@ -337,10 +337,6 @@ In addition to making OpenMPI available by loading the `mpi` module, several MPI
 
 #### Package **Rmpi**
 
-<!--
-Rocky 8: install.packages("Rmpi") works out of the box /HB 2023-09-16
--->
-
 The **[Rmpi]** package does not install out-of-the-box like other R packages.  To install **Rmpi** on the cluster, we have to load the `mpi` module (see above) before starting R.  Then, to install **Rmpi**, we launch R and call the following:
 
 <!-- code-block label="install-Rmpi" -->
@@ -366,7 +362,7 @@ gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARN
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
 gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -lR
+gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ r_path }}/lib64/R/lib -lR
 installing to {{ r_libs_user_path }}/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo
@@ -419,7 +415,7 @@ Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbd
 
 ```r
 > install.packages("pbdMPI", configure.args="--with-mpi-include=$MPI_INCLUDE --with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
-Installing package into '{{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
 * installing *source* package 'pbdMPI' ...
 ** package 'pbdMPI' successfully unpacked and MD5 sums checked
@@ -484,12 +480,12 @@ echo "PKG_CPPFLAGS = -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI" >> Makecon
 echo "PKG_LIBS = -L/usr/lib64/openmpi/lib -lmpi  -lutil -lpthread" >> Makeconf
 echo "PROF_LDFLAGS = " >> Makeconf
 echo "ENABLE_LD_LIBRARY_PATH = no" >> Makeconf
-gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
-gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
 ...
-gcc -I"{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c zzz.c -o zzz.o
-gcc -shared -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi/lib -lmpi -lutil -lpthread -L{{ site.path.cbi_software }}/{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -lR
-installing via 'install.libs.R' to {{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-pbdMPI/00new/pbdMPI
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c zzz.c -o zzz.o
+gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi/lib -lmpi -lutil -lpthread -L{{ r_path }}/lib64/R/lib -lR
+installing via 'install.libs.R' to {{ r_libs_user_path }}/00LOCK-pbdMPI/00new/pbdMPI
 ** R
 ** demo
 ** inst
@@ -538,9 +534,9 @@ configure: Attempting legacy configuration of rjags
 checking for jags... no
 configure: error: "automatic detection of JAGS failed. Please use pkg-config to locate the JAGS library. See the INSTALL file for details."
 ERROR: configuration failed for package 'rjags'
-* removing '{{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/rjags'
+* removing '{{ r_libs_user_path }}/rjags'
 ERROR: dependency 'rjags' is not available for package 'infercnv'
-* removing '{{ site.user.home }}/R/rocky8-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/infercnv'
+* removing '{{ r_libs_user_path }}/infercnv'
 ```
 
 The error says that the "JAGS library" is missing.  It's available via
