@@ -26,7 +26,7 @@
             "pattern": "^https://gatk.broadinstitute.org/"
         },
         {
-            "pattern": "https://wynton.ucsf.edu/hpc/software/scl.html"
+            "pattern": "^https://wynton.ucsf.edu/hpc/software/scl.html.*"
         }
      ],
     
