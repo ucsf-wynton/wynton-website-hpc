@@ -1,12 +1,3 @@
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ 2022-10-28: **Beta version!** The instructions on this page are fresh and might be updated soon. That said, they have been validated and approved by a group of experienced Conda users. If you run into issues, please let us know.
-</div>
-
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-⚠️ 2023-06-11: If you've used `module load CBI miniconda3-py39/4.12.0` in the past, please update to use `module load CBI miniconda3/4.12.0-py39` instead. It loads the same Conda version - it's just the module name structure that has been tidied up.
-</div>
-
-
 # Work with Conda
 
 [Conda] is a package manager and an environment management system.  It's popular, because it simplifies installation of many scientific software tools.  There are two main distributions of Conda:
