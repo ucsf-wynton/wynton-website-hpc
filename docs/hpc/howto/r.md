@@ -2,9 +2,15 @@
 
 {% assign r_basename = "R-4.3.2-gcc10" %}
 
-{% assign linux_distro = "_rocky8" %}
+{% assign linux_distro = "rocky8" %}
 
 {% assign r_libs_user = "4.3-CBI-gcc10" %}
+
+{% assign r_path = site.path.cbi_software | append: "/_" | append: linux_distro | append: "/" | append: r_basename %}
+
+```
+r_path='{{ r_path }}'
+```
 
 R is available on {{ site.cluster.name }} via a [contributed environment module]({{ '/software/software-repositories.html' | relative_url }}).
 
