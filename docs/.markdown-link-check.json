@@ -24,9 +24,6 @@
         {
             "comment": "Generates HTTP 403 (hmm)",
             "pattern": "^https://gatk.broadinstitute.org/"
-        },
-        {
-            "pattern": ".*https://wynton.ucsf.edu/hpc/software/scl.html.*"
         }
      ],
     

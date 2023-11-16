@@ -120,6 +120,11 @@ check-absolute-links:
 	     ok_count=$$((ok_count+1))
 	     $(TPUT) && printf "\r"
 	     printf "[$(OK)] checking %s\\n" "$$file"
+	   elif [[ "$(basename "$${file}")" == */software/software-repositories.md ]] && ! grep -q -H -i -E "/scl[.]html$$" "$${file}" ; then
+	     ## SPECIAL CASE             
+	     ok_count=$$((ok_count+1))
+	     $(TPUT) && printf "\r"
+	     printf "[$(OK)] checking %s\\n" "$$file"
 	   else
 	     error_count=$$((error_count+1))
 	     $(TPUT) && printf "\r"
