@@ -73,7 +73,7 @@ _Note:_ These core tools will be updated without notice as the
 operating system is updated on a regular basis.  Many of the
 tools originate from the (stable) Rocky 8
 repositories.  To see what software and system libraries that are
-installed, run `dnf --cached-only list`.  Please note that, compared to
+installed, run `dnf --cacheonly list`.  Please note that, compared to
 compute nodes, the development nodes have additional software
 installed (typically named `-devel`) needed to build and compile from
 source.
