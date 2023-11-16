@@ -292,12 +292,14 @@ to your `~/.bashrc` file.
 The GCC development tools that come built-in on our Rocky 8 system is
 sufficient for most needs.  For example, the default `gcc` version is:
 
+<!-- code-block label="gcc-version" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ gcc --version
 gcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-18)
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
 ```
 
 This GCC 8.5.0 compiler supports older C++ standards such as C++17,
@@ -320,13 +322,15 @@ Collections (SCLs)].  The easiest way to access these is via the
 `scl-gcctoolset` modules in the [CBI software repository], e.g.
 
 
+<!-- code-block label="module-load-scl-gcc-toolset" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI scl-gcctoolset/120
+[alice@{{ site.devel.name }} ~]$ module load CBI scl-gcc-toolset/12
 [alice@{{ site.devel.name }} ~]$ gcc --version
 gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-7)
 Copyright (C) 2022 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
 ```
 
 You only need to load these compiler tools prior to installing the
