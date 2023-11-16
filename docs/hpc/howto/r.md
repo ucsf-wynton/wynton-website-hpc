@@ -153,11 +153,11 @@ downloaded 764 KB
 ** using staged installation
 ** libs
 using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-zoo/00new/zoo/libs
+gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
+gcc -shared -L{{ r_path }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ r_path }}/lib/R/lib -lR
+installing to {{ r_libs_user_path }}/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst
@@ -216,7 +216,7 @@ If you already have **[BiocManager]** installed, you can skip this section.  Whe
 <!-- code-block label="install-BiocManager" -->
 ```r
 > install.packages("BiocManager")
-Installing package into '/wynton/home/cbi/hb/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.22.tar.gz'
 Content type 'application/x-gzip' length 582690 bytes (569 KB)
@@ -264,11 +264,11 @@ downloaded 2.7 MB
 ** using staged installation
 ** libs
 using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -lR          
-installing to {{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-limma/00new/limma/libs
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ r_path }}/lib64/R/lib -lR          
+installing to {{ r_libs_user_path }}/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -346,7 +346,7 @@ The **[Rmpi]** package does not install out-of-the-box like other R packages.  T
 <!-- code-block label="install-Rmpi" -->
 ```r
 > install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
-Installing package into '{{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.7-1.tar.gz'
 Content type 'application/x-gzip' length 106286 bytes (103 KB)
@@ -360,14 +360,14 @@ configure: creating ./config.status
 config.status: creating src/Makevars
 ** libs
 using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
-gcc -I"{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
+gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L{{ site.path.cbi_software }}/_{{ linux_distro }}/{{ r_basename }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -lR
-installing to {{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-Rmpi/00new/Rmpi/libs
+gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -lR
+installing to {{ r_libs_user_path }}/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo
 ** inst
