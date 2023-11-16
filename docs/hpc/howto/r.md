@@ -1,16 +1,21 @@
 # Work with R
 
-{% assign r_basename = "R-4.3.2-gcc10" %}
-
 {% assign linux_distro = "rocky8" %}
+
+{% assign r_basename = "R-4.3.2-gcc10" %}
 
 {% assign r_libs_user = "4.3-CBI-gcc10" %}
 
 {% assign r_path = site.path.cbi_software | append: "/_" | append: linux_distro | append: "/" | append: r_basename %}
 
+{% assign r_libs_user_path = site.user.home | append: "R/" | append: linux_distro | append: "-x86_64-pc-linux-gnu-library" | append: "/" | append: r_libs_user %}
+
+<!--
 ```
 r_path='{{ r_path }}'
+r_libs_user_path='{{ r_libs_user_path }}'
 ```
+-->
 
 R is available on {{ site.cluster.name }} via a [contributed environment module]({{ '/software/software-repositories.html' | relative_url }}).
 

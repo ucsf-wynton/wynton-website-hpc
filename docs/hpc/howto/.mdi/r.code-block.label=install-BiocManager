@@ -1,5 +1,5 @@
 > install.packages("BiocManager")
-Installing package into '/wynton/home/cbi/hb/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.22.tar.gz'
 Content type 'application/x-gzip' length 582690 bytes (569 KB)

@@ -15,7 +15,7 @@ gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/incl
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
 gcc -shared -L{{ r_path }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ r_path }}/lib/R/lib -lR
-installing to {{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-zoo/00new/zoo/libs
+installing to {{ r_libs_user_path }}/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
 ** inst

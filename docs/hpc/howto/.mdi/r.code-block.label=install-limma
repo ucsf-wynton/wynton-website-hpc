@@ -14,7 +14,7 @@ gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -
 gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o
 gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
 gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ r_path }}/lib64/R/lib -lR          
-installing to {{ site.user.home }}R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/00LOCK-limma/00new/limma/libs
+installing to {{ r_libs_user_path }}/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
