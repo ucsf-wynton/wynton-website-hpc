@@ -1,38 +1,41 @@
 {
-	"ignorePatterns": [
-		{
-			"pattern": "^http://127.0.0.1:"
-		},
-		{
-			"pattern": "^https://www.cgl.ucsf.edu/admin/"
-		},
-		{
-			"pattern": "^https://mon.wynton.ucsf.edu/"
-		},
-		{
-			"pattern": "^https://jhub.wynton.ucsf.edu/"
-		},
-		{
-			"pattern": "^https://it.ucsf.edu/service/keeper-password-vault"
-		},
-		{
-			"pattern": "^https://support.box.com/hc/en-us/articles/360043697414-Using-Box-with-FTP-or-FTPS"
-		},
-		{
-		        "pattern": "^https://listsrv.ucsf.edu/"
-		},
-		{
-		        "comment": "Generates HTTP 403 (hmm)",
-		        "pattern": "^https://gatk.broadinstitute.org/"
-		}
- 	],
+    "ignorePatterns": [
+        {
+            "pattern": "^http://127.0.0.1:"
+        },
+        {
+            "pattern": "^https://www.cgl.ucsf.edu/admin/"
+        },
+        {
+            "pattern": "^https://mon.wynton.ucsf.edu/"
+        },
+        {
+            "pattern": "^https://jhub.wynton.ucsf.edu/"
+        },
+        {
+            "pattern": "^https://it.ucsf.edu/service/keeper-password-vault"
+        },
+        {
+            "pattern": "^https://support.box.com/hc/en-us/articles/360043697414-Using-Box-with-FTP-or-FTPS"
+        },
+        {
+            "pattern": "^https://listsrv.ucsf.edu/"
+        },
+        {
+            "comment": "Generates HTTP 403 (hmm)",
+            "pattern": "^https://gatk.broadinstitute.org/"
+        },
+        {
+            "pattern": "https://wynton.ucsf.edu/hpc/software/scl.html"
+        }
+     ],
     
-	"replacementPatterns": [
-		{
-			"pattern": "^.attachments",
-			"replacement": "file://some/conventional/folder/.attachments"
-		}
-	],
+    "replacementPatterns": [
+        {
+            "pattern": "^.attachments",
+            "replacement": "file://some/conventional/folder/.attachments"
+        }
+    ],
     
-	"seealso": "https://github.com/tcort/markdown-link-check"
+    "seealso": "https://github.com/tcort/markdown-link-check"
 }
