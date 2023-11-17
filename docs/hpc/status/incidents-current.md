@@ -1,4 +1,30 @@
-### November 15-November 24(?), 2023
+### November 16-ongoing, 2023
+
+#### <span style="color: orange;">Sporadic job failure</span>
+
+**Update**: The "can't get password entry for user" error happens on
+some compute nodes where the System Security Services Daemon (SSSD)
+has failed.  Until the cause for failed SSSD has been identified and
+resolved, the only solution is to resubmit the job.
+<br><span class="timestamp">November 17, 09:30 PT</span>
+
+**Notice**: Some jobs end up in an error state (Eqw) with an error
+"can't get password entry for user "alice". Either user does not exist
+or error with NIS/LDAP etc."
+<br><span class="timestamp">November 16, 17:00 PT</span>
+
+<!--
+start: 2023-11-17T16:00:00
+stop: 
+length: 
+severity: 
+affected: jobs
+reason: scheduled
+ -->
+
+
+
+### November 15-ongoing, 2023
 
 #### <span style="color: orange;">Upgrading compute nodes</span>
 
@@ -22,7 +48,7 @@ reason: scheduled
 
 
 
-### November 5-24(?), 2023
+### November 5-ongoing, 2023
 
 #### <span style="color: orange;">Passwords cannot be reset</span>
 

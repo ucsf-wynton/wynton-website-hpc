@@ -91,4 +91,5 @@ condition: is operational
 
 level: warning
 condition: is operational
-message: (1) Wynton now runs Rocky 8 Linux. (2) Expect longer waiting times on the queue until more compute nodes have been re-enabled.
+message: (1) Wynton now runs Rocky 8 Linux. (2) Expect longer waiting times on the queue until more compute nodes have been re-enabled. (3) Some jobs end up in an error state (Eqw) with an error "can't get password entry for user "alice". Either user does not exist or error with NIS/LDAP etc."
+
