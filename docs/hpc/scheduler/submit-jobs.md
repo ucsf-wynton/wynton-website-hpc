@@ -167,12 +167,18 @@ Similarly to the SMP parallel environment, we can request slots on a single host
 qsub -pe mpi_onehost 10 -l mem_free=2G script.sh
 ```
 
-There are two versions of MPI on Wynton:
+where the job script looks like something like:
 
- * OpenMPI 3.1.3, available via `module load mpi` or `module load mpi/openmpi3-x86_64`
- * OpenMPI 1.10.7, available via `module laod mpi/openmpi-x86_64`
+```sh
+#! /usr/bin/env bash
+#$ -S /bin/bash       # the shell language when run via the job scheduler [IMPORTANT]
+#$ -cwd               # job should run in the current working directory
 
-To launch a parallel job using MPI, put `mpirun -np $NSLOTS` before your application and its arguments in your job script `script.sh`.
+module load mpi/openmpi-x86_64
+
+## Important: Make sure to $NHOSTS here
+mpirun -np $NSLOTS /path/to/the_app
+```
 
 
 ### MPI multi-host parallel processing [`-pe mpi <slots>`]
