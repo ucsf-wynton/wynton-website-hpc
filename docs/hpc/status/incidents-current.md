@@ -28,6 +28,9 @@ reason: scheduled
 
 #### <span style="color: orange;">Upgrading compute nodes</span>
 
+**Update**: A total of ~10,000 CPU cores are now up and running.
+<br><span class="timestamp">November 21, 01:00 PT</span>
+
 **Update**: 98 compute nodes with a total of 2,780 CPU cores are now
 up and running.
 <br><span class="timestamp">November 16, 15:00 PT</span>
