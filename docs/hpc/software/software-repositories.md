@@ -4020,24 +4020,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2023.09/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4056,6 +4038,24 @@ prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </details>
   </dd>
 </dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_sali_boost" class="module-name">boost</h3>
 <dl>
   <dd class="module-details">
@@ -4069,9 +4069,9 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
 module-whatis &quot;URL: https://www.boost.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/include
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
@@ -5518,12 +5518,12 @@ module-whatis &quot;Description: Protocol Buffers - Google's data interchange fo
 module-whatis &quot;URL: https://developers.google.com/protocol-buffers/&quot;
 conflict python2
 module load python3/six
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64/python3.6/site-packages
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/bin
-prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/share/emacs/site-lisp
-prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/include
-prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2-gcc10/lib64
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64/python3.6/site-packages
+prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/bin
+prepend-path EMACSLOADPATH   /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/share/emacs/site-lisp
+prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/include
+prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py36-3.11.2/lib64
 </code></pre>
 
 </details>
