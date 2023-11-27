@@ -72,7 +72,7 @@ Node                               | Physical Cores |      RAM | Local `/scratch
 `{{ site.dev1.hostname }}`         |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
 `{{ site.dev2.hostname }}`         |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
 `{{ site.dev3.hostname }}`         |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.gpudev1.hostname }}`      |             32 |  128 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
+`{{ site.gpudev1.hostname }}`      |             56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
 `p{{ site.dev1.hostname }}` (for PHI users)    |  32 | 256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                    |
 `p{{ site.gpudev1.hostname }}` (for PHI users) |  32 | 128 GiB |         0.87 TiB | x86-64-v3        | Intel E5-2640 v3              | NVIDIA Tesla K80   |
 
