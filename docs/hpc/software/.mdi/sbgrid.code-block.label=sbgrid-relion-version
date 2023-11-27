@@ -1,0 +1,4 @@
+[alice@{{ site.devel.name }} ~]$ relion --version
+RELION version: 4.0.1 
+Precision: BASE=double
+
