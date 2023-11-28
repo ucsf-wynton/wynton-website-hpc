@@ -206,6 +206,16 @@ drives = ["wynton_scratch_hb", "wynton_home_cbi_hb", "wynton_group_cbi_hb"];
 // Baseline is when there is no load on the file system (rough estimate)
 baseline = 19.0;
 
+function date_to_string(d) {
+  var YY = d.getFullYear().toString();
+  var mm = (d.getMonth()+1).toString().length==2?(d.getMonth()+1).toString():"0"+(d.getMonth()+1).toString();
+  var dd = d.getDate().toString().length==2?d.getDate().toString():"0"+d.getDate().toString();
+  var HH = d.getHours().toString().length==2?d.getHours().toString():"0"+d.getHours().toString();
+  var MM = (parseInt(d.getMinutes()/5)*5).toString().length==2?(parseInt(d.getMinutes()/5)*5).toString():"0"+(parseInt(d.getMinutes()/5)*5).toString();
+  var SS = "00";
+  return YY + "-" + mm + "-" + dd + " " + HH + ":" + MM + ":" + SS;
+}
+
 drives.forEach(function(drive) {
   var name = host + "__" + drive;
   var id = "BeeGFSLoad_" + name;
@@ -237,12 +247,16 @@ drives.forEach(function(drive) {
     }
   
     var data = [beegfs_load];
-  
+
+    var now = new Date();
+    var from = new Date(now - 24 * 60 * 60 * 1000);
+
     var layout = {
       height: 200,
       margin: { l: 50, r: 30, b: 40, t: 60, pad: 4 },
       xaxis: {
-        autorange: true,
+        autorange: false,
+        range: [date_to_string(from), date_to_string(now)],
         rangeselector: {buttons: [
             {
               count: 1,
