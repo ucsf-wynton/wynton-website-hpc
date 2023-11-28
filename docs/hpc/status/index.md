@@ -269,7 +269,8 @@ drives.forEach(function(drive) {
               stepmode: 'backward'
             },
             {
-              step: 'all'
+              step: 'all',
+              label: 'all'
             }
           ]},
         type: 'date'
