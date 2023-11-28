@@ -240,7 +240,7 @@ drives.forEach(function(drive) {
   
     var layout = {
       height: 200,
-      margin: { l: 50, r: 30, b: 30, t: 60, pad: 4 },
+      margin: { l: 50, r: 30, b: 40, t: 60, pad: 4 },
       xaxis: {
         autorange: true,
         rangeselector: {buttons: [
