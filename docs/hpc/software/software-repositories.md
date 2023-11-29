@@ -4069,9 +4069,9 @@ Versions: <span class="module-version">1.68.0, <em>1.73.0</em></span><br>
 module-whatis &quot;Description: The free peer-reviewed portable C++ source libraries&quot;
 module-whatis &quot;URL: https://www.boost.org/&quot;
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
-  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
-  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/include
-  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0-gcc10/lib64
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
+  prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/include
+  prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/boost-1.73.0/lib64
 } else {
   set curMod [module-info name]
   puts stderr &quot;'$curMod' does not work on Fedora - ask a sysadmin to install the RPM package instead&quot;
