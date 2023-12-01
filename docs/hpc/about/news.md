@@ -1,5 +1,7 @@
 # News
 
+2023-11-30: The JupyterHub (JHub) server has been discontinued.
+
 2023-11-15: Wynton is now running [Rocky 8] Linux.
 
 2023-11-06: Wynton has been upgrade to [Rocky 8] Linux from CentOS 7.
