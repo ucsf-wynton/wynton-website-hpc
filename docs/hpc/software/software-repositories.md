@@ -93,7 +93,7 @@ prepend-path  PYTHONPATH      /usr/local/amber20/lib/python3.6/site-packages
 <h3 id="module_built-in_cuda" class="module-name">cuda</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">7.5, 8.0, 9.1, 9.2, 10.1, 11.0, 11.4, <em>11.5</em></span><br>
+Versions: <span class="module-version">7.5, 8.0, 9.1, 9.2, 10.1, 11.0, 11.3, 11.4, <em>11.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -1462,7 +1462,6 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.</span><br>
 Example: <span class="module-example"><code>gistic2</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/cancer/cga/gistic">https://software.broadinstitute.org/cancer/cga/gistic</a>, <a href="https://github.com/broadinstitute/gistic2/blob/master/support/README.txt">https://github.com/broadinstitute/gistic2/blob/master/support/README.txt</a> (changelog), <a href="https://github.com/broadinstitute/gistic2">https://github.com/broadinstitute/gistic2</a> (source code), <a href="https://www.genepattern.org/modules/docs/GISTIC_2.0/7">https://www.genepattern.org/modules/docs/GISTIC_2.0/7</a></span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>2.0.23</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
