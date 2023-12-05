@@ -90,8 +90,8 @@ spinner that never ends.  The user is presented with three options
 'Reload', 'Safe Mode', and 'Terminate R'.  Ideally, 'Safe Mode' or
 'Terminate R' would solve the problem and let the user access the
 RStudio GUI.  Unfortunately, for some users, none of these options
-helps.  Consecutive attempts to use `rsc stop` and `rsc start` fail
-for same reasons.
+help.  Consecutive attempts to use `rsc stop` and `rsc start` fail for
+same reasons.
 
 As of 2023-12-04, it is not clear to why and when this happens.  The
 one workaround we have found is to wipe the user's RStudio set up.
