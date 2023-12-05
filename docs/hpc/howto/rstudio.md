@@ -81,6 +81,28 @@ To terminate the RStudio Server, start by exiting R by typing `quit()` at the R 
 
 
 
+#### Stuck at "R is taking longer to start than usual"?
+
+Some users report that they stuck when they try to log in to RStudio.
+After they enter their username and password, and click 'Sign In',
+they get to a page "R is taking longer to start than usual" with a
+spinner that never ends.  Consecutive attempts to log in fail for same
+reasons.
+
+As of 2023-12-04, it is not clear to why and when this happens.  The
+one workaround we have found is to wipe the user's RStudio set up.
+We recommend to do:
+
+```sh
+$ tar -cvf ~/rstudio-config.tar ~/.local/share/rstudio && rm -rf ~/.local/share/rstudio
+```
+
+This will create a local copy of your problematic RStudio set up in
+file `~/rstudio-config.tar`, and, only then, remove the actually
+settings.  The next time you call `rsc start`, you should start out
+with a fresh RStudio set up, and the login issue should be gone.
+
+
 
 ## Alt 2. RStudio Desktop over X11 Forwarding
 
