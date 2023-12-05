@@ -31,21 +31,21 @@ title: Wynton HPC Status
    <div style="font-size: 150%; font-weight: bold;">
     <span>/wynton/scratch/ lagginess</span><span style="float: right;"></span>
    </div>
-   <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_scratch_hb"></div>
+   <div id="BeeGFSLoad_devX__wynton_scratch_hb"></div>
   </div>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
     <span>/wynton/home/ lagginess</span><span style="float: right;"></span>
    </div>
-   <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_home_cbi_hb"></div>
+   <div id="BeeGFSLoad_devX__wynton_home_cbi_hb"></div>
   </div>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
     <span>/wynton/group/ lagginess</span><span style="float: right;"></span>
    </div>
-   <div id="BeeGFSLoad_dev1.wynton.ucsf.edu__wynton_group_cbi_hb"></div>
+   <div id="BeeGFSLoad_devX__wynton_group_cbi_hb"></div>
   </div>
 
 _Figure: The total, relative processing time on the log-10 scale for one benchmarking run to complete over time. The values presented are relative to the best case scenario when there is no load, in case the value is 1.0. The larger the relative time is, the more lag there is on file system. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
@@ -201,7 +201,9 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
 
 <script>
 url_path = "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench";
-host = "dev1.wynton.ucsf.edu";
+host_set = "devX";
+hosts = ["dev1.wynton.ucsf.edu", "dev2.wynton.ucsf.edu", "dev3.wynton.ucsf.edu"];
+hosts = ["dev1.wynton.ucsf.edu"];
 drives = ["wynton_scratch_hb", "wynton_home_cbi_hb", "wynton_group_cbi_hb"];
 // Baseline is when there is no load on the file system (rough estimate)
 baseline = 19.0;
@@ -216,87 +218,114 @@ function date_to_string(d) {
   return YY + "-" + mm + "-" + dd + " " + HH + ":" + MM + ":" + SS;
 }
 
-drives.forEach(function(drive) {
-  var name = host + "__" + drive;
-  var id = "BeeGFSLoad_" + name;
-  var file = "wynton-bench_" + name + ".tsv";
-  var url = url_path + "/" + file;
+var now = new Date();
+var from = new Date(now - 24 * 60 * 60 * 1000);
 
-  Plotly.d3.tsv(url, function(err, rows) {
-    function unpack(rows, key) {
-      return rows.map(function(row) { 
-        var value = row[key];
-        if (key == "duration") {
-          value = parseFloat(value);
-          value = value / baseline;
-          if (value < 1.0) {
-            value = 1.0;
-          }
+var beegfs_load = {
+  type: "scatter",
+  mode: "lines",
+  name: 'BeeGFS Load',
+  x: [],
+  y: [],
+  line: {color: '#23527c'}
+}
+
+var layout = {
+  height: 200,
+  margin: { l: 50, r: 30, b: 40, t: 60, pad: 4 },
+  xaxis: {
+    autorange: false,
+    range: [date_to_string(from), date_to_string(now)],
+    rangeselector: {buttons: [
+        {
+          count: 1,
+          label: '1d',
+          step: 'day',
+          stepmode: 'backward'
+        },
+        {
+          count: 7,
+          label: '1w',
+          step: 'day',
+          stepmode: 'backward'
+        },
+        {
+          count: 1,
+          label: '1m',
+          step: 'month',
+          stepmode: 'backward'
+        },
+        {
+          count: 12,
+          label: '1y',
+          step: 'month',
+          stepmode: 'backward'
+        },
+        {
+          step: 'all',
+          label: 'all'
         }
-        return value;
-      });
-    }
+      ]},
+    type: 'date'
+  },
+  yaxis: {
+    autorange: false,
+    range: [-0.1, 2.5],
+    type: 'log'
+  }
+};
 
-    var beegfs_load = {
-      type: "scatter",
-      mode: "lines",
-      name: 'BeeGFS Load',
-      x: unpack(rows, 'timestamp'),
-      y: unpack(rows, 'duration'),
-      line: {color: '#23527c'}
-    }
-  
-    var data = [beegfs_load];
-
-    var now = new Date();
-    var from = new Date(now - 24 * 60 * 60 * 1000);
-
-    var layout = {
-      height: 200,
-      margin: { l: 50, r: 30, b: 40, t: 60, pad: 4 },
-      xaxis: {
-        autorange: false,
-        range: [date_to_string(from), date_to_string(now)],
-        rangeselector: {buttons: [
-            {
-              count: 1,
-              label: '1d',
-              step: 'day',
-              stepmode: 'backward'
-            },
-            {
-              count: 7,
-              label: '1w',
-              step: 'day',
-              stepmode: 'backward'
-            },
-            {
-              count: 1,
-              label: '1m',
-              step: 'month',
-              stepmode: 'backward'
-            },
-            {
-              count: 12,
-              label: '1y',
-              step: 'month',
-              stepmode: 'backward'
-            },
-            {
-              step: 'all',
-              label: 'all'
-            }
-          ]},
-        type: 'date'
-      },
-      yaxis: {
-        autorange: false,
-        range: [-0.1, 2.5],
-        type: 'log'
+function unpack(rows, key) {
+  return rows.map(function(row) { 
+    var value = row[key];
+    if (key == "duration") {
+      value = parseFloat(value);
+      value = value / baseline;
+      if (value < 1.0) {
+        value = 1.0;
       }
-    };
-    
-    Plotly.newPlot(id, data, layout);
+    }
+    return value;
+  });
+}
+
+var data = [];
+
+drives.forEach(function(drive) {
+  var id = "BeeGFSLoad_" + host_set + "__" + drive;
+  
+  var url = url_path + "/" + "wynton-bench_" + hosts[0] + "__" + drive + ".tsv";
+  Plotly.d3.tsv(url, function(err, rows) {
+    var trace = JSON.parse(JSON.stringify(beegfs_load));
+    trace.name = hosts[0];
+    trace.x = unpack(rows, 'timestamp');
+    trace.y = unpack(rows, 'duration');
+    trace.line = { color: '#23527c' };
+    Plotly.newPlot(id, [trace], layout);
   })
+
+  if (hosts.length >= 2) {
+    var url = url_path + "/" + "wynton-bench_" + hosts[1] + "__" + drive + ".tsv";
+    Plotly.d3.tsv(url, function(err, rows) {
+      var trace = JSON.parse(JSON.stringify(beegfs_load));
+      trace.name = hosts[1];
+      trace.x = unpack(rows, 'timestamp');
+      trace.y = unpack(rows, 'duration');
+      trace.line = { color: '#F88379' };
+      Plotly.addTraces(id, [trace]);
+    })
+  }
+
+  if (hosts.length >= 3) {
+    var url = url_path + "/" + "wynton-bench_" + hosts[2] + "__" + drive + ".tsv";
+    Plotly.d3.tsv(url, function(err, rows) {
+      var trace = JSON.parse(JSON.stringify(beegfs_load));
+      trace.name = hosts[2];
+      trace.x = unpack(rows, 'timestamp');
+      trace.y = unpack(rows, 'duration');
+      trace.line = { color: '#9dc183' };
+      Plotly.addTraces(id, [trace]);
+    })
+  }
 });
 </script>
