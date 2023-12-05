@@ -86,12 +86,16 @@ To terminate the RStudio Server, start by exiting R by typing `quit()` at the R 
 Some users report that they stuck when they try to log in to RStudio.
 After they enter their username and password, and click 'Sign In',
 they get to a page "R is taking longer to start than usual" with a
-spinner that never ends.  Consecutive attempts to log in fail for same
-reasons.
+spinner that never ends.  The user is presented with three options
+'Reload', 'Safe Mode', and 'Terminate R'.  Ideally, 'Safe Mode' or
+'Terminate R' would solve the problem and let the user access the
+RStudio GUI.  Unfortunately, for some users, none of these options
+helps.  Consecutive attempts to use `rsc stop` and `rsc start` fail
+for same reasons.
 
 As of 2023-12-04, it is not clear to why and when this happens.  The
 one workaround we have found is to wipe the user's RStudio set up.
-We recommend to do:
+For this, we recommend the to use:
 
 ```sh
 $ tar -cvf ~/rstudio-config.tar ~/.local/share/rstudio && rm -rf ~/.local/share/rstudio
