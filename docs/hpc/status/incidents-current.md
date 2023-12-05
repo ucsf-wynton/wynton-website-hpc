@@ -2,6 +2,10 @@
 
 #### <span style="color: orange;">Sporadic job failure</span>
 
+**Update**: To lower the risk for this problem to occur, the SSSD
+timeout limit was increased from 10 seconds to 30 seconds.
+<br><span class="timestamp">November 20, 10:00 PT</span>
+
 **Update**: The "can't get password entry for user" error happens on
 some compute nodes where the System Security Services Daemon (SSSD)
 has failed.  Until the cause for failed SSSD has been identified and
