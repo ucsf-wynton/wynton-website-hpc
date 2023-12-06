@@ -297,6 +297,27 @@ qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"
 Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
 
 
+## Submitting a string of commands as job
+
+The `qsub` command typically takes a job-script file as input, but,
+alternatively, it can take a sequence of commands on the standard
+input (stdin) as input.  For example, consider you want to run two
+commands via the job scheduler;
+
+```sh
+hostname
+date --iso-8601=seconds
+```
+
+Instead of create a script file with those two commands, you can pass
+them to `sub` using `echo`:
+
+```sh
+$ echo "hostname; date --iso-8601=seconds" | qsub -S /bin/bash -cwd -l mem_free=1G
+Your job 2225213 ("STDIN") has been submitted
+```
+
+
 ## Interactive jobs
 
 It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
