@@ -4371,7 +4371,6 @@ Versions: <span class="module-version">5.1.1, 6.4.1, 7.3.1, <em>10.2.1</em></spa
 
 module-whatis &quot;Description: Various compilers (C, C++, Objective-C, Java, ...)&quot;
 module-whatis &quot;URL: https://gcc.gnu.org/&quot;
-prepend-path  MODULEPATH      /salilab/diva1/home/modules-gcc10
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/gcc-10.2.1/bin
 prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/gcc-10.2.1/lib64
 if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
