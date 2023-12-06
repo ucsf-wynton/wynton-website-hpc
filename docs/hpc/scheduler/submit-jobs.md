@@ -57,9 +57,11 @@ hostname
 ## Submit a script to run in the current working directory
 
 To submit a shell script to the scheduler such that it will run in the current working directory (`-cwd`), use:
+
 ```sh
 qsub -cwd script.sh
 ```
+
 The scheduler will assign your job a unique (numeric) job ID.
 
 
@@ -92,6 +94,7 @@ Specifying the run time will shorten the queuing time - significantly so for sho
 </div>
 
 By specifying the how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time (= wall time, not CPU time) for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
+
 ```sh
 qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
 ```
@@ -104,6 +107,7 @@ If not specified, the default run time is 14 days, i.e. the maximum allowed.  If
 ## Using local scratch storage [`-l scratch=<amount>`]
 
 Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage](/hpc/about/specs.html#scratch-storage) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
+
 ```sh
 qsub -cwd -l scratch=200G script.sh
 ```
@@ -120,6 +124,7 @@ Note that `-l scratch=size` specifies _space per job_, not per slot.
 
 
 If your job would benefit from extra-fast [local scratch storage](/hpc/about/specs.html#scratch-storage), then you can request a node with either a SSD or NVMe scratch drive via the following flag:
+
 ```sh
 qsub -l ssd_scratch=1
 ```
@@ -272,9 +277,11 @@ will launch the job on a compute node with x86-64-v3 CPUs or newer.
 ## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps) [`-l eth_speed <bandwidth>`]
 
 The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
+
 ```sh
 qsub -cwd -l eth_speed=10 script.sh
 ```
+
 A job requesting `eth_speed=40` will end up on a 40 Gbps node, and a job requesting `eth_speed=1` (default) will end up on any node.
 
 
@@ -282,9 +289,11 @@ A job requesting `eth_speed=40` will end up on a 40 Gbps node, and a job request
 ## Passing arguments to script
 
 You can pass arguments to a job script similarly to how one passes argument to a script executed on the command line, e.g.
+
 ```sh
 qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"' --debug
 ```
+
 Arguments are then passed as if you called the script as `script.sh --first=2 --second=true --third="some value" --debug`.  Note how you have to have an extra layer of single quotes around `"some value"`, otherwise `script.sh` will see `--third=some value` as two independent arguments (`--third=some` and `value`).
 
 
