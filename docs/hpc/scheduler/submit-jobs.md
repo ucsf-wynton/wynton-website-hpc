@@ -309,8 +309,8 @@ hostname
 date --iso-8601=seconds
 ```
 
-Instead of create a script file with those two commands, you can pass
-them to `sub` using `echo`:
+Instead of creating a script file with those two commands, you can
+pass them to `sub` using `echo`:
 
 ```sh
 $ echo "hostname; date --iso-8601=seconds" | qsub -S /bin/bash -cwd -l mem_free=1G
