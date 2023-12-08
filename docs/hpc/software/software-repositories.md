@@ -4788,6 +4788,9 @@ prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0
 prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/include/opencv4
 prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
 prepend-path PYTHONPATH         /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib/python3.6/site-packages
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release]} {
+  prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64/rhel
+}
 </code></pre>
 
 </details>
