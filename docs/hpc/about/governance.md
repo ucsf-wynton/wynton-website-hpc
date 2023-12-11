@@ -43,14 +43,13 @@ The cluster is governed by a Faculty Steering Committee, guided by the
 cluster’s purpose and organizational principles outlined above. The
 Committee consists of major contributing basic scientists, a
 representative of guest users, and a campus Information Technology
-representative (_ex officio_), all of whom have some expertise in
+representative, all of whom have some expertise in
 cluster computing. The Committee meets as required to review overall
 utilization of the system, plan future expansions, discuss funding
 opportunities, etc. The Committee also resolves any disputes
 concerning use and governance of the cluster. Committee matters are
 addressed at meetings and by email as needed. To ensure continuity of
 governance, the Committee appoints new members by a majority vote. The
-Committee currently consists of David Agard, Sergio Baranzini, Scott
+Committee currently consists of Kliment Verba, Sergio Baranzini, Scott
 Pegg, Brian Shoichet, Tom Ferrin (Co-Chair), Andrej Sali (Co-Chair),
-Mike Keiser (representing guest users), and Rick Larsen (_ex officio_,
-Campus IT).
+Mike Keiser (representing guest users), and Mandy Terrill (Campus IT).
