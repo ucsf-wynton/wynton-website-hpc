@@ -4522,7 +4522,7 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
     prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
     prepend-path  PYTHONPATH      ${topdir}/lib/release64/openmpi-4.0
   }
-  # CentOS 7 with no MPI or mpi/openpmi loaded
+  # CentOS 7 with no MPI or mpi/openmpi loaded
 } else {
   # Fedora
   prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
@@ -4562,7 +4562,7 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
     prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
     prepend-path  PYTHONPATH      ${topdir}/lib/release64/openmpi-4.0
   }
-  # CentOS 7 with no MPI or mpi/openpmi loaded
+  # CentOS 7 with no MPI or mpi/openmpi loaded
 } else {
   # Fedora
   prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release64/openmpi-4.0
