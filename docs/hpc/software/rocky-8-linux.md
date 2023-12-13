@@ -49,7 +49,7 @@ Here are some of the hurdles you may run into:
 * [R] : R via the CBI software stack works as previously. All versions
   have been been re-installed for Rocky 8. Previously installed R
   packages are no longer available, and have to re-installed.
-  - If you use **[renv]**] to manage your R package per project
+  - If you use **[renv]** to manage your R package per project
     folder, you have to reinstall all packages within such **renv**
     environments.
 
