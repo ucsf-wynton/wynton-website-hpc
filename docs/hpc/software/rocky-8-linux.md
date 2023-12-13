@@ -49,9 +49,9 @@ Here are some of the hurdles you may run into:
 * [R] : R via the CBI software stack works as previously. All versions
   have been been re-installed for Rocky 8. Previously installed R
   packages are no longer available, and have to re-installed.
-  - If you used [**renv**](https://cran.r-project.org/package=renv) to
-    manage your R package per project folder, you have to reinstall
-    all packages within such **renv** environments.
+  - If you use **[renv]**] to manage your R package per project
+    folder, you have to reinstall all packages within such **renv**
+    environments.
 
 * [MPI] : OpenMPI is available via the built-in module `mpi`. On Rocky
   8, the default, and only available version is OpenMPI 4.1, which you
@@ -72,4 +72,6 @@ Here are some of the hurdles you may run into:
 [Software Repositories]: software-repositories.html
 [Software Collections (SCL)]: scl.html
 [Python]: ../howto/python.html
+[R]: ../howto/r.html
+[renv]: https://cran.r-project.org/package=renv
 [MPI]: .../scheduler/submit-jobs.html#mpi-single-host-parallel-processing--pe-mpi_onehost-slots
