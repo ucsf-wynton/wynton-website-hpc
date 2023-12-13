@@ -1,6 +1,6 @@
 # Wynton runs Rocky 8 Linux as of November 2023
 
-_Last updated: 2023-11-11_
+_Last updated: 2023-12-12_
 
 {{ site.cluster.nickname }} now runs [Rocky 8] Linux.  Previously, we
 were running CentOS 7 Linux, which will reach the [end of life (EOL)
@@ -45,6 +45,13 @@ Here are some of the hurdles you may run into:
   - If you get errors like `/opt/rh/rh-python38/root/usr/bin/python3:
     bad interpreter: No such file or directory` when you run a Python
     based software, then you need to reinstall that software tool.
+
+* [R] : R via the CBI software stack works as previously. All versions
+  have been been re-installed for Rocky 8. Previously installed R
+  packages are no longer available, and have to re-installed.
+  - If you used [**renv**](https://cran.r-project.org/package=renv) to
+    manage your R package per project folder, you have to reinstall
+    all packages within such **renv** environments.
 
 * [MPI] : OpenMPI is available via the built-in module `mpi`. On Rocky
   8, the default, and only available version is OpenMPI 4.1, which you
