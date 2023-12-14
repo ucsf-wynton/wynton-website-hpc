@@ -2813,13 +2813,15 @@ if (v &gt;= &quot;4.1.0&quot;) then
   gv = string.gsub(gv, &quot;-beta&quot;, &quot;&quot;)
   gv = string.gsub(gv, &quot;-rc&quot;, &quot;&quot;)
   gv = string.gsub(gv, &quot;-gcc&quot;, &quot;&quot;)
-  gv = tonumber(gv)
-  if (gv &gt; 4) then
-    r_libs_user = r_libs_user .. &quot;-gcc&quot; .. gv
-    if has_devtoolset(gv) then
-      depends_on(&quot;scl-devtoolset/&quot; .. gv)
-    elseif has_gcc_toolset(gv) then
-      depends_on(&quot;scl-gcc-toolset/&quot; .. gv)
+  if (gv ~= &quot;&quot;) then                                                                                           
+    gv = tonumber(gv)
+    if (gv &gt; 4) then
+      r_libs_user = r_libs_user .. &quot;-gcc&quot; .. gv
+      if has_devtoolset(gv) then
+        depends_on(&quot;scl-devtoolset/&quot; .. gv)
+      elseif has_gcc_toolset(gv) then
+        depends_on(&quot;scl-gcc-toolset/&quot; .. gv)
+      end
     end
   end
 end
@@ -2846,6 +2848,14 @@ end
 -- built-in R_LIBS_USER folder already exists. If not, then it's safe to use
 -- one specific to the CBI stack.
 pushenv(&quot;R_LIBS_USER&quot;, r_libs_user)
+
+-- The R package 'renv' (https://cran.r-project.org/package=renv) is used to create
+-- folder-specific R package library folder that help with reproducibility and long-term
+-- stability.  By setting RENV_PATHS_PREFIX_AUTO=TRUE, these folders are also specific
+-- for the current Linux distribution, which avoids problems occurring when updating
+-- from, say, CentOS 7 to Rocky 8.  This is likely to become the default behavior in
+-- 'renv' (https://github.com/rstudio/renv/issues/1211)
+pushenv(&quot;RENV_PATHS_PREFIX_AUTO&quot;, &quot;TRUE&quot;)
 
 -- WORKAROUND: utils::download.file(), which is for instance used by install.packages()
 -- have a built-in timeout at 60 seconds.  This might be too short for some larger
@@ -4018,24 +4028,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2023.09/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4049,6 +4041,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
