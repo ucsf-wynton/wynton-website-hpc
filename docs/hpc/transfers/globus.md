@@ -58,10 +58,6 @@ If you want to transfer files from or to your local machine, you need to set up 
 
 ## Transfer between Wynton and UCSF Box using UCSF Wynton HPC Box Globus Connector
 
-<div class="alert alert-warning" role="alert" markdown="1">
-2022-05-26: We are still testing this feature. Although basic use-case testing has been done, **UCSF HPC Box Globus Connector** still hasn't been thoroughly validated by end users. If you run into issues or have suggestions to make the documentation clearer, please reach out to [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
-</div>
-
 ### Prerequisites
 
 You must have:
