@@ -1463,6 +1463,7 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.</span><br>
 Example: <span class="module-example"><code>gistic2</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/cancer/cga/gistic">https://software.broadinstitute.org/cancer/cga/gistic</a>, <a href="https://github.com/broadinstitute/gistic2/blob/master/support/README.txt">https://github.com/broadinstitute/gistic2/blob/master/support/README.txt</a> (changelog), <a href="https://github.com/broadinstitute/gistic2">https://github.com/broadinstitute/gistic2</a> (source code), <a href="https://www.genepattern.org/modules/docs/GISTIC_2.0/7">https://www.genepattern.org/modules/docs/GISTIC_2.0/7</a></span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>2.0.23</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -4449,17 +4450,17 @@ prepend-path  PATH            /salilab/diva1/programs/x86_64linux/gnuplot-5.4.2/
   <dd class="module-details">
 <span class="module-description">A general purpose library and file format for storing scientific data</span><br>
 URL: <span class="module-url"><a href="https://support.hdfgroup.org/HDF5/">https://support.hdfgroup.org/HDF5/</a></span><br>
-Versions: <span class="module-version">1.8.14, 1.8.17, 1.10.1, 1.10.5, <em>1.10.6</em></span><br>
+Versions: <span class="module-version">1.8.14, 1.8.17, 1.10.1, 1.10.5, 1.10.6, <em>1.10.7</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Description: A general purpose library and file format for storing scientific data&quot;
 module-whatis &quot;URL: https://support.hdfgroup.org/HDF5/&quot;
-prepend-path PATH               /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/bin
-prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/lib
-prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/include
-prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/hdf5-1.10.6/lib
+prepend-path PATH               /salilab/diva1/programs/x86_64linux/hdf5-1.10.7/bin
+prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/hdf5-1.10.7/lib
+prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/hdf5-1.10.7/include
+prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/hdf5-1.10.7/lib
 </code></pre>
 
 </details>
@@ -4796,7 +4797,7 @@ Versions: <span class="module-version">3.4.3, <em>4.3.0</em></span><br>
 
 module-whatis &quot;Description: Collection of algorithms for computer vision&quot;
 module-whatis &quot;URL: https://opencv.org/&quot;
-module load hdf5/1.10.6
+module load hdf5/1.10.7
 prepend-path PATH               /salilab/diva1/programs/x86_64linux/opencv-4.3.0/bin
 prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/opencv-4.3.0/lib64
 prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/opencv-4.3.0/include/opencv4
@@ -5754,7 +5755,7 @@ module-whatis &quot;URL: http://www.pytables.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5
 module load python3/numexpr/2.8.1
-module load hdf5/1.10.6
+module load hdf5/1.10.7
 module load python3/six
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tables-py36-3.6.1/lib64/python3.6/site-packages
 prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py36-3.6.1/bin
