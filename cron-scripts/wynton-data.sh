@@ -4,7 +4,7 @@
 SOFTWARE_HOME=/wynton/home/cbi/shared/software/CBI
 PATH=/opt/sge/bin/lx-amd64/:$PATH
 PATH=${SOFTWARE_HOME}/_rocky8/R-4.3.2-gcc10/bin:$PATH
-PATH=${SOFTWARE_HOME}/sqlite-3.41.1/bin:$PATH
+PATH=${SOFTWARE_HOME}/_rocky8/sqlite-3.43.2/bin:$PATH
 
 ## Required R packages
 ## FIXME: Freeze an R package library with the required packages
