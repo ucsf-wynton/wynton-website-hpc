@@ -31,8 +31,6 @@ There are some additional parameters:
 
 * The storage is not available for mounting outside of the cluster.
 
-* At this point, the storage may not be used for PHI data (this may change in the future).
-
 * The storage is not backed up.
 
 
