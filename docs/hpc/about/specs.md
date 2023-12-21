@@ -11,7 +11,7 @@
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.data.specs.global_scratch_size_total }} TiB</dd>
   <dt>User home storage</dt><dd>500 GiB/user ({{ site.data.specs.home_size_total }} TiB in total)</dd>
   <dt>Group storage</dt><dd>{{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
-  <dt>Number of accounts</dt><dd>{{ site.data.users.nbr_of_accounts }} of which {{ site.data.users.nbr_of_phi_accounts }} are approved for PHI</dd>
+  <dt>Number of accounts</dt><dd><a href="https://ucsf-wynton.github.io/wyntonquery/reference/users_over_time.html">{{ site.data.users.nbr_of_accounts }}</a> of which {{ site.data.users.nbr_of_phi_accounts }} are approved for PHI</dd>
   <dt>Number of projects</dt><dd>{{ site.data.users.nbr_of_projects }}</dd>
 </dl>
 
