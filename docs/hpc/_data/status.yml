@@ -74,21 +74,18 @@ condition: is operational
 # condition: experiences partial problems
 # message: 
 
-level: warning
-condition: is operational
-message: The cluster will be shut down for maintenance during May 16-17, 2023. Starting May 2, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime.
+# level: warning
+# condition: is operational
+# message: The cluster will be shut down for maintenance during May 16-17, 2023. Starting May 2, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime.
 
 # level: danger
 # condition: is not operational
 # message: The cluster is down for maintenance during September 27-29, 2022.
 
-level: warning
-condition: is operational
-message: The cluster is operational with some file-system issues. If you encounter a "Communication error on send" error, do not delete or move the affected file!
+# level: warning
+# condition: is operational
+# message: The cluster is operational with some file-system issues. If you encounter a "Communication error on send" error, do not delete or move the affected file!
 
-level: warning
-condition: is operational
-
-level: danger
-condition: is partially operational
-message: (1) Wynton now runs Rocky 8 Linux. (2) Only login and development nodes are available. (3) The data-transfer nodes are not available. (4) The compute nodes and the scheduler are unavailable.
+# level: warning
+# condition: is operational
+# message: (1) Wynton now runs Rocky 8 Linux. (2) Expect longer waiting times on the queue until more compute nodes have been re-enabled.
