@@ -24,7 +24,7 @@ and get to a resolution sooner. Please make sure to:
         `/wynton/home/boblab/alice/my_script.sh`.").
 
   * [ ] &nbsp; cut-and-paste text from the console.  If using Slack,
-        please format your output as a "Code Blocks" (there's a button
+        please format your output as a "Code Block" (there's a button
         for it too); it makes it much easier to read.  [Avoid
         screenshot
         images](/hpc/support/faq.html#avoid-screenshots-when-asking-for-help).
