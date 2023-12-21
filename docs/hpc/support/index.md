@@ -9,19 +9,19 @@ Below is a checklist that helps us better assist you with your issue
 and get to a resolution sooner. Please make sure to:
 
   * [ ] &nbsp; include your username on the cluster (e.g. "My user
-        name is `alice`").
+        name is `alice`.").
   
   * [ ] &nbsp; specify what machine the problem occurs on (e.g. "I
-        tried this on `dev1` and `dev3`").
+        tried this on `dev1` and `dev3`.").
 
   * [ ] &nbsp; for failing jobs, specify the job ID of the job that
         has issues (e.g. "Jobs that failed are `9702394` and
-        `9709933`, but it worked for `9704439`).
+        `9709933`, but it worked for `9704439`.").
 
   * [ ] &nbsp; for failing jobs, specify how you submit the job and
         what your script is (e.g. "I submit using `qsub -cwd -j y -l
         mem_free=500M my_script.sh`. My script is
-        `/wynton/home/boblab/alice/my_script.sh`).
+        `/wynton/home/boblab/alice/my_script.sh`.").
 
   * [ ] &nbsp; cut-and-paste text from the console.  If using Slack,
         please format your output as a "Code Blocks" (there's a button
