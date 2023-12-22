@@ -6,6 +6,30 @@
 
 ## Setup of Globus Collections
 
+### NOTE: You do not need a Wynton HPC Account to Transfer Data with Globus
+
+If you only need to transfer data from remote Globus collections to your local machine or departmental share, you do NOT need a Wynton HPC Account.
+
+Instead, install Globus Connect Personal.
+
+### Set up a Globus Collection for your local machine
+
+If you want to transfer files from or to your local machine, you need to set up a personal Collection on that machine.  Below is an outline on how to do this.  For full details, see the [Globus Docs How To](https://docs.globus.org/how-to/).
+
+1. [local] Make sure [Globus Connect Personal] is installed on your local machine (available for macOS, Linux, and MS Windows)
+
+2. [local] (optional) The default is that Globus will have access to all of the content under your home directory, e.g. when connected to Globus you will be able to browse it from the Global website online.  To limit this, create a folder to be used solely for Globus transfers, e.g. `~/globus/`.  Launch the 'Globus Connect Personal' software, go to 'Preferences' and change the 'Access Path Configuration' to `~/globus`. Then, click 'Save'.
+
+3. [online] Setup a [Globus Connect Personal (GCP) Collection] for your local machine. Use one GCP collection per machine.  This step will produce a **GCP Security Key** for your local machine.  Make sure to write it down in a safe place.  If you lose it, you will have to create a new GCP collection.
+
+4. [local] Launch the 'Globus Connect Personal' software, and enter your **GCP Security Key** code to connect.
+
+5. [online] Go to [Collection -> 'Administered by You'](https://app.globus.org/collections?scope=administered-by-me), go to on your GCP Collection, and click on 'Open in File Manager'.  This will display the files and folders on your local computer.  If you restricted access to `~/globus` (Step 2), then it is only that folder that is accessible via Globus.
+
+6. [local] In the Globus Connect Personal software, make sure to disconnect when no longer needed.
+
+7. [online] (Optional) If you require to transfer data to or from Globus High Assurance Collections, you account must be associated with the "University of California San Francisco High Assurance Globus Plus" Group. To join the group, login to [globus.org](https://www.globus.org/) with your UCSF my access credentials, select the groups side tab, unselect "My Groups", and search for "University of California San Francisco" - locate the "University of California San Francisco High Assurance Globus Plus" group and hit the join. The person who manages the UCSF Globus subscription will approve any account associated with a UCSF Email Address.
+
 ### Set up a Globus Collection for your {{ site.cluster.nickname }} account
 
 If you want to transfer files from or to your {{ site.cluster.nickname }} account, you need to set up the '{{ site.globus.name }}' Collection.  Below is an outline on how to do this.
@@ -38,23 +62,6 @@ Instead of using the non-PHI-compliant Collection 'UCSF Wynton HPC', all PHI dat
 4. This will take you to a screen where you are prompted to enter your Wynton Username and Password. Enter these. 
 5. Your default Two-Factor Authentication will be notified.  
 6. Approve, and Globus will continue to a screen representing the Wynton file system.
-
-
-### Set up a Globus Collection for your local machine
-
-If you want to transfer files from or to your local machine, you need to set up a personal Collection on that machine.  Below is an outline on how to do this.  For full details, see the [Globus Docs How To](https://docs.globus.org/how-to/).
-
-1. [local] Make sure [Globus Connect Personal] is installed on your local machine (available for macOS, Linux, and MS Windows)
-
-2. [local] (optional) The default is that Globus will have access to all of the content under your home directory, e.g. when connected to Globus you will be able to browse it from the Global website online.  To limit this, create a folder to be used solely for Globus transfers, e.g. `~/globus/`.  Launch the 'Globus Connect Personal' software, go to 'Preferences' and change the 'Access Path Configuration' to `~/globus`. Then, click 'Save'.
-
-3. [online] Setup a [Globus Connect Personal (GCP) Collection] for your local machine. Use one GCP collection per machine.  This step will produce a **GCP Security Key** for your local machine.  Make sure to write it down in a safe place.  If you lose it, you will have to create a new GCP collection.
-
-4. [local] Launch the 'Globus Connect Personal' software, and enter your **GCP Security Key** code to connect.
-
-5. [online] Go to [Collection -> 'Administered by You'](https://app.globus.org/collections?scope=administered-by-me), go to on your GCP Collection, and click on 'Open in File Manager'.  This will display the files and folders on your local computer.  If you restricted access to `~/globus` (Step 2), then it is only that folder that is accessible via Globus.
-
-6. [local] In the Globus Connect Personal software, make sure to disconnect when no longer needed.
 
 ## Transfer between Wynton and UCSF Box using UCSF Wynton HPC Box Globus Connector
 
