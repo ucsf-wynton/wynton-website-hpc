@@ -10,7 +10,7 @@
 
 If you only need to transfer data from remote Globus collections to your local machine or departmental share, you do NOT need a Wynton HPC Account.
 
-Instead, install Globus Connect Personal.
+Instead, follow the instructions below to install Globus Connect Personal.
 
 ### Set up a Globus Collection for your local machine
 
