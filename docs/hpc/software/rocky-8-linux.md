@@ -1,6 +1,6 @@
 # Wynton runs Rocky 8 Linux as of November 2023
 
-_Last updated: 2023-12-12_
+_Last updated: 2023-12-22_
 
 {{ site.cluster.nickname }} now runs [Rocky 8] Linux.  Previously, we
 were running CentOS 7 Linux, which will reach the [end of life (EOL)
@@ -49,9 +49,6 @@ Here are some of the hurdles you may run into:
 * [R] : R via the CBI software stack works as previously. All versions
   have been been re-installed for Rocky 8. Previously installed R
   packages are no longer available, and have to re-installed.
-  - If you use **[renv]** to manage your R package per project
-    folder, you have to reinstall all packages within such **renv**
-    environments.
 
 * [MPI] : OpenMPI is available via the built-in module `mpi`. On Rocky
   8, the default, and only available version is OpenMPI 4.1, which you
