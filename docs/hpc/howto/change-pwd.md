@@ -86,7 +86,7 @@ Alternatively, you can verify your credentials from your browser:
 
 1. Go to <https://www.cgl.ucsf.edu/admin/kerbtest.py> in your browser.  A popup panel titled 'Sign in https<span>://www.cgl.ucsf.edu</span>' is opened by the browser.
 
-2. Enter your {{ site.cluster.nickname }} login credentials in the two fields 'Username' and 'Password' and click 'Sign in'.
+2. Enter your {{ site.cluster.nickname }} login credentials in the two fields 'Username'  (e.g. `alice`) and 'Password' and click 'Sign in'.
 
 3. If you entered correct credentials, you will get to a confirmation page saying so.  If you entered incorrect credentials, there will be no error message and the popup will appear again.
 
