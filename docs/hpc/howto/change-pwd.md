@@ -31,14 +31,14 @@ You can change your password before it expires using the 'RBVI Kerberos Web Inte
 1. Go to <https://www.cgl.ucsf.edu/admin/chpass.py>
 
 2. To access the page, enter your current {{ site.cluster.name }}
-   'Username' and 'Password' (must not be expired) in the browser
-   pop-up panel
+   'Username' (e.g. `alice`) and 'Password' (must not be expired)
+   in the browser pop-up panel
 
-3. Upon successful login, you will reach the 'Resource for
+4. Upon successful login, you will reach the 'Resource for
    Biocomputing, Visualization, and Informatics' page, which allows
    you to set a new password
 
-4. Wait 10 minutes for your new password to propagate before using it
+5. Wait 10 minutes for your new password to propagate before using it
 
 
 
