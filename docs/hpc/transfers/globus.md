@@ -8,9 +8,9 @@
 
 ### NOTE: You do not need a Wynton HPC Account to Transfer Data with Globus
 
-If you only need to transfer data from remote Globus collections to your local machine or departmental share, you do NOT need a Wynton HPC Account.
+If you only need to transfer data to or from remote Globus collections to or from your local machine or departmental share, you do NOT need a Wynton HPC Account.
 
-Instead, follow the instructions below to install Globus Connect Personal.
+Instead, follow the instructions below to install Globus Connect Personal on your computer.
 
 ### Set up a Globus Collection for your local machine
 
@@ -28,7 +28,7 @@ If you want to transfer files from or to your local machine, you need to set up 
 
 6. [local] In the Globus Connect Personal software, make sure to disconnect when no longer needed.
 
-7. [online] (Optional) If you require to transfer data to or from Globus High Assurance Collections, you account must be associated with the "University of California San Francisco High Assurance Globus Plus" Group. To join the group, login to [globus.org](https://www.globus.org/) with your UCSF my access credentials, select the groups side tab, unselect "My Groups", and search for "University of California San Francisco" - locate the "University of California San Francisco High Assurance Globus Plus" group and hit the join. The person who manages the UCSF Globus subscription will approve any account associated with a UCSF Email Address.
+7. [online] (Optional) If you require to transfer data to or from Globus High Assurance Collections, your account must be associated with the "University of California San Francisco High Assurance Globus Plus" Group. To join the group, login to [globus.org](https://www.globus.org/) with your UCSF MyAccess credentials, select the groups side tab, unselect "My Groups", and search for "University of California San Francisco" - locate the "University of California San Francisco High Assurance Globus Plus" group and hit the join. The person who manages the UCSF Globus subscription will approve any account associated with a UCSF Email Address.
 
 ### Set up a Globus Collection for your {{ site.cluster.nickname }} account
 
