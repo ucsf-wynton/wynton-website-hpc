@@ -33,7 +33,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
 
  1. Use the menus to create a **New Session ...**
  2. Pick a **Session name**, e.g. `{{ site.cluster.name }}`
- 3. Set the **Host** to a [development node]: <span class="non-phi">`dev1`, `dev2`, `dev3`, or ~~`gpudev1`~~</span><span class="phi">`pdev1`, `pdev2`, or ~~`pgpudev1`~~</span>
+ 3. Set the **Host** to a [development node]: <span class="non-phi">`dev1`, `dev2`, `dev3`, or ~~`gpudev1`~~</span><span class="phi">`pdev1` or ~~`pgpudev1`~~</span>
  4. Set the **Login** to _your_ {{ site.cluster.name }} username, e.g. `alice`
  5. In the **Use RSA/DSA key for ssh connection**, enter the path to the your private SSH Key.
  6. Select **Try auto login (via SSH Agent or default SSH key)**
