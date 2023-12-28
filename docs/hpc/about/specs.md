@@ -20,7 +20,7 @@
 
 | Feature     | Login Nodes | Transfer Nodes          | Development Nodes | Compute Nodes |
 | ---- | ---------- | ----------------------- | ------------ | ---- |
-| Hostname | `log[1-2].wynton.ucsf.edu`, `plog1.wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu`, `pdt[1-2].wynton.ucsf.edu` | `dev[1-2]`, `gpudev1`, `pdev1`, `pgpudev1` | … |
+| Hostname | `log[1-2].wynton.ucsf.edu`, `plog1.wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu`, `pdt[1-2].wynton.ucsf.edu` | `dev[1-3]`, `gpudev1`, `pdev1`, `pgpudev1` | … |
 | Accessible via SSH from outside of cluster | ✓ (2FA if outside of UCSF) | ✓ (2FA if outside of UCSF) | no                                                          | no |
 | Accessible via SSH from within cluster | ✓ | ✓ | ✓ | no |
 | Outbound access | Within UCSF only: SSH and SFTP | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, Globus | Via proxy: HTTP/HTTPS, GIT+SSH(\*) | no |
