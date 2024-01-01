@@ -14,7 +14,7 @@
 * Occurrences:
   - 2023-02-22 (17.0 hours)
   - 2023-05-17 (20.0 hours)
-  - 2023-10-30 (104.0 hours)
+  - 2023-10-30 -- 2023-11-03 (104.0 hours)
 * Total downtime: 141.0 hours
 
 #### Scheduled kernel maintenance
@@ -41,7 +41,7 @@
   may have failed, cluster not accessible
 * Occurrences:
   - 2023-05-17 -- 2023-06-01 (359.0 hours)
-  - 2023-10-30 -- 2023-11-15 (347.25 hours, excluding the scheduled 5-day downtime)
+  - 2023-10-27 -- 2023-11-15 (347.25 hours, excluding the scheduled 5-day downtime)
 * Total downtime: 742.25 hours of which 0.0 hours were due to external
   factors
 
