@@ -1,9 +1,9 @@
-### Operational Summary for 2023 (this far)
+### Operational Summary for 2023
 
 * Full downtime:
-  - Scheduled: 141.0 hours (= 5.9 days)
-  - Unscheduled: 742.25 hours (= 30.9 days)
-  - Total: 847.25 hours (= 35.3 days)
+  - Scheduled: 141.0 hours = 5.9 days = 1.6%
+  - Unscheduled: 742.25 hours = 30.9 days = 8.5%
+  - Total: 883.25 hours = 35.3 days = 10.1%
   - External factors: 0% of the above downtime, corresponding to 0.0 hours (= 0.0 days), were due to external factors
 
 
@@ -447,4 +447,3 @@ severity: partial-outage
 affected: develop
 reason: network
  -->
-
