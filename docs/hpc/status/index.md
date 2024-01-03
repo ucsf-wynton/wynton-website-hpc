@@ -200,14 +200,6 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <script>
-url_path = "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench";
-host_set = "devX";
-hosts = ["dev1.wynton.ucsf.edu", "dev2.wynton.ucsf.edu", "dev3.wynton.ucsf.edu"];
-hosts = ["dev1.wynton.ucsf.edu"];
-drives = ["wynton_scratch_hb", "wynton_home_cbi_hb", "wynton_group_cbi_hb"];
-// Baseline is when there is no load on the file system (rough estimate)
-baseline = 19.0;
-
 function date_to_string(d) {
   var YY = d.getFullYear().toString();
   var mm = (d.getMonth()+1).toString().length==2?(d.getMonth()+1).toString():"0"+(d.getMonth()+1).toString();
@@ -217,6 +209,15 @@ function date_to_string(d) {
   var SS = "00";
   return YY + "-" + mm + "-" + dd + " " + HH + ":" + MM + ":" + SS;
 }
+
+
+url_path = "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench";
+host_set = "devX";
+hosts = ["dev1.wynton.ucsf.edu", "dev2.wynton.ucsf.edu", "dev3.wynton.ucsf.edu"];
+//hosts = ["dev1.wynton.ucsf.edu"];
+drives = ["wynton_scratch_hb", "wynton_home_cbi_hb", "wynton_group_cbi_hb"];
+// Baseline is when there is no load on the file system (rough estimate)
+baseline = 19.0;
 
 var now = new Date();
 var from = new Date(now - 24 * 60 * 60 * 1000);
