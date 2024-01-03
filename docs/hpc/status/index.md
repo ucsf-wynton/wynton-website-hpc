@@ -213,8 +213,7 @@ function date_to_string(d) {
 
 url_path = "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench";
 host_set = "devX";
-hosts = ["dev1.wynton.ucsf.edu", "dev2.wynton.ucsf.edu", "dev3.wynton.ucsf.edu"];
-//hosts = ["dev1.wynton.ucsf.edu"];
+hosts = ["dev1", "dev2", "dev3"];
 drives = ["wynton_scratch_hb", "wynton_home_cbi_hb", "wynton_group_cbi_hb"];
 // Baseline is when there is no load on the file system (rough estimate)
 baseline = 19.0;
@@ -295,7 +294,7 @@ var data = [];
 drives.forEach(function(drive) {
   var id = "BeeGFSLoad_" + host_set + "__" + drive;
   
-  var url = url_path + "/" + "wynton-bench_" + hosts[0] + "__" + drive + ".tsv";
+  var url = url_path + "/" + "wynton-bench_" + hosts[0] + ".wynton.ucsf.edu__" + drive + ".tsv";
   Plotly.d3.tsv(url, function(err, rows) {
     var trace = JSON.parse(JSON.stringify(beegfs_load));
     trace.name = hosts[0];
@@ -306,7 +305,7 @@ drives.forEach(function(drive) {
   })
 
   if (hosts.length >= 2) {
-    var url = url_path + "/" + "wynton-bench_" + hosts[1] + "__" + drive + ".tsv";
+    var url = url_path + "/" + "wynton-bench_" + hosts[1] + ".wynton.ucsf.edu__" + drive + ".tsv";
     Plotly.d3.tsv(url, function(err, rows) {
       var trace = JSON.parse(JSON.stringify(beegfs_load));
       trace.name = hosts[1];
@@ -318,7 +317,7 @@ drives.forEach(function(drive) {
   }
 
   if (hosts.length >= 3) {
-    var url = url_path + "/" + "wynton-bench_" + hosts[2] + "__" + drive + ".tsv";
+    var url = url_path + "/" + "wynton-bench_" + hosts[2] + ".wynton.ucsf.edu__" + drive + ".tsv";
     Plotly.d3.tsv(url, function(err, rows) {
       var trace = JSON.parse(JSON.stringify(beegfs_load));
       trace.name = hosts[2];
