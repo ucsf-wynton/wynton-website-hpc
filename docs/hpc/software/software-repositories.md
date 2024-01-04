@@ -1464,6 +1464,7 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.</span><br>
 Example: <span class="module-example"><code>gistic2</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/cancer/cga/gistic">https://software.broadinstitute.org/cancer/cga/gistic</a>, <a href="https://github.com/broadinstitute/gistic2/blob/master/support/README.txt">https://github.com/broadinstitute/gistic2/blob/master/support/README.txt</a> (changelog), <a href="https://github.com/broadinstitute/gistic2">https://github.com/broadinstitute/gistic2</a> (source code), <a href="https://www.genepattern.org/modules/docs/GISTIC_2.0/7">https://www.genepattern.org/modules/docs/GISTIC_2.0/7</a></span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>2.0.23</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -4602,7 +4603,7 @@ URL: <span class="module-url"><a href="https://github.com/salilab/itcell-lib">ht
 
 module-whatis &quot;Description: Integrative T-cell epitope prediction&quot;
 module-whatis &quot;URL: https://github.com/salilab/itcell-lib&quot;
-module load imp scwrl
+module load imp/2.17.0 scwrl
 set topdir /salilab/diva1/programs/x86_64linux/itcell-lib
 prepend-path  PATH            ${topdir}/scripts
 </code></pre>
