@@ -115,7 +115,7 @@ While waiting to receive purchased storage, users may use the global scratch spa
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
-Importantly, note that **the {{ site.cluster.name }} storage is not backed up**.  Users and labs are responsible to back up their own data outside of {{ site.cluster.name }}.
+Importantly, note that **the {{ site.cluster.name }} storage is not backed up**.  Users and labs are responsible for backing up their own data outside of {{ site.cluster.name }}.
 </div>
 
 
