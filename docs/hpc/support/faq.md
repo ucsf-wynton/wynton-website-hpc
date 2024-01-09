@@ -25,6 +25,9 @@
 
   3. If you request impossible resource requests, the job will never
      run, as explained below.
+     
+  4. Jobs that you ran in the past do _not_ impact the waiting time
+     for new jobs.
   
 
 **Q**. _My submitted job is stuck in the queue - why is it not
