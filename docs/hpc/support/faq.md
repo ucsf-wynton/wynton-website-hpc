@@ -4,7 +4,30 @@
 
 ### Waiting in job queue
 
-**Q**. _My submitted job is still in the queue - why is it not
+**Q**. _My jobs wait in the queue for a long time before they run - why?_
+
+**A**. A job's waiting time in the queue depends on many factors:
+
+  1. The overall number of jobs already in the queue by you and
+     others, and the run time of the jobs already running on the
+     cluster ([Status] page).
+     
+  2. The amount of resources your job requests, e.g.
+  
+     - the more CPU cores it needs, the longer it has to wait
+       (`-pe <type> <slots>`)
+     
+     - the more RAM it needs, the longer it has to wait 
+       (`-l mem_free=<amount>`)
+     
+     - the longer run-time it needs, the longer it has to wait
+       (`-l h_rt=<time>`)
+
+  3. If you request impossible resource requests, the job will never
+     run, as explained below.
+  
+
+**Q**. _My submitted job is stuck in the queue - why is it not
 running?_
 
 **A**. There could be several reason why your job is not running:
@@ -380,6 +403,7 @@ team].
 **A**. Wynton HPC provides High Performance Computing resources to the UCSF Research community.  We are _not_ able to provide server hosting, application hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.  For these, and related services, we suggest you contact UCSF IT regarding their offerings, e.g. [UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting), [UCSF IT Physical Server Hosting](https://it.ucsf.edu/service/physical-server-hosting), and [UCSF IT Cloud Services](https://cloudservices.ucsf.edu/).
 
 
+[Status]: /hpc/status/index.html
 [{{ site.cluster.nickname }} team]: /hpc/about/contact.html
 [purchase additional storage]: /hpc/about/pricing-storage.html
 [File Sizes and Disk Quotas]: /hpc/howto/storage-size.html
