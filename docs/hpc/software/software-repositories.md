@@ -1464,6 +1464,7 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.</span><br>
 Example: <span class="module-example"><code>gistic2</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/cancer/cga/gistic">https://software.broadinstitute.org/cancer/cga/gistic</a>, <a href="https://github.com/broadinstitute/gistic2/blob/master/support/README.txt">https://github.com/broadinstitute/gistic2/blob/master/support/README.txt</a> (changelog), <a href="https://github.com/broadinstitute/gistic2">https://github.com/broadinstitute/gistic2</a> (source code), <a href="https://www.genepattern.org/modules/docs/GISTIC_2.0/7">https://www.genepattern.org/modules/docs/GISTIC_2.0/7</a></span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>2.0.23</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2624,7 +2625,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>port4me --help</code>, <code>port4me</code>, <code>port4me --tool=jupyter</code>).</span><br>
 URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/port4me">https://github.com/HenrikBengtsson/port4me</a>, <a href="https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This tool is under development.</span><br>
-Versions: <span class="module-version">0.6.0, <em>0.6.0-9010</em></span><br>
+Versions: <span class="module-version">0.6.0, <em>0.7.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2646,7 +2647,6 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-setenv(&quot;PORT4ME_PORT_COMMAND&quot;,&quot;netstat&quot;)
 </code></pre>
 
 </details>
