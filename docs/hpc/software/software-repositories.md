@@ -1069,7 +1069,6 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>4.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -1464,6 +1463,7 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.</span><br>
 Example: <span class="module-example"><code>gistic2</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/cancer/cga/gistic">https://software.broadinstitute.org/cancer/cga/gistic</a>, <a href="https://github.com/broadinstitute/gistic2/blob/master/support/README.txt">https://github.com/broadinstitute/gistic2/blob/master/support/README.txt</a> (changelog), <a href="https://github.com/broadinstitute/gistic2">https://github.com/broadinstitute/gistic2</a> (source code), <a href="https://www.genepattern.org/modules/docs/GISTIC_2.0/7">https://www.genepattern.org/modules/docs/GISTIC_2.0/7</a></span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>2.0.23</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -5199,7 +5199,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.33/lib64/py
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
-Versions: <span class="module-version">0.15, 0.27, 0.28, <em>0.31</em></span><br>
+Versions: <span class="module-version">0.15, 0.27, 0.28, 0.31, <em>0.43</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5208,7 +5208,7 @@ module-whatis &quot;Description: Python package for handling IHM mmCIF files&quo
 module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.31/lib64/python3.6/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.43/lib64/python/site-packages
 </code></pre>
 
 </details>
@@ -5363,7 +5363,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/s
   <dd class="module-details">
 <span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
-Versions: <span class="module-version">0.2, 0.3, 0.4, <em>0.5</em></span><br>
+Versions: <span class="module-version">0.2, 0.3, 0.4, 0.5, <em>0.9</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5372,7 +5372,7 @@ module-whatis &quot;Description: Python package for handling ModelCIF mmCIF file
 module-whatis &quot;URL: https://github.com/ihmwg/python-modelcif&quot;
 conflict python2
 module load python3/ihm
-prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.5/lib/python3.6/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.9/lib/python/site-packages
 </code></pre>
 
 </details>
