@@ -907,7 +907,7 @@ setenv(&quot;X86_64_LEVEL_ASSERT&quot;, &quot;&quot;)
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog) <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version">3.26.3, 3.27.1, 3.27.4, <em>3.27.7</em></span><br>
+Versions: <span class="module-version"><em>3.27.7</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1069,7 +1069,6 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>4.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -1271,7 +1270,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.44.0, 0.44.1, <em>0.45.0</em></span><br>
+Versions: <span class="module-version"><em>0.45.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2118,7 +2117,7 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">markdownlint-cli: MarkdownLint Command Line Interface</strong><br>
 <span class="module-description">Examples: <code>markdownlint --version</code>, <code>markdownlint --help</code>, <code>markdownlint -- *.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (documentation), <a href="https://github.com/igorshubovych/markdownlint-cli/releases/">https://github.com/igorshubovych/markdownlint-cli/releases/</a> (releases), <a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (source code)</span><br>
-Versions: <span class="module-version">0.37.0, <em>0.38.0</em></span><br>
+Versions: <span class="module-version"><em>0.38.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2218,7 +2217,7 @@ LmodError(&quot;[DEFUNCT ERROR] The CBI '&quot; .. name .. &quot;/&quot; .. vers
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://docs.conda.io/en/latest/">https://docs.conda.io/en/latest/</a>, <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> (documentation), <a href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a> (releases), <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
 Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
-Versions: <span class="module-version">4.12.0-py39, 22.11.1-1-py310, 23.3.1-0-py39, 23.5.2-0-py39, 23.5.2-0-py310, <em>23.5.2-0-py311</em></span><br>
+Versions: <span class="module-version">4.12.0-py39, 22.11.1-1-py310, 23.3.1-0-py39, 23.5.2-0-py39, 23.5.2-0-py310, 23.5.2-0-py311, <em>23.11.0-2-py311</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2247,6 +2246,10 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
 
+-- Miniconda (&gt;= 23.11.0) [2023-11-30]:
+-- Prevent conda from add shortcuts to user's Desktop.
+pushenv(&quot;CONDA_SHORTCUTS&quot;, false)
+
 if mode() == &quot;load&quot; then
   -- ASSERT: Make sure there is no other active conda environment
   if os.getenv(&quot;CONDA_EXE&quot;) then
@@ -2264,11 +2267,11 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_CONDA&quot;, false)
 end
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniconda3-23.5.2-0-py311/etc/profile.d/conda.sh
-pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-23.5.2-0-py311/bin/conda&quot;)
-pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-23.5.2-0-py311/bin/python&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniconda3-23.11.0-2-py311/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-23.11.0-2-py311/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-23.11.0-2-py311/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-23.5.2-0-py311/condabin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-23.11.0-2-py311/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
@@ -2430,7 +2433,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc/blob/master/changelog.md">https://github.com/jgm/pandoc/blob/master/changelog.md</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.1.9, 3.1.10, <em>3.1.11</em></span><br>
+Versions: <span class="module-version">3.1.10, <em>3.1.11</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2662,7 +2665,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>port4me --help</code>, <code>port4me</code>, <code>port4me --tool=jupyter</code>).</span><br>
 URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/port4me">https://github.com/HenrikBengtsson/port4me</a>, <a href="https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/port4me/blob/develop/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This tool is under development.</span><br>
-Versions: <span class="module-version">0.6.0, 0.7.0, <em>0.7.1</em></span><br>
+Versions: <span class="module-version"><em>0.7.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3027,7 +3030,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.64.2, 1.65.0, <em>1.65.1</em></span><br>
+Versions: <span class="module-version"><em>1.65.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -3132,7 +3135,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 Example: <span class="module-example"><code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a>, <a href="https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md">https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">13.0.0, <em>14.0.3</em></span><br>
+Versions: <span class="module-version"><em>14.0.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4001,7 +4004,7 @@ end
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.35.2, <em>4.40.5</em></span><br>
+Versions: <span class="module-version"><em>4.40.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4116,24 +4119,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2023.09/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4147,6 +4132,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
