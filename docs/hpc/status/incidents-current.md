@@ -2,6 +2,14 @@
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
 
+**Update**: The compute and development nodes are available again.
+Jobs that were running when we did the emergency shutdown should be
+considered lost and need to be resubmitted.  UCSF Facilities has
+re-established cooling, but there is currently no redundancy cooling
+system available, meaning there is a higher-than-usual risk for
+another failure.
+<br><span class="timestamp">January 25, 15:45 PT</span>
+
 **Notice**: We are shutting down all Wynton compute and development
 nodes as an emergency action. This is due to a serious issue with the
 chilled-water system that feeds the cooling in the Wynton data
