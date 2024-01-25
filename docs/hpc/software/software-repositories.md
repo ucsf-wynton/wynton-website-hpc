@@ -1069,7 +1069,6 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>4.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -1271,7 +1270,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.45.0</em></span><br>
+Versions: <span class="module-version">0.45.0, <em>0.46.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1834,7 +1833,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
 Example: <span class="module-example"><code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/htslib/blob/develop/NEWS">https://github.com/samtools/htslib/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, <em>1.19</em></span><br>
+Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, <em>1.19.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2786,7 +2785,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases/latest">https://github.com/quarto-dev/quarto-cli/releases/latest</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.3.450</em></span><br>
+Versions: <span class="module-version">1.3.450, <em>1.4.549</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3030,7 +3029,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.65.1</em></span><br>
+Versions: <span class="module-version">1.65.1, <em>1.65.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -3135,7 +3134,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 Example: <span class="module-example"><code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a>, <a href="https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md">https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>14.0.3</em></span><br>
+Versions: <span class="module-version">14.0.3, <em>14.1.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3333,7 +3332,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
 Example: <span class="module-example"><code>samtools --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS">https://github.com/samtools/samtools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, <em>1.19</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, <em>1.19.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4119,24 +4118,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2023.09/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4150,6 +4131,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
