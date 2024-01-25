@@ -1,3 +1,26 @@
+### January 25, 2024
+
+#### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
+
+**Notice**: We are shutting down all Wynton compute nodes as an
+emergency action. This is due to a serious issue with the
+chilled-water system that feeds the cooling in the Wynton data
+center. By shutting down all of the compute nodes, we hope to slow the
+current temperature rise, while keeping the storage system and login
+nodes up. The will come back up again as soon as the UCSF Facilities
+has resolved the chilled-water system. ETA is currently unknown.
+<br><span class="timestamp">January 25, 11:25 PT</span>
+
+<!--
+start: 2024-01-25T11:25:00
+stop: ...
+length: 
+severity: major-outage
+affected: jobs
+reason: external
+ -->
+
+
 ### November 16-ongoing, 2023
 
 #### <span style="color: orange;">Sporadic job failure</span>
