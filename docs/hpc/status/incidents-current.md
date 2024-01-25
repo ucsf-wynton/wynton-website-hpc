@@ -22,8 +22,8 @@ currently unknown.
 
 <!--
 start: 2024-01-25T11:25:00
-stop: ...
-length: 
+stop: 2024-01-25T15:25:00
+length: 4.0 hours
 severity: major-outage
 affected: jobs
 reason: external
