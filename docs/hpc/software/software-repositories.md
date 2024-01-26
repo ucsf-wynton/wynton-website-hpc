@@ -1069,7 +1069,6 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>4.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -1913,7 +1912,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
 Warning: <span class="module-warning">IGV (&gt;= 2.5.0) requires Java 11. Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>2.16.2</em></span><br>
+Versions: <span class="module-version">2.16.2, <em>2.17.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1932,13 +1931,29 @@ Examples: `igv --help`, `igv --version`, and `igv`.
 Warning: IGV (&gt;= 2.5.0) requires Java 11. Only the most recent version of this software will be kept.
 ]])
 
---depends_on(&quot;openjdk/11&quot;)
-
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 prepend_path(&quot;PATH&quot;, home)
 
-local java_check = 'ver=$(java -version 2&gt;&amp;1 | grep -F &quot;version&quot; | sed -E &quot;s/(.* version |\\&quot;)//g&quot;); &gt;&amp;2 echo &quot;Java version: ${ver} [IGV requires Java 11 or newer]&quot;; ver_x=$(sed -E &quot;s/^1[.]//&quot; &lt;&lt;&lt; &quot;${ver}&quot; | sed &quot;s/[.].*//&quot;); if [[ ${ver_x} -lt 11 ]]; then &gt;&amp;2 echo &quot;ERROR: Java ${ver_x} detected, but IGV requires Java 11 or newer: $(java -version 2&gt;&amp;1 | grep -F &quot;version&quot;)&quot;; return 1; fi;'
+-- Parse version x.y.z into x and y
+version_x=string.gsub(version, &quot;[.].*$&quot;, &quot;&quot;)
+version_xy=string.gsub(version, version_x .. &quot;[.]&quot;, &quot;&quot;)
+version_y=string.gsub(version_xy, &quot;[.].*$&quot;, &quot;&quot;)
+version_x=tonumber(version_x)
+version_y=tonumber(version_y)
+
+-- Identify required Java version
+local min_java_version=8
+if (version_x &gt;= 2) then
+  if (version_y &gt;= 17) then
+    min_java_version=17
+  elseif (version_y &gt;= 2.5) then
+    min_java_version=11
+  end
+end
+
+
+local java_check = 'ver=$(java -version 2&gt;&amp;1 | grep -F &quot;version&quot; | sed -E &quot;s/(.* version |\\&quot;)//g&quot;); &gt;&amp;2 echo &quot;Java version: ${ver} [IGV ' .. version .. ' requires Java ' .. min_java_version .. ' or newer]&quot;; ver_x=$(sed -E &quot;s/^1[.]//&quot; &lt;&lt;&lt; &quot;${ver}&quot; | sed &quot;s/[.].*//&quot;); if [[ ${ver_x} -lt ' .. min_java_version .. ' ]]; then &gt;&amp;2 echo &quot;ERROR: Java ${ver_x} detected, but IGV requires Java ' .. min_java_version .. ' or newer: $(java -version 2&gt;&amp;1 | grep -F &quot;version&quot;)&quot;; return 1; fi;'
 
 local bash = java_check .. ' ' .. home .. '/igv.sh &quot;$@&quot;'
 local csh  = home .. '/igv.sh $*'
@@ -3333,7 +3348,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 <strong class="module-help">SAMtools: Tools (written in C using htslib) for Manipulating Next-Generation Sequencing Data</strong><br>
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
 Example: <span class="module-example"><code>samtools --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS">https://github.com/samtools/samtools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS.md">https://github.com/samtools/samtools/blob/develop/NEWS.md</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
 Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, <em>1.19.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -3345,7 +3360,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: https://www.htslib.org/, https://github.com/samtools/samtools/blob/develop/NEWS (changelog), https://github.com/samtools/samtools (source code)&quot;)
+whatis(&quot;URL: https://www.htslib.org/, https://github.com/samtools/samtools/blob/develop/NEWS.md (changelog), https://github.com/samtools/samtools (source code)&quot;)
 whatis([[
 Description: SAMtools is a suite of programs for interacting with high-throughput sequencing data.
 Examples: `samtools --version`.
