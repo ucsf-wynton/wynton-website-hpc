@@ -89,3 +89,11 @@ condition: is operational
 # level: warning
 # condition: is operational
 # message: (1) Wynton now runs Rocky 8 Linux. (2) Expect longer waiting times on the queue until more compute nodes have been re-enabled.
+
+level: danger
+condition: Emergency shutdown with limited access
+message: Emergency shutdown of compute and development nodes because of severe cooling issue
+
+level: warning
+condition: is operational
+message: The immediate cooling issue has been resolve, but we currently run without redundant cooling exposing us to the risk of another emergency shutdown
