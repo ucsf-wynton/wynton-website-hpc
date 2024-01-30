@@ -57,6 +57,47 @@
 
 
 
+### November 15-December 15, 2023
+
+#### <span style="color: orange;">Upgrading compute nodes</span>
+
+**Resolved**: All compute nodes are up and running.
+<br><span class="timestamp">December 15, 09:00 PT</span>
+
+**Update**: A total of ~15,000 CPU cores are now up and running.
+<br><span class="timestamp">November 27, 15:00 PT</span>
+
+**Update**: A total of ~14,000 CPU cores are now up and running.
+<br><span class="timestamp">November 26, 02:00 PT</span>
+
+**Update**: A total of ~13,000 CPU cores are now up and running.
+<br><span class="timestamp">November 22, 15:30 PT</span>
+
+**Update**: A total of ~12,000 CPU cores are now up and running.
+<br><span class="timestamp">November 22, 01:00 PT</span>
+
+**Update**: A total of ~10,000 CPU cores are now up and running.
+<br><span class="timestamp">November 21, 01:00 PT</span>
+
+**Update**: 98 compute nodes with a total of 2,780 CPU cores are now
+up and running.
+<br><span class="timestamp">November 16, 15:00 PT</span>
+
+**Notice**: As we come back from the downtime, we start out with 36
+out of 490 compute nodes available to process jobs.  Work continues to
+migrating the remaining nodes to Rocky 8.
+<br><span class="timestamp">November 15, 14:15 PT</span>
+
+<!--
+start: 2023-11-15T09:00:00
+stop: 2023-12-15T09:00:00
+length: 720 hours
+severity: low
+affected: jobs
+reason: scheduled
+ -->
+
+
 
 ### October 30-November 15, 2023
 
