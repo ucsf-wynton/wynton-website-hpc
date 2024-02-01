@@ -1,4 +1,4 @@
-# Using rclone to mount `/wynton` filesystem on macOS:
+# Using rclone to mount `/wynton` filesystem on macOS
 
 - install [macFUSE](https://osxfuse.github.io/)
 - install rclone from the [Downloads](https://rclone.org/downloads/) page
