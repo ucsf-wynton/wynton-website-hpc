@@ -9,3 +9,5 @@ Apptainer> echo $TMPDIR
 /scratch/alice
 Apptainer> ls "$TMPDIR"
 ls: cannot access '/scratch/alice': No such file or directory
+Apptainer> mktemp
+mktemp: failed to create file via template ‘/scratch/alice/tmp.XXXXXXXXXX’: No such file or directory

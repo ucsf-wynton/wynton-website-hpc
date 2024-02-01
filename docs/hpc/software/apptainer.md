@@ -194,6 +194,8 @@ Apptainer> echo $TMPDIR
 /scratch/alice
 Apptainer> ls "$TMPDIR"
 ls: cannot access '/scratch/alice': No such file or directory
+Apptainer> mktemp
+mktemp: failed to create file via template ‘/scratch/alice/tmp.XXXXXXXXXX’: No such file or directory
 ```
 
 To make also these folders available within the container, we can use `apptainer` option `--bind`.  In its simplest form, we can just list the folders we want to make available, e.g.

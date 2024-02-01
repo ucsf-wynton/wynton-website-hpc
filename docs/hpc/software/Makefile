@@ -29,7 +29,7 @@ scl:
 	markin build $@.sh
 	markin inject $@.md
 
-singularity:
+apptainer:
 	markin build $@.sh
 	markin inject $@.md
 
