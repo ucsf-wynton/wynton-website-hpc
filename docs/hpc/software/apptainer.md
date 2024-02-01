@@ -190,9 +190,9 @@ Apptainer> ls {{ site.path.global_scratch }}
 ls: cannot access '{{ site.path.global_scratch }}': No such file or directory
 Apptainer> ls {{ site.user.labfolder }}
 ls: cannot access '{{ site.user.labfolder }}': No such file or directory
-Apptainer> echo $TMPDIR
+Apptainer> echo "$TMPDIR"
 /scratch/alice
-Apptainer> ls "$TMPDIR"
+Apptainer> ls -dF "$TMPDIR"
 ls: cannot access '/scratch/alice': No such file or directory
 Apptainer> mktemp
 mktemp: failed to create file via template ‘/scratch/alice/tmp.XXXXXXXXXX’: No such file or directory
@@ -203,10 +203,14 @@ To make also these folders available within the container, we can use `apptainer
 <!-- code-block label="shell-bind" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ apptainer shell --bind /scratch,{{ site.path.global_scratch }},{{ site.user.labfolder }} rocker_r-base.sif
-Apptainer> ls /scratch
-alice
-Apptainer> ls {{ site.path.global_scratch }}
-alice
+Apptainer> echo "$TMPDIR"
+/scratch/alice
+Apptainer> ls -dF "$TMPDIR"
+/scratch/alice/
+Apptainer> mktemp
+/scratch/alice/tmp.UfD7e9LlxV
+Apptainer> ls -dF {{ site.path.global_scratch }}/alice
+/wynton/scratch/alice/
 Apptainer> ls {{ site.user.labfolder }}
 data1  data2
 ```
