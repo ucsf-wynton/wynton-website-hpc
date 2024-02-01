@@ -256,7 +256,8 @@ To run this as a batch job, we need to create a job script.
 #$ -l mem_free=100M
 #$ -l h_rt=00:05:00
 
-apptainer exec rocker_r-base.sif Rscript -e "sum(1:10)"
+## Remember to bind TMPDIR
+apptainer exec --bind "$TMPDIR" rocker_r-base.sif Rscript -e "sum(1:10)"
 ```
 
 And now submit with `qsub`:
