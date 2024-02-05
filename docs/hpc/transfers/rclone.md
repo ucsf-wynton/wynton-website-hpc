@@ -1,4 +1,6 @@
-# Using rclone to mount `/wynton` filesystem on macOS
+# Using rclone to mount `/wynton` filesystem
+
+The rclone application is available for macOS, Windows and Linux.  Check the [rclone website](https://rclone.org/install/) for the most up-to-date installation instructions for your operating system.
 
 - install FUSE
   - macOS: install [macFUSE](https://osxfuse.github.io/)
