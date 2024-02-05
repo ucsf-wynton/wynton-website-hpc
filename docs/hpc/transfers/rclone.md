@@ -1,8 +1,9 @@
 # Using rclone to mount `/wynton` filesystem on macOS
 
-- install [macFUSE](https://osxfuse.github.io/)
+- install FUSE
+  - macOS: install [macFUSE](https://osxfuse.github.io/)
+  - for Windows, follow instructions for [installing on Windows](https://rclone.org/commands/rclone_mount/#installing-on-windows)
 - install rclone from the [Downloads](https://rclone.org/downloads/) page
-- set up a new "remote" with: `rclone config`
 - set up a new ssh key
   - generate key with `ssh-keygen` command with​ a password/passphrase `~/.ssh % ssh-keygen -m PEM -f ~/.ssh/rclone_to_wynton`
   - 2 files should be generated, in this case named:
@@ -11,6 +12,8 @@
   - store the new key `rclone_to_wynton` in `~/.ssh/` on laptop/workstation
   - push the `.pub` file to wynton using: `$ ssh-copy-id -i ~/.ssh/rclone_to_wynton.pub alice@{{ site.login.hostname }}`
     - note: replace `alice` with *your* Wynton username 
+
+- set up a new "remote" with: `rclone config`
 
 To create a new remote: run `rclone config`, in this example named `log1` and select `sftp` as the "Type of Storage":
 
