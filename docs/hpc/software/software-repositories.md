@@ -1069,6 +1069,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
+Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>4.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -4138,24 +4139,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2023.09/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4169,6 +4152,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -5138,7 +5139,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/decorator-4.4.1/lib/pyt
   <dd class="module-details">
 <span class="module-description">The modular source code checker: pep8 pyflakes and co</span><br>
 URL: <span class="module-url"><a href="https://gitlab.com/pycqa/flake8">https://gitlab.com/pycqa/flake8</a></span><br>
-Versions: <span class="module-version">3.8.4, <em>5.0.4</em></span><br>
+Versions: <span class="module-version"><em>5.0.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5202,7 +5203,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/
   <dd class="module-details">
 <span class="module-description">A high performance implementation of HDBSCAN clustering</span><br>
 URL: <span class="module-url"><a href="https://github.com/scikit-learn-contrib/hdbscan">https://github.com/scikit-learn-contrib/hdbscan</a></span><br>
-Versions: <span class="module-version">0.8.28, <em>0.8.33</em></span><br>
+Versions: <span class="module-version"><em>0.8.33</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5283,7 +5284,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/iniconfig-1.1.1/lib/pyt
   <dd class="module-details">
 <span class="module-description">Lightweight pipelining: using Python functions as pipeline jobs</span><br>
 URL: <span class="module-url"><a href="https://joblib.readthedocs.io/en/latest/">https://joblib.readthedocs.io/en/latest/</a></span><br>
-Versions: <span class="module-version">0.14.0, <em>0.17.0</em></span><br>
+Versions: <span class="module-version"><em>0.17.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5466,7 +5467,7 @@ prepend-path  PATH         /salilab/diva1/programs/linux/nose-1.3.7/bin
   <dd class="module-details">
 <span class="module-description">Fast numerical array expression evaluator for Python and NumPy</span><br>
 URL: <span class="module-url"><a href="https://github.com/pydata/numexpr">https://github.com/pydata/numexpr</a></span><br>
-Versions: <span class="module-version">2.7.0, <em>2.8.1</em></span><br>
+Versions: <span class="module-version"><em>2.8.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5614,7 +5615,7 @@ prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/protobuf-py3
   <dd class="module-details">
 <span class="module-description">Cross-python path, ini-parsing, io, code, log facilities</span><br>
 URL: <span class="module-url"><a href="https://py.readthedocs.io/en/latest/">https://py.readthedocs.io/en/latest/</a></span><br>
-Versions: <span class="module-version">1.10.0, <em>1.11.0</em></span><br>
+Versions: <span class="module-version"><em>1.11.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5755,7 +5756,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/pytz-2019.3/lib/python3
   <dd class="module-details">
 <span class="module-description">A set of python modules for machine learning and data mining</span><br>
 URL: <span class="module-url"><a href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a></span><br>
-Versions: <span class="module-version">0.14.1, <em>0.21.3</em></span><br>
+Versions: <span class="module-version"><em>0.21.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
