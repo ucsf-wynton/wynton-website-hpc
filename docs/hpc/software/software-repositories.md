@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(92)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -1464,7 +1464,6 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <span class="module-description">GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers.</span><br>
 Example: <span class="module-example"><code>gistic2</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/cancer/cga/gistic">https://software.broadinstitute.org/cancer/cga/gistic</a>, <a href="https://github.com/broadinstitute/gistic2/blob/master/support/README.txt">https://github.com/broadinstitute/gistic2/blob/master/support/README.txt</a> (changelog), <a href="https://github.com/broadinstitute/gistic2">https://github.com/broadinstitute/gistic2</a> (source code), <a href="https://www.genepattern.org/modules/docs/GISTIC_2.0/7">https://www.genepattern.org/modules/docs/GISTIC_2.0/7</a></span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>2.0.23</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -4057,7 +4056,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (96)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (95)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -4238,30 +4237,6 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_cmake" class="module-name">cmake</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Cross-platform make system</span><br>
-URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a></span><br>
-Versions: <span class="module-version">3.12.2, <em>3.18.3</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Cross-platform make system&quot;
-module-whatis &quot;URL: https://cmake.org/&quot;
-prepend-path PATH               /salilab/diva1/programs/x86_64linux/cmake-3.18.3/bin
-
-if [ module-info mode load ] {
-  puts stderr &quot;!! It is recommended NOT to use 'module load cmake' as this module is&quot;
-  puts stderr &quot;   older than the default cmake. This module is deprecated and will be&quot;
-  puts stderr &quot;   removed on Feb 1st, 2024.&quot;
-}
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_colabfold" class="module-name">colabfold</h3>
 <dl>
   <dd class="module-details">
@@ -4374,7 +4349,7 @@ setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0
   <dd class="module-details">
 <span class="module-description">A language for writing Python extension modules</span><br>
 URL: <span class="module-url"><a href="https://cython.org/">https://cython.org/</a></span><br>
-Versions: <span class="module-version">0.25.2, 0.29.14, 0.29.24, 0.29.32, 0.29.36, <em>3.0.5</em></span><br>
+Versions: <span class="module-version">0.29.36, <em>3.0.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5085,7 +5060,7 @@ Versions: <span class="module-version"><em>0.10.0</em></span><br>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Composable style cycles&quot;
+module-whatis &quot;Description: Composable style cycles&quot; 
 module-whatis &quot;URL: https://github.com/matplotlib/cycler&quot;
 conflict python2
 module load python3/six
@@ -5797,7 +5772,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py36-1.3.2/
   <dd class="module-details">
 <span class="module-description">Python 2 and 3 compatibility utilities</span><br>
 URL: <span class="module-url"><a href="https://github.com/benjaminp/six">https://github.com/benjaminp/six</a></span><br>
-Versions: <span class="module-version">1.13.0, <em>1.16.0</em></span><br>
+Versions: <span class="module-version"><em>1.16.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -6090,7 +6065,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(92)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
 _The above information is updated automatically once an hour by querying `module avail` and `module spider`._
