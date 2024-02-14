@@ -83,10 +83,13 @@ When logging in from your local computer, you should see something like:
 
 ```sh
 {local}$ ssh alice@{{ site.login.hostname }}
-alice@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
+alice@{{ site.login.hostname }}:s password: 
 [alice@{{ site.login.name }} ~]$ 
 ```
 
+Note, when typing your password, there will be _no_ visual feedback at
+all, but the system will still receive what you type, so just press
+<kbd>ENTER</kbd> afterward.
 
 If you get `Permission denied, please try again.` when you enter your password, make sure you use the correct {{ site.cluster.name }} username (case sensitive) and the correct password.
 
