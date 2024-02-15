@@ -10,16 +10,6 @@ The {{ site.cluster.name }} environment supports running a graphical user interf
 
 ## X2Go (Remote Desktop)
 
-<div class="alert alert-danger" role="alert" markdown="1">
-
-**X2Go does not work for GPU development nodes**. The symptom is that
-the session disconnects after successful authentication.  The
-workaround is to use the [X11 Forwarding] technique
-instead. /2022-04-26
-
-</div>
-
-
 ### Requirements
 
 Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }}  _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to have a working [SSH key pair] set up and configured the X2Go Client. 
@@ -33,7 +23,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
 
  1. Use the menus to create a **New Session ...**
  2. Pick a **Session name**, e.g. `{{ site.cluster.name }}`
- 3. Set the **Host** to a [development node]: <span class="non-phi">`dev1`, `dev2`, `dev3`, or ~~`gpudev1`~~</span><span class="phi">`pdev1` or ~~`pgpudev1`~~</span>
+ 3. Set the **Host** to a [development node]: <span class="non-phi">`dev1`, `dev2`, `dev3`, or `gpudev1`</span><span class="phi">`pdev1` or `pgpudev1`</span>
  4. Set the **Login** to _your_ {{ site.cluster.name }} username, e.g. `alice`
  5. In the **Use RSA/DSA key for ssh connection**, enter the path to the your private SSH Key.
  6. Select **Try auto login (via SSH Agent or default SSH key)**
