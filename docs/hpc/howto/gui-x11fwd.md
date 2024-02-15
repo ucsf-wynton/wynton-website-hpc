@@ -88,7 +88,7 @@ To setup the X11 forwarding when connecting to the cluster, add option `-X`, or 
 
 ```sh
 {local}$ ssh -X -C alice@{{ site.login.hostname }}
-alice1@{{ site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
+alice1@{{ site.login.hostname }}:s password: 
 [alice@{{ site.login.name }} ~]$ echo "DISPLAY='$DISPLAY'"
 DISPLAY='localhost:20.0'
 [alice@{{ site.login.name }} ~]$ 
@@ -107,7 +107,7 @@ Now, since we should not run anything on the login nodes, the next step is to he
 
 ```sh
 [alice@{{ site.login.name }} ~]$ ssh -X {{ site.devel.hostname }}
-alice1@{{ site.devel.name }}:s password: XXXXXXXXXXXXXXXXXXX
+alice1@{{ site.devel.name }}:s password: 
 [alice@{{ site.devel.name }} ~]$ echo "DISPLAY='$DISPLAY'"
 DISPLAY='localhost:14.0'
 [alice@{{ site.devel.name }} ~]$ 
