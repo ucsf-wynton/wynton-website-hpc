@@ -4283,6 +4283,7 @@ Versions: <span class="module-version"><em>20230808.git79d8c6e</em></span><br>
 
 module-whatis &quot;Description: AlphaFold2 using MMseqs2&quot;
 module-whatis &quot;URL: https://github.com/sokrypton/ColabFold&quot;
+module-whatis &quot;Examples: for example usage on Wynton, see https://www.rbvi.ucsf.edu/chimerax/data/wynton-colabfold-feb2024/colabfold_wynton.html&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/colabfold-20230808.git79d8c6e/localcolabfold/colabfold-conda/bin/
 </code></pre>
 
