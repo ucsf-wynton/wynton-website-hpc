@@ -2874,7 +2874,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The R programming language.</span><br>
 Example: <span class="module-example"><code>R</code>, <code>R --version</code>, and <code>Rscript --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.r-project.org/">https://www.r-project.org/</a>, <a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.html">https://cran.r-project.org/doc/manuals/r-release/NEWS.html</a> (changelog)</span><br>
-Versions: <span class="module-version">3.0.0, 3.0.3, 3.1.0, 3.1.3, 3.2.0, 3.2.5, 3.3.0, 3.3.3, 3.4.0, 3.4.4, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0, 4.1.3, 4.2.0-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, 4.3.1-gcc10, <em>4.3.2-gcc10</em></span><br>
+Versions: <span class="module-version">3.0.0, 3.0.3, 3.1.0, 3.1.3, 3.2.0, 3.2.5, 3.3.0, 3.3.3, 3.4.0, 3.4.4, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0, 4.1.3, 4.2.0-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, 4.3.1-gcc10, 4.3.2-gcc10, <em>4.3.3-gcc10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3630,7 +3630,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 Example: <span class="module-example"><code>fastq-dump --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/ncbi/sra-tools/wiki">https://github.com/ncbi/sra-tools/wiki</a> (documentation), <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc">https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc</a> (documentation), <a href="https://github.com/ncbi/sra-tools/blob/master/CHANGES.md">https://github.com/ncbi/sra-tools/blob/master/CHANGES.md</a> (changelog), <a href="https://github.com/ncbi/sra-tools">https://github.com/ncbi/sra-tools</a> (source code)</span><br>
 Warning: <span class="module-warning">To work around a bug where <code>fasterq-dump</code> crashes the local machine, it has been tweaked such that it uses <code>$TMPDIR</code> rather than <code>$PWD</code> as the default temporary folder and it will only use two threads instead of six by default.</span><br>
-Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, 2.11.1, 2.11.2, 2.11.3, 3.0.0, 3.0.1, 3.0.2, 3.0.5, 3.0.6, <em>3.0.7</em></span><br>
+Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, 2.11.1, 2.11.2, 2.11.3, 3.0.0, 3.0.1, 3.0.2, 3.0.5, 3.0.6, 3.0.7, <em>3.1.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
