@@ -1069,7 +1069,6 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.</span><br>
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
-Requirement: <span class="module-requirement">CentOS 7.</span><br>
 Versions: <span class="module-version"><em>4.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -4171,24 +4170,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2023.09/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4202,6 +4183,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -4360,19 +4359,19 @@ prepend-path  PYTHONPATH      ${topdir}/python
 <h3 id="module_sali_cuda" class="module-name">cuda</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, <em>11.5.0</em></span><br>
+Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, 11.5.0, <em>12.4.0;65e8f4c8</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;NVIDIA CUDA Toolkit libraries, plus cuDNN (v8)&quot;
+module-whatis &quot;NVIDIA CUDA Toolkit libraries, plus cuDNN (v9)&quot;
 if ![file exists /usr/bin/g++] {
   module load gcc
 }
-prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/bin
-prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
-prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/pkgconfig
-setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-11.5.0/lib64/cuda/lib64
+prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/bin
+prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/lib64
+prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/pkgconfig
+setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/lib64
 </code></pre>
 
 </details>
