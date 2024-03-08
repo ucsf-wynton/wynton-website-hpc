@@ -4312,7 +4312,7 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/concavity-0.1/b
   <dd class="module-details">
 <span class="module-description">conda-forge Python distribution</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a></span><br>
-Versions: <span class="module-version"><em>py310-23.1.0</em></span><br>
+Versions: <span class="module-version">py310-23.1.0, <em>py310-23.11.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4320,7 +4320,7 @@ Versions: <span class="module-version"><em>py310-23.1.0</em></span><br>
 module-whatis &quot;Description: conda-forge Python distribution&quot;
 module-whatis &quot;URL: https://conda-forge.org/&quot;
 conflict anaconda
-prepend-path  PATH       /salilab/diva1/home/anaconda/mambaforge/py310-23.1.0/bin/
+prepend-path  PATH       /salilab/diva1/home/anaconda/mambaforge/py310-23.11.0/bin/
 </code></pre>
 
 </details>
