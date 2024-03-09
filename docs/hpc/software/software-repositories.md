@@ -4158,7 +4158,7 @@ prepend-path  LD_LIBRARY_PATH /wynton/group/sali/AMBER/amber11/deplib
   <dd class="module-details">
 <span class="module-description">Anaconda Python distribution</span><br>
 URL: <span class="module-url"><a href="https://www.anaconda.com/">https://www.anaconda.com/</a></span><br>
-Versions: <span class="module-version">py39-2022.05, py310-2023.03, <em>py311-2023.09</em></span><br>
+Versions: <span class="module-version">py39-2022.05, py310-2023.03, py311-2023.09, <em>py311-2024.02</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4166,7 +4166,7 @@ Versions: <span class="module-version">py39-2022.05, py310-2023.03, <em>py311-20
 module-whatis &quot;Description: Anaconda Python distribution&quot;
 module-whatis &quot;URL: https://www.anaconda.com/&quot;
 conflict conda-forge
-prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2023.09/bin/
+prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2024.02/bin/
 </code></pre>
 
 </details>
