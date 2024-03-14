@@ -1,3 +1,22 @@
+### March 14, 2024
+
+#### <span style="color: orange;">File-system failures</span>
+
+**Notice**: Wynton is currently down due to an unknown issue with the
+BeeGFS filesystem. The problem started at 02:11 this morning. We're
+working on it and will post updates as we know more.
+<br><span class="timestamp">March 14, 09:15 PT</span>
+
+<!--
+start: 2024-03-14T02:11:00
+stop: 2024-03-??
+length: ?? hours
+severity: major-outage
+affected: jobs
+reason: external
+ -->
+
+
 ### January 25, 2024
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
