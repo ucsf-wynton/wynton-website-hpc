@@ -127,13 +127,13 @@ prepend-path  MANPATH   /usr/local/julia-1.6.0/share/man
 <h3 id="module_built-in_matlab" class="module-name">matlab</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, 2022a, <em>2022b</em></span><br>
+Versions: <span class="module-version">2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, 2022a, 2022b, 2023a, <em>2023b</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Language for technical computing&quot;
-prepend-path  PATH                /usr/local/matlab/R2022b/bin
+prepend-path  PATH                /usr/local/matlab/R2023b/bin
 setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton.ucsf.edu
 </code></pre>
 
@@ -143,13 +143,13 @@ setenv        MLM_LICENSE_FILE    27000@matl1.wynton.ucsf.edu:27000@matl2.wynton
 <h3 id="module_built-in_matlab-runtime" class="module-name">matlab-runtime</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, 2022a, <em>2022b</em></span><br>
+Versions: <span class="module-version">2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, 2022a, 2022b, 2023a, <em>2023b</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;MATLAB Runtime for making use of MATLAB Compiler applications&quot;
-prepend-path  LD_LIBRARY_PATH     /usr/local/matlab/R2022b/runtime/glnxa64:/usr/local/matlab/R2022b/bin/glnxa64:/usr/local/matlab/R2022b/sys/os/glnxa64:/usr/local/matlab/R2022b/extern/bin/glnxa64
+prepend-path  LD_LIBRARY_PATH     /usr/local/matlab/R2023b/runtime/glnxa64:/usr/local/matlab/R2023b/bin/glnxa64:/usr/local/matlab/R2023b/sys/os/glnxa64:/usr/local/matlab/R2023b/extern/bin/glnxa64
 </code></pre>
 
 </details>
@@ -4171,24 +4171,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2024.02/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4202,6 +4184,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
