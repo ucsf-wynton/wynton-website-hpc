@@ -58,7 +58,8 @@
 
 #### <span style="color: orange;">File-system failures</span>
 
-**Resolved**: Wynton and BeeGFS is back up and running again after a adA full reboot of the BeeGFS servers. Root cause is still unknown. 
+**Resolved**: Wynton and BeeGFS is back up and running again after a
+full reboot of the BeeGFS servers. Root cause is still unknown.
 <br><span class="timestamp">March 14, 15:15 PT</span>
 
 **Notice**: Wynton is currently down due to an unknown issue with the
