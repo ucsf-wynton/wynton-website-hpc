@@ -96,4 +96,8 @@ message: Emergency shutdown of compute and development nodes because of severe c
 
 level: warning
 condition: is operational
-message: The immediate cooling issue has been resolve, but we currently run without redundant cooling exposing us to the risk of another emergency shutdown
+message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown
+
+# level: danger
+# condition: is non-operational
+# message: Cluster is not accessible because of BeeGFS issues

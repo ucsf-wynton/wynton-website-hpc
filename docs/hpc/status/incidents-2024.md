@@ -40,7 +40,8 @@
   may have failed, cluster not accessible
 * Occurrences:
   - 2024-03-14 (13.0 hours)
-* Total downtime: 13.0 hours of which 0.0 hours were due to external
+  - 2024-03-17 (15.0 hours)
+* Total downtime: 28.0 hours of which 0.0 hours were due to external
   factors
 
 #### Unscheduled downtimes due to other reasons
@@ -52,6 +53,29 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### March 17-18, 2024
+
+#### <span style="color: orange;">File-system failures</span>
+
+**Resolved**: Wynton and BeeGFS is back up and running again after a
+full reboot of the BeeGFS servers. Root cause is still unknown.
+<br><span class="timestamp">March 18, 10:30 PT</span>
+
+**Notice**: Wynton is currently down due to an unknown BeeGFS
+issues. The problem started around 19:30 on 2024-03-17. We're working
+on it and will post updates as we know more.
+<br><span class="timestamp">March 18, 09:00 PT</span>
+
+<!--
+start: 2024-03-17T19:30:00
+stop: 2024-03-18T10:30:00
+length: 15.0 hours
+severity: major-outage
+affected: jobs, beegfs, compute, *
+reason: beegfs
+ -->
 
 
 ### March 14, 2024
@@ -72,7 +96,7 @@ start: 2024-03-14T02:11:00
 stop: 2024-03-14T15:15:00
 length: 13.0 hours
 severity: major-outage
-affected: jobs
-reason: external
+affected: jobs, beegfs, compute, *
+reason: beegfs
  -->
 

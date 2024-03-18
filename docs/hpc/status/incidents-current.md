@@ -1,4 +1,3 @@
-
 ### January 25-ongoing, 2024
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
