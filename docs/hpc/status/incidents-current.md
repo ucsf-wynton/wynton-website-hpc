@@ -1,23 +1,3 @@
-### March 17-ongoing, 2024
-
-#### <span style="color: orange;">File-system failures</span>
-
-**Notice**: Wynton is currently down due to an unknown BeeGFS
-issues. The problem started around 19:30 on 2024-03-17. We're working
-on it and will post updates as we know more.
-<br><span class="timestamp">March 18, 09:00 PT</span>
-
-<!--
-start: 2024-03-17T19:00:00
-stop: 2024-03-??
-length: ?? hours
-severity: major-outage
-affected: jobs, beegfs, compute, *
-reason: beegfs
- -->
-
-
-
 ### January 25-ongoing, 2024
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
