@@ -72,7 +72,7 @@ start: 2024-03-14T02:11:00
 stop: 2024-03-14T15:15:00
 length: 13.0 hours
 severity: major-outage
-affected: jobs
-reason: external
+affected: jobs, beegfs, compute, *
+reason: beegfs
  -->
 
