@@ -1,6 +1,26 @@
 # Jupyter Notebook
 
-## Where to to run Jupyter Notebook
+## Installing Jupyter Notebook
+
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+
+**Reason for _not_ using Conda**: For Conda environments installed in
+a home directory, both the Python interpreter and all of it's modules
+reside on the shared parallel file system.  The operations to look up
+the needed files are metadata heavy and can strain the parallel file
+system, resulting in a slower startup performance.
+
+</div>
+
+Although you can install Jupyter via [Conda], we highly recommend to
+install using regular [Python] techniques. The following is known to
+work:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user notebook
+```
+
+## Running Jupyter Notebook
 
 [Jupyter Notebook] should only be run on the {{ site.cluster.name }}
 development nodes. However, you cannot connect from outside
@@ -9,44 +29,6 @@ either need to use SSH port forwarding to establish the connection
 with a local web browser, else use X2Go to redirect the desktop from
 the development server to your local desktop and launch a remote web
 browser there.
-
-This assumes you have Jupyter installed with whichever Python you
-usually use.
-
-If using the standard system Python, Jupyter Notebook can be installed
-using `pip`:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ python3 -m pip install --user notebook
-```
-
-If using a Conda environment, using the `conda` package manager to
-install Jupyter Notebook should be used:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ conda install -c conda-forge notebook
-```
-
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-
-Note: During startup, Python does a lot of small file operations
-locating all the required files. The system version Python is
-installed on the local filesystem on {{ site.cluster.name }} nodes and
-should have a faster startup time.
-
-In contrast, for Conda environments installed in a home directory,
-both the Python interpreter and all of it's modules reside on the
-shared parallel file system.  The operations to look up the needed
-files are metadata heavy and can strain the parallel file system,
-resulting in slower startup performance for the script. In particular,
-if the script is a batch job executing on many compute nodes, the
-performance impact has the potential to slow operations down for all
-users.
-
-</div>
-
-
-## Running Jupyter Notebook
 
 Running Jupyter Notebook on {{ site.cluster.name }} involves three
 steps.  On an development node,
@@ -176,3 +158,5 @@ terminal connected by X2Go, which will also launch the web browser.
 
 [Jupyter Notebook]: https://jupyter-notebook.readthedocs.io/en/stable/
 ['Graphical User Interfaces (GUI)']: /hpc/howto/gui-x11fwd.html
+[Conda]: /hpc/howto/conda.html
+[Python]: /hpc/howto/python.html
