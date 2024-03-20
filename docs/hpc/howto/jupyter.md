@@ -90,18 +90,31 @@ Next, we launch Jupyter Notebook on the same development node:
 
 ```sh
 [alice@{{ site.devel.name }}]$ jupyter notebook --no-browser --port 47467
-[I 10:50:23.319 NotebookApp] Serving notebooks from local directory: {{ site.user.home }}
-[I 10:50:23.319 NotebookApp] Jupyter Notebook 6.4.10 is running at:
-[I 10:50:23.319 NotebookApp] http://localhost:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
-[I 10:50:23.319 NotebookApp]  or http://127.0.0.1:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
-[I 10:50:23.319 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 10:50:23.581 NotebookApp]
+[I 2024-03-20 14:48:45.693 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-03-20 14:48:45.698 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-03-20 14:48:45.703 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-03-20 14:48:45.708 ServerApp] notebook | extension was successfully linked.
+[I 2024-03-20 14:48:46.577 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-03-20 14:48:46.666 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-03-20 14:48:46.668 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-03-20 14:48:46.669 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-03-20 14:48:46.675 LabApp] JupyterLab extension loaded from /wynton/home/boblab/alice/.local/lib/python3.11/site-packages/jupyterlab
+[I 2024-03-20 14:48:46.675 LabApp] JupyterLab application directory is /wynton/home/boblab/alice/.local/share/jupyter/lab
+[I 2024-03-20 14:48:46.677 LabApp] Extension Manager is 'pypi'.
+[I 2024-03-20 14:48:46.707 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-03-20 14:48:46.711 ServerApp] notebook | extension was successfully loaded.
+[I 2024-03-20 14:48:46.712 ServerApp] Serving notebooks from local directory: /wynton/home/boblab/alice
+[I 2024-03-20 14:48:46.712 ServerApp] Jupyter Server 2.13.0 is running at:
+[I 2024-03-20 14:48:46.712 ServerApp] http://localhost:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
+[I 2024-03-20 14:48:46.712 ServerApp]     http://127.0.0.1:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
+[I 2024-03-20 14:48:46.712 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-03-20 14:48:46.725 ServerApp]
 
-    To access the notebook, open this file in a browser:
-        file://{{ site.user.home }}/.local/share/jupyter/runtime/nbserver-27971-open.html
+    To access the server, open this file in a browser:
+        file:///wynton/home/boblab/alice/.local/share/jupyter/runtime/jpserver-2853162-open.html
     Or copy and paste one of these URLs:
-        http://localhost:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
-     or http://127.0.0.1:47467/?token=57041544d4cacfdc71c2201d6bebe5b16fcec6bc8397fc98
+        http://localhost:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
+        http://127.0.0.1:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
 ```
 
 However, these instructions do _not_ work out of the box, because they
