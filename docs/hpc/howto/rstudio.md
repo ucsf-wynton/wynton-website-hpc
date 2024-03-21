@@ -95,7 +95,7 @@ same reasons.
 
 As of 2023-12-04, it is not clear why and when this happens.  The
 one workaround we have found is to wipe the user's RStudio set up.
-For this, we recommend the to use:
+For this, we recommend to use:
 
 ```sh
 $ tar -cvf ~/rstudio-config.tar ~/.local/share/rstudio && rm -rf ~/.local/share/rstudio
