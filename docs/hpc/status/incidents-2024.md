@@ -3,7 +3,7 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 13.0 hours (= 0.5 days)
+  - Unscheduled: 28.0 hours (= 1.2 days)
   - Total: 0.0 hours (= 0.0 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
