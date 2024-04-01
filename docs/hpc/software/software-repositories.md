@@ -396,7 +396,7 @@ prepend_path(&quot;BATS_ASSERT_HOME&quot;, home)
 <span class="module-description">Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.</span><br>
 Example: <span class="module-example"><code>bats --version</code>, <code>bats --help</code>, <code>man bats</code>, <code>man 7 bats</code>, and <code>bats tests/</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-core">https://github.com/bats-core/bats-core</a>, <a href="https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md">https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/">https://bats-core.readthedocs.io/en/stable/</a> (documentation)</span><br>
-Versions: <span class="module-version"><em>1.10.0</em></span><br>
+Versions: <span class="module-version">1.10.0, <em>1.11.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -907,7 +907,7 @@ setenv(&quot;X86_64_LEVEL_ASSERT&quot;, &quot;&quot;)
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog) <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version"><em>3.27.7</em></span><br>
+Versions: <span class="module-version">3.27.7, <em>3.29.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1304,7 +1304,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.45.0, 0.46.0, 0.46.1, <em>0.48.0</em></span><br>
+Versions: <span class="module-version">0.45.0, 0.46.0, 0.46.1, 0.48.0, <em>0.48.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1608,7 +1608,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, and <code>gh auth login</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.42.1, <em>2.44.1</em></span><br>
+Versions: <span class="module-version">2.42.1, 2.44.1, <em>2.46.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1945,7 +1945,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
 Warning: <span class="module-warning">IGV (&gt;= 2.7.0) requires Java 17. Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.16.2, 2.17.0, <em>2.17.1</em></span><br>
+Versions: <span class="module-version">2.16.2, 2.17.0, 2.17.1, <em>2.17.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2166,7 +2166,7 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">markdownlint-cli: MarkdownLint Command Line Interface</strong><br>
 <span class="module-description">Examples: <code>markdownlint --version</code>, <code>markdownlint --help</code>, <code>markdownlint -- *.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (documentation), <a href="https://github.com/igorshubovych/markdownlint-cli/releases/">https://github.com/igorshubovych/markdownlint-cli/releases/</a> (releases), <a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (source code)</span><br>
-Versions: <span class="module-version"><em>0.38.0</em></span><br>
+Versions: <span class="module-version">0.38.0, <em>0.39.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2448,7 +2448,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a remote server where you don’t have an entire graphical setup available, but it is a useful tool even on regular desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like environment with ncurses installed.</span><br>
 Example: <span class="module-example"><code>ncdu --version</code>, <code>ncdu --help</code>, and <code>ncdu</code>. For large cleanup tasks, call <code>ncdu --one-file-system -o ncdu.cache</code> once to scan all files, and then use <code>ncdu --enable-delete -f ncdu.cache</code> to clean them out.</span><br>
 URL: <span class="module-url"><a href="https://dev.yorhel.nl/ncdu">https://dev.yorhel.nl/ncdu</a>, <a href="https://dev.yorhel.nl/ncdu/man2">https://dev.yorhel.nl/ncdu/man2</a> (documentation), <a href="https://dev.yorhel.nl/ncdu/changes2">https://dev.yorhel.nl/ncdu/changes2</a> (changelog), <a href="https://code.blicky.net/yorhel/ncdu/">https://code.blicky.net/yorhel/ncdu/</a> (source code)</span><br>
-Versions: <span class="module-version"><em>2.2.1</em></span><br>
+Versions: <span class="module-version">2.2.1, <em>2.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2482,7 +2482,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc/blob/master/changelog.md">https://github.com/jgm/pandoc/blob/master/changelog.md</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.1.10, 3.1.11, <em>3.1.12</em></span><br>
+Versions: <span class="module-version">3.1.10, 3.1.11, 3.1.12, <em>3.1.12.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2551,8 +2551,8 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</span><br>
 Example: <span class="module-example"><code>PicardCommandLine -h</code>, which is short for <code>java -jar &quot;$PICARD_HOME/picard.jar&quot; -h</code>.</span><br>
 URL: <span class="module-url"><a href="https://broadinstitute.github.io/picard/">https://broadinstitute.github.io/picard/</a>, <a href="https://github.com/broadinstitute/picard/releases">https://github.com/broadinstitute/picard/releases</a> (changelog), <a href="https://github.com/broadinstitute/picard">https://github.com/broadinstitute/picard</a> (source code)</span><br>
-Warning: <span class="module-warning">The old <code>picard</code> alias is deprecated. Use function <code>PicardCommandLine</code> instead.</span><br>
-Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2.26.2, 2.26.10, 2.27.1, 2.27.4, <em>2.27.5</em></span><br>
+Warning: <span class="module-warning">The old <code>picard</code> alias is deprecated. Use function <code>PicardCommandLine</code> instead. Picard 3 requires Java 17, Picard 2 requires Java 1.8.</span><br>
+Versions: <span class="module-version">2.21.1, 2.21.4, 2.22.2, 2.23.1, 2.24.0, 2.26.2, 2.26.10, 2.27.1, 2.27.4, 2.27.5, <em>3.1.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2567,16 +2567,19 @@ whatis(&quot;URL: https://broadinstitute.github.io/picard/, https://github.com/b
 whatis([[
 Description: Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.
 Examples: `PicardCommandLine -h`, which is short for `java -jar &quot;$PICARD_HOME/picard.jar&quot; -h`.
-Warning: The old `picard` alias is deprecated. Use function `PicardCommandLine` instead.
+Warning: The old `picard` alias is deprecated. Use function `PicardCommandLine` instead. Picard 3 requires Java 17, Picard 2 requires Java 1.8.
 ]])
 
 local version_x = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
 if (version_x == &quot;1&quot;) then
   -- Pindel 1.64 requires Java (&lt;= 1.6)
   depends_on(&quot;openjdk/1.6.0&quot;)
-else
+elseif (version_x == &quot;2&quot;) then
   -- As of version 2.0.1 (Nov. 2015) Picard requires Java 1.8 (jdk8u66)
   depends_on(&quot;openjdk/1.8.0&quot;)
+elseif (version_x == &quot;3&quot;) then
+  -- As of version 3.0.0 (Feb. 2023) Picard requires Java 17
+  depends_on(&quot;openjdk/17&quot;)
 end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2835,7 +2838,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases/latest">https://github.com/quarto-dev/quarto-cli/releases/latest</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.3.450, 1.4.549, <em>1.4.551</em></span><br>
+Versions: <span class="module-version">1.3.450, 1.4.549, 1.4.551, <em>1.4.552</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3113,7 +3116,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 Example: <span class="module-example"><code>redis-cli --version</code>, <code>redis-cli --help</code>, <code>redis-server --version</code>, and <code>redis-server --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://redis.io/">https://redis.io/</a>, <a href="https://redis.io/docs/">https://redis.io/docs/</a> (docs), <a href="https://github.com/redis/redis/releases">https://github.com/redis/redis/releases</a> (changelog), <a href="https://github.com/redis/redis">https://github.com/redis/redis</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">7.0.12, 7.0.13, 7.2.1, 7.2.2, <em>7.2.3</em></span><br>
+Versions: <span class="module-version">7.0.12, 7.0.13, 7.2.1, 7.2.2, 7.2.3, <em>7.2.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3523,7 +3526,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).</span><br>
 Example: <span class="module-example"><code>snpEff -help</code> and <code>SnpSift -help</code>, which are short for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code> and <code>java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help</code>.  In SnpEff (&lt; 5.0), there is also <code>ClinEff -help</code>, which is short for <code>java -jar $SNPEFF_HOME/ClinEff/ClinEff.jar -help</code>.</span><br>
 URL: <span class="module-url"><a href="https://pcingola.github.io/SnpEff/">https://pcingola.github.io/SnpEff/</a>, <a href="https://github.com/pcingola/SnpEff/tags">https://github.com/pcingola/SnpEff/tags</a> (changelog), <a href="https://github.com/pcingola/SnpEff">https://github.com/pcingola/SnpEff</a> (source code)</span><br>
-Versions: <span class="module-version">4.3t, 5.0c, 5.0e, 5.1e, <em>5.1</em></span><br>
+Versions: <span class="module-version">4.3t, 5.0c, 5.0e, 5.1e, 5.1, <em>5.2a</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3586,7 +3589,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</span><br>
 Example: <span class="module-example"><code>sqlite3 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://sqlite.org/">https://sqlite.org/</a>, <a href="https://sqlite.org/docs.html">https://sqlite.org/docs.html</a> (docs), <a href="https://github.com/sqlite/sqlite/tags">https://github.com/sqlite/sqlite/tags</a> (changelog), <a href="https://github.com/sqlite/sqlite">https://github.com/sqlite/sqlite</a> (source code)</span><br>
-Versions: <span class="module-version">3.43.0, <em>3.43.2</em></span><br>
+Versions: <span class="module-version">3.43.0, 3.43.2, <em>3.45.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4056,7 +4059,7 @@ end
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>4.40.5</em></span><br>
+Versions: <span class="module-version">4.40.5, <em>4.43.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
