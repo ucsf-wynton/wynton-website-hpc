@@ -314,9 +314,12 @@ endpoints.
 
 
 
-### June 1 - ongoing, 2023
+### June 1, 2023 - April 3, 2024
 
 #### <span style="color: orange;">Post file-system failure incidents</span>
+
+**Resolved**: All corrupted and orphaned files have now been deleted. There might be orphaned directories remaining, which we leave to each user to remove, if they exist.
+<br><span class="timestamp">April 3, 2024, 11:15 PT</span>
 
 **Update**: Reading files whose data was lost on the unrecovered storage targets back in May no longer results in an error message.  Instead, the portion of the file that was lost will be replaced by null bytes.  Obviously, this results in a file with corrupt content.  The admins will be going through and deleting all the corrupted files as soon as possible.  It's a big task and will take some time.
 <br><span class="timestamp">July 13, 14:15 PT</span>
