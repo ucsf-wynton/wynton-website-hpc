@@ -1,3 +1,11 @@
+### April 3-ongoing, 2024
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Notice**: New operating-system kernels are deployed. Login, data-transfer, and development nodes will be rebooted on Thursday April 4 at 11:00. Compute nodes will no longer accept new jobs until they have been rebooted. A node will be rebooted as soon as any existing jobs have completed, which may take up to two weeks (maximum runtime). During this update period, there will be fewer than usual slots available on the queues.
+<br><span class="timestamp">April 3, 17:30 PT</span>
+
+
 ### January 25-ongoing, 2024
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
