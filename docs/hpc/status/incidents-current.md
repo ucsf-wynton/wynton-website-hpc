@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
+**Update**: Hosts `dt1` and `plog1` are now also available.
+<br><span class="timestamp">April 4, 12:15 PT</span>
+
 **Update**: Login, data-transfer, and development nodes have been rebooted. It will take some more time before `dt1` and `plog1` are available again, because they did not come back as expected after the reboot.
 <br><span class="timestamp">April 4, 11:15 PT</span>
 
