@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
+**Update**: A new set of kernel updates will be rolled out.  Login, data-transfer, and development nodes will be rebooted briefly on Thursday April 11 at 11:00.  All compute nodes will also have to be drained and rebooted, which might take up to two weeks. Some of the compute have been draining since last week, meaning that will only have been drain for at most another week.
+<br><span class="timestamp">April 10, 16:00 PT</span>
+
 **Update**: Hosts `dt1` and `plog1` are now also available.
 <br><span class="timestamp">April 4, 12:15 PT</span>
 
