@@ -12,8 +12,8 @@
 # Technical details: This information is used in _layouts/default.html.
 
 # Default:
-level: info
-condition: is operational
+# level: info
+# condition: is operational
 
 # level: warning
 # condition: is operational
@@ -90,13 +90,13 @@ condition: is operational
 # condition: is operational
 # message: (1) Wynton now runs Rocky 8 Linux. (2) Expect longer waiting times on the queue until more compute nodes have been re-enabled.
 
-level: danger
-condition: Emergency shutdown with limited access
-message: Emergency shutdown of compute and development nodes because of severe cooling issue
+# level: danger
+# condition: Emergency shutdown with limited access
+# message: Emergency shutdown of compute and development nodes because of severe cooling issue
 
-level: warning
-condition: is operational
-message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown
+# level: warning
+# condition: is operational
+# message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown
 
 # level: danger
 # condition: is non-operational
