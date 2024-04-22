@@ -96,20 +96,34 @@ _Comment_: If another version of R is already loaded, that will automatically be
 ## Using within a login shell
 
 Since `module` is only available on the development and compute nodes,
-its use in a login script (.profile, .bash_profile, .bashrc) needs
-to be guarded:
+its use in a login script (`.profile`, `.bash_profile`, `.bashrc`), we
+can only call it where its supported.  It is supported when
+environment variable `MODULEPATH` is set.  The below `~/.bashrc` code
+snippet shows how to check for this.  Moreover, many of the modules
+provide software tools that are only useful in interactive mode on a
+development node.  The below example shows how to load modules only
+when running in interactive mode.
+
 ```sh
-if [[ -n "$MODULEPATH" ]]
-then
-    module load <software>
+## Are environment modules supported?
+if [[ -n "$MODULEPATH" ]]; then
+    ## Load modules for interactive use
+    ## (these will not be loaded when running jobs)
+    if [[ $- == *i* ]]; then
+        module load CBI htop mc 
+    fi
 fi
 ```
 
 
-<br>
-<div class="alert alert-info" role="alert" markdown="1">
-The names of software repositories are always capitilized (e.g. `CBI` and `Sali`) whereas the names of the software themselves are typically in all lower case (e.g. `r` and `bwa`).  This makes it easier to distiguish between repositories and software.
-</div>
+## Module for interactive use, i.e. not jobs or batch scripts
+
+
+<br> <div class="alert alert-info" role="alert" markdown="1"> The
+names of software repositories are always capitilized (e.g. `CBI` and
+`Sali`) whereas the names of the software themselves are typically in
+all lower case (e.g. `r` and `bwa`).  This makes it easier to
+distiguish between repositories and software.  </div>
 
 
 ## See also
