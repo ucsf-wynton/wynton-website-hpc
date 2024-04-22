@@ -120,10 +120,10 @@ fi
 
 
 <br> <div class="alert alert-info" role="alert" markdown="1"> The
-names of software repositories are always capitilized (e.g. `CBI` and
+names of software repositories are always capitalized (e.g. `CBI` and
 `Sali`) whereas the names of the software themselves are typically in
 all lower case (e.g. `r` and `bwa`).  This makes it easier to
-distiguish between repositories and software.  </div>
+distinguish between repositories and software.  </div>
 
 
 ## See also
