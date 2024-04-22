@@ -35,20 +35,32 @@ In addition to the [core software] tools that are available by default, addition
 
 To get access to the software available in one or more of these repositories, load the repository using `module load <repos>` (on command line and in script).  After loading a software repository, all of its software tools are available as _environment modules_, that is, they can in turn be loaded using `module load <software>`.
 
+<div class="alert alert-info" role="alert" markdown="1"> 
+The names of software repositories are always capitalized (e.g. `CBI`
+and `Sali`) whereas the names of the software themselves are typically
+in all lower case (e.g. `r` and `bwa`).  This makes it easier to
+distinguish between repositories and software.
+</div>
+
+
 
 ## Example
 
 The [R] software is available in software repository CBI.  To use that R installation, first make sure to enable ("load") the repository and then the software as in:
+
 ```sh
 module load CBI   ## Enables the software repository
 module load r     ## Enables R
 ```
+
 or, shorter (order is important):
+
 ```sh
 module load CBI r
 ```
 
 After this, the `R` and the `Rscript` commands are available on the search path (`PATH`), e.g.
+
 ```sh
 $ Rscript --version
 R scripting front-end version 4.0.3 (2020-10-10)
@@ -59,6 +71,7 @@ R scripting front-end version 4.0.3 (2020-10-10)
 </div>
 
 To disable ("unload") R, that is, remove it from the search path, do:
+
 ```sh
 module unload r
 ```
@@ -69,27 +82,35 @@ If you unload a _repository_, any of its software modules that are loaded will b
 </div>
 
 To see what software modules you have currently loaded, use:
+
 ```sh
 module list
 ```
+
 To disable all loaded software modules and repositories, use:
+
 ```sh
 module purge
 ```
 
 To see what software modules are currently available (in the software repositories you have loaded), use:
+
 ```sh
 module avail
 ```
+
 or alternative,
+
 ```sh
 module spider
 ```
 
 If the software repository provides more than one version of each software, specific versions can be loaded using the `module load <software>/<version>` format.  For instance, the CBI repository provides a large number of historical R versions.  To load R 3.2.0, use:
+
 ```sh
 module load r/3.2.0
 ```
+
 _Comment_: If another version of R is already loaded, that will automatically be unloaded before loading the new version.
 
 
@@ -114,17 +135,6 @@ if [[ -n "$MODULEPATH" ]]; then
     fi
 fi
 ```
-
-
-## Module for interactive use, i.e. not jobs or batch scripts
-
-
-<br> <div class="alert alert-info" role="alert" markdown="1"> The
-names of software repositories are always capitalized (e.g. `CBI` and
-`Sali`) whereas the names of the software themselves are typically in
-all lower case (e.g. `r` and `bwa`).  This makes it easier to
-distinguish between repositories and software.  </div>
-
 
 ## See also
 
