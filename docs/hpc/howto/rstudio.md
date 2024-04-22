@@ -94,17 +94,17 @@ help.  Consecutive attempts to use `rsc stop` and `rsc start` fail for
 same reasons.
 
 As of 2023-12-04, it is not clear why and when this happens.  The
-one workaround we have found is to wipe the user's RStudio set up.
+one workaround we have found is to wipe the user's RStudio setup.
 For this, we recommend to use:
 
 ```sh
 $ tar -cvf ~/rstudio-config.tar ~/.local/share/rstudio && rm -rf ~/.local/share/rstudio
 ```
 
-This will create a local copy of your problematic RStudio set up in
+This will create a local copy of your problematic RStudio setup in
 file `~/rstudio-config.tar`, and, only then, remove the actually
 settings.  The next time you call `rsc start`, you should start out
-with a fresh RStudio set up, and the login issue should be gone.
+with a fresh RStudio setup, and the login issue should be gone.
 
 
 
