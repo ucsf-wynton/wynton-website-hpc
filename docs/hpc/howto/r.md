@@ -572,7 +572,7 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 
 
 [CRAN]: https://cran.r-project.org/
-[Bioconductor]: http://bioconductor.org/
+[Bioconductor]: https://bioconductor.org/
 [bigGP]: https://cran.r-project.org/package=bigGP
 [BiocManager]: https://cran.r-project.org/package=BiocManager
 [parallelly]: https://cran.r-project.org/package=parallelly
@@ -588,5 +588,5 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [terra]: https://cran.r-project.org/package=terra
 [udunits2]: https://cran.r-project.org/package=udunits2
 [zoo]: https://cran.r-project.org/package=zoo
-[limma]: http://bioconductor.org/packages/limma/
+[limma]: https://bioconductor.org/packages/limma/
 [CBI software stack]: {{ '/software/software-repositories.html' | relative_url }}
