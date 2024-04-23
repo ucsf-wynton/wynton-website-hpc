@@ -589,5 +589,5 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [udunits2]: https://cran.r-project.org/package=udunits2
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: https://bioconductor.org/packages/limma/
-[contributed environment module]({{ '/hpc/software/software-repositories.html' | relative_url }}).
+[contributed environment module]: {{ '/hpc/software/software-repositories.html' | relative_url }}
 [CBI software stack]: {{ '/hpc/software/software-repositories.html' | relative_url }}
