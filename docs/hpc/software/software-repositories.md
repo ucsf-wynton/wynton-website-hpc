@@ -3504,7 +3504,7 @@ whatis(&quot;Keywords: programming, shell, bash&quot;)
 whatis(&quot;URL: https://github.com/HenrikBengtsson/shellcheck-repl, https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/README.md (documentation), https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/NEWS.md (changelog)&quot;)
 whatis([[
 Description: ShellCheck is a great tool for validating your Unix shell scripts. It will parse the scripts and warn about mistakes, errors, and potential problems. This tool - shellcheck-repl - brings ShellCheck validation to the Bash read-eval-print loop (REPL), i.e. the Bash prompt. Getting this type of validation and feedback at the prompt lowers the risk of damaging mistakes and will help you become a better Bash user and developer.
-Examples: Try `echo $HOME` before and after loading this module. To deactive, start a new shell.
+Examples: Try `echo $HOME` before and after loading this module. To deactive, unload module, or start a new shell.
 Warning: Only the most recent version of this software will be kept.
 ]])
 
@@ -3520,8 +3520,6 @@ execute{cmd = &quot;source &quot; .. script, modeA = {&quot;load&quot;}}
 
 -- Disable on unload
 execute{cmd = &quot;sc_repl_disable&quot;, modeA = {&quot;unload&quot;}}
-
-
 </code></pre>
 
 </details>
