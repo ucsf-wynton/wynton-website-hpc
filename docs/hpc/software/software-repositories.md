@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(92)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(93)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
@@ -206,7 +206,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (92)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (93)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -3480,6 +3480,53 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_shellcheck-repl" class="module-name">shellcheck-repl</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">ShellCheck REPL: Validation of Shell Commands Before Evaluation</strong><br>
+<span class="module-description">ShellCheck is a great tool for validating your Unix shell scripts. It will parse the scripts and warn about mistakes, errors, and potential problems. This tool - shellcheck-repl - brings ShellCheck validation to the Bash read-eval-print loop (REPL), i.e. the Bash prompt. Getting this type of validation and feedback at the prompt lowers the risk of damaging mistakes and will help you become a better Bash user and developer.</span><br>
+Example: <span class="module-example">Try <code>echo $HOME</code> before and after loading this module. To deactive, start a new shell.</span><br>
+URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/shellcheck-repl">https://github.com/HenrikBengtsson/shellcheck-repl</a>, <a href="https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/README.md">https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/README.md</a> (documentation), <a href="https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/NEWS.md">https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/NEWS.md</a> (changelog)</span><br>
+Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Versions: <span class="module-version"><em>0.4.4</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+ShellCheck REPL: Validation of Shell Commands Before Evaluation 
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;)
+
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming, shell, bash&quot;)
+whatis(&quot;URL: https://github.com/HenrikBengtsson/shellcheck-repl, https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/README.md (documentation), https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/NEWS.md (changelog)&quot;)
+whatis([[
+Description: ShellCheck is a great tool for validating your Unix shell scripts. It will parse the scripts and warn about mistakes, errors, and potential problems. This tool - shellcheck-repl - brings ShellCheck validation to the Bash read-eval-print loop (REPL), i.e. the Bash prompt. Getting this type of validation and feedback at the prompt lowers the risk of damaging mistakes and will help you become a better Bash user and developer.
+Examples: Try `echo $HOME` before and after loading this module. To deactive, start a new shell.
+Warning: Only the most recent version of this software will be kept.
+]])
+
+depends_on(&quot;shellcheck&quot;)
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+local shell = os.getenv(&quot;SHELL&quot;)
+local script = pathJoin(home, &quot;shellcheck-repl.bash&quot;)
+
+-- Enable on load
+execute{cmd = &quot;source &quot; .. script, modeA = {&quot;load&quot;}}
+
+-- Disable on unload
+execute{cmd = &quot;sc_repl_disable&quot;, modeA = {&quot;unload&quot;}}
+
+
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_snpeff" class="module-name">snpeff</h3>
 <dl>
   <dd class="module-details">
@@ -6065,7 +6112,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(92)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(93)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
