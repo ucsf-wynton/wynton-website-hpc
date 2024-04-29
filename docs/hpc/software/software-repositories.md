@@ -501,7 +501,7 @@ prepend_path(&quot;BATS_SUPPORT_HOME&quot;, home)
 <span class="module-description">BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.</span><br>
 Example: <span class="module-example"><code>bcftools --version</code></span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/bcftools/blob/develop/NEWS">https://github.com/samtools/bcftools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/bcftools">https://github.com/samtools/bcftools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, <em>1.19</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, <em>1.20</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1304,7 +1304,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.49.0</em></span><br>
+Versions: <span class="module-version">0.49.0, <em>0.50.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1569,7 +1569,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, and <code>gh auth login</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>2.46.0</em></span><br>
+Versions: <span class="module-version">2.46.0, <em>2.48.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1828,7 +1828,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
 Example: <span class="module-example"><code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/htslib/blob/develop/NEWS">https://github.com/samtools/htslib/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, <em>1.19.1</em></span><br>
+Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.19.1, <em>1.20</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2409,7 +2409,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a remote server where you don’t have an entire graphical setup available, but it is a useful tool even on regular desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like environment with ncurses installed.</span><br>
 Example: <span class="module-example"><code>ncdu --version</code>, <code>ncdu --help</code>, and <code>ncdu</code>. For large cleanup tasks, call <code>ncdu --one-file-system -o ncdu.cache</code> once to scan all files, and then use <code>ncdu --enable-delete -f ncdu.cache</code> to clean them out.</span><br>
 URL: <span class="module-url"><a href="https://dev.yorhel.nl/ncdu">https://dev.yorhel.nl/ncdu</a>, <a href="https://dev.yorhel.nl/ncdu/man2">https://dev.yorhel.nl/ncdu/man2</a> (documentation), <a href="https://dev.yorhel.nl/ncdu/changes2">https://dev.yorhel.nl/ncdu/changes2</a> (changelog), <a href="https://code.blicky.net/yorhel/ncdu/">https://code.blicky.net/yorhel/ncdu/</a> (source code)</span><br>
-Versions: <span class="module-version"><em>2.3</em></span><br>
+Versions: <span class="module-version">2.3, <em>2.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3349,7 +3349,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
 Example: <span class="module-example"><code>samtools --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS.md">https://github.com/samtools/samtools/blob/develop/NEWS.md</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, <em>1.19.2</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, 1.19.2, <em>1.20</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
