@@ -39,8 +39,8 @@ All tasks for using Linux containers, such as downloading, building, and running
 For full details, see `apptainer --help`, `man apptainer`, and the [Apptainer] website.
 
 * Install Apptainer or Docker on your own machine:
-  - Create a Apptainer image on your own workstation and transfer the image to Wynton
-  - Create a Docker image on your own workstation and transfer the image to Wynton
+  - Create a Apptainer image on your own workstation and transfer the image to {{ site.cluster.name }}
+  - Create a Docker image on your own workstation and transfer the image to {{ site.cluster.name }}
 
 ## Example
 
