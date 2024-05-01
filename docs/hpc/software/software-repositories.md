@@ -94,15 +94,15 @@ setenv        QUICK_BASIS     /usr/local/amber22/AmberTools/src/quick/basis
 <h3 id="module_built-in_cuda" class="module-name">cuda</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">7.5, 8.0, 9.1, 9.2, 10.1, 11.0, 11.3, 11.4, <em>11.5</em></span><br>
+Versions: <span class="module-version">7.5, 8.0, 9.1, 9.2, 10.1, 11.0, 11.3, 11.4, 11.5, 11.8, <em>12.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;NVIDIA CUDA Toolkit libraries&quot;
-prepend-path  PATH               /usr/local/cuda-11.5.2/bin
-prepend-path  LD_LIBRARY_PATH    /usr/local/cuda-11.5.2/lib64
-setenv        CUDA_LIB_PATH      /usr/local/cuda-11.5.2/lib64
+prepend-path  PATH               /usr/local/cuda-12.2.2/bin
+prepend-path  LD_LIBRARY_PATH    /usr/local/cuda-12.2.2/lib64
+setenv        CUDA_LIB_PATH      /usr/local/cuda-12.2.2/lib64
 </code></pre>
 
 </details>
