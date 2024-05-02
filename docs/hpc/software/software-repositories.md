@@ -94,15 +94,15 @@ setenv        QUICK_BASIS     /usr/local/amber22/AmberTools/src/quick/basis
 <h3 id="module_built-in_cuda" class="module-name">cuda</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">7.5, 8.0, 9.1, 9.2, 10.1, 11.0, 11.3, 11.4, <em>11.5</em></span><br>
+Versions: <span class="module-version">7.5, 8.0, 9.1, 9.2, 10.1, 11.0, 11.3, 11.4, 11.5, 11.8, <em>12.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;NVIDIA CUDA Toolkit libraries&quot;
-prepend-path  PATH               /usr/local/cuda-11.5.2/bin
-prepend-path  LD_LIBRARY_PATH    /usr/local/cuda-11.5.2/lib64
-setenv        CUDA_LIB_PATH      /usr/local/cuda-11.5.2/lib64
+prepend-path  PATH               /usr/local/cuda-12.2.2/bin
+prepend-path  LD_LIBRARY_PATH    /usr/local/cuda-12.2.2/lib64
+setenv        CUDA_LIB_PATH      /usr/local/cuda-12.2.2/lib64
 </code></pre>
 
 </details>
@@ -4182,24 +4182,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2024.02/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4213,6 +4195,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
