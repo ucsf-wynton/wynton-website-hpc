@@ -324,7 +324,7 @@ can install older versions of them that are compatible with R (<
 4.4.0) using:
 
 ```r
-> install.packages("https://cran.r-project.org/src/contrib/Archive/MASS/MASS_7.3-59.tar.gz", type = "source")
+> install.packages("https://cran.r-project.org/src/contrib/Archive/MASS/MASS_7.3-60.0.1.tar.gz", type = "source")
 
 > install.packages("https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.6-5.tar.gz", type = "source")
 ```
