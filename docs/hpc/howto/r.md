@@ -316,13 +316,16 @@ _Comment_: This will actually also update any CRAN packages.
 If you have an R scripts, and it involves setting up a number of parallel workers in R, do _not_ use `ncores <- detectCores()` of the **parallel** package because it will result in your job hijacking _all_ cores on the compute node regardless of how many cores the scheduler has given you.  Taking up all CPU resources without permission is really bad practice and a common cause for problems.  A much better solution is to use `availableCores()` that is available in the **[parallelly]** package, e.g. as `ncores <- parallelly::availableCores()`.  This function is backward compatible with `detectCores()` while respecting what the scheduler has allocated for your job.
 
 
-### Installing the Matrix package
+### Packages MASS and Matrix
 
-As of 2024-04-26, the **[Matrix]** package requires R (>= 4.4.0). If
-you run an older version of R, you can install the older **Matrix**
-1.6.5 using:
+As of 2024-04-26, the "recommended" **[MASS]** and **[Matrix]**
+packages require R (>= 4.4.0). If you run an older version of R, you
+can install older versions of them that are compatible with R (<
+4.4.0) using:
 
 ```r
+> install.packages("https://cran.r-project.org/src/contrib/Archive/MASS/MASS_7.3-59.tar.gz", type = "source")
+
 > install.packages("https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.6-5.tar.gz", type = "source")
 ```
 
@@ -591,6 +594,7 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [hdf5r]: https://cran.r-project.org/package=hdf5r
 [igraph]: https://cran.r-project.org/package=igraph
 [lwgeom]: https://cran.r-project.org/package=lwgeom
+[MASS]: https://cran.r-project.org/package=MASS
 [Matrix]: https://cran.r-project.org/package=Matrix
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
