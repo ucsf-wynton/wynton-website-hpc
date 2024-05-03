@@ -86,6 +86,32 @@ Rscript my_script.R
 
 ## Installing R packages
 
+<!--
+<div class="alert alert-info" role="alert" markdown="1">
+
+R 4.4.0 was release on 2024-04-24 and Bioconductor 3.19 on 2024-05-01.
+On 2024-05-03, there were 20,684 packages on CRAN and 3,591 packages
+on Bioconductor 3.18. 
+
+Out of 20,684 CRAN packages, 20,594 installed out of the box in R
+4.4.0 when following the below instructions.
+
+Out of 3,578 Bioconductor 3.19 packages, 3,??? installed out of the
+box in R 4.4.0 when following the below instructions.
+
+Out of 3,568 Bioconductor 3.18 packages, 3,562 installed out of the
+box in R 4.4.0 (sic!) when following the below instructions.
+
+The packages that failed to install do so either because they depend
+on a system library that is not available on the cluster, or because
+they have bugs preventing them from being installed out of the box. If
+you need to install any of those, please reach out on one of the
+support channels.
+
+</div>
+-->
+
+
 The majority of R packages are available from [CRAN] (Comprehensive R Archive Network).  Another dominant repository of R packages is [Bioconductor], which provides R packages with a focus on bioinformatics.  Packages available from Bioconductor are not available on CRAN, and vice versa.  At times, you will find online instructions for installing R packages hosted on, for instance, GitHub and GitLab.  Before installing an R package from such sources, we highly recommend to install the package from CRAN or Bioconductor, if it is available there, because packages hosted on the latter are stable releases and often better tested.
 
 Before continuing, it is useful to understand where R packages looks for locally installed R packages.  There are three locations that R considers:
