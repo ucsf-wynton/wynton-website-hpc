@@ -60,7 +60,8 @@ Save workspace image? [y/n/c]: n
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-To use an older version of R, specify the version when you load R, e.g.
+To use an older version of R, specify the version when you load R,
+e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI
@@ -71,7 +72,10 @@ To use an older version of R, specify the version when you load R, e.g.
 
 ## Using R in job scripts
 
-In order to run R in jobs, the above R environment module needs to be loaded just as when you run it interactively on a development node.  For example, to run the `my_script.R` script, the job script should at a minimum contain:
+In order to run R in jobs, the above R environment module needs to be
+loaded just as when you run it interactively on a development node.
+For example, to run the `my_script.R` script, the job script should at
+a minimum contain:
 
 ```sh
 #! /usr/bin/env bash
@@ -110,17 +114,30 @@ box in R 4.4.0 (sic!) when following the below instructions.
 -->
 
 
-The majority of R packages are available from [CRAN] (Comprehensive R Archive Network).  Another dominant repository of R packages is [Bioconductor], which provides R packages with a focus on bioinformatics.  Packages available from Bioconductor are not available on CRAN, and vice versa.  At times, you will find online instructions for installing R packages hosted on, for instance, GitHub and GitLab.  Before installing an R package from such sources, we highly recommend to install the package from CRAN or Bioconductor, if it is available there, because packages hosted on the latter are stable releases and often better tested.
+The majority of R packages are available from [CRAN] (Comprehensive R
+Archive Network).  Another dominant repository of R packages is
+[Bioconductor], which provides R packages with a focus on
+bioinformatics.  Packages available from Bioconductor are not
+available on CRAN, and vice versa.  At times, you will find online
+instructions for installing R packages hosted on, for instance, GitHub
+and GitLab.  Before installing an R package from such sources, we
+highly recommend to install the package from CRAN or Bioconductor, if
+it is available there, because packages hosted on the latter are
+stable releases and often better tested.
 
-Before continuing, it is useful to understand where R packages looks for locally installed R packages.  There are three locations that R considers:
+Before continuing, it is useful to understand where R packages looks
+for locally installed R packages.  There are three locations that R
+considers:
 
-1. Your personal R package library. This is located under `~/R/`, e.g. `~/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}/`
+1. Your personal R package library. This is located under `~/R/`,
+   e.g. `~/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{
+   r_libs_user }}/`
 
-2. (optional) A site-wide R package library (not used on {{ site.cluster.name }})
+2. (optional) A site-wide R package library (not used on {{
+   site.cluster.name }})
 
-3. The system-wide R package library part of the R installed, e.g. `{{ r_path }}/lib64/R/library`
-
-
+3. The system-wide R package library part of the R installed, e.g. `{{
+   r_path }}/lib64/R/library`
 
 For instance, when we try to load an R package:
 
@@ -129,22 +146,46 @@ For instance, when we try to load an R package:
 ```
 
 R will search the above folders in order for R package 'datasets'.
-When you start you fresh, the only R packages available to you are the ones installed in folder (3) - the system-wide library.  The 'datasets' package comes with the R installation, so with a fresh setup, it will be loaded from the third location.
-As we will see below, when you install your own packages, they will all be installed into folder (1) - your personal library.  The first time your run R, the personal library folder does not exists, so R will ask you whether or not you want to create that folder.  If asked, you should always accept (answer 'Yes').  If you had already created this folder, R will install into this folder without asking.
+When you start you fresh, the only R packages available to you are the
+ones installed in folder (3) - the system-wide library.  The
+'datasets' package comes with the R installation, so with a fresh
+setup, it will be loaded from the third location.  As we will see
+below, when you install your own packages, they will all be installed
+into folder (1) - your personal library.  The first time your run R,
+the personal library folder does not exists, so R will ask you whether
+or not you want to create that folder.  If asked, you should always
+accept (answer 'Yes').  If you had already created this folder, R will
+install into this folder without asking.
 
-Finally, R undergoes a _main_ update once a year (in April).  For example, R 4.3.0 was release in April 2023.  The next main release will be R 4.4.0 in April 2024.  Whenever the `y` component in R `x.y.z` version is increased, you will start out with an empty personal package folder specific for R `x.y` (regardless of `z`).  This means that you will have to re-install all R packages you had installed during the year before the new main release came out.  Yes, this can be tedious and can take quite some time but it will improve stability and yet allow the R developers to keep improving R.  Of course, you can still keep using an older version of R and all the packages you have installed for that version - they will not be removed.
+Finally, R undergoes a _main_ update once a year (in April).  For
+example, R 4.3.0 was release in April 2023.  The next main release
+will be R 4.4.0 in April 2024.  Whenever the `y` component in R
+`x.y.z` version is increased, you will start out with an empty
+personal package folder specific for R `x.y` (regardless of `z`).
+This means that you will have to re-install all R packages you had
+installed during the year before the new main release came out.  Yes,
+this can be tedious and can take quite some time but it will improve
+stability and yet allow the R developers to keep improving R.  Of
+course, you can still keep using an older version of R and all the
+packages you have installed for that version - they will not be
+removed.
 
 
 ### Installing an R package from CRAN
 
-Packages available on CRAN can be installed using the `install.packages()` function in R.  The default behavior of R is to always ask you which one of the many CRAN mirrors you want to install from (their content is all identical).  To avoid this question, tell R to always use the first one:
+Packages available on CRAN can be installed using the
+`install.packages()` function in R.  The default behavior of R is to
+always ask you which one of the many CRAN mirrors you want to install
+from (their content is all identical).  To avoid this question, tell R
+to always use the first one:
 
 ```r
 > chooseCRANmirror(ind = 1)
 >
 ```
 
-Now, in order to install, for instance, the **[zoo]** package available on CRAN, call:
+Now, in order to install, for instance, the **[zoo]** package
+available on CRAN, call:
 
 ```r
 > install.packages("zoo")
@@ -153,7 +194,12 @@ Warning in install.packages("zoo") :
 Would you like to use a personal library instead? (yes/No/cancel)
 ```
 
-We notice two things.  First there is a warning mentioning that a "lib" folder was "not writable".  This is because your personal library folder did not yet exists and R tried to install to location (3) but failed (because you do not have write permission there).  This is where R decided to ask you whether or not you want to install to a personal library.  Answer 'yes':
+We notice two things.  First there is a warning mentioning that a
+"lib" folder was "not writable".  This is because your personal
+library folder did not yet exists and R tried to install to location
+(3) but failed (because you do not have write permission there).  This
+is where R decided to ask you whether or not you want to install to a
+personal library.  Answer 'yes':
 
 ```r
 Would you like to use a personal library instead? (yes/No/cancel) yes
@@ -162,7 +208,11 @@ Would you like to create a personal library
 to install packages into? (yes/No/cancel)
 ```
 
-R wants to make sure you are aware what is done, so it will, conservatively, also ask if you accept the default location.  Answer 'yes' for this folder to be created.  After this, the current and all future package installation in R will be installed into this folder without further questions asked.  In this example, we will get:
+R wants to make sure you are aware what is done, so it will,
+conservatively, also ask if you accept the default location.  Answer
+'yes' for this folder to be created.  After this, the current and all
+future package installation in R will be installed into this folder
+without further questions asked.  In this example, we will get:
 
 <!-- code-block label="install-zoo" -->
 ```r
@@ -203,7 +253,11 @@ The downloaded source packages are in
 >
 ```
 
-If there is no mentioning of an "error" (a "warning" is ok in R but never an "error"), then the package was successfully installed.  If you see `* DONE (zoo)` at the end, it means that the package was successfully installed.  As with any other package in R, you can also verify that it is indeed installed by loading it, i.e.
+If there is no mentioning of an "error" (a "warning" is ok in R but
+never an "error"), then the package was successfully installed.  If
+you see `* DONE (zoo)` at the end, it means that the package was
+successfully installed.  As with any other package in R, you can also
+verify that it is indeed installed by loading it, i.e.
 
 ```r
 > library(zoo)
@@ -220,7 +274,8 @@ The following objects are masked from 'package:base':
 
 #### Updating CRAN packages
 
-If a new version of one or more CRAN packages is released, they can be installed by calling:
+If a new version of one or more CRAN packages is released, they can be
+installed by calling:
 
 ```r
 > chooseCRANmirror(ind = 1)
@@ -232,12 +287,17 @@ If a new version of one or more CRAN packages is released, they can be installed
 
 ### Installing an R package from Bioconductor
 
-Per Bioconductor's best practices, R packages from Bioconductor should be installed using `BiocManager::install()`.  This is to guarantee maximum compatibility between all Bioconductor packages.
+Per Bioconductor's best practices, R packages from Bioconductor should
+be installed using `BiocManager::install()`.  This is to guarantee
+maximum compatibility between all Bioconductor packages.
 
 
 #### Installing BiocManager (once)
 
-If you already have **[BiocManager]** installed, you can skip this section.  When you start out fresh, the package **BiocManager** is not installed meaning that calling `BiocManager::install()` will fail.  We need to start by installing it from CRAN (sic!);
+If you already have **[BiocManager]** installed, you can skip this
+section.  When you start out fresh, the package **BiocManager** is not
+installed meaning that calling `BiocManager::install()` will fail.  We
+need to start by installing it from CRAN (sic!);
 
 <!-- code-block label="install-BiocManager" -->
 ```r
@@ -269,7 +329,9 @@ The downloaded source packages are in
 > 
 ```
 
-_Comment_: If this is the very first R package you installed, see above CRAN instructions for setting a default CRAN mirror and creating a personal library folder.
+_Comment_: If this is the very first R package you installed, see
+above CRAN instructions for setting a default CRAN mirror and creating
+a personal library folder.
 
 
 #### Installing a Bioconductor package
@@ -313,7 +375,8 @@ The downloaded source packages are in
 >
 ```
 
-There were no "error" messages, so the installation was successful.  To verify that it worked, we can load the package in R as:
+There were no "error" messages, so the installation was successful.
+To verify that it worked, we can load the package in R as:
 
 ```r
 > library(limma)
@@ -337,7 +400,17 @@ _Comment_: This will actually also update any CRAN packages.
 
 ### Parallel processing in R
 
-If you have an R scripts, and it involves setting up a number of parallel workers in R, do _not_ use `ncores <- detectCores()` of the **parallel** package because it will result in your job hijacking _all_ cores on the compute node regardless of how many cores the scheduler has given you.  Taking up all CPU resources without permission is really bad practice and a common cause for problems.  A much better solution is to use `availableCores()` that is available in the **[parallelly]** package, e.g. as `ncores <- parallelly::availableCores()`.  This function is backward compatible with `detectCores()` while respecting what the scheduler has allocated for your job.
+If you have an R scripts, and it involves setting up a number of
+parallel workers in R, do _not_ use `ncores <- detectCores()` of the
+**parallel** package because it will result in your job hijacking
+_all_ cores on the compute node regardless of how many cores the
+scheduler has given you.  Taking up all CPU resources without
+permission is really bad practice and a common cause for problems.  A
+much better solution is to use `availableCores()` that is available in
+the **[parallelly]** package, e.g. as `ncores <-
+parallelly::availableCores()`.  This function is backward compatible
+with `detectCores()` while respecting what the scheduler has allocated
+for your job.
 
 
 ### Packages MASS and Matrix
@@ -356,7 +429,9 @@ can install older versions of them that are compatible with R (<
 
 ### Packages relying on MPI
 
-Several R packages that rely on the Message Passing Interface (MPI) do not install out-of-the-box like other R packages.  At a minimum, they require that the built-in `mpi` module is loaded;
+Several R packages that rely on the Message Passing Interface (MPI) do
+not install out-of-the-box like other R packages.  At a minimum, they
+require that the built-in `mpi` module is loaded;
 
 <!-- code-block label="r-openmpi" -->
 ```sh
@@ -367,14 +442,23 @@ Currently Loaded Modules:
   1) CBI   2) scl-gcc-toolset/10   3) r/4.3.2   4) mpi/openmpi-x86_64
 ```
 
-_Importantly_, make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires these MPI-dependent R packages.
+_Importantly_, make sure to specify the exact version of the `mpi`
+module as well so that your code will keep working also when a newer
+version becomes the new default.  Note that you will have to load the
+same `mpi` module, and version(!), also whenever you run R code that
+requires these MPI-dependent R packages.
 
-In addition to making OpenMPI available by loading the `mpi` module, several MPI-based R packages requires additional special care in order to install.  Below sections, show how to install them.
+In addition to making OpenMPI available by loading the `mpi` module,
+several MPI-based R packages requires additional special care in order
+to install.  Below sections, show how to install them.
 
 
 #### Package **Rmpi**
 
-The **[Rmpi]** package does not install out-of-the-box like other R packages.  To install **Rmpi** on the cluster, we have to load the `mpi` module (see above) before starting R.  Then, to install **Rmpi**, we launch R and call the following:
+The **[Rmpi]** package does not install out-of-the-box like other R
+packages.  To install **Rmpi** on the cluster, we have to load the
+`mpi` module (see above) before starting R.  Then, to install
+**Rmpi**, we launch R and call the following:
 
 <!-- code-block label="install-Rmpi" -->
 ```r
@@ -419,8 +503,9 @@ The downloaded source packages are in
 >
 ```
 
-
-Note, you need to load the identical module and version each time you want to use the **Rmpi** package.  After installing **Rmpi**, verify that it works:
+Note, you need to load the identical module and version each time you
+want to use the **Rmpi** package.  After installing **Rmpi**, verify
+that it works:
 
 ```r
 [alice@{{ site.devel.name }} ~]$ module load CBI r
@@ -448,7 +533,10 @@ slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 Rocky 8: pbdMPI, bigGP still need to be installed this way /HB 2023-09-16
 -->
 
-Similarly to the **Rmpi** package above, MPI-dependent R packages such as **[pbdMPI]** and **[bigGP]** require special install instructions.  For example, after having loaded the `mpi` module, we can install **pbdMPI** in R as:
+Similarly to the **Rmpi** package above, MPI-dependent R packages such
+as **[pbdMPI]** and **[bigGP]** require special install instructions.
+For example, after having loaded the `mpi` module, we can install
+**pbdMPI** in R as:
 
 ```r
 > install.packages("pbdMPI", configure.args="--with-mpi-include=$MPI_INCLUDE --with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
@@ -551,7 +639,8 @@ The downloaded source packages are in
 #### Package **rjags**
 
 <!--
-Rocky 8: rjags still requires JAGS; keep. ALSO: Troubleshoot why rjags fails to load on Rocky 8 although the compile goes well /HB 2023-09-16
+Rocky 8: rjags still requires JAGS; keep. ALSO: Troubleshoot why rjags
+fails to load on Rocky 8 although the compile goes well /HB 2023-09-16
 -->
 
 If we try to install the **[rjags]** package, we'll get the following
@@ -642,7 +731,11 @@ where the **jqr** R package needs to be loaded.
 Rocky 8: udunits2 still requires special care; keep as-is /HB 2023-09-16
 -->
 
-The **[udunits2]** package does not install out of the box.  It seems to be due to a problem with the package itself, and the suggested instructions that the package gives on setting environment variable `UDUNITS2_INCLUDE` do not work.  A workaround to install the package is to do:
+The **[udunits2]** package does not install out of the box.  It seems
+to be due to a problem with the package itself, and the suggested
+instructions that the package gives on setting environment variable
+`UDUNITS2_INCLUDE` do not work.  A workaround to install the package
+is to do:
 
 ```sh
 install.packages("udunits2", configure.args="--with-udunits2-include=/usr/include/udunits2")
