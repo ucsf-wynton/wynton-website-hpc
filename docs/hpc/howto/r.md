@@ -341,9 +341,6 @@ Several R packages that rely on the Message Passing Interface (MPI) do not insta
 
 Currently Loaded Modules:
   1) CBI   2) scl-gcc-toolset/10   3) r/4.3.2   4) mpi/openmpi-x86_64
-
- 
-
 ```
 
 _Importantly_, make sure to specify the exact version of the `mpi` module as well so that your code will keep working also when a newer version becomes the new default.  Note that you will have to load the same `mpi` module, and version(!), also whenever you run R code that requires these MPI-dependent R packages.
@@ -569,6 +566,49 @@ Importantly, you need to load the `jags` CBI module any time you run R
 where the **rjags** R package needs to be loaded.
 
 
+### Packages relying on JQ
+
+#### Package **jqr**
+
+If we try to install the **[jqr]** package, it fails to compile;
+
+```r
+> install.packages("jqr")
+...
+* installing *source* package ‘jqr’ ...
+** package ‘jqr’ successfully unpacked and MD5 sums checked
+** using staged installation
+Using PKG_CFLAGS=
+Using PKG_LIBS=-ljq
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed because libjq was not found. Try installing:
+ * deb: libjq-dev (Debian, Ubuntu).
+ * rpm: jq-devel (Fedora, EPEL)
+ * csw: libjq_dev (Solaris)
+ * brew: jq (OSX)
+If  is already installed set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: jq.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+ERROR: configuration failed for package ‘jqr’
+```
+
+To fix this, load the `jq` module from the CBI stack before launching R, i.e.
+
+```r
+$ module load CBI r
+$ module load CBI jq
+$ R
+```
+
+after this, the **jqr** package will install out of the box.
+
+Importantly, you need to load the `jq` CBI module any time you run R
+where the **jqr** R package needs to be loaded.
+
+
 
 ### Packages requiring extra care
 
@@ -593,6 +633,7 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [gsl]: https://cran.r-project.org/package=gsl
 [hdf5r]: https://cran.r-project.org/package=hdf5r
 [igraph]: https://cran.r-project.org/package=igraph
+[jqr]: https://cran.r-project.org/package=jqr
 [lwgeom]: https://cran.r-project.org/package=lwgeom
 [MASS]: https://cran.r-project.org/package=MASS
 [Matrix]: https://cran.r-project.org/package=Matrix
