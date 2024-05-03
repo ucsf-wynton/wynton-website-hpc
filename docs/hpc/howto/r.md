@@ -90,25 +90,23 @@ Rscript my_script.R
 <div class="alert alert-info" role="alert" markdown="1">
 
 R 4.4.0 was release on 2024-04-24 and Bioconductor 3.19 on 2024-05-01.
-On 2024-05-03, there were 20,684 packages on CRAN and 3,591 packages
-on Bioconductor 3.18. 
+As of 2024-05-03, there were 20,684 packages on CRAN and 3,578
+packages on Bioconductor 3.19.
 
-Out of 20,684 CRAN packages, 20,594 installed out of the box in R
-4.4.0 when following the below instructions.
-
-Out of 3,578 Bioconductor 3.19 packages, 3,??? installed out of the
-box in R 4.4.0 when following the below instructions.
-
-Out of 3,568 Bioconductor 3.18 packages, 3,562 installed out of the
-box in R 4.4.0 (sic!) when following the below instructions.
-
-The packages that failed to install do so either because they depend
-on a system library that is not available on the cluster, or because
-they have bugs preventing them from being installed out of the box. If
-you need to install any of those, please reach out on one of the
-support channels.
+On 2024-05-03, we confirmed that 20,594 CRAN packages and 3,???
+Bioconductor 3.19 packages install out of the box when following the
+below instructions. The packages that failed to install do so either
+because they depend on a system library that is not available on the
+cluster, or because they have bugs preventing them from being
+installed out of the box. If you need to install any of those, please
+reach out on one of the support channels.
 
 </div>
+-->
+
+<!--
+Out of 3,568 Bioconductor 3.18 packages, 3,562 installed out of the
+box in R 4.4.0 (sic!) when following the below instructions.
 -->
 
 
@@ -656,19 +654,13 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [bigGP]: https://cran.r-project.org/package=bigGP
 [BiocManager]: https://cran.r-project.org/package=BiocManager
 [parallelly]: https://cran.r-project.org/package=parallelly
-[gsl]: https://cran.r-project.org/package=gsl
-[hdf5r]: https://cran.r-project.org/package=hdf5r
-[igraph]: https://cran.r-project.org/package=igraph
 [jqr]: https://cran.r-project.org/package=jqr
-[lwgeom]: https://cran.r-project.org/package=lwgeom
 [MASS]: https://cran.r-project.org/package=MASS
 [Matrix]: https://cran.r-project.org/package=Matrix
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
 [rjags]: https://cran.r-project.org/package=rjags
 [Rmpi]: https://cran.r-project.org/package=Rmpi
-[sf]: https://cran.r-project.org/package=sf
-[terra]: https://cran.r-project.org/package=terra
 [udunits2]: https://cran.r-project.org/package=udunits2
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: https://bioconductor.org/packages/limma/
