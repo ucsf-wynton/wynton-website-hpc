@@ -1,15 +1,14 @@
 [alice@{{ site.devel.name }} ~]$ module load CBI scl-gcc-toolset/12
 Lmod Warning:
-------------------------------------------------------------------------------
-The following dependent module(s) are not currently loaded: scl-gcc-toolset/10
-(required by: r/4.3.2)
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: scl-gcc-toolset/13 (required by: r/4.4.0)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
 The following have been reloaded with a version change:
-  1) scl-gcc-toolset/10 => scl-gcc-toolset/12
+  1) scl-gcc-toolset/13 => scl-gcc-toolset/12
 
 [alice@{{ site.devel.name }} ~]$ gcc --version
 gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-7)

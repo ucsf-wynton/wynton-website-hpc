@@ -2,9 +2,9 @@
 
 {% assign linux_distro = "rocky8" %}
 
-{% assign r_basename = "R-4.3.2-gcc10" %}
+{% assign r_basename = "R-4.4.0-gcc13" %}
 
-{% assign r_libs_user = "4.3-CBI-gcc10" %}
+{% assign r_libs_user = "4.4-CBI-gcc13" %}
 
 {% assign r_path = site.path.cbi_software | append: "/_" | append: linux_distro | append: "/" | append: r_basename %}
 
@@ -35,9 +35,9 @@ which provides access to a modern version of R:
 ```r
 [alice@{{ site.devel.name }} ~]$ R 
 
-R version 4.3.2 (2023-10-31) -- "Eye Holes"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-pc-linux-gnu (64-bit)
+R version 4.4.0 (2024-04-24) -- "Puppy Cup"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -90,7 +90,6 @@ Rscript my_script.R
 
 ## Installing R packages
 
-<!--
 <div class="alert alert-info" role="alert" markdown="1">
 
 R 4.4.0 was release on 2024-04-24 and Bioconductor 3.19 on 2024-05-01.
@@ -105,13 +104,12 @@ cluster, or because they have bugs preventing them from being
 installed out of the box. If you need to install any of those, please
 reach out on one of the support channels.
 
-</div>
--->
-
 <!--
 Out of 3,568 Bioconductor 3.18 packages, 3,562 installed out of the
 box in R 4.4.0 (sic!) when following the below instructions.
 -->
+
+</div>
 
 
 The majority of R packages are available from [CRAN] (Comprehensive R
@@ -158,17 +156,16 @@ accept (answer 'Yes').  If you had already created this folder, R will
 install into this folder without asking.
 
 Finally, R undergoes a _main_ update once a year (in April).  For
-example, R 4.3.0 was release in April 2023.  The next main release
-will be R 4.4.0 in April 2024.  Whenever the `y` component in R
-`x.y.z` version is increased, you will start out with an empty
-personal package folder specific for R `x.y` (regardless of `z`).
-This means that you will have to re-install all R packages you had
-installed during the year before the new main release came out.  Yes,
-this can be tedious and can take quite some time but it will improve
-stability and yet allow the R developers to keep improving R.  Of
-course, you can still keep using an older version of R and all the
-packages you have installed for that version - they will not be
-removed.
+example, R 4.4.0 was release in April 2024.  The next main release
+will be R 4.5.0 a year later.  Whenever the `y` component in R `x.y.z`
+version is increased, you will start out with an empty personal
+package folder specific for R `x.y` (regardless of `z`).  This means
+that you will have to re-install all R packages you had installed
+during the year before the new main release came out.  Yes, this can
+be tedious and can take quite some time but it will improve stability
+and yet allow the R developers to keep improving R.  Of course, you
+can still keep using an older version of R and all the packages you
+have installed for that version - they will not be removed.
 
 
 ### Installing an R package from CRAN
@@ -217,7 +214,7 @@ without further questions asked.  In this example, we will get:
 <!-- code-block label="install-zoo" -->
 ```r
 Would you like to create a personal library
-'~/R/{{ linux_distro }}-x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
+'~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-12.tar.gz'
 Content type 'application/x-gzip' length 782344 bytes (764 KB)
@@ -228,7 +225,7 @@ downloaded 764 KB
 ** package ‘zoo’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
+using C compiler: ‘gcc (GCC) 13.1.1 20230614 (Red Hat 13.1.1-4)’
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
@@ -341,12 +338,12 @@ With **BiocManager** installed, we can now install any Bioconductor package.  Fo
 <!-- code-block label="install-limma" -->
 ```r
 > BiocManager::install("limma")
-Bioconductor version 3.18 (BiocManager 1.30.22), R 4.3.2 (2023-10-31)
-Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/limma_3.58.1.tar.gz'
-Content type 'application/x-gzip' length 2804950 bytes (2.7 MB)
+Bioconductor version 3.19 (BiocManager 1.30.22), R 4.4.0 (2024-04-24)
+Installing package(s) 'BiocVersion'
+trying URL 'https://bioconductor.org/packages/3.19/bioc/src/contrib/BiocVersion_3.19.1.tar.gz'                                                               
+Content type 'application/x-gzip' length 987 bytes
 ==================================================
-downloaded 2.7 MB
+downloaded 987 bytes
 
 * installing *source* package ‘limma’ ...
 ** using staged installation
@@ -439,7 +436,10 @@ require that the built-in `mpi` module is loaded;
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-gcc-toolset/10   3) r/4.3.2   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-gcc-toolset/13   3) r/4.4.0   4) mpi/openmpi-x86_64
+
+ 
+
 ```
 
 _Importantly_, make sure to specify the exact version of the `mpi`
@@ -483,7 +483,7 @@ gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARN
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
 gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
 CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ r_path }}/lib64/R/lib -lR
+gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -lR
 installing to {{ r_libs_user_path }}/00LOCK-Rmpi/00new/Rmpi/libs
 ** R
 ** demo
