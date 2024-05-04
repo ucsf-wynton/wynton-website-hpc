@@ -775,7 +775,8 @@ Execution halted
 ERROR: loading failed
 ```
 
-The solution is to make sure **RcppGSL** is installed, and then install **verse**;
+The solution is to make sure **RcppGSL** is installed, and then
+install **verse**;
 
 ```r
 > if (requireNamespace("RcppGSL")) install.packages("RcppGSL")
