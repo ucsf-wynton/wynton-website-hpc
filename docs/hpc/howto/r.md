@@ -96,7 +96,7 @@ R 4.4.0 was release on 2024-04-24 and Bioconductor 3.19 on 2024-05-01.
 As of 2024-05-03, there were 20,684 packages on CRAN and 3,578
 packages on Bioconductor 3.19.
 
-On 2024-05-03, we confirmed that 20,614 CRAN packages and 3,530
+On 2024-05-03, we confirmed that 20,614 CRAN packages and 3,560
 Bioconductor 3.19 packages install out of the box when following the
 below instructions. The packages that failed to install do so either
 because they depend on a system library that is not available on the
