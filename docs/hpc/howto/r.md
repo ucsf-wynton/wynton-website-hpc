@@ -97,7 +97,7 @@ R 4.4.0 was release on 2024-04-24 and Bioconductor 3.19 on 2024-05-01.
 As of 2024-05-03, there were 20,684 packages on CRAN and 3,578
 packages on Bioconductor 3.19.
 
-On 2024-05-03, we confirmed that 20,594 CRAN packages and 3,???
+On 2024-05-03, we confirmed that 20,614 CRAN packages and 3,530
 Bioconductor 3.19 packages install out of the box when following the
 below instructions. The packages that failed to install do so either
 because they depend on a system library that is not available on the
@@ -798,8 +798,8 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 
 To install the **[valse]** package, we have to make sure the
 **[RcppGSL]** package is already installed.  This is not specified
-anywhere, but if we try to install **valse** without **RcppGSL already
-installed, we get:
+anywhere, but if we try to install **valse** without **RcppGSL**
+already installed, we get:
 
 ```r
 > install.packages("valse")
