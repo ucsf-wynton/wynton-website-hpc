@@ -725,6 +725,58 @@ where the **jqr** R package needs to be loaded.
 
 ### Packages requiring extra care
 
+#### Package **tfevents**
+
+The **[tfevents]** package [fails to install with GCC (>=
+13)](https://github.com/mlverse/tfevents/issues/43);
+
+```r
+> install.packages("tfevents")
+...
+using C compiler: ‘gcc (GCC) 13.1.1 20230614 (Red Hat 13.1.1-4)’
+using C++ compiler: ‘g++ (GCC) 13.1.1 20230614 (Red Hat 13.1.1-4)’
+...
+g++ -std=gnu++17 -I"{{ r_path }}/lib64/R/include" -DNDEBUG -Igenerated -I'{{ r_libs_user_path }}/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c reader.cpp -o reader.o                           
+In file included from reader.cpp:4:
+reader.h:9:8: error: ‘uint64_t’ in namespace ‘std’ does not name a type; did you mean ‘wint_t’?
+    9 |   std::uint64_t current_pos = 0;
+      |        ^~~~~~~~
+      |        wint_t
+...
+```
+
+Because of this, we need to manually revert to an older version of GCC
+before launch R;
+
+```sh
+$ module load CBI r
+$ module load scl-gcc-toolset/12
+
+The following have been reloaded with a version change:
+  1) scl-gcc-toolset/13 => scl-gcc-toolset/12
+
+$ R
+...
+
+> install.packages("tfevents")
+...
+* DONE (tfevents)
+```
+
+You can then quit R and reload the `r` module to revert to the default
+GCC version:
+
+```sh
+$ module load CBI r
+
+The following have been reloaded with a version change:
+  1) scl-gcc-toolset/12 => scl-gcc-toolset/13
+```
+
+This workaround is only needed when install **tfevents**, so there is
+no need to load an older version of GCC when running R later.
+
+
 #### Package **udunits2**
 
 <!--
@@ -797,6 +849,7 @@ install **verse**;
 [rjags]: https://cran.r-project.org/package=rjags
 [RcppGSL]: https://cran.r-project.org/package=RcppGSL
 [Rmpi]: https://cran.r-project.org/package=Rmpi
+[tfevents]: https://cran.r-project.org/package=tfevents
 [udunits2]: https://cran.r-project.org/package=udunits2
 [valse]: https://cran.r-project.org/package=valse
 [zoo]: https://cran.r-project.org/package=zoo
