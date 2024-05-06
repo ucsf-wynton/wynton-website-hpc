@@ -5940,15 +5940,7 @@ if [file exists /etc/modulefiles/mpi/openmpi-x86_64] {
 } elseif [file exists /usr/share/modulefiles/mpi/openmpi-x86_64] {    
   module load mpi/openmpi-x86_64
 }
-if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release] } {
-  if [file exists /etc/dnf/dnf.conf] {  # CentOS/Rocky/Alma 8 or 9
-    prepend-path  PATH            /salilab/diva1/programs/x86_64linux/relion-3.0.git9a02562/bin-mpi40
-  } else {  # CentOS 7
-    prepend-path  PATH            /salilab/diva1/programs/x86_64linux/relion-3.0.git9a02562/bin
-  }
-} else {  # Fedora
-  prepend-path  PATH            /salilab/diva1/programs/x86_64linux/relion-3.0.git9a02562/bin-mpi40
-}
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/relion-3.0.git9a02562/bin
 
 # Provide libX11 if not available on the system
 if [file exists /lib64/libX11.so.6] {
