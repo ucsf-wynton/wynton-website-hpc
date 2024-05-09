@@ -304,28 +304,31 @@ drives.forEach(function(drive) {
     Plotly.newPlot(id, [trace], layout);
   })
 
-  if (hosts.length >= 2) {
-    var url = url_path + "/" + "wynton-bench_" + hosts[1] + ".wynton.ucsf.edu__" + drive + ".tsv";
-    Plotly.d3.tsv(url, function(err, rows) {
-      var trace = JSON.parse(JSON.stringify(beegfs_load));
-      trace.name = hosts[1];
-      trace.x = unpack(rows, 'timestamp');
-      trace.y = unpack(rows, 'duration');
-      trace.line = { color: '#F88379' };
-      Plotly.addTraces(id, [trace]);
-    })
-  }
-
-  if (hosts.length >= 3) {
-    var url = url_path + "/" + "wynton-bench_" + hosts[2] + ".wynton.ucsf.edu__" + drive + ".tsv";
-    Plotly.d3.tsv(url, function(err, rows) {
-      var trace = JSON.parse(JSON.stringify(beegfs_load));
-      trace.name = hosts[2];
-      trace.x = unpack(rows, 'timestamp');
-      trace.y = unpack(rows, 'duration');
-      trace.line = { color: '#9dc183' };
-      Plotly.addTraces(id, [trace]);
-    })
-  }
+  // Change to 'true' to show multiple traces
+  if (false) {
+    if (hosts.length >= 2) {
+      var url = url_path + "/" + "wynton-bench_" + hosts[1] + ".wynton.ucsf.edu__" + drive + ".tsv";
+      Plotly.d3.tsv(url, function(err, rows) {
+        var trace = JSON.parse(JSON.stringify(beegfs_load));
+        trace.name = hosts[1];
+        trace.x = unpack(rows, 'timestamp');
+        trace.y = unpack(rows, 'duration');
+        trace.line = { color: '#F88379' };
+        Plotly.addTraces(id, [trace]);
+      })
+    }
+  
+    if (hosts.length >= 3) {
+      var url = url_path + "/" + "wynton-bench_" + hosts[2] + ".wynton.ucsf.edu__" + drive + ".tsv";
+      Plotly.d3.tsv(url, function(err, rows) {
+        var trace = JSON.parse(JSON.stringify(beegfs_load));
+        trace.name = hosts[2];
+        trace.x = unpack(rows, 'timestamp');
+        trace.y = unpack(rows, 'duration');
+        trace.line = { color: '#9dc183' };
+        Plotly.addTraces(id, [trace]);
+      })
+    }
+  }  
 });
 </script>
