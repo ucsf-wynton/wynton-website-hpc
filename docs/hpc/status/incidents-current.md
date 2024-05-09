@@ -2,6 +2,11 @@
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
 
+**Update**: UCSF Facilities performed testing for rerouting of updated
+chilled-water piping the building where the Wynton data center is
+hosted between 07-12 on 2024-05-08.
+<br><span class="timestamp">May 9, 12:30 PT</span>
+
 **Update**: The compute and development nodes are available again.
 Jobs that were running when we did the emergency shutdown should be
 considered lost and need to be resubmitted.  UCSF Facilities has
