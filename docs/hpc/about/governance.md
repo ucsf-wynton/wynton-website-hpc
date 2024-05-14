@@ -50,6 +50,5 @@ opportunities, etc. The Committee also resolves any disputes
 concerning use and governance of the cluster. Committee matters are
 addressed at meetings and by email as needed. To ensure continuity of
 governance, the Committee appoints new members by a majority vote. The
-Committee currently consists of Kliment Verba, Sergio Baranzini, Scott
-Pegg, Brian Shoichet, Tom Ferrin (Co-Chair), Andrej Sali (Co-Chair),
-Mike Keiser (representing guest users), and Mandy Terrill (Campus IT).
+Committee currently consists of Kliment Verba (Co-Chair), Sergio Baranzini, Scott
+Pegg, Brian Shoichet, Tom Ferrin (Co-Chair), and Mandy Terrill (Campus IT).
