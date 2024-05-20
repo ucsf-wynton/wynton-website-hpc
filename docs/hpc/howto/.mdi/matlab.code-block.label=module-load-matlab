@@ -2,10 +2,10 @@
 [alice@{{ site.devel.name }} ~]$ matlab -nosplash -nodesktop
 MATLAB is selecting SOFTWARE OPENGL rendering.
 
-                                                        < M A T L A B (R) >
-                                              Copyright 1984-2022 The MathWorks, Inc.
-                                              R2022b (9.13.0.2049777) 64-bit (glnxa64)
-                                                          August 24, 2022
+                     < M A T L A B (R) >
+           Copyright 1984-2023 The MathWorks, Inc.                                                             
+      R2023b Update 5 (23.2.0.2459199) 64-bit (glnxa64)                                                        
+                      November 28, 2023
 
  
 To get started, type doc.
