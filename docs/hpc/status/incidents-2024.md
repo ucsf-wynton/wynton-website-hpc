@@ -3,7 +3,7 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 28.0 hours (= 1.2 days)
+  - Unscheduled: 30.3 hours (= 1.3 days)
   - Total: 0.0 hours (= 0.0 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
@@ -41,7 +41,8 @@
 * Occurrences:
   - 2024-03-14 (13.0 hours)
   - 2024-03-17 (15.0 hours)
-* Total downtime: 28.0 hours of which 0.0 hours were due to external
+  - 2024-05-31  (2.3 hours)
+* Total downtime: 30.3 hours of which 0.0 hours were due to external
   factors
 
 #### Unscheduled downtimes due to other reasons
@@ -53,6 +54,29 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### May 31, 2024
+
+#### <span style="color: orange;">File-system failures</span>
+
+**Resolved**: The BeeGFS issue has been resolved. Wynton is
+operational again.
+<br><span class="timestamp">May 31, 09:20 PT</span>
+
+**Notice**: Wynton is currently down due to an unknown issue with the
+BeeGFS filesystem. The problem started around 06:00. We're working on
+it and will post updates as we know more.
+<br><span class="timestamp">May 31, 08:45 PT</span>
+
+<!--
+start: 2024-05-31T07:00:00
+stop: 2024-05-31T09:20:00
+length: 2.3 hours
+severity: major-outage
+affected: jobs, beegfs, compute, *
+reason: beegfs
+ -->
 
 
 ### April 3-25, 2024
