@@ -105,3 +105,7 @@ message: Wynton is running without redundant building cooling exposing us to the
 #level: warning
 #condition: runs at lower capacity
 #message: (1) Fewer compute slots are available due to kernel upgrades. (2) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown
+
+#level: danger
+#condition: experiences significant issues
+#message: Cluster is not accessible because of BeeGFS issues
