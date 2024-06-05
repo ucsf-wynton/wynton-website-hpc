@@ -10,19 +10,23 @@
 This repository contains the  Wynton HPC website <https://wynton.ucsf.edu/hpc/>.  Updates to the 'master' branch will be published and go live within minutes.  
 
 
-## Dynamically generated data
+## Dynamically generated information
 
 The website provides dynamic summaries of data that are produced on regular basis by crontab jobs.  Below are some of the data files used:
 
 * Data: [docs/_data/users.yml](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/docs/_data/users.yml)
   - used by: Jekyll to generate https://wynton.ucsf.edu/hpc/about/specs.html
-  - generate manual: `(cd docs; make _data/users.yml)`
+  - generate manual: `(cd docs; make hpc/_data/users.yml)`
   - generate via cronjob: [cron-scripts/wynton-users.sh](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/cron-scripts/wynton-users.sh)
 
-* Data: [docs/assets/data/compute_shares.tsv](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/docs/assets/data/compute_shares.tsv)
+* Data: [docs/_data/compute_shares.tsv](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/docs/_data/compute_shares.tsv)
   - used by: JavaScript to generated table on https://wynton.ucsf.edu/hpc/about/shares.html
   - generate manual: `(cd docs; make assets/data/compute_shares.tsv)`
   - generate via cronjob: [cron-scripts/wynton-shares.sh](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/cron-scripts/wynton-shares.sh)
+
+* Data: [docs/_data/status.yml](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/docs/_ata/status)
+  - used by: All pages to generate status banner
+  - generate manual: `emacs docs/_data/status.yml`
 
 
 ## Technical details
