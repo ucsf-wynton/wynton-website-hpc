@@ -24,7 +24,7 @@ The website provides dynamic summaries of data that are produced on regular basi
   - generate manual: `(cd docs; make assets/data/compute_shares.tsv)`
   - generate via cronjob: [cron-scripts/wynton-shares.sh](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/cron-scripts/wynton-shares.sh)
 
-* Data: [docs/_data/status.yml](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/docs/_data/status)
+* Data: [docs/_data/status.yml](https://github.com/ucsf-wynton/wynton-website-hpc/blob/master/docs/_data/status.yml)
   - used by: All pages to generate status banner
   - generate manual: `emacs docs/_data/status.yml`
 
