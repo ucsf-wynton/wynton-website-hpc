@@ -1,21 +1,3 @@
-### June 7-ongoing, 2024
-
-#### <span style="color: orange;">Development nodes are inaccessible</span>
-
-**Notice**: Development nodes are inaccessible since Friday June 7
-at 17:00. We will investigate the problem on Monday.
-<br><span class="timestamp">June 8, 05:45 PT</span>
-
-<!--
-start: 2024-06-07T17:05:00
-stop: 2024-06-10T??:??:00
-length: ?? hours
-severity: major
-affected: development-nodes
-reason: unknown
- -->
-
-
 ### January 25-ongoing, 2024
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>

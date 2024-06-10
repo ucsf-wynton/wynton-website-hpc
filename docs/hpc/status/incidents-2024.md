@@ -56,6 +56,28 @@
   factors
 
 
+
+### June 7-June 10, 2024
+
+#### <span style="color: orange;">Development nodes are inaccessible</span>
+
+**Resolved**: Development nodes are available again.
+<br><span class="timestamp">June 10, 10:25 PT</span>
+
+**Notice**: Development nodes are inaccessible since Friday June 7
+at 17:00. We will investigate the problem on Monday.
+<br><span class="timestamp">June 8, 05:45 PT</span>
+
+<!--
+start: 2024-06-07T17:05:00
+stop: 2024-06-10T10:25:00
+length: 65.0 hours
+severity: major
+affected: development-nodes
+reason: unknown
+ -->
+
+
 ### May 31, 2024
 
 #### <span style="color: orange;">File-system failures</span>
