@@ -4189,24 +4189,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2024.02/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4220,6 +4202,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -4644,17 +4644,17 @@ prepend-path  PERL5LIB        /salilab/diva1/programs/x86_64linux/ImageMagick-6.
 <h3 id="module_sali_imp" class="module-name">imp</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Integrative Modeling Platform (version 2.20.2, with only usage checks turned on)</span><br>
+<span class="module-description">Integrative Modeling Platform (version 2.21.0, with only usage checks turned on)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, <em>2.20.2</em></span><br>
+Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, 2.20.2, <em>2.21.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Integrative Modeling Platform (version 2.20.2, with only usage checks turned on)&quot;
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.21.0, with only usage checks turned on)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 sali-libraries
-set topdir [file link /salilab/diva1/home/imp/main/2.20.2]
+set topdir [file link /salilab/diva1/home/imp/main/2.21.0]
 prepend-path  PATH            ${topdir}/bin/release8
 prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release8
 prepend-path  PYTHONPATH      ${topdir}/lib/release8
@@ -4667,17 +4667,17 @@ setenv        IMP_DIR         ${topdir}/lib/release8/cmake/IMP
 <h3 id="module_sali_imp-fast" class="module-name">imp-fast</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Integrative Modeling Platform (version 2.20.2, fast build)</span><br>
+<span class="module-description">Integrative Modeling Platform (version 2.21.0, fast build)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, <em>2.20.2</em></span><br>
+Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, 2.20.2, <em>2.21.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Integrative Modeling Platform (version 2.20.2, fast build)&quot;
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.21.0, fast build)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 sali-libraries
-set topdir [file link /salilab/diva1/home/imp/main/2.20.2]
+set topdir [file link /salilab/diva1/home/imp/main/2.21.0]
 prepend-path  PATH            ${topdir}/bin/fast8
 prepend-path  LD_LIBRARY_PATH ${topdir}/lib/fast8
 prepend-path  PYTHONPATH      ${topdir}/lib/fast8
