@@ -1,8 +1,15 @@
 ### June 15-ongoing, 2024
 
-#### <span style="color: orange;">Cluster inaccessible</span>
+#### <span style="color: orange;">File-system unreliable</span>
 
-**Notice**: Wynton is currently down due to an unknown issue. The problem started around 15:00 on Saturday 2024-06-15.
+**Update**: A disk chassis that hosts part of `/wynton/home` appears
+to be failing. It works for a while and then fails, which brings down
+`/wynton`.  We are trying to keep it running as much as possible, but
+can't make any promises.
+<br><span class="timestamp">June 16, 00:15 PT</span>
+
+**Notice**: Wynton is currently down due to an unknown issue. The
+problem started around 15:00 on Saturday 2024-06-15.
 <br><span class="timestamp">June 15, 23:15 PT</span>
 
 <!--
