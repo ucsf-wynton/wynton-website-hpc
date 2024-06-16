@@ -1,3 +1,20 @@
+### June 15-ongoing, 2024
+
+#### <span style="color: orange;">Cluster inaccessible</span>
+
+**Notice**: Wynton is currently down due to an unknown issue. The problem started around 15:00 on Saturday 2024-06-15.
+<br><span class="timestamp">June 15, 23:15 PT</span>
+
+<!--
+start: 2024-06-15T15:00:00
+stop: 2024-06-??T??:??:00
+length: ??? hours
+severity: major-outage
+affected: jobs, beegfs, compute, *
+reason: beegfs
+ -->
+
+
 ### January 25-ongoing, 2024
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>

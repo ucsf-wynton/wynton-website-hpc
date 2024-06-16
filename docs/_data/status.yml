@@ -114,6 +114,6 @@ message: Wynton is running without redundant building cooling exposing us to the
 # condition: is operational
 # message: (1) The development nodes are inaccessible. (2) The cluster will be shut down for maintenance during June 17-18, 2024. Starting June 4, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime. (3) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
 
-level: warning
-condition: is operational
-message: (1) The cluster will be shut down for maintenance during June 17-18, 2024. Starting June 4, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime. (2) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
+level: danger
+condition: is non-operational
+message: (1) The cluster is inaccessible. (2) The cluster will be shut down for maintenance during June 17-18, 2024. Starting June 4, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will only be started after the downtime. (3) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
