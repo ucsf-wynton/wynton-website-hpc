@@ -1,3 +1,22 @@
+### June 17-18, 2024
+
+#### <span style="color: orange;">File-system unreliable</span>
+
+**Notice**: Wynton is down for maintenance as of 09:00 on Monday
+2024-06-17.
+<br><span class="timestamp">June 17, 09:00 PT</span>
+
+<!--
+comment: Scheduled downtime
+start: 2024-06-17T09:00:00
+stop: 2024-06-18T??:??:00
+length: ??? hours
+severity: under-maintenance
+affected: jobs, beegfs, compute, *
+reason: scheduled
+ -->
+
+
 ### June 15-ongoing, 2024
 
 #### <span style="color: orange;">File-system unreliable</span>
