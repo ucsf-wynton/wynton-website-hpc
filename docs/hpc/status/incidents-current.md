@@ -21,6 +21,15 @@ reason: scheduled
 
 #### <span style="color: orange;">File-system unreliable</span>
 
+**Update**: We decided to replace the problematic chassis with a
+spare. The RAID file system has two failing drives, which are
+currently being restored. We expect this to finish up in the
+morning. Then, we will replace those two failing drives and proceed
+with another restore. If that succeeds, we plan to open up the login
+nodes to make files available again. After that, the goal is to slowly
+open up the queue and compute nodes over the weekend.
+<br><span class="timestamp">June 20, 23:30 PT</span>
+
 **Update**: We had folks onsite today to complete some preventative
 maintenance on all of the disk chassis (and, in a fit of optimism,
 bring up all of the nodes to prepare for a return to production).  As
