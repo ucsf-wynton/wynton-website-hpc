@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 32.0 hours (= 1.3 days)
-  - Unscheduled: 30.3 hours (= 1.3 days)
-  - Total: 62.3 hours (= 2.6 days)
+  - Unscheduled: 142.3 hours (= 5.9 days)
+  - Total: 174.3 hours (= 7.3 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -39,10 +39,11 @@
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers
   may have failed, cluster not accessible
 * Occurrences:
-  - 2024-03-14 (13.0 hours)
-  - 2024-03-17 (15.0 hours)
-  - 2024-05-31  (2.3 hours)
-* Total downtime: 30.3 hours of which 0.0 hours were due to external
+  - 2024-03-14  (13.0 hours)
+  - 2024-03-17  (15.0 hours)
+  - 2024-05-31   (2.3 hours)
+  - 2024-06-15 (112.0 hours)
+* Total downtime: 142.3 hours of which 0.0 hours were due to external
   factors
 
 #### Unscheduled downtimes due to other reasons

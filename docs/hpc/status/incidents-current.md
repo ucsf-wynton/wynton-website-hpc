@@ -2,6 +2,17 @@
 
 #### <span style="color: orange;">File-system unreliable</span>
 
+**Update**: Development nodes are available. We have also opened up
+100 compute nodes. We will keep monitoring BeeGFS over the weekend
+with the plan to re-enable the remaining compute nodes if all go well.
+<br><span class="timestamp">June 21, 19:15 PT</span>
+
+**Update**: The login and data-transfer nodes are available. We will
+continue to validate BeeGFS during the day with the intent to open up
+the development nodes and a portion of the compute nodes before the
+weekend.
+<br><span class="timestamp">June 21, 12:45 PT</span>
+
 **Update**: We decided to replace the problematic chassis with a
 spare. The RAID file system has two failing drives, which are
 currently being restored. We expect this to finish up in the
@@ -47,8 +58,8 @@ problem started around 15:00 on Saturday 2024-06-15.
 
 <!--
 start: 2024-06-15T15:00:00
-stop: 2024-06-??T??:??:00
-length: ??? hours
+stop: 2024-06-21T19:00:00
+length: 144 hours - 32.0 hours scheduled maintenance = 112 hours
 severity: major-outage
 affected: jobs, beegfs, compute, *
 reason: beegfs
