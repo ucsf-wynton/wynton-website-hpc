@@ -2,9 +2,9 @@
 
 * Full downtime:
 
-  - Scheduled: 0.0 hours (= 0.0 days)
+  - Scheduled: 32.0 hours (= 1.3 days)
   - Unscheduled: 30.3 hours (= 1.3 days)
-  - Total: 30.3 hours (= 1.3 days)
+  - Total: 62.3 hours (= 2.6 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -13,8 +13,8 @@
 * Impact: No file access, no compute resources available
 * Damage: None
 * Occurrences:
-  - N/A
-* Total downtime: 0.0 hours
+  - 2024-06-17 (32.0 hours)
+* Total downtime: 32.0 hours
 
 #### Scheduled kernel maintenance
 
@@ -55,6 +55,30 @@
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
 
+
+### June 17-18, 2024
+
+#### <span style="color: orange;">Full downtime</span>
+
+**Update**: All but one of the planned maintenance upgrades were
+completed during this scheduled maintenance. The remain upgrade does
+not require a downtime and will be done in a near future without
+disrupting the cluster.
+<br><span class="timestamp">June 18, 17:00 PT</span>
+
+**Notice**: Wynton is down for maintenance as of 09:00 on Monday
+2024-06-17.
+<br><span class="timestamp">June 17, 09:00 PT</span>
+
+<!--
+comment: Scheduled downtime
+start: 2024-06-17T09:00:00
+stop: 2024-06-18T17:00:00
+length: 32 hours
+severity: under-maintenance
+affected: jobs, beegfs, compute, *
+reason: scheduled
+ -->
 
 
 ### June 7-June 10, 2024
