@@ -13,7 +13,7 @@
 * Impact: No file access, no compute resources available
 * Damage: None
 * Occurrences:
-  - 2024-06-17 (32.0 hours)
+  - 2024-06-17 -- 2024-06-18 (32.0 hours)
 * Total downtime: 32.0 hours
 
 #### Scheduled kernel maintenance
@@ -39,10 +39,10 @@
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers
   may have failed, cluster not accessible
 * Occurrences:
-  - 2024-03-14  (13.0 hours)
-  - 2024-03-17  (15.0 hours)
-  - 2024-05-31   (2.3 hours)
-  - 2024-06-15 (112.0 hours)
+  - 2024-03-14 (13.0 hours)
+  - 2024-03-17 (15.0 hours)
+  - 2024-05-31  (2.3 hours)
+  - 2024-06-15 -- 2024-06-21 (112.0 hours; excluding 32 hours scheduled maintenance)
 * Total downtime: 142.3 hours of which 0.0 hours were due to external
   factors
 
