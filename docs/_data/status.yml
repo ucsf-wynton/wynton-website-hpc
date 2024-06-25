@@ -120,5 +120,5 @@ message: Wynton is running without redundant building cooling exposing us to the
 
 
 level: warning
-condition: runs at lower capacity
-message: (1) Fewer compute slots are available. (2) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
+condition: is operational
+message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.

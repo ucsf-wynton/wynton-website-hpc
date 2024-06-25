@@ -2,6 +2,12 @@
 
 #### <span style="color: orange;">File-system unreliable</span>
 
+**Update**: 14,000 compute slots are now available.
+<br><span class="timestamp">June 25, 00:30 PT</span>
+
+**Update**: We will go ahead and re-enable the remaing compute nodes.
+<br><span class="timestamp">June 24, 13:00 PT</span>
+
 **Update**: Development nodes are available. We have also opened up
 100 compute nodes. We will keep monitoring BeeGFS over the weekend
 with the plan to re-enable the remaining compute nodes if all go well.
