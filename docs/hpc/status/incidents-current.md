@@ -5,7 +5,8 @@
 **Update**: 14,000 compute slots are now available.
 <br><span class="timestamp">June 25, 00:30 PT</span>
 
-**Update**: We will go ahead and re-enable the remaing compute nodes.
+**Update**: We will go ahead and re-enable the remaining compute 
+nodes.
 <br><span class="timestamp">June 24, 13:00 PT</span>
 
 **Update**: Development nodes are available. We have also opened up
