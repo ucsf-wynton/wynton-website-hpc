@@ -18,11 +18,11 @@ endif
 
 
 spelling:
-	@echo "*** $@:"
-	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); paths <- grep("software/software-repositories[.]md$$", paths, invert = TRUE, value = TRUE); paths <- c(paths, "_data/status.yml"); words <- spelling::spell_check_files(paths, ignore = readLines("WORDLIST")); print(words); ok <- (nrow(words) == 0); quit(status = !ok)' || { printf "\n\nSUGGESTION: If you believe these are correctly spelled, add them to 'docs/WORDLIST'\n\n"; exit 1; }
+	@echo "$@ ..."
+	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); paths <- grep("software/software-repositories[.]md$$", paths, invert = TRUE, value = TRUE); paths <- c(paths, "_data/status.yml"); wordlist <- unique(sort(readLines("WORDLIST"))); words <- spelling::spell_check_files(paths, ignore = wordlist); print(words); ok <- (nrow(words) == 0); quit(status = !ok)' || { printf "\n\nSUGGESTION: If you believe these are correctly spelled, add them to 'docs/WORDLIST'\n\n"; exit 1; }
 
 yaml-check:
-	@echo "*** $@:"
+	@echo "$@ ..."
 	@Rscript -e 'paths <- dir(path = c(".", "_data"), pattern = "*[.]yml$$", full.names = TRUE, recursive = TRUE); yaml <- lapply(paths, FUN = yaml::read_yaml)'
 	@echo "All ok"
 
@@ -36,7 +36,7 @@ markdownlint:
 	error_count=0
 	config=.markdownlint.json
 
-	echo "*** $@:"
+	echo "$@ ..."
 	if [[ ! -f "$$config" ]]; then
 	   echo "File not found: $$config (PWD=$$PWD)"
 	   ls -la
@@ -77,7 +77,7 @@ markdown-link-check:
 	error_count=0
 	config=.markdown-link-check.json
 
-	echo "*** $@:"
+	echo "$@ ..."
 	if [[ ! -f "$$config" ]]; then
 	   echo "File not found: $$config (PWD=$$PWD)"
 	   ls -la
@@ -175,7 +175,7 @@ check-usernames:
 	ok_count=0
 	error_count=0
 
-	echo "*** $@:"
+	echo "$@ ..."
 	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
@@ -206,7 +206,7 @@ check-leftovers-from-C4:
 	error_count=0
 	config=.markdown-link-check.json
 
-	echo "*** $@:"
+	echo "$@ ..."
 	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
@@ -243,7 +243,7 @@ check-legacy:
 	error_count=0
 	config=.markdown-link-check.json
 
-	echo "*** $@:"
+	echo "$@ ..."
 	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./hpc/status/incidents-201?.md" \) )
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
@@ -275,7 +275,7 @@ markin-shellcheck:
 	error_count=0
 	config=.markdown-link-check.json
 
-	echo "*** $@:"
+	echo "$@ ..."
 	files=$$(find . -type f -name "*.sh" -not -path "./_site/*")
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"

@@ -12,34 +12,34 @@ stop:
 check: spell shellcheck yaml-check markdownlint markdown-link-check check-usernames check-here-links
 
 cron-shellcheck:
-	cd cron-scripts; $(MAKE) shellcheck
+	$(MAKE) -C cron-scripts --silent shellcheck
 
 ## Backward compatibility /HB 2022-01-12
 shellcheck: cron-shellcheck
 
 markin-shellcheck:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 spelling:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 yaml-check:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 markdownlint:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 markdown-link-check:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 check-usernames:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 check-here-links:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 check-absolute-links:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
 
 check-legacy:
-	cd docs; $(MAKE) $@
+	@$(MAKE) -C docs --silent $@
