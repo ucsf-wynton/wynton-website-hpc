@@ -5251,7 +5251,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.33/lib64/py
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
-Versions: <span class="module-version">0.15, 0.27, 0.28, 0.31, <em>0.43</em></span><br>
+Versions: <span class="module-version">0.15, 0.27, 0.28, 0.31, 0.43, <em>1.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5260,7 +5260,7 @@ module-whatis &quot;Description: Python package for handling IHM mmCIF files&quo
 module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-0.43/lib64/python/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-1.2/lib64/python/site-packages
 </code></pre>
 
 </details>
