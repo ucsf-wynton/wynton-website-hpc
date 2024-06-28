@@ -4189,24 +4189,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2024.02/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4220,6 +4202,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -4654,11 +4654,15 @@ Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9
 module-whatis &quot;Description: Integrative Modeling Platform (version 2.21.0, with only usage checks turned on)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 sali-libraries
-set topdir [file link /salilab/diva1/home/imp/main/2.21.0]
-prepend-path  PATH            ${topdir}/bin/release8
-prepend-path  LD_LIBRARY_PATH ${topdir}/lib/release8
-prepend-path  PYTHONPATH      ${topdir}/lib/release8
-setenv        IMP_DIR         ${topdir}/lib/release8/cmake/IMP
+set topdir &quot;/salilab/diva1/home/imp/main&quot;
+set subdir [file readlink &quot;${topdir}/2.21.0&quot;]
+if {[file pathtype ${subdir}] == &quot;relative&quot;} {
+  set subdir &quot;${topdir}/${subdir}&quot;
+} 
+prepend-path  PATH            ${subdir}/bin/release8
+prepend-path  LD_LIBRARY_PATH ${subdir}/lib/release8
+prepend-path  PYTHONPATH      ${subdir}/lib/release8
+setenv        IMP_DIR         ${subdir}/lib/release8/cmake/IMP
 </code></pre>
 
 </details>
@@ -4677,11 +4681,15 @@ Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9
 module-whatis &quot;Description: Integrative Modeling Platform (version 2.21.0, fast build)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 sali-libraries
-set topdir [file link /salilab/diva1/home/imp/main/2.21.0]
-prepend-path  PATH            ${topdir}/bin/fast8
-prepend-path  LD_LIBRARY_PATH ${topdir}/lib/fast8
-prepend-path  PYTHONPATH      ${topdir}/lib/fast8
-setenv        IMP_DIR         ${topdir}/lib/fast8/cmake/IMP
+set topdir &quot;/salilab/diva1/home/imp/main&quot;
+set subdir [file readlink &quot;${topdir}/2.21.0&quot;]
+if {[file pathtype ${subdir}] == &quot;relative&quot;} {
+  set subdir &quot;${topdir}/${subdir}&quot;
+} 
+prepend-path  PATH            ${subdir}/bin/fast8
+prepend-path  LD_LIBRARY_PATH ${subdir}/lib/fast8
+prepend-path  PYTHONPATH      ${subdir}/lib/fast8
+setenv        IMP_DIR         ${subdir}/lib/fast8/cmake/IMP
 </code></pre>
 
 </details>
