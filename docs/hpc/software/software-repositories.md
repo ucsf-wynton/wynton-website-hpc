@@ -683,8 +683,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <strong class="module-help">BLAT: Fast Sequence Search Command Line Tool</strong><br>
 <span class="module-description">BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting.</span><br>
 Example: <span class="module-example"><code>blat</code></span><br>
-URL: <span class="module-url"><a href="https://genome.ucsc.edu/goldenPath/help/blatSpec.html">https://genome.ucsc.edu/goldenPath/help/blatSpec.html</a> (docs), <a href="https://genome.ucsc.edu/FAQ/FAQblat.html">https://genome.ucsc.edu/FAQ/FAQblat.html</a> (faq), <a href="https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/">https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/</a> (download)</span><br>
-Versions: <span class="module-version">36x4, <em>37x1</em></span><br>
+URL: <span class="module-url"><a href="https://genome.ucsc.edu/goldenPath/help/blatSpec.html">https://genome.ucsc.edu/goldenPath/help/blatSpec.html</a> (documentation), <a href="https://genome.ucsc.edu/FAQ/FAQblat.html">https://genome.ucsc.edu/FAQ/FAQblat.html</a> (faq), <a href="https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/">https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/</a> (download), <a href="https://github.com/ucscGenomeBrowser/kent/tree/master/src/blat">https://github.com/ucscGenomeBrowser/kent/tree/master/src/blat</a> (source code)</span><br>
+Versions: <span class="module-version">36x4, 37x1, <em>39x1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -695,7 +695,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing, alignment&quot;)
-whatis(&quot;URL: https://genome.ucsc.edu/goldenPath/help/blatSpec.html (docs), https://genome.ucsc.edu/FAQ/FAQblat.html (faq), https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/ (download)&quot;)
+whatis(&quot;URL: https://genome.ucsc.edu/goldenPath/help/blatSpec.html (documentation), https://genome.ucsc.edu/FAQ/FAQblat.html (faq), https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/ (download), https://github.com/ucscGenomeBrowser/kent/tree/master/src/blat (source code)&quot;)
 whatis([[
 Description: BLAT - client and server combined into a single program, first building the index, then using the index, and then exiting.
 Examples: `blat`
@@ -3647,7 +3647,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 Example: <span class="module-example"><code>fastq-dump --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/ncbi/sra-tools/wiki">https://github.com/ncbi/sra-tools/wiki</a> (documentation), <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc">https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc</a> (documentation), <a href="https://github.com/ncbi/sra-tools/blob/master/CHANGES.md">https://github.com/ncbi/sra-tools/blob/master/CHANGES.md</a> (changelog), <a href="https://github.com/ncbi/sra-tools">https://github.com/ncbi/sra-tools</a> (source code)</span><br>
 Warning: <span class="module-warning">To work around a bug where <code>fasterq-dump</code> crashes the local machine, it has been tweaked such that it uses <code>$TMPDIR</code> rather than <code>$PWD</code> as the default temporary folder and it will only use two threads instead of six by default.</span><br>
-Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, 2.11.1, 2.11.2, 2.11.3, 3.0.0, 3.0.1, 3.0.2, 3.0.5, 3.0.6, 3.0.7, <em>3.1.0</em></span><br>
+Versions: <span class="module-version">2.10.0, 2.10.4, 2.10.5, 2.10.7, 2.10.8, 2.10.9, 2.11.0, 2.11.1, 2.11.2, 2.11.3, 3.0.0, 3.0.1, 3.0.2, 3.0.5, 3.0.6, 3.0.7, 3.1.0, <em>3.1.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
