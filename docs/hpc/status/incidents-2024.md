@@ -57,6 +57,82 @@
   factors
 
 
+### June 15-25, 2024
+
+#### <span style="color: orange;">File-system unreliable</span>
+
+**Resolved**: 14,000 compute slots are now available, which
+corresponds to the majority of compute nodes.
+<br><span class="timestamp">June 25, 00:30 PT</span>
+
+**Update**: We will go ahead and re-enable the remaining compute 
+nodes.
+<br><span class="timestamp">June 24, 13:00 PT</span>
+
+**Update**: Development nodes are available. We have also opened up
+100 compute nodes. We will keep monitoring BeeGFS over the weekend
+with the plan to re-enable the remaining compute nodes if all go well.
+<br><span class="timestamp">June 21, 19:15 PT</span>
+
+**Update**: The login and data-transfer nodes are available. We will
+continue to validate BeeGFS during the day with the intent to open up
+the development nodes and a portion of the compute nodes before the
+weekend.
+<br><span class="timestamp">June 21, 12:45 PT</span>
+
+**Update**: We decided to replace the problematic chassis with a
+spare. The RAID file system has two failing drives, which are
+currently being restored. We expect this to finish up in the
+morning. Then, we will replace those two failing drives and proceed
+with another restore. If that succeeds, we plan to open up the login
+nodes to make files available again. After that, the goal is to slowly
+open up the queue and compute nodes over the weekend.
+<br><span class="timestamp">June 20, 23:30 PT</span>
+
+**Update**: We had folks onsite today to complete some preventative
+maintenance on all of the disk chassis (and, in a fit of optimism,
+bring up all of the nodes to prepare for a return to production).  As
+this maintenance involved new firmware, we had some hope that it might
+sort out our issues with the problematic chassis.  Unfortunately, our
+testing was still able to cause an issue (read: crash). We've sent
+details from this latest crash to the vendor and we'll be pushing hard
+to work with them tomorrow Thursday to sort things out.
+<br><span class="timestamp">June 20, 00:15 PT</span>
+
+**Update**: The vendor is still working on diagnosing our disk chassis
+issue.  That work will resume after Wednesday's holiday.  So,
+unfortunately, we will not be able to bring Wynton up on Wednesday.
+We hope to come up on Thursday, but it all depends on our testing and
+the vendor's investigation.
+<br><span class="timestamp">June 19, 01:00 PT</span>
+
+**Update**: We are working with both the system and chassis vendors to
+diagnose this and determine what the problem is and how to fix
+it. This process is taking much longer than we'd like, and it is
+looking increasingly unlikely that we'll be in a position to bring
+Wynton back online today.
+<br><span class="timestamp">June 18, 14:00 PT</span>
+
+**Update**: A disk chassis that hosts part of `/wynton/home` appears
+to be failing. It works for a while and then fails, which brings down
+`/wynton`.  We are trying to keep it running as much as possible, but
+can't make any promises.
+<br><span class="timestamp">June 16, 00:15 PT</span>
+
+**Notice**: Wynton is currently down due to an unknown issue. The
+problem started around 15:00 on Saturday 2024-06-15.
+<br><span class="timestamp">June 15, 23:15 PT</span>
+
+<!--
+start: 2024-06-15T15:00:00
+stop: 2024-06-21T19:00:00
+length: 144 hours - 32.0 hours scheduled maintenance = 112 hours
+severity: major-outage
+affected: jobs, beegfs, compute, *
+reason: beegfs
+ -->
+
+
 ### June 17-18, 2024
 
 #### <span style="color: orange;">Full downtime</span>
