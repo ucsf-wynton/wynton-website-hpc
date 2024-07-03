@@ -742,48 +742,6 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 ```
 
 
-#### Package **valse**
-
-To install the **[valse]** package, we have to make sure the
-**[RcppGSL]** package is already installed.  This is not specified
-anywhere, but if we try to install **valse** without **RcppGSL**
-already installed, we get:
-
-```r
-> install.packages("valse")
-...
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c valse_init.c -o valse_init.o
-Error in loadNamespace(x) : there is no package called ‘RcppGSL’
-Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o valse.so EMGLLF.o EMGrank.o a.EMGLLF.o a.EMGrank.o valse_init.o -lm -L{{ r_path }}/lib64/R/lib -lRblas -lgfortran -lm -lquadmath -L{{ r_path }}/lib64/R/lib -lR
-Error in loadNamespace(x) : there is no package called ‘RcppGSL’
-Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-installing to {{ r_libs_user_path }}/00LOCK-valse/00new/valse/libs
-** R
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded from temporary location
-Error: package or namespace load failed for ‘valse’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '{{ r_libs_user_path }}/00LOCK-valse/00new/valse/libs/valse.so':
-  {{ r_libs_user_path }}/00LOCK-valse/00new/valse/libs/valse.so: undefined symbol: gsl_permutation_free
-Error: loading failed
-Execution halted
-ERROR: loading failed
-```
-
-The solution is to make sure **RcppGSL** is installed, and then
-install **verse**;
-
-```r
-> if (requireNamespace("RcppGSL")) install.packages("RcppGSL")
-> install.packages("valse")
-```
-
-
 [CRAN]: https://cran.r-project.org/
 [Bioconductor]: https://bioconductor.org/
 [bigGP]: https://cran.r-project.org/package=bigGP
@@ -795,11 +753,9 @@ install **verse**;
 [pbdMPI]: https://cran.r-project.org/package=pbdMPI
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
 [rjags]: https://cran.r-project.org/package=rjags
-[RcppGSL]: https://cran.r-project.org/package=RcppGSL
 [Rmpi]: https://cran.r-project.org/package=Rmpi
 [tfevents]: https://cran.r-project.org/package=tfevents
 [udunits2]: https://cran.r-project.org/package=udunits2
-[valse]: https://cran.r-project.org/package=valse
 [zoo]: https://cran.r-project.org/package=zoo
 [limma]: https://bioconductor.org/packages/limma/
 [contributed environment module]: {{ '/hpc/software/software-repositories.html' | relative_url }}
