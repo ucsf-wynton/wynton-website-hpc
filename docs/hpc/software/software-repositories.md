@@ -5104,7 +5104,7 @@ Versions: <span class="module-version"><em>1.3.1</em></span><br>
 module-whatis &quot;Description: Collection of fast NumPy array functions written in Cython&quot;
 module-whatis &quot;URL: https://github.com/pydata/bottleneck&quot;
 conflict python2
-module load python3/numpy/1.17.4 python3/scipy/1.3.2
+module load python3/numpy/1.19.5 python3/scipy/1.3.2
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py36-1.3.1/lib64/python3.6/site-packages
 </code></pre>
 
@@ -5523,7 +5523,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py36-2.8.
   <dd class="module-details">
 <span class="module-description">A fast multidimensional array facility for Python</span><br>
 URL: <span class="module-url"><a href="https://numpy.org/">https://numpy.org/</a></span><br>
-Versions: <span class="module-version">1.17.4, <em>1.19.5</em></span><br>
+Versions: <span class="module-version"><em>1.19.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
