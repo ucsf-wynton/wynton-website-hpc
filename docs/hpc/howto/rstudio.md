@@ -111,7 +111,12 @@ with a fresh RStudio setup, and the login issue should be gone.
 ## Alt 2. RStudio Desktop over X11 Forwarding
 
 <div class="alert alert-warning" role="alert" markdown="1">
-It is _not_ possible to run RStudio Desktop via X2Go, because X2Go does not support the modern graphical protocols that RStudio Desktop requires.
+
+It is _not_ possible to run RStudio Desktop via X2Go, because X2Go
+does not support the modern graphical protocols that RStudio Desktop
+requires. If you try, you will get an error from RStudio saying that
+"GLX 1.3 or later is required."
+
 </div>
 
 To run the RStudio Desktop client, you must be logged via [SSH with X11 forwarding enabled]. Then load the `rstudio` (Desktop) module from the CBI stack and launch `rstudio`:
