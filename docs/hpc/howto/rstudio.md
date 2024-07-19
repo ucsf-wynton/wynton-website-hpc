@@ -114,8 +114,8 @@ with a fresh RStudio setup, and the login issue should be gone.
 
 It is _not_ possible to run RStudio Desktop via X2Go, because X2Go
 does not support the modern graphical protocols that RStudio Desktop
-requires. If you try, you will get an error saying that "The RStudio
-Desktop version gives "GLX 1.3 or later is required."
+requires. If you try, you will get an error from RStudio saying that
+"GLX 1.3 or later is required."
 
 </div>
 
