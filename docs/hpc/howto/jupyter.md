@@ -80,12 +80,12 @@ Next, we launch Jupyter Notebook on the same development node:
 [I 2024-03-20 14:48:46.666 ServerApp] notebook_shim | extension was successfully loaded.
 [I 2024-03-20 14:48:46.668 ServerApp] jupyter_lsp | extension was successfully loaded.
 [I 2024-03-20 14:48:46.669 ServerApp] jupyter_server_terminals | extension was successfully loaded.
-[I 2024-03-20 14:48:46.675 LabApp] JupyterLab extension loaded from /wynton/home/boblab/alice/.local/lib/python3.11/site-packages/jupyterlab
-[I 2024-03-20 14:48:46.675 LabApp] JupyterLab application directory is /wynton/home/boblab/alice/.local/share/jupyter/lab
+[I 2024-03-20 14:48:46.675 LabApp] JupyterLab extension loaded from {{ site.user.home }}/.local/lib/python3.11/site-packages/jupyterlab
+[I 2024-03-20 14:48:46.675 LabApp] JupyterLab application directory is {{ site.user.home }}/.local/share/jupyter/lab
 [I 2024-03-20 14:48:46.677 LabApp] Extension Manager is 'pypi'.
 [I 2024-03-20 14:48:46.707 ServerApp] jupyterlab | extension was successfully loaded.
 [I 2024-03-20 14:48:46.711 ServerApp] notebook | extension was successfully loaded.
-[I 2024-03-20 14:48:46.712 ServerApp] Serving notebooks from local directory: /wynton/home/boblab/alice
+[I 2024-03-20 14:48:46.712 ServerApp] Serving notebooks from local directory: {{ site.user.home }}
 [I 2024-03-20 14:48:46.712 ServerApp] Jupyter Server 2.13.0 is running at:
 [I 2024-03-20 14:48:46.712 ServerApp] http://localhost:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
 [I 2024-03-20 14:48:46.712 ServerApp]     http://127.0.0.1:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
@@ -93,7 +93,7 @@ Next, we launch Jupyter Notebook on the same development node:
 [C 2024-03-20 14:48:46.725 ServerApp]
 
     To access the server, open this file in a browser:
-        file:///wynton/home/boblab/alice/.local/share/jupyter/runtime/jpserver-2853162-open.html
+        file://{{ site.user.home }}/.local/share/jupyter/runtime/jpserver-2853162-open.html
     Or copy and paste one of these URLs:
         http://localhost:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
         http://127.0.0.1:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
