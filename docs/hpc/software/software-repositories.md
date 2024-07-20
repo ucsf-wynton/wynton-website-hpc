@@ -1304,7 +1304,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.50.0, 0.51.0, 0.53.0, <em>0.54.1</em></span><br>
+Versions: <span class="module-version">0.53.0, <em>0.54.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1493,12 +1493,12 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quo
 <h3 id="module_cbi_git-extras" class="module-name">git-extras</h3>
 <dl>
   <dd class="module-details">
-<strong class="module-help">git-extras: Little git extras</strong><br>
+<strong class="module-help">git-extras: Little Git Extras</strong><br>
 <span class="module-description">GIT utilities -- repo summary, repl, changelog population, author commit percentages and more.</span><br>
 Example: <span class="module-example"><code>git extras --version</code> and <code>git extras --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/tj/git-extras">https://github.com/tj/git-extras</a>, <a href="https://github.com/tj/git-extras/releases">https://github.com/tj/git-extras/releases</a> (releases), <a href="https://github.com/tj/git-extras/blob/main/History.md">https://github.com/tj/git-extras/blob/main/History.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">7.1.0, <em>7.2.0</em></span><br>
+Versions: <span class="module-version"><em>7.2.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1569,7 +1569,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, and <code>gh auth login</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.48.0, 2.49.0, 2.52.0, <em>2.53.0</em></span><br>
+Versions: <span class="module-version">2.52.0, <em>2.53.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1786,7 +1786,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.2.2, <em>3.3.0</em></span><br>
+Versions: <span class="module-version"><em>3.3.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2057,7 +2057,7 @@ pushenv(&quot;JAGS_LIB&quot;, pathJoin(home, &quot;lib&quot;))
 Example: <span class="module-example"><code>jq --help</code>, <code>jq --version</code>, <code>cat in.json | jq .</code>, and <code>man jq</code></span><br>
 URL: <span class="module-url"><a href="https://github.com/jqlang/jq">https://github.com/jqlang/jq</a>, <a href="https://github.com/jqlang/jq/blob/master/NEWS.md">https://github.com/jqlang/jq/blob/master/NEWS.md</a> (changelog), <a href="https://jqlang.github.io/jq">https://jqlang.github.io/jq</a> (documentation)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.7, <em>1.7.1</em></span><br>
+Versions: <span class="module-version"><em>1.7.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2840,7 +2840,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.4.553, 1.4.554, 1.4.557, <em>1.5.55</em></span><br>
+Versions: <span class="module-version">1.4.557, <em>1.5.55</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
