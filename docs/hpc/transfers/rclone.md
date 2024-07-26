@@ -3,9 +3,9 @@
 <div class="alert alert-danger" role="alert" markdown="1">
 
 2024-07-26: It appears that rclone over SFTP to Wynton is broken. If
-tried, an error "Failed to create file system for "log1:": NewFs:
+tried, an error 'Failed to create file system for "log1:": NewFs:
 couldn't connect SSH: ssh: handshake failed: ssh: unable to
-authenticate, attempted methods [none], no supported methods remain"
+authenticate, attempted methods [none], no supported methods remain'
 is produced.
 
 </div>
