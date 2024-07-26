@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
@@ -206,7 +206,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (96)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (95)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -3519,40 +3519,6 @@ setenv(&quot;PKG_CONFIG_PATH&quot;,&quot;/opt/rh/gcc-toolset-13/root/usr/lib64/p
 </details>
   </dd>
 </dl>
-<h3 id="module_cbi_seqsizzle" class="module-name">seqsizzle</h3>
-<dl>
-  <dd class="module-details">
-<strong class="module-help">seqsizzle: View and Search FASTQ files</strong><br>
-<span class="module-description">SeqSizzle is a pager for viewing FASTQ files with fuzzy matching, allowing different adaptors to be colored differently.</span><br>
-Example: <span class="module-example"><code>seqsizzle file.fq</code>, seqsizzle --version<code>, and </code>seqsizzle --help`.</span><br>
-URL: <span class="module-url"><a href="https://github.com/ChangqingW/SeqSizzle">https://github.com/ChangqingW/SeqSizzle</a>, <a href="https://github.com/ChangqingW/SeqSizzle/blob/master/CHANGELOG.md">https://github.com/ChangqingW/SeqSizzle/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/ChangqingW/SeqSizzle/releases">https://github.com/ChangqingW/SeqSizzle/releases</a> (releases)</span><br>
-Versions: <span class="module-version"><em>0.1.4</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-seqsizzle: View and Search FASTQ files
-]])
-
-local name = myModuleName()
-local version = myModuleVersion()
-whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: tui, shell&quot;)
-whatis(&quot;URL: https://github.com/ChangqingW/SeqSizzle, https://github.com/ChangqingW/SeqSizzle/blob/master/CHANGELOG.md (changelog), https://github.com/ChangqingW/SeqSizzle/releases (releases)&quot;)
-whatis([[
-Description: SeqSizzle is a pager for viewing FASTQ files with fuzzy matching, allowing different adaptors to be colored differently.
-Examples: `seqsizzle file.fq`, seqsizzle --version`, and `seqsizzle --help`.
-]])
-
-local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
-local home = pathJoin(root, name .. &quot;-&quot; .. version)
-
-prepend_path(&quot;PATH&quot;, home)
-
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_cbi_shellcheck" class="module-name">shellcheck</h3>
 <dl>
   <dd class="module-details">
@@ -4291,24 +4257,6 @@ prepend-path  PATH       /salilab/diva1/home/anaconda/py311-2024.02/bin/
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4322,6 +4270,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
@@ -6219,7 +6185,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(95)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
