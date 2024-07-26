@@ -1,5 +1,15 @@
 # Using rclone to mount `/wynton` filesystem
 
+<div class="alert alert-danger" role="alert" markdown="1">
+
+2024-07-26: It appears that rclone over SFTP to Wynton is broken. If
+tried, an error 'Failed to create file system for "log1:": NewFs:
+couldn't connect SSH: ssh: handshake failed: ssh: unable to
+authenticate, attempted methods [none], no supported methods remain'
+is produced.
+
+</div>
+
 The rclone application is available for macOS, Windows and Linux.  Check the [rclone website](https://rclone.org/install/) for the most up-to-date installation instructions for your operating system.
 
 - install FUSE
