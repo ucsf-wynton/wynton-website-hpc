@@ -785,7 +785,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.</span><br>
 Example: <span class="module-example"><code>bwa</code>.</span><br>
 URL: <span class="module-url"><a href="http://bio-bwa.sourceforge.net/">http://bio-bwa.sourceforge.net/</a>, <a href="https://github.com/lh3/bwa/blob/master/NEWS.md">https://github.com/lh3/bwa/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/lh3/bwa">https://github.com/lh3/bwa</a> (source code)</span><br>
-Versions: <span class="module-version">0.7.17, <em>0.7.18</em></span><br>
+Versions: <span class="module-version">0.7.12, 0.7.17, <em>0.7.18</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
