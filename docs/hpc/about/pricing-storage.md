@@ -56,7 +56,7 @@ A: No, the home directory quotas are managed separately from group quotas and ad
 
 ## Background
 
-We have an immediate need to provide for {{ site.cluster.name }} storage expansion to meet the demands of various research groups on campus. Given the difficulty of predicting longer-term costs and issues, the current pricing is considered short-term and may change as we understand the evolving needs and operational realities of {{ site.cluster.name }}. Thus, this pricing model will be re-evaluated at the beginning of the next fiscal year (July 1, 2019). This model is based on some assumptions that are important to understand:
+We have an immediate need to provide for {{ site.cluster.name }} storage expansion to meet the demands of various research groups on campus. Given the difficulty of predicting longer-term costs and issues, the current pricing is considered short-term and may change as we understand the evolving needs and operational realities of {{ site.cluster.name }}. This model is based on some assumptions that are important to understand:
 
 * Various components of the shared storage environment are considered “infrastructure” and are currently funded from the ongoing support provided by the campus.  These components include the networking infrastructure, and management and metadata servers that are part of the overall storage infrastructure. We don’t know with certainty that these components will continue to be funded by the campus and this introduces additional uncertainty as to the future pricing for storage, beyond the current offering described here.
 
