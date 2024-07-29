@@ -8,7 +8,7 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 * Global `/wynton/scratch` and `/wynton/protected/scratch` (for PHI users) may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
 
-* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/protected/group` (for PHI users), or in `/wynton/protected/project` (for specific PHI projects) at $160/TB (one-time fee).  Both will count towards a lab's storage quota total.
+* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/protected/group` (for PHI users), or in `/wynton/protected/project` (for specific PHI projects) at $160/TiB (one-time fee).  Both will count towards a lab's storage quota total.
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
@@ -19,7 +19,7 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 ## Lab-Specific HPC Storage Pricing Model
 
-We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TB for RAID 6 equivalent storage (or $320/TB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group`, `/wynton/protected/group`, or `/wynton/protected/project` and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (e.g. `/wynton/scratch`, `/wynton/protected/scratch`, `/wynton/home`, and `/wynton/protected/home`).
+We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TiB for RAID 6 equivalent storage (or $320/TiB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group`, `/wynton/protected/group`, or `/wynton/protected/project` and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (e.g. `/wynton/scratch`, `/wynton/protected/scratch`, `/wynton/home`, and `/wynton/protected/home`).
 
 Please note, storage in `/wynton/group/`, `/wynton/protected/group`, and `/wynton/protected/project` count towards a lab's storage quota total.
 
@@ -60,13 +60,17 @@ We have an immediate need to provide for {{ site.cluster.name }} storage expansi
 
 * Various components of the shared storage environment are considered “infrastructure” and are currently funded from the ongoing support provided by the campus.  These components include the networking infrastructure, and management and metadata servers that are part of the overall storage infrastructure. We don’t know with certainty that these components will continue to be funded by the campus and this introduces additional uncertainty as to the future pricing for storage, beyond the current offering described here.
 
-* The $160/TB price is for non-mirrored, potentially non-geographically redundant storage.  While we hope to always purchase storage servers in pairs, providing failover between servers, there is no guarantee that we will always be able to do that. If you wish to protect your data beyond the level of RAID 6 (allows for two failed disks), we suggest you consider purchasing mirrored storage which completely duplicates data using a separate set of (RAID 6) disk drives.
+* The $160/TiB price is for non-mirrored, potentially non-geographically redundant storage.  While we hope to always purchase storage servers in pairs, providing failover between servers, there is no guarantee that we will always be able to do that. If you wish to protect your data beyond the level of RAID 6 (allows for two failed disks), we suggest you consider purchasing mirrored storage which completely duplicates data using a separate set of (RAID 6) disk drives.
 
 * Any new storage will be added to our existing BeeGFS installation and will not use separate instances of BeeGFS (which would significantly increase the potential costs, if not in hardware, certainly in terms of personnel effort).
 
-* We assume that our last purchase represents a reasonable scalable unit of storage.  This purchase provided 1,200 TB (raw) storage and two storage servers.  At ~$112,500, this results in a cost of $93/TB (raw) or $136/TB after accounting for RAID-Z2 and BeeGFS filesystem costs. We also need to add two additional metadata servers at a cost of $20,000. Taken together, this results in the $160/TB price.
+
+## Price calculations
+
+* We assume that purchases during 2019 represented a reasonable scalable unit of storage.  This purchase provided 1,200 TB (raw) storage and two storage servers.  At ~$112,500, this results in a cost of $93/TB (raw) or $136/TB after accounting for RAID-Z2 and BeeGFS filesystem costs. We also need to add two additional metadata servers at a cost of $20,000. Taken together, this results in the $160/TB price.
 
 * The current storage hardware increment is ~$160,000, which may result in some delay between the first contributions and an actual purchase, although there is already pent-up demand and hence we are trying to proceed with the purchase as quickly as possible.
 
+* Update 2024-07-29: We have sold storage in units of TB = 1000^4 bytes, but allocated in units of TiB = 1024^4 bytes, which is a 10% over-allocation. That said, given that prices has been going down, we have made the decision to change the charge to $160/TiB.  There is also current work in revisit the storage price, so the current price might be adjusted again.
 
-_Last updated: May 22, 2023_
+_Last updated: July 29, 2024_
