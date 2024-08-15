@@ -143,9 +143,12 @@ not require a downtime and will be done in a near future without
 disrupting the cluster.
 <br><span class="timestamp">June 18, 17:00 PT</span>
 
-**Notice**: Wynton is down for maintenance as of 09:00 on Monday
+**Update**: Wynton is down for maintenance as of 09:00 on Monday
 2024-06-17.
 <br><span class="timestamp">June 17, 09:00 PT</span>
+
+**Notice**: The cluster will be shut down for maintenance from 9 pm on Monday June 17 until 5:00 pm on Tuesday June 18, 2024. Starting June 3, the maximum job runtime will be decreased on a daily basis from the current 14 days so that jobs finish in time. Jobs with runtimes going into the maintenance window, will be started after the downtime.
+<br><span class="timestamp">June 5, 09:00 PT</span>
 
 <!--
 comment: Scheduled downtime
