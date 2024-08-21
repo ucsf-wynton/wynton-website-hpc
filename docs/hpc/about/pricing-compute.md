@@ -1,27 +1,27 @@
-# Pricing for Extra Compute
+<img width="1367" alt="image" src="https://github.com/user-attachments/assets/c5ffa211-cda0-4ff0-b489-1f363fa0dd2e"># Pricing for Extra Compute
 
-_Example specifications and pricing as of October 2023_
+_Example specifications and pricing as of August 2024_
 
 Please note: You cannot be charged for the hardware until it has been received and invoiced. Since lead times can be extensive, please plan as far ahead as you can. 
 
 
 ## Pricing for prioritized "CPU" compute
 
-Cluster compute nodes are purchased by Wynton in modules that have 4 "2U" compute nodes in a single chassis. If partial nodes are requested, contributions will be pooled with other requests towards a full system. **Another option is to pay $170/member.q slot.**
+Cluster compute nodes are purchased by Wynton in modules that have 4 "2U" compute nodes in a single chassis. If partial nodes are requested, contributions will be pooled with other requests towards a full system. **Another option is to pay $180/member.q slot.**
 
 ### Configuration: SMC RM224Q 2U Quad-Node Server
 
 This configuration comes with four compute modules, where each node includes:
 
-* CPU/node: 2 × Intel Xeon Gold 6336Y 2.4GHz 24-core processor
+* CPU/node: 2 × Intel Xeon Gold 5520+ 2.2GHz 28-core processor 
 
-* RAM/node: 256GiB DDR4-3200 ECC (16 × 16 GiB)
+* RAM/node: 256GiB DDR5-4800 ECC (16 × 16 GiB)
 
-* Storage/node: 1 × 1.92TB SATA SSD
+* Storage/node: 1 × 1.92TB U.2 NVMe SSD, 1DWPD
 
-Total price for a module with four (4) node: **~33,000 USD** excluding taxes.
+Total price for a module with four (4) node: **~37,000 USD** excluding taxes.
 
-As of October 2023, **lead time for compute nodes is approximate three months from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a four-compute-node module, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
+As of August 2024, **lead time for compute nodes is approximate three months from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a four-compute-node module, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
 
 ## Pricing for prioritized Graphics Processing Unit (GPU) processing
 
