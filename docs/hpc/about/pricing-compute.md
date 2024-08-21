@@ -1,4 +1,4 @@
-<img width="1367" alt="image" src="https://github.com/user-attachments/assets/c5ffa211-cda0-4ff0-b489-1f363fa0dd2e"># Pricing for Extra Compute
+# Pricing for Extra Compute
 
 _Example specifications and pricing as of August 2024_
 
