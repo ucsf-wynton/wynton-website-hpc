@@ -941,7 +941,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog) <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version"><em>3.29.0</em></span><br>
+Versions: <span class="module-version">3.29.0, <em>3.30.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1338,7 +1338,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.53.0, <em>0.54.1</em></span><br>
+Versions: <span class="module-version">0.53.0, 0.54.1, <em>0.54.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1603,7 +1603,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, and <code>gh auth login</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.52.0, <em>2.53.0</em></span><br>
+Versions: <span class="module-version">2.52.0, 2.53.0, <em>2.55.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1711,7 +1711,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gping --version</code>, <code>gping --help</code>, <code>gping 8.8.8.8 9.9.9.9</code>, and <code>gping --cmd &quot;curl -o /dev/null https://www.github.com&quot; &quot;wget -O /dev/null https://github.com&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/orf/gping">https://github.com/orf/gping</a>, <a href="https://github.com/orf/gping/releases">https://github.com/orf/gping/releases</a> (changelog), <a href="https://github.com/orf/gping">https://github.com/orf/gping</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.16.1</em></span><br>
+Versions: <span class="module-version">1.16.1, <em>1.17.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1975,7 +1975,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
 Warning: <span class="module-warning">IGV (&gt;= 2.7.0) requires Java 17. Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.16.2, 2.17.0, 2.17.1, 2.17.3, <em>2.17.4</em></span><br>
+Versions: <span class="module-version">2.16.2, 2.17.0, 2.17.1, 2.17.3, 2.17.4, <em>2.18.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2553,7 +2553,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://github.com/jgm/pandoc/blob/master/changelog.md">https://github.com/jgm/pandoc/blob/master/changelog.md</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.1.13, <em>3.2.1</em></span><br>
+Versions: <span class="module-version">3.1.13, 3.2.1, <em>3.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2909,7 +2909,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.4.557, <em>1.5.55</em></span><br>
+Versions: <span class="module-version">1.4.557, 1.5.55, <em>1.5.56</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3223,7 +3223,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">restic is a backup program that is fast, efficient and secure. It supports the three major operating systems (Linux, macOS, Windows) and a few smaller ones (FreeBSD, OpenBSD).</span><br>
 Example: <span class="module-example"><code>restic --help</code> and <code>restic version</code>.</span><br>
 URL: <span class="module-url"><a href="https://restic.net">https://restic.net</a>, <a href="https://restic.readthedocs.io/en/latest/">https://restic.readthedocs.io/en/latest/</a> (documentation), <a href="https://github.com/restic/restic/releases">https://github.com/restic/restic/releases</a> (change log), <a href="https://github.com/restic/restic">https://github.com/restic/restic</a> (source code)</span><br>
-Versions: <span class="module-version">0.16.4, <em>0.16.5</em></span><br>
+Versions: <span class="module-version">0.16.4, 0.16.5, <em>0.17.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3707,7 +3707,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</span><br>
 Example: <span class="module-example"><code>sqlite3 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://sqlite.org/">https://sqlite.org/</a>, <a href="https://sqlite.org/docs.html">https://sqlite.org/docs.html</a> (docs), <a href="https://github.com/sqlite/sqlite/tags">https://github.com/sqlite/sqlite/tags</a> (changelog), <a href="https://github.com/sqlite/sqlite">https://github.com/sqlite/sqlite</a> (source code)</span><br>
-Versions: <span class="module-version">3.43.0, 3.43.2, <em>3.45.2</em></span><br>
+Versions: <span class="module-version">3.43.0, 3.43.2, 3.45.2, <em>3.46.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4177,7 +4177,7 @@ end
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.43.1, <em>4.44.2</em></span><br>
+Versions: <span class="module-version">4.43.1, 4.44.2, <em>4.44.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
