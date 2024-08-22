@@ -148,7 +148,7 @@ X2Go via one of the {{ site.cluster.name }} development nodes.
 
 
 <div class="alert alert-info" role="alert" markdown="1">
-If you use Python via your own Anaconda installation, instead of the
+If you use Python via your own Conda installation, instead of the
 Python version provided by {{ site.cluster.name }}, you can launch a
 Jupyter Notebook using the `jupyter notebook` command from the
 terminal connected by X2Go, which will also launch the web browser.
