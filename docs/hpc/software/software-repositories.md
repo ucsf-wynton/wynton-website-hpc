@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(97)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
@@ -206,7 +206,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (96)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (97)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2392,6 +2392,122 @@ pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/minicon
 pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-24.5.0-0-py312/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
 prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniconda3-24.5.0-0-py312/condabin&quot;)
+pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
+pushenv(&quot;_CE_M&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_activate&quot;,&quot; \
+    if [ -n \&quot;${CONDA_PS1_BACKUP:+x}\&quot; ]; then\
+        PS1=\&quot;$CONDA_PS1_BACKUP\&quot;;\
+        \\unset CONDA_PS1_BACKUP;\
+    fi;\
+    \\local ask_conda;\
+    ask_conda=\&quot;$(PS1=\&quot;${PS1:-}\&quot; __conda_exe shell.posix \&quot;$@\&quot;)\&quot; || \\return;\
+    \\eval \&quot;$ask_conda\&quot;;\
+    __conda_hashr\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_exe&quot;,&quot; \
+    ( \&quot;$CONDA_EXE\&quot; $_CE_M $_CE_CONDA \&quot;$@\&quot; )\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_hashr&quot;,&quot; \
+    if [ -n \&quot;${ZSH_VERSION:+x}\&quot; ]; then\
+        \\rehash;\
+    else\
+        if [ -n \&quot;${POSH_VERSION:+x}\&quot; ]; then\
+            :;\
+        else\
+            \\hash -r;\
+        fi;\
+    fi\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_reactivate&quot;,&quot; \
+    \\local ask_conda;\
+    ask_conda=\&quot;$(PS1=\&quot;${PS1:-}\&quot; __conda_exe shell.posix reactivate)\&quot; || \\return;\
+    \\eval \&quot;$ask_conda\&quot;;\
+    __conda_hashr\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;conda&quot;,&quot; \
+    \\local cmd=\&quot;${1-__missing__}\&quot;;\
+    case \&quot;$cmd\&quot; in \
+        activate | deactivate)\
+            __conda_activate \&quot;$@\&quot;\
+        ;;\
+        install | update | upgrade | remove | uninstall)\
+            __conda_exe \&quot;$@\&quot; || \\return;\
+            __conda_reactivate\
+        ;;\
+        *)\
+            __conda_exe \&quot;$@\&quot;\
+        ;;\
+    esac\
+&quot;,&quot;&quot;)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_miniforge3" class="module-name">miniforge3</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">Miniforge: A Free Minimal Installer for Conda</strong><br>
+<span class="module-description">Miniforge is a free minimal installer for conda. Miniforge is a community effort to provide Miniconda-like installers, with the added feature that conda-forge is the default channel.</span><br>
+Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
+URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a>, <a href="https://conda-forge.org/docs/user/introduction/">https://conda-forge.org/docs/user/introduction/</a> (documentation), <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a> (releases),  <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
+Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
+Versions: <span class="module-version"><em>24.3.0-0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+Miniforge: A Free Minimal Installer for Conda
+]])
+
+local warning = &quot;Use at your own peril! Software tools installed via Conda are known to cause conflicts with other software on the system, including core software provided by the operating system as well as other software from the CBI stack. For example, do not install R packages running R from the CBI stack, while conda is activated.&quot;
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: files, utility&quot;)
+whatis(&quot;URL: https://conda-forge.org/, https://conda-forge.org/docs/user/introduction/ (documentation), https://github.com/conda-forge/miniforge/releases (releases),  https://github.com/conda/conda/blob/master/CHANGELOG.md (changelog), https://github.com/conda/conda (source code)&quot;)
+whatis([[
+Description: Miniforge is a free minimal installer for conda. Miniforge is a community effort to provide Miniconda-like installers, with the added feature that conda-forge is the default channel.
+Examples: `conda --version`, `conda create --name=myenv`, `conda env list`, `conda activate myenv`, `conda info`, and `conda deactive`.
+Warning: For now, this module works only in Bash. Also, do _not_ do `conda init`. If you do this by mistake, please undo by `conda init --reverse`.
+]])
+
+conflict(&quot;miniconda3&quot;)
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
+
+-- Miniconda (&gt;= 23.11.0) [2023-11-30]:
+-- Prevent conda from add shortcuts to user's Desktop.
+pushenv(&quot;CONDA_SHORTCUTS&quot;, &quot;false&quot;)
+
+if mode() == &quot;load&quot; then
+  -- ASSERT: Make sure there is no other active conda environment
+  if os.getenv(&quot;CONDA_EXE&quot;) then
+    LmodError(&quot;Cannot load &quot; .. name .. &quot; module, because another conda installation is already enabled (detected environment variable CONDA_EXE='&quot; .. os.getenv(&quot;CONDA_EXE&quot;) .. &quot;'). Have you installed conda on your own? If so, run 'conda config --set auto_activate_base false' and then log out and log back in again.  If that is not sufficient, please run 'conda init --reverse' and log out and back in again.&quot;)
+  end
+
+  pushenv(&quot;CONDA_EXE&quot;, pathJoin(home, &quot;bin&quot;, &quot;conda&quot;))
+  pushenv(&quot;CONDA_PYTHON_EXE&quot;, pathJoin(home, &quot;bin&quot;, &quot;python&quot;))
+  pushenv(&quot;_CE_M&quot;, &quot;&quot;)
+  pushenv(&quot;_CE_CONDA&quot;, &quot;&quot;)
+elseif mode() == &quot;unload&quot; then
+  pushenv(&quot;CONDA_EXE&quot;, &quot;false&quot;)
+  pushenv(&quot;CONDA_PYTHON_EXE&quot;, &quot;false&quot;)
+  pushenv(&quot;_CE_M&quot;, &quot;false&quot;)
+  pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
+end
+-- Don't edit! Created using: 
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.3.0-0/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.3.0-0/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.3.0-0/bin/python&quot;)
+pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.3.0-0/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
@@ -6220,7 +6336,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(96)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(97)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
