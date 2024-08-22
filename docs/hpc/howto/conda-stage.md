@@ -43,13 +43,13 @@ Each time you activate the environment, it is automatically staged to local disk
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-INFO: Staging current Conda environment ({{ site.user.home }}/miniconda3/envs/myjupyter) to local disk ...
+INFO: Staging current Conda environment ({{ site.user.home }}/.conda/envs/myjupyter) to local disk ...
 INFO: [ONCE] Packaging Conda environment, because it hasn't been done before ...
 Collecting packages...
-Packing environment at '{{ site.user.home }}/miniconda3/envs/myjupyter' to '{{ site.user.home }}/miniconda3/envs/.tmp.myjupyter.tar.gz'
+Packing environment at '{{ site.user.home }}/.conda/envs/myjupyter' to '{{ site.user.home }}/.conda/envs/.tmp.myjupyter.tar.gz'
 [########################################] | 100% Completed |  4min  5.6s
 INFO: Total 'conda-pack' time: 274 seconds
-INFO: Extracting {{ site.user.home }}/miniconda3/envs/myjupyter.tar.gz (86965746 byte
+INFO: Extracting {{ site.user.home }}/.conda/envs/myjupyter.tar.gz (86965746 byte
 s; 2022-04-15 16:53:50.000000000 -0700) to /scratch/alice/conda-stage-grWA/myjupyter
 INFO: Total extract time: 4 seconds
 INFO: Disable any /scratch/alice/conda-stage-grWA/myjupyter/etc/conda/activate.d/*.cond
@@ -158,7 +158,7 @@ Without staging to local disk, the call takes a whopping 32 seconds to return:
 ```sh
 [alice@{{ site.devel.name }} ~]$ CONDA_STAGE=false conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command -v jupyter
-{{ site.user.home }}/miniconda3/envs/myjupyter/bin/jupyter
+{{ site.user.home }}/.conda/envs/myjupyter/bin/jupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ command time --portability jupyter --version > /dev/null
 real 32.06
 user 1.42
