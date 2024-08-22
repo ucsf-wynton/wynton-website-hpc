@@ -87,16 +87,16 @@ Next, we launch Jupyter Notebook on the same development node:
 [I 2024-03-20 14:48:46.711 ServerApp] notebook | extension was successfully loaded.
 [I 2024-03-20 14:48:46.712 ServerApp] Serving notebooks from local directory: {{ site.user.home }}
 [I 2024-03-20 14:48:46.712 ServerApp] Jupyter Server 2.13.0 is running at:
-[I 2024-03-20 14:48:46.712 ServerApp] http://localhost:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
-[I 2024-03-20 14:48:46.712 ServerApp]     http://127.0.0.1:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
+[I 2024-03-20 14:48:46.712 ServerApp] http://localhost:47467/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
+[I 2024-03-20 14:48:46.712 ServerApp]     http://127.0.0.1:47467/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
 [I 2024-03-20 14:48:46.712 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 [C 2024-03-20 14:48:46.725 ServerApp]
 
     To access the server, open this file in a browser:
         file://{{ site.user.home }}/.local/share/jupyter/runtime/jpserver-2853162-open.html
     Or copy and paste one of these URLs:
-        http://localhost:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
-        http://127.0.0.1:44214/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
+        http://localhost:47467/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
+        http://127.0.0.1:47467/tree?token=8e37f8d62fca6a1c9b2da429f27df5ebcec706a808c3a8f2
 ```
 
 However, these instructions do _not_ work out of the box, because they
