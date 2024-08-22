@@ -1,6 +1,6 @@
 # How to Cite
 
-## Publication Acknowledgement
+## Publication Acknowledgment
 
 If you'd like to acknowledge Wynton in your publication, you are welcome to use this sample verbiage:
 
