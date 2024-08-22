@@ -12,7 +12,7 @@ Both come with Python and `conda` commands.  We _recommend_ working with the sma
 
 ## Loading Miniconda
 
-On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3 with Python 3.9, call:
+On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3 with Python 3.11, call:
 
 <!-- code-block label="module-load-miniconda3" -->
 ```sh
