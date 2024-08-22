@@ -1,1 +1,1 @@
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/23.5.2-0-py311
+[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/24.5.0-0-py312

@@ -22,8 +22,8 @@ mdi_adjust_output() {
 
 
 module purge
-mdi_code_block --label=module-load-miniconda3 <<EOF
-module load CBI miniconda3/23.5.2-0-py311
+mdi_code_block --label=module-load-miniforge3 <<EOF
+module load CBI miniforge3/24.3.0-0
 EOF
 
 

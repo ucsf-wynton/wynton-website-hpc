@@ -12,11 +12,11 @@ Both come with Python and `conda` commands.  We _recommend_ working with the sma
 
 ## Loading Miniconda
 
-On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3 with Python 3.9, call:
+On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3, call:
 
-<!-- code-block label="module-load-miniconda3" -->
+<!-- code-block label="module-load-miniforge3" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniconda3/23.5.2-0-py311
+[alice@{{ site.devel.name }} ~]$ module load CBI miniforge3/24.3.0-0
 ```
 
 This gives access to:
@@ -24,9 +24,9 @@ This gives access to:
 <!-- code-block label="conda-version" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda --version
-conda 23.5.2
+conda 24.3.0
 [alice@{{ site.devel.name }} ~]$ python --version
-Python 3.11.4
+Python 3.10.14
 ```
 
 To see what software packages come with this Miniconda distribution, call:
@@ -34,79 +34,87 @@ To see what software packages come with this Miniconda distribution, call:
 <!-- code-block label="conda-list" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda list
-# packages in environment at /wynton/home/boblab/shared/software/CBI/miniconda3-23.5.2-0-py311:
+# packages in environment at /wynton/home/boblab/shared/software/CBI/miniforge3-24.3.0-0:
 #
 # Name                    Version                   Build  Channel
-_libgcc_mutex             0.1                        main  
-_openmp_mutex             5.1                       1_gnu  
-boltons                   23.0.0          py311h06a4308_0  
-brotlipy                  0.7.0           py311h5eee18b_1002  
-bzip2                     1.0.8                h7b6447c_0  
-c-ares                    1.19.0               h5eee18b_0  
-ca-certificates           2023.05.30           h06a4308_0  
-certifi                   2023.5.7        py311h06a4308_0  
-cffi                      1.15.1          py311h5eee18b_3  
-charset-normalizer        2.0.4              pyhd3eb1b0_0  
-conda                     23.5.2          py311h06a4308_0  
-conda-content-trust       0.1.3           py311h06a4308_0  
-conda-libmamba-solver     23.5.0          py311h06a4308_0  
-conda-package-handling    2.1.0           py311h06a4308_0  
-conda-package-streaming   0.8.0           py311h06a4308_0  
-cryptography              39.0.1          py311h9ce1e76_2  
-fmt                       9.1.0                hdb19cb5_0  
-icu                       58.2                 he6710b0_3  
-idna                      3.4             py311h06a4308_0  
-jsonpatch                 1.32               pyhd3eb1b0_0  
-jsonpointer               2.1                pyhd3eb1b0_0  
-krb5                      1.20.1               h143b758_1  
-ld_impl_linux-64          2.38                 h1181459_1  
-libarchive                3.6.2                h6ac8c49_2  
-libcurl                   8.1.1                h251f7ec_1  
-libedit                   3.1.20221030         h5eee18b_0  
-libev                     4.33                 h7f8727e_1  
-libffi                    3.4.4                h6a678d5_0  
-libgcc-ng                 11.2.0               h1234567_1  
-libgomp                   11.2.0               h1234567_1  
-libmamba                  1.4.1                h2dafd23_1  
-libmambapy                1.4.1           py311h2dafd23_1  
-libnghttp2                1.52.0               h2d74bed_1  
-libsolv                   0.7.22               he621ea3_0  
-libssh2                   1.10.0               hdbd6064_2  
-libstdcxx-ng              11.2.0               h1234567_1  
-libuuid                   1.41.5               h5eee18b_0  
-libxml2                   2.10.3               hcbfbd50_0  
-lz4-c                     1.9.4                h6a678d5_0  
-ncurses                   6.4                  h6a678d5_0  
-openssl                   3.0.9                h7f8727e_0  
-packaging                 23.0            py311h06a4308_0  
-pcre2                     10.37                he7ceb23_1  
-pip                       23.1.2          py311h06a4308_0  
-pluggy                    1.0.0           py311h06a4308_1  
-pybind11-abi              4                    hd3eb1b0_1  
-pycosat                   0.6.4           py311h5eee18b_0  
-pycparser                 2.21               pyhd3eb1b0_0  
-pyopenssl                 23.0.0          py311h06a4308_0  
-pysocks                   1.7.1           py311h06a4308_0  
-python                    3.11.4               h955ad1f_0  
-readline                  8.2                  h5eee18b_0  
-reproc                    14.2.4               h295c915_1  
-reproc-cpp                14.2.4               h295c915_1  
-requests                  2.29.0          py311h06a4308_0  
-ruamel.yaml               0.17.21         py311h5eee18b_0  
-setuptools                67.8.0          py311h06a4308_0  
-six                       1.16.0             pyhd3eb1b0_1  
-sqlite                    3.41.2               h5eee18b_0  
-tk                        8.6.12               h1ccaba5_0  
-toolz                     0.12.0          py311h06a4308_0  
-tqdm                      4.65.0          py311h92b7b1e_0  
-tzdata                    2023c                h04d1e81_0  
-urllib3                   1.26.16         py311h06a4308_0  
-wheel                     0.38.4          py311h06a4308_0  
-xz                        5.4.2                h5eee18b_0  
-yaml-cpp                  0.7.0                h295c915_1  
-zlib                      1.2.13               h5eee18b_0  
-zstandard                 0.19.0          py311h5eee18b_0  
-zstd                      1.5.5                hc292b87_0  
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       2_gnu    conda-forge
+archspec                  0.2.3              pyhd8ed1ab_0    conda-forge
+boltons                   24.0.0             pyhd8ed1ab_0    conda-forge
+brotli-python             1.1.0           py310hc6cd4ac_1    conda-forge
+bzip2                     1.0.8                hd590300_5    conda-forge
+c-ares                    1.28.1               hd590300_0    conda-forge
+ca-certificates           2024.2.2             hbcca054_0    conda-forge
+certifi                   2024.2.2           pyhd8ed1ab_0    conda-forge
+cffi                      1.16.0          py310h2fee648_0    conda-forge
+charset-normalizer        3.3.2              pyhd8ed1ab_0    conda-forge
+colorama                  0.4.6              pyhd8ed1ab_0    conda-forge
+conda                     24.3.0          py310hff52083_0    conda-forge
+conda-libmamba-solver     24.1.0             pyhd8ed1ab_0    conda-forge
+conda-package-handling    2.2.0              pyh38be061_0    conda-forge
+conda-package-streaming   0.9.0              pyhd8ed1ab_0    conda-forge
+distro                    1.9.0              pyhd8ed1ab_0    conda-forge
+fmt                       10.2.1               h00ab1b0_0    conda-forge
+icu                       73.2                 h59595ed_0    conda-forge
+idna                      3.6                pyhd8ed1ab_0    conda-forge
+jsonpatch                 1.33               pyhd8ed1ab_0    conda-forge
+jsonpointer               2.4             py310hff52083_3    conda-forge
+keyutils                  1.6.1                h166bdaf_0    conda-forge
+krb5                      1.21.2               h659d440_0    conda-forge
+ld_impl_linux-64          2.40                 h41732ed_0    conda-forge
+libarchive                3.7.2                h2aa1ff5_1    conda-forge
+libcurl                   8.7.1                hca28451_0    conda-forge
+libedit                   3.1.20191231         he28a2e2_2    conda-forge
+libev                     4.33                 hd590300_2    conda-forge
+libffi                    3.4.2                h7f98852_5    conda-forge
+libgcc-ng                 13.2.0               h807b86a_5    conda-forge
+libgomp                   13.2.0               h807b86a_5    conda-forge
+libiconv                  1.17                 hd590300_2    conda-forge
+libmamba                  1.5.8                had39da4_0    conda-forge
+libmambapy                1.5.8           py310h39ff949_0    conda-forge
+libnghttp2                1.58.0               h47da74e_1    conda-forge
+libnsl                    2.0.1                hd590300_0    conda-forge
+libsolv                   0.7.28               hfc55251_2    conda-forge
+libsqlite                 3.45.2               h2797004_0    conda-forge
+libssh2                   1.11.0               h0841786_0    conda-forge
+libstdcxx-ng              13.2.0               h7e041cc_5    conda-forge
+libuuid                   2.38.1               h0b41bf4_0    conda-forge
+libxcrypt                 4.4.36               hd590300_1    conda-forge
+libxml2                   2.12.6               h232c23b_1    conda-forge
+libzlib                   1.2.13               hd590300_5    conda-forge
+lz4-c                     1.9.4                hcb278e6_0    conda-forge
+lzo                       2.10              h516909a_1000    conda-forge
+mamba                     1.5.8           py310h51d5547_0    conda-forge
+menuinst                  2.0.2           py310hff52083_0    conda-forge
+ncurses                   6.4.20240210         h59595ed_0    conda-forge
+openssl                   3.2.1                hd590300_1    conda-forge
+packaging                 24.0               pyhd8ed1ab_0    conda-forge
+pip                       24.0               pyhd8ed1ab_0    conda-forge
+platformdirs              4.2.0              pyhd8ed1ab_0    conda-forge
+pluggy                    1.4.0              pyhd8ed1ab_0    conda-forge
+pybind11-abi              4                    hd8ed1ab_3    conda-forge
+pycosat                   0.6.6           py310h2372a71_0    conda-forge
+pycparser                 2.22               pyhd8ed1ab_0    conda-forge
+pysocks                   1.7.1              pyha2e5f31_6    conda-forge
+python                    3.10.14         hd12c33a_0_cpython    conda-forge
+python_abi                3.10                    4_cp310    conda-forge
+readline                  8.2                  h8228510_1    conda-forge
+reproc                    14.2.4.post0         hd590300_1    conda-forge
+reproc-cpp                14.2.4.post0         h59595ed_1    conda-forge
+requests                  2.31.0             pyhd8ed1ab_0    conda-forge
+ruamel.yaml               0.18.6          py310h2372a71_0    conda-forge
+ruamel.yaml.clib          0.2.8           py310h2372a71_0    conda-forge
+setuptools                69.5.1             pyhd8ed1ab_0    conda-forge
+tk                        8.6.13          noxft_h4845f30_101    conda-forge
+tqdm                      4.66.2             pyhd8ed1ab_0    conda-forge
+truststore                0.8.0              pyhd8ed1ab_0    conda-forge
+tzdata                    2024a                h0c530f3_0    conda-forge
+urllib3                   2.2.1              pyhd8ed1ab_0    conda-forge
+wheel                     0.43.0             pyhd8ed1ab_1    conda-forge
+xz                        5.2.6                h166bdaf_0    conda-forge
+yaml-cpp                  0.8.0                h59595ed_0    conda-forge
+zstandard                 0.22.0          py310h1275a96_0    conda-forge
+zstd                      1.5.5                hfc55251_0    conda-forge
 ```
 
 

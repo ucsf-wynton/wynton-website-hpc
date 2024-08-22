@@ -1,4 +1,4 @@
 [alice@{{ site.devel.name }} ~]$ conda --version
-conda 23.5.2
+conda 24.3.0
 [alice@{{ site.devel.name }} ~]$ python --version
-Python 3.11.4
+Python 3.10.14
