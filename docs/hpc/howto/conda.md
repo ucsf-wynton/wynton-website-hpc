@@ -1,9 +1,9 @@
 <div class="alert alert-warning" role="alert" markdown="1">
 
-We no longer recommend using Anaconda or Miniconda that is distributed
-by Anaconda Inc., because of license issues. Anaconda Inc. argues that
-using their default package channels requires UCSF to acquire an
-enterprise license.
+2024-08-21: We no longer recommend using Anaconda or Miniconda that is
+distributed by Anaconda Inc., because of license issues. Anaconda
+Inc. argues that using their default package channels requires UCSF to
+acquire an enterprise license.
 
 </div>
 
@@ -14,9 +14,10 @@ enterprise license.
 It's popular, because it simplifies installation of many scientific
 software tools.  We recommend to use:
 
-1. [Miniforge] - a community-driven, libre-licensed alternative to the
-   [Miniconda] (~0.5 GiB of disk space) [**recommended**; preinstalled
-   on {{ site.cluster.nickname }}]
+1. [Miniforge] - a Conda alternative to the [Miniconda] (~0.5 GiB of
+   disk space), which defaults to the community-driven, libre-licensed
+   **[conda-forge]** channels [**recommended**; preinstalled on {{
+   site.cluster.nickname }}]
 
 It provides the `conda` and `python` commands, among other tools and
 libraries.
@@ -26,19 +27,11 @@ libraries.
 
 ## Loading Miniforge
 
-<<<<<<< Updated upstream
-On {{ site.cluster.name }}, up-to-date versions of the Miniconda distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniconda v3, call:
+On {{ site.cluster.name }}, up-to-date versions of the Miniforge distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniforge, call:
 
 <!-- code-block label="module-load-miniforge3" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI miniforge3/24.3.0-0
-=======
-On {{ site.cluster.name }}, up-to-date versions of the Miniforge distribution are available via the CBI software stack.  There is no need for you to install this yourself.  To load Miniforge v3, call:
-
-<!-- code-block label="module-load-miniforge3" -->
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI miniforge3/23.5.2-0-py311
->>>>>>> Stashed changes
 ```
 
 This gives access to:
@@ -51,16 +44,12 @@ conda 24.3.0
 Python 3.10.14
 ```
 
-To see what software packages come with this Miniconda distribution, call:
+To see what software packages come with this distribution, call:
 
 <!-- code-block label="conda-list" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda list
-<<<<<<< Updated upstream
 # packages in environment at /wynton/home/boblab/shared/software/CBI/miniforge3-24.3.0-0:
-=======
-# packages in environment at /wynton/home/boblab/shared/software/CBI/miniforge3-23.5.2-0-py311:
->>>>>>> Stashed changes
 #
 # Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                 conda_forge    conda-forge
@@ -146,48 +135,37 @@ zstd                      1.5.5                hfc55251_0    conda-forge
 
 ## Creating a Conda environment (required)
 
-A Conda _environment_ is a mechanism for installing extra software tools and versions beyond the base Miniconda distribution in a controlled manner.  When using the **miniforge3** module, a Conda environment must be used to install extra software. The following command creates a new `myjupyter` environment:
+A Conda _environment_ is a mechanism for installing extra software tools and versions beyond the base Miniforge distribution in a controlled manner.  When using the **miniforge3** module, a Conda environment must be used to install extra software. The following command creates a new `myjupyter` environment:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda create -n myjupyter notebook
+Channels:
+ - conda-forge
+Platform: linux-64
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
 
 ## Package Plan ##
 
   environment location: {{ site.user.home }}/.conda/envs/myjupyter
-
+  
   added / updated specs:
     - notebook
-
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    anyio-3.5.0                |  py311h06a4308_0         214 KB
-    argon2-cffi-bindings-21.2.0|  py311h5eee18b_0          33 KB
-    ...
-    xz-5.4.2                   |       h5eee18b_0         642 KB
-    yaml-0.2.5                 |       h7b6447c_0          75 KB
-    ------------------------------------------------------------
-                                           Total:        67.6 MB
-
+    
 The following NEW packages will be INSTALLED:
 
-  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
-  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
+  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-2_gnu
   ...
-  zeromq             pkgs/main/linux-64::zeromq-4.3.4-h2531618_0 
-  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0 
+  zstandard          conda-forge/linux-64::zstandard-0.23.0-py312h3483029_0 
+  zstd               conda-forge/linux-64::zstd-1.5.6-ha6fb4c9_0 
 
 Proceed ([y]/n)? y
 
 
 Downloading and Extracting Packages
+
 ...
-jupyterlab_pygments- | 8 KB      | #################################### | 100% 
-jupyter_client-7.3.5 | 194 KB    | #################################### | 100% 
 Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done
@@ -203,7 +181,7 @@ Executing transaction: done
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-By default, the environment is created in your home directory under `~/.conda/`.  To create the environment at a specific location, see [Managing environments] part of the official Conda documentation.  That section covers many useful topics such as removing a Conda environment, and creating an environment with a specific Python version.
+By default, the environment is created in your home directory under `~/.conda/envs/`.  To create the environment at a specific location, see [Managing environments] part of the official Conda documentation.  That section covers many useful topics such as removing a Conda environment, and creating an environment with a specific Python version.
 
 
 ## Activating a Conda environment (required)
@@ -214,7 +192,7 @@ After an environment is created, the next time you log in to a development node,
 [alice@{{ site.devel.name }} ~]$ module load CBI miniforge3
 [alice@{{ site.devel.name }} ~]$ conda activate myjupyter
 (myjupyter) [alice@{{ site.devel.name }} ~]$ jupyter notebook --version
-6.5.4
+7.2.1
 
 (myjupyter) [alice@{{ site.devel.name }} ~]$ 
 ```
@@ -254,7 +232,7 @@ Once you have your Conda environment built, we recommend that you back up its co
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda env export --name myjupyter | grep -v "^prefix: " > myjupyter.yml
 [alice@{{ site.devel.name }} ~]$ ls -l myjupyter.yml
--rw-rw-r-- 1 alice boblab 3597 Jun 11 03:48 myjupyter.yml
+-rw-rw-r-- 1 alice boblab 4982 Aug 21 17:56 myjupyter.yml
 ```
 
 This configuration file is useful:
@@ -288,8 +266,8 @@ name: myjupyter
 {local}$ conda env list
 # conda environments:
 #
-sandbox  {{ site.user.home }}/.conda/envs/sandbox
-base     /path/to/anaconda3
+myjupyter {{ site.user.home }}/.conda/envs/myjupyter
+base      /path/to/miniforge3
 ```
 
 When have confirmed that there is no name clash, we can restore the backed up environment on our local machine using:
@@ -353,10 +331,10 @@ If you see a `(base)` prefix in your prompt, then you have this set up and the C
 [alice@{{ site.devel.name }} ~]$ conda info | grep active
 conda info | grep active
      active environment : base
-    active env location : {{ site.user.home }}/miniforge3
+    active env location : {{ site.user.home }}/.conda
 ```
 
-This auto-activation might sound convenient, but we _strongly recommend_ against using it, because Conda software stacks have a great chance to cause conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless, hard-to-understand problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  To clarify, if you never installed Conda yourself, and only used `module load CBI miniforge3-py39/23.3.1-0-py39`, then you should not have this problem.
+This auto-activation might sound convenient, but we _strongly recommend_ against using it, because Conda software stacks have a great chance to cause conflicts (read: wreak havoc) with other software tools installed outside of Conda.  For example, people that have Conda activated and then run R via `module load CBI r`, often report on endless, hard-to-understand problems when trying to install common R packages.  Instead, we recommend to activate your Conda environments only when you need them, and leave them non-activated otherwise.  This will give you a much smoother day-to-day experience.  To clarify, if you never installed Conda yourself, and only used `module load CBI miniforge3`, then you should not have this problem.
 
 To reconfigure Conda to no longer activate the 'base' Conda environment by default, call:
 
@@ -371,17 +349,17 @@ If you want to completely retire you personal Conda installation, and move on to
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda init --reverse
-no change     {{ site.user.home }}/miniforge3/condabin/conda
-no change     {{ site.user.home }}/miniforge3/bin/conda
-no change     {{ site.user.home }}/miniforge3/bin/conda-env
-no change     {{ site.user.home }}/miniforge3/bin/activate
-no change     {{ site.user.home }}/miniforge3/bin/deactivate
-no change     {{ site.user.home }}/miniforge3/etc/profile.d/conda.sh
-no change     {{ site.user.home }}/miniforge3/etc/fish/conf.d/conda.fish
-no change     {{ site.user.home }}/miniforge3/shell/condabin/Conda.psm1
-no change     {{ site.user.home }}/miniforge3/shell/condabin/conda-hook.ps1
-no change     {{ site.user.home }}/miniforge3/lib/python3.9/site-packages/xontrib/conda.xsh
-no change     {{ site.user.home }}/miniforge3/etc/profile.d/conda.csh
+no change     {{ site.user.home }}/.conda/condabin/conda
+no change     {{ site.user.home }}/.conda/bin/conda
+no change     {{ site.user.home }}/.conda/bin/conda-env
+no change     {{ site.user.home }}/.conda/bin/activate
+no change     {{ site.user.home }}/.conda/bin/deactivate
+no change     {{ site.user.home }}/.conda/etc/profile.d/conda.sh
+no change     {{ site.user.home }}/.conda/etc/fish/conf.d/conda.fish
+no change     {{ site.user.home }}/.conda/shell/condabin/Conda.psm1
+no change     {{ site.user.home }}/.conda/shell/condabin/conda-hook.ps1
+no change     {{ site.user.home }}/.conda/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     {{ site.user.home }}/.conda/etc/profile.d/conda.csh
 modified      {{ site.user.home }}/.bashrc
 
 ==> For changes to take effect, close and re-open your current shell. <==
@@ -392,5 +370,7 @@ modified      {{ site.user.home }}/.bashrc
 
 [Conda]: https://conda.io
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
+[Miniforge]: https://conda-forge.org/miniforge/
+[conda-forge]: https://conda-forge.org/
 [conda-stage]: conda-stage.html
 [Managing environments]: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
