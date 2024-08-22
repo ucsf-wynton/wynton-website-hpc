@@ -1,12 +1,14 @@
 # How to Cite
 
 ## Publication Acknowledgement
+
 If you'd like to acknowledge Wynton in your publication, you are welcome to use this sample verbiage:
 
-Portions of this work were performed on the Wynton HPC Co-Op cluster, which is 
-supported by UCSF research faculty and UCSF institutional funds.  The authors 
-wish to thank the UCSF Wynton team for their ongoing technical support of the 
-Wynton environment.
+> Portions of this work were performed on the Wynton HPC Co-Op
+> cluster, which is supported by UCSF research faculty and UCSF
+> institutional funds.  The authors wish to thank the UCSF Wynton team
+> for their ongoing technical support of the Wynton environment.
+
 
 ## Grant Applications
 
