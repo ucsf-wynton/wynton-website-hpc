@@ -1,54 +1,17 @@
 # Shared Cluster Computing at UCSF
 
-## Purpose
+## Context
 
-The shared cluster computing at UCSF was founded by basic scientists
-to support their research programs.  In the process, researchers
-benefit from maximized economies of scale in building, administering,
-and using the cluster. The cluster provides computing capacity,
-network connectivity internally at UCSF and externally to research
-networks such as the Pacific Research Platform, data storage, job
-queueing with accounting, and systems administration. As a result, the
-cluster contributes directly to the basic mission of UCSF, including
-research, education, and outreach.
+The Wynton high performance computer cluster at UCSF (defined here as the computer cluster named Wynton HPC as of June 2024 and the one primarily located in Byers Hall room 101, Mission Bay, UCSF) was founded by basic scientists to support their research programs. In the process, researchers benefitted and continue to benefit from maximized economies of scale in building, administering, and using the cluster. The cluster provides computing capacity, network connectivity internally at UCSF and externally to research networks such as the Pacific Research Platform, data storage, job queueing with accounting, and systems administration. As a result, the cluster contributes directly to the mission of UCSF, including research, education, and outreach.
 
+The cluster is built on a co-op model rather than a fee-for-service model, in contrast to, for example, most technology cores at UCSF and high-performance computing provided by Amazon Web Services. In the co-op model, every contributing research group has immediate access to the cluster computing power and storage capacity proportional to their contribution; contributions are preferably made in cash, although suitable existing hardware may also be integrated. This funding model suits best the often unpredictable timing and amount of research funds available to individual projects. In addition, our goal is to maximize the number of UCSF users of the shared cluster. Therefore, every member of the UCSF community has access to a fraction of the cluster computing power and storage capacity regardless of their contribution, reflecting the contribution by UCSF and shared instrumentation grants from NIH and NSF. Finally, any unused compute power is available to any user on a first-come, first-served basis. Every effort is made to accommodate and expand the set of applications that can be run efficiently on the cluster, as long as they don’t negatively impact our founding goals. If a contributing member leaves the consortium, they are entitled to take their contribution with them (except for communal storage).
 
-## Principles
+## Governance of the Wynton cluster
 
-The cluster is built on a co-op model rather than a fee-for-service
-model, in contrast to, for example, most technology cores at UCSF and
-high-performance computing provided by Amazon Web Services. In the
-co-op model, every contributing research group has immediate access to
-the cluster computing power and storage capacity proportionate to
-their contribution; contributions are preferably made in cash,
-although suitable existing hardware may also be integrated. This
-funding model suits best the often unpredictable timing and amount of
-research funds available to individual projects. In addition, our goal
-is to maximize the number of UCSF users of the shared
-cluster. Therefore, every member of the UCSF community has access to a
-fraction of the cluster computing power and storage capacity
-regardless of their contribution, reflecting the contribution by UCSF
-and shared instrumentation grants from NIH and NSF.  Finally, any
-unused compute power is available to any user on a first-come,
-first-served basis. Every effort is made to accommodate and expand the
-set of applications that can be run efficiently on the cluster, as
-long as they don’t negatively impact our founding goals.  If a
-contributing member leaves the consortium, they are entitled to take
-their contribution with them (except for communal storage).
+The governance pertaining only to the Wynton cluster as defined above is described here; Other high performance computing initiatives at UCSF are outside the scope of this document. The Wynton cluster is governed by the Wynton Faculty Steering Committee (WFSC), guided by the cluster’s purpose and organizational principles outlined above. The Committee consists of major contributing basic scientists, a representative of guest users, and a campus Information Technology representative, all of whom have some expertise in cluster computing. The Committee meets as required to review overall utilization of the system, plan future expansions, discuss funding opportunities, etc. The Committee also resolves any disputes concerning use and governance of the cluster. Committee matters are addressed at meetings and by email as needed. To ensure continuity of governance, the Committee appoints new members by a majority vote. All decision rights for the Wynton Cluster  rest with the Wynton Faculty Steering Committee decided by a majority vote, with the Chair breaking any ties. Decision rights include but are not limited to queuing rules, expansion of the environment, proposals for new uses of the environment, administrative aspects of the environment such as proposals for recharges, collaborations with other Faculty Subcommittees on investment requests/proposals, best practices, innovations, submissions of funding requests to outside agencies, and/or campus entities. The computer security aspects of Wynton are specified by UCSF IT. The Committee currently consists of Kliment Verba (Co-Chair), Sergio Baranzini, Scott Pegg, Brian Shoichet, Tom Ferrin (Co-Chair), and Mandy Terrill (Campus IT) (as of June 2024).
 
+## Budget Request and Approval Process
 
-## Governance
+(a) 	The budget request and approval process for campus funds and resources will flow through the Committee for Research Technology (CRT), with subsequent oversight by the CRT and then final approval by the Executive Vice Chancellor and Provost (EVCP). This ensures alignment with institutional strategies and financial policies while respecting the voices of all stakeholders in the prioritization and operations of the compute cluster.
 
-The cluster is governed by a Faculty Steering Committee, guided by the
-cluster’s purpose and organizational principles outlined above. The
-Committee consists of major contributing basic scientists, a
-representative of guest users, and a campus Information Technology
-representative, all of whom have some expertise in
-cluster computing. The Committee meets as required to review overall
-utilization of the system, plan future expansions, discuss funding
-opportunities, etc. The Committee also resolves any disputes
-concerning use and governance of the cluster. Committee matters are
-addressed at meetings and by email as needed. To ensure continuity of
-governance, the Committee appoints new members by a majority vote. The
-Committee currently consists of Kliment Verba (Co-Chair), Sergio Baranzini, Scott
-Pegg, Brian Shoichet, Tom Ferrin (Co-Chair), and Mandy Terrill (Campus IT).
+(b)	The Wynton Faculty Steering Committee (WFSC) is tasked with formulating recommendations and articulating the needs and concerns regarding the budget for the Wynton computational environment. These recommendations are a critical component of the process as we seek approval from the Executive Vice Chancellor and Provost (EVCP), ensuring that the budgetary needs align with the operational and strategic imperatives of UCSF’s research infrastructure.
