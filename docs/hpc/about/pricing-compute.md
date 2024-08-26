@@ -7,7 +7,8 @@ Please note: You cannot be charged for the hardware until it has been received a
 
 ## Pricing for prioritized "CPU" compute
 
-Cluster compute nodes are purchased by Wynton in modules that have 4 "2U" compute nodes in a single chassis. If partial nodes are requested, contributions will be pooled with other requests towards a full system. **Another option is to pay $180/member.q slot.**
+Cluster compute nodes are purchased by Wynton in modules that have 4 "2U" compute nodes in a single chassis. If partial nodes are requested, contributions will be pooled with other requests towards a full system. **Another option is to pay 180 USD/member.q slot.**
+
 
 ### Configuration: SMC RM224Q 2U Quad-Node Server
 
