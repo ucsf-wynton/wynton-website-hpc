@@ -4,7 +4,7 @@ R is available on {{ site.cluster.name }} via a [contributed environment module]
 
 1. The **RStudio Server** via the web browser (recommended)
 
-2. The **RStudio Desktop** over X11 Forwarding
+2. The **RStudio Desktop** over X11 Forwarding (deprecated)
 
 Running desktop applications over X11 forwarding works, but depending on your network connection, you will experience more or less lag. For instance, you might see a small delay between a key is pressed and it is echoed at the R prompt. Similarly, plotted graphics might take some time to render. This is also true for the RStudio Desktop. Because of this, we recommend running a personal RStudio Server instance, because that is designed to run remotely.
 
@@ -12,6 +12,12 @@ Regardless which one you use, you will be running the same version of R as you w
 
 
 ## Alt 1. Personal RStudio Server
+
+<div class="alert alert-warning" role="alert" markdown="1">
+
+An RStudio Server session will time out after 120 minutes of no user input. This is to make sure there are forgotten, left-over processes running on the system. For R tasks running longer than this, the solution is to submit them via the scheduler.
+
+</div>
 
 You can run a personal RStudio Server instance, which you, and only you, can access via your local web browser.  Contrary to RStudio Desktop, this approach does not require X11 forwarding. Instead, it does require running _two_ separate SSH connections to the cluster: (i) one to launch RStudio Server, and (ii) one to connect to it.
 
@@ -108,7 +114,17 @@ with a fresh RStudio setup, and the login issue should be gone.
 
 
 
-## Alt 2. RStudio Desktop over X11 Forwarding
+## Alt 2. RStudio Desktop over X11 Forwarding [DEPRECATED]
+
+<div class="alert alert-warning" role="alert" markdown="1">
+
+2024-08-30: Contrary to the above RStudio Server solution, the RStudio
+Desktop client below is no longer maintained as of July 2023.  The
+RStudio Server approach works equally well, and in more
+situations. Dropping the RStudio Desktop lowers the maintenance burden
+for the CBI software maintainer.
+
+</div>
 
 <div class="alert alert-warning" role="alert" markdown="1">
 
