@@ -4,7 +4,7 @@ R is available on {{ site.cluster.name }} via a [contributed environment module]
 
 1. The **RStudio Server** via the web browser (recommended)
 
-2. The **RStudio Desktop** over X11 Forwarding (deprecated)
+2. The **RStudio Desktop** over X11 Forwarding (deprecated as of April 2024)
 
 Running desktop applications over X11 forwarding works, but depending on your network connection, you will experience more or less lag. For instance, you might see a small delay between a key is pressed and it is echoed at the R prompt. Similarly, plotted graphics might take some time to render. This is also true for the RStudio Desktop. Because of this, we recommend running a personal RStudio Server instance, because that is designed to run remotely.
 
@@ -119,10 +119,10 @@ with a fresh RStudio setup, and the login issue should be gone.
 <div class="alert alert-warning" role="alert" markdown="1">
 
 2024-08-30: Contrary to the above RStudio Server solution, the RStudio
-Desktop client below is no longer maintained as of July 2023.  The
-RStudio Server approach works equally well, and in more
-situations. Dropping the RStudio Desktop lowers the maintenance burden
-for the CBI software maintainer.
+Desktop client below is no longer maintained as of April 2024.  It
+will eventually become defunct. The above RStudio Server approach
+works equally well, and in more situations. Dropping the RStudio
+Desktop lowers the maintenance burden for the CBI software maintainer.
 
 </div>
 
@@ -139,6 +139,15 @@ To run the RStudio Desktop client, you must be logged via [SSH with X11 forwardi
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI rstudio
+Lmod Warning:  [DEPRECATION WARNING] The CBI 'rstudio/2024.04.2-764'           
+module is deprecated in favor of 'rstudio-server'; please use that module      
+instead
+While processing the following module(s):                                      
+    Module fullname        Module Filename                                     
+    ---------------        ---------------                                     
+    rstudio/2024.04.2-764  /wynton/home/cbi/shared/modulefiles/CBI/rstudio/2024.
+04.2-764.lua 
+
 [alice@{{ site.devel.name }} ~]$ rstudio
 TTY detected. Printing informational message about logging configuration.
 Logging configuration loaded from '/etc/rstudio/logging.conf'. Logging to
