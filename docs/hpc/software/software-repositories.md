@@ -3410,11 +3410,11 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>rstudio</code>.  If you get a blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
 URL: <span class="module-url"><a href="https://posit.co/products/open-source/rstudio/#rstudio-desktop">https://posit.co/products/open-source/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
 Warning: <span class="module-warning">This software works only on the development nodes. It requires an SSH connection with X11 Forwarding enabled. It does <em>not</em> work with X2Go (gives error &quot;GLX 1.3 or later is required&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
-Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, 2021.09.2-382, 2022.02.1-461, 2022.07.2-576, 2022.12.0-353, <em>2023.06.1-524</em></span><br>
+Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, 2021.09.2-382, 2022.02.1-461, 2022.07.2-576, 2022.12.0-353, 2023.06.1-524, <em>2024.04.2-764</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
-RStudio Desktop: The RStudio Desktop IDE for R
+[DEPRECATED] RStudio Desktop: The RStudio Desktop IDE for R
 ]])
 
 local name = myModuleName()
@@ -3426,6 +3426,7 @@ whatis([[
 Description: The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.
 Examples: `rstudio`.  If you get a blank window, retry with `QMLSCENE_DEVICE=softwarecontext rstudio`.
 Warning: This software works only on the development nodes. It requires an SSH connection with X11 Forwarding enabled. It does _not_ work with X2Go (gives error \&quot;GLX 1.3 or later is required\&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. `ssh -X -C ...`.
+Warning: This module is no longer maintained; please use the 'rstudio-server' tool instead.
 ]])
 
 depends_on(&quot;r&quot;)
@@ -3435,6 +3436,9 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
 
+if mode() == &quot;load&quot; then
+    LmodWarning(&quot;[DEPRECATION WARNING] The CBI '&quot; .. name .. &quot;/&quot; .. version .. &quot;' module is deprecated in favor of 'rstudio-server'; please use that module instead&quot;)
+end
 </code></pre>
 
 </details>
