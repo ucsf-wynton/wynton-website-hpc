@@ -6,11 +6,6 @@
 
 2023-11-15: Wynton is now running [Rocky 8] Linux.
 
-2023-07-21: [Rocky 8]: Wynton will migrate from CentOS 7 to Rocky 8 at
-the end of October 2023. To prepare for this, we have made one non-PHI
-and one PHI development node available for all users, together with
-six compute nodes.
-
 [More ...](/hpc/about/news.html)
 </div>
 
