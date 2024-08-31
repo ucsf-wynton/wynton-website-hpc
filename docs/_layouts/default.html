@@ -290,9 +290,9 @@ Source: https://github.com/allejo/jekyll-anchor-headings
      {% assign page_url = '/index' %}
      {% endif %}
      <span style="float: right;">       
-       <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/commits/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank" rel="noopener noreferrer"><span class="glyphicon glyphicon-time" title="Change log for this page"></span></a>
+       <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/commits/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank" rel="noopener noreferrer"><span class="glyphicon glyphicon-time" title="Change log for this page"></span><span style="visibility: hidden; font-size: 0pt;">Change log for this page</span></a>
        :
-     <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/tree/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank" rel="noopener noreferrer"><span class="glyphicon glyphicon-edit" title="Contribute to this page"></span></a>
+     <a href="{{ site.github.owner_url }}/{{ site.github.repository_name }}/tree/master/docs{{ page_url | append: '.md' | replace_first: '/.md', '/index.md' }}" id="edit" target="_blank" rel="noopener noreferrer"><span class="glyphicon glyphicon-edit" title="Contribute to this page"></span><span style="visibility: hidden; font-size: 0pt;">Contribute to this page</span></a>
      </span>
 <p class="muted credit" style="font-size: inherits;">
 <a href="https://www.ucsf.edu/">UCSF</a> ::
