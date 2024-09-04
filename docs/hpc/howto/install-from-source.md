@@ -334,7 +334,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 You only need to load these compiler tools prior to installing the
-software.  With very few exception, they are not needed for running
+software.  With very few exceptions, they are not needed for running
 the installed software later on.
 
 
