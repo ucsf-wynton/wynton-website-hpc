@@ -2,14 +2,6 @@
 
 Wynton PHI environment, which is subset of the Wynton HPC environment, is approved for storing and working with Protected Health Information (PHI) data as long as the specific PHI-data usage is covered by the institutional review board (IRB) approval for the principal investigator (PI). This way, PIs can be confident that they are conducting their research computing with PHI in a compliant environment.
 
-
-## System security plan
-
-Wynton team has worked closely with UCSF IT Security and the UCSF Privacy, Legal, and Risk (PLR) group to follow the best practices in addressing security and privacy related risks. We obtained the services of an outside security consulting firm to put together a System Security Plan (SSP) based on the [NIST 800-53 revision 4 framework] from the US federal government. The SSP lists twelve security domains with a total of 156 risk control categories. The SSP then describes how Wynton PHI addresses each risk control, and clearly identifies the owner of each risk control. The Wynton team reviewed this SSP with IT Security and PLR for their support of the plan and also went through a security risk assessment with IT Security which assigned an overall risk level of "Low".
-
-Please note that Wynton PHI employs a shared risk model that relies on **individual PIs and their research team members to own certain risks** and follow the guidelines set in [Wynton User Agreement] as well as [UCSF Minimum Security Standards for Electronic Information Resources].
-
-
 ## Getting a Wynton PHI account
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
