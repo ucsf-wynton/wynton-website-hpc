@@ -19,9 +19,10 @@ Agreement include:
    enhanced security such as additional access restrictions and/or
    relevant HIPAA compliance measures.
 
- * The PI is responsible for ensuring that users are listed on the IRB
-   approval letter before they approve those users' Wynton 
-   access to data that require IRB approval.
+ * The PI is responsible for ensuring that users are listed on the
+   Institutional Review Board (IRB) approval letter before they
+   approve those users' Wynton access to data that require IRB
+   approval.
 
  * Because IT security requirements, operating systems, and hardware
    are continually evolving, difficult situations may arise in the
