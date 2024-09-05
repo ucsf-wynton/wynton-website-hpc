@@ -4413,24 +4413,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4444,6 +4426,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
@@ -4555,7 +4555,7 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/concavity-0.1/b
   <dd class="module-details">
 <span class="module-description">conda-forge Python distribution</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a></span><br>
-Versions: <span class="module-version">py310-23.1.0, py310-23.11.0, <em>py310-24.3.0</em></span><br>
+Versions: <span class="module-version">py310-23.1.0, py310-23.11.0, py310-24.3.0, <em>py312-24.7.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4563,7 +4563,7 @@ Versions: <span class="module-version">py310-23.1.0, py310-23.11.0, <em>py310-24
 module-whatis &quot;Description: conda-forge Python distribution&quot;
 module-whatis &quot;URL: https://conda-forge.org/&quot;
 conflict anaconda
-prepend-path  PATH       /salilab/diva1/home/anaconda/mambaforge/py310-24.3.0/bin/
+prepend-path  PATH       /salilab/diva1/home/anaconda/miniforge/py312-24.7.1/bin/
 </code></pre>
 
 </details>
