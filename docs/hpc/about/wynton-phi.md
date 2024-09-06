@@ -4,10 +4,6 @@ Wynton PHI environment, which is subset of the Wynton HPC environment, is approv
 
 ## Getting a Wynton PHI account
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex; margin-bottom: 3ex;" markdown="1">
-2021-12-17: Contrary to Wynton HPC, we can currently onboard only UCSF staff and UCSF affiliates who have a UCSF ID on Wynton PHI. We are working on allowing also non-UCSF research collaborators to get a Wynton PHI account with approval from the PHI project's PI.
-</div>
-
 To apply for a new Wynton HPC account with PHI access, or to update an existing account for PHI access, please follow the [instructions for requesting or updating an account](/hpc/about/join.html). This will initiate an automated onboarding process to check that you meet the following prerequisites:
 
 * Valid email address
