@@ -39,4 +39,8 @@ python: FORCE
 	module purge;      markin build "$@".sh
 	module load CBI r; markin inject "$@".md
 
+conda: FORCE
+	module purge;      markin build "$@".sh
+	module load CBI r; markin inject "$@".md
+
 FORCE:

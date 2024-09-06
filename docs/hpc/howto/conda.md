@@ -49,7 +49,7 @@ To see what software packages come with this distribution, call:
 <!-- code-block label="conda-list" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda list
-# packages in environment at /wynton/home/boblab/shared/software/CBI/miniforge3-24.3.0-0:
+# packages in environment at /wynton/home/boblab/shared/software/CBI/miniforge3-24.7.1-0:
 #
 # Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                 conda_forge    conda-forge
