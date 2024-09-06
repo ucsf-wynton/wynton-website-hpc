@@ -12,7 +12,7 @@ Wynton user responsibilities and/or requirements in support of this
 Agreement include:
 
  * By using the Wynton HPC environment, you agree to abide by the
-   statement of its [Purpose, Principles and Governance].
+   statement of its [Purpose, Principles and Governance] as well as well as the <a href=https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information >UCSF Minimum Security Standards</a>.
 
  * Users who wish to access protected data such as Protected Health
    Information (PHI) are required to log into node(s) that implement
