@@ -182,7 +182,7 @@ If you get an 'R Session Error' dialog saying:
 
 one reason is that you ran out of memory and R was terminated by the
 operating system.  Note that each user is limited to 96 GiB of RAM on
-the development node. Trying to use more than that, will cause the
+the development node (as of 2024-09-12). Trying to use more than that, will cause the
 operating system to kill the underlying R process. When this happens,
 RStudio will likely keep running, but your R session was lost and
 reset.
