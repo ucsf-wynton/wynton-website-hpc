@@ -10,6 +10,10 @@ Although you should always run analyses via the job scheduler, there are times w
 Any shell session that has been idle for more than eight hours will timeout and exit automatically.
 </div>
 
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
+**[To be enabled on 2024-09-12]** CPU use is throttled to 2 CPU cores/user, and memory use is limited to 96 GiB/user. If a process overuses the memory, it will be killed by the operating system. 
+</div>
+
 ## List of Development Nodes
 
 <div class="non-phi" markdown="1">

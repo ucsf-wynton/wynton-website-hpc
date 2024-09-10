@@ -116,6 +116,20 @@ Intel nodes with more 12+ nodes), and `at` is for "**A**MD
 
 ## Errors
 
+### "Killed"?
+
+**Q**. I was running Python on a development node when it suddenly
+terminated with a single message "Killed". What happened?
+
+**A**. Sudden termination of Python, R, and other software tools with
+only a "Killed" message is likely due to overuse of the memory. The
+"Killed" message is produced by the operating system when it decides
+to terminate a process that uses too much memory, where the memory
+limit is 96 GB/user (as of 2024-09-12).  To confirm it was overuse of
+memory, type `echo "Exit code: $?"` _immediately_ after the process
+was terminated. If you get exit code 137, then you ran out of memory.
+
+
 ### Cannot submit jobs
 
 **Q**. _I just started to get SSL-related errors when using `qsub` and

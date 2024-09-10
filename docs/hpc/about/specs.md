@@ -29,9 +29,13 @@
 | modules (software stacks)                  | no | no | ✓ | ✓ |
 | Global file system                         | ✓ | ✓ | ✓ | ✓ |
 | Job submission                             | ✓ | no | ✓ | ✓ |
+| CPU quota per user(\*\*)                   | 1 core | 2 cores | 2 cores | per job request |
+| Memory limit per user(\*\*)                | 32 GiB | 96 GiB | 96 GiB   | per job request |
 | Purpose                                    | Submit and query jobs. SSH to development nodes. File management. | Fast in- & outbound file transfers. File management. | Compile and install software. Prototype and test job scripts. Submit and query jobs. Version control (clone, pull, push). File management. | Running short and long-running job scripts. |
 
 (\*) GIT+SSH access on development nodes is restricted to git.bioconductor.org, bitbucket.org, gitea.com, github.com / gist.github.com, gitlab.com, cci.lbl.gov, and git.ucsf.edu.
+
+(\**) **[To be enabled on 2024-09-12]** CPU is throttled and memory is limited by Linux Control Groups ([CGroups]). If a process overuses the memory, it will be killed by the operating system.
 
 All nodes on the cluster run [Rocky 8] which is updated on a regular basis.
 The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues](/hpc/scheduler/queues.html) for both communal and lab-priority tasks.
@@ -257,6 +261,7 @@ Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> usin
 
 -->
 
+[CGroups]: https://en.wikipedia.org/wiki/Cgroups
 [Rocky 8]: https://www.rocky-linux.org/
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform

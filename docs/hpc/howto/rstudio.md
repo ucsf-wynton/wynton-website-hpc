@@ -164,6 +164,30 @@ If you get a blank window, which some macOS users have reported, retry with:
 To exit the RStudio Desktop, type `quit()` at the R prompt, or press <kbd>Ctrl-C</kbd> in the above terminal.
 
 
+## Troubleshooting
+
+### Running out of memory
+
+If you get an 'R Session Error' dialog saying:
+
+> The previous R session was abnormally terminated due to an
+> unexpected crash.
+> 
+> You may have lost workspace data as a result of this crash.
+> 
+> RStudio may not have restored the previously active project as a
+> precaution. You may switch back to it using the Projects menu.
+>
+> [OK]
+
+one reason is that you ran out of memory and R was terminated by the
+operating system.  Note that each user is limited to 96 GiB of RAM on
+the development node. Trying to use more than that, will cause the
+operating system to kill the underlying R process. When this happens,
+RStudio will likely keep running, but your R session was lost and
+reset.
+
+
 [CBI software stack]: /hpc/software/software-repositories.html
 [Work with R]: /hpc/howto/r.html
 [SSH with X11 forwarding enabled]: /hpc/howto/gui-x11fwd.html#x11-forwarding-over-ssh
