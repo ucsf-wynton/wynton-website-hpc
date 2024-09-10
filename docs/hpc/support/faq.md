@@ -118,8 +118,8 @@ Intel nodes with more 12+ nodes), and `at` is for "**A**MD
 
 ### "Killed"?
 
-**Q**. I was running Python on a development node when it suddenly
-terminated with a single message "Killed". What happened?
+**Q**. _I was running Python on a development node when it suddenly
+terminated with a single message "Killed". What happened?_
 
 **A**. Sudden termination of Python, R, and other software tools with
 only a "Killed" message is likely due to overuse of the memory. The
