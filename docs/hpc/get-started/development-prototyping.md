@@ -3,7 +3,7 @@
 Although you should always run analyses via the job scheduler, there are times when you may need to develop parts of it interactively at the command-line prompt.  For instance, you may need to install some software, a few R packages, or run some quick tests on your new pipeline.  {{ site.cluster.name }} provides _development nodes_ dedicated for such short-term usages and that are configured similarly to the compute nodes.
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-**Please do not run your real-world analysis on the development nodes.**  Instead run it as a job via the scheduler - this will assert that your analysis runs as fast as possible and with all the resources it needs.  For further instruction, see the getting-started page [Submit Job to Cluster].
+**Please do not run your real-world analysis on the development nodes.**  Instead, run it as a job via the scheduler - this will assert that your analysis runs as fast as possible and with all the resources it needs.  For further instruction, see the getting-started page [Submit Job to Cluster].
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
