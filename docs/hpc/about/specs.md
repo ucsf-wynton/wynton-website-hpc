@@ -35,7 +35,7 @@
 
 (\*) GIT+SSH access on development nodes is restricted to git.bioconductor.org, bitbucket.org, gitea.com, github.com / gist.github.com, gitlab.com, cci.lbl.gov, and git.ucsf.edu.
 
-(\**) **[To be enabled on 2024-09-12]** CPU is throttled and memory is limited by Linux Control Groups ([CGroups]). If a process overuses the memory, it will be killed by the operating system.
+(\**) CPU is throttled and memory is limited by Linux Control Groups ([CGroups]). If a process overuses the memory, it will be killed by the operating system.
 
 All nodes on the cluster run [Rocky 8] which is updated on a regular basis.
 The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues](/hpc/scheduler/queues.html) for both communal and lab-priority tasks.

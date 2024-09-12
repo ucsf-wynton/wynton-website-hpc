@@ -126,10 +126,10 @@ only a "Killed" message is likely due to overuse of the memory. The
 "Killed" message is produced by the shell whenever the operating
 system terminates the process (by signaling `SIGKILL`). The operating
 system may decide to terminate any process that uses too much memory,
-where the memory limit is 96 GB/user (as of 2024-09-12).  To confirm
-it was overuse of memory, type `echo "Exit code: $?"` _immediately_
-after the process was terminated. If you get exit code 137, then it is
-likely that you ran out of memory.
+where the memory limit is 96 GB/user.  To confirm it was overuse of
+memory, type `echo "Exit code: $?"` _immediately_ after the process
+was terminated. If you get exit code 137, then it is likely that you
+ran out of memory.
 
 
 ### Cannot submit jobs

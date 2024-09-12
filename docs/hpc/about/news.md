@@ -1,5 +1,7 @@
 # News
 
+2024-09-12: CPU and memory usage is now limited on interactive nodes for each user.  On development and data-transfer nodes, each user is limited to two CPUs and 96 GiB of memory. On login nodes, the limits are one CPU and 32 GiB of memory
+.
 2023-11-30: The JupyterHub (JHub) server has been discontinued.
 
 2023-11-15: Wynton is now running [Rocky 8] Linux.
