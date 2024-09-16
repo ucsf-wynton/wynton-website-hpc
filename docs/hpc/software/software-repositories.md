@@ -2868,8 +2868,9 @@ prepend_path(&quot;PATH&quot;, home)
   <dd class="module-details">
 <strong class="module-help">PLINK2: Whole Genome Association Analysis Toolset</strong><br>
 <span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
-Example: <span class="module-example"><code>plink2 --help</code> and <code>plink2 --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
+Example: <span class="module-example"><code>plink2 --help</code>, <code>plink2 --version</code>, and <code>plink2 --threads 1 ...</code>.
+WARNING: This tool runs on all available CPU cores by default, which is bad practice. Please specify option <code>--threads ncores</code> to avoid this, e.g. <code>--threads 1</code>.</span><br>
+URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/general_usage">https://www.cog-genomics.org/plink/2.0/general_usage</a> (documentation), <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
 Versions: <span class="module-version">2.00a2LM, <em>2.00a3LM</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2881,10 +2882,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: genomics&quot;)
-whatis(&quot;URL: https://www.cog-genomics.org/plink/2.0/, https://www.cog-genomics.org/plink/2.0/#recent (changelog), https://github.com/chrchang/plink-ng (source code)&quot;)
+whatis(&quot;URL: https://www.cog-genomics.org/plink/2.0/, https://www.cog-genomics.org/plink/2.0/general_usage (documentation), https://www.cog-genomics.org/plink/2.0/#recent (changelog), https://github.com/chrchang/plink-ng (source code)&quot;)
 whatis([[
 Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).
-Examples: `plink2 --help` and `plink2 --version`.
+Examples: `plink2 --help`, `plink2 --version`, and `plink2 --threads 1 ...`.
+WARNING: This tool runs on all available CPU cores by default, which is bad practice. Please specify option `--threads ncores` to avoid this, e.g. `--threads 1`.
 ]])
 
 -- Local variables
