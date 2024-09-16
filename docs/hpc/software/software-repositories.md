@@ -3540,8 +3540,9 @@ setenv(&quot;PORT4ME_PORT_COMMAND&quot;, &quot;netstat&quot;)
   <dd class="module-details">
 <strong class="module-help">salmon: Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression</strong><br>
 <span class="module-description">Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.</span><br>
-Example: <span class="module-example"><code>salmon --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://github.com/COMBINE-lab/salmon/releases">https://github.com/COMBINE-lab/salmon/releases</a> (changelog), <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a> (source code)</span><br>
+Example: <span class="module-example"><code>salmon --version</code>, <code>salmon --help</code>, and <code>salmon quant --threads=1 ...</code>.
+WARNING: This tool runs on all available CPU cores by default, which is bad practice. Please specify option <code>--threads=ncores</code> to avoid this, e.g. <code>--threads=1</code>.</span><br>
+URL: <span class="module-url"><a href="https://combine-lab.github.io/salmon/">https://combine-lab.github.io/salmon/</a>, <a href="https://salmon.readthedocs.io/en/latest/">https://salmon.readthedocs.io/en/latest/</a> (documentation), <a href="https://github.com/COMBINE-lab/salmon/releases">https://github.com/COMBINE-lab/salmon/releases</a> (changelog), <a href="https://github.com/COMBINE-lab/salmon">https://github.com/COMBINE-lab/salmon</a> (source code)</span><br>
 Versions: <span class="module-version">1.3.0, 1.4.0, 1.5.2, 1.6.0, 1.8.0, 1.9.0, <em>1.10.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -3553,10 +3554,11 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: https://combine-lab.github.io/salmon/, https://github.com/COMBINE-lab/salmon/releases (changelog), https://github.com/COMBINE-lab/salmon (source code)&quot;)
+whatis(&quot;URL: https://combine-lab.github.io/salmon/, https://salmon.readthedocs.io/en/latest/ (documentation), https://github.com/COMBINE-lab/salmon/releases (changelog), https://github.com/COMBINE-lab/salmon (source code)&quot;)
 whatis([[
 Description: Highly-accurate &amp; wicked fast transcript-level quantification from RNA-seq reads using selective alignment.
-Examples: `salmon --version`.
+Examples: `salmon --version`, `salmon --help`, and `salmon quant --threads=1 ...`.
+WARNING: This tool runs on all available CPU cores by default, which is bad practice. Please specify option `--threads=ncores` to avoid this, e.g. `--threads=1`.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
