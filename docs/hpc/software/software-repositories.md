@@ -1186,7 +1186,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>emacs --version</code> and <code>emacs -nw</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a>, <a href="https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases">https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">29.3, <em>29.4</em></span><br>
+Versions: <span class="module-version"><em>29.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1338,7 +1338,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.53.0, 0.54.1, 0.54.3, <em>0.55.0</em></span><br>
+Versions: <span class="module-version"><em>0.55.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1603,7 +1603,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, and <code>gh auth login</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.52.0, 2.53.0, 2.55.0, 2.56.0, <em>2.57.0</em></span><br>
+Versions: <span class="module-version"><em>2.57.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1712,7 +1712,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gping --version</code>, <code>gping --help</code>, <code>gping 8.8.8.8 9.9.9.9</code>, and <code>gping --cmd &quot;curl -o /dev/null https://www.github.com&quot; &quot;wget -O /dev/null https://github.com&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/orf/gping">https://github.com/orf/gping</a>, <a href="https://github.com/orf/gping/releases">https://github.com/orf/gping/releases</a> (changelog), <a href="https://github.com/orf/gping">https://github.com/orf/gping</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.16.1, <em>1.17.3</em></span><br>
+Versions: <span class="module-version"><em>1.17.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2272,7 +2272,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;.b
 Example: <span class="module-example"><code>mc</code> and <code>mc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://midnight-commander.org/">https://midnight-commander.org/</a>, <a href="https://github.com/MidnightCommander/mc/blob/master/doc/NEWS">https://github.com/MidnightCommander/mc/blob/master/doc/NEWS</a> (changelog), <a href="https://github.com/MidnightCommander/mc">https://github.com/MidnightCommander/mc</a> (source code), <a href="https://github.com/MidnightCommander/mc/tags">https://github.com/MidnightCommander/mc/tags</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.8.31, <em>4.8.32</em></span><br>
+Versions: <span class="module-version"><em>4.8.32</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2670,7 +2670,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://pandoc.org/releases.html">https://pandoc.org/releases.html</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.1.13, 3.2.1, 3.3, <em>3.4</em></span><br>
+Versions: <span class="module-version"><em>3.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3028,7 +3028,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.4.557, 1.5.55, 1.5.56, <em>1.5.57</em></span><br>
+Versions: <span class="module-version"><em>1.5.57</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3272,7 +3272,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.66.0, 1.67.0, <em>1.68.0</em></span><br>
+Versions: <span class="module-version"><em>1.68.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -3377,7 +3377,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 Example: <span class="module-example"><code>rg --version</code> and <code>rg -i 'lorem ipsum'</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a>, <a href="https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md">https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">14.1.0, <em>14.1.1</em></span><br>
+Versions: <span class="module-version"><em>14.1.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4298,7 +4298,7 @@ end
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.43.1, 4.44.2, <em>4.44.3</em></span><br>
+Versions: <span class="module-version"><em>4.44.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4418,24 +4418,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4449,6 +4431,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
