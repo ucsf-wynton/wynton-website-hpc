@@ -8,6 +8,8 @@
 
 ## Customer Responsibilities
 
+Last Updated September 23, 2024, 10:46am PDT
+
 Wynton user responsibilities and/or requirements in support of this
 Agreement include:
 
@@ -22,8 +24,27 @@ Agreement include:
  * The PI is responsible for ensuring that users are listed on the
    Institutional Review Board (IRB) approval letter before they
    approve those users' Wynton access to data that require IRB
-   approval.
+   approval. The PI is also responsible for ensuring they are in compliance with their grant requirements (e.g. platform security, data retention policies).
 
+ * It is the responsibility of the PIs to ensure the integrity of
+   their data. The Wynton filesystem is not the primary source of data
+   (not a system of record). Once the PI has write access to the data,
+   they are entitled to manipulate the data as they see fit.
+
+ * Wynton does not offer a back-up service, other than disaster recovery back-ups 
+   of Home directories that could be restored only in the event of a disaster. Very large
+   Home directories do not have disaster recovery back-ups. All Wynton users are responsible
+   for ensuring they have their own back-ups so they are able to revert to an earlier version
+   if a mistake is made or they want access to their data during an outage.
+   
+ * Upon separation from UCSF, a Wynton user's home directory and its
+   contents may be transferred to the user's PI in accordance with the
+   Authorized and Acceptable Use of Electronic Information Resources
+   policy (650-18) "i. An account that is not deleted upon loss of
+   affiliation shall be transferred to another UCSF faculty or staff
+   person designated as being responsible for the account." Accounts that are not claimed after
+   90 days will be permanently deleted.
+   
  * Because IT security requirements, operating systems, and hardware
    are continually evolving, difficult situations may arise in the
    future. For example, it is possible that future requirements
@@ -44,18 +65,6 @@ Agreement include:
  * Use of the Wynton HPC cluster is subject to UCSF's policy on
    [Authorized and Acceptable Use of Electronic Information
    Resources].
-
- * It is the responsibility of the PIs to ensure the integrity of
-   their data. The Wynton filesystem is not the primary source of data
-   (not a system of record). Once the PI has write access to the data,
-   they are entitled to manipulate the data as they see fit.
-
- * Upon separation from UCSF, a Wynton user's home directory and it's
-   contents may be transferred to the user's PI in accordance with the
-   Authorized and Acceptable Use of Electronic Information Resources
-   policy (650-18) "i. An account that is not deleted upon loss of
-   affiliation shall be transferred to another UCSF faculty or staff
-   person designated as being responsible for the account."
 
  * The Wynton Operations team is tasked with implementing the policies
    established by the Faculty Steering Committee and with ensuring
