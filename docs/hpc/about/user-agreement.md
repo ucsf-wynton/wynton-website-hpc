@@ -9,6 +9,7 @@
 ## Customer Responsibilities
 
 Last Updated September 23, 2024, 10:46am PDT
+
 Wynton user responsibilities and/or requirements in support of this
 Agreement include:
 
