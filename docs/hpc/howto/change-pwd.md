@@ -91,9 +91,9 @@ Alternatively, you can verify your credentials from your browser:
 3. If you entered correct credentials, you will get to a confirmation page saying so.  If you entered incorrect credentials, there will be no error message and the popup will appear again.
 
 
-## Reset expired password
+## Reset password
 
-If your _{{ site.cluster.nickname }}_ password has expired, please email [{{ site.cluster.email_password }}](mailto:{{ site.cluster.email_password }}) to have it reset.
+If your _{{ site.cluster.nickname }}_ password has expired, or you forgot it, please email the password-reset team at [{{ site.cluster.email_password }}](mailto:{{ site.cluster.email_password }}) to have it reset.
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 **Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
