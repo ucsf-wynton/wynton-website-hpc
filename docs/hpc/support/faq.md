@@ -224,10 +224,10 @@ saturating your CPU quota on that other machine. The best you can do
 in this situation is to either (a) wait for your processes to finish,
 or (b) wait until SSH completes, which might take several minutes or
 longer. When you eventually get to the prompt, you can terminate _all_
-your processes on the current node by calling `killall`. This will
+your processes on the current node by calling `killall`. **This will
 terminate all your running processes on that machine abruptly and you
-will be logged out from that machine as well. Afterward, you should be
-able to access the machine as usual.
+will be logged out from that machine as well.** Afterward, you should
+be able to access the machine as usual.
 
 
 ### Scary error when trying to log in to a development node
