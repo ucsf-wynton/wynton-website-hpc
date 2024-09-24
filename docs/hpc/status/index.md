@@ -174,10 +174,10 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
     if (nodes_with_issues > 0) {
       var text = document.createTextNode("Currently, " + nodes_with_issues + " (" + (100*nodes_with_issues/nodes).toFixed(1) + "%) " +  " of " + nodes + " compute nodes, corresponding to " + cores_with_issues + " (" + (100*cores_with_issues/cores).toFixed(1) + "%) " + " of " + cores + " CPU cores, are unavailable. Out of these, " + gpu_nodes_with_issues + " (" + (100*gpu_cores_with_issues/gpu_cores).toFixed(1) + "%) of " + gpu_nodes + " GPU compute nodes are unavailable.");
       div.appendChild(text);
-      text = document.createTextNode(" A compute node is considered unavailable when its queuing state is \"unheard/unreachable\" or \"error\" (according to ");
+      text = document.createTextNode(" A compute node is considered unavailable when its queuing state is \"disabled\" (d), \"unheard/unreachable\" (u), or \"error\" (E) (according to ");
       div.appendChild(text);
       var code = document.createElement("code");
-      code.innerText = "qstat -f -qs uE";
+      code.innerText = "qstat -f -qs duE";
       div.appendChild(code);
       text = document.createTextNode(" queried every five minutes), which means they will not take on any new jobs.");
       div.appendChild(text);
