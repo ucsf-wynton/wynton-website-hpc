@@ -114,7 +114,7 @@ Intel nodes with more 12+ nodes), and `at` is for "**A**MD
 
 
 
-## Errors
+## Something is not working
 
 ### "Killed"?
 
@@ -203,6 +203,27 @@ you. Note: The {{ site.cluster.nickname}} team supports `csh/tcsh` and
 `sh/bash` login shells. Any other shell than these may result in
 reduced functionality or errors which may be beyond the scope of our
 support.
+
+
+### SSH to a development node stalls
+
+**Q**. _When I SSH to one of the development nodes, nothing happens -
+it seems to be stuck._
+
+**A**. One reason for this could be that you previously started
+compute-heavy processes on the problematic development node, and those
+processes are now consuming all of your CPU quota on that node. Each
+user can use [up to two CPU cores (200%) worth of compute per
+development node](/hpc/about/specs.html). If you are already saturate
+a development node like this, then _you_, and only you, will
+experience an very slow response time if you try to SSH into that same
+node.  The best you can do in this situation is to either (a) wait for
+your processes to finish, or (b) wait until SSH completes, which might
+take several minutes or longer. When you eventually get to the prompt,
+you can terminate _all_ your processes on the current node by calling
+`killall`. This will terminate all your running processes on that
+machine abruptly and you will be logged out from that machine as
+well. Afterward, you should be able to access the machine as usual.
 
 
 ### Scary error when trying to log in to a development node
