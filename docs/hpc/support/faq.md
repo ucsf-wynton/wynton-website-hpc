@@ -216,14 +216,18 @@ processes are now consuming all of your CPU quota on that node. Each
 user can use [up to two CPU cores (200%) worth of compute per
 development node](/hpc/about/specs.html). If you are already saturate
 a development node like this, then _you_, and only you, will
-experience an very slow response time if you try to SSH into that same
-node.  The best you can do in this situation is to either (a) wait for
-your processes to finish, or (b) wait until SSH completes, which might
-take several minutes or longer. When you eventually get to the prompt,
-you can terminate _all_ your processes on the current node by calling
-`killall`. This will terminate all your running processes on that
-machine abruptly and you will be logged out from that machine as
-well. Afterward, you should be able to access the machine as usual.
+experience an very slow response time whenever you try to login into
+that same node. When this happens, try to login into _another_
+development node that you are not running on previously. If you can
+access another node promptly, then it is likely that you are indeed
+saturating your CPU quota on that other machine. The best you can do
+in this situation is to either (a) wait for your processes to finish,
+or (b) wait until SSH completes, which might take several minutes or
+longer. When you eventually get to the prompt, you can terminate _all_
+your processes on the current node by calling `killall`. This will
+terminate all your running processes on that machine abruptly and you
+will be logged out from that machine as well. Afterward, you should be
+able to access the machine as usual.
 
 
 ### Scary error when trying to log in to a development node
