@@ -109,9 +109,6 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
   host_table = d3.tsv.parse(host_table);
 
   d3.text("https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/status/qstat_nodes_in_state_au.tsv", "text/csv", function(host_status) {
-    
-    // drop header comments
-    host_status = host_status.replace(/^[#][^\r\n]*[\r\n]+/mg, '');
     host_status = d3.tsv.parse(host_status);
 
     var tbody, tr, td, td_status;

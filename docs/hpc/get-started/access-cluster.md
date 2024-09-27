@@ -119,6 +119,13 @@ An alternative is to press <kbd>Ctrl-D</kbd> (sends "End-Of-File" [EOF]) at the 
 Any shell session that has been idle for more than eight hours will timeout and exit automatically.
 </div>
 
+<script type="application/javascript">
+  function getIP(json) {
+    document.write("Your public IP address is ", json.ip);
+  }
+</script>
+<script type="application/javascript" src="https://ipinfo.io/?format=jsonp&callback=getIP"></script>
+
 
 [PuTTY]: https://www.putty.org/
 [development node]: /hpc/get-started/development-prototyping.html
