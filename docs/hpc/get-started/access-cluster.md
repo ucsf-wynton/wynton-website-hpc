@@ -120,11 +120,8 @@ Any shell session that has been idle for more than eight hours will timeout and 
 </div>
 
 <script type="application/javascript">
-  function getIP(json) {
-    document.write("Your public IP address is ", json.ip);
-  }
+fetch('https://api.ipify.org?format=json') .then(response => response.json()) .then(data => { console.log('The public IP address of the user is:', data.ip); }) .catch(error => console.error('Error obtaining IP address:', error));
 </script>
-<script type="application/javascript" src="https://ipinfo.io/?format=jsonp&callback=getIP"></script>
 
 
 [PuTTY]: https://www.putty.org/
