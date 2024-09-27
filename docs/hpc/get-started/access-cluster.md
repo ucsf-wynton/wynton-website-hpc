@@ -5,7 +5,7 @@ context:
 ---
 
 <div id="wifi-alert" class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 200%; display: none" markdown="1">
-⚠️ **Warning: You appear to be connected to one of the UCSF WiFi:s (e.g. 'UCSFguest' and UCSF 'eduroam') that SSH blocks access to Wynton!**
+⚠️ **Warning: You appear to be connected to one of the UCSF WiFi:s (e.g. 'UCSFguest' and UCSF 'eduroam') that blocks SSH access to Wynton!**
 
 Before trying to access Wynton, make sure to switch to another WiFi such as 'UCSFwpa', or connect to the UCSF VPN.
 </div>
