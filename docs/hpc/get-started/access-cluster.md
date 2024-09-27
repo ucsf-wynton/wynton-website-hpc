@@ -4,6 +4,12 @@ context:
   - login
 ---
 
+<div id="wifi-alert" class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 200%; display: none" markdown="1">
+⚠️ **Warning: You appear to be connected to one of the UCSF WiFi:s (e.g. 'UCSFguest' and UCSF 'eduroam') that SSH blocks access to Wynton!**
+
+Before trying to access Wynton, make sure to switch to another WiFi such as 'UCSFwpa', or connect to the UCSF VPN.
+</div>
+
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 **Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
@@ -119,9 +125,11 @@ An alternative is to press <kbd>Ctrl-D</kbd> (sends "End-Of-File" [EOF]) at the 
 Any shell session that has been idle for more than eight hours will timeout and exit automatically.
 </div>
 
+
 <script type="application/javascript">
-fetch('https://api.ipify.org?format=json') .then(response => response.json()) .then(data => { console.log('The public IP address of the user is:', data.ip); }) .catch(error => console.error('Error obtaining IP address:', error));
+fetch('https://api.ipify.org?format=json') .then(response => response.json()) .then(data => { console.log('The public IP address of the user is:', data.ip); if (data.ip.startsWith("205.154.")) { document.getElementById("wifi-alert").style.display = "block"; } }) .catch(error => console.error('Error obtaining IP address:', error));
 </script>
+
 
 
 [PuTTY]: https://www.putty.org/
