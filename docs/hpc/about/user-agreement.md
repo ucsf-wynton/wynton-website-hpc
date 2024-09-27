@@ -6,11 +6,9 @@
 
 # User Agreement and Disclaimer
 
-## Customer Responsibilities
+Last Updated September 26, 2024, 6:00pm PDT
 
-Last Updated September 23, 2024, 10:46am PDT
-
-Wynton user responsibilities and/or requirements in support of this
+Wynton user responsibilities and requirements in support of this
 Agreement include:
 
  * By using the Wynton HPC environment, you agree to abide by the
@@ -18,7 +16,7 @@ Agreement include:
 
  * Users who wish to access protected data such as Protected Health
    Information (PHI) are required to log into node(s) that implement
-   enhanced security such as additional access restrictions and/or
+   enhanced security such as additional access restrictions and
    relevant HIPAA compliance measures.
 
  * The PI is responsible for ensuring that users are listed on the
@@ -31,11 +29,10 @@ Agreement include:
    (not a system of record). Once the PI has write access to the data,
    they are entitled to manipulate the data as they see fit.
 
- * Wynton does not offer a back-up service, other than disaster recovery back-ups 
-   of Home directories that could be restored only in the event of a disaster. Very large
-   Home directories do not have disaster recovery back-ups. All Wynton users are responsible
-   for ensuring they have their own back-ups so they are able to revert to an earlier version
-   if a mistake is made or they want access to their data during an outage.
+ * All Wynton users are responsible for ensuring they have their own back-ups so they are able to revert to
+   an earlier version if a mistake is made or they want access to their data during an outage. Wynton does not offer a back-up service, other than disaster recovery back-ups 
+   of Home directories that could be restored only in the event of a major disaster, such as data center loss or ransomware.
+   Very large Home directories do not have disaster recovery back-ups. 
    
  * Upon separation from UCSF, a Wynton user's home directory and its
    contents may be transferred to the user's PI in accordance with the
@@ -78,16 +75,14 @@ Agreement include:
  * Users are prohibited from changing system-wide configurations on
    Wynton nodes.
 
- * Wynton operations maintains (including patches) of system-wide
-   software on Wynton nodes. Software managed using the yum package
-   management tool is the responsibility of Wynton operations.
+ * Wynton operations installs and maintains packages provided by the OS vendor
+   and select system-wide application software.
    
- * Software not managed by Wynton admins, and is the user's
-   responsibility, include software installed in Wynton user and group
-   directories. This includes but is not limited to: software in user
-   Singularity containers and software installed using the conda
-   package manager. Additionally, Lmod modules that are not maintained
-   by the Wynton admins themselves is the responsibility of the
+ * Software not managed by Wynton admins is the user's
+   responsibility. This includes but is not limited to: software installed in Wynton user and group
+   directories, software in containers, and software installed using the Conda package manager.
+   Additionally, Lmod modules that are not maintained
+   by the Wynton admins themselves are the responsibility of the
    individual labs and users that maintain the module repositories
    (e.g. the CBI and Sali repositories).
 
