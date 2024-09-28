@@ -1,11 +1,11 @@
 # Created by: hb
-# Created on: 2024-09-27 03:00:03-07:00
-# Total fshares: 20201
+# Created on: 2024-09-28 03:00:03-07:00
+# Total fshares: 20202
 # Total queue_slots: 11730
 # Number of projects: 53
 fshares	queue_slots	project
 5506	3305	salilab
-4104	1403	agardlab,chenglab,verbalab
+4105	1403	agardlab,chenglab,verbalab,msg-corelab
 1224	408	pollardlab
 874	292	mac-users
 852	284	kortemmelab
