@@ -87,33 +87,6 @@ To terminate the RStudio Server, start by exiting R by typing `quit()` at the R 
 
 
 
-#### Stuck at "R is taking longer to start than usual"?
-
-Some users report that they stuck when they try to log in to RStudio.
-After they enter their username and password, and click 'Sign In',
-they get to a page "R is taking longer to start than usual" with a
-spinner that never ends.  The user is presented with three options
-'Reload', 'Safe Mode', and 'Terminate R'.  Ideally, 'Safe Mode' or
-'Terminate R' would solve the problem and let the user access the
-RStudio GUI.  Unfortunately, for some users, none of these options
-help.  Consecutive attempts to use `rsc stop` and `rsc start` fail for
-same reasons.
-
-As of 2023-12-04, it is not clear why and when this happens.  The
-one workaround we have found is to wipe the user's RStudio setup.
-For this, we recommend to use:
-
-```sh
-$ tar -cvf ~/rstudio-config.tar ~/.local/share/rstudio && rm -rf ~/.local/share/rstudio
-```
-
-This will create a local copy of your problematic RStudio setup in
-file `~/rstudio-config.tar`, and, only then, remove the actually
-settings.  The next time you call `rsc start`, you should start out
-with a fresh RStudio setup, and the login issue should be gone.
-
-
-
 ## Alt 2. RStudio Desktop over X11 Forwarding [DEPRECATED]
 
 <div class="alert alert-warning" role="alert" markdown="1">
@@ -166,6 +139,68 @@ To exit the RStudio Desktop, type `quit()` at the R prompt, or press <kbd>Ctrl-C
 
 ## Troubleshooting
 
+### Stuck at "R is taking longer to start than usual"?
+
+Some users report that they stuck when they try to log in to RStudio.
+After they enter their username and password, and click 'Sign In',
+they get to a page "R is taking longer to start than usual" with a
+spinner that never ends.  The user is presented with three options
+'Reload', 'Safe Mode', and 'Terminate R'.  Ideally, 'Safe Mode' or
+'Terminate R' would solve the problem and let the user access the
+RStudio GUI.  Unfortunately, for some users, none of these options
+help.  Consecutive attempts to use `rsc stop` and `rsc start` fail for
+same reasons.
+
+As of 2023-12-04, it is not clear why and when this happens.  The
+one workaround we have found is to wipe the user's RStudio setup.
+For this, we recommend to use:
+
+```sh
+$ tar -cvf ~/rstudio-config.tar ~/.local/share/rstudio && rm -rf ~/.local/share/rstudio
+```
+
+This will create a local copy of your problematic RStudio setup in
+file `~/rstudio-config.tar`, and, only then, remove the actually
+settings.  The next time you call `rsc start`, you should start out
+with a fresh RStudio setup, and the login issue should be gone.
+
+
+### ERROR: Failed to check process PID 12345 on {{ site.dev1.hostname }} over SSH
+
+If you get the following error when launching `rsc start`:
+
+```sh
+[alice@{{ site.dev2.name }} ~]$ rsc start
+WARNING: Needs to SSH to {{ site.dev1.hostname }} to check whether process 2132343
+is still alive [{{ site.user.home }}/.config/rsc/rserver.hostname:
+21 bytes; 2024-09-28 15:56:13)]. If you don't have SSH key authentication set up,
+you will be asked to enter your account password below. The current machine is
+{{ site.dev2.hostname }}
+ERROR: Failed to check process PID 2132343 on {{ site.dev1.hostname }} over SSH. 
+Reason was: ssh: connect to host {{ site.dev1.hostname }} port 22: No route to host
+```
+
+the reason is that `rsc start` tries to protect against launching more
+than one RStudio session at the same time on different machines. In
+order to confirm that you already running another RStudio session on
+another machine, it needs to access that machine via SSH, but if that
+fails you get the above error.
+
+To troubleshoot this, start by making sure you can SSH to {{
+site.dev1.hostname }}. (1) If you can login manually, do that and call
+`rsc stop` there. This should resolve the above problem.  (2) If you
+cannot access the machine, it could be that you have exhausted your
+CPU quota on that machine and it is very slow to respond. If you
+suspect this is the case, see 'Running out of memory' below.  It could
+also be that the machine is not working or down, which is rare, but it
+happens. If it is down, it's most likely already discussed on our
+[Slack forum] - please check there to confirm it is truly down.  In
+the rare case that the machine is really down, try to call `rsc reset`
+and the retry with `rsc start`.  If you still get the above error,
+retry with `rsc reset --full`.
+
+
+
 ### Running out of memory
 
 If you get an 'R Session Error' dialog saying:
@@ -188,6 +223,7 @@ RStudio will likely keep running, but your R session was lost and
 reset.
 
 
+[Slack forum]: /hpc/support/
 [CBI software stack]: /hpc/software/software-repositories.html
 [Work with R]: /hpc/howto/r.html
 [SSH with X11 forwarding enabled]: /hpc/howto/gui-x11fwd.html#x11-forwarding-over-ssh
