@@ -33,7 +33,7 @@ login:
 
 devel:
   name: "dev1"
-  hostname: "dev1"
+  hostname: "dev1.wynton.ucsf.edu"
   ip: "172.26.44.131"
 
 transfer:
@@ -51,19 +51,19 @@ login2:
   ip: "169.230.79.47"
 dev1:
   name: "dev1"
-  hostname: "dev1"
+  hostname: "dev1.wynton.ucsf.edu"
   ip: "172.26.44.131"
 dev2:
   name: "dev2"
-  hostname: "dev2"
+  hostname: "dev2.wynton.ucsf.edu"
   ip: "172.26.44.132"
 dev3:
   name: "dev3"
-  hostname: "dev3"
+  hostname: "dev3.wynton.ucsf.edu"
   ip: "172.26.44.133"
 gpudev1:
   name: "gpudev1"
-  hostname: "gpudev1"
+  hostname: "gpudev1.wynton.ucsf.edu"
   ip: "172.26.44.141"
 transfer1:
   name: "dt1"
