@@ -410,7 +410,7 @@ to increase our priority.  How can we do this?_
 **A**. We welcome donations of any size.  In return, your lab will
 receive a number of slots in member.q equivalent to the number of
 cores in a current Standard Node that your contribution would
-purchase.  As of May 2020, that cost is 170 USD per slot.
+purchase.  See [Pricing for Extra Compute] for more details.
 
 ### Contribute hardware
 
@@ -431,5 +431,6 @@ team].
 [Status]: /hpc/status/index.html
 [{{ site.cluster.nickname }} team]: /hpc/about/contact.html
 [purchase additional storage]: /hpc/about/pricing-storage.html
+[Pricing for Extra Compute]: /hpc/about/pricing-compute.html
 [File Sizes and Disk Quotas]: /hpc/howto/storage-size.html
 ['Connect directly to a development node']: /hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node
