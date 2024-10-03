@@ -729,7 +729,7 @@ where the **jqr** R package needs to be loaded.
 
 The **[sf]** package does currently not install out of the box.  Specifically, **sf** 1.0-17 (2024-09-06) [fails to install on Rocky 8](https://github.com/r-spatial/sf/issues/2436) resulting in compilation error:
 
-```
+```plain
 gdal.cpp: In function ‘Rcpp::NumericVector CPL_transform_bounds(Rcpp::NumericVector, Rcpp::List, int)’:
 gdal.cpp:713:16: error: ‘ret’ was not declared in this scope
   713 |         return ret;
