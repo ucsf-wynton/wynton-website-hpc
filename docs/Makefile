@@ -29,6 +29,10 @@ dynamic-force:
 
 init: .git/hooks/pre-commit
 
+gitleaks:
+	module load CBI gitleaks; \
+	gitleaks dir . || { >&2 echo "ERROR: Leaks detected; run 'gitleaks dir --verbose .' for details"; exit 1; }
+
 .git/hooks/pre-commit:
 	cd .git/hooks; \
 	ln -s ../../.githooks/pre-commit .
