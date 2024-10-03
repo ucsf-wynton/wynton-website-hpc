@@ -30,6 +30,7 @@ TIPS: Try to use `scp -c aes128-gcm@openssh.com ...` to speed up the transfer ra
 ### Copy a single file on your local file system to your {{ site.cluster.name }} home directory
 
 To copy a single file to your home directory (`~/`) on the cluster, use
+
 ```sh
 {local}$ scp one_file.tsv alice@{{ site.transfer.hostname }}:~/
 ```
@@ -38,6 +39,7 @@ To copy a single file to your home directory (`~/`) on the cluster, use
 ### Copy one or more files to a folder on the cluster
 
 To copy multiple files to {{ site.cluster.name }} so they appear directly under `~/study/files/`, use
+
 ```sh
 {local}$ scp *.txt *.R ../some/path/another_file.tsv alice@{{ site.transfer.hostname }}:study/files/
 ```
@@ -45,6 +47,7 @@ To copy multiple files to {{ site.cluster.name }} so they appear directly under 
 ### Recursively copy a directory to a folder on the cluster
 
 To copy all content of directory `dataset/` to {{ site.cluster.name }} so that it appears as `~/study/dataset/`, use
+
 ```sh
 {local}$ scp -r dataset/ alice@{{ site.transfer.hostname }}:study/
 ```
@@ -56,6 +59,7 @@ To copy all content of directory `dataset/` to {{ site.cluster.name }} so that i
 ### Copy a single file from your {{ site.cluster.name }} home directory to your local machine
 
 To copy a single file in your  {{ site.cluster.name }} home directory to the working directory of your local machine, use
+
 ```sh
 {local}$ cd /path/project
 {local}$ scp alice@{{ site.transfer.hostname }}:one_file.tsv .
@@ -67,6 +71,7 @@ _Note_: Don't forget that period (`.`) at the end - it indicates copy [the file]
 ### Copy one or more files from the cluster
 
 To copy multiple files from `~/study/files/` on the cluster to `~/study/` on your local machine, do:
+
 ```sh
 {local}$ scp alice@{{ site.transfer.hostname }}:study/files/*.txt alice@{{ site.transfer.hostname }}:study/files/*.R ~/study/
 ```
@@ -74,6 +79,7 @@ To copy multiple files from `~/study/files/` on the cluster to `~/study/` on you
 ### Recursively copy a folder from the cluster
 
 To copy all content of directory `dataset/` on the cluster so that it appears as `dataset/` in your local working directory, use
+
 ```sh
 {local}$ cd /path/project
 {local}$ scp -r alice@{{ site.transfer.hostname }}:dataset/ .

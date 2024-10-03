@@ -38,27 +38,35 @@ echo "Hello world, I am running on node $HOSTNAME"
 sleep 10
 date
 ```
+
 _Hint_: To create this file, make sure that the folder exists first.  If doesn't, call `mkdir ~/tests`.
 
 Although not critical for the job scheduler, it is always convenient to set the file permission on this script file to be executable, e.g.
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ cd tests/
 [alice@{{ site.devel.name }} tests]$ chmod ugo+x hello_world
 ```
+
 This, in combination with the so called "she-bang" (`#! ...`) on the first line, allows you call the script just any other software, e.g.
+
 ```sh
 [alice@{{ site.devel.name }} tests]$ ./hello_world
 Hello world, I am running on node {{ site.devel.name }}.
 Mon Aug 28 16:31:29 PDT 2017
 ```
+
 Note how it takes ten seconds between the `Hello world` message and the time stamp.  We have now confirmed that the shell script does what we expect it to do, and we are ready to submit it to the job queue of the scheduler.  To do this, do:
+
 ```sh
 [alice@{{ site.devel.name }} tests]$ qsub -cwd -j yes hello_world
 Your job 201 ("hello_world") has been submitted
 ```
+
 _Explanation of command-line options_: The `-cwd` option tells the scheduler to launch the `hello_world` script and output the job log files to the current working directory (here `~/tests/`).  The `-j yes` option specifies that error message should be merged with regular output (instead of outputting to separate log files).
 
 When submitting a job, the scheduler assigned the job an identifier ("job id").  In the above example, the job id is '201'.  Immediately after the job has been submitted, we can see that it queued but not launched;
+
 ```sh
 [alice@{{ site.devel.name }} tests]$ qstat
 job-ID prior   name       user   state submit/start at     queue              slots ja-task-ID
@@ -67,6 +75,7 @@ job-ID prior   name       user   state submit/start at     queue              sl
 ```
 
 Later, when the job has been launched on one of the compute nodes, and we will something like:
+
 ```sh
 [alice@{{ site.devel.name }} tests]$ qstat
 job-ID prior   name       user   state submit/start at     queue              slots ja-task-ID
@@ -77,6 +86,7 @@ job-ID prior   name       user   state submit/start at     queue              sl
 Eventually, when the job script finished, `qstat` will no longer list it (if you have no other jobs on the queue, `qstat` will not output anything).
 
 So where is the output of the job?  Since we used `-j yes` and `-cwd` we will find a job output file in the current directory named `hello_world.o201` that contains:
+
 ```sh
 [alice@{{ site.devel.name }} tests]$ cat hello_world.o201
 Hello world, I am running on node cin-hmid1

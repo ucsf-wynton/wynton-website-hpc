@@ -14,8 +14,8 @@ qdel -f <jobid>
 
 Note that this command can take a long time to complete (up to a couple of minutes) if the node is non-responsive.
 
-
 To kill all of your jobs, use:
+
 ```sh
 qdel -u $USER
 ```

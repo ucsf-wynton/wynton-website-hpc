@@ -59,6 +59,7 @@ Retype new password:
 passwd: all authentication tokens updated successfully.
 [alice@{{ site.login.name }} ~]$ 
 ```
+
 Wait 10 minutes for your new password to propagate before using it.
 
 

@@ -8,6 +8,7 @@
 ## Compiling GPU applications
 
 The [CUDA Toolkit] is installed on the [development nodes].  Several versions of CUDA are available via software modules.  To see the currently available versions, run the command:
+
 ```sh
 module avail cuda
 ```
@@ -16,29 +17,37 @@ module avail cuda
 ## Submitting GPU jobs
 
 GPU jobs run in a dedicated queue which must be requested in the job submission.  Each slot in this queue represents a GPU that the job will use.  Therefore, users must ensure that every job's GPU use matches its submission request.  For a job using a single GPU, the submission should look like:
+
 ```sh
 qsub -q gpu.q ...
 ```
+
 Jobs requiring more than one GPU must be submitted like this:
+
 ```sh
 qsub -q gpu.q -pe smp N ...
 ```
+
 where N is the number of GPUs the job will use.
 
 If your application requires MPI, you should still use the proper parallel environment regardless of how many GPUs you'll be using:
+
 ```sh
 qsub -q gpu.q -pe mpi_onehost N ...
 mpirun -np M --oversubscribe ...
 ```
+
 where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).  Please note that, at the moment, each GPU job must limit itself to a single host.
 
 NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This allows for proper scheduling of GPU jobs on member and institutional nodes.  If your job does not include a runtime request, it may be removed from the queue.  Runtime requests are hard limits, so your job will be killed by SGE when it hits this limit.  Be sure to request enough time for you job to finish.  
+
 
 ## Submitting GPU jobs to the MSG 4-GPU nodes
 
 The 4gpu.q has {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }} nodes. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue. 
 
 To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
+
 ```sh
 qsub -q 4gpu.q ...
 ```
@@ -105,6 +114,7 @@ Several CUDA runtimes are installed on the GPU nodes.  They can be loaded via mo
 When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable `SGE_GPU` as a comma-delimited set of one or more non-negative integers where then number of integers corresponds to the number of GPU cores requested.  For example, a 3-core GPU job (`-q gpu.q -pe smp 3`) may get assigned GPU cores `SGE_GPU=2,0,6` whereas a 1-core GPU job (`-q gpu.q`) may get assigned GPU core `SGE_GPU=5`.  Be sure to send this GPU-core assignment to your application using the proper format for your application.
 
 For example, if your application uses CUDA, you should limit which GPUs are used with:
+
 ```sh
 export CUDA_VISIBLE_DEVICES=$SGE_GPU
 ```
@@ -122,21 +132,26 @@ Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores
 ## GPU use monitoring
 
 We have installed NVIDIA's [Data Center GPU Manager](https://docs.nvidia.com/datacenter/dcgm/latest/index.html) on all GPU nodes to allow the profiling of GPU jobs.  To use it, add the following to your job script just before you launch the GPU-utilizing process:
+
 ```sh
 gpuprof=$(dcgmi group -c mygpus -a $SGE_GPU | awk '{print $10}')
 dcgmi stats -g $gpuprof -e
 dcgmi stats -g $gpuprof -s $JOB_ID
 ```
+
 And then put the following after that process ends:
+
 ```sh
 dcgmi stats -g $gpuprof -x $JOB_ID
 dcgmi stats -g $gpuprof -v -j $JOB_ID
 dcgmi group -d $gpuprof
 ```
+
 The GPU stats will be written to the job's output file.  If you'd rather they go elsewhere, then direct the output of
 `dcgmi stats ... -v -j $JOB_ID` to the file where you want the GPU profiling info.
 
 It is also possible to see several statistics from the login hosts.  For example:
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ qconf -se msg-iogpu3
 hostname              msg-iogpu3
@@ -168,6 +183,7 @@ xprojects             NONE
 usage_scaling         NONE
 report_variables      NONE
 ```
+
 The above shows that host `msg-iogpu3` has 2 GeForce GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
 
 

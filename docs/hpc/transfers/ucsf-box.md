@@ -55,6 +55,7 @@ lftp {{ site.user.email }}@ftp.box.com:~> exit
 ## Automatic authentication
 
 When starting `lftp` as above, you need to manually enter your password, which can be tedious or even prevent automatic file transfers in batch scripts.  A solution to this is to set up the FTPS credentials in `~/.netrc`.  Here is what it could look like:
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ cat ~/.netrc
 machine ftp.box.com
@@ -75,6 +76,7 @@ machine ftp.box.com
 ```
 
 To verify that the automatic authentication works, try to log in again. You should no longer be prompted for your password - instead `lftp` gets it automatically from `~/.netrc`.  For example:
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ lftp --user {{ site.user.email }} ftps://ftp.box.com
 lftp {{ site.user.email }}@ftp.box.com:~> ls
@@ -85,6 +87,7 @@ $
 ```
 
 Note that `curl` also recognizes `~/.netrc` credentials, e.g.
+
 ```sh
 [alice@{{ site.transfer.name }} ~]$ curl --netrc -O ftps://ftp.box.com/Grant_R01.pdf
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current

@@ -121,6 +121,7 @@ machine_, and run:
 ...
 [alice@{{ site.devel.name }} ~]$ 
 ```
+
 _Importantly_, in your case, you will need to replace both instance of
 `47467` with the port number that you used in Step 2.
 
