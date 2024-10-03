@@ -725,6 +725,28 @@ where the **jqr** R package needs to be loaded.
 
 ### Packages requiring extra care
 
+#### Package **sf**
+
+The **[sf]** package does currently not install out of the box.  Specifically, **sf** 1.0-17 (2024-09-06) [fails to install on Rocky 8](https://github.com/r-spatial/sf/issues/2436) resulting in compilation error:
+
+```
+gdal.cpp: In function ‘Rcpp::NumericVector CPL_transform_bounds(Rcpp::NumericVector, Rcpp::List, int)’:
+gdal.cpp:713:16: error: ‘ret’ was not declared in this scope
+  713 |         return ret;
+      |                ^~~
+make: *** [{{ r_path }}/lib64/R/etc/Makeconf:204: gdal.o] Error 1
+ERROR: compilation failed for package ‘sf’
+* removing ‘{{ r_libs_user_path }}/sf’
+```
+
+Until the fixed version of **sf** is on CRAN, you can install the
+previous version, **sf** 1.0-16 (2024-03-25), as:
+
+```r
+install.packages("https://cran.r-project.org/src/contrib/Archive/sf/sf_1.0-16.tar.gz")
+```
+
+
 #### Package **udunits2**
 
 <!--
@@ -754,6 +776,7 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
 [rjags]: https://cran.r-project.org/package=rjags
 [Rmpi]: https://cran.r-project.org/package=Rmpi
+[sf]: https://cran.r-project.org/package=sf
 [tfevents]: https://cran.r-project.org/package=tfevents
 [udunits2]: https://cran.r-project.org/package=udunits2
 [zoo]: https://cran.r-project.org/package=zoo
