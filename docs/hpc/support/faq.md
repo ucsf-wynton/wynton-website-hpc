@@ -258,7 +258,7 @@ to identify that we want to remove the key on line 18.  To remove that
 line, use:
 
 ```sh
-$ sed -i '18d' ~/.ssh/known_hosts
+$ sed --in-place=".bak" "18d" ~/.ssh/known_hosts
 ```
 
 Then retry.
