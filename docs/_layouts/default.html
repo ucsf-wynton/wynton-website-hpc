@@ -242,7 +242,7 @@
     </div>
   </div>
 {% if site.events.downtime %}
-<div id="banner-downtime" class="alert alert-warning" role="alert" style="margin-top: 0ex; margin-bottom: 0ex; padding-top: 1ex; padding-bottom: 1ex; font-size: smaller; display: none" markdown="1">
+<div id="banner-downtime" class="alert alert-info" role="alert" style="margin-top: 0ex; margin-bottom: 0ex; padding-top: 1ex; padding-bottom: 1ex; font-size: smaller; display: none" markdown="1">
 <div id="downtime-scheduled" style="display: none">
 ⚠️ The cluster will shut down in <span id="downtime-delta">???</span> on <span id="downtime-scheduled-on">???</span>. <span id="downtime-scheduled-soon" style="display: none">Jobs submitted with a runtime beyond this cutoff time, will <em>not</em> be launched until after the downtime. Only jobs with a runtime less than <code>-l h_rt=<span id="downtime-runtime">???</span></code> have a chance to run before this scheduled downtime. If not specified, the default run time is <code>-l h_rt=336:00:00</code> (= 14 days).</span>
 </div>
@@ -473,7 +473,16 @@ if (downtime_str != "") {
         document.getElementById("downtime-ongoing-on").innerHTML = formatTimestamp(downtime_begin);
         document.getElementById("downtime-ongoing").style.display = "block";
     }
-    document.getElementById("banner-downtime").style.display = "block";
+
+    var banner = document.getElementById("banner-downtime");
+    // Is shutdown happening within 3 hours or 14 days? 
+    if (delta_ms / 1000 < 3 * 60 * 60) {
+        banner.className = "alert alert-danger";
+    } else if (delta_ms / 1000 < 14 * 24 * 60 * 60) {
+        banner.className = "alert alert-warning";
+    }
+    
+    banner.style.display = "block";
 }      
 </script>
 {% endif %}
