@@ -244,7 +244,7 @@
 {% if site.events.downtime %}
 <div id="banner-downtime" class="alert alert-warning" role="alert" style="margin-top: 0ex; margin-bottom: 0ex; padding-top: 1ex; padding-bottom: 1ex; font-size: smaller; display: none" markdown="1">
 <div id="downtime-scheduled" style="display: none">
-⚠️ The cluster will shutdown in <span id="downtime-delta">???</span> on <span id="downtime-scheduled-on">???</span>. Jobs submitted with a runtime beyond this cutoff time, will <em>not</em> be launched until after the downtime. Only jobs with a runtime less than <code>-l h_rt=<span id="downtime-runtime">???</span></code> have a chance to run before this scheduled downtime. If not specified, the default run time <code>-l h_rt=176:00:00</code> (= 14 days).
+⚠️ The cluster will shutdown in <span id="downtime-delta">???</span> on <span id="downtime-scheduled-on">???</span>. Jobs submitted with a runtime beyond this cutoff time, will <em>not</em> be launched until after the downtime. Only jobs with a runtime less than <code>-l h_rt=<span id="downtime-runtime">???</span></code> have a chance to run before this scheduled downtime. If not specified, the default run time is <code>-l h_rt=176:00:00</code> (= 14 days).
 </div>
 <div id="downtime-ongoing" style="display: none">
 🚧 The cluster is undergoing a scheduled downtime since <span id="downtime-ongoing-on">???</span>.
