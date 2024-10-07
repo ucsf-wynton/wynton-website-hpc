@@ -241,11 +241,23 @@
       </ul>
     </div>
   </div>
+{% if site.events.downtime %}
+<div id="banner-downtime" class="alert alert-warning" role="alert" style="margin-top: 0ex; margin-bottom: 0ex; padding-top: 1ex; padding-bottom: 1ex; font-size: smaller; display: none" markdown="1">
+<div id="downtime-scheduled" style="display: none">
+⚠️ The cluster will shutdown in <span id="downtime-delta">???</span> on <span id="downtime-scheduled-on">???</span>. Jobs submitted with a runtime beyond this cutoff time, will <em>not</em> be launched until after the downtime. Only jobs with a runtime less than <code>-l h_rt=<span id="downtime-runtime">???</span></code> have a chance to run before this scheduled downtime. If not specified, the default run time <code>-l h_rt=176:00:00</code> (= 14 days).
+</div>
+<div id="downtime-ongoing" style="display: none">
+🚧 The cluster is undergoing a scheduled downtime since <span id="downtime-ongoing-on">???</span>.
+</div>
+</div>
+{% endif %}
 </nav>
 
 <div id="wrap">
       <section>
 
+
+        
 {% if site.data.status.level == "danger" or page.url == "/hpc/status/" %}
 <div class="alert alert-{{ site.data.status.level }}" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;" markdown="1">
 <strong>{{ site.cluster.name }} {{ site.data.status.condition }}</strong></br>
@@ -304,6 +316,7 @@ Source: https://github.com/allejo/jekyll-anchor-headings
     
     <script src="/hpc/assets/js/bootstrap.min.js"></script><!-- 38.8 kB -->
 
+    
 <script>
   $(document).ready(function(){
       /***********************************************************
@@ -394,7 +407,72 @@ Source: https://github.com/allejo/jekyll-anchor-headings
   });
 </script>
 
-  <script>
+
+{% if site.events.downtime %}
+<script type="application/javascript">
+
+function formatTimestamp(timestamp) {
+    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const weekday = weekdays[timestamp.getDay()];
+
+    const year    = timestamp.getFullYear();
+    const month   = timestamp.getMonth() + 1;
+    const day     = timestamp.getDate();
+    const hours   = timestamp.getHours();
+    const minutes = timestamp.getMinutes();
+
+    const month_str   =   (month < 10) ? `0${month}`   : month;
+    const day_str     =     (day < 10) ? `0${day}`     : day;
+    const hours_str   =   (hours < 10) ? `0${hours}`   : hours;
+    const minutes_str = (minutes < 10) ? `0${minutes}` : minutes;
+
+    return `${weekday} ${year}-${month_str}-${day_str} at ${hours_str}:${minutes_str}`;
+}
+
+function formatTimeDiff(delta_ms) {
+    var delta = delta_ms / 1000;
+    const days    = Math.floor(delta / (24 * 60 * 60));
+    const hours   = Math.floor(delta % (24 * 60 * 60) / (60 * 60));
+    const minutes = Math.floor(delta % (60 * 60) / 60);
+                                                                  
+    return `in ${days} days, ${hours} hours, and  ${minutes} minutes`;
+}                                   
+
+function formatRuntimeHours(delta_ms) {
+    var delta = delta_ms / 1000;
+    const hours   = Math.floor(delta / (60 * 60));
+    const minutes = Math.floor(delta % (60 * 60) / 60);
+    const seconds = Math.floor(delta % 60);
+
+    const minutes_str = (minutes < 10) ? `0${minutes}` : minutes;
+    const seconds_str = (seconds < 10) ? `0${seconds}` : seconds;
+                                   
+    return `${hours}:${minutes_str}:${seconds_str}`;
+}                                   
+
+const downtime_str = '{{ site.events.downtime }}';
+if (downtime_str != "") {
+    const downtime_begin = new Date(downtime_str);
+    const now = Date.now();
+    const delta_ms = (downtime_begin - now);
+    if (delta_ms > 0) {
+        document.getElementById("downtime-scheduled-on").innerHTML = formatTimestamp(downtime_begin);
+    
+        document.getElementById("downtime-delta").innerHTML = formatTimeDiff(delta_ms);
+        document.getElementById("downtime-runtime").innerHTML = formatRuntimeHours(delta_ms);
+                                       
+        document.getElementById("downtime-scheduled").style.display = "block";
+    } else {
+        document.getElementById("downtime-ongoing-on").innerHTML = formatTimestamp(downtime_begin);
+        document.getElementById("downtime-ongoing").style.display = "block";
+    }
+    document.getElementById("banner-downtime").style.display = "block";
+}      
+</script>
+{% endif %}
+
+
+ <script>
     $("a[href^='http']:not([href*='ucsf.edu']):not([href*='github.io']):not([id*='edit'])").each(function() {
       $(this).css({
         "background": "url(https://www.google.com/s2/favicons?domain=" +

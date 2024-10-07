@@ -83,6 +83,9 @@ globus-phi:
 globus-box:
   name: "UCSF Wynton HPC Box"
   uuid: 98d778c4-75a9-4d8d-8baa-68f71d6568c0
+
+events:
+  downtime: 2024-10-14T08:00:00-0700
   
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
