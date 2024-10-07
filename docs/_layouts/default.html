@@ -450,12 +450,8 @@ function formatRuntimeHours(delta_ms) {
     var delta = delta_ms / 1000;
     const hours   = Math.floor(delta / (60 * 60));
     const minutes = Math.floor(delta % (60 * 60) / 60);
-    const seconds = Math.floor(delta % 60);
-
     const minutes_str = (minutes < 10) ? `0${minutes}` : minutes;
-    const seconds_str = (seconds < 10) ? `0${seconds}` : seconds;
-                                   
-    return `${hours}:${minutes_str}:${seconds_str}`;
+    return `${hours}:${minutes_str}:00`;
 }                                   
 
 const downtime_str = '{{ site.events.downtime }}';
