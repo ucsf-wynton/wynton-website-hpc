@@ -367,7 +367,7 @@ $ cp /etc/skel/.bash_profile ~/
 
 ### Viewing Image Files
 
-**Q**. _How can a view PNG and JPEG image files?_
+**Q**. _How can I view PNG and JPEG image files?_
 
 **A**. There are few alternatives for viewing images files over
 SSH.
