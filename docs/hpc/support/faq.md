@@ -370,28 +370,31 @@ $ cp /etc/skel/.bash_profile ~/
 **Q**. _How can I view PNG and JPEG image files?_
 
 **A**. There are few alternatives for viewing images files over
-SSH:
+SSH (easy-to-hard):
 
-  1. One set of solutions is to view the images using regular GUI
-     tools viewed remotely over X11. This requires that you are
-     connected to {{ site.cluster.nickname }} with [X11
-     Forwarding](/hpc/howto/gui-x11fwd.html) enabled. This allows you
-     to use `firefox image.png`, which launched the Firebox browser on
-     {{ site.cluster.nickname }} and opens the `image.png` file.
-     Another tool is `display image.png`, which is available via
-     `module load Sali ImageMagick`.
-
-  2. Another solution is to browser and view the image files via
-     browser-embedded GUIs such as [RStudio
-     Server](/hpc/howto/rstudio.html) and [Jupyter
-     Notebook](/hpc/howto/jupyter.html).
-
-  3. A third solution is to view the image files directly in the SSH
+  1. Another solution is to view the image files directly in the SSH
      terminal, but the resolution will depend on what type of terminal
-     you run locally and the font size (the smaller the great image
-     resolution).  For this, try `chafa image.png`, which is available
-     via `module load CBI chafa`.
-  
+     you run locally.  First, call `module load CBI chafa`. Then, if
+     you are using a terminal like [iTerm2] or [WezTerm], then use
+     `chafa --format=iterm image.png`. If you are using a terminal
+     like [Kitty], then use `chafa --format=kitty image.png`. If
+     nothing else works, try `chafa image.png` (the smaller font-size
+     the great image resolution). [**easiest**]
+     
+  2. One set of solutions is to view the images using regular GUI
+     tools viewed remotely over X11. This requires that you are
+     connected to {{ site.cluster.nickname }} with [X11 Forwarding]
+     enabled. This allows you to use `firefox image.png`, which
+     launched the Firebox browser on {{ site.cluster.nickname }} and
+     opens the `image.png` file.  Another tool is `display image.png`,
+     which is available via `module load Sali ImageMagick`. [**easy,
+     but slower**]
+
+  3. A third solution is to browser and view the image files via
+     browser-embedded GUIs such as [RStudio Server] and [Jupyter
+     Notebook]. [**more work**]
+
+
 
 ### Using Microsoft VS Code
 
@@ -455,9 +458,15 @@ team].
 **A**. Wynton HPC provides High Performance Computing resources to the UCSF Research community.  We are _not_ able to provide server hosting, application hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.  For these, and related services, we suggest you contact UCSF IT regarding their offerings, e.g. [UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting), [UCSF IT Physical Server Hosting](https://it.ucsf.edu/service/physical-server-hosting), and [UCSF IT Cloud Services](https://cloudservices.ucsf.edu/).
 
 
+[X11 Forwarding]: /hpc/howto/gui-x11fwd.html
+[RStudio Server]: /hpc/howto/rstudio.html
+[Jupyter Notebook]: /hpc/howto/jupyter.html
 [Status]: /hpc/status/index.html
 [{{ site.cluster.nickname }} team]: /hpc/about/contact.html
 [purchase additional storage]: /hpc/about/pricing-storage.html
 [Pricing for Extra Compute]: /hpc/about/pricing-compute.html
 [File Sizes and Disk Quotas]: /hpc/howto/storage-size.html
 ['Connect directly to a development node']: /hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node
+[Kitty]: https://sw.kovidgoyal.net/kitty/
+[iTerm2]: https://iterm2.com/
+[WezTerm]: https://wezfurlong.org/wezterm/index.html
