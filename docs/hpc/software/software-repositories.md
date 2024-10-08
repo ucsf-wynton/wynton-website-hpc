@@ -904,8 +904,8 @@ setenv(&quot;X86_64_LEVEL_ASSERT&quot;, &quot;&quot;)
 <dl>
   <dd class="module-details">
 <strong class="module-help">chafa: Chafa (Character Art Facsimile) Terminal Graphics and Character Art Generator</strong><br>
-<span class="module-description">Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal.</span><br>
-Example: <span class="module-example"><code>chafa image.png</code>, <code>chafa --version</code> and <code>chafa --help</code>.</span><br>
+<span class="module-description">Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal. Supports modern terminal graphics formats (Sixels, Kitty, iTerm2, Unicode mosaics) - pick the one that your local terminal supports.</span><br>
+Example: <span class="module-example"><code>chafa image.png</code>, <code>chafa --format=iterm image.png</code>, <code>chafa --format=kitty image.png</code>, <code>chafa --version</code> and <code>chafa --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://hpjansson.org/chafa/">https://hpjansson.org/chafa/</a>, <a href="https://github.com/hpjansson/chafa/blob/master/NEWS">https://github.com/hpjansson/chafa/blob/master/NEWS</a> (changelog) <a href="https://github.com/hpjansson/chafa/releases">https://github.com/hpjansson/chafa/releases</a> (releases), <a href="https://github.com/hpjansson/chafa">https://github.com/hpjansson/chafa</a> (source code)</span><br>
 Versions: <span class="module-version">1.14.1-1, <em>1.14.4-1</em></span><br>
 <details>
@@ -920,8 +920,8 @@ whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: cli, shell&quot;)
 whatis(&quot;URL: https://hpjansson.org/chafa/, https://github.com/hpjansson/chafa/blob/master/NEWS (changelog) https://github.com/hpjansson/chafa/releases (releases), https://github.com/hpjansson/chafa (source code)&quot;)
 whatis([[
-Description: Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal.
-Examples: `chafa image.png`, `chafa --version` and `chafa --help`.
+Description: Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal. Supports modern terminal graphics formats (Sixels, Kitty, iTerm2, Unicode mosaics) - pick the one that your local terminal supports.
+Examples: `chafa image.png`, `chafa --format=iterm image.png`, `chafa --format=kitty image.png`, `chafa --version` and `chafa --help`.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -4488,24 +4488,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4519,6 +4501,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
