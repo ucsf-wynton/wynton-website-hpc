@@ -370,11 +370,11 @@ $ cp /etc/skel/.bash_profile ~/
 **Q**. _How can I view PNG and JPEG image files?_
 
 **A**. There are few alternatives for viewing images files over
-SSH.
+SSH:
 
-  1. One set of solutions viewing the images using regular GUI tools
-     viewed remotely over X11. This requires that you are connected to
-     {{ site.cluster.nickname }} with [X11
+  1. One set of solutions is to view the images using regular GUI
+     tools viewed remotely over X11. This requires that you are
+     connected to {{ site.cluster.nickname }} with [X11
      Forwarding](/hpc/howto/gui-x11fwd.html) enabled. This allows you
      to use `firefox image.png`, which launched the Firebox browser on
      {{ site.cluster.nickname }} and opens the `image.png` file.
