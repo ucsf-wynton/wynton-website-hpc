@@ -365,6 +365,33 @@ $ cp ~/.bash_profile ~/.bash_profile.20231115
 $ cp /etc/skel/.bash_profile ~/
 ```
 
+### Viewing Image Files
+
+**Q**. _How can a view PNG and JPEG image files?_
+
+**A**. There are few alternatives for viewing images files over
+SSH.
+
+  1. One set of solutions viewing the images using regular GUI tools
+     viewed remotely over X11. This requires that you are connected to
+     {{ site.cluster.nickname }} with [X11
+     Forwarding](/hpc/howto/gui-x11fwd.html) enabled. This allows you
+     to use `firefox image.png`, which launched the Firebox browser on
+     {{ site.cluster.nickname }} and opens the `image.png` file.
+     Another tool is `display image.png`, which is available via
+     `module load Sali ImageMagick`.
+
+  2. Another solution is to browser and view the image files via
+     browser-embedded GUIs such as [RStudio
+     Server](/hpc/howto/rstudio.html) and [Jupyter
+     Notebook](/hpc/howto/jupyter.html).
+
+  3. A third solution is to view the image files directly in the SSH
+     terminal, but the resolution will depend on what type of terminal
+     you run locally and the font size (the smaller the great image
+     resolution).  For this, try `chafa image.png`, which is available
+     via `module load CBI chafa`.
+  
 
 ### Using Microsoft VS Code
 
