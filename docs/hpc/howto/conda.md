@@ -3,7 +3,9 @@
 2024-08-21: We no longer recommend using Anaconda or Miniconda that is
 distributed by Anaconda Inc., because of license issues. Anaconda
 Inc. argues that using their default package channels requires UCSF to
-acquire an enterprise license.
+acquire an enterprise license. If you used `module load CBI
+miniconda3` in the past, we therefore recommend that you use `module
+load CBI miniforge3` instead.
 
 </div>
 
