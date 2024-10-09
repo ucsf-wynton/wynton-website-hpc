@@ -1,25 +1,12 @@
-# Work with RStudio
-
-R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio IDE, there are two options:
-
-1. The **RStudio Server** via the web browser (recommended)
-
-2. The **RStudio Desktop** over X11 Forwarding (deprecated as of April 2024)
-
-Running desktop applications over X11 forwarding works, but depending on your network connection, you will experience more or less lag. For instance, you might see a small delay between a key is pressed and it is echoed at the R prompt. Similarly, plotted graphics might take some time to render. This is also true for the RStudio Desktop. Because of this, we recommend running a personal RStudio Server instance, because that is designed to run remotely.
-
-Regardless which one you use, you will be running the same version of R as you would when running from the terminal and all your installed packages will be available in either.
-
-
-## Alt 1. Personal RStudio Server
-
 <div class="alert alert-warning" role="alert" markdown="1">
 
 An RStudio Server session will time out after 120 minutes of no user input. This is to make sure there are forgotten, left-over processes running on the system. For R tasks running longer than this, the solution is to submit them via the scheduler.
 
 </div>
 
-You can run a personal RStudio Server instance, which you, and only you, can access via your local web browser.  Contrary to RStudio Desktop, this approach does not require X11 forwarding. Instead, it does require running _two_ separate SSH connections to the cluster: (i) one to launch RStudio Server, and (ii) one to connect to it.
+# Work with RStudio
+
+R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio GUI, launch your personal **RStudio Server** as instructed below and access it via your local web browser.  As explained, this requires running _two_ separate SSH connections to the cluster: (i) one to launch RStudio Server, and (ii) one to connect to it.
 
 ### Step 1. Launch your own RStudio Server instance
 
@@ -85,56 +72,6 @@ After clicking 'Sign In', you should be redirected to the RStudio interface.
 
 To terminate the RStudio Server, start by exiting R by typing `quit()` at the R prompt. Then press <kbd>Ctrl-C</kbd> in the terminal where you called `rsc start`.  Alternatively, run `rsc stop` in another terminal, e.g. the second one used in Step 2.
 
-
-
-## Alt 2. RStudio Desktop over X11 Forwarding [DEPRECATED]
-
-<div class="alert alert-warning" role="alert" markdown="1">
-
-2024-08-30: Contrary to the above RStudio Server solution, the RStudio
-Desktop client below is no longer maintained as of April 2024.  It
-will eventually become defunct. The above RStudio Server approach
-works equally well, and in more situations. Dropping the RStudio
-Desktop lowers the maintenance burden for the CBI software maintainer.
-
-</div>
-
-<div class="alert alert-warning" role="alert" markdown="1">
-
-It is _not_ possible to run RStudio Desktop via X2Go, because X2Go
-does not support the modern graphical protocols that RStudio Desktop
-requires. If you try, you will get an error from RStudio saying that
-"GLX 1.3 or later is required."
-
-</div>
-
-To run the RStudio Desktop client, you must be logged via [SSH with X11 forwarding enabled]. Then load the `rstudio` (Desktop) module from the CBI stack and launch `rstudio`:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI rstudio
-Lmod Warning:  [DEPRECATION WARNING] The CBI 'rstudio/2024.04.2-764'           
-module is deprecated in favor of 'rstudio-server'; please use that module      
-instead
-While processing the following module(s):                                      
-    Module fullname        Module Filename                                     
-    ---------------        ---------------                                     
-    rstudio/2024.04.2-764  /wynton/home/cbi/shared/modulefiles/CBI/rstudio/2024.
-04.2-764.lua 
-
-[alice@{{ site.devel.name }} ~]$ rstudio
-TTY detected. Printing informational message about logging configuration.
-Logging configuration loaded from '/etc/rstudio/logging.conf'. Logging to
-'{{ site.user.home }}/.local/share/rstudio/log/rdesktop.log'.
-```
-
-You should see the RStudio Desktop interface appear after a few seconds.
-If you get a blank window, which some macOS users have reported, retry with:
-
-```sh
-[alice@{{ site.devel.name }} ~]$ QMLSCENE_DEVICE=softwarecontext rstudio
-```
-
-To exit the RStudio Desktop, type `quit()` at the R prompt, or press <kbd>Ctrl-C</kbd> in the above terminal.
 
 
 ## Troubleshooting
