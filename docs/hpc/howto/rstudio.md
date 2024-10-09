@@ -8,7 +8,7 @@ An RStudio Server session will time out after 120 minutes of no user input. This
 
 R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio GUI, launch your personal **RStudio Server** as instructed below and access it via your local web browser.  As explained, this requires running _two_ separate SSH connections to the cluster: (i) one to launch RStudio Server, and (ii) one to connect to it.
 
-### Step 1. Launch your own RStudio Server instance
+## Step 1. Launch your own RStudio Server instance
 
 Assuming you are already logged on to a development node, launch your personal RStudio Server instance as:
 
@@ -43,7 +43,7 @@ You will need both below.
 
 
 
-### Step 2. Connect to your personal RStudio Server instance
+## Step 2. Connect to your personal RStudio Server instance
 
 On your local computer, log into the cluster in a second terminal
 following the instruction above.  Make sure to use your own username
@@ -56,7 +56,7 @@ alice1@{{site.login.hostname }}:s password: XXXXXXXXXXXXXXXXXXX
 [alice@{{site.login.name }} ~]$ 
 ```
 
-### Step 3. Open RStudio Server in your local web browser
+## Step 3. Open RStudio Server in your local web browser
 
 If you successfully completed the above two steps, and you made sure to use the correct port, then you should be able to open your personal RStudio Server in your local web browser by going to:
 
