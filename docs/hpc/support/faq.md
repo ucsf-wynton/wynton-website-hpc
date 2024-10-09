@@ -372,7 +372,7 @@ $ cp /etc/skel/.bash_profile ~/
 **A**. There are few alternatives for viewing images files over
 SSH (easy-to-hard):
 
-  1. Another solution is to view the image files directly in the SSH
+  1. One solution is to view the image files directly in the SSH
      terminal, but the resolution will depend on what type of terminal
      you run locally.  First, call `module load CBI chafa`. Then, if
      you are using a terminal like [iTerm2] or [WezTerm], then use
@@ -381,7 +381,7 @@ SSH (easy-to-hard):
      nothing else works, try `chafa image.png` (the smaller font-size
      the great image resolution). [**easiest**]
      
-  2. One set of solutions is to view the images using regular GUI
+  2. Another solution is to view the images using regular GUI
      tools viewed remotely over X11. This requires that you are
      connected to {{ site.cluster.nickname }} with [X11 Forwarding]
      enabled. This allows you to use `firefox image.png`, which
