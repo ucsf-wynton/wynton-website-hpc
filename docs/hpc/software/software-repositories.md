@@ -2406,12 +2406,12 @@ LmodError(&quot;[DEFUNCT ERROR] The CBI '&quot; .. name .. &quot;/&quot; .. vers
 <span class="module-description">Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.</span><br>
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://docs.conda.io/en/latest/">https://docs.conda.io/en/latest/</a>, <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> (documentation), <a href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a> (releases), <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
-Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
+Warning: <span class="module-warning"><em>This module is deprecated as of 2024-08-21, because of Anconda Inc. license issues. Please use the <code>miniforge3</code> module instead.</em> Also, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
 Versions: <span class="module-version">4.12.0-py39, 22.11.1-1-py310, 23.3.1-0-py39, 23.5.2-0-py39, 23.5.2-0-py310, 23.5.2-0-py311, 23.11.0-2-py311, 24.1.2-0-py312, 24.3.0-0-py312, <em>24.5.0-0-py312</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
-Miniconda: A Free Minimal Installer for Conda
+[DEPRECATED] Miniconda: A Free Minimal Installer for Conda
 ]])
 
 local warning = &quot;Use at your own peril! Software tools installed via Conda are known to cause conflicts with other software on the system, including core software provided by the operating system as well as other software from the CBI stack. For example, do not install R packages running R from the CBI stack, while conda is activated.&quot;
@@ -2425,7 +2425,7 @@ whatis(&quot;URL: https://docs.conda.io/en/latest/, https://docs.conda.io/en/lat
 whatis([[
 Description: Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
 Examples: `conda --version`, `conda create --name=myenv`, `conda env list`, `conda activate myenv`, `conda info`, and `conda deactive`.
-Warning: For now, this module works only in Bash. Also, do _not_ do `conda init`. If you do this by mistake, please undo by `conda init --reverse`.
+Warning: _This module is deprecated as of 2024-08-21, because of Anconda Inc. license issues. Please use the `miniforge3` module instead._ Also, this module works only in Bash. Also, do _not_ do `conda init`. If you do this by mistake, please undo by `conda init --reverse`.
 ]])
 
 
@@ -2456,6 +2456,16 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_M&quot;, &quot;false&quot;)
   pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
 end
+
+
+if mode() == &quot;load&quot; then
+  LmodWarning(&quot;[DEPRECATED] The CBI '&quot; .. name .. &quot;/&quot; .. version .. &quot;' module is deprecated as of 2024-08-21, and it will eventually become defunct. Please use 'miniforge3' instead. The reason for this is license issues introduced by Anconda Inc.&quot;)
+end
+
+
+
+
+
 
 -- Don't edit! Created using: 
 -- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniconda3-24.5.0-0-py312/etc/profile.d/conda.sh
@@ -3482,12 +3492,13 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.</span><br>
 Example: <span class="module-example"><code>rstudio</code>.  If you get a blank window, retry with <code>QMLSCENE_DEVICE=softwarecontext rstudio</code>.</span><br>
 URL: <span class="module-url"><a href="https://posit.co/products/open-source/rstudio/#rstudio-desktop">https://posit.co/products/open-source/rstudio/#rstudio-desktop</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
-Warning: <span class="module-warning">This software works only on the development nodes. It requires an SSH connection with X11 Forwarding enabled. It does <em>not</em> work with X2Go (gives error &quot;GLX 1.3 or later is required&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
-Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, 2021.09.2-382, 2022.02.1-461, 2022.07.2-576, 2022.12.0-353, <em>2023.06.1-524</em></span><br>
+Warning: <span class="module-warning"><em>This module is deprecates as of 2024-08-30 and no longer maintained; please use the 'rstudio-server' tool instead.</em> This software works only on the development nodes. It requires an SSH connection with X11 Forwarding enabled. It does <em>not</em> work with X2Go (gives error &quot;GLX 1.3 or later is required&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. <code>ssh -X -C ...</code>.</span><br>
+Versions: <span class="module-version">1.4.1103, 1.4.1717, 2021.09.0+351, 2021.09.1-372, 2021.09.2-382, 2022.02.1-461, 2022.07.2-576, 2022.12.0-353, 2023.06.1-524, <em>2024.04.2-764</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">help([[
-RStudio Desktop: The RStudio Desktop IDE for R
+<pre><code class="language-lua">
+help([[
+[DEPRECATED] RStudio Desktop: The RStudio Desktop IDE for R
 ]])
 
 local name = myModuleName()
@@ -3498,7 +3509,7 @@ whatis(&quot;URL: https://posit.co/products/open-source/rstudio/#rstudio-desktop
 whatis([[
 Description: The RStudio Desktop is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics.
 Examples: `rstudio`.  If you get a blank window, retry with `QMLSCENE_DEVICE=softwarecontext rstudio`.
-Warning: This software works only on the development nodes. It requires an SSH connection with X11 Forwarding enabled. It does _not_ work with X2Go (gives error \&quot;GLX 1.3 or later is required\&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. `ssh -X -C ...`.
+Warning: _This module is deprecates as of 2024-08-30 and no longer maintained; please use the 'rstudio-server' tool instead._ This software works only on the development nodes. It requires an SSH connection with X11 Forwarding enabled. It does _not_ work with X2Go (gives error \&quot;GLX 1.3 or later is required\&quot;). For best performance, use SSH compression when using X11 Forwarding, i.e. `ssh -X -C ...`.
 ]])
 
 depends_on(&quot;r&quot;)
@@ -3508,6 +3519,9 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
 
+if mode() == &quot;load&quot; then
+    LmodWarning(&quot;[DEPRECATION WARNING] The CBI '&quot; .. name .. &quot;/&quot; .. version .. &quot;' module is deprecated as of 2024-08-30 in favor of 'rstudio-server'; please use that module instead&quot;)
+end
 </code></pre>
 
 </details>
