@@ -440,7 +440,7 @@ function formatTimeDiff(delta_ms) {
     const minutes_str = (minutes == 1) ? '1 minute' : `${minutes} minutes`;
 
     var msg = minutes_str;
-    if (hours > 0) msg = `${hours_str}, and ${msg}`;  
+    if (hours > 0) msg = `${hours_str} and ${msg}`;  
     if (days > 0) msg = `${days_str}, ${msg}`;  
                                    
     return msg;
