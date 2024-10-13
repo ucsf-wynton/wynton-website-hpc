@@ -6,7 +6,7 @@
 
 # User Agreement and Disclaimer
 
-Last Updated September 26, 2024, 6:00pm PDT
+Last Updated October 11, 2024
 
 Wynton user responsibilities and requirements in support of this
 Agreement include:
