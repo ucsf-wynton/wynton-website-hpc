@@ -4,7 +4,7 @@
 
 **Update**: The cluster including all its storage is offline
 undergoing a scheduled maintenance.
-<br><span class="timestamp">September 20, 16:45 PT</span>
+<br><span class="timestamp">October 14, 11:00 PT</span>
 
 **Notice**: The cluster will be shut down for maintenance from 8:00 am
 on Monday October 14 until 5:00 pm on Friday October 18, 2024. This is
