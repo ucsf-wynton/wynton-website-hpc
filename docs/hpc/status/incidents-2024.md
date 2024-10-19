@@ -2,9 +2,9 @@
 
 * Full downtime:
 
-  - Scheduled: 32.0 hours (= 1.3 days)
+  - Scheduled: 137.0 hours (= 5.7 days)
   - Unscheduled: 142.3 hours (= 5.9 days)
-  - Total: 174.3 hours (= 7.3 days)
+  - Total: 174.3 hours (= 11.7 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -14,7 +14,8 @@
 * Damage: None
 * Occurrences:
   - 2024-06-17 -- 2024-06-18 (32.0 hours)
-* Total downtime: 32.0 hours
+  - 2024-10-14 -- 2024-10-18 (105.0 hours)
+* Total downtime: 137.0 hours
 
 #### Scheduled kernel maintenance
 
@@ -55,6 +56,41 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### October 14-18, 2024
+
+#### <span style="color: orange;">Full downtime</span>
+
+**Resolved**: The cluster is back online.
+<br><span class="timestamp">October 18, 17:00 PT</span>
+
+**Update**: The cluster including all its storage is offline
+undergoing a scheduled maintenance.
+<br><span class="timestamp">October 14, 11:00 PT</span>
+
+**Notice**: The cluster will be shut down for maintenance from 8:00 am
+on Monday October 14 until 5:00 pm on Friday October 18, 2024. This is
+a full downtime, including no access to login, development,
+data-transfer, and app nodes. Compute nodes will be shutdown as
+well. Starting 14 days before, the maximum job runtime will be
+decreased on a daily basis from the current 14 days down to one day so
+that jobs finish in time before the shutdown. Jobs with runtimes that
+go into the maintenance window will be started after the downtime.
+The reason for the downtime is that UCSF Facilities will perform
+maintenance affecting cooling in our data center. We will take this
+opportunity to perform system updates and BeeGFS maintenance.
+<br><span class="timestamp">September 20, 16:45 PT</span>
+
+<!--
+comment: Scheduled downtime
+start: 2024-10-14T08:00:00
+stop: 2024-10-18T17:00:00
+length: 105 hours
+severity: under-maintenance
+affected: jobs, beegfs, compute, *
+reason: scheduled
+ -->
 
 
 ### September 12, 2024
