@@ -122,3 +122,7 @@ message: Wynton is running without redundant building cooling exposing us to the
 level: warning
 condition: is operational
 message: (1) The cluster will be shut down for maintenance during October 14-18, 2024. (2) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
+
+level: danger
+condition: is non-operational
+message: Complete outage due to scheduled maintenance during October 14-18, 2024
