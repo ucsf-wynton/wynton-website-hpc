@@ -426,9 +426,9 @@ can install older versions of them that are compatible with R (<
 
 ### Packages relying on MPI
 
-Several R packages that rely on the Message Passing Interface (MPI) do
-not install out-of-the-box like other R packages.  At a minimum, they
-require that the built-in `mpi` module is loaded;
+Some R packages rely on the Message Passing Interface (MPI),
+e.g. **Rmpi**, **pbdMPI** and **bigGP**.  To use these, but also to
+install them we need to load the built-in `mpi` module;
 
 <!-- code-block label="r-openmpi" -->
 ```sh
@@ -455,57 +455,9 @@ to install.  Below sections, show how to install them.
 
 #### Package **Rmpi**
 
-The **[Rmpi]** package does not install out-of-the-box like other R
-packages.  To install **Rmpi** on the cluster, we have to load the
-`mpi` module (see above) before starting R.  Then, to install
-**Rmpi**, we launch R and call the following:
-
-<!-- code-block label="install-Rmpi" -->
-```r
-> install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
-Installing package into '{{ r_libs_user_path }}'
-(as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.7-1.tar.gz'
-Content type 'application/x-gzip' length 106286 bytes (103 KB)
-==================================================
-downloaded 103 KB
-
-* installing *source* package 'Rmpi' ...
-** package 'Rmpi' successfully unpacked and MD5 sums checked
-** using staged installation
-configure: creating ./config.status
-config.status: creating src/Makevars
-** libs
-using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
-CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c Rmpi.c -o Rmpi.o
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
-CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c conversion.c -o conversion.o
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPA
-CKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o Rmpi.so Rmpi.o conversion.o internal.o -L/usr/lib64/openmpi/lib -lmpi -L{{ site.path.cbi_software }}/{{ r_basename }}/lib64/R/lib -lR
-installing to {{ r_libs_user_path }}/00LOCK-Rmpi/00new/Rmpi/libs
-** R
-** demo
-** inst
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded from temporary location
-** checking absolute paths in shared objects and dynamic libraries
-** testing if installed package can be loaded from final location
-** testing if installed package keeps a record of temporary installation path
-* DONE (Rmpi)
-
-The downloaded source packages are in
-        '/scratch/alice/RtmpAwBn4a/downloaded_packages'
->
-```
-
-Note, you need to load the identical module and version each time you
-want to use the **Rmpi** package.  After installing **Rmpi**, verify
-that it works:
+After loading the `mpi` module, the **[Rmpi]** package installs
+out-of-the-box like other R packages.  After installing it, you can
+verify that it works by running the following example commands:
 
 ```r
 [alice@{{ site.devel.name }} ~]$ module load CBI r
@@ -533,10 +485,9 @@ slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 Rocky 8: pbdMPI, bigGP still need to be installed this way /HB 2023-09-16
 -->
 
-Similarly to the **Rmpi** package above, MPI-dependent R packages such
-as **[pbdMPI]** and **[bigGP]** require special install instructions.
-For example, after having loaded the `mpi` module, we can install
-**pbdMPI** in R as:
+Contrary to **Rmpi** above, packages such **[pbdMPI]** and **[bigGP]**
+require more hand-holding to install.  For example, after having
+loaded the `mpi` module, we can install **pbdMPI** in R as:
 
 ```r
 > install.packages("pbdMPI", configure.args="--with-mpi-include=$MPI_INCLUDE --with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
@@ -632,6 +583,9 @@ installing via 'install.libs.R' to {{ r_libs_user_path }}/00LOCK-pbdMPI/00new/pb
 The downloaded source packages are in
         '/scratch/{{ site.user.name }}/RtmpKNz5KF/downloaded_packages'
 ```
+
+The **bigGP** installs the same way.
+
 
 
 ### Packages relying on JAGS
