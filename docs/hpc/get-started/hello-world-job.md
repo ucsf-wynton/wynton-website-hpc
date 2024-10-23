@@ -31,8 +31,9 @@ In this example we will run compute jobs that outputs the name of the compute no
 
 ```sh
 #! /usr/bin/env bash
-#$ -S /bin/bash  # run job as a Bash shell [IMPORTANT]
-#$ -cwd          # run job in the current working directory
+#$ -S /bin/bash     # run job as a Bash shell [IMPORTANT]
+#$ -cwd             # run job in the current working directory
+#$ -l h_rt=00:01:00 # request a one-minute run time
 
 echo "Hello world, I am running on node $HOSTNAME"
 sleep 10
