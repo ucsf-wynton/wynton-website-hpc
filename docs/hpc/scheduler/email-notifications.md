@@ -77,7 +77,7 @@ job 8974017.1 died through signal KILL (9)
 
 ### Configure the default email address
 
-Normally, you would not set the email address for where SGE notifications are sent to.  By default, the email notifications are sent to the email address you have associated with your {{ site.cluster.nickname }} account.  To find out which address this is, run:
+**Normally, you would not set the email address for where SGE notifications are sent to.**  By default, the email notifications are sent to the email address you have associated with your {{ site.cluster.nickname }} account.  To find out which address this is, run:
 
 ```sh
 $ ldapsearch -LLL -x -H ldap://m1,ldap://m2 uidNumber="$(id -u)" mail
