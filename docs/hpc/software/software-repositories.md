@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(99)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(100)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
@@ -206,7 +206,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (99)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (100)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -3014,6 +3014,42 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_procs" class="module-name">procs</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">procs: A Modern Replacement for 'ps' written in Rust</strong><br>
+<span class="module-description">An alternative to <code>ps</code>, <code>pstree</code>, and <code>top</code>.</span><br>
+Example: <span class="module-example"><code>procs --version</code>, <code>procs --help</code>, <code>procs</code>, <code>procs --tree</code>, and <code>procs --watch --nand root</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/dalance/procs/">https://github.com/dalance/procs/</a>, <a href="https://github.com/dalance/procs/blob/master/CHANGELOG.md(changelog)">https://github.com/dalance/procs/blob/master/CHANGELOG.md(changelog)</a></span><br>
+Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Versions: <span class="module-version"><em>0.14.8</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+procs: A Modern Replacement for 'ps' written in Rust
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, cli, tui&quot;)
+whatis(&quot;URL: https://github.com/dalance/procs/, https://github.com/dalance/procs/blob/master/CHANGELOG.md(changelog)&quot;)
+whatis([[
+Description: An alternative to `ps`, `pstree`, and `top`.
+Examples: `procs --version`, `procs --help`, `procs`, `procs --tree`, and `procs --watch --nand root`.
+Warning: Only the most recent version of this software will be kept.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_proj" class="module-name">proj</h3>
 <dl>
   <dd class="module-details">
@@ -4502,24 +4538,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4533,6 +4551,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -4966,7 +5002,7 @@ Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9
 
 module-whatis &quot;Description: Integrative Modeling Platform (version 2.21.0, with only usage checks turned on)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
-module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 sali-libraries
+module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 python3/ihm sali-libraries
 set topdir &quot;/salilab/diva1/home/imp/main&quot;
 set subdir [file readlink &quot;${topdir}/2.21.0&quot;]
 if {[file pathtype ${subdir}] == &quot;relative&quot;} {
@@ -4993,7 +5029,7 @@ Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9
 
 module-whatis &quot;Description: Integrative Modeling Platform (version 2.21.0, fast build)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
-module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 sali-libraries
+module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 python3/ihm sali-libraries
 set topdir &quot;/salilab/diva1/home/imp/main&quot;
 set subdir [file readlink &quot;${topdir}/2.21.0&quot;]
 if {[file pathtype ${subdir}] == &quot;relative&quot;} {
@@ -5129,7 +5165,7 @@ prepend-path  PATH            ${topdir}/bin
   <dd class="module-details">
 <span class="module-description">MODELLER comparative modeling</span><br>
 URL: <span class="module-url"><a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a></span><br>
-Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, 10.2, 10.3, 10.4, 10.5, <em>SVN</em></span><br>
+Versions: <span class="module-version">9.10, 9.11, 9.12, 9.13, 9.14, 9.15, 9.16, 9.17, 9.18, 9.19, 9.20, 9.21, 9.22, 9.23, 9.24, 9.25, 10.0, 10.1, 10.2, 10.3, 10.4, 10.5, 10.6, <em>SVN</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5572,7 +5608,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.33/lib64/py
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
-Versions: <span class="module-version">0.15, 0.27, 0.28, 0.31, 0.43, <em>1.2</em></span><br>
+Versions: <span class="module-version">0.15, 0.27, 0.28, 0.31, 0.43, 1.2, <em>1.7</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5581,7 +5617,7 @@ module-whatis &quot;Description: Python package for handling IHM mmCIF files&quo
 module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-1.2/lib64/python/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-1.7/lib64/python/site-packages
 </code></pre>
 
 </details>
@@ -5736,7 +5772,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/s
   <dd class="module-details">
 <span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
-Versions: <span class="module-version">0.2, 0.3, 0.4, 0.5, <em>0.9</em></span><br>
+Versions: <span class="module-version">0.2, 0.3, 0.4, 0.5, 0.9, <em>1.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5745,7 +5781,7 @@ module-whatis &quot;Description: Python package for handling ModelCIF mmCIF file
 module-whatis &quot;URL: https://github.com/ihmwg/python-modelcif&quot;
 conflict python2
 module load python3/ihm
-prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-0.9/lib/python/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-1.2/lib/python/site-packages
 </code></pre>
 
 </details>
@@ -6430,7 +6466,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(99)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(100)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
 </ul>
 
