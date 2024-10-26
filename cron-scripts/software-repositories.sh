@@ -9,7 +9,9 @@ SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 ## Setup shell, including Lmod
 #shellcheck disable=SC1091
-[[ -f /etc/bashrc ]] && . /etc/bashrc || true
+if [[ -f /etc/bashrc ]]; then
+    . /etc/bashrc
+fi
 
 ## Assert module is defined
 type module
