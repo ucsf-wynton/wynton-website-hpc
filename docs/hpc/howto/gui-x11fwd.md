@@ -3,13 +3,6 @@ context:
   - login
 ---
 
-<div class="alert alert-danger" role="alert" markdown="1">
-**X2Go does not work for GPU development nodes**. The symptom is that
-the session disconnects after successful authentication.  The
-workaround is to use the [X11 Forwarding] technique
-instead. /2024-11-04
-</div>
-
 # Graphical User Interfaces (GUI)
 
 The {{ site.cluster.name }} environment supports running a graphical user interface (GUI) on {{ site.cluster.name }} while viewing and interacting with it on your local computer.  More specifically, and in more technical terms, {{ site.cluster.name }} supports NX and X11 Forwarding protocols.
