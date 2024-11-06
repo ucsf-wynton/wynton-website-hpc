@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(100)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -3182,7 +3182,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The R programming language.</span><br>
 Example: <span class="module-example"><code>R</code>, <code>R --version</code>, and <code>Rscript --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.r-project.org/">https://www.r-project.org/</a>, <a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.html">https://cran.r-project.org/doc/manuals/r-release/NEWS.html</a> (changelog)</span><br>
-Versions: <span class="module-version">3.0.0, 3.0.3, 3.1.0, 3.1.3, 3.2.0, 3.2.5, 3.3.0, 3.3.3, 3.4.0, 3.4.4, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0, 4.1.3, 4.2.0-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, 4.3.1-gcc10, 4.3.2-gcc10, 4.3.3-gcc10, 4.4.0-gcc13, <em>4.4.1-gcc13</em></span><br>
+Versions: <span class="module-version">3.0.0, 3.0.3, 3.1.0, 3.1.3, 3.2.0, 3.2.5, 3.3.0, 3.3.3, 3.4.0, 3.4.4, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0, 4.1.3, 4.2.0-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, 4.3.1-gcc10, 4.3.2-gcc10, 4.3.3-gcc10, 4.4.0-gcc13, 4.4.1-gcc13, <em>4.4.2-gcc13</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3190,7 +3190,7 @@ R: The R Programming Language
 ]])
 
 local name = myModuleName()
-local version = &quot;4.3.1-gcc10&quot;
+local version = &quot;4.3.2-gcc10&quot;
 version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: Programming, Statistics&quot;)
@@ -3570,7 +3570,7 @@ end
 <span class="module-description">The RStudio Server is an integrated development environment (IDE) for R that can be used from the web browser.</span><br>
 Example: <span class="module-example"><code>rserver</code>.</span><br>
 URL: <span class="module-url"><a href="https://posit.co/products/open-source/rstudio/#rstudio-server">https://posit.co/products/open-source/rstudio/#rstudio-server</a>, <a href="https://www.rstudio.com/products/rstudio/release-notes/">https://www.rstudio.com/products/rstudio/release-notes/</a> (changelog), <a href="https://github.com/rstudio/rstudio/">https://github.com/rstudio/rstudio/</a> (source code)</span><br>
-Versions: <span class="module-version">2021.09.2-382, 2022.02.4-500, 2022.12.0-353, 2023.03.0-386, 2023.06.1-524, 2023.06.2-561, 2023.09.0-463, 2023.09.1-494, 2023.12.0-369, 2023.12.1-402, 2024.04.0-735, <em>2024.04.2-764</em></span><br>
+Versions: <span class="module-version">2021.09.2-382, 2022.02.4-500, 2022.12.0-353, 2023.03.0-386, 2023.06.1-524, 2023.06.2-561, 2023.09.0-463, 2023.09.1-494, 2023.12.0-369, 2023.12.1-402, 2024.04.0-735, 2024.04.2-764, <em>2024.09.1-394</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4451,7 +4451,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (95)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (96)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -4538,24 +4538,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4569,6 +4551,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -4758,8 +4758,8 @@ Versions: <span class="module-version">0.29.36, <em>3.0.5</em></span><br>
 
 module-whatis &quot;Description: A language for writing Python extension modules&quot;
 module-whatis &quot;URL: https://cython.org/&quot;
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/Cython-py27-3.0.5/bin
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-py27-3.0.5/lib64/python2.7/site-packages
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/Cython-3.0.5/bin
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/Cython-3.0.5/lib64/python
 </code></pre>
 
 </details>
@@ -4990,6 +4990,30 @@ prepend-path  PERL5LIB        /salilab/diva1/programs/x86_64linux/ImageMagick-6.
 </details>
   </dd>
 </dl>
+<h3 id="module_sali_imod" class="module-name">imod</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Tomographic reconstruction package</span><br>
+URL: <span class="module-url"><a href="http://bio3d.colorado.edu/imod/">http://bio3d.colorado.edu/imod/</a></span><br>
+Versions: <span class="module-version"><em>4.5.7</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Tomographic reconstruction package&quot;
+module-whatis &quot;URL: http://bio3d.colorado.edu/imod/&quot;
+module load sali-libraries ifort
+setenv        IMOD_DIR        /salilab/diva1/programs/x86_64linux/imod-4.5.7/IMOD
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/imod-4.5.7/IMOD/bin
+setenv        IMOD_PLUGIN_DIR /salilab/diva1/programs/x86_64linux/imod-4.5.7/IMOD/lib/imodplug
+setenv        IMOD_QTLIBDIR   /salilab/diva1/programs/x86_64linux/imod-4.5.7/IMOD/qtlib
+prepend-path  LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/imod-4.5.7/IMOD/lib
+prepend-path  MANPATH         /salilab/diva1/programs/x86_64linux/imod-4.5.7/man
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_sali_imp" class="module-name">imp</h3>
 <dl>
   <dd class="module-details">
@@ -5075,9 +5099,9 @@ Versions: <span class="module-version"><em>1.0.1</em></span><br>
 
 module-whatis &quot;Description: Code from the SAMBA group at TAU&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/libTAU.html&quot;
-prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/libtau-py27-1.0.1/lib64
-prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/libtau-py27-1.0.1/include
-prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/libtau-py27-1.0.1/lib64
+prepend-path LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/libtau-1.0.1/lib64
+prepend-path CMAKE_INCLUDE_PATH /salilab/diva1/programs/x86_64linux/libtau-1.0.1/include
+prepend-path CMAKE_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/libtau-1.0.1/lib64
 </code></pre>
 
 </details>
@@ -5434,7 +5458,7 @@ module-whatis &quot;Description: Python tools for computational molecular biolog
 module-whatis &quot;URL: https://biopython.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-py36-1.75/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/biopython-1.75/lib64/python
 </code></pre>
 
 </details>
@@ -5454,7 +5478,7 @@ module-whatis &quot;Description: Collection of fast NumPy array functions writte
 module-whatis &quot;URL: https://github.com/pydata/bottleneck&quot;
 conflict python2
 module load python3/numpy/1.19.5 python3/scipy/1.3.2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-py36-1.3.1/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/bottleneck-1.3.1/lib64/python
 </code></pre>
 
 </details>
@@ -5474,7 +5498,7 @@ module-whatis &quot;Description: Composable style cycles&quot;
 module-whatis &quot;URL: https://github.com/matplotlib/cycler&quot;
 conflict python2
 module load python3/six
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/cycler-py36-0.10.0/lib/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/cycler-0.10.0/lib/python
 </code></pre>
 
 </details>
@@ -5577,7 +5601,7 @@ module-whatis &quot;Description: Python interface to the Hierarchical Data Forma
 module-whatis &quot;URL: https://www.h5py.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5 hdf5/1.10.7 python3/six
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-py36-2.10.0/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/h5py-2.10.0/lib64/python
 </code></pre>
 
 </details>
@@ -5597,7 +5621,7 @@ module-whatis &quot;Description: A high performance implementation of HDBSCAN cl
 module-whatis &quot;URL: https://github.com/scikit-learn-contrib/hdbscan&quot;
 conflict python2
 module load python3/numpy/1.19.5 python3/scipy/1.3.2 python3/scikit/0.21.3
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.33/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.33/lib64/python
 </code></pre>
 
 </details>
@@ -5677,7 +5701,7 @@ Versions: <span class="module-version"><em>0.17.0</em></span><br>
 module-whatis &quot;Description: Lightweight pipelining: using Python functions as pipeline jobs&quot;
 module-whatis &quot;URL: https://joblib.readthedocs.io/en/latest/&quot;
 conflict python2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/joblib-0.17.0/lib/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/joblib-0.17.0/lib/python
 </code></pre>
 
 </details>
@@ -5696,7 +5720,7 @@ Versions: <span class="module-version"><em>1.1.0</em></span><br>
 module-whatis &quot;Description: A fast implementation of the Cassowary constraint solver&quot;
 module-whatis &quot;URL: https://github.com/nucleic/kiwi&quot;
 conflict python2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/kiwisolver-py36-1.1.0/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/kiwisolver-1.1.0/lib64/python
 </code></pre>
 
 </details>
@@ -5721,8 +5745,8 @@ module load python3/pyparsing
 module load python3/dateutil
 module load python3/pytz
 module load python3/kiwisolver
-prepend-path PYTHONPATH   /salilab/diva1/programs/x86_64linux/matplotlib-py36-3.1.2/lib64/python3.6/site-packages
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-py36-3.1.2/lib
+prepend-path PYTHONPATH   /salilab/diva1/programs/x86_64linux/matplotlib-3.1.2/lib64/python
+prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/matplotlib-3.1.2/lib
 </code></pre>
 
 </details>
@@ -5800,7 +5824,7 @@ Versions: <span class="module-version"><em>0.6.2</em></span><br>
 module-whatis &quot;Description: A Python MessagePack (de)serializer&quot;
 module-whatis &quot;URL: https://msgpack.org/&quot;
 conflict python2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-py27-0.6.2/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/msgpack-0.6.2/lib64/python
 </code></pre>
 
 </details>
@@ -5819,10 +5843,8 @@ Versions: <span class="module-version"><em>2.4</em></span><br>
 module-whatis &quot;Description: Creates and Manipulates Graphs and Networks&quot;
 module-whatis &quot;URL: https://networkx.github.io/&quot;
 conflict python2
-module load python3/scipy/1.3.2
-module load python3/pyparsing
-module load python3/decorator
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/networkx-2.4/lib/python3.6/site-packages
+module load python3/scipy/1.3.2 python3/pyparsing python3/decorator
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/networkx-2.4/lib/python
 </code></pre>
 
 </details>
@@ -5861,7 +5883,7 @@ module-whatis &quot;Description: Fast numerical array expression evaluator for P
 module-whatis &quot;URL: https://github.com/pydata/numexpr&quot;
 conflict python2
 module load python3/numpy/1.19.5 python3/packaging
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-py36-2.8.1/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-2.8.1/lib64/python
 </code></pre>
 
 </details>
@@ -5880,9 +5902,9 @@ Versions: <span class="module-version"><em>1.19.5</em></span><br>
 module-whatis &quot;Description: A fast multidimensional array facility for Python&quot;
 module-whatis &quot;URL: https://numpy.org/&quot;
 conflict python2
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/numpy-py36-1.19.5/lib64/python3.6/site-packages
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/numpy-py36-1.19.5/bin
-prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-py36-1.19.5/lib
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/numpy-1.19.5/lib64/python
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/numpy-1.19.5/bin
+prepend-path LD_LIBRARY_PATH /salilab/diva1/programs/x86_64linux/numpy-1.19.5/lib
 </code></pre>
 
 </details>
@@ -5925,7 +5947,7 @@ module load python3/numpy/1.19.5
 module load python3/dateutil
 module load python3/matplotlib
 module load python3/pytz
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-py36-0.25.3/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-0.25.3/lib64/python
 </code></pre>
 
 </details>
@@ -6084,7 +6106,7 @@ Versions: <span class="module-version"><em>4.3.2</em></span><br>
 module-whatis &quot;Way of performing RMSD calculations of large sets of structures&quot;
 conflict python2
 module load cuda/7.5.18 python3/numpy/1.19.5 python3/scipy/1.3.2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-py36-4.3.2
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pyrmsd-4.3.2
 </code></pre>
 
 </details>
@@ -6151,7 +6173,7 @@ module-whatis &quot;URL: https://scikit-learn.org/stable/index.html&quot;
 conflict python2
 module load sali-libraries
 module load python3/numpy/1.19.5 python3/scipy/1.3.2 python3/joblib
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-py36-0.21.3/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scikit-0.21.3/lib64/python
 </code></pre>
 
 </details>
@@ -6171,7 +6193,7 @@ module-whatis &quot;Description: Scipy: Scientific Tools for Python&quot;
 module-whatis &quot;URL: https://www.scipy.org/&quot;
 conflict python2
 module load python3/numpy/1.19.5
-prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-py36-1.3.2/lib64/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/scipy-1.3.2/lib64/python
 </code></pre>
 
 </details>
@@ -6213,8 +6235,8 @@ module load python3/numpy/1.19.5
 module load python3/numexpr/2.8.1
 module load hdf5/1.10.7
 module load python3/six
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tables-py36-3.6.1/lib64/python3.6/site-packages
-prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-py36-3.6.1/bin
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tables-3.6.1/lib64/python
+prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-3.6.1/bin
 </code></pre>
 
 </details>
@@ -6346,6 +6368,10 @@ if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [f
   } else {
     prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64/centos
   }
+} else {
+  if [file exists /usr/lib64/libtiff.so.6] {
+    prepend-path  LD_LIBRARY_PATH /salilab/diva1/home/libs/x86_64/fedora41
+  }
 }
 </code></pre>
 
@@ -6467,7 +6493,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(100)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(95)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
 _The above information is updated automatically once an hour by querying `module avail` and `module spider`._
