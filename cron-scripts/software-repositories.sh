@@ -6,17 +6,22 @@ set -e
 echo "Wynton HPC website: Update Software Repository page ..."
 
 SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+echo " - SCRIPT_PATH=${SCRIPT_PATH}"
 
 ## Setup shell, including Lmod
 #shellcheck disable=SC1091
 if [[ -f /etc/bashrc ]]; then
-    . /etc/bashrc
+    printf "%s ..." " - Sourcing /etc/bashrc"
+    . /etc/bashrc || true
+    echo "OK"
 fi
 
 ## Assert module is defined
 type module
+echo " - [OK] 'module' function exists"
 
 ## Load R
+echo " - Loading modules"
 module load CBI
 module load r/4.3.2
 module list
