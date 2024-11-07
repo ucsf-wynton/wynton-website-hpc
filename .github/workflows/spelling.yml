@@ -13,11 +13,10 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - { os: ubuntu-latest, r: 'latest', cran: "https://demo.rstudiopm.com/all/__linux__/jammy/latest"}
+          - { os: ubuntu-latest, r: 'latest' }
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      CRAN: ${{ matrix.config.cran }}
       
     steps:
       - uses: actions/checkout@v4
@@ -25,22 +24,11 @@ jobs:
       - uses: r-lib/actions/setup-r@v2
         with:
           r-version: ${{ matrix.config.r }}
-
-      - name: Install R package 'remotes'
-        run: |
-          install.packages("remotes")
-        shell: Rscript {0}
-
-      - name: Cache R packages
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ matrix.config.r }}-spelling
-          restore-keys: ${{ runner.os }}-r-${{ matrix.config.r }}-
+          use-public-rspm: true
 
       - name: Install R packages
         run: |
-          remotes::install_cran("spelling")
+          install.packages("spelling")
         shell: Rscript {0}
 
       - name: Spell check README and Markdown files
