@@ -11,7 +11,7 @@ Any shell session that has been idle for more than eight hours will timeout and 
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-CPU use is throttled to 2 CPU cores/user, and memory use is limited to 96 GiB/user. If a process overuses the memory, it will be killed by the operating system. 
+CPU use is throttled to 4 CPU cores/user, and memory use is limited to 96 GiB/user. If a process overuses the memory, it will be killed by the operating system. 
 </div>
 
 ## List of Development Nodes
