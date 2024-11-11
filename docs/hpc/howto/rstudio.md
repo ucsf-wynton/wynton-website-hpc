@@ -88,18 +88,19 @@ RStudio GUI.  Unfortunately, for some users, none of these options
 help.  Consecutive attempts to use `rsc stop` and `rsc start` fail for
 same reasons.
 
-As of 2023-12-04, it is not clear why and when this happens.  The
-one workaround we have found is to wipe the user's RStudio setup.
-For this, we recommend to use:
+As of 2023-12-04, it is not clear why and when this happens.  The one
+workaround we have found is to wipe the user's RStudio sessions.  For
+this, we recommend to use:
 
 ```sh
-$ tar -cvf ~/rstudio-config.tar ~/.local/share/rstudio && rm -rf ~/.local/share/rstudio
+$ rsc reset --which=sessions
 ```
 
 This will create a local copy of your problematic RStudio setup in
-file `~/rstudio-config.tar`, and, only then, remove the actually
-settings.  The next time you call `rsc start`, you should start out
-with a fresh RStudio setup, and the login issue should be gone.
+file `rstudio-config_<timestamp>.tar`, and then, only then, remove the
+actually settings.  The next time you call `rsc start`, you should
+start out with a fresh RStudio setup, and the login issue should be
+gone.
 
 
 ### ERROR: Failed to check process PID 12345 on {{ site.dev1.hostname }} over SSH
