@@ -71,4 +71,4 @@ Here are some of the hurdles you may run into:
 [Python]: ../howto/python.html
 [R]: ../howto/r.html
 [renv]: https://cran.r-project.org/package=renv
-[MPI]: .../scheduler/submit-jobs.html#mpi-single-host-parallel-processing--pe-mpi_onehost-slots
+[MPI]: ../scheduler/submit-jobs.html#mpi-single-host-parallel-processing--pe-mpi_onehost-slots
