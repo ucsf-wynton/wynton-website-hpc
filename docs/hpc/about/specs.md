@@ -24,7 +24,7 @@
 | Accessible via SSH from outside of cluster | ✓ (2FA if outside of UCSF) | ✓ (2FA if outside of UCSF) | no | no |
 | Accessible via SSH from within cluster     | ✓ | ✓ | ✓ | no |
 | Outbound access                            | Within UCSF only: SSH and SFTP | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, Globus | Via proxy: HTTP/HTTPS, GIT+SSH(\*) | no |
-| Network speed                              | 1 Gbps | 10 Gbps | 1 Gbps | 1,10,40 Gbps |
+| Network speed                              | 10 Gbps | 10 Gbps | 10 Gbps | 1,10,40 Gbps |
 | Core software                              | Minimal | Minimal | Same as compute nodes + compilers and source-code packages | Rocky 8 packages |
 | modules (software stacks)                  | no | no | ✓ | ✓ |
 | Global file system                         | ✓ | ✓ | ✓ | ✓ |
