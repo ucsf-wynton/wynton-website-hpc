@@ -1338,7 +1338,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.55.0, <em>0.56.1</em></span><br>
+Versions: <span class="module-version">0.55.0, 0.56.1, <em>0.56.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2533,7 +2533,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a>, <a href="https://conda-forge.org/docs/user/introduction/">https://conda-forge.org/docs/user/introduction/</a> (documentation), <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a> (releases),  <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
 Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
-Versions: <span class="module-version">24.3.0-0, 24.7.1-0, <em>24.9.0-0</em></span><br>
+Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, <em>24.9.2-0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2584,11 +2584,11 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
 end
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.9.0-0/etc/profile.d/conda.sh
-pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.0-0/bin/conda&quot;)
-pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.0-0/bin/python&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.0-0/condabin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
@@ -2951,7 +2951,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>plink2 --help</code>, <code>plink2 --version</code>, and <code>plink2 --threads 1 ...</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/general_usage">https://www.cog-genomics.org/plink/2.0/general_usage</a> (documentation), <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
 Warning: <span class="module-warning">This tool runs on all available CPU cores by default, which is bad practice. Please specify option <code>--threads ncores</code> to avoid this, e.g. <code>--threads 1</code>.</span><br>
-Versions: <span class="module-version">2.00a2LM, 2.00a3LM, 2.00a5.14, <em>2.0.0-a.5.15</em></span><br>
+Versions: <span class="module-version">2.00a2LM, 2.00a3LM, 2.00a5.14, 2.0.0-a.5.15, <em>2.0.0-a.6.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3388,7 +3388,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.68.0, <em>1.68.1</em></span><br>
+Versions: <span class="module-version">1.68.0, 1.68.1, <em>1.68.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
