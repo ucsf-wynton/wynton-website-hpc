@@ -58,7 +58,13 @@ assistance, please don't hesitate to drop us a **{{ site.cluster.name
 
    * [{{ site.cluster.email_support }}](mailto:{{
      site.cluster.email_support }}) - reaches the {{
-     site.cluster.nickname }} support staff.
+     site.cluster.nickname }} support staff (Monday-Friday
+     08:00-17:00; Wynton support)
+
+   * [{{ site.cluster.email_password }}](mailto:{{
+     site.cluster.email_password }}) - if you forgot your {{
+     site.cluster.name }} password (Monday-Friday 08:00-17:00; UCSF IT
+     support)
 
 For questions, discussion, and feature requests, please use our
 **Slack workspace**:
