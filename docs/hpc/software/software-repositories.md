@@ -4045,7 +4045,7 @@ end
 <strong class="module-help">STAR: Spliced Transcripts Alignment to a Reference</strong><br>
 <span class="module-description">STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.</span><br>
 Example: <span class="module-example"><code>STAR --help</code> and <code>STAR --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a>, <a href="https://github.com/alexdobin/STAR/blob/master/CHANGES.md">https://github.com/alexdobin/STAR/blob/master/CHANGES.md</a> (changelog)</span><br>
+URL: <span class="module-url"><a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a>, <a href="https://raw.githubusercontent.com/alexdobin/STAR/master/doc/STARmanual.pdf">https://raw.githubusercontent.com/alexdobin/STAR/master/doc/STARmanual.pdf</a> (docs), <a href="https://github.com/alexdobin/STAR/blob/master/CHANGES.md">https://github.com/alexdobin/STAR/blob/master/CHANGES.md</a> (changelog)</span><br>
 Versions: <span class="module-version">2.7.0e, 2.7.0f, 2.7.1a, 2.7.2b, 2.7.3a, 2.7.5a, 2.7.5c, 2.7.7a, 2.7.9a, 2.7.10a, 2.7.10b, 2.7.11a, <em>2.7.11b</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -4055,7 +4055,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing&quot;)
-whatis(&quot;URL: https://github.com/alexdobin/STAR, https://github.com/alexdobin/STAR/blob/master/CHANGES.md (changelog)&quot;)
+whatis(&quot;URL: https://github.com/alexdobin/STAR, https://raw.githubusercontent.com/alexdobin/STAR/master/doc/STARmanual.pdf (docs), https://github.com/alexdobin/STAR/blob/master/CHANGES.md (changelog)&quot;)
 whatis([[
 Description: STAR (Spliced Transcripts Alignment to a Reference) is a fast NGS read aligner for RNA-seq data.
 Examples: `STAR --help` and `STAR --version`.
