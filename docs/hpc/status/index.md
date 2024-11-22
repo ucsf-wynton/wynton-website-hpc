@@ -8,6 +8,15 @@ title: Wynton HPC Status
 
 ## Queue Metrics
 
+<div class="alert alert-warning" role="alert" markdown="1">
+
+2024-11-21: The queue metrics graphs are currently down. We are
+working on it ...
+
+</div>
+
+<!--
+
 {% assign periods = "day,week,month,year" | split: ',' %}
 
 <ul class="nav nav-pills">
@@ -23,6 +32,7 @@ title: Wynton HPC Status
   </div>
 {% endfor %}
 </div>
+-->
 
 
 ## File-System Metrics
