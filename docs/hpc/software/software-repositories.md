@@ -858,7 +858,7 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
 Example: <span class="module-example"><code>cellranger --help</code> and <code>cellranger --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a>, <a href="https://www.10xgenomics.com/support/software/cell-ranger/latest/release-notes/cr-release-notes">https://www.10xgenomics.com/support/software/cell-ranger/latest/release-notes/cr-release-notes</a> (changelog), <a href="https://github.com/10XGenomics/cellranger">https://github.com/10XGenomics/cellranger</a> (source code)</span><br>
 Warning: <span class="module-warning">To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.</span><br>
-Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, 7.0.0, 7.0.1, 7.1.0, 7.2.0, 8.0.0, <em>8.0.1</em></span><br>
+Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, 7.0.0, 7.0.1, 7.1.0, 7.2.0, 8.0.0, 8.0.1, <em>9.0.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1782,7 +1782,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gping --version</code>, <code>gping --help</code>, <code>gping 8.8.8.8 9.9.9.9</code>, and <code>gping --cmd &quot;curl -o /dev/null https://www.github.com&quot; &quot;wget -O /dev/null https://github.com&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/orf/gping">https://github.com/orf/gping</a>, <a href="https://github.com/orf/gping/releases">https://github.com/orf/gping/releases</a> (changelog), <a href="https://github.com/orf/gping">https://github.com/orf/gping</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.17.3</em></span><br>
+Versions: <span class="module-version">1.17.3, <em>1.18.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2046,7 +2046,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
 Warning: <span class="module-warning">IGV (&gt;= 2.7.0) requires Java 17. Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.16.2, 2.17.0, 2.17.1, 2.17.3, 2.17.4, 2.18.1, 2.18.3, <em>2.18.4</em></span><br>
+Versions: <span class="module-version">2.16.2, 2.17.0, 2.17.1, 2.17.3, 2.17.4, 2.18.1, 2.18.3, 2.18.4, <em>2.19.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2307,7 +2307,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;.b
 <strong class="module-help">markdownlint-cli: MarkdownLint Command Line Interface</strong><br>
 <span class="module-description">Examples: <code>markdownlint --version</code>, <code>markdownlint --help</code>, <code>markdownlint -- *.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (documentation), <a href="https://github.com/igorshubovych/markdownlint-cli/releases/">https://github.com/igorshubovych/markdownlint-cli/releases/</a> (releases), <a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (source code)</span><br>
-Versions: <span class="module-version">0.39.0, 0.41.0, <em>0.42.0</em></span><br>
+Versions: <span class="module-version">0.39.0, 0.41.0, 0.42.0, <em>0.43.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2716,7 +2716,7 @@ depends_on(&quot;java-tweaks&quot;)
 <span class="module-description">Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a remote server where you don’t have an entire graphical setup available, but it is a useful tool even on regular desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like environment with ncurses installed.</span><br>
 Example: <span class="module-example"><code>ncdu --version</code>, <code>ncdu --help</code>, and <code>ncdu</code>. For large cleanup tasks, call <code>ncdu --one-file-system -o ncdu.cache</code> once to scan all files, and then use <code>ncdu --enable-delete -f ncdu.cache</code> to clean them out.</span><br>
 URL: <span class="module-url"><a href="https://dev.yorhel.nl/ncdu">https://dev.yorhel.nl/ncdu</a>, <a href="https://dev.yorhel.nl/ncdu/man2">https://dev.yorhel.nl/ncdu/man2</a> (documentation), <a href="https://dev.yorhel.nl/ncdu/changes2">https://dev.yorhel.nl/ncdu/changes2</a> (changelog), <a href="https://code.blicky.net/yorhel/ncdu/">https://code.blicky.net/yorhel/ncdu/</a> (source code)</span><br>
-Versions: <span class="module-version">2.4, 2.5, <em>2.6</em></span><br>
+Versions: <span class="module-version">2.6, <em>2.7</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3144,7 +3144,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.5.57</em></span><br>
+Versions: <span class="module-version">1.5.57, <em>1.6.38</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
