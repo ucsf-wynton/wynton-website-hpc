@@ -4,10 +4,6 @@ All nodes (compute and development) have their own locally storage mounted as `/
 
 ## Instructions
 
-<div class="alert alert-warning" role="alert" markdown="1">
-2019-09-09: Currently `TMPDIR` is only set automatically for job scripts running on the compute nodes.  On development nodes, `TMPDIR` is _not_ set - This is likely to change, but in the meanwhile, you need to set `TMPDIR` in your script in those cases when it is not set. See below for an example.
-</div>
-
 Here is how to use `/scratch`:
 
 * **Use environment variable TMPDIR** - on compute nodes, it points to an already created job-specific folder under local `/scratch`.  On other machines, you need to set it.
@@ -31,8 +27,8 @@ Here is a script called `ex-scratch.sh` that illustrates how to copy input files
 #$ -cwd             # use current working directory
 #$ -l scratch=200G  # needs 200 GiB of /scratch space
 
-## 0. In case TMPDIR is not set, e.g. on development nodes, set
-##    it to local /scratch, if it exists, otherwise to /tmp
+## 0. In case TMPDIR is not set, set it to local /scratch, 
+##    if it exists, otherwise to /tmp
 if [[ -z "$TMPDIR" ]]; then
   if [[ -d /scratch ]]; then TMPDIR=/scratch/$USER; else TMPDIR=/tmp/$USER; fi
   mkdir -p "$TMPDIR"
@@ -47,7 +43,7 @@ cp ~/sample.fq .
 cp ~/reference.fa .
 
 ## 3. Process input files
-/path/to/my_pipeline --cores="$NSLOTS" reference.fa sample.fq > output.bam
+/path/to/my_pipeline --cores="${NSLOTS:-1}" reference.fa sample.fq > output.bam
 
 ## 4. Move output files back to global disk
 mv output.bam ~
