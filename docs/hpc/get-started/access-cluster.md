@@ -5,9 +5,13 @@ context:
 ---
 
 <div id="wifi-alert" class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 200%; display: none" markdown="1">
-⚠️ **Warning: You appear to be connected to one of the UCSF WiFi:s (e.g. 'UCSFguest' and UCSF 'eduroam') that blocks SSH access to Wynton!**
-
-Before trying to access Wynton, make sure to switch to another WiFi such as 'UCSFwpa', or connect to the UCSF VPN.
+⚠️ **Warning: You appear to be connected to one of the UCSF WiFi:s -
+'UCSFguest', 'UCSFhousing' or UCSF 'eduroam'. If you are on
+'UCSFguest' or UCSF 'eduroam', you will _not_ be able to reach Wynton
+by SSH.** The symptom is an "ssh: connect to host {{ site.login.hostname }}
+port 22: Connection timed out" error. If you get that error, make sure
+to switch to another WiFi such as 'UCSFwpa' or 'UCSFhousing', or
+connect to the UCSF VPN, before trying again.
 </div>
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">

@@ -264,6 +264,18 @@ $ sed --in-place=".bak" "18d" ~/.ssh/known_hosts
 Then retry.
 
 
+### Cannot SSH to Wynton
+
+**Q**. When I try to SSH to one of the login or data-transfer nodes, I
+get an error `ssh: connect to host {{ site.login.hostname }} port 22: Connection timed out" error`. What's wrong?
+
+**A**. This error suggests that you cannot reach the Wynton login
+node. This _will_ happen if you are connected to the 'UCSFguest' WiFi
+or the UCSF 'eduroam' WiFi available on the UCSF campuses. If so,
+please make sure to use the 'UCSFwpa' WiFi, the 'UCSFhousing' WiFi (if
+you have access), or connect to the UCSF VPN, and then retry.
+
+
 ### Don't use sudo
 
 **Q**. _Why do I get "incorrect password attempts" when using `sudo`
