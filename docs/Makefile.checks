@@ -21,6 +21,28 @@ spelling:
 	@echo "$@ ..."
 	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); paths <- grep("software/software-repositories[.]md$$", paths, invert = TRUE, value = TRUE); paths <- c(paths, "_data/status.yml"); wordlist <- unique(sort(readLines("WORDLIST"))); words <- spelling::spell_check_files(paths, ignore = wordlist); print(words); ok <- (nrow(words) == 0); quit(status = !ok)' || { printf "\n\nSUGGESTION: If you believe these are correctly spelled, add them to 'docs/WORDLIST'\n\n"; exit 1; }
 
+tsv-check:
+	@echo "$@ ..."
+	tf=$$(mktemp)
+	files=$$(find . -type f -name "*.tsv" -not \( -path "./_site/*" -o -path "./drafts/*" \))
+	for file in $$files; do
+	    $(TPUT) && printf "[    ] checking %s" "$$file"
+	    if Rscript -e "tryCatch(db <- read.csv('$${file}', comment.char = '#', sep = '\t'), error = function(ex) { message(conditionMessage(ex)); quit(status=1) })" 2> "$${tf}"; then
+	        ok_count=$$((ok_count+1))
+	        $(TPUT) && printf "\r"
+	        printf "[$(OK)] checking %s\\n" "$$file"
+	    else
+	        error_count=$$((error_count+1))
+	        $(TPUT) && printf "\r"
+	        printf "[$(FAIL)] checking %s [reason: %s]\\n" "$$file" "$$(cat "$${tf}")"
+	    fi
+	done
+	echo "RESULT: $$ok_count OK, $$error_count ERROR"
+	if (( error_count > 0 )); then
+	  cat "$$stdout"
+	  exit 1
+	fi
+        
 yaml-check:
 	@echo "$@ ..."
 	@Rscript -e 'paths <- dir(path = c(".", "_data"), pattern = "*[.]yml$$", full.names = TRUE, recursive = TRUE); yaml <- lapply(paths, FUN = yaml::read_yaml)'
