@@ -12,11 +12,8 @@ gladstone, pollardlab	gpu.q	1	qb3-idgpu10
 i4h	gpu.q	1	qb3-iogpu4
 shoichetlab	gpu.q	1	qb3-atgpu16
 ichs	gpu.q	1	qb3-atgpu19
-theodorislab	gpu.q	1	qb3-atgpu20
 neuroppg	gpu.q	1	qb3-atgpu21
-gidb	gpu.q	1	qb3-atgpu22
 rsl	gpu.q	1	qb3-atgpu23
-yalalab	gpu.q	1	NONE
-kortemmelab	gpu.q	4	qb3-atgpu31, qb3-atgpu32, qb3-atgpu33, qb3-atgpu34
+kortemmelab	gpu.q	5	qb3-atgpu31, qb3-atgpu32, qb3-atgpu33, qb3-atgpu34, qb3-idgpu18
 ferrinlab	gpu.q	1	qb3-atgpu30
 ibrahimlab	gpu.q	2	qb3-atgpu35, qb3-atgpu36
