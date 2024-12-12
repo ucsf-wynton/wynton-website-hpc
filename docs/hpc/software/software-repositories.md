@@ -1603,7 +1603,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, <code>gh auth login</code>, and <code>gh extension install dlvhdr/gh-dash</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code), <a href="https://github.com/topics/gh-extension">https://github.com/topics/gh-extension</a> (GitHub CLI extensions)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.62.0, <em>2.63.0</em></span><br>
+Versions: <span class="module-version">2.62.0, 2.63.0, <em>2.63.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2533,7 +2533,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a>, <a href="https://conda-forge.org/docs/user/introduction/">https://conda-forge.org/docs/user/introduction/</a> (documentation), <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a> (releases),  <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
 Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
-Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, <em>24.9.2-0</em></span><br>
+Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, <em>24.11.0-0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2584,11 +2584,11 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
 end
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/etc/profile.d/conda.sh
-pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/bin/conda&quot;)
-pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/bin/python&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.9.2-0/condabin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
@@ -2615,12 +2615,6 @@ set_shell_function(&quot;__conda_hashr&quot;,&quot; \
         fi;\
     fi\
 &quot;,&quot;&quot;)
-set_shell_function(&quot;__conda_reactivate&quot;,&quot; \
-    \\local ask_conda;\
-    ask_conda=\&quot;$(PS1=\&quot;${PS1:-}\&quot; __conda_exe shell.posix reactivate)\&quot; || \\return;\
-    \\eval \&quot;$ask_conda\&quot;;\
-    __conda_hashr\
-&quot;,&quot;&quot;)
 set_shell_function(&quot;conda&quot;,&quot; \
     \\local cmd=\&quot;${1-__missing__}\&quot;;\
     case \&quot;$cmd\&quot; in \
@@ -2629,7 +2623,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
         ;;\
         install | update | upgrade | remove | uninstall)\
             __conda_exe \&quot;$@\&quot; || \\return;\
-            __conda_reactivate\
+            __conda_activate reactivate\
         ;;\
         *)\
             __conda_exe \&quot;$@\&quot;\
@@ -2750,7 +2744,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://pandoc.org/releases.html">https://pandoc.org/releases.html</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.4, <em>3.5</em></span><br>
+Versions: <span class="module-version">3.4, 3.5, <em>3.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2916,6 +2910,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).</span><br>
 Example: <span class="module-example"><code>plink --help</code> and <code>plink --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/">https://www.cog-genomics.org/plink/</a></span><br>
+Warning: <span class="module-warning">This tool runs on all available CPU cores by default, which is bad practice. Please specify option <code>--threads ncores</code> to avoid this, e.g. <code>--threads 1</code>.</span><br>
 Versions: <span class="module-version">1.07, 1.90b6.10, 1.90b6.16, 1.90b6.18, 1.90b6.21, 1.90b6.24, 1.90b6.25, <em>1.90b6.26</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -2931,6 +2926,7 @@ whatis(&quot;URL: https://www.cog-genomics.org/plink/&quot;)
 whatis([[
 Description: PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).
 Examples: `plink --help` and `plink --version`.
+Warning: This tool runs on all available CPU cores by default, which is bad practice. Please specify option `--threads ncores` to avoid this, e.g. `--threads 1`.
 ]])
 
 -- Local variables
@@ -2951,7 +2947,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>plink2 --help</code>, <code>plink2 --version</code>, and <code>plink2 --threads 1 ...</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/general_usage">https://www.cog-genomics.org/plink/2.0/general_usage</a> (documentation), <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
 Warning: <span class="module-warning">This tool runs on all available CPU cores by default, which is bad practice. Please specify option <code>--threads ncores</code> to avoid this, e.g. <code>--threads 1</code>.</span><br>
-Versions: <span class="module-version">2.00a2LM, 2.00a3LM, 2.00a5.14, 2.0.0-a.5.15, <em>2.0.0-a.6.1</em></span><br>
+Versions: <span class="module-version">2.00a2LM, 2.00a3LM, 2.00a5.14, 2.0.0-a.5.15, 2.0.0-a.6.1, <em>2.0.0-a.6.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4418,7 +4414,7 @@ end
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.44.3, <em>4.44.5</em></span><br>
+Versions: <span class="module-version">4.44.3, 4.44.5, <em>4.44.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
