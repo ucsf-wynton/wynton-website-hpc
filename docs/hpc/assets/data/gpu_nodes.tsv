@@ -18,8 +18,6 @@ msg-iogpu9	GTX 1080 Ti	11 GiB	2	128 GiB	msg	false
 msg-iogpu11	GTX 1080	8 GiB	4	256 GiB	msg	false
 msg-iogpu12	GTX 1080	8 GiB	4	256 GiB	msg	false
 msg-iogpu13	GTX 1080	8 GiB	4	256 GiB	msg	false
-qb3-idgpu1	GTX 1080	8 GiB	4	256 GiB	communal	false
-qb3-idgpu2	GTX 1080	8 GiB	4	256 GiB	communal	false
 qb3-idgpu3	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
 qb3-idgpu4	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
 qb3-idgpu5	RTX 2080 Ti	11 GiB	4	384 GiB	msg	false
@@ -35,6 +33,7 @@ qb3-idgpu14	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
 qb3-idgpu15	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
 qb3-idgpu16	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
 qb3-idgpu17	RTX 2080	8 GiB	2	384 GiB	huanglab	false
+qb3-idgpu18 H100 93 GiB 8 2048 GiB kortemmelab  true
 qb3-iogpu1	TITAN Xp	12 GiB	2	96 GiB	genetics,amaoutlab	false
 qb3-iogpu4	A100	40 GiB	4	512 GiB	i4h	true
 qb3-iogpu5	GTX 1080	8 GiB	4	256 GiB	msg	true
@@ -57,14 +56,10 @@ qb3-atgpu16	A40	48 GiB	4	512 GiB	keiser	true
 qb3-atgpu17	A40	48 GiB	4	512 GiB	communal	true
 qb3-atgpu18	A40	48 GiB	4	512 GiB	msg	true
 qb3-atgpu19	A40	48 GiB	4	512 GiB	ichs	true
-qb3-atgpu20	A100	80 GiB	4	1024 GiB	theodorislab	true
 qb3-atgpu21	A100	80 GiB	4	1024 GiB	neuroppg	true
-qb3-atgpu22	A100	80 GiB	4	1024 GiB	gidb	true
 qb3-atgpu23	A6000	48 GiB	2	512 GiB	rsl	true
 qb3-atgpu24	A40	48 GiB	4	512 GiB	communal	true
 qb3-atgpu25	A40	48 GiB	4	512 GiB	communal	true
-qb3-atgpu26	A40	48 GiB	4	512 GiB	yalalab	true
-qb3-atgpu27	A40	48 GiB	4	512 GiB	yalalab	true
 qb3-atgpu29	A40	48 GiB	4	512 GiB	msg	true
 qb3-atgpu30	A40	48 GiB	4	512 GiB	ferrinlab	true
 qb3-atgpu31	A40	48 GiB	4	512 GiB	kortemmelab	true
