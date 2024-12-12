@@ -26,6 +26,9 @@ spelling:
 yaml-check:
 	@$(MAKE) -C docs --silent $@
 
+tsv-check:
+	@$(MAKE) -C docs --silent $@
+
 markdownlint:
 	@$(MAKE) -C docs --silent $@
 
