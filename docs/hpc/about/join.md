@@ -20,6 +20,13 @@ The {{ site.cluster.name }} environment is available for _free_ to all UCSF rese
 
 If you are an non-UCSF affiliate, you will need to have the UCSF staff, student, postdoc, or PI you are associated with request your account for you.
 
+Important: If you are a Gladstone employee, staff, or faculty, please request your Wynton HPC Account via the Gladstone Service Desk.
+
+https://help.gladstone.org/support/catalog/items/58
+
+This will ensure that we get the proper information for your Wynton Account before it is created.
+
+Gladstone affiliated Wynton HPC Account requests submitted independent of the Gladstone Service Desk will be cancelled.
 
 ## How long will it take for my Wynton account request to be processed?
 

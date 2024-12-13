@@ -33,7 +33,7 @@ qb3-idgpu14	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
 qb3-idgpu15	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
 qb3-idgpu16	RTX 2080 Ti	11 GiB	8	96 GiB	grabelab	false
 qb3-idgpu17	RTX 2080	8 GiB	2	384 GiB	huanglab	false
-qb3-idgpu18  H100  93 GiB  8  2048 GiB  kortemmelab  true
+qb3-idgpu18	H100	93 GiB	8	2048 GiB	kortemmelab	true
 qb3-iogpu1	TITAN Xp	12 GiB	2	96 GiB	genetics,amaoutlab	false
 qb3-iogpu4	A100	40 GiB	4	512 GiB	i4h	true
 qb3-iogpu5	GTX 1080	8 GiB	4	256 GiB	msg	true
