@@ -24,19 +24,36 @@ spelling:
 tsv-check:
 	@echo "$@ ..."
 	tf=$$(mktemp)
+	stderr=$$(mktemp)
+	bad=()
 	files=$$(find . -type f -name "*.tsv" -not \( -path "./_site/*" -o -path "./drafts/*" \) | sort)
 	for file in $$files; do
 	    $(TPUT) && printf "[    ] checking %s" "$$file"
-	    if Rscript -e "tryCatch(db <- read.csv('$${file}', comment.char = '#', sep = '\t'), error = function(ex) { message(conditionMessage(ex)); quit(status=1) })" 2> "$${tf}"; then
+	    ## Remove header comments
+	    grep -v -E "^#" "$${file}" > "$${tf}"
+	    if Rscript -e "tryCatch(db <- read.csv('$${tf}', comment.char = "", sep = '\t'), error = function(ex) { message(conditionMessage(ex)); quit(status=1) })" 2> "$${stderr}"; then
 	        ok_count=$$((ok_count+1))
 	        $(TPUT) && printf "\r"
 	        printf "[$(OK)] checking %s\\n" "$$file"
 	    else
 	        error_count=$$((error_count+1))
 	        $(TPUT) && printf "\r"
-	        printf "[$(FAIL)] checking %s [reason: %s]\\n" "$$file" "$$(cat "$${tf}")"
+	        printf "[$(FAIL)] checking %s [reason: %s]\\n" "$$file" "$$(cat "$${stderr}")"
+	        bad+=("$${file}")
 	    fi
 	done
+	if [[ $${#bad[@]} -gt 0 ]]; then
+	    for file in "$${bad[@]}"; do
+	        echo "Investigating $${file}:"
+	        mapfile -t bfr < <(grep -v -E "^#" "$${file}" | sed 's/[^\t]//g' | sed 's/\t/./g' | sort | uniq -c)
+	        if [[ $${#bfr[@]} -eq 1 ]]; then
+	            echo "- all lines have same number of TABs"
+	        else
+	            echo "- lines have different number of TABs:"
+	            printf "%s\n" "$${bfr[@]}"
+	        fi    
+	    done
+	fi
 	echo "RESULT: $$ok_count OK, $$error_count ERROR"
 	if (( error_count > 0 )); then
 	  exit 1
