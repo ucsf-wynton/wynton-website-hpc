@@ -24,7 +24,7 @@ spelling:
 tsv-check:
 	@echo "$@ ..."
 	tf=$$(mktemp)
-	files=$$(find . -type f -name "*.tsv" -not \( -path "./_site/*" -o -path "./drafts/*" \))
+	files=$$(find . -type f -name "*.tsv" -not \( -path "./_site/*" -o -path "./drafts/*" \) | sort)
 	for file in $$files; do
 	    $(TPUT) && printf "[    ] checking %s" "$$file"
 	    if Rscript -e "tryCatch(db <- read.csv('$${file}', comment.char = '#', sep = '\t'), error = function(ex) { message(conditionMessage(ex)); quit(status=1) })" 2> "$${tf}"; then
@@ -64,7 +64,7 @@ markdownlint:
 	   exit 1
 	fi
 
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \))
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   config_file=$$(dirname "$$file")/.markdownlint.$$(basename "$${file//.md/}").json
@@ -105,7 +105,7 @@ markdown-link-check:
 	   exit 1
 	fi
 
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   if markdown-link-check --quiet --config "$$config" "$$file" &>> "$$stdout" ; then
@@ -134,7 +134,7 @@ check-absolute-links:
 	error_count=0
 
 	pattern="(http|https)://wynton.ucsf.edu"
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./index.md" \) )
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./index.md" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   if ! grep -H -i -E "$${pattern}" "$${file}" &>> "$$stdout" ; then
@@ -168,7 +168,7 @@ check-here-links:
 	ok_count=0
 	error_count=0
 
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   if ! grep -i -E "[[](click here|here|link|this|this form)[]]" "$${file}" &>> "$$stdout" ; then
@@ -197,7 +197,7 @@ check-usernames:
 	error_count=0
 
 	echo "$@ ..."
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   if ! grep -H -n -E "(alice@[a-z]+[.]|\b(ahechmer|harry|hb|hb-test|henrik|hputnam|putnam|tnejo)\b)" "$$file" &>> "$$stdout" ; then
@@ -228,7 +228,7 @@ check-leftovers-from-C4:
 	config=.markdown-link-check.json
 
 	echo "$@ ..."
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) )
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   pattern="#[ ]*SBATCH|/c4/|SLURM|SBATCH|sbatch|squeue|sstat|sacct"
@@ -265,7 +265,7 @@ check-legacy:
 	config=.markdown-link-check.json
 
 	echo "$@ ..."
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./hpc/status/incidents-201?.md" \) )
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./hpc/status/incidents-201?.md" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   pattern="(wynlog|wyndt|qb3-dev)"
@@ -297,7 +297,7 @@ markin-shellcheck:
 	config=.markdown-link-check.json
 
 	echo "$@ ..."
-	files=$$(find . -type f -name "*.sh" -not -path "./_site/*")
+	files=$$(find . -type f -name "*.sh" -not -path "./_site/*" | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   if shellcheck -x "$$file" &>> "$$stdout" ; then
