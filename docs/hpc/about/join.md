@@ -26,7 +26,7 @@ https://help.gladstone.org/support/catalog/items/58
 
 This will ensure that we get the proper information for your Wynton Account before it is created.
 
-Gladstone affiliated Wynton HPC Account requests submitted independent of the Gladstone Service Desk will be cancelled.
+Gladstone affiliated Wynton HPC Account requests submitted independent of the Gladstone Service Desk will be canceled.
 
 ## How long will it take for my Wynton account request to be processed?
 
