@@ -35,7 +35,7 @@ which provides access to a modern version of R:
 ```r
 [alice@{{ site.devel.name }} ~]$ R 
 
-R version 4.4.0 (2024-04-24) -- "Puppy Cup"
+R version 4.4.2 (2024-10-31) -- "Pile of Leaves"
 Copyright (C) 2024 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu
 
@@ -225,7 +225,7 @@ downloaded 764 KB
 ** package ‘zoo’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 13.1.1 20230614 (Red Hat 13.1.1-4)’
+using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
 gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
@@ -338,12 +338,12 @@ With **BiocManager** installed, we can now install any Bioconductor package.  Fo
 <!-- code-block label="install-limma" -->
 ```r
 > BiocManager::install("limma")
-Bioconductor version 3.19 (BiocManager 1.30.22), R 4.4.0 (2024-04-24)
-Installing package(s) 'BiocVersion'
-trying URL 'https://bioconductor.org/packages/3.19/bioc/src/contrib/BiocVersion_3.19.1.tar.gz'                                                               
-Content type 'application/x-gzip' length 987 bytes
+Bioconductor version 3.18 (BiocManager 1.30.22), R 4.3.2 (2023-10-31)
+Installing package(s) 'limma'
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/limma_3.58.1.tar.gz'
+Content type 'application/x-gzip' length 2804950 bytes (2.7 MB)
 ==================================================
-downloaded 987 bytes
+downloaded 2.7 MB
 
 * installing *source* package ‘limma’ ...
 ** using staged installation
@@ -436,7 +436,7 @@ install them we need to load the built-in `mpi` module;
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-gcc-toolset/13   3) r/4.4.0   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-gcc-toolset/13   3) r/4.4.2   4) mpi/openmpi-x86_64
 
  
 
