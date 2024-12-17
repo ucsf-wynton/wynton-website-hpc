@@ -31,24 +31,22 @@ First of all, if an online installation instructions says `pip install ...`, rep
 ```sh
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user pandas
 Collecting pandas
-  Downloading pandas-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 1.1 MB/s eta 0:00:00
-Collecting numpy<2,>=1.23.2
-  Downloading numpy-1.26.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 958.5 kB/s eta 0:00:00
+  Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 93.7 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.23.2 in /usr/lib64/python3.11/site-packages (from pandas) (1.23.5)
 Collecting python-dateutil>=2.8.2
-  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 996.7 kB/s eta 0:00:00
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 62.8 MB/s eta 0:00:00
 Collecting pytz>=2020.1
-  Downloading pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.5/502.5 kB 1.4 MB/s eta 0:00:00
-Collecting tzdata>=2022.1
-  Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 kB 2.0 MB/s eta 0:00:00
+  Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 508.0/508.0 kB 89.5 MB/s eta 0:00:00
+Collecting tzdata>=2022.7
+  Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 77.3 MB/s eta 0:00:00
 Collecting six>=1.5
-  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
-Installing collected packages: pytz, tzdata, six, numpy, python-dateutil, pandas
-Successfully installed numpy-1.26.2 pandas-2.1.3 python-dateutil-2.8.2 pytz-2023.3.post1 six-1.16.0 tzdata-2023.3
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: pytz, tzdata, six, python-dateutil, pandas
+Successfully installed pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 six-1.17.0 tzdata-2024.2
 ```
 
 To see all Python packages that you have installed globally, use `python3 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python3 -m pip list`.  Packages installed with `python3 -m pip list --user` are typically installed to your `~/.local/lib/python3.11/site-packages/` folder.  If CLI executables are installed with one of those packages, they are often installed to `~/.local/bin/`.
@@ -75,21 +73,21 @@ In order to use virtual environments, we need the `virtualenv` tool.  Following 
 ```sh
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user virtualenv
 Collecting virtualenv
-  Downloading virtualenv-20.24.6-py3-none-any.whl (3.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 1.3 MB/s eta 0:00:00
+  Downloading virtualenv-20.28.0-py3-none-any.whl (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 82.7 MB/s eta 0:00:00
 Collecting distlib<1,>=0.3.7
-  Downloading distlib-0.3.7-py2.py3-none-any.whl (468 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 kB 1.4 MB/s eta 0:00:00
+  Downloading distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 469.0/469.0 kB 85.1 MB/s eta 0:00:00
 Collecting filelock<4,>=3.12.2
-  Downloading filelock-3.13.1-py3-none-any.whl (11 kB)
-Collecting platformdirs<4,>=3.9.1
-  Downloading platformdirs-3.11.0-py3-none-any.whl (17 kB)
+  Downloading filelock-3.16.1-py3-none-any.whl (16 kB)
+Collecting platformdirs<5,>=3.9.1
+  Downloading platformdirs-4.3.6-py3-none-any.whl (18 kB)
 Installing collected packages: distlib, platformdirs, filelock, virtualenv
-Successfully installed distlib-0.3.7 filelock-3.13.1 platformdirs-3.11.0 virtualenv-20.24.6
+Successfully installed distlib-0.3.9 filelock-3.16.1 platformdirs-4.3.6 virtualenv-20.28.0
 [alice@{{ site.devel.name }} ~]$ which virtualenv
 ~/.local/bin/virtualenv
 [alice@{{ site.devel.name }} ~]$ virtualenv --version
-virtualenv 20.24.6 from ~/.local/lib/python3.11/site-packages/virtualenv/__init__.py
+virtualenv 20.28.0 from ~/.local/lib/python3.11/site-packages/virtualenv/__init__.py
 ```
 
 
@@ -100,10 +98,10 @@ Start by creating a folder specific to the project you are currently working on.
 <!-- code-block label="virtualenv-init" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ virtualenv -p python3 my_project
-created virtual environment CPython3.11.2.final.0-64 in 5039ms
+created virtual environment CPython3.11.10.final.0-64 in 7825ms
   creator CPython3Posix(dest=~/my_project, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=~/.local/share/virtualenv)
-    added seed packages: numpy==1.26.2, pandas==2.1.3, pip==23.3.1, python_dateutil==2.8.2, pytz==2023.3.post1, setuptools==68.2.2, six==1.16.0, tzdata==2023.3, wheel==0.41.2
+    added seed packages: pip==24.3.1, python_dateutil==2.9.0.post0, pytz==2024.2, setuptools==75.6.0, six==1.17.0, tzdata==2024.2, wheel==0.45.1
   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
 ```
 
@@ -138,7 +136,7 @@ Similarly, `python` points to:
 (my_project) [alice@{{ site.devel.name }} my_project]$ which python
 ~/my_project/bin/python
 (my_project) [alice@{{ site.devel.name }} my_project]$ python --version
-Python 3.11.2
+Python 3.11.10
 ```
 
 Note how this local `python` command points to the local `python3` command.  What is interesting, and important to notice, is that _if we set up a Python 3 virtual environment, then the local `python` command will point to the local `python3` command_.  In other words, when we use virtual environments, the `python` command will be using either Python 2 or Python3 at our choice.
@@ -149,16 +147,16 @@ To see what Python packages are installed _in the virtual environment_, use:
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
 Package         Version
---------------- ------------
-numpy           1.26.2
-pandas          2.1.3
-pip             23.3.1
-python-dateutil 2.8.2
-pytz            2023.3.post1
-setuptools      68.2.2
-six             1.16.0
-tzdata          2023.3
-wheel           0.41.2
+--------------- -----------
+numpy           2.2.0
+pandas          2.2.3
+pip             24.3.1
+python-dateutil 2.9.0.post0
+pytz            2024.2
+setuptools      75.6.0
+six             1.17.0
+tzdata          2024.2
+wheel           0.45.1
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
@@ -170,12 +168,12 @@ With a virtual environment enabled, you can install Python packages to the proje
 <!-- code-block label="virtualenv-pip-install-ex" -->
 ```sh
 (my_project) [alice@{{ site.devel.name }} ~]$ python3 -m pip install pandas
-Requirement already satisfied: pandas in ./my_project/lib/python3.11/site-packages (2.1.3)
-Requirement already satisfied: numpy<2,>=1.23.2 in ./my_project/lib/python3.11/site-packages (from pandas) (1.26.2)
-Requirement already satisfied: python-dateutil>=2.8.2 in ./my_project/lib/python3.11/site-packages (from pandas) (2.8.2)
-Requirement already satisfied: pytz>=2020.1 in ./my_project/lib/python3.11/site-packages (from pandas) (2023.3.post1)
-Requirement already satisfied: tzdata>=2022.1 in ./my_project/lib/python3.11/site-packages (from pandas) (2023.3)
-Requirement already satisfied: six>=1.5 in ./my_project/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+Requirement already satisfied: pandas in ./my_project/lib64/python3.11/site-packages (2.2.3)
+Requirement already satisfied: numpy>=1.23.2 in ./my_project/lib64/python3.11/site-packages (from pandas) (2.2.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./my_project/lib/python3.11/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./my_project/lib/python3.11/site-packages (from pandas) (2024.2)
+Requirement already satisfied: tzdata>=2022.7 in ./my_project/lib/python3.11/site-packages (from pandas) (2024.2)
+Requirement already satisfied: six>=1.5 in ./my_project/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
 ```
 
 To see which packages are now installed _in the virtual environment_ (the "project folder") and what their versions are, do:
@@ -184,16 +182,16 @@ To see which packages are now installed _in the virtual environment_ (the "proje
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python3 -m pip list
 Package         Version
---------------- ------------
-numpy           1.26.2
-pandas          2.1.3
-pip             23.3.1
-python-dateutil 2.8.2
-pytz            2023.3.post1
-setuptools      68.2.2
-six             1.16.0
-tzdata          2023.3
-wheel           0.41.2
+--------------- -----------
+numpy           2.2.0
+pandas          2.2.3
+pip             24.3.1
+python-dateutil 2.9.0.post0
+pytz            2024.2
+setuptools      75.6.0
+six             1.17.0
+tzdata          2024.2
+wheel           0.45.1
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
@@ -208,43 +206,13 @@ Whenever you open a new terminal, make sure to _activate_ the virtual environmen
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## ACTIVATE
 (my_project) [alice@{{ site.devel.name }} my_project]$ pip3 show pandas
 Name: pandas
-Version: 2.1.3
+Version: 2.2.3
 Summary: Powerful data structures for data analysis, time series, and statistics
 Home-page: https://pandas.pydata.org
 Author: 
 Author-email: The Pandas Development Team <pandas-dev@python.org>
 License: BSD 3-Clause License
-
-Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team
-All rights reserved.
-
-Copyright (c) 2011-2023, Open source contributors.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-
-* Neither the name of the copyright holder nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-Location: ~/my_project/lib/python3.11/site-packages
+Location: ~/my_project/lib64/python3.11/site-packages
 Requires: numpy, python-dateutil, pytz, tzdata
 Required-by: 
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
@@ -291,10 +259,10 @@ Don't use the suggested command call in that message.  Instead, use:
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user --upgrade pip
 Requirement already satisfied: pip in /usr/lib/python3.11/site-packages (22.3.1)
 Collecting pip
-  Downloading pip-23.3.1-py3-none-any.whl (2.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 20.9 MB/s eta 0:00:00
+  Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 31.7 MB/s eta 0:00:00
 Installing collected packages: pip
-Successfully installed pip-23.3.1
+Successfully installed pip-24.3.1
 ```
 
 _Note_, if you're using a virtual environment, drop `--user`, i.e.
@@ -308,7 +276,7 @@ To check the installed version of the 'pip' module, use:
 <!-- code-block label="pip-version-2" -->
 ```sh
 [alice@{{ site.devel.name }} ~]$ python3 -m pip --version
-pip 23.3.1 from ~/.local/lib/python3.11/site-packages/pip (python 3.11)
+pip 24.3.1 from ~/.local/lib/python3.11/site-packages/pip (python 3.11)
 ```
 
 
