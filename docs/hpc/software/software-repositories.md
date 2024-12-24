@@ -4365,7 +4365,7 @@ pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot
 Example: <span class="module-example"><code>wynton --help</code> and <code>trash --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/ucsf-wynton/wynton-tools">https://github.com/ucsf-wynton/wynton-tools</a>, <a href="https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md">https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work in development, which means that these tools may change, or even be removed, at anytime without notice.</span><br>
-Versions: <span class="module-version">0.9.0, <em>0.10.0</em></span><br>
+Versions: <span class="module-version">0.10.0, <em>0.11.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
