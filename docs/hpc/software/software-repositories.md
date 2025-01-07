@@ -4365,7 +4365,7 @@ pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot
 Example: <span class="module-example"><code>wynton --help</code> and <code>trash --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/ucsf-wynton/wynton-tools">https://github.com/ucsf-wynton/wynton-tools</a>, <a href="https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md">https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work in development, which means that these tools may change, or even be removed, at anytime without notice.</span><br>
-Versions: <span class="module-version">0.10.0, 0.11.0, <em>0.12.0</em></span><br>
+Versions: <span class="module-version">0.12.0, <em>0.13.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4571,24 +4571,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4602,6 +4584,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
