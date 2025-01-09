@@ -1,10 +1,10 @@
-### Operational Summary for 2024 (this far)
+### Operational Summary for 2024
 
 * Full downtime:
 
-  - Scheduled: 137.0 hours (= 5.7 days)
-  - Unscheduled: 142.3 hours (= 5.9 days)
-  - Total: 174.3 hours (= 11.7 days)
+  - Scheduled: 137.0 hours (= 5.7 days) = 1.6%
+  - Unscheduled: 142.3 hours (= 5.9 days) = 1.6%
+  - Total: 279.3 hours (= 11.6 days) = 3.2%
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
