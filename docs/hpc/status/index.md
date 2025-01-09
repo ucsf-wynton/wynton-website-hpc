@@ -87,17 +87,17 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 
 ## Past Incidents
 
-{% assign years = "2025,2024,2023,2022,2021,2020,2019,2018" | split: ',' %}
+{% assign current_year = site.time | date: "%Y" | plus: 0 %}
 
 <ul class="nav nav-pills">
-{% for year in years %}
-  <li{% if year == years[0] %} class="active"{% endif %}><a data-toggle="pill" href="#{{ year }}"><span style="font-weight: bold;">{{ year }}</span></a></li>
+{% for year in (2018..current_year) reversed %}
+  <li{% if year == current_year %} class="active"{% endif %}><a data-toggle="pill" href="#{{ year }}"><span style="font-weight: bold;">{{ year }}</span></a></li>
 {% endfor %}
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
-{% for year in years %}
-<div id="{{ year }}" class="tab-pane {% if year == years[0] %}fadein active{% else %}fade{% endif %}">
+{% for year in (2018..current_year) reversed %}
+<div id="{{ year }}" class="tab-pane {% if year == current_year %}fadein active{% else %}fade{% endif %}">
 <section markdown="1">
 {% include_relative incidents-{{ year }}.md %}
 </section>
