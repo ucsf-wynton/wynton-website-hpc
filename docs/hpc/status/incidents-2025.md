@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 0.0 hours (= 0.0 days)
-  - Total: 0.0 hours (= 0.0 days)
+  - Unscheduled: 1.2 hours (= 0.1 days)
+  - Total: 1.2 hours (= 0.1 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -55,4 +55,26 @@
   factors
 
 
-_No incidents thus far :)_
+
+### January 9, 2025
+
+#### <span style="color: orange;">File-system emergency shutdown</span>
+
+**Resolved**: The cluster full operational again. Suspended jobs have
+been resumed. The BeeGFS issue has been resolved. Checked hardware and
+cables. Rebooted affected BeeGFS server.
+<br><span class="timestamp">January 9, 16:20 PT</span>
+
+**Notice**: An issue with BeeGFS was detected. All Wynton jobs have
+been paused until further notice.
+<br><span class="timestamp">January 9, 15:10 PT</span>
+
+<!--
+start: 2025-01-09T15:10:00
+stop: 2025-01-09T16:20:00
+length: 1.2 hours
+severity: major-outage
+affected: jobs, beegfs, compute, *
+reason: beegfs
+ -->
+
