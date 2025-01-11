@@ -325,7 +325,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a>, <a href="https://github.com/sharkdp/bat/blob/master/CHANGELOG.md">https://github.com/sharkdp/bat/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.24.0</em></span><br>
+Versions: <span class="module-version">0.24.0, <em>0.25.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1746,7 +1746,7 @@ prepend_path(&quot;MANPATH&quot;, home)
 <span class="module-description">Build simple, secure, scalable systems with Go.</span><br>
 Example: <span class="module-example"><code>go version</code> and <code>go help</code>.</span><br>
 URL: <span class="module-url"><a href="https://go.dev/">https://go.dev/</a>, <a href="https://go.dev/doc/devel/release">https://go.dev/doc/devel/release</a> (changelog), <a href="https://go.dev/dl/">https://go.dev/dl/</a> (releases), <a href="https://github.com/golang">https://github.com/golang</a> (source code)</span><br>
-Versions: <span class="module-version">1.22.5, <em>1.23.1</em></span><br>
+Versions: <span class="module-version">1.22.5, 1.23.1, <em>1.23.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2570,7 +2570,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a>, <a href="https://conda-forge.org/docs/user/introduction/">https://conda-forge.org/docs/user/introduction/</a> (documentation), <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a> (releases),  <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
 Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
-Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, <em>24.11.0-0</em></span><br>
+Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, 24.11.0-0, <em>24.11.2-1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2621,11 +2621,11 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
 end
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/etc/profile.d/conda.sh
-pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/bin/conda&quot;)
-pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/bin/python&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.0-0/condabin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
@@ -2651,6 +2651,10 @@ set_shell_function(&quot;__conda_hashr&quot;,&quot; \
             \\hash -r;\
         fi;\
     fi\
+&quot;,&quot;&quot;)
+set_shell_function(&quot;__conda_reactivate&quot;,&quot; \
+    echo \&quot;'__conda_reactivate' is deprecated and will be removed in 25.9. Use '__conda_activate reactivate' instead.\&quot; 1&gt;&amp;2;\
+    __conda_activate reactivate\
 &quot;,&quot;&quot;)
 set_shell_function(&quot;conda&quot;,&quot; \
     \\local cmd=\&quot;${1-__missing__}\&quot;;\
@@ -3053,7 +3057,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <strong class="module-help">procs: A Modern Replacement for 'ps' written in Rust</strong><br>
 <span class="module-description">An alternative to <code>ps</code>, <code>pstree</code>, and <code>top</code>.</span><br>
 Example: <span class="module-example"><code>procs --version</code>, <code>procs --help</code>, <code>procs</code>, <code>procs --tree</code>, and <code>procs --watch --nand root</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/dalance/procs/">https://github.com/dalance/procs/</a>, <a href="https://github.com/dalance/procs/blob/master/CHANGELOG.md(changelog)">https://github.com/dalance/procs/blob/master/CHANGELOG.md(changelog)</a></span><br>
+URL: <span class="module-url"><a href="https://github.com/dalance/procs/">https://github.com/dalance/procs/</a>, <a href="https://github.com/dalance/procs/blob/master/CHANGELOG.md">https://github.com/dalance/procs/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
 Versions: <span class="module-version"><em>0.14.8</em></span><br>
 <details>
@@ -3066,7 +3070,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: utility, cli, tui&quot;)
-whatis(&quot;URL: https://github.com/dalance/procs/, https://github.com/dalance/procs/blob/master/CHANGELOG.md(changelog)&quot;)
+whatis(&quot;URL: https://github.com/dalance/procs/, https://github.com/dalance/procs/blob/master/CHANGELOG.md (changelog)&quot;)
 whatis([[
 Description: An alternative to `ps`, `pstree`, and `top`.
 Examples: `procs --version`, `procs --help`, `procs`, `procs --tree`, and `procs --watch --nand root`.
