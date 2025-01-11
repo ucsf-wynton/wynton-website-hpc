@@ -3523,9 +3523,9 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
   <dd class="module-details">
 <strong class="module-help">ripgrep: Recursively Searches Directories for a Regex Pattern</strong><br>
 <span class="module-description">ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.</span><br>
-Example: <span class="module-example"><code>rg --help</code>, <code>man rg</code>, and <code>rg -i 'lorem ipsum'</code>.</span><br>
+Example: <span class="module-example"><code>rg --help</code>, <code>man rg</code>, and <code>rg --threads=2 -i 'lorem ipsum'</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a>, <a href="https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md">https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md</a> (documentation), <a href="https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md">https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md</a> (FAQ), <a href="https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md">https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md</a> (changelog)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Warning: <span class="module-warning">This tool uses 12 parallel threads by default; please specify <code>--threads=2</code>. Only the most recent version of this software will be kept.</span><br>
 Versions: <span class="module-version"><em>14.1.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -3540,8 +3540,8 @@ whatis(&quot;Keywords: utility, files, search&quot;)
 whatis(&quot;URL: https://github.com/BurntSushi/ripgrep, https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md (documentation), https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md (FAQ), https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md (changelog)&quot;)
 whatis([[
 Description: ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.
-Examples: `rg --help`, `man rg`, and `rg -i 'lorem ipsum'`.
-Warning: Only the most recent version of this software will be kept.
+Examples: `rg --help`, `man rg`, and `rg --threads=2 -i 'lorem ipsum'`.
+Warning: This tool uses 12 parallel threads by default; please specify `--threads=2`. Only the most recent version of this software will be kept.
 ]])
 
 -- Local variables
@@ -4572,24 +4572,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4603,6 +4585,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
