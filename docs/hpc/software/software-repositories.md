@@ -4370,7 +4370,7 @@ pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot
 Example: <span class="module-example"><code>wynton --help</code> and <code>trash --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/ucsf-wynton/wynton-tools">https://github.com/ucsf-wynton/wynton-tools</a>, <a href="https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md">https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work in development, which means that these tools may change, or even be removed, at anytime without notice.</span><br>
-Versions: <span class="module-version">0.13.0, 0.14.0, <em>0.15.0</em></span><br>
+Versions: <span class="module-version">0.13.0, 0.14.0, 0.15.0, <em>0.16.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5834,7 +5834,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/s
   <dd class="module-details">
 <span class="module-description">Python package for handling ModelCIF mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-modelcif">https://github.com/ihmwg/python-modelcif</a></span><br>
-Versions: <span class="module-version">0.2, 0.3, 0.4, 0.5, 0.9, <em>1.2</em></span><br>
+Versions: <span class="module-version">1.2, <em>1.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5843,7 +5843,7 @@ module-whatis &quot;Description: Python package for handling ModelCIF mmCIF file
 module-whatis &quot;URL: https://github.com/ihmwg/python-modelcif&quot;
 conflict python2
 module load python3/ihm
-prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-1.2/lib/python/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/linux/modelcif-1.3/lib/python/site-packages
 </code></pre>
 
 </details>
