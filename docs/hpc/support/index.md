@@ -33,7 +33,7 @@ and get to a resolution sooner. Please make sure to:
         username, current machine, and current working directory, and
         possibly more.
   
-  * [ ] &nbsp; If using Slack, please format code and output as a "Code
+  * [ ] &nbsp; if using Slack, please format code and output as a "Code
         Block" (there's a button for it too); it makes it much easier
         to read.  [Avoid screenshot
         images](/hpc/support/faq.html#avoid-screenshots-when-asking-for-help).
