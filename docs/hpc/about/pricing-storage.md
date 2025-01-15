@@ -5,7 +5,7 @@ Per the email sent to all users on November 25, 2024, there will be a temporary 
 
 Waitlist for New Storage Brick: If you are already on the waitlist for the new storage brick, please be assured that you will be notified when this service is brought online.  
 
-Pending Requests: If you have recently submitted a request and have not yet received a response, we will evaluate whether we can accommodate some or all of your requests at this time. Nicki will reach out to you with more information. 
+Pending Requests: If you have recently submitted a request and have not yet received a response, we will evaluate whether we can accommodate some or all of your requests at this time. The Wynton Project Manager will reach out to you with more information. 
 
 Urgent Needs: If you have an urgent need, please contact support@wynton.ucsf.edu with the details of your request and its urgency. We will do our best to accommodate your needs.  
 
