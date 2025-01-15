@@ -1,7 +1,7 @@
 # ANNOUNCEMENT: Temporary Hold on Storage and Compute Requests
 As Wynton continues to expand, we are approaching the limits of space, cooling, and power capacity in the Byers Hall server room (BH101). In addition, as we work to move the administration of the cluster to the ARS team, we are currently reprioritizing our workload with the support of Wynton faculty leadership to ensure that we continue to meet our most critical objectives. We understand that this may cause some delays and appreciate your patience and understanding during this period.
 
-Per the email sent to all users on November 25, 2024, there will be a temporary hold on all new storage and compute requests,
+Per the email sent to all users on November 25, 2024, there will be a temporary hold on all new storage and compute requests.
 
 Waitlist for New Storage Brick: If you are already on the waitlist for the new storage brick, please be assured that you will be notified when this service is brought online.  
 
