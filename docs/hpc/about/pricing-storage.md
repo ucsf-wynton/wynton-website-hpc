@@ -1,14 +1,5 @@
-# ANNOUNCEMENT: Temporary Hold on Storage and Compute Requests
+{% include_relative warning-hold-on-storage-requests.md %}
 
-As Wynton continues to expand, we are approaching the limits of space, cooling, and power capacity in the Byers Hall server room. In addition, as we work to move the administration of the cluster to the Academic Research Systems (ARS) Team, we are currently reprioritizing our workload with the support of Wynton faculty leadership to ensure that we continue to meet our most critical objectives. We understand that this may cause some delays and appreciate your patience and understanding during this period.
-
-Per the email sent to all users on November 25, 2024, there will be a temporary hold on all new storage and compute requests.
-
-Waitlist for New Storage Brick: If you are already on the waitlist for the new storage brick, please be assured that you will be notified when this service is brought online.  
-
-Pending Requests: If you have recently submitted a request and have not yet received a response, we will evaluate whether we can accommodate some or all of your requests at this time. The Wynton Project Manager will reach out to you with more information. 
-
-Urgent Needs: If you have an urgent need, please contact support@wynton.ucsf.edu with the details of your request and its urgency. We will do our best to accommodate your needs.  
 
 # Pricing for Extra Storage
 

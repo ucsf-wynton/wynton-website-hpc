@@ -1,12 +1,8 @@
+{% include_relative warning-hold-on-compute-requests.md %}
+
 <div class="alert alert-info" role="alert" markdown="1">
 **Contributions to the {{ site.cluster.name }} environment are non-expiring, e.g. contribute once and keep it for life!**
 </div>
-
-# ANNOUNCEMENT: Temporary Hold on Storage and Compute Requests 
-
-As Wynton continues to expand, we are approaching the limits of space, cooling, and power capacity in the Byers Hall server room. In addition, as we work to move the administration of the cluster to the Academic Research Systems (ARS) Team, we are currently reprioritizing our workload with the support of Wynton faculty leadership to ensure that we continue to meet our most critical objectives. We understand that this may cause some delays and appreciate your patience and understanding during this period.
-
-Per the email sent to all users on November 25, 2024, there will be a temporary hold on all new storage and compute requests.
 
 # Contributing Member Shares
 
