@@ -1,6 +1,14 @@
 # News
 
-2024-09-12: CPU and memory usage is now limited on interactive nodes for each user.  On development and data-transfer nodes, each user is limited to two CPUs and 96 GiB of memory. On login nodes, the limits are one CPU and 32 GiB of memory.
+2025-01-16: The memory limit on development nodes was decreased from 68 GiB to 48 GiB, in order to further lower the risk for these machines to run low on memory resulting in non-responsiveness.
+
+2024-12-14: The memory limit on development nodes was decreased from 96 GiB to 68 GiB, in order to lower the risk for these machines to run low on memory resulting in non-responsiveness.
+
+2024-12-04: The CPU quota limit on development nodes was disabled, because it resulting in sever load on the operating system from context switching.
+
+2024-11-11: The CPU quota limit on development nodes were bumped up from 200% ("2 cores") to 400% ("4 cores"), with the hope to lower the overall overhead from context switching.
+
+2024-09-12: CPU and memory usage is now limited on interactive nodes for each user.  On development and data-transfer nodes, each user is limited to 200% ("2 cores") and 96 GiB of memory. On login nodes, the limits are 100% ("1 core") and 32 GiB of memory.
 
 2023-11-30: The JupyterHub (JHub) server has been discontinued.
 

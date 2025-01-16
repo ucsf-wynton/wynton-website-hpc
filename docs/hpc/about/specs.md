@@ -29,8 +29,8 @@
 | modules (software stacks)                  | no | no | ✓ | ✓ |
 | Global file system                         | ✓ | ✓ | ✓ | ✓ |
 | Job submission                             | ✓ | no | ✓ | ✓ |
-| CPU quota per user(\*\*)                   | 1 core | 2 cores | not limited | not limited |
-| Memory limit per user(\*\*)                | 32 GiB | 96 GiB | 96 GiB   | per job request |
+| CPU quota per user(\*\*)                   | 100% ("1 core") | 200% ("2 cores") | not limited | not limited |
+| Memory limit per user(\*\*)                | 32 GiB | 96 GiB | 48 GiB   | per job request |
 | Purpose                                    | Submit and query jobs. SSH to development nodes. File management. | Fast in- & outbound file transfers. File management. | Compile and install software. Prototype and test job scripts. Submit and query jobs. Version control (clone, pull, push). File management. | Running short and long-running job scripts. |
 
 (\*) GIT+SSH access on development nodes is restricted to git.bioconductor.org, bitbucket.org, gitea.com, github.com / gist.github.com, gitlab.com, cci.lbl.gov, and git.ucsf.edu.
