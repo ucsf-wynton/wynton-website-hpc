@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(101)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(102)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
@@ -206,7 +206,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (101)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (102)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -1138,6 +1138,47 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 
 
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_dmtcp" class="module-name">dmtcp</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">DMTCP: Distributed MultiThreaded CheckPointing</strong><br>
+<span class="module-description">DMTCP is a tool to transparently checkpoint the state of multiple simultaneous applications, including multi-threaded and distributed applications. It operates directly on the user binary executable, without any Linux kernel modules or other kernel modifications. Among the applications supported by DMTCP are MPI (various implementations), OpenMP, MATLAB, Python, Perl, R, and many programming languages and shell scripting languages. DMTCP also supports GNU screen sessions, including vim/cscope and emacs.</span><br>
+Example: <span class="module-example"><code>dmtcp_launch --help</code> and <code>man dmtcp</code>. To run R and create check points every 10 minutes, call <code>dmtcp_launch --interval=600 R</code>. If that process gets terminated, it can then be relaunched using <code>./dmtcp_restart_script.sh</code>.</span><br>
+URL: <span class="module-url"><a href="http://dmtcp.sourceforge.net/">http://dmtcp.sourceforge.net/</a>, <a href="https://docs.nersc.gov/development/checkpoint-restart/dmtcp/">https://docs.nersc.gov/development/checkpoint-restart/dmtcp/</a> (documentation), <a href="https://dmtcp.sourceforge.io/FAQ.html">https://dmtcp.sourceforge.io/FAQ.html</a> (FAQ), <a href="https://github.com/dmtcp/dmtcp/releases">https://github.com/dmtcp/dmtcp/releases</a> (changelog), <a href="https://github.com/dmtcp/dmtcp">https://github.com/dmtcp/dmtcp</a> (source code)</span><br>
+Versions: <span class="module-version"><em>3.1.2</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+DMTCP: Distributed MultiThreaded CheckPointing
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: hpc, checkpointing&quot;)
+whatis(&quot;URL: http://dmtcp.sourceforge.net/, https://docs.nersc.gov/development/checkpoint-restart/dmtcp/ (documentation), https://dmtcp.sourceforge.io/FAQ.html (FAQ), https://github.com/dmtcp/dmtcp/releases (changelog), https://github.com/dmtcp/dmtcp (source code)&quot;)
+whatis([[
+Description: DMTCP is a tool to transparently checkpoint the state of multiple simultaneous applications, including multi-threaded and distributed applications. It operates directly on the user binary executable, without any Linux kernel modules or other kernel modifications. Among the applications supported by DMTCP are MPI (various implementations), OpenMP, MATLAB, Python, Perl, R, and many programming languages and shell scripting languages. DMTCP also supports GNU screen sessions, including vim/cscope and emacs.
+Examples: `dmtcp_launch --help` and `man dmtcp`. To run R and create check points every 10 minutes, call `dmtcp_launch --interval=600 R`. If that process gets terminated, it can then be relaunched using `./dmtcp_restart_script.sh`.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+-- Runtime
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;MANPATH_PATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+
+-- Build time
+--prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
+--prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
+--prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
 </code></pre>
 
 </details>
@@ -4576,24 +4617,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4607,6 +4630,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
@@ -6530,7 +6571,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(101)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(102)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
