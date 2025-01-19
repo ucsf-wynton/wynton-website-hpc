@@ -2,6 +2,15 @@
 
 #### <span style="color: orange;">Cluster unavailable</span>
 
+**Update**: The cluster is available again, but the scheduler has been
+paused. No queued jobs are launched and running jobs have been
+suspended, but will resume when the pause of scheduler is
+removed. This is done to minimize the load on BeeGFS, which will
+simplify troubleshooting and increase the chances to stabilize
+BeeGFS. It is the same BeeGFS metadata server as before that is
+experiencing problems.
+<br><span class="timestamp">January 19, 13:45 PT</span>
+
 **Update**: The cluster is unavailable again.
 <br><span class="timestamp">January 19, 12:45 PT</span>
 
