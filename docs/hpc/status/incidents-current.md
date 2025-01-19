@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Cluster unavailable</span>
 
+**Update**: The cluster is unavailable again.
+<br><span class="timestamp">January 19, 12:45 PT</span>
+
 **Update**: The cluster is working again. We have started a
 resynchronization of the problematic BeeGFS metadata server.
 <br><span class="timestamp">January 18, 13:45 PT</span>

@@ -136,3 +136,7 @@ Default:
 level: info
 condition: is operational
 message:
+
+level: danger
+condition: experiences significant issues
+message: Cluster is not accessible because of BeeGFS issues
