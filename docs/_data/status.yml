@@ -139,4 +139,4 @@ message:
 
 level: danger
 condition: experiences significant issues
-message: Cluster is not accessible because of BeeGFS issues
+message: Cluster is accessible, but all jobs have been paused, because of BeeGFS issues
