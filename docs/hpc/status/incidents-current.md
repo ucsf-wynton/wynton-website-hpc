@@ -1,3 +1,38 @@
+### January 17-ongoing, 2025
+
+#### <span style="color: orange;">Cluster unavailable</span>
+
+**Update**: The cluster is working again. We have started a
+resynchronization of the problematic BeeGFS metadata server.
+<br><span class="timestamp">January 18, 13:45 PT</span>
+
+**Update**: First signs of the cluster coming back online again,
+e.g. queued jobs are launched, and it is possible to access the
+cluster via SSH.
+<br><span class="timestamp">January 18, 06:00 PT</span>
+
+**Notice**: Identifies a specific BeeGFS metadata server that is
+unresponsive. The BeeGFS vendor has been contacted.
+<br><span class="timestamp">January 18, 01:00 PT</span>
+
+**Notice**: The underlying problem appears to be BeeGFS. The storage
+servers are okay, but one or more metadata servers are unresponsive.
+<br><span class="timestamp">January 17, 21:30 PT</span>
+
+**Notice**: The cluster is unavailable, e.g. i is not possible to
+access the login or the data-transfer nodes.
+<br><span class="timestamp">January 17, 19:45 PT</span>
+
+<!--
+start: 2025-01-17T19:45:00
+stop: 2025-01-18T06:00:00
+length: 10h15m
+severity: major-outage
+affected: jobs, beegfs, compute, *
+reason: beegfs
+ -->
+
+
 ### November 16-ongoing, 2023
 
 #### <span style="color: orange;">Sporadic job failure</span>
