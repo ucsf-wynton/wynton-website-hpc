@@ -29,26 +29,34 @@ path:
 login:
   name: "log2"
   hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.79.47"
+  ip: "169.230.79.12"
 
 devel:
-  name: "dev1"
-  hostname: "dev1.wynton.ucsf.edu"
-  ip: "172.26.44.131"
+  name: "dev2"
+  hostname: "dev2.wynton.ucsf.edu"
+  ip: "172.26.44.132"
 
 transfer:
   name: "dt2"
   hostname: "dt2.wynton.ucsf.edu"
-  ip: "169.230.79.16"
+  ip: "169.230.79.22"
 
 login1:
   name: "log1"
   hostname: "log1.wynton.ucsf.edu"
-  ip: "169.230.79.44"
+  ip: "169.230.79.11"
 login2:
   name: "log2"
   hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.79.47"
+  ip: "169.230.79.12"
+transfer1:
+  name: "dt1"
+  hostname: "dt1.wynton.ucsf.edu"
+  ip: "169.230.79.21"
+transfer2:
+  name: "dt2"
+  hostname: "dt2.wynton.ucsf.edu"
+  ip: "169.230.79.22"
 dev1:
   name: "dev1"
   hostname: "dev1.wynton.ucsf.edu"
@@ -65,14 +73,6 @@ gpudev1:
   name: "gpudev1"
   hostname: "gpudev1.wynton.ucsf.edu"
   ip: "172.26.44.141"
-transfer1:
-  name: "dt1"
-  hostname: "dt1.wynton.ucsf.edu"
-  ip: "169.230.79.35"
-transfer2:
-  name: "dt2"
-  hostname: "dt2.wynton.ucsf.edu"
-  ip: "169.230.79.16"
 
 globus:
   name: "UCSF Wynton HPC"

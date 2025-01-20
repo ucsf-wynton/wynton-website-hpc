@@ -362,9 +362,23 @@ Source: https://github.com/allejo/jekyll-anchor-headings
 
               // plog2 doesn't exist, so use plog1
               html = html.replace(/\bplog2/gi, "plog1");
+
+              // pdev[2-3] doesn't exist, so use pdev1
+              html = html.replace(/\bpdev[23]/gi, "pdev1");
               
               // Tweak IP-numbers
+              // log1 -> plog1:
               html = html.replace(/172[.]26[.]44[.]11/g, "172.26.44.16");
+              // log2 -> plog1:
+              html = html.replace(/172[.]26[.]44[.]12/g, "172.26.44.16");
+              // dt1 -> pdt1:
+              html = html.replace(/172[.]26[.]44[.]21/g, "172.26.44.26");
+              // dt2 -> pdt2:
+              html = html.replace(/172[.]26[.]44[.]22/g, "172.26.44.27");
+              // dev[1-3] -> pdev1:
+              html = html.replace(/172[.]26[.]44[.](131|132|133)/g, "172.26.44.151");
+              // gpudev1 -> pgpudev1:
+              html = html.replace(/172[.]26[.]44[.]141/g, "172.26.44.161");
               
               // Tweak paths
               html = html.replace(/[/]wynton[/](home|group)[/](boblab|your_group)/gi, "/wynton/protected/$1/$2");
