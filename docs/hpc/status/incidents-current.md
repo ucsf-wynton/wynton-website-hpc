@@ -2,6 +2,12 @@
 
 #### <span style="color: orange;">Cluster unavailable</span>
 
+**Update**: The cluster is unavailable again. The past
+resynchronization of the problematic BeeGFS metadata server failed
+again, which triggers the problem. We are communicating with the
+vendor for their support.
+<br><span class="timestamp">January 21, 09:45 PT</span>
+
 **Update**: The cluster is available again, but the scheduler has been
 paused. No queued jobs are launched and running jobs have been
 suspended, but will resume when the pause of scheduler is
