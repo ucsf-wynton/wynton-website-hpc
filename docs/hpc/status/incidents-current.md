@@ -2,8 +2,8 @@
 
 #### <span style="color: orange;">Cluster unavailable</span>
 
-**Update**: The third resynchronization completed successfully.
-<br><span class="timestamp">January 22, 10:30 PT</span>
+**Update**: The login and data-transfer nodes are available again.
+<br><span class="timestamp">January 22, 11:00 PT</span>
 
 **Update**: The third resynchronization completed successfully.
 <br><span class="timestamp">January 21, 18:30 PT</span>
