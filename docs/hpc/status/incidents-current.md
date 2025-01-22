@@ -9,9 +9,10 @@
 morning indicated that the resynchronization did indeed keep running
 while it stopped producing any output and the underlying BeeGFS
 service was unresponsive. Because of this, we decided to not restart
-the resynchronization, but instead let it continue. By not restarting,
-Wynton remains inaccessible. Our first objective is to not jeopardize
-the cluster, the second objective is to bring the system back online.
+the resynchronization, but instead let it continue in the hope it will
+finish. But, by not restarting, Wynton will remain inaccessible. Our
+first objective is to not jeopardize the cluster, the second objective
+is to bring the system back online.
 <br><span class="timestamp">January 21, 15:15 PT</span>
 
 **Update**: The cluster is unavailable again. The past
