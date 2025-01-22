@@ -377,7 +377,7 @@ The results is a container image file named `isoseq3.sif`:
 <!-- code-block label="isoseq3-ls" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ls -l isoseq3.sif
--rwxr-xr-x. 1 alice boblab 214814720 Nov 15 13:19 isoseq3.sif
+-rwxr-xr-x. 1 alice boblab 214814720 Nov 15  2023 isoseq3.sif
 [alice@{{ site.devel.name }} lxc]$ 
 ```
 
