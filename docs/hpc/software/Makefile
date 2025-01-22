@@ -29,6 +29,10 @@ r-packages:
           -e "if (!requireNamespace('remotes')) install.packages('remotes')" \
           -e "if (!requireNamespace('lmodweb')) remotes::install_github('ucsf-wynton/lmodweb')"
 
+
+all-markin: scl apptainer sbgrid
+
+## 'sbgrid' requires user to be in the 'sbgrid' group
 sbgrid:
 	markin build $@.sh
 	markin inject $@.md
