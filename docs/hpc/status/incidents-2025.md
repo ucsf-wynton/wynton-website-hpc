@@ -111,11 +111,11 @@ e.g. queued jobs are launched, and it is possible to access the
 cluster via SSH.
 <br><span class="timestamp">January 18, 06:00 PT</span>
 
-**Notice**: Identifies a specific BeeGFS metadata server that is
+**Update**: Identifies a specific BeeGFS metadata server that is
 unresponsive. The BeeGFS vendor has been contacted.
 <br><span class="timestamp">January 18, 01:00 PT</span>
 
-**Notice**: The underlying problem appears to be BeeGFS. The storage
+**Update**: The underlying problem appears to be BeeGFS. The storage
 servers are okay, but one or more metadata servers are unresponsive.
 <br><span class="timestamp">January 17, 21:30 PT</span>
 
