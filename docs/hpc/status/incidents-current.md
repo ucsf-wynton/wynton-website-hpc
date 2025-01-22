@@ -1,6 +1,14 @@
-### January 17-ongoing, 2025
+### January 17-22, 2025
 
 #### <span style="color: orange;">Cluster unavailable</span>
+
+**Resolved**: Wynton is fully operational again. The BeeGFS file
+system issue has been resolved. All data consistency has been
+verified. Working with the vendor, we have identified a potential bug
+in the BeeGFS quota system that caused the BeeGFS outage. That part is
+still under investigation in order to minimize and remove the risk of
+reoccurrence.
+<br><span class="timestamp">January 22, 12:15 PT</span>
 
 **Update**: The login and data-transfer nodes are available again.
 <br><span class="timestamp">January 22, 11:00 PT</span>
