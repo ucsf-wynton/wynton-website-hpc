@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Cluster unavailable</span>
 
+**Update**: The third resynchronization completed successfully.
+<br><span class="timestamp">January 21, 18:30 PT</span>
+
 **Update**: Further investigation of the failed resynchronization this
 morning indicated that the resynchronization did indeed keep running
 while it stopped producing any output and the underlying BeeGFS
