@@ -3,6 +3,9 @@
 #### <span style="color: orange;">Cluster unavailable</span>
 
 **Update**: The third resynchronization completed successfully.
+<br><span class="timestamp">January 22, 10:30 PT</span>
+
+**Update**: The third resynchronization completed successfully.
 <br><span class="timestamp">January 21, 18:30 PT</span>
 
 **Update**: Further investigation of the failed resynchronization this
@@ -107,22 +110,3 @@ to Wynton.
 2023-11-05. This problem was introduced while doing cluster-wide
 upgrades to Rocky 8.
 <br><span class="timestamp">November 11, 09:00 PT</span>
-
-
-
-
--No new jobs can be run until further notice.
--Logins suspended.
-
-
-MITIGATION ACTIVITIES:
-
--Paused jobs and suspended logins.
-
--Analyzing logs to find the root cause of the issue.
-
--Working with the BeeGFS vendor to determine the best course of action that will not further jeopardize the cluster.
-
-
-NEXT UPDATE:
-We will provide another update on Wednesday after our troubleshooting session with the vendor. At this point, we hope the cluster can be available early next week, but we will keep you informed as we learn more.
