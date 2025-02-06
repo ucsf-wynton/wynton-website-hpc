@@ -135,7 +135,7 @@ happens. If it is down, it's most likely already discussed on our
 [Slack forum] - please check there to confirm it is truly down.  In
 the rare case that the machine is really down, try to call `rsc reset`
 and the retry with `rsc start`.  If you still get the above error,
-retry with `rsc reset --full`.
+retry with `rsc reset --force`.
 
 
 
