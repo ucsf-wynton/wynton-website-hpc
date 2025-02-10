@@ -17,7 +17,7 @@ automatic email notifications reminding any user that their password
 is about to expire. These email messages are sent each Sundays
 starting two weeks before a password expires (*).
 
-To avoid this from happening again, please make sure update your
+To avoid this from happening again, please make sure to update your
 password at least every 12 months. If you cannot remember when you
 last changed it, you can always [change your
 password](../howto/change-pwd.html) at any time.
