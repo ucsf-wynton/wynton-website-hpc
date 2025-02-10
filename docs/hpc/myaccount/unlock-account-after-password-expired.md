@@ -6,7 +6,7 @@ context:
 
 <!-- markdownlint-disable-file MD034 -->
 
-# Your Account Was Locked Because Password Expired
+# Account Locked Because Password Expired
 
 ## What happened and why?
 
