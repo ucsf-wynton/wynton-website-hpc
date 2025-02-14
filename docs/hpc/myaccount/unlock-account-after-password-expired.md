@@ -29,20 +29,13 @@ The _only_ way to unlock your account at this point is via
 ServiceNow. Do not send an email to Wynton support - they can only
 unlock your account if you have created a ServiceNow ticket.
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-
-Login to ServiceNow requires UCSF MyAccess credentials. If you do not
-have UCSF MyAccess credentials, your faculty sponsor or another
-approved representative in your faculty sponsor's lab will need to
-fill out the form for you.
-
-</div>
-
 Instructions:
 
 1. Go to the [Wynton Account Request/Wynton Account Modification]
-   ServiceNow form _(can be done by your faculty sponsor, if you do
-   not have access)_
+   ServiceNow form  
+   (_Login to ServiceNow requires UCSF MyAccess credentials. If you do
+   not have access, your faculty sponsor, or another approved
+   representative, will need to fill out this form for you_)
 
 2. Under 'Account Details', choose **'Yes'** for _"Does this user
    already have an existing account on Wynton?"_
