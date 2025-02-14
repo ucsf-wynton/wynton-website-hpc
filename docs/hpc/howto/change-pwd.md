@@ -42,7 +42,7 @@ You can change your password before it expires using the 'RBVI Kerberos Web Inte
 
 
 
-### Alt 2. From the {{ site.cluster.nickname }} command line
+### ~~Alt 2. From the {{ site.cluster.nickname }} command line~~
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 2023-11-13: Changing password via the command line is currently not working.
