@@ -136,3 +136,8 @@ Default:
 level: info
 condition: is operational
 message:
+
+
+level: warning
+condition: is operational
+message: The Globus endpoint for PHI users and the Globus UCSF Box Connector are unavailable.

@@ -1,6 +1,10 @@
+<div class="alert alert-danger" role="alert" markdown="1">
+2025-02-19: The 'Wynton HPC UCSF Box Connector' for Globus and the 'Wynton HPC PHI Compatible' Globus endpoint are currently unavailable. The regular 'Wynton HPC' Globus endpoint is unaffected and available. The former Globus endpoint is used by PHI users whereas the latter by non-PHI users.
+</div>
+
 # Globus File Sharing
 
-Below are instructions on how to share a specific folder on {{ site.cluster.nickname }} with specific Globus users.  These users do _neither_ have to have a {{ site.cluster.nickname }} account or have to be UCSF employees - you can share with anyone who has a Globus account.  When sharing, you can specify whether the person you share with should have read-only access or write access.  Typically, if you want to make large data files available for download, you will share with read-only permission.  If you want to receive data from a collaborator, you can give them write permission. 
+Below are instructions on how to share a specific folder on {{ site.cluster.nickname }} with specific Globus users.  These users do _neither_ have to have a {{ site.cluster.nickname }} account or have to be UCSF employees - you can share with anyone who has a Globus account.  When sharing, you can specify whether the person you share with should have read-only access or write access.  Typically, if you want to make large data files available for download, you will share with read-only permission.  If you want to receive data from a collaborator, you can give them write permission.
 
 
 ## Creating a Shared Globus Collection

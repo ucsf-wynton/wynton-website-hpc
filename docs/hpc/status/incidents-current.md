@@ -1,3 +1,15 @@
+### February 18-ongoing, 2025
+
+#### <span style="color: orange;">Globus issues</span>
+
+**Notice**: The 'Wynton HPC UCSF Box Connector' for Globus and the
+'Wynton HPC PHI Compatible' Globus endpoint are currently
+unavailable. The regular 'Wynton HPC' Globus endpoint is unaffected
+and available. The problem has been there since at least 2025-02-14 at
+22:36, when I user reported it.
+<br><span class="timestamp">February 19, 2025, 12:00 PT</span>
+
+
 ### November 16-ongoing, 2023
 
 #### <span style="color: orange;">Sporadic job failure</span>
