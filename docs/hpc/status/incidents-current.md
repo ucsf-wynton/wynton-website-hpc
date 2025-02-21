@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">Globus issues</span>
 
+**Update**: The vendor has escalated our support ticket.
+<br><span class="timestamp">February 19, 2025, 13:30 PT</span>
+
 **Notice**: The 'Wynton HPC UCSF Box Connector' for Globus and the
 'Wynton HPC PHI Compatible' Globus endpoint are currently
 unavailable. The regular 'Wynton HPC' Globus endpoint is unaffected
