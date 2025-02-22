@@ -139,5 +139,5 @@ message:
 
 
 level: warning
-condition: is operational
-message: The Globus endpoint for PHI users and the Globus UCSF Box Connector are unavailable.
+condition: runs at lower capacity
+message: Fewer compute slots are available due to kernel upgrades. The Globus endpoint for PHI users and the Globus UCSF Box Connector are unavailable. 
