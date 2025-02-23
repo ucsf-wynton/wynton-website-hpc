@@ -1,5 +1,12 @@
 <div class="alert alert-danger" role="alert" markdown="1">
-2025-02-19: The 'Wynton HPC UCSF Box Connector' for Globus and the 'Wynton HPC PHI Compatible' Globus endpoint are currently unavailable. The regular 'Wynton HPC' Globus endpoint is unaffected and available. The former Globus endpoint is used by PHI users whereas the latter by non-PHI users.
+2025-02-19: The 'Wynton HPC UCSF Box Connector' for Globus and the
+'Wynton HPC PHI Compatible' Globus endpoint are currently
+unavailable. The former gives an error on "Unknown user or wrong
+password", and the latter "Authentication Required - Identity set
+contains an identity from an allowed domain, but it does not map to a
+valid username for this connector". The regular 'Wynton HPC' Globus
+endpoint is unaffected and available. The former Globus endpoint is
+used by PHI users whereas the latter by non-PHI users.
 </div>
 
 # Globus File Sharing

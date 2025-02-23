@@ -32,9 +32,12 @@ usual slots available on the queues.
 
 **Notice**: The 'Wynton HPC UCSF Box Connector' for Globus and the
 'Wynton HPC PHI Compatible' Globus endpoint are currently
-unavailable. The regular 'Wynton HPC' Globus endpoint is unaffected
-and available. The problem has been there since at least 2025-02-14 at
-22:36, when I user reported it.
+unavailable. The former gives an error on "Unknown user or wrong
+password", and the latter "Authentication Required - Identity set
+contains an identity from an allowed domain, but it does not map to a
+valid username for this connector". The regular 'Wynton HPC' Globus
+endpoint is unaffected and available. The problem has been there since
+at least 2025-02-14 at 22:36, when I user reported it.
 <br><span class="timestamp">February 19, 2025, 12:00 PT</span>
 
 

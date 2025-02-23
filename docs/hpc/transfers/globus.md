@@ -1,7 +1,14 @@
 <!-- markdownlint-disable-file MD034 -->
 
 <div class="alert alert-danger" role="alert" markdown="1">
-2025-02-19: The 'Wynton HPC UCSF Box Connector' for Globus and the 'Wynton HPC PHI Compatible' Globus endpoint are currently unavailable. The regular 'Wynton HPC' Globus endpoint is unaffected and available. The former Globus endpoint is used by PHI users whereas the latter by non-PHI users.
+2025-02-19: The 'Wynton HPC UCSF Box Connector' for Globus and the
+'Wynton HPC PHI Compatible' Globus endpoint are currently
+unavailable. The former gives an error on "Unknown user or wrong
+password", and the latter "Authentication Required - Identity set
+contains an identity from an allowed domain, but it does not map to a
+valid username for this connector". The regular 'Wynton HPC' Globus
+endpoint is unaffected and available. The former Globus endpoint is
+used by PHI users whereas the latter by non-PHI users.
 </div>
 
 # Globus
@@ -66,6 +73,7 @@ Instead of using the non-PHI-compliant Collection 'UCSF Wynton HPC', all PHI dat
 4. This will take you to a screen where you are prompted to enter your Wynton Username and Password. Enter these. 
 5. Your default Two-Factor Authentication will be notified.  
 6. Approve, and Globus will continue to a screen representing the Wynton file system.
+
 
 ## Transfer between Wynton and UCSF Box using UCSF Wynton HPC Box Globus Connector
 
