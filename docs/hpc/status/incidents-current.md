@@ -7,11 +7,11 @@
 <br><span class="timestamp">MONTH, DAY, YEAR, HOUR:MINUTE PT</span>
 -->
 
-<!--
-**Update**: Login, data-transfer, and development nodes have been
-rebooted.
-<br><span class="timestamp">MONTH DAY, YEAR, HOUR:MINUTE PT</span>
--->
+**Update**: With the exception for `plog1` and `dt1`, all login,
+data-transfer, and development nodes have been rebooted. Until `plog1`
+is available, PHI-users may use `pdt1` and `pdt2` to login into the
+cluster.
+<br><span class="timestamp">February 22, 2023, 13:30 PT</span>
 
 **Notice**: New operating-system kernels are deployed. Login,
 data-transfer, and development nodes will be rebooted on Saturday,
