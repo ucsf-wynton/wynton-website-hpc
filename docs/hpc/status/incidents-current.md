@@ -7,6 +7,10 @@
 <br><span class="timestamp">MONTH, DAY, YEAR, HOUR:MINUTE PT</span>
 -->
 
+**Update**: The non-PHI Globus endpoint is not working, because
+data-transfer node `dt1` is not available.
+<br><span class="timestamp">February 22, 2025, 13:30 PT</span>
+
 **Update**: With the exception for `plog1` and `dt1`, all login,
 data-transfer, and development nodes have been rebooted. Until `plog1`
 is available, PHI-users may use `pdt1` and `pdt2` to login into the
