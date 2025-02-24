@@ -11,7 +11,7 @@
 data-transfer, and development nodes have been rebooted. Until `plog1`
 is available, PHI-users may use `pdt1` and `pdt2` to login into the
 cluster.
-<br><span class="timestamp">February 22, 2023, 13:30 PT</span>
+<br><span class="timestamp">February 22, 2025, 13:30 PT</span>
 
 **Notice**: New operating-system kernels are deployed. Login,
 data-transfer, and development nodes will be rebooted on Saturday,
@@ -20,7 +20,7 @@ jobs until they have been rebooted. A node will be rebooted as soon as
 any existing jobs have completed, which may take up to two weeks
 (maximum runtime). During this update period, there will be fewer than
 usual slots available on the queues.
-<br><span class="timestamp">February 21, 2023, 12:15 PT</span>
+<br><span class="timestamp">February 21, 2025, 12:15 PT</span>
 
 
 ### February 18-ongoing, 2025
