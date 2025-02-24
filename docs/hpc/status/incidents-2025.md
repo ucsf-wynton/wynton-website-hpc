@@ -55,6 +55,19 @@
   factors
 
 
+### February 22-24, 2025
+
+#### <span style="color: orange;">Globus issues</span>
+
+**Resolved**: The ‘Wynton HPC’ Globus endpoint used by non-PHI users
+is available again after data-transfer node `dt1` coming online.
+<br><span class="timestamp">February 24, 2025, 10:30 PT</span>
+
+**Notice**: The ‘Wynton HPC’ Globus endpoint used by non-PHI users is
+unavailable, because data-transfer node `dt1` is unavailable.
+<br><span class="timestamp">February 22, 2025, 13:30 PT</span>
+
+
 ### February 18-24, 2025
 
 #### <span style="color: orange;">Globus issues</span>
