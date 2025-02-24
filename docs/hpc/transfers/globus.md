@@ -1,16 +1,5 @@
 <!-- markdownlint-disable-file MD034 -->
 
-<div class="alert alert-danger" role="alert" markdown="1">
-2025-02-19: The 'Wynton HPC UCSF Box Connector' for Globus and the
-'Wynton HPC PHI Compatible' Globus endpoint are currently
-unavailable. The former gives an error on "Unknown user or wrong
-password", and the latter "Authentication Required - Identity set
-contains an identity from an allowed domain, but it does not map to a
-valid username for this connector". The regular 'Wynton HPC' Globus
-endpoint is unaffected and available. The former Globus endpoint is
-used by PHI users whereas the latter by non-PHI users.
-</div>
-
 # Globus
 
 [Globus] is a non-profit service for moving, syncing, and sharing large amounts of data asynchronously in the background.  Transfers are done from and to, so called, _Collections_.  In order to perform a file transfer from one location to another using the Globus service, both ends must have a Collection.  UCSF has a site license for Globus, and several UCSF departments and services, including the {{ site.cluster.name }} environment, provide Globus Collection.  This will allow you to transfer and share data efficiently with any other Globus user in the world.
