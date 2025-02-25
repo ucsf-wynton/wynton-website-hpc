@@ -1227,7 +1227,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>emacs --version</code> and <code>emacs -nw</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a>, <a href="https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases">https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>29.4</em></span><br>
+Versions: <span class="module-version">29.4, <em>30.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1416,7 +1416,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.56.3, 0.57.0, <em>0.59.0</em></span><br>
+Versions: <span class="module-version">0.56.3, 0.57.0, 0.59.0, <em>0.60.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1681,7 +1681,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, <code>gh auth login</code>, and <code>gh extension install dlvhdr/gh-dash</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code), <a href="https://github.com/topics/gh-extension">https://github.com/topics/gh-extension</a> (GitHub CLI extensions)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.62.0, 2.63.0, 2.63.2, 2.65.0, <em>2.66.1</em></span><br>
+Versions: <span class="module-version">2.62.0, 2.63.0, 2.63.2, 2.65.0, 2.66.1, <em>2.67.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1824,7 +1824,7 @@ prepend_path(&quot;MANPATH&quot;, home)
 <span class="module-description">Build simple, secure, scalable systems with Go.</span><br>
 Example: <span class="module-example"><code>go version</code> and <code>go help</code>.</span><br>
 URL: <span class="module-url"><a href="https://go.dev/">https://go.dev/</a>, <a href="https://go.dev/doc/devel/release">https://go.dev/doc/devel/release</a> (changelog), <a href="https://go.dev/dl/">https://go.dev/dl/</a> (releases), <a href="https://github.com/golang">https://github.com/golang</a> (source code)</span><br>
-Versions: <span class="module-version">1.22.5, 1.23.1, 1.23.4, 1.23.5, <em>1.23.6</em></span><br>
+Versions: <span class="module-version">1.22.5, 1.23.1, 1.23.4, 1.23.5, 1.23.6, <em>1.24.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3259,7 +3259,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.5.57, 1.6.38, 1.6.39, <em>1.6.40</em></span><br>
+Versions: <span class="module-version">1.5.57, 1.6.38, 1.6.39, 1.6.40, <em>1.6.42</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3503,7 +3503,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.68.0, 1.68.1, 1.68.2, <em>1.69.0</em></span><br>
+Versions: <span class="module-version">1.68.0, 1.68.1, 1.68.2, 1.69.0, <em>1.69.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -4065,7 +4065,7 @@ depends_on(&quot;java-tweaks&quot;)
 Example: <span class="module-example"><code>spacer --help</code>, <code>tail -f file.log | spacer</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/samwho/spacer">https://github.com/samwho/spacer</a>, <a href="https://github.com/samwho/spacer/releases">https://github.com/samwho/spacer/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.3.1</em></span><br>
+Versions: <span class="module-version">0.3.1, <em>0.3.8</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
