@@ -321,6 +321,30 @@ reason: beegfs
  -->
 
 
+### February 2-3, 2024
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Resolved**: All hosts are available.
+<br><span class="timestamp">February 3, 17:00 PT</span>
+
+**Update**: Login, data-transfer, and development nodes have been
+rebooted. It will take some more time before `plog1`, `dt1`, and
+`dev2` are available again, because they did not come back as expected
+after the reboot. PHI users may use `pdt1` and `pdt2` to access the
+cluster.
+<br><span class="timestamp">February 2, 14:45 PT</span>
+
+**Notice**: New operating-system kernels are deployed. Login,
+data-transfer, and development nodes will be rebooted on Friday
+February 2 at 14:00. Compute nodes will no longer accept new jobs until
+they have been rebooted. A node will be rebooted as soon as any
+existing jobs have completed, which may take up to two weeks (maximum
+runtime). During this update period, there will be fewer than usual
+slots available on the queues.
+<br><span class="timestamp">February 1, 23:30 PT</span>
+
+
 ### January 25-August, 2024
 
 #### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
