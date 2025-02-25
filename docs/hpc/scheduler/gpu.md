@@ -145,7 +145,7 @@ the following at the end of your job script:
 ```sh
 dcgmi stats --group "$gpuprof" --jstop "$JOB_ID"
 dcgmi stats --group "$gpuprof" --verbose --job "$JOB_ID"
-dcgmi group --disable "$gpuprof"
+dcgmi group --delete "$gpuprof"
 ```
 
 The GPU stats will be written to the job's output file.  If you'd rather they go elsewhere, then direct the output of
