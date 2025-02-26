@@ -24,7 +24,7 @@ As long as your password has not yet expired, you can change your password ~~eit
 
 
 
-### Alt 1. From the web browser
+### Via the RBVI/Wynton Password Change Website
 
 You can change your password before it expires using the 'RBVI Kerberos Web Interface' site;
 
@@ -40,29 +40,9 @@ You can change your password before it expires using the 'RBVI Kerberos Web Inte
 
 5. Wait 10 minutes for your new password to propagate before using it
 
-
-
-### ~~Alt 2. From the {{ site.cluster.nickname }} command line~~
-
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-2023-11-13: Changing password via the command line is currently not working.
+2023-11-13: Changing password via the command line is not supported. You must change your password using the Wynton/RBVI password change website.
 </div>
-
-If you can log in to {{ site.cluster.name }}, then you can change your credentials by calling `passwd` from one of the _login_ nodes, e.g.
-
-```sh
-[alice@{{ site.login.name }} ~]$ passwd
-Changing password for user alice.
-Kerberos 5 Password: 
-New password: 
-Retype new password: 
-passwd: all authentication tokens updated successfully.
-[alice@{{ site.login.name }} ~]$ 
-```
-
-Wait 10 minutes for your new password to propagate before using it.
-
-
 
 ## Verify credentials
 
