@@ -2,10 +2,12 @@
 
 #### <span style="color: orange;">Kernel maintenance</span>
 
-<!--
-**Resolved**: All compute nodes have been rebooted.
-<br><span class="timestamp">MONTH, DAY, YEAR, HOUR:MINUTE PT</span>
--->
+**Resolved**: Login node `plog1` respects SSH keys again.
+<br><span class="timestamp">February 24, 2025, 11:15 PT</span>
+
+**Update**: Login node `plog1` is available again, but does not respect
+SSH keys.
+<br><span class="timestamp">February 24, 2025, 10:30 PT</span>
 
 **Update**: Data-transfer node `dt1` is available again.
 <br><span class="timestamp">February 24, 2025, 10:30 PT</span>
@@ -24,6 +26,7 @@ any existing jobs have completed, which may take up to two weeks
 (maximum runtime). During this update period, there will be fewer than
 usual slots available on the queues.
 <br><span class="timestamp">February 21, 2025, 12:15 PT</span>
+
 
 
 ### November 16-ongoing, 2023
