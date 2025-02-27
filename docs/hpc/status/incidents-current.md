@@ -9,7 +9,7 @@ heavy load on the file system.
 <br><span class="timestamp">February 27, 07:30 PT</span>
 
 **Notice**: The file system latency is extremely high, resulting in
-the cluster being unnusable and attemps to log in via SSH failing.
+the cluster being unusable and attempts to log in via SSH failing.
 <br><span class="timestamp">February 26, 19:30 PT</span>
 
 **Notice**: We are working with the vendor to try to resolve this
