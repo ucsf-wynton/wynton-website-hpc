@@ -1,5 +1,55 @@
 ### February 21-ongoing, 2025
 
+#### <span style="color: orange;">File system timeouts</span>
+
+**Notice**: The extreme file-system lags seen the last few days have
+been resolved. The majority of the lagginess was due to a long-running
+resynchronization of two BeeGFS metadata servers in combination of
+heavy load on the file system.
+<br><span class="timestamp">February 27, 07:30 PT</span>
+
+**Notice**: The file system latency is extremely high, resulting in
+the cluster being unnusable and attemps to log in via SSH failing.
+<br><span class="timestamp">February 26, 19:30 PT</span>
+
+**Notice**: We are working with the vendor to try to resolve this
+problem.
+<br><span class="timestamp">February 26, 09:00 PT</span>
+
+**Notice**: The file system is again very slow.
+delays when working interactively and jobs to slow down.
+<br><span class="timestamp">February 25, 15:15 PT</span>
+
+**Notice**: The file system is again very slow.
+<br><span class="timestamp">February 25, 10:00 PT</span>
+
+**Notice**: The file system is very slow, which result in long delays
+when working interactively and jobs to take longer than usual.
+<br><span class="timestamp">February 21, 16:00 PT</span>
+
+<!--
+## When BeeGFS was down
+start: 2025-01-27T07:30:00
+stop: 2025-01-26T19:30:00
+length: 12h00m
+severity: major-outage
+affected: beegfs
+reason: beegfs
+
+## When BeeGFS was down
+start: 2025-01-26T19:30:00
+stop: 2025-01-21T16:00:00
+length: ???
+severity: high
+affected: beegfs
+reason: beegfs
+
+## total length on scheduler being down due to BeeGFS: 81h45m
+ -->
+
+
+### February 21-ongoing, 2025
+
 #### <span style="color: orange;">Kernel maintenance</span>
 
 **Resolved**: Login node `plog1` respects SSH keys again.
