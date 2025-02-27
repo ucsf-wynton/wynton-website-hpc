@@ -6,21 +6,34 @@ context:
 
 <!-- markdownlint-disable-file MD034 -->
 
-# Account Locked Because Password Expired
+# Your Account Has Been Locked
 
 ## What happened and why?
 
-If you are reading this, **your Wynton account was locked, because you
-let the password expire**. _Passwords must be updated at least every
-12 months_ per University of California requirements. Wynton sends out
-automatic email notifications reminding any user that their password
-is about to expire. These email messages are sent each Sundays
-starting two weeks before a password expires (*).
+If you are reading this, **your Wynton account has been locked**. This can happen for one of three reasons:
 
-To avoid this from happening again, please make sure to update your
-password at least every 12 months. If you cannot remember when you
-last changed it, you can always [change your
-password](../howto/change-pwd.html) at any time.
+1. **You let your expire password and you did not reset it within the
+   30-day grace period**
+  - _Passwords must be updated at least every 12 months_ per
+    University of California requirements. Wynton sends out automatic
+    email notifications reminding any user that their password is
+    about to expire. These email messages are sent each Sundays
+    starting two weeks before a password expires (*). To avoid this
+    from happening again, please make sure to update your password at
+    least every 12 months. If you cannot remember when you last
+    changed it, you can always [change your
+    password](../howto/change-pwd.html) at any time.
+
+2. **Your UCSF affiliation has expired**
+  - When leaving the UCSF, your UCSF affiliation expires and your
+    account is locked. At times, this can happen also when you
+    transition from one UCSF position to another.
+
+3. **Your Wynton guest account has expired**
+  - If you are not a UCSF affiliate, but have a Wynton account that
+    was sponsored by a UCSF collaborator, then your UCSF sponsor needs
+    to renew this every 12 months.
+
 
 
 ## Instructions for unlocking your account
