@@ -10,7 +10,8 @@ context:
 
 ## What happened and why?
 
-If you are reading this, **your Wynton account has been locked**. This can happen for one of three reasons:
+If you are reading this, **your Wynton account has been locked**. This
+can happen for one of three reasons:
 
 1. **You let your expire password and you did not reset it within the
    30-day grace period**
