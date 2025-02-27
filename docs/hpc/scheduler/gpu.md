@@ -129,29 +129,14 @@ To avoid overloading GPUs, it is important that each job use only the GPUs it wa
 Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores, there is no way to ensure that a GPU node's CPU cores don't get oversubscribed.  For this reason, please limit your CPU core usage to 4 CPU cores per GPU requested.  This will prevent CPU core overloading on all the GPU node types.
 
 
-## GPU use monitoring
+## Monitor GPU usage
 
-We have installed NVIDIA's [Data Center GPU Manager](https://docs.nvidia.com/datacenter/dcgm/latest/index.html) on all GPU nodes to allow the profiling of GPU jobs.  To use it, add the following to your job script just before you launch the GPU-utilizing process:
+### SGE summaries on GPU usage for a specific machine
 
-```sh
-gpuprof=$(dcgmi group --create mygpus --add "$SGE_GPU" | awk '{print $10}')
-dcgmi stats --group "$gpuprof" --enable
-dcgmi stats --group "$gpuprof" --jstart "$JOB_ID"
-```
-
-Make sure to stop the GPU profile when the job finishes, by putting
-the following at the end of your job script:
-
-```sh
-dcgmi stats --group "$gpuprof" --jstop "$JOB_ID"
-dcgmi stats --group "$gpuprof" --verbose --job "$JOB_ID"
-dcgmi group --delete "$gpuprof"
-```
-
-The GPU stats will be written to the job's output file.  If you'd rather they go elsewhere, then direct the output of
-`dcgmi stats ... --verbose --job "$JOB_ID"` to the file where you want the GPU profiling info.
-
-It is also possible to see several statistics from the login hosts.  For example:
+If you know the name of the compute node where your job is running,
+you can ask SGE to summarize the GPU usage on that machine, including
+use from other jobs than yours. This can be done from one the login
+and development hosts, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ qconf -se msg-iogpu3
@@ -185,7 +170,35 @@ usage_scaling         NONE
 report_variables      NONE
 ```
 
-The above shows that host `msg-iogpu3` has 2 GeForce GTX 1080 GPUs.  Each GPU is running one process, each is just over 50% utilized, and each has approximately 722 MiB (758,054,912 bytes) of free memory.
+This tells us that host `msg-iogpu3` has two GeForce GTX 1080
+GPUs. Each GPU is running one process, each is just over 50% utilized,
+and each has approximately 722 MiB (758,054,912 bytes) of free memory.
+
+
+### GPU profiling from within job
+
+One can also use NVIDIA's [Data Center GPU
+Manager](https://docs.nvidia.com/datacenter/dcgm/latest/index.html) to
+get detailed profiling of GPU jobs. To use it, add the following at
+the beginning of your job script _before_ you launch the software
+tools that use the GPUs:
+
+```sh
+gpuprof=$(dcgmi group --create mygpus --add "$SGE_GPU" | awk '{print $10}')
+dcgmi stats --group "$gpuprof" --enable
+dcgmi stats --group "$gpuprof" --jstart "$JOB_ID"
+```
+
+Make sure to stop the GPU profile when the job finishes, by putting
+the following at the end of your job script:
+
+```sh
+dcgmi stats --group "$gpuprof" --jstop "$JOB_ID"
+dcgmi stats --group "$gpuprof" --verbose --job "$JOB_ID"
+dcgmi group --delete "$gpuprof"
+```
+
+The GPU stats will be written to the job's output file.
 
 
 [CUDA Toolkit]: https://developer.nvidia.com/cuda-toolkit
