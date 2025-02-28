@@ -2,14 +2,26 @@
 
 #### <span style="color: orange;">File system timeouts</span>
 
-**Notice**: The extreme file-system lags seen the last few days have
-been resolved. The majority of the lagginess was due to a long-running
-resynchronization of two BeeGFS metadata servers in combination of
-heavy load on the file system.
-<br><span class="timestamp">February 27, 07:30 PT</span>
+**Notice**: In order to speed up resynchronization of metadata
+servers, we have decided to minimize the load on the file system by
+suspending all running jobs, disable login to Wynton, and disable all
+file transfers to and from Wynton.
+<br><span class="timestamp">February 27, 16:30 PT</span>
 
 **Notice**: The file system latency is extremely high, resulting in
-the cluster being unusable and attempts to log in via SSH failing.
+the cluster being unusable and attempts to log in via SSH
+failing. This is due to the BeeGFS secondary metadata server `meta51`
+resynchronizing with the primary `meta73`.
+<br><span class="timestamp">February 27, 16:15 PT</span>
+
+**Notice**: Resynchronization of BeeGFS metadata server pair
+`meta22` and `meta32` completed after 30 hours.
+<br><span class="timestamp">February 27, 06:00 PT</span>
+
+**Notice**: The file system latency is extremely high, resulting in
+the cluster being unusable and attempts to log in via SSH
+failing. This is due to the BeeGFS secondary metadata server `meta32`
+resynchronizing with the primary `meta22`.
 <br><span class="timestamp">February 26, 19:30 PT</span>
 
 **Notice**: We are working with the vendor to try to resolve this

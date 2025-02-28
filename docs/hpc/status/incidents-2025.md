@@ -137,7 +137,8 @@ experiencing problems.
 <br><span class="timestamp">January 19, 12:45 PT</span>
 
 **Update**: The cluster is working again. We have started a
-resynchronization of the problematic BeeGFS metadata server.
+resynchronization of the problematic BeeGFS metadata server pair
+`meta22` and `meta32`.
 <br><span class="timestamp">January 18, 13:45 PT</span>
 
 **Update**: First signs of the cluster coming back online again,
