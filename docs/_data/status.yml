@@ -140,5 +140,5 @@ message:
 
 level: warning
 condition: runs at lower capacity
-message: (1) Running jobs are suspended because of BeeGFS issues. (2) Fewer compute slots are available due to kernel upgrades.
+message: Fewer compute slots are available due to kernel upgrades.
 

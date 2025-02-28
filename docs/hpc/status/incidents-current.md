@@ -2,6 +2,10 @@
 
 #### <span style="color: orange;">File system timeouts</span>
 
+**Notice**: The job queue has been re-enabled and all suspended jobs
+have been released.
+<br><span class="timestamp">February 28, 09:00 PT</span>
+
 **Notice**: Login and file transfers to Wynton has been re-enabled.
 <br><span class="timestamp">February 28, 09:00 PT</span>
 
