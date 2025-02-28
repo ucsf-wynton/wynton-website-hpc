@@ -15,6 +15,7 @@ can happen for one of three reasons:
 
 1. **You let your expire password and you did not reset it within the
    30-day grace period**
+   
   - _Passwords must be updated at least every 12 months_ per
     University of California requirements. Wynton sends out automatic
     email notifications reminding any user that their password is
@@ -26,11 +27,13 @@ can happen for one of three reasons:
     password](../howto/change-pwd.html) at any time.
 
 2. **Your UCSF affiliation has expired**
+
   - When leaving the UCSF, your UCSF affiliation expires and your
     account is locked. At times, this can happen also when you
     transition from one UCSF position to another.
 
 3. **Your Wynton guest account has expired**
+
   - If you are not a UCSF affiliate, but have a Wynton account that
     was sponsored by a UCSF collaborator, then your UCSF sponsor needs
     to renew this every 12 months.
