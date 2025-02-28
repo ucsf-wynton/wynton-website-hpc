@@ -140,8 +140,5 @@ message:
 
 level: warning
 condition: runs at lower capacity
-message: (1) The BeeGFS file system is very slow. (2) Fewer compute slots are available due to kernel upgrades.
+message: (1) Running jobs are suspended because of BeeGFS issues. (2) Fewer compute slots are available due to kernel upgrades.
 
-level: danger
-condition: is non-operational
-message: Access to cluster has been disable and running jobs have been suspended because of BeeGFS issues

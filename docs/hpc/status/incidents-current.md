@@ -2,6 +2,13 @@
 
 #### <span style="color: orange;">File system timeouts</span>
 
+**Notice**: Login and file transfers to Wynton has been re-enabled.
+<br><span class="timestamp">February 28, 09:00 PT</span>
+
+**Notice**: Resynchronization of BeeGFS metadata server pair (41,51)
+completed after 24 hours, and pair (63,73) completed after 18 hours.
+<br><span class="timestamp">February 28, 09:00 PT</span>
+
 **Notice**: In order to speed up resynchronization of metadata
 servers, we have decided to minimize the load on the file system by
 suspending all running jobs, disable login to Wynton, and disable all
@@ -10,8 +17,8 @@ file transfers to and from Wynton.
 
 **Notice**: The file system latency is extremely high, resulting in
 the cluster being unusable and attempts to log in via SSH
-failing. This is due to the BeeGFS secondary metadata server `meta51`
-resynchronizing with the primary `meta73`.
+failing. This is due to the resynchronization of BeeGFS metadata
+server pair (51,73).
 <br><span class="timestamp">February 27, 16:15 PT</span>
 
 **Notice**: Resynchronization of BeeGFS metadata server pair
@@ -20,8 +27,8 @@ resynchronizing with the primary `meta73`.
 
 **Notice**: The file system latency is extremely high, resulting in
 the cluster being unusable and attempts to log in via SSH
-failing. This is due to the BeeGFS secondary metadata server `meta32`
-resynchronizing with the primary `meta22`.
+failing. This is due to the resynchronization of BeeGFS metadata
+server pair (22,32).
 <br><span class="timestamp">February 26, 19:30 PT</span>
 
 **Notice**: We are working with the vendor to try to resolve this
