@@ -223,14 +223,22 @@ We highly recommend configuring Conda environment to be automatically staged onl
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI miniforge3
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
-[alice@{{ site.devel.name }} ~]$ conda activate myjupyter
-(myjupyter) [alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable
+[alice@{{ site.devel.name }} ~]$ conda stage --auto-stage=enable myjupyter
 INFO: Configuring automatic staging and unstaging of original Conda environment  ...
+INFO: [ONCE] Packaging Conda environment, because it hasn't been done before ...
+Collecting packages...
+Packing environment at '{{ site.user.home }}/.conda/envs/myjupyter' to
+'{{ site.user.home }}/.conda/envs/.tmp.myjupyter.tar.gz'
+[########################################] | 100% Completed |  4min  5.6s
+INFO: Total 'conda-pack' time: 274 seconds
+INFO: Created conda-pack tarball: {{ site.user.home }}/.conda/envs/myjupyter.tar.gz
+      (140099022 bytes; 2025-03-02 19:33:08.108806755 -0800)
 INFO: Enabled auto-staging
 INFO: Enabled auto-unstaging
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
-For the complete, easy-to-follow instructions, see the [conda-stage] documentation.
+That's it. For the complete, easy-to-follow instructions, see the [conda-stage] documentation.
 
 
 ## Back up, migrate, and restore Conda environments (recommended)
