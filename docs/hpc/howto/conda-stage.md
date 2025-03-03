@@ -19,12 +19,12 @@ Below is a walk-through that illustrates the process. It assumes we have already
 
 ### Configure Conda environment for automatic staging (once)
 
-To configure Conda environment `myjupyter` for automatic staging, call `conda-stage --auto-stage=enable myjupyter` as in:
+To configure Conda environment `myjupyter` for automatic staging, call `conda stage --auto-stage=enable myjupyter` as in:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI miniforge3  ## or your own conda installation
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
-[alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable myjupyter
+[alice@{{ site.devel.name }} ~]$ conda stage --auto-stage=enable myjupyter
 INFO: Configuring automatic staging and unstaging of original Conda environment  ...
 INFO: [ONCE] Packaging Conda environment, because it hasn't been done before ...
 Collecting packages...
@@ -123,7 +123,7 @@ If we would update or install new Conda packages to a staged environment, they w
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage
-[alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=disable myjupyter
+[alice@{{ site.devel.name }} ~]$ conda stage --auto-stage=disable myjupyter
 INFO: Configuring automatic staging and unstaging of original Conda environment  ...
 INFO: Removed 'conda-pack' tarball /home/alice/.conda/envs/myenv.tar.gz
       (140098670 bytes; 2025-03-02 18:09:55.975267674 -0800)
@@ -144,7 +144,7 @@ Then update it as usual as in:
 Finally, re-enable auto-staging as above, i.e.
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ conda-stage --auto-stage=enable myjupyter
+[alice@{{ site.devel.name }} ~]$ conda stage --auto-stage=enable myjupyter
 ...
 ```
 
