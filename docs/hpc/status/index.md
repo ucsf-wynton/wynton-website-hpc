@@ -267,7 +267,7 @@ var layout = {
   },
   yaxis: {
     autorange: false,
-    range: [-0.1, 2.5],
+    range: [-0.1, 2.8],
     type: 'log'
   }
 };
@@ -302,7 +302,7 @@ drives.forEach(function(drive) {
   })
 
   // Change to 'true' to show multiple traces
-  if (false) {
+  if (true) {
     if (hosts.length >= 2) {
       var url = url_path + "/" + "wynton-bench_" + hosts[1] + ".wynton.ucsf.edu__" + drive + ".tsv";
       Plotly.d3.tsv(url, function(err, rows) {
