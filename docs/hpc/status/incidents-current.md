@@ -2,6 +2,14 @@
 
 #### <span style="color: orange;">File system timeouts</span>
 
+**Notice**: Resynchronization of BeeGFS metadata server pair (42,52)
+finished after 23 hours.
+<br><span class="timestamp">March 4, 14:00 PT</span>
+
+**Notice**: Resynchronization of BeeGFS metadata server pairs (32,22)
+and (23,33) started 2025-03-03, and (42,52) on 2025-03-04.
+<br><span class="timestamp">March 4, 09:00 PT</span>
+
 **Notice**: The job queue has been re-enabled and all suspended jobs
 have been released.
 <br><span class="timestamp">February 28, 09:00 PT</span>
