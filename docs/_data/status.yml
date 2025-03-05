@@ -140,5 +140,5 @@ message:
 
 level: warning
 condition: runs at lower capacity
-message: Fewer compute slots are available due to kernel upgrades.
+message: (1) BeeGFS is overloaded. (2) Fewer compute slots are available due to kernel upgrades.
 
