@@ -267,7 +267,7 @@ var layout = {
   },
   yaxis: {
     autorange: false,
-    range: [-0.1, 3.5],
+    range: [-0.1, 3.8],
     type: 'log'
   }
 };
