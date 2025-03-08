@@ -18,7 +18,7 @@ $(PAGE).md: $(PAGE).md.rsp r-packages
 	Rscript -e R.rsp::rfile $< --postprocess=FALSE
 
 deploy: $(PAGE).md
-	git commit $< -m "SOFTWARE: Rebuilt set of available modules [${HOSTNAME}]" &> /dev/null; true
+	git commit $< -m "SOFTWARE: Rebuilt set of available modules [${HOSTNAME} by ${USER}]" &> /dev/null; true
 	git push &> /dev/null; true
 
 r-packages:
@@ -44,4 +44,3 @@ scl:
 apptainer:
 	markin build $@.sh
 	markin inject $@.md
-

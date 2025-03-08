@@ -99,6 +99,6 @@ assets: hpc/assets/data/compute_shares.tsv hpc/assets/data/gpu_shares.tsv
 
 deploy:
 	git pull
-	git commit -am "Website updated [ci skip]" && git push 2> /dev/null
+	git commit -am "Website updated [$(HOSTNAME) by $(USER)] [ci skip]" && git push 2> /dev/null
 
 FORCE:
