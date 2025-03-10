@@ -302,7 +302,7 @@ drives.forEach(function(drive) {
   })
 
   // Change to 'true' to show multiple traces
-  if (true) {
+  if (false) {
     if (hosts.length >= 2) {
       var url = url_path + "/" + "wynton-bench_" + hosts[1] + ".wynton.ucsf.edu__" + drive + ".tsv";
       Plotly.d3.tsv(url, function(err, rows) {
