@@ -214,6 +214,7 @@ hosts = ["dev1", "dev2", "dev3"];
 drives = ["wynton_scratch_hb", "wynton_home_cbi_hb", "wynton_group_cbi_hb"];
 // Baseline is when there is no load on the file system (rough estimate)
 baseline = 19.0;
+var multiple_beegfs_tracks = true;
 
 var now = new Date();
 var from = new Date(now - 24 * 60 * 60 * 1000);
@@ -302,7 +303,7 @@ drives.forEach(function(drive) {
   })
 
   // Change to 'true' to show multiple traces
-  if (false) {
+  if (multiple_beegfs_tracks) {
     if (hosts.length >= 2) {
       var url = url_path + "/" + "wynton-bench_" + hosts[1] + ".wynton.ucsf.edu__" + drive + ".tsv";
       Plotly.d3.tsv(url, function(err, rows) {
