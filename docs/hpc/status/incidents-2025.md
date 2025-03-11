@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 83.0 hours (= 3.5 days)
-  - Total: 83.0 hours (= 3.5 days)
+  - Unscheduled: 144.0 hours (= 6.0 days)
+  - Total: 144.0 hours (= 6.0 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -41,6 +41,12 @@
   may have failed, cluster not accessible
 * Occurrences:
   - 2025-01-17 -- 2025-01-22 (81.75 hours)
+  - 2025-02-21 -- 2025-03-07 (61.0 hours)
+
+## When BeeGFS was down
+start: 2025-02-27T16:30:00
+stop: 2025-02-28T09:00:00
+  
 * Total downtime: 81.75 hours of which 0.0 hours were due to external
   factors
 
@@ -53,6 +59,118 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+
+### February 21-March 7, 2025
+
+#### <span style="color: orange;">File system timeouts</span>
+
+**Resolved**: We have resumed the scheduler and jobs are being
+processed again. We identified several problems related to the BeeGFS
+file system that could have contributed to the recent, severe
+performance degradation. Specifically, the process that automatically
+removes files older than 14 days from `/wynton/scratch/` failed to
+complete, which resulted in close to 100% full storage servers. We
+believe this issues started in November 2024 and has gone unnoticed
+until now. We do not understand why these cleanup processes had
+failed, but one hypothesis is that there are corrupt files or folders
+where the cleanup process gets stuck, preventing it from cleaning up
+elsewhere. It might be that these problems have caused our metadata
+servers resynchronizing over and over - resynchronization itself is an
+indication that something is wrong. We are in the process of
+robustifying our cleanup process, putting in monitoring systems to
+detect these issues before system degradation takes place.
+<br><span class="timestamp">March 7, 11:30 PT</span>
+
+**Notice**: We have decided to again suspending all running jobs and
+disable the queue from taking on new jobs.
+<br><span class="timestamp">March 5, 15:00 PT</span>
+
+**Notice**: Resynchronization of BeeGFS metadata server pair (42,52)
+finished after 23 hours.
+<br><span class="timestamp">March 4, 14:00 PT</span>
+
+**Notice**: Resynchronization of BeeGFS metadata server pairs (32,22)
+and (23,33) started 2025-03-03, and (42,52) on 2025-03-04.
+<br><span class="timestamp">March 4, 09:00 PT</span>
+
+**Notice**: The job queue has been re-enabled and all suspended jobs
+have been released.
+<br><span class="timestamp">February 28, 09:00 PT</span>
+
+**Notice**: Login and file transfers to Wynton has been re-enabled.
+<br><span class="timestamp">February 28, 09:00 PT</span>
+
+**Notice**: Resynchronization of BeeGFS metadata server pair (41,51)
+completed after 24 hours, and pair (63,73) completed after 18 hours.
+<br><span class="timestamp">February 28, 09:00 PT</span>
+
+**Notice**: In order to speed up resynchronization of metadata
+servers, we have decided to minimize the load on the file system by
+suspending all running jobs, disable login to Wynton, and disable all
+file transfers to and from Wynton.
+<br><span class="timestamp">February 27, 16:30 PT</span>
+
+**Notice**: The file system latency is extremely high, resulting in
+the cluster being unusable and attempts to log in via SSH
+failing. This is due to the resynchronization of BeeGFS metadata
+server pair (51,73).
+<br><span class="timestamp">February 27, 16:15 PT</span>
+
+**Notice**: Resynchronization of BeeGFS metadata server pair
+`meta22` and `meta32` completed after 30 hours.
+<br><span class="timestamp">February 27, 06:00 PT</span>
+
+**Notice**: The file system latency is extremely high, resulting in
+the cluster being unusable and attempts to log in via SSH
+failing. This is due to the resynchronization of BeeGFS metadata
+server pair (22,32).
+<br><span class="timestamp">February 26, 19:30 PT</span>
+
+**Notice**: We are working with the vendor to try to resolve this
+problem.
+<br><span class="timestamp">February 26, 09:00 PT</span>
+
+**Notice**: The file system is again very slow.
+delays when working interactively and jobs to slow down.
+<br><span class="timestamp">February 25, 15:15 PT</span>
+
+**Notice**: The file system is again very slow.
+<br><span class="timestamp">February 25, 10:00 PT</span>
+
+**Notice**: The file system is very slow, which result in long delays
+when working interactively and jobs to take longer than usual.
+<br><span class="timestamp">February 21, 16:00 PT</span>
+
+<!--
+## Total duration
+start: 2025-02-21T16:00:00
+stop: 2025-03-07T11:30:00
+length: 331h300m
+severity: blocking
+affected: beegfs, jobs, data-transfer, interactive
+reason: beegfs
+
+## When BeeGFS was down
+start: 2025-03-05T15:00:00
+stop: 2025-03-07T11:30:00
+length: 44h30m
+severity: major-outage
+affected: beegfs, jobs
+reason: beegfs
+
+## When BeeGFS was down
+start: 2025-02-27T16:30:00
+stop: 2025-02-28T09:00:00
+length: 16h30m
+severity: major-outage
+affected: beegfs, jobs
+reason: beegfs
+
+## total length on scheduler being down due to BeeGFS: 81h45m
+ -->
+
 
 
 ### February 22-24, 2025
