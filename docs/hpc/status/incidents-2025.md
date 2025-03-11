@@ -42,13 +42,9 @@
 * Occurrences:
   - 2025-01-17 -- 2025-01-22 (81.75 hours)
   - 2025-02-21 -- 2025-03-07 (61.0 hours)
-
-## When BeeGFS was down
-start: 2025-02-27T16:30:00
-stop: 2025-02-28T09:00:00
-  
-* Total downtime: 81.75 hours of which 0.0 hours were due to external
+* Total downtime: 142.75 hours of which 0.0 hours were due to external
   factors
+
 
 #### Unscheduled downtimes due to other reasons
 
