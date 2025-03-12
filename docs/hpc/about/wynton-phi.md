@@ -22,9 +22,3 @@ Depending on your project, Wynton PHI may or may not be the best fit for your pr
 * [UCSF Research Analysis Environment (RAE)](https://it.ucsf.edu/service/rae)
 * [UCSF Data Center Services](https://it.ucsf.edu/service/data-center-services)
 * [UCSF Central IT Cloud Services](https://cloudservices.ucsf.edu/)
-
-
-[Wynton User Agreement]: /hpc/about/user-agreement.html
-[UCSF Minimum Security Standards for Electronic Information Resources]: https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information
-[Apply for Wynton PHI]: https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f
-[NIST 800-53 revision 4 framework]: https://csrc.nist.gov/publications/detail/sp/800-53/rev-4/archive/2015-01-22
