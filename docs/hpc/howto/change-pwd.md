@@ -20,7 +20,7 @@ We **strongly recommend** using a **password vault** application or website like
 
 ## Change non-expired password
 
-As long as your password has not yet expired, you can change your password ~~either~~ via our web interface~~, or from the {{ site.cluster.name }} command line~~.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
+As long as your password has not yet expired, you can change your password only via our web interface the RBVI/Wynton Password Change Website.  Only passwords adhering to the Unified [UCSF Enterprise Password Standard] are accepted.  Attempts to update to an insufficient password will produce an informative error message.
 
 
 
