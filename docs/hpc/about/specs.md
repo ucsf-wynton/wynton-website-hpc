@@ -262,7 +262,7 @@ Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> usin
 -->
 
 [CGroups]: https://en.wikipedia.org/wiki/Cgroups
-[Rocky 8]: https://www.rocky-linux.org/
+[Rocky 8]: https://www.rockylinux.org/
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
 [x86-64 microarchitecture levels]: https://www.wikipedia.org/wiki/X86-64#Microarchitecture_levels
