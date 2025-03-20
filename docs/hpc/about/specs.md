@@ -37,7 +37,7 @@
 
 (\**) CPU is throttled and memory is limited by Linux Control Groups ([CGroups]). If a process overuses the memory, it will be killed by the operating system.
 
-All nodes on the cluster run [Rocky 8] which is updated on a regular basis.
+All nodes on the cluster run [Rocky Linux] [8.10](https://docs.rockylinux.org/release_notes/) which is updated on a regular basis.
 The job scheduler is SGE 8.1.9 ([Son of Grid Engine]) which provides [queues](/hpc/scheduler/queues.html) for both communal and lab-priority tasks.
 
 
@@ -262,7 +262,7 @@ Source: [host_table.tsv] produced on <span id="hosttable-timestamp"></span> usin
 -->
 
 [CGroups]: https://en.wikipedia.org/wiki/Cgroups
-[Rocky 8]: https://www.rockylinux.org/
+[Rocky Linux]: https://www.rockylinux.org/
 [Son of Grid Engine]: https://web.archive.org/web/https://arc.liv.ac.uk/trac/SGE
 [Pacific Research Platform]: https://ucsdnews.ucsd.edu/pressrelease/nsf_gives_green_light_to_pacific_research_platform
 [x86-64 microarchitecture levels]: https://www.wikipedia.org/wiki/X86-64#Microarchitecture_levels
