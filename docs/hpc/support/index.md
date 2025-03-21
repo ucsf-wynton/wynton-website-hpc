@@ -2,8 +2,9 @@
 
 ## Checklist when asking for help
 
-Whenever asking for help, here or elsewhere, think "How can I help
-the helper help me?"  
+Whenever asking for help, here or elsewhere, stop, take a big breathe, and then ask yourself:
+
+👉 **_- "How can I help the helper help me?"_** 👈
 
 Below is a checklist that helps us better assist you with your issue
 and get to a resolution sooner. Please make sure to:
