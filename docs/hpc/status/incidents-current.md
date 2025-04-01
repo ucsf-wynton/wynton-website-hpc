@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">File system timeouts</span>
 
+**Update**: Login is re-enabled. Queues and jobs remains suspended.
+<br><span class="timestamp">March 31, 20:15 PT</span>
+
 **Notice**: BeeGFS metadata servers are experiencing issues. We have
 suspended all queues and jobs and disabled logins. We will work with
 the file system vendor to resolve the issue.

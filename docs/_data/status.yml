@@ -142,5 +142,5 @@ condition: runs at lower capacity
 message: Fewer compute slots are available due to kernel upgrades.
 
 level: danger
-condition: is non-operational
-message: Login and jobs have been disabled due to BeeGFS issues.
+condition: is operational
+message: Jobs are suspended due to BeeGFS issues.
