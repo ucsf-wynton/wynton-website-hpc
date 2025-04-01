@@ -2,6 +2,9 @@
 
 #### <span style="color: orange;">File system timeouts</span>
 
+**Update**: Queues and jobs are re-enabled.
+<br><span class="timestamp">April 1, 12:00 PT</span>
+
 **Update**: Login is re-enabled. Queues and jobs remains suspended.
 <br><span class="timestamp">March 31, 20:15 PT</span>
 
