@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(104)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(105)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
@@ -206,7 +206,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (104)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (105)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2377,6 +2377,46 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_libgit2" class="module-name">libgit2</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">libgit2: Cross-platform, Linkable Library Implementation of Git</strong><br>
+<span class="module-description">A cross-platform, linkable library implementation of Git that you can use in your application.</span><br>
+Example: <span class="module-example"><code>git2 --version</code> and <code>git2 --help</code>.</span><br>
+URL: <span class="module-url"><a href="https://libgit2.org/">https://libgit2.org/</a>, <a href="https://github.com/libgit2/libgit2">https://github.com/libgit2/libgit2</a> (source code), <a href="https://github.com/libgit2/libgit2/releases">https://github.com/libgit2/libgit2/releases</a> (release)</span><br>
+Versions: <span class="module-version"><em>1.9.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help(&quot;libgit2: Cross-platform, Linkable Library Implementation of Git&quot;)
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: spatial, library&quot;)
+whatis(&quot;URL: https://libgit2.org/, https://github.com/libgit2/libgit2 (source code), https://github.com/libgit2/libgit2/releases (release)&quot;)
+whatis([[
+Description: A cross-platform, linkable library implementation of Git that you can use in your application.
+Examples: `git2 --version` and `git2 --help`.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib64&quot;))
+
+-- building
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,  pathJoin(home, &quot;lib64&quot;, &quot;pkgconfig&quot;))
+
+-- prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
+-- prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
+-- prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
 </code></pre>
 
 </details>
@@ -4690,24 +4730,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4721,6 +4743,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -6644,7 +6684,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(104)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(105)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
