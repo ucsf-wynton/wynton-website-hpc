@@ -4919,7 +4919,7 @@ prepend-path  PYTHONPATH      ${topdir}/python
 <h3 id="module_sali_cuda" class="module-name">cuda</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, 11.5.0, <em>12.4.0</em></span><br>
+Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, 11.5.0, 12.4.0, <em>12.8.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4928,11 +4928,11 @@ module-whatis &quot;NVIDIA CUDA Toolkit libraries, plus cuDNN (v9)&quot;
 if ![file exists /usr/bin/g++] {
   module load gcc
 }
-prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/bin
-prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/lib64
-prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/pkgconfig
-setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/lib64
-setenv        CUDA_BIN_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/bin
+prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/bin
+prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/lib64
+prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/pkgconfig
+setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/lib64
+setenv        CUDA_BIN_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/bin
 </code></pre>
 
 </details>
