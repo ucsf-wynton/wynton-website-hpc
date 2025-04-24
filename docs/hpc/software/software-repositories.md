@@ -941,7 +941,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog), <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version">3.29.0, 3.30.2, <em>3.31.5</em></span><br>
+Versions: <span class="module-version">3.29.0, 3.30.2, 3.31.5, <em>4.0.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2004,7 +2004,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>3.3.0</em></span><br>
+Versions: <span class="module-version">3.3.0, 3.4.0, <em>3.4.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3762,7 +3762,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">The RStudio Server Controller (RSC) is a tool for launching a personal instance of the RStudio Server on a Linux machine, which then can be access via the web browser, either directly or via SSH tunneling.</span><br>
 Example: <span class="module-example"><code>rsc --help</code>, <code>rsc start</code>, and <code>rsc stop</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/UCSF-CBI/rstudio-server-controller">https://github.com/UCSF-CBI/rstudio-server-controller</a>, <a href="https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md">https://github.com/UCSF-CBI/rstudio-server-controller/blob/main/NEWS.md</a> (changelog)</span><br>
-Versions: <span class="module-version"><em>0.17.0</em></span><br>
+Versions: <span class="module-version">0.17.0, <em>0.18.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3794,10 +3794,13 @@ if isDir(&quot;/wynton&quot;) then
   else
     pushenv(&quot;RSC_SSH_LOGIN_HOSTNAME&quot;, &quot;log1.wynton.ucsf.edu&quot;)
   end
+  pushenv(&quot;RSC_HELP_URL&quot;, &quot;https://wynton.ucsf.edu/hpc/howto/rstudio.html&quot;)
 elseif isDir(&quot;/c4&quot;) then
     pushenv(&quot;RSC_SSH_LOGIN_HOSTNAME&quot;, &quot;c4-log1.ucsf.edu&quot;)
+    pushenv(&quot;RSC_HELP_URL&quot;, &quot;https://www.c4.ucsf.edu/howto/rstudio.html&quot;)
 else
   try_load(&quot;expect&quot;)
+  pushenv(&quot;RSC_HELP_URL&quot;, &quot;https://github.com/UCSF-CBI/rstudio-server-controller#readme&quot;)
 end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -4524,7 +4527,7 @@ pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot
 Example: <span class="module-example"><code>wynton --help</code> and <code>trash --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/ucsf-wynton/wynton-tools">https://github.com/ucsf-wynton/wynton-tools</a>, <a href="https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md">https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work in development, which means that these tools may change, or even be removed, at anytime without notice.</span><br>
-Versions: <span class="module-version">0.20.0, 0.20.1, <em>0.21.0</em></span><br>
+Versions: <span class="module-version">0.20.0, 0.20.1, 0.21.0, <em>0.22.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4730,24 +4733,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4761,6 +4746,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -4919,7 +4922,7 @@ prepend-path  PYTHONPATH      ${topdir}/python
 <h3 id="module_sali_cuda" class="module-name">cuda</h3>
 <dl>
   <dd class="module-details">
-Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, 11.5.0, <em>12.4.0</em></span><br>
+Versions: <span class="module-version">6.0.37, 7.5.18, 8.0.61, 9.0.176, 10.0.130, 11.5.0, 12.4.0, <em>12.8.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -4928,11 +4931,11 @@ module-whatis &quot;NVIDIA CUDA Toolkit libraries, plus cuDNN (v9)&quot;
 if ![file exists /usr/bin/g++] {
   module load gcc
 }
-prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/bin
-prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/lib64
-prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/pkgconfig
-setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/lib64
-setenv        CUDA_BIN_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.4.0/lib64/cuda/bin
+prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/bin
+prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/lib64
+prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/pkgconfig
+setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/lib64
+setenv        CUDA_BIN_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/bin
 </code></pre>
 
 </details>
