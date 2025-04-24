@@ -1,3 +1,5 @@
+{% include banner-phi-freeze.md %}
+
 <!--
  WARNING: If you update this page, beyond fixing typos, you must create a
  GitHub issue on <https://github.com/ucsf-wynton/wynton-website-hpc/issues>

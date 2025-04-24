@@ -1,5 +1,8 @@
 # News
 
+<!-- FIXME -->
+2025-04-22: PHI Freeze: Effective immediately, we are pausing requests for new projects that process P4 data, specifically Protected Health Information (PHI).
+
 2025-01-16: The memory limit on development nodes was decreased from 68 GiB to 48 GiB, in order to further lower the risk for these machines to run low on memory resulting in non-responsiveness.
 
 2024-12-14: The memory limit on development nodes was decreased from 96 GiB to 68 GiB, in order to lower the risk for these machines to run low on memory resulting in non-responsiveness.

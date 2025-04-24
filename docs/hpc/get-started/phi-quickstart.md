@@ -1,3 +1,5 @@
+{% include banner-phi-freeze.md %}
+
 # Protected Health Information (PHI) Quickstart
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 150%;" markdown="1">
