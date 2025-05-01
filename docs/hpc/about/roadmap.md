@@ -2,29 +2,18 @@
 
 _The below "timeline" is a rough outline on when we can expect different milestones to be accomplished - the order does not reflect their relative priorities or the amount of effort spent_.
 
-
 ## Near future
 
-* Storage: Archival backup of the BeeGFS file system.
+* New job scheduler: Upgrade from SGE to Altair's AGE to improve scheduling performance, job observability, and GPU resource use experience. AGE also has paid support, which will allow us to make the best use of AGE, unlike the lack of support with SGE.
 
-* Pricing model: Contributors to {{ site.cluster.name }} get access to a larger compute share of the cluster (beyond what is available for free).  Details on how to contribute with new hardware (amount in USD) and how to contribute with existing hardware (minimum technical requirements) will be given
+* Hardware refresh: Complete a thorough assessment of Wynton hardware assets, replace outdated hardware where possible, and develop a sustainable plan for future hardware replacement.
 
-* Storage: Requirements for mounting lab-owned storage into {{ site.cluster.name }}
-
-
-## On the horizon
-
-* Forum: A self-hosted User Forum for richer conversations than what's on our Slack channel
-
-* Support: A User Issue Tracker
-
-
-## Postponed
-
-* Scheduler: Slurm as a job scheduler instead of SGE.  ~~This will be introduced in stages.  We will start with a beta-test phase where 12 nodes (in total 432 cores) will be dedicated for Slurm scheduling.  After a successful beta testing, we will start migrating over nodes from the SGE scheduler to the new Slurm scheduler.~~ The result of the test phase was that we cannot migrate to Slurm, because Slurm does not support our co-op model. We might revisit this for future versions of Slurm.
+* Architecture and Data Assessment: Conduct a thorough review of the use cases, projects, and types of data stored within Wynton and review the architecture to ensure compliance and identify areas for improvement.
 
 
 ## Accomplished milestones
+
+* Slurm pilot: Slurm was evaluated as a job scheduler instead of SGE.  The result of the test phase was that we cannot migrate to Slurm, because Slurm does not support our co-op model. 
 
 * Migration: The UCSF Memory and Aging Center (MAC) have joined {{ site.cluster.name }} by contributing new nodes
 
