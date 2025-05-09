@@ -48,9 +48,10 @@ title: Wynton HPC Status
    <div id="BeeGFSLoad_devX__wynton_group_cbi_hb"></div>
   </div>
 
-_Figure: The total, relative processing time on the logarithmic scale for one benchmarking run to complete over time. The values presented are relative to the best case scenario when there is no load, in case the value is 1.0. The larger the relative time is, the more lag there is on file system. These benchmarks are run every ten minutes from different hosts and toward different types of the file system._
+_Figure: The total, relative processing time on the logarithmic scale for one benchmarking run to complete over time. The values presented are relative to the best case scenario when there is no load, in case the value is 1.0. The larger the relative time is, the more lag there is on file system. 
+Annotation of lagginess ranges: 1-2: excellent (light green), 2-5: good (green), 5-20: sluggish (orange), 20-100: bad (red), 100 and above: critical (purple)._
 
-Details: These metrics are based on a [set of commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench](https://github.com/ucsf-wynton/wynton-bench)** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  When there's minimal load on `/wynton`, the processing time is ~19 seconds. In contrast, when benchmarking local `/scratch`, the total processing time is about three seconds.
+Details: These benchmarks are run every ten minutes from different hosts and toward different types of the file system. These metrics are based on a [set of commands](https://github.com/ucsf-wynton/wynton-bench/blob/d96937b51e6ee3a421afec3c793accb0acd82c51/bench-scripts/bench-files-tarball.sh#L93-L129), part of the **[wynton-bench](https://github.com/ucsf-wynton/wynton-bench)** tool, that interacts with the file system that is being benchmarked.  The relevant ones are: reading a large file from `/wynton/home/`, copying that large archive file to and from the BeeGFS path being benchmarked, extracting the archive to path being benchmarked, find one file among the extracted files, calculating the total file size, and re-archiving and compressing the extracted files.  When there's minimal load on `/wynton`, the processing time is ~19 seconds. In contrast, when benchmarking local `/scratch`, the total processing time is about three seconds.
 
 
 ## Miscellaneous Metrics
@@ -219,6 +220,8 @@ var multiple_beegfs_tracks = true;
 var now = new Date();
 var from = new Date(now - 24 * 60 * 60 * 1000);
 
+var max_lagginess = 1000;
+
 var beegfs_load = {
   type: "scatter",
   mode: "lines",
@@ -229,7 +232,7 @@ var beegfs_load = {
 }
 
 var layout = {
-  height: 200,
+  height: 300,
   margin: { l: 50, r: 30, b: 40, t: 60, pad: 4 },
   xaxis: {
     autorange: false,
@@ -268,7 +271,7 @@ var layout = {
   },
   yaxis: {
     autorange: false,
-    range: [-0.1, 4.0],
+    range: [-0.1, Math.log10(max_lagginess)],
     type: 'log'
   }
 };
@@ -294,12 +297,50 @@ drives.forEach(function(drive) {
   
   var url = url_path + "/" + "wynton-bench_" + hosts[0] + ".wynton.ucsf.edu__" + drive + ".tsv";
   Plotly.d3.tsv(url, function(err, rows) {
+    // Lagginess data
     var trace = JSON.parse(JSON.stringify(beegfs_load));
     trace.name = hosts[0];
     trace.x = unpack(rows, 'timestamp');
     trace.y = unpack(rows, 'duration');
-    trace.line = { color: '#23527c' };
-    Plotly.newPlot(id, [trace], layout);
+    trace.line = { color: '#23527c', width: 4 };
+
+    // Pain-level annotations (excellent, good, sluggish, bad, critical)
+    var painTicks = [2, 5, 20, 100, 10000];
+    var painLabels = ['', '', '', '', ''];
+          
+    var painTrace = {
+      x: trace.x,
+      y: painTicks,
+      yaxis: 'y2',
+      mode: 'markers',
+      marker: { opacity: 0 },
+      showlegend: false,
+      hoverinfo: 'skip'
+    };
+    
+    var updatedLayout = Object.assign({}, layout, {
+      yaxis2: {
+        overlaying: 'y',
+        side: 'right',
+        tickvals: painTicks,
+        ticktext: painLabels,
+        showgrid: false,
+        zeroline: false
+      },
+      shapes: [
+        { type: 'rect', xref: 'paper', x0: 0, x1: 1, yref: 'y', y0: 1, y1: painTicks[1], fillcolor: 'rgba(0, 200, 0, 0.2)', line: { width: 0 }, layer: 'below' },                 // Excellent
+        
+        { type: 'rect', xref: 'paper', x0: 0, x1: 1, yref: 'y', y0: painTicks[0], y1: painTicks[1], fillcolor: 'rgba(255, 215, 0, 0.3)', line: { width: 0 }, layer: 'below' },    // Good
+        
+        { type: 'rect', xref: 'paper', x0: 0, x1: 1, yref: 'y', y0: painTicks[1], y1: painTicks[2], fillcolor: 'rgba(255, 140, 0, 0.3)', line: { width: 0 }, layer: 'below' },    // Sluggish
+        
+        { type: 'rect', xref: 'paper', x0: 0, x1: 1, yref: 'y', y0: painTicks[2], y1: painTicks[3], fillcolor: 'rgba(255, 0, 0, 0.4)', line: { width: 0 }, layer: 'below' },      // Bad
+        
+        { type: 'rect', xref: 'paper', x0: 0, x1: 1, yref: 'y', y0: painTicks[3], y1: max_lagginess, fillcolor: 'rgba(200, 100, 255, 0.4)', line: { width: 0 }, layer: 'below' }  // Critical
+      ]
+    });  
+
+    Plotly.newPlot(id, [trace, painTrace], updatedLayout);
   })
 
   // Change to 'true' to show multiple traces
@@ -311,7 +352,7 @@ drives.forEach(function(drive) {
         trace.name = hosts[1];
         trace.x = unpack(rows, 'timestamp');
         trace.y = unpack(rows, 'duration');
-        trace.line = { color: '#F88379' };
+        trace.line = { color: '#F88379', width: 4 };
         Plotly.addTraces(id, [trace]);
       })
     }
@@ -323,7 +364,7 @@ drives.forEach(function(drive) {
         trace.name = hosts[2];
         trace.x = unpack(rows, 'timestamp');
         trace.y = unpack(rows, 'duration');
-        trace.line = { color: '#9dc183' };
+        trace.line = { color: '#9dc183', width: 4 };
         Plotly.addTraces(id, [trace]);
       })
     }
