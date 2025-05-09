@@ -302,7 +302,7 @@ drives.forEach(function(drive) {
     trace.name = hosts[0];
     trace.x = unpack(rows, 'timestamp');
     trace.y = unpack(rows, 'duration');
-    trace.line = { color: '#23527c', width: 4 };
+    trace.line = { color: '#23527c', width: 3 };
 
     // Pain-level annotations (excellent, good, sluggish, bad, critical)
     var painTicks = [2, 5, 20, 100, 10000];
@@ -352,7 +352,7 @@ drives.forEach(function(drive) {
         trace.name = hosts[1];
         trace.x = unpack(rows, 'timestamp');
         trace.y = unpack(rows, 'duration');
-        trace.line = { color: '#F88379', width: 4 };
+        trace.line = { color: '#F88379', width: 3 };
         Plotly.addTraces(id, [trace]);
       })
     }
@@ -364,7 +364,7 @@ drives.forEach(function(drive) {
         trace.name = hosts[2];
         trace.x = unpack(rows, 'timestamp');
         trace.y = unpack(rows, 'duration');
-        trace.line = { color: '#9dc183', width: 4 };
+        trace.line = { color: '#9dc183', width: 3 };
         Plotly.addTraces(id, [trace]);
       })
     }
