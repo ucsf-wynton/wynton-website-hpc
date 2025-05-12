@@ -294,7 +294,11 @@ function unpack(rows, key) {
     if (key == "duration") {
       value = parseFloat(value);
       value = value / baseline;
-      if (value < 1.0) {
+      if (value < 1/2) {
+        // Unreasonable value?
+        value = null;
+      } else if (value < 1.0) {
+        // Round up to baseline
         value = 1.0;
       }
     }
