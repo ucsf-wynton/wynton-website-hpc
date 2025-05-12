@@ -96,7 +96,13 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 {% endfor %}
 
 
+
 <!-- DO NOT EDIT ANYTHING BELOW -->
+
+
+<!-------------------------------------------------------------------------
+   Compute Nodes Status Table
+ -------------------------------------------------------------------------->
 
 <script src="https://d3js.org/d3.v3.min.js"><!-- ~150 kB --></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"><!-- ~80 kB --></script>
@@ -195,6 +201,12 @@ d3.text("/hpc/assets/data/host_table.tsv", "text/csv", function(host_table) {
 });
 </script>
 
+
+
+<!-------------------------------------------------------------------------
+   BeeGFS Lagginess Graphs
+ -------------------------------------------------------------------------->
+ 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <script>
