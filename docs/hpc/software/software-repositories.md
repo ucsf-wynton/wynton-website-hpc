@@ -5465,7 +5465,7 @@ prepend-path  PATH            /salilab/diva1/programs/x86_64linux/ninja-1.8.2/bi
   <dd class="module-details">
 <span class="module-description">Collection of algorithms for computer vision</span><br>
 URL: <span class="module-url"><a href="https://opencv.org/">https://opencv.org/</a></span><br>
-Versions: <span class="module-version">3.4.3, <em>4.3.0</em></span><br>
+Versions: <span class="module-version"><em>4.3.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5827,7 +5827,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/hdbscan-0.8.33/lib64/py
   <dd class="module-details">
 <span class="module-description">Python package for handling IHM mmCIF files</span><br>
 URL: <span class="module-url"><a href="https://github.com/ihmwg/python-ihm">https://github.com/ihmwg/python-ihm</a></span><br>
-Versions: <span class="module-version">1.2, 1.7, <em>1.8</em></span><br>
+Versions: <span class="module-version">1.2, 1.7, 1.8, <em>2.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5836,7 +5836,7 @@ module-whatis &quot;Description: Python package for handling IHM mmCIF files&quo
 module-whatis &quot;URL: https://github.com/ihmwg/python-ihm&quot;
 conflict python2
 module load python3/msgpack
-prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-1.8/lib64/python/site-packages
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/ihm-2.5/lib64/python/site-packages
 </code></pre>
 
 </details>
