@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 161 hours (= 6.7 days)
-  - Total: 161 hours (= 6.7 days)
+  - Unscheduled: 223 hours (= 9.3 days)
+  - Total: 223 hours (= 9.3 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -40,11 +40,12 @@
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers
   may have failed, cluster not accessible
 * Occurrences:
-  - 2025-01-09 -- 2025-01-09 (1.25 hours)
+  - 2025-01-09 -- 2025-01-09 ( 1.25 hours)
   - 2025-01-17 -- 2025-01-22 (81.75 hours)
   - 2025-02-21 -- 2025-03-07 (61.0 hours)
   - 2025-03-31 -- 2025-04-01 (17.0 hours)
-* Total downtime: 161 hours of which 0.0 hours were due to external
+  - 2025-04-11 -- 2025-04-14 (62.0 hours)
+* Total downtime: 223 hours of which 0.0 hours were due to external
   factors
 
 
@@ -57,6 +58,32 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### April 11-14, 2025
+
+#### <span style="color: orange;">File system timeouts</span>
+
+**Resoved**: All cluster jobs and queues were unsuspended at 02:00
+this night.
+<br><span class="timestamp">April 14, 08:15 PT</span>
+
+**Notice**: All cluster jobs have been suspended in order to allow
+multiple metadata mirror resyncing processes to complete. These
+processes are what led to the hanging episodes that we have been
+seeing. Interactive nodes remain available. Resyncing processes are
+estimated to complete by Monday.
+<br><span class="timestamp">April 11, 12:00 PT</span>
+
+<!--
+## When BeeGFS was down
+start: 2025-04-11T12:00:00
+stop: 2025-04-14T02:00:00
+length: 63h00m
+severity: major-outage
+affected: beegfs, jobs
+reason: beegfs
+ -->
 
 
 ### March 31-April 1, 2025
