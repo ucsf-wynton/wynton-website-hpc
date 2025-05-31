@@ -223,6 +223,35 @@ reason: beegfs
  -->
 
 
+### February 21-24, 2025
+
+#### <span style="color: orange;">Kernel maintenance</span>
+
+**Resolved**: Login node `plog1` respects SSH keys again.
+<br><span class="timestamp">February 24, 2025, 11:15 PT</span>
+
+**Update**: Login node `plog1` is available again, but does not respect
+SSH keys.
+<br><span class="timestamp">February 24, 2025, 10:30 PT</span>
+
+**Update**: Data-transfer node `dt1` is available again.
+<br><span class="timestamp">February 24, 2025, 10:30 PT</span>
+
+**Update**: With the exception for `plog1` and `dt1`, all login,
+data-transfer, and development nodes have been rebooted. Until `plog1`
+is available, PHI-users may use `pdt1` and `pdt2` to login into the
+cluster.
+<br><span class="timestamp">February 22, 2025, 13:30 PT</span>
+
+**Notice**: New operating-system kernels are deployed. Login,
+data-transfer, and development nodes will be rebooted on Saturday,
+February 22, 2025 at 13:00. Compute nodes will no longer accept new
+jobs until they have been rebooted. A node will be rebooted as soon as
+any existing jobs have completed, which may take up to two weeks
+(maximum runtime). During this update period, there will be fewer than
+usual slots available on the queues.
+<br><span class="timestamp">February 21, 2025, 12:15 PT</span>
+
 
 ### February 22-24, 2025
 
