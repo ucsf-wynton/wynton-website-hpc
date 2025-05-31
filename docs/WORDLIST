@@ -339,10 +339,12 @@ repos
 reprioritizing
 reproducibility
 requeue
+resilvering
 resynced
 resynchronization
 resynchronize
 resynchronizing
+resyncing
 rgdal
 rgeos
 riginti
@@ -385,6 +387,7 @@ unrecovered
 unselect
 unstage
 unstaged
+unsuspended
 uuid
 valse
 vglusers

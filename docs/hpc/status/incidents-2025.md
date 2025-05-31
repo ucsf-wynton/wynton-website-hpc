@@ -64,7 +64,7 @@
 
 #### <span style="color: orange;">File system timeouts</span>
 
-**Resoved**: All cluster jobs and queues were unsuspended at 02:00
+**Resolved**: All cluster jobs and queues were unsuspended at 02:00
 this night.
 <br><span class="timestamp">April 14, 08:15 PT</span>
 
@@ -90,7 +90,7 @@ reason: beegfs
 
 #### <span style="color: orange;">File system timeouts</span>
 
-**Update**: Queues and jobs are re-enabled.
+**Resolved**: Queues and jobs are re-enabled.
 <br><span class="timestamp">April 1, 12:00 PT</span>
 
 **Update**: Login is re-enabled. Queues and jobs remains suspended.

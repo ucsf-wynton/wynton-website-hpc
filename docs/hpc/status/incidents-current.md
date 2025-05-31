@@ -1,3 +1,32 @@
+### May 29-ongoing, 2025
+
+#### <span style="color: orange;">Major file system failures</span>
+
+**Update**: Wynton jobs and logins are still paused until further
+notice. Our team is working on determining all of the files that may
+be corrupt/unavailable and will work with the vendor on the best
+course of action. We do not yet have an estimate on when we will be
+back up.
+<br><span class="timestamp">May 30, 10:40 PT</span>
+
+**Notice**: Jobs and logins have been paused until further notice.
+Our team is actively troubleshooting and coordinating with the vendor.
+A drive was replaced today and was in the process of resilvering when
+two more drives failed, totally three failed drives, which causes
+significant problems. Data corruption is expected.
+<br><span class="timestamp">May 29, 18:20 PT</span>
+
+<!--
+## When BeeGFS was down
+start: 2025-05-29T18:00:00
+stop: 
+length: 
+severity: major-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
+
+
 ### February 21-ongoing, 2025
 
 #### <span style="color: orange;">Kernel maintenance</span>
