@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 144.0 hours (= 6.0 days)
-  - Total: 144.0 hours (= 6.0 days)
+  - Unscheduled: 161 hours (= 6.7 days)
+  - Total: 161 hours (= 6.7 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -40,9 +40,11 @@
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers
   may have failed, cluster not accessible
 * Occurrences:
+  - 2025-01-09 -- 2025-01-09 (1.25 hours)
   - 2025-01-17 -- 2025-01-22 (81.75 hours)
   - 2025-02-21 -- 2025-03-07 (61.0 hours)
-* Total downtime: 142.75 hours of which 0.0 hours were due to external
+  - 2025-03-31 -- 2025-04-01 (17.0 hours)
+* Total downtime: 161 hours of which 0.0 hours were due to external
   factors
 
 
@@ -56,6 +58,32 @@
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
 
+
+### March 31-April 1, 2025
+
+#### <span style="color: orange;">File system timeouts</span>
+
+**Update**: Queues and jobs are re-enabled.
+<br><span class="timestamp">April 1, 12:00 PT</span>
+
+**Update**: Login is re-enabled. Queues and jobs remains suspended.
+<br><span class="timestamp">March 31, 20:15 PT</span>
+
+**Notice**: BeeGFS metadata servers are experiencing issues. We have
+suspended all queues and jobs and disabled logins. We will work with
+the file system vendor to resolve the issue.
+<br><span class="timestamp">March 31, 19:00 PT</span>
+
+
+<!--
+## When BeeGFS was down
+start: 2025-03-31T19:00:00
+stop: 2025-04-01T12:00:00
+length: 17h00m
+severity: major-outage
+affected: beegfs, jobs
+reason: beegfs
+ -->
 
 
 ### February 21-March 7, 2025
@@ -330,4 +358,3 @@ severity: major-outage
 affected: jobs, beegfs, compute, *
 reason: beegfs
  -->
-
