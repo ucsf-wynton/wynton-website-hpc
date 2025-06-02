@@ -144,3 +144,7 @@ message: Fewer compute slots are available due to kernel upgrades.
 #level: danger
 #condition: is operational
 #message: Jobs are suspended due to BeeGFS issues.
+
+level: danger
+condition: is not operational
+message: The cluster is down, because the BeeGFS file system is non-functional.
