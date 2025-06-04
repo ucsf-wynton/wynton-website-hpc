@@ -2,6 +2,18 @@
 
 #### <span style="color: orange;">Major file system failures</span>
 
+**Update**: We plan to resume operations by the weekend, given that
+the current backup and the necessary, manual one-at-the-time
+replacement of multiple drives completes in time. Files that lived on
+the failed storage pool are broken and cannot not be fully read, but
+possible partially. Home directories are unaffected. The affected
+files live under `/wynton/group`, `/wynton/protected/group`, and
+`/wynton/protected/project`. We are scanning the file system to
+identify exactly which files are affected - this is a slow
+processes. We will share file lists with affected groups. Eventually,
+any broken files have to deleted.
+<br><span class="timestamp">June 4, 14:00 PT</span>
+
 **Update**: Wynton jobs and logins are still paused until further
 notice. Our team is working on determining all of the files that may
 be corrupt/unavailable and will work with the vendor on the best
