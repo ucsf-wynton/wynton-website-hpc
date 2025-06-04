@@ -11,7 +11,7 @@ files live under `/wynton/group`, `/wynton/protected/group`, and
 `/wynton/protected/project`. We are scanning the file system to
 identify exactly which files are affected - this is a slow
 processes. We will share file lists with affected groups. Eventually,
-any broken files have to deleted.
+any broken files have to be deleted.
 <br><span class="timestamp">June 4, 14:00 PT</span>
 
 **Update**: Wynton jobs and logins are still paused until further
