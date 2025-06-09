@@ -459,8 +459,7 @@ purchase.  See [Pricing for Extra Compute] for more details.
 **Q**. _Our lab has some old nodes we'd like to contribute to {{
 site.cluster.name }} in return for priority. Will you take them?_
 
-**A**. Please get in touch with the [{{ site.cluster.nickname }}
-team].
+**A**. We no longer accept donations of old hardware.
 
 
 ### What {{ site.cluster.nickname }} offers
