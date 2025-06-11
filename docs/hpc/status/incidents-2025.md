@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 223 hours (= 9.3 days)
-  - Total: 223 hours (= 9.3 days)
+  - Unscheduled: 505 hours (= 21.0 days)
+  - Total: 505 hours (= 21.0 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -45,7 +45,8 @@
   - 2025-02-21 -- 2025-03-07 (61.0 hours)
   - 2025-03-31 -- 2025-04-01 (17.0 hours)
   - 2025-04-11 -- 2025-04-14 (62.0 hours)
-* Total downtime: 223 hours of which 0.0 hours were due to external
+  - 2025-05-29 -- 2025-06-10 (282.0 hours)
+* Total downtime: 505 hours of which 0.0 hours were due to external
   factors
 
 
@@ -58,6 +59,55 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### May 29-June 10, 2025
+
+#### <span style="color: orange;">Major file system failures</span>
+
+**Resolved**: Wynton logins are available as of noon today. At that time
+we will start unsuspending jobs.  We lost about 50 TiBs (0.7%) of
+compressed data from 6550 TiBs with the group storage pool for files
+in `/wynton/group`, `/wynton/protected/group`, and
+`/wynton/protected/project`. See Wynton Announcement email for further
+details.
+<br><span class="timestamp">June 10, 12:00 PT</span>
+
+**Update**: We plan to resume operations by the weekend, given that
+the current backup and the necessary, manual one-at-the-time
+replacement of multiple drives completes in time. Files that lived on
+the failed storage pool are broken and cannot not be fully read, but
+possible partially. Home directories are unaffected. The affected
+files live under `/wynton/group`, `/wynton/protected/group`, and
+`/wynton/protected/project`. We are scanning the file system to
+identify exactly which files are affected - this is a slow
+processes. We will share file lists with affected groups. Eventually,
+any broken files have to be deleted.
+<br><span class="timestamp">June 4, 14:00 PT</span>
+
+**Update**: Wynton jobs and logins are still paused until further
+notice. Our team is working on determining all of the files that may
+be corrupt/unavailable and will work with the vendor on the best
+course of action. We do not yet have an estimate on when we will be
+back up.
+<br><span class="timestamp">May 30, 10:40 PT</span>
+
+**Notice**: Jobs and logins have been paused until further notice.
+Our team is actively troubleshooting and coordinating with the vendor.
+A drive was replaced today and was in the process of resilvering when
+two more drives failed, totally three failed drives, which causes
+significant problems. Data corruption is expected.
+<br><span class="timestamp">May 29, 18:20 PT</span>
+
+<!--
+## When BeeGFS was down
+start: 2025-05-29T18:00:00
+stop: 2025-06-10T12:00:00
+length: 282 hours
+severity: major-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
 
 
 ### April 11-14, 2025
