@@ -1,9 +1,8 @@
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="
 1">
-<strong>2025-04-22: Temporary PHI Freeze</strong>
+<strong>2025-09-08: Wynton-wide pause on P4 research</strong>
 
-<p> Effective immediately, we are pausing requests for new projects
-that process P4 data, specifically Protected Health Information (PHI).
+<p>Starting today, we will cease all data work on P4 level data.
 </p>
 
 </div>
