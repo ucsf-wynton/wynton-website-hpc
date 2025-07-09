@@ -8,7 +8,7 @@
 
 # User Agreement and Disclaimer
 
-Last Updated October 11, 2024
+Last Updated July 9, 2025
 
 Wynton user responsibilities and requirements in support of this
 Agreement include:
@@ -16,10 +16,10 @@ Agreement include:
  * By using the Wynton HPC environment, you agree to abide by the
    statement of its [Purpose, Principles and Governance] as well as the [UCSF Minimum Security Standards](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information).
 
- * Users who wish to access protected data such as Protected Health
-   Information (PHI) are required to log into node(s) that implement
-   enhanced security such as additional access restrictions and
-   relevant HIPAA compliance measures.
+ * P4 data, which includes PHI, is prohibited.  P3 data may only be used in "Wynton Protected” via a “protected” account. [Refer to UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard).  
+ 
+ * Users who wish to access P3 protected data are required to log into node(s) that implement
+   enhanced security, such as additional access restrictions.
 
  * The PI is responsible for ensuring that users are listed on the
    Institutional Review Board (IRB) approval letter before they
@@ -48,8 +48,8 @@ Agreement include:
    are continually evolving, difficult situations may arise in the
    future. For example, it is possible that future requirements
    imposed by the University of California Office of the President
-   (UCOP) or the UCSF concerning PHI data would in turn negatively
-   impact on the ability of the cluster to serve its founding purpose,
+   (UCOP) or UCSF concerning protected data would in turn negatively
+   impact the ability of the cluster to serve its founding purpose,
    as defined in the [Governance document].  In such a case, the
    Steering Committee may roll back configurational changes or
    otherwise re-configure the cluster, so that the founding needs are
@@ -71,8 +71,7 @@ Agreement include:
    to attempt to circumvent policies nor avoid restrictions imposed by
    the Wynton Operations team.
 
- * Under no circumstances are users to share their account and
-   password with others.
+ * Accounts are personal, and login credentials must not be shared.
 
  * Users are prohibited from changing system-wide configurations on
    Wynton nodes.
