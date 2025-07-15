@@ -9,9 +9,9 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 * All user accounts come with a quota of non-expandable 500 GiB of storage in `/wynton/home` or `/wynton/protected/home`, which is free of charge
 
-* Global `/wynton/scratch` and `/wynton/protected/scratch` (for PHI users) may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
+* Global `/wynton/scratch` and `/wynton/protected/scratch` (for Wynton Protected users) may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
 
-* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/protected/group` (for PHI users), or in `/wynton/protected/project` (for specific PHI projects) at $160/TiB (one-time fee).  Both will count towards a lab's storage quota total.
+* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/protected/group` (for Wynton Protected users), or in `/wynton/protected/project` (for specific Wynton Protected projects) at $160/TiB (one-time fee).  Both will count towards a lab's storage quota total.
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
@@ -39,17 +39,17 @@ There are some additional parameters:
 
 ## Frequently Asked Questions
 
-### Q: If I already have purchased group storage, can I also use that storage quota for PHI data in `/wynton/protected/group`?
+### Q: If I already have purchased group storage, can I also use that storage quota for Wynton Protected data in `/wynton/protected/group`?
 
-A: Yes, but PHI data must not be stored in `/wynton/group`.  We can create group folders for you under `/wynton/protected` for PHI data storage and collaboration. If you choose to have your current storage allocation updated to include PHI storage, you have three options:
+A: Yes, but Wynton Protected data must not be stored in `/wynton/group`.  We can create group folders for you under `/wynton/protected` for Wynton Protected data storage and collaboration. If you choose to have your current storage allocation updated to include Wynton Protected storage, you have three options:
 
-1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to two folders, so it can be tricky to track where the group’s quota usage is, PHI or non-PHI.
+1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to two folders, so it can be tricky to track where the group’s quota usage is, Wynton Protected or Wynton Regular.
 
-2. We can create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate PHI and non-PHI group quota usage.
+2. We can create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate Wynton Protected and Wynton Regular group quota usage.
 
-3. If the group using the PHI data does not include the whole lab group membership, or includes members from outside of the group, then a folder in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
+3. If the group using the Wynton Protected data does not include the whole lab group membership, or includes members from outside of the group, then a folder in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
 
-Only members of the lab group with Wynton PHI access will be able to access files stored under `/wynton/protected`.
+Only members of the lab group with Wynton Protected access will be able to access files stored under `/wynton/protected`.
 
 
 ### Q: Does purchasing additional group storage increase the quotas available to lab users in `/wynton/home` or `/wynton/protected/home`?
