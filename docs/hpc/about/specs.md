@@ -11,7 +11,7 @@
   <dt>Global scratch</dt><dd id="hosttable-summary-global-scratch">{{ site.data.specs.global_scratch_size_total }} TiB</dd>
   <dt>User home storage</dt><dd>500 GiB/user ({{ site.data.specs.home_size_total }} TiB in total)</dd>
   <dt>Group storage</dt><dd>{{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB</dd>
-  <dt>Number of accounts</dt><dd><a href="https://ucsf-wynton.github.io/wyntonquery/reference/users_over_time.html">{{ site.data.users.nbr_of_accounts }}</a> of which {{ site.data.users.nbr_of_phi_accounts }} are approved for PHI</dd>
+  <dt>Number of accounts</dt><dd><a href="https://ucsf-wynton.github.io/wyntonquery/reference/users_over_time.html">{{ site.data.users.nbr_of_accounts }}</a> of which {{ site.data.users.nbr_of_phi_accounts }} are Wynton Protected accounts</dd>
   <dt>Number of projects</dt><dd>{{ site.data.users.nbr_of_projects }}</dd>
 </dl>
 
@@ -50,7 +50,7 @@ The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to o
 
 1. `{{ site.login1.hostname }}`
 2. `{{ site.login2.hostname }}`
-1. `p{{ site.login1.hostname }}` (for PHI users)
+1. `p{{ site.login1.hostname }}` (for Wynton Protected users)
 
 
 ### Data Transfer Nodes
@@ -59,8 +59,8 @@ For transferring large data files, it is recommended to use one of the dedicate 
 
 1. `{{ site.transfer1.hostname }}`
 2. `{{ site.transfer2.hostname }}`
-1. `p{{ site.transfer1.hostname }}` (for PHI users)
-2. `p{{ site.transfer2.hostname }}` (for PHI users)
+1. `p{{ site.transfer1.hostname }}` (for Wynton Protected users)
+2. `p{{ site.transfer2.hostname }}` (for Wynton Protected users)
 
 which have a 10 Gbps connection - providing a file transfer speed of up to (theoretical) 1.25 GB/s = 4.5 TB/h.  As for the login nodes, the transfer nodes can be accessed via SSH.
 
@@ -77,8 +77,8 @@ Node                               | Physical Cores |      RAM | Local `/scratch
 `{{ site.dev2.hostname }}`         |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
 `{{ site.dev3.hostname }}`         |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
 `{{ site.gpudev1.hostname }}`      |             56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
-`p{{ site.dev1.hostname }}` (for PHI users)    |  32 | 256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                    |
-`p{{ site.gpudev1.hostname }}` (for PHI users) | 56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
+`p{{ site.dev1.hostname }}` (for Wynton Protected users)    |  32 | 256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                    |
+`p{{ site.gpudev1.hostname }}` (for Wynton Protected users) | 56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
 
 _Comment:_
 Please use the GPU development node only if you need to build or prototype GPU software.
@@ -102,15 +102,15 @@ The compute nodes can only be utilized by [submitting jobs via the scheduler](/h
 The {{ site.cluster.name }} cluster provides two types of scratch storage:
 
  * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
- * Global `/wynton/scratch/` and `/wynton/protected/scratch/` (for PHI users) - {{ site.data.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
+ * Global `/wynton/scratch/` and `/wynton/protected/scratch/` (for Wynton Protected users) - {{ site.data.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
 There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from a tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
 ### User and Lab Storage
 
- * `/wynton/home/` and `/wynton/protected/home/` (for PHI users): {{ site.data.specs.home_size_total }} TiB storage space
- * `/wynton/group/`, `/wynton/protected/group/` (for PHI users), and `/wynton/protected/projects/` (for PHI users): {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
+ * `/wynton/home/` and `/wynton/protected/home/` (for Wynton Protected users): {{ site.data.specs.home_size_total }} TiB storage space
+ * `/wynton/group/`, `/wynton/protected/group/` (for Wynton Protected users), and `/wynton/protected/projects/` (for Wynton Protected users): {{ site.data.specs.group_size_total }} TB (= {{ site.data.specs.group_size_total | divided_by: 1000.0 }} PB) storage space
 
 Each user may use up to 500 GiB disk space in the home directory.  It is _not_ possible to expand user's home directory.  Research groups can add additional storage space under `/wynton/group/`, `/wynton/protected/group/`, and `/wynton/protected/projects/` by [purchasing additional storage](/hpc/about/pricing-storage.html).
 
