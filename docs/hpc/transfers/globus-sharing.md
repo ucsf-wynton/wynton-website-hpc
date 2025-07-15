@@ -6,7 +6,7 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 ## Creating a Shared Globus Collection
 
 <div class="alert alert-warning" role="alert" markdown="1">
-<span class="wynton-protected">Note,</span> Guest Collections/Shared Globus Collections are _not_ allowed for PHI/Protected Wynton users.
+<span class="protected">Note,</span> Guest Collections/Shared Globus Collections are _not_ allowed for Wynton Protected users.
 </div>
 
 1. Make sure you have a working setup of [Globus for {{ site.cluster.nickname }}]

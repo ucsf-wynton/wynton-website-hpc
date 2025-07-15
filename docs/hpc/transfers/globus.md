@@ -50,11 +50,11 @@ NOTE: You can only use Wynton Globus Collections to share data from Wynton Serve
 
 * **If you receive a message similar to `Missing Identity Information. Unable to complete the authentication process. Your identity Provider did not release the attributes(s): {{email}}` please follow these steps, “This error is the result of email address privacy settings in the directory.  Please ask them to go to [UCSF Directory](https://directory.ucsf.edu) and click the “Edit My Record” button at the top right of the page. They’ll be asked to login via MyAccess (if they haven’t already done so).  To the right of the “Email” field on the Edit Your UCSF Directory Entry page that appears, click the pop-up menu (which probably shows “Private” currently) and select either “UCSF Only” or “Public” then click the “Save Changes” button at the bottom of the page.  This will tell the SSO system that it’s okay to release the email address to CILogon and other InCommon Federation registered applications.”**
 
-### Globus for PHI Users
+### Globus for Wynton Protected Users
 
-To use the PHI Compatible Globus ['UCSF Wynton PDT' Collection], you _must_ be signed up for [Wynton Two-Factor Authentication](/hpc/get-started/duo-signup.html).
+To use the Wynton Protected Compatible Globus ['UCSF Wynton PDT' Collection], you _must_ be signed up for [Wynton Two-Factor Authentication](/hpc/get-started/duo-signup.html).
 
-Instead of using the non-PHI-compliant Collection 'UCSF Wynton HPC', all PHI data must use the PHI-approved Globus Collection 'UCSF Wynton PDT', which is associated with the pdt1 and pdt2 data-transfer nodes.  
+The regular 'UCSF Wynton HPC' Collection is not compliant with Wynton Protected use. Instead, all Wynton Protected data must use the Wynton-Protected-approved Globus Collection 'UCSF Wynton PDT', which is associated with the pdt1 and pdt2 data-transfer nodes.  
 
 1. Log in to Globus with your UCSF Campus ID. 
 2. On the next screen, you will be notified 'Authentication Required'. 
@@ -113,7 +113,7 @@ To transfer files via the Globus network:
 
 * [Your personal GCP Collection](https://app.globus.org/collections?scope=administered-by-me)
 * ['{{ site.globus.name }}' Collection] (UUID `{{ site.globus.uuid }}`)
-* ['{{ site.globus-phi.name }}' Collection] (UUID `{{ site.globus-phi.uuid }}`)
+* ['{{ site.globus-protected.name }}' Collection] (UUID `{{ site.globus-protected.uuid }}`)
 * ['{{ site.globus-box.name }}' Collection] (UUID `{{ site.globus-box.uuid }}`)
 
 
@@ -121,5 +121,5 @@ To transfer files via the Globus network:
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
 [Globus Connect Personal (GCP) Collection]: https://app.globus.org/file-manager/gcp
 ['{{ site.globus.name }}' Collection]: https://app.globus.org/file-manager/collections/{{ site.globus.uuid }}/overview
-['{{ site.globus-phi.name }}' Collection]: https://app.globus.org/file-manager/collections/{{ site.globus-phi.uuid }}/overview
+['{{ site.globus-protected.name }}' Collection]: https://app.globus.org/file-manager/collections/{{ site.globus-protected.uuid }}/overview
 ['{{ site.globus-box.name }}' Collection]: https://app.globus.org/file-manager/collections/{{ site.globus-box.uuid }}/overview

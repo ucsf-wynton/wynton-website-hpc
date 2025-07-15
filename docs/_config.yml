@@ -77,7 +77,7 @@ gpudev1:
 globus:
   name: "UCSF Wynton HPC"
   uuid: 68f06816-cd00-4bf3-ae1f-0597a07ed118
-globus-phi:
+globus-protected:
   name: "UCSF Wynton PDT"
   uuid: ef126934-6f8a-4af8-81cd-d5b0b7afe51f
 globus-box:
