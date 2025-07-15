@@ -335,6 +335,16 @@ Source: https://github.com/allejo/jekyll-anchor-headings
       protected = params.get("protected");
       if (protected == null) {
           protected = localStorage.getItem("protected-mode");
+          if (protected == null) {
+              /* LEGACY: If 'protected-mode' is not stored, pull legacy
+                 'phi-mode' value and save as 'protected-mode',
+                 then remove 'phi-mode' / 2025-07-15 */
+              protected = localStorage.getItem("phi-mode");
+              if (protected !== null) {
+                  localStorage.setItem("protected-mode", protected);
+                  localStorage.removeItem("phi-mode");
+              }
+          }
       } else {
         localStorage.setItem("protected-mode", protected);
       }
