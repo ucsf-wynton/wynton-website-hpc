@@ -10,8 +10,8 @@
   <div style="padding: 0.1ex">
     <span style="font-size: 200%; vertical-align: middle; padding-right: 1ex;">👉</span>
     <span style="vertical-align: middle">
-      Non-Protected <label class="switch" title="View site as a Non-Protected or Protected user">
-        <input type="checkbox" id="toggle-phi-2">
+      Regular <label class="switch" title="View site as a Regular or Protected user">
+        <input type="checkbox" id="toggle-protected-2">
         <span class="slider round"></span>
       </label> Protected
     </span>

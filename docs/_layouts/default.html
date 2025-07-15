@@ -231,10 +231,10 @@
         <li>
           <ul class="nav navbar-nav">
        <div style="padding: 15px;">
-         Non-PHI <label class="switch" title="View site as a Non-PHI or PHI user">
-           <input type="checkbox" id="toggle-phi" aria-label="Toggle PHI view"/>
-           <span class="slider round"><span style="visibility: hidden; font-size: 0pt;">Toggle PHI view</span></span>
-         </label> PHI
+         Regular <label class="switch" title="View site as a Regular or Protected user">
+           <input type="checkbox" id="toggle-protected" aria-label="Toggle Protected view"/>
+           <span class="slider round"><span style="visibility: hidden; font-size: 0pt;">Toggle Protected view</span></span>
+         </label> Protected
        </div>
           </ul>
         </li>
@@ -280,7 +280,7 @@
         
 {% unless page.context contains "login" or page.context contains "xfer" %}
 {% if content contains "language-sh" %}
-{% assign tmp_text = "1. Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks.\n\n2. If you have a PHI account, make sure to use the PHI-approved machines, e.g. log1 -> plog1, dev1 -> pdev1, etc." %}
+{% assign tmp_text = "1. Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks.\n\n2. If you have a Protected account, make sure to use the Protected machines, e.g. log1 -> plog1, dev1 -> pdev1, etc." %}
 <div align="right">
 <span style="font-size: smaller; font-style: italic; text-decoration: underline;" title="{{ tmp_text }}" onclick="alert(&quot;{{ tmp_text }}&quot;)"/>Examples not working?</span>
 </div>
@@ -320,7 +320,7 @@ Source: https://github.com/allejo/jekyll-anchor-headings
 <script>
   $(document).ready(function(){
       /***********************************************************
-        View as: Non-PHI/PHI
+        View as: Regular/Protected
 
         IMPORTANTLY:
         Updating the innerHTML destroys the click event listeners,
@@ -329,28 +329,28 @@ Source: https://github.com/allejo/jekyll-anchor-headings
        ***********************************************************/
       var href = window.location.href;
       var params = new URL(href).searchParams;
-      var phi;
+      var protected;
 
-      /* Get 'phi' via URL parameter, otherwise via local storage */
-      phi = params.get("phi");
-      if (phi == null) {
-          phi = localStorage.getItem("phi-mode");
+      /* Get 'protected' via URL parameter, otherwise via local storage */
+      protected = params.get("protected");
+      if (protected == null) {
+          protected = localStorage.getItem("protected-mode");
       } else {
-        localStorage.setItem("phi-mode", phi);
+        localStorage.setItem("protected-mode", protected);
       }
-      phi = (phi == "true");
+      protected = (protected == "true");
 
-      // Toggle HTML elements of class 'phi'/'non-phi' on and off
-      if (phi) {
-          $(".phi").css("display", "inline");
-          $(".non-phi").css("display", "none");
+      // Toggle HTML elements of class 'protected'/'non-protected' on and off
+      if (protected) {
+          $(".protected").css("display", "inline");
+          $(".non-protected").css("display", "none");
       } else {
-          $(".non-phi").css("display", "inline");
-          $(".phi").css("display", "none");
+          $(".non-protected").css("display", "inline");
+          $(".protected").css("display", "none");
       }
 
-      // View as PHI?
-      if (phi) {
+      // View as PROTECTED?
+      if (protected) {
           // Skip page completely?
           var skip = false;
           skip = /\b(index.html|status|phi-quickstart|rocky-8-linux|news|roadmap|specs)\b/.test(href);
@@ -386,29 +386,29 @@ Source: https://github.com/allejo/jekyll-anchor-headings
           }
       }
 
-      // Main PHI toggle switch
-      const togglePhi = document.getElementById("toggle-phi");
-      togglePhi.checked = phi;
+      // Main PROTECTED toggle switch
+      const toggleProtected = document.getElementById("toggle-protected");
+      toggleProtected.checked = protected;
 
-      // Support for an optional, second PHI toggle switch
-      const togglePhi2 = document.getElementById("toggle-phi-2");
-      if (togglePhi2) {
-          togglePhi2.checked = phi;
+      // Support for an optional, second PROTECTED toggle switch
+      const toggleProtected2 = document.getElementById("toggle-protected-2");
+      if (toggleProtected2) {
+          toggleProtected2.checked = protected;
           
-          togglePhi.addEventListener("click", function(e) {
-//              togglePhi2.checked = togglePhi.checked;
-              localStorage.setItem("phi-mode", togglePhi.checked);
+          toggleProtected.addEventListener("click", function(e) {
+//              toggleProtected2.checked = toggleProtected.checked;
+              localStorage.setItem("protected-mode", toggleProtected.checked);
               location.reload();
           });
           
-          togglePhi2.addEventListener("click", function(e) {
-//              togglePhi.checked = togglePhi2.checked;
-              localStorage.setItem("phi-mode", togglePhi2.checked);
+          toggleProtected2.addEventListener("click", function(e) {
+//              toggleProtected.checked = toggleProtected2.checked;
+              localStorage.setItem("protected-mode", toggleProtected2.checked);
               location.reload();
           });
       } else {
-          togglePhi.addEventListener("click", function(e) {
-              localStorage.setItem("phi-mode", togglePhi.checked);
+          toggleProtected.addEventListener("click", function(e) {
+              localStorage.setItem("protected-mode", toggleProtected.checked);
               location.reload();
           });
       }
