@@ -23,7 +23,7 @@ CPU use is throttled to 4 CPU cores/user, and memory use is limited to 96 GiB/us
  * {{ site.gpudev1.hostname }}
 </div>
 <div class="protected" markdown="1">
-The following development nodes are available to PHI users:
+The following development nodes are available to Wynton Protected users:
 
  * p{{ site.dev1.hostname }}
  * p{{ site.gpudev1.hostname }}

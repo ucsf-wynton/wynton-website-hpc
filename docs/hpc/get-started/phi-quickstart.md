@@ -79,7 +79,7 @@
 
 * Data containing P3 must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected/` location. P4 data is prohibited.
 
-* Wynton Protected users must use data-transfer nodes pdt1 and pdt2 for all file transfers to and from the cluster, including when using [Globus](/hpc/transfers/globus.html#globus-for-phi-users)
+* Wynton Protected users must use data-transfer nodes pdt1 and pdt2 for all file transfers to and from the cluster, including when using [Globus](/hpc/transfers/globus.html#globus-for-wynton-protected-users)
 
 * If you have questions regarding the security status of your data, please contact the [UCSF Privacy Office](https://hipaa.ucsf.edu/)
 
