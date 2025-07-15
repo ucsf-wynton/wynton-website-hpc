@@ -43,11 +43,12 @@ and get to a resolution sooner. Please make sure to:
         way others in the team can pitch with additional knowledge and
         suggestions.
   
-  * [ ] &nbsp; never include PHI, or other sensitive, data in
-        unencrypted emails or Slack channels. If you need to include
-        sensitive data, use the UCSF encrypted email system (invoke by
-        including "Secure:" at the start of the email subject line.)
-        Do not include sensitive data in your Slack posts.
+  * [ ] &nbsp; never include protected health information (PHI), or
+        other sensitive, data in unencrypted emails or Slack
+        channels. If you need to include sensitive data, use the UCSF
+        encrypted email system (invoke by including "Secure:" at the
+        start of the email subject line.)  Do not include sensitive
+        data in your Slack posts.
   
 
 

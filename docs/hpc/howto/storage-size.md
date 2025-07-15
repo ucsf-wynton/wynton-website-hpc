@@ -115,8 +115,8 @@ storage space](/hpc/about/specs.html) is reported as 1000 GiB by the
 
 If your group/lab (e.g. `boblab`) has [purchased additional
 storage](/hpc/about/pricing-storage.html), it is available under
-`/wynton/group/`, and possibly also under `/wynton/protected/group/`
-(PHI), or `/wynton/protected/project/` (PHI).  To check how much
+`/wynton/group/` (Wynton Regular), and possibly also under `/wynton/protected/group/`
+(Wynton Protected), or `/wynton/protected/project/` (Wynton Protected).  To check how much
 storage space your group/lab has consumed of the total amount
 available to it, call:
 
@@ -143,16 +143,16 @@ The group storage is shared among all group members and does _not_
 count toward your personal disk quota under `$HOME`.
 
 Any group with purchased storage can have a group folder in both the
-non-PHI `/wynton/group/` area and the PHI `/wynton/protected/group/`
+Wynton Regular `/wynton/group/` area and the Wynton Protected `/wynton/protected/group/`
 area at the same time, e.g. `/wynton/group/boblab/` and
 `/wynton/protected/group/boblab/`. In that case, the group quota usage
 would include group-owned files in both areas. Your lab can also
 request to create a subgroup (e.g. `boblab-phi`) to [self-manage the
-quota](/hpc/howto/group-quota.html) for PHI-only data storage
+quota](/hpc/howto/group-quota.html) for Protected-only data storage
 (e.g. `/wynton/protected/group/boblab-phi/`), and it could be
 allocated as part of the parent quota.
 
-PHI projects under `/wynton/protected/projects/` are for controlling
+Wynton Protected projects under `/wynton/protected/projects/` are for controlling
 access to IRB related data, where the IRB access group does not
 encompass the whole PI group or where the access group encompasses
 selected members of more than one PI group. The quota for the
