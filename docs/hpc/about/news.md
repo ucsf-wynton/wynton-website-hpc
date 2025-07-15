@@ -1,7 +1,6 @@
 # News
 
-<!-- FIXME -->
-2025-09-08: Wynton-wide pause on P4 research: Starting today, we will cease all data work on P4 level data.
+2025-07-08: Wynton-wide pause on P4 research: Starting today, we will cease all data work on P4 level data.
 
 2025-04-22: PHI Freeze: Effective immediately, we are pausing requests for new projects that process P4 data, specifically Protected Health Information (PHI).
 
