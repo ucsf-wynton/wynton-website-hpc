@@ -75,7 +75,7 @@
 
   - data-transfer nodes: `pdt1.wynton.ucsf.edu` and `pdt2.wynton.ucsf.edu`
 
-* Wynton Protected users must _not_ use any of the non-protected nodes on Wynton, including log1, log2, dev1, dev2, dev3, gpudev1, dt1, and dt2.
+* Wynton Protected users must _not_ use any of the Wynton Regular nodes on Wynton, including log1, log2, dev1, dev2, dev3, gpudev1, dt1, and dt2.
 
 * Data containing P3 must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected/` location. P4 data is prohibited.
 
@@ -86,9 +86,9 @@
 
 ## Frequently Asked Questions (FAQ)
 
-**Q.** What if I want to share data between `/wynton/protected/group/` (protected) and `/wynton/group/` (non-protected) directories?
+**Q.** What if I want to share data between `/wynton/protected/group/` (Wynton Protected) and `/wynton/group/` (Wynton Regular) directories?
 
-**A.** Users with Wynton Protected access still have access to `/wynton/group/`, as do Wynton non-protected users. However, protected data should never be stored under `/wynton/group/` and protected data should never be shared with a user who does not have Wynton Protected access.
+**A.** Users with Wynton Protected access still have access to `/wynton/group/`, as do Wynton Regular users. However, protected data should never be stored under `/wynton/group/` and protected data should never be shared with a user who does not have Wynton Protected access.
 
 
 [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard]: https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard
