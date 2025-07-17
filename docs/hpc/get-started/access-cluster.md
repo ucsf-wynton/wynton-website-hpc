@@ -59,7 +59,6 @@ Users on Linux, macOS, and MS Windows have an SSH client built-in, which is avai
   switch to tailor the instructions on the website to Protected users:
   
   <div style="padding: 0.1ex">
-  
     <span style="font-size: 200%; vertical-align: middle; padding-right: 1ex;">👉</span>
     <span style="vertical-align: middle">
       Regular <label class="switch" title="View site as a Regular or Protected user">
