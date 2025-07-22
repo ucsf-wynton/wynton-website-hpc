@@ -53,7 +53,7 @@ If you have an existing {{ site.cluster.name }} account and would like to modify
 
 1. Select "Yes" or "No" from the **"Does this user already have an existing account on Wynton?"** pull down.
 
-2. Select "Yes" or "No" from the **"Do you Require Access to Wynton Protected"** pull down. More information here regarding Wynton Protected: [PHI Quickstart](/hpc/get-started/phi-quickstart.html). Note: P4/PHI data is prohibited on Wynton.
+2. Select "Yes" or "No" from the **"Do you Require Access to Wynton Protected"** pull down. More information here regarding Wynton Protected: [Wynton Protected Quickstart](/hpc/get-started/phi-quickstart.html). Note: P4/PHI data is prohibited on Wynton.
 
 3. If you are filling the form out for yourself, when you click the box to indicate that, the **"Requested For"** field will be autopopulated with your name.  If you are requesting an account for another user, enter their name and select it from the pull down.  If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
 
