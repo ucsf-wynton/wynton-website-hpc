@@ -35,7 +35,7 @@
   
   - link to actually [request a Wynton Protected account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac)
 
-* A link will be emailed to a Statement of Responsibility form that all users applying for Wynton Protected access must sign agreeing to the responsibilities of handling PII and/or PHI data, take the training in the handling of PII/PHI data, and keep the training up to date.
+* A link will be emailed to a Statement of Responsibility form that all users applying for Wynton Protected access must sign agreeing to the responsibilities of handling data.
 
   - **Important**: The email address associated with a new Statement of Responsibility must exactly match the user's original email address.
 
@@ -77,7 +77,7 @@
 
 * Wynton Protected users must _not_ use any of the Wynton Regular nodes on Wynton, including log1, log2, dev1, dev2, dev3, gpudev1, dt1, and dt2.
 
-* Data containing P3 must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the PHI-designated `/wynton/protected/` location. P4 data is prohibited.
+* Data containing P3 must not be transferred to, mounted on, or processed with any Wynton HPC cluster resources outside of the `/wynton/protected/` location. P4 data is prohibited.
 
 * Wynton Protected users must use data-transfer nodes pdt1 and pdt2 for all file transfers to and from the cluster, including when using [Globus](/hpc/transfers/globus.html#globus-for-wynton-protected-users)
 
