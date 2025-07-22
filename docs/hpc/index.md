@@ -22,9 +22,8 @@
 
 The {{ site.cluster.name }} environment keeps growing as more users discover it and more groups buy into the co-op model.  [Each contributing member brings more resources and compute power for everyone based on a fair-share model where contributors get higher access priority than non-contributing members](/hpc/about/shares.html).  **Contributions to the {{ site.cluster.name }} environment are non-expiring and valid for life!**  In addition, several UCSF centers have joined by contributing a large amount of their compute hardware to the cluster, e.g. Memory and Aging Center and QB3.  For more details on where we are heading, please see the [{{ site.cluster.name }} Roadmap](/hpc/about/roadmap.html).
 
-**Please note**: The {{ site.cluster.name }} environment is _not_ certified for use with Protected Health Information (PHI) _unless you have a Wynton PHI account_.  Data containing PHI must not be transferred to, mounted on, or processed with any {{ site.cluster.name }} cluster resources other than in the Wynton PHI environment.  For more information or to apply for a PHI account, see [Protected Health Information (PHI) on Wynton].
-
+**Please note**: P4 data, which includes PHI, is prohibited.  P3 data may only be used in "Wynton Protected” via a “protected” account. Refer to [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard). For compliant alternatives for working with P4 data, please visit our UCSF Data Storage for Research Page found here: https://secureresearch.ucsf.edu/ucsf-data-storage-research, or contact our cloud services team for a consultation: https://it.ucsf.edu/service/secured-enterprise-cloud-aws.
 
 [UCSF Privacy Office]: https://hipaa.ucsf.edu/
-[Protected Health Information (PHI) on Wynton]: /hpc/about/wynton-phi.html
+[Wynton Protected]: /hpc/about/wynton-phi.html
 [Rocky 8]: /hpc/software/rocky-8-linux.html
