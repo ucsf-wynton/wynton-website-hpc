@@ -17,9 +17,9 @@ cluster:
   version: "1.1"
   domain: wynton.ucsf.edu
   email_support: wynton-support@ucsf.edu
-  email_storage: storage@wynton.ucsf.edu
-  email_compute: compute@wynton.ucsf.edu
-  email_password: password@wynton.ucsf.edu
+  email_storage: wynton-storage@ucsf.edu
+  email_compute: wynton-compute@ucsf.edu
+  email_password: wynton-password@ucsf.edu
 
 path:
   global_root: /wynton
