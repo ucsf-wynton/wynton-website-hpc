@@ -18,11 +18,11 @@
 
 P4 level data is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
 
-P3 data IS currently allowed on Wynton, as long as you have a Wynton Protected account. 
+P3 data _is_ currently allowed on Wynton, as long as you have a Wynton Protected account. 
 
 For more information on Wynton Protected Accounts, see this page on our website: [Wynton Protected Quickstart](https://wynton.ucsf.edu/hpc/get-started/protected-quickstart.html)
 
-If you do _NOT_ have a Wynton Protected account, you should limit yourself to working with P1/P2 data, freely available data available without legal encumbrance.
+If you do _not_ have a Wynton Protected account, you should limit yourself to working with P1/P2 data, freely available data available without legal encumbrance.
 
 However, if your P2 or P3 data use or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. 
 
