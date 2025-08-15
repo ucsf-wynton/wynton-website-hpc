@@ -26,7 +26,7 @@ If you do _NOT_ have a Wynton Protected account, you should limit yourself to wo
 
 However, if your P2 or P3 data use or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. 
 
-Wynton does NOT meet any known security standard for protected data storage, including, but not limited to NIST SP 800-171 or ISO/IEC 270013/270024 standards.
+Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
 ## Jobs
 
