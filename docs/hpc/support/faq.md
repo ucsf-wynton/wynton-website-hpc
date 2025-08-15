@@ -6,7 +6,7 @@
 
 **A**. PHI/P4 Data is NOT Allowed on Wynton
 
-(UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard)[https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard] provides four levels of "Data Classification" for security standards.
+[UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard[(https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards.
 
 **P1** Examples of P1 data includes: Data found on public UCSF websites
 
@@ -20,7 +20,7 @@ P4 level data is prohibited from being used or stored on Wynton and should be de
 
 P3 data IS currently allowed on Wynton, as long as you have a Wynton Protected account. 
 
-For more information on Wynton Protected Accounts, see this page on our website: (Wynton Protected Quickstart)[https://wynton.ucsf.edu/hpc/get-started/protected-quickstart.html]
+For more information on Wynton Protected Accounts, see this page on our website: [Wynton Protected Quickstart](https://wynton.ucsf.edu/hpc/get-started/protected-quickstart.html)
 
 If you do NOT have a Wynton Protected account, you should limit yourself to working with P1/P2 data, freely available data available without legal encumbrance.
 
