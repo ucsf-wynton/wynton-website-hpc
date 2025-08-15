@@ -16,7 +16,7 @@
 
 **P4** Examples of P4 data include: Unredacted clinical data, images, or notes which contain patient identifiers aka _PHI_
 
-P4 level data, _PHI_, is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
+P4 level data, including _PHI_, is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
 
 P3 data _IS_ currently allowed on Wynton, as long as you have a Wynton Protected account. 
 
