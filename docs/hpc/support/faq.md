@@ -34,7 +34,7 @@ Wynton does _NOT_ meet any known security standard for protected data storage, i
 
 **Q**. _Wait, Didn't PHI Data Used to be Allowed on Wynton?_
 
-**A**. Yes, PHI Data was allowed during a PHI Pilot and for a period in 2022-2024. Unfortunately, a subsequent Security Audit found that Wynton did not meet the necessary standards for hosting PHI/P4 data
+**A**. Yes, PHI Data was allowed during a PHI Pilot and for a period in 2022-2025. Unfortunately, a subsequent Security Audit found that Wynton did not meet the necessary standards for hosting PHI/P4 data
 
 ## Jobs
 
