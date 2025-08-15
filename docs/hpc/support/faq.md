@@ -14,7 +14,7 @@
 
 **P3** Examples of P3 data include: Certified Deidentified Clinical Data
 
-**P4** Examples of P4 data includes: Unredacted clinical data and notes which contain patient identifiers
+**P4** Examples of P4 data include: Unredacted clinical data and notes which contain patient identifiers
 
 P4 level data is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
 
