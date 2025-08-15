@@ -6,7 +6,7 @@
 
 **A**. PHI/P4 Data is NOT Allowed on Wynton
 
-[UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard[(https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards.
+[UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards.
 
 **P1** Examples of P1 data includes: Data found on public UCSF websites
 
