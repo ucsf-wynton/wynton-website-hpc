@@ -28,6 +28,10 @@ However, if your P2 or P3 data use or grant requires that your computing or stor
 
 Wynton does _NOT_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
+**Q**. _Will PHI Data Ever Be Alowed on Wynton?_
+
+**A**. Due to architectural choices made, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton
+
 ## Jobs
 
 ### Waiting in job queue
