@@ -12,9 +12,9 @@
 
 **P2** Examples of P2 data includes: Published Public Certified Deidentified Data sets, freely available without legal encumbrance
 
-**P3** Examples of P3 data include: UCSF Certified Deidentified Clinical Data
+**P3** Examples of P3 data include: UCSF Certified Deidentified Clinical Data, images, or notes
 
-**P4** Examples of P4 data include: Unredacted clinical data and notes which contain patient identifiers aka _PHI_
+**P4** Examples of P4 data include: Unredacted clinical data, images, or notes which contain patient identifiers aka _PHI_
 
 P4 level data, _PHI_, is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
 
