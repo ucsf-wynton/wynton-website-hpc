@@ -10,9 +10,9 @@
 
 **P1** Examples of P1 data includes: Data found on public UCSF websites
 
-**P2** Examples of P2 data includes: Published Public Certified Deidentified Data sets freely available without legal encumbrance
+**P2** Examples of P2 data includes: Published Public Certified Deidentified Data sets, freely available without legal encumbrance
 
-**P3** Examples of P4 data include: Certified Deidentified Clinical Data 
+**P3** Examples of P3 data include: Certified Deidentified Clinical Data
 
 **P4** Examples of P4 data includes: Unredacted clinical data and notes which contain patient identifiers
 
