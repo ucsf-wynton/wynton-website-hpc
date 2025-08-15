@@ -8,7 +8,7 @@
 
 [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards.
 
-**P1** Examples of P1 data includes: Public data published on public websites, including but not limited to UCSF
+**P1** Examples of P1 data includes: Data published on public websites, including but not limited to UCSF, freely available without legal encumbrance
 
 **P2** Examples of P2 data includes: Published Public Certified Deidentified Data sets, freely available without legal encumbrance
 
