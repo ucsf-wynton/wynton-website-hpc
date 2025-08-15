@@ -16,9 +16,11 @@
 
 **P4** Examples of P4 data includes: Unredacted clinical data and notes which contain patient identifiers
 
-P4 leve data is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
+P4 level data is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
 
-P3 data IS currently allowed on Wynton, as long as you have a Wynton Protected account. For more information on Wynton Protected Accounts, see this page on our website: (Wynton Protected Quickstart)[https://wynton.ucsf.edu/hpc/get-started/protected-quickstart.html]
+P3 data IS currently allowed on Wynton, as long as you have a Wynton Protected account. 
+
+For more information on Wynton Protected Accounts, see this page on our website: (Wynton Protected Quickstart)[https://wynton.ucsf.edu/hpc/get-started/protected-quickstart.html]
 
 If you do NOT have a Wynton Protected account, you should limit yourself to working with P1/P2 data, freely available data available without legal encumbrance.
 
