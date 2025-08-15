@@ -30,7 +30,7 @@ Wynton does _NOT_ meet any known security standard for protected data storage, i
 
 **Q**. _Will PHI Data Ever Be Alowed on Wynton?_
 
-**A**. Due to architectural choices made, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton
+**A**. Due to the architectural choices that were made on Wynton early on, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton
 
 ## Jobs
 
