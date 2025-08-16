@@ -6,31 +6,20 @@
 
 **A**. PHI/P4 Data is _not_ Allowed on Wynton
 
-[UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards.
+[UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards. Examples of P1-P4 data:
 
-**P1** Examples of P1 data includes: Data published on public websites, including but not limited to UCSF, freely available without legal encumbrance
+  * **P1**: Data published on public websites, including but not limited to UCSF, freely available without legal encumbrance
+  * **P2**: Published Public Certified Deidentified Data sets, freely available without legal encumbrance
+  * **P3**: UCSF, or other, Certified Deidentified Clinical Data, images, or notes
+  * **P4**: Unredacted clinical data, images, or notes which contain patient identifiers, aka _PHI_
 
-**P2** Examples of P2 data includes: Published Public Certified Deidentified Data sets, freely available without legal encumbrance
+P4 level data, including _PHI_ data, is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately. P3 data _is_ currently allowed on Wynton, as long as you have a Wynton Protected account. For more information on Wynton Protected Accounts, see [Wynton Protected Quickstart](/hpc/get-started/protected-quickstart.html). If you do _not_ have a Wynton Protected account, you should limit yourself to working with P1 and P2 data, freely available data available without legal encumbrance. However, if your P2 or P3 data use or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
-**P3** Examples of P3 data include: UCSF, or other, Certified Deidentified Clinical Data, images, or notes
-
-**P4** Examples of P4 data include: Unredacted clinical data, images, or notes which contain patient identifiers, aka _PHI_
-
-P4 level data, including _PHI_ data, is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately.
-
-P3 data _is_ currently allowed on Wynton, as long as you have a Wynton Protected account. 
-
-For more information on Wynton Protected Accounts, see this page on our website: [Wynton Protected Quickstart](/hpc/get-started/protected-quickstart.html)
-
-If you do _not_ have a Wynton Protected account, you should limit yourself to working with P1/P2 data, freely available data available without legal encumbrance.
-
-However, if your P2 or P3 data use or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. 
-
-Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
 **Q**. _Will PHI Data Ever Be Allowed on Wynton?_
 
 **A**. Due to the architectural choices that were made with Wynton early on, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton
+
 
 **Q**. _Wait, Didn't PHI Data Used to be Allowed on Wynton?_
 
