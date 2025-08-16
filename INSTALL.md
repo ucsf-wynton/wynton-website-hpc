@@ -1,6 +1,6 @@
 # Installing Jekyll
 
-## Ubuntu 22.04
+## Ubuntu 24.04
 
 ```sh
 $ sudo apt install ruby-dev
@@ -10,11 +10,11 @@ $ gem install --user-install bundler jekyll jekyll-target-blank github-pages
 Then
 
 ```sh
-$ export PATH=$HOME/.gem/ruby/3.0.0/bin
+$ export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
 $ make start
 ```
 
-Last verified: 2023-02-08
+Last verified: 2025-08-15
 
 
 ## Legacy
