@@ -133,9 +133,4 @@ To run these tests locally, install [markdown-link-check](https://github.com/tco
 
 ## Installation
 
-To preview this website on your local computer, install Jekyll following the instructions in `INSTALL.md`. Then run:
-
-```sh
-$ export PATH=$HOME/.gem/ruby/3.0.0/bin
-$ make start
-```
+To preview this website on your local computer, install Jekyll following the instructions in `INSTALL.md`. Don't forget to set your `PATH` environment as instructed.
