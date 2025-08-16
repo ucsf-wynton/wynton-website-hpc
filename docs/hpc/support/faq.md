@@ -2,9 +2,9 @@
 
 ## Policies
 
-**Q**. _Is PHI Data allowed on Wynton?_
+**Q**. _Is PHI data allowed on Wynton?_
 
-**A**. PHI/P4 Data is _not_ Allowed on Wynton
+**A**. PHI/P4 data is _not_ allowed on Wynton
 
 [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards. Examples of P1-P4 data:
 
@@ -16,14 +16,15 @@
 P4 level data, including _PHI_ data, is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately. P3 data _is_ currently allowed on Wynton, as long as you have a Wynton Protected account. For more information on Wynton Protected Accounts, see [Wynton Protected Quickstart](/hpc/get-started/protected-quickstart.html). If you do _not_ have a Wynton Protected account, you should limit yourself to working with P1 and P2 data, freely available data available without legal encumbrance. However, if your P2 or P3 data use or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
 
-**Q**. _Will PHI Data Ever Be Allowed on Wynton?_
+**Q**. _Will PHI data ever be allowed on Wynton?_
 
 **A**. Due to the architectural choices that were made with Wynton early on, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton
 
 
-**Q**. _Wait, Didn't PHI Data Used to be Allowed on Wynton?_
+**Q**. _Wait, didn't PHI data used to be allowed on Wynton?_
 
 **A**. Yes, PHI Data was allowed during a PHI Pilot and for a period from 2021 to early 2025. Unfortunately, a Security Audit subsequent to the PHI Project's launch found that Wynton did not meet the necessary standards for hosting PHI/P4 data
+
 
 ## Jobs
 
