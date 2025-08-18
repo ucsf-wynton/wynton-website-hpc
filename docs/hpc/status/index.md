@@ -6,6 +6,7 @@ title: Wynton HPC Status
 
 # UCSF {{ site.cluster.name }} Status
 
+
 ## Queue Metrics
 
 {% assign periods = "day,week,month,year" | split: ',' %}
@@ -26,6 +27,8 @@ title: Wynton HPC Status
 
 
 ## File-System Metrics
+
+Last known heartbeat: <span id="last-heartbeat">Loading…</span>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
@@ -98,6 +101,104 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 
 
 <!-- DO NOT EDIT ANYTHING BELOW -->
+
+
+<!-------------------------------------------------------------------------
+   Heartbeak
+ -------------------------------------------------------------------------->
+<script>
+(async function setMostRecentHeartbeat() {
+  const urls = [
+    "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench/wynton-bench_dev1.wynton.ucsf.edu__wynton_scratch_hb.tsv",
+    "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench/wynton-bench_dev2.wynton.ucsf.edu__wynton_scratch_hb.tsv",
+    "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench/wynton-bench_dev3.wynton.ucsf.edu__wynton_scratch_hb.tsv",
+  ];
+  const el = document.getElementById("last-heartbeat");
+  if (!el) return;
+
+  const MAX_BUFFER = 32 * 1024; // keep only the last ~32KB per file
+
+  async function readLastLine(url) {
+    const res = await fetch(url + "?t=" + Date.now(), { cache: "no-store" });
+    if (!res.ok || !res.body) throw new Error(`HTTP ${res.status} for ${url}`);
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let buf = "";
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      if (buf.length > MAX_BUFFER) {
+        const cutFrom = buf.length - MAX_BUFFER;
+        const nl = buf.indexOf("\n", cutFrom);
+        buf = nl >= 0 ? buf.slice(nl + 1) : buf.slice(cutFrom);
+      }
+    }
+    buf += decoder.decode();
+
+    const lines = buf.split(/\r?\n/).filter(line => line.trim().length > 0);
+    if (lines.length === 0) throw new Error("No lines");
+    const lastLine = lines[lines.length - 1];
+
+    const delim = lastLine.includes("\t") ? "\t" : ",";
+    const [tsRaw, durRaw] = lastLine.split(delim);
+    const ts = (tsRaw || "").replace(/^"|"$/g, "");
+    const dt = new Date(ts);
+
+    return {
+      url,
+      line: lastLine,
+      ts,
+      dt: Number.isNaN(dt.getTime()) ? null : dt,
+      duration: durRaw?.trim(),
+    };
+  }
+
+  try {
+    const results = await Promise.allSettled(urls.map(readLastLine));
+    const valid = results
+      .filter(r => r.status === "fulfilled" && r.value.dt)
+      .map(r => r.value);
+
+    if (valid.length === 0) {
+      el.textContent = "—";
+      el.title = "No valid timestamps found";
+      return;
+    }
+
+    // Pick the newest timestamp
+    const newest = valid.reduce((a, b) => (a.dt > b.dt ? a : b));
+
+    // Show ISO-8601 UTC + how many minutes ago
+    // Truncate to seconds
+    const dtTrunc = new Date(Math.floor(newest.dt.getTime() / 1000) * 1000);
+    // Format in local timezone as ISO-like string
+    function pad(n) { return String(n).padStart(2, "0"); }
+    const yyyy = dtTrunc.getFullYear();
+    const mm = pad(dtTrunc.getMonth() + 1);
+    const dd = pad(dtTrunc.getDate());
+    const hh = pad(dtTrunc.getHours());
+    const min = pad(dtTrunc.getMinutes());
+    const ss = pad(dtTrunc.getSeconds());
+    const tzOffsetMin = -dtTrunc.getTimezoneOffset();
+    const sign = tzOffsetMin >= 0 ? "+" : "-";
+    const offH = pad(Math.floor(Math.abs(tzOffsetMin) / 60));
+    const offM = pad(Math.abs(tzOffsetMin) % 60);
+    const localIso = `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${sign}${offH}:${offM}`;
+
+    // Age in minutes and seconds, e.g. "13m03s ago"
+    const diffMs = Date.now() - dtTrunc.getTime();
+    const mins = Math.floor(diffMs / 60000);
+    const secs = Math.floor((diffMs % 60000) / 1000);
+    const ageStr = `${mins}m${secs.toString().padStart(2, "0")}s ago`;
+    el.textContent = `${ageStr} (${localIso})`;
+  } catch (err) {
+    console.error("Failed to aggregate heartbeats:", err);
+    el.textContent = "—";
+  }
+})();
+</script>
 
 
 <!-------------------------------------------------------------------------
