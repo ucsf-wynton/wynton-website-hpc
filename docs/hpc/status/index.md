@@ -29,6 +29,7 @@ title: Wynton HPC Status
 ## File-System Metrics
 
 Last known heartbeat: <span id="last-heartbeat">Loading…</span>
+<button id="reload-heartbeat" title="Reload">⟲</button>
 
   <div class="status-panel" style="border: 1px solid #dec000; padding: 2ex; margin-bottom: 2ex;">
    <div style="font-size: 150%; font-weight: bold;">
@@ -104,19 +105,40 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
 
 
 <!-------------------------------------------------------------------------
-   Heartbeak
+   Heartbeat
  -------------------------------------------------------------------------->
+<span id="last-heartbeat">loading…</span>
+<button id="reload-heartbeat">Reload</button>
+
 <script>
-(async function setMostRecentHeartbeat() {
+(async function initHeartbeatFromTSV() {
   const urls = [
     "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench/wynton-bench_dev1.wynton.ucsf.edu__wynton_scratch_hb.tsv",
     "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench/wynton-bench_dev2.wynton.ucsf.edu__wynton_scratch_hb.tsv",
     "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench/wynton-bench_dev3.wynton.ucsf.edu__wynton_scratch_hb.tsv",
   ];
+
   const el = document.getElementById("last-heartbeat");
+  const reloadBtn = document.getElementById("reload-heartbeat");
   if (!el) return;
 
   const MAX_BUFFER = 32 * 1024; // keep only the last ~32KB per file
+
+  function pad(n) { return String(n).padStart(2, "0"); }
+  function toLocalIsoSeconds(d) {
+    const t = new Date(Math.floor(d.getTime() / 1000) * 1000);
+    const yyyy = t.getFullYear();
+    const mm = pad(t.getMonth() + 1);
+    const dd = pad(t.getDate());
+    const hh = pad(t.getHours());
+    const mi = pad(t.getMinutes());
+    const ss = pad(t.getSeconds());
+    const tzOffMin = -t.getTimezoneOffset();
+    const sign = tzOffMin >= 0 ? "+" : "-";
+    const offH = pad(Math.floor(Math.abs(tzOffMin) / 60));
+    const offM = pad(Math.abs(tzOffMin) % 60);
+    return `${yyyy}-${mm}-${dd}T${hh}:${mi}:${ss}${sign}${offH}:${offM}`;
+  }
 
   async function readLastLine(url) {
     const res = await fetch(url + "?t=" + Date.now(), { cache: "no-store" });
@@ -130,6 +152,7 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
       if (done) break;
       buf += decoder.decode(value, { stream: true });
       if (buf.length > MAX_BUFFER) {
+        // Keep only tail; try not to cut inside a line
         const cutFrom = buf.length - MAX_BUFFER;
         const nl = buf.indexOf("\n", cutFrom);
         buf = nl >= 0 ? buf.slice(nl + 1) : buf.slice(cutFrom);
@@ -138,72 +161,60 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
     buf += decoder.decode();
 
     const lines = buf.split(/\r?\n/).filter(line => line.trim().length > 0);
-    if (lines.length === 0) throw new Error("No lines");
+    if (lines.length === 0) throw new Error("No non-empty lines");
     const lastLine = lines[lines.length - 1];
 
+    // TSV preferred; fallback to CSV if needed
     const delim = lastLine.includes("\t") ? "\t" : ",";
-const [tsRaw, durRaw] = lastLine.split(delim);
+    const [tsRaw, durRaw] = lastLine.split(delim);
+
     const ts = (tsRaw || "").replace(/^"|"$/g, "");
-    const startDt = new Date(ts);
-    const durSecNum = Number((durRaw || "").trim());
-    const hasStart = !Number.isNaN(startDt.getTime());
-    const hasDur = !Number.isNaN(durSecNum);
-    const endDt = hasStart ? new Date(startDt.getTime() + (hasDur ? durSecNum * 1000 : 0)) : null;
+    const start = new Date(ts);
+    const durSec = Number((durRaw || "").trim());
+    const validStart = !Number.isNaN(start.getTime());
+    const validDur = !Number.isNaN(durSec);
 
-    return {
-      url,
-      line: lastLine,
-      ts,                // raw start timestamp string
-      start: hasStart ? startDt : null,
-      end: endDt,        // heartbeat "ends" at timestamp + duration
-      durationSec: hasDur ? durSecNum : null,
-    };
+    const end = validStart ? new Date(start.getTime() + (validDur ? durSec * 1000 : 0)) : null;
+
+    return { url, start: validStart ? start : null, end, durationSec: validDur ? durSec : null };
   }
 
-  try {
-    const results = await Promise.allSettled(urls.map(readLastLine));
-    const valid = results
-      .filter(r => r.status === "fulfilled" && r.value.end)
-      .map(r => r.value);
+  async function updateHeartbeat() {
+    el.textContent = "loading…";
+    try {
+      const results = await Promise.allSettled(urls.map(readLastLine));
+      const ok = results.filter(r => r.status === "fulfilled").map(r => r.value).filter(v => v.end);
+      if (ok.length === 0) {
+        el.textContent = "—";
+        el.title = "No valid (timestamp+duration) found";
+        return;
+      }
+      // Pick newest end time (timestamp + duration)
+      const newest = ok.reduce((a, b) => (a.end > b.end ? a : b));
 
-    if (valid.length === 0) {
+      const localIso = toLocalIsoSeconds(newest.end);
+
+      // Age as "XmYYs ago"
+      const diffMs = Date.now() - newest.end.getTime();
+      const mins = Math.floor(diffMs / 60000);
+      const secs = Math.floor((diffMs % 60000) / 1000);
+      const ageStr = `${mins}m${secs.toString().padStart(2, "0")}s ago`;
+
+      el.textContent = `${ageStr} (${localIso})`;
+      const tipParts = [`from: ${newest.url}`];
+      if (newest.durationSec != null) tipParts.push(`duration: ${newest.durationSec}s`);
+      el.title = tipParts.join(" | ");
+    } catch (err) {
+      console.error("Failed to aggregate heartbeats:", err);
       el.textContent = "—";
-      el.title = "No valid timestamps found";
-      return;
     }
-
-    // Pick the newest *end* time (timestamp + duration)
-    const newest = valid.reduce((a, b) => (a.end > b.end ? a : b));
-
-    // Truncate to seconds
-    const dtTrunc = new Date(Math.floor(newest.end.getTime() / 1000) * 1000);
-    // Format in local timezone as ISO-like string (YYYY-MM-DDTHH:MM:SS±hh:mm)
-    function pad(n) { return String(n).padStart(2, "0"); }
-    const yyyy = dtTrunc.getFullYear();
-    const mm = pad(dtTrunc.getMonth() + 1);
-    const dd = pad(dtTrunc.getDate());
-    const hh = pad(dtTrunc.getHours());
-    const min = pad(dtTrunc.getMinutes());
-    const ss = pad(dtTrunc.getSeconds());
-    const tzOffsetMin = -dtTrunc.getTimezoneOffset();
-    const sign = tzOffsetMin >= 0 ? "+" : "-";
-    const offH = pad(Math.floor(Math.abs(tzOffsetMin) / 60));
-    const offM = pad(Math.abs(tzOffsetMin) % 60);
-    const localIso = `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${sign}${offH}:${offM}`;
-
-    // Age as "XmYYs ago"
-    const diffMs = Date.now() - dtTrunc.getTime();
-    const mins = Math.floor(diffMs / 60000);
-    const secs = Math.floor((diffMs % 60000) / 1000);
-    const ageStr = `${mins}m${secs.toString().padStart(2, "0")}s ago`;
-    el.textContent = `${ageStr} (${localIso})`;
-    // Tooltip: which file + start time + duration (if available)
-    const durTip = newest.durationSec != null ? ` | duration: ${newest.durationSec}s` : "";
-    el.title = `from: ${newest.url}${durTip}`;
-  } catch (err) {
-    console.error("Failed to aggregate heartbeats:", err);
-    el.textContent = "—";
   }
+
+  // Initial load
+  updateHeartbeat();
+
+  // Reload button
+  if (reloadBtn) reloadBtn.addEventListener("click", updateHeartbeat);
 })();
 </script>
 
