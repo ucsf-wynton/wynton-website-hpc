@@ -142,23 +142,28 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
     const lastLine = lines[lines.length - 1];
 
     const delim = lastLine.includes("\t") ? "\t" : ",";
-    const [tsRaw, durRaw] = lastLine.split(delim);
+const [tsRaw, durRaw] = lastLine.split(delim);
     const ts = (tsRaw || "").replace(/^"|"$/g, "");
-    const dt = new Date(ts);
+    const startDt = new Date(ts);
+    const durSecNum = Number((durRaw || "").trim());
+    const hasStart = !Number.isNaN(startDt.getTime());
+    const hasDur = !Number.isNaN(durSecNum);
+    const endDt = hasStart ? new Date(startDt.getTime() + (hasDur ? durSecNum * 1000 : 0)) : null;
 
     return {
       url,
       line: lastLine,
-      ts,
-      dt: Number.isNaN(dt.getTime()) ? null : dt,
-      duration: durRaw?.trim(),
+      ts,                // raw start timestamp string
+      start: hasStart ? startDt : null,
+      end: endDt,        // heartbeat "ends" at timestamp + duration
+      durationSec: hasDur ? durSecNum : null,
     };
   }
 
   try {
     const results = await Promise.allSettled(urls.map(readLastLine));
     const valid = results
-      .filter(r => r.status === "fulfilled" && r.value.dt)
+      .filter(r => r.status === "fulfilled" && r.value.end)
       .map(r => r.value);
 
     if (valid.length === 0) {
@@ -167,13 +172,12 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
       return;
     }
 
-    // Pick the newest timestamp
-    const newest = valid.reduce((a, b) => (a.dt > b.dt ? a : b));
+    // Pick the newest *end* time (timestamp + duration)
+    const newest = valid.reduce((a, b) => (a.end > b.end ? a : b));
 
-    // Show ISO-8601 UTC + how many minutes ago
     // Truncate to seconds
-    const dtTrunc = new Date(Math.floor(newest.dt.getTime() / 1000) * 1000);
-    // Format in local timezone as ISO-like string
+    const dtTrunc = new Date(Math.floor(newest.end.getTime() / 1000) * 1000);
+    // Format in local timezone as ISO-like string (YYYY-MM-DDTHH:MM:SS±hh:mm)
     function pad(n) { return String(n).padStart(2, "0"); }
     const yyyy = dtTrunc.getFullYear();
     const mm = pad(dtTrunc.getMonth() + 1);
@@ -187,12 +191,15 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
     const offM = pad(Math.abs(tzOffsetMin) % 60);
     const localIso = `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${sign}${offH}:${offM}`;
 
-    // Age in minutes and seconds, e.g. "13m03s ago"
+    // Age as "XmYYs ago"
     const diffMs = Date.now() - dtTrunc.getTime();
     const mins = Math.floor(diffMs / 60000);
     const secs = Math.floor((diffMs % 60000) / 1000);
     const ageStr = `${mins}m${secs.toString().padStart(2, "0")}s ago`;
     el.textContent = `${ageStr} (${localIso})`;
+    // Tooltip: which file + start time + duration (if available)
+    const durTip = newest.durationSec != null ? ` | duration: ${newest.durationSec}s` : "";
+    el.title = `from: ${newest.url}${durTip}`;
   } catch (err) {
     console.error("Failed to aggregate heartbeats:", err);
     el.textContent = "—";
