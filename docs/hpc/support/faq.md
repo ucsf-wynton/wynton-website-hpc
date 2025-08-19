@@ -86,12 +86,6 @@ running?_
      is not running.  `qstat -u '*'` will show all jobs and their
      priority scores in the queue.
 
-**A**: **[For QB3 migrants]** If you are coming from the legacy QB3
-cluster (defunct since 2020), please make sure that your job script
-does _not_ specify `-l arch=linux-x64` - just drop it. That type of
-architecture was only available on our old QB3 cluster.  **A job
-submitted with that specification will sit in the queue forever.**
-
 
 ### Cannot delete jobs from queue
 
