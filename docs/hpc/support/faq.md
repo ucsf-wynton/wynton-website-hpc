@@ -114,6 +114,23 @@ Intel nodes with more 12+ nodes), and `at` is for "**A**MD
 **T**riginti-core" (32 cores).
 
 
+### Cannot submit jobs
+
+**Q**. _I just started to get SSL-related errors when using `qsub` and
+`qstat` that I have never seen before;_
+
+```sh
+error: commlib error: ssl connect error (SSL handshake error)
+ssl error (the used certificate is expired)
+unable to contact qmaster using port 6444 on host "q"
+```
+
+**A**. Your {{ site.cluster.name }} account has expired.  If so, you
+should already have received an email from us with instructions on how
+to request the renewal.  If you have responded to that email, then
+it's a mistake on our end (sorry) - please drop us another email.
+
+
 
 ## Something is not working
 
@@ -131,23 +148,6 @@ where the memory limit is 96 GB/user.  To confirm it was overuse of
 memory, type `echo "Exit code: $?"` _immediately_ after the process
 was terminated. If you get exit code 137, then it is likely that you
 ran out of memory.
-
-
-### Cannot submit jobs
-
-**Q**. _I just started to get SSL-related errors when using `qsub` and
-`qstat` that I have never seen before;_
-
-```sh
-error: commlib error: ssl connect error (SSL handshake error)
-ssl error (the used certificate is expired)
-unable to contact qmaster using port 6444 on host "q"
-```
-
-**A**. Your {{ site.cluster.name }} account has expired.  If so, you
-should already have received an email from us with instructions on how
-to request the renewal.  If you have responded to that email, then
-it's a mistake on our end (sorry) - please drop us another email.
 
 
 ### X2Go Troubleshooting
