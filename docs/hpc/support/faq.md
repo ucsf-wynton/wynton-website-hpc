@@ -150,6 +150,24 @@ was terminated. If you get exit code 137, then it is likely that you
 ran out of memory.
 
 
+### Segmentation faults and core dumps
+
+**Q**. _I'm getting errors like 'caught illegal operation', 'illegal
+operand', and 'Illegal instruction (core dumped)'_
+
+**A**. These type of errors are often because a software tool is
+  called a CPU instruction ("operand") that the CPU on the current
+  machine does not understand or support. The {{ site.cluster.nickname
+  }} cluster comprise of a heterogeneous set of compute nodes with a
+  wide variety of CPU generations. Specifically, all nodes support CPU
+  instructions of x86-64 version 2 or newer.  However, some software
+  tools requires x86-64 v3 or newer. If you submit a job requiring
+  x86-64 v3, it might end up on a x86-64 v2 compute node by chance,
+  resulting in the above type of errors. To ensure that this does not
+  happen, [declare the x86-64 level] that your job requires, e.g. `-l
+  x86-64-v=3`.
+
+
 ### X2Go Troubleshooting
 
 **Q**. _x2go authenticates, but then immediately disconnects without launching._
@@ -498,6 +516,7 @@ site.cluster.name }} in return for priority. Will you take them?_
 [Pricing for Extra Compute]: /hpc/about/pricing-compute.html
 [File Sizes and Disk Quotas]: /hpc/howto/storage-size.html
 ['Connect directly to a development node']: /hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node
+[declare the x86-64 level]: /hpc/scheduler/submit-jobs.html#cpu-architecture-generation--l-x86-64-vlevel
 [Kitty]: https://sw.kovidgoyal.net/kitty/
 [iTerm2]: https://iterm2.com/
 [WezTerm]: https://wezfurlong.org/wezterm/index.html
