@@ -44,13 +44,14 @@ NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This
 
 ## Submitting GPU jobs to the MSG 4-GPU nodes
 
-The 4gpu.q has {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }} nodes. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue. 
+The 4gpu.q has {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }} nodes. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue.
 
 To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
 
 ```sh
 qsub -q 4gpu.q ...
 ```
+NOTE: The GPU servers in the 4gpu.q were all contributed by MSG Labs. If you are not a member of a MSG lab, for your job to run in the 4gpu.q, your job must have a run time (h_rt) of less than 2 hours.
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 Do not use a parallel environment (i.e. `-pe smp 4` or `-pe mpi_onehost 4`) for 4gpu.q as you would for gpu.q.  If you do, the job will never start.
