@@ -179,23 +179,25 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
     return { url, start: validStart ? start : null, end, durationSec: validDur ? durSec : null };
   }
 
+  // Hmm ... v.start appears to be the actual "end" timestamp, not v.end.
+  // This was discovered when the latency was >200x. /HB 2025-08-26
   async function updateHeartbeat() {
     el.textContent = "loading…";
-    try {
+    try {    
       const results = await Promise.allSettled(urls.map(readLastLine));
-      const ok = results.filter(r => r.status === "fulfilled").map(r => r.value).filter(v => v.end);
+      const ok = results.filter(r => r.status === "fulfilled").map(r => r.value).filter(v => v.start);
       if (ok.length === 0) {
         el.textContent = "—";
         el.title = "No valid (timestamp+duration) found";
         return;
       }
       // Pick newest end time (timestamp + duration)
-      const newest = ok.reduce((a, b) => (a.end > b.end ? a : b));
+      const newest = ok.reduce((a, b) => (a.start > b.start ? a : b));
 
-      const localIso = toLocalIsoSeconds(newest.end);
+      const localIso = toLocalIsoSeconds(newest.start);
 
       // Age as "XmYYs ago"
-      const diffMs = Date.now() - newest.end.getTime();
+      const diffMs = Date.now() - newest.start.getTime();
       const mins = Math.floor(diffMs / 60000);
       const secs = Math.floor((diffMs % 60000) / 1000);
       const ageStr = `${mins}m${secs.toString().padStart(2, "0")}s ago`;
