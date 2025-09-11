@@ -197,10 +197,17 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
       const localIso = toLocalIsoSeconds(newest.start);
 
       // Age as "XmYYs ago"
-      const diffMs = Date.now() - newest.start.getTime();
-      const mins = Math.floor(diffMs / 60000);
-      const secs = Math.floor((diffMs % 60000) / 1000);
-      const ageStr = `${mins}m${secs.toString().padStart(2, "0")}s ago`;
+      const diff_ms = Date.now() - newest.start.getTime();
+      const diff_s = diff_ms / 1000;
+      const hours = Math.floor(diff_s / 3600);
+      const mins = Math.floor((diff_s - 3600 * hours) / 60);
+      const secs = Math.floor((diff_s - 3600 * hours - 60 * mins));
+      const ageStr;
+      if (hours > 0) {
+        ageStr = `${hours}h${mins.toString().padStart(2, "0")}m${secs.toString().padStart(2, "0")}s ago`;
+      } else {
+        ageStr = `${mins}m${secs.toString().padStart(2, "0")}s ago`;
+      }
 
       el.textContent = `${ageStr} (${localIso})`;
       const tipParts = [`from: ${newest.url}`];
