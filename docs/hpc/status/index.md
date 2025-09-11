@@ -202,7 +202,7 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
       const hours = Math.floor(diff_s / 3600);
       const mins = Math.floor((diff_s - 3600 * hours) / 60);
       const secs = Math.floor((diff_s - 3600 * hours - 60 * mins));
-      const ageStr;
+      var ageStr;
       if (hours > 0) {
         ageStr = `${hours}h${mins.toString().padStart(2, "0")}m${secs.toString().padStart(2, "0")}s ago`;
       } else {
