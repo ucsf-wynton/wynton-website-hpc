@@ -1,5 +1,5 @@
-nodes: 485
-physical_cores: 17640
+nodes: 484
+physical_cores: 17592
 gpu_nodes: 61
 communal_gpu_nodes: 22
 gpus: 235
