@@ -45,7 +45,7 @@ $ qsub -l h_rt=00:01:00 -l mem_free=1G job_summary.sge
 ```
 
 
-_Comment_: Note that the `mem` value has unit `GB s` (GB * seconds), which is because it is the "accumulated memory usage of the job in Gbytes seconds".
+_Comment_: Note that the `mem_free` value has unit `GB s` (GB * seconds), which is because it is the "accumulated memory usage of the job in Gbytes seconds".
 
 
 Here is an example of the job summary outputted from the above job script:
