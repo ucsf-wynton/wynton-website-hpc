@@ -41,11 +41,11 @@ The full details are available at the end.
 With this information, we can narrow down that the total processing time was 14 seconds (`cpu=00:00:14`) and that the maximum amount of virtual memory used was ~810 MB (`maxvmem=810.203M`).  With the help of `cpu` and `maxvmem` from previous runs, we can re-submit this job script with more relevant resource specifications;
 
 ```sh
-$ qsub -l h_rt=00:01:00 -l mem=1G job_summary.sge
+$ qsub -l h_rt=00:01:00 -l mem_free=1G job_summary.sge
 ```
 
 
-_Comment_: Note that the `mem` value has unit `GB s` (GB * seconds), which is because it is the "accumulated memory usage of the job in Gbytes seconds".
+_Comment_: Note that the `mem_free` value has unit `GB s` (GB * seconds), which is because it is the "accumulated memory usage of the job in Gbytes seconds".
 
 
 Here is an example of the job summary outputted from the above job script:

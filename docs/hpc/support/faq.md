@@ -21,12 +21,12 @@ However, if your P2 or P3 data use or grant requires that your computing or stor
 
 **Q**. _Will PHI data ever be allowed on Wynton?_
 
-**A**. Due to the architectural choices that were made with Wynton early on, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton
+**A**. Due to the architectural choices that were made with Wynton early on, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton.
 
 
 **Q**. _Wait, didn't PHI data used to be allowed on Wynton?_
 
-**A**. Yes, PHI Data was allowed during a PHI Pilot and for a period from 2021 to early 2025. Unfortunately, a Security Audit subsequent to the PHI Project's launch found that Wynton did not meet the necessary standards for hosting PHI/P4 data
+**A**. Yes, PHI Data was allowed during a PHI Pilot and for a period from 2021 to early 2025. Unfortunately, a Security Audit subsequent to the PHI Project's launch found that Wynton did not meet the necessary standards for hosting PHI/P4 data.
 
 
 ## Jobs
@@ -74,7 +74,7 @@ running?_
      
   3. You might have asked for compute resources that cannot be met,
      e.g. more memory or more cores than available on any compute
-     node, e.g. `-l mem=4048gb` or `-pe smp 256`.  If so, your job
+     node, e.g. `-l mem_free=4048G` or `-pe smp 512`.  If so, your job
      will never run.  Either lower the job's resource needs using
      `qdel`, or, alternatively, remove the job (`qdel`) and submit
      (`qsub`) a new one with adjusted resources.
