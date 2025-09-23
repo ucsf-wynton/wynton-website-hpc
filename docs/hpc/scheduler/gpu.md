@@ -69,7 +69,7 @@ We have setup a trial of multi-node GPU jobs on Wynton. This enables you to run 
     of GPUs you want to use.  Assuming you want to use all A40s, the number
     should be a multiple of 4.  Example: `"-pe mpi 8"`.
 
-2) Request the "exclusive" resource: `"-l excl=true"`
+2) Request the "exclusive" resource: `"-l exclusive=true"`
 
 And that's all that's required.  You'll need to use 'mpirun' to launch your applications on the hosts assigned to the job.  And you'll likely want to tailor the rest of your qsub flags to make sure you run on hosts with the same GPU types.  Also, you'll *really* want to set "-R y" to turn on reservations.  As with all parallel jobs, keep in mind that the more resources you request, the longer your wait time will be.
 
@@ -92,7 +92,7 @@ In addition, a discussion group has been started on the Wynton Slack by the Wynt
 
 The GPU nodes in {{ site.cluster.name }} contain many different generations and models of NVIDIA GPUs.  In order to ensure that your GPU jobs run on GPUs with the proper capabilities, there are two SGE resource complexes assigned to each GPU node:
 
-1. `compute_cap` - describes the Compute Capability (or SM version) of the GPUs in the node (see [NVIDIA's CUDA GPU page] for more details).  `compute_cap` is an integer in keeping with the relevant flags to `nvcc`.  For example, a Compute Capability of 6.1 (e.g. [GeForce GTX 1080]) is represented by `compute_cap=61`.
+1. `compute_cap` - describes the Compute Capability (or SM version) of the GPUs in the node (see [NVIDIA's CUDA GPU page] for more details).  `compute_cap` is an integer in keeping with the relevant flags to `nvcc`.  For example, a Compute Capability of 6.1 (e.g. [GeForce GTX 1080]) is requested by `-l compute_cap=61`.
 
 2. `gpu_mem` - describes how much GPU memory the GPUs in the node have.  It's defined in units of MiB.
 
