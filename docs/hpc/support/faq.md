@@ -2,6 +2,14 @@
 
 ## Policies
 
+**Q**. _Do I need a Wynton Protected Account?_
+
+**A**. You need a Wynton Protected account if you are working with anything classified by UCSF Security as "P3". This includes DEID UCSF Data and Data covered by UCSF Intellectual Property Agreements.
+
+**Q**. _Can I use a Wynton with a non-Protected account?_
+
+**A**. You can work on Wynton with a non-Protected account _only_ if you are working with only with public datasets and tools that would not be covered by UCSF Intellectual Property agreements.
+
 **Q**. _Is PHI data allowed on Wynton?_
 
 **A**. PHI/P4 data is _not_ allowed on Wynton. The [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards. Examples of P1-P4 data are:
