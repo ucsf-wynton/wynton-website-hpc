@@ -4,7 +4,7 @@
 
 **Q**. _Do I need a Wynton Protected Account?_
 
-**A**. You need a Wynton Protected account if you are working with anything classified by UCSF Security as "P3". This includes DEID UCSF Data and Data covered by UCSF Intellectual Property Agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
+**A**. You need a Wynton Protected account if you are working with anything classified by UCSF Security as "P3". This includes Deidentified UCSF Data and Data covered by UCSF Intellectual Property Agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
 
 Note, if your P2 or P3 data use agreement, IRB, or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does not meet any known security standard for Protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
