@@ -2,6 +2,18 @@
 
 ## Policies
 
+**Q**. _Do I need a Wynton Protected Account?_
+
+**A**. You need a Wynton Protected account if you are working with anything classified by UCSF Security as "P3". This includes Deidentified UCSF Data and Data covered by UCSF Intellectual Property Agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
+
+Note, if your P2 or P3 data use agreement, IRB, or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does not meet any known security standard for Protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
+
+**Q**. _Can I use a Wynton with a non-Protected account?_
+
+**A**. You can work on Wynton with a non-Protected account _only_ if you are working with with public datasets and tools that would not be covered by UCSF Intellectual Property agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
+
+If your data is covered by an IRB or other data use agreement, it is safe to say you should be using a Wynton Protected account.
+
 **Q**. _Is PHI data allowed on Wynton?_
 
 **A**. PHI/P4 data is _not_ allowed on Wynton. The [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards. Examples of P1-P4 data are:
@@ -17,7 +29,7 @@ P3 data _is_ currently allowed on Wynton, as long as you have a Wynton Protected
 
 If you do _not_ have a Wynton Protected account, you should limit yourself to working with P1 and P2 data, freely available data available without legal encumbrance. 
 
-However, if your P2 or P3 data use or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
+However, if your P2 or P3 data use agreement, IRB, or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
 **Q**. _Will PHI data ever be allowed on Wynton?_
 
