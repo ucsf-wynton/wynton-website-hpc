@@ -12,6 +12,8 @@ Note, if your P2 or P3 data use agreement, IRB, or grant requires that your comp
 
 **A**. You can work on Wynton with a non-Protected account _only_ if you are working with with public datasets and tools that would not be covered by UCSF Intellectual Property agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
 
+If your data is covered by an IRB or other data use agreement, it is safe to say you should be using a Wynton Protected account.
+
 **Q**. _Is PHI data allowed on Wynton?_
 
 **A**. PHI/P4 data is _not_ allowed on Wynton. The [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards. Examples of P1-P4 data are:
