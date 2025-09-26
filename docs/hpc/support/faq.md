@@ -25,7 +25,7 @@ P3 data _is_ currently allowed on Wynton, as long as you have a Wynton Protected
 
 If you do _not_ have a Wynton Protected account, you should limit yourself to working with P1 and P2 data, freely available data available without legal encumbrance. 
 
-However, if your P2 or P3 data use or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
+However, if your P2 or P3 data use agreement, IRB, or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
 
 **Q**. _Will PHI data ever be allowed on Wynton?_
 
