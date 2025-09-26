@@ -8,7 +8,7 @@
 
 **Q**. _Can I use a Wynton with a non-Protected account?_
 
-**A**. You can work on Wynton with a non-Protected account _only_ if you are working with only with public datasets and tools that would not be covered by UCSF Intellectual Property agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
+**A**. You can work on Wynton with a non-Protected account _only_ if you are working with with public datasets and tools that would not be covered by UCSF Intellectual Property agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
 
 **Q**. _Is PHI data allowed on Wynton?_
 
