@@ -1,45 +1,6 @@
 # Frequently Asked Questions (FAQs)
 
-## Policies
-
-**Q**. _Do I need a Wynton Protected Account?_
-
-**A**. You need a Wynton Protected account if you are working with anything classified by UCSF Security as "P3". This includes Deidentified UCSF Data and Data covered by UCSF Intellectual Property Agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
-
-Note, if your P2 or P3 data use agreement, IRB, or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does not meet any known security standard for Protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
-
-**Q**. _Can I use a Wynton with a non-Protected account?_
-
-**A**. You can work on Wynton with a non-Protected account _only_ if you are working with with public datasets and tools that would not be covered by UCSF Intellectual Property agreements. See the [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) for more information on UCSF Data Classification levels.
-
-If your data is covered by an IRB or other data use agreement, it is safe to say you should be using a Wynton Protected account.
-
-**Q**. _Is PHI data allowed on Wynton?_
-
-**A**. PHI/P4 data is _not_ allowed on Wynton. The [UCSF Policy 650-16 Addendum F - UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard) provides four levels of "Data Classification" for security standards. Examples of P1-P4 data are:
-
-  * **P1**: Public data, freely available without legal encumbrance.
-  * **P2**: Published, Publicly available Certified Deidentified Data sets, freely available without legal encumbrance.
-  * **P3**: UCSF, or other, Deidentified Health Information, including images and notes.  University Intellectual Property, "...electronic data which the University may patent or gain from financially through intellectual property commercialization partnerships and commercial entities." Sensitive Faculty Activities. Learner Information.
-  * **P4**: Unredacted Clinical Data, Images, Medical Records, or Notes which contain Patient Identifiers, aka _PHI_. Research health information. Personally Identifiable Information. Licensed intellectual property and product development information.
-
-P4 level data, including _PHI_ data, is prohibited from being used or stored on Wynton and should be deleted or transferred elsewhere immediately. 
-
-P3 data _is_ currently allowed on Wynton, as long as you have a Wynton Protected account. For more information on Wynton Protected Accounts, see [Wynton Protected Quickstart](/hpc/get-started/protected-quickstart.html). 
-
-If you do _not_ have a Wynton Protected account, you should limit yourself to working with P1 and P2 data, freely available data available without legal encumbrance. 
-
-However, if your P2 or P3 data use agreement, IRB, or grant requires that your computing or storage resource meet a particular NIST or ISO standard, it _cannot_ be used on Wynton. Wynton does _not_ meet any known security standard for protected data storage, including, but not limited to, NIST SP 800-171 or ISO/IEC 270013/270024 standards.
-
-**Q**. _Will PHI data ever be allowed on Wynton?_
-
-**A**. Due to the architectural choices that were made with Wynton early on, it is extremely unlikely that PHI/P4 data will ever be allowed on Wynton.
-
-
-**Q**. _Wait, didn't PHI data used to be allowed on Wynton?_
-
-**A**. Yes, PHI Data was allowed during a PHI Pilot and for a period from 2021 to early 2025. Unfortunately, a Security Audit subsequent to the PHI Project's launch found that Wynton did not meet the necessary standards for hosting PHI/P4 data.
-
+For detailed information on data classifications and guidelines for using Wynton Protected, please consult the [User Agreement and Disclaimer](https://wynton.ucsf.edu/hpc/about/user-agreement.html).
 
 ## Jobs
 
