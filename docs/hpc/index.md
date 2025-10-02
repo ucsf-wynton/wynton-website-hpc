@@ -28,8 +28,8 @@ The {{ site.cluster.name }} environment grew as more users discovered it and mor
 [Wynton Protected]: /hpc/about/wynton-protected.html
 [Rocky 8]: /hpc/software/rocky-8-linux.html
 
-
 # Wynton's Future
+
 Wynton HPC has been a vital resource for UCSF’s computational research, providing shared HPC capabilities to support diverse scientific projects. However, Wynton HPC is being gradually phased out to align with UCSF’s evolving research infrastructure strategy.
 
 While Wynton will remain operational for the near term, researchers are encouraged to plan for its eventual absorption into the FAC and CoreHPC. UCSF is committed to supporting researchers during this transition and ensuring continued access to robust computational resources.
