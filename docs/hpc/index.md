@@ -24,9 +24,6 @@ The {{ site.cluster.name }} environment grew as more users discovered it and mor
 
 **Please note**: P4 data, which includes PHI, is prohibited.  P3 data may only be used in "[Wynton Protected]" via a "protected" account. Refer to [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard). For compliant alternatives for working with P4 data, please visit our UCSF Data Storage for Research Page found here: https://secureresearch.ucsf.edu/ucsf-data-storage-research, or contact our cloud services team for a consultation: https://it.ucsf.edu/service/secured-enterprise-cloud-aws.
 
-[UCSF Privacy Office]: https://hipaa.ucsf.edu/
-[Wynton Protected]: /hpc/about/wynton-protected.html
-[Rocky 8]: /hpc/software/rocky-8-linux.html
 
 # Wynton's Future
 
@@ -37,3 +34,7 @@ While Wynton will remain operational for the near term, researchers are encourag
 For more details on the upcoming changes, visit the [Wynton HPC Transition Announcement](https://ars.ucsf.edu/news/announcement-wynton-hpc-transition).
 
 Learn about the [Facility for Advanced Computing (FAC)](https://it.ucsf.edu/service/facility-advanced-computing-fac), including pricing options for [FAC Capacity Storage](https://it.ucsf.edu/how-to/fac-capacity-storage).
+
+[UCSF Privacy Office]: https://hipaa.ucsf.edu/
+[Wynton Protected]: /hpc/about/wynton-protected.html
+[Rocky 8]: /hpc/software/rocky-8-linux.html
