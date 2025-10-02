@@ -1,6 +1,6 @@
 # Frequently Asked Questions (FAQs)
 
-For detailed information on data classifications and guidelines for using Wynton Protected, please consult the [User Agreement and Disclaimer](https://wynton.ucsf.edu/hpc/about/user-agreement.html).
+For detailed information on data classifications and guidelines for using Wynton Protected, please consult the [User Agreement and Disclaimer].
 
 ## Jobs
 
@@ -491,6 +491,7 @@ site.cluster.name }} in return for priority. Will you take them?_
 [purchase additional storage]: /hpc/about/pricing-storage.html
 [Pricing for Extra Compute]: /hpc/about/pricing-compute.html
 [File Sizes and Disk Quotas]: /hpc/howto/storage-size.html
+[User Agreement and Disclaimer]: /hpc/about/user-agreement.html
 ['Connect directly to a development node']: /hpc/howto/log-in-without-pwd.html#connect-directly-to-a-development-node
 [declare the x86-64 level]: /hpc/scheduler/submit-jobs.html#cpu-architecture-generation--l-x86-64-vlevel
 [Kitty]: https://sw.kovidgoyal.net/kitty/
