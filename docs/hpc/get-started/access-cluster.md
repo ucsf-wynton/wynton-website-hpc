@@ -131,7 +131,7 @@ Any shell session that has been idle for more than eight hours will timeout and 
 
 
 <script type="application/javascript">
-fetch('https://api.ipify.org?format=json') .then(response => response.json()) .then(data => { console.log('The public IP address of the user is:', data.ip); if (data.ip.startsWith("205.154.")) { document.getElementById("wifi-alert").style.display = "block"; } }) .catch(error => console.error('Error obtaining IP address:', error));
+fetch('https://api64.ipify.org?format=json') .then(response => response.json()) .then(data => { console.log('The public IP address of the user is:', data.ip); if (data.ip.startsWith("205.154.")) { document.getElementById("wifi-alert").style.display = "block"; } }) .catch(error => console.error('Error obtaining IP address:', error));
 </script>
 
 
