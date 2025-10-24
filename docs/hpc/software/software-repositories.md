@@ -325,7 +325,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a>, <a href="https://github.com/sharkdp/bat/blob/master/CHANGELOG.md">https://github.com/sharkdp/bat/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.25.0</em></span><br>
+Versions: <span class="module-version">0.25.0, <em>0.26.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -361,7 +361,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">This is a helper library providing common assertions for Bats.</span><br>
 Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_ASSERT_HOME}/load.bash&quot;</code></span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-assert">https://github.com/bats-core/bats-assert</a>, <a href="https://github.com/bats-core/bats-assert/releases">https://github.com/bats-core/bats-assert/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
-Versions: <span class="module-version">2.1.0, <em>2.2.0</em></span><br>
+Versions: <span class="module-version">2.1.0, 2.2.0, <em>2.2.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1104,7 +1104,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
-Versions: <span class="module-version">3.7, 4.9, <em>5.0</em></span><br>
+Versions: <span class="module-version">3.7, 4.9, 5.0, <em>5.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1416,7 +1416,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.60.2, <em>0.65.2</em></span><br>
+Versions: <span class="module-version">0.60.2, 0.65.2, <em>0.66.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1678,10 +1678,10 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
   <dd class="module-details">
 <strong class="module-help">github-cli: GitHub's Official Command Line Tool</strong><br>
 <span class="module-description"><code>gh</code> is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with <code>git</code> and your code.</span><br>
-Example: <span class="module-example"><code>gh --version</code>, <code>gh --help</code>, <code>gh auth login</code>, and <code>gh extension install dlvhdr/gh-dash</code>.</span><br>
+Example: <span class="module-example"><code>gh --version</code> and <code>gh --help</code>. Setup: <code>gh auth login</code> (once). CLI query example: <code>gh issue list --repo=futureverse/future</code>. TUI: <code>gh extension install dlvhdr/gh-dash</code> (once), then <code>gh dash</code>. AI: <code>gh extension install github/gh-copilot</code> (once), then <code>gh copilot suggest &quot;find files older than one year&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code), <a href="https://github.com/topics/gh-extension">https://github.com/topics/gh-extension</a> (GitHub CLI extensions)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>2.67.0</em></span><br>
+Versions: <span class="module-version">2.67.0, <em>2.82.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1695,7 +1695,7 @@ whatis(&quot;Keywords: utility, file viewer, cli, tui&quot;)
 whatis(&quot;URL: https://cli.github.com/, https://cli.github.com/manual/ (documentation), https://github.com/cli/cli/releases (changelog), https://github.com/cli/cli/ (source code), https://github.com/topics/gh-extension (GitHub CLI extensions)&quot;)
 whatis([[
 Description: `gh` is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with `git` and your code.
-Examples: `gh --version`, `gh --help`, `gh auth login`, and `gh extension install dlvhdr/gh-dash`.
+Examples: `gh --version` and `gh --help`. Setup: `gh auth login` (once). CLI query example: `gh issue list --repo=futureverse/future`. TUI: `gh extension install dlvhdr/gh-dash` (once), then `gh dash`. AI: `gh extension install github/gh-copilot` (once), then `gh copilot suggest &quot;find files older than one year&quot;`.
 Warning: Only the most recent version of this software will be kept.
 ]])
 
@@ -1860,7 +1860,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gping --version</code>, <code>gping --help</code>, <code>gping 8.8.8.8 9.9.9.9</code>, and <code>gping --cmd &quot;curl -o /dev/null https://www.github.com&quot; &quot;wget -O /dev/null https://github.com&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/orf/gping">https://github.com/orf/gping</a>, <a href="https://github.com/orf/gping/releases">https://github.com/orf/gping/releases</a> (changelog), <a href="https://github.com/orf/gping">https://github.com/orf/gping</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.19.0</em></span><br>
+Versions: <span class="module-version">1.19.0, <em>1.20.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2903,7 +2903,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://pandoc.org/releases.html">https://pandoc.org/releases.html</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.4, 3.5, 3.6, 3.6.1, <em>3.6.2</em></span><br>
+Versions: <span class="module-version">3.4, 3.5, 3.6, 3.6.1, 3.6.2, <em>3.8.2.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3106,7 +3106,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>plink2 --help</code>, <code>plink2 --version</code>, and <code>plink2 --threads 1 ...</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.cog-genomics.org/plink/2.0/">https://www.cog-genomics.org/plink/2.0/</a>, <a href="https://www.cog-genomics.org/plink/2.0/general_usage">https://www.cog-genomics.org/plink/2.0/general_usage</a> (documentation), <a href="https://www.cog-genomics.org/plink/2.0/#recent">https://www.cog-genomics.org/plink/2.0/#recent</a> (changelog), <a href="https://github.com/chrchang/plink-ng">https://github.com/chrchang/plink-ng</a> (source code)</span><br>
 Warning: <span class="module-warning">This tool runs on all available CPU cores by default, which is bad practice. Please specify option <code>--threads ncores</code> to avoid this, e.g. <code>--threads 1</code>.</span><br>
-Versions: <span class="module-version">2.00a2LM, 2.00a3LM, 2.00a5.14, 2.0.0-a.5.15, 2.0.0-a.6.1, 2.0.0-a.6.4, <em>2.0.0-a.6.9</em></span><br>
+Versions: <span class="module-version">2.00a2LM, 2.00a3LM, 2.00a5.14, 2.0.0-a.5.15, 2.0.0-a.6.1, 2.0.0-a.6.4, 2.0.0-a.6.9, <em>2.0.0-a.6.21</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3299,7 +3299,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.6.42</em></span><br>
+Versions: <span class="module-version">1.6.42, <em>1.8.25</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3543,7 +3543,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.69.1, <em>1.71.0</em></span><br>
+Versions: <span class="module-version">1.69.1, 1.71.0, <em>1.71.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -3613,7 +3613,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">restic is a backup program that is fast, efficient and secure. It supports the three major operating systems (Linux, macOS, Windows) and a few smaller ones (FreeBSD, OpenBSD).</span><br>
 Example: <span class="module-example"><code>restic --help</code> and <code>restic version</code>.</span><br>
 URL: <span class="module-url"><a href="https://restic.net">https://restic.net</a>, <a href="https://restic.readthedocs.io/en/latest/">https://restic.readthedocs.io/en/latest/</a> (documentation), <a href="https://github.com/restic/restic/releases">https://github.com/restic/restic/releases</a> (changelog), <a href="https://github.com/restic/restic">https://github.com/restic/restic</a> (source code)</span><br>
-Versions: <span class="module-version"><em>0.17.3</em></span><br>
+Versions: <span class="module-version">0.17.3, <em>0.18.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3648,7 +3648,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 Example: <span class="module-example"><code>rg --help</code>, <code>man rg</code>, and <code>rg --threads=2 -i 'lorem ipsum'</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a>, <a href="https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md">https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md</a> (documentation), <a href="https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md">https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md</a> (FAQ), <a href="https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md">https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This tool uses 12 parallel threads by default; please specify <code>--threads=2</code>. Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>14.1.1</em></span><br>
+Versions: <span class="module-version">14.1.1, <em>15.1.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4489,7 +4489,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. The aim of VCFtools is to provide easily accessible methods for working with complex genetic variation data in the form of VCF files.</span><br>
 Example: <span class="module-example"><code>vcftools --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://vcftools.github.io/">https://vcftools.github.io/</a>, <a href="https://github.com/vcftools/vcftools/releases">https://github.com/vcftools/vcftools/releases</a> (changelog), <a href="https://github.com/vcftools/vcftools">https://github.com/vcftools/vcftools</a> (source code)</span><br>
-Versions: <span class="module-version"><em>0.1.16</em></span><br>
+Versions: <span class="module-version">0.1.16, <em>0.1.17</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4613,7 +4613,7 @@ end
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>4.45.1</em></span><br>
+Versions: <span class="module-version">4.45.1, <em>4.48.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4733,24 +4733,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4764,6 +4746,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
