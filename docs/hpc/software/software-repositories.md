@@ -6145,6 +6145,7 @@ module load python3/numpy/1.19.5
 module load python3/dateutil
 module load python3/matplotlib
 module load python3/pytz
+module load python3/bottleneck
 prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/pandas-0.25.3/lib64/python
 </code></pre>
 
