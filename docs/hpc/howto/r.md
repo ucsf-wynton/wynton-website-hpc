@@ -95,9 +95,9 @@ Rscript my_script.R
 R 4.5.0 was released on 2025-04-11, R 4.5.1 on 2025-06-13, and
 Bioconductor 3.21 on 2024-04-16.
 
-On 2025-04-17, [we confirmed that 22,582 (99.1%) out of 22,371 CRAN
-packages and 2,289 (99.2%) out of 2,308 Bioconductor 3.21 software
-packages installed out of the box when following the below
+[We have confirmed that more than 99% of the CRAN packages and more
+than 99% of the Bioconductor Software packages install out of the box
+when following the below
 instructions](https://blog.wynton.ucsf.edu/posts/2025/10/r-4.5/). The
 packages that failed to install do so either because they depend on a
 system library that is not available on the cluster, or because they
