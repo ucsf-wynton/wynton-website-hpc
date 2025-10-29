@@ -9,7 +9,7 @@ msg_4gpus: 28
 
 ## RAM [GiB]:
 ram_min: 48
-ram_max: 1512
+ram_max: 2000
 
 ## Disk /swap [GiB]:
 swap_min: 4
