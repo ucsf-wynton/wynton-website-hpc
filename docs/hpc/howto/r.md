@@ -214,17 +214,16 @@ Would you like to create a personal library
 '~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-14.tar.gz'
-trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-14.tar.gz'
 Content type 'application/x-gzip' length 778426 bytes (760 KB)
 ==================================================
 downloaded 760 KB
 
-* installing *source* package 'zoo' ...
-** this is package 'zoo' version '1.8-14'
-** package 'zoo' successfully unpacked and MD5 sums checked
+* installing *source* package ‘zoo’ ...
+** this is package ‘zoo’ version ‘1.8-14’
+** package ‘zoo’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-using C compiler: 'gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)'
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c coredata.c -o coredata.o
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c lag.c -o lag.o
@@ -305,8 +304,8 @@ Content type 'application/x-gzip' length 582690 bytes (580 KB)
 ==================================================
 downloaded 569 KB
 
-* installing *source* package 'BiocManager' ...
-** package 'BiocManager' successfully unpacked and MD5 sums checked
+* installing *source* package ‘BiocManager’ ...
+** package ‘BiocManager’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** R
 ** inst
@@ -344,11 +343,11 @@ Content type 'application/x-gzip' length 2846680 bytes (2.7 MB)
 ==================================================
 downloaded 2.7 MB
 
-* installing *source* package 'limma' ...
-** this is package 'limma' version '3.64.3'
+* installing *source* package ‘limma’ ...
+** this is package ‘limma’ version ‘3.64.3’
 ** using staged installation
 ** libs
-using C compiler: 'gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)'
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o                                                                                          
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o                                                                                    
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o                                                                    
@@ -489,14 +488,20 @@ Contrary to **Rmpi** above, packages such **[pbdMPI]** and **[bigGP]**
 require more hand-holding to install.  For example, after having
 loaded the `mpi` module, we can install **pbdMPI** in R as:
 
+<!-- code-block label="install-pbdMPI" -->
 ```r
 > install.packages("pbdMPI", configure.args="--with-mpi-include=$MPI_INCLUDE --with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-* installing *source* package 'pbdMPI' ...
-** package 'pbdMPI' successfully unpacked and MD5 sums checked
+trying URL 'https://cloud.r-project.org/src/contrib/pbdMPI_0.5-4.tar.gz'
+Content type 'application/x-gzip' length 423376 bytes (413 KB)
+==================================================
+downloaded 413 KB
+
+* installing *source* package ‘pbdMPI’ ...
+** this is package ‘pbdMPI’ version ‘0.5-4’
+** package ‘pbdMPI’ successfully unpacked and MD5 sums checked
 ** using staged installation
-setting mpi include path from MPI_INCLUDE
 checking for sed... /usr/bin/sed
 checking for mpicc... mpicc
 checking for ompi_info... ompi_info
@@ -504,38 +509,40 @@ checking for pkg-config... /usr/bin/pkg-config
 >> TMP_FOUND = Nothing found from mpicc --show & sed nor pkg-config ...
 checking for openpty in -lutil... yes
 checking for main in -lpthread... yes
- 
+
 ******************* Results of pbdMPI package configure *****************
- 
+
 >> MPIRUN = /usr/lib64/openmpi/bin/mpirun
 >> MPIEXEC = /usr/lib64/openmpi/bin/mpiexec
 >> ORTERUN = /usr/lib64/openmpi/bin/orterun
->> TMP_INC = 
->> TMP_LIB = 
->> TMP_LIBNAME = 
+>> TMP_INC =
+>> TMP_LIB =
+>> TMP_LIBNAME =
 >> TMP_FOUND = Nothing found from mpicc --show & sed nor pkg-config ...
->> MPI_ROOT = 
+>> MPI_ROOT =
 >> MPITYPE = OPENMPI
 >> MPI_INCLUDE_PATH = /usr/include/openmpi-x86_64
 >> MPI_LIBPATH = /usr/lib64/openmpi/lib
->> MPI_LIBNAME = 
+>> MPI_LIBNAME =
 >> MPI_LIBS =  -lutil -lpthread
 >> MPI_DEFS = -DMPI2
->> MPI_INCL2 = 
->> MPI_LDFLAGS = 
+>> MPI_INCL2 =
+>> MPI_LDFLAGS =
 >> PKG_CPPFLAGS = -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI
 >> PKG_LIBS = -L/usr/lib64/openmpi/lib -lmpi  -lutil -lpthread
->> PROF_LDFLAGS = 
+>> PROF_LDFLAGS =
 >> ENABLE_LD_LIBRARY_PATH = no
- 
+
 *************************************************************************
- 
+
 configure: creating ./config.status
 config.status: creating src/Makevars
 configure: creating ./config.status
 config.status: creating src/Makevars
 config.status: creating R/zzz.r
+config.status: creating R/util_execmpi.r
 ** libs
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
 echo "MPIRUN = /usr/lib64/openmpi/bin/mpirun" > Makeconf
 echo "MPIEXEC = /usr/lib64/openmpi/bin/mpiexec" >> Makeconf
 echo "ORTERUN = /usr/lib64/openmpi/bin/orterun" >> Makeconf
@@ -556,11 +563,35 @@ echo "PKG_CPPFLAGS = -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI" >> Makecon
 echo "PKG_LIBS = -L/usr/lib64/openmpi/lib -lmpi  -lutil -lpthread" >> Makeconf
 echo "PROF_LDFLAGS = " >> Makeconf
 echo "ENABLE_LD_LIBRARY_PATH = no" >> Makeconf
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
-...
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include   -fpic  -g -O2  -c zzz.c -o zzz.o
-gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi/lib -lmpi -lutil -lpthread -L{{ r_path }}/lib64/R/lib -lR
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c comm_errors.c -o comm_errors.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c comm_sort_double.c -o comm_sort_double.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c comm_sort_integer.c -o comm_sort_integer.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c pkg_dl.c -o pkg_dl.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c pkg_tools.c -o pkg_tools.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd.c -o spmd.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_allgather.c -o spmd_allgather.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_allgatherv.c -o spmd_allgatherv.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_allreduce.c -o spmd_allreduce.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_alltoall.c -o spmd_alltoall.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_alltoallv.c -o spmd_alltoallv.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_bcast.c -o spmd_bcast.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_communicator.c -o spmd_communicator.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_communicator_spawn.c -o spmd_communicator_spawn.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_gather.c -o spmd_gather.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_gatherv.c -o spmd_gatherv.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_info.c -o spmd_info.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_recv.c -o spmd_recv.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_reduce.c -o spmd_reduce.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_scatter.c -o spmd_scatter.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_scatterv.c -o spmd_scatterv.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_send.c -o spmd_send.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_sendrecv.c -o spmd_sendrecv.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_sendrecv_replace.c -o spmd_sendrecv_replace.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_tool.c -o spmd_tool.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_utility.c -o spmd_utility.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c spmd_wait.c -o spmd_wait.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c zzz.c -o zzz.o
+gcc -std=gnu2x -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o pbdMPI.so comm_errors.o comm_sort_double.o comm_sort_integer.o pkg_dl.o pkg_tools.o spmd.o spmd_allgather.o spmd_allgatherv.o spmd_allreduce.o spmd_alltoall.o spmd_alltoallv.o spmd_bcast.o spmd_communicator.o spmd_communicator_spawn.o spmd_gather.o spmd_gatherv.o spmd_info.o spmd_recv.o spmd_reduce.o spmd_scatter.o spmd_scatterv.o spmd_send.o spmd_sendrecv.o spmd_sendrecv_replace.o spmd_tool.o spmd_utility.o spmd_wait.o zzz.o -L/usr/lib64/openmpi/lib -lmpi -lutil -lpthread -L{{ r_path }}/lib64/R/lib -lR
 installing via 'install.libs.R' to {{ r_libs_user_path }}/00LOCK-pbdMPI/00new/pbdMPI
 ** R
 ** demo
@@ -571,17 +602,37 @@ installing via 'install.libs.R' to {{ r_libs_user_path }}/00LOCK-pbdMPI/00new/pb
 ** building package indices
 ** installing vignettes
 ** testing if installed package can be loaded from temporary location
-[1684426347.259086] [c4-dev3:26986:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           {{ site.devel.name }}
+  Local device:         mlx5_0
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[1684168833.604597] [{{ site.devel.name }}:227206:0]       ib_iface.c:700  UCX  ERROR ibv_create_cq(cqe=4096) failed: Cannot allocate memory
 [{{ site.devel.hostname }}:227206] pml_ucx.c:208 Error: Failed to create UCP worker
 ** checking absolute paths in shared objects and dynamic libraries
 ** testing if installed package can be loaded from final location
-[1684426349.593601] [c4-dev3:27017:0]            sys.c:618  UCX  ERROR shmget(size=2097152 flags=0xfb0) for mm_recv_desc failed: Operation not permitted, please check shared memory limits by 'ipcs -l'
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           {{ site.devel.name }}
+  Local device:         mlx5_0
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[1684168836.256287] [{{ site.devel.name }}:227248:0]       ib_iface.c:700  UCX  ERROR ibv_create_cq(cqe=4096) failed: Cannot allocate memory
 [{{ site.devel.hostname }}:227248] pml_ucx.c:208 Error: Failed to create UCP worker
 ** testing if installed package keeps a record of temporary installation path
 * DONE (pbdMPI)
 
 The downloaded source packages are in
-        '/scratch/{{ site.user.name }}/RtmpKNz5KF/downloaded_packages'
+        '/scratch/alice/RtmpKNz5KF/downloaded_packages'
 ```
 
 The **bigGP** installs the same way.

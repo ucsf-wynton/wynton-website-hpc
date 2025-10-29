@@ -2,7 +2,6 @@ Would you like to create a personal library
 '~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
 trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-14.tar.gz'
-trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-14.tar.gz'
 Content type 'application/x-gzip' length 778426 bytes (760 KB)
 ==================================================
 downloaded 760 KB
