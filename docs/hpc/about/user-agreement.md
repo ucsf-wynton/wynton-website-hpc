@@ -8,7 +8,7 @@
 
 # User Agreement and Disclaimer
 
-Last Updated July 9, 2025
+Last Updated October 29, 2025
 
 Wynton user responsibilities and requirements in support of this
 Agreement include:
@@ -41,8 +41,8 @@ Agreement include:
    Authorized and Acceptable Use of Electronic Information Resources
    policy (650-18) "i. An account that is not deleted upon loss of
    affiliation shall be transferred to another UCSF faculty or staff
-   person designated as being responsible for the account." Accounts that are not claimed after
-   90 days will be permanently deleted.
+   person designated as being responsible for the account." Accounts and data that are not claimed after
+   90 days may be permanently deleted.
    
  * Because IT security requirements, operating systems, and hardware
    are continually evolving, difficult situations may arise in the
