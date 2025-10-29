@@ -2,9 +2,9 @@
 
 {% assign linux_distro = "rocky8" %}
 
-{% assign r_basename = "R-4.4.0-gcc13" %}
+{% assign r_basename = "R-4.5.1-gcc13" %}
 
-{% assign r_libs_user = "4.4-CBI-gcc13" %}
+{% assign r_libs_user = "4.5-CBI-gcc13" %}
 
 {% assign r_path = site.path.cbi_software | append: "/_" | append: linux_distro | append: "/" | append: r_basename %}
 
@@ -35,8 +35,8 @@ which provides access to a modern version of R:
 ```r
 [alice@{{ site.devel.name }} ~]$ R 
 
-R version 4.4.2 (2024-10-31) -- "Pile of Leaves"
-Copyright (C) 2024 The R Foundation for Statistical Computing
+R version 4.5.1 (2025-06-13) -- "Great Square Root"
+Copyright (C) 2025 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -92,22 +92,18 @@ Rscript my_script.R
 
 <div class="alert alert-info" role="alert" markdown="1">
 
-R 4.4.0 was release on 2024-04-24 and Bioconductor 3.19 on 2024-05-01.
-As of 2024-05-03, there were 20,684 packages on CRAN and 3,578
-packages on Bioconductor 3.19.
+R 4.5.0 was released on 2025-04-11, R 4.5.1 on 2025-06-13, and
+Bioconductor 3.21 on 2024-04-16.
 
-On 2024-05-03, we confirmed that 20,614 CRAN packages and 3,560
-Bioconductor 3.19 packages install out of the box when following the
-below instructions. The packages that failed to install do so either
-because they depend on a system library that is not available on the
-cluster, or because they have bugs preventing them from being
-installed out of the box. If you need to install any of those, please
-reach out on one of the support channels.
-
-<!--
-Out of 3,568 Bioconductor 3.18 packages, 3,562 installed out of the
-box in R 4.4.0 (sic!) when following the below instructions.
--->
+On 2025-04-17, [we confirmed that 22,582 (99.1%) out of 22,371 CRAN
+packages and 2,289 (99.2%) out of 2,308 Bioconductor 3.21 software
+packages installed out of the box when following the below
+instructions](https://blog.wynton.ucsf.edu/posts/2025/10/r-4.5/). The
+packages that failed to install do so either because they depend on a
+system library that is not available on the cluster, or because they
+have bugs preventing them from being installed out of the box. If you
+need to install any of those, please reach out on one of the support
+channels.
 
 </div>
 
@@ -155,17 +151,18 @@ or not you want to create that folder.  If asked, you should always
 accept (answer 'Yes').  If you had already created this folder, R will
 install into this folder without asking.
 
-Finally, R undergoes a _main_ update once a year (in April).  For
-example, R 4.4.0 was release in April 2024.  The next main release
-will be R 4.5.0 a year later.  Whenever the `y` component in R `x.y.z`
-version is increased, you will start out with an empty personal
-package folder specific for R `x.y` (regardless of `z`).  This means
-that you will have to re-install all R packages you had installed
-during the year before the new main release came out.  Yes, this can
-be tedious and can take quite some time but it will improve stability
-and yet allow the R developers to keep improving R.  Of course, you
-can still keep using an older version of R and all the packages you
-have installed for that version - they will not be removed.
+Finally, R undergoes a _main_ update once a year (around April and
+May). For example, R 4.5.0 was release in April 2025.  The next main
+release will be R 4.6.0 a year later. Whenever the `y` component in R
+`x.y.z` version is increased, you will start out with an empty
+personal package folder specific for R `x.y` (regardless of `z`).
+This means that you will have to re-install all R packages you had
+installed during the year before the new main release came out.  Yes,
+this can be tedious and can take quite some time but it will improve
+stability and yet allow the R developers to keep improving R.  Of
+course, you can still keep using an older version of R and all the
+packages you have installed for that version - they will not be
+removed.
 
 
 ### Installing an R package from CRAN
@@ -216,20 +213,22 @@ without further questions asked.  In this example, we will get:
 Would you like to create a personal library
 '~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
-trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-12.tar.gz'
-Content type 'application/x-gzip' length 782344 bytes (764 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-14.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-14.tar.gz'
+Content type 'application/x-gzip' length 778426 bytes (760 KB)
 ==================================================
-downloaded 764 KB
+downloaded 760 KB
 
 * installing *source* package ‘zoo’ ...
+** this is package ‘zoo’ version ‘1.8-14’
 ** package ‘zoo’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
-gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c coredata.c -o coredata.o
-gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ r_path }}/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fpic  -g -O2  -c lag.c -o lag.o
-gcc -shared -L{{ r_path }}/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L{{ r_path }}/lib/R/lib -lR
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c coredata.c -o coredata.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c lag.c -o lag.o
+gcc -std=gnu2x -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o zoo.so coredata.o init.o lag.o -L{{ r_path }}/lib64/R/lib -lR
 installing to {{ r_libs_user_path }}/00LOCK-zoo/00new/zoo/libs
 ** R
 ** demo
@@ -298,11 +297,11 @@ need to start by installing it from CRAN (sic!);
 
 <!-- code-block label="install-BiocManager" -->
 ```r
-> install.packages("BiocManager")
+e> install.packages("BiocManager")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.22.tar.gz'
-Content type 'application/x-gzip' length 582690 bytes (569 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.26.tar.gz'
+Content type 'application/x-gzip' length 582690 bytes (580 KB)
 ==================================================
 downloaded 569 KB
 
@@ -338,21 +337,22 @@ With **BiocManager** installed, we can now install any Bioconductor package.  Fo
 <!-- code-block label="install-limma" -->
 ```r
 > BiocManager::install("limma")
-Bioconductor version 3.18 (BiocManager 1.30.22), R 4.3.2 (2023-10-31)
+Bioconductor version 3.21 (BiocManager 1.30.26), R 4.5.1 (2025-06-13)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/limma_3.58.1.tar.gz'
-Content type 'application/x-gzip' length 2804950 bytes (2.7 MB)
+trying URL 'https://bioconductor.org/packages/3.21/bioc/src/contrib/limma_3.64.3.tar.gz'
+Content type 'application/x-gzip' length 2846680 bytes (2.7 MB)
 ==================================================
 downloaded 2.7 MB
 
 * installing *source* package ‘limma’ ...
+** this is package ‘limma’ version ‘3.64.3’
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ r_path }}/lib64/R/lib -lR          
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o                                                                                          
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o                                                                                    
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o                                                                    
+gcc -std=gnu2x -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ r_path }}/lib64/R/lib -lR               
 installing to {{ r_libs_user_path }}/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
@@ -368,7 +368,7 @@ installing to {{ r_libs_user_path }}/00LOCK-limma/00new/limma/libs
 * DONE (limma)
 
 The downloaded source packages are in
-        ‘/scratch/alice/Rtmp4dISqw/downloaded_packages’
+        '/scratch/hb/RtmpIoJ3Np/downloaded_packages'
 >
 ```
 
@@ -436,7 +436,7 @@ install them we need to load the built-in `mpi` module;
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-gcc-toolset/13   3) r/4.4.2   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-gcc-toolset/13   3) r/4.5.1   4) mpi/openmpi-x86_64
 
  
 

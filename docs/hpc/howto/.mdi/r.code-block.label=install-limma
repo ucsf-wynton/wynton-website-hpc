@@ -1,19 +1,20 @@
 > BiocManager::install("limma")
-Bioconductor version 3.18 (BiocManager 1.30.22), R 4.3.2 (2023-10-31)
+Bioconductor version 3.21 (BiocManager 1.30.26), R 4.5.1 (2025-06-13)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/limma_3.58.1.tar.gz'
-Content type 'application/x-gzip' length 2804950 bytes (2.7 MB)
+trying URL 'https://bioconductor.org/packages/3.21/bioc/src/contrib/limma_3.64.3.tar.gz'
+Content type 'application/x-gzip' length 2846680 bytes (2.7 MB)
 ==================================================
 downloaded 2.7 MB
 
 * installing *source* package ‘limma’ ...
+** this is package ‘limma’ version ‘3.64.3’
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 10.3.1 20210422 (Red Hat 10.3.1-1)’
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o
-gcc -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
-gcc -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ r_path }}/lib64/R/lib -lR          
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o                                                                                          
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o                                                                                    
+gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o                                                                    
+gcc -std=gnu2x -shared -L{{ r_path }}/lib64/R/lib -L/usr/local/lib64 -o limma.so init.o normexp.o weighted_lowess.o -L{{ r_path }}/lib64/R/lib -lR               
 installing to {{ r_libs_user_path }}/00LOCK-limma/00new/limma/libs
 ** R
 ** inst
@@ -29,5 +30,5 @@ installing to {{ r_libs_user_path }}/00LOCK-limma/00new/limma/libs
 * DONE (limma)
 
 The downloaded source packages are in
-        ‘/scratch/alice/Rtmp4dISqw/downloaded_packages’
+        '/scratch/hb/RtmpIoJ3Np/downloaded_packages'
 >

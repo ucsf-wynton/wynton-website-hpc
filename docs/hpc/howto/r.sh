@@ -85,9 +85,9 @@ module load CBI r
 #module purge
 #module load CBI r
 
-mdi_code_block --label=r-scl-gcc-toolset <<EOF
-module load CBI scl-gcc-toolset/12
-gcc --version
-EOF
-module purge
-module load CBI r
+#mdi_code_block --label=r-scl-gcc-toolset <<EOF
+#module load CBI scl-gcc-toolset/12
+#gcc --version
+#EOF
+#module purge
+#module load CBI r

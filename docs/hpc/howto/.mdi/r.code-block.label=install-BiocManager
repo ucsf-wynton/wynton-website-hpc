@@ -1,8 +1,8 @@
-> install.packages("BiocManager")
+e> install.packages("BiocManager")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.22.tar.gz'
-Content type 'application/x-gzip' length 582690 bytes (569 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.26.tar.gz'
+Content type 'application/x-gzip' length 582690 bytes (580 KB)
 ==================================================
 downloaded 569 KB
 

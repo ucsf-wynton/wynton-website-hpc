@@ -1,8 +1,0 @@
-[alice@{{ site.devel.name }} ~]$ module load CBI hdf5
-[alice@{{ site.devel.name }} ~]$ module list
-
-Currently Loaded Modules:
-  1) CBI   2) scl-devtoolset/10   3) r/4.3.1   4) hdf5/1.12.2
-
- 
-
