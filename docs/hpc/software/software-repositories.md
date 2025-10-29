@@ -5891,7 +5891,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/iniconfig-1.1.1/lib/pyt
   <dd class="module-details">
 <span class="module-description">Lightweight pipelining: using Python functions as pipeline jobs</span><br>
 URL: <span class="module-url"><a href="https://joblib.readthedocs.io/en/latest/">https://joblib.readthedocs.io/en/latest/</a></span><br>
-Versions: <span class="module-version"><em>0.17.0</em></span><br>
+Versions: <span class="module-version">0.17.0, <em>1.5.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5899,7 +5899,7 @@ Versions: <span class="module-version"><em>0.17.0</em></span><br>
 module-whatis &quot;Description: Lightweight pipelining: using Python functions as pipeline jobs&quot;
 module-whatis &quot;URL: https://joblib.readthedocs.io/en/latest/&quot;
 conflict python2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/joblib-0.17.0/lib/python
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/joblib-1.5.2/lib/python
 </code></pre>
 
 </details>
