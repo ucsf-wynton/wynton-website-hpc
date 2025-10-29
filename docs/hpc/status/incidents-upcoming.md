@@ -7,11 +7,13 @@ Wednesday November 12 until 6:00 pm on Thursday November 13, 2025.
 This is a full downtime, including no access to login, development,
 data-transfer, and app nodes. Compute nodes will be shutdown as
 well. Jobs with runtimes that go into the maintenance window will be
-started after the downtime. UCSF Facilities will perform annual fire
-inspection activities to remain compliant with regulations. The
-network team will update a core switch. The Wynton team will take the
-opportunity to implement kernel updates during this period.  <br><span
-class="timestamp">October 10, 11:30 PT</span>
+started after the downtime. Starting October 29 at 3:00pm, jobs
+relying on the default 14-day runtime will not be launched until after
+the downtime.  UCSF Facilities will perform annual fire inspection
+activities to remain compliant with regulations. The network team will
+update a core switch. The Wynton team will take the opportunity to
+implement kernel updates during this period.
+<br><span class="timestamp">October 10, 11:30 PT</span>
 
 <!--
 comment: Scheduled downtime
