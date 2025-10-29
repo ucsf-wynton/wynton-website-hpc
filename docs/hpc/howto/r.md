@@ -367,7 +367,7 @@ installing to {{ r_libs_user_path }}/00LOCK-limma/00new/limma/libs
 * DONE (limma)
 
 The downloaded source packages are in
-        '/scratch/hb/RtmpIoJ3Np/downloaded_packages'
+        '/scratch/alice/RtmpIoJ3Np/downloaded_packages'
 >
 ```
 
