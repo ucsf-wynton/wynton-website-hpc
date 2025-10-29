@@ -219,12 +219,12 @@ Content type 'application/x-gzip' length 778426 bytes (760 KB)
 ==================================================
 downloaded 760 KB
 
-* installing *source* package ‘zoo’ ...
-** this is package ‘zoo’ version ‘1.8-14’
-** package ‘zoo’ successfully unpacked and MD5 sums checked
+* installing *source* package 'zoo' ...
+** this is package 'zoo' version '1.8-14'
+** package 'zoo' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
+using C compiler: 'gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)'
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c coredata.c -o coredata.o
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2  -c lag.c -o lag.o
@@ -305,8 +305,8 @@ Content type 'application/x-gzip' length 582690 bytes (580 KB)
 ==================================================
 downloaded 569 KB
 
-* installing *source* package ‘BiocManager’ ...
-** package ‘BiocManager’ successfully unpacked and MD5 sums checked
+* installing *source* package 'BiocManager' ...
+** package 'BiocManager' successfully unpacked and MD5 sums checked
 ** using staged installation
 ** R
 ** inst
@@ -344,11 +344,11 @@ Content type 'application/x-gzip' length 2846680 bytes (2.7 MB)
 ==================================================
 downloaded 2.7 MB
 
-* installing *source* package ‘limma’ ...
-** this is package ‘limma’ version ‘3.64.3’
+* installing *source* package 'limma' ...
+** this is package 'limma' version '3.64.3'
 ** using staged installation
 ** libs
-using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
+using C compiler: 'gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)'
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o                                                                                          
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o                                                                                    
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o                                                                    
@@ -642,8 +642,8 @@ If we try to install the **[jqr]** package, it fails to compile;
 ```r
 > install.packages("jqr")
 ...
-* installing *source* package ‘jqr’ ...
-** package ‘jqr’ successfully unpacked and MD5 sums checked
+* installing *source* package 'jqr' ...
+** package 'jqr' successfully unpacked and MD5 sums checked
 ** using staged installation
 Using PKG_CFLAGS=
 Using PKG_LIBS=-ljq
@@ -659,7 +659,7 @@ R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
 <stdin>:1:10: fatal error: jq.h: No such file or directory
 compilation terminated.
 --------------------------------------------------------------------
-ERROR: configuration failed for package ‘jqr’
+ERROR: configuration failed for package 'jqr'
 ```
 
 To fix this, load the `jq` module from the CBI stack before launching R, i.e.
