@@ -413,9 +413,9 @@ for your job.
 ### Packages MASS and Matrix
 
 As of 2024-04-26, the "recommended" **[MASS]** and **[Matrix]**
-packages require R (>= 4.4.0). If you run an older version of R, you
-can install older versions of them that are compatible with R (<
-4.4.0) using:
+packages require R (>= 4.4.0) [2024-04-24]. If you run an older
+version of R, you can install older versions of them that are
+compatible with R (< 4.4.0) using:
 
 ```r
 > install.packages("https://cran.r-project.org/src/contrib/Archive/MASS/MASS_7.3-60.0.1.tar.gz", type = "source")
