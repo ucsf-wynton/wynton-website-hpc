@@ -68,7 +68,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <h2 id="repository_built-in">Module Software Repository: built-in (6)</h2>
 
-Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
+Maintained by: {{ site.cluster.nickname }} Systems Administrators, <a href="{{ '/hpc/about/contact.html' | relative_url }}">{{ site.cluster.name }}</a><br>
 Enable repository: <em>this software repository is always enabled</em><br>
 
 <h3 id="module_built-in_amber" class="module-name">amber</h3>
@@ -208,7 +208,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <h2 id="repository_cbi">Module Software Repository: CBI (105)</h2>
 
-Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu">Computational Biology and Informatics</a><br>
+Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
@@ -501,7 +501,7 @@ prepend_path(&quot;BATS_SUPPORT_HOME&quot;, home)
 <span class="module-description">BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.</span><br>
 Example: <span class="module-example"><code>bcftools --version</code></span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/bcftools/blob/develop/NEWS">https://github.com/samtools/bcftools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/bcftools">https://github.com/samtools/bcftools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.20, <em>1.21</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, <em>1.22</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -819,7 +819,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 <strong class="module-help">byobu: Elegant Enhancement of the Otherwise Functional, Plain, Practical GNU Screen</strong><br>
 <span class="module-description">Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer.</span><br>
 Example: <span class="module-example"><code>byobu --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.byobu.org/">https://www.byobu.org/</a>, <a href="https://bazaar.launchpad.net/~kirkland/byobu/trunk/view/head:/debian/changelog">https://bazaar.launchpad.net/~kirkland/byobu/trunk/view/head:/debian/changelog</a> (changelog), <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://www.byobu.org/">https://www.byobu.org/</a>, <a href="https://github.com/dustinkirkland/byobu/releases">https://github.com/dustinkirkland/byobu/releases</a> (releases), <a href="https://github.com/dustinkirkland/byobu">https://github.com/dustinkirkland/byobu</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
 Versions: <span class="module-version"><em>5.133</em></span><br>
 <details>
@@ -831,8 +831,8 @@ byobu: Elegant Enhancement of the Otherwise Functional, Plain, Practical GNU Scr
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
-whatis(&quot;Keywords: terminal, SSH&quot;)
-whatis(&quot;URL: https://www.byobu.org/, https://bazaar.launchpad.net/~kirkland/byobu/trunk/view/head:/debian/changelog (changelog), https://github.com/dustinkirkland/byobu (source code)&quot;)
+whatis(&quot;Keywords: terminal, SSH, cli, tui&quot;)
+whatis(&quot;URL: https://www.byobu.org/, https://github.com/dustinkirkland/byobu/releases (releases), https://github.com/dustinkirkland/byobu (source code)&quot;)
 whatis([[
 Description: Byobu is an elegant enhancement of the otherwise functional, plain, practical GNU Screen. Byobu includes an enhanced profile, configuration utilities, and system status notifications for the GNU screen window manager as well as the Tmux terminal multiplexer.
 Examples: `byobu --version`.
@@ -1930,7 +1930,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 <strong class="module-help">hdf5: A General Purpose Library and File Format for Storing Scientific Data</strong><br>
 <span class="module-description">Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications.</span><br>
 Example: <span class="module-example"><code>h5stat --version</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.hdfgroup.org/downloads/hdf5/">https://www.hdfgroup.org/downloads/hdf5/</a>, <a href="https://portal.hdfgroup.org/display/support/Downloads">https://portal.hdfgroup.org/display/support/Downloads</a> (changelog), <a href="https://www.hdfgroup.org/downloads/hdf5/source-code/">https://www.hdfgroup.org/downloads/hdf5/source-code/</a> (source code)</span><br>
+URL: <span class="module-url"><a href="https://www.hdfgroup.org/download-hdf5/">https://www.hdfgroup.org/download-hdf5/</a>, <a href="https://github.com/HDFGroup/hdf5/releases">https://github.com/HDFGroup/hdf5/releases</a> (releases), <a href="https://github.com/HDFGroup/hdf5">https://github.com/HDFGroup/hdf5</a> (source code)</span><br>
 Versions: <span class="module-version">1.10.6, 1.12.0, 1.12.1, <em>1.12.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -1942,7 +1942,7 @@ local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: library&quot;)
-whatis(&quot;URL: https://www.hdfgroup.org/downloads/hdf5/, https://portal.hdfgroup.org/display/support/Downloads (changelog), https://www.hdfgroup.org/downloads/hdf5/source-code/ (source code)&quot;)
+whatis(&quot;URL: https://www.hdfgroup.org/download-hdf5/, https://github.com/HDFGroup/hdf5/releases (releases), https://github.com/HDFGroup/hdf5 (source code)&quot;)
 whatis([[
 Description: Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications.
 Examples: `h5stat --version`.
@@ -2046,7 +2046,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
 Example: <span class="module-example"><code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/htslib/blob/develop/NEWS">https://github.com/samtools/htslib/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.19.1, 1.20, <em>1.21</em></span><br>
+Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.19.1, 1.20, 1.21, <em>1.22.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3860,7 +3860,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
 Example: <span class="module-example"><code>samtools --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS.md">https://github.com/samtools/samtools/blob/develop/NEWS.md</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, 1.19.2, 1.20, <em>1.21</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, 1.19.2, 1.20, 1.21, <em>1.22.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4044,7 +4044,7 @@ execute{cmd = &quot;sc_repl_disable&quot;, modeA = {&quot;unload&quot;}}
 Example: <span class="module-example"><code>snpEff -help</code> and <code>SnpSift -help</code>, which are short for <code>java -jar $SNPEFF_HOME/snpEff/snpEff.jar -help</code> and <code>java -jar $SNPEFF_HOME/snpEff/SnpSift.jar -help</code>.  In SnpEff (&lt; 5.0), there is also <code>ClinEff -help</code>, which is short for <code>java -jar $SNPEFF_HOME/ClinEff/ClinEff.jar -help</code>.</span><br>
 URL: <span class="module-url"><a href="https://pcingola.github.io/SnpEff/">https://pcingola.github.io/SnpEff/</a>, <a href="https://github.com/pcingola/SnpEff/tags">https://github.com/pcingola/SnpEff/tags</a> (changelog), <a href="https://github.com/pcingola/SnpEff">https://github.com/pcingola/SnpEff</a> (source code)</span><br>
 Warning: <span class="module-warning">SnpEff (&gt;= 5.1) requires Java (&gt;= 12).</span><br>
-Versions: <span class="module-version">4.3t, 5.0c, 5.0e, 5.1e, 5.1, 5.2a, 5.2c, <em>5.2e</em></span><br>
+Versions: <span class="module-version">4.3t, 5.0c, 5.0e, 5.1e, 5.1, 5.2a, <em>5.2c</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4734,24 +4734,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4765,6 +4747,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -6757,4 +6757,4 @@ $(document).ready(function() {
 })
 </script>
 
-[core software]: {{ '/software/core-software.html' | relative_url }}
+[core software]: {{ '/hpc/software/core-software.html' | relative_url }}
