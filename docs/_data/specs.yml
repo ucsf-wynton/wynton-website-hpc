@@ -9,7 +9,7 @@ msg_4gpus: 28
 
 ## RAM [GiB]:
 ram_min: 48
-ram_max: 2000
+ram_max: 1512
 
 ## Disk /swap [GiB]:
 swap_min: 4
@@ -24,16 +24,13 @@ local_scratch_size_min: 0.1
 local_scratch_size_max: 1.8
 
 ## Global /wynton/scratch [TiB]:
-## df --si --portability /wynton/scratch
-global_scratch_size_total: 924
+global_scratch_size_total: 703
 
 ## User home [TiB]:
-## df --si --portability /wynton/home
-home_size_total: 1126
+home_size_total: 770
 
 ## Group home [TiB]:
-## df --si --portability /wynton/group
-group_size_total: 10240
+group_size_total: 6500
 
 ## Job queues
 pu_total: 20186
