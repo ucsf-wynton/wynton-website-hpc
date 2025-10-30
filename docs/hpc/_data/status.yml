@@ -148,3 +148,9 @@ message:
 #level: danger
 #condition: is not operational
 #message: The cluster is down, because the BeeGFS file system is non-functional.
+
+level: warning
+condition: is operational
+message: The cluster will be down for maintenance on November 12-13, 2025. Jobs with runtimes going into the maintenance window will only be started after the downtime.
+
+
