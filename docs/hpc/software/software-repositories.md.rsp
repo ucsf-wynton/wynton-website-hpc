@@ -245,4 +245,4 @@ $(document).ready(function() {
 })
 </script>
 
-[core software]: {{ '/software/core-software.html' | relative_url }}
+[core software]: {{ '/hpc/software/core-software.html' | relative_url }}

@@ -47,7 +47,7 @@
 
 2021-05-28: Development node dev1 has been upgraded to a machine with 72 CPU cores and 384 GiB RAM (was 8 cores and 16 GiB RAM)
 
-2021-04-05: We have improved the purchasing and accounting workflow for [lab storage orders](/hpc/support/pricing-storage.html) resulting in shorter waiting times.
+2021-04-05: We have improved the purchasing and accounting workflow for [lab storage orders](/hpc/about/pricing-storage.html) resulting in shorter waiting times.
 
 2021-03-12: Zsh is now also available in addition to the officially supported Bash, our default shell, Csh, and Tcsh.
 
