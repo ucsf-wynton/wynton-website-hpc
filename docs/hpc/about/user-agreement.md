@@ -8,7 +8,7 @@
 
 # User Agreement and Disclaimer
 
-Last Updated October 29, 2025
+Last Updated October 30, 2025
 
 Wynton user responsibilities and requirements in support of this
 Agreement include:
@@ -16,7 +16,9 @@ Agreement include:
  * By using the Wynton HPC environment, you agree to abide by the
    statement of its [Purpose, Principles and Governance] as well as the [UCSF Minimum Security Standards](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information).
 
- * P4 data, which includes PHI, is prohibited.  P3 data may only be used in "Wynton Protected” via a “protected” account. [Refer to UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard).  
+ * P4 data, which includes PHI, is prohibited.
+ 
+ * P3 data may only be used in "Wynton Protected” via a “protected” account. [Refer to UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard).  
  
  * Users who wish to access P3 protected data are required to log into node(s) that implement
    enhanced security, such as additional access restrictions.
