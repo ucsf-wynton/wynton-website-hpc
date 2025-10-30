@@ -136,7 +136,7 @@ fetch('https://api64.ipify.org?format=json') .then(response => response.json()) 
 
 
 
-[PuTTY]: https://www.putty.org/
+[PuTTY]: https://www.chiark.greenend.org.uk/~sgtatham/putty/
 [development node]: /hpc/get-started/development-prototyping.html
 [X2Go]: /hpc/howto/gui-x11fwd.html
 [Log in without Password]: /hpc/howto/log-in-without-pwd.html

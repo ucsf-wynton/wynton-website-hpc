@@ -271,6 +271,6 @@ have called `ssh -J {{ site.login.hostname }} {{ site.devel.name }}.{{ site.clus
 
 
 [UCSF VPN]: https://it.ucsf.edu/services/vpn
-[PuTTY]: https://www.putty.org/
+[PuTTY]: https://www.chiark.greenend.org.uk/~sgtatham/putty/
 [Fix in-secure file permission on ~/.ssh/]: #fix-in-secure-file-permission-on-ssh
 [improve the X11 Forwarding performance]: /hpc/howto/gui-x11fwd.html#log-into-the-cluster-with-x11-forwarding
