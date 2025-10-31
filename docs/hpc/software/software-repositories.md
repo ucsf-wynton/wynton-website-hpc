@@ -3999,7 +3999,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example">Try <code>echo $HOME</code> before and after loading this module. To deactive, unload module, or start a new shell.</span><br>
 URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/shellcheck-repl">https://github.com/HenrikBengtsson/shellcheck-repl</a>, <a href="https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/README.md">https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/README.md</a> (documentation), <a href="https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/NEWS.md">https://github.com/HenrikBengtsson/shellcheck-repl/blob/master/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.4.4</em></span><br>
+Versions: <span class="module-version">0.4.4, <em>0.5.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4026,11 +4026,14 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 local shell = os.getenv(&quot;SHELL&quot;)
 local script = pathJoin(home, &quot;shellcheck-repl.bash&quot;)
 
--- Enable on load
-execute{cmd = &quot;source &quot; .. script, modeA = {&quot;load&quot;}}
 
--- Disable on unload
-execute{cmd = &quot;sc_repl_disable&quot;, modeA = {&quot;unload&quot;}}
+-- Shellcheck REPL can only be activated in interactive mode
+if os.getenv(&quot;PS1&quot;) ~= nil then
+  -- Enable on load
+  execute{cmd = &quot;source &quot; .. script, modeA = {&quot;load&quot;}}
+  -- Disable on unload
+  execute{cmd = &quot;sc_repl_disable&quot;, modeA = {&quot;unload&quot;}}
+end
 </code></pre>
 
 </details>
