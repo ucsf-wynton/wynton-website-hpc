@@ -436,7 +436,7 @@ install them we need to load the built-in `mpi` module;
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-gcc-toolset/13   3) r/4.5.1   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-gcc-toolset/13   3) r/4.5.2   4) mpi/openmpi-x86_64
 
  
 
