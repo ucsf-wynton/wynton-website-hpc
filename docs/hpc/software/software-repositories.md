@@ -1455,7 +1455,7 @@ pushenv(&quot;FZF_HOME&quot;, home)
 Example: <span class="module-example"><code>gatk --help</code> and <code>gatk --list</code>.</span><br>
 URL: <span class="module-url"><a href="https://gatk.broadinstitute.org/hc/en-us">https://gatk.broadinstitute.org/hc/en-us</a>, <a href="https://github.com/broadinstitute/gatk">https://github.com/broadinstitute/gatk</a> (source code), <a href="https://github.com/broadinstitute/gatk/releases">https://github.com/broadinstitute/gatk/releases</a> (changelog), <a href="https://github.com/broadgsa/gatk">https://github.com/broadgsa/gatk</a> (legacy), <a href="https://console.cloud.google.com/storage/browser/gatk-software/package-archive">https://console.cloud.google.com/storage/browser/gatk-software/package-archive</a> (legacy), <a href="ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/">ftp://ftp.broadinstitute.org/pub/gsa/GenomeAnalysisTK/</a> (legacy)</span><br>
 Requirement: <span class="module-requirement">Modern GATK versions require Java (&gt;= 17).</span><br>
-Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, 4.2.2.0, 4.2.4.1, 4.2.5.0, 4.2.6.0, 4.2.6.1, 4.3.0.0, 4.4.0.0, 4.5.0.0, 4.6.0.0, <em>4.6.1.0</em></span><br>
+Versions: <span class="module-version">4.1.0.0, 4.1.2.0, 4.1.3.0, 4.1.4.0, 4.1.6.0, 4.1.7.0, 4.1.9.0, 4.2.2.0, 4.2.4.1, 4.2.5.0, 4.2.6.0, 4.2.6.1, 4.3.0.0, 4.4.0.0, 4.5.0.0, 4.6.0.0, 4.6.1.0, <em>4.6.2.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
