@@ -15,7 +15,7 @@ Assuming you are already logged on to a development node, launch your personal R
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI rstudio-server-controller
 [alice@{{ site.devel.name }} ~]$ rsc start
-alice, your personal RStudio Server 2025.05.1-513 running R 4.5.1 is available on:
+alice, your personal RStudio Server 2025.05.1-513 running R 4.5.2 is available on:
 
   <http://127.0.0.1:20612>
 
