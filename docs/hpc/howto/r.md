@@ -2,7 +2,7 @@
 
 {% assign linux_distro = "rocky8" %}
 
-{% assign r_basename = "R-4.5.1-gcc13" %}
+{% assign r_basename = "R-4.5.2-gcc13" %}
 
 {% assign r_libs_user = "4.5-CBI-gcc13" %}
 
@@ -35,7 +35,7 @@ which provides access to a modern version of R:
 ```r
 [alice@{{ site.devel.name }} ~]$ R 
 
-R version 4.5.1 (2025-06-13) -- "Great Square Root"
+R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
 Copyright (C) 2025 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu
 
@@ -92,8 +92,9 @@ Rscript my_script.R
 
 <div class="alert alert-info" role="alert" markdown="1">
 
-R 4.5.0 was released on 2025-04-11, R 4.5.1 on 2025-06-13, and
-Bioconductor 3.21 on 2024-04-16.
+R 4.5.0 was released on 2025-04-11, R 4.5.1 on 2025-06-13 and R 4.5.2
+on 2025-10-31. Bioconductor 3.21 was release on 2024-04-16 and
+Bioconductor 3.22 was release on 2024-10-30.
 
 [We have confirmed that more than 99% of the CRAN packages and more
 than 99% of the Bioconductor Software packages install out of the box
