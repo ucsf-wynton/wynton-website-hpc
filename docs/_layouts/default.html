@@ -513,7 +513,7 @@ if (downtime_str != "") {
 
 
  <script>
-    $("a[href^='http']:not([href*='127.0.0.1']):not([href*='localhost']):not([href*='ucsf.edu']):not([href*='github.io']):not([id*='edit'])").each(function() {
+    $("a[href^='http']:not([href*='127.0.0.1']):not([href*='localhost']):not([href*='ucsf.edu']):not([href*='github.io']):not([href*='app.globus.org']):not([href*='ucsf.service-now.com']):not([id*='edit'])").each(function() {
       $(this).css({
         "background": "url(https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&size=16&url=" +
                        this.href + ") right center no-repeat",
