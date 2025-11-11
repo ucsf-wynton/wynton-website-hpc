@@ -75,7 +75,13 @@
 
       <ul class="nav navbar-nav" id="menunavbar">
         <li>
-          <a href="/hpc/status/index.html">Status<span class="status-led" style="background: {% if site.data.status.level == "warning" %}orange{% endif %}{% if site.data.status.level == "danger" %}red{% endif %};"></span></a>
+          {% if site.data.status.level == "warning" %}
+            <a href="/hpc/status/index.html" title="{{ site.data.status.message }}">Status<span class="status-led" style="background: orange;"></span></a>
+          {% elsif site.data.status.level == "danger" %}
+            <a href="/hpc/status/index.html" title="{{ site.data.status.message }}">Status<span class="status-led" style="background: red;"></span></a>
+          {% else %}
+            <a href="/hpc/status/index.html">Status</a>
+          {% endif %}
         </li>
         
         <li class="dropdown">
