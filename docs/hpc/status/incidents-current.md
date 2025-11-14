@@ -2,6 +2,12 @@
 
 #### <span style="color: orange;">Full downtime</span>
 
+**Update**: The downtime has concluded and the maintenance has been
+successfully completed. The cluster is now back up and running. Please
+note, you may experience some lag over the next 24 hours as the
+file-system metadata servers continue to re-synchronize.
+<br><span class="timestamp">November 13, 18:00 PT</span>
+
 **Update**: The cluster is down for maintenance.
 <br><span class="timestamp">November 12, 15:00 PT</span>
 
