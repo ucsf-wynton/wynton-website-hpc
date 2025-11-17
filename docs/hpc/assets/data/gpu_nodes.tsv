@@ -61,7 +61,6 @@ qb3-atgpu23	A6000	48 GiB	2	512 GiB	rsl	true
 qb3-atgpu24	A40	48 GiB	4	512 GiB	communal	true
 qb3-atgpu25	A40	48 GiB	4	512 GiB	communal	true
 qb3-atgpu29	A40	48 GiB	4	512 GiB	msg	true
-qb3-atgpu30	A40	48 GiB	4	512 GiB	ferrinlab	true
 qb3-atgpu31	A40	48 GiB	4	512 GiB	kortemmelab	true
 qb3-atgpu32	A40	48 GiB	4	512 GiB	kortemmelab	true
 qb3-atgpu33	A40	48 GiB	4	512 GiB	kortemmelab	true
