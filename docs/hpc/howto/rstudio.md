@@ -1,6 +1,6 @@
 <div class="alert alert-warning" role="alert" markdown="1">
 
-An RStudio Server session will time out after 120 minutes of no user input. This is to make sure there are forgotten, left-over processes running on the system. For R tasks running longer than this, the solution is to submit them via the scheduler.
+An RStudio Server session will time out after 120 minutes of no user input. This is to make sure there are no forgotten, left-over processes running on the system. For R tasks running longer than this, the solution is to submit them via the scheduler.
 
 </div>
 
