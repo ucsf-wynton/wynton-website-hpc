@@ -200,7 +200,7 @@ first six lines of your Wynton `~/.bashrc` file, you can do:
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+        . /etc/bashrc
 fi
 ```
 
