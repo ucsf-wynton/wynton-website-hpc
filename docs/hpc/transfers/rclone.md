@@ -177,13 +177,13 @@ To check that it works, open another terminal on your local computer,
 and do:
 
 ```sh
-{local}$ ls -la ~/wynton-home
+{local}$ ls -al ~/wynton-home
 total 757
-drwxr-xr-x.  57 hb-test lsd     230 Nov 18 16:04 .
-drwxr-xr-x.   3 root    root      1 Apr  9  2019 ..
-drwx------.   4 hb-test lsd       2 Feb 13  2024 .apptainer
--rw-r--r--.   1 hb-test lsd       0 May 20  2024 authorized_keys
--rw-------.   1 hb-test lsd   38967 Nov 18 15:49 .bash_history
+drwxr-xr-x.  57 alice boblab     230 Nov 18 16:04 .
+drwxr-xr-x.   3 root    root       1 Apr  9  2019 ..
+drwx------.   4 alice boblab       2 Feb 13  2024 .apptainer
+-rw-r--r--.   1 alice boblab       0 May 20  2024 authorized_keys
+-rw-------.   1 alice boblab   38967 Nov 18 15:49 .bash_history
 ...
 ```
 
