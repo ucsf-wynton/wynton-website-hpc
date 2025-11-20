@@ -17,7 +17,6 @@ PS1="[\u@\h \W]\$ "
 
 path=lxc
 
-
 ## ----------------------------------------------------------------------------
 ## R
 ## ----------------------------------------------------------------------------
@@ -26,9 +25,10 @@ file=rocker_r-base.sif
 
 ## Skip if already exists
 if [[ ! -f "${path}/${file}" ]]; then
+rm -rf ~/.apptainer/cache/
 >&2 echo "Building ${path}/${file} ..."
 mdi_code_block --label="build" <<EOF
-mkdir ${path}
+mkdir -p ${path}
 cd ${path}/
 apptainer build ${file} docker://rocker/r-base
 ls -l ${file}
@@ -59,9 +59,10 @@ file=isoseq3.sif
 
 ## Skip if already exists
 if [[ ! -f "${path}/${file}" ]]; then
+rm -rf ~/.apptainer/cache/
 >&2 echo "Building ${path}/${file} ..."
 mdi_code_block --label="isoseq3-build" <<EOF
-mkdir ${path}
+mkdir -p ${path}
 cd ${path}/
 apptainer build ${file} isoseq3.def
 EOF
