@@ -1,10 +1,10 @@
-### Operational Summary for 2025 (this far)
+### Operational Summary for 2025 (thus far)
 
 * Full downtime:
 
-  - Scheduled: 0.0 hours (= 0.0 days)
+  - Scheduled: 27.0 hours (= 1.1 days)
   - Unscheduled: 505 hours (= 21.0 days)
-  - Total: 505 hours (= 21.0 days)
+  - Total: 532 hours (= 22.2 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -30,8 +30,8 @@
 * Damage: Running jobs (<= 14 days) failed, file-transfers failed,
   possible file corruptions
 * Occurrences:
-  - N/A
-* Total downtime: 0.0 hours of which 0.0 hours were due to external
+  - 2025-11-12 -- 2025-11-13 (27.0 hours)
+* Total downtime: 27.0 hours of which 0.0 hours were due to external
   factors
   
 #### Unscheduled downtimes due to file-system failures
@@ -59,6 +59,49 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### November 12-13, 2025
+
+#### <span style="color: orange;">Full downtime</span>
+
+**Resolved**: The BeeGFS meta server pairs resynchronization took around
+two days to complete. During this time we experiences several
+incidents of extended large BeeGFS lagginess, especially so during the
+first 12-24 hours.
+<br><span class="timestamp">November 15, 18:00 PT</span>
+
+**Update**: The downtime has concluded and the maintenance has been
+successfully completed. The cluster is now back up and running. Please
+note, you may experience some lag over the next 24 hours as the
+file-system metadata servers continue to re-synchronize.
+<br><span class="timestamp">November 13, 18:00 PT</span>
+
+**Update**: The cluster is down for maintenance.
+<br><span class="timestamp">November 12, 15:00 PT</span>
+
+**Notice**: The cluster will down for maintenance from 3:00 pm on
+Wednesday November 12 until 6:00 pm on Thursday November 13, 2025.
+This is a full downtime, including no access to login, development,
+data-transfer, and app nodes. Compute nodes will be shutdown as
+well. Jobs with runtimes that go into the maintenance window will be
+started after the downtime. Starting October 29 at 4:00pm, jobs
+relying on the default 14-day runtime will not be launched until after
+the downtime.  UCSF Facilities will perform annual fire inspection
+activities to remain compliant with regulations. The network team will
+update a core switch. The Wynton team will take the opportunity to
+implement kernel updates during this period.
+<br><span class="timestamp">October 29, 12:00 PT</span>
+
+<!--
+comment: Scheduled downtime
+start: 2025-11-12T15:00:00
+stop: 2025-11-13T18:00:00
+length: 27 hours
+severity: under-maintenance
+affected: jobs, beegfs, compute, *
+reason: scheduled
+ -->
 
 
 ### May 29-June 10, 2025
