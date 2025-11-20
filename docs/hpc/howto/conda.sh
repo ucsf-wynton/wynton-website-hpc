@@ -23,7 +23,7 @@ mdi_adjust_output() {
 
 module purge
 mdi_code_block --label=module-load-miniforge3 <<EOF
-module load CBI miniforge3/24.11.0-0
+module load CBI miniforge3/25.9.1-0
 EOF
 
 
