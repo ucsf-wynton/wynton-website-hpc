@@ -1,25 +1,11 @@
-[alice@{{ site.devel.name }} ~]$ mkdir lxc
-mkdir: cannot create directory ‘lxc’: File exists
+[alice@{{ site.devel.name }} ~]$ mkdir -p lxc
 [alice@{{ site.devel.name }} ~]$ cd lxc/
 [alice@{{ site.devel.name }} lxc]$ apptainer build rocker_r-base.sif docker://rocker/r-base
 INFO:    Starting build...
-Getting image source signatures
-Copying blob sha256:bd556fe2886dac2a22b5e02cf43558766730e3423978522b24f2457ff2d489d0
-Copying blob sha256:4ade4cbe0c7e776cd60102751e29ec82271b08f5a086da6ccfef0574f6a040db
-Copying blob sha256:5fe7cbdf1a7c13b846f5fa6e716cf72a115b877f48d2693b9a1fbe7788d36b1d
-Copying blob sha256:ebbe46658ae1eddd748e3222cbc9dd7109f9fd7f279a4b2f9d6a32d0a58b4c16
-Copying blob sha256:4be550b6d67c5ef8b2ae801804eabe3acefc327f4abfa62a3e364f311a1e25b4
-Copying blob sha256:5790fe4db759efadbc15af34fc7b9ae6f5ebadf8ce05baec4309b73b79cec810
-Copying config sha256:6de003fbdce5b64853257f2e3d540251123c25006977d544680b6c38c21942b9
-Writing manifest to image destination
-Storing signatures
-2023/11/15 12:34:02  info unpack layer: sha256:ebbe46658ae1eddd748e3222cbc9dd7109f9fd7f279a4b2f9d6a32d0a58b4c16
-2023/11/15 12:34:04  info unpack layer: sha256:4ade4cbe0c7e776cd60102751e29ec82271b08f5a086da6ccfef0574f6a040db
-2023/11/15 12:34:04  info unpack layer: sha256:4be550b6d67c5ef8b2ae801804eabe3acefc327f4abfa62a3e364f311a1e25b4
-2023/11/15 12:34:05  info unpack layer: sha256:5fe7cbdf1a7c13b846f5fa6e716cf72a115b877f48d2693b9a1fbe7788d36b1d
-2023/11/15 12:34:05  info unpack layer: sha256:5790fe4db759efadbc15af34fc7b9ae6f5ebadf8ce05baec4309b73b79cec810
-2023/11/15 12:34:05  info unpack layer: sha256:bd556fe2886dac2a22b5e02cf43558766730e3423978522b24f2457ff2d489d0
+INFO:    Fetching OCI image...
+INFO:    Extracting OCI image...
+INFO:    Inserting Apptainer configuration...
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.sif
 [alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.sif
--rwxr-xr-x. 1 alice boblab 325574656 Nov 15 12:34 rocker_r-base.sif
+-rwxr-xr-x. 1 alice boblab 358178816 Nov 19 17:01 rocker_r-base.sif
