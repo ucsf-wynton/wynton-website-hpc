@@ -1,14 +1,14 @@
 [alice@{{ site.devel.name }} lxc]$ apptainer shell rocker_r-base.sif
 Apptainer> head -3 /etc/os-release
-PRETTY_NAME="Debian GNU/Linux bookworm/sid"
+PRETTY_NAME="Debian GNU/Linux trixie/sid"
 NAME="Debian GNU/Linux"
-VERSION_CODENAME=bookworm
+VERSION_CODENAME=trixie
 Apptainer> Rscript --version
-Rscript (R) version 4.3.1 (2023-06-16)
+Rscript (R) version 4.5.2 (2025-10-31)
 Apptainer> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
 NAME="Rocky Linux"
-VERSION="8.8 (Green Obsidian)"
+VERSION="8.10 (Green Obsidian)"
 ID="rocky"
 

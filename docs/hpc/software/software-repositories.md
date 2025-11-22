@@ -59,7 +59,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(105)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(106)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
@@ -206,7 +206,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (105)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (106)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -396,7 +396,7 @@ prepend_path(&quot;BATS_ASSERT_HOME&quot;, home)
 <span class="module-description">Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.</span><br>
 Example: <span class="module-example"><code>bats --version</code>, <code>bats --help</code>, <code>man bats</code>, <code>man 7 bats</code>, and <code>bats tests/</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-core">https://github.com/bats-core/bats-core</a>, <a href="https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md">https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/">https://bats-core.readthedocs.io/en/stable/</a> (documentation)</span><br>
-Versions: <span class="module-version">1.10.0, 1.11.0, 1.11.1, <em>1.12.0</em></span><br>
+Versions: <span class="module-version">1.10.0, 1.11.0, 1.11.1, 1.12.0, <em>1.13.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1416,7 +1416,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.65.2, <em>0.66.0</em></span><br>
+Versions: <span class="module-version">0.65.2, 0.66.0, <em>0.67.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1681,7 +1681,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code> and <code>gh --help</code>. Setup: <code>gh auth login</code> (once). CLI query example: <code>gh issue list --repo=futureverse/future</code>. TUI: <code>gh extension install dlvhdr/gh-dash</code> (once), then <code>gh dash</code>. AI: <code>gh extension install github/gh-copilot</code> (once), then <code>gh copilot suggest &quot;find files older than one year&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code), <a href="https://github.com/topics/gh-extension">https://github.com/topics/gh-extension</a> (GitHub CLI extensions)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.67.0, <em>2.82.1</em></span><br>
+Versions: <span class="module-version">2.67.0, 2.82.1, <em>2.83.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1953,11 +1953,11 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
--- prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
 
+local libdir = pathJoin(home, &quot;lib&quot;)
 prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
--- prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
--- prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
+prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. libdir, &quot; &quot;)
+
 </code></pre>
 
 </details>
@@ -2688,7 +2688,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a>, <a href="https://conda-forge.org/docs/user/introduction/">https://conda-forge.org/docs/user/introduction/</a> (documentation), <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a> (releases),  <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
 Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
-Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, 24.11.0-0, <em>24.11.2-1</em></span><br>
+Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, 24.11.0-0, 24.11.2-1, <em>25.9.1-0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2739,13 +2739,15 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
 end
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/etc/profile.d/conda.sh
-pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/bin/conda&quot;)
-pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/bin/python&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-25.9.1-0/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-25.9.1-0/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-25.9.1-0/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-24.11.2-1/condabin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-25.9.1-0/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
+setenv(&quot;_CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-25.9.1-0/bin/conda&quot;)
+setenv(&quot;_CONDA_ROOT&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-25.9.1-0&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
     if [ -n \&quot;${CONDA_PS1_BACKUP:+x}\&quot; ]; then\
         PS1=\&quot;$CONDA_PS1_BACKUP\&quot;;\
@@ -2757,7 +2759,11 @@ set_shell_function(&quot;__conda_activate&quot;,&quot; \
     __conda_hashr\
 &quot;,&quot;&quot;)
 set_shell_function(&quot;__conda_exe&quot;,&quot; \
-    ( \&quot;$CONDA_EXE\&quot; $_CE_M $_CE_CONDA \&quot;$@\&quot; )\
+    ( if [ -n \&quot;${_CE_M:+x}\&quot; ] &amp;&amp; [ -n \&quot;${_CE_CONDA:+x}\&quot; ]; then\
+        \&quot;$CONDA_EXE\&quot; $_CE_M $_CE_CONDA \&quot;$@\&quot;;\
+    else\
+        \&quot;$CONDA_EXE\&quot; \&quot;$@\&quot;;\
+    fi )\
 &quot;,&quot;&quot;)
 set_shell_function(&quot;__conda_hashr&quot;,&quot; \
     if [ -n \&quot;${ZSH_VERSION:+x}\&quot; ]; then\
@@ -3299,7 +3305,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.6.42, <em>1.8.25</em></span><br>
+Versions: <span class="module-version">1.6.42, 1.8.25, <em>1.8.26</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4340,6 +4346,44 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_trash-cli" class="module-name">trash-cli</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">trash-cli: Command Line Interface to FreeDesktop.org Trash</strong><br>
+<span class="module-description">trash-cli trashes files recording the original path, deletion date, and permissions. It provides commands: <code>trash-put</code> to trash files and directories, <code>trash-list</code> to list trashed files, <code>trash-restore</code> to restore a trashed file, <code>trash-rm</code> to remove individual files from the trashcan, and <code>trash-empty</code> to empty the trashcan.</span><br>
+Example: <span class="module-example"><code>trash --version</code>, <code>trash --help</code>, and <code>man trash</code>. <code>trash file.txt</code>, <code>trash dir/</code>, <code>trash-list</code>, and <code>trash-empty</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/andreafrancia/trash-cli">https://github.com/andreafrancia/trash-cli</a>, <a href="https://github.com/andreafrancia/trash-cli?tab=readme-ov-file#faq">https://github.com/andreafrancia/trash-cli?tab=readme-ov-file#faq</a> (FAQ), <a href="https://github.com/andreafrancia/trash-cli/discussions">https://github.com/andreafrancia/trash-cli/discussions</a> (forum), <a href="https://pypi.org/project/trash-cli/#history">https://pypi.org/project/trash-cli/#history</a> (change log)</span><br>
+Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Versions: <span class="module-version"><em>0.24.5.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+trash-cli: Command Line Interface to FreeDesktop.org Trash
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, files&quot;)
+whatis(&quot;URL: https://github.com/andreafrancia/trash-cli, https://github.com/andreafrancia/trash-cli?tab=readme-ov-file#faq (FAQ), https://github.com/andreafrancia/trash-cli/discussions (forum), https://pypi.org/project/trash-cli/#history (change log)&quot;)
+whatis([[
+Description: trash-cli trashes files recording the original path, deletion date, and permissions. It provides commands: `trash-put` to trash files and directories, `trash-list` to list trashed files, `trash-restore` to restore a trashed file, `trash-rm` to remove individual files from the trashcan, and `trash-empty` to empty the trashcan.
+Examples: `trash --version`, `trash --help`, and `man trash`. `trash file.txt`, `trash dir/`, `trash-list`, and `trash-empty`.
+Warning: Only the most recent version of this software will be kept.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_tree" class="module-name">tree</h3>
 <dl>
   <dd class="module-details">
@@ -4737,24 +4781,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -4768,6 +4794,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
@@ -6695,7 +6739,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(105)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(106)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 

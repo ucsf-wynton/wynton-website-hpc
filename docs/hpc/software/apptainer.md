@@ -52,31 +52,17 @@ To use this rocker/r-base container, we first pull it down to a Apptainer image 
 
 <!-- code-block label="build" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ mkdir lxc
-mkdir: cannot create directory ‘lxc’: File exists
+[alice@{{ site.devel.name }} ~]$ mkdir -p lxc
 [alice@{{ site.devel.name }} ~]$ cd lxc/
 [alice@{{ site.devel.name }} lxc]$ apptainer build rocker_r-base.sif docker://rocker/r-base
 INFO:    Starting build...
-Getting image source signatures
-Copying blob sha256:bd556fe2886dac2a22b5e02cf43558766730e3423978522b24f2457ff2d489d0
-Copying blob sha256:4ade4cbe0c7e776cd60102751e29ec82271b08f5a086da6ccfef0574f6a040db
-Copying blob sha256:5fe7cbdf1a7c13b846f5fa6e716cf72a115b877f48d2693b9a1fbe7788d36b1d
-Copying blob sha256:ebbe46658ae1eddd748e3222cbc9dd7109f9fd7f279a4b2f9d6a32d0a58b4c16
-Copying blob sha256:4be550b6d67c5ef8b2ae801804eabe3acefc327f4abfa62a3e364f311a1e25b4
-Copying blob sha256:5790fe4db759efadbc15af34fc7b9ae6f5ebadf8ce05baec4309b73b79cec810
-Copying config sha256:6de003fbdce5b64853257f2e3d540251123c25006977d544680b6c38c21942b9
-Writing manifest to image destination
-Storing signatures
-2023/11/15 12:34:02  info unpack layer: sha256:ebbe46658ae1eddd748e3222cbc9dd7109f9fd7f279a4b2f9d6a32d0a58b4c16
-2023/11/15 12:34:04  info unpack layer: sha256:4ade4cbe0c7e776cd60102751e29ec82271b08f5a086da6ccfef0574f6a040db
-2023/11/15 12:34:04  info unpack layer: sha256:4be550b6d67c5ef8b2ae801804eabe3acefc327f4abfa62a3e364f311a1e25b4
-2023/11/15 12:34:05  info unpack layer: sha256:5fe7cbdf1a7c13b846f5fa6e716cf72a115b877f48d2693b9a1fbe7788d36b1d
-2023/11/15 12:34:05  info unpack layer: sha256:5790fe4db759efadbc15af34fc7b9ae6f5ebadf8ce05baec4309b73b79cec810
-2023/11/15 12:34:05  info unpack layer: sha256:bd556fe2886dac2a22b5e02cf43558766730e3423978522b24f2457ff2d489d0
+INFO:    Fetching OCI image...
+INFO:    Extracting OCI image...
+INFO:    Inserting Apptainer configuration...
 INFO:    Creating SIF file...
 INFO:    Build complete: rocker_r-base.sif
 [alice@{{ site.devel.name }} lxc]$ ls -l rocker_r-base.sif
--rwxr-xr-x. 1 alice boblab 325574656 Nov 15 12:34 rocker_r-base.sif
+-rwxr-xr-x. 1 alice boblab 358178816 Nov 19 17:01 rocker_r-base.sif
 ```
 
 The above may take a minute or two to complete.
@@ -90,9 +76,9 @@ After this, we can run R within this container using:
 ```sh
 [alice@{{ site.devel.name }} lxc]$ apptainer run rocker_r-base.sif
 
-R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-pc-linux-gnu (64-bit)
+R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -132,9 +118,9 @@ Note that, the Apptainer image is marked as an _executable_, which means you can
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./rocker_r-base.sif
 
-R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-pc-linux-gnu (64-bit)
+R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -162,16 +148,16 @@ To launch a shell within this container, and to also convince yourselves that th
 ```sh
 [alice@{{ site.devel.name }} lxc]$ apptainer shell rocker_r-base.sif
 Apptainer> head -3 /etc/os-release
-PRETTY_NAME="Debian GNU/Linux bookworm/sid"
+PRETTY_NAME="Debian GNU/Linux trixie/sid"
 NAME="Debian GNU/Linux"
-VERSION_CODENAME=bookworm
+VERSION_CODENAME=trixie
 Apptainer> Rscript --version
-Rscript (R) version 4.3.1 (2023-06-16)
+Rscript (R) version 4.5.2 (2025-10-31)
 Apptainer> exit
 
 [alice@{{ site.devel.name }} lxc]$ head -3 /etc/os-release
 NAME="Rocky Linux"
-VERSION="8.8 (Green Obsidian)"
+VERSION="8.10 (Green Obsidian)"
 ID="rocky"
 
 ```
@@ -309,29 +295,25 @@ build` as in:
 
 <!-- code-block label="isoseq3-build" -->
 ```sh
-[alice@{{ site.devel.name }} ~]$ mkdir lxc
-mkdir: cannot create directory ‘lxc’: File exists
+[alice@{{ site.devel.name }} ~]$ mkdir -p lxc
 [alice@{{ site.devel.name }} ~]$ cd lxc/
 [alice@{{ site.devel.name }} lxc]$ apptainer build isoseq3.sif isoseq3.def
 INFO:    User not listed in /etc/subuid, trying root-mapped namespace
-INFO:    The %post section will be run under fakeroot
+INFO:    The %post section will be run under the fakeroot command
 INFO:    Starting build...
-Getting image source signatures
-Copying blob sha256:129bc9a4304fe3a6ef0435e6698ab6bc2728b6f92078718fb28cb4b54ac59e96
-Copying blob sha256:e67fdae3559346105027c63e7fb032bba57e62b1fe9f2da23e6fdfb56384e00b
-Copying blob sha256:62aa66a9c405da603a06d242539b8f0dd178ae4179bf52584bbcce7a0471795f
-Copying config sha256:6fbaadd54391b461351b02c0ddaf2bf284a2dcc9817f5685e07b2602e30f2b5c
-Writing manifest to image destination
-Storing signatures
-2023/11/15 13:18:59  info unpack layer: sha256:e67fdae3559346105027c63e7fb032bba57e62b1fe9f2da23e6fdfb56384e00b
-2023/11/15 13:19:01  info unpack layer: sha256:62aa66a9c405da603a06d242539b8f0dd178ae4179bf52584bbcce7a0471795f
-2023/11/15 13:19:03  info unpack layer: sha256:129bc9a4304fe3a6ef0435e6698ab6bc2728b6f92078718fb28cb4b54ac59e96
+INFO:    Fetching OCI image...
+INFO:    Extracting OCI image...
+INFO:    Inserting Apptainer configuration...
 INFO:    Running post scriptlet
 + /opt/conda/bin/conda config --set notify_outdated_conda false
 + /opt/conda/bin/conda config --add channels bioconda
 + /opt/conda/bin/conda install isoseq3
-Collecting package metadata (current_repodata.json): ...working... done
-Solving environment: ...working... done
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
 
 ## Package Plan ##
 
@@ -340,33 +322,35 @@ Solving environment: ...working... done
   added / updated specs:
     - isoseq3
 
-
 The following packages will be downloaded:
 
     package                    |            build
     ---------------------------|-----------------
-    isoseq-4.0.0               |       h9ee0642_0         2.9 MB  bioconda
+    ca-certificates-2025.11.4  |       h06a4308_0         128 KB
+    certifi-2025.11.12         |  py313h06a4308_0         154 KB
+    isoseq-4.3.0               |       h9ee0642_0         4.1 MB  bioconda
     isoseq3-4.0.0              |       h9ee0642_0           7 KB  bioconda
-    openssl-3.0.12             |       h7f8727e_0         5.2 MB
+    openssl-3.0.18             |       hd6dcaed_0         4.5 MB
     ------------------------------------------------------------
-                                           Total:         8.1 MB
+                                           Total:         8.9 MB
 
 The following NEW packages will be INSTALLED:
 
-  isoseq             bioconda/linux-64::isoseq-4.0.0-h9ee0642_0 
+  isoseq             bioconda/linux-64::isoseq-4.3.0-h9ee0642_0 
   isoseq3            bioconda/linux-64::isoseq3-4.0.0-h9ee0642_0 
 
 The following packages will be UPDATED:
 
-  openssl                                 3.0.11-h7f8727e_2 --> 3.0.12-h7f8727e_0 
+  ca-certificates                      2025.2.25-h06a4308_0 --> 2025.11.4-h06a4308_0 
+  certifi                         2025.4.26-py313h06a4308_0 --> 2025.11.12-py313h06a4308_0 
+  openssl                                 3.0.16-h5eee18b_0 --> 3.0.18-hd6dcaed_0 
 
+Proceed ([y]/n)? y
 
-Proceed ([y]/n)? 
-
-Downloading and Extracting Packages: ...working... done
-Preparing transaction: ...working... done
-Verifying transaction: ...working... done
-Executing transaction: ...working... done
+Downloading and Extracting Packages: done
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
 INFO:    Adding runscript
 INFO:    Creating SIF file...
 INFO:    Build complete: isoseq3.sif
@@ -377,7 +361,7 @@ The results is a container image file named `isoseq3.sif`:
 <!-- code-block label="isoseq3-ls" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ls -l isoseq3.sif
--rwxr-xr-x. 1 alice boblab 214814720 Nov 15  2023 isoseq3.sif
+-rwxr-xr-x. 1 alice boblab 318189568 Nov 19 17:06 isoseq3.sif
 [alice@{{ site.devel.name }} lxc]$ 
 ```
 
@@ -386,15 +370,15 @@ Because the definition file has a [`%runscript`] entry, we can call this image d
 <!-- code-block label="isoseq3-version" -->
 ```sh
 [alice@{{ site.devel.name }} lxc]$ ./isoseq3.sif --version
-isoseq 4.0.0 (commit v4.0.0)
+isoseq 4.3.0 (commit v4.3.0)
 
 Using:
-  pbbam     : 2.4.99 (commit v2.4.0-16-g5cc6e4b)
-  pbcopper  : 2.3.99 (commit v2.3.0-14-g5ac5693)
-  pbmm2     : 1.11.99 (commit v1.11.0-1-g1b5a417)
-  minimap2  : 2.15
+  pbbam     : 2.8.0 (commit v2.8.0)
+  pbcopper  : 2.7.0 (commit v2.7.0)
+  pbmm2     : 1.17.0 (commit v1.17.0)
+  minimap2  : 2.26
   parasail  : 2.1.3
-  boost     : 1.77
+  boost     : 1.81
   htslib    : 1.17
   zlib      : 1.2.13
 [alice@{{ site.devel.name }} lxc]$ 

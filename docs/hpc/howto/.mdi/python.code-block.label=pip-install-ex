@@ -1,18 +1,18 @@
 [alice@{{ site.devel.name }} ~]$ python3 -m pip install --user pandas
 Collecting pandas
-  Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 93.7 MB/s eta 0:00:00
+  Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 89.8 MB/s eta 0:00:00
 Requirement already satisfied: numpy>=1.23.2 in /usr/lib64/python3.11/site-packages (from pandas) (1.23.5)
 Collecting python-dateutil>=2.8.2
   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 62.8 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 69.5 MB/s eta 0:00:00
 Collecting pytz>=2020.1
-  Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 508.0/508.0 kB 89.5 MB/s eta 0:00:00
+  Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 98.1 MB/s eta 0:00:00
 Collecting tzdata>=2022.7
-  Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 77.3 MB/s eta 0:00:00
+  Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 85.8 MB/s eta 0:00:00
 Collecting six>=1.5
   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
 Installing collected packages: pytz, tzdata, six, python-dateutil, pandas
-Successfully installed pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 six-1.17.0 tzdata-2024.2
+Successfully installed pandas-2.3.3 python-dateutil-2.9.0.post0 pytz-2025.2 six-1.17.0 tzdata-2025.2

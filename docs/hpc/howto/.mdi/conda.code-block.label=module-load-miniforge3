@@ -1,1 +1,1 @@
-[alice@{{ site.devel.name }} ~]$ module load CBI miniforge3/24.11.0-0
+[alice@{{ site.devel.name }} ~]$ module load CBI miniforge3/25.9.1-0
