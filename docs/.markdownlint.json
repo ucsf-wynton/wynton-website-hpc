@@ -13,6 +13,8 @@
 
     "no-duplicate-header": false,
     
+    "no-duplicate-heading": { "siblings_only": true },
+    
     "no-trailing-spaces": false,
 
     "no-space-in-emphasis": false,
@@ -50,6 +52,6 @@
     "emphasis-style": false,
 
     "no-emphasis-as-heading": false,
-    
+
     "seealso": "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
 }
