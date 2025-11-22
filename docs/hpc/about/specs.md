@@ -18,20 +18,20 @@
 
 ## Summary of Compute Environment
 
-| Feature                                    | Login Nodes | Transfer Nodes          | Development Nodes | Compute Nodes |
-| ------------------------------------------ | ----------- | ----------------------- | ----------------- | ------------- |
-| Hostname                                   | `log[1-2].wynton.ucsf.edu`, `plog1.wynton.ucsf.edu` | `dt[1-2].wynton.ucsf.edu`, `pdt[1-2].wynton.ucsf.edu` | `dev[1-3]`, `gpudev1`, `pdev1`, `pgpudev1` | … |
-| Accessible via SSH from outside of cluster | ✓ (2FA if outside of UCSF) | ✓ (2FA if outside of UCSF) | no | no |
-| Accessible via SSH from within cluster     | ✓ | ✓ | ✓ | no |
-| Outbound access                            | Within UCSF only: SSH and SFTP | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, Globus | Via proxy: HTTP/HTTPS, GIT+SSH(\*) | no |
-| Network speed                              | 10 Gbps | 10 Gbps | 10 Gbps | 1,10,40 Gbps |
-| Core software                              | Minimal | Minimal | Same as compute nodes + compilers and source-code packages | Rocky 8 packages |
-| modules (software stacks)                  | no | no | ✓ | ✓ |
-| Global file system                         | ✓ | ✓ | ✓ | ✓ |
-| Job submission                             | ✓ | no | ✓ | ✓ |
-| CPU quota per user(\*\*)                   | 100% ("1 core") | 200% ("2 cores") | not limited | not limited |
-| Memory limit per user(\*\*)                | 32 GiB | 96 GiB | 48 GiB   | per job request |
-| Purpose                                    | Submit and query jobs. SSH to development nodes. File management. | Fast in- & outbound file transfers. File management. | Compile and install software. Prototype and test job scripts. Submit and query jobs. Version control (clone, pull, push). File management. | Running short and long-running job scripts. |
+| Feature                                    | Login Nodes                                                     | Transfer Nodes                                        | Development Nodes                                                                     | Compute Nodes                               |
+| ------------------------------------------ | --------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------- |
+| Hostname                                   | `log[1-2].wynton.ucsf.edu`, `plog1.wynton.ucsf.edu`             | `dt[1-2].wynton.ucsf.edu`, `pdt[1-2].wynton.ucsf.edu` | `dev[1-3]`, `gpudev1`, `pdev1`, `pgpudev1`                                            | …                                           |
+| Accessible via SSH from outside of cluster | ✓ (2FA if outside of UCSF)                                      | ✓ (2FA if outside of UCSF)                            | no                                                                                    | no                                          |
+| Accessible via SSH from within cluster     | ✓                                                               | ✓                                                     | ✓                                                                                     | no                                          |
+| Outbound access                            | Within UCSF only: SSH and SFTP                                  | HTTP/HTTPS, FTP/FTPS, SSH, SFTP, Globus               | Via proxy: HTTP/HTTPS, GIT+SSH(\*)                                                    | no                                          |
+| Network speed                              | 10 Gbps                                                         | 10 Gbps                                               | 10 Gbps                                                                               | 1,10,40 Gbps                                |
+| Core software                              | Minimal                                                         | Minimal                                               | Same as compute nodes + compilers and source-code packages                            | Rocky 8 packages                            |
+| modules (software stacks)                  | no                                                              | no                                                    | ✓                                                                                     | ✓                                           |
+| Global file system                         | ✓                                                               | ✓                                                     | ✓                                                                                     | ✓                                           |
+| Job submission                             | ✓                                                               | no                                                    | ✓                                                                                     | ✓                                           |
+| CPU quota per user(\*\*)                   | 100% ("1 core")                                                 | 200% ("2 cores")                                      | not limited                                                                           | not limited                                 |
+| Memory limit per user(\*\*)                | 32 GiB                                                          | 96 GiB                                                | 48 GiB                                                                                | per job request                             |
+| Purpose                                    | Submit & query jobs. SSH to development nodes. File management. | Fast file transfers. File management.                 | Install software. Prototyping. Submit & query jobs. Version control. File management. | Running short and long-running job scripts. |
 
 (\*) GIT+SSH access on development nodes is restricted to git.bioconductor.org, bitbucket.org, gitea.com, github.com / gist.github.com, gitlab.com, cci.lbl.gov, and git.ucsf.edu.
 
@@ -71,14 +71,14 @@ _Comment_: You can also transfer data via the login nodes, but since those only 
 
 The cluster has development nodes for the purpose of validating scripts, prototyping pipelines, compiling software, and more.  Development nodes [can be accessed from the login nodes](/hpc/get-started/development-prototyping.html).
 
-Node                               | Physical Cores |      RAM | Local `/scratch` | CPU x86-64 level |                          CPU  |                GPU |
------------------------------------|---------------:|---------:|-----------------:|-----------------:|------------------------------:|-------------------:|
-`{{ site.dev1.hostname }}`         |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                    |
-`{{ site.dev2.hostname }}`         |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.dev3.hostname }}`         |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                    |
-`{{ site.gpudev1.hostname }}`      |             56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
-`p{{ site.dev1.hostname }}` (for Wynton Protected users)    |  32 | 256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                    |
-`p{{ site.gpudev1.hostname }}` (for Wynton Protected users) | 56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
+| Node                                                        | Physical Cores |      RAM | Local `/scratch` | CPU x86-64 level |                           CPU |                     GPU |
+| ----------------------------------------------------------- | ------------- :| ------- :| --------------- :| --------------- :| ---------------------------- :| ---------------------- :|
+| `{{ site.dev1.hostname }}`                                  |             72 |  384 GiB |         0.93 TiB | x86-64-v4        | Intel Gold 6240 2.60GHz       |                         |
+| `{{ site.dev2.hostname }}`                                  |             48 |  512 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                         |
+| `{{ site.dev3.hostname }}`                                  |             48 |  256 GiB |         0.73 TiB | x86-64-v3        | Intel Xeon E5-2680 v3 2.50GHz |                         |
+| `{{ site.gpudev1.hostname }}`                               |             56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
+| `p{{ site.dev1.hostname }}` (for Wynton Protected users)    |             32 |  256 GiB |         1.1  TiB | x86-64-v3        | Intel E5-2640 v3              |                         |
+| `p{{ site.gpudev1.hostname }}` (for Wynton Protected users) |             56 |  256 GiB |         0.82 TiB | x86-64-v3        | Intel Xeon E5-2660 v4 2.00GHz | NVIDIA GeForce GTX 1080 |
 
 _Comment:_
 Please use the GPU development node only if you need to build or prototype GPU software.

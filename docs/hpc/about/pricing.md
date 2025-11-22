@@ -6,16 +6,16 @@
 
 The {{ site.cluster.name }} cluster is built on a co-op model where every contributing research group has immediate access to the cluster **computing power** and/or **storage capacity** _proportionate to their contribution_.  In addition, **all members** (free and contributing), have access to a baseline fraction of the cluster computing power and storage capacity regardless of their contribution.
 
-| Description                                          | Free | Compute contributor | Storage contributor
-|------------------------------------------------------|:----:|:-------------------:|:-------------------:
-| **Compute:**                                         |     |     |             
-| • Baseline compute ([short.q & long.q])              |  ✔  |  ✔  |  ✔
-| • Priority compute ([member.q])                      |     |  ✔  |      
-| • GPU compute ([gpu.q]<sup>1</sup>)                  |     |  ✔  |
-| **Storage:**                                         |     |     |             
-| • Home storage ([200 GiB]<sup>2</sup>)               |  ✔  |  ✔  |  ✔
-| • Global scratch storage ([unlimited]<sup>3</sup>)   |  ✔  |  ✔  |  ✔
-| • Extra storage<sup>4</sup>                          |     |     |  ✔
+| Description                                        | Free | Compute contributor | Storage contributor  |
+|----------------------------------------------------|:----:|:-------------------:|:--------------------:|
+| **Compute:**                                       |      |                     |                      |
+| • Baseline compute ([short.q & long.q])            |   ✔  |                  ✔  |                   ✔  |
+| • Priority compute ([member.q])                    |      |                  ✔  |                      |
+| • GPU compute ([gpu.q]<sup>1</sup>)                |      |                  ✔  |                      |
+| **Storage:**                                       |      |                     |                      |
+| • Home storage ([200 GiB]<sup>2</sup>)             |   ✔  |                  ✔  |                   ✔  |
+| • Global scratch storage ([unlimited]<sup>3</sup>) |   ✔  |                  ✔  |                   ✔  |
+| • Extra storage<sup>4</sup>                        |      |                     |                   ✔  |
 
 
 <small>
