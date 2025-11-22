@@ -10,7 +10,7 @@
 
 2025-01-16: The memory limit on development nodes was decreased from 68 GiB to 48 GiB, in order to further lower the risk for these machines to run low on memory resulting in non-responsiveness.
 
-[More news ...](/hpc/about/news.html)
+[More news](/hpc/about/news.html)
 </div>
 
 
