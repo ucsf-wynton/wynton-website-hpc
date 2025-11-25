@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(106)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(107)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (106)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (107)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -4277,6 +4277,45 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_symphony" class="module-name">symphony</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">symphony: A Solver for Mixed-Integer Linear Programs (MILPs)</strong><br>
+<span class="module-description">SYMPHONY is an open-source solver, callable library, and development framework for mixed-integer linear programs (MILPs) written in C with a number of unique features</span><br>
+Example: <span class="module-example"><code>symphony --version</code>, <code>symphony --help</code>, and <code>clp</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/coin-or/SYMPHONY">https://github.com/coin-or/SYMPHONY</a>, <a href="https://github.com/coin-or/SYMPHONY/wiki">https://github.com/coin-or/SYMPHONY/wiki</a> (documentation), <a href="https://github.com/coin-or/SYMPHONY/releases/">https://github.com/coin-or/SYMPHONY/releases/</a> (releases), <a href="https://github.com/coin-or/SYMPHONY">https://github.com/coin-or/SYMPHONY</a> (source code)</span><br>
+Versions: <span class="module-version"><em>5.7.3</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+symphony: A Solver for Mixed-Integer Linear Programs (MILPs)
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: library&quot;)
+whatis(&quot;URL: https://github.com/coin-or/SYMPHONY, https://github.com/coin-or/SYMPHONY/wiki (documentation), https://github.com/coin-or/SYMPHONY/releases/ (releases), https://github.com/coin-or/SYMPHONY (source code)&quot;)
+whatis([[
+Description: SYMPHONY is an open-source solver, callable library, and development framework for mixed-integer linear programs (MILPs) written in C with a number of unique features 
+Examples: `symphony --version`, `symphony --help`, and `clp`.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
+-- prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
+
+-- Required to by R package 'Rsymphony'
+prepend_path(&quot;CPLUS_INCLUDE_PATH&quot;, pathJoin(home, &quot;include&quot;))
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_tmux" class="module-name">tmux</h3>
 <dl>
   <dd class="module-details">
@@ -4782,24 +4821,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast-" class="module-name">blast+</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
-Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
-prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast" class="module-name">blast</h3>
 <dl>
   <dd class="module-details">
@@ -4813,6 +4834,24 @@ Versions: <span class="module-version"><em>2.2.26</em></span><br>
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
 prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast-" class="module-name">blast+</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov/">https://blast.ncbi.nlm.nih.gov/</a></span><br>
+Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
+prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
 </code></pre>
 
 </details>
@@ -6740,7 +6779,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(106)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(107)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(96)</a></li>
 </ul>
 
