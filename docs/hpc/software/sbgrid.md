@@ -113,7 +113,7 @@ Precision: BASE=double
 ## Some SBGrid programs do not run on older compute nodes
 
 Many SBGrid programs run only on "modern" CPUs.  Broadly speaking,
-there are four generations of CPUs, on the cluster - x86-64-v1,
+there are three generations of CPUs on the cluster - 
 x86-64-v2, x86-64-v3, and x86-64-v4 - and SBGrid often requires
 x86-64-v3 compute nodes or newer.  If your job fails with an obscure
 error such as:
@@ -129,7 +129,7 @@ or
 address 0x2b3a8b234ccd, cause 'illegal operand'
 ```
 
-it most likely ended up on a x86-64-v1 or x86-64-v2 compute node,
+it most likely ended up on a x86-64-v2 compute node,
 while the program required something newer.  To avoid this from
 happening, specify the [`x86-64-v=<level>` resource] to request a
 compute node with x86-64-v3 or newer.  Either specify command-line
