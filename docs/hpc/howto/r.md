@@ -728,6 +728,30 @@ Importantly, you need to load the `jq` CBI module any time you run R
 where the **jqr** R package needs to be loaded.
 
 
+### Packages relying on SYMPHONY
+
+#### Package **Rsymphony**
+
+In order to install **[Rsymphony]**, we need the SYMPHONY library,
+which is made available by the CBI module `symphony`;
+
+```sh
+$ module load CBI r
+$ module load CBI symphony
+$ R
+```
+
+With this, the **Rsymphony** package installs out of the box. Without
+the `symphony` module, you get:
+
+```r
+> install.packages("Rsymphony")
+...
+Cannot find SYMPHONY libraries and headers.
+See <https://projects.coin-or.org/SYMPHONY>.
+ERROR: configuration failed for package ‘Rsymphony’
+```
+
 
 ### Packages requiring extra care
 
@@ -760,6 +784,7 @@ install.packages("udunits2", configure.args="--with-udunits2-include=/usr/includ
 [pbdPROF]: https://cran.r-project.org/package=pbdPROF
 [rjags]: https://cran.r-project.org/package=rjags
 [Rmpi]: https://cran.r-project.org/package=Rmpi
+[Rsymphony]: https://cran.r-project.org/package=Rsymphony
 [sf]: https://cran.r-project.org/package=sf
 [tfevents]: https://cran.r-project.org/package=tfevents
 [udunits2]: https://cran.r-project.org/package=udunits2
