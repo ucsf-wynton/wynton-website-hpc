@@ -159,6 +159,14 @@ To see what Rclone offers, see <https://rclone.org/docs/>.
 
 ## Mount your Wynton home directory on your local computer
 
+<div class="alert alert-info" role="alert" markdown="1">
+
+There are options to run the `rclone mount` command in the background,
+but we recommend that you do not do this, because it is harder to see
+errors and harder to terminate the mount when done.
+
+</div>
+
 You can mount your Wynton home directory remotely so that your
 Wynton files appear to be regular files on your local computer. To
 mount your Wynton home directory such that it appears under
@@ -173,7 +181,7 @@ There will be no output displayed, and you will not get back to the
 prompt until you terminate the above `rclone mount` using
 <kbd>Ctrl-C</kbd>.
 
-To check that it works, open another terminal on your local computer,
+To check that it works, open _another_ terminal on your local computer,
 and do:
 
 ```sh
@@ -209,14 +217,6 @@ To copy a local file to your Wynton home directory, use:
 ```sh
 {local}$ cp ~/one_file.tsv ~/mnt/wynton-home/
 ```
-
-<div class="alert alert-info" role="alert" markdown="1">
-
-There are options to run this command in the background, but we
-recommend that you do not do this, because it is harder to see errors
-and harder to terminate the mount when done.
-
-</div>
 
 To mount all of Wynton's file system, including `/wynton/home/`,
 `/wynton/groups/`, `/wynton/scratch/`, among others, use:
