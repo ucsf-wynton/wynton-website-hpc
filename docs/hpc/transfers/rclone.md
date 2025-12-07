@@ -27,6 +27,65 @@ your Wynton jobs.
    install. Please see <https://rclone.org/install/> for installation
    instructions for your operating system.
 
+3. Make sure that `rclone` is on the `PATH`, e.g. verify that `rclone
+--version` works in a terminal on your local computer.
+
+Please do _not_ continue below this point if the above is not working.
+
+
+## Add private SSH key to the SSH agent (once)
+
+Next, we need to make sure Rclone will have access to your private SSH
+keys. We recommend that you use the [SSH agent] that runs on your
+local machine for this. If you don't have one running, and you are on
+Linux or macOS, you can start it with:
+
+```sh
+{local}$ eval "$(ssh-agent -s)"
+Agent pid 1015799
+```
+
+<!--
+If you are on Windows, make sure to enable the SSH agent. In order to
+do this, _you must have administrative access to your machine_.
+
+1. Open a PowerShell terminal as an adminstrator, e.g. press the
+   Windows Key, type 'powershell', right click on 'Windows PowerShell'
+   and click 'Run as administrator'. Approve the prompt.
+
+2. In the 'Administrator: Windows PowerShell' terminal, type:
+
+```sh
+## Configure Windows to launch SSH Agent automatically
+Get-Service ssh-agent | Set-Service -StartupType Automatic
+
+## Start the SSH Agent now
+Start-Service ssh-agent
+```
+
+-->
+
+After having started the SSH agent, add your private SSH key to it;
+
+```sh
+{local}$ ssh-add ~/.ssh/laptop_to_wynton
+Enter passphrase for /home/alice/.ssh/laptop_to_wynton: 
+Identity added: /home/alice/.ssh/laptop_to_wynton (alice@local)
+```
+
+You can verify that it works, by trying to SFTP to the cluster;
+
+```sh
+{local}$ sftp alice@{{ site.login.hostname }}
+Connected to {{ site.login.name }}.
+sftp> 
+sftp> exit
+{local}$ 
+```
+
+If you do not get asked for your {{ site.cluster.nickname }} password,
+then we know the SSH agent works. Type `exit` to exit.
+
 Please do _not_ continue below this point if the above is not working.
 
 
@@ -37,8 +96,21 @@ from your local machine. Specifically, we want it to connect to one of
 Wynton's data transfer nodes, because those are the most efficient
 nodes for file transfers.
 
-To configure an Rclone "remote" to {{ site.transfer.hostname }} over
-SFTP, start with the following command on _your local computer_:
+<!--
+
+<div class="alert alert-info" role="alert" markdown="1">
+
+If you are on Windows, please use the Windows PowerShell. The
+following commands work as-is if you open a terminal in the Windows
+PowerShell. They do _not_ work in the classical Windows Terminal - if
+you use the latter, you need to adjust the syntax accordingly.
+
+</div>
+
+-->
+
+To configure an Rclone "remote" to {{ site.transfer.hostname }} over SFTP,
+start with the following command in a terminal on _your local computer_:
 
 ```sh
 {local}$ rclone config create {{ site.transfer.hostname }} sftp user=alice host={{ site.transfer.hostname }} pass="$(rclone obscure dummy)" key_use_agent=true
@@ -52,32 +124,15 @@ user = alice
 
 <div class="alert alert-warning" role="alert" markdown="1">
 
-Importantly, do _not_ forget `pass="$(rclone obscure dummy)"` - it is a
-required workaround for a known [Rclone bug] - without it you will
-get errors such as "Failed to create file system for "{{
-site.transfer.hostname }}:": NewFs: couldn't connect SSH: ssh:
-handshake failed: ssh: unable to authenticate, attempted methods
-[none], no supported methods remain".
+Importantly, do _not_ forget (1) to change `user=alice` to _your_ {{
+site.cluster.nickname }} username, and (2) to include the
+`pass="$(rclone obscure dummy)"` option -- it is a required workaround
+for a known [Rclone bug] -- without it you will get errors such as
+"Failed to create file system for "{{ site.transfer.hostname }}:":
+NewFs: couldn't connect SSH: ssh: handshake failed: ssh: unable to
+authenticate, attempted methods [none], no supported methods remain".
 
 </div>
-
-Next, we need to make sure Rclone has access to your private SSH
-keys. We recommend that you use the [SSH agent] that runs on your
-local machine for this. If you don't have one running, you can start
-it with:
-
-```sh
-{local}$ eval "$(ssh-agent -s)"
-Agent pid 1015799
-```
-
-After this, add your private SSH key;
-
-```sh
-{local}$ ssh-add ~/.ssh/laptop_to_wynton
-Enter passphrase for /home/alice/.ssh/laptop_to_wynton: 
-Identity added: /home/alice/.ssh/laptop_to_wynton (alice@local)
-```
 
 That's it! To verify that Rclone now has access to this remote, use:
 
