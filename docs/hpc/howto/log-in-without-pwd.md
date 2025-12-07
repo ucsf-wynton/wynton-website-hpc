@@ -88,10 +88,10 @@ Done.
 
 
 
-**Alternative 2**: If you don't have `ssh-copy-id`, you will have to copy the _public_ key file over to the cluster, log in, append it to the target file, and validate file permissions.  Assuming you already have a `~/.ssh` folder on the cluster, first copy the public key file to `~/.ssh` on the cluster:
+**Alternative 2**: If you don't have `ssh-copy-id`, which may be the case on Windows, you will have to copy the _public_ key file over to the cluster, log in, append it to the target file, and validate file permissions.  Assuming you already have a `~/.ssh` folder on the cluster, first copy the public key file to `~/.ssh` on the cluster:
 
 ```sh
-{local}$ scp ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}.pub alice@{{ site.login.hostname }}:.ssh/
+{local}$ scp ~/.ssh/laptop_to_{{ site.cluster.nickname | downcase }}.pub alice@{{ site.login.hostname }}:
 laptop_to_{{ site.cluster.nickname | downcase }}.pub           100%  390     0.4KB/s   00:00
 ```
 
@@ -100,8 +100,7 @@ Then, log into the cluster (still using a password) and _append_ the public key 
 ```sh
 {local}$ ssh -o PreferredAuthentications=keyboard-interactive,password alice@{{ site.login.hostname }}
 alice1@{{ site.login.ip }}\'s password: XXXXXXXXXXXXXXXXXXX
-[alice@{{ site.login.name }} ~]$ cd .ssh
-[alice@{{ site.login.name }} .ssh]$ cat laptop_to_{{ site.cluster.nickname | downcase }}.pub >> authorized_keys
+[alice@{{ site.login.name }} ~]$ cat laptop_to_{{ site.cluster.nickname | downcase }}.pub >> .ssh/authorized_keys
 ```
 
 Finally, make sure that `~/.ssh/authorized_keys` on {{ site.cluster.nickname }} is only accessible to you (otherwise that file will be completely ignored by SSH);
@@ -111,6 +110,10 @@ Finally, make sure that `~/.ssh/authorized_keys` on {{ site.cluster.nickname }} 
 [alice@{{ site.login.name }} .ssh]$ stat --format=%A ~/.ssh/authorized_keys
 -rw-------
 ```
+
+The public key file that you uploaded is no longer needed, so go ahead and remove it;
+
+[alice@{{ site.login.name }} ~]$ rm laptop_to_{{ site.cluster.nickname | downcase }}.pub
 
 Lastly, log out from the cluster:
 
