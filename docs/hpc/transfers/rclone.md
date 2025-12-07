@@ -41,7 +41,7 @@ To configure an Rclone "remote" to {{ site.transfer.hostname }} over
 SFTP, start with the following command on _your local computer_:
 
 ```sh
-{local}$ rclone config create {{ site.transfer.hostname }} sftp user=alice host={{ site.transfer.hostname }} pass="$(rclone obscure "")" key_use_agent=true
+{local}$ rclone config create {{ site.transfer.hostname }} sftp user=alice host={{ site.transfer.hostname }} pass="$(rclone obscure dummy)" key_use_agent=true
 [{{ site.transfer.hostname }}]
 type = sftp
 host = {{ site.transfer.hostname }}
@@ -52,8 +52,8 @@ user = alice
 
 <div class="alert alert-warning" role="alert" markdown="1">
 
-Importantly, do _not_ forget `pass="$(rclone obscure "")"` - it is a
-required workaround for an [obscure Rclone bug] - without it you will
+Importantly, do _not_ forget `pass="$(rclone obscure dummy)"` - it is a
+required workaround for a known [Rclone bug] - without it you will
 get errors such as "Failed to create file system for "{{
 site.transfer.hostname }}:": NewFs: couldn't connect SSH: ssh:
 handshake failed: ssh: unable to authenticate, attempted methods
@@ -266,6 +266,6 @@ files on a data-transfer node, because it is faster in most cases.
 
 
 [Rclone]: https://rclone.org/
-[obscure Rclone bug]: https://github.com/rclone/rclone/issues/4177#issuecomment-2457891153
+[Rclone bug]: https://github.com/rclone/rclone/issues/4177#issuecomment-2457891153
 [Log in without Password]: /hpc/howto/log-in-without-pwd.html
 [SSH agent]: https://en.wikipedia.org/wiki/Ssh-agent
