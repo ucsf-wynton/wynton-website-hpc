@@ -2,12 +2,19 @@
 
 #### <span style="color: orange;">Major file system issues</span>
 
+**Update**: Network switch issues on Sunday evening triggered problems
+  with the BeeGFS file system. Those BeeGFS issues have now been
+  addressed. The file servers are now resynchronizing. We will keep
+  the cluster offline until that has completed, which we estimate to
+  happen tomorrow.
+<br><span class="timestamp">December 8, 15:15 PT</span>
+
 **Notice**: Wynton is experiencing issues with the file system and
   needs to be shut down for maintenance. All existing jobs have been
   paused. No new jobs can be run until further notice. Logins
   currently fail. First indications of problems were observed on
   2025-12-06 around 19:00.
-<br><span class="timestamp">December 7, 09:40 PT</span>
+<br><span class="timestamp">December 8, 09:40 PT</span>
 
 <!--
 ## When BeeGFS was down
