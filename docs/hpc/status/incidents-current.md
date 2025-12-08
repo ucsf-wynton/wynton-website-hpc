@@ -1,3 +1,26 @@
+### December 7-, 2025
+
+#### <span style="color: orange;">Major file system issues</span>
+
+**Notice**: Wynton is experiencing issues with the file system and
+  needs to be shut down for maintenance. All existing jobs have been
+  paused. No new jobs can be run until further notice. Logins
+  currently fail. First indications of problems were observed on
+  2025-12-06 around 19:00.
+<br><span class="timestamp">December 7, 09:40 PT</span>
+
+<!--
+## When BeeGFS was down
+start: 2025-12-07T18:45:00
+stop: 2025-12-31T12:00:00
+length: ??? hours
+severity: major-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
+
+
+
 ### November 16-ongoing, 2023
 
 #### <span style="color: orange;">Sporadic job failure</span>
