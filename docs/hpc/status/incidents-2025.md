@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 27.0 hours (= 1.1 days)
-  - Unscheduled: 505 hours (= 21.0 days)
-  - Total: 532 hours (= 22.2 days)
+  - Unscheduled: 546.5 hours (= 22.8 days)
+  - Total: 573.5 hours (= 23.9 days)
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -46,7 +46,8 @@
   - 2025-03-31 -- 2025-04-01 (17.0 hours)
   - 2025-04-11 -- 2025-04-14 (62.0 hours)
   - 2025-05-29 -- 2025-06-10 (282.0 hours)
-* Total downtime: 505 hours of which 0.0 hours were due to external
+  - 2025-12-07 -- 2025-12-09 (41.5 hours)
+* Total downtime: 546.5 hours of which 0.0 hours were due to external
   factors
 
 
@@ -59,6 +60,47 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### December 7-9, 2025
+
+#### <span style="color: orange;">Major file system issues</span>
+
+**Resolved**: Data-transfer nodes `dt1` and `pdt1` online.
+<br><span class="timestamp">December 9, 14:45 PT</span>
+
+**Update**: The cluster is online again. All interactive nodes, except
+  data-transfer nodes `dt1` and `pdt1`.
+<br><span class="timestamp">December 9, 12:15 PT</span>
+
+**Update**: The resynchronization of the BeeGFS file servers is almost
+  completed. We anticipate putting the cluster back online during the
+  afternoon.
+<br><span class="timestamp">December 9, 09:45 PT</span>
+
+**Update**: Network switch issues on Sunday evening triggered problems
+  with the BeeGFS file system. Those BeeGFS issues have now been
+  addressed. The file servers are now resynchronizing. We will keep
+  the cluster offline until that has completed, which we estimate to
+  happen tomorrow.
+<br><span class="timestamp">December 8, 15:15 PT</span>
+
+**Notice**: Wynton is experiencing issues with the file system and
+  needs to be shut down for maintenance. All existing jobs have been
+  paused. No new jobs can be run until further notice. Logins
+  currently fail. First indications of problems were observed on
+  2025-12-06 around 19:00.
+<br><span class="timestamp">December 8, 09:40 PT</span>
+
+<!--
+## When BeeGFS was down
+start: 2025-12-07T18:45:00
+stop: 2025-12-09T12:15:00
+length: 41.5 hours
+severity: major-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
 
 
 ### November 12-13, 2025
