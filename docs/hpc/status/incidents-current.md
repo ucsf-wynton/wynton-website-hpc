@@ -1,6 +1,15 @@
-### December 7-, 2025
+### December 7-9, 2025
 
 #### <span style="color: orange;">Major file system issues</span>
+
+**Update**: The cluster is online again. All interactive nodes, except
+  data-transfer nodes `dt1` and `pdt1`.
+<br><span class="timestamp">December 9, 12:15 PT</span>
+
+**Update**: The resynchronization of the BeeGFS file servers is almost
+  completed. We anticipate putting the cluster back online during the
+  afternoon.
+<br><span class="timestamp">December 9, 09:45 PT</span>
 
 **Update**: Network switch issues on Sunday evening triggered problems
   with the BeeGFS file system. Those BeeGFS issues have now been
@@ -19,8 +28,8 @@
 <!--
 ## When BeeGFS was down
 start: 2025-12-07T18:45:00
-stop: 2025-12-31T12:00:00
-length: ??? hours
+stop: 2025-12-09T12:15:00
+length: 41.5 hours
 severity: major-outage
 affected: beegfs, jobs, hosts
 reason: beegfs
