@@ -51,9 +51,12 @@ wynton:
 	PAGES_REPO_NWO=UCSF-HPC/wynton jekyll build --incremental --destination ~/gitea/gitea/public/wynton-help
 
 hpc/_data/users.yml: FORCE
-	echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE "uid" | grep -c "^uid:")" > $@.tmp
-	echo "nbr_of_projects: $$(qconf -sprjl | wc -l | grep -vE '^[[:space:]]*0*[[:space:]]*$$')" >> $@.tmp
-	echo "nbr_of_phi_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x '(&(wyntonAccess=TRUE)(protectedAccess=TRUE))' "uid" | grep -c "^uid:")">> $@.tmp
+	{ \
+		echo "nbr_of_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x wyntonAccess=TRUE "uid" | grep -c "^uid:")"; \
+		echo "nbr_of_protected_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x '(&(wyntonAccess=TRUE)(protectedAccess=TRUE))' "uid" | grep -c "^uid:")"; \
+		echo "nbr_of_phi_accounts: $$(ldapsearch -H ldap://m1,ldap://m2 -LLL -x '(&(wyntonAccess=TRUE)(protectedAccess=TRUE))' "uid" | grep -c "^uid:")";
+		echo "nbr_of_projects: $$(qconf -sprjl | wc -l | grep -vE '^[[:space:]]*0*[[:space:]]*$$')"; \
+	} >> $@.tmp
 	if ! grep -q -E "nbr_of_projects:[[:space:]]*$$" $@.tmp; then \
 	  mv $@.tmp $@; \
 	else \
