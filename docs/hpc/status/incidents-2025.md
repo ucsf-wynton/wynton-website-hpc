@@ -46,8 +46,7 @@
   - 2025-03-31 -- 2025-04-01 (17.0 hours)
   - 2025-04-11 -- 2025-04-14 (62.0 hours)
   - 2025-05-29 -- 2025-06-10 (282.0 hours)
-  - 2025-12-07 -- 2025-12-09 (41.5 hours)
-* Total downtime: 546.5 hours of which 0.0 hours were due to external
+* Total downtime: 505 hours of which 0.0 hours were due to external
   factors
 
 
@@ -57,8 +56,8 @@
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers
   may have failed, cluster not accessible
 * Occurrences:
-  - N/A
-* Total downtime: 0.0 hours of which 0.0 hours were due to external
+  - 2025-12-07 -- 2025-12-09 (41.5 hours)
+* Total downtime: 41.5 hours of which 41.5 hours were due to external
   factors
 
 
