@@ -31,7 +31,7 @@ Wynton HPC has been a vital resource for UCSF’s computational research, provid
 
 While Wynton will remain operational for the near term, researchers are encouraged to plan for its eventual absorption into the FAC and CoreHPC. UCSF is committed to supporting researchers during this transition and ensuring continued access to robust computational resources.
 
-For more details on the upcoming changes, visit the [Wynton HPC Transition Announcement](https://ars.ucsf.edu/news/announcement-wynton-hpc-transition).
+For more details on the upcoming changes, visit the [Wynton Transition Keeping You Informed](https://ars.ucsf.edu/wynton-transition-keeping-you-informed).
 
 Learn about the [Facility for Advanced Computing (FAC)](https://it.ucsf.edu/service/facility-advanced-computing-fac), including pricing options for [FAC Capacity Storage](https://it.ucsf.edu/how-to/fac-capacity-storage).
 
