@@ -21,14 +21,14 @@ cleaned up. If you are interested in scanning all of your HOME folder, do:
 
 ```sh
 [alice@{{ site.devel.name }} somewhere]$ cd ~
-[alice@{{ site.devel.name }} ~]$
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
 If you like to clean up a specific folder, go there, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ cd projects/superduper
-[alice@{{ site.devel.name }} superduper]$
+[alice@{{ site.devel.name }} superduper]$ 
 ```
 
 ## Scan the folder to be cleaned up
