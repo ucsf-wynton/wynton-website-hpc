@@ -9,7 +9,7 @@ your [disk quota] decreases.
 
 ## Load modules (once per session)
 
-```r
+```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI ncdu trash-cli
 ```
 
@@ -53,7 +53,7 @@ there will be a file `ncdu.cache` in the current directory.
 Now we are ready to start cleaning up among the pre-scanned files. To
 do this, launch:
 
-```
+```sh
 [alice@{{ site.devel.name }} ~]$ ncdu --enable-delete -f ncdu.cache --delete-command "trash --"
 ```
 
