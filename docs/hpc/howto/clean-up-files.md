@@ -3,11 +3,11 @@
 The below instructions show how to swiftly navigate around in your
 folders and move select files to your personal Trash folder. When you
 are ready, and certain you didn't make any mistakes, you can choose to
-empty your Trash folder. It is only when you your Trash folder that
-your [disk quota] decreases.
+empty your Trash folder. It is only when you empty your Trash folder
+that your [disk quota] decreases.
 
 
-## Load modules (once per session)
+## Load modules
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI ncdu trash-cli
@@ -31,7 +31,7 @@ If you like to clean up a specific folder, go there, e.g.
 [alice@{{ site.devel.name }} superduper]$ 
 ```
 
-## Scan the folder to be cleaned up
+## Scan the folder to be cleaned up (slow)
 
 Next, we will pre-scan the folder recursively to find the size of all
 files and folders therein;
