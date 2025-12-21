@@ -150,6 +150,7 @@ SpeedType
 Sylabs
 TBs
 TMPDIR
+TUI
 Tanja
 Tcsh
 Terrill
@@ -304,6 +305,7 @@ multinode
 multithreaded
 narkive
 natively
+ncdu
 nds
 nloptr
 ntel
