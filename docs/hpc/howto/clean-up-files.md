@@ -113,9 +113,11 @@ minutes to complete.
 ## Appendix
 
 The default location of your personal Trash folder is
-`~/.local/share/Trash/`. The above instructions move deleted files to
-this Trash folder, because we used `ncdu ... --delete-command "trash
---"`.
+`~/.local/share/Trash/`. The above instructions _move_ deleted files
+to this Trash folder, because we used `ncdu ... --delete-command
+"trash --"`. Moving files and folders is very fast, regardless of file
+system. The command `trash-empty` is slow, much like `rm` is slow,
+because it _removes_ the files.
 
 
 [disk quota]: storage-size.html
