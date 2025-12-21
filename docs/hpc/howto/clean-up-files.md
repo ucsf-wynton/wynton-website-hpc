@@ -69,8 +69,8 @@ keyboard shortcuts. The most useful ones are:
  * <kbd>d</kbd>: delete selected file or directory
 
 When you delete, you will be asked to confirm with "yes", "no", or
-"don't ask me again", before the files are _swiftly_ moved to your
-personal Trash folder. Keep deleting files this way until you are
+"don't ask me again", after which the files are _swiftly_ moved to
+your personal Trash folder. Keep deleting files this way until you are
 done. Press <kbd>q</kbd> to exit `ncdu` when you are ready.
 
 When you're done, remove the temporary `ncdu.cache` file;
