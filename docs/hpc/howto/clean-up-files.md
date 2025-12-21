@@ -48,7 +48,7 @@ take anything from seconds to minutes to complete. When it's done,
 there will be a file `ncdu.cache` in the current directory.
 
 
-## Moving files to your personal Trash folder
+## Moving files to your personal Trash folder (fast)
 
 Now we are ready to start cleaning up among the pre-scanned files. To
 do this, launch:
@@ -82,7 +82,7 @@ When you're done, remove the temporary `ncdu.cache` file;
 ```
 
 
-## Empty your personal Trash folder
+## Empty your personal Trash folder (slow)
 
 You can use `trash-list` to see what is in your personal Trash folder,
 e.g.
