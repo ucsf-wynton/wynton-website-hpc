@@ -4,6 +4,14 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Near future
 
+* Protected (P3 and P4) storage and accounts will be decommissions by 2026-01-26.
+
+
+## Discontinued milestones
+
+The following goals have been discontinued, because of the planned
+sunsetting of Wynton HPC in favor of UCSF CoreHPC:
+
 * New job scheduler: Upgrade from SGE to Altair's AGE to improve scheduling performance, job observability, and GPU resource use experience. AGE also has paid support, which will allow us to make the best use of AGE, unlike the lack of support with SGE.
 
 * Hardware refresh: Complete a thorough assessment of Wynton hardware assets, replace outdated hardware where possible, and develop a sustainable plan for future hardware replacement.
