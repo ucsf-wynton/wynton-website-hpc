@@ -24,13 +24,30 @@
 
 # {{ site.cluster.name }} - UCSF Research Computing at Scale
 
-{{ site.cluster.name }} is a large, shared high-performance compute (HPC) cluster underlying UCSF's Research Computing Capability. Funded and administered cooperatively by UCSF campus IT and key research groups, it is available to all UCSF researchers, and consists of different profiles suited to various biomedical and health science computing needs.  Researchers can participate using the "co-op" model of resource contribution and sharing.
+{{ site.cluster.name }} is a large, shared high-performance compute
+(HPC) cluster underlying UCSF's Research Computing Capability. Funded
+and administered cooperatively by UCSF campus IT and key research
+groups, it is available to all UCSF researchers, and consists of
+different profiles suited to various biomedical and health science
+computing needs.  Researchers can participate using the "co-op" model
+of resource contribution and sharing. The {{ site.cluster.name }}
+environment grew as more users discovered it and more groups bought
+into the co-op model.  [Each contributing member brings more resources
+and compute power for everyone based on a fair-share model where
+contributors get higher access priority than non-contributing
+members](/hpc/about/shares.html).  In addition, several UCSF centers
+have joined by contributing a large amount of their compute hardware
+to the cluster, e.g. Memory and Aging Center and QB3.
 
 **The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers**.  To join, please follow the [instructions for requesting an account](/hpc/about/join.html).
 
-The {{ site.cluster.name }} environment grew as more users discovered it and more groups bought into the co-op model.  [Each contributing member brings more resources and compute power for everyone based on a fair-share model where contributors get higher access priority than non-contributing members](/hpc/about/shares.html).  In addition, several UCSF centers have joined by contributing a large amount of their compute hardware to the cluster, e.g. Memory and Aging Center and QB3.
 
-**Please note**: P4 data, which includes PHI, is prohibited.  P3 data may only be used in "[Wynton Protected]" via a "protected" account. Refer to [UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard). For compliant alternatives for working with P4 data, please visit our UCSF Data Storage for Research Page found here: https://secureresearch.ucsf.edu/ucsf-data-storage-research, or contact our cloud services team for a consultation: https://it.ucsf.edu/service/secured-enterprise-cloud-aws.
+**Please note**, _all_ Protected (P3 and P4) data will be removed by
+2026-01-26. P4 data, which includes Protected Health Information
+(PHI), is prohibited as of 2025-07-08. Users with Wynton Protected
+account should prioritize removing remaining Protected data from
+Wynton. See "[Wynton Protected]" for UCSF's P1-P4 classification
+standards and UCSF alternatives for storing Protected data.
 
 
 # Wynton's Future

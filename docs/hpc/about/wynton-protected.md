@@ -27,7 +27,7 @@ Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-u
 
  * [CoreHPC](https://it.ucsf.edu/service/corehpc) - PHI-compliant UCSF HPC environment coming early 2026
  * [Facility for Advanced Computing (FAC)](https://it.ucsf.edu/service/facility-advanced-computing-fac) - CoreHPC works FAC storage
- * [UCSF Data Storage for Research](https://secureresearch.ucsf.edu/ucsf-data-storage-research) - Overview of data storage options and compliances at the UCSF 
+ * [UCSF Data Storage for Research](https://secureresearch.ucsf.edu/ucsf-data-storage-research) - Overview of data storage options and compliance at the UCSF 
  * [UCSF Research Analysis Environment (RAE)](https://it.ucsf.edu/service/rae)
  * [UCSF Data Center Services](https://it.ucsf.edu/service/data-center-services)
  * [UCSF Central IT Cloud Services](https://cloudservices.ucsf.edu/)
