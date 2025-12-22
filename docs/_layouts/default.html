@@ -56,6 +56,7 @@
         <li>
   {% if site.docsearch.api_key %}
           <ul class="nav navbar-nav">
+           <li>
            <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
             <div class="form-group">
               <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
@@ -68,6 +69,7 @@
               </span>
              </div>
             </form>
+           </li>
           </ul>
         <li>
       </ul>
@@ -93,7 +95,7 @@
             <li><a href="/hpc/get-started/good-practices.html">4. Good Practices</a></li>
             <li><a href="/hpc/get-started/duo-signup.html">5. 2FA Registration</a></li>
             <li><a href="/hpc/get-started/protected-quickstart.html">6. Wynton Protected Quickstart</a></li>
-    </ul>
+          </ul>
         </li>
 
         <li class="dropdown">
@@ -237,12 +239,14 @@
       <ul class="nav navbar-nav" style="float: right;">
         <li>
           <ul class="nav navbar-nav">
-       <div style="padding: 15px;">
-         Regular <label class="switch" title="View site as a Regular or Protected user">
-           <input type="checkbox" id="toggle-protected" aria-label="Toggle Protected view"/>
-           <span class="slider round"><span style="visibility: hidden; font-size: 0pt;">Toggle Protected view</span></span>
-         </label> Protected
-       </div>
+            <li>
+              <div style="padding: 15px;">
+                Regular <label class="switch" title="View site as a Regular or Protected user">
+                  <input type="checkbox" id="toggle-protected" aria-label="Toggle Protected view"/>
+                  <span class="slider round"><span style="visibility: hidden; font-size: 0pt;">Toggle Protected view</span></span>
+                </label> Protected
+              </div>
+            </li>
           </ul>
         </li>
       </ul>
