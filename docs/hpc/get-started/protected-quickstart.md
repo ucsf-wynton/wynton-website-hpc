@@ -1,4 +1,4 @@
-{% include banner-phi-freeze.md %}
+{% include banner-deprecating-protected.md %}
 
 # Wynton Protected Quickstart
 

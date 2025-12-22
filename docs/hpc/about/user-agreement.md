@@ -1,4 +1,4 @@
-{% include banner-phi-freeze.md %}
+{% include banner-deprecating-protected.md %}
 
 <!--
  WARNING: If you update this page, beyond fixing typos, you must create a

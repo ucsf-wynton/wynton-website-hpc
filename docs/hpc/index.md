@@ -1,4 +1,4 @@
-{% include banner-phi-freeze.md %}
+{% include banner-deprecating-protected.md %}
 
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the
