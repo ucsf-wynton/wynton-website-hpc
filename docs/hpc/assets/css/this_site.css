@@ -15,7 +15,7 @@ a {
 }
 
 .muted > a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .navbar-default {
