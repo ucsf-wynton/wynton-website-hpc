@@ -1,3 +1,5 @@
+{% include banner-deprecating-protected.md %}
+
 # Join the Cluster
 
 {{ site.cluster.name }} is a large, shared high-performance compute (HPC) cluster underlying UCSF's Research Computing Capability. Funded and administered cooperatively by UCSF campus IT and key research groups, it is available to all UCSF researchers, and consists of different profiles suited to various biomedical and health science computing needs. Researchers can participate using the “co-op” model of resource contribution and sharing.
@@ -35,7 +37,7 @@ _Note: The form linked above is only available to UCSF staff, students, postdocs
 
 ## Update an existing account
 
-If you have an existing {{ site.cluster.name }} account and would like to modify it, e.g. change it to a Wynton Protected account, please use the following ServiceNow form:
+If you have an existing {{ site.cluster.name }} account and would like to modify it, e.g. ~~change it to a Wynton Protected account~~, please use the following ServiceNow form:
 
 * **Everyone**: **[Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)** (requires UCSF MyAccess login)
 
@@ -53,7 +55,7 @@ If you have an existing {{ site.cluster.name }} account and would like to modify
 
 1. Select "Yes" or "No" from the **"Does this user already have an existing account on Wynton?"** pull down.
 
-2. Select "Yes" or "No" from the **"Do you Require Access to Wynton Protected"** pull down. More information here regarding Wynton Protected: [Wynton Protected Quickstart](/hpc/get-started/protected-quickstart.html). Note: P4/PHI data is prohibited on Wynton.
+2. Select ~~"Yes" or~~ **"No"** from the **"Do you Require Access to Wynton Protected"** pull down. [Wynton Protected accounts are no created as of 2025-12-01](/hpc/get-started/protected-quickstart.html).
 
 3. If you are filling the form out for yourself, when you click the box to indicate that, the **"Requested For"** field will be autopopulated with your name.  If you are requesting an account for another user, enter their name and select it from the pull down.  If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
 
