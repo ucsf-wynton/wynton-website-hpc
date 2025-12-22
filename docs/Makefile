@@ -38,6 +38,7 @@ gitleaks:
 	ln -s ../../.githooks/pre-commit .
 
 start:
+	export PATH="$${HOME}/.local/share/gem/ruby/3.2.0/bin:$${PATH}"; \
 	bundle exec jekyll serve --port 4001 $(JEKYLL_OPTS) 2> ../jekyll.log &
 
 stop:
