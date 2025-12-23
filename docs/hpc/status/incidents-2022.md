@@ -57,7 +57,7 @@
 
 ### November 2, 2022
 
-#### <span style="color: orange;">Major BeeGFS issues</span>
+#### <span class="incident-title">Major BeeGFS issues</span>
 
 **Resolved**: The BeeGFS issues have been resolved. At 05:29 this morning, a local file system hosting one of our 12 BeeGFS meta daemons crashed. Normally, BeeGFS detects this and redirects processing to a secondary, backup daemon. In this incident, this failback did not get activated and a manual intervention was needed.
 <br><span class="timestamp">November 2, 09:30 PT</span>
@@ -77,7 +77,7 @@ reason: beegfs
 
 ### November 1, 2022
 
-#### <span style="color: orange;">Scheduler not available</span>
+#### <span class="incident-title">Scheduler not available</span>
 
 **Resolved**: The job scheduler is responsive again, but we are not
 certain what caused the problem. We will keep monitoring the issue.
@@ -102,7 +102,7 @@ reason: scheduler
 
 ### September 27-29, 2022
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span class="incident-title">Full downtime</span>
 
 **Resolved**: The cluster maintenance has completed and the cluster is now fully operational again.
 <br><span class="timestamp">September 29, 13:30 PT</span>
@@ -125,7 +125,7 @@ reason: scheduled
 
 ### September 6-9, 2022
 
-#### <span style="color: orange;">Outage following campus power glitch</span>
+#### <span class="incident-title">Outage following campus power glitch</span>
 
 **Resolved**: As of 09:20 on 2022-09-09, the cluster is back in full operation. The queues are enabled, jobs are running, and the development nodes are accepting logins.
 <br><span class="timestamp">September 9, 09:35 PT</span>
@@ -148,7 +148,7 @@ reason: power outage
 
 ### August 5-9, 2022
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">Aug 9, 12:00 PT</span>
@@ -159,7 +159,7 @@ reason: power outage
 
 ### August 4, 2022
 
-#### <span style="color: orange;">Software repository maintenance</span>
+#### <span class="incident-title">Software repository maintenance</span>
 
 **Resolved**: The Sali lab software module repository is back.
 <br><span class="timestamp">Aug 4, 12:00 PT</span>
@@ -171,7 +171,7 @@ reason: power outage
 
 ### March 28-April 6, 2022
 
-#### <span style="color: orange;">Major BeeGFS issues</span>
+#### <span class="incident-title">Major BeeGFS issues</span>
 
 **Resolved**: The patch of the BeeGFS servers were successfully deployed by 14:30 and went without disruptions. As a side effect, rudimentary benchmarking shows that this patch also improves the overall performance. Since the troubleshooting, bug fixing, and testing started on 2022-03-28, we managed to keep the impact of the bugs to a minimum resulting in only one hour of BeeGFS stall.
 <br><span class="timestamp">April 6, 17:00 PT</span>
@@ -206,7 +206,7 @@ reason: beegfs
 
 ### March 26, 2022
 
-#### <span style="color: orange;">Job scheduler is disabled due to cooling issues</span>
+#### <span class="incident-title">Job scheduler is disabled due to cooling issues</span>
 
 **Resolved**: The compute nodes and the job scheduler are up and running again.
 <br><span class="timestamp">March 26, 11:00 PT</span>
@@ -228,7 +228,7 @@ reason: external
 <!-- markdownlint-disable MD024 -->
 ### March 26, 2022
 
-#### <span style="color: orange;">Major BeeGFS issues</span>
+#### <span class="incident-title">Major BeeGFS issues</span>
 
 **Resolved**: Just after 03:00 on Saturday 2022-03-26 morning BeeGFS hung. Recover actions were taken at 07:30 and the problem was resolved before 08:00. We have tracked down the problem occur when a user runs more than one `rm -r /wynton/path/to/folder` concurrently on the same folder. This is a bug in BeeGFS that vendors is aware of.
 <br><span class="timestamp">March 26, 10:30 PT</span>
@@ -245,7 +245,7 @@ reason: beegfs
 
 ### March 18-22, 2022
 
-#### <span style="color: orange;">Job scheduler is disabled because of BeeGFS issues</span>
+#### <span class="incident-title">Job scheduler is disabled because of BeeGFS issues</span>
 
 **Resolved**: We have re-enabled the job scheduler, which now processes all queued jobs. We will keep working with the BeeGFS vendor to find a solution to avoid this issue from happening again.
 <br><span class="timestamp">March 22, 16:30 PT</span>
@@ -274,7 +274,7 @@ reason: beegfs
 
 ### March 14-15, 2022
 
-#### <span style="color: orange;">Brief network outage</span>
+#### <span class="incident-title">Brief network outage</span>
 
 **Noticed**: UCSF Network IT will be performing maintenance on several network switches in the evening and overnight on Monday March 14.  This will _not_ affect jobs running on the cluster. One of the switches is the one which provides Wynton with external network access. When that switch is rebooted, Wynton will be inaccessible for about 15 minutes. This is likely to happen somewhere between 22:00 and 23:00 that evening, but the outage window extends from 21:00 to 05:00 the following morning, so it could take place anywhere in that window.
 <br><span class="timestamp">March 11, 10:15 PT</span>
@@ -282,7 +282,7 @@ reason: beegfs
 
 ### February 28-March 2, 2022
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span class="incident-title">Full downtime</span>
 
 **Resolved**: Wynton is available again.
 <br><span class="timestamp">March 2, 15:30 PT</span>

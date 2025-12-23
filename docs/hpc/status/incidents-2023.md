@@ -59,7 +59,7 @@
 
 ### November 15-December 15, 2023
 
-#### <span style="color: orange;">Upgrading compute nodes</span>
+#### <span class="incident-title">Upgrading compute nodes</span>
 
 **Resolved**: All compute nodes are up and running.
 <br><span class="timestamp">December 15, 09:00 PT</span>
@@ -101,7 +101,7 @@ reason: scheduled
 
 ### October 30-November 15, 2023
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span class="incident-title">Full downtime</span>
 
 **Update**: The job scheduler is available and jobs are running.  The
 data-transfer nodes are available. At this time, 36 out of 490 compute
@@ -199,7 +199,7 @@ comment: Total outage = 451.25 hours = 18.8 days
 
 ### October 27-November 14, 2023
 
-#### <span style="color: orange;">File-system failures</span>
+#### <span class="incident-title">File-system failures</span>
 
 **Resolved**: The BeeGFS metadata resynchronization is complete around
 02:30 this morning.
@@ -316,7 +316,7 @@ endpoints.
 
 ### June 1, 2023 - April 3, 2024
 
-#### <span style="color: orange;">Post file-system failure incidents</span>
+#### <span class="incident-title">Post file-system failure incidents</span>
 
 **Resolved**: All corrupted and orphaned files have now been deleted. There might be orphaned directories remaining, which we leave to each user to remove, if they exist.
 <br><span class="timestamp">April 3, 2024, 11:15 PT</span>
@@ -351,7 +351,7 @@ endpoints.
 
 ### May 16-June 1, 2023
 
-#### <span style="color: orange;">Full downtime followed by network and file-system recovery</span>
+#### <span class="incident-title">Full downtime followed by network and file-system recovery</span>
 
 **Resolved**: The job scheduler is now available. Access to `/wynton/group`, `/wynton/protected/group`, and `/wynton/protected/project` has been restored.  **If you encounter a "Communication error on send" error, please do not delete or move the affected file.**
 <br><span class="timestamp">June 1, 16:00 PT</span>
@@ -426,7 +426,7 @@ reason: scheduled
 
 ### February 22-23, 2023
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span class="incident-title">Full downtime</span>
 
 **Resolved**: The cluster maintenance has completed and the cluster is now fully operational again.
 <br><span class="timestamp">February 23, 14:00 PT</span>
@@ -449,7 +449,7 @@ reason: scheduled
 
 ### January 24, 2023
 
-#### <span style="color: orange;">No access to login and data-transfer hosts</span>
+#### <span class="incident-title">No access to login and data-transfer hosts</span>
 
 **Resolve**: Network issues has been resolved and access to all login
 and data-transfer has been re-established.  The problem was physical
@@ -466,7 +466,7 @@ problem.
 
 ### January 11, 2023
 
-#### <span style="color: orange;">No internet access on development nodes</span>
+#### <span class="incident-title">No internet access on development nodes</span>
 
 **Resolved**: The network issue for the proxy servers has been fixed.
 All development nodes now have working internet access.

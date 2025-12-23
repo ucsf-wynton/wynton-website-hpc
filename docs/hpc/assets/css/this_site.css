@@ -180,6 +180,9 @@ ttr:last-child { border-top: 2px solid #f00; }
   cursor: pointer;
 }
 
+.incident-title {
+  color: #cc7700;
+}
 
 /*--------------------------------------------------------------*
  * Custom page CSS

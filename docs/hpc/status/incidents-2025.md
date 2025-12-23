@@ -63,7 +63,7 @@
 
 ### December 7-9, 2025
 
-#### <span style="color: orange;">Major file system issues</span>
+#### <span class="incident-title">Major file system issues</span>
 
 **Resolved**: Data-transfer nodes `dt1` and `pdt1` online.
 <br><span class="timestamp">December 9, 14:45 PT</span>
@@ -104,7 +104,7 @@ reason: beegfs
 
 ### November 12-13, 2025
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span class="incident-title">Full downtime</span>
 
 **Resolved**: The BeeGFS meta server pairs resynchronization took around
 two days to complete. During this time we experiences several
@@ -147,7 +147,7 @@ reason: scheduled
 
 ### May 29-June 10, 2025
 
-#### <span style="color: orange;">Major file system failures</span>
+#### <span class="incident-title">Major file system failures</span>
 
 **Resolved**: Wynton logins are available as of noon today. At that time
 we will start unsuspending jobs.  We lost about 50 TiBs (0.7%) of
@@ -196,7 +196,7 @@ reason: beegfs
 
 ### April 11-14, 2025
 
-#### <span style="color: orange;">File system timeouts</span>
+#### <span class="incident-title">File system timeouts</span>
 
 **Resolved**: All cluster jobs and queues were unsuspended at 02:00
 this night.
@@ -222,7 +222,7 @@ reason: beegfs
 
 ### March 31-April 1, 2025
 
-#### <span style="color: orange;">File system timeouts</span>
+#### <span class="incident-title">File system timeouts</span>
 
 **Resolved**: Queues and jobs are re-enabled.
 <br><span class="timestamp">April 1, 12:00 PT</span>
@@ -249,7 +249,7 @@ reason: beegfs
 
 ### February 21-March 7, 2025
 
-#### <span style="color: orange;">File system timeouts</span>
+#### <span class="incident-title">File system timeouts</span>
 
 **Resolved**: We have resumed the scheduler and jobs are being
 processed again. We identified several problems related to the BeeGFS
@@ -359,7 +359,7 @@ reason: beegfs
 
 ### February 21-24, 2025
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: Login node `plog1` respects SSH keys again.
 <br><span class="timestamp">February 24, 2025, 11:15 PT</span>
@@ -389,7 +389,7 @@ usual slots available on the queues.
 
 ### February 22-24, 2025
 
-#### <span style="color: orange;">Globus issues</span>
+#### <span class="incident-title">Globus issues</span>
 
 **Resolved**: The 'Wynton HPC' Globus endpoint used by non-PHI users
 is available again after data-transfer node `dt1` coming online.
@@ -402,7 +402,7 @@ unavailable, because data-transfer node `dt1` is unavailable.
 
 ### February 18-24, 2025
 
-#### <span style="color: orange;">Globus issues</span>
+#### <span class="incident-title">Globus issues</span>
 
 **Resolved**: The 'Wynton HPC UCSF Box Connector' for Globus and the
 'Wynton HPC PHI Compatible' Globus endpoint are functional again.
@@ -424,7 +424,7 @@ at least 2025-02-14 at 22:36, when I user reported it.
 
 ### January 17-22, 2025
 
-#### <span style="color: orange;">Cluster unavailable</span>
+#### <span class="incident-title">Cluster unavailable</span>
 
 **Resolved**: Wynton is fully operational again. The BeeGFS file
 system issue has been resolved. All data consistency has been
@@ -529,7 +529,7 @@ reason: beegfs
 
 ### January 9, 2025
 
-#### <span style="color: orange;">File-system emergency shutdown</span>
+#### <span class="incident-title">File-system emergency shutdown</span>
 
 **Resolved**: The cluster full operational again. Suspended jobs have
 been resumed. The BeeGFS issue has been resolved. Checked hardware and

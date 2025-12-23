@@ -60,7 +60,7 @@
 
 ### October 14-18, 2024
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span class="incident-title">Full downtime</span>
 
 **Resolved**: The cluster is back online.
 <br><span class="timestamp">October 18, 17:00 PT</span>
@@ -95,7 +95,7 @@ reason: scheduled
 
 ### September 12, 2024
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All interactive nodes have been updated and deployed with the new CGroups limits.
 <br><span class="timestamp">September 13, 13:00 PT</span>
@@ -106,7 +106,7 @@ reason: scheduled
 
 ### June 15-25, 2024
 
-#### <span style="color: orange;">File-system unreliable</span>
+#### <span class="incident-title">File-system unreliable</span>
 
 **Resolved**: 14,000 compute slots are now available, which
 corresponds to the majority of compute nodes.
@@ -182,7 +182,7 @@ reason: beegfs
 
 ### June 17-18, 2024
 
-#### <span style="color: orange;">Full downtime</span>
+#### <span class="incident-title">Full downtime</span>
 
 **Update**: All but one of the planned maintenance upgrades were
 completed during this scheduled maintenance. The remain upgrade does
@@ -210,7 +210,7 @@ reason: scheduled
 
 ### June 7-June 10, 2024
 
-#### <span style="color: orange;">Development nodes are inaccessible</span>
+#### <span class="incident-title">Development nodes are inaccessible</span>
 
 **Resolved**: Development nodes are available again.
 <br><span class="timestamp">June 10, 10:25 PT</span>
@@ -231,7 +231,7 @@ reason: unknown
 
 ### May 31, 2024
 
-#### <span style="color: orange;">File-system failures</span>
+#### <span class="incident-title">File-system failures</span>
 
 **Resolved**: The BeeGFS issue has been resolved. Wynton is
 operational again.
@@ -254,7 +254,7 @@ reason: beegfs
 
 ### April 3-25, 2024
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">April 25, 09:00 PT</span>
@@ -277,7 +277,7 @@ reason: beegfs
 
 ### March 17-18, 2024
 
-#### <span style="color: orange;">File-system failures</span>
+#### <span class="incident-title">File-system failures</span>
 
 **Resolved**: Wynton and BeeGFS is back up and running again after a
 full reboot of the BeeGFS servers. Root cause is still unknown.
@@ -300,7 +300,7 @@ reason: beegfs
 
 ### March 14, 2024
 
-#### <span style="color: orange;">File-system failures</span>
+#### <span class="incident-title">File-system failures</span>
 
 **Resolved**: Wynton and BeeGFS is back up and running again after a
 full reboot of the BeeGFS servers. Root cause is still unknown.
@@ -323,7 +323,7 @@ reason: beegfs
 
 ### February 2-3, 2024
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All hosts are available.
 <br><span class="timestamp">February 3, 17:00 PT</span>
@@ -347,7 +347,7 @@ slots available on the queues.
 
 ### January 25-August, 2024
 
-#### <span style="color: orange;">Emergency shutdown due to cooling issue</span>
+#### <span class="incident-title">Emergency shutdown due to cooling issue</span>
 
 **Resolved**: UCSF Facilities has resolved the cooling issue and there
 are again two working chillers. As a fallback backup, the building is

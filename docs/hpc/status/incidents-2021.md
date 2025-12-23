@@ -60,7 +60,7 @@
 
 ### December 8-December 23, 2021
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">Dec 23, 12:00 PT</span>
@@ -71,7 +71,7 @@
 
 ### December 19-21, 2021
 
-#### <span style="color: orange;">Globus and data-transfer node issue</span>
+#### <span class="incident-title">Globus and data-transfer node issue</span>
 
 **Resolved**: Data-transfer node `dt1` and Globus file transfers are working again.
 <br><span class="timestamp">Dec 21, 13:20 PT</span>
@@ -86,7 +86,7 @@
 
 ### November 9, 2021
 
-#### <span style="color: orange;">Partial outage due to campus power glitch</span>
+#### <span class="incident-title">Partial outage due to campus power glitch</span>
 
 **Resolved**: All hosts have been rebooted and are now up and running.
 <br><span class="timestamp">November 9, 11:00 PT</span>
@@ -106,7 +106,7 @@ reason: external
 
 ### October 25-26, 2021
 
-#### <span style="color: orange;">File-system maintenance</span>
+#### <span class="incident-title">File-system maintenance</span>
 
 **Resolved**: Resynchronization of all file-system meta servers is complete, which concludes the maintenance.
 <br><span class="timestamp">October 26, 09:45 PT</span>
@@ -120,7 +120,7 @@ reason: external
 
 ### August 26-September 10, 2021
 
-#### <span style="color: orange;">Byers Hall power outage & file-system corruption</span>
+#### <span class="incident-title">Byers Hall power outage & file-system corruption</span>
 
 **Resolved**: The corrupted filesystem has been recovered.
 <br><span class="timestamp">September 10, 17:20 PT</span>
@@ -152,7 +152,7 @@ reason: external
 
 ### July 23-July 28, 2021
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: The majority of the compute nodes have been rebooted after only four days, which was quicker than the maximum of 14 days.
 <br><span class="timestamp">July 28, 08:00 PT</span>
@@ -163,7 +163,7 @@ reason: external
 
 ### June 24, 2021
 
-#### <span style="color: orange;">Cluster not accessible (due to BeeGFS issues)</span>
+#### <span class="incident-title">Cluster not accessible (due to BeeGFS issues)</span>
 
 **Resolved**: Wynton and BeeGFS is back online. The problem was due to failed disks. Unfortunately, about 10% of the space in `/wynton/scratch/` went bad, meaning some files are missing or corrupted.  It is neither possible to recover them nor identify which files or folders are affected.  In other words, expect some oddness if you had data under `/wynton/scratch/`.  There will also be some hiccups over the next several days as we get everything in ZFS and BeeGFS back into an as stable state as possible.
 <br><span class="timestamp">June 24, 14:55 PT</span>
@@ -186,7 +186,7 @@ reason: external
 
 ### May 25-June 7, 2021
 
-#### <span style="color: orange;">Full downtime (major maintenance)</span>
+#### <span class="incident-title">Full downtime (major maintenance)</span>
 
 **Resolved**: All remaining issues from the downtime have been resolved.
 <br>
@@ -245,7 +245,7 @@ reason: scheduled
 
 ### June 1-2, 2021
 
-#### <span style="color: orange;">Password management outage</span>
+#### <span class="incident-title">Password management outage</span>
 
 **Resolved**: Password updates works again.
 <br>
@@ -259,7 +259,7 @@ reason: scheduled
 
 ### April 28 - May 7, 2021
 
-#### <span style="color: orange;">Many GPU nodes down (due to cooling issues)</span>
+#### <span class="incident-title">Many GPU nodes down (due to cooling issues)</span>
 
 **Resolved**: Cooling has been restored and all GPU nodes are back online again. 
 <br>
@@ -285,7 +285,7 @@ reason: external
 
 ### March 26, 2021
 
-#### <span style="color: orange;">Cluster not accessible (due to network outage)</span>
+#### <span class="incident-title">Cluster not accessible (due to network outage)</span>
 
 **Resolved**: The malfunctioning network link between two of Wynton's data centers, which affected our BeeGFS file system and Wynton HPC as a whole, has been restored.
 <br><span class="timestamp">March 26, 21:30 PT</span>
@@ -305,7 +305,7 @@ reason: external
 
 ### January 29-February 12, 2021
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.  A few compute nodes remain offline that has to be rebooted manually, which will be done as opportunity is given.
 <br><span class="timestamp">February 13, 09:00 PT</span>
@@ -317,7 +317,7 @@ reason: external
 
 ### February 1-3, 2021
 
-#### <span style="color: orange;">Development node not available</span>
+#### <span class="incident-title">Development node not available</span>
 
 **Resolved**: Development node `dev2` is available again.
 <br><span class="timestamp">February 3, 15:00 PT</span>
@@ -328,7 +328,7 @@ reason: external
 
 ### January 28, 2021
 
-#### <span style="color: orange;">Server room maintenance</span>
+#### <span class="incident-title">Server room maintenance</span>
 
 **Notice**: The air conditioning system in one of our server rooms will be upgraded on January 28.  The compute nodes in this room will be powered down during the upgrade resulting in fewer compute nodes being available on the cluster.  Starting 14 days prior to this date, compute nodes in this room will only accept jobs that will finish in time.
 <br><span class="timestamp">January 13, 10:00 PT</span>

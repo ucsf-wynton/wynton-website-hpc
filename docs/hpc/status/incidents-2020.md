@@ -66,7 +66,7 @@
 
 ### December 8-17, 2020
 
-#### <span style="color: orange;">Limited accessibility of Login node log1</span>
+#### <span class="incident-title">Limited accessibility of Login node log1</span>
 
 **Resolved**: Login node 'log1.wynton.ucsf.edu' can again be accessed from outside of the UCSF network.
 <br><span class="timestamp">December 17, 14:20 PT</span>
@@ -77,7 +77,7 @@
 
 ### December 11-16, 2020
 
-#### <span style="color: orange;">Rebooting compute nodes</span>
+#### <span class="incident-title">Rebooting compute nodes</span>
 
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">December 16, 05:00 PT</span>
@@ -88,7 +88,7 @@
 
 ### December 11, 2020
 
-#### <span style="color: orange;">Rebooting login and development nodes</span>
+#### <span class="incident-title">Rebooting login and development nodes</span>
 
 **Resolved**: All login and development nodes have been rebooted.
 <br><span class="timestamp">December 12, 17:00 PT</span>
@@ -99,7 +99,7 @@
 
 ### December 7-8, 2020
 
-#### <span style="color: orange;">Major upgrades (full downtime)</span>
+#### <span class="incident-title">Major upgrades (full downtime)</span>
 
 **Resolved**: The upgrade has been completed.  The cluster back online, including all of the login, data-transfer, and development nodes, as well as the majority of the compute nodes.  The scheduler is processing jobs again.  All hosts now run CentOS 7.9.
 <br><span class="timestamp">December 8, 16:30 PT</span>
@@ -141,7 +141,7 @@ reason: scheduled
 
 ### November 4-16, 2020
 
-#### <span style="color: orange;">Compute nodes not serving jobs (due to network switch failure)</span>
+#### <span class="incident-title">Compute nodes not serving jobs (due to network switch failure)</span>
 
 **Resolved**: All 74 compute nodes that were taken off the job scheduler on 2020-11-04 are back up and running
 <br><span class="timestamp">November 16, 12:00 PT</span>
@@ -161,7 +161,7 @@ reason: external
 
 ### November 5, 2020
 
-#### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
+#### <span class="incident-title">Cluster inaccessible (due to BeeGFS issues)</span>
 
 **Resolved**: Our BeeGFS file system was non-responsive during 01:20-04:00 on 2020-11-05 because one of the meta servers hung.
 <br><span class="timestamp">November 5, 08:55 PT</span>
@@ -179,7 +179,7 @@ reason: internal
 
 ### October 21, 2020
 
-#### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
+#### <span class="incident-title">Cluster inaccessible (due to BeeGFS issues)</span>
 
 **Resolved**: Our BeeGFS file system was non-responsive because one of its meta servers hung, which now has been restarted.
 <br><span class="timestamp">October 21, 11:15 PT</span>
@@ -199,7 +199,7 @@ reason: internal
 
 ### August 19, 2020
 
-#### <span style="color: orange;">Cluster inaccessible (due to BeeGFS issues)</span>
+#### <span class="incident-title">Cluster inaccessible (due to BeeGFS issues)</span>
 
 **Resolved**: Our BeeGFS file system was non-responsive between 17:22 and 18:52 today because one of its meta servers hung while the other attempted to synchronize to it.
 <br><span class="timestamp">August 19, 19:00 PT</span>
@@ -219,7 +219,7 @@ reason: internal
 
 ### August 10-13, 2020
 
-#### <span style="color: orange;">Network and hardware upgrades (full downtime)</span>
+#### <span class="incident-title">Network and hardware upgrades (full downtime)</span>
 
 **Resolved**: The cluster is fully back up and running.  Several compute nodes still need to be rebooted but we consider this upgrade cycle completed.  The network upgrade took longer than expected, which delayed the processes.  We hope to bring the new lab storage online during the next week.
 <br><span class="timestamp">August 13, 21:00 PT</span>
@@ -258,7 +258,7 @@ reason: scheduled
 
 ### July 6, 2020
 
-#### <span style="color: orange;">Development node failures</span>
+#### <span class="incident-title">Development node failures</span>
 
 **Resolved**: All three development nodes have been rebooted.
 <br><span class="timestamp">July 6, 15:20 PT</span>
@@ -269,7 +269,7 @@ reason: scheduled
 
 ### July 5, 2020
 
-#### <span style="color: orange;">Job scheduler non-working</span>
+#### <span class="incident-title">Job scheduler non-working</span>
 
 **Resolved**: The SGE scheduler produced errors when queried or when jobs were submitted or launched.  The problem started 00:30 and lasted until 02:45 early Sunday 2020-07-05.
 <br><span class="timestamp">July 6, 22:00 PT</span>
@@ -286,7 +286,7 @@ reason: internal
 
 ### June 11-26, 2020
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">June 26, 10:45 PT</span>
@@ -303,7 +303,7 @@ reason: internal
 
 ### June 5-9, 2020
 
-#### <span style="color: orange;">No internet access on development nodes</span>
+#### <span class="incident-title">No internet access on development nodes</span>
 
 **Resolved**: Internet access from the development nodes is available again.  A new web-proxy server had to be built and deploy.
 <br><span class="timestamp">June 9, 09:15 PT</span>
@@ -314,7 +314,7 @@ reason: internal
 
 ### May 18-22, 2020
 
-#### <span style="color: orange;">File-system maintenance</span>
+#### <span class="incident-title">File-system maintenance</span>
 
 **Update**: The upgrade of the BeeGFS filesystem introduced new issues.
 We decided to rollback the upgrade and we are working with the vendor.
@@ -353,7 +353,7 @@ reason: internal
 
 ### May 28-29, 2020
 
-#### <span style="color: orange;">GPU compute nodes outage</span>
+#### <span class="incident-title">GPU compute nodes outage</span>
 
 **Resolved**: The GPU compute nodes are now fully available to serve jobs.
 <br><span class="timestamp">May 29, 12:00 PT</span>
@@ -376,7 +376,7 @@ reason: internal
 
 ### February 5-7, 2020
 
-#### <span style="color: orange;">Major outage due to NetApp file-system failure</span>
+#### <span class="incident-title">Major outage due to NetApp file-system failure</span>
 
 **Resolved**: The {{ site.cluster.name }} system is considered fully functional again.  The legacy, deprecated NetApp storage was lost.
 <br><span class="timestamp">February 10, 10:55 PT</span>
@@ -405,7 +405,7 @@ reason: internal
 
 ### January 29, 2020
 
-#### <span style="color: orange;">BeeGFS failure</span>
+#### <span class="incident-title">BeeGFS failure</span>
 
 **Resolved**: The BeeGFS file-system issue has been resolved by rebooting two meta servers.
 <br><span class="timestamp">January 29, 17:00 PT</span>
@@ -426,7 +426,7 @@ reason: internal
 
 ### January 22, 2020
 
-#### <span style="color: orange;">File-system maintenance</span>
+#### <span class="incident-title">File-system maintenance</span>
 
 **Resolved**: The BeeGFS upgrade issue has been resolved.
 <br><span class="timestamp">Jan 22, 14:30 PT</span>
@@ -449,7 +449,7 @@ reason: scheduled
 
 ### December 20, 2019 - January 4, 2020
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been updated and rebooted.
 <br><span class="timestamp">Jan 4, 11:00 PT</span>

@@ -1,6 +1,6 @@
 ### November 16-ongoing, 2023
 
-#### <span style="color: orange;">Sporadic job failure</span>
+#### <span class="incident-title">Sporadic job failure</span>
 
 **Update**: There was another burst of "can't get password entry for
 user" errors starting on 2025-01-26 around 15:30, causing jobs to fail
@@ -36,7 +36,7 @@ reason: scheduled
 
 ### November 5-ongoing, 2023
 
-#### <span style="color: orange;">Passwords cannot be reset</span>
+#### <span class="incident-title">Passwords cannot be reset</span>
 
 **Notice**: Passwords can be changed via the web interface. It is
 still not possible to change it via the command-line while logged in

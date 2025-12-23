@@ -51,7 +51,7 @@
 
 ### December 21, 2018
 
-#### <span style="color: orange;">Partial file system failure</span>
+#### <span class="incident-title">Partial file system failure</span>
 
 **Resolved**: Parts of the new BeeGFS file system was non-functional for approx. 1.5 hours during Friday December 21 when a brief maintenance task failed.
 <br><span class="timestamp">Dec 21, 20:50 PT</span>
@@ -68,7 +68,7 @@ reason: internal
 
 ### December 12-20, 2018
 
-#### <span style="color: orange;">Nodes down</span>
+#### <span class="incident-title">Nodes down</span>
 
 **Resolved**: All of the `msg-* compute nodes but one are operational.
 <br><span class="timestamp">Dec 20, 16:40 PT</span>
@@ -88,7 +88,7 @@ reason: internal
 
 ### December 18, 2018
 
-#### <span style="color: orange;">Development node does not respond</span>
+#### <span class="incident-title">Development node does not respond</span>
 
 **Resolved**: Development node `qb3-dev1` is functional.
 <br><span class="timestamp">Dec 18, 20:50 PT</span>
@@ -99,7 +99,7 @@ reason: internal
 
 ### November 28-December 19, 2018
 
-#### <span style="color: orange;">Installation of new, larger, and faster storage space</span>
+#### <span class="incident-title">Installation of new, larger, and faster storage space</span>
 
 **Resolved**: `/wynton/scratch` is now back online and ready to be used.
 <br><span class="timestamp">Dec 19, 14:20 PT</span>
@@ -146,7 +146,7 @@ reason: scheduled
 
 ### December 12-14, 2018
 
-#### <span style="color: orange;">Power failure</span>
+#### <span class="incident-title">Power failure</span>
 
 **Resolved**: All `mac-*` compute nodes are up and functional.
 <br><span class="timestamp">Dec 14, 12:00 PT</span>
@@ -166,7 +166,7 @@ reason: external
 
 ### November 8, 2018
 
-#### <span style="color: orange;">Partial shutdown due to planned power outage</span>
+#### <span class="incident-title">Partial shutdown due to planned power outage</span>
 
 **Resolved**: The cluster is full functional.  It turns out that none of the compute nodes, and therefore none of the running jobs, were affected by the power outage.
 <br><span class="timestamp">Nov 8, 11:00 PT</span>
@@ -195,7 +195,7 @@ reason: scheduled, external
 
 ### September 28 - October 11, 2018
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: The compute nodes has been rebooted and are accepting new jobs.  For the record, on day 5 approx. 300 cores were back online, on day 7 approx. 600 cores were back online, on day 8 approx. 1,500 cores were back online, and on day 9 the majority of the 1,832 cores were back online.
 <br><span class="timestamp">Oct 11, 09:00 PT</span>
@@ -206,7 +206,7 @@ reason: scheduled, external
 
 ### October 1, 2018
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: The login, development, and data transfer hosts have been rebooted.
 <br><span class="timestamp">Oct 1, 13:30 PT</span>
@@ -217,7 +217,7 @@ reason: scheduled, external
 
 ### September 13, 2018
 
-#### <span style="color: orange;">Scheduler unreachable</span>
+#### <span class="incident-title">Scheduler unreachable</span>
 
 **Resolved**: Around 11:00 on Wednesday September 12, the SGE scheduler (“qmaster”) became unreachable such that the scheduler could not be queried and no new jobs could be submitted. Jobs that relied on run-time access to the scheduler may have failed. The problem, which was due to a misconfiguration being introduced, was resolved early morning on Thursday September 13.
 <br><span class="timestamp">Sept 13, 09:50 PT</span>
@@ -234,7 +234,7 @@ reason: internal
 
 ### August 1, 2018
 
-#### <span style="color: orange;">Partial shutdown</span>
+#### <span class="incident-title">Partial shutdown</span>
 
 **Resolved**: Nodes were rebooted on August 1 shortly after the power came back.
 <br><span class="timestamp">Aug 2, 08:15 PT</span>
@@ -253,7 +253,7 @@ reason: external
 
 ### July 30, 2018
 
-#### <span style="color: orange;">Partial shutdown</span>
+#### <span class="incident-title">Partial shutdown</span>
 
 **Resolved**: The nodes brought down during the July 30 partial shutdown has been rebooted.  Unfortunately, the same partial shutdown has to be repeated within a few days because the work in server room was not completed. Exact date for the next shutdown is not known at this point.
 <br><span class="timestamp">Jul 30, 09:55 PT</span>
@@ -264,7 +264,7 @@ reason: external
 
 ### June 16-26, 2018
 
-#### <span style="color: orange;">Power outage</span>
+#### <span class="incident-title">Power outage</span>
 
 **Resolved**: The Nvidia-driver issue occurring on some of the GPU compute nodes has been fixed.
 <br><span class="timestamp">Jun 26, 11:55 PT</span>

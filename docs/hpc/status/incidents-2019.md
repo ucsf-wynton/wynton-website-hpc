@@ -63,7 +63,7 @@
 
 ### December 20, 2019 - January 4, 2020
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been updated and rebooted.
 <br><span class="timestamp">Jan 4, 11:00 PT</span>
@@ -74,7 +74,7 @@
 
 ### December 22, 2019
 
-#### <span style="color: orange;">BeeGFS failure</span>
+#### <span class="incident-title">BeeGFS failure</span>
 
 **Resolved**: No further hiccups were needed during the BeeGFS resynchronization.  Everything is working as expected.
 <br><span class="timestamp">December 23, 10:00 PT</span>
@@ -97,7 +97,7 @@ reason: internal
 
 ### December 18, 2019
 
-#### <span style="color: orange;">Network/login issues</span>
+#### <span class="incident-title">Network/login issues</span>
 
 **Resolved**: The {{ site.cluster.name }} environment is fully functional again. The BeeGFS filesystem was not working properly during 18:30-22:10 on December 18 resulting in no login access to the cluster and job file I/O being backed up.
 <br><span class="timestamp">December 19, 08:50 PT</span>
@@ -120,7 +120,7 @@ reason: internal
 
 ### October 29-November 11, 2019
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been updated and rebooted.
 <br><span class="timestamp">Nov 11, 01:00 PT</span>
@@ -132,7 +132,7 @@ reason: internal
 
 ### October 25, 2019
 
-#### <span style="color: orange;">Byers Hall power outage glitch</span>
+#### <span class="incident-title">Byers Hall power outage glitch</span>
 
 **Resolved**: Development node `qb3-dev2` was rebooted.  Data-transfer node `dt1.wynton.ucsf.edu` is kept offline because it is scheduled to be upgraded next week.
 <br><span class="timestamp">October 28, 15:00 PT</span>
@@ -155,7 +155,7 @@ reason: external
 
 ### October 24, 2019
 
-#### <span style="color: orange;">Login non-functional</span>
+#### <span class="incident-title">Login non-functional</span>
 
 **Resolved**: Log in works again.
 <br><span class="timestamp">October 24, 09:45 PT</span>
@@ -166,7 +166,7 @@ reason: external
 
 ### October 22-23, 2019
 
-#### <span style="color: orange;">BeeGFS failure</span>
+#### <span class="incident-title">BeeGFS failure</span>
 
 **Resolved**: The {{ site.cluster.name }} BeeGFS file system is fully functional again.  During the outage, `/wynton/group` and `/wynton/scratch` was not working properly, whereas `/wynton/home` was unaffected.
 <br><span class="timestamp">October 23, 10:35 PT</span>
@@ -186,7 +186,7 @@ reason: external
 
 ### September 24, 2019
 
-#### <span style="color: orange;">BeeGFS failure</span>
+#### <span class="incident-title">BeeGFS failure</span>
 
 **Resolved**: The {{ site.cluster.name }} environment is up and running again.
 <br><span class="timestamp">September 24, 20:25 PT</span>
@@ -206,7 +206,7 @@ reason: internal
 
 ### August 23, 2019
 
-#### <span style="color: orange;">BeeGFS failure</span>
+#### <span class="incident-title">BeeGFS failure</span>
 
 **Resolved**: The {{ site.cluster.name }} environment is up and running again. The reason for this downtime was the BeeGFS file server became unresponsive.
 <br><span class="timestamp">August 23, 20:45 PT</span>
@@ -226,7 +226,7 @@ reason: internal
 
 ### August 15, 2019
 
-#### <span style="color: orange;">Power outage</span>
+#### <span class="incident-title">Power outage</span>
 
 **Resolved**: The {{ site.cluster.name }} environment is up and running again.
 <br><span class="timestamp">August 15, 21:00 PT</span>
@@ -246,7 +246,7 @@ reason: external
 
 ### July 30, 2019
 
-#### <span style="color: orange;">Power outage</span>
+#### <span class="incident-title">Power outage</span>
 
 **Resolved**: The {{ site.cluster.name }} environment is up and running again.
 <br><span class="timestamp">July 30, 14:40 PT</span>
@@ -266,7 +266,7 @@ reason: external
 
 ### July 8-12, 2019
 
-#### <span style="color: orange;">Full system downtime</span>
+#### <span class="incident-title">Full system downtime</span>
 
 **Resolved**: The {{ site.cluster.name }} environment and the BeeGFS file system are fully functional after updates and upgrades.
 <br><span class="timestamp">July 12, 11:15 PT</span>
@@ -289,7 +289,7 @@ reason: scheduled
 
 ### June 17-18, 2019
 
-#### <span style="color: orange;">Significant file-system outage</span>
+#### <span class="incident-title">Significant file-system outage</span>
 
 **Resolved**: The BeeGFS file system is fully functional again.
 <br><span class="timestamp">June 18, 01:30 PT</span>
@@ -309,7 +309,7 @@ reason: internal
 
 ### May 17, 2019
 
-#### <span style="color: orange;">Major outage due to file-system issues</span>
+#### <span class="incident-title">Major outage due to file-system issues</span>
 
 **Resolved**: The BeeGFS file system and the cluster is functional again.
 <br><span class="timestamp">May 17, 16:00 PT</span>
@@ -330,7 +330,7 @@ reason: internal
 
 ### May 15-16, 2019
 
-#### <span style="color: orange;">Major outage due to file-system issues</span>
+#### <span class="incident-title">Major outage due to file-system issues</span>
 
 **Resolved**: The BeeGFS file system, and thereby also the cluster itself, is functional again.
 <br><span class="timestamp">May 16, 10:30 PT</span>
@@ -351,7 +351,7 @@ reason: internal
 
 ### May 15, 2019
 
-#### <span style="color: orange;">Network/login issues</span>
+#### <span class="incident-title">Network/login issues</span>
 
 **Resolved**: The UCSF-wide network issue that affected access to {{ site.cluster.name }} has been resolved.
 <br><span class="timestamp">May 15, 15:30 PT</span>
@@ -365,7 +365,7 @@ reason: internal
 
 ### March 21-April 5, 2019
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">April 5, 12:00 PT</span>
@@ -379,7 +379,7 @@ reason: internal
 
 ### March 22, 2019
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: The login, development and transfer hosts have been rebooted.
 <br><span class="timestamp">March 22, 10:35 PT</span>
@@ -390,7 +390,7 @@ reason: internal
 
 ### January 22-February 5, 2019
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: All compute nodes have been rebooted.
 <br><span class="timestamp">Feb 5, 11:30 PT</span>
@@ -401,7 +401,7 @@ reason: internal
 
 ### January 23, 2019
 
-#### <span style="color: orange;">Kernel maintenance</span>
+#### <span class="incident-title">Kernel maintenance</span>
 
 **Resolved**: The login, development and transfer hosts have been rebooted.
 <br><span class="timestamp">Jan 23, 13:00 PT</span>
@@ -412,7 +412,7 @@ reason: internal
 
 ### January 14, 2019
  
-#### <span style="color: orange;">Blocking file-system issues</span>
+#### <span class="incident-title">Blocking file-system issues</span>
 
 **Resolved**: The file system under `/wynton/` is back up again.  We are looking into the cause and taking steps to prevent this from happening again.
 <br><span class="timestamp">Jan 9, 12:45 PT</span>
@@ -432,7 +432,7 @@ reason: internal
 
 ### January 9, 2019
 
-#### <span style="color: orange;">Job scheduler maintenance downtime</span>
+#### <span class="incident-title">Job scheduler maintenance downtime</span>
 
 **Resolved**: The SGE job scheduler is now back online and accepts new job submission again.
 <br><span class="timestamp">Jan 9, 12:45 PT</span>
@@ -454,7 +454,7 @@ reason: scheduled
 
 ### January 8, 2019
  
-#### <span style="color: orange;">File-system server crash</span>
+#### <span class="incident-title">File-system server crash</span>
 
 **Investigating**: One of the parallel file-system servers (BeeGFS) appears to have crashed on Monday January 7 at 07:30 and was recovered on 9:20pm.  Right now we are monitoring its stability, and investigating the cause and what impact it might have had.  Currently, we believe users might have experienced I/O errors on `/wynton/scratch/` whereas `/wynton/home/` was not affected.
 <br><span class="timestamp">Jan 8, 10:15 PT</span>
