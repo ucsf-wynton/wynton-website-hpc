@@ -111,7 +111,7 @@ To transfer files via the Globus network:
 
 ## Collections of interest
 
-* [Your personal GCP Collection](https://app.globus.org/collections?scope=administered-by-me)
+* [Your personal GCP Collection](https://app.globus.org/collections?scope=administered-by-me) (UUID `<unique to you>`)
 * ['{{ site.globus.name }}' Collection] (UUID `{{ site.globus.uuid }}`)
 * ['{{ site.globus-protected.name }}' Collection] (UUID `{{ site.globus-protected.uuid }}`)
 * ['{{ site.globus-box.name }}' Collection] (UUID `{{ site.globus-box.uuid }}`)
