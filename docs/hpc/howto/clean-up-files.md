@@ -149,8 +149,8 @@ do this.
 Before wiping your Trash folder, think twice, because after this step
 it is impossible to recover the deleted files. A good strategy is to
 let files sit in your trash folder for some days or weeks and keep
-doing your regular work. That gives you a chance to see if you are
-missing some mistakes.
+doing your regular work. That gives you a chance to detect if you
+deleted too many files by mistakes.
 
 To permanently remove _parts_ of your Trash folder;
 
