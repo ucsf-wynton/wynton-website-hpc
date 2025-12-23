@@ -65,10 +65,10 @@ With this, you can then go to the folder you wish to clean up and run `ncdu` fro
 [alice@{{ site.devel.name }} superduper]$ ncdu --one-file-system --enable-delete --delete-command "trash --"
 ```
 
-This will launch the TUI, and you that it starts to scan all the
-content, which can take several minutes to complete for large
-folders. When scan is complete, you can use the TUI to interactive
-find files and folders to delete.
+This will launch the TUI, and then it starts to scan all the content,
+which can take several minutes to complete for large folders. When
+scan is complete, you can use the TUI to interactive find files and
+folders to delete.
 
 Now, because the scan takes a long time, we recommend a two step
 approach; (a) pre-scan files, then (b) navigate and delete files,
