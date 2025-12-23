@@ -4,61 +4,88 @@
 
 # Clean Up Files
 
-The below instructions show how to swiftly navigate around in your
-folders and move select files to your personal Trash folder. When you
-are ready, and certain you didn't make any mistakes, you can choose to
-empty your Trash folder. It is only when you empty your Trash folder
-that your [disk quota] decreases.
+## Alt 1. Clean Up Files using your Trash folder (safe; fast; recommended)
 
+These instructions show how to delete files by moving them to your
+personal Trash folder, _without_ deleting them permanently. This gives
+you a second chance if you happen to delete files by mistake. There
+are tool for recovering files from the Trash folder.  _Your Trash
+folder will only be wiped when you explicitly say so_. A good strategy
+is to empty the trash folder later - days or weeks - that will give
+you a chance to see what files are missing.
 
-## Load modules
+Key to working with with the Trash folder, is the `trash-cli` toolbox
+available via:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ module load CBI ncdu trash-cli
+[alice@{{ site.devel.name }} ~]$ module load CBI trash-cli
 ```
 
+### Alt 1a. Manually moving files to Trash folder
 
-## Go to the folder to be cleaned up
-
-Go to the root of the folder you would like to scan for files to be
-cleaned up. If you are interested in scanning all of your HOME folder, do:
+Analogously to using `rm` to manually remove files (danger; that's
+irreversible), you can use the `trash` tool to move files and folders
+to your Trash folder. For example, say you want to clean out a
+specific file and a specific folder, then you can use:
 
 ```sh
-[alice@{{ site.devel.name }} somewhere]$ cd ~
+[alice@{{ site.devel.name }} ~]$ trash ~/projects/some-file
+[alice@{{ site.devel.name }} ~]$ trash ~/projects/superduper/
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-If you like to clean up a specific folder, go there, e.g.
+These have now been moved to your Trash folder, which you can see by
+using `trash-list`, as in:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ cd projects/superduper
-[alice@{{ site.devel.name }} superduper]$ 
+[alice@{{ site.devel.name }} ~]$ trash-list
+2025-12-23 11:07:29 {{ site.user.home }}/projects/some-file
+2025-12-23 11:07:33 {{ site.user.home }}/projects/superduper
+[alice@{{ site.devel.name }} ~]$ 
 ```
 
-## Scan the folder to be cleaned up (slow)
 
-Next, we will pre-scan the folder recursively to find the size of all
-files and folders therein;
+
+### Alt 1b. Interactively moving files to Trash folder (ncdu)
+
+If you have a lot of files and folders to delete, or you do not have a
+good overview where they are and how big they are, you can use the
+interactive text-based user interface (TUI) `ncdu` tool to quickly
+navigate around and move files to the Trash folder. The `ncdu` tool is
+available as:
 
 ```sh
+[alice@{{ site.devel.name }} ~]$ module load CBI trash-cli ncdu
+```
+
+With this, you can then go to the folder you wish to clean up and run `ncdu` from there, e.g.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ cd ~/projects/superduper/
+[alice@{{ site.devel.name }} superduper]$ ncdu --one-file-system --enable-delete --delete-command "trash --"
+```
+
+This will launch the TUI, and you that it starts to scan all the
+content, which can take several minutes to complete for large
+folders. When scan is complete, you can use the TUI to interactive
+find files and folders to delete.
+
+Now, because the scan takes a long time, we recommend a two step
+approach; (a) pre-scan files, then (b) navigate and delete files,
+which you can do as:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ cd ~/projects/superduper/
 [alice@{{ site.devel.name }} ~]$ ncdu --one-file-system -o ncdu.cache
 ```
 
-This will make it faster to navigate subfolders when selecting what to
-delete in the next step. Strictly speaking, this is not necessary for
-using `ncdu` to clean up files, but we highly recommend it, especially
-for large folder. Depending on how many files are scanned this might
-take anything from seconds to minutes to complete. When it's done,
-there will be a file `ncdu.cache` in the current directory.
-
-
-## Moving files to your personal Trash folder (fast)
-
-Now we are ready to start cleaning up among the pre-scanned files. To
-do this, launch:
+When the scanning is done, there will be a file `ncdu.cache` in the
+current directory, which is a database index of all your files and
+their sizes. From now on, the `ncdu` TUI will be fast and
+responsive. Launch it as:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ ncdu --enable-delete -f ncdu.cache --delete-command "trash --"
+[alice@{{ site.devel.name }} ~]$ ncdu -f ncdu.cache --enable-delete --delete-command "trash --"
 ```
 
 This will open up a text-based user interface (TUI) displaying the
@@ -84,34 +111,89 @@ When you're done, remove the temporary `ncdu.cache` file;
 ```
 
 
-## Empty your personal Trash folder (slow)
+### Recovering files from Trash folder
 
-You can use `trash-list` to see what is in your personal Trash folder,
-e.g.
+If you regret some of the deletions in your Trash folder;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ trash-list
-2025-12-21 12:31:23 /home/alice/.cache/R/pkgdown
-2025-12-21 12:31:24 /home/alice/.cache/R/litedown
-2025-12-21 12:30:20 /home/alice/.cache/R/R.cache
-2025-12-21 12:31:21 /home/alice/.cache/R/sass
+2025-12-23 11:07:29 {{ site.user.home }}/projects/some-file
+2025-12-23 11:07:33 {{ site.user.home }}/projects/superduper
+2025-12-23 11:09:32 {{ site.user.home }}/projects/another-file
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-You can restore files using `trash-restore`. See `trash --help` for
-more details. 
+you can restore them using `trash-restore`;
 
-To empty your personal Trash folder, run:
+```sh
+[alice@{{ site.devel.name }} ~]$ trash-restore ~/projects/some-file
+   0 2025-12-23 11:07:33 {{ site.user.home }}/projects/some-file
+What file to restore [0..0]: 0
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+If there are older versions of the same file, then you will be asked
+to select which version you wish to restore.
+
+
+### Permanently erase Trash folder (danger zone; slow)
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
+
+**Warning, it is not possible to recover files after they have been
+wiped from the Trash folder!** Not even the systems administrators can
+do this.
+
+</div>
+
+Before wiping your Trash folder, think twice, because after this step
+it is impossible to recover the deleted files. A good strategy is to
+let files sit in your trash folder for some days or weeks and keep
+doing your regular work. That gives you a chance to see if you are
+missing some mistakes.
+
+To permanently remove _parts_ of your Trash folder;
+
+```sh
+[alice@{{ site.devel.name }} ~]$ trash-list
+2025-12-23 11:07:29 {{ site.user.home }}/projects/some-file
+2025-12-23 11:07:33 {{ site.user.home }}/projects/superduper
+2025-12-23 11:09:32 {{ site.user.home }}/projects/another-file
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+use the `trash-rm` command, e.g.
+
+```sh
+[alice@{{ site.devel.name }} ~]$ trash-rm ~/projects/superduper/
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+This results in:
+
+```sh
+[alice@{{ site.devel.name }} ~]$ trash-list
+2025-12-23 11:07:33 {{ site.user.home }}/projects/superduper
+2025-12-23 11:09:32 {{ site.user.home }}/projects/another-file
+[alice@{{ site.devel.name }} ~]$ 
+```
+
+That file is now permanently gone.  To permanently remove _all_
+content of your Trash folder, use the `trash-empty` command, as in:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ trash-empty
 Would empty the following trash directories:
-    - /home/alice/.local/share/Trash
+    - {{ site.user.home }}/.local/share/Trash
 Proceed? (y/N) 
 ```
 
-If you deleted a lot of files and folders, this may take several
+If you have a lot of files in your Trash folder, this may take several
 minutes to complete.
+
+It is only when you empty your Trash folder that your [disk quota]
+decreases.
+
 
 
 ## Appendix
