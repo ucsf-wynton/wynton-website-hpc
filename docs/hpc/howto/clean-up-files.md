@@ -61,8 +61,8 @@ available as:
 With this, you can then go to the folder you wish to clean up and run `ncdu` from there, e.g.
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ cd ~/projects/superduper/
-[alice@{{ site.devel.name }} superduper]$ ncdu --one-file-system --enable-delete --delete-command "trash --"
+[alice@{{ site.devel.name }} ~]$ cd ~/projects/
+[alice@{{ site.devel.name }} projects]$ ncdu --one-file-system --enable-delete --delete-command "trash --"
 ```
 
 This will launch the TUI, and then it starts to scan all the content,
@@ -75,8 +75,8 @@ approach; (a) pre-scan files, then (b) navigate and delete files,
 which you can do as:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ cd ~/projects/superduper/
-[alice@{{ site.devel.name }} ~]$ ncdu --one-file-system -o ncdu.cache
+[alice@{{ site.devel.name }} ~]$ cd ~/projects/
+[alice@{{ site.devel.name }} projects]$ ncdu --one-file-system -o ncdu.cache
 ```
 
 When the scanning is done, there will be a file `ncdu.cache` in the
@@ -85,7 +85,7 @@ their sizes. From now on, the `ncdu` TUI will be fast and
 responsive. Launch it as:
 
 ```sh
-[alice@{{ site.devel.name }} ~]$ ncdu -f ncdu.cache --enable-delete --delete-command "trash --"
+[alice@{{ site.devel.name }} projects]$ ncdu -f ncdu.cache --enable-delete --delete-command "trash --"
 ```
 
 This will open up a text-based user interface (TUI) displaying the
