@@ -4,7 +4,7 @@
 
 # Clean Up Files
 
-## Alt 1. Clean Up Files using your Trash folder (safe; fast; recommended)
+## Alt 1. Clean op files using your Trash folder (safe; fast; recommended)
 
 These instructions show how to delete files by moving them to your
 personal Trash folder, _without_ deleting them permanently. This gives
@@ -66,7 +66,7 @@ With this, you can then go to the folder you wish to clean up and run `ncdu` fro
 ```
 
 This will launch the TUI, and then it starts to scan all the content,
-which can take several minutes to complete for large folders. When
+which can take several minutes to complete for large folders. When the
 scan is complete, you can use the TUI to interactive find files and
 folders to delete.
 
