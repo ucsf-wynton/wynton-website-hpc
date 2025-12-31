@@ -4,7 +4,7 @@
 
 # Clean Up Files
 
-## Alt 1. Clean op files using your Trash folder (safe; fast; recommended)
+## Alt 1. Clean up files using your Trash folder (safe; fast; recommended)
 
 These instructions show how to delete files by moving them to your
 personal Trash folder, _without_ deleting them permanently. This gives
