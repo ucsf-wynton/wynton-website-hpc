@@ -212,6 +212,14 @@ Detailed statistics on the file-system load and other cluster metrics can be fou
       }
 
       el.textContent = `${ageStr} (${localIso})`;
+      if (hours > 0) {
+        el.style.background = 'red';
+        el.style.color = 'white';
+      } else if (mins > 30) {
+        el.style.background = 'orange';
+        el.style.color = 'black';
+      }
+      
       const tipParts = [`from: ${newest.url}`];
       if (newest.durationSec != null) tipParts.push(`duration: ${newest.durationSec}s`);
       el.title = tipParts.join(" | ");
