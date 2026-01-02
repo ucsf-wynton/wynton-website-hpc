@@ -2,8 +2,8 @@
 
 #### <span class="incident-title">Cluster unavailable</span>
 
-**Update**: The cluster is unavailable since 13:45 due to ongoing
-BeeGFS issues.
+**Update**: The cluster will be sporadically unavailable for extended
+periods of time due to ongoing BeeGFS resynchronization.
 <br><span class="timestamp">January 2, 14:30 PT</span>
 
 **Update**: The cluster is available, except interactive hosts `log1`,
