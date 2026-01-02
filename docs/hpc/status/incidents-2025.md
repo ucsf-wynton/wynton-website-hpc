@@ -1,10 +1,10 @@
-### Operational Summary for 2025 (thus far)
+### Operational Summary for 2025
 
 * Full downtime:
 
-  - Scheduled: 27.0 hours (= 1.1 days)
-  - Unscheduled: 546.5 hours (= 22.8 days)
-  - Total: 573.5 hours (= 23.9 days)
+  - Scheduled: 27.0 hours (= 1.1 days) = 0.3%
+  - Unscheduled: 546.5 hours (= 22.8 days) = 6.2%
+  - Total: 573.5 hours (= 23.9 days) = 6.5%
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -14,8 +14,9 @@
 * Impact: No file access, no compute resources available
 * Damage: None
 * Occurrences:
-  - N/A
-* Total downtime: 0.0 hours
+  - 2025-11-12 -- 2025-11-13 (27.0 hours)
+* Total downtime: 27.0 hours of which 0.0 hours were due to external
+  factors
 
 #### Scheduled kernel maintenance
 
@@ -30,9 +31,9 @@
 * Damage: Running jobs (<= 14 days) failed, file-transfers failed,
   possible file corruptions
 * Occurrences:
-  - 2025-11-12 -- 2025-11-13 (27.0 hours)
-* Total downtime: 27.0 hours of which 0.0 hours were due to external
-  factors
+  - N/A
+* Total downtime: 0.0 hours
+
   
 #### Unscheduled downtimes due to file-system failures
 
@@ -486,7 +487,7 @@ unresponsive. The BeeGFS vendor has been contacted.
 servers are okay, but one or more metadata servers are unresponsive.
 <br><span class="timestamp">January 17, 21:30 PT</span>
 
-**Notice**: The cluster is unavailable, e.g. i is not possible to
+**Notice**: The cluster is unavailable, e.g. it is not possible to
 access the login or the data-transfer nodes.
 <br><span class="timestamp">January 17, 19:45 PT</span>
 
