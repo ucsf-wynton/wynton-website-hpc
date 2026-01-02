@@ -6,7 +6,7 @@
 user" errors starting on 2025-01-26 around 15:30, causing jobs to fail
 immediately. We are restarting the SSSD service on the ~140 compute
 nodes we have identified suffer from this problem.  <br><span
-class="timestamp">January 27, 11:45 PT</span>
+class="timestamp">January 27, 2025, 11:45 PT</span>
 
 **Update**: To lower the risk for this problem to occur, the SSSD
 timeout limit was increased from 10 seconds to 30 seconds.
@@ -41,9 +41,9 @@ reason: scheduled
 **Notice**: Passwords can be changed via the web interface. It is
 still not possible to change it via the command-line while logged in
 to Wynton.
-<br><span class="timestamp">November 13, 11:00 PT</span>
+<br><span class="timestamp">November 13, 2023, 11:00 PT</span>
 
 **Notice**: It is not possible to change or reset passwords since
 2023-11-05. This problem was introduced while doing cluster-wide
 upgrades to Rocky 8.
-<br><span class="timestamp">November 11, 09:00 PT</span>
+<br><span class="timestamp">November 11, 2023, 09:00 PT</span>
