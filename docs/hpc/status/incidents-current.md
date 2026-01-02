@@ -2,10 +2,14 @@
 
 #### <span class="incident-title">Cluster unavailable</span>
 
+**Update**: The cluster is unavailable since 13:45 due to ongoing
+BeeGFS issues.
+<br><span class="timestamp">January 2, 14:30 PT</span>
+
 **Update**: The cluster is available, except interactive hosts `log1`,
 `dt1`, and `pdt1`. Jobs are suspended until BeeGFS resynchronizations
 have stabilized.
-<br><span class="timestamp">January 2, 09:45 PT</span>
+<br><span class="timestamp">January 2, 10:30 PT</span>
 
 **Notice**: The cluster is unavailable since 2026-01-01 15:30. It is
 not possible to access the login or the data-transfer nodes.  Initial
