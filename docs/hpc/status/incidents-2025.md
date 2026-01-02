@@ -3,8 +3,8 @@
 * Full downtime:
 
   - Scheduled: 27.0 hours (= 1.1 days) = 0.3%
-  - Unscheduled: 546.5 hours (= 22.8 days) = 6.2%
-  - Total: 573.5 hours (= 23.9 days) = 6.5%
+  - Unscheduled: 551.25 hours (= 23.0 days) = 6.3%
+  - Total: 578.25 hours (= 24.1 days) = 6.6%
   - External factors: 0% of the above downtime, corresponding to 0.0
     hours (= 0.0 days), were due to external factors
 
@@ -47,7 +47,8 @@
   - 2025-03-31 -- 2025-04-01 (17.0 hours)
   - 2025-04-11 -- 2025-04-14 (62.0 hours)
   - 2025-05-29 -- 2025-06-10 (282.0 hours)
-* Total downtime: 505 hours of which 0.0 hours were due to external
+  - 2025-12-25 -- 2025-12-25 ( 4.75 hours)
+* Total downtime: 509.75 hours of which 0.0 hours were due to external
   factors
 
 
@@ -60,6 +61,27 @@
   - 2025-12-07 -- 2025-12-09 (41.5 hours)
 * Total downtime: 41.5 hours of which 41.5 hours were due to external
   factors
+
+
+### December 25, 2025
+
+#### <span class="incident-title">BeeGFS non-responsive</span>
+
+**Resolved**: BeeGFS is available again.
+<br><span class="timestamp">December 25, 10:45 PT</span>
+
+**Notice**: BeeGFS is non-responsive.
+<br><span class="timestamp">December 25, 06:00 PT</span>
+
+<!--
+## When BeeGFS was down
+start: 2025-12-25T06:00:00
+stop: 2025-12-25T10:45:00
+length: 4.75 hours
+severity: minor-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
 
 
 ### December 7-9, 2025
