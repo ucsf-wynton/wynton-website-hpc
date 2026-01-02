@@ -1,3 +1,22 @@
+### January 1, 2026
+
+#### <span class="incident-title">Cluster unavailable</span>
+
+**Notice**: The cluster is unavailable since 2026-01-01 15:30, e.g. it
+is not possible to access the login or the data-transfer nodes.
+
+<br><span class="timestamp">January 2, 09:45 PT</span>
+
+<!--
+start: 2026-01-017T15:30:00
+stop: 
+length: 
+severity: major-outage
+affected: beegfs, jobs, hosts
+reason: tbd
+ -->
+
+
 ### November 16-ongoing, 2023
 
 #### <span class="incident-title">Sporadic job failure</span>

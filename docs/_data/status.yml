@@ -94,9 +94,9 @@
 # condition: Emergency shutdown with limited access
 # message: Emergency shutdown of compute and development nodes because of severe cooling issue
 
-level: warning
-condition: is operational
-message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown
+# level: warning
+# condition: is operational
+# message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown
 
 # level: danger
 # condition: is non-operational
@@ -119,18 +119,18 @@ message: Wynton is running without redundant building cooling exposing us to the
 # message: (1) The cluster is down down for maintenance starting June 17, 2024. (2) The BeeGFS file system is non-working. (3) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
 
 
-level: warning
-condition: is operational
-message: (1) The cluster will be shut down for maintenance during October 14-18, 2024. (2) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
+# level: warning
+# condition: is operational
+# message: (1) The cluster will be shut down for maintenance during October 14-18, 2024. (2) Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
 
-level: danger
-condition: is non-operational
-message: Complete outage due to scheduled maintenance during October 14-18, 2024
-
-
-level: warning
-condition: is operational
-message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
+# level: danger
+# condition: is non-operational
+# message: Complete outage due to scheduled maintenance during October 14-18, 2024
+# 
+# 
+# level: warning
+# condition: is operational
+# message: Wynton is running without redundant building cooling exposing us to the risk of another emergency shutdown.
 
 #level: warning
 #condition: runs at lower capacity
@@ -144,24 +144,29 @@ message: Wynton is running without redundant building cooling exposing us to the
 #condition: is not operational
 #message: The cluster is down, because the BeeGFS file system is non-functional.
 
-level: warning
-condition: is operational
-message: The cluster will be down for maintenance on November 12-13, 2025. Jobs with runtimes going into the maintenance window will only be started after the downtime.
+# level: warning
+# condition: is operational
+# message: The cluster will be down for maintenance on November 12-13, 2025. Jobs with runtimes going into the maintenance window will only be started after the downtime.
+# 
+# level: danger
+# condition: is non-operational
+# message: Complete outage due to scheduled maintenance during November 12-13, 2025
+# 
+# Default:
+# level: info
+# condition: is operational
+# message:
+# 
+# level: danger
+# condition: is non-operational
+# message: Cluster is not accessible because of BeeGFS issues
+# 
+# Default:
+# level: info
+# condition: is operational
+# message:
+
 
 level: danger
 condition: is non-operational
-message: Complete outage due to scheduled maintenance during November 12-13, 2025
-
-Default:
-level: info
-condition: is operational
-message:
-
-level: danger
-condition: is non-operational
-message: Cluster is not accessible because of BeeGFS issues
-
-Default:
-level: info
-condition: is operational
-message:
+message: Cluster is not accessible
