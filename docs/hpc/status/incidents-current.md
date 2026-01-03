@@ -1,6 +1,13 @@
-### January 1, 2026
+### January 1-ongoing, 2026
 
 #### <span class="incident-title">Cluster unavailable</span>
+
+**Update**: Wynton jobs are paused until a network switch issue can be
+addressed on Monday 2026-01-05. Users can still log in, but will not
+be able to run jobs. The cluster will be shut down (no logins) on
+Monday morning at 09:00 with a plan to make it available again the
+same evening, but the outage may extend through Tuesday afternoon.
+<br><span class="timestamp">January 2, 17:45 PT</span>
 
 **Update**: The cluster will be sporadically unavailable for extended
 periods of time due to ongoing BeeGFS resynchronization.
@@ -26,7 +33,7 @@ reason: beegfs, network, external
  -->
 
 
-### November 16-ongoing, 2023
+### November 16, 2023-ongoing
 
 #### <span class="incident-title">Sporadic job failure</span>
 
@@ -62,7 +69,7 @@ reason: scheduled
 
 
 
-### November 5-ongoing, 2023
+### November 5, 2023-ongoing
 
 #### <span class="incident-title">Passwords cannot be reset</span>
 
