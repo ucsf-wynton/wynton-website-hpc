@@ -2,6 +2,10 @@
 
 #### <span class="incident-title">Cluster unavailable</span>
 
+**Update**: The cluster is resumed, except interactive hosts `log1`,
+`dt1`, and `pdt1`.
+<br><span class="timestamp">January 5, 14:30 PT</span>
+
 **Update**: Wynton jobs are paused until a network switch issue can be
 addressed on Monday 2026-01-05. Users can still log in, but will not
 be able to run jobs. The cluster will be shut down (no logins) on
