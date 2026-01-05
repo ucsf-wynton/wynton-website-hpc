@@ -1,5 +1,5 @@
 {% assign current_date = "now" | date: "%s" | plus: 0 %}
-{% assign target_date = "2026-01-26" | date: "%s" | plus: 0 %}
+{% assign target_date = "2026-01-30" | date: "%s" | plus: 0 %}
 {% assign secs = target_date | minus: current_date %}
 {% assign days = secs | divided_by: 86400 %}
 
