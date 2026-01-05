@@ -4,10 +4,10 @@
 
 # Clean Up Files
 
-## 1. Permanently delete with `rm` command (no recovery; be careful)
+## Method 1. Permanently delete with `rm` command (no recovery; be careful)
 - Use the standard Linux rm command to remove files and directories. This is immediate and irreversible.
 
-## 2. Move file to global scratch directory: `/wynton/scratch` (automatically deleted after 2 weeks)
+## Method 2. Move file to global scratch directory: `/wynton/scratch` (automatically deleted after 2 weeks)
 - Move files or directories to global scratch for temporary staging. Files under `/wynton/scratch/$USER` are automatically deleted after 2 weeks.
 
 Note: create your scratch directory (if it doesn’t exist): `mkdir -p /wynton/scratch/$USER`
