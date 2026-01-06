@@ -2,8 +2,12 @@
 
 #### <span class="incident-title">Cluster unavailable</span>
 
-**Update**: The cluster is resumed, except interactive hosts `log1`,
-`dt1`, and `pdt1`.
+**Update**: Interactive nodes `log1`, `dt1`, and `plog1` are available
+again.
+<br><span class="timestamp">January 6, 15:00 PT</span>
+
+**Update**: The cluster is resumed, except interactive nodes `log1`,
+`dt1`, `plog1`, and `pdt1`.
 <br><span class="timestamp">January 5, 14:30 PT</span>
 
 **Update**: Wynton jobs are paused until a network switch issue can be
@@ -17,7 +21,7 @@ same evening, but the outage may extend through Tuesday afternoon.
 periods of time due to ongoing BeeGFS resynchronization.
 <br><span class="timestamp">January 2, 14:30 PT</span>
 
-**Update**: The cluster is available, except interactive hosts `log1`,
+**Update**: The cluster is available, except interactive nodes `log1`,
 `dt1`, and `pdt1`. Jobs are suspended until BeeGFS resynchronizations
 have stabilized.
 <br><span class="timestamp">January 2, 10:30 PT</span>
