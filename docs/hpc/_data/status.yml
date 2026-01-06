@@ -170,6 +170,11 @@
 #condition: is non-operational
 #message: Cluster is not accessible because of BeeGFS issues
 
-level: warning
+#level: warning
+#condition: is operational
+#message: Cluster is partially accessible and jobs are suspended until BeeGFS resynchronizations have stabilized
+
+Default:
+level: info
 condition: is operational
-message: Cluster is partially accessible and jobs are suspended until BeeGFS resynchronizations have stabilized
+message:
