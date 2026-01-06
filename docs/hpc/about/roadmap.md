@@ -4,7 +4,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Near future
 
-* Protected (P3 and P4) storage and accounts will be decommissions by 2026-01-26.
+* Protected (P3 and P4) storage and accounts will be decommissions by {{ site.data.specs.protected_eol }}.
 
 
 ## Discontinued milestones

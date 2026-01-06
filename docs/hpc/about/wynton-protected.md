@@ -5,7 +5,7 @@
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 
 2025-12-01: **We are no longer commissioning Protected accounts.**
-This is because all Protected data will be removed by 2026-01-26.
+This is because all Protected data will be removed by {{ site.data.specs.protected_eol }}.
 
 </div>
 <div style="font-size: 150%;" markdown="1">
@@ -17,7 +17,7 @@ Wynton Protected, which is a subset of the Wynton HPC environment, is
 **not** approved for storing and working with P4/Protected Health
 Information (PHI) data. **Existing Wynton Protected users may only use
 P3 data, but should take immediate action for to remove also P3 data
-from Wynton by 2026-01-26.**  For UCSF’s determination of the
+from Wynton by {{ site.data.specs.protected_eol }}.**  For UCSF’s determination of the
 Protection Levels (P1, P2, P3, P4), refer to [UCSF Policy 650-16
 Addendum F - UCSF Data Classification
 Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard).
