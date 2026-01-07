@@ -1,7 +1,3 @@
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
-2025-12-22: This is a draft, which is currently under review. Please use these instructions with care.
-</div>
-
 # Clean Up Files
 
 ## Method 1. Permanently and instantly remove files (danger zone; slow)
