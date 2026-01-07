@@ -3,9 +3,9 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 95.0 hours (= 4.0 days)
-  - Total: 95.0 hours (= 4.0 days)
-  - External factors: 100% of the above downtime, corresponding to 95.0
+  - Unscheduled: 96.25 hours (= 4.0 days)
+  - Total: 96.25 hours (= 4.0 days)
+  - External factors: 99% of the above downtime, corresponding to 95.0
     hours (= 4.0 days), were due to external factors
 
 
@@ -40,8 +40,9 @@
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers
   may have failed, cluster not accessible
 * Occurrences:
+  - 2026-01-07 (1.25 hours)
   - 2026-01-01 -- 2026-01-05 (95.0 hours)
-* Total downtime: 95.0 hours of which 95.0 hours were due to external
+* Total downtime: 96.25 hours of which 95.0 hours were due to external
   factors
 
 #### Unscheduled downtimes due to other reasons
@@ -53,6 +54,28 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### January 7, 2026
+
+#### <span class="incident-title">BeeGFS issue</span>
+
+**Resolved**: BeeGFS issues are resolved after rebooting a storage
+server. This incidents requires some resynchronization, which will
+induce some lagginess until finished.
+<br><span class="timestamp">January 7, 12:50 PT</span>
+
+**Notice**: BeeGFS experiences issues.
+<br><span class="timestamp">January 7, 11:35 PT</span>
+
+<!--
+start: 2026-01-07T11:35:00
+stop: 2026-01-07T12:50:00
+length: 1.25 hours
+severity: major
+affected: beegfs
+reason: unscheduled
+ -->
 
 
 ### January 1-5, 2026
