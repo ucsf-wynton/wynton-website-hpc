@@ -4,18 +4,46 @@
 
 # Clean Up Files
 
-## Method 1. Permanently delete with `rm` command (no recovery; be careful)
+## Method 1. Permanently and instantly remove files (danger zone; slow)
 
-- Use the standard Linux `rm` command to remove files and directories. This is immediate and irreversible.
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 
-## Method 2. Move file to global scratch directory: `/wynton/scratch` (automatically deleted after 2 weeks)
+**Warning, it is not possible to recover files after they have been
+removed!** Not even the systems administrators can do this.
 
-- Move files or directories to global scratch for temporary staging. Files under `/wynton/scratch/$USER` are automatically deleted after 2 weeks.
+</div>
 
-Note: create your scratch directory (if it doesn’t exist): `mkdir -p /wynton/scratch/$USER`
+The most direct way to remove files and folder permanently is to use
+the `rm` command. This removes the files immediately, which can be a
+rather slow process if you remove a large number of files. More
+importantly, using `rm` is irreversible -- there is no way to recover
+files deleted by mistake.
 
 
-## Method 3. Clean up files using your Trash folder (safe; fast; most cautious)
+## Method 2. Move files to global scratch for automatic deletion after two weeks (temporarily recoverable; fast)
+
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
+
+**Warning, it is not possible to recover files after they have been
+automatically wiped from global scratch!** Not even the systems
+administrators can do this.
+
+</div>
+
+An alternative to _removing_ files, is to _move_ them to global
+scratch. Contrary to removing files, moving files is very fast.
+
+1. Create your personal global scratch directory, if it doesn’t exist:
+   `mkdir -p /wynton/scratch/$USER`
+
+2. Manually move files and folders to your global scratch directory
+   for temporary staging, where they will be automatically deleted
+   after two weeks.
+
+This approach gives you some leeway to undo deletions done by mistake.
+
+
+## Method 3. Clean up files using your Trash folder (recoverable; fast)
 
 These instructions show how to delete files by moving them to your
 personal Trash folder, _without_ deleting them permanently. This gives
@@ -32,7 +60,7 @@ available via:
 [alice@{{ site.devel.name }} ~]$ module load CBI trash-cli
 ```
 
-### Alt 1a. Manually moving files to Trash folder
+### Alt 3a. Manually moving files to Trash folder
 
 Analogously to using `rm` to manually remove files (danger; that's
 irreversible), you can use the `trash` tool to move files and folders
@@ -57,7 +85,7 @@ using `trash-list`, as in:
 
 
 
-### Alt 1b. Interactively moving files to Trash folder (ncdu)
+### Alt 3b. Interactively moving files to Trash folder
 
 If you have a lot of files and folders to delete, or you do not have a
 good overview where they are and how big they are, you can use the
