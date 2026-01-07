@@ -241,5 +241,5 @@ system. The command `trash-empty` is slow, much like `rm` is slow,
 because it _removes_ the files.
 
 
-[disk quota]: storage-size.html
+[disk quota]: /hpc/howto/storage-size.html
 
