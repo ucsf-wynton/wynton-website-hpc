@@ -2,14 +2,14 @@
 
 #### <span class="incident-title">Partial BeeGFS storage failure</span>
 
-**Notice**: All of the BeeGFS file system is available again.
+**Update**: All of the BeeGFS file system is available again.
 <br><span class="timestamp">January 15, 09:45 PT</span>
 
 **Notice**: One section (bss16) of the BeeGFS file system is offline
 since 00:00 on 2026-01-26.
 <br><span class="timestamp">January 16, 09:15 PT</span>
 
-**Notice**: All of the BeeGFS file system is available again.
+**Update**: All of the BeeGFS file system is available again.
 <br><span class="timestamp">January 15, 09:30 PT</span>
 
 **Notice**: Two sections (bss6 and bss16) of the BeeGFS file system
