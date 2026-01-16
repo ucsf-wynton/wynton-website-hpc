@@ -1,3 +1,31 @@
+### January 15-16, 2026
+
+#### <span class="incident-title">Partial BeeGFS storage failure</span>
+
+**Update**: All of the BeeGFS file system is available again.
+<br><span class="timestamp">January 15, 09:45 PT</span>
+
+**Notice**: One section (bss16) of the BeeGFS file system is offline
+since 00:00 on 2026-01-26.
+<br><span class="timestamp">January 16, 09:15 PT</span>
+
+**Update**: All of the BeeGFS file system is available again.
+<br><span class="timestamp">January 15, 09:30 PT</span>
+
+**Notice**: Two sections (bss6 and bss16) of the BeeGFS file system
+are offline since 06:45-07:00 this morning.
+<br><span class="timestamp">January 15, 08:30 PT</span>
+
+<!--
+period: 2026-01-15T06:45:00/2026-01-15T09:30:00 (2.75 hours)
+period: 2026-01-16T00:00:00/2026-01-16T09:45:00 (9.75 hours)
+total_length: 12.5 hours
+severity: minor-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
+
+
 ### November 16, 2023-ongoing
 
 #### <span class="incident-title">Sporadic job failure</span>

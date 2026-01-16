@@ -1,5 +1,7 @@
 # News
 
+2026-01-16: The maximum job run-time is now limited for all Protected users such their jobs finish by January 29 at 01:00 am.
+
 2025-12-01: No new Protected accounts are commissioned and existing Regular accounts can no longer be changed to Protected accounts.
 
 2025-09-31: GPU compute nodes are now reserved for GPU tasks. Non-GPU jobs, that is, jobs that do not request `-q gpu.q`, will no long end up on a GPU compute node. This removes the risk of CPU-only jobs starving out GPU jobs.
