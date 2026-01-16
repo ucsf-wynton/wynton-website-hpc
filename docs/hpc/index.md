@@ -4,6 +4,8 @@
 **NEWS**: (_For upcoming and current incidents, see the
 [Status](/hpc/status/index.html) page_)
 
+2026-01-16: The maximum job run-time is now limited for all Protected users such their jobs finish by January 29 at 01:00 am.
+
 2025-12-01: No new Protected accounts are commissioned and existing Regular accounts can no longer be changed to Protected accounts.
 
 2025-09-31: GPU compute nodes are now reserved for GPU tasks. Non-GPU jobs, that is, jobs that do not request `-q gpu.q`, will no long end up on a GPU compute node. This removes the risk of CPU-only jobs starving out GPU jobs.
@@ -11,10 +13,6 @@
 2025-09-23: Protected (P3 and P4) storage and accounts will be decommissions by ~~2026-01-26~~ {{ site.data.specs.protected_eol }}.
 
 2025-07-08: Termination of Wynton Support for P4/PHI data. Starting today, all work on P4/PHI level data must be ceased and all P4/PHI data removed from Wynton.
-
-2025-04-22: PHI Freeze: Effective immediately, we are pausing requests for new projects that process P4 data, specifically Protected Health Information (PHI).
-
-2025-01-16: The memory limit on development nodes was decreased from 68 GiB to 48 GiB, in order to further lower the risk for these machines to run low on memory resulting in non-responsiveness.
 
 [More news](/hpc/about/news.html)
 </div>
