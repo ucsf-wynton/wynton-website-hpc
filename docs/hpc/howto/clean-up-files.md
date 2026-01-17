@@ -16,7 +16,7 @@ importantly, using `rm` is irreversible -- there is no way to recover
 files deleted by mistake.
 
 
-## Method 2. Move files to global scratch for automatic deletion after two weeks (temporarily recoverable; fast)
+## Method 2. Move files to global scratch for automatic deletion after two weeks (temporarily recoverable; slow)
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
 
@@ -27,7 +27,7 @@ administrators can do this.
 </div>
 
 An alternative to _removing_ files, is to _move_ them to global
-scratch. Contrary to removing files, moving files is very fast.
+scratch:
 
 1. Create your personal global scratch directory, if it doesn’t exist:
    `mkdir -p /wynton/scratch/$USER`
