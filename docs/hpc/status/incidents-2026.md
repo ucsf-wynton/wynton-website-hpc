@@ -3,9 +3,9 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 96.25 hours (= 4.0 days)
-  - Total: 96.25 hours (= 4.0 days)
-  - External factors: 99% of the above downtime, corresponding to 95.0
+  - Unscheduled: 108.75 hours (= 4.5 days)
+  - Total: 108.75 hours (= 4.5 days)
+  - External factors: 97% of the above downtime, corresponding to 95.0
     hours (= 4.0 days), were due to external factors
 
 
@@ -40,9 +40,10 @@
 * Damage: Running jobs (<= 14 days) may have failed, file-transfers
   may have failed, cluster not accessible
 * Occurrences:
-  - 2026-01-07 (1.25 hours)
   - 2026-01-01 -- 2026-01-05 (95.0 hours)
-* Total downtime: 96.25 hours of which 95.0 hours were due to external
+  - 2026-01-07 (1.25 hours)
+  - 2026-01-15 -- 2026-01-16 (12.5 hours)
+* Total downtime: 108.75 hours of which 95.0 hours were due to external
   factors
 
 #### Unscheduled downtimes due to other reasons
@@ -54,6 +55,34 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+### January 15-16, 2026
+
+#### <span class="incident-title">Partial BeeGFS storage failure</span>
+
+**Update**: All of the BeeGFS file system is available again.
+<br><span class="timestamp">January 15, 09:45 PT</span>
+
+**Notice**: One section (bss16) of the BeeGFS file system is offline
+since 00:00 on 2026-01-26.
+<br><span class="timestamp">January 16, 09:15 PT</span>
+
+**Update**: All of the BeeGFS file system is available again.
+<br><span class="timestamp">January 15, 09:30 PT</span>
+
+**Notice**: Two sections (bss6 and bss16) of the BeeGFS file system
+are offline since 06:45-07:00 this morning.
+<br><span class="timestamp">January 15, 08:30 PT</span>
+
+<!--
+period: 2026-01-15T06:45:00/2026-01-15T09:30:00 (2.75 hours)
+period: 2026-01-16T00:00:00/2026-01-16T09:45:00 (9.75 hours)
+total_length: 12.5 hours
+severity: minor-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
 
 
 ### January 7, 2026
