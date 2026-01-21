@@ -42,7 +42,7 @@ If you forget to load the MATLAB module, then you will get an error when attempt
 
 ## Using MATLAB in job scripts
 
-In order to run MATLAB in jobs, the MATLAB environment module needs to be loaded just as when you run it interactive on a development node.  For example, to run the `my_script.m` script, the job script should at a minimum contain:
+In order to run MATLAB in jobs, the MATLAB environment module needs to be loaded just as when you run it interactively on a development node.  For example, to run the `my_script.m` script, the job script should at a minimum contain:
 
 ```sh
 #! /usr/bin/env bash
@@ -58,7 +58,7 @@ The `-batch` option tells MATLAB to call the command `my_script`, and since that
 
 ### Parallel processing in MATLAB
 
-If your MATLAB code supports parallel processing, make sure to [specify the number of CPU cores] when submitting your job submit, e.g. `-pe smp 4` will request four cores on one machine, which in turn will set environment variable `NSLOTS` to `4`.  To make your MATLAB script respect this, add the following at the top of your script:
+If your MATLAB code supports parallel processing, make sure to [specify the number of CPU cores] when submitting your job, e.g. `-pe smp 4` will request four cores on one machine, which in turn will set environment variable `NSLOTS` to `4`.  To make your MATLAB script respect this, add the following at the top of your script:
 
 ```matlab
 %% Make MATLAB respect the number of cores that the SGE scheduler

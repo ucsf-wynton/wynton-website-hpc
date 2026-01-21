@@ -5,7 +5,7 @@
 **Update**: There was another burst of "can't get password entry for
 user" errors starting on 2025-01-26 around 15:30, causing jobs to fail
 immediately. We are restarting the SSSD service on the ~140 compute
-nodes we have identified suffer from this problem.  <br><span
+nodes we have identified as suffering from this problem.  <br><span
 class="timestamp">January 27, 2025, 11:45 PT</span>
 
 **Update**: To lower the risk for this problem to occur, the SSSD

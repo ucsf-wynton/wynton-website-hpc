@@ -42,7 +42,7 @@ The amount of compute power that contributed hardware adds is based on benchmark
 **A lab's contributed processing units (_PU<sub>lab</sub>_) will never expire - it will remain the same until the lab makes additional contributions to the cluster.**
 </div>
 
-As other labs contribute to the cluster, the total computer power (_PU<sub>total</sub>_) and the total number of member.q slots (_member.q<sub>total</sub>_) will increase over time.   This will result in the lab's _relative_ compute share (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) to decrease over time while their number of member.q slots (_member.q<sub>lab</sub>_) will stay approximately(**) the same.
+As other labs contribute to the cluster, the total computer power (_PU<sub>total</sub>_) and the total number of member.q slots (_member.q<sub>total</sub>_) will increase over time.   This will result in the lab's _relative_ compute share (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) decreasing over time while their number of member.q slots (_member.q<sub>lab</sub>_) will stay approximately(**) the same.
 
 
 ### Example: Additional contribution from the Charlie Lab
@@ -50,7 +50,7 @@ As other labs contribute to the cluster, the total computer power (_PU<sub>total
 Assume that the last addition was from the Charlie Lab contributing {{ pu_times }} compute nodes.  Each of these machines has a {{ slots_add }}-core {{ pu_add_label }} and clocks in at {{ pu_add }} PUs based on the benchmarking, resulting in the processing power added for this lab, but also to the cluster as a whole, to be {{ pu_times }} \* {{ pu_add }} PUs = +{{ pu_delta }} PUs.  In addition to increasing the total amount of contributed PUs, the lab's contribution also increased the total number of member.q slots on the cluster by {{ pu_times }} \* {{ slots_add }} = +{{ slots_delta }} slots.
 
 If this was Charlie Lab's first contribution to {{ site.cluster.name }}, their share on the member.q queue will be _PU<sub>lab</sub>_ / _PU<sub>total</sub>_ = {{ pu_delta }} / {{ site.data.specs.pu_total }} = {{ pu_delta_share | times: 100 | round: 3 }}%.  This PU share translates to _member.q<sub>lab</sub>_ = (_PU<sub>lab</sub>_ / _PU<sub>total</sub>_) \*_member.q<sub>total</sub>_ = {{ slots_delta_share | round: 0 }} member.q slots ({{ slots_delta_share | round: 2 }} rounded off to the closest integer).
-Instead, if they already had contributed, say, in total {{ pu_0 }} PUs in the past, their computational share would had become _PU<sub>lab</sub>_ = ({{ pu_0 }} + {{ pu_delta }}) / {{ site.data.specs.pu_total }} = {{ pu_1_share | times: 100 | round: 3 }}%, which, would corresponds to {{ slots_1 | round: 0 }} member.q slots ({{ slots_1 | round: 2 }} rounded off).
+Instead, if they already had contributed, say, in total {{ pu_0 }} PUs in the past, their computational share would have become _PU<sub>lab</sub>_ = ({{ pu_0 }} + {{ pu_delta }}) / {{ site.data.specs.pu_total }} = {{ pu_1_share | times: 100 | round: 3 }}%, which, would corresponds to {{ slots_1 | round: 0 }} member.q slots ({{ slots_1 | round: 2 }} rounded off).
 
 <!--
 All members of a lab will have access to the lab's member.q slots.  For example, if five out of seven member.q slots are currently in use when another lab member submits four ten-hour jobs, then two of those jobs will end up on the member.q queue whereas the other two will "spill over" to the lower-priority long.q queue.  In contrast, if those jobs were submitted by a non-contributing member, all four would end up on the long.q queue.
@@ -59,7 +59,7 @@ All members of a lab will have access to the lab's member.q slots.  For example,
 
 ### Current Compute Shares
 
-Below table shows the current amount of contributions in terms of Processing Units (PU) and the corresponding number of member.q slots per contributing lab.
+The table below shows the current amount of contributions in terms of Processing Units (PU) and the corresponding number of member.q slots per contributing lab.
 
 
 

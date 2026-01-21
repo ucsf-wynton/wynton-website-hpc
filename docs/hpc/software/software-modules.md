@@ -116,7 +116,7 @@ _Comment_: If another version of R is already loaded, that will automatically be
 
 Since `module` is only available on the development and compute nodes,
 its use in a login script (`.profile`, `.bash_profile`, `.bashrc`), we
-can only call it where its supported.  It is supported when
+can only call it where it is supported.  It is supported when
 environment variable `MODULEPATH` is set.  The below `~/.bashrc` code
 snippet shows how to check for this.  Moreover, many of the modules
 provide software tools that are only useful in interactive mode on a
@@ -141,7 +141,7 @@ For more information on how to use modules and the `module` command, see `module
 
 ## Technical details
 
-Instead of the classical Tcl-based environment module system commonly available on Linux, the cluster uses a Lua-based environment module system called [Lmod].  Lmod has a several advantages over the Tcl-based module system while being backward compatible, i.e. users of Tcl modules can still use them with Lmod.  There are [a few rare corner cases](http://lmod.readthedocs.io/en/latest/095_tcl2lua.html) where a Tcl module might fail and the module has to be rewritten as a Lua-based module.
+Instead of the classical Tcl-based environment module system commonly available on Linux, the cluster uses a Lua-based environment module system called [Lmod].  Lmod has several advantages over the Tcl-based module system while being backward compatible, i.e. users of Tcl modules can still use them with Lmod.  There are [a few rare corner cases](http://lmod.readthedocs.io/en/latest/095_tcl2lua.html) where a Tcl module might fail and the module has to be rewritten as a Lua-based module.
 
 When loading a _software repository_ (`module load <repos>`), it will append its module folder to the `$MODULEPATH`.  Unloading it (`module unload <repos>`) will undo any changes.  For instance, `module load <repos>` appends `$MODULEPATH_ROOT/<repos>` to your `$MODULEPATH`.  Multiple software repositories can be loaded in one call, e.g. `module load <repos1> <repos2>`.  It is also possible to load a software repository and some of its software tools in one call, e.g. `module load <repos> <software1> <software2>`.
 

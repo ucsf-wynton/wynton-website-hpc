@@ -1,6 +1,6 @@
 # Two-Factor Authentication for SSH
 
-**Access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).**   If you connecting via the UCSF campus network, 2FA is _not_ required.  Likewise, if you are on the UCSF VPN, you are already fully authenticated on the campus network and _no_ further 2FA is needed to access {{ site.cluster.name }}.  In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.
+**Access to {{ site.cluster.name }} from outside of the UCSF network requires two-factor authentication (2FA).**   If you are connecting via the UCSF campus network, 2FA is _not_ required.  Likewise, if you are on the UCSF VPN, you are already fully authenticated on the campus network and _no_ further 2FA is needed to access {{ site.cluster.name }}.  In all other cases, you will be prompted to authenticate through a Wynton-specific 2FA method when SSH:ing directly to the cluster.
 
 
 
@@ -73,7 +73,7 @@ We recommend that you read through the below instructions before starting the re
 
 In order to register with Duo 2FA, you need to obtain a registration link (URL) to your personal registration page.  This is done by attempting to log into {{ site.cluster.nickname }} via SSH.
 
-If this is the first time you access {{ site.cluster.name }} via SSH, then you will have to do two SSH logins - the first login is just a "trigger" and the second login one will display the registration URL.  If you have priorly logged into to {{ site.cluster.name }}, then you can skip to the second SSH-login instructions below.
+If this is the first time you access {{ site.cluster.name }} via SSH, then you will have to do two SSH logins - the first login is just a "trigger" and the second login one will display the registration URL.  If you have previously logged into {{ site.cluster.name }}, then you can skip to the second SSH-login instructions below.
 
 1. SSH to {{ site.login.hostname }} using your {{ site.cluster.nickname }} username
    - If you are asked the question `Are you sure you want to continue connecting (yes/no/[fingerprint])?`, then answer `yes`
@@ -82,8 +82,8 @@ If this is the first time you access {{ site.cluster.name }} via SSH, then you w
 
 2. Again, SSH to {{ site.login.hostname }} using your {{ site.cluster.nickname }} username
    - Enter your {{ site.cluster.nickname }} password
-   - After entering you password, you should then see **a message saying to enroll at a particular Duo URL**
-   - This will followed by a 'Permission denied'. The connection will close. This is expected
+   - After entering your password, you should then see **a message saying to enroll at a particular Duo URL**
+   - This will be followed by a 'Permission denied'. The connection will close. This is expected
 
 3. Go to the enrollment page by copying the URL into your web browser
 
@@ -130,7 +130,7 @@ The first registration page will ask 'What type of device are you adding?':
 > * Touch ID
 
 1. Select the type of device you are using;
-   - 'Mobile phone' is recommended. It allows you do authenticate with the Duo Mobile App, SMS, and phone calls
+   - 'Mobile phone' is recommended. It allows you to authenticate with the Duo Mobile App, SMS, and phone calls
    - We do _not_ recommend using 'Security Key' because then you will not be able to use the 'Mobile phone' options.  Also, if you have already registered your 'Security Key' for the UCSF VPN, it will _not_ work with the {{ site.cluster.name }} 2FA.
    
 2. Click the 'Continue' button
@@ -179,7 +179,7 @@ Follow the instructions on the 'Activate Duo Mobile' page:
 4. After scanning the barcode with the app on your phone, an entry titled 'UCSF PharmChem' should appear in the app
 5. Click the 'Continue' button
 
-_Comment_: If you have problems scanning the barcode, there is also an option to receive a on-time activation link via email.
+_Comment_: If you have problems scanning the barcode, there is also an option to receive a one-time activation link via email.
 
 
 #### Step 2f: Finish enrollment

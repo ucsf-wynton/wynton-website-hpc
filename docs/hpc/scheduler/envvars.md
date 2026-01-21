@@ -64,7 +64,7 @@ TMPDIR=/scratch/453717.1.long.q
 
 ## Environment variables in different languages
 
-Here are some examples how to get the value of environment variable `NSLOTS` in some of the most popular programming languages.  The value is assigned to a local variable `nslots`, and if not set, `1` is used as the default value.  All examples coerce the value to a numeric value and then outputs a message with the value.
+Here are some examples of how to get the value of environment variable `NSLOTS` in some of the most popular programming languages.  The value is assigned to a local variable `nslots`, and if not set, `1` is used as the default value.  All examples coerce the value to a numeric value and then outputs a message with the value.
 
 ### Bash
 

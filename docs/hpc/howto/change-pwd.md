@@ -82,7 +82,7 @@ support teams available to reset your password outside of regular
 business hours (Monday-Friday 08:00-17:00).
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-**Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
+**Accounts are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
 [Keeper Password Vault]: https://it.ucsf.edu/service/keeper-password-vault

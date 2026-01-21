@@ -98,9 +98,9 @@ scheduling info:            queue instance "long.q@msg-test3" dropped because it
 
 ## Post-mortem job details
 
-Sometimes your job "just dies". There is often a simply explanation to this but finding out why can be complicated at first, especially if there are no clues in the job log files.
+Sometimes your job "just dies". There is often a simple explanation to this but finding out why can be complicated at first, especially if there are no clues in the job log files.
 
-One common reason for jobs terminating early is that it ran out of the requested runtime (`-l h_rt=<runtime>`).  When that happens, the log files appear to have ended abruptly (which is not too far from the truth).  It is tempting to try us `qstat -j <jobid>` to find out more;
+One common reason for jobs terminating early is that it ran out of the requested runtime (`-l h_rt=<runtime>`).  When that happens, the log files appear to have ended abruptly (which is not too far from the truth).  It is tempting to try using `qstat -j <jobid>` to find out more;
 
 ```sh
 $ qstat -j 191442
@@ -108,7 +108,7 @@ Following jobs do not exist:
 191442
 ```
 
-Unfortunately, that does not work because the job no longer exist.  Instead, we have to go look into the SGE logs.  More specifically, we can scan the SGE "accounting" file, which records summaries of all jobs, for information on our terminated job.  The SGE accounting file is huge so we don't want to scan all of it.  Instead, we search only the end of it but making a best guess of what "end of it" means.  Below, we start at the 100,000 last rows and scan for our job. If no output is produced, try to increase the number of lines scanned.
+Unfortunately, that does not work because the job no longer exists.  Instead, we have to go look into the SGE logs.  More specifically, we can scan the SGE "accounting" file, which records summaries of all jobs, for information on our terminated job.  The SGE accounting file is huge so we don't want to scan all of it.  Instead, we search only the end of it but making a best guess of what "end of it" means.  Below, we start at the 100,000 last rows and scan for our job. If no output is produced, try to increase the number of lines scanned.
 
 ```sh
 $ tail -100000 /opt/sge/wynton/common/accounting | qacct -f - -j 191442
@@ -166,7 +166,7 @@ failed       37  : qmaster enforced h_rt, h_cpu, or h_vmem limit
 exit_status  137                  (Killed)
 ```
 
-First of all, the `exit_status` line is not zero (`0`); any software with an exit code other than zero indicates that something went wrong.  It could be due to an error (typically `exit_status = 1`), or as here `137` with suggests that the job was "killed".  If we look at `failed`, we see that some rules were enforced, which in our case suggests that the rule for resource `h_rt` was enforced.
+First of all, the `exit_status` line is not zero (`0`); any software with an exit code other than zero indicates that something went wrong.  It could be due to an error (typically `exit_status = 1`), or as here `137` which suggests that the job was "killed".  If we look at `failed`, we see that some rules were enforced, which in our case suggests that the rule for resource `h_rt` was enforced.
 
 Next, if we look at: 
 

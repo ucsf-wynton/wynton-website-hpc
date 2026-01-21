@@ -20,7 +20,7 @@ There are **two ways for non-privileged users to install Python packages using t
  2. Install locally to a project-specific folder (e.g. `~/my_project/`) using `python3 -m pip install ...` in a self-contained Python virtual environment
 
 Both are done from the terminal.  Which one you choose depends on your needs; for some projects you may want to use the virtual environment approach whereas for your everyday work you might want to work toward your global Python package stack.
-Installing globally is the easiest, because you don't have to remember to _activate_ a virtual environment and if you need the Python package in different places, you only have to install it once.  However, if you are concerned about reproducibility, or being able to coming back to an old project of yours, you most likely want to use a virtual environment for that project so that its Python packages are _not_ updated when you update or install Python packages globally. This is also true if you collaborate with others in a shared project folder.
+Installing globally is the easiest, because you don't have to remember to _activate_ a virtual environment and if you need the Python package in different places, you only have to install it once.  However, if you are concerned about reproducibility, or being able to come back to an old project of yours, you most likely want to use a virtual environment for that project so that its Python packages are _not_ updated when you update or install Python packages globally. This is also true if you collaborate with others in a shared project folder.
 
 
 ### 1. Installing globally (aka "user-site")
@@ -56,10 +56,10 @@ To see all Python packages that you have installed globally, use `python3 -m pip
 ### 2. Installing to a virtual environment (aka "virtualenv")
 
 <div class="alert alert-info" role="alert" markdown="1">
-Virtual environment are not used just on computer clusters - many Python users and developers choose to use virtual environment on their local computers whenever they work in Python.
+Virtual environments are not used just on computer clusters - many Python users and developers choose to use virtual environment on their local computers whenever they work in Python.
 </div>
 
-An alternative to install globally to your home directory, is to install to a local folder using a, so called, Python _virtual environment_.  A virtual environment is a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ a virtual environment, environment variables like `PATH` is updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
+An alternative to install globally to your home directory, is to install to a local folder using a, so called, Python _virtual environment_.  A virtual environment is a self-contained folder that contains the Python executable and any Python packages you install.  When you _activate_ a virtual environment, environment variables like `PATH` are updated such that you will use the Python executable and the packages in the virtual environment and not the globally installed ones.
 
 Below is an example on how to set up a virtual environment and install the [pandas](https://pandas.pydata.org/docs/) package and all of its dependencies into it.
 
@@ -112,7 +112,7 @@ Always remember to specify option `-p python3` or `-p python2` when you call `vi
 
 #### 2.3 Activate virtual environment (each time you use project)
 
-Now, each time you want to work on your project, go to its folder and _active the virtual environment_:
+Now, each time you want to work on your project, go to its folder and _activate the virtual environment_:
 
 <!-- code-block label="virtualenv-activate" -->
 ```sh
@@ -121,7 +121,7 @@ Now, each time you want to work on your project, go to its folder and _active th
 (my_project) [alice@{{ site.devel.name }} my_project]$ 
 ```
 
-Note how `(my_project)` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  This tells you that you run in a customized Python environment.  Specifically, `python3` now points to a local, frozen version:
+Note how `(my_project)` is prepended to the shell prompt when the virtual environment `my_project` is _active_.  This tells you that you run in a customized Python environment.  Specifically, `python3` now points to a local, frozen version:
 
 <!-- code-block label="virtualenv-which-python3" -->
 ```sh
@@ -139,7 +139,7 @@ Similarly, `python` points to:
 Python 3.11.13
 ```
 
-Note how this local `python` command points to the local `python3` command.  What is interesting, and important to notice, is that _if we set up a Python 3 virtual environment, then the local `python` command will point to the local `python3` command_.  In other words, when we use virtual environments, the `python` command will be using either Python 2 or Python3 at our choice.
+Note how this local `python` command points to the local `python3` command.  What is interesting, and important to notice, is that _if we set up a Python 3 virtual environment, then the local `python` command will point to the local `python3` command_.  In other words, when we use virtual environments, the `python` command will be using either Python 2 or Python 3 at our choice.
 
 To see what Python packages are installed _in the virtual environment_, use:
 

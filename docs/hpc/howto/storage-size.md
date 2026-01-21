@@ -5,7 +5,7 @@
 The `/wynton/` storage is on a [ZFS] file system on top of our BeeGFS
 parallel storage system. This is **automatically compressed** (using
 [lz4] compression in ZFS) before anything is written to the physical
-drives.  Because of this, a 1.0 MiB file is likely to occupy less that
+drives.  Because of this, a 1.0 MiB file is likely to occupy less than
 1.0 MiB of drive space.  Exactly, how much a file is compressed varies
 greatly with file format but as a rule of thumb plain text files can
 be compressed more than files in a binary format.  Already compressed
@@ -49,7 +49,7 @@ quota.
 
 ## Disk quota
 
-The BeeGFS file system keeps track on how much disk each of us
+The BeeGFS file system keeps track of how much disk each of us
 currently consumes in different storage locations, specifically:
 
 1. User home folder (`$HOME`, i.e. `/wynton/home/` or
@@ -65,7 +65,7 @@ These different type of locations are formally referred to as _storage
 pools_ by BeeGFS.
 
 If we ever run out of quota in one storage pool, BeeGFS detects this
-and prevent us from writing additional data. The symptoms of a full
+and prevents us from writing additional data. The symptoms of a full
 quota may vary.  You might get a clear "disk full" error, or you might
 experience obscure issues such as having problems logging in.  You can
 use the BeeGFS tool `beegfs-ctl --getquota ...` to check how much disk
@@ -136,7 +136,7 @@ For example,
 
 says that the `boblab` group is using 13.43 TiB out of the 40.00 TiB
 group storage they have acquired.  If the `hard` limit is `1 Byte`
-(sic!), that is a placeholder that the group does not have purchased
+(sic!), that is a placeholder that the group has not purchased
 any group storage.
 
 The group storage is shared among all group members and does _not_

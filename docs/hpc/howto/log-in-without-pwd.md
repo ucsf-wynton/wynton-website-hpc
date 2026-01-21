@@ -5,7 +5,7 @@ context:
 
 # Log in without Password
 
-These instructions explains how to set up your local computer such that you can log into the compute cluster, or copy files to and from the cluster, without having to enter your password each time.
+These instructions explain how to set up your local computer such that you can log into the compute cluster, or copy files to and from the cluster, without having to enter your password each time.
 
 
 ## Instruction
@@ -240,9 +240,9 @@ then add also `ForwardX11Trusted yes`:
 ### Connect directly to a development node
 
 The login nodes should only be used for light-weight tasks such as
-submitting job scripts, checking that the status of existing jobs, and
-doing basic file manipulations.  We should do all other type of tasks
-on development nodes, do avoid risk clogging up the login nodes.  To
+submitting job scripts, checking the status of existing jobs, and
+doing basic file manipulations.  We should do all other types of tasks
+on development nodes, to avoid the risk of clogging up the login nodes.  To
 avoid having to do two manual SSH steps, one to a login node followed
 immediately by one to the development, we can set up another SSH
 configuration directive that does both in one SSH call.

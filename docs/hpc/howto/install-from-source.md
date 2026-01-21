@@ -23,9 +23,9 @@ Compiling software from source often involves three steps:
 
  2. Building - compiling the source code into binary executables
 
- 3. Installation - install the compiled binaries to its final destination
+ 3. Installation - install the compiled binaries to their final destination
 
-Lets use the [samtools] software as a real-world example to illustrate
+Let's use the [samtools] software as a real-world example to illustrate
 these steps.
 
 
@@ -82,7 +82,7 @@ out: `configure`, `INSTALL`, `Makefile`, `NEWS`, and `README`.  The
 files `README`, `NEWS` and `INSTALL` are standard file names for
 human-readable text files.  These are often useful to read when trying
 to understand what the software is about and how to install it.  If
-there is an `INSTALL` file, as here, it most likely contain
+there is an `INSTALL` file, as here, it most likely contains
 instructions on how to install the software.  In our case,
 [`INSTALL`](https://github.com/samtools/samtools/blob/84dfab2520661ee09f96fcbdc62f31f33be70478/INSTALL#L66)
 contains a section:
@@ -201,7 +201,7 @@ out yourself, please reach out on one of our [Support Channels].
 ### Step 2 - Building
 
 If the configuration steps complete without errors, it is often
-straightforward to build ("compile") the software my calling `make`.
+straightforward to build ("compile") the software by calling `make`.
 The `make` command will use formal build instruction in the
 `Makefile`, but we don't have to know about those details.  Just call
 `make` as in:
@@ -232,7 +232,7 @@ instructions in Section 'Too old compiler?' below.
 
 ### Step 3 - Installation
 
-If we got this far, all we have to do is to install the software, we
+If we got this far, all we have to do is to install the software that we
 just configured and built, to its final destination, which was
 specified and recorded in the configure step.  All we have to do now
 is:
@@ -289,7 +289,7 @@ to your `~/.bashrc` file.
 
 ## Too old compiler?
 
-The GCC development tools that come built-in on our Rocky 8 system is
+The GCC development tools that come built-in on our Rocky 8 system are
 sufficient for most needs.  For example, the default `gcc` version is:
 
 <!-- code-block label="gcc-version" -->

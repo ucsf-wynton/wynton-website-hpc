@@ -6,14 +6,14 @@ Here is what a typical job submission of shell script `script.sh` would look lik
 qsub -cwd -pe smp 4 -l mem_free=2G -l scratch=50G -l h_rt=00:20:00 script.sh
 ```
 
-This job submission will submit `script.sh` to the job scheduler which will eventually launch the job on one the compute nodes that can meet the resource needs of the job.  Exactly, what these options are is explained below sections, but in summary, the above will result in:
+This job submission will submit `script.sh` to the job scheduler which will eventually launch the job on one of the compute nodes that can meet the resource needs of the job.  Exactly, what these options are is explained in the sections below, but in summary, the above will result in:
 
 * `-S /bin/bash`: the job scheduler will run the script via Bash (important not to forget)
 * `-cwd`: the working directory will be set to the same directory as from where the submission was done
 * `-pe smp 4`: the job will be allotted four slots ("cores") on a single machine
 * `-l mem_free=2G`: the job will be allotted 2 GiB of RAM per slot, i.e. 8 GiB in total
 * `-l scratch=50G`: the job will be launched on a compute node with at least 50 GiB of local `/scratch` available
-* `-l h_rt=00:20:00`: the scheduler knows that the job to run no longer than 20 minutes allowing it to be scheduled much sooner than if no run-time was specified
+* `-l h_rt=00:20:00`: the scheduler knows that the job is to run no longer than 20 minutes allowing it to be scheduled much sooner than if no run-time was specified
 * `script.sh`: the shell script to be run
 
 ## Sample submit script
@@ -67,7 +67,7 @@ The scheduler will assign your job a unique (numeric) job ID.
 
 ## Specifying (maximum) memory usage [`-l mem_free=<amount>`]
 
-Unless specified, the maximum amount of memory used at any time is 1 GiB per slot (`-l mem_free=1G`).  A job that need to use more memory, need to request that when submitted.  For example, a job that needs (at most) 10 GiB of memory should be submitted as:
+Unless specified, the maximum amount of memory used at any time is 1 GiB per slot (`-l mem_free=1G`).  A job that needs to use more memory, needs to request that when submitted.  For example, a job that needs (at most) 10 GiB of memory should be submitted as:
 
 ```sh
 qsub -cwd -l mem_free=10G script.sh
@@ -93,7 +93,7 @@ Note that `-l mem_free=size` specifies _memory per slot_, not per job.
 Specifying the run time will shorten the queuing time - significantly so for short running jobs.
 </div>
 
-By specifying the how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time (= wall time, not CPU time) for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
+By specifying how long each job will take, the better the scheduler can manage resources and allocate jobs to different nodes.  This will also decrease the average waiting time the job will sit in the queue before being launched on a compute node.  You can specify the maximum run time (= wall time, not CPU time) for a job using option `-l h_rt=HH:MM:SS` where `HH:MM:SS` specifies the number of hours (`HH`), the number of minutes (`MM`), and the number of seconds (`SS`) - all parts must be specified.  For instance, the following job is expected to run for at most 3 minutes (180 seconds):
 
 ```sh
 qsub -cwd -l mem_free=2G -l h_rt=00:03:00 script.sh
@@ -106,7 +106,7 @@ If not specified, the default run time is 14 days, i.e. the maximum allowed.  If
 
 ## Using local scratch storage [`-l scratch=<amount>`]
 
-Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage](/hpc/about/specs.html#scratch-storage) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that have little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
+Each compute node has {{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB of [local scratch storage](/hpc/about/specs.html#scratch-storage) which is fast and ideal for temporary, intermediate data files that are only needed for the length of a job.  This scratch storage is unique to each machine and shared among all users and jobs running on the same machine.  To minimize the risk of launching a job on a node that has little scratch space left, specify the `-l scratch=size` resource.  For instance, if your job requires 200 GiB of local `/scratch` space, submit the job using:
 
 ```sh
 qsub -cwd -l scratch=200G script.sh
@@ -123,7 +123,7 @@ Note that `-l scratch=size` specifies _space per job_, not per slot.
 </div>
 
 
-If your job would benefit from extra-fast [local scratch storage](/hpc/about/specs.html#scratch-storage), then you can request a node with either a SSD or NVMe scratch drive via the following flag:
+If your job would benefit from extra-fast [local scratch storage](/hpc/about/specs.html#scratch-storage), then you can request a node with either an SSD or NVMe scratch drive via the following flag:
 
 ```sh
 qsub -l ssd_scratch=1
@@ -188,7 +188,7 @@ mpirun -np $NSLOTS /path/to/the_app
 
 ### MPI multi-host parallel processing [`-pe mpi <slots>`]
 
-MPI supports parallelization across multiple hosts where the different parallel processes communicating over the network.  To request a, possible, multi-host job, use `-pi mpi <slots>`.  For example,
+MPI supports parallelization across multiple hosts where the different parallel processes communicate over the network.  To request a possibly multi-host job, use `-pi mpi <slots>`.  For example,
 
 ```sh
 qsub -pe mpi 24 -l mem_free=2G script.sh
@@ -227,7 +227,7 @@ qsub -pe mpi_onehost 40 hybrid_mpi.sh
 ```
 -->
 
-_Note_: When working with MPI, it is important to use the exact same version as was used to built the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.
+_Note_: When working with MPI, it is important to use the exact same version as was used to build the software using MPI.  Because of this, we always specify the full `mpi/<version>` path.
 
 <div class="alert alert-warning" role="alert" markdown="1">
 Note that mpi-8 jobs must request a multiple of exactly eight (8) slots.  If `NSLOTS` is not a multiple of eight, then the job will be stuck in the queue forever and never run.
@@ -245,7 +245,7 @@ All {{ site.cluster.name }} compute nodes have x86-64-compliant CPUs,
 but they differ in generation.  There are four major generations of
 CPUs - x86-64-v1, x86-64-v2, x86-64-v3, and x86-64-v4 - formally
 referred to as [CPU microarchitecture levels]. Most software tools are
-compiled such they can run on any of these generations, that is, they
+compiled such that they can run on any of these generations, that is, they
 only require a CPU supporting x86-64-v1.  However, some are compiled
 to take advantage of more modern CPU instructions, and thereby become
 more performant.  Such software tools cannot run on an older
@@ -276,7 +276,7 @@ will launch the job on a compute node with x86-64-v3 CPUs or newer.
 
 ## Minimum network speed (1 Gbps, 10 Gbps, 40 Gbps) [`-l eth_speed <bandwidth>`]
 
-The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
+The majority of the compute nodes have 1 Gbps and 10 Gbps network cards while a few have 40 Gbps cards.  A job that requires 10-40 Gbps network speed can request this by specifying the `eth_speed=10` (sic!) resource, e.g.
 
 ```sh
 qsub -cwd -l eth_speed=10 script.sh
@@ -288,7 +288,7 @@ A job requesting `eth_speed=40` will end up on a 40 Gbps node, and a job request
 
 ## Passing arguments to script
 
-You can pass arguments to a job script similarly to how one passes argument to a script executed on the command line, e.g.
+You can pass arguments to a job script similarly to how one passes arguments to a script executed on the command line, e.g.
 
 ```sh
 qsub -cwd -l mem_free=1G script.sh --first=2 --second=true --third='"some value"' --debug
@@ -310,7 +310,7 @@ date --iso-8601=seconds
 ```
 
 Instead of creating a script file with those two commands, you can
-pass them to `sub` using `echo`:
+pass them to `qsub` using `echo`:
 
 ```sh
 $ echo "hostname; date --iso-8601=seconds" | qsub -S /bin/bash -cwd -l mem_free=1G
@@ -320,7 +320,7 @@ Your job 2225213 ("STDIN") has been submitted
 
 ## Interactive jobs
 
-It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such building software and prototyping scripts before submitting them to the scheduler.
+It is currently _not_ possible to request _interactive_ jobs (aka `qlogin`).  Instead, there are dedicated [development nodes] that can be used for short-term interactive development needs such as building software and prototyping scripts before submitting them to the scheduler.
 
 
 

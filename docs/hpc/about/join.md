@@ -49,13 +49,13 @@ If you have an existing {{ site.cluster.name }} account and would like to modify
 
 1. If you have successfully logged into MyAccess, the **"Requested By Name"** and **"Requested by Email"** should be autopopulated with your information from the UCSF Directory.
 
-2. In the **"UCSF Principle Investigator (PI) Approver Name"**, enter the name of your faculty member or supervisor you are working with and select the matching name from the pull down. This should populate the **"UCSF PI Email"** and **"UCSF PI Department or Program"** fields.
+2. In the **"UCSF Principal Investigator (PI) Approver Name"**, enter the name of your faculty member or supervisor you are working with and select the matching name from the pull down. This should populate the **"UCSF PI Email"** and **"UCSF PI Department or Program"** fields.
 
 #### Account Details
 
 1. Select "Yes" or "No" from the **"Does this user already have an existing account on Wynton?"** pull down.
 
-2. Select ~~"Yes" or~~ **"No"** from the **"Do you Require Access to Wynton Protected"** pull down. [Wynton Protected accounts are no created as of 2025-12-01](/hpc/get-started/protected-quickstart.html).
+2. Select ~~"Yes" or~~ **"No"** from the **"Do you Require Access to Wynton Protected"** pull down. [Wynton Protected accounts are no longer created as of 2025-12-01](/hpc/get-started/protected-quickstart.html).
 
 3. If you are filling the form out for yourself, when you click the box to indicate that, the **"Requested For"** field will be autopopulated with your name.  If you are requesting an account for another user, enter their name and select it from the pull down.  If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
 

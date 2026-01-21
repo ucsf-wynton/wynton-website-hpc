@@ -9,7 +9,7 @@ removed!** Not even the systems administrators can do this.
 
 </div>
 
-The most direct way to remove files and folder permanently is to use
+The most direct way to remove files and folders permanently is to use
 the `rm` command. This removes the files immediately, which can be a
 rather slow process if you remove a large number of files. More
 importantly, using `rm` is irreversible -- there is no way to recover
@@ -44,12 +44,12 @@ This approach gives you some leeway to undo deletions done by mistake.
 These instructions show how to delete files by moving them to your
 personal Trash folder, _without_ deleting them permanently. This gives
 you a second chance if you happen to delete files by mistake. There
-are tool for recovering files from the Trash folder.  _Your Trash
+are tools for recovering files from the Trash folder.  _Your Trash
 folder will only be wiped when you explicitly say so_. A good strategy
 is to empty the trash folder later - days or weeks - that will give
 you a chance to see what files are missing.
 
-Key to working with with the Trash folder, is the `trash-cli` toolbox
+Key to working with the Trash folder, is the `trash-cli` toolbox
 available via:
 
 ```sh
@@ -102,7 +102,7 @@ With this, you can then go to the folder you wish to clean up and run `ncdu` fro
 
 This will launch the TUI, and then it starts to scan all the content,
 which can take several minutes to complete for large folders. When the
-scan is complete, you can use the TUI to interactive find files and
+scan is complete, you can use the TUI to interactively find files and
 folders to delete.
 
 Now, because the scan takes a long time, we recommend a two step

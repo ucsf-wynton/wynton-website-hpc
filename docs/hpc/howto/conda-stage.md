@@ -14,7 +14,7 @@ Working with a Conda environment that lives on _local disk_ greatly improves the
 
 Staging a Conda environment to local disk is straightforward using the **[conda-stage]** tool.  All we have to do is configure the environment once, and from then on we can work with `conda activate ...` and `conda deactivate` as normal.
 
-Below is a walk-through that illustrates the process. It assumes we have already create a Conda environment named `myjupyter` with some software installed.
+Below is a walk-through that illustrates the process. It assumes we have already created a Conda environment named `myjupyter` with some software installed.
 
 
 ### Configure Conda environment for automatic staging (once)
@@ -119,7 +119,7 @@ If you get an error on `/usr/share/lmod/lmod/init/sh: line 14: 'conda-stage': no
 
 ### Update an automatically-staged Conda environment
 
-If we would update or install new Conda packages to a staged environment, they will all be lost when unstaged.  Because of this staged environments are by default read-only (**conda-stage** option `--writable` overrides this).  Instead, for installation to be persistent, we need to install to the original Conda environment before it is staged.  The easiest approach is to first disable auto-staging;
+If we would update or install new Conda packages to a staged environment, they will all be lost when unstaged.  Because of this, staged environments are by default read-only (**conda-stage** option `--writable` overrides this).  Instead, for installation to be persistent, we need to install to the original Conda environment before it is staged.  The easiest approach is to first disable auto-staging;
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI conda-stage

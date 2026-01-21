@@ -35,7 +35,7 @@ Contributions toward compute can be done either in cash ("buy in") or by integra
 
 ### Buy new compute
 
-As of October 2018, **a compute unit with four nodes (112 cores), 384 GiB RAM, ~0.8 TiB local scratch, 10 Gbps network card, is ~37,000 USD**.  It is possible buy into a partial compute unit - please let us known and we will combine your contributions with others before purchasing the new hardware.
+As of October 2018, **a compute unit with four nodes (112 cores), 384 GiB RAM, ~0.8 TiB local scratch, 10 Gbps network card, is ~37,000 USD**.  It is possible to buy into a partial compute unit - please let us know and we will combine your contributions with others before purchasing the new hardware.
 
 ### Bring your own compute
 

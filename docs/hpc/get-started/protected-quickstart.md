@@ -35,7 +35,7 @@
   
   - link to actually [request a Wynton Protected account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac)
 
-* A link will be emailed to a Statement of Responsibility form that all users applying for Wynton Protected access must sign agreeing to the responsibilities of handling data.
+* A link to a Statement of Responsibility form will be emailed that all users applying for Wynton Protected access must sign agreeing to the responsibilities of handling data.
 
   - **Important**: The email address associated with a new Statement of Responsibility must exactly match the user's original email address.
 

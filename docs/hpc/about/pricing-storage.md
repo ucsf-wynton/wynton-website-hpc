@@ -74,6 +74,6 @@ We have an immediate need to provide for {{ site.cluster.name }} storage expansi
 
 * The current storage hardware increment is ~$160,000, which may result in some delay between the first contributions and an actual purchase, although there is already pent-up demand and hence we are trying to proceed with the purchase as quickly as possible.
 
-* Update 2024-07-29: We have sold storage in units of TB = 1000^4 bytes, but allocated in units of TiB = 1024^4 bytes, which is a 10% over-allocation. That said, given that prices has been going down, we have made the decision to change the charge to $160/TiB.  There is also current work in revisit the storage price, so the current price might be adjusted again.
+* Update 2024-07-29: We have sold storage in units of TB = 1000^4 bytes, but allocated in units of TiB = 1024^4 bytes, which is a 10% over-allocation. That said, given that prices have been going down, we have made the decision to change the charge to $160/TiB.  There is also current work to revisit the storage price, so the current price might be adjusted again.
 
 _Last updated: July 29, 2024_

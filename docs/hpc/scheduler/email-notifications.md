@@ -106,7 +106,7 @@ _Technical details_: When not specifying `-M`, the `To:` address used for these 
 
 ### Email notifications for array jobs
 
-**Do not request email notifications for array jobs!**  If done, there will be email messages sent for _every single task_ of the job array.  Instead, to get an email notification when a job array completes, submit a "dummy" job that depend on the job array such that it will only launch when the job array completes.  The sole purpose of this dummy job is to trigger an email notification.  For instance, if the job array has job ID 9156754, then submit a job:
+**Do not request email notifications for array jobs!**  If done, there will be email messages sent for _every single task_ of the job array.  Instead, to get an email notification when a job array completes, submit a "dummy" job that depends on the job array such that it will only launch when the job array completes.  The sole purpose of this dummy job is to trigger an email notification.  For instance, if the job array has job ID 9156754, then submit a job:
 
 ```sh
 $ job_id=9156754

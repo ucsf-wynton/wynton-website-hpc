@@ -22,9 +22,9 @@ This configuration comes with four compute modules, where each node includes:
 
 * Storage/node: 1 × 1.92TB U.2 NVMe SSD, 1DWPD
 
-Total price for a module with four (4) node: **~37,000 USD** excluding taxes.
+Total price for a module with four (4) nodes: **~37,000 USD** excluding taxes.
 
-As of August 2024, **lead time for compute nodes is approximate three months from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a four-compute-node module, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
+As of August 2024, **lead time for compute nodes is approximately three months from order to delivery.** Once the hardware is received, we will schedule time to configure hardware as time allows given priority projects. Unless you are purchasing a four-compute-node module, we will need to wait until we have enough requests to place an order for a whole unit. If we have capacity, we may be able to provision some shares in advance of the billing. 
 
 ## Pricing for prioritized Graphics Processing Unit (GPU) processing
 
@@ -34,7 +34,7 @@ As of August 2024, **lead time for compute nodes is approximate three months fro
 
 Single GPU cards cannot be purchased - only a full GPU node. However, just like partial compute nodes can be purchased, GPU purchase requests can also be pooled towards a full system. 
 
-There are three common configurations of GPU compute nodes available, which all share the same base setup, and differs only by type of GPU.
+There are three common configurations of GPU compute nodes available, which all share the same base setup, and differ only by type of GPU.
 
 ### Configuration: Mercury GPU208 2U Server
 

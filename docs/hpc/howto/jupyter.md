@@ -5,15 +5,15 @@
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
 
 **Reason for _not_ using Conda**: For Conda environments installed in
-a home directory, both the Python interpreter and all of it's modules
+a home directory, both the Python interpreter and all of its modules
 reside on the shared parallel file system.  The operations to look up
 the needed files are metadata heavy and can strain the parallel file
 system, resulting in a slower startup performance.
 
 </div>
 
-Although you can install Jupyter via [Conda], we highly recommend to
-install using regular [Python] techniques. The following is known to
+Although you can install Jupyter via [Conda], we highly recommend
+installing using regular [Python] techniques. The following is known to
 work:
 
 ```sh
@@ -31,11 +31,11 @@ the development server to your local desktop and launch a remote web
 browser there.
 
 Running Jupyter Notebook on {{ site.cluster.name }} involves three
-steps.  On an development node,
+steps.  On a development node,
 
 1. find an available TCP port
 
-2. launch Jupyter Notebook on select port, and
+2. launch Jupyter Notebook on the selected port, and
 
 3. set up a TCP port tunnel from your local machine to the {{
    site.cluster.nickname }} development node where Jupyter runs
@@ -122,7 +122,7 @@ machine_, and run:
 [alice@{{ site.devel.name }} ~]$ 
 ```
 
-_Importantly_, in your case, you will need to replace both instance of
+_Importantly_, in your case, you will need to replace both instances of
 `47467` with the port number that you used in Step 2.
 
 
@@ -137,7 +137,7 @@ HTTP links outputted by Jupyter in Step 2, e.g.
 ## Alternative: Run Jupyter Notebook via X2Go
 
 An alternative method to run a Jupyter Notebook on one of the
-development nodes and interact with on your local computer is to use
+development nodes and interact with it on your local computer is to use
 the X2Go software to connect to one of the development nodes, then
 launch a Jupyter Notebook and a web browser on the development
 node. The web browser will appear on your remote computer in the X2Go

@@ -55,7 +55,7 @@ The [cluster can be accessed](/hpc/get-started/access-cluster.html) via SSH to o
 
 ### Data Transfer Nodes
 
-For transferring large data files, it is recommended to use one of the dedicate data transfer nodes:
+For transferring large data files, it is recommended to use one of the dedicated data transfer nodes:
 
 1. `{{ site.transfer1.hostname }}`
 2. `{{ site.transfer2.hostname }}`
@@ -104,7 +104,7 @@ The {{ site.cluster.name }} cluster provides two types of scratch storage:
  * Local `/scratch/` - <span id="hosttable-summary-local-scratch2">{{ site.data.specs.local_scratch_size_min }}-{{ site.data.specs.local_scratch_size_max }} TiB/node</span> storage unique to each compute node (can only be accessed from the specific compute node).
  * Global `/wynton/scratch/` and `/wynton/protected/scratch/` (for Wynton Protected users) - {{ site.data.specs.global_scratch_size_total }} TiB storage ([BeeGFS](https://www.beegfs.io/content/)) accessible from everywhere.
 
-There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch place during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from a tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
+There are no per-user quotas in these scratch spaces.  **Files not added or modified during the last two weeks will be automatically deleted** on a nightly basis.  Note, files with old timestamps that were "added" to the scratch space during this period will _not_ be deleted, which covers the use case where files with old timestamps are extracted from a tar.gz file.  (Details: `tmpwatch --ctime --dirmtime --all --force` is used for the cleanup.)
 
 
 ### User and Lab Storage
@@ -125,7 +125,7 @@ Importantly, note that **the {{ site.cluster.name }} storage is not backed up**.
 
 ## Network
 
-The majority of the compute nodes are connected to the local network with 1 Gbps and 10 Gbps network cards while a few got 40 Gbps cards.
+The majority of the compute nodes are connected to the local network with 1 Gbps and 10 Gbps network cards while a few have 40 Gbps cards.
 
 The cluster itself connects to NSF's [Pacific Research Platform] at a speed of 100 Gbps - providing a file transfer speed of up to (theoretical) 12.5 GB/s = 45 TB/h.
 

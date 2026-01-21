@@ -14,7 +14,7 @@ load CBI miniforge3` instead.
 
 [Conda] is a package manager and an environment management system.
 It's popular, because it simplifies installation of many scientific
-software tools.  We recommend to use:
+software tools.  We recommend using:
 
 1. [Miniforge] - a Conda alternative to the [Miniconda] (~0.5 GiB of
    disk space), which defaults to the community-driven, libre-licensed
@@ -222,7 +222,7 @@ jupyter: command not found
 
 ## Speed up software by auto-staging Conda environment (recommended)
 
-We highly recommend configuring Conda environment to be automatically staged only on the local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool, e.g.
+We highly recommend configuring a Conda environment to be automatically staged only on the local disk whenever activated.  This results in your software running _significantly faster_.  Auto-staging is straightforward to configure using the `conda-stage` tool, e.g.
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ module load CBI miniforge3
@@ -365,7 +365,7 @@ To reconfigure Conda to no longer activate the 'base' Conda environment by defau
 
 Next time you log in, the 'base' environment should no longer be activated by default.
 
-If you want to completely retire you personal Conda installation, and move on to only using `module load CBI miniforge3`, you can uninstall the Conda setup code that were injected to your `~/.bashrc` file by calling:
+If you want to completely retire your personal Conda installation, and move on to only using `module load CBI miniforge3`, you can uninstall the Conda setup code that was injected to your `~/.bashrc` file by calling:
 
 ```sh
 [alice@{{ site.devel.name }} ~]$ conda init --reverse

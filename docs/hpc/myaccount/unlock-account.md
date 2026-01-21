@@ -25,7 +25,7 @@ can happen for several reasons:
     password](../howto/change-pwd.html) at any time.
 
 2. **Your UCSF affiliation has expired**
-   - When leaving the UCSF, your UCSF affiliation expires and your
+   - When leaving UCSF, your UCSF affiliation expires and your
     account is locked. At times, this can happen also when you
     transition from one UCSF position to another.
 

@@ -9,7 +9,7 @@ $ qsub -cwd hello_world
 Your job 151711 ("hello_world") has been submitted
 ```
 
-Although it possible to parse this output string to infer the job id, by adding option `-terse` only the job id itself is outputted removing any needs for parsing, e.g.
+Although it is possible to parse this output string to infer the job id, by adding option `-terse` only the job id itself is outputted removing any needs for parsing, e.g.
 
 ```sh
 $ qsub -terse -cwd hello_world
@@ -42,7 +42,7 @@ $ qsub -l hostname='!qb3-idgpu11' ...
 ```
 
 The `!` symbol means "not". Note that we must put the `hostname`
-specification withing _single quotation marks_. To avoid more than one
+specification within _single quotation marks_. To avoid more than one
 problematic compute node, use:
 
 ```sh

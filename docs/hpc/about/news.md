@@ -4,9 +4,9 @@
 
 2025-12-01: No new Protected accounts are commissioned and existing Regular accounts can no longer be changed to Protected accounts.
 
-2025-09-31: GPU compute nodes are now reserved for GPU tasks. Non-GPU jobs, that is, jobs that do not request `-q gpu.q`, will no long end up on a GPU compute node. This removes the risk of CPU-only jobs starving out GPU jobs.
+2025-09-31: GPU compute nodes are now reserved for GPU tasks. Non-GPU jobs, that is, jobs that do not request `-q gpu.q`, will no longer end up on a GPU compute node. This removes the risk of CPU-only jobs starving out GPU jobs.
 
-2025-09-23: Protected (P3 and P4) storage and accounts will be decommissions by ~~2026-01-26~~ {{ site.data.specs.protected_eol }}.
+2025-09-23: Protected (P3 and P4) storage and accounts will be decommissioned by ~~2026-01-26~~ {{ site.data.specs.protected_eol }}.
 
 2025-07-08: Termination of Wynton Support for P4/PHI data. Starting today, all work on P4/PHI level data must be ceased and all P4/PHI data removed from Wynton.
 
@@ -16,9 +16,9 @@
 
 2024-12-14: The memory limit on development nodes was decreased from 96 GiB to 68 GiB, in order to lower the risk for these machines to run low on memory resulting in non-responsiveness.
 
-2024-12-04: The CPU quota limit on development nodes was disabled, because it resulting in sever load on the operating system from context switching.
+2024-12-04: The CPU quota limit on development nodes was disabled, because it resulted in severe load on the operating system from context switching.
 
-2024-11-11: The CPU quota limit on development nodes were bumped up from 200% ("2 cores") to 400% ("4 cores"), with the hope to lower the overall overhead from context switching.
+2024-11-11: The CPU quota limit on development nodes was bumped up from 200% ("2 cores") to 400% ("4 cores"), with the hope to lower the overall overhead from context switching.
 
 2024-09-12: CPU and memory usage is now limited on interactive nodes for each user.  On development and data-transfer nodes, each user is limited to 200% ("2 cores") and 96 GiB of memory. On login nodes, the limits are 100% ("1 core") and 32 GiB of memory.
 
@@ -26,7 +26,7 @@
 
 2023-11-15: Wynton is now running [Rocky 8] Linux.
 
-2023-11-06: Wynton has been upgrade to [Rocky 8] Linux from CentOS 7.
+2023-11-06: Wynton has been upgraded to [Rocky 8] Linux from CentOS 7.
 
 2023-10-26: [Rocky 8]: Login node `log2`, data-transfer nodes `dt1`, and development node `dev2` are now running Rocky 8.
 
@@ -79,11 +79,11 @@
 
 2020-02-05: The QB3-legacy NetApp storage (`/netapp/`), deprecated with a deadline on December 2019, crashed on 2020-02-05 and was declared non-recoverable without further resource/funding.
 
-2019-12-13: Status page now include [GPU queue metrics](/hpc/status/index.html).
+2019-12-13: Status page now includes [GPU queue metrics](/hpc/status/index.html).
 
 2019-11-12: Added support for [email notifications](/hpc/scheduler/email-notifications.html) when a job starts running or ends.
 
-2019-09-20: New [GPU policy](/hpc/scheduler/queues.html) in place. All GPU nodes, communal and contributed, are now available to all users. Run time is two weeks, unless for jobs running on a contributed nodes that was not contributed by you in which case the run time is limited to 2 hours.
+2019-09-20: New [GPU policy](/hpc/scheduler/queues.html) in place. All GPU nodes, communal and contributed, are now available to all users. Run time is two weeks, unless for jobs running on a contributed node that was not contributed by you in which case the run time is limited to 2 hours.
 
 2019-09-13: Added another three [communal GPU nodes with a total of 12 GPUs](/hpc/about/specs.html).
 
@@ -135,7 +135,7 @@
 
 2018-08-20: [Global scratch storage](/hpc/about/specs.html#scratch-storage) on BeeGFS Parallel File System is live - validation and testing completed.
 
-2018-08-02: Added a dedicate [10 Gbps transfer node](/hpc/about/specs.html#data-transfer-nodes) for faster file transfers in to and out from {{ site.cluster.nickname }}.
+2018-08-02: Added a dedicated [10 Gbps transfer node](/hpc/about/specs.html#data-transfer-nodes) for faster file transfers in to and out from {{ site.cluster.nickname }}.
 
 2018-07-25: [BeeGFS Parallel File System/Storage](/hpc/about/specs.html#scratch-storage): Validation completed - user beta testing started.
 

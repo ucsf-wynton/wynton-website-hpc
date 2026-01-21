@@ -25,7 +25,7 @@ Because you can create and customize your own containers, and because Apptainer 
 
 ## Instructions
 
-All tasks for using Linux containers, such as downloading, building, and running containers, is done via the `apptainer` client and supported on {{ site.cluster.name }}.  The most common command calls are:
+All tasks for using Linux containers, such as downloading, building, and running containers, are done via the `apptainer` client and supported on {{ site.cluster.name }}.  The most common command calls are:
 
 * Use an existing container:
   - `apptainer run <image>` - run predefined script within container
@@ -34,21 +34,21 @@ All tasks for using Linux containers, such as downloading, building, and running
 
 * Build a container:
   - `apptainer build <url>`  - import an existing Apptainer or Docker container available online
-  - `apptainer build --remote <image> <def file>` - build a Apptainer from local specifications in definition file
+  - `apptainer build --remote <image> <def file>` - build an Apptainer from local specifications in definition file
 
 For full details, see `apptainer --help`, `man apptainer`, and the [Apptainer] website.
 
 * Install Apptainer or Docker on your own machine:
-  - Create a Apptainer image on your own workstation and transfer the image to {{ site.cluster.name }}
+  - Create an Apptainer image on your own workstation and transfer the image to {{ site.cluster.name }}
   - Create a Docker image on your own workstation and transfer the image to {{ site.cluster.name }}
 
 ## Example
 
-### Building a Apptainer container from an existing Docker Hub image
+### Building an Apptainer container from an existing Docker Hub image
 
 As an illustration on how to use Linux containers with Apptainer, we will use the Docker container [rocker/r-base] available on Docker Hub.  This particular container provides the latest release of the [R] software in an Ubuntu OS environment.  Containers available from Docker Hub, Biocontainers, and elsewhere, can be downloaded and used analogously.
 
-To use this rocker/r-base container, we first pull it down to a Apptainer image file `~/lxc/rocker_r-base.sif` as:
+To use this rocker/r-base container, we first pull it down to an Apptainer image file `~/lxc/rocker_r-base.sif` as:
 
 <!-- code-block label="build" -->
 ```sh
@@ -101,7 +101,7 @@ Save workspace image? [y/n/c]: n
 [alice@{{ site.devel.name }} lxc]$
 ```
 
-Exactly what is "run" is defined by the so called [`%runscript`] of the Apptainer container, or the [`CMD`] entry if imported from a Docker container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
+Exactly what is "run" is defined by the so-called [`%runscript`] of the Apptainer container, or the [`CMD`] entry if imported from a Docker container.  An alternative way to launch R within this container is by explicitly executing R, e.g.
 
 <!-- code-block label="exec" -->
 ```sh
@@ -142,7 +142,7 @@ Type 'q()' to quit R.
 [alice@{{ site.devel.name }} lxc]$
 ```
 
-To launch a shell within this container, and to also convince yourselves that the container runs Ubuntu (and not Rocky 8 as on the {{ site.cluster.name }} host system), do:
+To launch a shell within this container, and to also convince yourself that the container runs Ubuntu (and not Rocky 8 as on the {{ site.cluster.name }} host system), do:
 
 <!-- code-block label="shell" -->
 ```sh
@@ -184,7 +184,7 @@ Apptainer> mktemp
 mktemp: failed to create file via template ‘/scratch/alice/tmp.XXXXXXXXXX’: No such file or directory
 ```
 
-To make also these folders available within the container, we can use `apptainer` option `--bind`.  In its simplest form, we can just list the folders we want to make available, e.g.
+To make these folders available also within the container, we can use `apptainer` option `--bind`.  In its simplest form, we can just list the folders we want to make available, e.g.
 
 <!-- code-block label="shell-bind" -->
 ```sh
@@ -263,7 +263,7 @@ Check results:
 
 ### Building a container from scratch
 
-Sometimes you need to build custom Linux container from a `*.def`
+Sometimes you need to build a custom Linux container from a `*.def`
 definition file.  In the past, when Singularity was used, this
 required administrative ("sudo") privileges. However, with the
 introduction of Apptainer, any user can now build container images

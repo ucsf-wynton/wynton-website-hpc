@@ -6,7 +6,7 @@ An RStudio Server session will time out after 120 minutes of no user input. This
 
 # Work with RStudio
 
-R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explain on the how-to '[Work with R]' page.  To run R via the RStudio GUI, launch your personal **RStudio Server** as instructed below and access it via your local web browser.  As explained, this requires running _two_ separate SSH connections to the cluster: (i) one to launch RStudio Server, and (ii) one to connect to it.
+R is available on {{ site.cluster.name }} via a [contributed environment module](/hpc/software/software-repositories.html).  It can be run interactively in the terminal via `R` on a development node, as explained on the how-to '[Work with R]' page.  To run R via the RStudio GUI, launch your personal **RStudio Server** as instructed below and access it via your local web browser.  As explained, this requires running _two_ separate SSH connections to the cluster: (i) one to launch RStudio Server, and (ii) one to connect to it.
 
 ## Step 1. Launch your own RStudio Server instance
 
@@ -78,7 +78,7 @@ To terminate the RStudio Server, start by exiting R by typing `quit()` at the R 
 
 ### Stuck at "R is taking longer to start than usual"?
 
-Some users report that they stuck when they try to log in to RStudio.
+Some users report that they get stuck when they try to log in to RStudio.
 After they enter their username and password, and click 'Sign In',
 they get to a page "R is taking longer to start than usual" with a
 spinner that never ends.  The user is presented with three options
@@ -86,7 +86,7 @@ spinner that never ends.  The user is presented with three options
 'Terminate R' would solve the problem and let the user access the
 RStudio GUI.  Unfortunately, for some users, none of these options
 help.  Consecutive attempts to use `rsc stop` and `rsc start` fail for
-same reasons.
+the same reasons.
 
 As of 2023-12-04, it is not clear why and when this happens.  The one
 workaround we have found is to wipe the user's RStudio sessions.  For
@@ -98,7 +98,7 @@ $ rsc reset --which=sessions
 
 This will create a local copy of your problematic RStudio setup in
 file `rstudio-config_<timestamp>.tar`, and then, only then, remove the
-actually settings.  The next time you call `rsc start`, you should
+actual settings.  The next time you call `rsc start`, you should
 start out with a fresh RStudio setup, and the login issue should be
 gone.
 
@@ -120,7 +120,7 @@ Reason was: ssh: connect to host {{ site.dev1.hostname }} port 22: No route to h
 
 the reason is that `rsc start` tries to protect against launching more
 than one RStudio session at the same time on different machines. In
-order to confirm that you already running another RStudio session on
+order to confirm that you are already running another RStudio session on
 another machine, it needs to access that machine via SSH, but if that
 fails you get the above error.
 

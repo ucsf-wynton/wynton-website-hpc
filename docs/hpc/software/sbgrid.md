@@ -11,7 +11,7 @@ Report Software Bug form] The {{ site.cluster.nickname }} sysadmins do
 not fix problems in SBGrid software.
 </div>
 
-SBGrid is a [collection of hundred of programs](https://sbgrid.org/software/)
+SBGrid is a [collection of hundreds of programs](https://sbgrid.org/software/)
 for structural biology.  It is kept up to date by the [SBGrid] team
 without needing intervention by the {{ site.cluster.nickname }} admins.
 Each lab using SBGrid must pay a yearly fee. This covers usage by anyone
@@ -28,7 +28,7 @@ is available only to paying members, which are listed on the
 [SBGrid Member Labs] webpage.  As a {{ site.cluster.name }} user part
 of a paying lab, you will have access to SBGrid on the
 {{ site.cluster.name }} cluster from being part of the `sbgrid` Unix
-group.  You can verify that this is get case by running:
+group.  You can verify that this is the case by running:
 
 <!-- code-block label="groups" -->
 ```sh
@@ -133,7 +133,7 @@ it most likely ended up on a x86-64-v2 compute node,
 while the program required something newer.  To avoid this from
 happening, specify the [`x86-64-v=<level>` resource] to request a
 compute node with x86-64-v3 or newer.  Either specify command-line
-option `-l x86-64-v=3` when you submit the job, or add it is as an SGE
+option `-l x86-64-v=3` when you submit the job, or add it as an SGE
 declaration in your script:
 
 ```plain

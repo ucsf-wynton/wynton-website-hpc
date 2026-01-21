@@ -39,14 +39,14 @@ mpirun -np M --oversubscribe ...
 
 where N is the number of GPUs your job will use and M is the number of MPI processes your job will launch.  M does not have to equal N (see below).  Please note that, at the moment, each GPU job must limit itself to a single host.
 
-NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This allows for proper scheduling of GPU jobs on member and institutional nodes.  If your job does not include a runtime request, it may be removed from the queue.  Runtime requests are hard limits, so your job will be killed by SGE when it hits this limit.  Be sure to request enough time for you job to finish.  
+NOTE:  GPU jobs *must* include a runtime request, i.e. `-l h_rt=HH:MM:SS`.  This allows for proper scheduling of GPU jobs on member and institutional nodes.  If your job does not include a runtime request, it may be removed from the queue.  Runtime requests are hard limits, so your job will be killed by SGE when it hits this limit.  Be sure to request enough time for your job to finish.  
 
 
 ## Submitting GPU jobs to the MSG 4-GPU nodes
 
 The 4gpu.q has {{ site.data.specs.msg_4gpus }} GPUs on {{ site.data.specs.msg_4gpu_nodes }} nodes. These GPUs are reserved such that all 4 on the node are reserved when a job is submitted to the queue.
 
-To submit a 4-GPU job to a host a dedicated 4-GPU host, do this:
+To submit a 4-GPU job to a dedicated 4-GPU host, do this:
 
 ```sh
 qsub -q 4gpu.q ...
@@ -63,7 +63,7 @@ Do not use a parallel environment (i.e. `-pe smp 4` or `-pe mpi_onehost 4`) for 
 2022-12-20: We are still testing this feature. Although basic use-case testing has been done, Multi-Node Multi-GPU jobs still haven’t been thoroughly validated by end users. If you run into issues or have suggestions to make the documentation clearer, please reach out to [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 </div>
 
-We have setup a trial of multi-node GPU jobs on Wynton. This enables you to run jobs on all the GPUs of more than one server.  To run a multi-node GPU, job, you must do the following:
+We have set up a trial of multi-node GPU jobs on Wynton. This enables you to run jobs on all the GPUs of more than one server.  To run a multi-node GPU job, you must do the following:
 
 1) Submit to the MPI PE and request a number of slots equal to the number
     of GPUs you want to use.  Assuming you want to use all A40s, the number
@@ -112,7 +112,7 @@ Several CUDA runtimes are installed on the GPU nodes.  They can be loaded via mo
 
 ### GPU selection
 
-When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable `SGE_GPU` as a comma-delimited set of one or more non-negative integers where then number of integers corresponds to the number of GPU cores requested.  For example, a 3-core GPU job (`-q gpu.q -pe smp 3`) may get assigned GPU cores `SGE_GPU=2,0,6` whereas a 1-core GPU job (`-q gpu.q`) may get assigned GPU core `SGE_GPU=5`.  Be sure to send this GPU-core assignment to your application using the proper format for your application.
+When your job is assigned to a node, it will also be assigned specific GPUs on that node.  The GPU assignment will be contained in the environment variable `SGE_GPU` as a comma-delimited set of one or more non-negative integers where the number of integers corresponds to the number of GPU cores requested.  For example, a 3-core GPU job (`-q gpu.q -pe smp 3`) may get assigned GPU cores `SGE_GPU=2,0,6` whereas a 1-core GPU job (`-q gpu.q`) may get assigned GPU core `SGE_GPU=5`.  Be sure to send this GPU-core assignment to your application using the proper format for your application.
 
 For example, if your application uses CUDA, you should limit which GPUs are used with:
 
@@ -136,7 +136,7 @@ Since we are using gpu.q slots to represent GPUs rather than the usual CPU cores
 
 If you know the name of the compute node where your job is running,
 you can ask SGE to summarize the GPU usage on that machine, including
-use from other jobs than yours. This can be done from one the login
+use from other jobs than yours. This can be done from one of the login
 and development hosts, e.g.
 
 ```sh

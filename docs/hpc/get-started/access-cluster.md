@@ -5,7 +5,7 @@ context:
 ---
 
 <div id="wifi-alert" class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 200%; display: none" markdown="1">
-⚠️ **Warning: You appear to be connected to one of the UCSF WiFi:s -
+⚠️ **Warning: You appear to be connected to one of the UCSF WiFi networks -
 'UCSFguest', 'UCSFhousing' or UCSF 'eduroam'. If you are on
 'UCSFguest' or UCSF 'eduroam', you will _not_ be able to reach Wynton
 by SSH.** The symptom is an "ssh: connect to host {{ site.login.hostname }}
@@ -15,7 +15,7 @@ connect to the UCSF VPN, before trying again.
 </div>
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-**Account are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
+**Accounts are personal and login credentials must not be shared with others**. If detected, access to the account will be automatically disabled.  It is still possible and easy for multiple users to share and collaborate on the same folders and scripts.  Don't hesitate to ask if you don't know how to do this - we're here to help.
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex" markdown="1">
@@ -33,7 +33,7 @@ To access the {{ site.cluster.name }} cluster you need an account - any UCSF aff
 
 ## Prerequisites
 
-The instructions below requires that you:
+The instructions below require that you:
 
 * have an SSH client available on your local computer
 
@@ -49,7 +49,7 @@ The instructions below requires that you:
 * know whether you have a Regular or Protected {{ site.cluster.name }}
   account _(you only have a Protected account if you requested it)_
 
-Users on Linux, macOS, and MS Windows have an SSH client built-in, which is available from the terminal as `ssh`. We will use that one in all our examples. You can also use other SSH clients if you prefer, include [PuTTY] on MS Windows. If you choose to use another SSH client, consult that program's documentation for further instructions. Another alternative, which some might find easier, is to connect to the cluster using the [X2Go] software.
+Users on Linux, macOS, and MS Windows have an SSH client built-in, which is available from the terminal as `ssh`. We will use that one in all our examples. You can also use other SSH clients if you prefer, including [PuTTY] on MS Windows. If you choose to use another SSH client, consult that program's documentation for further instructions. Another alternative, which some might find easier, is to connect to the cluster using the [X2Go] software.
 
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 150%;" markdown="1">
@@ -110,12 +110,12 @@ It is possible to set up password-less authentication via a public-private SSH k
 
 # What is available on the login node?
 
-The login node is dedicated solely to very basic tasks such as copying and moving files on the shared file system, submitting jobs, and checking the status on existing jobs.  Note that most software tools are _not_ available on the login node, which means you can neither use it for prototyping scripts nor build software.  Instead, for such tasks, use a [development node], which is configured identically to the compute nodes.
+The login node is dedicated solely to very basic tasks such as copying and moving files on the shared file system, submitting jobs, and checking the status of existing jobs.  Note that most software tools are _not_ available on the login node, which means you can neither use it for prototyping scripts nor build software.  Instead, for such tasks, use a [development node], which is configured identically to the compute nodes.
 
 
 # Logout
 
-Like for all Unix-based system, to log out from {{ site.cluster.name }}, type `exit` or `logout` (standard Unix commands) and press <kbd>ENTER</kbd>.  For example,
+Like for all Unix-based systems, to log out from {{ site.cluster.name }}, type `exit` or `logout` (standard Unix commands) and press <kbd>ENTER</kbd>.  For example,
 
 ```sh
 [alice@{{ site.login.name }} ~]$ exit

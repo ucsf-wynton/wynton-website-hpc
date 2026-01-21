@@ -33,7 +33,7 @@ The following development nodes are available to Wynton Protected users:
 
 ## Instructions
 
-To access one of the _development node_, say, {{ site.devel.hostname }},
+To access one of the _development nodes_, say, {{ site.devel.hostname }},
 
 1. make sure you are [logged in to the cluster], and
 

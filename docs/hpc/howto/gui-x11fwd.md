@@ -12,7 +12,7 @@ The {{ site.cluster.name }} environment supports running a graphical user interf
 
 ### Requirements
 
-Due to limitation in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }}  _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to have a working [SSH key pair] set up and configured the X2Go Client. 
+Due to limitations in X2Go Client, it is _not_ possible to connect to {{ site.cluster.name }}  _when using SSH password_(\*).  Instead, in order to connect to {{ site.cluster.nickname }} using the X2Go Client, you have to have a working [SSH key pair] set up and configured the X2Go Client. 
 
 If you are connecting to {{ site.cluster.nickname }} from off campus, you will also have to use Two Factor Authentication (2FA) for {{ site.cluster.nickname }}.  This is _not_ needed if you are connected via the UCSF VPN.
 
@@ -25,7 +25,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
  2. Pick a **Session name**, e.g. `{{ site.cluster.name }}`
  3. Set the **Host** to a [development node]: <span class="non-protected">`dev1`, `dev2`, `dev3`, or `gpudev1`</span><span class="protected">`pdev1` or `pgpudev1`</span>
  4. Set the **Login** to _your_ {{ site.cluster.name }} username, e.g. `alice`
- 5. In the **Use RSA/DSA key for ssh connection**, enter the path to the your private SSH Key.
+ 5. In the **Use RSA/DSA key for ssh connection**, enter the path to your private SSH Key.
  6. Select **Try auto login (via SSH Agent or default SSH key)**
  7. Check **Use Proxy server for SSH connection**
  8. Then in the **Proxy server** section:
@@ -39,7 +39,7 @@ First, you will need to install the X2Go Client on your local computer.  For ins
 
 ### Logging in
 
-With the above setup, the following instructions opens a remote desktop window on your local computer:
+With the above setup, the following instructions open a remote desktop window on your local computer:
 
 1. Launch the X2Go Client on your local machine
 2. Double click the session configured (above)
@@ -50,7 +50,7 @@ With the above setup, the following instructions opens a remote desktop window o
 6. Dialog **MATE on dev2**: _Enter your {{ site.cluster.name }} password_ (this happens for unknown reasons to _some_ users, even when using SSH keys)
 7. Dialog **Enter passphrase to decrypt a key**: _Enter ssh key passphrase, if set_
 8. Dialog **Enter passphrase to decrypt a key**: _Enter ssh key passphrase, if set_ (yes, twice)
-9. Wait! It will take a long time before the MATE window to appear, looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would do on your regular desktop.
+9. Wait! It will take a long time for the MATE window to appear, looks like an empty Linux desktop. Resize the window if you wish, and start up terminals, web browsers, etc. as you would do on your regular desktop.
 
 
 <div class="alert alert-warning" role="alert" markdown="1">
@@ -103,7 +103,7 @@ If you are on macOS, you need to use `ssh -Y ...` instead of `ssh -X ...`. This 
 
 ### Log into a development node with X11 forwarding
 
-Now, since we should not run anything on the login nodes, the next step is to head over to one of the development nodes.  When doing so, we have remember to keep using X11 forward, that is, we need to use `-X` also here;
+Now, since we should not run anything on the login nodes, the next step is to head over to one of the development nodes.  When doing so, we have to remember to keep using X11 forwarding, that is, we need to use `-X` also here;
 
 ```sh
 [alice@{{ site.login.name }} ~]$ ssh -X {{ site.devel.hostname }}

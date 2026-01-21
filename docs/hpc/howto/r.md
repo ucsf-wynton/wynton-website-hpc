@@ -93,8 +93,8 @@ Rscript my_script.R
 <div class="alert alert-info" role="alert" markdown="1">
 
 R 4.5.0 was released on 2025-04-11, R 4.5.1 on 2025-06-13 and R 4.5.2
-on 2025-10-31. Bioconductor 3.21 was release on 2024-04-16 and
-Bioconductor 3.22 was release on 2024-10-30.
+on 2025-10-31. Bioconductor 3.21 was released on 2024-04-16 and
+Bioconductor 3.22 was released on 2024-10-30.
 
 [We have confirmed that more than 99% of the CRAN packages and more
 than 99% of the Bioconductor Software packages install out of the box
@@ -116,11 +116,11 @@ bioinformatics.  Packages available from Bioconductor are not
 available on CRAN, and vice versa.  At times, you will find online
 instructions for installing R packages hosted on, for instance, GitHub
 and GitLab.  Before installing an R package from such sources, we
-highly recommend to install the package from CRAN or Bioconductor, if
+highly recommend installing the package from CRAN or Bioconductor, if
 it is available there, because packages hosted on the latter are
 stable releases and often better tested.
 
-Before continuing, it is useful to understand where R packages looks
+Before continuing, it is useful to understand where R looks
 for locally installed R packages.  There are three locations that R
 considers:
 
@@ -141,19 +141,19 @@ For instance, when we try to load an R package:
 ```
 
 R will search the above folders in order for R package 'datasets'.
-When you start you fresh, the only R packages available to you are the
+When you start out fresh, the only R packages available to you are the
 ones installed in folder (3) - the system-wide library.  The
 'datasets' package comes with the R installation, so with a fresh
 setup, it will be loaded from the third location.  As we will see
 below, when you install your own packages, they will all be installed
 into folder (1) - your personal library.  The first time your run R,
-the personal library folder does not exists, so R will ask you whether
+the personal library folder does not exist, so R will ask you whether
 or not you want to create that folder.  If asked, you should always
 accept (answer 'Yes').  If you had already created this folder, R will
 install into this folder without asking.
 
 Finally, R undergoes a _main_ update once a year (around April and
-May). For example, R 4.5.0 was release in April 2025.  The next main
+May). For example, R 4.5.0 was released in April 2025.  The next main
 release will be R 4.6.0 a year later. Whenever the `y` component in R
 `x.y.z` version is increased, you will start out with an empty
 personal package folder specific for R `x.y` (regardless of `z`).
@@ -191,7 +191,7 @@ Would you like to use a personal library instead? (yes/No/cancel)
 
 We notice two things.  First there is a warning mentioning that a
 "lib" folder was "not writable".  This is because your personal
-library folder did not yet exists and R tried to install to location
+library folder did not yet exist and R tried to install to location
 (3) but failed (because you do not have write permission there).  This
 is where R decided to ask you whether or not you want to install to a
 personal library.  Answer 'yes':
@@ -397,7 +397,7 @@ _Comment_: This will actually also update any CRAN packages.
 
 ### Parallel processing in R
 
-If you have an R scripts, and it involves setting up a number of
+If you have an R script, and it involves setting up a number of
 parallel workers in R, do _not_ use `ncores <- detectCores()` of the
 **parallel** package because it will result in your job hijacking
 _all_ cores on the compute node regardless of how many cores the
@@ -485,7 +485,7 @@ slave1 (rank 1, comm 1) of size 2 is running on: {{ site.devel.name}}
 Rocky 8: pbdMPI, bigGP still need to be installed this way /HB 2023-09-16
 -->
 
-Contrary to **Rmpi** above, packages such **[pbdMPI]** and **[bigGP]**
+Contrary to **Rmpi** above, packages such as **[pbdMPI]** and **[bigGP]**
 require more hand-holding to install.  For example, after having
 loaded the `mpi` module, we can install **pbdMPI** in R as:
 

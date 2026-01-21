@@ -7,7 +7,7 @@ qstat
 ```
 
 
-To get detailed information on a specific job, your or others, use:
+To get detailed information on a specific job, yours or others, use:
 
 ```sh
 qstat -j <job_id>
@@ -81,7 +81,7 @@ For more details, see `man qstat`.
 
 ## When will queued jobs start?
 
-When your jobs will be launched depends on your jobs' _current priority_ on the queue.  _If_ one of your jobs is on the top of the priority queue _and_ the resources (CPU, memory, ...) you have requested are available, _then_ that job will be launched next.  If sufficient resources are not available, then a lower-priority jobs with lower resource may be launched in the meantime.
+When your jobs will be launched depends on your jobs' _current priority_ on the queue.  _If_ one of your jobs is on the top of the priority queue _and_ the resources (CPU, memory, ...) you have requested are available, _then_ that job will be launched next.  If sufficient resources are not available, then a lower-priority job with lower resources may be launched in the meantime.
 
 The priority scores of all jobs can be seen in column `prior` in the `qstat -u '*'` output (\*). The "priority scores" are constantly recalculated as a function of all users' jobs currently queued and running on the cluster.  They are a function of:
 

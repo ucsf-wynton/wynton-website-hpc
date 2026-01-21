@@ -4,7 +4,7 @@ _The below "timeline" is a rough outline on when we can expect different milesto
 
 ## Near future
 
-* Protected (P3 and P4) storage and accounts will be decommissions by {{ site.data.specs.protected_eol }}.
+* Protected (P3 and P4) storage and accounts will be decommissioned by {{ site.data.specs.protected_eol }}.
 
 
 ## Discontinued milestones
@@ -23,7 +23,7 @@ sunsetting of Wynton HPC in favor of UCSF CoreHPC:
 
 * Slurm pilot: Slurm was evaluated as a job scheduler instead of SGE.  The result of the test phase was that we cannot migrate to Slurm, because Slurm does not support our co-op model. 
 
-* Migration: The UCSF Memory and Aging Center (MAC) have joined {{ site.cluster.name }} by contributing new nodes
+* Migration: The UCSF Memory and Aging Center (MAC) has joined {{ site.cluster.name }} by contributing new nodes
 
 * Migration: The UCSF Macromolecular Structure Group (MSG) compute cluster (~1,300 physical cores) is incorporated into {{ site.cluster.name }}
 
@@ -49,7 +49,7 @@ sunsetting of Wynton HPC in favor of UCSF CoreHPC:
 
 * GPU compute: An additional 12 communal GPUs on three GPU nodes (2019-09-13)
 
-* GPU policy: All GPU nodes, communal and contributed, are available to all users. When running on another contributors GPU node, run time is limited to 2 hours. (2019-09-20)
+* GPU policy: All GPU nodes, communal and contributed, are available to all users. When running on another contributor's GPU node, run time is limited to 2 hours. (2019-09-20)
 
 * Scheduler: Support for email notification upon job completion, e.g. `qsub -m bea` (2019-11-12)
 

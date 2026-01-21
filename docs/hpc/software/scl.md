@@ -60,7 +60,7 @@ gcc-toolset-11-gcc-gdb-plugin-11.2.1-9.2.el8_9.x86_64
 
 ## Using SCLs
 
-Rocky 8 comes with GCC 8.5.0 (2021-05-14).  Never versions are
+Rocky 8 comes with GCC 8.5.0 (2021-05-14).  Newer versions are
 available via the `gcc-toolset-NN` SCLs.  Here is an example how to
 check the version of one of the newer version:
 
@@ -109,7 +109,7 @@ SCL-enabled shell, i.e.
 #### Using `module load CBI scl-gcc-toolset` (recommended)
 
 An alternative approach to using `scl enable` for activating an SCL,
-is to `module load` to achieve the same, e.g.
+is to use `module load` to achieve the same, e.g.
 
 <!-- code-block label="module-load-scl-gcc-toolset" -->
 ```sh

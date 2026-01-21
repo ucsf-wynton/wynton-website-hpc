@@ -8,9 +8,9 @@
 
 2025-12-01: No new Protected accounts are commissioned and existing Regular accounts can no longer be changed to Protected accounts.
 
-2025-09-31: GPU compute nodes are now reserved for GPU tasks. Non-GPU jobs, that is, jobs that do not request `-q gpu.q`, will no long end up on a GPU compute node. This removes the risk of CPU-only jobs starving out GPU jobs.
+2025-09-31: GPU compute nodes are now reserved for GPU tasks. Non-GPU jobs, that is, jobs that do not request `-q gpu.q`, will no longer end up on a GPU compute node. This removes the risk of CPU-only jobs starving out GPU jobs.
 
-2025-09-23: Protected (P3 and P4) storage and accounts will be decommissions by ~~2026-01-26~~ {{ site.data.specs.protected_eol }}.
+2025-09-23: Protected (P3 and P4) storage and accounts will be decommissioned by ~~2026-01-26~~ {{ site.data.specs.protected_eol }}.
 
 2025-07-08: Termination of Wynton Support for P4/PHI data. Starting today, all work on P4/PHI level data must be ceased and all P4/PHI data removed from Wynton.
 
@@ -41,7 +41,7 @@ to the cluster, e.g. Memory and Aging Center and QB3.
 **Please note**, _all_ Protected (P3 and P4) data will be removed by
 {{ site.data.specs.protected_eol }}. P4 data, which includes Protected Health Information
 (PHI), is prohibited as of 2025-07-08. Users with Wynton Protected
-account should prioritize removing remaining Protected data from
+accounts should prioritize removing remaining Protected data from
 Wynton. See "[Wynton Protected]" for UCSF's P1-P4 classification
 standards and UCSF alternatives for storing Protected data.
 
