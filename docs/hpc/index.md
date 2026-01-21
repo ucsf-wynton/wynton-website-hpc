@@ -4,7 +4,7 @@
 **NEWS**: (_For upcoming and current incidents, see the
 [Status](/hpc/status/index.html) page_)
 
-2026-01-16: The maximum job run-time is now limited for all Protected users such their jobs finish by January 29 at 01:00 am.
+2026-01-16: The maximum job run-time is now limited for all Protected users such that their jobs finish by January 29 at 01:00 am.
 
 2025-12-01: No new Protected accounts are commissioned and existing Regular accounts can no longer be changed to Protected accounts.
 
