@@ -5020,10 +5020,12 @@ if ![file exists /usr/bin/g++] {
   module load gcc
 }
 prepend-path  PATH               /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/bin
+prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/extras/CUPTI/lib64/
 prepend-path  LD_LIBRARY_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/lib64
 prepend-path  PKG_CONFIG_PATH    /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/pkgconfig
 setenv        CUDA_LIB_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/lib64
 setenv        CUDA_BIN_PATH      /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda/bin
+setenv        CUDA_HOME          /salilab/diva1/programs/x86_64linux/cuda-12.8.1/lib64/cuda
 </code></pre>
 
 </details>
