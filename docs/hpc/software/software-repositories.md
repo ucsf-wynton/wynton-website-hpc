@@ -61,7 +61,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(107)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(97)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -4734,7 +4734,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (97)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (99)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -5995,6 +5995,47 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/iniconfig-1.1.1/lib/pyt
 </details>
   </dd>
 </dl>
+<h3 id="module_sali_python3-jax-cpu" class="module-name">python3/jax-cpu</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">JAX high performance array computing (CPU)</span><br>
+URL: <span class="module-url"><a href="https://docs.jax.dev/en/latest/">https://docs.jax.dev/en/latest/</a></span><br>
+Versions: <span class="module-version"><em>0.9.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: JAX high performance array computing (CPU)&quot;
+module-whatis &quot;URL: https://docs.jax.dev/en/latest/&quot;
+conflict python2
+conflict python3/jax-cuda12
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/jax-0.9.0/jax-cpu
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_python3-jax-cuda12" class="module-name">python3/jax-cuda12</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">JAX high performance array computing (CUDA 12)</span><br>
+URL: <span class="module-url"><a href="https://docs.jax.dev/en/latest/">https://docs.jax.dev/en/latest/</a></span><br>
+Versions: <span class="module-version"><em>0.9.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: JAX high performance array computing (CUDA 12)&quot;
+module-whatis &quot;URL: https://docs.jax.dev/en/latest/&quot;
+conflict python2
+conflict python3/jax-cpu
+module load cuda/12.8.1
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/jax-0.9.0/jax-cuda12
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_sali_python3-joblib" class="module-name">python3/joblib</h3>
 <dl>
   <dd class="module-details">
@@ -6801,7 +6842,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(107)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(97)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
 _The above information is updated automatically once an hour by querying `module avail` and `module spider`._
