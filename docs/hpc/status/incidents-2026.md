@@ -3,10 +3,18 @@
 * Full downtime:
 
   - Scheduled: 0.0 hours (= 0.0 days)
-  - Unscheduled: 108.75 hours (= 4.5 days)
-  - Total: 135.75 hours (= 5.7 days)
-  - External factors: 70% of the above downtime, corresponding to 95.0
+  - Unscheduled: 69.25 hours (= 2.9 days)
+  - Total: 96.25 hours (= 4.0 days)
+  - External factors: 99% of the above downtime, corresponding to 95.0
     hours (= 4.0 days), were due to external factors
+
+* Partial downtime:
+
+  - Scheduled: 0.0 hours (= 0.0 days)
+  - Unscheduled: 39.5 hours (= 1.6 days)
+  - Total: 39.5 hours (= 1.6 days)
+  - External factors: 0% of the above downtime, corresponding to 0.0
+    hours (= 0.0 days), were due to external factors
 
 
 #### Scheduled maintenance downtimes
@@ -42,8 +50,8 @@
 * Occurrences:
   - 2026-01-01 -- 2026-01-05 (95.0 hours)
   - 2026-01-07 (1.25 hours)
-  - 2026-01-15 -- 2026-01-16 (12.5 hours)
-  - 2026-01-25 -- 2026-01-27 (27.0 hours)
+  - 2026-01-15 -- 2026-01-16 (12.5 hours) [partial]
+  - 2026-01-25 -- 2026-01-27 (27.0 hours) [partial]
 * Total downtime: 135.75 hours of which 95.0 hours were due to external
   factors
 
