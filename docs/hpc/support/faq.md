@@ -1,6 +1,6 @@
 # Frequently Asked Questions (FAQs)
 
-For detailed information on data classifications and guidelines for using Wynton Protected ⚠️, please consult the [User Agreement and Disclaimer].
+For detailed information on data classifications and guidelines for using Wynton Protected, please consult the [User Agreement and Disclaimer].
 
 ## Wynton Transition
 

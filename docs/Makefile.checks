@@ -19,7 +19,7 @@ endif
 
 spelling:
 	@echo "$@ ..."
-	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); paths <- grep("software/software-repositories[.]md$$", paths, invert = TRUE, value = TRUE); paths <- c(paths, "_data/status.yml"); wordlist <- unique(sort(readLines("WORDLIST"))); words <- spelling::spell_check_files(paths, ignore = wordlist); print(words); ok <- (nrow(words) == 0); quit(status = !ok)' || { printf "\n\nSUGGESTION: If you believe these are correctly spelled, add them to 'docs/WORDLIST'\n\n"; exit 1; }
+	@Rscript -e 'paths <- dir(path = c("..", "."), pattern = "*[.]md$$", full.names = TRUE, recursive = TRUE); paths <- grep("_site", paths, value = TRUE, invert = TRUE); paths <- grep("software/software-repositories[.]md$$", paths, invert = TRUE, value = TRUE); paths <- grep("banner-deprecating-protected[.]md$$", paths, invert = TRUE, value = TRUE); paths <- c(paths, "_data/status.yml"); wordlist <- unique(sort(readLines("WORDLIST"))); words <- spelling::spell_check_files(paths, ignore = wordlist); print(words); ok <- (nrow(words) == 0); quit(status = !ok)' || { printf "\n\nSUGGESTION: If you believe these are correctly spelled, add them to 'docs/WORDLIST'\n\n"; exit 1; }
 
 tsv-check:
 	@echo "$@ ..."
