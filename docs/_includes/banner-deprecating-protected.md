@@ -1,4 +1,5 @@
-{% assign now = "now" | date: "%s" | plus: 0 %}
+{% assign github_server_offset = -32400 %}
+{% assign now = "now" | date: "%s" | plus: github_server_offset %}
 {% assign deadline = site.data.specs.protected_eol | date: "%s" %}
 {% assign secs = deadline | minus: now %}
 {% assign hours = secs | divided_by: 3600 %}
