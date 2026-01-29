@@ -36,5 +36,5 @@ group_size_total: 6500
 pu_total: 20186
 member_q_total: 7023
 
-## Protected Accounts and Data End of Life date
-protected_eol: 2026-01-30
+## Protected Accounts and Data End of Life timestamp
+protected_eol: 2026-01-30 12:00
