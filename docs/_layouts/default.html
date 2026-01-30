@@ -76,7 +76,7 @@
   {% endif %}
 
       <ul class="nav navbar-nav" id="menunavbar">
-        <li>
+        <li>          
           {% if site.data.status.level == "warning" %}
             <a href="/hpc/status/index.html" title="{{ site.data.status.message }}">Status<span class="status-led" style="background: orange;"></span></a>
           {% elsif site.data.status.level == "danger" %}
@@ -268,6 +268,7 @@
       <section>
 
 
+{% include banner-deprecating-protected.md %}
         
 {% if site.data.status.level == "danger" or page.url == "/hpc/status/" %}
 <div class="alert alert-{{ site.data.status.level }}" role="alert" style="margin-top: 3ex; margin-bottom: 3ex; font-size: large;" markdown="1">

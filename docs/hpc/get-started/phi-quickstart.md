@@ -1,5 +1,3 @@
-{% include banner-deprecating-protected.md %}
-
 # Wynton PHI Quickstart
 
 It is as of 2025-07-08 forbidden to process Protected Health

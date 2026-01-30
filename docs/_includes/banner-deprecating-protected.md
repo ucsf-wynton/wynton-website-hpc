@@ -1,6 +1,6 @@
 {% assign deadline = site.data.specs.protected_eol %}
 
-<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+<div class="alert alert-danger" role="alert" style="margin-top: 3ex">
   <p>
     ⚠️ <strong>Countdown: <span id="live-countdown">--</span> minutes remaining</strong> 
     - Protected (P3 and P4) data and accounts will be decommissioned at {{ deadline }} (noon). 

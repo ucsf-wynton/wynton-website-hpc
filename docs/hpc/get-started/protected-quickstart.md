@@ -1,5 +1,3 @@
-{% include banner-deprecating-protected.md %}
-
 # Wynton Protected Quickstart
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex; font-size: 150%;" markdown="1">

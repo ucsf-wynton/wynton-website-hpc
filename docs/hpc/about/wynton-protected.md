@@ -1,5 +1,3 @@
-{% include banner-deprecating-protected.md %}
-
 # Wynton Protected (deprecated)
 
 <div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">

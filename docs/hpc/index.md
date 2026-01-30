@@ -1,5 +1,3 @@
-{% include banner-deprecating-protected.md %}
-
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the
 [Status](/hpc/status/index.html) page_)
