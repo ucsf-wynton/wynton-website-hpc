@@ -8,11 +8,11 @@
 
 Last Updated January 30, 2026 
 
-**Wynton user responsibilities and requirements in support of this Agreement include: ** 
+**Wynton user responsibilities and requirements in support of this Agreement include:** 
 
-* By using the Wynton HPC environment, you agree to abide by the statement of its Purpose, Principles and Governance as well as the UCSF Minimum Security Standards. 
+* By using the Wynton HPC environment, you agree to abide by the statement of its [Purpose, Principles and Governance](https://wynton.ucsf.edu/hpc/about/governance.html) as well as the [UCSF Minimum Security Standards](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information). 
 
-* P3 and P4 data, which include deidentified data and PHI, are prohibited. Even running jobs that involve this type of data is prohibited. Refer to UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard for detailed definitions.  
+* P3 and P4 data, which include deidentified data and PHI, are prohibited. Even running jobs that involve this type of data is prohibited. [Refer to UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard for detailed definitions.](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard)  
 
 * The PI is responsible for ensuring that users are listed on the Institutional Review Board (IRB) approval letter before they approve those users’ Wynton access to data that require IRB approval. The PI is also responsible for ensuring they are in compliance with their grant requirements (e.g. platform security, data retention policies). 
 
@@ -20,9 +20,9 @@ Last Updated January 30, 2026
 
 * All Wynton users are responsible for ensuring they have their own back-ups so they are able to revert to an earlier version if a mistake is made or they want access to their data during an outage. Wynton does not offer a back-up service. 
 
-* Upon separation from UCSF, a Wynton user’s home directory and its contents may be transferred to the user’s PI in accordance with the Authorized and Acceptable Use of Electronic Information Resources policy (650-18) “An account that is not deleted upon loss of affiliation shall be transferred to another UCSF faculty or staff person designated as being responsible for the account.” Accounts and data that are not claimed after 90 days may be permanently deleted. 
+* Upon separation from UCSF, a Wynton user’s home directory and its contents may be transferred to the user’s PI in accordance with the [Authorized and Acceptable Use of Electronic Information Resources policy (650-18)](https://policies.ucsf.edu/policy/650-18) “An account that is not deleted upon loss of affiliation shall be transferred to another UCSF faculty or staff person designated as being responsible for the account.” Accounts and data that are not claimed after 90 days may be permanently deleted. 
 
-* Use of the Wynton HPC cluster is subject to UCSF’s policy on Authorized and Acceptable Use of Electronic Information Resources. 
+* Use of the Wynton HPC cluster is subject to UCSF’s policy on [Authorized and Acceptable Use of Electronic Information Resources](https://policies.ucsf.edu/policy/650-18). 
 
 * The Wynton Operations team is tasked with implementing the policies established by IT Governance and the Wynton Faculty Advisory Committee and ensuring that the cluster runs effectively and efficiently. Users agree not to attempt to circumvent policies or avoid restrictions imposed by the Wynton Operations team. 
 
