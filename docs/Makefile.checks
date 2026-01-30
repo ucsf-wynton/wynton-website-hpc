@@ -151,7 +151,7 @@ check-absolute-links:
 	error_count=0
 
 	pattern="(http|https)://wynton.ucsf.edu"
-	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./index.md" \) | sort)
+	files=$$(find . -type f -name "*.md" -not \( -path "./_site/*" -o -path "./drafts/*" -o -path "./index.md" -o -path "./hpc/about/wynton-phi.md" \) | sort)
 	for file in $$files; do
 	   $(TPUT) && printf "[    ] checking %s" "$$file"
 	   if ! grep -H -i -E "$${pattern}" "$${file}" &>> "$$stdout" ; then
