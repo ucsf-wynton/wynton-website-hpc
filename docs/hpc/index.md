@@ -51,7 +51,6 @@ Keeping You Informed] page.
 
 
 [UCSF Privacy Office]: https://hipaa.ucsf.edu/
-[Wynton Protected]: /hpc/about/wynton-protected.html
 [Rocky 8]: /hpc/software/rocky-8-linux.html
 [CoreHPC]: https://it.ucsf.edu/service/corehpc
 [Facility for Advanced Computing (FAC)]: https://it.ucsf.edu/service/facility-advanced-computing-fac)

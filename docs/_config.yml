@@ -14,7 +14,7 @@ user:
 cluster:
   name: "Wynton HPC"
   nickname: "Wynton"
-  version: "1.1"
+  version: "1.2"
   domain: wynton.ucsf.edu
   email_support: wynton-support@ucsf.edu
   email_storage: wynton-storage@ucsf.edu
@@ -77,9 +77,6 @@ gpudev1:
 globus:
   name: "UCSF Wynton HPC"
   uuid: 68f06816-cd00-4bf3-ae1f-0597a07ed118
-globus-protected:
-  name: "UCSF Wynton PDT"
-  uuid: ef126934-6f8a-4af8-81cd-d5b0b7afe51f
 globus-box:
   name: "UCSF Wynton HPC Box"
   uuid: 98d778c4-75a9-4d8d-8baa-68f71d6568c0

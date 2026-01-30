@@ -1,5 +1,3 @@
-# Wynton PHI
+<meta http-equiv="Refresh" content="0; url='/hpc/about/wynton-protected.html'" />
 
-It is as of 2025-07-08 forbidden to process Protected Health
-Information (PHI) data, including P4 data, on the Wynton HPC
-environment.
+Redirecting to <https://wynton.ucsf.edu/hpc/about/wynton-protected.html>.

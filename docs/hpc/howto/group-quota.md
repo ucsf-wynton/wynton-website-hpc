@@ -10,9 +10,7 @@ context:
 2022-09-02: The Quota Management Tool is still being developed. If you run into any problems, please email: [{{ site.cluster.email_support }}](mailto::{{ site.cluster.email_support }}).
 </div>
 
-Any group with purchased storage can have a group folder in both the Wynton Regular `/wynton/group/` area and the Wynton Protected `/wynton/protected/group/` area, e.g. `/wynton/group/boblab/` _and_ `/wynton/protected/group/boblab/`.  In that case, the group quota usage would include group-owned files in _both_ areas.  Of course, only members with Wynton Protected access would have access to the data under `/wynton/protected/group/`.
-
-You can also request to create a subgroup to self-manage the quota for Protected-only data storage (e.g. `boblab-phi`), and it could be allocated as part of the parent quota.
+Any group with purchased storage can have a group folder in the `/wynton/group/` area.  In that case, the group quota usage would include group-owned files in _both_ areas.
 
 In addition, responsible parties may request to be delegated responsibility for managing the membership of their groups.
 

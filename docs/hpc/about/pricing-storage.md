@@ -7,11 +7,11 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 ## Summary
 
-* All user accounts come with a quota of non-expandable 500 GiB of storage in `/wynton/home` or `/wynton/protected/home`, which is free of charge
+* All user accounts come with a quota of non-expandable 500 GiB of storage in `/wynton/home`, which is free of charge
 
-* Global `/wynton/scratch` and `/wynton/protected/scratch` (for Wynton Protected users) may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
+* Global `/wynton/scratch` may be used for smaller, short-term project needs of a few TBs with the caveat that [files older than two weeks are deleted automatically](/hpc/about/specs.html#scratch-storage)
 
-* Additional, long-term storage can be purchased in `/wynton/group`, `/wynton/protected/group` (for Wynton Protected users), or in `/wynton/protected/project` (for specific Wynton Protected projects) at $160/TiB (one-time fee).  Both will count towards a lab's storage quota total.
+* Additional, long-term storage can be purchased in `/wynton/group` at $160/TiB (one-time fee).  Both will count towards a lab's storage quota total.
 
 * After 5 years from purchase, when the warranty runs out, a small "maintenance fee" might be introduced
 
@@ -22,9 +22,9 @@ Research groups can purchase additional storage on {{ site.cluster.nickname }} b
 
 ## Lab-Specific HPC Storage Pricing Model
 
-We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TiB for RAID 6 equivalent storage (or $320/TiB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group`, `/wynton/protected/group`, or `/wynton/protected/project` and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (e.g. `/wynton/scratch`, `/wynton/protected/scratch`, `/wynton/home`, and `/wynton/protected/home`).
+We are currently offering the ability for research labs to purchase additional storage at a one-time charge of $160/TiB for RAID 6 equivalent storage (or $320/TiB for mirrored RAID 6).  In contrast to `/wynton/home`, purchased storage will be mounted on `/wynton/group` and dedicated to the lab that bought it -- no oversubscription will occur.  The purchased storage will have similar performance to the rest of the BeeGFS infrastructure (e.g. `/wynton/scratch` and `/wynton/home`).
 
-Please note, storage in `/wynton/group/`, `/wynton/protected/group`, and `/wynton/protected/project` count towards a lab's storage quota total.
+Please note, storage in `/wynton/group/` count towards a lab's storage quota total.
 
 Given prices of hard drives, the stated rate might seem high, but there are three mitigating factors. First, we have enabled ZFS compression, so the actual available space might be significantly more. Second, the price includes the cost of the networking, metadata servers, storage server, maintenance, and administration. Third, we have proven that the performance of our BeeGFS infrastructure is much higher than the typical NFS server (in some respects, the performance is more than an order of magnitude faster). In the future, if absolutely necessary, we may also charge a “maintenance fee” for storage after the initial 5-year hardware warranty expires, but nothing has been decided as of yet. Similarly, any future storage purchases may be priced differently than that described here, to reflect the situation present at that time.
 
@@ -39,20 +39,7 @@ There are some additional parameters:
 
 ## Frequently Asked Questions
 
-### Q: If I already have purchased group storage, can I also use that storage quota for Wynton Protected data in `/wynton/protected/group`?
-
-A: Yes, but Wynton Protected data must not be stored in `/wynton/group`.  We can create group folders for you under `/wynton/protected` for Wynton Protected data storage and collaboration. If you choose to have your current storage allocation updated to include Wynton Protected storage, you have three options:
-
-1. We can create a group folder in both `/wynton/group` and `/wynton/protected/group`. Both folders will share the same quota. In this case, the same quota will be applied to two folders, so it can be tricky to track where the group’s quota usage is, Wynton Protected or Wynton Regular.
-
-2. We can create a group folder in `/wynton/group` and a folder with a separate sub-quota subtracted from the group quota in `/wynton/protected/group`, for example, `/wynton/protected/group/group-phi`. This makes it easier to track separate Wynton Protected and Wynton Regular group quota usage.
-
-3. If the group using the Wynton Protected data does not include the whole lab group membership, or includes members from outside of the group, then a folder in `/wynton/protected/project` can be created and the child quota subtracted from the parent group.
-
-Only members of the lab group with Wynton Protected access will be able to access files stored under `/wynton/protected`.
-
-
-### Q: Does purchasing additional group storage increase the quotas available to lab users in `/wynton/home` or `/wynton/protected/home`?
+### Q: Does purchasing additional group storage increase the quotas available to lab users in `/wynton/home`?
 
 A: No, the home directory quotas are managed separately from group quotas and additional purchased group space cannot be applied to home directories.
 

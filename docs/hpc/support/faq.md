@@ -1,7 +1,5 @@
 # Frequently Asked Questions (FAQs)
 
-For detailed information on data classifications and guidelines for using Wynton Protected, please consult the [User Agreement and Disclaimer].
-
 ## Wynton Transition
 
 **Q**. Where can I find more information about the Wynton transition to FAC and CoreHPC?

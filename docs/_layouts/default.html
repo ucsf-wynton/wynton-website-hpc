@@ -94,7 +94,6 @@
             <li><a href="/hpc/get-started/hello-world-job.html">3. 'Hello World' Job</a></li>
             <li><a href="/hpc/get-started/good-practices.html">4. Good Practices</a></li>
             <li><a href="/hpc/get-started/duo-signup.html">5. 2FA Registration</a></li>
-            <li><a href="/hpc/get-started/protected-quickstart.html">6. Wynton Protected Quickstart ⚠️</a></li>
           </ul>
         </li>
 
@@ -220,7 +219,6 @@
             <li><a href="/hpc/about/pricing-storage.html">Pricing: Extra Storage</a></li>
             <li><a href="/hpc/about/pricing-compute.html">Pricing: Extra Compute (CPU & GPU)</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="/hpc/about/wynton-protected.html">⚠️ Wynton Protected (deprecated)</a></li> 
             <li><a href="/hpc/about/join.html">Join <span class="glyphicon glyphicon-heart-empty"></span></a></li>
             <li><a href="/hpc/about/shares.html">Contributing Member Shares</a></li>
 <!--
@@ -232,21 +230,6 @@
             <li><a href="/hpc/about/citation.html">How to Cite</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="/hpc/about/contact.html">Contact</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav" style="float: right;">
-        <li>
-          <ul class="nav navbar-nav">
-            <li>
-              <div style="padding: 15px;">
-                Regular <label class="switch" title="View site as a Regular or Protected user">
-                  <input type="checkbox" id="toggle-protected" aria-label="Toggle Protected view"/>
-                  <span class="slider round"><span style="visibility: hidden; font-size: 0pt;">Toggle Protected view</span></span>
-                </label> Protected ⚠️
-              </div>
-            </li>
           </ul>
         </li>
       </ul>
@@ -292,7 +275,7 @@
         
 {% unless page.context contains "login" or page.context contains "xfer" %}
 {% if content contains "language-sh" %}
-{% assign tmp_text = "1. Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks.\n\n2. If you have a Protected account, make sure to use the Protected machines, e.g. log1 -> plog1, dev1 -> pdev1, etc." %}
+{% assign tmp_text = "Please note that login and data-transfer nodes are very limited, e.g. login nodes are for submitting and querying jobs and data-transfer nodes for downloading files. Make sure you are logged in to a development node for all other tasks." %}
 <div align="right">
 <span style="font-size: smaller; font-style: italic; text-decoration: underline;" title="{{ tmp_text }}" onclick="alert(&quot;{{ tmp_text }}&quot;)"/>Examples not working?</span>
 </div>
@@ -327,121 +310,6 @@ Source: https://github.com/allejo/jekyll-anchor-headings
     <script src="{{ site.baseurl }}/assets/js/scale.fix.js"></script>
     
     <script src="/hpc/assets/js/bootstrap.min.js"></script><!-- 38.8 kB -->
-
-    
-<script>
-  $(document).ready(function(){
-      /***********************************************************
-        View as: Regular/Protected
-
-        IMPORTANTLY:
-        Updating the innerHTML destroys the click event listeners,
-        so it has to be added *after* updating innerHTML.
-        FIXME: Does this destroy other event listeners to? /HB 2023-01-19
-       ***********************************************************/
-      var href = window.location.href;
-      var params = new URL(href).searchParams;
-      var protected;
-
-      /* Get 'protected' via URL parameter, otherwise via local storage */
-      protected = params.get("protected");
-      if (protected == null) {
-          protected = localStorage.getItem("protected-mode");
-          if (protected == null) {
-              /* LEGACY: If 'protected-mode' is not stored, pull legacy
-                 'phi-mode' value and save as 'protected-mode',
-                 then remove 'phi-mode' / 2025-07-15 */
-              protected = localStorage.getItem("phi-mode");
-              if (protected !== null) {
-                  localStorage.setItem("protected-mode", protected);
-                  localStorage.removeItem("phi-mode");
-              }
-          }
-      } else {
-        localStorage.setItem("protected-mode", protected);
-      }
-      protected = (protected == "true");
-
-      // Toggle HTML elements of class 'protected'/'non-protected' on and off
-      if (protected) {
-          $(".protected").css("display", "inline");
-          $(".non-protected").css("display", "none");
-      } else {
-          $(".non-protected").css("display", "inline");
-          $(".protected").css("display", "none");
-      }
-
-      // View as PROTECTED?
-      if (protected) {
-          // Skip page completely?
-          var skip = false;
-          skip = /\b(index.html|status|protected-quickstart|phi-quickstart|rocky-8-linux|news|roadmap|specs)\b/.test(href);
-          if (!skip) {
-              var html = document.body.innerHTML;
-
-              // Add 'p'-prefix to all log[1-2],dt[1-2],dev[1-3],gpudev[1]?
-              html = html.replace(/\b((log|dev|dt|gpudev)[1-9[])/gi, "p$1");
-
-              // plog2 doesn't exist, so use plog1
-              html = html.replace(/\bplog2/gi, "plog1");
-
-              // pdev[2-3] doesn't exist, so use pdev1
-              html = html.replace(/\bpdev[23]/gi, "pdev1");
-              
-              // Tweak IP-numbers
-              // log1 -> plog1:
-              html = html.replace(/172[.]26[.]44[.]11/g, "172.26.44.16");
-              // log2 -> plog1:
-              html = html.replace(/172[.]26[.]44[.]12/g, "172.26.44.16");
-              // dt1 -> pdt1:
-              html = html.replace(/172[.]26[.]44[.]21/g, "172.26.44.26");
-              // dt2 -> pdt2:
-              html = html.replace(/172[.]26[.]44[.]22/g, "172.26.44.27");
-              // dev[1-3] -> pdev1:
-              html = html.replace(/172[.]26[.]44[.](131|132|133)/g, "172.26.44.151");
-              // gpudev1 -> pgpudev1:
-              html = html.replace(/172[.]26[.]44[.]141/g, "172.26.44.161");
-              
-              // Tweak paths
-              html = html.replace(/[/]wynton[/](home|group)[/](boblab|your_group)/gi, "/wynton/protected/$1/$2");
-              document.body.innerHTML = html;
-          }
-      }
-
-      // Main PROTECTED toggle switch
-      const toggleProtected = document.getElementById("toggle-protected");
-      toggleProtected.checked = protected;
-
-      // Support for an optional, second PROTECTED toggle switch
-      const toggleProtected2 = document.getElementById("toggle-protected-2");
-      if (toggleProtected2) {
-          toggleProtected2.checked = protected;
-          
-          toggleProtected.addEventListener("click", function(e) {
-//              toggleProtected2.checked = toggleProtected.checked;
-              localStorage.setItem("protected-mode", toggleProtected.checked);
-              location.reload();
-          });
-          
-          toggleProtected2.addEventListener("click", function(e) {
-//              toggleProtected.checked = toggleProtected2.checked;
-              localStorage.setItem("protected-mode", toggleProtected2.checked);
-              location.reload();
-          });
-      } else {
-          toggleProtected.addEventListener("click", function(e) {
-              localStorage.setItem("protected-mode", toggleProtected.checked);
-              location.reload();
-          });
-      }
-      
-      $(document.body).css('padding-top', $('#topnavbar').height() + 10);
-      
-      $(window).resize(function(){
-          $(document.body).css('padding-top', $('#topnavbar').height() + 10);
-      });
-  });
-</script>
 
 
 {% if site.events.downtime %}

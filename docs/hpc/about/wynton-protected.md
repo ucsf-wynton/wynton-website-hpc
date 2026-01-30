@@ -1,24 +1,6 @@
-# Wynton Protected (deprecated)
+# Wynton Protected (decommissioned)
 
-<div class="alert alert-danger" role="alert" style="margin-top: 3ex" markdown="1">
-
-2025-12-01: **We are no longer commissioning Protected accounts.**
-This is because all Protected data will be removed by {{ site.data.specs.protected_eol }}.
-
-</div>
-<div style="font-size: 150%;" markdown="1">
-
-
-</div>
-
-Wynton Protected, which is a subset of the Wynton HPC environment, is
-**not** approved for storing and working with P4/Protected Health
-Information (PHI) data. **Existing Wynton Protected users may only use
-P3 data, but should take immediate action to remove P3 data
-from Wynton by {{ site.data.specs.protected_eol }}.**  For UCSF’s determination of the
-Protection Levels (P1, P2, P3, P4), refer to [UCSF Policy 650-16
-Addendum F - UCSF Data Classification
-Standard](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard).
+The Wynton HPC environment decommissioned all Protected (P3 and P4) data and accounts on 2026-01-30. Only Wynton Regular (P1-P2) accounts can use the cluster as of this date.
 
 
 ## UCSF options for working with P3 and P4 data

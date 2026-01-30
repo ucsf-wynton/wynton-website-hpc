@@ -52,14 +52,11 @@ quota.
 The BeeGFS file system keeps track of how much disk each of us
 currently consumes in different storage locations, specifically:
 
-1. User home folder (`$HOME`, i.e. `/wynton/home/` or
-   `/wynton/protected/home/`)
+1. User home folder (`$HOME`, i.e. `/wynton/home/`)
 
-2. Group folder under (i.e. `/wynton/group/`,
-   `/wynton/protected/group/`, and `/wynton/protected/project/`)
+2. Group folder under (i.e. `/wynton/group/`)
 
-3. User files and folders under `/wynton/scratch/` and
-   `/wynton/protected/scratch/` (unlimited quota)
+3. User files and folders under `/wynton/scratch/` (unlimited quota)
 
 These different type of locations are formally referred to as _storage
 pools_ by BeeGFS.
@@ -81,11 +78,10 @@ information only once every ten minutes.
 </div>
 
 
-### User disk quota on `/wynton/home/` or `/wynton/protected/home/`
+### User disk quota on `/wynton/home/`
 
-To check how much storage space you have consumed on `/wynton/home/`
-or `/wynton/protected/home/`, and the total amount available to you,
-call:
+To check how much storage space you have consumed on `/wynton/home/`, 
+and the total amount available to you, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"
@@ -111,14 +107,12 @@ storage space](/hpc/about/specs.html) is reported as 1000 GiB by the
 `beegfs-ctl` tool.
 
 
-### Group disk quota on `/wynton/group/`, `/wynton/protected/group/` and `/wynton/protected/project/`
+### Group disk quota on `/wynton/group/`
 
 If your group/lab (e.g. `boblab`) has [purchased additional
 storage](/hpc/about/pricing-storage.html), it is available under
-`/wynton/group/` (Wynton Regular), and possibly also under `/wynton/protected/group/`
-(Wynton Protected), or `/wynton/protected/project/` (Wynton Protected).  To check how much
-storage space your group/lab has consumed of the total amount
-available to it, call:
+`/wynton/group/`.  To check how much storage space your group/lab has
+consumed of the total amount available to it, call:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=12 --gid "$(id --group)"
@@ -142,23 +136,8 @@ any group storage.
 The group storage is shared among all group members and does _not_
 count toward your personal disk quota under `$HOME`.
 
-Any group with purchased storage can have a group folder in both the
-Wynton Regular `/wynton/group/` area and the Wynton Protected `/wynton/protected/group/`
-area at the same time, e.g. `/wynton/group/boblab/` and
-`/wynton/protected/group/boblab/`. In that case, the group quota usage
-would include group-owned files in both areas. Your lab can also
-request to create a subgroup (e.g. `boblab-phi`) to [self-manage the
-quota](/hpc/howto/group-quota.html) for Protected-only data storage
-(e.g. `/wynton/protected/group/boblab-phi/`), and it could be
-allocated as part of the parent quota.
-
-Wynton Protected projects under `/wynton/protected/projects/` are for controlling
-access to IRB related data, where the IRB access group does not
-encompass the whole PI group or where the access group encompasses
-selected members of more than one PI group. The quota for the
-directory in `/wynton/protected/projects/` could either be a separate
-group quota purchase or a portion of a purchased group quota dedicated
-to the project (subgroup).
+Any group with purchased storage can have a group folder in the `/wynton/group/` area. In that case, the group quota usage
+would include group-owned files in both areas.
 
 
 #### Additional group storage via other groups
@@ -205,19 +184,18 @@ and another 100 TiB via the `carol_inst` group.
 
 
 
-### User disk usage on `/wynton/scratch/` and `/wynton/protected/scratch/`
+### User disk usage on `/wynton/scratch/`
 
 To check your disk consumption on the _global_ scratch space
-(`/wynton/scratch/` and `/wynton/protected/scratch/`), use:
+(`/wynton/scratch/`), use:
 
 ```sh
 beegfs-ctl --getquota --storagepoolid=10 --uid "$USER"
 ```
 
-_Comment_: There are no user or group quotas on `/wynton/scratch/` and
-`/wynton/protected/scratch/`, but [files on the global scratch that
-are older than two weeks are deleted
-automatically](/hpc/about/specs.html).
+_Comment_: There are no user or group quotas on `/wynton/scratch/`,
+but [files on the global scratch that are older than two weeks are
+deleted automatically](/hpc/about/specs.html).
 
 
 

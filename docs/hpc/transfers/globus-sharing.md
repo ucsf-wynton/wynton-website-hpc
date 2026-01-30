@@ -5,10 +5,6 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 
 ## Creating a Shared Globus Collection
 
-<div class="alert alert-warning" role="alert" markdown="1">
-<span class="protected">Note,</span> Guest Collections/Shared Globus Collections are _not_ allowed for Wynton Protected users.
-</div>
-
 1. Make sure you have a working setup of [Globus for {{ site.cluster.nickname }}]
 
 2. Email [support@wynton.ucsf.edu] with the directory you want to share.

@@ -16,19 +16,10 @@ CPU use is throttled to 4 CPU cores/user, and memory use is limited to 96 GiB/us
 
 ## List of Development Nodes
 
-<div class="non-protected" markdown="1">
  * {{ site.dev1.hostname }}
  * {{ site.dev2.hostname }}
  * {{ site.dev3.hostname }}
  * {{ site.gpudev1.hostname }}
-</div>
-<div class="protected" markdown="1">
-The following development nodes are available to Wynton Protected users:
-
- * p{{ site.dev1.hostname }}
- * p{{ site.gpudev1.hostname }}
- 
-</div>
 
 
 ## Instructions
