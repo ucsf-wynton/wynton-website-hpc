@@ -10,7 +10,7 @@ Last Updated January 30, 2026
 
 **Wynton user responsibilities and requirements in support of this Agreement include:** 
 
-* By using the Wynton HPC environment, you agree to abide by the statement of its [Purpose, Principles and Governance](https://wynton.ucsf.edu/hpc/about/governance.html) as well as the [UCSF Minimum Security Standards](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information). 
+* By using the Wynton HPC environment, you agree to abide by the statement of its [Purpose, Principles and Governance](/hpc/about/governance.html) as well as the [UCSF Minimum Security Standards](https://it.ucsf.edu/standard-guideline/ucsf-650-16-addendum-b-ucsf-minimum-security-standards-electronic-information). 
 
 * P3 and P4 data, which include deidentified data and PHI, are prohibited. Even running jobs that involve this type of data is prohibited. [Refer to UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard for detailed definitions.](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard)  
 
