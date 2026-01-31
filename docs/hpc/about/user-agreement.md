@@ -14,7 +14,7 @@ Last Updated January 30, 2026
 
 * P3 and P4 data, which include deidentified data and PHI, are prohibited. Even running jobs that involve this type of data is prohibited. [Refer to UCSF Policy 650-16 Addendum F, UCSF Data Classification Standard for detailed definitions.](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard)  
 
-* The PI is responsible for ensuring that users are listed on the Institutional Review Board (IRB) approval letter before they approve those users’ Wynton access to data that require IRB approval. The PI is also responsible for ensuring they are in compliance with their grant requirements (e.g. platform security, data retention policies). 
+* The PI is responsible for ensuring that users are listed on the Institutional Review Board (IRB) approval letter before they approve those users' Wynton access to data that require IRB approval. The PI is also responsible for ensuring they are in compliance with their grant requirements (e.g. platform security, data retention policies). 
 
 * It is the responsibility of the PIs to ensure the integrity of their data. The Wynton filesystem is not the primary source of data (not a system of record). Once the PI has write access to the data, they are entitled to manipulate the data as they see fit. 
 
