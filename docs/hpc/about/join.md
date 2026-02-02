@@ -35,7 +35,7 @@ _Note: The form linked above is only available to UCSF staff, students, postdocs
 
 ## Update an existing account
 
-If you have an existing {{ site.cluster.name }} account and would like to modify it, e.g. change your account from a "Protected" account to a non-Protected account, please use the following ServiceNow form:
+If you have an existing {{ site.cluster.name }} account and would like to modify it, e.g. change your lab affiliation or request a Wynton Affiliate account, please use the following ServiceNow form:
 
 * **Everyone**: **[Request a Wynton Account / Modify an Existing Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f)** (requires UCSF MyAccess login)
 
