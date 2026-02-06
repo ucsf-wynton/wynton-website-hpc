@@ -1,10 +1,9 @@
-{% include_relative warning-hold-on-compute-requests.md %}
-
-<div class="alert alert-info" role="alert" markdown="1">
 **Contributions to the {{ site.cluster.name }} environment are non-expiring, e.g. contribute once and keep it for life!**
 </div>
 
 # Contributing Member Shares
+
+Due to the pending End of Life of the Wynton Service, Compute Shares are no longer being sold.
 
 ## Compute Shares
 
