@@ -6010,6 +6010,9 @@ module-whatis &quot;URL: https://docs.jax.dev/en/latest/&quot;
 conflict python2
 conflict python3/jax-cuda12
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/jax-0.9.0/jax-cpu
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release]} {
+  module load python3/numpy/2.4.2
+}
 </code></pre>
 
 </details>
@@ -6031,6 +6034,9 @@ conflict python2
 conflict python3/jax-cpu
 module load cuda/12.8.1
 prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/jax-0.9.0/jax-cuda12
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release]} {
+  module load python3/numpy/2.4.2
+}
 </code></pre>
 
 </details>
@@ -6242,7 +6248,7 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/x86_64linux/numexpr-2.8.1/lib
   <dd class="module-details">
 <span class="module-description">A fast multidimensional array facility for Python</span><br>
 URL: <span class="module-url"><a href="https://numpy.org/">https://numpy.org/</a></span><br>
-Versions: <span class="module-version"><em>1.19.5</em></span><br>
+Versions: <span class="module-version">2.4.2, <em>1.19.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
