@@ -4963,7 +4963,7 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/concavity-0.1/b
   <dd class="module-details">
 <span class="module-description">conda-forge Python distribution</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a></span><br>
-Versions: <span class="module-version">py312-24.7.1, py312-24.11.0, py312-25.3.0, <em>py312-25.9.1</em></span><br>
+Versions: <span class="module-version">py312-24.7.1, py312-24.11.0, py312-25.3.0, py313-26.1.0, <em>py312-25.9.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
