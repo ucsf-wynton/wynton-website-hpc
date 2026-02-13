@@ -3,14 +3,16 @@
 {{ site.cluster.name }} is a large, shared high-performance compute (HPC) cluster underlying UCSF's Research Computing Capability. Funded and administered cooperatively by UCSF campus IT and key research groups, it is available to all UCSF researchers, and consists of different profiles suited to various biomedical and health science computing needs. Researchers can participate using the “co-op” model of resource contribution and sharing.
 
 
-## Co-op model
+## Wynton's Future
 
-The end goal is that all UCSF researchers should have access to the cluster without charge.  Free accounts will be limited by the number of concurrent cores and will have lower priority on the job queue.  Participating co-op members that contribute to the cluster will get priority on the job queue and will be able to utilize a large number of concurrent cores (proportionate to the contribution).
+Wynton HPC has been a vital resource for UCSF’s computational research, providing shared HPC capabilities to support diverse scientific projects. However, Wynton HPC is being gradually phased out to align with UCSF’s evolving research infrastructure strategy. While Wynton will remain operational for the near term for [P1 and P2 data only](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard), researchers are encouraged to plan for its eventual absorption into the Facility for Advanced Computing (FAC) and CoreHPC. UCSF is committed to supporting researchers during this transition and ensuring continued access to robust computational resources.
+
+For more details on the upcoming changes, visit the [Wynton Transition Keeping You Informed](https://ars.ucsf.edu/wynton-transition-keeping-you-informed) page.
 
 
 ## Who can join?
 
-The {{ site.cluster.name }} environment is available for _free_ to all UCSF researchers, which includes faculty and principal investigators (PIs) as well as research staff, students, and postdocs affiliated with a faculty or a PI.  If you don't fit into one of these categories, please don't hesitate to [contact us].
+If you are working with a lab that is using Wynton, you may request a Wynton account. However, if you are not collaborating with existing Wynton users, or you work with [P3 or P4 data](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard), please explore options with the [FAC](https://ars.ucsf.edu/facility-advanced-computing-fac) and [CoreHPC](https://ars.ucsf.edu/high-performance-computing-hpc). 
 
 If you are a non-UCSF affiliate, you will need to have the UCSF staff, student, postdoc, or PI you are associated with request your account for you.
 
