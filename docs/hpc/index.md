@@ -1,6 +1,7 @@
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the
 [Status](/hpc/status/index.html) page_)
+  
 2026-02-23: All jobs and logins on Wynton have been paused until further notice. The team is focused on resolving the issue.
   
 2026-01-30: Protected (P3 and P4) data and accounts have been decommissioned. Only Wynton Regular (P1-P2) accounts can use the cluster from now on.
