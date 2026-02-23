@@ -178,7 +178,7 @@ level: danger
 condition: is non-operational
 message: Cluster is not accessible. Job submissions and logins are paused.
 
-Default:
-level: info
-condition: is operational
-message:
+#Default:
+#level: info
+#condition: is operational
+#message:
