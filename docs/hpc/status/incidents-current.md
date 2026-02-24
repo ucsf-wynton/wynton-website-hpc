@@ -1,3 +1,32 @@
+### February 20-ongoing, 2026
+
+#### <span class="incident-title">BeeGFS storage outage</span>
+
+**Notice**: All jobs and the job queue remain suspended. The Wynton Team
+working on this as a top priority.
+<br><span class="timestamp">February 23, 10:30 PT</span>
+
+**Notice**: The Wynton Team has been working throughout the weekend to
+monitor and mitigate issues with the BeeGFS storage servers.
+<br><span class="timestamp">February 23, 09:30 PT</span>
+
+**Notice**: All jobs have been paused. They will be automatically
+resumed when the file system is stable again.
+<br><span class="timestamp">February 20, 21:30 PT</span>
+
+**Notice**: BeeGFS is experiencing issues since Friday at 17:55.
+<br><span class="timestamp">February 20, 19:00 PT</span>
+
+<!--
+period: 2026-01-25T20:15:00/2026-01-26T08:45:00 (12.5 hours)
+period: 2026-01-26T17:45:00/2026-01-27T08:15:00 (14.5 hours)
+total_length: 27.0 hours
+severity: minor-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
+
+
 ### November 16, 2023-ongoing
 
 #### <span class="incident-title">Sporadic job failure</span>
