@@ -174,7 +174,11 @@
 #condition: is operational
 #message: Cluster is partially accessible and jobs are suspended until BeeGFS resynchronizations have stabilized
 
-Default:
-level: info
-condition: is operational
-message:
+level: danger
+condition: is non-operational
+message: Cluster is not accessible. Job submissions and logins are paused.
+
+#Default:
+#level: info
+#condition: is operational
+#message:
