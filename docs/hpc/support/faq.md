@@ -463,16 +463,6 @@ connect directly to `dev1`.
 
 ## Contributing to {{ site.cluster.nickname }}
 
-### Purchase compute slots
-
-**Q**. _Our lab would contribute to {{ site.cluster.name }} in order
-to increase our priority.  How can we do this?_
-
-**A**. We welcome donations of any size.  In return, your lab will
-receive a number of slots in member.q equivalent to the number of
-cores in a current Standard Node that your contribution would
-purchase.  See [Pricing for Extra Compute] for more details.
-
 ### Contribute hardware
 
 **Q**. _Our lab has some old nodes we'd like to contribute to {{
