@@ -2,13 +2,18 @@
 
 #### <span class="incident-title">BeeGFS storage outage</span>
 
+**Notice**: All jobs and the job queue are suspended. The Wynton Team
+is working with support vendors and the UCSF networking team to
+troubleshoot.
+<br><span class="timestamp">February 24, 18:00 PT</span>
+
 **Notice**: Jobs and the job queue have been resumed. The root cause
 is still being investigated. There is a risk for subsequential file
 system issues resulting in job hanging.
 <br><span class="timestamp">February 23, 17:45 PT</span>
 
 **Notice**: All jobs and the job queue remain suspended. The Wynton Team
-working on this as a top priority.
+is working on this as a top priority.
 <br><span class="timestamp">February 23, 10:30 PT</span>
 
 **Notice**: The Wynton Team has been working throughout the weekend to
