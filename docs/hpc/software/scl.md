@@ -16,6 +16,7 @@ gcc-toolset-10
 gcc-toolset-11
 gcc-toolset-12
 gcc-toolset-13
+gcc-toolset-14
 gcc-toolset-9
 ```
 
@@ -128,7 +129,7 @@ To go back to the built-in version of GCC, unload the module, i.e.
 ```sh
 [alice@{{ site.devel.name }} ~]$ module unload CBI scl-gcc-toolset/12
 [alice@{{ site.devel.name }} ~]$ gcc --version
-gcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-22)
+gcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
