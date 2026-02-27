@@ -2,6 +2,11 @@
 
 #### <span class="incident-title">BeeGFS storage outage</span>
 
+**Notice**: Status quo - all jobs and the job queue remain suspended.
+A definitive root cause has not yet been identified. In the meanwhile,
+storage drive pairs keep being re-synchronized.
+<br><span class="timestamp">February 27, 10:30 PT</span>
+
 **Notice**: All jobs and the job queue are suspended. The Wynton Team
 is working with support vendors and the UCSF networking team to
 troubleshoot.
