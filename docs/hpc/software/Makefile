@@ -27,7 +27,7 @@ r-packages:
 	Rscript -e "chooseCRANmirror(ind = 1)" \
           -e "if (!requireNamespace('R.rsp'  )) install.packages('R.rsp')" \
           -e "if (!requireNamespace('remotes')) install.packages('remotes')" \
-          -e "if (!requireNamespace('lmodweb')) remotes::install_github('ucsf-wynton/lmodweb')"
+          -e "if (!requireNamespace('lmodweb')) remotes::install_github('HenrikBengtsson/lmodweb')"
 
 
 all-markin: scl apptainer sbgrid
