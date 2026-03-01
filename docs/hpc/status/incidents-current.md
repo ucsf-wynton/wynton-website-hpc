@@ -2,6 +2,11 @@
 
 #### <span class="incident-title">BeeGFS storage outage</span>
 
+**Notice**: Jobs and the job queue have been resumed. The status of
+BeeGFS metadata and storage servers is now all okay. We will keep
+monitoring the file system as load is ramping up.
+<br><span class="timestamp">February 28, 18:00 PT</span>
+
 **Notice**: Status quo - all jobs and the job queue remain suspended.
 A definitive root cause has not yet been identified. In the meanwhile,
 storage drive pairs keep being re-synchronized.
