@@ -2,6 +2,9 @@
 
 #### <span class="incident-title">BeeGFS storage outage</span>
 
+**Notice**: All BeeGFS storage servers are stable again.
+<br><span class="timestamp">March 3, 13:15 PT</span>
+
 **Notice**: BeeGFS storage servers bss15 and bss16 are experiencing
 issues. This affects some users' group storage resulting in stalled
 file access and possible timeouts.
