@@ -191,6 +191,11 @@
 #condition: is operational
 #message: Cluster is partially accessible. All job are paused.
 
+#level: warning
+#condition: experiences partial problems
+#message: Cluster is experiencing partial BeeGFS problems affecting group storage
+
 level: warning
 condition: is operational
-message: Cluster is recovering from BeeGFS issues. Jobs have been resumed.
+message: Cluster is recovering from BeeGFS issues.
+
