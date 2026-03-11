@@ -84,6 +84,6 @@ For questions, discussion, and feature requests, please use our
 
 If you prefer in-person support, please visit our **Office Hours**:
 
-   * We hold online **Office Hours every Tuesday at 11-noon** (1 hour)
+   * We hold online **Office Hours every Tuesday at 10:10am-11:00am** (50 minutes)
      - you can find the Zoom URL in (i) the message-of-the-day (MOTD)
      that you get when you log into Wynton, and (ii) on Slack.
