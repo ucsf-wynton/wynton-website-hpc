@@ -55,19 +55,17 @@ If you have an existing {{ site.cluster.name }} account and would like to modify
 
 1. Select "Yes" or "No" from the **"Does this user already have an existing account on Wynton?"** pull down.
 
-2. Select ~~"Yes" or~~ **"No"** from the **"Do you Require Access to Wynton Protected"** pull down. [Wynton Protected accounts are no longer created as of 2025-12-01](/hpc/get-started/protected-quickstart.html).
+2. If you are filling the form out for yourself, when you click the box to indicate that, the **"Requested For"** field will be autopopulated with your name.  If you are requesting an account for another user, enter their name and select it from the pull down.  If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
 
-3. If you are filling the form out for yourself, when you click the box to indicate that, the **"Requested For"** field will be autopopulated with your name.  If you are requesting an account for another user, enter their name and select it from the pull down.  If they are a non-UCSF affiliate, select **"Check this box if you cannot find their User Name in the database"** and enter their First Name, Last Name, and contact email address.
+3. Select a **"UCSF Title"** from the pull down menu (if there isn't an exact match, select something that approximates your title/role).
 
-4. Select a **"UCSF Title"** from the pull down menu (if there isn't an exact match, select something that approximates your title/role).
+4. Select the **"Country"** and **"State"** from which you work. If you are associated with an institution other than UCSF, enter it in the **"Institution"** field.
 
-5. Select the **"Country"** and **"State"** from which you work. If you are associated with an institution other than UCSF, enter it in the **"Institution"** field.
+5. If you have had accounts with any of the affiliated computing environments, select them.
 
-6. If you have had accounts with any of the affiliated computing environments, select them.
+6. Enter your desired Wynton Username.
 
-7. Enter your desired Wynton Username.
-
-8. Enter a desired alternative Wynton Username (in case your first choice is already in use).
+7. Enter a desired alternative Wynton Username (in case your first choice is already in use).
 
 #### Comments and Submit
 
