@@ -1,5 +1,7 @@
 # News
 
+2026-03-01: Please note that the Wynton HPC service is being phased out and is scheduled to retire in early March, 2027. New research projects should generally use the newer FAC and CoreHPC environment instead.
+
 2026-01-30: Protected (P3 and P4) data and accounts have been decommissioned. Only Wynton Regular (P1-P2) accounts can use the cluster from now on.
 
 2026-01-16: The maximum job run-time is now limited for all Protected users such that their jobs finish by January 29 at 01:00 am.
