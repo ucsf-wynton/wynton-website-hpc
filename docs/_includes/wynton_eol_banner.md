@@ -1,4 +1,3 @@
-{% assign deadline = site.data.specs.protected_eol %}
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
   <p>
