@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(109)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(110)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (109)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (110)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2378,6 +2378,41 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_libblosc" class="module-name">libblosc</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">libblosc: A Blocking, Shuffling and Loss-less Compression Library</strong><br>
+<span class="module-description">A blocking, shuffling and loss-less compression library that can be faster than <code>memcpy()</code>.</span><br>
+URL: <span class="module-url"><a href="https://www.blosc.org/">https://www.blosc.org/</a>, <a href="https://github.com/Blosc/c-blosc">https://github.com/Blosc/c-blosc</a> (source code), <a href="https://github.com/Blosc/c-blosc/releases">https://github.com/Blosc/c-blosc/releases</a> (release)</span><br>
+Versions: <span class="module-version"><em>1.21.6</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help(&quot;libblosc: A Blocking, Shuffling and Loss-less Compression Library&quot;)
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: library&quot;)
+whatis(&quot;URL: https://www.blosc.org/, https://github.com/Blosc/c-blosc (source code), https://github.com/Blosc/c-blosc/releases (release)&quot;)
+whatis([[
+Description: A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+-- run-time
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib64&quot;))
+
+-- building
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,  pathJoin(home, &quot;lib64&quot;, &quot;pkgconfig&quot;))
+prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
 </code></pre>
 
 </details>
@@ -6922,7 +6957,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(109)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(110)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
