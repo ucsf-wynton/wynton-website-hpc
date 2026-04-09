@@ -1,3 +1,9 @@
+<div class="alert alert-warning" role="alert" style="margin-top: 3ex">
+  <p>
+    ⚠️ <strong>Please note that the Wynton HPC service is being phased out as part of the Wynton Transition project and is scheduled to retire in early March, 2027. New research projects should generally use the newer FAC and CoreHPC environment instead.</strong> ⚠️
+  </p>
+</div>
+
 <div class="alert alert-info" role="alert" markdown="1">
 **NEWS**: (_For upcoming and current incidents, see the
 [Status](/hpc/status/index.html) page_)
