@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(112)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(114)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (112)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (114)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -1418,7 +1418,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.65.2, 0.66.0, 0.67.0, <em>0.70.0</em></span><br>
+Versions: <span class="module-version">0.65.2, 0.66.0, 0.67.0, 0.70.0, <em>0.71.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2006,7 +2006,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>3.4.1</em></span><br>
+Versions: <span class="module-version">3.4.1, <em>3.5.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2512,7 +2512,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;,  pathJoin(home, &quot;lib64&quot;, &qu
 Example: <span class="module-example"><code>llmfit --help</code>, <code>llmfit --version</code>, <code>llmfit</code> (TUI), and <code>llmfit</code> (output table)</span><br>
 URL: <span class="module-url"><a href="https://github.com/AlexsJones/llmfit">https://github.com/AlexsJones/llmfit</a> (source code), <a href="https://github.com/AlexsJones/llmfit/releases">https://github.com/AlexsJones/llmfit/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.7.2, <em>0.8.5</em></span><br>
+Versions: <span class="module-version">0.7.2, 0.8.5, <em>0.9.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3018,11 +3018,51 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_node" class="module-name">node</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">node: Node.js - Run JavaScript Everywhere</strong><br>
+<span class="module-description">Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. Long-term-support (LTS) versions of Node.js have even numbers, e.g. 20 (2023-04-18), 22 (2024-04-24), and 24 (2025-04-22).</span><br>
+Example: <span class="module-example"><code>node --version</code> and <code>node --help</code>. It's recommended to do <code>npm config set prefix ~/.local</code> (once) such that <code>npm install -g &lt;pkg&gt;</code> installs to <code>~/.local</code>.</span><br>
+URL: <span class="module-url"><a href="https://nodejs.org/">https://nodejs.org/</a>, <a href="https://nodejs.org/docs/latest/api/">https://nodejs.org/docs/latest/api/</a> (documentation), <a href="https://github.com/nodejs/node">https://github.com/nodejs/node</a> (source code), <a href="https://github.com/nodejs/node/releases">https://github.com/nodejs/node/releases</a> (releases)</span><br>
+Versions: <span class="module-version"><em>24.14.1</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+node: Node.js - Run JavaScript Everywhere
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming&quot;)
+whatis(&quot;URL: https://nodejs.org/, https://nodejs.org/docs/latest/api/ (documentation), https://github.com/nodejs/node (source code), https://github.com/nodejs/node/releases (releases)&quot;)
+whatis([[
+Description: Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. Long-term-support (LTS) versions of Node.js have even numbers, e.g. 20 (2023-04-18), 22 (2024-04-24), and 24 (2025-04-22).
+Examples: `node --version` and `node --help`. It's recommended to do `npm config set prefix ~/.local` (once) such that `npm install -g &lt;pkg&gt;` installs to `~/.local`.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+setenv(&quot;NODE_PATH&quot;, pathJoin(base, &quot;lib&quot;, &quot;node_modules&quot;))
+prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
+
+
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_openjdk" class="module-name">openjdk</h3>
 <dl>
   <dd class="module-details">
 <strong class="module-help">openjdk: Open Java Development Kit</strong><br>
-<span class="module-description">Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8, 11, 17, 21, and 25.</span><br>
+<span class="module-description">Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8 (2014-03-18), 11 (2018-09-25), 17 (2021-09-14), 21 (2023-09-19), and 25 (2025-09-16).</span><br>
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
 URL: <span class="module-url"><a href="https://openjdk.org/">https://openjdk.org/</a>, <a href="https://jdk.java.net/">https://jdk.java.net/</a> (releases)</span><br>
 Versions: <span class="module-version">21+35, <em>25.0.2</em></span><br>
@@ -3038,7 +3078,7 @@ whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming&quot;)
 whatis(&quot;URL: https://openjdk.org/, https://jdk.java.net/ (releases)&quot;)
 whatis([[
-Description: Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8, 11, 17, 21, and 25.
+Description: Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8 (2014-03-18), 11 (2018-09-25), 17 (2021-09-14), 21 (2023-09-19), and 25 (2025-09-16).
 Examples: `java -version` and `javac -version`.
 ]])
 
@@ -3462,7 +3502,7 @@ append_path(&quot;PYTHONPATH&quot;, home)
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.6.42, 1.8.25, 1.8.26, <em>1.9.36</em></span><br>
+Versions: <span class="module-version">1.6.42, 1.8.25, 1.8.26, 1.9.36, <em>1.9.37</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3707,7 +3747,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.71.0, 1.71.2, <em>1.73.3</em></span><br>
+Versions: <span class="module-version">1.71.0, 1.71.2, 1.73.3, <em>1.73.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -3975,6 +4015,51 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 -- Temporary workaround for https://github.com/UCSF-CBI/rstudio-server-controller/issues/91 /2023-12-15
 setenv(&quot;PORT4ME_PORT_COMMAND&quot;, &quot;netstat&quot;)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_rust" class="module-name">rust</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">rust: The Rust Programming Language</strong><br>
+<span class="module-description">Rust is a general-purpose programming language emphasizing performance, type safety, and concurrency. It enforces memory safety, meaning that all references point to valid memory. It does so without a conventional garbage collector; instead, memory safety errors and data races are prevented by the &quot;borrow checker&quot;, which tracks the object lifetime of references at compile time.</span><br>
+Example: <span class="module-example"><code>rustc --help</code> and <code>cargo --help</code>.</span><br>
+URL: <span class="module-url"><a href="https://www.rust-lang.org/">https://www.rust-lang.org/</a>, <a href="https://www.rust-lang.org/learn">https://www.rust-lang.org/learn</a> (documentation), <a href="https://github.com/rust-lang/rust">https://github.com/rust-lang/rust</a> (source code), <a href="https://github.com/rust-lang/rust/releases/tag/1.86.0">https://github.com/rust-lang/rust/releases/tag/1.86.0</a> (releases)</span><br>
+Versions: <span class="module-version"><em>1.94.1</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+rust: The Rust Programming Language
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: programming&quot;)
+whatis(&quot;URL: https://www.rust-lang.org/, https://www.rust-lang.org/learn (documentation), https://github.com/rust-lang/rust (source code), https://github.com/rust-lang/rust/releases/tag/1.86.0 (releases)&quot;)
+whatis([[
+Description: Rust is a general-purpose programming language emphasizing performance, type safety, and concurrency. It enforces memory safety, meaning that all references point to valid memory. It does so without a conventional garbage collector; instead, memory safety errors and data races are prevented by the &quot;borrow checker&quot;, which tracks the object lifetime of references at compile time.
+Examples: `rustc --help` and `cargo --help`.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+-- Cargo
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;cargo/bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;cargo/share/man&quot;))
+
+-- Rustc
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;rustc/bin&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;rustc/share/man&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;rustc/lib&quot;))
+
+pushenv(&quot;RUSTFLAGS&quot;, &quot;--sysroot=&quot; .. pathJoin(home, &quot;rust-std-x86_64-unknown-linux-gnu&quot;))
+
 </code></pre>
 
 </details>
@@ -4664,7 +4749,7 @@ pushenv(&quot;TRIMGALORE_HOME&quot;, home)
 Example: <span class="module-example"><code>uv --help</code>, <code>uv --version</code></span><br>
 URL: <span class="module-url"><a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a> (documentation), <a href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a> (source code), <a href="https://github.com/astral-sh/uv/releases">https://github.com/astral-sh/uv/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.11.2</em></span><br>
+Versions: <span class="module-version">0.11.2, <em>0.11.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -7040,7 +7125,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(112)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(114)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
