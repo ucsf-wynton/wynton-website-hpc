@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(114)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(115)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (114)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (115)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -1140,6 +1140,44 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 
 
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_deno" class="module-name">deno</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">deno: A Modern Runtime for JavaScript, TypeScript, and WebAssembly</strong><br>
+<span class="module-description">Deno is a JavaScript, TypeScript, and WebAssembly runtime with secure defaults and a great developer experience. It's built on V8, Rust, and Tokio.</span><br>
+Example: <span class="module-example"><code>deno --version</code>, <code>deno --help</code>.
+License: MIT</span><br>
+URL: <span class="module-url"><a href="https://deno.com/">https://deno.com/</a>, <a href="https://docs.deno.com/runtime/">https://docs.deno.com/runtime/</a> (documentation), <a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a> (source code), <a href="https://github.com/denoland/deno/releases">https://github.com/denoland/deno/releases</a> (releases)</span><br>
+Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Versions: <span class="module-version"><em>2.7.12</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+deno: A Modern Runtime for JavaScript, TypeScript, and WebAssembly
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, javascript, typescript, webassembly&quot;)
+whatis(&quot;URL: https://deno.com/, https://docs.deno.com/runtime/ (documentation), https://github.com/denoland/deno (source code), https://github.com/denoland/deno/releases (releases)&quot;)
+whatis([[
+Description: Deno is a JavaScript, TypeScript, and WebAssembly runtime with secure defaults and a great developer experience. It's built on V8, Rust, and Tokio.
+Examples: `deno --version`, `deno --help`.
+License: MIT
+Warning: Only the most recent version of this software will be kept.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, home)
 </code></pre>
 
 </details>
@@ -2357,10 +2395,11 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 <dl>
   <dd class="module-details">
 <strong class="module-help">julia: The Julia Programming Language</strong><br>
-<span class="module-description">Julia was designed for high performance. Julia programs automatically compile to efficient native code via LLVM, and support multiple platforms. Julia is dynamically typed, feels like a scripting language, and has good support for interactive use, but can also optionally be separately compiled.</span><br>
+<span class="module-description">Julia was designed for high performance. Julia programs automatically compile to efficient native code via LLVM, and support multiple platforms. Julia is dynamically typed, feels like a scripting language, and has good support for interactive use, but can also optionally be separately compiled.
+License: MIT</span><br>
 Example: <span class="module-example"><code>julia --version</code>, <code>julia --help</code>, and <code>julia</code>.</span><br>
 URL: <span class="module-url"><a href="https://julialang.org/">https://julialang.org/</a> (changelog), <a href="https://docs.julialang.org/">https://docs.julialang.org/</a> (docs), <a href="https://github.com/JuliaLang/julia/blob/master/NEWS.md">https://github.com/JuliaLang/julia/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/JuliaLang/julia/releases">https://github.com/JuliaLang/julia/releases</a> (releases), <a href="https://github.com/JuliaLang/julia">https://github.com/JuliaLang/julia</a> (source code)</span><br>
-Versions: <span class="module-version"><em>1.12.5</em></span><br>
+Versions: <span class="module-version">1.12.5, <em>1.12.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2375,6 +2414,7 @@ whatis(&quot;Keywords: system, utility, cli, tui&quot;)
 whatis(&quot;URL: https://julialang.org/ (changelog), https://docs.julialang.org/ (docs), https://github.com/JuliaLang/julia/blob/master/NEWS.md (changelog), https://github.com/JuliaLang/julia/releases (releases), https://github.com/JuliaLang/julia (source code)&quot;)
 whatis([[
 Description: Julia was designed for high performance. Julia programs automatically compile to efficient native code via LLVM, and support multiple platforms. Julia is dynamically typed, feels like a scripting language, and has good support for interactive use, but can also optionally be separately compiled.
+License: MIT
 Examples: `julia --version`, `julia --help`, and `julia`.
 ]])
 
@@ -4745,11 +4785,12 @@ pushenv(&quot;TRIMGALORE_HOME&quot;, home)
 <dl>
   <dd class="module-details">
 <strong class="module-help">uv: Extremely Fast Python Package and Project Manager</strong><br>
-<span class="module-description">The 'uv' tool replaces 'pip', 'pip-tools', 'pipx', 'poetry', 'pyenv', 'twine', 'virtualenv', and more.</span><br>
+<span class="module-description">The 'uv' tool replaces 'pip', 'pip-tools', 'pipx', 'poetry', 'pyenv', 'twine', 'virtualenv', and more.
+License: MIT | Apache-2.0</span><br>
 Example: <span class="module-example"><code>uv --help</code>, <code>uv --version</code></span><br>
 URL: <span class="module-url"><a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a> (documentation), <a href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a> (source code), <a href="https://github.com/astral-sh/uv/releases">https://github.com/astral-sh/uv/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.11.2, <em>0.11.6</em></span><br>
+Versions: <span class="module-version">0.11.2, 0.11.6, <em>0.11.7</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4763,6 +4804,7 @@ whatis(&quot;Keywords: utility, python&quot;)
 whatis(&quot;URL: https://docs.astral.sh/uv (documentation), https://github.com/astral-sh/uv (source code), https://github.com/astral-sh/uv/releases (releases)&quot;)
 whatis([[
 Description: The 'uv' tool replaces 'pip', 'pip-tools', 'pipx', 'poetry', 'pyenv', 'twine', 'virtualenv', and more.
+License: MIT | Apache-2.0
 Examples: `uv --help`, `uv --version`
 Warning: Only the most recent version of this software will be kept.
 ]])
@@ -4820,10 +4862,11 @@ depends_on(&quot;java-tweaks&quot;)
 <dl>
   <dd class="module-details">
 <strong class="module-help">vcf-validator: Validation Suite for Variant Call Format (VCF) Files</strong><br>
-<span class="module-description">Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input.</span><br>
+<span class="module-description">Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input.
+License: Apache-2.0</span><br>
 Example: <span class="module-example"><code>vcf_validator --help</code>, <code>vcf-debugulator --help</code>, and <code>vcf-assembly-checker --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/EBIvariation/vcf-validator">https://github.com/EBIvariation/vcf-validator</a>, <a href="https://github.com/EBIvariation/vcf-validator/releases">https://github.com/EBIvariation/vcf-validator/releases</a> (changelog)</span><br>
-Versions: <span class="module-version">0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, <em>0.9.7</em></span><br>
+Versions: <span class="module-version">0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, 0.9.7, <em>0.10.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4837,6 +4880,7 @@ whatis(&quot;Keywords: sequencing&quot;)
 whatis(&quot;URL: https://github.com/EBIvariation/vcf-validator, https://github.com/EBIvariation/vcf-validator/releases (changelog)&quot;)
 whatis([[
 Description: Validator for the Variant Call Format (VCF) implemented using C++11. It includes all the checks from the vcftools suite, and some more that involve lexical, syntactic and semantic analysis of the VCF input.
+License: Apache-2.0
 Examples: `vcf_validator --help`, `vcf-debugulator --help`, and `vcf-assembly-checker --help`.
 ]])
 
@@ -7125,7 +7169,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(114)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(115)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
