@@ -52,7 +52,9 @@
   - 2026-01-07 (1.25 hours)
   - 2026-01-15 -- 2026-01-16 (12.5 hours) [partial]
   - 2026-01-25 -- 2026-01-27 (27.0 hours) [partial]
-* Total downtime: 135.75 hours of which 95.0 hours were due to external
+  - 2026-02-20 -- 2026-03-24 (238.75 hours) [partial]
+  
+* Total downtime: 374.5 hours of which 95.0 hours were due to external
   factors
 
 #### Unscheduled downtimes due to other reasons
@@ -64,6 +66,79 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
+
+
+
+### February 20-March 24, 2026
+
+#### <span class="incident-title">BeeGFS storage outage</span>
+
+**Resolved**: All BeeGFS storage servers are now fully functional.
+<br><span class="timestamp">March 24, 07:30 PT</span>
+
+**Notice**: One pool on BeeGFS storage server bss16 is offline.
+<br><span class="timestamp">March 12, 13:00 PT</span>
+
+**Notice**: All BeeGFS storage servers are available again.
+<br><span class="timestamp">March 10, 18:00 PT</span>
+
+**Notice**: BeeGFS storage servers bss15 and bss16 are experiencing
+issues again. This affects some users' group storage resulting in
+stalled file access and possible timeouts.
+<br><span class="timestamp">March 3, 18:45 PT</span>
+
+**Notice**: All BeeGFS storage servers are stable again.
+<br><span class="timestamp">March 3, 13:15 PT</span>
+
+**Notice**: BeeGFS storage servers bss15 and bss16 are experiencing
+issues. This affects some users' group storage resulting in stalled
+file access and possible timeouts.
+<br><span class="timestamp">March 2, 15:15 PT</span>
+
+**Notice**: Jobs and the job queue have been resumed. The status of
+BeeGFS metadata and storage servers is now all okay. We will keep
+monitoring the file system as load is ramping up.
+<br><span class="timestamp">February 28, 18:00 PT</span>
+
+**Notice**: Status quo - all jobs and the job queue remain suspended.
+A definitive root cause has not yet been identified. In the meanwhile,
+storage drive pairs keep being re-synchronized.
+<br><span class="timestamp">February 27, 10:30 PT</span>
+
+**Notice**: All jobs and the job queue are suspended. The Wynton Team
+is working with support vendors and the UCSF networking team to
+troubleshoot.
+<br><span class="timestamp">February 24, 18:00 PT</span>
+
+**Notice**: Jobs and the job queue have been resumed. The root cause
+is still being investigated. There is a risk for subsequential file
+system issues resulting in job hanging.
+<br><span class="timestamp">February 23, 17:45 PT</span>
+
+**Notice**: All jobs and the job queue remain suspended. The Wynton Team
+is working on this as a top priority.
+<br><span class="timestamp">February 23, 10:30 PT</span>
+
+**Notice**: The Wynton Team has been working throughout the weekend to
+monitor and mitigate issues with the BeeGFS storage servers.
+<br><span class="timestamp">February 23, 09:30 PT</span>
+
+**Notice**: All jobs have been paused. They will be automatically
+resumed when the file system is stable again.
+<br><span class="timestamp">February 20, 21:30 PT</span>
+
+**Notice**: BeeGFS is experiencing issues since Friday at 17:55.
+<br><span class="timestamp">February 20, 19:00 PT</span>
+
+<!--
+period: 2026-02-20T17:45:00/2026-02-23T17:45:00 (72.0 hours)
+period: 2026-03-03T18:45:00/2026-03-10T18:30:00 (166.75 hours)
+period: 2026-03-13T13:00:00/2026-03-24T07:30:00 (258.5 hours; partial)
+total_length: 238.75 hours (excluding the 258.5 hours of partial avaialbility)
+severity: minor-outage
+affected: beegfs, jobs, hosts
+reason: beegfs
+ -->
 
 
 ### January 25-27, 2026
