@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(115)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(117)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (115)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (117)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -2548,11 +2548,12 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;,  pathJoin(home, &quot;lib64&quot;, &qu
 <dl>
   <dd class="module-details">
 <strong class="module-help">llmfit: Identify LLM Models &amp; Providers Supported on Current Hardware</strong><br>
-<span class="module-description">A terminal tool that right-sizes LLM models to your system's RAM, CPU, and GPU. Detects your hardware, scores each model across quality, speed, fit, and context dimensions, and tells you which ones will actually run well on your machine. Ships with an interactive TUI (default) and a classic CLI mode. Supports multi-GPU setups, MoE architectures, dynamic quantization selection, speed estimation, and local runtime providers (Ollama, llama.cpp, MLX).</span><br>
+<span class="module-description">A terminal tool that right-sizes LLM models to your system's RAM, CPU, and GPU. Detects your hardware, scores each model across quality, speed, fit, and context dimensions, and tells you which ones will actually run well on your machine. Ships with an interactive TUI (default) and a classic CLI mode. Supports multi-GPU setups, MoE architectures, dynamic quantization selection, speed estimation, and local runtime providers (Ollama, llama.cpp, MLX).
+License: MIT</span><br>
 Example: <span class="module-example"><code>llmfit --help</code>, <code>llmfit --version</code>, <code>llmfit</code> (TUI), and <code>llmfit</code> (output table)</span><br>
 URL: <span class="module-url"><a href="https://github.com/AlexsJones/llmfit">https://github.com/AlexsJones/llmfit</a> (source code), <a href="https://github.com/AlexsJones/llmfit/releases">https://github.com/AlexsJones/llmfit/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.7.2, 0.8.5, <em>0.9.3</em></span><br>
+Versions: <span class="module-version">0.7.2, 0.8.5, 0.9.3, <em>0.9.22</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2566,6 +2567,7 @@ whatis(&quot;Keywords: utility, ai, llm&quot;)
 whatis(&quot;URL: https://github.com/AlexsJones/llmfit (source code), https://github.com/AlexsJones/llmfit/releases (releases)&quot;)
 whatis([[
 Description: A terminal tool that right-sizes LLM models to your system's RAM, CPU, and GPU. Detects your hardware, scores each model across quality, speed, fit, and context dimensions, and tells you which ones will actually run well on your machine. Ships with an interactive TUI (default) and a classic CLI mode. Supports multi-GPU setups, MoE architectures, dynamic quantization selection, speed estimation, and local runtime providers (Ollama, llama.cpp, MLX).
+License: MIT
 Examples: `llmfit --help`, `llmfit --version`, `llmfit` (TUI), and `llmfit` (output table)
 Warning: Only the most recent version of this software will be kept.
 ]])
@@ -3093,6 +3095,87 @@ setenv(&quot;NODE_PATH&quot;, pathJoin(base, &quot;lib&quot;, &quot;node_modules
 prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_ollama" class="module-name">ollama</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">ollama: Start Building with Open Models</strong><br>
+<span class="module-description">Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.
+License: MIT</span><br>
+Example: <span class="module-example"><code>ollama --version</code> and <code>ollama --help</code>. <code>ollama serve</code> and <code>ollama pull llama3.2</code> in another shell (models are stored under <code>~/.ollama/</code>). <code>ollama show llama3.2</code>.</span><br>
+URL: <span class="module-url"><a href="https://ollama.com/">https://ollama.com/</a>, <a href="https://github.com/ollama/ollama/releases/">https://github.com/ollama/ollama/releases/</a> (releases), <a href="https://github.com/ollama/ollama/">https://github.com/ollama/ollama/</a> (source code)</span><br>
+Versions: <span class="module-version"><em>0.23.2</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+ollama: Start Building with Open Models
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: llm&quot;)
+whatis(&quot;URL: https://ollama.com/, https://github.com/ollama/ollama/releases/ (releases), https://github.com/ollama/ollama/ (source code)&quot;)
+whatis([[
+Description: Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.
+License: MIT
+Examples: `ollama --version` and `ollama --help`. `ollama serve` and `ollama pull llama3.2` in another shell (models are stored under `~/.ollama/`). `ollama show llama3.2`.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;ollama&quot;))
+
+
+-- Warn about missing system libraries
+if (mode() == &quot;load&quot;) then
+  local handle = os.execute(&quot;ldconfig -p | grep -q libcuda.so&quot;)
+  if not handle then
+      LmodMessage(&quot;[&quot; .. name .. &quot;]: libcuda.so not found. GPU features may not work&quot;)
+  end
+end
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_opencode" class="module-name">opencode</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">opencode: The Open Source AI Coding Agent</strong><br>
+<span class="module-description">The open source AI coding agent. Free models included or connect any model from any provider, including Claude, GPT, Gemini and more.</span><br>
+Example: <span class="module-example"><code>opencode --version</code>, <code>opencode --help</code>.</span><br>
+URL: <span class="module-url"><a href="https://opencode.ai/">https://opencode.ai/</a>, <a href="https://github.com/anomalyco/opencode/releases">https://github.com/anomalyco/opencode/releases</a> (releases), <a href="https://github.com/anomalyco/opencode">https://github.com/anomalyco/opencode</a> (source code)</span><br>
+Versions: <span class="module-version"><em>1.14.42</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+opencode: The Open Source AI Coding Agent
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: cli, ai&quot;)
+whatis(&quot;URL: https://opencode.ai/, https://github.com/anomalyco/opencode/releases (releases), https://github.com/anomalyco/opencode (source code)&quot;)
+whatis([[
+Description: The open source AI coding agent. Free models included or connect any model from any provider, including Claude, GPT, Gemini and more.
+Examples: `opencode --version`, `opencode --help`.
+]]
+)
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;opencode-ai&quot;, &quot;bin&quot;))
 </code></pre>
 
 </details>
@@ -5143,24 +5226,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -5174,6 +5239,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
@@ -7169,7 +7252,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(115)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(117)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
