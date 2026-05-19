@@ -909,7 +909,7 @@ setenv(&quot;X86_64_LEVEL_ASSERT&quot;, &quot;&quot;)
 <span class="module-description">Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal. Supports modern terminal graphics formats (Sixels, Kitty, iTerm2, Unicode mosaics) - pick the one that your local terminal supports.</span><br>
 Example: <span class="module-example"><code>chafa image.png</code>, <code>chafa --format=iterm image.png</code>, <code>chafa --format=kitty image.png</code>, <code>chafa --version</code> and <code>chafa --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://hpjansson.org/chafa/">https://hpjansson.org/chafa/</a>, <a href="https://github.com/hpjansson/chafa/blob/master/NEWS">https://github.com/hpjansson/chafa/blob/master/NEWS</a> (changelog) <a href="https://github.com/hpjansson/chafa/releases">https://github.com/hpjansson/chafa/releases</a> (releases), <a href="https://github.com/hpjansson/chafa">https://github.com/hpjansson/chafa</a> (source code)</span><br>
-Versions: <span class="module-version">1.14.4-1, <em>1.18.1</em></span><br>
+Versions: <span class="module-version">1.14.4-1, 1.18.1, <em>1.18.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1154,7 +1154,7 @@ Example: <span class="module-example"><code>deno --version</code>, <code>deno --
 License: MIT</span><br>
 URL: <span class="module-url"><a href="https://deno.com/">https://deno.com/</a>, <a href="https://docs.deno.com/runtime/">https://docs.deno.com/runtime/</a> (documentation), <a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a> (source code), <a href="https://github.com/denoland/deno/releases">https://github.com/denoland/deno/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>2.7.12</em></span><br>
+Versions: <span class="module-version">2.7.12, <em>2.7.14</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1178,6 +1178,13 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
+
+-- DENO_JOBS: Number of parallel workers used for the '--parallel' flag
+-- with the test subcommand. Defaults to number of available CPUs.
+-- FIX: Change default to two parallel workers
+if not os.getenv(&quot;DENO_JOBS&quot;) then
+    pushenv(&quot;DENO_JOBS&quot;, &quot;2&quot;)
+end
 </code></pre>
 
 </details>
@@ -1456,7 +1463,7 @@ Example: <span class="module-example"><code>fzf --version</code> and <code>emacs
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.65.2, 0.66.0, 0.67.0, 0.70.0, <em>0.71.0</em></span><br>
+Versions: <span class="module-version">0.65.2, 0.66.0, 0.67.0, 0.70.0, 0.71.0, <em>0.72.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1721,7 +1728,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code> and <code>gh --help</code>. Setup: <code>gh auth login</code> (once). CLI query example: <code>gh issue list --repo=futureverse/future</code>. TUI: <code>gh extension install dlvhdr/gh-dash</code> (once), then <code>gh dash</code>. AI: <code>gh extension install github/gh-copilot</code> (once), then <code>gh copilot suggest &quot;find files older than one year&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code), <a href="https://github.com/topics/gh-extension">https://github.com/topics/gh-extension</a> (GitHub CLI extensions)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.67.0, 2.82.1, 2.83.1, <em>2.89.0</em></span><br>
+Versions: <span class="module-version">2.67.0, 2.82.1, 2.83.1, 2.89.0, <em>2.92.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1824,11 +1831,12 @@ prepend_path(&quot;PATH&quot;, home)
 <dl>
   <dd class="module-details">
 <strong class="module-help">glow: Render Markdown on the CLI, with Pizzazz!</strong><br>
-<span class="module-description">Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI.  Use it to discover markdown files, read documentation directly on the command line and stash markdown files to your own private collection so you can read them anywhere. Glow will find local markdown files in subdirectories or a local Git repository.</span><br>
+<span class="module-description">Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI.  Use it to discover markdown files, read documentation directly on the command line and stash markdown files to your own private collection so you can read them anywhere. Glow will find local markdown files in subdirectories or a local Git repository.
+License: MIT</span><br>
 Example: <span class="module-example"><code>glow README.md</code>, <code>glow --pager README.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/charmbracelet/glow">https://github.com/charmbracelet/glow</a>, <a href="https://github.com/charmbracelet/glow/releases">https://github.com/charmbracelet/glow/releases</a> (changelog)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.0.0, <em>2.1.1</em></span><br>
+Versions: <span class="module-version">2.0.0, 2.1.1, <em>2.1.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1842,6 +1850,7 @@ whatis(&quot;Keywords: utility, file viewer, pager, markdown, cli, tui&quot;)
 whatis(&quot;URL: https://github.com/charmbracelet/glow, https://github.com/charmbracelet/glow/releases (changelog)&quot;)
 whatis([[
 Description: Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI.  Use it to discover markdown files, read documentation directly on the command line and stash markdown files to your own private collection so you can read them anywhere. Glow will find local markdown files in subdirectories or a local Git repository.
+License: MIT
 Examples: `glow README.md`, `glow --pager README.md`.
 Warning: Only the most recent version of this software will be kept.
 ]])
@@ -1861,10 +1870,10 @@ prepend_path(&quot;MANPATH&quot;, home)
 <dl>
   <dd class="module-details">
 <strong class="module-help">go: The Go Programming Language</strong><br>
-<span class="module-description">Build simple, secure, scalable systems with Go.</span><br>
+<span class="module-description">Build simple, secure, scalable systems with Go. Go has two major releases each year, e.g. go 1.24 (2025-02-11), 1.25 (2025-08-12), 1.26 (2026-02-10).</span><br>
 Example: <span class="module-example"><code>go version</code> and <code>go help</code>.</span><br>
 URL: <span class="module-url"><a href="https://go.dev/">https://go.dev/</a>, <a href="https://go.dev/doc/devel/release">https://go.dev/doc/devel/release</a> (changelog), <a href="https://go.dev/dl/">https://go.dev/dl/</a> (releases), <a href="https://github.com/golang">https://github.com/golang</a> (source code)</span><br>
-Versions: <span class="module-version">1.22.5, 1.23.1, 1.23.4, 1.23.5, 1.23.6, 1.24.0, 1.24.4, <em>1.26.1</em></span><br>
+Versions: <span class="module-version">1.22.5, 1.23.1, 1.23.4, 1.23.5, 1.23.6, 1.24.0, 1.24.4, 1.26.1, <em>1.26.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1877,7 +1886,7 @@ whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: cli, shell&quot;)
 whatis(&quot;URL: https://go.dev/, https://go.dev/doc/devel/release (changelog), https://go.dev/dl/ (releases), https://github.com/golang (source code)&quot;)
 whatis([[
-Description: Build simple, secure, scalable systems with Go.
+Description: Build simple, secure, scalable systems with Go. Go has two major releases each year, e.g. go 1.24 (2025-02-11), 1.25 (2025-08-12), 1.26 (2026-02-10).
 Examples: `go version` and `go help`.
 ]])
 
@@ -2044,7 +2053,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.4.1, <em>3.5.0</em></span><br>
+Versions: <span class="module-version">3.4.1, 3.5.0, <em>3.5.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2511,7 +2520,7 @@ prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
 <span class="module-description">A cross-platform, linkable library implementation of Git that you can use in your application.</span><br>
 Example: <span class="module-example"><code>git2 --version</code> and <code>git2 --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://libgit2.org/">https://libgit2.org/</a>, <a href="https://github.com/libgit2/libgit2">https://github.com/libgit2/libgit2</a> (source code), <a href="https://github.com/libgit2/libgit2/releases">https://github.com/libgit2/libgit2/releases</a> (release)</span><br>
-Versions: <span class="module-version"><em>1.9.0</em></span><br>
+Versions: <span class="module-version">1.9.0, <em>1.9.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;libgit2: Cross-platform, Linkable Library Implementation of Git&quot;)
@@ -2553,7 +2562,7 @@ License: MIT</span><br>
 Example: <span class="module-example"><code>llmfit --help</code>, <code>llmfit --version</code>, <code>llmfit</code> (TUI), and <code>llmfit</code> (output table)</span><br>
 URL: <span class="module-url"><a href="https://github.com/AlexsJones/llmfit">https://github.com/AlexsJones/llmfit</a> (source code), <a href="https://github.com/AlexsJones/llmfit/releases">https://github.com/AlexsJones/llmfit/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.7.2, 0.8.5, 0.9.3, <em>0.9.22</em></span><br>
+Versions: <span class="module-version">0.7.2, 0.8.5, 0.9.3, 0.9.22, <em>0.9.25</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2847,7 +2856,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a>, <a href="https://conda-forge.org/docs/user/introduction/">https://conda-forge.org/docs/user/introduction/</a> (documentation), <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a> (releases),  <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
 Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
-Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, 24.11.0-0, 24.11.2-1, 25.9.1-0, <em>26.1.1-3</em></span><br>
+Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, 24.11.0-0, 24.11.2-1, 25.9.1-0, 26.1.1-3, <em>26.3.2-2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2898,15 +2907,15 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
 end
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-26.1.1-3/etc/profile.d/conda.sh
-pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.1.1-3/bin/conda&quot;)
-pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.1.1-3/bin/python&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.1.1-3/condabin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
-setenv(&quot;_CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.1.1-3/bin/conda&quot;)
-setenv(&quot;_CONDA_ROOT&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.1.1-3&quot;)
+setenv(&quot;_CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/bin/conda&quot;)
+setenv(&quot;_CONDA_ROOT&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
     if [ -n \&quot;${CONDA_PS1_BACKUP:+x}\&quot; ]; then\
         PS1=\&quot;$CONDA_PS1_BACKUP\&quot;;\
@@ -3064,10 +3073,10 @@ prepend_path(&quot;PATH&quot;, home)
 <dl>
   <dd class="module-details">
 <strong class="module-help">node: Node.js - Run JavaScript Everywhere</strong><br>
-<span class="module-description">Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. Long-term-support (LTS) versions of Node.js have even numbers, e.g. 20 (2023-04-18), 22 (2024-04-24), and 24 (2025-04-22).</span><br>
+<span class="module-description">Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. Long-term-support (LTS) versions of Node.js have even numbers and enter LTS around six months after the first release, e.g. 20 (2023-04-18), 22 (2024-04-24) and 24 (2025-04-22). Node js 26 (2026-05-05) is expected to enter LTS in October 2026.</span><br>
 Example: <span class="module-example"><code>node --version</code> and <code>node --help</code>. It's recommended to do <code>npm config set prefix ~/.local</code> (once) such that <code>npm install -g &lt;pkg&gt;</code> installs to <code>~/.local</code>.</span><br>
 URL: <span class="module-url"><a href="https://nodejs.org/">https://nodejs.org/</a>, <a href="https://nodejs.org/docs/latest/api/">https://nodejs.org/docs/latest/api/</a> (documentation), <a href="https://github.com/nodejs/node">https://github.com/nodejs/node</a> (source code), <a href="https://github.com/nodejs/node/releases">https://github.com/nodejs/node/releases</a> (releases)</span><br>
-Versions: <span class="module-version"><em>24.14.1</em></span><br>
+Versions: <span class="module-version">24.14.1, <em>24.15.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3080,7 +3089,7 @@ whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming&quot;)
 whatis(&quot;URL: https://nodejs.org/, https://nodejs.org/docs/latest/api/ (documentation), https://github.com/nodejs/node (source code), https://github.com/nodejs/node/releases (releases)&quot;)
 whatis([[
-Description: Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. Long-term-support (LTS) versions of Node.js have even numbers, e.g. 20 (2023-04-18), 22 (2024-04-24), and 24 (2025-04-22).
+Description: Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. Long-term-support (LTS) versions of Node.js have even numbers and enter LTS around six months after the first release, e.g. 20 (2023-04-18), 22 (2024-04-24) and 24 (2025-04-22). Node js 26 (2026-05-05) is expected to enter LTS in October 2026.
 Examples: `node --version` and `node --help`. It's recommended to do `npm config set prefix ~/.local` (once) such that `npm install -g &lt;pkg&gt;` installs to `~/.local`.
 ]])
 
@@ -3108,7 +3117,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 License: MIT</span><br>
 Example: <span class="module-example"><code>ollama --version</code> and <code>ollama --help</code>. <code>ollama serve</code> and <code>ollama pull llama3.2</code> in another shell (models are stored under <code>~/.ollama/</code>). <code>ollama show llama3.2</code>.</span><br>
 URL: <span class="module-url"><a href="https://ollama.com/">https://ollama.com/</a>, <a href="https://github.com/ollama/ollama/releases/">https://github.com/ollama/ollama/releases/</a> (releases), <a href="https://github.com/ollama/ollama/">https://github.com/ollama/ollama/</a> (source code)</span><br>
-Versions: <span class="module-version"><em>0.23.2</em></span><br>
+Versions: <span class="module-version">0.23.2, <em>0.24.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3154,7 +3163,7 @@ end
 <span class="module-description">The open source AI coding agent. Free models included or connect any model from any provider, including Claude, GPT, Gemini and more.</span><br>
 Example: <span class="module-example"><code>opencode --version</code>, <code>opencode --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://opencode.ai/">https://opencode.ai/</a>, <a href="https://github.com/anomalyco/opencode/releases">https://github.com/anomalyco/opencode/releases</a> (releases), <a href="https://github.com/anomalyco/opencode">https://github.com/anomalyco/opencode</a> (source code)</span><br>
-Versions: <span class="module-version"><em>1.14.42</em></span><br>
+Versions: <span class="module-version">1.14.42, <em>1.14.51</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3870,7 +3879,7 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.71.0, 1.71.2, 1.73.3, <em>1.73.4</em></span><br>
+Versions: <span class="module-version">1.71.0, 1.71.2, 1.73.3, 1.73.4, <em>1.74.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -4149,8 +4158,8 @@ setenv(&quot;PORT4ME_PORT_COMMAND&quot;, &quot;netstat&quot;)
 <strong class="module-help">rust: The Rust Programming Language</strong><br>
 <span class="module-description">Rust is a general-purpose programming language emphasizing performance, type safety, and concurrency. It enforces memory safety, meaning that all references point to valid memory. It does so without a conventional garbage collector; instead, memory safety errors and data races are prevented by the &quot;borrow checker&quot;, which tracks the object lifetime of references at compile time.</span><br>
 Example: <span class="module-example"><code>rustc --help</code> and <code>cargo --help</code>.</span><br>
-URL: <span class="module-url"><a href="https://www.rust-lang.org/">https://www.rust-lang.org/</a>, <a href="https://www.rust-lang.org/learn">https://www.rust-lang.org/learn</a> (documentation), <a href="https://github.com/rust-lang/rust">https://github.com/rust-lang/rust</a> (source code), <a href="https://github.com/rust-lang/rust/releases/tag/1.86.0">https://github.com/rust-lang/rust/releases/tag/1.86.0</a> (releases)</span><br>
-Versions: <span class="module-version"><em>1.94.1</em></span><br>
+URL: <span class="module-url"><a href="https://www.rust-lang.org/">https://www.rust-lang.org/</a>, <a href="https://www.rust-lang.org/learn">https://www.rust-lang.org/learn</a> (documentation), <a href="https://github.com/rust-lang/rust">https://github.com/rust-lang/rust</a> (source code), <a href="https://github.com/rust-lang/rust/releases/">https://github.com/rust-lang/rust/releases/</a> (releases)</span><br>
+Versions: <span class="module-version">1.94.1, <em>1.95.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4162,7 +4171,7 @@ local version = myModuleVersion()
 version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming&quot;)
-whatis(&quot;URL: https://www.rust-lang.org/, https://www.rust-lang.org/learn (documentation), https://github.com/rust-lang/rust (source code), https://github.com/rust-lang/rust/releases/tag/1.86.0 (releases)&quot;)
+whatis(&quot;URL: https://www.rust-lang.org/, https://www.rust-lang.org/learn (documentation), https://github.com/rust-lang/rust (source code), https://github.com/rust-lang/rust/releases/ (releases)&quot;)
 whatis([[
 Description: Rust is a general-purpose programming language emphasizing performance, type safety, and concurrency. It enforces memory safety, meaning that all references point to valid memory. It does so without a conventional garbage collector; instead, memory safety errors and data races are prevented by the &quot;borrow checker&quot;, which tracks the object lifetime of references at compile time.
 Examples: `rustc --help` and `cargo --help`.
@@ -4873,7 +4882,7 @@ License: MIT | Apache-2.0</span><br>
 Example: <span class="module-example"><code>uv --help</code>, <code>uv --version</code></span><br>
 URL: <span class="module-url"><a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a> (documentation), <a href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a> (source code), <a href="https://github.com/astral-sh/uv/releases">https://github.com/astral-sh/uv/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.11.2, 0.11.6, <em>0.11.7</em></span><br>
+Versions: <span class="module-version">0.11.2, 0.11.6, 0.11.7, <em>0.11.14</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
