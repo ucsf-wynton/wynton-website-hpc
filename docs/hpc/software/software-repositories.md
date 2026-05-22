@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(117)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(118)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (117)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (118)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -4522,6 +4522,43 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_sqlcmd" class="module-name">sqlcmd</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">sqlcmd: Tools for working with Microsoft SQL Server, Azure SQL Database, and Azure Synapse</strong><br>
+<span class="module-description">Examples: <code>sqlcmd --help</code>, <code>sqlcmd --version</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/microsoft/go-sqlcmd">https://github.com/microsoft/go-sqlcmd</a>, <a href="https://learn.microsoft.com/sql/tools/sqlcmd/go-sqlcmd-utility">https://learn.microsoft.com/sql/tools/sqlcmd/go-sqlcmd-utility</a> (documentation), <a href="https://github.com/microsoft/go-sqlcmd/releases">https://github.com/microsoft/go-sqlcmd/releases</a> (releases)</span><br>
+Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Versions: <span class="module-version"><em>1.10.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+sqlcmd: Tools for working with Microsoft SQL Server, Azure SQL Database, and Azure Synapse
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, cli, sql&quot;)
+whatis(&quot;URL: https://github.com/microsoft/go-sqlcmd, https://learn.microsoft.com/sql/tools/sqlcmd/go-sqlcmd-utility (documentation), https://github.com/microsoft/go-sqlcmd/releases (releases)&quot;)
+whatis([[
+Description: 
+Examples: `sqlcmd --help`, `sqlcmd --version`.
+Warning: Only the most recent version of this software will be kept.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_sqlite" class="module-name">sqlite</h3>
 <dl>
   <dd class="module-details">
@@ -7261,7 +7298,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(117)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(118)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
