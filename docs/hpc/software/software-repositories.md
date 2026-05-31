@@ -60,7 +60,7 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(119)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(120)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (119)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (120)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -283,6 +283,42 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, &quot;ASCIIGenome&quot; .. &quot;-&quot; .. version)
 prepend_path(&quot;PATH&quot;, home)
 
+
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_aws-cli" class="module-name">aws-cli</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">aws-cli: Universal Command Line Interface for Amazon Web Services</strong><br>
+<span class="module-description">Examples: <code>aws help</code>.</span><br>
+URL: <span class="module-url"><a href="https://github.com/aws/aws-cli">https://github.com/aws/aws-cli</a></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version"><em>1.45.18</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help([[
+aws-cli: Universal Command Line Interface for Amazon Web Services
+]])
+
+local name = myModuleName()
+local version = myModuleVersion()
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: utility, files&quot;)
+whatis(&quot;URL: https://github.com/aws/aws-cli&quot;)
+whatis([[
+Description: 
+Examples: `aws help`.
+Warning: Only the most recent versions of this software will be kept.
+]])
+
+-- Local variables
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 
 </code></pre>
 
@@ -943,7 +979,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">CMake is cross-platform free and open-source software for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries.</span><br>
 Example: <span class="module-example"><code>cmake --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://cmake.org/">https://cmake.org/</a>, <a href="https://cmake.org/cmake/help/latest/release/index.html">https://cmake.org/cmake/help/latest/release/index.html</a> (changelog), <a href="https://github.com/Kitware/CMake/releases">https://github.com/Kitware/CMake/releases</a> (download)</span><br>
-Versions: <span class="module-version">3.29.0, 3.30.2, 3.31.5, <em>4.0.1</em></span><br>
+Versions: <span class="module-version">3.29.0, 3.30.2, 3.31.5, 4.0.1, <em>4.3.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1153,8 +1189,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>deno --version</code>, <code>deno --help</code>.
 License: MIT</span><br>
 URL: <span class="module-url"><a href="https://deno.com/">https://deno.com/</a>, <a href="https://docs.deno.com/runtime/">https://docs.deno.com/runtime/</a> (documentation), <a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a> (source code), <a href="https://github.com/denoland/deno/releases">https://github.com/denoland/deno/releases</a> (releases)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.7.12, 2.7.14, <em>2.8.0</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">2.7.12, 2.7.14, 2.8.0, <em>2.8.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1170,7 +1206,7 @@ whatis([[
 Description: Deno is a JavaScript, TypeScript, and WebAssembly runtime with secure defaults and a great developer experience. It's built on V8, Rust, and Tokio.
 Examples: `deno --version`, `deno --help`.
 License: MIT
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 -- Local variables
@@ -2489,7 +2525,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment.</span><br>
 Example: <span class="module-example"><code>kallisto version</code></span><br>
 URL: <span class="module-url"><a href="https://pachterlab.github.io/kallisto/about.html">https://pachterlab.github.io/kallisto/about.html</a>, <a href="https://github.com/pachterlab/kallisto/releases">https://github.com/pachterlab/kallisto/releases</a> (changelog), <a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a> (source code)</span><br>
-Versions: <span class="module-version">0.45.0, 0.45.1, 0.46.0, 0.46.1, 0.46.2, 0.50.0, 0.50.1, <em>0.51.1</em></span><br>
+Versions: <span class="module-version">0.45.0, 0.45.1, 0.46.0, 0.46.1, 0.46.2, 0.50.0, 0.50.1, 0.51.1, <em>0.52.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4196,7 +4232,7 @@ setenv(&quot;PORT4ME_PORT_COMMAND&quot;, &quot;netstat&quot;)
 <span class="module-description">Rust is a general-purpose programming language emphasizing performance, type safety, and concurrency. It enforces memory safety, meaning that all references point to valid memory. It does so without a conventional garbage collector; instead, memory safety errors and data races are prevented by the &quot;borrow checker&quot;, which tracks the object lifetime of references at compile time.</span><br>
 Example: <span class="module-example"><code>rustc --help</code> and <code>cargo --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.rust-lang.org/">https://www.rust-lang.org/</a>, <a href="https://www.rust-lang.org/learn">https://www.rust-lang.org/learn</a> (documentation), <a href="https://github.com/rust-lang/rust">https://github.com/rust-lang/rust</a> (source code), <a href="https://github.com/rust-lang/rust/releases/">https://github.com/rust-lang/rust/releases/</a> (releases)</span><br>
-Versions: <span class="module-version">1.94.1, <em>1.95.0</em></span><br>
+Versions: <span class="module-version">1.94.1, 1.95.0, <em>1.96.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4914,23 +4950,25 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
   <dd class="module-details">
 <strong class="module-help">TrimGalore: Taking Appropriate QC Measures for RRBS-Type or Other -Seq Applications with Trim Galore!</strong><br>
 <span class="module-description">A wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data.</span><br>
-Example: <span class="module-example"><code>trim_galore --version</code>, <code>trim_galore --help</code>, and <code>more &quot;$TRIMGALORE_HOME/Docs/Trim_Galore_User_Guide.md&quot;</code>.</span><br>
-URL: <span class="module-url"><a href="https://github.com/FelixKrueger/TrimGalore">https://github.com/FelixKrueger/TrimGalore</a>, <a href="https://github.com/FelixKrueger/TrimGalore/blob/master/CHANGELOG.md">https://github.com/FelixKrueger/TrimGalore/blob/master/CHANGELOG.md</a> (changelog)</span><br>
-Versions: <span class="module-version">0.6.7, <em>0.6.10</em></span><br>
+Example: <span class="module-example"><code>trim_galore --version</code>, <code>trim_galore --help</code>, and <code>more &quot;$TRIMGALORE_HOME/Docs/Trim_Galore_User_Guide.md&quot;</code>.
+License: GPL</span><br>
+URL: <span class="module-url"><a href="https://www.trimgalore.com/">https://www.trimgalore.com/</a>, <a href="https://github.com/FelixKrueger/TrimGalore">https://github.com/FelixKrueger/TrimGalore</a> (source code), <a href="https://github.com/FelixKrueger/TrimGalore/blob/master/CHANGELOG.md">https://github.com/FelixKrueger/TrimGalore/blob/master/CHANGELOG.md</a> (changelog)</span><br>
+Versions: <span class="module-version">0.6.7, 0.6.10, <em>0.6.11</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
-TrimGalore: Taking Appropriate QC Measures for RRBS-Type or Other -Seq Applications with Trim Galore!
+TrimGalore: Consistent Adapter and Quality Trimming for NGS, with Extra Functionality for RRBS Data
 ]])
 
 local name = myModuleName()
 local version = myModuleVersion()
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing, genome&quot;)
-whatis(&quot;URL: https://github.com/FelixKrueger/TrimGalore, https://github.com/FelixKrueger/TrimGalore/blob/master/CHANGELOG.md (changelog)&quot;)
+whatis(&quot;URL: https://www.trimgalore.com/, https://github.com/FelixKrueger/TrimGalore (source code), https://github.com/FelixKrueger/TrimGalore/blob/master/CHANGELOG.md (changelog)&quot;)
 whatis([[
 Description: A wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data.
 Examples: `trim_galore --version`, `trim_galore --help`, and `more &quot;$TRIMGALORE_HOME/Docs/Trim_Galore_User_Guide.md&quot;`.
+License: GPL
 ]])
 
 depends_on(&quot;cutadapt&quot;)
@@ -4955,8 +4993,8 @@ pushenv(&quot;TRIMGALORE_HOME&quot;, home)
 License: MIT | Apache-2.0</span><br>
 Example: <span class="module-example"><code>uv --help</code>, <code>uv --version</code></span><br>
 URL: <span class="module-url"><a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a> (documentation), <a href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a> (source code), <a href="https://github.com/astral-sh/uv/releases">https://github.com/astral-sh/uv/releases</a> (releases)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.11.2, 0.11.6, 0.11.7, 0.11.14, <em>0.11.16</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">0.11.2, 0.11.6, 0.11.7, 0.11.14, 0.11.16, <em>0.11.17</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4972,7 +5010,7 @@ whatis([[
 Description: The 'uv' tool replaces 'pip', 'pip-tools', 'pipx', 'poetry', 'pyenv', 'twine', 'virtualenv', and more.
 License: MIT | Apache-2.0
 Examples: `uv --help`, `uv --version`
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -7335,7 +7373,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(119)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(120)</a></li>
 <li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(99)</a></li>
 </ul>
 
