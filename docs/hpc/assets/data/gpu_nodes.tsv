@@ -3,18 +3,13 @@
 Node	GPU	GPU RAM	#GPUs	RAM	Contributor	NVME /scratch
 msg-ihgpu1	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
 msg-ihgpu2	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
-msg-ihgpu3	GTX 1080 Ti	11 GiB	2	48 GiB	msg	false
 msg-ihgpu4	TITAN Xp	12 GiB	2	48 GiB	msg	false
-msg-ihgpu5	TITAN Xp	12 GiB	2	48 GiB	rosenberglab	false
 msg-iogpu1	GTX 1080 Ti	11 GiB	2	128 GiB	msg	true
 msg-iogpu2	GTX 1080	8 GiB	2	128 GiB	msg	true
-msg-iogpu3	GTX 1080	8 GiB	2	128 GiB	msg	false
 msg-iogpu4	GTX 1080	8 GiB	2	128 GiB	msg	true
 msg-iogpu5	GTX 1080	8 GiB	2	128 GiB	msg	true
 msg-iogpu6	GTX TITAN X	12 GiB	2	128 GiB	msg	true
-msg-iogpu7	GTX 1080	8 GiB	2	128 GiB	msg	false
 msg-iogpu8	GTX 1080	8 GiB	2	128 GiB	msg	false
-msg-iogpu9	GTX 1080 Ti	11 GiB	2	128 GiB	msg	false
 msg-iogpu11	GTX 1080	8 GiB	4	256 GiB	msg	false
 msg-iogpu12	GTX 1080	8 GiB	4	256 GiB	msg	false
 msg-iogpu13	GTX 1080	8 GiB	4	256 GiB	msg	false
