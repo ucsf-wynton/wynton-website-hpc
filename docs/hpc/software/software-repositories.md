@@ -2245,8 +2245,8 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.</span><br>
 Example: <span class="module-example"><code>igv --help</code>, <code>igv --version</code>, and <code>igv</code>.</span><br>
 URL: <span class="module-url"><a href="https://software.broadinstitute.org/software/igv/">https://software.broadinstitute.org/software/igv/</a>, <a href="https://github.com/igvteam/igv/tags">https://github.com/igvteam/igv/tags</a> (changelog), <a href="https://github.com/igvteam/igv/">https://github.com/igvteam/igv/</a> (source code)</span><br>
-Warning: <span class="module-warning">IGV (&gt;= 2.7.0) requires Java 17. Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.16.2, 2.17.0, 2.17.1, 2.17.3, 2.17.4, 2.18.1, 2.18.3, 2.18.4, <em>2.19.6</em></span><br>
+Warning: <span class="module-warning">IGV (&gt;= 2.7.0) requires Java 17. Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">2.16.2, 2.17.0, 2.17.1, 2.17.3, 2.17.4, 2.18.1, 2.18.3, 2.18.4, 2.19.6, <em>2.19.7</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2262,7 +2262,7 @@ whatis(&quot;URL: https://software.broadinstitute.org/software/igv/, https://git
 whatis([[
 Description: The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.
 Examples: `igv --help`, `igv --version`, and `igv`.
-Warning: IGV (&gt;= 2.7.0) requires Java 17. Only the most recent version of this software will be kept.
+Warning: IGV (&gt;= 2.7.0) requires Java 17. Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
