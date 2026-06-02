@@ -2593,7 +2593,7 @@ prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
 <span class="module-description">A cross-platform, linkable library implementation of Git that you can use in your application.</span><br>
 Example: <span class="module-example"><code>git2 --version</code> and <code>git2 --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://libgit2.org/">https://libgit2.org/</a>, <a href="https://github.com/libgit2/libgit2">https://github.com/libgit2/libgit2</a> (source code), <a href="https://github.com/libgit2/libgit2/releases">https://github.com/libgit2/libgit2/releases</a> (release)</span><br>
-Versions: <span class="module-version">1.9.0, <em>1.9.3</em></span><br>
+Versions: <span class="module-version">1.9.0, 1.9.3, <em>1.9.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;libgit2: Cross-platform, Linkable Library Implementation of Git&quot;)
