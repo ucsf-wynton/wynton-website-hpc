@@ -492,3 +492,15 @@ site.cluster.name }} in return for priority. Will you take them?_
 [Kitty]: https://sw.kovidgoyal.net/kitty/
 [iTerm2]: https://iterm2.com/
 [WezTerm]: https://wezfurlong.org/wezterm/index.html
+
+
+## Generative AI and LLM policy on {{ site.cluster.nickname }}
+
+Q. Is there a policy using generative AI and LLMs on the cluster?
+
+A. Users are required to follow UCSF IT AI policy and guidelines. For more information, please see:
+
+[Considerations for using Generative AI](https://ai.ucsf.edu/considerations-using-generative-ai)
+[ChatGPT/ Large Language Models (LLM)/ Artificial Intelligence (AI)](https://irb.ucsf.edu/chatgpt-large-language-models-llm-artificial-intelligence-ai)
+
+If there are further questions about using AI at UCSF, please contact [Enterprise AI](https://ai.ucsf.edu/teams/enterprise-ai)
