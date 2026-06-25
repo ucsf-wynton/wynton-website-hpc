@@ -199,11 +199,11 @@
 #condition: is operational
 #message: Cluster is recovering from BeeGFS issues.
 
-# level: info
+# level: warning
 # condition: is operational
-# message:
+# message: The cluster will be down for maintenance on June 23-24, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
 
-level: warning
+level: info
 condition: is operational
-message: The cluster will be down for maintenance on June 23-24, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
+message: Compute nodes are being brought up after scheduled downtime
 

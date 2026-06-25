@@ -2,11 +2,11 @@
 
 * Full downtime:
 
-  - Scheduled: 0.0 hours (= 0.0 days)
+  - Scheduled: 22.0 hours (= 0.9 days)
   - Unscheduled: 69.25 hours (= 2.9 days)
-  - Total: 96.25 hours (= 4.0 days)
-  - External factors: 99% of the above downtime, corresponding to 95.0
-    hours (= 4.0 days), were due to external factors
+  - Total: 118.25 hours (= 4.9 days)
+  - External factors: 99% of the above downtime, corresponding to 117.0
+    hours (= 4.9 days), were due to external factors
 
 * Partial downtime:
 
@@ -22,8 +22,9 @@
 * Impact: No file access, no compute resources available
 * Damage: None
 * Occurrences:
-  - N/A
-* Total downtime: 0.0 hours
+  - 2026-06-23 -- 2026-06-24 (22.0 hours)
+* Total downtime: 22.0 hours
+
 
 #### Scheduled kernel maintenance
 
@@ -31,6 +32,7 @@
 * Damage: None
 * Occurrences:
   - N/A
+
 
 #### Unscheduled downtimes due to power outage
 
@@ -41,7 +43,8 @@
   - N/A
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
-  
+
+
 #### Unscheduled downtimes due to file-system failures
 
 * Impact: No file access
@@ -56,6 +59,7 @@
   
 * Total downtime: 374.5 hours of which 95.0 hours were due to external
   factors
+
 
 #### Unscheduled downtimes due to other reasons
 
