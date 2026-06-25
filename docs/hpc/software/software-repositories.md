@@ -1190,7 +1190,7 @@ Example: <span class="module-example"><code>deno --version</code>, <code>deno --
 License: MIT</span><br>
 URL: <span class="module-url"><a href="https://deno.com/">https://deno.com/</a>, <a href="https://docs.deno.com/runtime/">https://docs.deno.com/runtime/</a> (documentation), <a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a> (source code), <a href="https://github.com/denoland/deno/releases">https://github.com/denoland/deno/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
-Versions: <span class="module-version">2.7.12, 2.7.14, 2.8.0, <em>2.8.1</em></span><br>
+Versions: <span class="module-version">2.7.12, 2.7.14, 2.8.0, 2.8.1, <em>2.9.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1496,8 +1496,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <strong class="module-help">firefox: The Mozilla Firefox Web Browser</strong><br>
 <span class="module-description">Examples: <code>firefox --help</code>, <code>firefox --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.firefox.com/">https://www.firefox.com/</a>, <a href="https://firefox-source-docs.mozilla.org/">https://firefox-source-docs.mozilla.org/</a> (documentation), mozilla.org/en-US/firefox/notes (changelog), <a href="https://github.com/mozilla-firefox/firefox">https://github.com/mozilla-firefox/firefox</a> (source code), <a href="https://searchfox.org/firefox-main/source">https://searchfox.org/firefox-main/source</a> (source code)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>151.0.1</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">151.0.1, <em>152.0.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1513,7 +1513,7 @@ whatis(&quot;URL: https://www.firefox.com/, https://firefox-source-docs.mozilla.
 whatis([[
 Description: 
 Examples: `firefox --help`, `firefox --version`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 -- Local variables
@@ -1800,8 +1800,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description"><code>gh</code> is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with <code>git</code> and your code.</span><br>
 Example: <span class="module-example"><code>gh --version</code> and <code>gh --help</code>. Setup: <code>gh auth login</code> (once). CLI query example: <code>gh issue list --repo=futureverse/future</code>. TUI: <code>gh extension install dlvhdr/gh-dash</code> (once), then <code>gh dash</code>. AI: <code>gh extension install github/gh-copilot</code> (once), then <code>gh copilot suggest &quot;find files older than one year&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code), <a href="https://github.com/topics/gh-extension">https://github.com/topics/gh-extension</a> (GitHub CLI extensions)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">2.67.0, 2.82.1, 2.83.1, 2.89.0, <em>2.92.0</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">2.67.0, 2.82.1, 2.83.1, 2.89.0, 2.92.0, <em>2.95.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1816,7 +1816,7 @@ whatis(&quot;URL: https://cli.github.com/, https://cli.github.com/manual/ (docum
 whatis([[
 Description: `gh` is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with `git` and your code.
 Examples: `gh --version` and `gh --help`. Setup: `gh auth login` (once). CLI query example: `gh issue list --repo=futureverse/future`. TUI: `gh extension install dlvhdr/gh-dash` (once), then `gh dash`. AI: `gh extension install github/gh-copilot` (once), then `gh copilot suggest &quot;find files older than one year&quot;`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 -- Local variables
@@ -5369,24 +5369,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -5400,6 +5382,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
