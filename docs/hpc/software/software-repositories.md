@@ -362,7 +362,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">A cat(1) clone with syntax highlighting and Git integration.</span><br>
 Example: <span class="module-example"><code>bat README.md</code>, <code>bat scripts/*.sh</code>, and <code>bat src/*.c</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a>, <a href="https://github.com/sharkdp/bat/blob/master/CHANGELOG.md">https://github.com/sharkdp/bat/blob/master/CHANGELOG.md</a> (changelog)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
 Versions: <span class="module-version">0.25.0, 0.26.0, <em>0.26.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
@@ -378,7 +378,7 @@ whatis(&quot;URL: https://github.com/sharkdp/bat, https://github.com/sharkdp/bat
 whatis([[
 Description: A cat(1) clone with syntax highlighting and Git integration.
 Examples: `bat README.md`, `bat scripts/*.sh`, and `bat src/*.c`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 -- Local variables
@@ -1142,7 +1142,7 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>cutadapt --version</code> and <code>cutadapt --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://cutadapt.readthedocs.io/en/stable/">https://cutadapt.readthedocs.io/en/stable/</a>, <a href="https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst">https://github.com/marcelm/cutadapt/blob/main/CHANGES.rst</a> (changelog), <a href="https://github.com/marcelm/cutadapt">https://github.com/marcelm/cutadapt</a> (source code)</span><br>
 Requirement: <span class="module-requirement">CentOS 7.</span><br>
-Versions: <span class="module-version">3.7, 4.9, 5.0, <em>5.1</em></span><br>
+Versions: <span class="module-version">3.7, 4.9, 5.0, 5.1, <em>5.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2634,8 +2634,8 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;,  pathJoin(home, &quot;lib64&quot;, &qu
 License: MIT</span><br>
 Example: <span class="module-example"><code>llmfit --help</code>, <code>llmfit --version</code>, <code>llmfit</code> (TUI), and <code>llmfit</code> (output table)</span><br>
 URL: <span class="module-url"><a href="https://github.com/AlexsJones/llmfit">https://github.com/AlexsJones/llmfit</a> (source code), <a href="https://github.com/AlexsJones/llmfit/releases">https://github.com/AlexsJones/llmfit/releases</a> (releases)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.7.2, 0.8.5, 0.9.3, 0.9.22, <em>0.9.25</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">0.7.2, 0.8.5, 0.9.3, 0.9.22, 0.9.25, <em>0.9.33</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2651,7 +2651,7 @@ whatis([[
 Description: A terminal tool that right-sizes LLM models to your system's RAM, CPU, and GPU. Detects your hardware, scores each model across quality, speed, fit, and context dimensions, and tells you which ones will actually run well on your machine. Ships with an interactive TUI (default) and a classic CLI mode. Supports multi-GPU setups, MoE architectures, dynamic quantization selection, speed estimation, and local runtime providers (Ollama, llama.cpp, MLX).
 License: MIT
 Examples: `llmfit --help`, `llmfit --version`, `llmfit` (TUI), and `llmfit` (output table)
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -3190,7 +3190,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 License: MIT</span><br>
 Example: <span class="module-example"><code>ollama --version</code> and <code>ollama --help</code>. <code>ollama serve</code> and <code>ollama pull llama3.2</code> in another shell (models are stored under <code>~/.ollama/</code>). <code>ollama show llama3.2</code>.</span><br>
 URL: <span class="module-url"><a href="https://ollama.com/">https://ollama.com/</a>, <a href="https://github.com/ollama/ollama/releases/">https://github.com/ollama/ollama/releases/</a> (releases), <a href="https://github.com/ollama/ollama/">https://github.com/ollama/ollama/</a> (source code)</span><br>
-Versions: <span class="module-version">0.23.2, <em>0.24.0</em></span><br>
+Versions: <span class="module-version">0.23.2, 0.24.0, <em>0.30.10</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3584,8 +3584,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">An alternative to <code>ps</code>, <code>pstree</code>, and <code>top</code>.</span><br>
 Example: <span class="module-example"><code>procs --version</code>, <code>procs --help</code>, <code>procs</code>, <code>procs --tree</code>, and <code>procs --watch --nand root</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/dalance/procs/">https://github.com/dalance/procs/</a>, <a href="https://github.com/dalance/procs/blob/master/CHANGELOG.md">https://github.com/dalance/procs/blob/master/CHANGELOG.md</a> (changelog)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.14.9, <em>0.14.11</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">0.14.9, 0.14.11, <em>0.14.12</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3600,7 +3600,7 @@ whatis(&quot;URL: https://github.com/dalance/procs/, https://github.com/dalance/
 whatis([[
 Description: An alternative to `ps`, `pstree`, and `top`.
 Examples: `procs --version`, `procs --help`, `procs`, `procs --tree`, and `procs --watch --nand root`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 -- Local variables
@@ -5141,7 +5141,7 @@ pushenv(&quot;PERL5LIB&quot;, pathJoin(home, &quot;share&quot;, &quot;perl5&quot
 Example: <span class="module-example"><code>wynton --help</code> and <code>trash --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/ucsf-wynton/wynton-tools">https://github.com/ucsf-wynton/wynton-tools</a>, <a href="https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md">https://github.com/ucsf-wynton/wynton-tools/blob/master/NEWS.md</a> (changelog)</span><br>
 Warning: <span class="module-warning">This is work in development, which means that these tools may change, or even be removed, at anytime without notice.</span><br>
-Versions: <span class="module-version">0.26.0, 0.26.1, 0.27.0, <em>0.28.0</em></span><br>
+Versions: <span class="module-version">0.26.0, 0.26.1, 0.27.0, 0.28.0, <em>0.29.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
