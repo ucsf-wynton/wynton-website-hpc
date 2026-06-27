@@ -3149,7 +3149,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. Long-term-support (LTS) versions of Node.js have even numbers and enter LTS around six months after the first release, e.g. 20 (2023-04-18), 22 (2024-04-24) and 24 (2025-04-22). Node js 26 (2026-05-05) is expected to enter LTS in October 2026.</span><br>
 Example: <span class="module-example"><code>node --version</code> and <code>node --help</code>. It's recommended to do <code>npm config set prefix ~/.local</code> (once) such that <code>npm install -g &lt;pkg&gt;</code> installs to <code>~/.local</code>.</span><br>
 URL: <span class="module-url"><a href="https://nodejs.org/">https://nodejs.org/</a>, <a href="https://nodejs.org/docs/latest/api/">https://nodejs.org/docs/latest/api/</a> (documentation), <a href="https://github.com/nodejs/node">https://github.com/nodejs/node</a> (source code), <a href="https://github.com/nodejs/node/releases">https://github.com/nodejs/node/releases</a> (releases)</span><br>
-Versions: <span class="module-version">24.14.1, <em>24.15.0</em></span><br>
+Versions: <span class="module-version">24.14.1, 24.15.0, <em>24.18.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3236,7 +3236,7 @@ end
 <span class="module-description">The open source AI coding agent. Free models included or connect any model from any provider, including Claude, GPT, Gemini and more.</span><br>
 Example: <span class="module-example"><code>opencode --version</code>, <code>opencode --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://opencode.ai/">https://opencode.ai/</a>, <a href="https://github.com/anomalyco/opencode/releases">https://github.com/anomalyco/opencode/releases</a> (releases), <a href="https://github.com/anomalyco/opencode">https://github.com/anomalyco/opencode</a> (source code)</span><br>
-Versions: <span class="module-version">1.14.42, <em>1.14.51</em></span><br>
+Versions: <span class="module-version">1.14.42, 1.14.51, <em>1.17.11</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3257,7 +3257,7 @@ Examples: `opencode --version`, `opencode --help`.
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
-prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;opencode-ai&quot;, &quot;bin&quot;))
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;opencode-linux-x64&quot;, &quot;bin&quot;))
 </code></pre>
 
 </details>
@@ -5369,24 +5369,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -5400,6 +5382,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
