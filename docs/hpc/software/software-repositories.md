@@ -7326,14 +7326,14 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/svm_light-6.0.2
   <dd class="module-details">
 <span class="module-description">Connects C/C++/Objective C to some high-level programming languages</span><br>
 URL: <span class="module-url"><a href="http://www.swig.org/">http://www.swig.org/</a></span><br>
-Versions: <span class="module-version">3.0.12, <em>4.0.2</em></span><br>
+Versions: <span class="module-version">3.0.12, 4.0.2, <em>4.4.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
 module-whatis &quot;Description: Connects C/C++/Objective C to some high-level programming languages&quot;
 module-whatis &quot;URL: http://www.swig.org/&quot;
-prepend-path PATH               /salilab/diva1/programs/x86_64linux/swig-4.0.2/bin
+prepend-path PATH               /salilab/diva1/programs/x86_64linux/swig-4.4.1/bin
 </code></pre>
 
 </details>
