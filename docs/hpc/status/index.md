@@ -358,6 +358,21 @@ function date_to_string(d) {
   return YY + "-" + mm + "-" + dd + " " + HH + ":" + MM + ":" + SS;
 }
 
+// The benchmark timestamps are timezone-aware, e.g. "2024-09-27 14:43:34-07:00".
+// Plotly.js ignores the timezone offset and plots the literal wall-clock part,
+// whereas the axis range (via date_to_string) is built from the browser's local
+// time. To make the data align with the viewer's timezone, convert each
+// timestamp to a naive local wall-clock string "YYYY-MM-DD HH:MM:SS".
+function pad2(n) { return String(n).padStart(2, "0"); }
+
+function timestamp_to_local_string(value) {
+  // Normalize the space separator to 'T' so all browsers parse it as ISO 8601.
+  var d = new Date(String(value).replace(" ", "T"));
+  if (isNaN(d.getTime())) return null;
+  return d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate()) +
+    " " + pad2(d.getHours()) + ":" + pad2(d.getMinutes()) + ":" + pad2(d.getSeconds());
+}
+
 
 url_path = "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash2/master/wynton-bench";
 host_set = "devX";
@@ -429,7 +444,9 @@ var layout = {
 function unpack(rows, key) {
   return rows.map(function(row) { 
     var value = row[key];
-    if (key == "duration") {
+    if (key == "timestamp") {
+      value = timestamp_to_local_string(value);
+    } else if (key == "duration") {
       value = parseFloat(value);
       value = value / baseline;
       if (value < 1/2) {
