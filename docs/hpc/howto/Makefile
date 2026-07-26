@@ -23,6 +23,7 @@ r-build: FORCE
 	markin build r.sh
 	sed -i 's|/R-4.1.2-gcc8|/R-4.1.3-gcc8|g' .mdi/r.code-block*
 	sed -i 's|/R-4-1-branch|/R-4.1.3-gcc8|g' .mdi/r.code-block*
+	sed -i 's|/home/hb/shared/software/CBI/_ubuntu24_04/R-4.6.1-gcc13|{{ r_path }}|g' .mdi/r.code-block*
 	sed -i 's|/wynton/home/cbi/shared/software|{{ site.path.cbi_software }}|g' .mdi/r.code-block*
 	sed -i 's|/c4/home/alice/software/R-devel|{{ site.path.cbi_software }}|g' .mdi/r.code-block*
 	sed -i 's|/software/c4/cbi/software|{{ site.path.cbi_software }}|g' .mdi/r.code-block*

@@ -1,10 +1,10 @@
 e> install.packages("BiocManager")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.26.tar.gz'
-Content type 'application/x-gzip' length 582690 bytes (580 KB)
+trying URL 'https://packagemanager.posit.co/cran/__linux__/noble/latest/src/contrib/BiocManager_1.30.27.tar.gz'
+Content type 'binary/octet-stream' length 668862 bytes (653 KB)
 ==================================================
-downloaded 569 KB
+downloaded 653 KB
 
 * installing *source* package ‘BiocManager’ ...
 ** package ‘BiocManager’ successfully unpacked and MD5 sums checked

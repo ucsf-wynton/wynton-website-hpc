@@ -35,8 +35,8 @@ which provides access to a modern version of R:
 ```r
 [alice@{{ site.devel.name }} ~]$ R 
 
-R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
-Copyright (C) 2025 The R Foundation for Statistical Computing
+R version 4.6.1 (2026-06-24) -- "Happy Hop"
+Copyright (C) 2026 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -214,13 +214,13 @@ without further questions asked.  In this example, we will get:
 Would you like to create a personal library
 '~/R/x86_64-pc-linux-gnu-library/{{ r_libs_user }}'
 to install packages into? (yes/No/cancel) yes
-trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-14.tar.gz'
-Content type 'application/x-gzip' length 778426 bytes (760 KB)
+trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-15.tar.gz'
+Content type 'application/x-gzip' length 806453 bytes (787 KB)
 ==================================================
-downloaded 760 KB
+downloaded 787 KB
 
 * installing *source* package ‘zoo’ ...
-** this is package ‘zoo’ version ‘1.8-14’
+** this is package ‘zoo’ version ‘1.8-15’
 ** package ‘zoo’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
@@ -300,10 +300,10 @@ need to start by installing it from CRAN (sic!);
 e> install.packages("BiocManager")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.26.tar.gz'
-Content type 'application/x-gzip' length 582690 bytes (580 KB)
+trying URL 'https://packagemanager.posit.co/cran/__linux__/noble/latest/src/contrib/BiocManager_1.30.27.tar.gz'
+Content type 'binary/octet-stream' length 668862 bytes (653 KB)
 ==================================================
-downloaded 569 KB
+downloaded 653 KB
 
 * installing *source* package ‘BiocManager’ ...
 ** package ‘BiocManager’ successfully unpacked and MD5 sums checked
@@ -337,15 +337,15 @@ With **BiocManager** installed, we can now install any Bioconductor package.  Fo
 <!-- code-block label="install-limma" -->
 ```r
 > BiocManager::install("limma")
-Bioconductor version 3.21 (BiocManager 1.30.26), R 4.5.1 (2025-06-13)
+Bioconductor version 3.23 (BiocManager 1.30.27), R 4.6.1 (2026-06-24)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.21/bioc/src/contrib/limma_3.64.3.tar.gz'
-Content type 'application/x-gzip' length 2846680 bytes (2.7 MB)
+trying URL 'https://bioconductor.statistik.tu-dortmund.de/packages/3.23/bioc/src/contrib/limma_3.68.4.tar.gz'
+Content type 'application/octet-stream' length 2841554 bytes (2.7 MB)
 ==================================================
 downloaded 2.7 MB
 
 * installing *source* package ‘limma’ ...
-** this is package ‘limma’ version ‘3.64.3’
+** this is package ‘limma’ version ‘3.68.4’
 ** using staged installation
 ** libs
 using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
@@ -436,7 +436,7 @@ install them we need to load the built-in `mpi` module;
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-gcc-toolset/13   3) r/4.5.2   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-gcc-toolset/13   3) cmake/4.3.3   4) r/4.6.1   5) mpi/openmpi-x86_64
 
  
 
@@ -494,13 +494,13 @@ loaded the `mpi` module, we can install **pbdMPI** in R as:
 > install.packages("pbdMPI", configure.args="--with-mpi-include=$MPI_INCLUDE --with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/pbdMPI_0.5-4.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pbdMPI_0.5-5.tar.gz'
 Content type 'application/x-gzip' length 423376 bytes (413 KB)
 ==================================================
 downloaded 413 KB
 
 * installing *source* package ‘pbdMPI’ ...
-** this is package ‘pbdMPI’ version ‘0.5-4’
+** this is package ‘pbdMPI’ version ‘0.5-5’
 ** package ‘pbdMPI’ successfully unpacked and MD5 sums checked
 ** using staged installation
 checking for sed... /usr/bin/sed

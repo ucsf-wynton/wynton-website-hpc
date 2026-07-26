@@ -2,7 +2,7 @@
 [alice@{{ site.devel.name }} ~]$ module list
 
 Currently Loaded Modules:
-  1) CBI   2) scl-gcc-toolset/13   3) r/4.5.2   4) mpi/openmpi-x86_64
+  1) CBI   2) scl-gcc-toolset/13   3) cmake/4.3.3   4) r/4.6.1   5) mpi/openmpi-x86_64
 
  
 

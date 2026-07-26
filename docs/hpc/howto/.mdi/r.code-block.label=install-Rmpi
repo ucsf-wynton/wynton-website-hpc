@@ -1,23 +1,19 @@
 > install.packages("Rmpi", configure.args="--with-Rmpi-include=$MPI_INCLUDE --with-Rmpi-libpath=$MPI_LIB --with-Rmpi-type=OPENMPI")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.7-3.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.7-3.4.tar.gz'
 Content type 'application/x-gzip' length 107508 bytes (104 KB)
 ==================================================
 downloaded 104 KB
 
 * installing *source* package ‘Rmpi’ ...
-** this is package ‘Rmpi’ version ‘0.7-3.3’
+** this is package ‘Rmpi’ version ‘0.7-3.4’
 ** package 'Rmpi' successfully unpacked and MD5 sums checked
 ** using staged installation
 configure: creating ./config.status
 config.status: creating src/Makevars
+...
 ** libs
-trying URL 'https://cloud.r-project.org/src/contrib/Rmpi_0.7-1.tar.gz'
-Content type 'application/x-gzip' length 106286 bytes (103 KB)
-==================================================
-downloaded 103 KB
-
 * installing *source* package 'Rmpi' ...
 using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
 gcc -std=gnu2x -I"{{ r_path }}/lib64/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -I/usr/include/openmpi-x86_64  -DMPI2 -DOPENMPI  -I/usr/local/include    -fpic  -g -O2  -c Rmpi.c -o Rmpi.o

@@ -1,13 +1,13 @@
 > BiocManager::install("limma")
-Bioconductor version 3.21 (BiocManager 1.30.26), R 4.5.1 (2025-06-13)
+Bioconductor version 3.23 (BiocManager 1.30.27), R 4.6.1 (2026-06-24)
 Installing package(s) 'limma'
-trying URL 'https://bioconductor.org/packages/3.21/bioc/src/contrib/limma_3.64.3.tar.gz'
-Content type 'application/x-gzip' length 2846680 bytes (2.7 MB)
+trying URL 'https://bioconductor.statistik.tu-dortmund.de/packages/3.23/bioc/src/contrib/limma_3.68.4.tar.gz'
+Content type 'application/octet-stream' length 2841554 bytes (2.7 MB)
 ==================================================
 downloaded 2.7 MB
 
 * installing *source* package ‘limma’ ...
-** this is package ‘limma’ version ‘3.64.3’
+** this is package ‘limma’ version ‘3.68.4’
 ** using staged installation
 ** libs
 using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’

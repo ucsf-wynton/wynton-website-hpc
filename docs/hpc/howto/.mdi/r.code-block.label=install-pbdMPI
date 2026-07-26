@@ -1,13 +1,13 @@
 > install.packages("pbdMPI", configure.args="--with-mpi-include=$MPI_INCLUDE --with-mpi-libpath=$MPI_LIB --with-mpi-type=OPENMPI")
 Installing package into '{{ r_libs_user_path }}'
 (as 'lib' is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/pbdMPI_0.5-4.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pbdMPI_0.5-5.tar.gz'
 Content type 'application/x-gzip' length 423376 bytes (413 KB)
 ==================================================
 downloaded 413 KB
 
 * installing *source* package ‘pbdMPI’ ...
-** this is package ‘pbdMPI’ version ‘0.5-4’
+** this is package ‘pbdMPI’ version ‘0.5-5’
 ** package ‘pbdMPI’ successfully unpacked and MD5 sums checked
 ** using staged installation
 checking for sed... /usr/bin/sed

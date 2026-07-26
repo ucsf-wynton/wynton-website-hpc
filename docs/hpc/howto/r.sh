@@ -40,7 +40,7 @@ R() {
 }
 
 module purge
-module load CBI r
+module load CBI r/4.6
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup
