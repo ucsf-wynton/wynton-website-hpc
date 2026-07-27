@@ -2,9 +2,9 @@
 
 {% assign linux_distro = "rocky8" %}
 
-{% assign r_basename = "R-4.5.2-gcc13" %}
+{% assign r_basename = "R-4.6.1-gcc13" %}
 
-{% assign r_libs_user = "4.5-CBI-gcc13" %}
+{% assign r_libs_user = "4.6-CBI-gcc13" %}
 
 {% assign r_path = site.path.cbi_software | append: "/_" | append: linux_distro | append: "/" | append: r_basename %}
 
@@ -92,14 +92,13 @@ Rscript my_script.R
 
 <div class="alert alert-info" role="alert" markdown="1">
 
-R 4.5.0 was released on 2025-04-11, R 4.5.1 on 2025-06-13 and R 4.5.2
-on 2025-10-31. Bioconductor 3.21 was released on 2024-04-16 and
-Bioconductor 3.22 was released on 2024-10-30.
+R 4.6.0 was released on 2026-04-24 and R 4.6.1 on 2026-06-24. 
+Bioconductor 3.23 was released on 2026-04-29.
 
-[We have confirmed that more than 99% of the CRAN packages and more
-than 99% of the Bioconductor Software packages install out of the box
+[We have confirmed that nearly 100% of the CRAN packages and nearly
+100% of the Bioconductor Software packages install out of the box
 when following the below
-instructions](https://blog.wynton.ucsf.edu/posts/2025/10/r-4.5/). The
+instructions](https://blog.wynton.ucsf.edu/posts/2026/07/r-4.6/). The
 packages that failed to install do so either because they depend on a
 system library that is not available on the cluster, or because they
 have bugs preventing them from being installed out of the box. If you
@@ -153,8 +152,8 @@ accept (answer 'Yes').  If you had already created this folder, R will
 install into this folder without asking.
 
 Finally, R undergoes a _main_ update once a year (around April and
-May). For example, R 4.5.0 was released in April 2025.  The next main
-release will be R 4.6.0 a year later. Whenever the `y` component in R
+May). For example, R 4.6.0 was released in April 2026.  The next main
+release will be R 4.7.0 a year later. Whenever the `y` component in R
 `x.y.z` version is increased, you will start out with an empty
 personal package folder specific for R `x.y` (regardless of `z`).
 This means that you will have to re-install all R packages you had
