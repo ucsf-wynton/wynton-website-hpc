@@ -17,6 +17,9 @@ CLI
 CMD
 CMake
 COA
+CPUs
+CRAN
+CRLF
 CUDA
 CentOS
 ChatGPT
@@ -46,6 +49,7 @@ FASTQ
 Feitian
 Ferrin
 FileZilla
+Fortran
 GCP
 GDAL
 GDDR
@@ -53,6 +57,7 @@ GEOS
 GLX
 GPUs
 GTX
+GUIs
 Gbps
 Gbytes
 GeForce
@@ -106,6 +111,7 @@ PID
 PII
 PIs
 PLR
+PNG
 PROJ
 PUs
 Pegg
@@ -151,10 +157,13 @@ Slurm
 Sochat
 SpeedType
 Sylabs
+TBD
 TBs
+TCP
 TMPDIR
 TUI
 Tanja
+Tcl
 Tcsh
 Terrill
 TiB
@@ -164,6 +173,7 @@ UCSF's
 UCSFguest
 UCSFhousing
 UCSFwpa
+USD
 Unredacted
 VPN
 Verba
@@ -185,6 +195,7 @@ amaoutlab
 atgpu
 autopopulated
 barcode
+basename
 baseurl
 bashrc
 bc
@@ -217,9 +228,11 @@ crontab
 cto
 ctocore
 cxx
+datasets
 decrypt
 deidentified
 dev
+devel
 devtoolset
 distro
 downcase
@@ -234,6 +247,7 @@ egins
 endcomment
 envvars
 eol
+executables
 failback
 failover
 favicon
@@ -262,6 +276,7 @@ hdf
 hostname
 howto
 hpc
+html
 http
 https
 huanglab
@@ -290,6 +305,7 @@ libre
 libs
 limma
 linux
+localhost
 lwgeom
 lz
 macFUSE
@@ -336,6 +352,8 @@ pgpudev
 plog
 pre
 prebuilt
+prepend
+prepended
 priorly
 pu
 purchasedStorage
@@ -370,6 +388,8 @@ roadmap
 robustifying
 rosenberglab
 runscript
+runtime
+runtimes
 sF
 samtools
 scalable
@@ -401,12 +421,14 @@ udunits
 uncheck
 underutilizing
 unencrypted
+unix
 unrecovered
 unselect
 unstage
 unstaged
 unsuspended
 unsuspending
+url
 uuid
 valse
 vglusers
@@ -414,6 +436,7 @@ virtualenv
 virtualgl
 waitlist
 walltime
+webpage
 www
 wynlog
 wynton

@@ -248,7 +248,7 @@ The downloaded source packages are in
 >
 ```
 
-If there is no mentioning of an "error" (a "warning" is ok in R but
+If there is no mentioning of an "error" (a "warning" is okay in R but
 never an "error"), then the package was successfully installed.  If
 you see `* DONE (zoo)` at the end, it means that the package was
 successfully installed.  As with any other package in R, you can also
