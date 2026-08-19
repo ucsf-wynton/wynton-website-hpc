@@ -203,7 +203,11 @@
 # condition: is operational
 # message: The cluster will be down for maintenance on June 23-24, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
 
-level: info
+# level: info
+# condition: is operational
+# message: Compute nodes are being brought up after scheduled downtime
+
+level: warning
 condition: is operational
-message: Compute nodes are being brought up after scheduled downtime
+message: The cluster will be down for maintenance on September 7-8, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
 
