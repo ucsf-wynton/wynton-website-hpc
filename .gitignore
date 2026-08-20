@@ -4,3 +4,4 @@ docs/_site/*
 .Rhistory
 **/software/lmod_data/
 **/software/lxc/
+.osgrep
