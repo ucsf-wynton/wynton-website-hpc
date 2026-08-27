@@ -60,8 +60,8 @@ Below are 3 software repositories, each providing a set of software tools.
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(120)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(122)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -207,7 +207,7 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
 <div id="button_repository_cbi" class="tab-pane fade">
 
-<h2 id="repository_cbi">Module Software Repository: CBI (120)</h2>
+<h2 id="repository_cbi">Module Software Repository: CBI (122)</h2>
 
 Maintained by: Henrik Bengtsson, <a href="https://cbi.ucsf.edu/">Computational Biology and Informatics</a><br>
 Enable repository: <code>module load CBI</code><br>
@@ -1681,6 +1681,99 @@ prepend_path(&quot;PATH&quot;, home)
 </details>
   </dd>
 </dl>
+<h3 id="module_cbi_gdal" class="module-name">gdal</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">GDAL: Geospatial Data Abstraction Library</strong><br>
+<span class="module-description">GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.</span><br>
+Example: <span class="module-example"><code>gdalinfo --version</code> and <code>man gdalinfo</code>.</span><br>
+URL: <span class="module-url"><a href="https://gdal.org/">https://gdal.org/</a>, <a href="https://github.com/OSGeo/gdal/blob/master/NEWS.md">https://github.com/OSGeo/gdal/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/OSGeo/gdal">https://github.com/OSGeo/gdal</a> (source code)</span><br>
+Versions: <span class="module-version"><em>3.13.2</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help(&quot;GDAL: Geospatial Data Abstraction Library&quot;)
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: spatial, library&quot;)
+whatis(&quot;URL: https://gdal.org/, https://github.com/OSGeo/gdal/blob/master/NEWS.md (changelog), https://github.com/OSGeo/gdal (source code)&quot;)
+whatis([[
+Description: GDAL is an open source X/MIT licensed translator library for raster and vector geospatial data formats.
+Examples: `gdalinfo --version` and `man gdalinfo`.
+]])
+
+-- Compare two version strings a and b
+-- Returns true if a &gt;= b
+function version_ge(a, b)
+  local function split(ver)
+    local parts = {}
+    for num in ver:gmatch(&quot;(%d+)&quot;) do
+      table.insert(parts, tonumber(num))
+    end
+    return parts
+  end
+
+  local va = split(a)
+  local vb = split(b)
+  local len = math.max(#va, #vb)
+
+  for i = 1, len do
+    local na = va[i] or 0
+    local nb = vb[i] or 0
+    if na &gt; nb then return true end
+    if na &lt; nb then return false end
+  end
+  return true  -- equal
+end
+
+
+-- GDAL (&gt;= 3.0.0), requires PROJ (&gt;= 6.0.0)
+local libdir = &quot;lib&quot;
+local mandir = &quot;man&quot;
+
+if version_ge(version, &quot;3&quot;) then
+  depends_on(&quot;proj&quot;)
+  -- ... and a modern SQLite3 and HDF5 (&gt;= 1.8.13)
+  depends_on(&quot;sqlite&quot;)
+  depends_on(&quot;hdf5&quot;)
+
+  libdir = &quot;lib64&quot;
+
+  if version_ge(version, &quot;3.7&quot;) then
+    depends_on(&quot;libarchive&quot;)
+    mandir = pathJoin(&quot;share&quot;, &quot;man&quot;)
+  end
+end
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+
+-- Specific to the Linux distribution?
+if string.match(myFileName(), &quot;/_&quot; .. os.getenv(&quot;CBI_LINUX&quot;) .. &quot;/&quot;) then
+  root = pathJoin(root, &quot;_&quot; .. os.getenv(&quot;CBI_LINUX&quot;))
+end
+
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, libdir))
+
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, mandir))
+
+-- linking
+prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, libdir))
+
+-- building
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,  pathJoin(home, libdir, &quot;pkgconfig&quot;))
+prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
+prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
+prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, libdir), &quot; &quot;)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_cbi_geos" class="module-name">geos</h3>
 <dl>
   <dd class="module-details">
@@ -2053,7 +2146,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 <span class="module-description">Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data. The HDF5 format is designed to address some of the limitations of the HDF4 library, and to address current and anticipated requirements of modern systems and applications.</span><br>
 Example: <span class="module-example"><code>h5stat --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.hdfgroup.org/download-hdf5/">https://www.hdfgroup.org/download-hdf5/</a>, <a href="https://github.com/HDFGroup/hdf5/releases">https://github.com/HDFGroup/hdf5/releases</a> (releases), <a href="https://github.com/HDFGroup/hdf5">https://github.com/HDFGroup/hdf5</a> (source code)</span><br>
-Versions: <span class="module-version">1.10.6, 1.12.0, 1.12.1, <em>1.12.2</em></span><br>
+Versions: <span class="module-version">1.10.6, 1.12.0, 1.12.1, 1.12.2, <em>1.14.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2435,8 +2528,8 @@ pushenv(&quot;JAGS_LIB&quot;, pathJoin(home, &quot;lib&quot;))
 <span class="module-description">jq is a lightweight and flexible command-line JSON processor.</span><br>
 Example: <span class="module-example"><code>jq --help</code>, <code>jq --version</code>, <code>cat in.json | jq .</code>, and <code>man jq</code></span><br>
 URL: <span class="module-url"><a href="https://github.com/jqlang/jq">https://github.com/jqlang/jq</a>, <a href="https://github.com/jqlang/jq/blob/master/NEWS.md">https://github.com/jqlang/jq/blob/master/NEWS.md</a> (changelog), <a href="https://jqlang.github.io/jq">https://jqlang.github.io/jq</a> (documentation)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.7.1, <em>1.8.1</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">1.7.1, 1.8.1, <em>1.8.2</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2452,7 +2545,7 @@ whatis(&quot;URL: https://github.com/jqlang/jq, https://github.com/jqlang/jq/blo
 whatis([[
 Description: jq is a lightweight and flexible command-line JSON processor.
 Examples: `jq --help`, `jq --version`, `cat in.json | jq .`, and `man jq`
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 -- Local variables
@@ -2546,6 +2639,47 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;PATH&quot;, home)
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_cbi_libarchive" class="module-name">libarchive</h3>
+<dl>
+  <dd class="module-details">
+<strong class="module-help">libarchive: Multi-Format Archive and Compression Library</strong><br>
+<span class="module-description">Libarchive is an open-source BSD-licensed C programming library that provides streaming access to a variety of different archive formats, including tar, cpio, pax, Zip, and ISO9660 images. The distribution also includes bsdtar and bsdcpio, full-featured implementations of tar and cpio that use libarchive.</span><br>
+Example: <span class="module-example"><code>bsdcat --version</code>, <code>bsdcat --help</code>, and <code>man libarchive</code>.</span><br>
+URL: <span class="module-url"><a href="https://www.libarchive.org/">https://www.libarchive.org/</a>, <a href="https://github.com/libarchive/libarchive/">https://github.com/libarchive/libarchive/</a> (source code), <a href="https://github.com/libarchive/libarchive/releases">https://github.com/libarchive/libarchive/releases</a> (release)</span><br>
+Versions: <span class="module-version"><em>3.8.8</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">help(&quot;libarchive: Multi-Format Archive and Compression Library&quot;)
+
+local name = myModuleName()
+local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
+whatis(&quot;Version: &quot; .. version)
+whatis(&quot;Keywords: library&quot;)
+whatis(&quot;URL: https://www.libarchive.org/, https://github.com/libarchive/libarchive/ (source code), https://github.com/libarchive/libarchive/releases (release)&quot;)
+whatis([[
+Description: Libarchive is an open-source BSD-licensed C programming library that provides streaming access to a variety of different archive formats, including tar, cpio, pax, Zip, and ISO9660 images. The distribution also includes bsdtar and bsdcpio, full-featured implementations of tar and cpio that use libarchive.
+Examples: `bsdcat --version`, `bsdcat --help`, and `man libarchive`.
+]])
+
+local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
+local home = pathJoin(root, name .. &quot;-&quot; .. version)
+
+prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
+
+-- building
+prepend_path(&quot;PKG_CONFIG_PATH&quot;,  pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
+
+-- prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
+-- prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
+-- prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
 </code></pre>
 
 </details>
@@ -3619,8 +3753,8 @@ prepend_path(&quot;PATH&quot;, home)
 <strong class="module-help">PROJ: PROJ Coordinate Transformation Software Library</strong><br>
 <span class="module-description">PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves.</span><br>
 Example: <span class="module-example"><code>geod</code>, <code>proj</code> and <code>man proj</code>.</span><br>
-URL: <span class="module-url"><a href="https://proj.org/">https://proj.org/</a></span><br>
-Versions: <span class="module-version"><em>4.9.3</em></span><br>
+URL: <span class="module-url"><a href="https://proj.org/">https://proj.org/</a>, <a href="https://proj.org/news.html">https://proj.org/news.html</a> (changelog), <a href="https://github.com/OSGeo/PROJ">https://github.com/OSGeo/PROJ</a> (source code)</span><br>
+Versions: <span class="module-version">4.9.3, <em>9.8.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3629,10 +3763,14 @@ PROJ: PROJ Coordinate Transformation Software Library
 
 local name = myModuleName()
 local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;)
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: statistics, spatial&quot;)
-whatis(&quot;URL: https://proj.org/&quot;)
-whatis(&quot;Description: PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves. Example: `geod`, `proj` and `man proj`.&quot;)
+whatis(&quot;URL: https://proj.org/, https://proj.org/news.html (changelog), https://github.com/OSGeo/PROJ (source code)&quot;)
+whatis([[
+Description: PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another. This includes cartographic projections as well as geodetic transformations. PROJ includes command line applications for easy conversion of coordinates from text files or directly from user input. In addition to the command line utilities PROJ also exposes an application programming interface, or API in short. The API lets developers use the functionality of PROJ in their own software without having to implement similar functionality themselves.
+Examples: `geod`, `proj` and `man proj`.
+]])
 
 if (version &gt;= &quot;7.2.0&quot;) then
   depends_on(&quot;sqlite&quot;)
@@ -3641,10 +3779,18 @@ end
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
+local libdir
+if (version &gt;= &quot;9.0.0&quot;) then
+  libdir = &quot;lib64&quot;
+else
+  libdir = &quot;lib&quot;
+end
+
+
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&quot;))
-prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
-prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;pkgconfig&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, libdir))
+prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, libdir, &quot;pkgconfig&quot;))
 
 
 -- From 'make install':
@@ -3746,7 +3892,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>R</code>, <code>R --version</code>, and <code>Rscript --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.r-project.org/">https://www.r-project.org/</a>, <a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.html">https://cran.r-project.org/doc/manuals/r-release/NEWS.html</a> (changelog)</span><br>
 Warning: <span class="module-warning">Because Conda negatively affects this software tool, Conda must be deactived in order to load this module.</span><br>
-Versions: <span class="module-version">3.0.0, 3.0.3, 3.1.0, 3.1.3, 3.2.0, 3.2.5, 3.3.0, 3.3.3, 3.4.0, 3.4.4, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0, 4.1.3, 4.2.0-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, 4.3.1-gcc10, 4.3.2-gcc10, 4.3.3-gcc10, 4.4.0-gcc13, 4.4.1-gcc13, 4.4.2-gcc13, 4.4.3-gcc13, 4.5.0-gcc13, 4.5.1-gcc13, 4.5.2-gcc13, <em>4.5.3-gcc13</em></span><br>
+Versions: <span class="module-version">3.0.0, 3.0.3, 3.1.0, 3.1.3, 3.2.0, 3.2.5, 3.3.0, 3.3.3, 3.4.0, 3.4.4, 3.5.0, 3.5.3, 3.6.0, 3.6.3, 4.0.0, 4.0.5, 4.1.0, 4.1.3, 4.2.0-gcc10, 4.2.3-gcc10, 4.3.0-gcc10, 4.3.1-gcc10, 4.3.2-gcc10, 4.3.3-gcc10, 4.4.0-gcc13, 4.4.1-gcc13, 4.4.2-gcc13, 4.4.3-gcc13, 4.5.0-gcc13, 4.5.1-gcc13, 4.5.2-gcc13, 4.5.3-gcc13, 4.6.0-gcc13, <em>4.6.1-gcc13</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3754,7 +3900,7 @@ R: The R Programming Language
 ]])
 
 local name = myModuleName()
-local version = &quot;4.4.0-gcc13&quot;
+local version = &quot;4.4.1-gcc13&quot;
 version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: Programming, Statistics&quot;)
@@ -5260,7 +5406,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (100)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (101)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -5369,24 +5515,6 @@ if [ module-info mode load ] {
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_blast" class="module-name">blast</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Basic Local Alignment Search Tool</span><br>
-URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
-Versions: <span class="module-version"><em>2.2.26</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
-module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
-prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_blast-" class="module-name">blast+</h3>
 <dl>
   <dd class="module-details">
@@ -5400,6 +5528,24 @@ Versions: <span class="module-version">2.2.25, 2.2.28, <em>2.12.0</em></span><br
 module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
 module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov/&quot;
 prepend-path  PATH   /salilab/diva1/programs/x86_64linux/ncbi-blast-2.12.0+/bin
+</code></pre>
+
+</details>
+  </dd>
+</dl>
+<h3 id="module_sali_blast" class="module-name">blast</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">Basic Local Alignment Search Tool</span><br>
+URL: <span class="module-url"><a href="https://blast.ncbi.nlm.nih.gov">https://blast.ncbi.nlm.nih.gov</a></span><br>
+Versions: <span class="module-version"><em>2.2.26</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: Basic Local Alignment Search Tool&quot;
+module-whatis &quot;URL: https://blast.ncbi.nlm.nih.gov&quot;
+prepend-path  PATH            /salilab/diva1/programs/x86_64linux/blast-2.2.26/bin
 </code></pre>
 
 </details>
@@ -5511,7 +5657,7 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/concavity-0.1/b
   <dd class="module-details">
 <span class="module-description">conda-forge Python distribution</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a></span><br>
-Versions: <span class="module-version">py312-24.7.1, py312-24.11.0, py312-25.3.0, py313-26.1.0, <em>py312-25.9.1</em></span><br>
+Versions: <span class="module-version">py312-24.7.1, py312-24.11.0, py312-25.3.0, py312-25.9.1, <em>py313-26.1.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
@@ -5519,7 +5665,7 @@ Versions: <span class="module-version">py312-24.7.1, py312-24.11.0, py312-25.3.0
 module-whatis &quot;Description: conda-forge Python distribution&quot;
 module-whatis &quot;URL: https://conda-forge.org/&quot;
 conflict anaconda
-prepend-path  PATH       /salilab/diva1/home/anaconda/miniforge/py312-25.9.1/bin/
+prepend-path  PATH       /salilab/diva1/home/anaconda/miniforge/py313-26.1.0/bin/
 </code></pre>
 
 </details>
@@ -5850,18 +5996,18 @@ prepend-path  MANPATH         /salilab/diva1/programs/x86_64linux/imod-4.5.7/man
 <h3 id="module_sali_imp" class="module-name">imp</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Integrative Modeling Platform (version 2.24.0, with only usage checks turned on)</span><br>
+<span class="module-description">Integrative Modeling Platform (version 2.25.0, with only usage checks turned on)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, 2.20.2, 2.21.0, 2.22.0, 2.23.0, <em>2.24.0</em></span><br>
+Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, 2.20.2, 2.21.0, 2.22.0, 2.23.0, 2.24.0, <em>2.25.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Integrative Modeling Platform (version 2.24.0, with only usage checks turned on)&quot;
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.25.0, with only usage checks turned on)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 python3/ihm sali-libraries
 set topdir &quot;/salilab/diva1/home/imp/main&quot;
-set subdir [file readlink &quot;${topdir}/2.24.0&quot;]
+set subdir [file readlink &quot;${topdir}/2.25.0&quot;]
 if {[file pathtype ${subdir}] == &quot;relative&quot;} {
   set subdir &quot;${topdir}/${subdir}&quot;
 } 
@@ -5877,18 +6023,18 @@ setenv        IMP_DIR         ${subdir}/lib/release8/cmake/IMP
 <h3 id="module_sali_imp-fast" class="module-name">imp-fast</h3>
 <dl>
   <dd class="module-details">
-<span class="module-description">Integrative Modeling Platform (version 2.24.0, fast build)</span><br>
+<span class="module-description">Integrative Modeling Platform (version 2.25.0, fast build)</span><br>
 URL: <span class="module-url"><a href="https://integrativemodeling.org/">https://integrativemodeling.org/</a></span><br>
-Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, 2.20.2, 2.21.0, 2.22.0, 2.23.0, <em>2.24.0</em></span><br>
+Versions: <span class="module-version">last_ok_build, nightly, 2.7.0, 2.8.0, 2.9.0, 2.10.0, 2.10.1, 2.11.0, 2.11.1, 2.12.0, 2.13.0, 2.14.0, 2.15.0, 2.16.0, 2.17.0, 2.18.0, 2.19.0, 2.20.0, 2.20.1, 2.20.2, 2.21.0, 2.22.0, 2.23.0, 2.24.0, <em>2.25.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">#%Module 1.0
 
-module-whatis &quot;Description: Integrative Modeling Platform (version 2.24.0, fast build)&quot;
+module-whatis &quot;Description: Integrative Modeling Platform (version 2.25.0, fast build)&quot;
 module-whatis &quot;URL: https://integrativemodeling.org/&quot;
 module load boost/1.73.0 libtau/1.0.1 opencv/4.3.0 python3/ihm sali-libraries
 set topdir &quot;/salilab/diva1/home/imp/main&quot;
-set subdir [file readlink &quot;${topdir}/2.24.0&quot;]
+set subdir [file readlink &quot;${topdir}/2.25.0&quot;]
 if {[file pathtype ${subdir}] == &quot;relative&quot;} {
   set subdir &quot;${topdir}/${subdir}&quot;
 } 
@@ -7149,6 +7295,33 @@ prepend-path PATH            /salilab/diva1/programs/x86_64linux/tables-3.6.1/bi
 </details>
   </dd>
 </dl>
+<h3 id="module_sali_python3-tensorflow" class="module-name">python3/tensorflow</h3>
+<dl>
+  <dd class="module-details">
+<span class="module-description">An end-to-end platform for machine learning</span><br>
+URL: <span class="module-url"><a href="https://www.tensorflow.org/">https://www.tensorflow.org/</a></span><br>
+Versions: <span class="module-version"><em>2.21.0</em></span><br>
+<details>
+<summary>Module code: <a>view</a></summary>
+<pre><code class="language-lua">#%Module 1.0
+
+module-whatis &quot;Description: An end-to-end platform for machine learning&quot;
+module-whatis &quot;URL: https://www.tensorflow.org/&quot;
+conflict python3/protobuf
+conflict python3/scipy
+conflict python3/scikit
+conflict python3/typing-extensions
+conflict python3/numpy/1.19.5
+prepend-path PYTHONPATH      /salilab/diva1/programs/x86_64linux/tensorflow-2.21.0
+if { [file exists /etc/centos-release] || [file exists /etc/rocky-release] || [file exists /etc/almalinux-release]} {
+  module load python3/numpy/2.4.2
+}
+module load python3/packaging python3/six python3/decorator python3/joblib
+</code></pre>
+
+</details>
+  </dd>
+</dl>
 <h3 id="module_sali_python3-toml" class="module-name">python3/toml</h3>
 <dl>
   <dd class="module-details">
@@ -7399,8 +7572,8 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
-<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(120)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
+<li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(122)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
 </ul>
 
 _The above information is updated automatically once an hour by querying `module avail` and `module spider`._
