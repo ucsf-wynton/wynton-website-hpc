@@ -103,7 +103,7 @@ reason: scheduled
 #### <span class="incident-title">Passwords cannot be reset</span>
 
 **Update**: Updating passwords via the commandline will not be fixed.
-<br><span class="timestamp">September 2, 2026, 02:00 PT</span>
+<br><span class="timestamp">December 17, 2025, 14:30 PT</span>
 
 **Notice**: Passwords can be changed via the web interface. It is
 still not possible to change it via the commandline while logged in
