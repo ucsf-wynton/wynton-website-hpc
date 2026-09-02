@@ -296,7 +296,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Examples: <code>aws help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/aws/aws-cli">https://github.com/aws/aws-cli</a></span><br>
 Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.45.18</em></span><br>
+Versions: <span class="module-version">1.45.18, <em>1.46.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -313,6 +313,29 @@ Description:
 Examples: `aws help`.
 Warning: Only the most recent versions of this software will be kept.
 ]])
+
+-- aws-cli requires Python (&gt;= 3.10). If 'python3' on the PATH is an older
+-- Python, try to provide a newer one by loading the 'miniforge3' module.
+local function on_path(exec)
+  for dir in string.gmatch(os.getenv(&quot;PATH&quot;) or &quot;&quot;, &quot;[^:]+&quot;) do
+    if isFile(pathJoin(dir, exec)) then
+      return true
+    end
+  end
+  return false
+end
+
+if on_path(&quot;python3&quot;) then
+  local bfr = capture(&quot;python3 --version 2&gt;&amp;1&quot;)
+  local major, minor = string.match(bfr, &quot;Python (%d+)[.](%d+)&quot;)
+  if major ~= nil then
+    major = tonumber(major)
+    minor = tonumber(minor)
+    if major &lt; 3 or (major == 3 and minor &lt; 10) then
+      try_load(&quot;miniforge3&quot;)
+    end
+  end
+end
 
 -- Local variables
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -434,7 +457,7 @@ prepend_path(&quot;BATS_ASSERT_HOME&quot;, home)
 <span class="module-description">Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.</span><br>
 Example: <span class="module-example"><code>bats --version</code>, <code>bats --help</code>, <code>man bats</code>, <code>man 7 bats</code>, and <code>bats tests/</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-core">https://github.com/bats-core/bats-core</a>, <a href="https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md">https://github.com/bats-core/bats-core/blob/master/docs/CHANGELOG.md</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/">https://bats-core.readthedocs.io/en/stable/</a> (documentation)</span><br>
-Versions: <span class="module-version">1.10.0, 1.11.0, 1.11.1, 1.12.0, <em>1.13.0</em></span><br>
+Versions: <span class="module-version">1.10.0, 1.11.0, 1.11.1, 1.12.0, 1.13.0, <em>1.14.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -539,7 +562,7 @@ prepend_path(&quot;BATS_SUPPORT_HOME&quot;, home)
 <span class="module-description">BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.</span><br>
 Example: <span class="module-example"><code>bcftools --version</code></span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/bcftools/blob/develop/NEWS">https://github.com/samtools/bcftools/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/bcftools">https://github.com/samtools/bcftools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, <em>1.23.1</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.23.1, <em>1.24</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -789,7 +812,7 @@ pushenv(&quot;BOWTIE_HOME&quot;, home)
 <span class="module-description">Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.</span><br>
 Example: <span class="module-example"><code>bowtie2 --version</code></span><br>
 URL: <span class="module-url"><a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>, <a href="https://bowtie-bio.sourceforge.net/bowtie2/index.shtml">https://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a> (changelog), <a href="https://github.com/BenLangmead/bowtie2">https://github.com/BenLangmead/bowtie2</a> (source code)</span><br>
-Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, 2.4.5, 2.5.0, 2.5.1, 2.5.2, <em>2.5.4</em></span><br>
+Versions: <span class="module-version">2.3.5, 2.3.5.1, 2.4.1, 2.4.2, 2.4.4, 2.4.5, 2.5.0, 2.5.1, 2.5.2, 2.5.4, <em>2.5.5</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -823,7 +846,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">Burrows-Wheeler Aligner (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.</span><br>
 Example: <span class="module-example"><code>bwa</code>.</span><br>
 URL: <span class="module-url"><a href="http://bio-bwa.sourceforge.net/">http://bio-bwa.sourceforge.net/</a>, <a href="https://github.com/lh3/bwa/blob/master/NEWS.md">https://github.com/lh3/bwa/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/lh3/bwa">https://github.com/lh3/bwa</a> (source code)</span><br>
-Versions: <span class="module-version">0.7.12, 0.7.17, <em>0.7.18</em></span><br>
+Versions: <span class="module-version">0.7.12, 0.7.17, 0.7.18, <em>0.7.19</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -893,10 +916,11 @@ prepend_path(&quot;MANPATH&quot;,  pathJoin(home, &quot;share&quot;, &quot;man&q
   <dd class="module-details">
 <strong class="module-help">Cell Ranger: 10x Genomics Pipeline for Single-Cell Data Analysis</strong><br>
 <span class="module-description">Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.</span><br>
-Example: <span class="module-example"><code>cellranger --help</code> and <code>cellranger --version</code>.</span><br>
+Example: <span class="module-example"><code>cellranger --help</code> and <code>cellranger --version</code>.
+EULA: <a href="https://www.10xgenomics.com/legal/end-user-software-license-agreement">https://www.10xgenomics.com/legal/end-user-software-license-agreement</a></span><br>
 URL: <span class="module-url"><a href="https://www.10xgenomics.com/support/software/cell-ranger/latest">https://www.10xgenomics.com/support/software/cell-ranger/latest</a>, <a href="https://www.10xgenomics.com/support/software/cell-ranger/latest/release-notes/cr-release-notes">https://www.10xgenomics.com/support/software/cell-ranger/latest/release-notes/cr-release-notes</a> (changelog), <a href="https://github.com/10XGenomics/cellranger">https://github.com/10XGenomics/cellranger</a> (source code)</span><br>
 Warning: <span class="module-warning">To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable <code>MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'</code> making those the default.</span><br>
-Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, 7.0.0, 7.0.1, 7.1.0, 7.2.0, 8.0.0, 8.0.1, 9.0.0, 9.0.1, <em>10.0.0</em></span><br>
+Versions: <span class="module-version">2.1.0, 3.0.2, 3.1.0, 4.0.0, 5.0.1, 6.1.1, 6.1.2, 7.0.0, 7.0.1, 7.1.0, 7.2.0, 8.0.0, 8.0.1, 9.0.0, 9.0.1, 10.0.0, <em>10.1.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -905,16 +929,28 @@ Cell Ranger: 10x Genomics Pipeline for Single-Cell Data Analysis
 
 local name = myModuleName()
 local version = myModuleVersion()
+    
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: sequencing, 10x genomics&quot;)
 whatis(&quot;URL: https://www.10xgenomics.com/support/software/cell-ranger/latest, https://www.10xgenomics.com/support/software/cell-ranger/latest/release-notes/cr-release-notes (changelog), https://github.com/10XGenomics/cellranger (source code)&quot;)
 whatis([[
 Description: Cell Ranger is a set of analysis pipelines that process Chromium Single Cell 3' RNA-seq output to align reads, generate gene-cell matrices and perform clustering and gene expression analysis.
 Examples: `cellranger --help` and `cellranger --version`.
+EULA: https://www.10xgenomics.com/legal/end-user-software-license-agreement
 Warning: To prevent a single Cell Ranger process from hijacking all CPU and RAM by default, this module sets environment variable `MROFLAGS='--localcores=1 --localmem=8 --limit-loadavg'` making those the default.
 ]])
 
-load(&quot;bcl2fastq&quot;)
+local version_x_str = string.gsub(version, &quot;[.].*&quot;, &quot;&quot;)
+local version_x = tonumber(version_x_str)
+
+-- Cell Ranger (&lt;  7.0): 'cellranger mkfastq' wrapper for 'bcl2fastq'
+-- Cell Ranger (== 7.0): 'cellranger mkfastq' and 'bcl-convert' supported
+-- Cell Ranger (&gt;= 8.0): 'cellranger mkfastq' deprecated
+if (version_x &lt; 7) then
+    load(&quot;bcl2fastq&quot;)
+elseif (version_x &gt;= 7) then
+    try_load(&quot;bcl2fastq&quot;)
+end
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -932,7 +968,83 @@ pushenv(&quot;MROFLAGS&quot;, &quot;--localcores=1 --localmem=8 --limit-loadavg&
 setenv(&quot;X86_64_LEVEL_ASSERT&quot;, &quot;2&quot;)
 try_load(&quot;x86-64-level&quot;)
 setenv(&quot;X86_64_LEVEL_ASSERT&quot;, &quot;&quot;)
+function assert_eula(module_name, eula_url)
+    if os.getenv(&quot;MODULE_INSTALLATION&quot;) then return end
+    
+    if (mode() ~= &quot;load&quot;) then return end
 
+    -- Only act when loading the module
+    if (mode() ~= &quot;load&quot;) then return end
+
+    local module_stack = &quot;CBI&quot;
+    local user = os.getenv(&quot;USER&quot;) or &quot;unknown&quot;
+    local xdg_data_home = os.getenv(&quot;XDG_DATA_HOME&quot;)
+    local home = os.getenv(&quot;HOME&quot;)
+    
+    -- Define data directory and sentinel path
+    local data_dir = (xdg_data_home or (home .. &quot;/.local/share&quot;)) .. &quot;/&quot; .. module_stack
+    local sentinel = data_dir .. &quot;/eula_accepted_for_module_&quot; .. module_name
+
+    -- 1. Check for existing approval
+    local f = io.open(sentinel, &quot;r&quot;)
+    if f then
+        f:close()
+        return
+    end
+
+    -- 2. Check for interactivity
+    -- [ -t 0 ] checks if stdin is a terminal
+    local is_interactive = os.execute(&quot;[ -t 0 ]&quot;)
+    if (not is_interactive) then
+        local msg = {
+            &quot;\n&quot; .. string.rep(&quot;-&quot;, 60),
+            &quot;ERROR: EULA for '&quot; .. module_name .. &quot;' has not been accepted.&quot;,
+            &quot;Please run 'module load &quot; .. module_name .. &quot;' in an *interactive*&quot;,
+            &quot;shell session to read and agree to the terms at:&quot;,
+            &quot;&lt;&quot; .. eula_url .. &quot;&gt;&quot;,
+            string.rep(&quot;-&quot;, 60) .. &quot;\n&quot;
+        }
+        LmodError(table.concat(msg, &quot;\n&quot;))
+    end
+
+    -- 3. Interactive Prompt
+    -- We must write to stderr to be visible to the user
+    io.stderr:write(&quot;\nTo use '&quot; .. module_name .. &quot;', you must accept the end-user license agreement (EULA) at:\n\n  &lt;&quot; .. eula_url .. &quot;&gt;\n\n&quot;)
+    io.stderr:write(&quot;Do you agree to these terms? (y/n): &quot;)
+    
+    -- Read from /dev/tty to ensure we grab user input even if stdin is redirected
+    local tty = io.open(&quot;/dev/tty&quot;, &quot;r&quot;)
+    local choice = tty:read(&quot;*l&quot;)
+    tty:close()
+
+    if (choice and choice:match(&quot;^[yY]%a*$&quot;)) then
+        -- Create directory and write sentinel
+        os.execute(&quot;mkdir -p &quot; .. data_dir)
+        local timestamp = os.date(&quot;%Y-%m-%d at %H:%M:%S&quot;)
+        local record = &quot;EULA accepted by user '&quot; .. user .. &quot;' via 'module load &quot; .. module_name .. &quot;' on &quot; .. timestamp
+        
+        local sf = io.open(sentinel, &quot;w&quot;)
+        if sf then
+            sf:write(record .. &quot;\n&quot;)
+            sf:close()
+        end
+        
+        io.stderr:write(&quot;EULA agreement recorded for '&quot; .. module_name .. &quot;'.\n&quot;)
+    else
+        local err_msg = {
+            &quot;\n&quot; .. string.rep(&quot;-&quot;, 60),
+            &quot;Error: EULA declined. Module load aborted.&quot;,
+            string.rep(&quot;-&quot;, 60) .. &quot;\n&quot;
+        }
+        LmodError(table.concat(err_msg, &quot;\n&quot;))
+    end
+end
+
+
+-- Assert the EULA has been approved
+if (mode() == &quot;load&quot;) then
+   assert_eula(name, &quot;https://www.10xgenomics.com/legal/end-user-software-license-agreement&quot;)
+end
 </code></pre>
 
 </details>
@@ -1190,7 +1302,7 @@ Example: <span class="module-example"><code>deno --version</code>, <code>deno --
 License: MIT</span><br>
 URL: <span class="module-url"><a href="https://deno.com/">https://deno.com/</a>, <a href="https://docs.deno.com/runtime/">https://docs.deno.com/runtime/</a> (documentation), <a href="https://github.com/denoland/deno">https://github.com/denoland/deno</a> (source code), <a href="https://github.com/denoland/deno/releases">https://github.com/denoland/deno/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
-Versions: <span class="module-version">2.7.12, 2.7.14, 2.8.0, 2.8.1, <em>2.9.0</em></span><br>
+Versions: <span class="module-version">2.7.12, 2.7.14, 2.8.0, 2.8.1, 2.9.0, <em>2.9.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1497,7 +1609,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">Examples: <code>firefox --help</code>, <code>firefox --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.firefox.com/">https://www.firefox.com/</a>, <a href="https://firefox-source-docs.mozilla.org/">https://firefox-source-docs.mozilla.org/</a> (documentation), mozilla.org/en-US/firefox/notes (changelog), <a href="https://github.com/mozilla-firefox/firefox">https://github.com/mozilla-firefox/firefox</a> (source code), <a href="https://searchfox.org/firefox-main/source">https://searchfox.org/firefox-main/source</a> (source code)</span><br>
 Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
-Versions: <span class="module-version">151.0.1, <em>152.0.3</em></span><br>
+Versions: <span class="module-version">151.0.1, 152.0.3, <em>155.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1535,8 +1647,8 @@ prepend_path(&quot;PATH&quot;, home)
 Example: <span class="module-example"><code>fzf --version</code> and <code>emacs &quot;$(fzf)&quot;</code>.</span><br>
 Note: <span class="module-note">To install tab completions and key bindinds to your shell, call <code>$FZF_HOME/install</code>. To uninstall, use <code>$FZF_HOME/uninstall</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, <a href="https://github.com/junegunn/fzf/wiki">https://github.com/junegunn/fzf/wiki</a> (documentation), <a href="https://github.com/junegunn/fzf/blob/master/CHANGELOG.md">https://github.com/junegunn/fzf/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/junegunn/fzf/releases">https://github.com/junegunn/fzf/releases</a> (download)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">0.65.2, 0.66.0, 0.67.0, 0.70.0, 0.71.0, 0.72.0, <em>0.73.1</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">0.65.2, 0.66.0, 0.67.0, 0.70.0, 0.71.0, 0.72.0, 0.73.1, <em>0.74.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1551,7 +1663,7 @@ whatis(&quot;URL: https://github.com/junegunn/fzf, https://github.com/junegunn/f
 whatis([[
 Description: fzf is a general-purpose command-line fuzzy finder. It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 Examples: `fzf --version` and `emacs &quot;$(fzf)&quot;`. Note: To install tab completions and key bindinds to your shell, call `$FZF_HOME/install`. To uninstall, use `$FZF_HOME/uninstall`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -1781,7 +1893,7 @@ prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, libdir), &quo
 <span class="module-description">GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It aims to contain the complete functionality of JTS in C++. This includes all the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced functions. GEOS provides spatial functionality to many other projects and products.</span><br>
 Example: <span class="module-example"><code>geos-config --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://libgeos.org/">https://libgeos.org/</a>, <a href="https://libgeos.org/usage/download/">https://libgeos.org/usage/download/</a> (changelog), <a href="https://github.com/libgeos/geos/issues">https://github.com/libgeos/geos/issues</a> (bug reports)</span><br>
-Versions: <span class="module-version">3.5.2, 3.7.3, 3.8.1, 3.9.1, 3.9.3, <em>3.9.4</em></span><br>
+Versions: <span class="module-version">3.5.2, 3.7.3, 3.8.1, 3.9.1, 3.9.3, 3.9.4, <em>3.15.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1790,6 +1902,7 @@ GEOS: Geometry Engine, Open Source
 
 local name = myModuleName()
 local version = myModuleVersion()
+version = string.gsub(version, &quot;^[.]&quot;, &quot;&quot;) -- for hidden modules
 whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: statistics, spatial&quot;)
 whatis(&quot;URL: https://libgeos.org/, https://libgeos.org/usage/download/ (changelog), https://github.com/libgeos/geos/issues (bug reports)&quot;)
@@ -1800,16 +1913,23 @@ Examples: `geos-config --version`.
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
+local libdir = &quot;lib&quot;
+local v = version
+v = string.gsub(v, &quot;[.].*&quot;, &quot;&quot;)
+if v &gt;= &quot;3&quot; then
+  libdir = &quot;lib64&quot;
+end
 
 -- execution
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, libdir))
 -- linking
-prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, &quot;lib&quot;))
+prepend_path(&quot;LD_RUN_PATH&quot;, pathJoin(home, libdir))
 -- building
 prepend_path(&quot;CPATH&quot;,  pathJoin(home, &quot;include&quot;))
 prepend_path(&quot;CFLAGS&quot;, &quot;-I&quot; .. pathJoin(home, &quot;include&quot;), &quot; &quot;)
-prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, &quot;lib&quot;), &quot; &quot;)
+prepend_path(&quot;LDFLAGS&quot;, &quot;-L&quot; .. pathJoin(home, libdir), &quot; &quot;)
+
 </code></pre>
 
 </details>
@@ -1894,7 +2014,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 Example: <span class="module-example"><code>gh --version</code> and <code>gh --help</code>. Setup: <code>gh auth login</code> (once). CLI query example: <code>gh issue list --repo=futureverse/future</code>. TUI: <code>gh extension install dlvhdr/gh-dash</code> (once), then <code>gh dash</code>. AI: <code>gh extension install github/gh-copilot</code> (once), then <code>gh copilot suggest &quot;find files older than one year&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://cli.github.com/">https://cli.github.com/</a>, <a href="https://cli.github.com/manual/">https://cli.github.com/manual/</a> (documentation), <a href="https://github.com/cli/cli/releases">https://github.com/cli/cli/releases</a> (changelog), <a href="https://github.com/cli/cli/">https://github.com/cli/cli/</a> (source code), <a href="https://github.com/topics/gh-extension">https://github.com/topics/gh-extension</a> (GitHub CLI extensions)</span><br>
 Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
-Versions: <span class="module-version">2.67.0, 2.82.1, 2.83.1, 2.89.0, 2.92.0, <em>2.95.0</em></span><br>
+Versions: <span class="module-version">2.67.0, 2.82.1, 2.83.1, 2.89.0, 2.92.0, 2.95.0, <em>2.99.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2039,7 +2159,7 @@ prepend_path(&quot;MANPATH&quot;, home)
 <span class="module-description">Build simple, secure, scalable systems with Go. Go has two major releases each year, e.g. go 1.24 (2025-02-11), 1.25 (2025-08-12), 1.26 (2026-02-10).</span><br>
 Example: <span class="module-example"><code>go version</code> and <code>go help</code>.</span><br>
 URL: <span class="module-url"><a href="https://go.dev/">https://go.dev/</a>, <a href="https://go.dev/doc/devel/release">https://go.dev/doc/devel/release</a> (changelog), <a href="https://go.dev/dl/">https://go.dev/dl/</a> (releases), <a href="https://github.com/golang">https://github.com/golang</a> (source code)</span><br>
-Versions: <span class="module-version">1.22.5, 1.23.1, 1.23.4, 1.23.5, 1.23.6, 1.24.0, 1.24.4, 1.26.1, <em>1.26.3</em></span><br>
+Versions: <span class="module-version">1.22.5, 1.23.1, 1.23.4, 1.23.5, 1.23.6, 1.24.0, 1.24.4, 1.26.1, 1.26.3, <em>1.27.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2074,8 +2194,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">gping comes with the following super-powers: (i) graph the ping time for multiple hosts, (ii) graph the execution time for commands via the <code>--cmd</code> flag, and (iii) custom colours.</span><br>
 Example: <span class="module-example"><code>gping --version</code>, <code>gping --help</code>, <code>gping 8.8.8.8 9.9.9.9</code>, and <code>gping --cmd &quot;curl -o /dev/null https://www.github.com&quot; &quot;wget -O /dev/null https://github.com&quot;</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/orf/gping">https://github.com/orf/gping</a>, <a href="https://github.com/orf/gping/releases">https://github.com/orf/gping/releases</a> (changelog), <a href="https://github.com/orf/gping">https://github.com/orf/gping</a> (source code)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>1.20.1</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">1.20.1, <em>1.21.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2090,7 +2210,7 @@ whatis(&quot;URL: https://github.com/orf/gping, https://github.com/orf/gping/rel
 whatis([[
 Description: gping comes with the following super-powers: (i) graph the ping time for multiple hosts, (ii) graph the execution time for commands via the `--cmd` flag, and (iii) custom colours.
 Examples: `gping --version`, `gping --help`, `gping 8.8.8.8 9.9.9.9`, and `gping --cmd &quot;curl -o /dev/null https://www.github.com&quot; &quot;wget -O /dev/null https://github.com&quot;`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2218,8 +2338,8 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description"><code>htop</code> is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.</span><br>
 Example: <span class="module-example"><code>htop</code>.</span><br>
 URL: <span class="module-url"><a href="https://htop.dev">https://htop.dev</a>, <a href="https://github.com/htop-dev/htop/blob/main/ChangeLog">https://github.com/htop-dev/htop/blob/main/ChangeLog</a> (changelog), <a href="https://github.com/htop-dev/htop">https://github.com/htop-dev/htop</a> (source code)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.4.1, 3.5.0, <em>3.5.1</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">3.4.1, 3.5.0, 3.5.1, <em>3.5.3</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2235,7 +2355,7 @@ whatis(&quot;URL: https://htop.dev, https://github.com/htop-dev/htop/blob/main/C
 whatis([[
 Description: `htop` is an interactive process viewer for Unix systems. It is a text-mode application (for console or X terminals) and requires ncurses.
 Examples: `htop`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2261,7 +2381,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 <span class="module-description">HTSlib is an implementation of a unified C library for accessing common file formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, and is the core library used by samtools and bcftools. HTSlib also provides the bgzip, htsfile, and tabix utilities.</span><br>
 Example: <span class="module-example"><code>bgzip --version</code>, <code>htsfile --version</code>, and <code>tabix --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/htslib/blob/develop/NEWS">https://github.com/samtools/htslib/blob/develop/NEWS</a> (changelog), <a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.19.1, 1.20, 1.21, 1.22.1, 1.23, <em>1.23.1</em></span><br>
+Versions: <span class="module-version">1.9, 1.10.2, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.19, 1.19.1, 1.20, 1.21, 1.22.1, 1.23, 1.23.1, <em>1.24</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2837,7 +2957,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;.b
 <strong class="module-help">markdownlint-cli: MarkdownLint Command Line Interface</strong><br>
 <span class="module-description">Examples: <code>markdownlint --version</code>, <code>markdownlint --help</code>, <code>markdownlint -- *.md</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (documentation), <a href="https://github.com/igorshubovych/markdownlint-cli/releases/">https://github.com/igorshubovych/markdownlint-cli/releases/</a> (releases), <a href="https://github.com/igorshubovych/markdownlint-cli">https://github.com/igorshubovych/markdownlint-cli</a> (source code)</span><br>
-Versions: <span class="module-version">0.43.0, <em>0.48.0</em></span><br>
+Versions: <span class="module-version">0.43.0, 0.48.0, <em>0.49.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -2854,6 +2974,8 @@ Description:
 Examples: `markdownlint --version`, `markdownlint --help`, `markdownlint -- *.md`.
 ]]
 )
+
+try_load(&quot;node&quot;)
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
@@ -3063,7 +3185,7 @@ set_shell_function(&quot;conda&quot;,&quot; \
 Example: <span class="module-example"><code>conda --version</code>, <code>conda create --name=myenv</code>, <code>conda env list</code>, <code>conda activate myenv</code>, <code>conda info</code>, and <code>conda deactive</code>.</span><br>
 URL: <span class="module-url"><a href="https://conda-forge.org/">https://conda-forge.org/</a>, <a href="https://conda-forge.org/docs/user/introduction/">https://conda-forge.org/docs/user/introduction/</a> (documentation), <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a> (releases),  <a href="https://github.com/conda/conda/blob/master/CHANGELOG.md">https://github.com/conda/conda/blob/master/CHANGELOG.md</a> (changelog), <a href="https://github.com/conda/conda">https://github.com/conda/conda</a> (source code)</span><br>
 Warning: <span class="module-warning">For now, this module works only in Bash. Also, do <em>not</em> do <code>conda init</code>. If you do this by mistake, please undo by <code>conda init --reverse</code>.</span><br>
-Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, 24.11.0-0, 24.11.2-1, 25.9.1-0, 26.1.1-3, <em>26.3.2-2</em></span><br>
+Versions: <span class="module-version">24.3.0-0, 24.7.1-0, 24.9.0-0, 24.9.2-0, 24.11.0-0, 24.11.2-1, 25.9.1-0, 26.1.1-3, 26.3.2-2, <em>26.5.3-0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3114,15 +3236,15 @@ elseif mode() == &quot;unload&quot; then
   pushenv(&quot;_CE_CONDA&quot;, &quot;false&quot;)
 end
 -- Don't edit! Created using: 
--- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/etc/profile.d/conda.sh
-pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/bin/conda&quot;)
-pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/bin/python&quot;)
+-- /usr/share/lmod/lmod/libexec/sh_to_modulefile /wynton/home/cbi/shared/software/CBI/miniforge3-26.5.3-0/etc/profile.d/conda.sh
+pushenv(&quot;CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.5.3-0/bin/conda&quot;)
+pushenv(&quot;CONDA_PYTHON_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.5.3-0/bin/python&quot;)
 pushenv(&quot;CONDA_SHLVL&quot;,&quot;0&quot;)
-prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/condabin&quot;)
+prepend_path(&quot;PATH&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.5.3-0/condabin&quot;)
 pushenv(&quot;_CE_CONDA&quot;,&quot;&quot;)
 pushenv(&quot;_CE_M&quot;,&quot;&quot;)
-setenv(&quot;_CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2/bin/conda&quot;)
-setenv(&quot;_CONDA_ROOT&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.3.2-2&quot;)
+setenv(&quot;_CONDA_EXE&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.5.3-0/bin/conda&quot;)
+setenv(&quot;_CONDA_ROOT&quot;,&quot;/wynton/home/cbi/shared/software/CBI/miniforge3-26.5.3-0&quot;)
 set_shell_function(&quot;__conda_activate&quot;,&quot; \
     if [ -n \&quot;${CONDA_PS1_BACKUP:+x}\&quot; ]; then\
         PS1=\&quot;$CONDA_PS1_BACKUP\&quot;;\
@@ -3444,8 +3566,8 @@ prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 <span class="module-description">Pandoc is a Haskell library and software tool for converting from one markup format to another, and a command-line tool that uses this library.</span><br>
 Example: <span class="module-example"><code>pandoc --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://pandoc.org/">https://pandoc.org/</a>, <a href="https://pandoc.org/releases.html">https://pandoc.org/releases.html</a> (changelog), <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a> (source code)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">3.6.2, 3.8.2.1, <em>3.9.0.2</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">3.6.2, 3.8.2.1, 3.9.0.2, <em>3.11</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3460,7 +3582,7 @@ whatis(&quot;URL: https://pandoc.org/, https://pandoc.org/releases.html (changel
 whatis([[
 Description: Pandoc is a Haskell library and software tool for converting from one markup format to another, and a command-line tool that uses this library.
 Examples: `pandoc --version`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -3852,8 +3974,8 @@ append_path(&quot;PYTHONPATH&quot;, home)
 <span class="module-description">Quarto is an open-source scientific and technical publishing system built on Pandoc; (i) Create dynamic content with Python, R, Julia, and Observable, (ii) Author documents as plain text markdown or Jupyter notebooks, (iii) Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more, (iv) Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.</span><br>
 Example: <span class="module-example"><code>quarto --version</code> and <code>quarto --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://quarto.org/">https://quarto.org/</a>, <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a> (documentation), <a href="https://github.com/quarto-dev/quarto-cli/releases">https://github.com/quarto-dev/quarto-cli/releases</a> (changelog), <a href="https://github.com/quarto-dev/quarto-cli/">https://github.com/quarto-dev/quarto-cli/</a> (source code)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.6.42, 1.8.25, 1.8.26, 1.9.36, 1.9.37, <em>1.9.38</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">1.6.42, 1.8.25, 1.8.26, 1.9.36, 1.9.37, 1.9.38, <em>1.10.18</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3868,7 +3990,7 @@ whatis(&quot;URL: https://quarto.org/, https://quarto.org/docs/guide/ (documenta
 whatis([[
 Description: Quarto is an open-source scientific and technical publishing system built on Pandoc; (i) Create dynamic content with Python, R, Julia, and Observable, (ii) Author documents as plain text markdown or Jupyter notebooks, (iii) Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more, (iv) Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
 Examples: `quarto --version` and `quarto --help`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 try_load(&quot;pandoc&quot;)
@@ -4097,8 +4219,8 @@ pushenv(&quot;R_PROFILE&quot;, pathJoin(home, &quot;Rprofile.site&quot;))
 <span class="module-description">Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, or remote file systems, and in the cloud.</span><br>
 Example: <span class="module-example"><code>rclone --version</code>, <code>rclone --help</code>, <code>rclone config</code>, and <code>man rclone</code>.</span><br>
 URL: <span class="module-url"><a href="https://rclone.org/">https://rclone.org/</a>, <a href="https://rclone.org/changelog/">https://rclone.org/changelog/</a> (changelog), <a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> (source code)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">1.71.0, 1.71.2, 1.73.3, 1.73.4, <em>1.74.1</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">1.71.0, 1.71.2, 1.73.3, 1.73.4, 1.74.1, <em>1.75.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help(&quot;rclone: Rsync for Cloud Storage and More&quot;)
@@ -4111,7 +4233,7 @@ whatis(&quot;URL: https://rclone.org/, https://rclone.org/changelog/ (changelog)
 whatis([[
 Description: Rclone is a command line program to sync files and directories to and from a large number of end points on the local file system, or remote file systems, and in the cloud.
 Examples: `rclone --version`, `rclone --help`, `rclone config`, and `man rclone`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -4168,7 +4290,7 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">restic is a backup program that is fast, efficient and secure. It supports the three major operating systems (Linux, macOS, Windows) and a few smaller ones (FreeBSD, OpenBSD).</span><br>
 Example: <span class="module-example"><code>restic --help</code> and <code>restic version</code>.</span><br>
 URL: <span class="module-url"><a href="https://restic.net">https://restic.net</a>, <a href="https://restic.readthedocs.io/en/latest/">https://restic.readthedocs.io/en/latest/</a> (documentation), <a href="https://github.com/restic/restic/releases">https://github.com/restic/restic/releases</a> (changelog), <a href="https://github.com/restic/restic">https://github.com/restic/restic</a> (source code)</span><br>
-Versions: <span class="module-version">0.17.3, 0.18.1, <em>0.19.0</em></span><br>
+Versions: <span class="module-version">0.17.3, 0.18.1, 0.19.0, <em>0.19.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4202,8 +4324,8 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
 <span class="module-description">ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.</span><br>
 Example: <span class="module-example"><code>rg --help</code>, <code>man rg</code>, and <code>rg --threads=2 -i 'lorem ipsum'</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/BurntSushi/ripgrep">https://github.com/BurntSushi/ripgrep</a>, <a href="https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md">https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md</a> (documentation), <a href="https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md">https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md</a> (FAQ), <a href="https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md">https://github.com/BurntSushi/ripgrep/blob/master/CHANGELOG.md</a> (changelog)</span><br>
-Warning: <span class="module-warning">This tool uses 12 parallel threads by default; please specify <code>--threads=2</code>. Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">14.1.1, <em>15.1.0</em></span><br>
+Warning: <span class="module-warning">This tool uses 12 parallel threads by default; please specify <code>--threads=2</code>. Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">14.1.1, 15.1.0, <em>15.2.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4218,7 +4340,7 @@ whatis(&quot;URL: https://github.com/BurntSushi/ripgrep, https://github.com/Burn
 whatis([[
 Description: ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern. By default, ripgrep will respect your .gitignore and automatically skip hidden files/directories and binary files. ripgrep is similar to other popular search tools like The Silver Searcher, ack and grep.
 Examples: `rg --help`, `man rg`, and `rg --threads=2 -i 'lorem ipsum'`.
-Warning: This tool uses 12 parallel threads by default; please specify `--threads=2`. Only the most recent version of this software will be kept.
+Warning: This tool uses 12 parallel threads by default; please specify `--threads=2`. Only the most recent versions of this software will be kept.
 ]])
 
 -- Local variables
@@ -4378,7 +4500,7 @@ setenv(&quot;PORT4ME_PORT_COMMAND&quot;, &quot;netstat&quot;)
 <span class="module-description">Rust is a general-purpose programming language emphasizing performance, type safety, and concurrency. It enforces memory safety, meaning that all references point to valid memory. It does so without a conventional garbage collector; instead, memory safety errors and data races are prevented by the &quot;borrow checker&quot;, which tracks the object lifetime of references at compile time.</span><br>
 Example: <span class="module-example"><code>rustc --help</code> and <code>cargo --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.rust-lang.org/">https://www.rust-lang.org/</a>, <a href="https://www.rust-lang.org/learn">https://www.rust-lang.org/learn</a> (documentation), <a href="https://github.com/rust-lang/rust">https://github.com/rust-lang/rust</a> (source code), <a href="https://github.com/rust-lang/rust/releases/">https://github.com/rust-lang/rust/releases/</a> (releases)</span><br>
-Versions: <span class="module-version">1.94.1, 1.95.0, <em>1.96.0</em></span><br>
+Versions: <span class="module-version">1.94.1, 1.95.0, 1.96.0, <em>1.98.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4459,7 +4581,7 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 <span class="module-description">SAMtools is a suite of programs for interacting with high-throughput sequencing data.</span><br>
 Example: <span class="module-example"><code>samtools --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.htslib.org/">https://www.htslib.org/</a>, <a href="https://github.com/samtools/samtools/blob/develop/NEWS.md">https://github.com/samtools/samtools/blob/develop/NEWS.md</a> (changelog), <a href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a> (source code)</span><br>
-Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, 1.19.2, 1.20, 1.21, 1.22.1, 1.23, <em>1.23.1</em></span><br>
+Versions: <span class="module-version">1.9, 1.10, 1.11, 1.13, 1.14, 1.15, 1.15.1, 1.16, 1.16.1, 1.17, 1.18, 1.19, 1.19.2, 1.20, 1.21, 1.22.1, 1.23, 1.23.1, <em>1.24</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -4785,7 +4907,7 @@ prepend_path(&quot;PATH&quot;, home)
 <span class="module-description">SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</span><br>
 Example: <span class="module-example"><code>sqlite3 --version</code>.</span><br>
 URL: <span class="module-url"><a href="https://sqlite.org/">https://sqlite.org/</a>, <a href="https://sqlite.org/docs.html">https://sqlite.org/docs.html</a> (docs), <a href="https://github.com/sqlite/sqlite/tags">https://github.com/sqlite/sqlite/tags</a> (changelog), <a href="https://github.com/sqlite/sqlite">https://github.com/sqlite/sqlite</a> (source code)</span><br>
-Versions: <span class="module-version">3.43.0, 3.43.2, 3.45.2, 3.46.1, <em>3.47.0</em></span><br>
+Versions: <span class="module-version">3.43.0, 3.43.2, 3.45.2, 3.46.1, 3.47.0, <em>3.53.4</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5140,7 +5262,7 @@ License: MIT | Apache-2.0</span><br>
 Example: <span class="module-example"><code>uv --help</code>, <code>uv --version</code></span><br>
 URL: <span class="module-url"><a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a> (documentation), <a href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a> (source code), <a href="https://github.com/astral-sh/uv/releases">https://github.com/astral-sh/uv/releases</a> (releases)</span><br>
 Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
-Versions: <span class="module-version">0.11.2, 0.11.6, 0.11.7, 0.11.14, 0.11.16, 0.11.17, 0.11.24, <em>0.11.25</em></span><br>
+Versions: <span class="module-version">0.11.2, 0.11.6, 0.11.7, 0.11.14, 0.11.16, 0.11.17, 0.11.24, 0.11.25, <em>0.12.9</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5325,8 +5447,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">x86-64 is a 64-bit version of the x86 CPU instruction set supported by AMD and Intel CPUs among others. Since the first generations of CPUs, more low-level CPU features have been added over the years. The x86-64 CPU features can be grouped into four CPU microarchitecture levels: x86-64 v1, x86-64 v2, x86-64 v3, and x86-64 v4. This tool checks which CPU level the current machine supports.</span><br>
 Example: <span class="module-example"><code>x86-64-level</code> and <code>x86-64-level --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/HenrikBengtsson/x86-64-level/">https://github.com/HenrikBengtsson/x86-64-level/</a>, <a href="https://github.com/HenrikBengtsson/x86-64-level/blob/develop/NEWS.md">https://github.com/HenrikBengtsson/x86-64-level/blob/develop/NEWS.md</a> (changelog)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version"><em>0.2.2</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">0.2.2, <em>0.3.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5343,7 +5465,7 @@ whatis(&quot;URL: https://github.com/HenrikBengtsson/x86-64-level/, https://gith
 whatis([[
 Description: x86-64 is a 64-bit version of the x86 CPU instruction set supported by AMD and Intel CPUs among others. Since the first generations of CPUs, more low-level CPU features have been added over the years. The x86-64 CPU features can be grouped into four CPU microarchitecture levels: x86-64 v1, x86-64 v2, x86-64 v3, and x86-64 v4. This tool checks which CPU level the current machine supports.
 Examples: `x86-64-level` and `x86-64-level --help`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -5372,8 +5494,8 @@ end
 <span class="module-description"><code>yq</code> is a lightweight and portable command-line YAML, JSON and XML processor. <code>yq</code> uses <code>jq</code> like syntax, but works with YAML files as well as JSON, XML, properties, CSV, and TSV.</span><br>
 Example: <span class="module-example"><code>yq --version</code>, <code>yq --help</code>.</span><br>
 URL: <span class="module-url"><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>, <a href="https://github.com/mikefarah/yq/releases">https://github.com/mikefarah/yq/releases</a> (changelog), <a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a> (source code)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">4.45.1, 4.48.1, <em>4.52.5</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">4.45.1, 4.48.1, 4.52.5, <em>4.53.6</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -5388,7 +5510,7 @@ whatis(&quot;URL: https://github.com/mikefarah/yq, https://github.com/mikefarah/
 whatis([[
 Description: `yq` is a lightweight and portable command-line YAML, JSON and XML processor. `yq` uses `jq` like syntax, but works with YAML files as well as JSON, XML, properties, CSV, and TSV.
 Examples: `yq --version`, `yq --help`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
