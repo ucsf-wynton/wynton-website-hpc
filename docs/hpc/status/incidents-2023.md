@@ -102,11 +102,11 @@ reason: scheduled
 
 #### <span class="incident-title">Passwords cannot be reset</span>
 
-**Update**: Updating passwords via the commandline will not be fixed.
+**Update**: Updating passwords via the command-line will not be fixed.
 <br><span class="timestamp">December 17, 2025, 14:30 PT</span>
 
 **Notice**: Passwords can be changed via the web interface. It is
-still not possible to change it via the commandline while logged in
+still not possible to change it via the command-line while logged in
 to Wynton.
 <br><span class="timestamp">November 13, 2023, 11:00 PT</span>
 

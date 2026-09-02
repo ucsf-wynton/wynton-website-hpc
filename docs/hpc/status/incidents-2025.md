@@ -130,7 +130,7 @@ reason: beegfs
 #### <span class="incident-title">Sporadic job failure</span>
 
 **Resolved**: A monitor has been implemented that detects and fixes
-SSSD service issues on a continous basis.  <br><span
+SSSD service issues on a continuous basis.  <br><span
 class="timestamp">November 20, 2025, 10:45 PT</span>
 
 **Update**: There was another burst of "can't get password entry for
