@@ -98,6 +98,23 @@ reason: scheduled
  -->
 
 
+### November 5, 2023-discontinued
+
+#### <span class="incident-title">Passwords cannot be reset</span>
+
+**Update**: Updating passwords via the commandline will not be fixed.
+<br><span class="timestamp">September 2, 2026, 02:00 PT</span>
+
+**Notice**: Passwords can be changed via the web interface. It is
+still not possible to change it via the commandline while logged in
+to Wynton.
+<br><span class="timestamp">November 13, 2023, 11:00 PT</span>
+
+**Notice**: It is not possible to change or reset passwords since
+2023-11-05. This problem was introduced while doing cluster-wide
+upgrades to Rocky 8.
+<br><span class="timestamp">November 11, 2023, 09:00 PT</span>
+
 
 ### October 30-November 15, 2023
 
