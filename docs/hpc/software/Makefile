@@ -12,6 +12,11 @@ build:
 	make all
 	git diff
 
+lmodweb-refresh: FORCE
+	module purge; \
+	module load CBI r && \
+	Rscript lmodweb-refresh.R 
+
 $(PAGE).md: $(PAGE).md.rsp r-packages
 	module purge; \
 	module load CBI r && \
@@ -44,3 +49,5 @@ scl:
 apptainer:
 	markin build $@.sh
 	markin inject $@.md
+
+FORCE:
