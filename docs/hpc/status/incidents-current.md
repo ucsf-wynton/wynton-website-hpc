@@ -2,6 +2,9 @@
 
 #### <span class="incident-title">Full downtime</span>
 
+**Update**: Wynton is back to being available. There is currently an issue that is resulting in only about 20% of our nodes being up, however. We are investigating and will continue to work on this today and tomorrow until resolved.
+<br><span class="timestamp">September 8, 16:00 PT</span>
+
 **Update**: The cluster is down for maintenance until 5:00 PM on Tuesday, September 8, 2026.
 <br><span class="timestamp">September 7, 15:30 PT</span>
 

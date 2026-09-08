@@ -211,6 +211,10 @@
 # condition: is operational
 # message: The cluster will be down for maintenance on September 7-8, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
 
-level: danger
-condition: is not operational
-message: The cluster is down for maintenance on September 7-8, 2026.
+# level: danger
+# condition: is not operational
+# message: The cluster is down for maintenance on September 7-8, 2026.
+
+level: warning
+condition: runs at lower capacity
+message: Wynton is back to being available following maintenance. However, there is currently an issue resulting in only about 20% of nodes being up. We are investigating and will continue to work on this until resolved.
