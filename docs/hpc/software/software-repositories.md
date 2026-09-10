@@ -61,7 +61,7 @@ Below are 3 software repositories, each providing a set of software tools.
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(121)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
 </ul>
 
 <div class="tab-content" style="margin-top: 1ex;">
@@ -5499,7 +5499,7 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
 
 <div id="button_repository_sali" class="tab-pane fade">
 
-<h2 id="repository_sali">Module Software Repository: Sali (101)</h2>
+<h2 id="repository_sali">Module Software Repository: Sali (100)</h2>
 
 Maintained by: Ben Webb, <a href="https://salilab.org/">Sali Lab Software Repository</a><br>
 Enable repository: <code>module load Sali</code><br>
@@ -6912,26 +6912,6 @@ prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mccabe-0.7.0/lib/python
 </details>
   </dd>
 </dl>
-<h3 id="module_sali_python3-mdp" class="module-name">python3/mdp</h3>
-<dl>
-  <dd class="module-details">
-<span class="module-description">Modular toolkit for Data Processing</span><br>
-URL: <span class="module-url"><a href="http://mdp-toolkit.sourceforge.net/">http://mdp-toolkit.sourceforge.net/</a></span><br>
-Versions: <span class="module-version"><em>3.6</em></span><br>
-<details>
-<summary>Module code: <a>view</a></summary>
-<pre><code class="language-lua">#%Module 1.0
-
-module-whatis &quot;Description: Modular toolkit for Data Processing&quot;
-module-whatis &quot;URL: http://mdp-toolkit.sourceforge.net/&quot;
-conflict python2
-module load python3/scipy python3/future python3/scikit
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/mdp-3.6/lib/python3.6/site-packages
-</code></pre>
-
-</details>
-  </dd>
-</dl>
 <h3 id="module_sali_python3-modelcif" class="module-name">python3/modelcif</h3>
 <dl>
   <dd class="module-details">
@@ -7358,7 +7338,7 @@ Versions: <span class="module-version"><em>1.16.0</em></span><br>
 module-whatis &quot;Description: Python 2 and 3 compatibility utilities&quot;
 module-whatis &quot;URL: https://github.com/benjaminp/six&quot;
 conflict python2
-prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/six-1.16.0/lib/python3.6/site-packages
+prepend-path  PYTHONPATH   /salilab/diva1/programs/linux/six-1.16.0/lib/python
 </code></pre>
 
 </details>
@@ -7666,7 +7646,7 @@ prepend-path  PATH /salilab/diva1/programs/x86_64linux/zdock-3.0.2
 <ul class="nav nav-pills">
 <li class="active"><a data-toggle="pill" href="#button_repository_built-in"><span style="font-weight: bold;">built-in</span>&nbsp;(6)</a></li>
 <li><a data-toggle="pill" href="#button_repository_cbi"><span style="font-weight: bold;">CBI</span>&nbsp;(121)</a></li>
-<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(101)</a></li>
+<li><a data-toggle="pill" href="#button_repository_sali"><span style="font-weight: bold;">Sali</span>&nbsp;(100)</a></li>
 </ul>
 
 _The above information is updated automatically once an hour by querying `module avail` and `module spider`._
