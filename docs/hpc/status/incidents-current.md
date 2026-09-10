@@ -2,7 +2,10 @@
 
 #### <span class="incident-title">Full downtime</span>
 
-**Update**: Wynton is back to being available. There is currently an issue that is resulting in only about 20% of our nodes being up, however. We are investigating and will continue to work on this today and tomorrow until resolved.
+**Update**: About 90% of the compute slots have been recovered, and we are continuing to bring the remaining nodes back online. The interactive GPU development node `gpudev1`, which was slow to return, is back up as of the afternoon of September 9.
+<br><span class="timestamp">September 10, 09:30 PT</span>
+
+**Update**: Wynton is back to being available. There is currently an issue that is resulting in only about 20% of our nodes being up, however, and the interactive GPU development node `gpudev1` did not come back up either. We are investigating and will continue to work on this today and tomorrow until resolved.
 <br><span class="timestamp">September 8, 16:00 PT</span>
 
 **Update**: The cluster is down for maintenance until 5:00 PM on Tuesday, September 8, 2026.
