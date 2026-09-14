@@ -420,7 +420,8 @@ prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;share&quot;, &quot;man&qu
   <dd class="module-details">
 <strong class="module-help">bats-assert: Assertion Library for Bats (Bash Automated Testing System)</strong><br>
 <span class="module-description">This is a helper library providing common assertions for Bats.</span><br>
-Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_ASSERT_HOME}/load.bash&quot;</code></span><br>
+Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_ASSERT_HOME}/load.bash&quot;</code>
+License: CC0-1.0</span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-assert">https://github.com/bats-core/bats-assert</a>, <a href="https://github.com/bats-core/bats-assert/releases">https://github.com/bats-core/bats-assert/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
 Versions: <span class="module-version">2.2.0, <em>2.2.4</em></span><br>
 <details>
@@ -437,6 +438,7 @@ whatis(&quot;URL: https://github.com/bats-core/bats-assert, https://github.com/b
 whatis([[
 Description: This is a helper library providing common assertions for Bats.
 Examples: In Bats `setup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_ASSERT_HOME}/load.bash&quot;`
+License: CC0-1.0
 ]])
 
 depends_on(&quot;bats-support&quot;)
@@ -445,6 +447,7 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;BATS_ASSERT_HOME&quot;, home)
+prepend_path(&quot;BATS_LIB_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 </code></pre>
 
 </details>
@@ -490,7 +493,8 @@ prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
   <dd class="module-details">
 <strong class="module-help">bats-file: File-System Assertion Library for Bats (Bash Automated Testing System)</strong><br>
 <span class="module-description">This is a helper library providing common filesystem related assertions and helpers foor Bats.</span><br>
-Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_FILE_HOME}/load.bash&quot;</code></span><br>
+Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code> and <code>load &quot;${BATS_FILE_HOME}/load.bash&quot;</code>
+License: CC0-1.0</span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-file">https://github.com/bats-core/bats-file</a>, <a href="https://github.com/bats-core/bats-file/releases">https://github.com/bats-core/bats-file/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-file">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-file</a> (documentation)</span><br>
 Versions: <span class="module-version"><em>0.4.0</em></span><br>
 <details>
@@ -507,6 +511,7 @@ whatis(&quot;URL: https://github.com/bats-core/bats-file, https://github.com/bat
 whatis([[
 Description: This is a helper library providing common filesystem related assertions and helpers foor Bats.
 Examples: In Bats `setup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;` and `load &quot;${BATS_FILE_HOME}/load.bash&quot;`
+License: CC0-1.0
 ]])
 
 depends_on(&quot;bats-support&quot;)
@@ -515,6 +520,7 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;BATS_FILE_HOME&quot;, home)
+prepend_path(&quot;BATS_LIB_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 </code></pre>
 
 </details>
@@ -525,7 +531,8 @@ prepend_path(&quot;BATS_FILE_HOME&quot;, home)
   <dd class="module-details">
 <strong class="module-help">bats-support: Supporting Library for Bats (Bash Automated Testing System)</strong><br>
 <span class="module-description">This is a supporting library providing common functions to test helper libraries written for Bats.</span><br>
-Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code></span><br>
+Example: <span class="module-example">In Bats <code>setup()</code> function: <code>load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;</code>
+License: 0BSD</span><br>
 URL: <span class="module-url"><a href="https://github.com/bats-core/bats-support">https://github.com/bats-core/bats-support</a>, <a href="https://github.com/bats-core/bats-support/releases">https://github.com/bats-core/bats-support/releases</a> (changelog), <a href="https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert">https://bats-core.readthedocs.io/en/stable/faq.html?highlight=assert#how-can-i-use-helper-libraries-like-bats-assert</a> (documentation)</span><br>
 Versions: <span class="module-version"><em>0.3.0</em></span><br>
 <details>
@@ -542,6 +549,7 @@ whatis(&quot;URL: https://github.com/bats-core/bats-support, https://github.com/
 whatis([[
 Description: This is a supporting library providing common functions to test helper libraries written for Bats.
 Examples: In Bats `setup()` function: `load &quot;${BATS_SUPPORT_HOME}/load.bash&quot;`
+License: 0BSD
 ]])
 
 depends_on(&quot;bats-core&quot;)
@@ -550,6 +558,7 @@ local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
 local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 prepend_path(&quot;BATS_SUPPORT_HOME&quot;, home)
+prepend_path(&quot;BATS_LIB_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 </code></pre>
 
 </details>
@@ -1421,8 +1430,8 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
 <span class="module-description">At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.</span><br>
 Example: <span class="module-example"><code>emacs --version</code> and <code>emacs -nw</code>.</span><br>
 URL: <span class="module-url"><a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a>, <a href="https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases">https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html#Releases</a> (changelog)</span><br>
-Warning: <span class="module-warning">Only the most recent version of this software will be kept.</span><br>
-Versions: <span class="module-version">29.4, 30.1, <em>30.2</em></span><br>
+Warning: <span class="module-warning">Only the most recent versions of this software will be kept.</span><br>
+Versions: <span class="module-version">29.4, 30.1, 30.2, <em>31.1</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -1437,7 +1446,7 @@ whatis(&quot;URL: https://www.gnu.org/software/emacs/, https://www.gnu.org/savan
 whatis([[
 Description: At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.
 Examples: `emacs --version` and `emacs -nw`.
-Warning: Only the most recent version of this software will be kept.
+Warning: Only the most recent versions of this software will be kept.
 ]])
 
 local root = os.getenv(&quot;SOFTWARE_ROOT_CBI&quot;)
@@ -2694,7 +2703,7 @@ prepend_path(&quot;PKG_CONFIG_PATH&quot;, pathJoin(home, &quot;lib&quot;, &quot;
 License: MIT</span><br>
 Example: <span class="module-example"><code>julia --version</code>, <code>julia --help</code>, and <code>julia</code>.</span><br>
 URL: <span class="module-url"><a href="https://julialang.org/">https://julialang.org/</a> (changelog), <a href="https://docs.julialang.org/">https://docs.julialang.org/</a> (docs), <a href="https://github.com/JuliaLang/julia/blob/master/NEWS.md">https://github.com/JuliaLang/julia/blob/master/NEWS.md</a> (changelog), <a href="https://github.com/JuliaLang/julia/releases">https://github.com/JuliaLang/julia/releases</a> (releases), <a href="https://github.com/JuliaLang/julia">https://github.com/JuliaLang/julia</a> (source code)</span><br>
-Versions: <span class="module-version">1.12.5, <em>1.12.6</em></span><br>
+Versions: <span class="module-version">1.12.5, 1.12.6, <em>1.13.0</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
