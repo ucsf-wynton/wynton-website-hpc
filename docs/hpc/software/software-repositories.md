@@ -3503,10 +3503,10 @@ prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;node_modules&quot;, &quot;op
 <dl>
   <dd class="module-details">
 <strong class="module-help">openjdk: Open Java Development Kit</strong><br>
-<span class="module-description">Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8 (2014-03-18), 11 (2018-09-25), 17 (2021-09-14), 21 (2023-09-19), and 25 (2025-09-16).</span><br>
+<span class="module-description">Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8 (2014-03-18), 11 (2018-09-25), 17 (2021-09-14), 21 (2023-09-19), 25 (2025-09-16), and 27 (2026-09-15).</span><br>
 Example: <span class="module-example"><code>java -version</code> and <code>javac -version</code>.</span><br>
 URL: <span class="module-url"><a href="https://openjdk.org/">https://openjdk.org/</a>, <a href="https://jdk.java.net/">https://jdk.java.net/</a> (releases)</span><br>
-Versions: <span class="module-version">21+35, <em>25.0.2</em></span><br>
+Versions: <span class="module-version">21+35, 25.0.2, <em>27</em></span><br>
 <details>
 <summary>Module code: <a>view</a></summary>
 <pre><code class="language-lua">help([[
@@ -3519,7 +3519,7 @@ whatis(&quot;Version: &quot; .. version)
 whatis(&quot;Keywords: programming&quot;)
 whatis(&quot;URL: https://openjdk.org/, https://jdk.java.net/ (releases)&quot;)
 whatis([[
-Description: Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8 (2014-03-18), 11 (2018-09-25), 17 (2021-09-14), 21 (2023-09-19), and 25 (2025-09-16).
+Description: Open Java Development Kit (OpenJDK) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE). Long-Term Support (LTS) versions of OpenJDK are 8 (2014-03-18), 11 (2018-09-25), 17 (2021-09-14), 21 (2023-09-19), 25 (2025-09-16), and 27 (2026-09-15).
 Examples: `java -version` and `javac -version`.
 ]])
 
@@ -3530,7 +3530,10 @@ local home = pathJoin(root, name .. &quot;-&quot; .. version)
 
 setenv(&quot;JAVA_HOME&quot;, home)
 prepend_path(&quot;PATH&quot;, pathJoin(home, &quot;bin&quot;))
-prepend_path(&quot;MANPATH&quot;, pathJoin(home, &quot;man&quot;))
+local manpath = pathJoin(home, &quot;man&quot;)
+if isDir(manpath) then
+  prepend_path(&quot;MANPATH&quot;, manpath)
+end
 prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(home, &quot;lib&quot;))
 prepend_path(&quot;CPATH&quot;, pathJoin(home, &quot;include&quot;))
 
