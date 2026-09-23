@@ -82,7 +82,7 @@ job 8974017.1 died through signal KILL (9)
 ```sh
 $ ldapsearch -LLL -x -H ldap://m1,ldap://m2 uidNumber="$(id -u)" mail
 dn: uid=alice,ou=Accounts,dc=cgl,dc=ucsf,dc=edu
-mail: alice.bobson@ucsf.edu
+mail: {{ site.user.email }}
 ```
 
 But, if you have to send to email another address than your Wynton-associated email address, you can set a new default in the `~/.sge_request` file (create if missing) as:

@@ -38,9 +38,9 @@ can happen for several reasons:
 
 ## Instructions for unlocking your account
 
-If the only reason your account was locked was because of a
-recently expired password (less than 30 days ago), you can
-reset it by sending email to [wynton-password@ucsf.edu](mailto:wynton-password@ucsf.edu).
+If the only reason your account was locked was because of a recently
+expired password (less than 30 days ago), you can reset it by sending
+email to [{{ site.cluster.email_support }}].
 
 Otherwise, you'll need to unlock your account via ServiceNow.
 Do not send an email to Wynton support - they can only
@@ -73,3 +73,4 @@ password is expiring' and are sent from `do-not-reply@wynton.ucsf.edu` to
 the email address that is associated with your Wynton account.
 
 [Wynton Account Request/Wynton Account Modification]: https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f
+[{{ site.cluster.email_support }}]: mailto:{{ site.cluster.email_support }}

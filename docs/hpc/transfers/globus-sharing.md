@@ -7,7 +7,7 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 
 1. Make sure you have a working setup of [Globus for {{ site.cluster.nickname }}]
 
-2. Email [wynton-support@ucsf.edu] with the directory you want to share.
+2. Email [{{ site.cluster.email_support }}] with the directory you want to share.
    The admins will send back the path the Globus share will appear as, e.g. `/wynton/globus/share/alice`
 
 3. On the ['UCSF {{ site.cluster.nickname }}' Collection] page, click the ['Collections'] tab to get to 'Guest Collections':
@@ -29,17 +29,17 @@ Below are instructions on how to share a specific folder on {{ site.cluster.nick
 At that point you should be all set.  Globus will send an email to the person you are sharing the folder with, and you can let them know the share is active.
 
 <div class="alert alert-warning" role="alert" markdown="1">
-It is only possible to have one Globus Guest Collection per Wynton user. However, you can add multiple permissions to your Guest Collection, giving different people access to different subdirectories. If you have questions, send mail to [wynton-support@ucsf.edu].
+It is only possible to have one Globus Guest Collection per Wynton user. However, you can add multiple permissions to your Guest Collection, giving different people access to different subdirectories. If you have questions, send mail to [{{ site.cluster.email_support }}].
 </div>
 
 
 ## Removing a Shared Globus Collection
 
-When you’re done, log into Globus, go to 'Collections' and then 'Administered by You'. Click on the shared Collection and then 'Delete Collection'.  Email [wynton-support@ucsf.edu] to let us know you've deleted the Collection.
+When you’re done, log into Globus, go to 'Collections' and then 'Administered by You'. Click on the shared Collection and then 'Delete Collection'.  Email [{{ site.cluster.email_support }}] to let us know you've deleted the Collection.
 
 
 
-[wynton-support@ucsf.edu]: mailto:wynton-support@ucsf.edu
+[{{ site.cluster.email_support }}]: mailto:{{ site.cluster.email_support }}
 
 [Globus]: https://www.globus.org/
 [Globus Connect Personal]: https://www.globus.org/globus-connect-personal
