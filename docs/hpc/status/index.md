@@ -15,12 +15,37 @@ title: Wynton HPC Status
 {% for period in periods %}
   <li{% if period == periods[0] %} class="active"{% endif %}><a data-toggle="pill" href="#by-{{ period }}"><span style="font-weight: bold;">{{ period }}</span></a></li>
 {% endfor %}
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span id="queue-year-label" style="font-weight: bold;">past years</span> <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+{% for year in (2018..2025) reversed %}
+      <li><a data-toggle="pill" href="#by-{{ year }}">{{ year }}</a></li>
+{% endfor %}
+    </ul>
+  </li>
 </ul>
+<script>
+$(function() {
+  // Show the chosen past year on the dropdown pill; reset it otherwise
+  $(document).on('shown.bs.tab', 'a[href^="#by-"]', function(e) {
+    var label = $(e.target).closest('.dropdown-menu').length ? $(e.target).text() : 'past years';
+    $('#queue-year-label').text(label);
+  });
+});
+</script>
 <div class="tab-content" style="margin-top: 1ex;">
 {% for period in periods %}
   <div id="by-{{ period }}" class="tab-pane fade in{% if period == periods[0] %} active{% endif %}">
     <img src="{{ site.assets.status_root_path }}/status/figures/queues-{{ period }}.png" alt="queues usage during the last {{ period }}"/><br>
     <img src="{{ site.assets.status_root_path }}/status/figures/gpuq-{{ period }}.png" alt="GPU queues usage during the last {{ period }}"/><br>
+  </div>
+{% endfor %}
+{% for year in (2018..2025) reversed %}
+  <div id="by-{{ year }}" class="tab-pane fade">
+    <img src="/hpc/status/figures/queues-{{ year }}.png" alt="queues usage during {{ year }}"/><br>
+{% if year >= 2019 %}
+    <img src="/hpc/status/figures/gpuq-{{ year }}.png" alt="GPU queues usage during {{ year }}"/><br>
+{% endif %}
   </div>
 {% endfor %}
 </div>
