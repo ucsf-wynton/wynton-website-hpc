@@ -224,6 +224,10 @@
 # message: Wynton is back to being available following maintenance. About 90% of the compute slots have been recovered, and we are continuing to bring the remaining nodes back online.
 
 # Default:
-level: info
+# level: info
+# condition: is operational
+# message:
+
+level: warning
 condition: is operational
-message:
+message: The cluster will be down for maintenance on October 12-13, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
