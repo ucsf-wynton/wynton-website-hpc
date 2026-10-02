@@ -230,4 +230,4 @@
 
 level: warning
 condition: is operational
-message: The cluster will be down for maintenance on October 12-13, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
+message: The cluster will be down for maintenance on October 13-14, 2026. Jobs with runtimes going into the maintenance window will only be started after the downtime.
