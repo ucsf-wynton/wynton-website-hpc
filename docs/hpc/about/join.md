@@ -16,6 +16,8 @@ If you are working with a lab that is using Wynton, you may request a Wynton acc
 
 If you are a non-UCSF affiliate, you will need to have the UCSF staff, student, postdoc, or PI you are associated with request your account for you.
 
+Gladstone affiliates: Please reach out to your service desk for advice on access to FAC/CoreHPC as no new Wynton accounts are being created for Gladstone.
+
 ## How long will it take for my Wynton account request to be processed?
 
 The {{ site.cluster.name }} staff will make every effort to process your account request and create the account within five business days of confirmation of your affiliation and contact information.
