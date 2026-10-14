@@ -2,10 +2,10 @@
 
 * Full downtime:
 
-  - Scheduled: 48.0 hours (= 2.0 days)
+  - Scheduled: 69.25 hours (= 2.9 days)
   - Unscheduled: 96.25 hours (= 4.0 days)
-  - Total: 144.25 hours (= 6.0 days)
-  - External factors: 65% of the above downtime, corresponding to 95.0 hours (= 4.0 days), were due to external factors
+  - Total: 165.5 hours (= 6.9 days)
+  - External factors: 57% of the above downtime, corresponding to 95.0 hours (= 4.0 days), were due to external factors
 
 * Partial downtime:
 
@@ -23,7 +23,8 @@
 * Occurrences:
   - 2026-06-23 -- 2026-06-24 (22.0 hours)
   - 2026-09-07 -- 2026-09-08 (26.0 hours)
-* Total downtime: 48.0 hours
+  - 2026-10-13 -- 2026-10-14 (21.25 hours)
+* Total downtime: 69.25 hours
 
 
 #### Scheduled kernel maintenance
@@ -71,6 +72,40 @@
 * Total downtime: 0.0 hours of which 0.0 hours were due to external
   factors
 
+
+
+### October 13-14, 2026
+
+#### <span class="incident-title">Full downtime</span>
+
+**Update**: Wynton is back in service.
+<br><span class="timestamp">October 14, 12:15 PT</span>
+
+**Notice**: Downtime started.
+<br><span class="timestamp">October 13, 15:00 PT</span>
+
+**Notice**: Downtime delayed 24 hours to begin 3:00 PM on Tuesday,
+October 13, and run through 10:00 AM on Wednesday, October 14, 2026.
+<br><span class="timestamp">October 1, 10:30 PT</span>
+
+**Notice**: Wynton HPC will undergo a full scheduled downtime,
+including login, development, data-transfer, and application nodes,
+beginning 3:00 PM on Monday, October 12, through 10:00 AM on Tuesday,
+October 13, 2026. Jobs with runtime limits (h_rt) that extend into the
+maintenance window will not be started until after the downtime has
+concluded. The reason is construction-related electrical work in the
+building where the data center is located.
+<br><span class="timestamp">September 29, 14:30 PT</span>
+
+<!--
+comment: Scheduled downtime
+start: 2026-10-13T15:00:00
+stop: 2026-10-14T12:15:00
+length: 21.25 hours
+severity: under-maintenance
+affected: jobs, beegfs, compute, *
+reason: scheduled
+ -->
 
 
 ### September 7-8, 2026
