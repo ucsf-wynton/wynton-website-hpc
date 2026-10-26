@@ -5,7 +5,7 @@
 
 ## Wynton's Future
 
-Wynton HPC has been a vital resource for UCSF’s computational research, providing shared HPC capabilities to support diverse scientific projects. However, Wynton HPC will be gradually phased out by March 2027 to align with UCSF’s evolving research infrastructure strategy. While Wynton will remain operational for the near term for [P1 and P2 data only](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard), researchers are encouraged to plan for its eventual absorption into the Facility for Advanced Computing (FAC) and CoreHPC. UCSF is committed to supporting researchers during this transition and ensuring continued access to robust computational resources.
+Wynton HPC has been a vital resource for UCSF’s computational research, providing shared HPC capabilities to support diverse scientific projects. However, Wynton HPC will be gradually phased out by the end of February 2027 to align with UCSF’s evolving research infrastructure strategy. While Wynton will remain operational for the near term for [P1 and P2 data only](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard), researchers are encouraged to plan for its eventual absorption into the Facility for Advanced Computing (FAC) and CoreHPC. UCSF is committed to supporting researchers during this transition and ensuring continued access to robust computational resources.
 
 For more details on the upcoming changes, visit the [Wynton Transition Keeping You Informed](https://ars.ucsf.edu/wynton-transition-keeping-you-informed) page.
 
@@ -13,6 +13,10 @@ For more details on the upcoming changes, visit the [Wynton Transition Keeping Y
 ## Who can join?
 
 If you are working with a lab that is using Wynton, you may request a Wynton account. However, if you are not collaborating with existing Wynton users, or you work with [P3 or P4 data](https://it.ucsf.edu/standard-guideline/ucsf-policy-650-16-addendum-f-ucsf-data-classification-standard), please explore options with the [FAC](https://ars.ucsf.edu/facility-advanced-computing-fac) and [CoreHPC](https://ars.ucsf.edu/high-performance-computing-hpc). 
+
+<div class="alert alert-warning" role="alert" markdown="1">
+**Update 2026-10-22**: Wynton is no longer accepting new labs, and beginning October 31, 2026, Wynton accounts will no longer be created for new members of existing labs. To transition your lab, your PI should submit one [Wynton transition request](https://tiny.ucsf.edu/transition); see [Wynton Transition: Keeping You Informed](https://ars.ucsf.edu/wynton-transition-keeping-you-informed) for details.
+</div>
 
 If you are a non-UCSF affiliate, you will need to have the UCSF staff, student, postdoc, or PI you are associated with request your account for you.
 

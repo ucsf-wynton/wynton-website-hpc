@@ -2,9 +2,17 @@
 
 ## Wynton Transition
 
-**Q**. Where can I find more information about the Wynton transition to FAC and CoreHPC?
+**Q**. _Where can I find more information about the Wynton transition to FAC and CoreHPC?_
 
 **A**. Please visit [Wynton Transition: Keeping You Informed](https://ars.ucsf.edu/wynton-transition-keeping-you-informed) on the Academic Research Services (ARS) website.
+
+**Q**. _Can I still request a Wynton account?_
+
+**A**. Wynton no longer accepts new labs. Beginning October 31, 2026, Wynton accounts are no longer created for new members of existing labs. Please explore [FAC](https://ars.ucsf.edu/facility-advanced-computing-fac) and [CoreHPC](https://ars.ucsf.edu/high-performance-computing-hpc) instead.
+
+**Q**. _My lab has not started the transition. What should we do?_
+
+**A**. Your PI should submit one transition request for the lab using the [Wynton transition form](https://tiny.ucsf.edu/transition).
 
 
 ## Jobs
@@ -285,8 +293,8 @@ Then retry.
 
 ### Cannot SSH to Wynton
 
-**Q**. When I try to SSH to one of the login or data-transfer nodes, I
-get an error `ssh: connect to host {{ site.login.hostname }} port 22: Connection timed out" error`. What's wrong?
+**Q**. _When I try to SSH to one of the login or data-transfer nodes, I
+get an error `ssh: connect to host {{ site.login.hostname }} port 22: Connection timed out" error`. What's wrong?_
 
 **A**. This error suggests that you cannot reach the Wynton login
 node. This _will_ happen if you are connected to the 'UCSFguest' WiFi
@@ -363,9 +371,9 @@ not count toward users disk quota.
 
 ### Sudden Python errors
 
-**Q**. When I run Jupyter, I now get an error saying
+**Q**. _When I run Jupyter, I now get an error saying
 `/opt/rh/rh-python38/root/usr/bin/python3: bad interpreter: No such
-file or directory`. How can I fix it.
+file or directory`. How can I fix it._
 
 **A**. This is because the Python software, here Jupyter, was
 installed using the `rh-python38` SCL, which was only available on
@@ -473,7 +481,7 @@ site.cluster.name }} in return for priority. Will you take them?_
 
 ### What {{ site.cluster.nickname }} offers
 
-**Q**. Does {{ site.cluster.nickname }} Provide Server Hosting, Data Storage, or Application Hosting Services?
+**Q**. _Does {{ site.cluster.nickname }} Provide Server Hosting, Data Storage, or Application Hosting Services?_
 
 **A**. Wynton HPC provides High Performance Computing resources to the UCSF Research community.  We are _not_ able to provide server hosting, application hosting, data storage, or consulting services outside of our core mission in Research High Performance Computing.  For these, and related services, we suggest you contact UCSF IT regarding their offerings, e.g. [UCSF IT Virtual Server Hosting](https://it.ucsf.edu/service/virtual-server-hosting), [UCSF IT Physical Server Hosting](https://it.ucsf.edu/service/physical-server-hosting), and [UCSF IT Cloud Services](https://cloudservices.ucsf.edu/).
 

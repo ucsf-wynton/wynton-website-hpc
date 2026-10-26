@@ -1,6 +1,8 @@
 # News
 
-2026-03-01: Please note that the Wynton HPC service is being phased out and is scheduled to retire in early March, 2027. New research projects should generally use the newer FAC and CoreHPC environment instead.
+2026-10-22: Wynton no longer accepts new labs, and from October 31 no accounts are created for new members of existing labs. Transition requests take priority over general support, so response times may be longer. PIs of labs that have not started the transition should submit one [transition request](https://tiny.ucsf.edu/transition).
+
+2026-03-01: Please note that the Wynton HPC service is being phased out and is scheduled to retire in end of February, 2027. New research projects should generally use the newer FAC and CoreHPC environment instead.
 
 2026-01-30: Protected (P3 and P4) data and accounts have been decommissioned. Only Wynton Regular (P1-P2) accounts can use the cluster from now on.
 
