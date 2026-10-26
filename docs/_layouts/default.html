@@ -245,6 +245,40 @@
 </div>
 </div>
 {% endif %}
+<div id="banner-last-submission" class="alert" role="alert" style="margin-top: 0ex; margin-bottom: 0ex; padding-top: 1ex; padding-bottom: 1ex; font-size: medium; display: none; background: #052049; color: #fff; border: 0; border-radius: 0; text-align: center">
+⏳ <span id="last-submission-text"></span>
+</div>
+<script>
+// Countdown to the last day of job submission (end of 2027-01-31 PST).
+// Computed client-side because the site is not re-rendered regularly.
+(function() {
+    var cutoff = new Date("2027-02-01T00:00:00-08:00");
+    var days = Math.ceil((cutoff - Date.now()) / (24 * 60 * 60 * 1000));
+    var text;
+    if (days > 1) {
+        text = "<strong>" + days + " days</strong> left to submit jobs on Wynton. The last day to submit jobs is January 31, 2027.";
+    } else if (days == 1) {
+        text = "<strong>Today is the last day</strong> to submit jobs on Wynton (January 31, 2027).";
+    } else {
+        text = "Job submission on Wynton has closed (last day was January 31, 2027).";
+    }
+    document.getElementById("last-submission-text").innerHTML = text;
+    var banner = document.getElementById("banner-last-submission");
+    banner.style.display = "block";
+
+    // The navbar is fixed, so push the page body (and in-page anchor
+    // targets) down by the height of this banner; it wraps on narrow screens.
+    var basePadding = parseFloat(window.getComputedStyle(document.body).paddingTop);
+    function adjustForBanner() {
+        var h = banner.offsetHeight;
+        document.body.style.paddingTop = (basePadding + h) + "px";
+        document.documentElement.style.setProperty("--last-submission-banner-height", h + "px");
+    }
+    adjustForBanner();
+    window.addEventListener("load", adjustForBanner);
+    window.addEventListener("resize", adjustForBanner);
+})();
+</script>
 </nav>
 
 <div id="wrap">
